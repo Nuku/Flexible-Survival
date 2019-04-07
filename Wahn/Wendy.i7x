@@ -140,7 +140,32 @@ Table of GameCharacterIDs (continued)
 object	name
 Wendy	"Wendy"
 
-Wendy is a woman. The HP of Wendy is normally 0.
+Wendy is a woman.
+ScaleValue of Wendy is 4.
+Cocks of Wendy is 0.
+Cock Length of Wendy is 0.
+Cock Width of Wendy is 0.
+Testes of Wendy is 0.
+Cunts of Wendy is 1.
+Cunt Length of Wendy is 30.
+Cunt Width of Wendy is 15.
+Breasts of Wendy is 4. [4 nipples]
+Breast Size of Wendy is 0.
+TwistedCapacity of Wendy is true.
+Sterile of Wendy is true.
+[Basic Interaction states as of game start]
+PlayerMet of Wendy is false.
+PlayerRomanced of Wendy is false.
+PlayerFriended of Wendy is false.
+PlayerControlled of Wendy is false.
+PlayerFucked of Wendy is false.
+OralVirgin of Wendy is false.
+Virgin of Wendy is false.
+AnalVirgin of Wendy is false.
+PenileVirgin of Wendy is true.
+SexuallyExperienced of Wendy is true.
+MainInfection of Wendy is "".
+The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 

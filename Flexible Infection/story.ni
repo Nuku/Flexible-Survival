@@ -1060,7 +1060,7 @@ Segment	Shift Text	Desc Text
 "right shin"	"Your right shin shortens and grows rough brown hair, forcing you into a digitigrade stance."		"Your hairy right shin is making you walk digitigrade."
 "right foot"	"Your right foots lengthens, the toes fusing into a clover black hoof."		"Your right foot looks like it belongs to a hairy pig."
 "rear"		"A weight behind you makes you notice your ass swelling with muscle and fat, becoming extremely hairy as coarse brown fur covers it, with a blush you release a fart, attracting a cloud of flies to you "		"Your large hairy ass releases a puff of gas occasionally, keeping you surrounded in a swarm of flies."
-"full"		"boar man"		"Your a muscular but fat brown boar man, with a rather horrid stench."
+"full"		"boar man"		"You're a muscular but fat brown boar man, with a rather horrid stench."
 
 Section - Furry Skunk
 
@@ -5406,7 +5406,7 @@ when play ends:
 				say "You're picked up by the military and whisked away to a safe city. They determine that you are largely harmless, only forbidding you from playing with chemicals. You get a job at a coffee shop where your special brews bring a smile to the patron's faces. By the time they notice anything amiss, they will have forgotten that sweet cup of coffee you had offered them...";
 			if tf table of head is table goblin:
 				let u be the number of compatible on-stage npc persons;
-				say "You [if u is greater than 0], and [u] others, [end if] flee to the outskirts of the city. A great roaring sound comes from above, where an airship comes in for a landing, its various gears spinning wildly in the struggle to keep it aloft. As soon as the plank is lowered, you dash up it. The goblins there greet their new member[if u is greater than 0]s[end if] eagerly and the ship sales off into the sky, towards adventure!";
+				say "You [if u is greater than 1]and [u] others [else if u is 1]and one other [end if]flee to the outskirts of the city. A great roaring sound comes from above, where an airship comes in for a landing, its various gears spinning wildly in the struggle to keep it aloft. As soon as the plank is lowered, you dash up it. The goblins there greet their new member[if u is greater than 0]s[end if] eagerly and the ship sales off into the sky, towards adventure!";
 			if tf table of head is table slutrat:
 				let u be the number of compatible npc on-stage persons;
 				if u is 0:

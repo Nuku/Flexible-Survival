@@ -226,12 +226,11 @@ to flotbind:
 				LineBreak;
 				if boundrecover is true:
 					if flotintense < 2:
-						increase humanity of player by 1;
+						SanBoost 1;
 					else if flotintense < 4:
-						increase humanity of player by 2;
+						SanBoost 2;
 					else:
-						increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+						SanBoost 3;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity[if flotintense > 4] within these confines[end if], recovering a small portion of your lost humanity.";
 					LineBreak;
 					flotlust;

@@ -280,6 +280,32 @@ object	name
 Triton	"Triton"
 
 Triton is a man. Triton is in Atlantis City Entrance.
+[Physical details as of game start]
+ScaleValue of Triton is 3. [human sized]
+SleepRhythm of Triton is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Triton is 1. [X cock]
+Cock Length of Triton is 8. [X Inches]
+Cock Width of Triton is 4.
+Testes of Triton is 2. [X balls]
+Cunts of Triton is 0. [X pussy]
+Cunt Length of Triton is 0. [X Cunt]
+Cunt Width of Triton is 0. [X Cunt]
+Breasts of Triton is 2. [X nipples]
+Breast Size of Triton is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Triton is false. [can not take oversized members without pain]
+Sterile of Triton is true.
+PlayerMet of Triton is false.
+PlayerRomanced of Triton is false.
+PlayerFriended of Triton is false.
+PlayerControlled of Triton is false.
+PlayerFucked of Triton is false.
+OralVirgin of Triton is true.
+Virgin of Triton is true.
+AnalVirgin of Triton is true.
+PenileVirgin of Triton is true.
+SexuallyExperienced of Triton is false.
+MainInfection of Triton is "".
 The description of Triton is "[TritonDesc]".
 The conversation of Triton is { "<This is nothing but a placeholder!>" }.
 The scent of Triton is "He smells of the ocean and a bit of musk. Though he has an underlying smell of spice.".
@@ -362,6 +388,32 @@ object	name
 Alana	"Alana"
 
 Alana is a woman. Alana is in Atlantis City Entrance.
+[Physical details as of game start]
+ScaleValue of Alana is 3. [human sized]
+SleepRhythm of Alana is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Alana is 0. [X cock]
+Cock Length of Alana is 0. [X Inches]
+Cock Width of Alana is 0.
+Testes of Alana is 0. [X balls]
+Cunts of Alana is 1. [X pussy]
+Cunt Length of Alana is 8. [X Cunt]
+Cunt Width of Alana is 4. [X Cunt]
+Breasts of Alana is 2. [X nipples]
+Breast Size of Alana is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Alana is false. [can not take oversized members without pain]
+Sterile of Alana is true.
+PlayerMet of Alana is false.
+PlayerRomanced of Alana is false.
+PlayerFriended of Alana is false.
+PlayerControlled of Alana is false.
+PlayerFucked of Alana is false.
+OralVirgin of Alana is true.
+Virgin of Alana is true.
+AnalVirgin of Alana is true.
+PenileVirgin of Alana is true.
+SexuallyExperienced of Alana is false.
+MainInfection of Alana is "".
 The description of Alana is "[AlanaDesc]".
 The conversation of Alana is { "<This is nothing but a placeholder!>" }.
 The scent of Alana is "     Alana smells like sweat and lavender oddly enough.".
@@ -438,6 +490,32 @@ object	name
 Poseidon	"Poseidon"
 
 Poseidon is a man.
+[Physical details as of game start]
+ScaleValue of Poseidon is 3. [human sized]
+SleepRhythm of Poseidon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Poseidon is 1. [X cock]
+Cock Length of Poseidon is 10. [X Inches]
+Cock Width of Poseidon is 6.
+Testes of Poseidon is 2. [X balls]
+Cunts of Poseidon is 0. [X pussy]
+Cunt Length of Poseidon is 0. [X Cunt]
+Cunt Width of Poseidon is 0. [X Cunt]
+Breasts of Poseidon is 2. [X nipples]
+Breast Size of Poseidon is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Poseidon is false. [can not take oversized members without pain]
+Sterile of Poseidon is true.
+PlayerMet of Poseidon is false.
+PlayerRomanced of Poseidon is false.
+PlayerFriended of Poseidon is false.
+PlayerControlled of Poseidon is false.
+PlayerFucked of Poseidon is false.
+OralVirgin of Poseidon is false.
+Virgin of Poseidon is true.
+AnalVirgin of Poseidon is false.
+PenileVirgin of Poseidon is false.
+SexuallyExperienced of Poseidon is true.
+MainInfection of Poseidon is "".
 The description of Poseido is "[PoseidonDesc]".
 The conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
 The scent of Poseidon is "He smells heavily of the sea and the earth. It's an odd combination but it works for him".

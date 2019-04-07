@@ -91,6 +91,32 @@ object	name
 Ammy	"Ammy"
 
 Ammy is a woman. Ammy is in Topless Lounge.
+[Physical details as of game start]
+ScaleValue of Ammy is 3. [human sized]
+SleepRhythm of Ammy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Ammy is 1. [X cock]
+Cock Length of Ammy is 10. [X Inches]
+Cock Width of Ammy is 14.
+Testes of Ammy is 2. [X balls]
+Cunts of Ammy is 1. [X pussy]
+Cunt Length of Ammy is 10. [X Cunt]
+Cunt Width of Ammy is 4. [X Cunt]
+Breasts of Ammy is 2. [X nipples]
+Breast Size of Ammy is 4. [D Cup at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Ammy is false. [can not take oversized members without pain]
+Sterile of Ammy is true.
+PlayerMet of Ammy is false.
+PlayerRomanced of Ammy is false.
+PlayerFriended of Ammy is false.
+PlayerControlled of Ammy is false.
+PlayerFucked of Ammy is false.
+OralVirgin of Ammy is false.
+Virgin of Ammy is false.
+AnalVirgin of Ammy is false.
+PenileVirgin of Ammy is false.
+SexuallyExperienced of Ammy is true.
+MainInfection of Ammy is "".
 The description of Ammy is "[ammy_desc]".
 
 The conversation of Ammy is { " " }

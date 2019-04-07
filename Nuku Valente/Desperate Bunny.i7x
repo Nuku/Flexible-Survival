@@ -127,6 +127,8 @@ Cunt Width of Sandra is 6.
 Breasts of Sandra is 2.
 Breast Size of Sandra is 4.
 [Basic Interaction states as of game start]
+TwistedCapacity of Sandra is false. [can not take oversized members without pain]
+Sterile of Sandra is false.
 PlayerMet of Sandra is false.
 PlayerRomanced of Sandra is false.
 PlayerFriended of Sandra is false.
@@ -262,7 +264,7 @@ to say sandrasexmenu:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 3;
-		now description entry is "have a sexy 69 with the bunny cutey";
+		now description entry is "have a sexy 69 with the bunny cutie";
 	if rabbitsibling > 0 and rabbitsibling < 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Rabbit Kin Induction";

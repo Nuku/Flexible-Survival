@@ -61,7 +61,7 @@ to SecondKurtEvent:
 	say "     Figuring you may as well meet up with Kurt for your little lunch date. Thankfully though it doesn't take you long to find the shark-morph as he's very clearly standing out in the open. It also helps you that the male is very noticeable, at least to you, with his clean-cut, button up shirt and comfy looking pair of jeans. He obviously wanted to be fancy for this occasion, so who are you to deny him. Instead, you wander on over and give him a smile which he matches with a toothy one. 'Hey there, just in time! Thankfully the restaurants are open all day,' he says, before holding out his arm all gentlemanly like for you to hold. Raising a brow but deciding to oblige the guy you accept it, and he begins to lead you on your way.";
 	say "     It doesn't take you two long before you reach a rather fancy eatery, and to be honest you're kind of glad it is not a fish place. As that would make you feel partially awkward. Instead it appears to be an expensive bar and grill. Kurt hailed down the person standing at the front of the place, to get you two a booth. The woman appears to notice him, and you swear would have stars in her eyes if it was possible, but the shark-morph just asks for a seat as calmly as possible. She was put out at first but quickly shrugged it off before leading you guys to your area. Upon sitting down the male smiles at you and crosses his arms, staring at you in curiosity, causing you to tilt your head at him.";
 	WaitLineBreak;
-	say "     'Soooo, why do you not act star-struck like everyone else does when they see me?' Kurt asks, sincere curiosity in his tone. You raise your brows at him but decide to answer him honestly, since he appears to be wanting a real answer. So, you tell him that you don't see why you should, since he's just like any other person, even if he does have a nice voice and music-playing skills. By then a waiter comes by to take your orders, to which you quickly give, and when you turn to look at your... lunch partner, he appears very intrigued by you. 'The fact that you think that of me, makes you very interesting to me, cause it's hard to make friends here when everyone just sees you as a celebrity,' the shark says, a sigh soon escaping his lips afterwards. You nod having a vague understanding of what he means. A few minutes later your food comes by and you dig in, enjoying the taste of Atlantean cuisine.";
+	say "     'Soooo, why do you not act star-struck like everyone else does when they see me?' Kurt asks, sincere curiosity in his tone. You raise your brows at him but decide to answer him honestly, since he appears to be wanting a real answer. So, you tell him that you don't see why you should, since he's just like any other person, even if he does have a nice voice and music-playing skills. By then a waiter comes by to take your orders, to which you quickly give, and when you turn to look at your... lunch partner, he appears very intrigued by you. 'The fact that you think that of me makes you very interesting to me, [']cause it's hard to make friends here when everyone just sees you as a celebrity,' the shark says, a sigh soon escaping his lips afterwards. You nod having a vague understanding of what he means. A few minutes later your food comes by and you dig in, enjoying the taste of Atlantean cuisine.";
 	say "     After you finish your food the shark-morph nods to himself as if confirming something. 'You know what, whenever you're free come visit me at my abode. My house is to the west when you enter the residential area,' Kurt says to you, giving you a saucy smile. After saying that he gets up and puts the money on the table for the bill. As he walks away you take a good loo at him, and wonder if you really want to visit him at his home before quickly shrugging your shoulders and deciding that you'll think about it later. You then get up and make your own way out of the restaurant, heading out to do what you wanted to do afterwards.";
 	now KurtRelationship is 3;
 	now Predator's Lunch is resolved;
@@ -76,6 +76,32 @@ object	name
 Kurt	"Kurt"
 
 Kurt is a man.
+[Physical details as of game start]
+ScaleValue of Kurt is 3. [human sized]
+SleepRhythm of Kurt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Kurt is 2. [X cock]
+Cock Length of Kurt is 8. [X Inches]
+Cock Width of Kurt is 4.
+Testes of Kurt is 2. [X balls]
+Cunts of Kurt is 0. [X pussy]
+Cunt Length of Kurt is 0. [X Cunt]
+Cunt Width of Kurt is 0. [X Cunt]
+Breasts of Kurt is 2. [X nipples]
+Breast Size of Kurt is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Kurt is false. [can not take oversized members without pain]
+Sterile of Kurt is true.
+PlayerMet of Kurt is false.
+PlayerRomanced of Kurt is false.
+PlayerFriended of Kurt is false.
+PlayerControlled of Kurt is false.
+PlayerFucked of Kurt is false.
+OralVirgin of Kurt is true.
+Virgin of Kurt is true.
+AnalVirgin of Kurt is true.
+PenileVirgin of Kurt is true.
+SexuallyExperienced of Kurt is false.
+MainInfection of Kurt is "".
 The description of Kurt is "[KurtDesc]".
 The conversation of Kurt is { "<This is nothing but a placeholder!>" }.
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".
@@ -106,7 +132,7 @@ to say KurtTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "His Interest in Music";
 	now sortorder entry is 2;
-	now description entry is "Ask him how he came to be interested in music.";
+	now description entry is "Ask him how he came to be interested in music";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

@@ -330,12 +330,11 @@ to InflatableOtterSuitBind:
 					LineBreak;
 					if boundrecover is true: [recover]
 						if InflatableOtterSuitBindStage is 1:
-							increase humanity of player by 1;
+							SanBoost 1;
 						else if InflatableOtterSuitBindStage is 2:
-							increase humanity of player by 2;
+							SanBoost 2;
 						else: [3+]
-							increase humanity of player by 3;
-						if humanity of player > 100, now humanity of player is 100;
+							SanBoost 3;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
 					else: [endure]
 						if InflatableOtterSuitBindStage is 1:

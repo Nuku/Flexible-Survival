@@ -12,17 +12,45 @@ Object	Name
 Hanu	"Hanu"
 
 Hanu is a person. Hanu is in Monkey House.
+[Physical details as of game start]
+ScaleValue of Hanu is 3. [human sized]
+SleepRhythm of Hanu is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Hanu is 1. [X cock]
+Cock Length of Hanu is 8. [X Inches]
+Cock Width of Hanu is 4.
+Testes of Hanu is 2. [X balls]
+Cunts of Hanu is 0. [X pussy]
+Cunt Length of Hanu is 0. [X Cunt]
+Cunt Width of Hanu is 0. [X Cunt]
+Breasts of Hanu is 2. [X nipples]
+Breast Size of Hanu is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Hanu is false. [can not take oversized members without pain]
+Sterile of Hanu is true.
+PlayerMet of Hanu is false.
+PlayerRomanced of Hanu is false.
+PlayerFriended of Hanu is false.
+PlayerControlled of Hanu is false.
+PlayerFucked of Hanu is false.
+OralVirgin of Hanu is true.
+Virgin of Hanu is true.
+AnalVirgin of Hanu is true.
+PenileVirgin of Hanu is true.
+SexuallyExperienced of Hanu is false.
+MainInfection of Hanu is "".
 The description of Hanu is "[hanuDesc]";
 
 to say hanuDesc:
 	if Monkey Duel is unresolved:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[at random].";
-	else if Resolution of Monkey Duel is not 1:
+	else if Resolution of Monkey Duel is 2 or Resolution of Monkey Duel is 3:
 		say "Hanu is sitting in front of the throne, naked except for the collar shackled around his neck, linked with a metal chain to the throne. The monkey gives you a defeated look, then lowers his eyes as Wukong patronizingly pets his slave's head with his prehensile foot.";
-	else:
+	else if Resolution of Monkey Duel is 1:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[or]Hanu is sitting in front of his more-or-less willing student as he finishes lecturing him on the importance of mastering one's mind and body. From Wukong's [if humanity of Wukong < 3]exasperated[else]bored[end if] expression, you are not sure if Hanu's message is finding open ears[at random].";
+	else:
+		say "Unexpexted Resolution of Monkey Duel: [Resolution of Monkey Duel] Please report this on the FS Discord.";
 
-Instead of going to Monkey House for the first time:
+Instead of going to Monkey House while (Resolution of Monkey Duel is 0 and Monkey Duel is inactive):
 	say "Coming to one of the less exposed area of the zoo you find yourself coming across a monkey-shifted man sitting quietly on top of a rock, meditating in the lotus position. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes close. 'Yes, I'm talking to you. Come on over here so we can start training.'";
 	say "You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
 	LineBreak;
@@ -34,14 +62,14 @@ Instead of going to Monkey House for the first time:
 		say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
 		decrease libido of player by 10;
 		if libido of player < 0, now libido of player is 0;
-		increase humanity of player by 20;
-		if humanity of player > 100, now humanity of player is 100;
+		SanBoost 20;
 		Increase maxHP of player by 5;
 		Increase score by 5;
 		now Monkey Duel is active;
 	else:
 		LineBreak;
 		say "You politely refuse Hanu's offer, arguing that you have more pressing matters. 'Hmf,' the monkey replies. 'You should take the time to meditate and reflect on your personality. I remain here. Come back and talk to me if you reconsider my offer.";
+		now Resolution of Monkey Duel is 99; [postponed]
 
 instead of conversing Hanu:
 	if Monkey Duel is inactive:
@@ -55,8 +83,7 @@ instead of conversing Hanu:
 			say "     'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that, Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you, and then disappears out of sight. Not sure what that was about, you idly wonder who that crazy monkey guy was.";
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;
-			increase humanity of player by 20;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 20;
 			Increase maxHP of player by 5;
 			Increase score by 5;
 			now Monkey Duel is active;
@@ -145,8 +172,10 @@ Object	Name
 Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
+Monkey Duel is inactive.
+The sarea of Monkey Duel is "Nowhere".
 
-to monkeyDuel:
+to MonkeyDuel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have a habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
 	say "     The monkey's words make you remember about your (mis)adventures with the only other monkey you know. [bold type]Should you bring up Wukong's existence to Hanu?[roman type][line break]";
 	LineBreak;

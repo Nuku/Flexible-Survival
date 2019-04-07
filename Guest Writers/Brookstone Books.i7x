@@ -136,7 +136,7 @@ carry out browsebooks:
 			say "[afsm]";
 	else if X is 3:
 		say "     With all that is going on in the city right now you decide to head to the humor section to see if you can find a good newspaper comic collection. Finding your favorite, you take it, find a chair to relax in, and begin to read. You don't even notice the time go by as you get a few laughs out of your favorite funnies. Your mood noticeably lightened, you rise from the chair with a smile and put the book back, promising yourself to come back to read it again when you're feeling down.";
-		Increase humanity of player by 3;
+		SanBoost 3;
 		if morale of player < 0:
 			now morale of player is ( 2 * morale of player / 3 );
 		else:
@@ -153,7 +153,7 @@ carry out browsebooks:
 	else if X is 5:
 		If fsnovel is 1:
 			say "     While passing a table loaded with children's books you notice one titled [bold type]Boris the Lion's African Adventure[roman type], and not even knowing why, you pause to read it. It's a simple tale, like any preschooler book, about Boris's misadventure of trying to capture Andy the Antelope with no success. But the words at the end manage to inspire you. 'He may be faster. He may be smarter. But I always, always will try harder. One day, one day he will be too slow. One day, one day I will catch him, I know.' You close the book with a smile, your mood lightened.";
-			Increase humanity of player by 1;
+			SanBoost 1;
 			if morale of player < 20, increase morale of player by 1;
 		else:
 			say "     When you pass by a table you notice what looks like a large three ring binder. Thinking it's something Beverly has left out accidentally, you pick it up with the intent to ask her when the hand written title catches your eyes, [bold type]Flexible Survival[roman type]. Thumbing through some of the pages, you see that it's a novel made up of short stories, and as you continue reading some of the pages of each story you soon start to wonder that with the way things currently are, is life now imitating art or some gigantic cosmic joke. With a wry smile you close the binder and return it to the pile of books you found it on.";

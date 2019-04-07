@@ -199,6 +199,8 @@ Cunt Width of Wally is 0. [Doesn't have a vagina to get stretched]
 Breasts of Wally is 2. [Has two normal nipples]
 Breast Size of Wally is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
+TwistedCapacity of Wally is false. [can not take oversized members without pain]
+Sterile of Wally is true.
 PlayerMet of Wally is false.
 PlayerRomanced of Wally is false.
 PlayerFriended of Wally is false.
@@ -209,6 +211,7 @@ Virgin of Wally is false.
 AnalVirgin of Wally is false.
 PenileVirgin of Wally is true.
 SexuallyExperienced of Wally is true.
+MainInfection of Wally is "".
 The description of Wally is "[WallyDesc]".
 The conversation of Wally is { "<This is nothing but a placeholder!>" }.
 The scent of Wally is "     Wally gives off a scent of the salty sea which makes you think he occasionally returns to the beach for a swim.".
@@ -297,7 +300,7 @@ to say WallySexMenu:
 	if player is male:
 		now title entry is "Seduce him";
 		now sortorder entry is 1;
-		now description entry is "Put your moves on him, his cock, and his hole.";
+		now description entry is "Put your moves on him, his cock, and his hole";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

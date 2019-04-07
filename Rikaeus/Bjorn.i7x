@@ -65,6 +65,32 @@ object	name
 Bjorn	"Bjorn"
 
 Bjorn is a man.
+[Physical details as of game start]
+ScaleValue of Bjorn is 3. [human sized]
+SleepRhythm of Bjorn is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Bjorn is 1. [X cock]
+Cock Length of Bjorn is 8. [X Inches]
+Cock Width of Bjorn is 4.
+Testes of Bjorn is 2. [X balls]
+Cunts of Bjorn is 0. [X pussy]
+Cunt Length of Bjorn is 0. [X Cunt]
+Cunt Width of Bjorn is 0. [X Cunt]
+Breasts of Bjorn is 2. [X nipples]
+Breast Size of Bjorn is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Bjorn is false. [can not take oversized members without pain]
+Sterile of Bjorn is true.
+PlayerMet of Bjorn is false.
+PlayerRomanced of Bjorn is false.
+PlayerFriended of Bjorn is false.
+PlayerControlled of Bjorn is false.
+PlayerFucked of Bjorn is false.
+OralVirgin of Bjorn is true.
+Virgin of Bjorn is true.
+AnalVirgin of Bjorn is true.
+PenileVirgin of Bjorn is true.
+SexuallyExperienced of Bjorn is false.
+MainInfection of Bjorn is "".
 The description of Bjorn is "[BjornDesc]".
 The conversation of Bjorn is { "<This is nothing but a placeholder!>" }.
 The scent of Bjorn is "He smells of the sea and sweat, the later proving that he does work out.".

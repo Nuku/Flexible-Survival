@@ -368,9 +368,9 @@ to say BadAlexandraTalkMenu:
 	clear the screen and hyperlink list;
 
 to say AlexandraContraceptionTalk:
-	if "Contraception" is listed in Traits of Alexandra: [she already is taking em]
+	if Sterile of Alexandra is true: [she already is taking em]
 		say "     'Changed your mind, boss? Fine by me, and Medea will be oh so happy to set me right again. That girl is just a little baby-crazy, I tell ya,' Alexandra says in a happy tone and saunters up close to you, giving you a wet doggy kiss. After that, she slips out of the building right away, to return about an hour later with an eager expression on her face. She looks at you happily and licks the sides of her muzzle, apparently eager to get started on a litter of puppies soon.'";
-		remove "Contraception" from Traits of Alexandra;
+		now Sterile of Alexandra is false;
 	else if libido of Alexandra > 20: [more than 20 puppies]
 		say "     As you bring up the fact that you want her to take some precautions against further pregnancies, Alexandra crosses her arms in front of her bare chest and gives you a hard stare. Her lips peel back from the impressive set of teeth in her muzzle, with the doberwoman growling out, 'Are you trying to be funny? Fuck no, you bastard! I like having puppies! And if you wanna stop me from having more, I might just need to go find some other place for me and my pack.' The steely gaze of her eyes tells you that she is completely serious about this, so you back off and tell her to forget you said anything. Watching the former cop walk away from you, checking on her offspring before she gets back to her usual guard post, you remind yourself that you shouldn't try to get between this bitch and her current (and future) puppies.";
 	else:
@@ -393,7 +393,7 @@ to say AlexandraContraceptionTalk:
 			if player consents:
 				LineBreak;
 				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
-				add "Contraception" to Traits of Alexandra;
+				now Sterile of Alexandra is true;
 			else:
 				LineBreak;
 				say "     As you tell her that you've decided against contraception after all, Alexandra gives you a broad grin. 'Guess that means it's time for some hard banging soon, eh? Time to breed me some more!' She wiggles her breasts enticingly at you, not at all sorry that she'll still be fertile.";
@@ -418,7 +418,7 @@ to say AlexandraContraceptionTalk:
 			if player consents:
 				LineBreak;
 				say "     Telling Alexandra that you have made up your mind, you order her to get herself squared away properly. 'Fine, I'll get it done, boss,' she barks back at you, somewhat of a sharp undertone in her voice. With that said, she strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to further puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
-				add "Contraception" to Traits of Alexandra;
+				now Sterile of Alexandra is true;
 			else:
 				LineBreak;
 				say "     As you tell her that you've decided against contraception after all, Alexandra gives you a broad grin. 'Guess that means it's time for some hard banging soon, eh? Getting me bred and full with a litter of pups?' She wiggles her breasts enticingly at you, not at all sorry that she'll still be fertile.";
@@ -437,12 +437,12 @@ to say AlexandraCCounteroffer:
 	else:
 		LineBreak;
 		say "     Telling Alexandra that you have made up your mind, the bitch crosses her arms in a sulky fashion. 'I hope you realize that the usual stuff isn't gonna work on someone like me, and condoms aren't really my thing, even if we could find [']em. But hey, I know someone who can fix me up. A doctor, holed up in the pediatrics clinic not too far from here. Her name's Medea and she'll surely be able to cook something up. I'll find my own way there and back, no need for you to come along,' she says with a somewhat sharp undertone to her voice, then strides over to the library entrance and slips out of the building. It's not hard to guess that she was actually looking forward to [if libido of Alexandra > 0]further [end if]puppies growing in her, but she gave in to your will as her master. About an hour later, the dobie comes back and somewhat sullenly takes her usual spot of guarding the entrance.";
-		add "Contraception" to Traits of Alexandra;
+		now Sterile of Alexandra is true;
 
 to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 	if HP of Alexandra is 3 or HP of Alexandra is 5: [pregnant right now]
 		say "     As you bring up the topic of getting Alexandra treatments to increase her fertility, the doberwoman gives an amused bark and shakes her head in disbelief. 'So you're really gonna make me do it? Damn boss, you really like your girls always pregnant and ready to please, eh? Though that's something that kinda shoots your plan in the foot right now. Messing with my bits down south isn't exactly the greatest idea while I'm already pregnant. It'll have to wait till this litter has been born.'";
-	else if "Contraception" is listed in Traits of Alexandra:
+	else if Sterile of Alexandra is true:
 		say "     As you bring up the topic of getting Alexandra treatments to increase her fertility, the doberwoman gives a bemused bark and shakes her head in disbelief. 'Damn boss, you really can't make up your mind, can you? Remember that little trip you made me take to avoid getting pregnant? But fine, if that's what you want, I'll go ask if she can undo it. I bet it takes a little while before things are back to normal though, so your plans for a puppy mill will have to wait.'";
 		say "     [bold type]Let her leave and be made fertile again?[roman type][line break]";
 		LineBreak;
@@ -451,7 +451,7 @@ to say AlexandraFertilityTrip: [taking her to Medea for fertility treatments]
 		if player consents:
 			LineBreak;
 			say "     Alexandra takes the command well enough and says with a chuckle, 'Medea will be oh so happy to set me right again. That girl is just a little baby-crazy, I tell ya.' Then she up close to you, giving you a wet doggy kiss and goes to slips out of the building. About an hour later, the doberwoman returns with an eager expression on her face. She looks at you happily and licks the sides of her muzzle, apparently eager to get started on a litter of puppies soon.'";
-			remove "Contraception" from Traits of Alexandra;
+			now Sterile of Alexandra is false;
 		else:
 			LineBreak;
 			say "     As you tell her to forget about it, the anthro dobie lets out an annoyed grunt. 'Make up your mind, will ya? You know where to find me if you ever do.' With that said, Alexandra stalks off, taking position at her usual guard-post.";
@@ -532,7 +532,7 @@ to say A_SarahTalk:	[Sarah]
 			say "     As you bring up Sarah, a grin spreads over Alexandra's muzzle and she lets out a chuckle. 'Yeah, you got the little bitch broken in good by now, haven't you? Even with a collar around her neck, like the pet she is deserves. The only thing missing for a typical husky slut now is a belly full of pups. Huskies really just are born sluts! You should have seen the packs of husky ho's I ran into when I was still doing patrols,' Alexandra says in a rough tone that carries some amusement with it, then goes into a lewd tale that details one situation she did encounter, eventually ending in a graphic description of [one of]a husky foursome with triple penetration[or]a literal fuck-pile of huskies[or]an alleyway gangbang[or]a bitchfight ending in lesbian sex[or]an alpha husky breeding his lined-up bitches[at random]. 'My old goodie two shoes self just stood there and couldn't help but watch after everyone involved told her to take a hike, no rescue needed,' she adds with a shrug, slightly embarrassed about the cop she was not too long ago.";
 			say "     'Now as for your slut Sarah, what's next? Gonna breed her and have some more huskies? They're real puppy machines too, you know,' the former cop says in a superior tone, amused to be talking about breeding another former human. 'And if you don't wanna do it yourself,[if player is not male]missing the equipment and all, [end if]I got some ideas of where we could find some strapping dudes to knock her up. Just imagine [one of]a towering great dane[or]a hunky doberman[or]a dalmatian stud[or]a horseman with a huge shaft[or]an anthro wolf[at random] pounding that bitch's pussy and starting a litter in her. You could sell tickets for that show!'";
 		else if libido of Alexandra is 0: [player has pups with Sarah, but not Alexandra]
-			if "Contraception" is listed in Traits of Alexandra:
+			if Sterile of Alexandra is true:
 				say "     As you bring up Sarah, a grin spreads over Alexandra's muzzle and she lets out a chuckle. 'What a nice slutty pet you've made the bitch into. Naked, collared and pregnant too, when the mood strikes, eh? Yeah, let her pop those puppies out by the dozen, she's programmed to like it, as are all husky sluts!' Tapping the side of her muzzle thoughtfully, Alexandra adds after a moment, 'You know, I don't really mind that you put me on contraceptives now. Sure, it takes a little bit of the thrill and risk out of sex, but being tied down by pups looks like a drag.' She shrugs to herself, then slides an arm around you and pulls you in to make out with her, perfectly happy to be your top bitch and leave the breeding to Sarah.";
 			else:
 				say "     As you bring up Sarah, a grin spreads over Alexandra's muzzle and she lets out a chuckle. 'What a nice slutty pet you've made the bitch into. Naked, collared and pregnant too, when the mood strikes, eh? Yeah, let her pop those puppies out by the dozen, she's programmed to like it, as are all husky sluts!' Tapping the side of her muzzle thoughtfully, Alexandra adds after a moment, 'You know, I'm kinda glad that I haven't gotten knocked up so far. Being tied down by pups looks like a drag, but I guess that's part of what makes bare sex such a thrill. The risk spices it up.' She chuckles, then slides an arm around you and pulls you in to make out with her.";
@@ -1133,7 +1133,7 @@ To impregAlexandraChance with (x - text):
 	if "Fertility Treatments" is listed in Traits of Alexandra:
 		increase AlexandraPregChance by 2; [20% extra chance]
 		increase MaxPups by 2; [2 more max pups]
-	if "Contraception" is not listed in Traits of Alexandra and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
+	if Sterile of Alexandra is false and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:
 		now AlexandraGrowingPups is a random number between 2 and MaxPups;
 		if debugactive is 1:
 			say "     Impregnation successful! [AlexandraGrowingPups] pups are growing in Alexandra now!";

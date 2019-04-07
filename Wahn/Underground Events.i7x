@@ -242,7 +242,7 @@ Instead of resolving a Trashed Refuge:
 		say "     As your thoughts wander to maybe searching in here a third time, you suddenly hear a noise behind you. Whirling around, you find yourself face to face with a many-tentacled creature. Looks like you're not the only one returning to this room to pick up some more goodies. With outstretched tentacles, the creature attacks.";
 		challenge "Tentacle Horror";
 		say "     Time to get out of here before more of those things appear. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 3; [3rd visit]
+		now Resolution of Trashed Refuge is 4; [4th visit]
 		now Trashed Refuge is resolved;
 
 Table of GameEventIDs (continued)

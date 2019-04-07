@@ -132,7 +132,7 @@ To say Plush Lion loss:
 				now noplionsex is 0;
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "Shall you [description entry]?";
+				say "[title entry]: Shall you [description entry]?";
 				if player consents:
 					let num be sortorder entry;
 					now sextablerun is 1;

@@ -399,23 +399,23 @@ When Play begins:
 	now defeated entry is "[Doran_Beat]";
 	now victory entry is "[Doran_Lose]";
 	now desc entry is "[DoranDescription]";
-	now face entry is "now a head described by this text"; [Non-infectious, descriptors assumedly irrelevant.]
-	now body entry is "that of a well-described new form put here";
-	now skin entry is "fur/scales/patterns that now cover your";
-	now tail entry is "Your tail gets a full sentence ending in a period.";
-	now cock entry is "thesaurian";
-	now face change entry is "your head changes in some descriptive manner";
-	now body change entry is "your body takes on a newly described form";
-	now skin change entry is "you gain fur/scales/skin/patterns described herein";
-	now ass change entry is "your tail or ass changes in the manner described by this text";
-	now cock change entry is "it takes on a new, kinky form";
+	now face entry is "draconic in shape, regal maw full of pearly fangs that could shred a would-be thief in a single bite"; [Non-infectious, descriptors assumedly irrelevant.]
+	now body entry is "stocky and covered in tough scales that look as though they could deflect a brave adventurer's sword. On your back, two wings are folded, ready to sent you skyward";
+	now skin entry is "impressive turquoise scales that could distract a pesky archer";
+	now tail entry is "You have a thick, draconic tail that is strong enough to dent the chestplate of a questing knight.";
+	now cock entry is "knotted dragon";
+	now face change entry is "it morphs into a more draconic shape";
+	now body change entry is "it morphs into a more draconic form";
+	now skin change entry is "your body gets covered in shiny turquoise scales";
+	now ass change entry is "it changes into a more draconic shape";
+	now cock change entry is "it takes on a more drconic shape";
 	now str entry is 17;
 	now dex entry is 24;
 	now sta entry is 16;
 	now per entry is 12;
 	now int entry is 20;
 	now cha entry is 16;
-	now sex entry is "nochange";
+	now sex entry is "Male";
 	now HP entry is 105;
 	now lev entry is 16;
 	now wdam entry is 17;
@@ -433,8 +433,8 @@ When Play begins:
 	now loot entry is "";
 	now lootchance entry is 0;
 	now scale entry is 4;
-	now body descriptor entry is "erudite";
-	now type entry is "conceptual";
+	now body descriptor entry is "draconic";
+	now type entry is "draconic";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -460,6 +460,32 @@ object	name
 Doran	"Doran"
 
 Doran is a man. Doran is in Rocky Outcropping.
+[Physical details as of game start]
+ScaleValue of Doran is 4. [horse sized]
+SleepRhythm of Doran is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Doran is 1. [1 cock]
+Cock Length of Doran is 18. [18 Inches]
+Cock Width of Doran is 15.
+Testes of Doran is 2. [2 balls]
+Cunts of Doran is 0. [0 pussy]
+Cunt Length of Doran is 0. [X Cunt]
+Cunt Width of Doran is 0. [X Cunt]
+Breasts of Doran is 0. [X nipples]
+Breast Size of Doran is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Doran is false. [can not take oversized members without pain]
+Sterile of Doran is true.
+PlayerMet of Doran is false.
+PlayerRomanced of Doran is false.
+PlayerFriended of Doran is false.
+PlayerControlled of Doran is false.
+PlayerFucked of Doran is false.
+OralVirgin of Doran is true.
+Virgin of Doran is true.
+AnalVirgin of Doran is true.
+PenileVirgin of Doran is true.
+SexuallyExperienced of Doran is false.
+MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
 the description of Doran is "[DoranLook]".
 the fuckscene of Doran is "[DoranSex]".
@@ -1339,7 +1365,7 @@ to say DoranDom_RidingPlayer: [Riding Player] [BODY MODDED]
 		else:
 			say "[one of]I can see my [DoranPlayerRegard] enjoying being ridden[or]my [DoranPlayerRegard] is so very challenging[or]don't worry, my [DoranPlayerRegard], their [gdragon] will be gentle[at random]";
 		say ".' [if player is knotted]It takes the [gdragon] a fair bit of time to engulf your dick in its entirety, contending for a fair amount of time to deal with your knot[else]Several prolonged minutes filled with the sound [ghis] grunting the [gdragon] eventually manages to engulf your dick in its entirety[end if]. [if DoranRoleIntensity is 0]Takes some time[else]Shows little interest in trying to acclimate[end if] to your size before [ghe] begins bouncing against you, [ghis] prior lubrication [if DoranRoleIntensity is 0]at least a slight balm to [ghis] rough treatment[else]making the whole affair a lot easier on you[end if].";
-	say "     [gchis] own dick[if DoranInternal is false and DoranBallModStatus > 0]and massive balls[else if DoranInternal is false]and balls[end if] slapping against you with an audible lack of reverence, [if DoranBallModStatus > 0]large gouts[else]strings[end if] of pre spurt from [ghim] to stain you[if scalevalue of player < 4] and your face[end if], [if DoranRoleIntensity is 0]any affection you might be inclined to offer in turn prevented against by [ghis] hold, intent to let the rod bounce free before you[else]inclined to return the affection by reaching out to stroke the rod as well, much to [ghis] approval[end if]. [gche] chooses to [if cocks of player > 2]move a free talon to one of your unengulfed dicks, offering a casual, passing affection to it in order to intensify[else if cocks of player is 2]move a free talon to your unengulfed dick, offering a casual, passing affection to it in order to intensify[else if cunts of player > 1]lean back, stroking one of your, previously neglected, [cunt size desc of player] cunts, offering a casual, passing affection to it in order to intensify[else if cunts of player is 1]leans back to stroke your, previously neglected, [cunt size desc of player] cunt, offering a casual, passing affection to it in order to exacerbate[else if anallevel is 3]lean back, forcing a digit past your, previously neglected, anal ring, that [ghe] might accelerate[else]continue with [ghis] tongue's attention, body smeared with pre and saliva as you are awash in [ghis] heated, panting breath, clearly eager for[end if] your eventual bliss. Loudly panting, [ghis] pursuit is utterly relentless, compelled by an overwhelming, wanton need, [if DoranRoleIntensity is 0]with little regard to the strain it puts[else]putting an increasing strain[end if] on you.";
+	say "     [gchis] own dick[if DoranInternal is false and DoranBallModStatus > 0]and massive balls[else if DoranInternal is false]and balls[end if] slapping against you with an audible lack of reverence, [if DoranBallModStatus > 0]large gouts[else]strings[end if] of pre spurt from [ghim] to stain you[if scalevalue of player < 4] and your face[end if], [if DoranRoleIntensity is 0]any affection you might be inclined to offer in turn prevented against by [ghis] hold, intent to let the rod bounce free before you[else]inclined to return the affection by reaching out to stroke the rod as well, much to [ghis] approval[end if]. [gche] chooses to [if cocks of player > 2]move a free talon to one of your unengulfed dicks, offering a casual, passing affection to it in order to intensify[else if cocks of player is 2]move a free talon to your unengulfed dick, offering a casual, passing affection to it in order to intensify[else if cunts of player > 1]lean back, stroking one of your previously neglected, [cunt size desc of player] cunts, offering a casual, passing affection to it in order to intensify[else if cunts of player is 1]leans back to stroke your previously neglected, [cunt size desc of player] cunt, offering a casual, passing affection to it in order to exacerbate[else if anallevel is 3]lean back, forcing a digit past your previously neglected, anal ring, that [ghe] might accelerate[else]continue with [ghis] tongue's attention, body smeared with pre and saliva as you are awash in [ghis] heated, panting breath, clearly eager for[end if] your eventual bliss. Loudly panting, [ghis] pursuit is utterly relentless, compelled by an overwhelming, wanton need, [if DoranRoleIntensity is 0]with little regard to the strain it puts[else]putting an increasing strain[end if] on you.";
 	say "     '[one of]A-ah[or]A-ang[or]N-nn[at random]... [one of]F-fuck[or]M-more[or]I'm g-gonna[at random]";
 	if DoranRoleIntensity is 0 and ((DoranAutofired is false and a random chance of 1 in 5 succeeds) or (DoranAutofired is true and a random chance of 2 in 3 succeeds)):
 		say "...!' Just about to break, [ghe] pulls [ghim]self free of your [cock size desc of player] dick, frotting with it[if cocks of player > 2] and one of its brothers[else if cocks of player is 2] and its brother[end if] until the both of you cry out, your [cum load size of player] load mixing with [ghis] own[if DoranBallModStatus > 0], massive release to utterly drench[else] to stain[end if] your exhausted form, a weakened laugh escaping the [gdragon]'s lips as each[if DoranBallModStatus > 0] excessive[end if] gout paints you white with cum[if cock width of player > 24 or DoranBallModStatus > 0], making a massive mess of you[end if].";

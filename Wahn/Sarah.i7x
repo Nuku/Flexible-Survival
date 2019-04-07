@@ -1182,11 +1182,11 @@ to say SarahCarlScene2:
 	say "     ([link]N[as]n[end link]) - Let them play their game in peace.";
 	if player consents:
 		say "     Walking up to the two of them, you are readily welcomed by Carl and Sarah and join them at the poker table. The three of you play for a while, having a nice and relaxing time while eating some candy on the side.";
-		increase humanity of player by 10;
+		SanBoost 10;
 		PlayerEat 5;
 	else:
 		say "     Not wanting to disturb their play, you turn your attention to other things. Still, it is good to see that the people you saved are getting along nicely.";
-		increase humanity of player by 5;
+		SanBoost 5;
 	now CarlSarahInteraction is 3; [played poker]
 	now lastCarlSarahInteraction is turns;
 

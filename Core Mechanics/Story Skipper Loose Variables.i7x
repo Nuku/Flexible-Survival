@@ -72,16 +72,28 @@ to VariableSave:
 		else if Type Entry is "list of numbers":
 			NumberListVariableSave;
 	write File of TextSave from the Table of GameTexts; [freshly made table gets saved to file]
-	write File of NumberSave from the Table of GameNumbers; [freshly made table gets saved to file]
-	write File of TruthSave from the Table of GameTruths; [freshly made table gets saved to file]
-	write File of IndexedTextSave from the Table of GameIndexedTexts; [freshly made table gets saved to file]
-	write File of TextListSave from the Table of GameTextLists; [freshly made table gets saved to file]
-	write File of NumberListSave from the Table of GameNumberLists; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "TextSave File Written.";
 	blank out the whole of Table of GameTexts; [empty out all old data]
+	write File of NumberSave from the Table of GameNumbers; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "NumberSave File Written.";
 	blank out the whole of Table of GameNumbers; [empty out all old data]
+	write File of TruthSave from the Table of GameTruths; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "TruthSave File Written.";
 	blank out the whole of Table of GameTruths; [empty out all old data]
+	write File of IndexedTextSave from the Table of GameIndexedTexts; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "IndexedTextSave File Written.";
 	blank out the whole of Table of GameIndexedTexts; [empty out all old data]
+	write File of TextListSave from the Table of GameTextLists; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "TextListSave File Written.";
 	blank out the whole of Table of GameTextLists; [empty out all old data]
+	write File of NumberListSave from the Table of GameNumberLists; [freshly made table gets saved to file]
+	if debugactive is 1:
+		say "NumberListSave File Written.";
 	blank out the whole of Table of GameNumberLists; [empty out all old data]
 
 to TextVariableSave:
@@ -124,8 +136,6 @@ to TextVariableSave:
 			now TextVarValue entry is ButterflyBreastDesc;
 		-- "ButterflyTummy":
 			now TextVarValue entry is ButterflyTummy;
-		-- "cockdata":
-			now TextVarValue entry is cockdata;
 		-- "CorbinImpregnatingCock":
 			now TextVarValue entry is CorbinImpregnatingCock;
 		-- "descr":
@@ -196,8 +206,6 @@ to TextVariableSave:
 			now TextVarValue entry is hdformname;
 		-- "headadjdata":
 			now TextVarValue entry is headadjdata;
-		-- "headdata":
-			now TextVarValue entry is headdata;
 		-- "HighestPlayerStat":
 			now TextVarValue entry is HighestPlayerStat;
 		-- "horndata":
@@ -234,10 +242,6 @@ to TextVariableSave:
 			now TextVarValue entry is LarissaTail;
 		-- "LarissaTFText":
 			now TextVarValue entry is LarissaTFText;
-		-- "larmdata":
-			now TextVarValue entry is larmdata;
-		-- "llegdata":
-			now TextVarValue entry is llegdata;
 		-- "Lusting":
 			now TextVarValue entry is Lusting;
 		-- "musicmessage":
@@ -278,12 +282,6 @@ to TextVariableSave:
 			now TextVarValue entry is pfpskin;
 		-- "ppcolor":
 			now TextVarValue entry is ppcolor;
-		-- "rarmdata":
-			now TextVarValue entry is rarmdata;
-		-- "ridemessage":
-			now TextVarValue entry is ridemessage;
-		-- "rlegdata":
-			now TextVarValue entry is rlegdata;
 		-- "sangr":
 			now TextVarValue entry is sangr;
 		-- "Scenario":
@@ -296,12 +294,6 @@ to TextVariableSave:
 			now TextVarValue entry is slutname;
 		-- "StellaNPCInt":
 			now TextVarValue entry is StellaNPCInt;
-		-- "tempGorillaName1":
-			now TextVarValue entry is tempGorillaName1;
-		-- "tempGorillaName2":
-			now TextVarValue entry is tempGorillaName2;
-		-- "torsodata":
-			now TextVarValue entry is torsodata;
 		-- "ubpreg":
 			now TextVarValue entry is ubpreg;
 		-- "VikingKidShape":
@@ -559,8 +551,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is bradfordBountyNum;
 		-- "bradfordstory":
 			now NumberVarValue entry is bradfordstory;
-		-- "breastdata":
-			now NumberVarValue entry is breastdata;
 		-- "BrennanRelationship":
 			now NumberVarValue entry is BrennanRelationship;
 		-- "BrianOral":
@@ -631,8 +621,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is CarlSarahInteraction;
 		-- "CarlSarahSex":
 			now NumberVarValue entry is CarlSarahSex;
-		-- "CarlShower":
-			now NumberVarValue entry is CarlShower;
 		-- "CassandraFucked":
 			now NumberVarValue entry is CassandraFucked;
 		-- "catdogstate":
@@ -2651,8 +2639,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is TehuantlTimer;
 		-- "TempClearBypass":
 			now NumberVarValue entry is TempClearBypass;
-		-- "tempGorillaGender":
-			now NumberVarValue entry is tempGorillaGender;
 		-- "templust":
 			now NumberVarValue entry is templust;
 		-- "tempnum":
@@ -3811,8 +3797,6 @@ to VariableTextLoad:
 					now ButterflyBreastDesc is TextVarValue entry;
 				-- "ButterflyTummy":
 					now ButterflyTummy is TextVarValue entry;
-				-- "cockdata":
-					now cockdata is TextVarValue entry;
 				-- "CorbinImpregnatingCock":
 					now CorbinImpregnatingCock is TextVarValue entry;
 				-- "descr":
@@ -3883,8 +3867,6 @@ to VariableTextLoad:
 					now hdformname is TextVarValue entry;
 				-- "headadjdata":
 					now headadjdata is TextVarValue entry;
-				-- "headdata":
-					now headdata is TextVarValue entry;
 				-- "HighestPlayerStat":
 					now HighestPlayerStat is TextVarValue entry;
 				-- "horndata":
@@ -3921,10 +3903,6 @@ to VariableTextLoad:
 					now LarissaTail is TextVarValue entry;
 				-- "LarissaTFText":
 					now LarissaTFText is TextVarValue entry;
-				-- "larmdata":
-					now larmdata is TextVarValue entry;
-				-- "llegdata":
-					now llegdata is TextVarValue entry;
 				-- "Lusting":
 					now Lusting is TextVarValue entry;
 				-- "musicmessage":
@@ -3965,12 +3943,6 @@ to VariableTextLoad:
 					now pfpskin is TextVarValue entry;
 				-- "ppcolor":
 					now ppcolor is TextVarValue entry;
-				-- "rarmdata":
-					now rarmdata is TextVarValue entry;
-				-- "ridemessage":
-					now ridemessage is TextVarValue entry;
-				-- "rlegdata":
-					now rlegdata is TextVarValue entry;
 				-- "sangr":
 					now sangr is TextVarValue entry;
 				-- "Scenario":
@@ -3983,12 +3955,6 @@ to VariableTextLoad:
 					now slutname is TextVarValue entry;
 				-- "StellaNPCInt":
 					now StellaNPCInt is TextVarValue entry;
-				-- "tempGorillaName1":
-					now tempGorillaName1 is TextVarValue entry;
-				-- "tempGorillaName2":
-					now tempGorillaName2 is TextVarValue entry;
-				-- "torsodata":
-					now torsodata is TextVarValue entry;
 				-- "ubpreg":
 					now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
@@ -4255,8 +4221,6 @@ to VariableNumberLoad:
 					now bradfordBountyNum is numberVarValue entry;
 				-- "bradfordstory":
 					now bradfordstory is numberVarValue entry;
-				-- "breastdata":
-					now breastdata is numberVarValue entry;
 				-- "BrennanRelationship":
 					now BrennanRelationship is numberVarValue entry;
 				-- "BrianOral":
@@ -4327,8 +4291,6 @@ to VariableNumberLoad:
 					now CarlSarahInteraction is numberVarValue entry;
 				-- "CarlSarahSex":
 					now CarlSarahSex is numberVarValue entry;
-				-- "CarlShower":
-					now CarlShower is numberVarValue entry;
 				-- "CassandraFucked":
 					now CassandraFucked is numberVarValue entry;
 				-- "catdogstate":
@@ -6345,8 +6307,6 @@ to VariableNumberLoad:
 					now TehuantlTimer is numberVarValue entry;
 				-- "TempClearBypass":
 					now TempClearBypass is numberVarValue entry;
-				-- "tempGorillaGender":
-					now tempGorillaGender is numberVarValue entry;
 				-- "templust":
 					now templust is numberVarValue entry;
 				-- "tempnum":

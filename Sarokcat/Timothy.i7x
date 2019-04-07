@@ -34,6 +34,32 @@ object	name
 Timothy	"Timothy"
 
 Timothy is a man.
+[Physical details as of game start]
+ScaleValue of Timothy is 3. [human sized]
+SleepRhythm of Timothy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Timothy is 1. [X cock]
+Cock Length of Timothy is 8. [X Inches]
+Cock Width of Timothy is 4.
+Testes of Timothy is 2. [X balls]
+Cunts of Timothy is 1. [X pussy]
+Cunt Length of Timothy is 16. [X Cunt]
+Cunt Width of Timothy is 6. [X Cunt]
+Breasts of Timothy is 2. [X nipples]
+Breast Size of Timothy is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Timothy is false. [can not take oversized members without pain]
+Sterile of Timothy is false.
+PlayerMet of Timothy is false.
+PlayerRomanced of Timothy is false.
+PlayerFriended of Timothy is false.
+PlayerControlled of Timothy is false.
+PlayerFucked of Timothy is false.
+OralVirgin of Timothy is false.
+Virgin of Timothy is false.
+AnalVirgin of Timothy is false.
+PenileVirgin of Timothy is false.
+SexuallyExperienced of Timothy is true.
+MainInfection of Timothy is "Hermaphrodite Gryphon".
 The description of Timothy is "[TimothyDesc]".
 
 to say TimothyDesc:

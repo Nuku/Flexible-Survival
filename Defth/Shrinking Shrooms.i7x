@@ -173,7 +173,7 @@ Instead of resolving Little trouble:
 		choose a blank row in table of fucking options;
 		now title entry is "Eat one of the mushrooms and enter through the hole";
 		now sortorder entry is 2;
-		now description entry is "You use the shrooms to shrink yourself until you can fit into the hole in front of you";
+		now description entry is "Use the shrooms to shrink yourself until you can fit into the hole in front of you";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

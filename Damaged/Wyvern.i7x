@@ -530,7 +530,7 @@ to say wyvmale_1: [Cunt Catching]
 	if player consents:
 		say "     Who should be the target of his release? Shall you take the brunt of his load? Otherwise, you'll give the beast a taste of his own medicine.";
 		if player consents:
-			say "     At the very last second, you pull free of the monster's dick, grinding your backside against it for a few brief seconds before its owner roars out, painting you[if scalevalue of player is 3] utterly[else]r ass and back[end if] with his virile seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his own[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his own[else]your cunt[sfn] aching and staining the dragon's scales with your sexual fluids, mixing with his own[end if].";
+			say "     At the very last second, you pull free of the monster's dick, grinding your backside against it for a few brief seconds before its owner roars out, painting [if scalevalue of player is 3]you utterly[else]your ass and back[end if] with his virile seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his own[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his own[else]your cunt[sfn] aching and staining the dragon's scales with your sexual fluids, mixing with his own[end if].";
 			now tempnum is 1;
 		else:
 			say "     At the very last second, you pull free of the monster's dick, pulling to grind your crotch against it for a few brief seconds before its owner roars out, painting the beast in his own, voluminous seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his own[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his own[else]your cunt[sfn] aching and staining the dragon's scales with your sexual fluids, mixing with his own[end if].";
@@ -553,13 +553,13 @@ to say wyvmale_2: [Anal Catching]
 	if player consents:
 		say "     Who should be the target of his release? Shall you take the brunt of his load? Otherwise, you'll give the beast a taste of his own medicine.";
 		if player consents:
-			say "     At the very last second, you pull free of the monster's dick, grinding your backside against it for a few brief seconds before its owner roars out, painting you[if scalevalue of player is 3] utterly[else]r ass and back[end if] with his virile seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his[else if cunts of player > 1]your cunts aching and staining the dragon's scales with your sexual fluids, mixing with his own[else]body writhing and twisting in insatiable need[end if].";
+			say "     At the very last second, you pull free of the monster's dick, grinding your backside against it for a few brief seconds before its owner roars out, painting [if scalevalue of player is 3]you utterly[else]your ass and back[end if] with his virile seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his[else if cunts of player > 1]your cunts aching and staining the dragon's scales with your sexual fluids, mixing with his own[else]body writhing and twisting in insatiable need[end if].";
 			now tempnum is 1;
 		else:
 			say "     At the very last second, you pull free of the monster's dick, pulling to grind your crotch against it for a few brief seconds before its owner roars out, painting the beast in his own, voluminous seed. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales along with his[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales along with his[else if cunts of player > 1]your cunts aching and staining the dragon's scales with your sexual fluids, mixing with his own[else]body writhing and twisting in insatiable need[end if].";
 			now tempnum is 0;
 	else:
-		say "     With one final plunge, you hilt the monster's dick within you[if scalevalue of player < 5] to the best of your ability[end if], more than enough to make its owner roar out, assaulting you with gout after successive gout flooding your bowels[if scalevalue of player < 5], causing your body to visibly bloat until it sputters from your stuffed hole[else]until it begins to ooze from your stuffed hole[end if]. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales[else if cunts of player > 1]your cunts aching and staining the dragon's scales with your sexual fluids[else]body writhing and twisting in insatiable need[end if].";
+		say "     With one final plunge, you hilt the monster's dick within you[if scalevalue of player < 5] to the best of your ability[end if], more than enough to make its owner roar out, assaulting you with gout after successive gout flooding your bowels[if scalevalue of player < 5], causing your body to visibly bloat until it sputters from your stuffed hole[else]until it begins to ooze from your stuffed hole[end if]. Succumbing to your own bliss, [if cocks of player > 1]your cocks fire off your [cum load size of player] load, staining the beast's scales[else if cocks of player is 1]your cock fires off your [cum load size of player] load, staining the beast's scales[else if cunts of player > 1]your cunts aching and staining the dragon's scales with your sexual fluids[else]body writhing and twisting in insatiable need[end if].[mimpregchance]";
 		now tempnum is 0;
 	say "     Taking a moment to catch your breath, you eventually pull yourself free of the wyvern and his tool, its audible departure from your ass loudly echoing through the air. You set him off with a smack, though his lingering exhaustion makes him slow to comply. Satisfied, you go on your merry way... Though now perhaps a little sore from the whole affair[if tempnum is 1], to say nothing of being a cum-drenched mess[end if].";
 
@@ -848,14 +848,13 @@ to wyvore:
 							say ". Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
 					else:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
+					SanBoost 3;
 					if a random chance of 2 in 3 succeeds:
 						PlayerDrink 2;
 						PlayerEat 1;
 					else:
 						PlayerDrink 1;
 					now boundrecover is false;
-					if humanity of player > 100, now humanity of player is 100;
 				else:
 					if boundsegment is 1:
 						say "     You actively attempt to endure the wyvern's influence on you";
@@ -1150,8 +1149,7 @@ to wyvorgy:
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 					LineBreak;
 					wyvernmatron;
 					wyvernsanityroll;

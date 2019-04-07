@@ -59,6 +59,32 @@ object	name
 Snips	"Snips"
 
 Snips is a man.
+[Physical details as of game start]
+ScaleValue of Snips is 1. [human sized]
+SleepRhythm of Snips is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Snips is 1. [X cock]
+Cock Length of Snips is 1. [X Inches]
+Cock Width of Snips is 1.
+Testes of Snips is 2. [X balls]
+Cunts of Snips is 0. [X pussy]
+Cunt Length of Snips is 0. [X Cunt]
+Cunt Width of Snips is 0. [X Cunt]
+Breasts of Snips is 0. [X nipples]
+Breast Size of Snips is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Snips is false. [can not take oversized members without pain]
+Sterile of Snips is true.
+PlayerMet of Snips is false.
+PlayerRomanced of Snips is false.
+PlayerFriended of Snips is false.
+PlayerControlled of Snips is false.
+PlayerFucked of Snips is false.
+OralVirgin of Snips is true.
+Virgin of Snips is true.
+AnalVirgin of Snips is true.
+PenileVirgin of Snips is true.
+SexuallyExperienced of Snips is false.
+MainInfection of Snips is "".
 The description of Snips is "[Snipsdesc]".
 
 instead of sniffing the Cute Crab:
@@ -150,16 +176,16 @@ to say SnipsTalk2:
 	if number of bunkered people + number of booked people < 4:
 		say "     You settle yourself down on the floor next to Snips's cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering. Eventually, he loosens his grip, instead deciding that it would be more fun to play in the dust. You slowly draw shapes in said dust lightly with your finger, glancing over at the cute little crab, and you see him mimicking your actions with his pincer. While the shapes he draws aren't exactly what you would call shapes, Snips seems to be quite proud of them. Leaning down, you begin to draw a new shape, one you think that is appropriate for him.";
 		say "     This time, you draw the constellation of Cancer, the great crab. Your little friend seems ecstatic, dancing around and blowing bubbles, although you're not sure if that's because he recognizes a fellow crustacean or simply because you are spending time with him. Either way it brings a smile to your lips. Once he begins to slow down, you gently pick him up and place him at the back of his cubicle where he sleeps. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
-		increase humanity of player by 10;
+		SanBoost 10;
 	else if number of bunkered people + number of booked people > 4:
 		say "     You settle yourself down on the floor next to Snips's cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering.";
 		if ElijahChar-H is "2":
 			say "     Eventually, he loosens his grip, instead scuttling back to his home and grabbing his toy crab friend, reminding you of a toddler grabbing its favorite stuffed animal. As the two of them continue to play around in the dirt, you notice the remains of a past meal in the dirt, mostly some sort of plant life. Snatching up a piece, you place it closer to Snips, wondering if he is hungry or not. He doesn't seem particularly interested in it, that is until you look away. He creeps closer to the food that you placed on the dirt and brings his little friend with him. It ends up becoming a game, with you looking away and glancing back quickly to see if you can catch him, and every time you act like you haven't noticed. When Snips is right on top of the food you look away for a few seconds and are able to hear his munching. Quickly turning your attention back to him, you see that the little bit of food is now missing.";
 			say "     Raising an eyebrow at your cute little crab, he quickly points one claw at the toy Elijah gave him. You can't help but burst out laughing, once again being reminded of a child You can almost hear his internal voice say, 'It was them, not me!' Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
-			increase humanity of player by 10;
+			SanBoost 10;
 		else:
 			say "     Eventually he loosens his grip, instead deciding that it would be more fun to play in the sand. Picking up a small pebble in the dirt, you hold it out to Snips, who eagerly grabs it from your fingers. He begins to do a strange sort of scuttling dance with the pebble held high like a trophy. You can't help but laugh a bit at the cute little guy's antics, your laughing though gives the crustacean pause. Looking up at you with those huge eyes, it almost feels like he is looking deep inside of your soul. Well it would if not even a second later, he scuttles quickly back to his home and gently places the pebble that you gave him right next to the opening. Deciding that he has had enough of playtime, Snips turns to face you before raising up a single claw almost to say goodbye. He makes his way back into his little tunnel, obviously tuckered out. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
-			increase humanity of player by 10;
+			SanBoost 10;
 
 Section 1.3 - Cute Crab Event
 
@@ -227,6 +253,32 @@ object	name
 Dinah	"Dinah"
 
 Dinah is a woman.
+[Physical details as of game start]
+ScaleValue of Dinah is 1. [cat sized]
+SleepRhythm of Dinah is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Dinah is 0. [X cock]
+Cock Length of Dinah is 0. [X Inches]
+Cock Width of Dinah is 0.
+Testes of Dinah is 0. [X balls]
+Cunts of Dinah is 1. [X pussy]
+Cunt Length of Dinah is 2. [X Cunt]
+Cunt Width of Dinah is 1. [X Cunt]
+Breasts of Dinah is 6. [X nipples]
+Breast Size of Dinah is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Dinah is false. [can not take oversized members without pain]
+Sterile of Dinah is true.
+PlayerMet of Dinah is false.
+PlayerRomanced of Dinah is false.
+PlayerFriended of Dinah is false.
+PlayerControlled of Dinah is false.
+PlayerFucked of Dinah is false.
+OralVirgin of Dinah is true.
+Virgin of Dinah is true.
+AnalVirgin of Dinah is true.
+PenileVirgin of Dinah is true.
+SexuallyExperienced of Dinah is false.
+MainInfection of Dinah is "".
 The description of Dinah is "[DinahDesc]".
 
 instead of sniffing Dinah:
@@ -419,6 +471,32 @@ object	name
 Chirpy	"Chirpy"
 
 Chirpy is a woman.
+[Physical details as of game start]
+ScaleValue of Chirpy is 1. [parrot sized]
+SleepRhythm of Chirpy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Chirpy is 0. [X cock]
+Cock Length of Chirpy is 0. [X Inches]
+Cock Width of Chirpy is 0.
+Testes of Chirpy is 0. [X balls]
+Cunts of Chirpy is 1. [X pussy]
+Cunt Length of Chirpy is 2. [X Cunt]
+Cunt Width of Chirpy is 1. [X Cunt]
+Breasts of Chirpy is 0. [X nipples]
+Breast Size of Chirpy is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Chirpy is false. [can not take oversized members without pain]
+Sterile of Chirpy is true.
+PlayerMet of Chirpy is false.
+PlayerRomanced of Chirpy is false.
+PlayerFriended of Chirpy is false.
+PlayerControlled of Chirpy is false.
+PlayerFucked of Chirpy is false.
+OralVirgin of Chirpy is true.
+Virgin of Chirpy is true.
+AnalVirgin of Chirpy is true.
+PenileVirgin of Chirpy is true.
+SexuallyExperienced of Chirpy is false.
+MainInfection of Chirpy is "".
 The description of Chirpy is "[ChirpyDesc]".
 
 instead of sniffing Chirpy:
@@ -578,6 +656,32 @@ object	name
 Hobo	"Hobo"
 
 Hobo is a man.
+[Physical details as of game start]
+ScaleValue of Hobo is 2. [dog sized]
+SleepRhythm of Hobo is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Hobo is 1. [X cock]
+Cock Length of Hobo is 6. [X Inches]
+Cock Width of Hobo is 3.
+Testes of Hobo is 2. [X balls]
+Cunts of Hobo is 0. [X pussy]
+Cunt Length of Hobo is 0. [X Cunt]
+Cunt Width of Hobo is 0. [X Cunt]
+Breasts of Hobo is 6. [X nipples]
+Breast Size of Hobo is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Hobo is false. [can not take oversized members without pain]
+Sterile of Hobo is true.
+PlayerMet of Hobo is false.
+PlayerRomanced of Hobo is false.
+PlayerFriended of Hobo is false.
+PlayerControlled of Hobo is false.
+PlayerFucked of Hobo is false.
+OralVirgin of Hobo is true.
+Virgin of Hobo is true.
+AnalVirgin of Hobo is true.
+PenileVirgin of Hobo is true.
+SexuallyExperienced of Hobo is false.
+MainInfection of Hobo is "".
 The description of Hobo is "[HoboDesc]".
 
 instead of sniffing the Helper Dog:

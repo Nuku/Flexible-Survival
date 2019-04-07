@@ -70,6 +70,32 @@ object	name
 Colleen	"Colleen"
 
 Colleen is a woman.
+[Physical details as of game start]
+ScaleValue of Colleen is 3. [human sized]
+SleepRhythm of Colleen is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Colleen is 0. [X cock]
+Cock Length of Colleen is 0. [X Inches]
+Cock Width of Colleen is 0.
+Testes of Colleen is 0. [X balls]
+Cunts of Colleen is 1. [X pussy]
+Cunt Length of Colleen is 6. [X Cunt]
+Cunt Width of Colleen is 4. [X Cunt]
+Breasts of Colleen is 2. [X nipples]
+Breast Size of Colleen is 3. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Colleen is false. [can not take oversized members without pain]
+Sterile of Colleen is true.
+PlayerMet of Colleen is false.
+PlayerRomanced of Colleen is false.
+PlayerFriended of Colleen is false.
+PlayerControlled of Colleen is false.
+PlayerFucked of Colleen is false.
+OralVirgin of Colleen is true.
+Virgin of Colleen is true.
+AnalVirgin of Colleen is true.
+PenileVirgin of Colleen is true.
+SexuallyExperienced of Colleen is false.
+MainInfection of Colleen is "human".
 The description of Colleen is "[CollenStatus]".
 The conversation of Colleen is { "Woof!" }.
 the linkaction of Colleen is "[ColleenLinkAction]".
@@ -305,7 +331,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
 					say "     'See isn't it just better to be like this!' Colleen says as she wags her tail happily at you. 'I'm so glad you agree with me!'";
@@ -324,7 +350,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 					stop the action;
 				else:
@@ -347,7 +373,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 			else:
 				say "     'Well ok, the spray bottle is full so it should still work on you. Want me to spray you now?'";
@@ -363,7 +389,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
 					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
@@ -379,7 +405,7 @@ carry out ColleenSpraying:
 			now bodydesc of player is "unchanged";
 			now bodytype of player is "human";
 			now SleepRhythm of player is 0;
-			increase humanity of player by 20;
+			SanBoost 20;
 			increase ColleenSpray by 1;
 	else if ColleenSpray is 1:
 		say "     'Ok, let's try that again! I only have about enough for one more dose after this,' Colleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time. Perhaps the chemicals are losing their effectiveness?";
@@ -389,11 +415,11 @@ carry out ColleenSpraying:
 		now bodydesc of player is "unchanged";
 		now bodytype of player is "human";
 		now SleepRhythm of player is 0;
-		increase humanity of player by 20;
+		SanBoost 20;
 		increase ColleenSpray by 1;
 	else if ColleenSpray is 2:
 		say "     'Well, alright. It didn't seem to help as much last time though, and there isn't much left either,' Colleen says as she once again sprays that strange liquid on you, making your body tingle slightly. Although you can't seem to notice any real changes, you still somehow feel slightly more human afterwards.";
-		increase humanity of player by 10;
+		SanBoost 10;
 		increase ColleenSpray by 1;
 	else if ColleenSpray is 99 and Sarah is bunkered:
 		say "     'Sorry, but I don't have any left. I tried to use my spray to change back after these husky features started to appear, but it never seemed to last. I ended up using it all to try and go back to normal, but it still came back after a little while. This means we probably shouldn't have any more fun, even as great as it was. If we go at it again, I might end up another slutty husky bitch.' She tries to stay calm, but she's clearly upset that she's going to be stuck like this. Though her tail wags happily at the mention of becoming a bitch, so it seems her body's interested even if her mind's not accepted it yet.";
@@ -432,18 +458,22 @@ to say SexWithColleen:
 				WaitLineBreak;
 				say "     You can see your pet Sarah whispering soft words of encouragement to your newest bitch, even as she runs her own husky paws through the fur of your latest fuckpet, the sight making you feel a swell of pride in your well trained little slutty first pet as she helps you train your newest pet properly. Enjoying the moment, you begin rolling your hips forward, pushing yourself into her again and again and making her rock back up against Sarah behind her as you fuck her like the animalistic little pet you are training her to be, a lusty little toy for your pleasure. You grin as she orgasms around you from the feel of your cock within her, and the soft teasing of her body by Sarah, her mind obviously clouded with pleasure as she stares at you dreamily through half lidded eyes, her long canine tongue hanging out the side of her mouth as she pants eagerly for more.";
 				say "Her orgasm only serves to encourage you to go harder and faster, as her passage massages your cock with every thrust, as if begging you to spill your fertile seed deep into her body. Before long you are more than ready to do so, and with a soft grunt your body tenses as your cock fires its load deep into her slutty bitches womb, making her cry out as a second orgasm rushes through her body so soon after the first. A tired grin spreads across your face as you hold yourself inside her shaking body, the pleasure obviously more than Colleen can bear as she has her eyes closed and is panting harshly.";
+				NPCSexAftermath Colleen receives "PussyFuck" from Player;
 				WaitLineBreak;
 				say "     You notice with approval that your other pet is taking this opportunity to whisper more lovely words into her ears, telling your newest pet all about the joys of being filled with your wonderful seed, and how much fun it would be to grow round and pregnant with their master's lovely puppies... Maybe you should reward your other little pet with a good fuck of her own after all this, you think, as you eventually pull yourself out of your exhausted new bitch, and go to clean yourself up. Glancing back you can see that Sarah has taken it upon herself like a good little pet to lick your newest pet clean on her own, the sight of your two pets on the floor together making you smile at what a lucky master you are...";
 				now lastfuck of Colleen is turns;
 				infect "Alpha Husky";
 			else:
-				say "     'Master wants to play with his bitch?' the bitch formerly known as Colleen asks eagerly, as she looks up to see just how you want to play with her body today. Smiling at your eager little bitch, you decide it wouldn't be fair to just play with one of your pets, and gesture for your other pet to come over even as you gesture for Colleen to lie down on her back. Your happy bitch lies back eagerly, spreading her legs wide before you as she lies back down on the ground, her tail wagging along between her legs as you slowly move between them. The heat scent of her damp pussy calls to you, even as it leaks a soft trickle of eager juices out into her fur, you grin as you lower your face down to play with your pet, as you can see your other pet moving up to lick and suckle at your newest bitch's breasts, making her gasp.";
+				say "     'Mistress wants to play with her bitch?' the bitch formerly known as Colleen asks eagerly, as she looks up to see just how you want to play with her body today. Smiling at your eager little bitch, you decide it wouldn't be fair to just play with one of your pets, and gesture for your other pet to come over even as you gesture for Colleen to lie down on her back. Your happy bitch lies back eagerly, spreading her legs wide before you as she lies back down on the ground, her tail wagging along between her legs as you slowly move between them. The heat scent of her damp pussy calls to you, even as it leaks a soft trickle of eager juices out into her fur, you grin as you lower your face down to play with your pet, as you can see your other pet moving up to lick and suckle at your newest bitch's breasts, making her gasp.";
 				say "     Deciding to enjoy your play time properly, you slowly tease your bitch by running your hands through the fur of her inner thighs, watching her buck her hips helplessly as Sarah tugs and licks at her breasts. The sight of your newly collared bitch writhing underneath your soft touches makes your own pussy dampen in arousal, as you begin to tease her slit with your hands, occasionally leaning closer to run your tongue across them as she shudders in pleasure above you. You can hear your first pet whispering soft words of encouragement to your newest acquisition, telling her all about the joys of being a lovely little slutty pet, with a kind and caring owner to take care of all your kinky husky needs. The words make you smile even as Colleen moans in pleasure at the happy and slutty images your pet paints for her of life as a collared pet.";
 				WaitLineBreak;
 				say "     You bask in pride at having trained your little slutty Sarah pet so well that she is eagerly helping you break in your newest of pets, and decide to give your newest bitch a treat to go along with her training. Burying your face in your bitches crotch again, you begin to lick and tease her damp sex with vigor, your hands working her clit pleasurably, even as your tongue expertly probes her warm velvety depths. You savor the lovely lusty taste of her husky juices on your tongue even as you probe into her deeper, using your fingers as well as your tongue now to tease and excite her body. She obviously can't much of this treatment, or the soft whispers of your other pet, and soon fills the bunker with a loud howl of orgasm as her body spasms underneath you, and you lick your lips even as your hands and face are drenched in her soft juices.";
 				say "     Even after your pet has had her own orgasm, you still need to enjoy your own. Gesturing for your other pet to back off slightly, you crawl up your pets shaking body, enjoying her look of submissive joy as you move all the way up her body, until you can position your own aroused sex in front of her husky muzzle. Colleen needs no further encouragement, and has her muzzle buried in your snatch like a good little pet as soon as you settle yourself above her. You moan as she licks and teases your clit with her soft lips, before beginning to lap happily at your juices, her tongue probing your slit eagerly.";
 				WaitLineBreak;
 				say "     She gasps underneath you and begins to lick even more enthusiastically, making you shudder as you look back over your shoulder to see that your other pet has taken your place between her legs, and is licking at teasing at your bitch's swollen, heat-filled sex even as your bitch lashes your own with her soft tongue. Enjoying this powerful moment with your two pets, and your body already hot and excited, it isn't long before your own orgasm wracks your body with pleasure, your newly collared bitches muzzle is coated in your juices even as she tries to eagerly swallow as much of it as she can. Your legs unsteady with the intense pleasure, you manage to stagger to your feet, and look back even as your first pet brings your newest pet to another orgasm of her own with her talented husky tongue, and smile at what good little well trained pets you have.";
+				NPCSexAftermath Player receives "OralPussy" from Colleen;
+				NPCSexAftermath Colleen receives "OralPussy" from Player;
+				NPCSexAftermath Sarah receives "OralPussy" from Colleen;
 				now lastfuck of Colleen is turns;
 				infect "Alpha Husky";
 		else if ColleenSlut is 1: [stray Colleen, fucked by the player]
@@ -453,6 +483,7 @@ to say SexWithColleen:
 				say "     You grin and groan in pleasure as you reach forward and grip and massage her soft breasts where they hang down from her chest, using them as handholds as you lean forward over her back. Her tail wags against the side of your chest as she pushes herself back to meet your every thrust, obviously as eager and wanton a bitch now, as any you have ever seen. You enjoy the changes in her personality almost as much as you are enjoying the changes to her body, loving the way she yips and whines and begs underneath you as she submits just as willingly to you as you know she now would to anything with a cock, her mind truly matching her body now, a slutty bitch both inside and outside.";
 				WaitLineBreak;
 				say "     Each thrust inside her hot, tight form brings you closer and closer to completion, as you pant and play with her body eagerly, the pressure and pleasure building up ever higher until with one last thrust your cock explodes within her, sending your seed straight into her needy womb as she lets loose another long howl of pleasure as she orgasms as well. You lie there locked with your bitch for several minutes as you both recover, before pulling yourself out of her slutty form, letting her collapse to the ground helplessly as she pants from the sheer pleasure acting out her role as a husky slut brings her.";
+				NPCSexAftermath Colleen receives "PussyFuck" from Player;
 				now lastfuck of Colleen is turns;
 			else:
 				say "     'You want to play too?' the slutty little husky asks as you approach her, her eyes wandering over your female body with interest as her tail wags eagerly behind her, as she begins to crawl towards you on all fours. Her position makes you grin as you can feel your own body wanting to go down on all fours and join her down there to play. Deciding to give in to the desire, you are soon on all fours just like Colleen, and you grin as she rubs her body up against your own, enjoying the play as you stroke and pet the stray bitch in return. Soon your soft touches have her so excited that she pounces on you eagerly, knocking you both to the ground as you roll around together on the floor touching and tickling each other as you play together on the ground like dogs.";
@@ -476,6 +507,7 @@ to say SexWithColleen:
 			if player is male:
 				say "     'You will never become a happy, slutty husky bitch like us with that!' Colleen says as she stares at your manhood, 'Though it does look very nice on you... Maybe I should help you out with your problems, and get a little treat at the same time...' the stray husky says as she grins at you for a minute, before dropping to all fours and burying her face in your crotch. You groan in pleasure as the slutty husky takes charge of your body and wraps her muzzle around your new cock, licking and sucking eagerly even as she rubs your balls with her paws.";
 				say "     The pleasure builds quickly as her expert mouth works your shaft, and soon you are panting in pleasure as you shoot your seed into her eager mouth, her muzzle locking tight around your shaft as she suckles on it happily. All too soon your powerful orgasm is spent, and while she massages your balls for minute longer as if trying to coax every drop of male seed out of you, she soon releases your shaft and sits back on her haunches happily, licking her lips. As you recover from your orgasm, you realize your shaft almost seems to be shorter, and you shudder as your body starts to change.";
+				NPCSexAftermath Colleen receives "OralCock" from Player;
 				infect "Female Husky";
 				infect "Female Husky";
 				increase ColleenAlpha by 1;
@@ -486,6 +518,7 @@ to say SexWithColleen:
 				WaitLineBreak;
 				say "     Soon you can feel the large knot at the base of the cock pressing up against your outer lips, and Colleen lifts her head up from your neck to whisper into your ear again. 'Feel that thick knot? Doesn't it make you feel so good as it rubs up against you?' she says as she presses the cock into you even further, your lips starting to part to allow the thick bulge into you. 'Just imagine how much better it would be if it was a real cock, a real dogs knot swelling up as it pushes into your body, the warm thick cock throbbing with life as he shoves it into you with one swift push,' she whispers, as suiting actions to words she draws the cock toy back and then shoves it into you in one swift movement, the knot forcing its way into you, as your pussy closes up behind it, sealing it into you.";
 				say "     The feeling makes you gasp in pleasure at being so very tightly filled and the idea of an actual living cock throbbing with warmth within you fills your mind. 'Just imagine that lovely living dog cock, its knot swelling so he can ensure none of his warm life giving seed can escape from your needy husky womb, making sure with each short swift thrust into you that you are going to carry his pups like a good little husky bitch,' she says as she moves the trapped toy within you in time to her words, making you moan as you writhe under her touch and the dirty images that her words are painting. Before you know it you are panting and shuddering in orgasm, as Colleen brings you again and again with that canine cock and her hands. Eventually she pulls the toy out of you with a sodden, popping noise, before smiling down at you where you lie slumped up against the wall in exhaustion. 'Wouldn't the life of a husky bitch just be great? Why don't you come back and talk to me about it again sometime,' she says with a chuckle as she walks off, idly licking your juices off of the canine toy as she does.";
+				NPCSexAftermath Player receives "PussyDildoFuck" from Colleen;
 				increase ColleenAlpha by 1;
 				infect "Female Husky";
 				infect "Female Husky";
@@ -500,6 +533,7 @@ to say SexWithColleen:
 				if player is male:
 					say "     Colleen's face brightens and her husky muzzle pulls back in a happy smile as you fix the collar around her throat, settling it securely so her new nametag can shine out proudly for all to see. 'Now Colleen's name is Bitch!' the newly collared Bitch proclaims proudly as she stares up at you in adoration. 'Thank you so much for taking me in master! Bitch will work hard to be a good bitch for her master!' the formerly independent husky girl says even as she rubs herself up against your body eagerly. 'How would master like to use his new little bitch?' Your pet asks you as she looks up at you eagerly, her position in front of you giving you an idea of a better use to put her mouth to. You grin as you reach down to stroke your cock, her eyes following your every movement eagerly as your [cock of player] rod quickly grows erect at just a touch, the heat scent of a needy bitch all the encouragement it needs to rise to the occasion.";
 					say "     'Why don't you worship your new master's rod,' you say with a grin. Her face lights up eagerly at your suggestion, as she eagerly crawls forward to nuzzle your cock with her soft nose, before running her tongue along it eagerly. You groan in pleasure as she begins to lick and suck on the tip of your cock, tracing her teeth along the base of your cock lightly and making you squirm and thrust forward into her mouth as she does her best to swallow your entire cock into her muzzle. Your new bitch moans around your cock, loving the taste of your thick meat, even as she applies herself to it with renewed vigor, taking to her new submissive role like she was born to it as she begs for you to fill her mouth with your seed. Soon you reward your newest pet with her treat, as your cock sends its sperm shooting deep into her mouth, while she works hard to swallow every drop. Eventually spent, you relax backwards, your newest bitch licking your cock and balls clean even as she enjoys the feel of your seed filling her stomach. You can feel a smile tugging on your face as you look down on her on all fours before you, happy to have yet another good little pet to keep you company and train.";
+					NPCSexAftermath Colleen receives "OralCock" from Player;
 					now ColleenCollared is 1; [pet Colleen]
 					now lastfuck of Colleen is turns;
 					now ColleenFound is 2; [husky Colleen fucked]
@@ -508,6 +542,8 @@ to say SexWithColleen:
 					say "     The transformed woman's face lights up happily at your suggestion as she crawls over to you on all fours, quickly lowering her head to stick her muzzle into your damp crotch. Deciding to have some fun involving your other pet in this, you quickly gesture to Sarah to join the fun, even as Colleen runs her tongue across your soft pussy lips. The feeling makes you gasp and pet your newest bitches head in encouragement, as she begins to lick and nip at your outer lips eagerly, her tongue starting to tease its way inside your body with every pass. You groan as your new pet gasps and pushes her tongue into you even further, and you smile as you see your other pet has her own husky muzzle buried between Colleen's legs as well.";
 					WaitLineBreak;
 					say "     Your new bitch renews her assault on your sex even as her own is being licked and teased, the sensations making you moan in pleasure as you rock your hips upward with each probing stroke of her tongue. Your new pet's slutty husky instincts come to the fore as she whines and pants eagerly as she slurps and laps at your pussy, savoring every taste of your body, even as her own hips rock back in time with the tongue licking at her own slit. Your body can only take so much of this wanton assault before you find yourself clenching your fingers in her fur as you orgasm, holding her head down in your crotch as she tries to lick up every bit of your juices even as they coat her muzzle. Panting you can see that your newest pet has had her own orgasm as well, and your other pet is just as happily licking up the mess she made on the floor behind her. You can feel a smile tugging at your face as you look down on your two happily licking pets, glad to have such wonderful company to play with and train...";
+					NPCSexAftermath Colleen receives "OralPussy" from Player;
+					NPCSexAftermath Sarah receives "OralPussy" from Colleen;
 					now ColleenCollared is 1; [pet Colleen]
 					now lastfuck of Colleen is turns;
 					now ColleenFound is 2; [husky Colleen fucked]
@@ -518,6 +554,7 @@ to say SexWithColleen:
 				if player is male:
 					say "     Before you can respond, the new bitch has dropped to all fours, and has turned her rear to you, her tail lifting up eagerly in an unspoken invitation as she looks back at you over her shoulder. 'Why don't you come play hide the bone, with a bitch...' she says as her she wiggles her rear at you, her damp lips winking at you as the scent of a bitch in need fills the air. The invitation is just to perfect to decline, your rod stiffening eagerly as you move over to her needy body, and you rub the tip of your cock up against her heat swollen lips, making her moan. Her animalistic posture, and her acceptance of the bestial changes within, make you feel almost like an animal yourself as you sheathe your [cock of player] cock in her warm silken passage, Colleen yipping and whining in pleasure underneath you.";
 					say "     You grip her hips tightly as she lifts her rear up even higher to allow you better access to her body, her tail brushing across your chest as it wags eagerly, even as her body shifts to become a full husky bitch underneath you, nearly indistinguishable from all the other slutty little huskies roaming the city. The pleasure of the rough sex fills your mind as you take her from behind like an animal, thrusting into her again and again as she yips and pants underneath you, her every sound proof of your victory over her body and mind as she embraces her new role as a husky slut. Soon your eyes close and your head swims with pleasure as you shoot your seed into her waiting body, making her howl in pleasure underneath you as you fill her womb up with your fertile sperm.";
+					NPCSexAftermath Colleen receives "PussyFuck" from Player;
 					WaitLineBreak;
 					say "     Panting from the exertion, you slowly release the new husky slut as you pull yourself out of her, and she twists around to lick at her well used passage with her long canine tongue. You sit down to rest for a minute while she cleans herself up, before she turns to you and wags her tail happily. 'Thanks so much! I hope we can do this again lots!' she says with a happy look on her lust filled canine face. 'Now I'm going to go see what other kinds of fun I can find in the city! Don't worry though! I won't be far from here and your wonderful cock for long!' she says as she wanders out the bunker door, her tail wagging happily as she goes to explore, although you know that she will always end up back here whenever you return to the bunker, her needy cunt leading her right back to where your cock filled her up for the first time...'";
 					now ColleenSlut is 1; [stray Colleen, fucked by the player]
@@ -609,11 +646,13 @@ to say ColleenSpraySex:
 to say Colleen_pretfsex01:
 	say "     Atop her now, you guide your [cock size desc of player] cock into position. Lining up your [cock of player] meat with her pussy, you [if cock length of player < 10]thrust into her, inciting a moan of delight from the soldier[else if cock length of player < 20]push into her, inciting a whimpering moan of pleasure from the soldier[else]push into her slowly, inciting a gasp as your oversized manhood stretches the soldier unnaturally open[end if][if cock length of player >= 10]. Despite the increased size of your shaft, her cunt is made to stretch around it, showing she's not wholly unaffected despite still being purely human[end if][if player is purehuman]. Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[else]. Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
 	say "     You keep your pace steady as you fuck you human lover, enjoying the soft cries of pleasure she gives. But Colleen is no passive lover, soon ending up with her legs wrapped around your waist, her arms around your shoulders and her lips locked to yours. The sex is raw, straightforward and strong, much like the soldier you're fucking. With such a passionate lover, it is no surprise when it comes to an end with mutual cries of orgasmic release. You blast your [cum load size of player] load into her pussy, flooding her womb with your semen[if cock width of player > 30] to the point the woman's belly is stretched and bloated[else if cock width of player > 20] to the point the woman's belly has a visible bulge from it[end if]. Sated, the female soldier releases you and flops back onto her bunk with a loud sigh of satisfaction. She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
+	NPCSexAftermath Colleen receives "PussyFuck" from Player;
 
 to say Colleen_pretfsex02:
 	say "     Atop her now, you move a hand between her thighs to caress across her mons and then to delve into her pussy. This incites a moan of pleasure from the soldier and she grabs your ass firmly with one hand and places the other on your [if breast size of player > 0][breast size desc of player] tit[else]side[end if][if player is purehuman]. Her hands run across your still-human body, clearly pleased to have found a lover who still seems fairly normal[else]. Her human hands run across your [bodydesc of player] body, intrigued by your altered features and doesn't shy away from touching them now that she's allowing herself to indulge herself[end if].";
 	say "     In time, her hand slips to your cunny and she starts caressing your pussy and clit in return. For a while, you both play with one another's pussies and alternate between kissing one another and [if breasts of player > 0 and breast size of player > 0]sucking on each other's nipples[else]you sucking on her nipples while she moans for more[end if]. The soldier's touch is surprisingly soft and delicate, working to bring pleasure to your sensitive, needy pussy and aching clit. Your hips quiver and your juices flow freely as she excites you more and more with her sensual fingering.";
 	say "     After several minutes of this, Colleen gets a hungry look in her eye and rolls you over onto her back with a grin. Turning around atop you, she buries her face between your legs and presses her juicy, dripping cunt to your lips. She dives right in to licking your cunny. She shows considerable skill at this, using her tongue artfully and eagerly to eat you out, the soldier clearly having done this before. You lick her in return, working a finger into her cunt while you suck at her clit. With all your earlier foreplay, it's not long before you're both crying out in orgasm even as you try to lap up the other's feminine juices. You lap up the human woman's juices, loving the taste of them across your tongue. Eventually, when both sated, Colleen releases you by rolling over onto her back once again with a loud sigh of satisfaction. She reaches over to her nearby pack, slips out her spray and uses a bit on herself as a preventative measure.";
+	NPCSexAftermath Colleen receives "OralPussy" from Player;
 
 Section 6 - Endings
 

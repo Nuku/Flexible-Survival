@@ -19,7 +19,7 @@ to say Stallionboi wins:
 		infect "Stallionboi";
 
 To say Stallionboi loses:
-	say "     Driven back by your powerful assault, the stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn't have to be so mean!'[or]Maybe you will be more fun next time sexy,'[or]Why don't you want to fuck me?'[or]Damn sweety, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
+	say "     Driven back by your powerful assault, the stallionboi groans with pain as he staggers backwards and shoots you a rather dirty and sexy look, before bursting into tears as he says '[one of]Well you didn't have to be so mean!'[or]Maybe you will be more fun next time sexy,'[or]Why don't you want to fuck me?'[or]Damn sweetie, that's a little rough for me, maybe you should try one of the donkeys,'[at random] before staggering off down the corridor, shooting you a last teasing glance over his shoulder as he does so.";
 
 Section 2 - Monster Insertion
 

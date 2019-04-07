@@ -529,10 +529,11 @@ To impregnate with (x - text):
 				say "You choose not to accept the seed.";
 				remove "Human Carrier" from feats of player;
 				stop the action;
-			now skinname of child is "Human";
-			now bodyname of child is "Human";
-			now tailname of child is "Human";
-			now facename of child is "Human";
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Human";
+		now bodyname of child is "Human";
+		now tailname of child is "Human";
+		now facename of child is "Human";
 	else:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with a/an [x] child?";

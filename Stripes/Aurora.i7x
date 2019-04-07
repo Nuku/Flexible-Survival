@@ -74,7 +74,7 @@ to say freeing_aurora:
 		if aurorafreed is true:
 			say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
 			WaitLineBreak;
-			say "     Once she's had a chance to recover, she looks much better. The giant woman looks [if scalevalue of player < 5]down [end if]at you with a friendly smile. 'Come here, cutey!' she exclaims, grabbing you in those strong arms of hers, crushing you in an over-enthusiastic hug. 'Thank you, thank you, thank you so much.' She turns from side to side roughly while squeezing you tight. You manage a weak groan that gets her to stop. 'Oh, sorry. I guess I don't really know my own strength.'";
+			say "     Once she's had a chance to recover, she looks much better. The giant woman looks [if scalevalue of player < 5]down [end if]at you with a friendly smile. 'Come here, cutie!' she exclaims, grabbing you in those strong arms of hers, crushing you in an over-enthusiastic hug. 'Thank you, thank you, thank you so much.' She turns from side to side roughly while squeezing you tight. You manage a weak groan that gets her to stop. 'Oh, sorry. I guess I don't really know my own strength.'";
 			say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
 			now HP of frost giantess is 2;
 			now frost giantess is tamed;
@@ -143,6 +143,7 @@ to say AuroraScent:
 	say "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.";
 
 to say AuroraDesc:
+	project the Figure of Aurora_clothed_icon;
 	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 
@@ -162,6 +163,7 @@ instead of conversing frost giantess:
 			say "     Aurora isn't here.";
 
 to say AuroraTalkMenu:
+	project the Figure of Aurora_clothed_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -208,6 +210,7 @@ to say AuroraTalk1:
 Section 3 - Sex w/Aurora
 
 to say SexWithAurora:
+	project the Figure of Aurora_clothed_icon;
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
 	else if ublevel is 3 and a random chance of 1 in 3 succeeds:

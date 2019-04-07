@@ -151,7 +151,7 @@ to BlueSpeakerTalkMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Ask about the goo people"):
+				if nam is "Ask about the goo people":
 					say "[BlueTalk_Background]";
 				else if (nam is "Ask about the 'Speaker' title"):
 					say "[BlueTalk_Speaker]";
@@ -223,7 +223,7 @@ to say BlueSpeakerSexMenu:
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "[']Donate['] some cum";
+		now title entry is "Donate some cum";
 		now sortorder entry is 1;
 		now description entry is "Jerk off on [ObjectPro of Blue Speaker]";
 	[]
@@ -272,7 +272,7 @@ to say BlueSpeakerSexMenu:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "[']Donate['] some cum":
+				if nam is "Donate some cum":
 					say "[BlueSex1]";
 				else if (nam is "Fuck Blue's mouth"):
 					say "[BlueSex2]";

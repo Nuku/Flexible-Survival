@@ -188,6 +188,32 @@ object	name
 Pericles	"Pericles"
 
 Pericles is a man.
+[Physical details as of game start]
+ScaleValue of Pericles is 3. [human sized]
+SleepRhythm of Pericles is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Pericles is 1. [X cock]
+Cock Length of Pericles is 8. [X Inches]
+Cock Width of Pericles is 4.
+Testes of Pericles is 2. [X balls]
+Cunts of Pericles is 0. [X pussy]
+Cunt Length of Pericles is 0. [X Cunt]
+Cunt Width of Pericles is 0. [X Cunt]
+Breasts of Pericles is 2. [X nipples]
+Breast Size of Pericles is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Pericles is false. [can not take oversized members without pain]
+Sterile of Pericles is true.
+PlayerMet of Pericles is false.
+PlayerRomanced of Pericles is false.
+PlayerFriended of Pericles is false.
+PlayerControlled of Pericles is false.
+PlayerFucked of Pericles is false.
+OralVirgin of Pericles is false.
+Virgin of Pericles is true.
+AnalVirgin of Pericles is false.
+PenileVirgin of Pericles is false.
+SexuallyExperienced of Pericles is true.
+MainInfection of Pericles is "".
 The description of Pericles is "[PericlesDesc]".
 The conversation of Pericles is { "<This is nothing but a placeholder!>" }.
 The scent of Pericles is "     Pericles smells like sweat and hard work, something to be expected of the leader of the Spartans and Helots. Beyond that he smells like the pages of a book.".
@@ -221,12 +247,12 @@ to say PericlesTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Pre Apocalypse";
 	now sortorder entry is 1;
-	now description entry is "Ask him what his life was before the apocalypse.";
+	now description entry is "Ask him what his life was before the apocalypse";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Current College Life";
 	now sortorder entry is 2;
-	now description entry is "Ask him about his current college life.";
+	now description entry is "Ask him about his current college life";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

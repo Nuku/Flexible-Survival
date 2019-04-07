@@ -122,8 +122,7 @@ to say losetodobie1:		[low-lust player loss]
 		say "     'You need to keep it together until rescue can come,' she continues, tapping you firmly on the shoulder. 'I want you to return to your home, take cover and wait this thing out.";
 		say "[weaponconf]";
 		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if][if dobielibido is -2]. At least it seems you've made a new friend in this messed up world[end if].";
-		increase humanity of player by 12;
-		if humanity of player > 100, now humanity of player is 100;
+		SanBoost 12;
 	else if libido of player >= 110:
 		if dobielibido < 1, now dobielibido is 1;
 		say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
@@ -132,7 +131,7 @@ to say losetodobie1:		[low-lust player loss]
 		if dobieresist > 4, increase timepenalty by 1;
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
-		increase humanity of player by 10;
+		SanBoost 10;
 		extend game by ( 0 - timepenalty );
 	else if HP of player > 0:
 		if dobielibido < 1, now dobielibido is 1;
@@ -144,7 +143,7 @@ to say losetodobie1:		[low-lust player loss]
 		say ".' She shoves the ticket into your hand, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
-		increase humanity of player by 10;
+		SanBoost 10;
 		extend game by ( 0 - timepenalty );
 	else:
 		if dobielibido < 1, now dobielibido is 1;
@@ -157,7 +156,7 @@ to say losetodobie1:		[low-lust player loss]
 		say ".' She tosses the ticket onto your prone body, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
 		decrease freecred by fine;
 		if freecred < 0, now freecred is 0;
-		increase humanity of player by 10;
+		SanBoost 10;
 		extend game by ( 0 - timepenalty );
 	if dobielibido > 0:
 		decrease dobielibido by 5;
@@ -172,14 +171,14 @@ to say losttodobie2:		[mid-lust player loss]
 		say "     You drop your fighting stance and put your arms up, surrendering to the canine policewoman. From the way she looks at you and licks her muzzle, a part of you hopes she'll give in to her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. Since you're obviously able to control yourself enough to not fight, there may still be hope for you.' You feel one of her paws grope your ass before it's pulled away quickly. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'I'm ordering you to take cover and wait this thing out.'";
 		say "[weaponconf]";
 		say "     And with that said, she turns and heads off, leaving you feeling a little more focused[if libido of player > 50] and maybe a little disappointed you didn't get any fun with the sexy cop[end if].";
-		increase humanity of player by 12;
+		SanBoost 12;
 	else if libido of player >= 110:
 		say "***Not written yet, but may be needed in the future. Player lost due to excess libido.";
 		say "[weaponconf]";
 		let fine be 8 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
 		if dobieresist > 4, increase timepenalty by 1;
-		increase humanity of player by 10;
+		SanBoost 10;
 	else if HP of player > 0:
 		let fine be 4 + ( dobieresist * 2 ) + ( HP entry - monsterHP );
 		let timepenalty be 2;
@@ -187,7 +186,7 @@ to say losttodobie2:		[mid-lust player loss]
 		say "     Deciding it'd be best to stop and surrender, you drop your fighting stance and put up your arms. She growls and keeps a close eye on you, licking her muzzle with a grin of pleasure. From the look she give you, a part of you hopes she'll give in to her lusts with you. She walks up to you with a sexy sway to her hips, but knocks your legs out from under you, pinning your arms behind your back. 'Rrrr! I'm tempted to really show you how much I appreciate your earlier stunt, but I'm trying to keep it together. And you should be too. But you've been resisting arrest,' she growls in your ear, giving your ass a squeeze. 'Sh- Look, we both need to keep it together until rescue can come,' she continues. 'Since I can't really detain you right now, I'm giving you a ticket and ordering you back to your home. You need to keep it together, take cover and wait this mess out until rescue comes.";
 		say "[weaponconf]";
 		say "     She shoves the ticket into your hand, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
-		increase humanity of player by 10;
+		SanBoost 10;
 	else:
 		let fine be 8 + ( dobieresist * 3 ) + ( HP entry - monsterHP );
 		let timepenalty be 3;
@@ -196,8 +195,7 @@ to say losttodobie2:		[mid-lust player loss]
 		say "     'As much as I'd like to detain you and keep you all to myself,' she says with a soft rumble in your ear while a paw slides over your ass before groping your groin, before being pulled away quickly. 'Sh- I know it's crazy out here, but you're not making my job any easier.' She gives you a firm knee to the kidneys. 'So I'm giving you a ticket and ordering you back to your home. You need to get your head on straight or you'll completely end up a sex monster like the others out there. The police band stated that the National Guard would be called in, so rescue is on the way. You need to get a grip, take cover and wait this mess out until rescue comes.";
 		say "[weaponconf]";
 		say "     She tosses the ticket onto your prone body, turns and heads off. More than a little confused[if libido of player > 50] and slightly disappointed sexually[end if], but feeling a bit calmer, you look it over the ticket. It says something about a fine of [special-style-2][fine][roman type] freecred and a penalty of [special-style-2][timepenalty * 3][roman type] hours of community service.";
-		increase humanity of player by 10;
-	if humanity of player > 100, now humanity of player is 100;
+		SanBoost 10;
 	decrease freecred by fine;
 	if freecred < 0, now freecred is 0;
 	extend game by ( 0 - timepenalty );

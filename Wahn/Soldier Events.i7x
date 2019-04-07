@@ -332,8 +332,7 @@ Instead of resolving a Soldiers & Snowmeows:
 					else:
 						LineBreak;
 						say "     Shaking your head to clear your mind, you force yourself to let go of the female snow leopard and step back from her, determined not to let animal instincts dominate your behavior. The former soldier looks at you with a surprised expression, a bit lost now that you've derailed what her body was telling her would happen next. She pants in her undiminished arousal, then turns and runs, dashing off to find a male who will give her what she so urgently needs.";
-						increase humanity of player by 5;
-						if humanity of player > 100, now humanity of player is 100;
+						SanBoost 5;
 						now Resolution of Soldiers & Snowmeows is 2; [snow leopard player didn't fuck]
 				else:
 					say "     Glancing up at you, the newly female snow feline panics and dashes off, quickly losing you in the winding alleys of the city. With a sigh, you let her go.";

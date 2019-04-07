@@ -22,8 +22,8 @@ Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0.
 The sarea of Cheetah Cheater is "Campus".
 
-instead of going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway West;
+after going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CheetahCheaterEvent;
 
 Instead of resolving a Cheetah Cheater:
@@ -44,8 +44,8 @@ Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus".
 
-instead of going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway East;
+after going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	PregnantFriendEvent;
 
 Instead of resolving a Pregnant Friend:
@@ -63,14 +63,41 @@ to PregnantFriendEvent:
 
 Table of GameEventIDs (continued)
 Object	Name
+Art Class	"Art Class"
+
+Art Class is a situation.
+The level of Art Class is 0.
+The sarea of Art Class is "Campus".
+
+after going to Creative Street while (Art Class is active and Art Class is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
+	ArtClassEvent;
+
+Instead of resolving a Art Class:
+	ArtClassEvent;
+
+to ArtClassEvent:
+	say "     On your travels around the campus you come across an art class – not a normal one though. A group of [one of]girls[or]ladies[or]women[at random] have all pulled up a chair and an easel to [one of]sketch[or]paint[or]draw[or]capture[at random] their model, and unusually for an art class set outside, their model is a nude one – Though with everything else going on, you suppose that this isn't all that out-there of an idea. With this particular model however, you can see why there is so much female attention to this art class. At the center of the circle there is a [one of]studly stallion[or]good looking wolf[or]sexy tiger[or]handsome [one of]german shepherd[or]alsatian[at random][or]muscled panther[or]alluring stag[or]athletic snow leopard[or]buff moose[at random] standing in a [one of]proud[or]heroic[at random] pose.";
+	say "     The instructor seems pretty good at first, but as you are standing there she quickly starts to lose her composure.[line break]";
+	say "     'You don't need to be quick, but he can't stay in that pose forever, so you definitely can't be slow'[line break]";
+	say "     'Focus on getting the entire thing in rough detail before starting the fine stuff, just in case you run out of time'[line break]";
+	say "     'Make sure to get the fine detail around that strong... handsome jaw'[line break]";
+	say "     'Don't forget to get the shading just right for the small shadows around those gorgeous abs'[line break]";
+	say "     'Get as much detail as you can of that big, sexy sheath'[line break]";
+	say "     You can see where this is going and keep your distance as the model becomes [one of]erect[or]engorged[or]aroused[at random] from the comments and the instructor begins to get distracted. First she begins to strip, then the male model's [one of]prodigious[or]marvellous[or]impressive[at random] cock gets some attention. It starts with a stray hand stroking upwards, and escalates from there. A loud gasp from the model breaks your transfixion and you realize where you are and what you are doing. You keep your distance and move on, not wanting to spend the entire day as a voyeur. You cannot resist the urge to catch one last glimpse before you go, and it's a sight you know you will remember - the model fucking the instructor while the art students begin a new, more lewd [one of]sketch[or]painting[or]drawing[at random].";
+	now Art Class is resolved;
+	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
 CatsVSDogs	"CatsVSDogs"
 
 CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus".
 
-instead of going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to Athletic Street;
+after going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CatsVSDogsEvent;
 
 Instead of resolving a CatsVSDogs:
@@ -99,8 +126,8 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
-	move player to College Fountain;
+after going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
+	try looking;
 	SharkFountainEvent;
 
 Instead of resolving a SharkFountain:
@@ -126,8 +153,8 @@ The sarea of Fountain Naiad is "Campus".
 when play begins:
 	add Fountain Naiad to badspots of girl;
 
-instead of going to College Fountain while (Fountain Naiad is active and Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
-	move player to College Fountain;
+after going to College Fountain while (Fountain Naiad is active and Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
+	try looking;
 	NaiadFountainEvent;
 
 instead of resolving a Fountain Naiad:
@@ -147,8 +174,8 @@ Campus Racing is a situation.
 Campus Racing is inactive.
 The sarea of Campus Racing is "Campus".
 
-instead of going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to Athletic Street;
+after going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CampusRacingEvent;
 
 instead of resolving a Campus Racing:
@@ -171,20 +198,20 @@ The sarea of Frat Party Recruiter is "Campus".
 when play begins:
 	add Frat Party Recruiter to badspots of guy;
 
-instead of going to College Walkway West while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway West;
+after going to College Walkway West while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway East while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway East;
+after going to College Walkway East while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway Northeast while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway Northeast;
+after going to College Walkway Northeast while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway Northwest while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway Northwest;
+after going to College Walkway Northwest while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	FratPartyRecruiterEvent;
 
 instead of resolving a Frat Party Recruiter:
@@ -214,20 +241,20 @@ Undie Race	"Undie Race"
 Undie Race is a situation.
 The sarea of Undie Race is "Campus".
 
-instead of going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway West;
+after going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	UndieRaceEvent;
 
-instead of going to College Walkway East while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway East;
+after going to College Walkway East while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	UndieRaceEvent;
 
-instead of going to College Walkway Northeast while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway Northeast;
+after going to College Walkway Northeast while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	UndieRaceEvent;
 
-instead of going to College Walkway Northwest while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway Northwest;
+after going to College Walkway Northwest while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	UndieRaceEvent;
 
 to UndieRaceEvent:
@@ -250,8 +277,7 @@ to UndieRaceEvent:
 
 Section 2 - Events with Specific NPCs
 
-instead of going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway East;
+after going east from College Campus Entrance while (LastCampusWalkin - turns > 2 and gshep is companion of player and gsd_pet >= 60 and GibsonRelationship is 0 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin runs into a young adult beagle boy - GibsonRelationship: [GibsonRelationship][line break]";
 	say "     Walking over the campus in the direction of the Tenvale college dorms, you notice after a few steps that something - or rather someone - is missing from your side. As you start turning around to see where your attack dog Korvin ended up, you hear the German Shepherd bark out, 'What are you looking at, pup? Never seen a [italic type]real[roman type] dog before?' It turns out that Korvin stopped walking about a dozen feet back, where he is standing now, hands on his furry hips and looking down at a young adult anthro standing right in front of him. The other guy is a canine too, though shorter and of a different breed of dog - a beagle, you'd say, judging by the floppy ears and the mixture of white, tan and brown fur. Dressed in shorts and a t-shirt bearing the 'Tenvale College' logo, a backpack slung over one shoulder, the slender young man gapes at Korvin with wide eyes, then gasps out, 'I - I'm sorry sir! It's just... um, you're naked and...'";
@@ -305,16 +331,20 @@ when play begins:
 	add Course Advice to badspots of girl;
 	add Course Advice to badspots of guy;
 
-instead of going north from College Fountain while (Course Advice is not resolved):
+after going north from College Fountain while (Course Advice is not resolved):
+	try looking;
 	AdminIntro;
 
-instead of going northeast from College Walkway Northwest while (Course Advice is not resolved):
+after going northeast from College Walkway Northwest while (Course Advice is not resolved):
+	try looking;
 	AdminIntro;
 
-instead of going northwest from College Walkway Northeast while (Course Advice is not resolved):
+after going northwest from College Walkway Northeast while (Course Advice is not resolved):
+	try looking;
 	AdminIntro;
 
-instead of resolving a Course Advice:
+after resolving a Course Advice:
+	try looking;
 	AdminIntro;
 
 to AdminIntro:
@@ -364,17 +394,13 @@ to AdminIntro:
 			say "     With a grin on your face, you wish the two of them well, then stand up. After putting your clothes in order, you then walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
 			WaitLineBreak;
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
-			increase humanity of player by 10;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 10;
 			now Resolution of Course Advice is 1; [Waited outside office, Watched sex]
 		else:
 			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
-			increase humanity of player by 10;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 10;
 		move player to College Administration Building;
 		now Resolution of Course Advice is 2; [Waited outside office, Did not watch sex]
 	else:
@@ -415,7 +441,7 @@ to LibrarySexEvent:
 		say "     Taking advantage of being on campus, you stop by the library and browse a little. ";
 		if randomnumber is:
 			-- 1:
-				say "As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
+				say "     As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
 				say "     'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.";
 				say "     'She will hear [italic type]you[roman type]. Keep these legs spread.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";
@@ -431,7 +457,7 @@ to LibrarySexEvent:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 2:
-				say "As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
+				say "     As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
 				say "     'F-fuck. It feels s-so good.'";
 				say "     'Y-yeah. Keep going.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";
@@ -555,19 +581,20 @@ Campus Patrol is a situation.
 Campus Patrol is inactive.
 The sarea of Campus Patrol is "Campus".
 
-instead of going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway West;
+after going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CampusPatrolEvent;
 
-instead of going to College Walkway East while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Walkway East;
+after going to College Walkway East while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CampusPatrolEvent;
 
-instead of going to College Campus Entrance while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
-	move player to College Campus Entrance;
+after going to College Campus Entrance while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+	try looking;
 	CampusPatrolEvent;
 
-Instead of resolving a Campus Patrol:
+after resolving a Campus Patrol:
+	try looking;
 	CampusPatrolEvent;
 
 to CampusPatrolEvent:

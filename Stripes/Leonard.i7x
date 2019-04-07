@@ -717,6 +717,7 @@ Instead of resolving Concert Hall:
 				say "     After storing the case and supplies away in your case, you fold up one of the music stands and start heading back out. The bunny watches you leave the room but doesn't move. There's another watching you from elsewhere before you leave her line of sight, and another safely watching from the distance as you turn the corner. They quietly watch you depart, clearly wary of the intruder who managed to fight them all off.";
 				increase carried of violin by 1;
 				now violinfound is 20;
+			now Music Store is resolved;
 	if fightstatus is 2:
 		say "     Unable to hold out against the bunny horde, you find yourself surrounded by the strange group of lustful, longing bunnies. They fuck you repeatedly, with so many of them there to share you that you always have several lovers at a time, drawing you further and further into the lustful needs of your body as it starts to change, gaining bunny ears and a tail. But as the changes continue, ";
 		if "Male Preferred" is listed in feats of player:
@@ -740,7 +741,6 @@ Instead of resolving Concert Hall:
 		say "     Unwilling or unable to continue to stand up to the bunny horde, you make a break for it, weaving between several of them to head for the exit. They follow you, calling out stuff like 'Stay.' 'Join.' 'Play.' 'Divide.' 'Unity.' 'Remain.' 'Expand.' 'Many.' 'One.' They strangely speak in unison and calmly, but there is a longing to it as well. You manage to get away, running from the concert hall, from which the rabbits choose not to pursue you, instead slamming the back door shut and latching it from the inside. You probably won't be able to get back in there and should try looking elsewhere for a violin for Leonard.";
 		if violinfound is 0, now violinfound is 1;
 		if violinfound is 2, now violinfound is 3;
-	now Music Store is resolved;
 	now Concert Hall is resolved;
 
 

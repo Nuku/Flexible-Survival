@@ -55,7 +55,7 @@ The sarea of Happy silly feeling is "Fair".
 
 Instead of Resolving a Happy silly feeling:
 	say "     Wandering through the cheerful midway of the fair, you hear some squeaking from a nearby area. When you cautiously take a look, you see a group of three different latex animals involved in some kind of strange altercation. The squeaky fox appears to be ducking and squeaking out silly commentary, while the latex cat tries to slap some sense into the fox. Which is amusing enough, but when the large latex tiger starts banging their heads together indiscriminately, you can't help but giggle, at the absurd situation, and the looks on the two beasts smooshed together faces. You pause for a minute, afraid you might have attracted their attention, but the beasts spare you only a glance before they go back to their escalating argument, with more silly gestures and slapstick fighting. You find yourself laughing hilariously at the strange situation playing out in front of you, especially when one of them grabs a pie off one of the nearby food carts, and the food starts flying. Still chuckling, you leave the fight before any of the food can start flying your way, but the smile stays on your face for quite a while afterwards, and you feel much better about yourself.";
-	increase humanity of player by 25;
+	SanBoost 25;
 	now Happy silly feeling is resolved;
 
 Section 5 - Flashing fair lights
@@ -140,7 +140,7 @@ The sarea of Ferris fun time is "Fair".
 
 Instead of Resolving a Ferris fun time:
 	say "     Wandering through the cheerful midway of the fair, you quickly find yourself in trouble as a number of the beasts that inhabit the fair seem to have found you. Realizing there are far too many for you to easily fight, you quickly flee down the shining and sparkling midway, while they give hot pursuit. Eventually taking a chance, you duck into one of the Ferris wheel cages, and slam the door shut, hoping they won't find you. To your surprise the wheel starts up again right away, swinging you up and away from your pursuers, and giving you a great view of the fair itself, as you go higher you can see the entire ruined skyscape of the city spread out before you, and the ominous smoke rising from near the capital building. Still swinging around in the air as the wheel spins is actually kind of fun, and you find yourself smiling as the ride stops, even better your pursuers are long gone, so you continue off into the fairgrounds while whistling a little tune.";
-	increase humanity of player by 10;
+	SanBoost 10;
 	now Ferris fun time is resolved;
 
 Section 12 - Rubber tiger chase

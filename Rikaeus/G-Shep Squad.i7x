@@ -115,6 +115,32 @@ object	name
 Buster	"Buster"
 
 Buster is a person. Buster is in K9 Vans.
+[Physical details as of game start]
+ScaleValue of Buster is 3. [human sized]
+SleepRhythm of Buster is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Buster is 1. [X cock]
+Cock Length of Buster is 6. [X Inches]
+Cock Width of Buster is 4.
+Testes of Buster is 2. [X balls]
+Cunts of Buster is 0. [X pussy]
+Cunt Length of Buster is 0. [X Cunt]
+Cunt Width of Buster is 0. [X Cunt]
+Breasts of Buster is 2. [X nipples]
+Breast Size of Buster is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Buster is false. [can not take oversized members without pain]
+Sterile of Buster is false.
+PlayerMet of Buster is false.
+PlayerRomanced of Buster is false.
+PlayerFriended of Buster is false.
+PlayerControlled of Buster is false.
+PlayerFucked of Buster is false.
+OralVirgin of Buster is false.
+Virgin of Buster is true.
+AnalVirgin of Buster is false.
+PenileVirgin of Buster is false.
+SexuallyExperienced of Buster is true.
+MainInfection of Buster is "German Shepherd".
 The description of Buster is "[busterdesc]".
 The conversation of Buster is { "Dogs are awesome!" }.
 the scent of Buster is "The leader of the canine squad smells of dogs and sex.".

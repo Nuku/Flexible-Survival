@@ -58,7 +58,7 @@ to say libraryentrance:
 	choose a blank row in table of fucking options;
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
-	now description entry is "Shall you give up on this plan entirely?";]
+	now description entry is "Shall you give up on this plan entirely";]
 	if centrallib is 1 or ( centrallib is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";
@@ -315,7 +315,7 @@ to say libguard4:
 		say "     But it doesn't stop there, the big wolverine rolls you onto your back and climbs atop you again. After licking and kissing at your breasts for a while and playing with your pussy, he climbs atop you and starts mating again. It is another wild, animalistic romp after another until you both collapse panting on the steps, reeking of sex and thoroughly satisfied. You are so wonderfully full to the point of overflowing with this strong, diligent wolverine's cum and your new instincts love it.[impregchance]";
 		infect "Wolverine Guard";
 		decrease humanity of player by 20;
-		if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
+		if "Strong Psyche" is listed in feats of player, SanBoost 5;
 		if humanity of player < 10:
 			now tailname of player is "Wolverine Guard";
 			now facename of player is "Wolverine Guard";

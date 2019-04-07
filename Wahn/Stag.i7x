@@ -44,13 +44,13 @@ Instead of resolving a Dog Walking:
 	else if HP of Mike is 1: [second meeting]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 		now HP of Mike is 2;
 		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 98: [first friendly meeting after player attack]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman looks at you suspiciously and growls silently until Mike steps up and strokes her head. 'It's okay Lea, we just had a misunderstanding last time.' Hearing soothing words from her master, she trots over to you and sniffs at you before licking your hands.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 		now HP of Mike is 2;
 		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 2: [third meeting - they're under attack by a gang]
@@ -86,7 +86,7 @@ Instead of resolving a Dog Walking:
 	else if HP of Mike > 2 and HP of Mike < 98: [further repeat meetings]
 		say "     You run into Mike and his 'dog' Lea again, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 
 Section 2 - Monster Responses
 
@@ -100,35 +100,35 @@ to say Stag loses:
 	[]
 	if HP of Mike is 0: [last chance to switch to friendly mode]
 		choose a blank row in table of fucking options;
-		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
+		now title entry is "Free Lea";
 		now sortorder entry is 1;
-		now description entry is "Free Lea";
+		now description entry is "Demand that he sets free the woman he's brainwashed to act as a dog";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Suck him off.";
+	now title entry is "Suck him off";
 	now sortorder entry is 2;
 	now description entry is "Blow him";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Have him suck you off.";
+		now title entry is "Have him suck you off";
 		now sortorder entry is 3;
 		now description entry is "Get a blow-job";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
-		now title entry is "Ride his cock with your pussy.";
+		now title entry is "Ride his cock with your pussy";
 		now sortorder entry is 4;
 		now description entry is "Let the stag breed you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Get his cock in your ass.";
+	now title entry is "Get his cock in your ass";
 	now sortorder entry is 5;
 	now description entry is "Let the stag fill your ass with his seed";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Take the stag's ass.";
+		now title entry is "Take the stag's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill him with your cock";
 	[]
@@ -147,20 +147,20 @@ to say Stag loses:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Demand that he sets free the woman he's brainwashed to act as a dog.":
+				if nam is "Free Lea":
 					say "     The stag's eyes get big and he replies 'What the fuck? You think I'm one of those creeps that makes people forget their humanity? Hell no - Lea and the others are actual dogs, man. I'm a professional animal trainer - or was, before this chaos. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them. They may look different, but they're still animals inside and need a master to care for them - and their new form is permanent as it turns out. They won't change again...'";
 					say "     'So you thought I had enslaved Lea, and I thought you were just a feral looking for something to fuck. Two of the few sane people in the town beating each other up - Hah. How about we forget this silly fighting ever happened?' He offers you his hand and you accept and shake it. Saying 'I'm Mike, by the way. See you later, under friendlier circumstances I hope.' he walks away.";
 					now HP of Mike is 98;
 					now Dog Walking is active;
-				else if (nam is "Suck him off."):
+				else if (nam is "Suck him off"):
 					say "[MikeSex1]";
-				else if (nam is "Have him suck you off."):
+				else if (nam is "Have him suck you off"):
 					say "[MikeSex2]";
-				else if (nam is "Ride his cock with your pussy."):
+				else if (nam is "Ride his cock with your pussy"):
 					say "[MikeSex3]";
-				else if (nam is "Get his cock in your ass."):
+				else if (nam is "Get his cock in your ass"):
 					say "[MikeSex4]";
-				else if (nam is "Take the stag's ass."):
+				else if (nam is "Take the stag's ass"):
 					say "[MikeSex5]";
 				if HP of Mike is 0: [if the player hasn't selected talking above and set the HP to 98 by now, Mike will be permanently hostile (99)]
 					now HP of mike is 99;
@@ -284,6 +284,8 @@ Cunt Length of Mike is 0.
 Cunt Width of Mike is 0.
 Breasts of Mike is 2.
 Breast Size of Mike is 0.
+TwistedCapacity of Mike is false.
+Sterile of Mike is false.
 [Basic Interaction states as of game start]
 PlayerMet of Mike is false.
 PlayerRomanced of Mike is false.
@@ -515,7 +517,7 @@ instead of conversing Mike:
 	else if HP of Mike is 4:
 		say "     Mike looks up hopefully. 'Have you got a medkit?'";
 		if medkit is owned:
-			say "     Aware that you have one in your backpack, you answer...";
+			say "     Aware that you have one in your backpack, you answer... ";
 			if player consents:
 				say "     You pull the medkit out and start to patch Lea up while Mike holds her tight as she struggles, whining pitifully as you do the painful but necessary steps of cleaning and disinfecting her wound. It's not an easy task, but soon she's well taken care of, with a fresh white bandage around her upper torso.";
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
@@ -527,7 +529,7 @@ instead of conversing Mike:
 			say "     You just silently shake your head.";
 	else if HP of Mike is 5:
 		say "     Mike says 'I don't have anything I could give you as thanks, except... would you maybe want one of my human dogs for your own? They were well trained as dogs and are very obedient - and since they changed, I taught them a few extra tricks too...' he winks and gives a small nod to Lea and her pregnant belly.";
-		say "     Do you accept one of the human form dogs from Mike as a reward?";
+		say "     Do you accept one of the human form dogs from Mike as a reward? ";
 		if player consents:
 			say "     [bold type]What gender do you want your new 'dog' to be?[roman type][line break]";
 			LineBreak;
@@ -597,6 +599,8 @@ Cunt Length of Xerxes is 0.
 Cunt Width of Xerxes is 0.
 Breasts of Xerxes is 2.
 Breast Size of Xerxes is 0.
+TwistedCapacity of Xerxes is false.
+Sterile of Xerxes is false.
 [Basic Interaction states as of game start]
 PlayerMet of Xerxes is false.
 PlayerRomanced of Xerxes is false.
@@ -659,7 +663,7 @@ instead of conversing Xerxes:
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him. He [one of]snuggles up at your feet[or]rests his head in your lap[at random] and listens to you talk. He doesn't say much and mostly barks in response, but will occasionally use one of his spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being his favorites, though you've heard him use at least a couple dozen and he seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastXerxesTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now LastXerxesTalk is turns;
 
 instead of sniffing Xerxes:
@@ -1219,6 +1223,8 @@ Cunt Length of Helen is 9.
 Cunt Width of Helen is 4.
 Breasts of Helen is 2.
 Breast Size of Helen is 3.
+TwistedCapacity of Helen is false.
+Sterile of Helen is false.
 [Basic Interaction states as of game start]
 PlayerMet of Helen is false.
 PlayerRomanced of Helen is false.
@@ -1270,7 +1276,8 @@ HelenPregnant is a number that varies.
 
 to say HelenDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Xerxes], LUST: [lust of Xerxes], LIBIDO: [libido of Helen], THIRST: [thirst of Helen], PREGTIMER: [HelenPregnant] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Helen], LUST: [lust of Helen], LIBIDO: [libido of Helen], THIRST: [thirst of Helen], PREGTIMER: [HelenPregnant] <- DEBUG[line break]";
+	project the Figure of Helen_naked_icon;
 	if lust of Helen < 3:
 		say "     Originally one of Mike's dogs, Helen is now a young human of about nineteen. She has long black hair and a slender physique, with some muscles on her arms and legs. A pretty face completes the image of a beautiful woman - but no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. She watches you attentively, eager to follow the commands of her master. ";
 		if thirst of helen is 2:
@@ -1302,6 +1309,7 @@ to say HelenDesc:
 		say "     The unexpected effects of the fruit seem to have largely settled down with her becoming smarter and able to recognize and use her human body. She still has a thoroughly canine mind and is as loyal and obedient as ever, if not more so. While she is able to walk upright a little unsteadily, she still much prefers to go on all fours. Interspersed between her normal, canine antics, she will sometimes flip through some of the books, mainly children's books. She seems to find those with color pictures particularly fascinating. She has a short vocabulary of words, though usually sticks to more canine sounds, especially when she's having fun or having fun having sex. Having a canine perspective on the world, she has no human shame and is as sexually open as ever despite her much more human capacity for reason.";
 
 instead of conversing Helen:
+	project the Figure of Helen_naked_icon;
 	if lust of Helen < 3:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her and talk with her. Or rather to her - as she still only has the mind of a dog and mostly replies with 'Woof?', 'Woof.' and 'Woof!'";
 	else if lust of Helen is 3:
@@ -1310,7 +1318,7 @@ instead of conversing Helen:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her. She [one of]snuggles up at your feet[or]rests her head in your lap[at random] and listens to you talk. She doesn't say much and mostly barks in response, but will occasionally use one of her spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being her favorites, though you've heard her use at least a couple dozen and seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastHelenTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now LastHelenTalk is turns;
 
 instead of sniffing Helen:
@@ -1320,6 +1328,7 @@ instead of sniffing Helen:
 Chapter 2 - Helen Sex Menu
 
 Instead of fucking Helen:
+	project the Figure of Helen_naked_icon;
 	if (lastfuck of Helen - turns < 5):
 		say "     Helen still seems a bit worn out from the last fun-time. Let her rest a bit more...";
 	else if lust of Helen is 3:

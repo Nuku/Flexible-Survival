@@ -13,6 +13,32 @@ object	name
 Daisy	"Daisy"
 
 Daisy is a woman.
+[Physical details as of game start]
+ScaleValue of Daisy is 3. [human sized]
+SleepRhythm of Daisy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Daisy is 0. [X cock]
+Cock Length of Daisy is 0. [X Inches]
+Cock Width of Daisy is 0.
+Testes of Daisy is 0. [X balls]
+Cunts of Daisy is 1. [X pussy]
+Cunt Length of Daisy is 18. [X Cunt]
+Cunt Width of Daisy is 8. [X Cunt]
+Breasts of Daisy is 2. [X nipples]
+Breast Size of Daisy is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Daisy is false. [can not take oversized members without pain]
+Sterile of Daisy is false.
+PlayerMet of Daisy is false.
+PlayerRomanced of Daisy is false.
+PlayerFriended of Daisy is false.
+PlayerControlled of Daisy is false.
+PlayerFucked of Daisy is false.
+OralVirgin of Daisy is false.
+Virgin of Daisy is true.
+AnalVirgin of Daisy is true.
+PenileVirgin of Daisy is true.
+SexuallyExperienced of Daisy is false.
+MainInfection of Daisy is "Mareslut".
 The description of Daisy is "[Daisydescribing]".
 The conversation of Daisy is { "Ooo!" }.
 The fuckscene of Daisy is "[sexwithdaisy]".

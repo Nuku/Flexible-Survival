@@ -870,7 +870,7 @@ to say wrcureattempt:
 		if weapon object of player is silver knife, now weapon object of player is journal;
 		now carried of silver knife is 0;
 		if humanity of player < 100:
-			increase humanity of player by 1;
+			SanBoost 1;
 			increase humanity of player by ( 100 - humanity of player ) / 2;
 		now HP of player is HP of player / 2;
 		increase morale of player by 5;

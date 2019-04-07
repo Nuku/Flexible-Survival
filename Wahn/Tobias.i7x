@@ -173,6 +173,30 @@ object	name
 Tobias	"Tobias"
 
 Tobias is a man.
+ScaleValue of Tobias is 3.
+Cocks of Tobias is 1.
+Cock Length of Tobias is 12.
+Cock Width of Tobias is 5.
+Testes of Tobias is 2.
+Cunts of Tobias is 0.
+Cunt Length of Tobias is 0.
+Cunt Width of Tobias is 0.
+Breasts of Tobias is 2. [2 nipples]
+Breast Size of Tobias is 0.
+TwistedCapacity of Tobias is false.
+Sterile of Tobias is false.
+[Basic Interaction states as of game start]
+PlayerMet of Tobias is false.
+PlayerRomanced of Tobias is false.
+PlayerFriended of Tobias is false.
+PlayerControlled of Tobias is false.
+PlayerFucked of Tobias is false.
+OralVirgin of Tobias is false.
+Virgin of Tobias is true.
+AnalVirgin of Tobias is true.
+PenileVirgin of Tobias is false.
+SexuallyExperienced of Tobias is true.
+MainInfection of Tobias is "Doberman".
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".

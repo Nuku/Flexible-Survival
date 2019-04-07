@@ -54,6 +54,32 @@ object	name
 Dash	"Dash"
 
 Dash is a man.
+[Physical details as of game start]
+ScaleValue of Dash is 1. [puppy sized]
+SleepRhythm of Dash is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Dash is 1. [X cock]
+Cock Length of Dash is 3. [X Inches]
+Cock Width of Dash is 2.
+Testes of Dash is 2. [X balls]
+Cunts of Dash is 0. [X pussy]
+Cunt Length of Dash is 0. [X Cunt]
+Cunt Width of Dash is 0. [X Cunt]
+Breasts of Dash is 6. [X nipples]
+Breast Size of Dash is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Dash is false. [can not take oversized members without pain]
+Sterile of Dash is true.
+PlayerMet of Dash is false.
+PlayerRomanced of Dash is false.
+PlayerFriended of Dash is false.
+PlayerControlled of Dash is false.
+PlayerFucked of Dash is false.
+OralVirgin of Dash is true.
+Virgin of Dash is true.
+AnalVirgin of Dash is true.
+PenileVirgin of Dash is true.
+SexuallyExperienced of Dash is false.
+MainInfection of Dash is "".
 The description of Dash is "[Dashdesc]".
 
 instead of sniffing the little fox:
@@ -196,7 +222,7 @@ after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Das
 		say "     Walking up to Fang slowly with your head bowed and arms outstretched, you softly get close to the ground and check on Dash. With what your alpha had said going through your mind you glance up at the huge wolf. Without much thought your mouth starts to work on autopilot, you explain to Fang how you understand that Dash need to become stronger but there is another way. Fang looks down at you with an arrogant smirk on his muzzle as his eyes almost seem to bore inside of you. 'What are you saying? You agree that he needs to become stronger... but then act like you don't want me to train him, make up your mind!' Well aware that you are on thin ice with your alpha you continue with your opinion. You ask Fang if he was ever around children before the nanites, a look of confusion passes over his muzzle, until while mentioning the different sorts of children he could have been exposed to you ask if he ever had kids of his own.";
 		say "     The wolves eyes widen for a moment, although he still says nothing to affirm or deny it. But you decide to hope for the best and grab onto the reaction that you saw, slowly moving your hand closer to Dash you ask the canine if he can tell how small the fox kit is? How afraid he must be of the monsters that roam the city? You follow that up with mentioning that Dash is a child, that he doesn't need an alpha who views him as a tool he deserves more, he deserves a family. The look on the wolves face almost looks like one of betrayal, 'What about you bitch!? You take him out into the city... you expose him to all of those monsters yourself!' Almost like an opening floodgate, he yells back at Fang, telling him that the reason you take Dash with you is so he can more about the city and if something ever happens to you, you want him to be able to know how to survive and where to hide and survive!";
 		WaitLineBreak;
-		say "     Fang's face is a mixture of shock and rage, 'Nothing will happen to you... your mine.' While he started out in a loud growl, the last part is said softly. You tell your alpha that there is no way to know what the future holds, you can't hide the choked up sound in your voice, at the sound of you upset Dash starts to fight once again even going as far as to dig his tiny teeth into the massive paw of the canine. Fang lets the small fox go who sprints quickly to your side checking you over, the whole time the wolf watches the two of you. Without warning you feel your alphas large body rub up against you as he bumps you with his head. 'Nothing will happen to you... or to the pup, no matter what I will keep him safe... that's a promise.'";
+		say "     Fang's face is a mixture of shock and rage, 'Nothing will happen to you... you're mine.' While he started out in a loud growl, the last part is said softly. You tell your alpha that there is no way to know what the future holds, you can't hide the choked up sound in your voice, at the sound of you upset Dash starts to fight once again even going as far as to dig his tiny teeth into the massive paw of the canine. Fang lets the small fox go who sprints quickly to your side checking you over, the whole time the wolf watches the two of you. Without warning you feel your alphas large body rub up against you as he bumps you with his head. 'Nothing will happen to you... or to the pup, no matter what I will keep him safe... that's a promise.'";
 		say "     Leaning down Fang licks over Dash's small muzzle, without another word he starts to pad out the door. Shockingly the fox kit follows him, eventually attempting to walk directly underneath the big wolf. You swear you almost hear a deep snicker from your alpha, hopefully you made the right choice in allowing those two to spend more time together, then again Fang promised to keep Dash safe and thats enough for you.";
 		now FangDashRel is 2;
 	else:
@@ -250,6 +276,32 @@ object	name
 Peppy	"Peppy"
 
 Peppy is a man.
+[Physical details as of game start]
+ScaleValue of Peppy is 2. [dog sized]
+SleepRhythm of Peppy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Peppy is 1. [X cock]
+Cock Length of Peppy is 4. [X Inches]
+Cock Width of Peppy is 2.
+Testes of Peppy is 2. [X balls]
+Cunts of Peppy is 0. [X pussy]
+Cunt Length of Peppy is 0. [X Cunt]
+Cunt Width of Peppy is 0. [X Cunt]
+Breasts of Peppy is 2. [X nipples]
+Breast Size of Peppy is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Peppy is false. [can not take oversized members without pain]
+Sterile of Peppy is true.
+PlayerMet of Peppy is false.
+PlayerRomanced of Peppy is false.
+PlayerFriended of Peppy is false.
+PlayerControlled of Peppy is false.
+PlayerFucked of Peppy is false.
+OralVirgin of Peppy is true.
+Virgin of Peppy is true.
+AnalVirgin of Peppy is true.
+PenileVirgin of Peppy is true.
+SexuallyExperienced of Peppy is false.
+MainInfection of Peppy is "Skunk".
 The description of Peppy is "[Peppydesc]".
 
 instead of sniffing the skunk kit:

@@ -15,6 +15,7 @@ object	name
 Aster	"Aster"
 
 Aster is a man.
+[Physical details as of game start]
 ScaleValue of Aster is 4. [above human sized]
 SleepRhythm of Aster is 1. [day active]
 Cocks of Aster is 1.
@@ -26,6 +27,9 @@ Cunt Length of Aster is 0.
 Cunt Width of Aster is 0.
 Breasts of Aster is 2.
 Breast Size of Aster is 0.
+[Basic Interaction states as of game start]
+TwistedCapacity of Aster is false. [can not take oversized members without pain]
+Sterile of Aster is true.
 PlayerMet of Aster is false.
 PlayerRomanced of Aster is false.
 PlayerFriended of Aster is false.
@@ -36,6 +40,7 @@ Virgin of Aster is true.
 AnalVirgin of Aster is true.
 PenileVirgin of Aster is true.
 SexuallyExperienced of Aster is false.
+MainInfection of Aster is "".
 Aster is nowhere.
 The description of Aster is "[AsterDesc]".
 The conversation of Aster is { "<This is nothing but a placeholder!>" }.
@@ -244,18 +249,18 @@ to say AsterDomMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Offer a BJ";
 	now sortorder entry is 1;
-	now description entry is "Suck Aster off under the desk.";
+	now description entry is "Suck Aster off under the desk";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask him to fuck you";
 	now sortorder entry is 2;
-	now description entry is "Ask him to take you right there on his desk.";
+	now description entry is "Ask him to take you right there on his desk";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;
-		now description entry is "Tell the minotaur you're interested in his ass.";
+		now description entry is "Tell the minotaur you're interested in his ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -326,7 +331,7 @@ to say AsterSubMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;
-		now description entry is "Tell the minotaur you wanna ride his ass";
+		now description entry is "Tell the minotaur you want to ride his ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -345,7 +350,7 @@ to say AsterSubMenu:
 				now sextablerun is 1;
 				if (nam is "Offer a BJ"):
 					say "[AsterSub1]";
-				if (nam is "Present yourself for fucking"):
+				if (nam is "Demand his dick"):
 					say "[AsterSub2]";
 				if (nam is "Ask to fuck him"):
 					say "[AsterSub3]";

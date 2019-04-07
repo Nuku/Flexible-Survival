@@ -13,6 +13,32 @@ object	name
 Midnight	"Midnight"
 
 Midnight is a man.[or woman]
+[Physical details as of game start]
+ScaleValue of Midnight is 3. [human sized]
+SleepRhythm of Midnight is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Midnight is 1. [X cock]
+Cock Length of Midnight is 14. [X Inches]
+Cock Width of Midnight is 8.
+Testes of Midnight is 2. [X balls]
+Cunts of Midnight is 1. [X pussy]
+Cunt Length of Midnight is 8. [X Cunt]
+Cunt Width of Midnight is 4. [X Cunt]
+Breasts of Midnight is 6. [X nipples]
+Breast Size of Midnight is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Midnight is false. [can not take oversized members without pain]
+Sterile of Midnight is false.
+PlayerMet of Midnight is false.
+PlayerRomanced of Midnight is false.
+PlayerFriended of Midnight is false.
+PlayerControlled of Midnight is false.
+PlayerFucked of Midnight is false.
+OralVirgin of Midnight is true.
+Virgin of Midnight is true.
+AnalVirgin of Midnight is true.
+PenileVirgin of Midnight is false.
+SexuallyExperienced of Midnight is true.
+MainInfection of Midnight is "Pantherherm".
 The description of Midnight is "A large and powerful black panther is reclining lazily up against the gift shop counter, its golden eyes watching both you and Angie with lazy arrogance.".
 The conversation of Midnight is { "Mrowl!" }.
 
