@@ -47,6 +47,7 @@ Instead of resolving a Hyena Bikers:
 			now Hyena Bikers is resolved;
 			stop the action;
 		if lost is 0:
+			project the Figure of Grant_face_icon;
 			say "     Having struck down the third gang member, the others start to move in to mob you, but there's a laughing bark from the back. The hyenas stop, turning to look at their leader. He steps up, a big male with a well-built body in a leather jacket. He has a pair of sunglasses that have been modified to fit his muzzle. You ready your weapon, preparing to deal with this stronger enemy, but he speaks instead of attacking.";
 			say "     'You're pretty tough. You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this. You won't be able to go it alone forever and someone like you could fight for a good position.'";
 			say "     As the first hyena who faced you tries to get back up, he gives hir a hard smack in the back of the head. The herm drops hir tire iron, which the leader kicks over to you. 'Take that, watch yourself and think on the offer.' He boots the defeated hyenas back to their bikes and the gang gets on their bikes and rides off. You are left with your strange prize and the biker's offer mulling through your mind.";

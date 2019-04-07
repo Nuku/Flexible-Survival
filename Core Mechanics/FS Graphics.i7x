@@ -51,8 +51,8 @@ Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
-Figure of Herm_Hyena_clothed_icon is the file "Herm_Hyena_clothed.jpg".
-Figure of Herm_Hyena_naked_icon is the file "Herm_Hyena_naked.jpg".
+Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
+Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
@@ -390,10 +390,6 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg". [after the Hellhound
 Figure of Beach_Overlook_icon is the file "Beach_overlook.jpg".
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 Figure of Map_Tenvale_College_icon is the file "Campus_Map.jpg".
-Figure of Map_Bunker_Main_icon is the file "Map_Bunker_Main.jpg".
-Figure of Map_Bunker_Restroom_icon is the file "Map_Bunker_Restroom.jpg".
-Figure of Map_Bunker_Shower_icon is the file "Map_Bunker_Shower.jpg".
-Figure of Map_Bunker_Storeroom_icon is the file "Map_Bunker_Storeroom.jpg".
 Figure of Map_Bunker_Main_icon is the file "Map_Bunker_Main.jpg".
 Figure of Map_Bunker_Restroom_icon is the file "Map_Bunker_Restroom.jpg".
 Figure of Map_Bunker_Shower_icon is the file "Map_Bunker_Shower.jpg".
@@ -941,27 +937,27 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-black	"normal"
 [Library Map]
-"Map_Bunker_Main"	Figure of Map_Bunker_Main_icon	"Goncalo"	g-Black	"normal"
-"Map_Bunker_Restroom"	Figure of Map_Bunker_Restroom_icon	"Goncalo"	g-Black	"normal"
-"Map_Bunker_Shower"	Figure of Map_Bunker_Shower_icon	"Goncalo"	g-Black	"normal"
-"Map_Bunker_Storeroom"	Figure of Map_Bunker_Storeroom_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Back"	Figure of Map_Library_Back_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Front"	Figure of Map_Library_Front_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Fountain"	Figure of Map_Library_Fountain_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Street"	Figure of Map_Library_Street_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Garden"	Figure of Map_Library_Garden_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_Shack"	Figure of Map_Library_Shack_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_North1"	Figure of Map_Library_North1_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_North2"	Figure of Map_Library_North2_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_North3"	Figure of Map_Library_North3_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_North4"	Figure of Map_Library_North4_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_South1"	Figure of Map_Library_South1_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_South2"	Figure of Map_Library_South2_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_South3"	Figure of Map_Library_South3_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_2F_West"	Figure of Map_Library_2F_West_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_2F_North"	Figure of Map_Library_2F_North_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_2F_South"	Figure of Map_Library_2F_South_icon	"Goncalo"	g-Black	"normal"
-"Map_Library_2F_East"	Figure of Map_Library_2F_East_icon	"Goncalo"	g-Black	"normal"
+"Map Bunker_Main"	Figure of Map_Bunker_Main_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Restroom"	Figure of Map_Bunker_Restroom_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Shower"	Figure of Map_Bunker_Shower_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Storeroom"	Figure of Map_Bunker_Storeroom_icon	"Goncalo"	g-black	"normal"
+"Map Library_Back"	Figure of Map_Library_Back_icon	"Goncalo"	g-black	"normal"
+"Map Library_Front"	Figure of Map_Library_Front_icon	"Goncalo"	g-black	"normal"
+"Map Library_Fountain"	Figure of Map_Library_Fountain_icon	"Goncalo"	g-black	"normal"
+"Map Library_Street"	Figure of Map_Library_Street_icon	"Goncalo"	g-black	"normal"
+"Map Library_Garden"	Figure of Map_Library_Garden_icon	"Goncalo"	g-black	"normal"
+"Map Library_Shack"	Figure of Map_Library_Shack_icon	"Goncalo"	g-black	"normal"
+"Map Library_North1"	Figure of Map_Library_North1_icon	"Goncalo"	g-black	"normal"
+"Map Library_North2"	Figure of Map_Library_North2_icon	"Goncalo"	g-black	"normal"
+"Map Library_North3"	Figure of Map_Library_North3_icon	"Goncalo"	g-black	"normal"
+"Map Library_North4"	Figure of Map_Library_North4_icon	"Goncalo"	g-black	"normal"
+"Map Library_South1"	Figure of Map_Library_South1_icon	"Goncalo"	g-black	"normal"
+"Map Library_South2"	Figure of Map_Library_South2_icon	"Goncalo"	g-black	"normal"
+"Map Library_South3"	Figure of Map_Library_South3_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_West"	Figure of Map_Library_2F_West_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_North"	Figure of Map_Library_2F_North_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_South"	Figure of Map_Library_2F_South_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_East"	Figure of Map_Library_2F_East_icon	"Goncalo"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 

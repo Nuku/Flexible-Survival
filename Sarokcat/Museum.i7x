@@ -39,7 +39,7 @@ object	name
 Valerie	"Valerie"
 
 Valerie is a woman.
-The description of Valerie is "[ValerieDesc]";
+The description of Valerie is "[ValerieDesc]".
 The conversation of Valerie is { "Riddle me this!" }.
 The icon of Valerie is Figure of Valerie_icon.
 Valerie is in Museum Foyer.
