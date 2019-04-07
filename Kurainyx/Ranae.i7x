@@ -1,19 +1,28 @@
 Version 1 of Ranae by Kurainyx begins here.
 [ Version 1.0 - Created Ranae - Kurainyx ]
+[ Version 2.0 - Add one luxury item event and oral vore/bound state- Kurainyx]
 
 "Adds a female frog NPC to Flexible Survival"
 
 [  Hunger of Ranae                                         ]
-[  0: Never met                                              ]
+[  0: Never met                                            ]
 [  1: Met Ranae but did not give her food and water        ]
 [  2: Gave Ranae one round of food and water               ]
 [  3: Gave Ranae two rounds of food and water              ]
 [  4: Gave Ranae three rounds of food and water            ]
-[  5: Found black dress                                      ]
+[  5: Found black dress                                    ]
 [  6: Gave Ranae black dress                               ]
 [  7: Gave Ranae four rounds of food and water             ]
 [  8: Gave Ranae one round of chips and soda               ]
 [  9: Ranae moves into Abbey                               ]
+[ 10: Gave Ranae one luxury item                           ]
+
+[  Perception of Ranae (Figurine)                          ]
+[  0: Never found Figurine                                 ]
+[  1: Found Figurine                                       ]
+[  2: Gave Ranae Figurine                                  ]
+
+
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -23,6 +32,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Starving Frog	"Starving Frog"
 Rundown Boutique	"Rundown Boutique"
+Boarded-up Building	"Boarded-up Building"
 
 Ranae is a woman.
 [physical details as of game start]
@@ -57,9 +67,14 @@ Section 1 - Events
 
 Starving Frog is a situation.
 The sarea of Starving Frog is "Mall".
+
 Rundown Boutique is a situation.
 The sarea of Rundown Boutique is "Outside".
 Rundown Boutique is inactive.
+
+Boarded-up Building is a situation.
+The sarea of Boarded-up Building is "Outside".
+Boarded-up Building is inactive.
 
 when play begins:
 	add Starving Frog to badspots of girl;
@@ -111,6 +126,18 @@ Instead of resolving a Rundown Boutique:
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of player < 3], given how you're too small for it[else if scalevalue of player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
 	now hunger of Ranae is 5;		[Found black dress]
 	now Rundown Boutique is resolved;
+
+Instead of resolving a Boarded-up Building:		[Figurine]
+	say "     Exploring through one of the city's many streets, you come to a two-story building that has wooden boards covering every window and doorway. Chances are that the building was abandoned and boarded-up before all of the chaos started, but you figure you might as well try your luck and take a look inside. That is, if you can find a way to get in. Examining the boards up close, you find that all of them are securely in place, barring any chance of an easy entrance. You briefly consider trying to force your way in, but you dismiss the idea as it would take too much effort, not to mention that the noise would likely attract unwanted attention. Searching for an alternate route, you move into a small alleyway to the right of the building.";
+	say "     Curiously, you find a ladder peeking out from under a tarp that seems to have been hastily thrown over it. Even more curious is the fact that the ladder is located under a large boarded-up window on the second floor. Figuring that it's at least worth investigating, you pull out the ladder from the tarp, prop it against the wall, and use it to climb up to the window. To your surprise, the wood blocking your way budges when you touch it, and with a bit more pushing, you're able to move the board to the side, finally giving you a way in. When you climb through the window, you're disappointed to find that the room you have snuck into, as well as the adjacent ones, are all completely bare, confirming that the place was abandoned some time ago.";
+	WaitLineBreak;
+	say "     However, not wanting to give up so quickly, you make your way to the opposite side of the building and find a sleeping bag and a small pack tucked away in the corner. You quickly check to make sure that there's nothing else in the rest of the building before you search through the makeshift camp. Judging by the layer of dust on the items, it looks like the owner of the meager belongings will not be returning. Searching through the pack, you find a tin of food, which you happily pocket, as well as an odd object wrapped up with newspaper. Peeling away the paper, you find a small figurine of a woman attached to a dome-like wooden base.";
+	say "     The tiny female is wearing a green dress that completely covers her legs, and she has one arm raised up high with another stretched out in a dancing pose. Turning the object around, you find a wind-up key at the back of the base. You give the key a few turns, which makes the figurine start to slowly spin around as the soft sounds of a music box begins playing. Although the song and dance is short, it is charming enough to make you smile a little. As you look over the figurine, wondering what you're going to do with it, the dancer's green dress grabs your attention, the color almost the same shade as Ranae's skin. Perhaps the frog girl will appreciate a gift like this. After covering the gift back up with newspaper and safely tucking the gift away in your pack, you exit the building through the same window you crawled in through, making a note to bring your find to Ranae when you have the time.";
+	say "     [bold type]You found a can of food[roman type]";
+	increase carried of food by 1;
+	now perception of Ranae is 1;		[Found figurine]
+	now Boarded-up Building is resolved;
+
 
 
 Section 2 - Froggy Hideout
@@ -181,6 +208,12 @@ Instead of conversing the Ranae:
 		now sortorder entry is 3;
 		now description entry is "Gift some chips and soda to the hungry frog";
 	[]
+	if hunger of Ranae is 9:
+		choose a blank row in table of fucking options;
+		now title entry is "Give Ranae a gift";
+		now sortorder entry is 3;
+		now description entry is "Give Ranae something that she might like from your scavenging";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -203,6 +236,8 @@ Instead of conversing the Ranae:
 					say "[RanaeSupplies]";
 				if nam is "Give Ranae junk food":
 					say "[RanaeJunkFood]";
+				if nam is "Give Ranae a gift":
+					say "[RanaeGift]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -259,12 +294,21 @@ to say RanaeJunkFood:
 			now Froggy Hideout is unknown;
 			move player to Sitting Area;
 			move Ranae to Sitting Area;
+			now Boarded-up Building is active;
 		else:
 			say "     Error encountered. Please report this bug on the Discord channel.";
 		decrease carried of chips by 1;
 		decrease carried of soda by 1;
 	else:
 		say "     You don't have any chips and/or soda to give to Ranae.";
+
+to say RanaeGift:
+	say "     'Did you bring me something?' Ranae asks when as you approach her.";
+	if perception of Ranae is 1:	[Figurine]
+		say "     Recalling your recent search inside of the boarded-up building, you dig out the newspaper-wrapped object you found and give it to her. The frog woman arches her brow in skepticism, but she accepts your offering without a word before quickly tearing off the paper. Ranae grins as she holds up the dancing figurine and remarks, 'Ohhh, I like this. I used to have one of these things.' She turns the windup key a few times, making the soft tinkling of the music box starts playing, and she watches the tiny dancer spin around with rapt attention and a growing grin on her face. A few moments later, the figurine comes to a stop, and Ranae gently places her new possession on a nearby desk. Giving you a nod of satisfaction, she says, 'Good job, servant. You always know the best things to give me.'";
+		now perception of Ranae is 2;
+	else:
+		say "     You pull out several knickknacks and trinkets that you have found during your exploration, but none of them seems to catch Ranae's eye. When you run out of stuff to show to the frog woman, she snorts in annoyance and gives you a dismissive wave with her hand. 'Go and find me stuff that's actually interesting,' she commands before sending you on your way.";
 
 instead of fucking the Ranae:
 	if (lastfuck of Ranae - turns < 6): [Had sex in the last 18 hours = 6 turns]
@@ -286,6 +330,12 @@ instead of fucking the Ranae:
 			now sortorder entry is 2;
 			now description entry is "Let Ranae use your face as a seat";
 		[]
+		if vorelevel > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Oral Vore";
+			now sortorder entry is 3;
+			now description entry is "Let Ranae swallow you whole";
+		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
@@ -306,6 +356,8 @@ instead of fucking the Ranae:
 						say "[RanaeAss]";
 					if nam is "Facesit":
 						say "[RanaeFacesit]";
+					if nam is "Oral Vore":
+						say "[RanaeOralVore]";
 					now lastfuck of Ranae is turns;
 					wait for any key;
 			else if calcnumber is 0:
@@ -333,6 +385,120 @@ to say RanaeFacesit:		[Ranae sits on the player's face]
 		say "Suddenly, you feel the frog's fingers caress your groin, and you let out a moan of your own. 'I suppose my seat has earned a bit of a reward,' Ranae says through her husky panting. 'Just make sure you keep doing your job.'";
 	say "     As you continue to lavish her wondrous rear with attention, probing your tongue into the tight, hot passage and caressing every inch of it, Ranae's breathing gets even more ragged, and soon, with a squeal, she achieves her orgasm. While your body is drenched in her juices, your face is squeezed tightly by her ass, and the mix of her intoxicating musk and the sensual embrace of her rear cheeks gives you your own climax[if player is male], your cum spraying onto the amphibian's hand[else if player is female], your femcum splashing onto the amphibian's hand[end if].";
 	say "     You remain under Ranae's plush ass as she recovers from her release, not that you mind staying in your blissful situation. Eventually though, the magnificent ass rises off of your face, exposing you to the open air again with the frog woman smirking down at you. 'You make for a wonderful chair[if player is male], even if you do make quite the mess,' she says as she uses your body to wipe your cum off of her hand[else if player is female], even if you do make quite the mess,' she says as she uses your body to wipe your femcum off of her hand[else],' she says[end if]. 'Do make sure that you're around the next time I need a seat.'";
+
+to say RanaeOralVore:		[Ranae swallows player whole and bound state]
+	say "     Before you can say anything, Ranae curtly states in a tone that brooks no argument, 'I'm hungry.' Seeing that she will not take 'no' for an answer, you ask Ranae if she's asking you to get her more food. In response, she saunters right up to you with a devilish grin. 'No, I don't want those boring things. I want [italic type]you[roman type],' she says, and she pokes you in the chest with her index finger as she licks her lips with her long tongue. 'You've given me so many nice things, and now, you're going to give yourself to me.' Despite the ominous words, there's a sense of thrill, and along with your eccentric drive to constantly please the demanding woman, you don't refuse her outlandish command, nor do you resist when she pushes you onto her mattress. The hungry frog is upon you before you can react, locking you in place beneath her as a hungry glint flashes in her eyes. 'I'm going to enjoy this,' Ranae remarks before she lifts up your head toward her open maw. Though the amphibian predator is forceful in shoving you inside of mouth, she takes her time to savor your flavor, her long tongue licking every inch of your face.";
+	if scalevalue of player < 3:
+		say "     Because of your small body, it doesn't take much effort for Ranae to stuff the rest of you into her mouth, and before you know it, you're disappearing down her gullet. The slick muscles in her throat squish into you from all sides, slowly dragging you deeper into the amphibian. Your journey through the churning darkness doesn't take long before you eventually feel yourself push up against a wall, but it only takes a moment for you to be squeezed through it, dumping you into the frog's stomach. Situating yourself in the twisted confines, you find that there's little room for you to move about. ";
+	else:
+		say "     Despite being [if scalevalue of player is 3]the same size as[else]larger than[end if] the frog, Ranae is determined to make you her meal. As she continues to cram you inside of her, the hardest part soon comes when she gets to your shoulders. Amidst all of the pushes and squeezing she does to try and gulp you down, somehow, her mouth slowly stretches wider and wider until finally, she manages to take in your shoulders, allowing her to resume consuming you. With the widest part of you taken care of, the rest of your body follows suit down her gullet without much resistance. The journey down her constricting throat is brief. In fact, parts of your legs are still squirming outside of the frog by the time your head arrives in her stomach. No doubt that the infectious nanites is somehow letting her body stretch inhumanely, Ranae eventually manages to gulp you all down, and you're forced to curl up into a ball to fit inside of her stomach. ";
+	say "     'You were simply delicious,' Ranae compliments while she pats her belly, which is now extremely distended to house you. 'Be a good little servant and stay in there. I'll let you out later... if I feel like it.'";
+	wait for any key;
+	RanaeBind;
+
+
+Section 4 - Bound State
+
+
+to RanaeBind:
+	now lustatt is libido of player;
+	now calcnumber is -1;
+	let Trixieexit be 0;
+	while Trixieexit is 0:
+		if humanity of player < 50:
+			now obliging is true;
+		checkboundrecover;
+		if clearnomore is 0, clear the screen;
+		if lustatt > 99:
+			say "     Your cloistered captivity inside of Ranae is stifling, but there's also no denying that being inside of her stomach is somehow strangely arousing. You're not sure if it's whether the domineering frog exerting her influence on you or if it's you finding the caress of her inside walls pleasurable, but one thing is for certain and that is the growing pressure in your loins. The taut flesh pressing down on you restricts you from tending to your impending climax, but that same soft, supple flesh takes care of that for you, rubbing into every angle of your body, including your [if player is herm]cock[smn] and cunt[sfn][else if player is male]cock[smn][else if player is female]cunt[sfn][else]groin[end if]. It isn't long until you are pushed to orgasm, your throes of pleasure reduced to mere wiggles by your cramped confines. 'Ooh, someone is having fun in there,' Ranae commends, chuckling as she feels your movements. 'Just stay in there, and you'll feel much more of that.' Despite your mind regaining some clarity from your release, a part of you wants to obey your amphibious captor's suggestion.";
+			LineBreak;
+			now struggleatt is 0;
+			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
+			now lustatt is libido of player;
+			if enduring is true:
+				decrease humanity of player by 5 + (psycheadjust * 2);
+			else:
+				decrease humanity of player by 13 + (psycheadjust * 5);
+				if struggleatt > 0, decrease struggleatt by 1;
+		now enduring is false;
+		say "     You're within Ranae's stomach. [one of]You can feel Ranae's hands rub you from the outside while she murmurs, 'Feels so good...'[or]Although you're cramped inside of the amphibian, you find your confinement oddly pleasurable because of your fleshy surroundings constantly knead your helpless form[or]'Mine... All mine...' Ranae coos as she hugs her bulging belly[at random]. You can [bold type]S[roman type]truggle to let Ranae know that you want to be let out, [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] to continue pleasing the frog, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] to try and stay inside of the amphibian for as long as you can.[line break]";
+		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
+		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
+		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
+		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [RanaeStruggle]";
+		if humanity of player < 1:
+			LineBreak;
+			say "     You're not sure how long you've spent inside of the amphibious predator, but you eventually find yourself unwilling and unable to resist Ranae's influence. Subjected to the endless churning of her stomach, you feel completely worn out from the constant rubbing and squishing and allow yourself to submit to the frog. Between your exhaustion and no longer having the will to struggle, the touches of the surrounding slick flesh start to feel like they are kneading and massaging your weary body. The warm, comforting embrace of Ranae's stomach lulls you into a state of bliss, and you would do anything to spend more time inside of the hungry frog, which includes devoting yourself to tend to her every need. Even as your eyes grow heavy and eventually close from a mix of exhaustion and pleasure, your thoughts dwell on your froggy mistress and how to better serve her.";
+			wait for any key;
+			if a random chance of 1 in 2 succeeds:
+				say "     Coming to an unknown time later, you find yourself lying on the floor of Ranae's part of the library. You briefly wonder if you really did spend time in the amphibious woman's stomach, but judging by the fluids still covering your body, Ranae had indeed eaten you, and she had spat you out some time after you passed out. 'Look who's finally up,' the frog herself says. She's lounging on her mattress, looking you nonchalantly. 'What? Did you really think I was going to eat you for real?' she asks with a snort. 'I'm not going to waste a good servant just like that. That being said though...' Ranae smirks and puts on a show of slowly licking her lips with her long tongue. 'You're a really tasty treat, and I might not be able to resist keeping you when dinner time comes around again. Until then, go and find me more stuff.' Although you understand the implied risk of letting Ranae eating you again, a part of you actually yearns for you to return to the pleasurable embrace of her stomach. Shakily getting back on your feet, you clean yourself off and leave, thoughts of the hungry frog still on your mind.";
+				now humanity of player is 25;
+				cleanboundmemory;
+				now Trixieexit is 1;
+				follow the turnpass rule;
+				wait for any key;
+			else:
+				say "     'That's a good [if cocks of player > 1]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
+				now voreloss is true;
+				now bodyname of player is "Frog Food";
+				now Trixieexit is 1;
+				end the story saying "You let a frog have her way with you.";
+		else:
+			let k be 0;
+			now keychar is "INVALID";
+			change the text of the player's command to "";
+			while keychar is "INVALID":
+				now k is the chosen letter;
+				translate k;
+				if the player's command matches "[number]":
+					now keychar is "[number understood]";
+			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
+				LineBreak;
+				increase struggleatt by 1;
+				if struggleatt < 2:
+					say "     [one of]'What are you doing in there?' an annoyed Ranae asks as she pokes your struggling form[or]'Don't you want to stay inside of me? It would please me so much,' Ranae teases[or]'Aren't you a feisty one?' Ranae says as she places her hands on your squirming form[at random].";
+					increase lustatt by 7 + (lustadjust * 2);
+					wyvhumanityroll;
+					wait for any key;
+				else:
+					say "     As you continue to move about inside of the frog, Ranae asks, 'Why are you making such a fuss? You're supposed to be serving me.' You respond with some more movement, and eventually Ranae relents, 'Hmph. Fine. Be that way. You owe me for this.' Your surroundings start to tremble violently, and before you know it, you feel yourself being pushed upwards from your cramped cell and into a constricting tunnel stomach, only for it to end a moment later when you see the light of the outside world again as your head exits Ranae's mouth. The frog woman [if scalevalue of player < 3]unceremoniously spits you out onto the floor[else]grunts and groans as she slowly but steadily lets your body slip out of her mouth, unceremoniously dumping you on the floor[end if]. After catching her breath, Ranae says, 'Why did you have to go and ruin my fun? It's not like I was going to keep you in there forever.' The smirk the frog puts on makes you question that statement, and Ranae giggles mischievously at your skeptic face.";
+					cleanboundmemory;
+					now Trixieexit is 1;
+					follow the turnpass rule;
+					wait for any key;
+				next;
+			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
+				LineBreak;
+				if obliging is true:
+					decrease struggleatt by 1;
+					say "     [one of]'That's right. Just stay inside there and please me,' Ranae says as she caresses her belly[or]'Such a good servant,' Ranae praises[or]Ranae hums happily while she kneads your trapped form through her belly[at random].";
+					wyvhumanityroll;
+					increase lustatt by 14 + (lustadjust * 4);
+				else:
+					decrease struggleatt by 1;
+					say "     [one of]'That's right. Just stay inside there and please me,' Ranae says as she caresses her belly[or]'Such a good servant,' Ranae praises[or]Ranae hums happily while she kneads your trapped form through her belly[at random].";
+					wyvhumanityroll;
+					increase lustatt by 7 + (lustadjust * 2);
+				wait for any key;
+				next;
+			else:
+				LineBreak;
+				now enduring is true;
+				if boundrecover is true:
+					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
+					now boundrecover is false;
+					SanBoost 3;
+				else:
+					say "     You try to calm yourself down, focusing on delaying your next climax to gather your thoughts.";
+					wyvhumanityroll;
+				LineBreak;
+				increase lustatt by 3 + lustadjust;
+				wait for any key;
+				next;
+			say "Invalid action.";
+
+to say RanaeStruggle:
+say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
 
 
 Ranae ends here.
