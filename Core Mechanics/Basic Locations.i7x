@@ -74,12 +74,12 @@ to say brestroom desc:
 
 Table of GameRoomIDs (continued)
 Object	Name
-Maintenance Storeroom	"Maintenance Storeroom"
+Maintenance Closet	"Maintenance Storeroom"
 
 Maintenance Closet is southwest of Bunker.
 Maintenance Closet is a room. The description of Maintenance Closet is "[bmaintenance desc]".
 
-after going to Maintenance Storeroom:
+after going to Maintenance Closet:
 	try looking;
 	project the Figure of Map_Bunker_Storeroom_icon;
 
