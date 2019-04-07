@@ -352,8 +352,7 @@ to HyenaMatBind:
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					say "     [one of]You do your best to resist the matriarch's influence.[or]It's hard to say whether you're biding your time before you make your escape or if you're just trying to dwell amidst the squelching walls for as long as you can.[or]'Trying to resist me, huh?' the matriarch sneers. 'We'll see how long you can keep that up.'[at random]";
 					wyvhumanityroll;

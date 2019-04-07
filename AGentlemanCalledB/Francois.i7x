@@ -173,8 +173,8 @@ Francois is a man. Francois is in Bone-Appetit.
 ScaleValue of Francois is 3. [human sized]
 SleepRhythm of Francois is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Francois is 1. [One cock]
-Cock Length of Francois is 6. [Eight Inches]
-Cock Width of Francois is 2. [Each testicle 1 inch across]
+Cock Length of Francois is 8. [Eight Inches]
+Cock Width of Francois is 5.
 Testes of Francois is 2. [Two balls]
 Cunts of Francois is 0. [No pussy]
 Cunt Length of Francois is 0. [No Cunt]
@@ -182,6 +182,8 @@ Cunt Width of Francois is 0. [No Cunt]
 Breasts of Francois is 2. [2 nipples]
 Breast Size of Francois is 0. [Flat at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Francois is false. [can not take oversized members without pain]
+Sterile of Francois is true.
 PlayerMet of Francois is false.
 PlayerRomanced of Francois is false.
 PlayerFriended of Francois is false.
@@ -192,7 +194,7 @@ Virgin of Francois is true.
 AnalVirgin of Francois is true.
 PenileVirgin of Francois is true.
 SexuallyExperienced of Francois is false.
-MainInfection of Francois is "None".
+MainInfection of Francois is "".
 The description of Francois is "[Francoisdesc]".
 The conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.

@@ -180,6 +180,7 @@ an everyturn rule:
 			move Player to Tenvale College Male Dorms;
 			say "     as the memory fades, you actually find yourself in the college dormitory without any memory how you got here, your hand raised to knock on one of the doors. Shaking your head to clear it, you can't help but stare at the room with the number 23 and feel the urge to knock and go in. The draw to do so is almost irresistible.";
 			SanLoss 15;
+			now Resolution of HypnoGeeks is 73; [third flashback remembered]
 
 
 

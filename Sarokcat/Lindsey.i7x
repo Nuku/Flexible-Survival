@@ -21,6 +21,32 @@ object	name
 Lindsey	"Lindsey"
 
 Lindsey is a man.
+[Physical details as of game start]
+ScaleValue of Lindsey is 3. [human sized]
+SleepRhythm of Lindsey is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Lindsey is 1. [X cock]
+Cock Length of Lindsey is 10. [X Inches]
+Cock Width of Lindsey is 6.
+Testes of Lindsey is 2. [X balls]
+Cunts of Lindsey is 0. [X pussy]
+Cunt Length of Lindsey is 0. [X Cunt]
+Cunt Width of Lindsey is 0. [X Cunt]
+Breasts of Lindsey is 6. [X nipples]
+Breast Size of Lindsey is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Lindsey is false. [can not take oversized members without pain]
+Sterile of Lindsey is false.
+PlayerMet of Lindsey is false.
+PlayerRomanced of Lindsey is false.
+PlayerFriended of Lindsey is false.
+PlayerControlled of Lindsey is false.
+PlayerFucked of Lindsey is false.
+OralVirgin of Lindsey is false.
+Virgin of Lindsey is false.
+AnalVirgin of Lindsey is true.
+PenileVirgin of Lindsey is false.
+SexuallyExperienced of Lindsey is true.
+MainInfection of Lindsey is "Wolftaur".
 The description of Lindsey is "There is a large wolftaur examining itself in the mirror. Its large, canine lower body stretches behind it, and its tail is wagging slightly as it obviously approves of what it sees. The upper body of the beast is covered in soft gray fur, and the face is definitely more lupine than human. The sharp claws on its human hands look capable of doing a great deal of damage. As the wolftaur shifts its body around and turns its yellow canine gaze to you, you are given a good look between its legs, the large canine organ hanging half-erect there leaving no doubt as to the beast's maleness.".
 The conversation of Lindsey is { "Suck it!" }.
 Lindsey is in Zoo Restrooms.

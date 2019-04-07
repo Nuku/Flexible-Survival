@@ -26,10 +26,10 @@ Instead of resolving Chance Meeting:
 		else:
 			if (Girl is banned or Girl is Warded):
 				say "     You explore the place, only to get jumped by a latex fox.";
-				challenge "latex fox";
+				challenge "Latex Fox";
 			else:
 				say "     You explore the place, only to get jumped by a husky girl.";
-				challenge "female husky";
+				challenge "Female Husky";
 	else:
 		LineBreak;
 		say "     Favoring caution, you quietly slip away and continue your patrol.";

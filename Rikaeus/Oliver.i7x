@@ -75,6 +75,32 @@ object	name
 Oliver	"Oliver"
 
 Oliver is a man.
+[Physical details as of game start]
+ScaleValue of Oliver is 3. [human sized]
+SleepRhythm of Oliver is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Oliver is 1. [X cock]
+Cock Length of Oliver is 8. [X Inches]
+Cock Width of Oliver is 4.
+Testes of Oliver is 2. [X balls]
+Cunts of Oliver is 0. [X pussy]
+Cunt Length of Oliver is 0. [X Cunt]
+Cunt Width of Oliver is 0. [X Cunt]
+Breasts of Oliver is 2. [X nipples]
+Breast Size of Oliver is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Oliver is false. [can not take oversized members without pain]
+Sterile of Oliver is true.
+PlayerMet of Oliver is false.
+PlayerRomanced of Oliver is false.
+PlayerFriended of Oliver is false.
+PlayerControlled of Oliver is false.
+PlayerFucked of Oliver is false.
+OralVirgin of Oliver is false.
+Virgin of Oliver is true.
+AnalVirgin of Oliver is false.
+PenileVirgin of Oliver is false.
+SexuallyExperienced of Oliver is true.
+MainInfection of Oliver is "".
 The description of Oliver is "[OliverDesc]".
 The conversation of Oliver is { "<this is nothing but a placeholder!>" }.
 The scent of Oliver is "The big kitty smells heavily of male musk as well as sex, something that makes you moan out loud, making him smirk at you.".
@@ -109,7 +135,7 @@ to say OliverTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Little Ocelot";
 	now sortorder entry is 2;
-	now description entry is "Talk to him about his sub.";
+	now description entry is "Talk to him about his sub";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

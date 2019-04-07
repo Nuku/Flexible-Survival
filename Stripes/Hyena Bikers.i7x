@@ -24,15 +24,10 @@ Instead of resolving a Hyena Bikers:
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you. Looking it over, you see it proclaim the strength of the hyena gang. This puzzles you, as you thought you were well out of hyena territory.";
 	say "     You hear the roar of engines from out of a side street. It takes you a moment to even place the sound; it has been so long since you've heard a motor running. Motorcycles, your mind screams. As the moment of realization sets in, you are already running as the hyenas on motor bikes chase after you, cackling loudly. The next corner is too far away, but you continue running, looking for escape to either side. The nearby buildings both have no access within reach. The bikers overtake you and encircle you, laughing like hyenas as they keep you hemmed in. Many of the bikes have heavy bags tied to them (presumably filled with ill-gotten gains) and a couple carry spare tanks of gas.";
 	wait for any key;
-	[puts Herm Hyena as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if name entry is "Herm Hyena":
-			now monster is y;
-			break;
-	if hyg is 4 and the bodyname of player is "Herm Hyena":
+	Setmonster "Herm Hyena";
+	if hyg is 4 and bodyname of player is "Herm Hyena":
 		say "[ridetimecheck]";
-	else if hyg is 4 and the facename of player is "Herm Hyena":
+	else if hyg is 4 and facename of player is "Herm Hyena":
 		say "[ridetimecheck]";
 	else:
 		say "[bikeattack]";
@@ -85,7 +80,7 @@ to say ridetimecheck:
 		say "[gimmearide]";
 		increase score by 10;
 
-ridemessage is a text that varies.
+ridemessage is a text that varies.[@Tag:NotSaved]
 
 to say gimmearide:
 	say "     You have been offered a ride by the hyena bikers. The leader lists several places in the city they could drop you off and you have a few more come to mind. Where would you like to go?";

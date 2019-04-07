@@ -1051,7 +1051,32 @@ Table of GameCharacterIDs (continued)
 object	name
 Sonya	"Sonya"
 
-Sonya is a woman. The HP of Sonya is normally 0.
+Sonya is a woman.
+ScaleValue of Sonya is 3.
+Cocks of Sonya is 0.
+Cock Length of Sonya is 0.
+Cock Width of Sonya is 0.
+Testes of Sonya is 0.
+Cunts of Sonya is 1.
+Cunt Length of Sonya is 12.
+Cunt Width of Sonya is 5.
+Breasts of Sonya is 2. [4 nipples]
+Breast Size of Sonya is 3.
+TwistedCapacity of Sonya is false.
+Sterile of Sonya is false.
+[Basic Interaction states as of game start]
+PlayerMet of Sonya is false.
+PlayerRomanced of Sonya is false.
+PlayerFriended of Sonya is false.
+PlayerControlled of Sonya is false.
+PlayerFucked of Sonya is false.
+OralVirgin of Sonya is true.
+Virgin of Sonya is true.
+AnalVirgin of Sonya is true.
+PenileVirgin of Sonya is true.
+SexuallyExperienced of Sonya is true.
+MainInfection of Sonya is "Human".
+The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
 The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.

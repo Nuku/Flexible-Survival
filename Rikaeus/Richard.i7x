@@ -22,6 +22,32 @@ object	name
 Richard	"Richard"
 
 Richard is a man.
+[Physical details as of game start]
+ScaleValue of Richard is 3. [human sized]
+SleepRhythm of Richard is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Richard is 1. [X cock]
+Cock Length of Richard is 8. [X Inches]
+Cock Width of Richard is 4.
+Testes of Richard is 2. [X balls]
+Cunts of Richard is 0. [X pussy]
+Cunt Length of Richard is 0. [X Cunt]
+Cunt Width of Richard is 0. [X Cunt]
+Breasts of Richard is 2. [X nipples]
+Breast Size of Richard is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Richard is false. [can not take oversized members without pain]
+Sterile of Richard is true.
+PlayerMet of Richard is false.
+PlayerRomanced of Richard is false.
+PlayerFriended of Richard is false.
+PlayerControlled of Richard is false.
+PlayerFucked of Richard is false.
+OralVirgin of Richard is true.
+Virgin of Richard is true.
+AnalVirgin of Richard is true.
+PenileVirgin of Richard is true.
+SexuallyExperienced of Richard is false.
+MainInfection of Richard is "Satyr".
 The description of Richard is "[RichardDesc]".
 The conversation of Richard is { "<This is nothing but a placeholder!>" }.
 The scent of Richard is "     Richard smells like sex and musk, something that you expected from a randy satyr like him. However, beneath that scent you can smell... chocolate?".
@@ -53,7 +79,7 @@ to say RichardTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "College";
 	now sortorder entry is 2;
-	now description entry is "Ask him about his college life.";
+	now description entry is "Ask him about his college life";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

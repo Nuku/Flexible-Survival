@@ -87,6 +87,32 @@ object	name
 Horus	"Horus"
 
 Horus is a man.
+[Physical details as of game start]
+ScaleValue of Horus is 3. [human sized]
+SleepRhythm of Horus is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Horus is 1. [X cock]
+Cock Length of Horus is 8. [X Inches]
+Cock Width of Horus is 4.
+Testes of Horus is 2. [X balls]
+Cunts of Horus is 0. [X pussy]
+Cunt Length of Horus is 0. [X Cunt]
+Cunt Width of Horus is 0. [X Cunt]
+Breasts of Horus is 2. [X nipples]
+Breast Size of Horus is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Horus is false. [can not take oversized members without pain]
+Sterile of Horus is true.
+PlayerMet of Horus is false.
+PlayerRomanced of Horus is false.
+PlayerFriended of Horus is false.
+PlayerControlled of Horus is false.
+PlayerFucked of Horus is false.
+OralVirgin of Horus is true.
+Virgin of Horus is true.
+AnalVirgin of Horus is true.
+PenileVirgin of Horus is true.
+SexuallyExperienced of Horus is false.
+MainInfection of Horus is "".
 The description of Horus is "[HorusDesc]".
 The conversation of Horus is { "<This is nothing but a placeholder!>" }.
 The scent of Horus is "     Horus gives off the pleasant smell of a wonderful summer day, with the sun shining softly onward. Under it is a vague hint of an airy scent with a tinge of an earthy one.".
@@ -110,13 +136,13 @@ to say HorusTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Ra";
 	now sortorder entry is 1;
-	now description entry is "Ask him about the named Sun God and why he goes by that title now.";
+	now description entry is "Ask him about the named Sun God and why he goes by that title now";
 	[]
 	if HorusRelationship > 0 and HorusRelationship < 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Darkness";
 		now sortorder entry is 2;
-		now description entry is "Ask him about the growing darkness he has sensed.";
+		now description entry is "Ask him about the growing darkness he has sensed";
 	[]
 	if HorusRelationship is 4 and PlayerMet of Medea is true:
 		choose a blank row in table of fucking options;
@@ -202,7 +228,7 @@ to say HorusLilith:
 	say "     ";
 
 to say HorusCure:
-	say "     Pulling out the vile you present it to the Sun God. You tell him that the Pediatrics doctor managed to possibly work out a cure for the enemy you face. Horus instantly smiles in your direction, clearly happy about what you're telling him. 'That's great my friend! Now you can finally finish the fight against the darkness encroaching upon us,' he says. You nod and say that you'll make sure to take care of it as soon as possible. Inwardly you hope that the cure works as you don't know what other solution there is. Turning around you let the deity get back to his work.";
+	say "     Pulling out the vial you present it to the Sun God. You tell him that the Pediatrics doctor managed to possibly work out a cure for the enemy you face. Horus instantly smiles in your direction, clearly happy about what you're telling him. 'That's great my friend! Now you can finally finish the fight against the darkness encroaching upon us,' he says. You nod and say that you'll make sure to take care of it as soon as possible. Inwardly you hope that the cure works as you don't know what other solution there is. Turning around you let the deity get back to his work.";
 
 instead of fucking the Horus:
 	if HorusRelationship < 4:
@@ -309,7 +335,7 @@ instead of resolving Pediatrics Troublemakers:
 				now PediatricsLoss is 0;
 
 to say PediatricsTroubleFail:
-say "     However suddenly all your energy leaves you and you end up on the ground. Laying on the ground exhausted, you hear chuckling and laughing from behind you. Looking up and around you see the trio pointing at you and sneering in your direction. 'That was pathetic!' one of the leopardmen says. They all send their own insults and jeers towards you before telling you to try better next time before you start to slink off away from them and out of the alley to lick your wounds. Hopefully you can get them next time, cause you really wouldn't want to return to Medea empty-handed. Afterall, she is helping you with the research that you desperately need right now.";
+say "     However suddenly all your energy leaves you and you end up on the ground. Laying on the ground exhausted, you hear chuckling and laughing from behind you. Looking up and around you see the trio pointing at you and sneering in your direction. 'That was pathetic!' one of the leopardmen says. They all send their own insults and jeers towards you before telling you to try better next time before you start to slink off away from them and out of the alley to lick your wounds. Hopefully you can get them next time, because you really wouldn't want to return to Medea empty-handed. After all, she is helping you with the research that you desperately need right now.";
 
 instead of navigating Pediatrics Lobby while HorusRelationship is 7:
 		say "[NavCheck Pediatrics Lobby]";

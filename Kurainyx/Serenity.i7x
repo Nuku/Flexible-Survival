@@ -20,6 +20,32 @@ object	name
 Serenity	"Serenity"
 
 Serenity is a woman.
+[Physical details as of game start]
+ScaleValue of Serenity is 3. [human sized]
+SleepRhythm of Serenity is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Serenity is 0. [X cock]
+Cock Length of Serenity is 0. [X Inches]
+Cock Width of Serenity is 0.
+Testes of Serenity is 0. [X balls]
+Cunts of Serenity is 1. [X pussy]
+Cunt Length of Serenity is 8. [X Cunt]
+Cunt Width of Serenity is 2. [X Cunt]
+Breasts of Serenity is 0. [X nipples]
+Breast Size of Serenity is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Serenity is false. [can not take oversized members without pain]
+Sterile of Serenity is true.
+PlayerMet of Serenity is false.
+PlayerRomanced of Serenity is false.
+PlayerFriended of Serenity is false.
+PlayerControlled of Serenity is false.
+PlayerFucked of Serenity is false.
+OralVirgin of Serenity is true.
+Virgin of Serenity is true.
+AnalVirgin of Serenity is true.
+PenileVirgin of Serenity is true.
+SexuallyExperienced of Serenity is false.
+MainInfection of Serenity is "".
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -95,8 +121,7 @@ Instead of resolving a Naga Hybrid:
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
-					say "[bold type]Your good deed has increased your sanity by 20![roman type][line break]";
-					increase humanity of player by 20;
+					SanBoost 20;
 					now HP of Serenity is 100;
 					now Resolution of Naga Hybrid is 4; [player had the lockbox and gave it back, Serenity sent along]
 			else:			[Serenity ambushes the player, steals the lockbox, and leaves the game]
@@ -532,8 +557,7 @@ to SerenityBind:
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					say "     You try to calm yourself down, focusing on delaying your next climax to gather your thoughts.";
 					wyvhumanityroll;

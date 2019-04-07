@@ -53,6 +53,8 @@ Cunt Width of Retriever Girl is 2. [No Cunt]
 Breasts of Retriever Girl is 4. [4 nipples]
 Breast Size of Retriever Girl is 2. [B Cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Retriever Girl is false. [can not take oversized members without pain]
+Sterile of Retriever Girl is false.
 PlayerMet of Retriever Girl is false.
 PlayerRomanced of Retriever Girl is false.
 PlayerFriended of Retriever Girl is false.

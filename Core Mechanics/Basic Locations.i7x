@@ -33,7 +33,7 @@ The player is in Bunker.
 
 to say bunker desc:
 	project the figure of Bunker_icon;
-	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Two long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
+	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
 		say ". One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a large maintenance closet, but at least it's private.";
@@ -73,17 +73,17 @@ Table of GameRoomIDs (continued)
 Object	Name
 Maintenance Closet	"Maintenance Closet"
 
-Maintenance Closet is south of Bunker.
+Maintenance Closet is southwest of Bunker.
 Maintenance Closet is a room. The description of Maintenance Closet is "[bmaintenance desc]".
 
 to say bmaintenance desc:
 	project the figure of Bunker_icon;
-	say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by any standards, about the size of a walk-in closet. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of or on top of them, but you may find a use for the extra storage space in time.";
+	say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by any standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of or on top of them, but you may find a use for the extra storage space in time.";
 
 to say abbey desc:
 	project the figure of Library1stfloor_icon;
 	say "     This former abbey has been rebuilt to become a mid-sized library. The architecture and design shows its origins despite the renovations made. A number of simple yet elegant columns, wall sconces, and several other of the original features have been left untouched to give the library some [']character[']. The central room has a reception desk at the front, with long rows of bookshelves stretching out behind it and to the sides. [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim when whatever is going on in the rest of the city causes fluctuations. The computer on the front desk has power now as well and might be of some use[else]A computer sits on the front desk, although without power, it isn't of any help right now[end if]. Small seating groups of chairs and sofas make the library quite a nice place to hang out in and read.";
-	say "     There is an upper story to the library overhanging the ground floor, accessible through a stairway not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the north is a room with some white sheets covering assorted furniture. To the south is a glass window through which you are able to make out a dilapidated computer lab. Heading east will lead further into the library.";
+	say "     There is an upper story to the library overhanging the ground floor, accessible through two stairways to the left and right, not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the north is a room with some white sheets covering assorted furniture. To the south is a glass window through which you are able to make out a dilapidated computer lab. Heading east will lead further into the library.";
 	if Fang is booked and Alexandra is booked:
 		say "     Fang and Alexandra are on guard here, taking shifts watching by the door";
 		if HP of Fang < 3:

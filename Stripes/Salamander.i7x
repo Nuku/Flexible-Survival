@@ -298,8 +298,7 @@ to salabind:
 						else:
 							decrease thirst of player by 1;
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					if boundsegment is 0:
 						say "     You actively try to hold your ground and prevent the [one of]salamander[or]amphibian[at random] from pulling you in closer";

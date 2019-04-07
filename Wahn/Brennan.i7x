@@ -46,6 +46,7 @@ Version 1 of Brennan by Wahn begins here.
 [   1: Brennan told the player about his encounter                ]
 [   2: postponed taking Brennan to Camp Bravo                     ]
 [   3: went to Camp Bravo and got introduced to Tiny              ]
+[   4: went to the hospital and got some info about Diego         ]
 [  50: player got banned from the camp and told Brennen so        ]
 
 [ lust of Brennan - wolf interactions                             ]
@@ -137,8 +138,7 @@ Instead of resolving a Lone Survivor:
 				WaitLineBreak;
 				say "     'So - go with plastic, if you can find it. That's a safer bet,' Brennan tells you, then slowly pulls out a taser from a large pocket in his cargo pants, careful to not threaten you with it. Showing off the device, with its black plastic grip and bright yellow top, he gives you a companionable nod. 'Okay then, I think we should go - this lull in activity can't last forever. Wouldn't want to be picked off out here by a passing wyvern. Best of luck out there, and I hope we'll see each other again. Can't believe how good it felt to just talk to someone.' With a wave, the bearded man starts walking towards the nearest street corner, then dashes to it and vanishes in an alley. As you watch him go, you have to admit that he was right - this little chat really was good for your own sanity as well.";
 				LineBreak;
-				say "[bold type]Your sanity has increased by 15![roman type][line break]";
-				increase humanity of player by 15;
+				SanBoost 15;
 				now BrennanRelationship is 1; [talked to Brennan]
 				now Resolution of Lone Survivor is 1; [talked to Brennan]
 			else if calcnumber is 2: [mug]
@@ -516,7 +516,7 @@ to ThanksAndCherriesEvent:
 	say "     You share a sweet meal with Brennan and accept two more of the large cherries as a reward, then chat a bit with him before the cheerful man bids you farewell and departs.";
 	PlayerEat 15;
 	say "[bold type]Your sanity has increased by 10![roman type][line break]";
-	increase humanity of player by 10;
+	SanBoost 10;
 	say "[bold type]You gain 2 food![roman type][line break]";
 	increase carried of food by 2;
 	now BrennanRelationship is 7; [player got thanks, and cherries]
@@ -553,6 +553,7 @@ instead of resolving Wolf Whisperer:
 		now BrennanRelationship is 8; [met him and the wolves]
 		now Bunny Frat Invite is active;
 		now Entrance Checks is active;
+		now Infernal Offer is active;
 		now Trip to the Water Tower is active;
 		now Fountain Discussion is active;
 		now Slaver Caravan is active;
@@ -633,6 +634,7 @@ instead of resolving Wolf Whisperer:
 			now Bunny Frat Invite is inactive;
 			now Entrance Checks is inactive;
 			now Trip to the Water Tower is inactive;
+			now Infernal Offer is inactive;
 			now Fountain Discussion is inactive;
 			now Slaver Caravan is inactive;
 			now Slave Hunter is inactive;
@@ -1338,6 +1340,7 @@ to say BrennanDiegoTracking:
 		WaitLineBreak;
 		say "     Not waiting for the nurse to reach you or any other hospital inhabitants to pop out of the woodwork, all four of your little party run like hell, fleeing through the quickly opening entrance doors and out onto the streets. This gives you just the head-start that you need to shake her successfully, moving back into the dangerous, but somehow less freaky streets of the fallen city. Some time later, you reach Brennan's apartment building again and ride the elevator to get back into his safe haven.";
 		now City Hospital is known;
+		now XP of Brennan is 4;
 	else:
 		LineBreak;
 		say "     Brennan takes your decision calmly, but can't hide at least a little bit of disappointment. 'Okay then, we can postpone if you've got more important things going on right now. But I really would like to investigate this lead sometime soon. Just please let me know when you're ready, alright?'";
@@ -1972,7 +1975,7 @@ to say BrennanSex8: [pussy-fucking Brennan + wolves]
 	say "     Sinking yourself into his sweltering hot sex, you make the human survivor tremble and throw his head back, moaning out loud at the penetration. 'Yes, yes! Just like that! A little deeper. Deeper. Oh fuuuckk!' he groans lustfully, arms wrapping around your chest and holding you close as you start to thrust in and out, alternating between deep penetrations and staying balls-deep inside him, just grinding against his crotch and sensitive clit. The way his sweet pussy feels around your cock, clenching tight at just the right moments, it seems like there is no part of his body Brennan didn't train to perfection. Yet you have more in mind than just giving him a great fuck, so you soon force yourself to pause and reach out to pull his spread legs to wrap around you, followed by his arms. Then you roll the two of you over on the large bed, placing the muscular man on top.";
 	WaitLineBreak;
 	say "     Brennan looks you in the eye with an amused expression and smirks as he says, 'So you wanna let me ride you now? That'll be fun!' As you shake your head instead, he is confused right until you tell him in a husky voice that you want to have the wolves take him at the same time as you are. 'Oh? Ooooh!' Brennan lets out in surprise that is soon replaced by eagerness as he thinks about your idea, and the man raises his hand to his lips to give a loud whistle that immediately draws the sound of canine claws scraping over the floorboards after it. In a mad rush, Romulus and Remus join the two of you and jump on the bed, circling around their master and yourself to sniff and lick both of you excitedly. Brennan explains to the two of them what you want to do, making the wolves let out happy barks.";
-	say "     There is a little scramble for who will get his muzzle between the man's buttocks the fastest, with Remus being the winner. As he begins to lap the trans-man's pucker with a wet doggy tongue, the second wolf circles around to stand over your head. You get an up-close eyeful of his canine shaft pushing out from its sheath and put your hand on it to jerk the canine to full hardness, then bend his cock to the side and present it to Brennan. The trans-man happily bends forward and wraps his lips around his companion's cock, sucking it into his mouth. With his master now stretched forward and basically presenting to Remus, the wolf quickly finishes up licking Brennan's hole and instead jumps on his back, his hips pumping franticly against your friend's rear. A grunt by Brennan reveals the moment in which he is penetrated by the canine's shaft, followed by the sensation of another hard cock pushing against yours through the muscled man's insides.'";
+	say "     There is a little scramble for who will get his muzzle between the man's buttocks the fastest, with Remus being the winner. As he begins to lap the trans-man's pucker with a wet doggy tongue, the second wolf circles around to stand over your head. You get an up-close eyeful of his canine shaft pushing out from its sheath and put your hand on it to jerk the canine to full hardness, then bend his cock to the side and present it to Brennan. The trans-man happily bends forward and wraps his lips around his companion's cock, sucking it into his mouth. With his master now stretched forward and basically presenting to Remus, the wolf quickly finishes up licking Brennan's hole and instead jumps on his back, his hips pumping frantically against your friend's rear. A grunt by Brennan reveals the moment in which he is penetrated by the canine's shaft, followed by the sensation of another hard cock pushing against yours through the muscled man's insides.'";
 	WaitLineBreak;
 	say "     You grind up against Brennan's sex and move your manhood inside him, both of you experiencing all sorts of new sensations now that he is being double teamed in both his ass as well as the pussy. This is especially true as Remus pounds into his alpha like the wild beast he is, hammering his asshole with the full length of his canine shaft, including the pre-knot bulge at the bottom that pops in and out of Brennan only with a bit of stretching every time. If he could, you don't doubt your friend would be moaning nonstop from this treatment, but of course Brennan's mouth is full of yet another canine shaft, sucking on it in the determination not to leave any member of his little pack out of the fun. The most you hear from the trans-man are muted grunts and slurps around the doggy cock in his mouth, but even so it is more than obvious that he's having the time of his life at the center of your little foursome.";
 	say "     Between Remus and yourself, things just fall into a rhythm where one thrusts in as the other pulls out, meaning that there is not a single moment in which Brennan isn't being shafted hard and deep. The relentless pounding of his holes pushes the transgendered man to higher and higher stages of arousal and you can hear him panting hard through his nose while still suckling on Romulus's shaft. Feeling his pussy tremble and squeeze around your cock in very enjoyable ways, you can't help but want to thrust into him even harder, so you buck up into Brennan with everything you got, which pushes the horny guy over the edge in a big way. He gasps loudly in his lust, allowing Romulus's cock to slip out of his mouth and smack the wolf's belly just over your head. As you see the red rocket swing back and forth, dripping pre-cum and spit, your own cock is tightly clenched by Brennan's pussy as it twitches and flexes during his climax.";

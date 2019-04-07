@@ -354,63 +354,63 @@ to say joannaselection:
 		choose a blank row in table of fucking options;
 		now title entry is "Bukkake";
 		now sortorder entry is 1;
-		now description entry is "Lavish attention on her numerous genitalia to get a messy finish.";
+		now description entry is "Lavish attention on her numerous genitalia to get a messy finish";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is male and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 2;
-		now description entry is "Have her suck you off.";
+		now description entry is "Have her suck you off";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is female and HP of joanna is not 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 3;
-		now description entry is "Get that wondrous tongue in your womanly flower.";
+		now description entry is "Get that wondrous tongue in your womanly flower";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is male and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Joanna";
 		now sortorder entry is 4;
-		now description entry is "Stuff her lovely flowers with your cock(s).";
+		now description entry is "Stuff her lovely flowers with your cock(s)";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is female and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Pussy fucked";
 		now sortorder entry is 5;
-		now description entry is "Go for a ride on those tentacle cocks of hers.";
+		now description entry is "Go for a ride on those tentacle cocks of hers";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is not female and HP of Joanna > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 6;
-		now description entry is "Try one of those squirming tentacle cocks up your ass.";
+		now description entry is "Try one of those squirming tentacle cocks up your ass";
 		now toggle entry is joannasexy rule;
 	[]
 	if player is male and HP of Joanna >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Mutual Fucking";
 		now sortorder entry is 7;
-		now description entry is "Fuck Joanna while she does you.";
+		now description entry is "Fuck Joanna while she does you";
 		now toggle entry is joannasexy rule;
 	[]
 	if cocks of player > 1 and ( cock length of player * cocks of player ) <= 64 and HP of Joanna >= 5:
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-stuff Joanna";
 		now sortorder entry is 8;
-		now description entry is "Put several cocks in one pussy.";
+		now description entry is "Put several cocks in one pussy";
 		now toggle entry is joannasexy rule;
 	[]
 	if HP of Joanna >= 5 and ( cunts of player is 0 or cunt width of player > 4 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-stuff player";
 		now sortorder entry is 9;
-		now description entry is "Take those tendrils all in one hole.";
+		now description entry is "Take those tendrils all in one hole";
 		now toggle entry is joannasexy rule;
 	[]
 	sort the table of fucking options in sortorder order;

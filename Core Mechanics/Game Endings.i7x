@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "Tulip" as supersponsor.
+understand "vortex" as supersponsor.
 
 When play ends:
 	clear the screen;

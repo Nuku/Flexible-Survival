@@ -12,6 +12,30 @@ object	name
 Zephias	"Zephias"
 
 Zephias is a man.
+ScaleValue of Zephias is 4.
+Cocks of Zephias is 1.
+Cock Length of Zephias is 16.
+Cock Width of Zephias is 8.
+Testes of Zephias is 2.
+Cunts of Zephias is 0.
+Cunt Length of Zephias is 0.
+Cunt Width of Zephias is 0.
+Breasts of Zephias is 2. [2 nipples]
+Breast Size of Zephias is 0.
+TwistedCapacity of Zephias is false.
+Sterile of Zephias is false.
+[Basic Interaction states as of game start]
+PlayerMet of Zephias is false.
+PlayerRomanced of Zephias is false.
+PlayerFriended of Zephias is false.
+PlayerControlled of Zephias is false.
+PlayerFucked of Zephias is false.
+OralVirgin of Zephias is false.
+Virgin of Zephias is true.
+AnalVirgin of Zephias is false.
+PenileVirgin of Zephias is false.
+SexuallyExperienced of Zephias is true.
+MainInfection of Zephias is "Spidertaur".
 The description of Zephias is "[Zephiasdesc]".
 The conversation of Zephias is { "Meep!" }.
 

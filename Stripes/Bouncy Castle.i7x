@@ -654,7 +654,7 @@ to say bckingchair:
 			say "     It is a lucky glance down that has you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. The sudden realization that this chair intends to keep you or somehow transform you as part of its fun startles you from your complacency and you make a final attempt to pull free of the alluring inflatable.";
 			increase libido of player by 8;
 			decrease humanity of player by 3;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
@@ -816,7 +816,7 @@ to say bcpptendril:
 			say "     As you're coming down from your climax, you notice that you've been dragged much closer to the pillar and that it's about to grab you with another set of tentacles. Trying your best to shake off the afterglow, you try to grip the padded floor as best you can and pull out of its grip before it's too late. With the [ppcolor] stuff climbing quickly up your chest and more about to latch onto your arms, you know this is probably your last chance to get away before it does... whatever kinky, delightful - no, terrible! - thing it has planned for you.";
 			increase libido of player by 8;
 			decrease humanity of player by 3;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 			if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
@@ -1189,8 +1189,7 @@ to say chairstrugglebar:
 to chairpassivelosses:
 	if enduring is true:
 		if boundrecover is true:
-			increase humanity of player by 3;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 3;
 		else:
 			if boundsegment < 2:
 				decrease humanity of player by 1;
@@ -1722,8 +1721,7 @@ to dolboundstate:
 					now enduring is true;
 					LineBreak;
 					if boundrecover is true:
-						increase humanity of player by 3;
-						if humanity of player > 100, now humanity of player is 100;
+						SanBoost 3;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 						LineBreak;
 						if bodyname of player is "Bottlenose Toy":

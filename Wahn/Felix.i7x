@@ -58,7 +58,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 
 	move player to Dry Plains;
 	project the Figure of Felix_icon;
 	say "     As you come out into the dry plains to your usual meeting spot with the centaurs, Felix is waiting for you. He's trying his best to look calm, but you can see something is up. 'See that large pile of rubble back there in the midst of all that high grass? I saw something moving there just now.' He gives a slight sideways nod with his head, as not too obviously point out the location. 'Please, can you go look?'";
-	say "     [Stalker1]";
+	say "[Stalker1]";
 
 to say Stalker1:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
@@ -74,19 +74,19 @@ to say Stalker1:
 			increase diceroll by bonus;
 			if diceroll > 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
-				say "     [AndreMeeting]";
+				say "[AndreMeeting]";
 			else:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass.";
 				LineBreak;
 				say "     Sadly, as you try to climb over the top of the rubble mound, you knock loose a chunk of concrete that noisily bounces down over the rocks. You do manage to duck behind a piece of a wall jutting out of the pile, so you're not actually spotted, but it seems that the stalking lizard is careful. When you raise your head to look down to the lurking spot again, you see only the flattened grass as a sign of its presence, nothing else.";
-				say "     [AndreEscaped]";
+				say "[AndreEscaped]";
 		else:
 			if a random chance of 1 in 4 succeeds:
 				say "     Stalking through the high grass, you manage to stay unnoticed and move close to where Felix stalker should be. Looking around, you see a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. You continue to move forward until you're close behind the creature.";
-				say "     [AndreMeeting]";
+				say "[AndreMeeting]";
 			else:
 				say "     Doing your best to stay hidden in the grass, something nevertheless seems to have noticed you. You see a slight movement between the grass somewhere ahead, then a scaled shape about as big as a horse dashes away out of its hiding spot. Looks like a quadrupedal lizard with sand-yellow scales that serve terribly well to blend with the dry grass. And it's fast - you don't think you could catch it now.";
-				say "     [AndreEscaped]";
+				say "[AndreEscaped]";
 	else:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, but gives you a curt nod and says he understands.";
 	move player to Dry Plains;
@@ -96,7 +96,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
 	say "     As you come out into the dry plains to your usual meeting spot with the centaurs, Felix is waiting for you. He's trying his best to look calm, but you can see something is up. 'It's back! The predator! See that large pile of rubble back there in the midst of all that high grass? I saw something moving there just now.' He gives a slight sideways nod with his head, as not too obviously point out the location. 'Please, don't let it eat me!'";
-	say "     [Stalker2]";
+	say "[Stalker2]";
 
 to say Stalker2:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
@@ -111,19 +111,19 @@ to say Stalker2:
 			increase diceroll by bonus;
 			if diceroll > 10:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. Continuing on your climb, you move down the other side of the rubble until you're standing close behind the creature.";
-				say "     [AndreMeeting]";
+				say "[AndreMeeting]";
 			else:
 				say "     Carefully selecting your hand and footholds, you make your way up on the large mound of rubble. With the higher position, you can clearly see the centaurs in the distance, as well as a creature lurking in the grass, crouched low to keep itself hidden and watching your friends. Looks like a large lizard, about as big as a horse. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass.";
 				LineBreak;
 				say "     Sadly, as you try to climb over the top of the rubble mound, you knock loose a chunk of concrete that noisily bounces down over the rocks. You do manage to duck behind a piece of a wall jutting out of the pile, so you're not actually spotted, but it seems that the stalking lizard is careful. When you raise your head to look down to the lurking spot again, you see only the flattened grass as a sign of its presence, nothing else.";
-				say "     [AndreEscapedAgain]";
+				say "[AndreEscapedAgain]";
 		else:
 			if a random chance of 1 in 4 succeeds:
 				say "     Stalking through the high grass, you manage to stay unnoticed and move close to where Felix stalker should be. Looking around, you see the large lizard-creature lurking in the grass, crouched low to keep itself hidden and watching your friends. It's quadrupedal and has sand-yellow scales that serve well to blend with the dry grass. You continue to move forward until you're close behind the creature.";
-				say "     [AndreMeeting]";
+				say "[AndreMeeting]";
 			else:
 				say "     Doing your best to stay hidden in the grass, something nevertheless seems to have noticed you. You see a slight movement between the grass somewhere ahead, then a scaled shape about as big as a horse dashes away out of its hiding spot. Looks like a quadrupedal lizard with sand-yellow scales that serve terribly well to blend with the dry grass. And it's fast - you don't think you could catch it now.";
-				say "     [AndreEscaped]";
+				say "[AndreEscaped]";
 	else:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, saying, 'I thought you were my friend - do you want that thing to eat me?'";
 	move player to Dry Plains;
@@ -270,7 +270,7 @@ This is the FelixTalk rule:
 to say FelixTalk1:
 	say "     You talk a while with Felix and tell him how things were before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
 	if lastFelixTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now lastFelixTalk is turns;
 
 to say FelixTalk2:
@@ -544,7 +544,7 @@ This is the AndreTalk rule:
 to say AndreTalk1:
 	say "     You talk a while with Andre about how things were for the two of you before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
 	if lastAndreTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now lastAndreTalk is turns;
 
 to say AndreTalk5:

@@ -49,8 +49,7 @@ Instead of Resolving a Victim:
 		say "     'Thanks, sugar. Who knew my strong and charming guardian angel would be someone with a sexy [bodyname of player] body like yours in this weird ass town.' The tigress chuckles before shaking her head, but you catch the sincerity in her eyes before she hurriedly masks it. 'Eddie here was saying something about wanting to get a girl with wings or something before you came along. I knew I should have gotten out of this business before all of this started. Damn me for being so stupid.' The tigress growls and then chuffs in a true tiger-like way as she gives a shake of hir striped head. Asking her what she's going to do now you watch as the hermaphrodite smirks and then looks down at [']Eddie[']. 'I think it's about time someone taught this little creep a lesson in humility, if you know what I mean?' A playful wink from the hooker has you nodding somewhat hesitantly.";
 		WaitLineBreak;
 		say "     Watching as the red dress wearing prostitute kneels down, scoops up what you guess is gryphon's milk and then turn the unconscious pimp over to dump it down his throat you slowly back away when you see the tigress whip out her cock and then start to pump at herself to get a full erection going. By the time you turn to walk away, the last you would remember seeing of [']Eddie['] is the struggling pimp sprouting both wings and deep stripes across his body as the wrathful tigress had her way with him.";
-		increase humanity of player by 10;
-		if humanity of player > 100, now humanity of player is 100;
+		SanBoost 10;
 		increase score by 10;
 		now Resolution of Victim is 1; [punched out the pimp]
 		now Victim is resolved;
@@ -58,15 +57,13 @@ Instead of Resolving a Victim:
 		challenge "Twisted Pimp";
 		if lost is 0:
 			say "     Defeating the piece of scum you help the tigress up to her feet only to be glomped and then kissed like mad as the striped female shows her appreciation to you in a very physical way. Pushing the other off from you when the need for air becomes paramount you listen to the other rumble a purr at you before smiling and then turning to go about her way as quickly as possible. The unconscious pimp at your feet is left forgotten by the other, though you could have sworn that you heard the tigress say something about [']getting out of this business['] before she managed to get out of earshot. Shrugging you make your move out from the red light district to find somewhere else to be, you've done your job saving the little kittens stuck in a tree after all.";
-			increase humanity of player by 10;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 10;
 			increase score by 5;
 			now Resolution of Victim is 2; [lost to the pimp]
 			now Victim is resolved;
 		else:
 			say "     Managing to deal with the little slime as best you can by at least keeping him occupied, you find that the tigress hooker has taken the smart route and gone on about her way as the female herm is now nowhere in sight. Shrugging, but feeling as though you did a good thing you go about your business without thinking about what may happen to the tigress come later. After all, there's only so much you can do for one person.";
-			increase humanity of player by 5;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 5;
 			now Resolution of Victim is 3; [fought and won against the pimp]
 			now Victim is resolved;
 
@@ -120,8 +117,7 @@ Instead of Resolving a Portrait:
 	LineBreak;
 	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry.";
 	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [facename of player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
-	increase humanity of player by 10;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 10;
 	increase score by 1;
 	now Portrait is resolved;
 
@@ -152,8 +148,7 @@ Instead of Resolving a Hurting:
 			LineBreak;
 			say "     Realizing that going to find an orderly might be better than one of the nurses for the psychotic weasel, you go out to search for one of the jaguars to get their help. Finding one that isn't busy fucking a nurse you tell the other about the weasel hiding in one of the rooms and then have haul ass trying to catch up to the big cat as it charges off down the hall. Leading the other to the weasel you watch as the feline medical attendant goes over to the weasel and then kneels down to murmur something quietly into the psychotic male's ears. The weasel freezes for a split second and then nods gently before being hefted up into the muscular arms of the jaguar. Watching as the orderly carries the out of the room like a babe, more than likely back to a nice padded room you find yourself chuckling somewhat at how, even in the midst of all the insanity going on around here, others are still caring enough to aid those in greater need. The orderly says nothing to you, but you do spy something labeled as a libido suppressant lying on the desk where the feline had passed just a second ago. Maybe the other had left it there as payment for your services?";
 			increase carried of libido suppressant by 1;
-			increase humanity of player by 5;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 5;
 			increase score by 5;
 			now Resolution of Hurting is 1; [called an Orderly]
 			now Hurting is resolved;

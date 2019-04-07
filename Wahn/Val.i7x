@@ -21,7 +21,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Val	"Val"
 
-Val is a man. The HP of Val is normally 0.
+Val is a man.
+ScaleValue of Val is 3.
+Cocks of Val is 1.
+Cock Length of Val is 8.
+Cock Width of Val is 4.
+Testes of Val is 2.
+Cunts of Val is 0.
+Cunt Length of Val is 0.
+Cunt Width of Val is 0.
+Breasts of Val is 2. [2 nipples]
+Breast Size of Val is 0.
+TwistedCapacity of Val is true.
+Sterile of Val is false.
+[Basic Interaction states as of game start]
+PlayerMet of Val is false.
+PlayerRomanced of Val is false.
+PlayerFriended of Val is false.
+PlayerControlled of Val is false.
+PlayerFucked of Val is false.
+OralVirgin of Val is false.
+Virgin of Val is true.
+AnalVirgin of Val is false.
+PenileVirgin of Val is false.
+SexuallyExperienced of Val is true.
+MainInfection of Val is "Orc Breeder".
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.

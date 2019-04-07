@@ -307,7 +307,33 @@ Table of GameCharacterIDs (continued)
 object	name
 Jennifer	"Jennifer"
 
-Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
+Jennifer is a woman.
+ScaleValue of Jennifer is 3.
+Cocks of Jennifer is 0.
+Cock Length of Jennifer is 0.
+Cock Width of Jennifer is 0.
+Testes of Jennifer is 0.
+Cunts of Jennifer is 1.
+Cunt Length of Jennifer is 16.
+Cunt Width of Jennifer is 8.
+Breasts of Jennifer is 2. [2 nipples]
+Breast Size of Jennifer is 3.
+TwistedCapacity of Jennifer is false.
+Sterile of Jennifer is false.
+[Basic Interaction states as of game start]
+PlayerMet of Jennifer is false.
+PlayerRomanced of Jennifer is false.
+PlayerFriended of Jennifer is false.
+PlayerControlled of Jennifer is false.
+PlayerFucked of Jennifer is false.
+OralVirgin of Jennifer is false.
+Virgin of Jennifer is false.
+AnalVirgin of Jennifer is true.
+PenileVirgin of Jennifer is true.
+SexuallyExperienced of Jennifer is true.
+MainInfection of Jennifer is "Human".
+
+Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
 Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
@@ -518,7 +544,7 @@ Instead of fucking the Jennifer:
 		now Jenniferfucked is 1;
 	else if Jenniferfucked > 0: [repeat sex]
 		if (lastfuck of Jennifer - turns < 6 and HP of Septus < 7):
-			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'I'd love to sweety, but I do have some training of my own to do. Can't afford getting rusty with the moves - and the boys would be disappointed if I didn't train with them.' Giving you an apologetic pat on the arm, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. You decide to join the wolfmen a while as they watch the girls.";
+			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'I'd love to sweetie, but I do have some training of my own to do. Can't afford getting rusty with the moves - and the boys would be disappointed if I didn't train with them.' Giving you an apologetic pat on the arm, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. You decide to join the wolfmen a while as they watch the girls.";
 		else if lastfuck of Jennifer - turns < 4 and HP of Septus >= 7 and HP of Septus < 50: [team leader]
 			say "     As you approach Jennifer, she immediately sees the lust-filled twinkle in your eyes. Running her hand over your cheek and pulling you in for a quick kiss on the lips, she says 'Oh, I'd love to take a break with our sexy manager, but I do have some training of my own to do. The girls are working on a new move and they'll need me there to help them get it right. I'm sure you understand that while I'm all yours, I've still got my obligations to the team as well. Still, since I don't need to spend time with the other boys, I should be free for you more often.' Giving you a playful grope and another kiss, she steps over to the other cheerleaders to go though very flexible and... bouncy naked gymnastics moves. You decide to join the wolfmen a while as they watch the girls.";
 		else if lastfuck of Jennifer - turns < 4 and HP of Septus >= 50 and HP of Septus < 99: [cheer-leading player]
@@ -768,7 +794,33 @@ Table of GameCharacterIDs (continued)
 object	name
 Septus	"Septus"
 
-Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
+Septus is a man.
+ScaleValue of Septus is 3.
+Cocks of Septus is 1.
+Cock Length of Septus is 16.
+Cock Width of Septus is 8.
+Testes of Septus is 2.
+Cunts of Septus is 0.
+Cunt Length of Septus is 0.
+Cunt Width of Septus is 0.
+Breasts of Septus is 2. [2 nipples]
+Breast Size of Septus is 0.
+TwistedCapacity of Septus is false.
+Sterile of Septus is false.
+[Basic Interaction states as of game start]
+PlayerMet of Septus is false.
+PlayerRomanced of Septus is false.
+PlayerFriended of Septus is false.
+PlayerControlled of Septus is false.
+PlayerFucked of Septus is false.
+OralVirgin of Septus is false.
+Virgin of Septus is true.
+AnalVirgin of Septus is false.
+PenileVirgin of Septus is false.
+SexuallyExperienced of Septus is true.
+MainInfection of Septus is "Football Wolfman".
+
+Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.

@@ -32,8 +32,7 @@ The sarea of Peace is "Plains".
 Instead of resolving a Peace:
 	say "     Jogging across the plains, you come across a large bipedal blue and white furred wolf meditating in the middle of an orangish-yellow patch of grass. From the look of the other, with his imposing physique, strong jawline, rich azure and ivory furry and yellow belt strapped around his waist, the strange wolf seems to be oddly out of place given the normal mutants that roam the plains. Not that there was anything wrong with being odd, especially given the fact that this [']is['] a crossed legged blue and white lupine you're seeing after all.";
 	say "     Not having a reason to bother the other you simply continue to watch the wolf for several more minutes. When a sudden strong breeze causes the odd colored lupine's long and fluffy tail to start to sway behind him you find yourself chuckling at the peaceful smirk that draws itself up across the wolf's muzzle. When you feel that you've spent enough time watching the other you turn around and then head off in another direction to continue on your journey. Making your way about your business, you fail to note a golden pair of eyes looking at where you are going as the wolf cracks its eyelids open to track your movements.";
-	increase humanity of player by 10;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 10;
 	increase score by 5;
 	now Peace is resolved;
 

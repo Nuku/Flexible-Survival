@@ -33,7 +33,7 @@ Use Scoring.
 
 [ Basic Functions moved to Basic Functions.i7x in Core Mechanics]
 
-The release number is 65.
+The release number is 66.
 The story creation year is 2010.
 The maximum score is 2500.
 
@@ -531,7 +531,7 @@ Definition: A person (Called x) is booked:
 	if the location of x is Makeshift Rec Room, yes;
 	if the location of x is Courtyard, yes;
 	if the location of x is Large Shed, yes;
-	if the location of x is Garden, yes;
+	if the location of x is Grey Abbey Garden, yes;
 	if the location of x is Sitting Area, yes;
 	if the location of x is Garden View, yes;
 	if the location of x is Darkened Alcove, yes;
@@ -4423,10 +4423,10 @@ to weakrandominfect: [does not bypass researcher protection]
 		if debugactive is 1:
 			say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
 	else:
-		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
 			increase monster by 1;
 			choose row monster from Table of Random Critters;
-			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
 				next;
 			break;
 		infect;
@@ -5119,6 +5119,7 @@ Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
 [NPCs]
+Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
@@ -5147,6 +5148,7 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Cassiel by Tin Can.
 Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Cadmea by Prometheus.
@@ -5214,6 +5216,7 @@ Include Jimmy by Stripes.
 Include Joanna by Stripes.
 Include Joey by Qazarar.
 Include Joshiro by Wahn.
+Include J'Reth by Prometheus.
 Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
@@ -5258,6 +5261,7 @@ Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.
+Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.

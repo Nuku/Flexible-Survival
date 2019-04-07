@@ -166,7 +166,7 @@ The sarea of Art appreciation is "Museum".
 
 Instead of Resolving a Art appreciation:
 	say "     Wandering along the museum hallways, you find yourself pausing to take in the magnificent artwork gracing the halls. Deciding to relax and take your time, you wander through the rooms, enjoying the art and beauty surrounding you. Eventually, you come to a different section of the museum, but you feel much better for having stopped to appreciate the art.";
-	increase humanity of player by 30;
+	SanBoost 30;
 	now Art appreciation is resolved;
 
 

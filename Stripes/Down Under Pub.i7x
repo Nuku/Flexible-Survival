@@ -60,7 +60,7 @@ Instead of resolving a Aussie Pub:
 		else:
 			say "     You resist the temptation and head off with a little more resolve.";
 			increase score by 1;
-			increase humanity of player by 5;
+			SanBoost 5;
 			LineBreak;
 			now Resolution of Aussie Pub is 2; [Did not enter Pub]
 			now Aussie Pub is resolved;

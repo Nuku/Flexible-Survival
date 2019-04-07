@@ -112,7 +112,7 @@ carry out sacrificing:
 	increase score by 10;
 	if SatisfiedTanuki is 0:
 		extend game by 40;
-		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your, new, true form.' With that said, the spirit folds up on itself and is soon gone.";
+		say "The spirit appears just in front of your nose, grinning. Its teeth sink into the tender flesh of your nose in a sharp bit of pain that is fortunately brief. 'Persistent mortal, I gift you for your sacrifices. You are now as a child to me. Simply concentrate on a [bold type]leaf[roman type] and you can take your new, true form.' With that said, the spirit folds up on itself and is soon gone.";
 	else:
 		now the demand of the Shinto Shrine is journal;
 		try ringing;
@@ -368,7 +368,7 @@ instead of conversing the Tanuki Dad:
 	choose a blank row in table of fucking options;
 	now title entry is "Survival";
 	now sortorder entry is 1;
-	now description entry is "Get some tricks about surviving these harsh times.";
+	now description entry is "Get some tricks about surviving these harsh times";
 	[
 	choose a blank row in table of fucking options;
 	now title entry is "Romance";

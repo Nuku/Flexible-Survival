@@ -215,6 +215,8 @@ carry out NPCSexAftermathAction:
 	NPCSexAftermath Player receives "AssFuck" from Carl;
 	say "Testing: Player fucks Carl:";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
+
 
 [ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
 
@@ -271,16 +273,18 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of player is printed name of GivingChar;
 			if Sterile of GivingChar is false: [fertile]
-				setmonster MainInfection of GivingChar;
-				mimpregchance;
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+					setmonster MainInfection of GivingChar;
+					mimpregchance;
 		else if SexAct is "PussyFuck":
 			if Virgin of player is true:
 				now Virgin of player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of player is printed name of GivingChar;
 			if Sterile of GivingChar is false: [fertile]
-				setmonster MainInfection of GivingChar;
-				fimpregchance;
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+					setmonster MainInfection of GivingChar;
+					fimpregchance;
 		else if SexAct is "AssDildoFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;
@@ -317,6 +321,16 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "AssDildoFuck":
+			if AnalVirgin of TakingChar is true:
+				now AnalVirgin of TakingChar is false;
+				say "     [Bold Type][GivingChar] has taken [TakingChar]'s anal virginity![roman type][line break]";
+				now FirstAnalPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "PussyDildoFuck":
+			if Virgin of TakingChar is true:
+				now Virgin of TakingChar is false;
+				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
+				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
 		else if SexAct is "OralCock":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
@@ -343,11 +357,11 @@ understand "testCreatureSexAftermath" as CreatureSexAftermathAction.
 CreatureSexAftermathAction is an action applying to nothing.
 
 carry out CreatureSexAftermathAction:
-	say "Testing: Carl fucks player:";
+	say "Testing: Alpha Husky fucks player:";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
-	say "Testing: Player fucks Carl:";
+	say "Testing: Player fucks Alpha Husky:";
 	CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
-	[Options for SexAct are: AssFuck, PussyFuck, OralCock, OralPussy]
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
 
 to CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (GivingChar - a text):
 	if GivingChar is "Player":
@@ -378,13 +392,23 @@ to CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (G
 				now FirstVaginalPartner of player is GivingChar;
 			setmonster GivingChar;
 			fimpregchance;
+		else if SexAct is "AssDildoFuck":
+			if AnalVirgin of player is true:
+				now AnalVirgin of player is false;
+				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
+				now FirstAnalPartner of player is GivingChar;
+		else if SexAct is "PussyDildoFuck":
+			if Virgin of player is true:
+				now Virgin of player is false;
+				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
+				now FirstVaginalPartner of player is GivingChar;
 		else if SexAct is "OralCock" or SexAct is "OralPussy":
 			if OralVirgin of player is true:
 				now OralVirgin of player is false;
 				say "     [Bold Type]You have lost your oral virginity to the [GivingChar in lower case]![roman type][line break]";
 				now FirstOralPartner of player is GivingChar;
 
-to StatChange (Statname - a text) using (Value - a number):
+to StatChange (Statname - a text) by (Value - a number):
 	if Value is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
@@ -392,6 +416,7 @@ to StatChange (Statname - a text) using (Value - a number):
 	if Statname is:
 		-- "strength":
 			increase strength of player by Value;
+			increase capacity of player by Value * 5;
 		-- "dexterity":
 			increase dexterity of player by Value;
 		-- "stamina":
@@ -408,16 +433,16 @@ understand "teststatgain" as StatGainAction.
 StatGainAction is an action applying to one topic.
 
 carry out StatGainAction:
-	say "StatChange 'Strength' using 2[line break]";
-	StatChange "Strength" using 2;
+	say "StatChange 'Strength' by 2[line break]";
+	StatChange "Strength" by 2;
 
 understand "teststatloss" as StatLossAction.
 
 StatLossAction is an action applying to one topic.
 
 carry out StatLossAction:
-	say "StatChange 'Strength' using -2[line break]";
-	StatChange "Strength" using -2;
+	say "StatChange 'Strength' by -2[line break]";
+	StatChange "Strength" by -2;
 ]
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
@@ -607,7 +632,6 @@ to say StripChest:
 		say "pulls off your [ChestItem] and bares your chest";
 	else if ChestItem is not journal and BodyItem is not journal:
 		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
-
 
 [
 understand "zTSelfStripChest" as SSCAction.

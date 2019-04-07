@@ -223,7 +223,7 @@ this is the pigpussy rule:
 		decrease HP of player by dam;
 	if messypigcaught is 1:															[completely caught, infected]
 		decrease humanity of player by a random number between 2 and 5;
-		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+		if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		increase libido of player by a random number between 8 and 12;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
@@ -334,8 +334,7 @@ to MessyPigBind:
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					say "     [one of]The swine makes curious oinking noises as you try to resist her influences[or]Despite the crummy space that you're in, you manage to keep relatively calm as you figure out what to do[at random].";
 					wyvhumanityroll;

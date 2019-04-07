@@ -66,7 +66,9 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 [ 99 = Fang                                           ]
 
 [ AlexandraBrutusInteraction                          ]
-[  0: nothing yet                                     ]
+[   0: nothing yet                                    ]
+[   1: cucking with Brutus                            ]
+[ 100: cuckolding stopped cold                        ]
 
 AlexandraBrutusInteraction is a number that varies.
 AlexandraKorvinInteraction is a number that varies.

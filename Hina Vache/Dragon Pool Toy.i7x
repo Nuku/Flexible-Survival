@@ -1,5 +1,6 @@
 Version 1 of Dragon Pool Toy by Hina Vache begins here.
 [Version 1.0 - Created Creature. (Coded by Kurainyx)]
+[Version 1.1 - Added libido numbers - Kurainyx]
 
 "Adds a Dragon Pool Toy creature to Flexible Survival's Wandering Monsters table"
 
@@ -43,18 +44,22 @@ to say LoseToDragonPoolToy:
 		WaitLineBreak;
 		say "     The beast has not only swallowed you, but has shrunk itself to put itself on you like a suit, and you are now literally looking through its eyes. The creature begins to force you to move, wandering the area as it searches for something. Walking along the edge of the beach, it soon finds exactly what it is looking for as you see a group of Bottlenose Toys laughing and playing with each other. The beast that is holding you captive lets out a squeak to alert them of your presence, to which they all look at your oversexualized body with this 'suit' on. Walking over, it grabs one of the girls, spinning them around, and instantly impaling her on its hard, inflatable draconic member. You feel yourself thrusting away at the girl, but feel none of the pleasure of penetrating her. You are forced to watch as this strange beast pounds away at her sex mercilessly before pumping her full of liquid plastic instead of cum. But that is not the end of it. You are forced to spin around and look at the rest of the flock of girls... This could take a while.";
 		say "     You spend a long time watching as the toy breeds each of the girls tirelessly before the last one falls, and the toy lets out a triumphant squeak. It walks you both back to the pile you found it before carelessly spewing you out of its mouth, luckily depositing you onto the soft sand as it lays down to rest, your own aching body tired and sore from the constant thrusting you were made to perform.";
+		LibidoBoost 20;
 	else if ublevel > 1 and scalevalue of player < 5 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):	[Unbirth Bound State]
 		say "     As you pant, lying in pure defeat from the ridiculous toy, you raise a curious eyebrow as the beast turns its back to you, seeming to let you escape. But this thought is only for a fleeting moment as the beast soon lowers its backside down atop you, taking your entire head into its female sex in a single instant. Struggle as you may, you are too worn down from the fight to be able to properly resist the monster as it slowly sinks more and more of your being into its female genitals. Before long, you feel your feet being sucked in, the last of you now inside of the dragon. You squirm around as best you can given your tight confines. It isn't long before you hear an odd sound. Looking around in the dimly glowing insides of the monster, you're able to see some strange yellow spots spreading around. A quick prod of one spot near your finger confirms that it's rather hard compared to the soft latex innards of the pool toy. It appears the beast is trying to put you in an egg! What will you do?";
+		LibidoBoost 20;
 		wait for any key;
 		now boundsegment is 1;
 		DragonPoolToyBind;
 	else if player is female:	[Vaginal sex]
 		say "     The beast takes its time looking over your prone figure before letting out a series of happy squeaks as it finds what it is looking for. It knocks you onto your stomach before jumping somewhat clumsily on top of you. Given its sheer size, you expect to be crushed instantly, but being full of air, it is fairly light as it lay atop you, shifting nonstop. You wonder what it is doing before you soon have your answer as you feel a prod against your cunt. The beast clearly is eager to use a pussy, and it has found one. It wastes no time in thrusting desperately to try and begin its sexual assault on your much smaller body, though most of the thrusts miss their mark entirely before one finally manages to sink part of the tip into your sex. Before you can prepare yourself, the toy thrusts in extra hard, sinking as much of its tool into you as your body can take.";
 		say "     Given how [if cunt length of player < 11]small you are, you're unable to take more than half of the cock[else if cunt length of player < 20]positively deep your sex goes, you find it fairly easy to take most of his tool, practically the entirety of it[else]impossibly deep you are, you completely engulf his cock in your depths, making the beast squeak happily that it found a mate that could take it so completely[end if]. Wasting no time, the monster begins to pound away in earnest, seeking to breed its newest victim. Each thrust quickly becomes more brutal and bestial than the last, soon having you pushed into the sand below you despite the lack of real weight above you. It does not take long for the beast to reach its climax though as you feel a warm liquid rush into your waiting womb. You begin to wonder which of you two is really the inflatable as you are forced to watch your belly swell before your eyes, soon looking like a woman deep into pregnancy with quadruplets. After what seems like an hour, you finally feel a stop to the increasing pressure in your womb. Looking up, you notice that the toy has shrunken to an easily manageable size, to which you throw it as far as you can. Squatting, you push out as much of the liquid plastic cum as you can onto the ground before leaving, hoping that the fact that it isn't real sperm will prevent you from getting knocked up.[impregchance]";
+		LibidoLoss 40;
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Dragon Pool Toy";
 	else:	[Anal]
 		say "     The beast takes its time looking over your prone figure before squeaking out in frustration, clearly not finding what it is looking for. It knocks you onto your stomach before jumping somewhat clumsily on top of you. Given its sheer size, you expect to be crushed instantly, but being full of air, it is fairly light as it lay atop you, shifting nonstop. You wonder what it is doing before you soon have your answer as you feel a prod against your bum. The beast clearly is eager to use a hole, and it has found one. You bite your lip as the massive member pokes your rectum time and again before finally finding purchase as the tight hole gives in and open up to allow a bit of the dragon in. Given the inch, the monster takes the mile as it lets out its squeaky roar and thrusts in hard, giving you no time to get accustomed to its girth as it forces you to take as much of the plasticky tool as your body can handle at once. The pool toy remains still for a moment before beginning to thrust hard, over and over, as it seeks to breed your tight hole, each thrust more bestial than the last.";
 		say "     You're forced to take the brutal breeding for what seems like hours as it pounds away. After what seems like an eternity, you start to detect a strange scent, and you can feel the plastic-like, balloony member start pulsing in your tail hole. The pool toy must be getting close to cumming. With one final squeaky roar of triumph, the beast begins to pump its load into your gut, massive bout after massive bout of a liquid plastic-like substance gushing into your colon. It remains atop you as it pours it cum for a few minutes, the barely noticeable weight becoming lighter by the second as your stomach grows from the burden it must contain before you finally feel it stop. Looking up, the once massive pool toy has now shrunken to a much smaller size and is clearly unable to move by its own devices in its current state. Throwing the deflated toy off of yourself, you groan as you take your gravid belly, pushing out as much of the cum out of you as you can before you leave.";
+		LibidoLoss 40;
 		CreatureSexAftermath "Player" receives "AssFuck" from "Dragon Pool Toy";
 
 to say BeatTheDragonPoolToy:
@@ -182,11 +187,13 @@ to DragonPoolToyBind:		[Modified bound state that does not use lust or sanity]
 			if obliging is true:
 				if boundsegment is 1:
 					say "     You decide that you are actually in a spot that you would like to be. Maybe being in an egg wouldn't be so bad.";
+					LibidoBoost 10;
 					if a random chance of 2 in 5 succeeds:
 						infect;
 					increase boundcounter by 1;
 				else:
 					say "     You decide to sit in the strange egg. Surely there is nothing bad that can happen. Everything is fine. It is actually rather cozy in here.";
+					LibidoBoost 10;
 					if a random chance of 3 in 5 succeeds:
 						infect;
 			else:

@@ -41,6 +41,32 @@ object	name
 Sonny	"Sonny"
 
 Sonny is a man. The HP of Sonny is usually 0.
+[Physical details as of game start]
+ScaleValue of Sonny is 3. [human sized]
+SleepRhythm of Sonny is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Sonny is 1. [X cock]
+Cock Length of Sonny is 6. [X Inches]
+Cock Width of Sonny is 4.
+Testes of Sonny is 2. [X balls]
+Cunts of Sonny is 0. [X pussy]
+Cunt Length of Sonny is 0. [X Cunt]
+Cunt Width of Sonny is 0. [X Cunt]
+Breasts of Sonny is 2. [X nipples]
+Breast Size of Sonny is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Sonny is false. [can not take oversized members without pain]
+Sterile of Sonny is true.
+PlayerMet of Sonny is false.
+PlayerRomanced of Sonny is false.
+PlayerFriended of Sonny is false.
+PlayerControlled of Sonny is false.
+PlayerFucked of Sonny is false.
+OralVirgin of Sonny is true.
+Virgin of Sonny is true.
+AnalVirgin of Sonny is true.
+PenileVirgin of Sonny is true.
+SexuallyExperienced of Sonny is false.
+MainInfection of Sonny is "".
 The description of Sonny is "[SonnyDesc]".
 The conversation of Sonny is { "<This is nothing but a placeholder!>" }.
 The scent of Sonny is "     Sonny smells like berries with an underlying hint of musk. You feel as if it's probably from the conditioner he uses for his wool.".
