@@ -64,6 +64,7 @@ instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0
 	move player to Bunker;
 	if debugactive is 1:
 		say "     DEBUG: ERIC/ERICA QUESTION[line break]";
+	project the figure of Eric_face_icon;
 	say "     As you come down the stairs and enter the bunker, you find Eric waiting for you. He swallows visibly, then walks up to you and says in a halting voice, 'I - I've been thinking. Maybe... if - you know,' he waves a hand at his crotch meaningfully, then takes a breath and continues, 'If the pussy is here to stay... wouldn't it be better if I saw this thing through all the way somehow? If I was a real woman? Not - stuck like this. Halfway. A freak for some...'";
 	say "     It's clear that the young man is pretty unsure about his whole body image, even though he may have accepted his new gender. And now he turns to you, his savior, hoping that you'll make a decision for him. Better choose well, Eric will take what you say next to heart.";
 	LineBreak;

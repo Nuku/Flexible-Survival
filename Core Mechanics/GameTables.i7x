@@ -438,6 +438,7 @@ Name(text)	Type(text)
 "FangSarahInteraction"	"number"
 "FangWS"	"number"
 "fashionfight"	"number"
+"featgained"	"number"
 "Featqualified"	"number"
 "featunlock"	"number"
 "Feline_attached"	"number"

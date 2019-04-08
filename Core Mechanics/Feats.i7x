@@ -89,21 +89,6 @@ Check featgrabbing:
 Carry out featgrabbing:
 	say "I think you are trying to grab the feat of [topic understood in lower case].";
 
-
-[
-To FunFeatget:
-	blank out the whole of table of gainable feats;
-	repeat with x running through not functional featsets:
-		try addfeating x;
-	if there is no title in row 1 of table of gainable feats:
-		say "There are no feats to gain!";
-		wait for any key;
-	else:
-		change the current menu to table of Gainable Feats;
-		carry out the displaying activity;
-	decrease featgained of player by 1;
-]
-
 To FunFeatget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:

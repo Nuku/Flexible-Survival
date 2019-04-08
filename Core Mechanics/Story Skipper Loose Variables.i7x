@@ -331,6 +331,8 @@ to NumberVariableSave:
 	choose blank row in Table of GameNumbers;
 	now NumberVarName entry is CurrentVariableName;
 	if CurrentVariableName is:
+		-- "featgained":
+			now NumberVarValue entry is featgained of player;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
 		-- "addedlibido":
@@ -4001,6 +4003,8 @@ to VariableNumberLoad:
 			if debugactive is 1:
 				say "Restoring Number [NumberVarName entry].";
 			if NumberVarName entry is:
+				-- "featgained":
+					now featgained of player is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
 				-- "addedlibido":

@@ -24,8 +24,7 @@ Grey Abbey Library is east of Library Door.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 
-after going to Bunker:
-	try looking;
+after looking while player is in Bunker:
 	project the Figure of Map_Bunker_Main_icon;
 
 to say bunker desc:
@@ -46,8 +45,7 @@ Communal Shower is north of Bunker.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
 lastShowerUse is a number that varies. lastShowerUse is usually 10000.
 
-after going to Communal Shower:
-	try looking;
+after looking while player is in Communal Shower:
 	project the Figure of Map_Bunker_Shower_icon;
 
 to say bshower desc:
@@ -64,8 +62,7 @@ Underground Restroom	"Underground Restroom"
 Underground Restroom is northeast of Bunker.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
 
-after going to Underground Restroom:
-	try looking;
+after looking while player is in Underground Restroom:
 	project the Figure of Map_Bunker_Restroom_icon;
 
 to say brestroom desc:
@@ -79,8 +76,7 @@ Maintenance Storeroom	"Maintenance Storeroom"
 Maintenance Storeroom is southwest of Bunker.
 Maintenance Storeroom is a room. The description of Maintenance Storeroom is "[bmaintenance desc]".
 
-after going to Maintenance Storeroom:
-	try looking;
+after looking while player is in Maintenance Storeroom:
 	project the Figure of Map_Bunker_Storeroom_icon;
 
 to say bmaintenance desc:
@@ -96,8 +92,7 @@ Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Libra
 The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
 
-after going to Grey Abbey Library:
-	try looking;
+after looking while player is in Grey Abbey Library:
 	project the Figure of Map_Library_Front_icon;
 
 to say abbey desc:
@@ -130,8 +125,7 @@ Main & 7th Street	"Main & 7th Street"
 The description of Main & 7th Street is "[7thMainDesc]".
 The earea of Main & 7th Street is "Outside".
 
-after going to Main & 7th Street:
-	try looking;
+after looking while player is in Main & 7th Street:
 	project the Figure of Map_Library_Street_icon;
 
 to say 7thMainDesc:
@@ -187,8 +181,7 @@ to say LibraryMicrowaveDesc:
 	else:
 		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!";
 
-after going to Breakroom:
-	try looking;
+after looking while player is in Breakroom:
 	project the Figure of Map_Library_North2_icon;
 
 to say gbreakroom desc:
@@ -207,8 +200,7 @@ Half-Renovated Room is north of Grey Abbey Library.
 Half-Renovated Room is sleepsafe.
 The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
-after going to Half-Renovated Room:
-	try looking;
+after looking while player is in Half-Renovated Room:
 	project the Figure of Map_Library_North3_icon;
 
 to say LibrarySideRoomDesc:
@@ -223,8 +215,7 @@ Pantry	"Pantry"
 Pantry is west of Breakroom.
 Pantry is a room. The description of Pantry is "[gpantry desc]".
 
-after going to Pantry:
-	try looking;
+after looking while player is in Pantry:
 	project the Figure of Map_Library_North1_icon;
 
 to say gpantry desc:
@@ -238,8 +229,7 @@ Computer Lab is south of Grey Abbey Library.
 Computer Lab is a room. The description of Computer Lab is "[gcomputerlab desc]".
 The invent of Computer Lab is { "soda" }.
 
-after going to Computer Lab:
-	try looking;
+after looking while player is in Computer Lab:
 	project the Figure of Map_Library_South2_icon;
 
 to say gcomputerlab desc:
@@ -253,8 +243,7 @@ Back Of The Library	"Back Of The Library"
 Back Of The Library is east of Grey Abbey Library.
 Back Of The Library is a room. The description of Back Of The Library is "[gbackofthelibrary desc]".
 
-after going to Back Of The Library:
-	try looking;
+after looking while player is in Back Of The Library:
 	project the Figure of Map_Library_Back_icon;
 
 to say gbackofthelibrary desc:
@@ -267,8 +256,7 @@ Makeshift Rec Room	"Makeshift Rec Room"
 Makeshift Rec Room is north of Back Of The Library.
 Makeshift Rec Room is a room. The description of Makeshift Rec Room is "[grecroom desc]".
 
-after going to Makeshift Rec Room:
-	try looking;
+after looking while player is in Makeshift Rec Room:
 	project the Figure of Map_Library_North4_icon;
 
 to say grecroom desc:
@@ -282,8 +270,7 @@ Courtyard is east of Back Of The Library.
 Courtyard is a room. The description of Courtyard is "[gcourtyard desc]".
 The invent of Courtyard is { "dirty water" }.
 
-after going to Courtyard:
-	try looking;
+after looking while player is in Courtyard:
 	project the Figure of Map_Library_Fountain_icon;
 
 to say gcourtyard desc:
@@ -299,8 +286,7 @@ Large Shed is a room. The description of Large Shed is "[glargeshed desc]".
 when play begins:
 	add "Broke-Ass Hoe" to invent of Large Shed;
 
-after going to Large Shed:
-	try looking;
+after looking while player is in Large Shed:
 	project the Figure of Map_Library_Shack_icon;
 
 to say glargeshed desc:
@@ -313,8 +299,7 @@ Grey Abbey Garden	"Grey Abbey Garden"
 Grey Abbey Garden is south of Courtyard.
 Grey Abbey Garden is a room. The description of Grey Abbey Garden is "[ggarden desc]".
 
-after going to Grey Abbey Garden:
-	try looking;
+after looking while player is in Grey Abbey Garden:
 	project the Figure of Map_Library_Garden_icon;
 
 to say ggarden desc:
@@ -328,8 +313,7 @@ Grey Abbey 2F is above Grey Abbey Library.
 Grey Abbey 2F is a room. The description of Grey Abbey 2F is "[abbey 2F desc]".
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
-after going to Grey Abbey 2F:
-	try looking;
+after looking while player is in Grey Abbey 2F:
 	project the figure of Map_Library_2F_West_icon;
 
 to say abbey 2F desc:
@@ -343,8 +327,7 @@ Sitting Area is northeast of Grey Abbey 2F.
 Sitting Area is a room. The description of Sitting Area is "[usittingarea desc]".
 The invent of Sitting Area is { "chips" }.
 
-after going to Sitting Area:
-	try looking;
+after looking while player is in Sitting Area:
 	project the figure of Map_Library_2F_North_icon;
 
 to say usittingarea desc:
@@ -362,8 +345,7 @@ Garden View	"Garden View"
 Garden View is southeast of Sitting Area.
 Garden View is a room. The description of Garden View is "[ugardenview desc]".
 
-after going to Garden View:
-	try looking;
+after looking while player is in Garden View:
 	project the figure of Map_Library_2F_East_icon;
 
 to say ugardenview desc:
@@ -377,8 +359,7 @@ Darkened Alcove is southwest of Garden View.
 Darkened Alcove is southeast of Grey Abbey 2F.
 Darkened Alcove is a room. The description of Darkened Alcove is "[udarkenedalcove desc]".
 
-after going to Darkened Alcove:
-	try looking;
+after looking while player is in Darkened Alcove:
 	project the figure of Map_Library_2F_South_icon;
 
 to say udarkenedalcove desc:
