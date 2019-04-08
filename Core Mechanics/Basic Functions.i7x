@@ -317,7 +317,7 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now PenileVirgin of GivingChar is false;
 				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
 				now FirstPenilePartner of GivingChar is printed name of TakingChar;
-			if AnalVirgin of TakingChar is true:
+			if Virgin of TakingChar is true:
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
