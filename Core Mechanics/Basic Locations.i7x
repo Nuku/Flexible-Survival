@@ -76,8 +76,8 @@ Table of GameRoomIDs (continued)
 Object	Name
 Maintenance Storeroom	"Maintenance Storeroom"
 
-Maintenance Closet is southwest of Bunker.
-Maintenance Closet is a room. The description of Maintenance Closet is "[bmaintenance desc]".
+Maintenance Storeroom is southwest of Bunker.
+Maintenance Storeroom is a room. The description of Maintenance Storeroom is "[bmaintenance desc]".
 
 after going to Maintenance Storeroom:
 	try looking;
