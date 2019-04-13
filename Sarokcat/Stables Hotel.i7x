@@ -81,6 +81,7 @@ Object	Name
 Stables Hotel	"Stables Hotel"
 
 Stables Hotel is a room. It is fasttravel. It is private.
+The earea of Stables Hotel is "Stable".
 
 Table of GameRoomIDs (continued)
 Object	Name
