@@ -112,7 +112,7 @@ to say AlexandraBreedingMenu:
 		now sortorder entry is 1;
 		now description entry is "Let Alexandra get mounted by a street dog";
 	]
-	if demon brute is tamed and DBCaptureQuestVar is 5: [evil Brutus]
+	if demon brute is tamed and DBCaptureQuestVar is 5 and DemonBruteStatus < 2: [evil Brutus]
 		choose a blank row in table of fucking options;
 		now title entry is "Your demon slave Brutus";
 		now sortorder entry is 2;

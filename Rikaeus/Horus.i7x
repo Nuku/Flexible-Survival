@@ -41,7 +41,7 @@ Sky Tower	"Sky Tower"
 
 Sky Tower is a situation. The level of Sky Tower is 2.
 Sky Tower is inactive.
-The sarea of Sky Tower is "high".
+The sarea of Sky Tower is "High".
 
 when play begins:
 	add Sky Tower to badspots of guy;
@@ -261,7 +261,7 @@ Pediatrics Troublemakers	"Pediatrics Troublemakers"
 
 Pediatrics Troublemakers is a situation.
 Pediatrics Troublemakers is resolved.
-The sarea of Pediatrics Troublemakers is "high"
+The sarea of Pediatrics Troublemakers is "High"
 
 when play begins:
 	add Pediatrics Troublemakers to badspots of guy;
@@ -383,7 +383,7 @@ Nightmare Mutation	"Nightmare Mutation"
 
 Nightmare Mutation is a situation. The level of Nightmare Mutation is 10.
 Nightmare Mutation is inactive.
-The sarea of Nightmare Mutation is "capitol".
+The sarea of Nightmare Mutation is "Capitol".
 
 when play begins:
 	add Nightmare Mutation to badspots of Body Horror;

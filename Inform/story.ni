@@ -5280,6 +5280,7 @@ Include Sidney by Stripes.
 Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
+Include Skarnoth-Brutus Scenes by Luneth.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
 Include Spike by Wahn.
