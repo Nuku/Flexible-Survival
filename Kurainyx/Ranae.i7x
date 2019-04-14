@@ -105,10 +105,12 @@ Instead of resolving a Starving Frog:
 		else:
 			LineBreak;
 			say "     When you tell Ranae that you aren't able to spare any supplies, her shoulders droop in dejection, and she listlessly gazes down at the ground. 'I... I understand... Thanks for at least listening... I guess...' An awkward silence passes between the two of you. Eventually, Ranae meekly asks, 'Um, do you maybe want to see where I live? You know... just in case...' Although she doesn't finish her sentence, it's obvious that she's clinging to the hope that you'll help her out later. You let the frog lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in an dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I'll be here if you ever need a place to rest or someone to talk to... or help me out...' She adds that last part in a whisper that you barely hear it.";
+			now hunger of Ranae is 1;		[Met Ranae but did not give her food and water]
 			now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
 	else:
 		WaitLineBreak;
 		say "     When you tell Ranae that you aren't able to spare any supplies, her shoulders droop in dejection, and she listlessly gazes down at the ground. 'I... I understand... Thanks for at least listening... I guess...' An awkward silence passes between the two of you. Eventually, Ranae meekly asks, 'Um, do you maybe want to see where I live? You know... just in case...' Although she doesn't finish her sentence, it's obvious that she's clinging to the hope that you'll help her out later. You let the frog lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in an dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I'll be here if you ever need a place to rest or someone to talk to... or help me out...' She adds that last part in a whisper that you barely hear it.";
+		now hunger of Ranae is 1;		[Met Ranae but did not give her food and water]
 		now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
 	now Starving Frog is resolved;
 	now Froggy Hideout is known;
@@ -248,7 +250,9 @@ Instead of conversing the Ranae:
 	clear the screen and hyperlink list;
 
 to say RanaeCheckUp:
-	if hunger of Ranae is 0:
+	if debugactive is 1:
+		say "DEBUG -> Hunger: [hunger of Ranae] Perception: [perception of Ranae]<- DEBUG[line break]";
+	if hunger of Ranae is 1:
 		say "     Ranae gives you a friendly, albeit weak, smile, but it dissolves into a frown. 'I'm, um, still not doing well, and I could really use some food and water... if you feel like helping me, that is...'";
 	else if hunger of Ranae < 4:
 		say "     'I'm feeling better, thanks to you,' Ranae says with a smile. 'I still could use some more food and water. If you can't though, I understand.'";
@@ -263,7 +267,10 @@ to say RanaeCheckUp:
 
 to say RanaeSupplies:
 	if carried of food > 0 and carried of water bottle > 0:
-		if hunger of Ranae is 2:
+		if hunger of Ranae is 1:
+			say "     Ranae's eyes grow wide as you dig out a bottle of water and a package of food from your pack and hold them out to her. She moves closer, her gaze locked on the precious supplies, but when her hands reach for the rations, she hesitates and looks back up at you. You give her a smile and a nod, and the frog squeals in delight as she takes your gifts. 'Oh my god! Finally, water! I never thought that I'd miss clean water!' she cries before popping the cap off of the bottle and begin guzzling down the life-giving liquid. The amphibian drains the entire bottle in a matter of moments, and she promptly rips into the food right afterwards. The entire time, you just awkwardly stand there, watching as Ranae gorges herself, her loud chomping echoing through the sewer. It doesn't take long for her to finish devouring her meal, and you can already see that her belly is no longer concaved. The frog licks her fingers to get the last crumbs, only to freeze when she glances in your direction, and her face flushes red when she realizes that you're still here.'Um, excuse me?' Ranae sheepishly offers, to which you merely wave off with a smile.";
+			now hunger of Ranae is 2;		[Gave Ranae one round of food and water]
+		else if hunger of Ranae is 2:
 			say "     A wide smile graces Ranae's face when you take out another helping of water and food and hold them out to her. Again, she looks up at you, silently asking your permission, and after you give her a nod, she gleefully accepts your offerings. 'Thank you, thank you, thank you!' she exclaims before tearing into the supplies. Just like before, Ranae's ravenous hunger makes her forgo her decency and table manners, but despite her loud, sloppy eating, you find the act oddly endearing and cute. Unsurprisingly, Ranae finishes her meal in a matter of moments, and she sighs in contentment, only to make an embarrassed meep as she turns to you with her face flushed red and a nervous chuckle. 'S-sorry... again...' she apologizes. 'I think I'll be less messy the next time since I'm not starving anymore. Er, n-not that I'm implying that I expect you to help me again... although I certainly would not object if you did.'";
 			now hunger of Ranae is 3;		[Gave Ranae two rounds of food and water]
 		else if hunger of Ranae is 3:
@@ -275,7 +282,7 @@ to say RanaeSupplies:
 			say "     Ranae giggles as you present her with another round of supplies. 'You know, I would've been fine with trying to find my own supplies, but you just keep giving them to me. How can I say no to someone who just wants to keep serving me?' The frog woman takes your offering, quickly stashing them away in the corner, before giving you a nod of approval. 'Tell you what: if you really are intent on serving me, find me some junk food, like some [bold type]chips and soda[roman type]. The stuff you've been giving me is alright and all, but they're also getting boring.'";
 			now hunger of Ranae is 7;		[Gave Ranae four rounds of food and water]
 		else:
-			say "     Error encountered. Please report this bug on the Discord channel.";
+			say "     Error encountered. Please report this bug on the Discord channel. Ranae Hu: [hunger of Ranae]";
 		decrease carried of food by 1;
 		decrease carried of water bottle by 1;
 	else:
@@ -296,7 +303,7 @@ to say RanaeJunkFood:
 			move Ranae to Sitting Area;
 			now Boarded-up Building is active;
 		else:
-			say "     Error encountered. Please report this bug on the Discord channel.";
+			say "     Error encountered. Please report this bug on the Discord channel. Ranae Hu: [hunger of Ranae]";
 		decrease carried of chips by 1;
 		decrease carried of soda by 1;
 	else:
