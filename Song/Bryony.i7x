@@ -6,6 +6,32 @@ object	name
 Bryony	"Bryony"
 
 Bryony is a woman. Bryony is in Equinoid Camp.
+[Physical details as of game start]
+ScaleValue of Bryony is 4. [large human sized]
+SleepRhythm of Bryony is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Bryony is 1. [X cock]
+Cock Length of Bryony is 14. [X Inches]
+Cock Width of Bryony is 8.
+Testes of Bryony is 2. [X balls]
+Cunts of Bryony is 1. [X pussy]
+Cunt Length of Bryony is 12. [X Cunt]
+Cunt Width of Bryony is 4. [X Cunt]
+Breasts of Bryony is 1. [X nipples]
+Breast Size of Bryony is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Bryony is false. [can not take oversized members without pain]
+Sterile of Bryony is false.
+PlayerMet of Bryony is false.
+PlayerRomanced of Bryony is false.
+PlayerFriended of Bryony is false.
+PlayerControlled of Bryony is false.
+PlayerFucked of Bryony is false.
+OralVirgin of Bryony is false.
+Virgin of Bryony is false.
+AnalVirgin of Bryony is false.
+PenileVirgin of Bryony is false.
+SexuallyExperienced of Bryony is true.
+MainInfection of Bryony is "Black Equinoid".
 The description of Bryony is "[BryonyDesc]".
 The conversation of Bryony is { "Watch yourself." }.
 The scent of Bryony is "     Bryony smells distinctly masculine, a strong equine musk wafting from her body. Hints of soap and floral perfume barely mask the scent of her virility.".

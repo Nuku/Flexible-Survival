@@ -32,6 +32,32 @@ object	name
 Liliana	"Liliana"
 
 Liliana is a woman.
+[Physical details as of game start]
+ScaleValue of Liliana is 4. [large human sized]
+SleepRhythm of Liliana is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Liliana is 1. [X cock]
+Cock Length of Liliana is 12. [X Inches]
+Cock Width of Liliana is 7.
+Testes of Liliana is 2. [X balls]
+Cunts of Liliana is 1. [X pussy]
+Cunt Length of Liliana is 12. [X Cunt]
+Cunt Width of Liliana is 3. [X Cunt]
+Breasts of Liliana is 2. [X nipples]
+Breast Size of Liliana is 3. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Liliana is false. [can not take oversized members without pain]
+Sterile of Liliana is false.
+PlayerMet of Liliana is false.
+PlayerRomanced of Liliana is false.
+PlayerFriended of Liliana is false.
+PlayerControlled of Liliana is false.
+PlayerFucked of Liliana is false.
+OralVirgin of Liliana is false.
+Virgin of Liliana is false.
+AnalVirgin of Liliana is false.
+PenileVirgin of Liliana is false.
+SexuallyExperienced of Liliana is true.
+MainInfection of Liliana is "Black Equinoid".
 The description of Liliana is "[LilianaDesc]".
 
 to say LilianaDesc:

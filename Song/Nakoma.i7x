@@ -6,6 +6,32 @@ object	name
 Nakoma	"Nakoma"
 
 Nakoma is a woman. Nakoma is in Nakoma's Tent.
+[Physical details as of game start]
+ScaleValue of Nakoma is 4. [large human sized]
+SleepRhythm of Nakoma is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Nakoma is 1. [X cock]
+Cock Length of Nakoma is 12. [X Inches]
+Cock Width of Nakoma is 8.
+Testes of Nakoma is 2. [X balls]
+Cunts of Nakoma is 1. [X pussy]
+Cunt Length of Nakoma is 12. [X Cunt]
+Cunt Width of Nakoma is 4. [X Cunt]
+Breasts of Nakoma is 2. [X nipples]
+Breast Size of Nakoma is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Nakoma is false. [can not take oversized members without pain]
+Sterile of Nakoma is false.
+PlayerMet of Nakoma is false.
+PlayerRomanced of Nakoma is false.
+PlayerFriended of Nakoma is false.
+PlayerControlled of Nakoma is false.
+PlayerFucked of Nakoma is false.
+OralVirgin of Nakoma is false.
+Virgin of Nakoma is false.
+AnalVirgin of Nakoma is false.
+PenileVirgin of Nakoma is false.
+SexuallyExperienced of Nakoma is true.
+MainInfection of Nakoma is "Black Equinoid".
 The description of Nakoma is "[NakomaDesc]".
 The conversation of Nakoma is { "I like plains." }.
 The scent of Nakoma is "     Nakoma smells of grass, milk, and scented oil. A hint of arousal is also present, though it is obfuscated by the other scents which emanate from her fur.".

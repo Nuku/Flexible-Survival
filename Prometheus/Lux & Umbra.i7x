@@ -35,14 +35,26 @@ an everyturn rule:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [Midnight]
 			move Lux to Grey Abbey Garden;
 			move Umbra to Grey Abbey Garden;
+			if player is in Grey Abbey Library:
+				say "     [bold type]Lux and Umbra bound off towards the library garden, full of energy and eager to have some space to play.[roman type][line break]";
+			else if player is in Grey Abbey Garden:
+				say "     [bold type]Lux and Umbra bound into the garden and begin to chase each other excitedly.[roman type][line break]";
 		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn]
 		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Sleep]
 			move Lux to Computer Lab;
 			move Umbra to Computer Lab;
+			if player is in Grey Abbey Garden:
+				say "     [bold type]Lux and Umbra tiredly trot towards the computer lab, the dark-furred wolf leaving muddy pawprints.[roman type][line break]";
+			else if player is in Grey Abbey Garden:
+				say "     [bold type]Lux and Umbra tiredly trot into the computer lab before curling up beneath one of the desks[if Dash is visible] with Dash[end if].[roman type][line break]";
 		[else if TimekeepingVar is 6 or TimekeepingVar is -2:] [mid-morning]
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 			move Lux to Grey Abbey Library;
 			move Umbra to Grey Abbey Library;
+			if player is in Computer Lab:
+				say "     [bold type]With a yawn and a stretch, Lux and Umbra stand up and pad towards the entrance way to be with Fang again.[roman type][line break]";
+			else if player is in Grey Abbey Garden:
+				say "     [bold type]Lux and Umbra pad over towards Fang and sit down beside him, the three of them exchanging a lick of greeting.[roman type][line break]";
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
 		else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night]

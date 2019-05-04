@@ -6,6 +6,32 @@ object	name
 Amaryllis	"Amaryllis"
 
 Amaryllis is a woman. Amaryllis is in Equinoid Camp.
+[Physical details as of game start]
+ScaleValue of Amaryllis is 4. [large human sized]
+SleepRhythm of Amaryllis is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Amaryllis is 1. [X cock]
+Cock Length of Amaryllis is 12. [X Inches]
+Cock Width of Amaryllis is 8.
+Testes of Amaryllis is 2. [X balls]
+Cunts of Amaryllis is 1. [X pussy]
+Cunt Length of Amaryllis is 12. [X Cunt]
+Cunt Width of Amaryllis is 4. [X Cunt]
+Breasts of Amaryllis is 2. [X nipples]
+Breast Size of Amaryllis is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Amaryllis is false. [can not take oversized members without pain]
+Sterile of Amaryllis is false.
+PlayerMet of Amaryllis is false.
+PlayerRomanced of Amaryllis is false.
+PlayerFriended of Amaryllis is false.
+PlayerControlled of Amaryllis is false.
+PlayerFucked of Amaryllis is false.
+OralVirgin of Amaryllis is false.
+Virgin of Amaryllis is false.
+AnalVirgin of Amaryllis is false.
+PenileVirgin of Amaryllis is false.
+SexuallyExperienced of Amaryllis is true.
+MainInfection of Amaryllis is "Black Equinoid".
 The description of Amaryllis is "[AmaryllisDesc]".
 The conversation of Amaryllis is { "I choose you, playerchu!" }.
 The scent of Amaryllis is "     Amaryllis smells like clean fur and grassy fields with a hint of equine arousal.".

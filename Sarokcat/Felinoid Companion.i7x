@@ -150,6 +150,7 @@ Klauz	"Klauz"
 
 Klauz is a man.
 ScaleValue of Klauz is 3. [roughly human sized]
+SleepRhythm of Klauz is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Klauz is 1.
 Cock Length of Klauz is 14.
 Cock Width of Klauz is 10. [lemon sized balls]

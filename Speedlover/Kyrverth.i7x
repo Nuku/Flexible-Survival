@@ -51,6 +51,7 @@ Kyrverth	"Kyrverth"
 [Declaring a fuckton of variables. Keep scrolling - nothing to see here.					]
 [Compulsory Variables here:														]
 Kyrverth is a man. The hp of Kyrverth is usually 0.
+[Physical details as of game start]
 [ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]]
 [SleepRhythm(0) [0 - awake at all times, 1 - day active, 2 - night active]]
 Cocks of Kyrverth is 1. [One cock]
@@ -62,10 +63,9 @@ Cunt Length of Kyrverth is 0. [No cunt]
 Cunt Width of Kyrverth is 0. [No cunt]
 Breasts of Kyrverth is 0. [No Nipples]
 Breast Size of Kyrverth is 0. [No boobs]
-The description of Kyrverth is "[KyrverthDesc]".
-The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
-The scent of Kyrverth is "[KyrverthSmellDesc]".
-Kyrverth is in Dragons Den.
+[Basic Interaction states as of game start]
+TwistedCapacity of Kyrverth is false. [can not take oversized members without pain]
+Sterile of Kyrverth is true.
 PlayerMet of Kyrverth is false.
 PlayerRomanced of Kyrverth is false.
 PlayerFriended of Kyrverth is false.
@@ -75,6 +75,11 @@ Virgin of Kyrverth is true.
 AnalVirgin of Kyrverth is true.
 PenileVirgin of Kyrverth is true.
 SexuallyExperienced of Kyrverth is false.
+MainInfection of Kyrverth is "".
+The description of Kyrverth is "[KyrverthDesc]".
+The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
+The scent of Kyrverth is "[KyrverthSmellDesc]".
+Kyrverth is in Dragons Den.
 [Normal Variables																]
 KyrverthStage is a number that varies. KyrverthStage is usually 0.
 KyrverthQuestGiven is a number that varies. KyrverthQuestGiven is usually 0.
