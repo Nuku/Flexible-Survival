@@ -50,10 +50,12 @@ Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of random critters;
 	now name entry is "Army Ant"; [The creature's name as displayed and used in naming descriptions]
+	now enemy title entry is "Ant Warrior";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The Army Ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The Army Ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the Army Ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the Army Ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The Army Ant delivers a sweeping blow, stooping low witht he strike while his leg kicks out.[or]With his sinews creaking tightly, the Army Ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the Army Ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoarmyant]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[armyantdesc]"; [ Description of the creature when you encounter it. ]
@@ -90,7 +92,6 @@ When Play begins:
 	now libido entry is 5;
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]toned[or]segmented[or]shiny[or]fit[or]masculine[or]lean[or]plated[at random]";
 	now type entry is "[one of]ant[or]insectoid[at random]";

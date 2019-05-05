@@ -5128,6 +5128,7 @@ Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
 [NPCs]
+Include Ace by Aureas Gigas.
 Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
@@ -5175,6 +5176,7 @@ Include Darius by Wahn.
 Include David by Wahn.
 Include Deer by Stripes.
 Include Denise by Wahn.
+Include Demonologist by Gherod.
 Include Desperate Bunny by Nuku Valente.
 Include Diana by Wahn.
 Include Diego by Wahn.
@@ -5291,6 +5293,7 @@ Include Savina by Kurainyx.
 Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
+Include Sheng by Rikaeus.
 Include Sidney by Stripes.
 Include Sirius by Prometheus.
 Include Skarnoth by Wahn.

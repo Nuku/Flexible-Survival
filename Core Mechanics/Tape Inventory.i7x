@@ -79,10 +79,8 @@ carry out tapeing:
 			say "[UrbanExplorerVid1]";
 		-- "Fitness Studio Security Vid":
 			say "[FitnessStudioVid]";
-[
 		-- "Demonic Ritual Tape":
 			say "[DemonicRitualTape]"; [Source: Gherod/Demonologist.i7x]
-]
 [ Template to fill for new tapes ]
 [
 		-- "TAPE NAME":
