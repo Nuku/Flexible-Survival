@@ -14,6 +14,15 @@ Version 1 of Chris by Wahn begins here.
 [ Dexterity of Chris - interaction with his Zebra  ]
 [   0: nothing yet                                 ]
 [   1: fucked the guy                              ]
+[ 100: zebra freed                                 ]
+
+[ Stamina of Chris - number of orc warrior sons    ]
+[ Perception of Chris - turn of the last training  ]
+
+[ Strength of Chris - interaction with eldest son  ]
+[   0: not met                                     ]
+[   1: Malik got his name                          ]
+[   2: blew Malik off                              ]
 
 [ Hunger of Chris - interaction with Urik          ]
 [   0: never met                                   ]
@@ -25,6 +34,8 @@ Version 1 of Chris by Wahn begins here.
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
 
+MaliksRandomCaptive is a number that varies. [@Tag:NotSaved]
+
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -35,7 +46,7 @@ Chris is a man.
 ScaleValue of Chris is 3. [human sized]
 Cocks of Chris is 1.
 Cock Length of Chris is 9.
-Cock Width of Chris is 3.
+Cock Width of Chris is 6.
 Testes of Chris is 2.
 Cunts of Chris is 0.
 Cunt Length of Chris is 0.
@@ -53,7 +64,7 @@ Virgin of Chris is true.
 AnalVirgin of Chris is true.
 PenileVirgin of Chris is true.
 SexuallyExperienced of Chris is false.
-
+The MainInfection of Chris is "Orc Breeder".
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
@@ -75,7 +86,13 @@ to say ChrisDesc:
 		say "     As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
 	else if libido of Chris is 2: [warrior Chris]
 		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short, bristly black hair on his head completes the picture of an untamed orcish warrior.";
-		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'.";
+		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'. [if Dexterity of Chris > 0 and Dexterity of Chris < 100]Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.[end if]";
+		if Stamina of Chris > 4:
+			say "     As a result of the many virile loads Chris pumped into you, the library has become the haven of a new tribe of orcs. Several of your [Stamina of Chris] orc warrior sons usually hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
+		else if Stamina of Chris > 1:
+			say "     The multiple orc warrior sons that you've fathered together with Chris often hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
+		else if Stamina of Chris > 0:
+			say "     The orc warrior son you've fathered together with Chris usually hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
 
 instead of conversing the Chris:
 	say "[ChrisTalkMenu]";
@@ -92,6 +109,8 @@ instead of trading the orc brew when the current action involves the Chris:
 			say "     It doesn't take all that much effort to lay his concerns to rest, talking the young orc into taking 'just a sip' - and then another, and another. Before long, he's chugging away the alcoholic beverage like a true orc warrior - which is just what he's becoming right before your eyes. A bit tipsy from his first contact with alcohol, the young man grunts the words, 'Hmm... I want more!', while at the same time his body changes, getting bigger, wider and more muscular. The previously pretty, if masculine, features of his face take on a harder, gruff look, with a square jaw, protruding tusks and thickly pronounced brow. Meanwhile, the flowing black hair that gave Chris much of his handsome aura just disintegrates into a small shower of dust, leaving behind bristly short hair on his head. As all those bodily changes stabilize and set into place, you can almost see the shift of his thought processes in the depth of his eyes, the need and desire to dominate others and turn them into breeders he can pound hard and knock up.";
 			now libido of Chris is 2;
 			now the icon of Chris is Figure of OrcWarrior_random_icon;
+			now Cock Length of Chris is 14;
+			now Cock Width of Chris is 8;
 			LineBreak;
 			say "[bold type]You lose 1 orc brew![roman type][line break]";
 			decrease carried of orc brew by 1;
@@ -470,7 +489,10 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 	say "     Coming back into the library, you hear a commotion somewhere upstairs, on the second floor of the library. Then a panicky sounding male voice shouts, 'No, please! Don't... I - I'll blow you again. Just not... that.' The only reply is a deep-voiced chuckle, followed by a noise that makes you think of a thick, hard cock being slapped against an open palm. Running footsteps are next, the stomp of hooves on the upstairs floor, then the person responsible comes into sight - a panting anthro zebra who half-falls against, half-catches himself on the upper floor railing. He must have stumbled in his rush for the stairs, missing the curve after running out between the bookshelves up there.";
 	say "     Bent forward over the railing, hands clutching it tightly as not to go over - and also in the reflexive intensity of his desperation, the zebra stares down right at you, panting hard. You can see that the fur on his face and his mane is matted in sweat - and another fluid, sticky and white, showing in long splashes. A second or two stretch and stretch as he blinks away the terror in his eyes, then really focuses, giving you a pleading look as he shouts, 'Help me! He's...' Right behind the zebra, as it turns out. The muscled green shape of Chris steps into view, and one strong arm of the young orc warrior wraps around the striped equine's chest from behind. Drawing the struggling male against his broad chest, Chris holds him firmly and says with a chuckle, 'Don't run from me, pony. We've got so much fun to have yet!'";
 	LineBreak;
-	say "     Do you want to go upstairs and... deal with the matter (in one way or another) ([link]Y[as]y[end link]), or do you just turn your attention to other things, leaving Chris and his captive alone ([link]N[as]n[end link]).";
+	say "     [bold type]What do you want to do about this?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Go upstairs and deal with the matter... somehow.";
+	say "     ([link]N[as]n[end link]) - Leave Chris and his captive alone.";
 	if player consents:
 		LineBreak;
 		say "     Taking the steps two at a time, you hurry upstairs and soon come to stand near Chris and his captive. They're both completely naked, with the orc teen looking very buff and big next to the still muscled but somewhat more lithe form of the equine in his arms. The zebra glances over to you and whimpers as Chris grinds his hard shaft between his butt-cheeks, grunting lustily at the feeling of soft fur against his member. The striped captive's shaft is hard too, firmly erect and leaving little smears of precum against the panels of the railing he stands against - no doubt a result of the aphrodisiac-laden orc cum he's obviously been fed before. 'Hey there,' Chris grunts in greeting and nods to you, then adds, 'Wanna watch me break in this pony? Caught him near the zoo and just had some fun with that sweet mouth of his. Long muzzles are soo good for blowjobs, hah.'";
@@ -479,7 +501,7 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 		say "     Looking at their comparative sizes, with Chris about half a foot taller and much more muscled, you have to admit that you did see a lot bigger size difference turn out okay in your time since this all started. After all, there's a lot of sex going on out on the streets. Still, Kai will likely be sore if Chris isn't careful about wedging that prick into him. No matter what, the horny orc isn't deterred one bit by Kai's protests, and you can see him brush off another creamy glob of pre out of the zebra's mane, then bring his fingers down to the anthro equine's butt, rubbing them over his pucker.";
 		LineBreak;
 		say "     ([link]N[as]n[end link])?";
-		say "     [bold type]Do you watch Chris fuck Kai, or will you pull the zebra out of Chris's grip and set him free[roman type][line break]";
+		say "     [bold type]Do you watch Chris fuck Kai, or will you pull the zebra out of Chris's grip and set him free?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch.";
 		say "     ([link]N[as]n[end link]) - Set the zebra free.";
@@ -498,14 +520,16 @@ instead of navigating Grey Abbey Library while (libido of Chris is 2 and Chris i
 			say "     Between the orc's somewhat rough amorous advances, a big load of his potent cum inside his ass and Chris's hands stroking and groping Kai's body, the zebra is pretty blissed out and overwhelmed by it all. And then, things go even further and change his life forever, as the transformative effects of his creamy filling kick in. Throwing his head back, Kai gasps loudly as his muzzle shifts a little, and with his open mouth you see four tusks form, two long and two shorter fangs showing clearly that this zebra no longer is a herbivore. The rest of his long muzzle his transformed just a blink later, and quite a few more sharp teeth present themselves. As he snaps his mouth shut and starts running his tongue over the new teeth, Kai goes a little green in the face, then a lot, as a wave of emerald color starts to replace all the white parts of his striped pattern. With that, the external changes come to a halt.";
 			WaitLineBreak;
 			say "     'Hah, now you're a proper orc pony. To be ridden hard by my cock!' Chris grunts as he inspects Kai's new form, then pulls his cock out of the transformed zebra with a slurp. The young orc turns his new breeder with a pull on his arm, then pulls Kai into an eager kiss, during which they playfully rub tusks. 'Wow... that was... wow,' Kai gasps out as their lips part again, then he looks down over his black and green stripes and raises a hand to feel his sharp fangs. 'Er... what exactly am I now?' he asks and looks up into Chris eyes. The only answer he gets from Chris is 'Mine', then the young orc claps his zebra breeder on the shoulder and says, 'Come on, fucking you made me hungry - let's go grab a bite to eat.' With a sly grin to you, Chris guides his companion down the stairs and the two of them walk outside.";
+			now Dexterity of Chris is 1; [fucked Kai and made him green]
 		else:
 			LineBreak;
-			say "     Telling Chris he had his fun, you step up and start prying on his muscle-packed arm off the zebra. There is a short moment of resistance, then the young orc gives an annoyed grunt and lets go. 'Fine, but only because it's your place I'm staying at right now. If I you again out in the city Kai, your ass is mine!' And with that, the green-skinned brute turns away, stalking down a path between two bookshelves, no doubt on the way to his bedding.";
+			say "     Telling Chris he had his fun, you step up and start prying on his muscle-packed arm off the zebra. There is a short moment of resistance, then the young orc gives an annoyed grunt and lets go. 'Fine, but only because it's your place I'm staying at right now. If I see you again out in the city Kai, your ass is mine!' And with that, the green-skinned brute turns away, stalking down a path between two bookshelves, no doubt on the way to his bedding.";
 			say "     With a relieved sigh, Kai babbles to you, 'THANKYOU! Thankyou! Thank you. I don't think I could have taken... you know, his thing. Could barely get my mouth around it and he wants to stick that monster up my ass?!' Sounds like he's rather buzzed by his orc cum drink earlier, but one thing is for sure - you got a very thankful and relieved zebra on your hands. He gladly lets himself be led downstairs, then out of the library, and after walking with him for a block or two, he thanks you again, then sprints off in the direction of the zoo.";
+			now Dexterity of Chris is 1; [fucked Kai and made him green]
 	else:
 		LineBreak;
 		say "     Answering the zebra's pleading look with a shrug, you look away and walk over to the librarian's desk, from where there isn't a line of sight to that section of the upper floor railing. About time you sorted out your backpack a bit anyways, the better to find your stuff if you need it in a hurry. The gasps and sounds of rough fucking from above you just tune out, as you're used to by now from out on the streets.";
-	now Dexterity of Chris is 1;
+		now Dexterity of Chris is 1; [fucked Kai and made him green]
 
 instead of going up from Grey Abbey Library while (Chris is in Sitting Area and libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 0 and (lastfuck of Chris - turns) > 12):
 	move player to Sitting Area;
@@ -813,8 +837,6 @@ For normal Chris, I was think it would mostly be talking scene. Maybe ask about 
 Otherwise, I did think of it more along the lines of bonding and friendship leading to sexytime along all the paths
 Maybe with Urik trying to hide the fact that he's a sort-of breeder now initially with Warrior Chris, and trying to get back into his Warrior mindset with Breeder Chris.
 
-
 ]
-
 
 Chris ends here.

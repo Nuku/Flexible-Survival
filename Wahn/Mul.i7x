@@ -9,6 +9,28 @@ object	name
 Mul	"Mul"
 
 Mul is a man. Mul is in Main Hall.
+ScaleValue of Mul is 3. [human sized]
+Cocks of Mul is 1.
+Cock Length of Mul is 14.
+Cock Width of Mul is 8.
+Testes of Mul is 2.
+Cunts of Mul is 0.
+Cunt Length of Mul is 9.
+Cunt Width of Mul is 2.
+Breasts of Mul is 2. [2 nipples]
+Breast Size of Mul is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Mul is false.
+PlayerRomanced of Mul is false.
+PlayerFriended of Mul is false.
+PlayerControlled of Mul is false.
+PlayerFucked of Mul is false.
+OralVirgin of Mul is false.
+Virgin of Mul is true.
+AnalVirgin of Mul is false.
+PenileVirgin of Mul is false.
+SexuallyExperienced of Mul is true.
+The MainInfection of Mul is "Orc Breeder".
 The description of Mul is "[MulDesc]".
 The conversation of Mul is { "Mew!" }.
 MulAnalAcceptance is a number that varies.

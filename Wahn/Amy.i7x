@@ -577,12 +577,17 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
 				[-----WIP-----]
-				now lastfuck of Amy is turns;
-				now lastfuck of Icarus is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from Icarus;
 				now IcarusAmySex is 50; [dom Icarus + Amy sex will come up in the future]
 			else:[don't watch]
 				LineBreak;
 				say "     Being dominated by Icarus is one thing, watching him take Amy another, so you turn away and decide to stroll deeper into the library. As you pass row after row of shelves, the sounds of their coupling get a bit muffled, but even as you reach the back wall, still some of the moans and grunts reach you. In the end, you pick a book at random and read a bit of it to distract yourself before going back, where you find the freshly fucked Amy dozing on her mattress, with Icarus cum slowly leaking out of her pussy.";
+				if Lust of Amy is 0:
+					let AmyPregchance be a random number from 1 to 20;
+					if AmyPregchance > 13:
+						now Lust of Amy is 24;
+				[-----WIP-----]
+				NPCSexAftermath Amy receives "PussyFuck" from Icarus;
 				now IcarusAmySex is 51; [not watching Icarus/Amy sex in the future]
 		else if HP of Icarus > 0 and HP of Icarus < 50: [sub Icarus]
 			say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, a sudden flutter of wings in the air above you heralds the arrival of Icarus. The submissive blue chaffinch lands right next to you and gives Amy an appreciative look. 'She's really hot. I'd love to take that doggie for a ride,' he chirps, and you notice his avian cock quickly hardening. As you're looking at him, Icarus suddenly remembers that he's now just supposed to be your slutty pet bird and gets a bit flustered, chirping nervously as he adds 'I - I mean...'";
@@ -607,6 +612,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						say "     Quickly dropping your gear and clothes on the ground as you go along, you're completely naked before you're more than halfway to the fucking couple. Pounding into the increasingly aroused and noisy Amy under him, Icarus doesn't notice you coming up behind him, erect cock leading the way. As you suddenly push up his tail-feathers and expose his white-feathered bottom, he lets out a surprised chirp, then moans as you rub your hard shaft against his crack and get your cock lined up with his pucker. Gripping him tightly around the hips, you push forward, forcing his tight hole to spread open for your [cock size desc of player] [cock of player] phallus.";
 						say "     As you start humping away, you push Icarus own cock deeper into Amy's pussy, making the passerine chirp in pure lust from the double sensations of fucking while being fucked. With the husky under him panting loudly and Icarus begging for more, you go faster and faster, pounding his ass hard and deep. Teasing him for being such a puny, little slut, - even while fucking a woman - you grin as he moans and nods in agreement, loving being a horny cock slut now.";
 						say "     You keep it up, something in the weak bird's behavior egging you on to be rough with him. And certainly, he loves it as well. The gasps and chirps from him rising in pitch and the way his asshole tightens around you suddenly is all the warning you get before the stuffed bird cums hard, pumping his hot seed into Amy's cunt to flow into her womb. You cum a few moments later, claiming his ass once again[if cock width of player > 35]. Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak. His body is left rounded like a feathery balloon from it all. He can only give a weak chirp as you pull out and your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 25]. Your [cum load size of player] load leaves the poor songbird rounded like a feathery balloon. When you pull out, he gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 15]. Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed. When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[else]. He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if]. While taking a moment to check that your birdie pet's still fine, you wipe your cock clean on his blue tail-feathers before heading off, leaving him and Amy there to eventually recover.";
+						NPCSexAftermath Icarus receives "AssFuck" from Player;
 					else:
 						LineBreak;
 						say "     Nah, you decide to let him have his fun for now and just watch them go at it.";
@@ -619,14 +625,13 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
-				now lastfuck of Amy is turns;
-				now lastfuck of Icarus is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from Icarus;
 				now IcarusAmySex is 1; [sub Icarus + Amy sex will come up in the future]
 			else:[no sex for Icarus]
 				LineBreak;
 				say "     Gripping Icarus by the feathers on his head, you give him a strict look and tell him that he's yours and that you decide what he does or doesn't do. Then you tell him that he may - no he must - watch Amy play with herself and get fucked... and that he's forbidden from joining her or even masturbating. There, that should wind the little slut up some, making him especially needy for your touch. With a grin, you give his feathered butt a squeeze, then grab a chair from a nearby table and watch him a while, standing there to observe Amy and sometimes twitching a bit as he has to hold himself back from touching his increasingly aroused body.";
 				now IcarusAmySex is 99; [Icarus/Amy sex forbidden]
-	else if (HP of Amy > 10 and Alexandra is in the Grey Abbey Library and AlexandraAmySex is 0):[first interest of Alexandra in her]
+	else if (HP of Amy > 10 and Alexandra is in the Grey Abbey Library and HP of Alexandra < 50 and AlexandraAmySex is 0):[first interest of Alexandra in her]
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny and has taken to masturbation, her head resting on a pillow with closed eyes as she imagines... well, most likely you. As you stand there, eyes riveted on her naked form, Alexandra walks into your line of sight - seems like the former policewoman is interested in Amy too. Being the tough dobie bitch that she is, the anthro woman walks up to the young husky with confident steps, then comes to stand just a few feet before her, appraisingly gazing down at the silently moaning female. After ogling Amy for a moment, the doberwoman says 'Quite a horny bitch, aren't you? I can see why the boss brought you in...'";
 		if AmyShyness is 1:
 			say "     Pulled out of her fantasy by Alexandra's comment, Amy opens her eyes and gives a high-pitched 'Oh', pulling her hands away from her crotch and sitting up before continuing sheepishly with 'I - I got so horny that I just couldn't take it anymore. I just had to...' At that point, Amy notices the intensity of Alexandra's hungry looks wandering over her naked body and visible, wet pussy. With a shy little yip, she raises an arm to cover her breasts and closes her legs, much to the annoyance of the doberwoman standing before her. Giving the young husky a teasing stare, Alexandra barks 'Don't act like a pup now, girl. It's not like I haven't already seen all of you. And hiding a body like that would be a crime... especially if it's from your pack-mates.'";
@@ -651,8 +656,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			say "     Alexandra lets her pull at the tightly bound belt for a moment, chuckling, then says 'No chance, honey. I know how to tie someone up and you've got to learn that a lowly bitch like you gets off when the boss - or [if player is purefemale]her[else]his[end if] top bitch wants you to.' She lets Amy whimper and beg a bit for release while keeping to fondle and stroke her, then finally crouches down and starts to lap away at the desperately aroused husky's pussy. With the doberwoman's tongue agilely pleasuring the young woman's cunt, it doesn't take long at all till she drives Amy over the edge, yipping and barking as she reaches her climax.";
 			WaitLineBreak;
 			say "     Muzzle wet with femcum, Alexandra stands up and pulls Amy into a deep kiss, then says 'And that's your first lesson in being a real pack bitch. You like that, don't you, little slut?' Amy can only moan as an answer, still deep in the grip of her orgasm, which has Alexandra give a barking laugh, then making out with her some more. A while later, the former cop undoes the belt around Amy's wrists and helps the exhausted husky back to her mattress to rest a bit.";
-			now lastfuck of Amy is turns;
-			now lastfuck of Alexandra is turns;
+			NPCSexAftermath Alexandra receives "OralPussy" from Amy;
 			now AlexandraAmySex is 1; [repeat scenes enabled]
 			if AmyShyness < 4:
 				increase AmyShyness by 1;
@@ -701,10 +705,9 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				say "     Content with just arranging for their mating to happen, you let Carl and Amy go at it without an audience. You do hear quite a bit of happy, aroused and eventually climactic barking not too much later though. Quite a racket, between your husky friend and his daugh- err... totally unrelated bitch.";
 			if Lust of Amy is 0:
 				now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Carl is turns;
+			NPCSexAftermath Amy receives "PussyFuck" from Carl;
 			now CarlAmySex is 51; [player arranged for Carl to fuck Amy]
-	else if Alexandra is in Grey Abbey Library and (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Alexandra]
+	else if Alexandra is in Grey Abbey Library and (lastfuck of Amy - turns) > 12 and AlexandraAmySex is 99 and HP of Alexandra < 50 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Alexandra]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Not too far from her, Alexandra is casually leaning against a bookshelf, arms crossed as she keeps an eye on the naked husky. Seems like she's still quite interested in Amy, even though she does follow your orders not to touch her. A wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun to go over there and fuck Amy right now, giving your dobie bitch a bit of a show.";
 		say "     [bold type]Do you want to fuck Amy while Alexandra watches?[roman type][line break]";
 		LineBreak;
@@ -752,6 +755,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 10:
 						now Lust of Amy is 24;
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		else:
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
 	else if Carl is in Grey Abbey 2F and (lastfuck of Carl - turns) > 12 and CarlAmySex is 51 and a random chance of 1 in 5 succeeds:
@@ -761,8 +765,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Carl is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Carl;
 	else if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 1 and a random chance of 1 in 5 succeeds:
 		say "     Entering the library, you see Amy - on all fours on her bedding, with Xerxes mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again. You human dog's firmly muscled ass moves back and forth as he pounds her pussy with a relentless wild energy, his hard thrusts obviously hitting just the right spots, judging from Amy's pants and pleased yips. This soon drives Amy's libido to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 		say "     As his cock and balls keep twitching with blast after blast of cum into his sexual partner, Xerxes just keeps holding on to Amy, panting with his head over her shoulder. Exhausted, the husky lowers herself to lie on her bedding, taking your human dog with her so they end up cuddled together on the mattress[if lust of Xerxes >= 4]. Raising his head to look at you for a moment, Xerxes mumbles 'Mmm... Master-Friend Amy nice' to you, then snuggles up to her with his arms around the young woman's chest[end if].";
@@ -770,8 +773,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Xerxes is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 	else if Xerxes is in Grey Abbey Library and (lastfuck of Xerxes - turns) > 12 and thirst of Amy is 99 and a random chance of 1 in 5 succeeds and player is male: [having sex in front of Xerxes]
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. You also notice that Xerxes is crouched on his cot, watching her from a distance. Obedient as ever, the human dog does follow your orders to stay away from Amy to the letter, though that doesn't mean his interest in her isn't still burning bright. All on its own, a wicked little idea suddenly comes to the forefront of your mind - maybe it'd be fun, to go over there and take Amy for a ride, just now. A bit naughty towards the dutiful human dog, savoring something denied to him right before his eyes, but... that's half the thrill of it, isn't it?";
 		say "     [bold type]Do you want to fuck Amy while Xerxes watches?[roman type][line break]";
@@ -803,6 +805,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 10:
 						now Lust of Amy is 24;
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		else:
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
 	else if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and player is male:
@@ -837,6 +840,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 10:
 						now Lust of Amy is 24;
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		else:
 			say "     Deciding against it, you just walk up behind Fang and grab him by the scruff of his neck, then drag him off without Amy even noticing the wolf was there. Some distance away, you scold your disobedient pet, then leave him to stalk back to his place with his tail between his legs.";
 	else if Felinoid Companion is tamed and (lastfuck of felinoid companion - turns) > 12 and XP of Amy is 99 and a random chance of 1 in 5 succeeds and player is male:
@@ -872,6 +876,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 10:
 						now Lust of Amy is 24;
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		else:
 			LineBreak;
 			say "     Deciding against it, you just walk up behind Klauz and pat him on the head, stroking it but then also taking hold of the scruff of his neck. Crouching down, you whisper in his ear that he won't get mount Amy - not today, at least. And it seems he understands, giving a short rumbling mrowl and turning his head to look at you. The expression on his face seems to say 'You didn't just order me around - I didn't want her right now anyways.' After a moment of staring at you, he gives you the cold shoulder, just turning away and stalking off without a look back.";
@@ -882,8 +887,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of felinoid companion is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Klauz;
 	else if Fang is in Grey Abbey Library and (lastfuck of Fang - turns) > 12 and XP of Amy is 1 and a random chance of 1 in 5 succeeds:
 		if HP of Fang < 3: [Beta Fang]
 			say "     Entering the library, you see Amy - on all fours on her bedding, with Fang mounting her from behind. Looks like she felt the need to get some relief from her mounting arousal again and he was only too happy to fuck the horny husky. The black wolf pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang takes the fur of her neck between his teeth in a careful bite and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling the husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your wolf's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
@@ -893,8 +897,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Fang is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Fang;
 	else if Elijah is bunkered and HP of Elijah > 3 and HP of Elijah < 100 and Dexterity of Amy > 0 and Dexterity of Amy < 99 and a random chance of 1 in 5 succeeds:[repeat sex between Elijah and Amy]
 		if HP of Elijah is 99: [evil Elijah]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Elijah thrusts his hard cock into her in a rapid pace. He's holding her legs spread apart, hands gripping her fur tightly as he really pounds her pussy, filling the library with slapping sounds of his hips hitting her crotch. Looks like the two of them have been going at it for a while now, judging from the cum-soaked spot on the mattress under Amy's hips and the wet squishing noises as Elijah slams into her, making one of his previous loads ooze out around his shaft. Wanting to get a closer look, you move in and watch from behind a nearby bookshelf, observing their movements against each other and listening to the pants and moans as they come quicker and quicker. It's obvious that Elijah is getting close to another climax quickly and he suddenly grips Amy by the hips, holding her tight against himself as his balls twitch again, sending pulse after pulse of his seed deep into the husky's womb. Amy writhes beneath him in ecstasy, cumming hard as well from taking even more of the dark angel's seed.";
@@ -905,8 +908,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Elijah is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Elijah;
 	else if Elijah is in Bunker and (Dexterity of Amy is 99 and HP of Elijah < 99 and a random chance of 1 in 5 succeeds and player is male): [having sex in front of Elijah]
 		say "     As you enter the library, you see Elijah sitting cross-legged on the ground between the rows bookshelves, apparently so captivated by a good book that he just sat down right there to read it. Not far away, just around the corner of the shelves and a few steps to the side, Amy is lying on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck - and it's obvious that Elijah hasn't noticed her soft gasps and moans yet. The situation causes a wicked little idea to suddenly come to the forefront of your mind - maybe it'd be fun to go over there and take Amy for a ride just now, with the added thrill of possibly getting 'caught' if - no, when - the angel notices.";
 		say "     [bold type]Do you want to fuck Amy and make Elijah blush?[roman type][line break]";
@@ -968,6 +970,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 10:
 						now Lust of Amy is 24;
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		else:
 			LineBreak;
 			say "     Slowly shaking your head, you push the thought aside and turn your attention to other things again.";
@@ -978,8 +981,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Sven is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Sven;
 [	else if Sven is bunkered and HP of Sven > 5 and HP of Sven < 50 and SvenAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between confident Sven and Amy]
 		say "***Repeat scene between Amy and confident Sven.";]
 	else if Snow is in the Grey Abbey Library and SnowAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Snow and Amy]
@@ -990,8 +992,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 13:
 				now Lust of Amy is 24;
-		now lastfuck of Amy is turns;
-		now lastfuck of Snow is turns;
+		NPCSexAftermath Amy receives "PussyFuck" from Snow;
 	else if HP of Amy > 10 and Icarus is in the Garden View and IcarusAmySex > 0 and IcarusAmySex < 99 and a random chance of 1 in 5 succeeds:[repeat sex between Icarus and Amy]
 		if IcarusAmySex is 50: [dom Icarus]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly as Icarus thrusts into her with his avian rod. The feathered fellow is drilling her hard with his tapered, slick cock, chirping occasionally as he does. With this having gone on for a while obviously, Amy is quite aroused by him mating her, with Icarus soft feathers rubbing against her thighs, crotch and pussy lips as he fucks her. She's not resisting his advances, just gripping the sheets with her paw-hands as waves of lust run through her body and Icarus is free to let his taloned hands roam over Amy's soft-furred body. Between the soft feathers rubbing against her and the hard cock pumping inside her needy pussy, it's not much longer until both of them finally climax loudly, his chirping and moaning joining her lust-filled barks. Icarus spreads his feathers a bit and gives you a smug nod as his hot seed pumps into Amy's cunt and flows into her womb.";
@@ -1000,8 +1001,6 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Icarus is turns;
 		else if IcarusAmySex is 51:[don't watch]
 			say "     Entering the library, you see Amy - lying on her bedding and panting loudly, with her fur a bit matted by sweat. The fur on her crotch looks wet and a trickle of white cum is leaking out between her nether lips to soak into the mattress. Clearly she's been well-fucked and bred not too long ago, and a few small blue feathers on the mattress around her show who did it too. Icarus had some fun with her, filling the husky's womb with his seed.";
 		else if IcarusAmySex is 1: [sub Icarus + Amy]
@@ -1011,13 +1010,12 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Icarus is turns;
-	else if Alexandra is in the Grey Abbey Library and AlexandraAmySex is 1 and a random chance of 1 in 5 succeeds:[repeat sex between Alexandra and Amy]
+		NPCSexAftermath Amy receives "PussyFuck" from Icarus;
+	else if Alexandra is in the Grey Abbey Library and AlexandraAmySex is 1 and HP of Alexandra < 50 and a random chance of 1 in 5 succeeds:[repeat sex between Alexandra and Amy]
 		say "     Entering the library, you see Amy - gripping the sheets on her mattress tightly and moaning as Alexandra laps away at her needy pussy. The doberwoman is on all fours on top of her in the classical 69 position. A moment later, she raises her head to look back at the husky, barking 'Keep licking, girl,' after which Amy hurriedly gets back to pleasing the former cop. Quite a hot sight, to find your two canine bitches entwined on the ground like that, having oral sex, so you walk up to them to have a closer look. They're mostly using their long canine tongues to lap and lick each other's pussies, though fingers also come into play to rub and stroke, especially the inside of their legs and outer nether lips.";
 		say "     With them clearly having been at it a while, it doesn't take all that long before the two women climax together, accompanied by yips and moans. After allowing Amy to lap up her femcum, Alexandra then moves to lie next to the young husky, arm around her and gently stroking her fur. In that position, you've got a perfect view of all of their female charms, clearly intended by the tough bitch, as she calls out 'Hope you liked the show, boss.' a moment later.";
-		now lastfuck of Amy is turns;
-		now lastfuck of Alexandra is turns;
+		NPCSexAftermath Amy receives "OralPussy" from Alexandra;
+		NPCSexAftermath Alexandra receives "OralPussy" from Amy;
 	else:
 		say "     As you enter the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. Maybe you should help her out with that...";
 
@@ -1168,17 +1166,16 @@ to say AmySexMenu:
 	clear the screen and hyperlink list;
 
 to say AmySex1: [cock sucked by Amy]
-	say "     A smile on your face as you walk up to her, you grab the bulge in your pants and ask her if she could help you it with it. No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling out your [cock of player] cock, you hold it out with one hand, allowing Amy to put it in her muzzle and suck on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue...";
-	say "     Before too much longer, the husky girl's enthusiastic sucking drives your arousal through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her a 'Good dog', tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+	say "     A smile on your face as you walk up to her, you grab the bulge in your pants and ask her if she could help you it with it. No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling out your [cock of player] cock, you hold it out with one hand, allowing Amy to put it in her muzzle and suck on it. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. Before too much longer, the husky girl's enthusiastic sucking drives your arousal through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her a 'Good dog', tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+	NPCSexAftermath Amy receives "OralCock" from Player;
 
 to say AmySex2: [cunt licked by Amy]
-	say "     A smile on your face as you walk up to her, you rub the crotch of your pants and ask her if she could help you it with it. No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling off your pants, you show your already a bit moist pussy, allowing Amy to put her muzzle between your legs and lick. She really is a natural at stimulating you with that tongue of hers, pushing it into your vagina and teasing your clit with its tip...";
-	say "     Before too much longer, the husky girl's enthusiastic oral attention drives your arousal through the roof. As she goes down on you to lick your pussy again, you hold her head against your crotch, breathing deeply as the husky girl slurps up the femcum running down your legs. Jokingly, you call her a 'Good dog', tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+	say "     A smile on your face as you walk up to her, you rub the crotch of your pants and ask her if she could help you it with it. No longer the innocent little husky you first found, she grins at you and licks her lips, then kneels before you. Pulling off your pants, you show your already a bit moist pussy, allowing Amy to put her muzzle between your legs and lick. She really is a natural at stimulating you with that tongue of hers, pushing it into your vagina and teasing your clit with its tip. Before too much longer, the husky girl's enthusiastic oral attention drives your arousal through the roof. As she goes down on you to lick your pussy again, you hold her head against your crotch, breathing deeply as the husky girl slurps up the femcum running down your legs. Jokingly, you call her a 'Good dog', tousling her hair, then softly pull Amy to her feet and give her a deep kiss.";
+	NPCSexAftermath Amy receives "OralPussy" from Player;
 
 to say AmySex3: [Amy's cunt licked/fingered]
-	say "     Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves. Coming back up for air, you start rubbing over her sensitive pussy lips, making Amy give a needful moan.";
-	say "     Guiding the aroused husky over to her bedding, you kneel between her legs as she lies down on her back. Her pussy, already a bit swollen and moist in anticipation, lies ready for you between the canine girl's legs. Leaning forward, you bring your mouth to it, licking over her crotch, then playing with Amy's clit with the tip of your tongue. It's a lot of fun to hear her gasp and moan under your ministrations and you switch up between fingering her and licking.";
-	say "     Under your skilled fingers and tongue, it doesn't take long until Amy's moans get louder and louder and the female husky pants almost nonstop. Then suddenly, she arches her back, hands flying to hold your head in place as she climaxes. Your face is a bit wet with squirts of her femcum as you move on top of Amy afterwards to give her a deep kiss. The young husky smiles and licks your face, her arms around your body to hold you close.";
+	say "     Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves. Coming back up for air, you start rubbing over her sensitive pussy lips, making Amy give a needful moan. Guiding the aroused husky over to her bedding, you kneel between her legs as she lies down on her back. Her pussy, already a bit swollen and moist in anticipation, lies ready for you between the canine girl's legs. Leaning forward, you bring your mouth to it, licking over her crotch, then playing with Amy's clit with the tip of your tongue. It's a lot of fun to hear her gasp and moan under your ministrations and you switch up between fingering her and licking. Under your skilled fingers and tongue, it doesn't take long until Amy's moans get louder and louder and the female husky pants almost nonstop. Then suddenly, she arches her back, hands flying to hold your head in place as she climaxes. Your face is a bit wet with squirts of her femcum as you move on top of Amy afterwards to give her a deep kiss. The young husky smiles and licks your face, her arms around your body to hold you close.";
+	NPCSexAftermath Player receives "OralPussy" from Amy;
 
 to say AmySex4: [Amy's pussy fucked by player]
 	if (Lust of Amy > 1 and Lust of Amy < 12): [pregnant version]
@@ -1199,6 +1196,7 @@ to say AmySex4: [Amy's pussy fucked by player]
 			let AmyPregchance be a random number from 1 to 20;
 			if AmyPregchance > 10:
 				now Lust of Amy is 24;
+	NPCSexAftermath Amy receives "PussyFuck" from Player;
 
 to say AmySex5: [Amy's ass fucked by player]
 	if (Lust of Amy > 1 and Lust of Amy < 12): [pregnant version]
@@ -1215,6 +1213,7 @@ to say AmySex5: [Amy's ass fucked by player]
 		say "     Amy is a very enthusiastic sex-partner, rocking back to meet you with her hips as you pound into her. In between moans and pants, she groans 'Harder. Harder!', only satisfied when your balls smack against her buttcheeks with an audible thud each time you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft in her butt. Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's insides. The feeling of a male's cum filling her gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her own orgasm.";
 		WaitLineBreak;
 		say "     Immensely satisfied, you stay like that on top of her for a while, then pull your softening cock out and lie down with Amy. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";
+	NPCSexAftermath Amy receives "AssFuck" from Player;
 
 to say AmySex6: [Xerxes+Amy+Player Threesome]
 	say "     Stepping by Xerxes bunk, you ruffle the human dog's hair and say 'Come on, boy', then make your way to Amy's bedding accompanied by him. Walking up close to Amy, you put your arms around her and give her a hug. As your lips find hers for a kiss, your hands move down over her naked body, softly stroking her curves[if Lust of Amy > 1 and Lust of Amy < 12] and carefully touching her pregnant belly[end if]. Coming back up for air, you tell her how hard thinking about fucking her makes you. 'You're not the only one,' she coos back at you, giving a smiling nod down to Xerxes, who's busy sniffing her already a bit moist, open and swollen pussy. She crouches down[if Lust of Amy > 1 and Lust of Amy < 12] with a bit of help from you, pregnant as she is[end if], then sits on her mattress and pulls the human dog's head to hers, exchanging some licks and kisses with him too.";
@@ -1240,37 +1239,38 @@ to say AmySex6: [Xerxes+Amy+Player Threesome]
 			WaitLineBreak;
 			say "     Xerxes fucks you with a relentless wild energy, his hard thrusts rubbing very sensitive and pleasurable spots inside you, just as you pound the very enthusiastic Amy in front of yourself. In between moans and pants, she groans 'Harder. Harder!', only satisfied when your balls smack against her buttcheeks with an audible thud each time you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[end if]. Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
 			say "     In the grip of your own climax, your anal muscles twitch around Xerxes cock, which obviously excites him, making his growls of lust increase and him speed up before plunging in one last time and filling your asshole with his human seed. As his cock and balls keep twitching with blast after blast of cum into you, Xerxes just keeps holding on to you, panting with his head over your shoulder. Turning your head, you pull his lips to yours, kissing him and sticking your tongue in his mouth. Holding him against you with one arm, the other one on Amy, you pull your little trio down to lie on the mattress, where you enjoy each other's warmth and closeness for a while as you come down from your respective orgasms[if lust of Xerxes >= 4]. 'Mmm... Master good fuck,' he mumbles softly, snuggling up to your back lovingly[end if].";
-			setmonster "Human";
-			choose row monster from the Table of Random Critters;
-			say "     [mimpregchance]";
+			NPCSexAftermath Player receives "AssFuck" from Xerxes;
 		else: [Xerxes gets sucked off by Amy]
 			LineBreak;
 			say "     Telling [if lust of Xerxes >= 4]Xerxes to get a blowjob from Amy, you watch the naked body of the human dog as he rushes around to her front, then kneels in front of her, his erect cock sticking up straight in front of her face[else]Xerxes to go to Amy, you watch the naked body of the human dog as moves to her front, then throws himself on the ground in front of her, rolling on his back with spread legs to allow her to suck his shaft[end if]. The young husky takes it in her muzzle, carefully keeping her teeth away as she starts bobbing up and down. While Xerxes is getting an amazing blowjob, you fuck Amy's tight pussy, pounding into the very enthusiastic young husky. In between moans and pants, she groans 'Harder. Harder!', only satisfied when your balls smack against her buttcheeks with an audible thud each time you bottom out again. You wish you could keep the amazing feelings you give each other up forever, but all too soon, the limit of your ability to hold back is reached. With a gasped 'I'm coming!', you thrust into her one last time, burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[end if]. Then your balls send the massive load built up inside them on its way, burst after burst of your fertile seed shooting into your beautiful husky's womb. The feeling of a male's cum flooding her insides gives Amy the last push she needed too. While you're still pumping more shots inside her, she writhes under you, tongue lolling out of her mouth as she rides her orgasm.";
 			say "     After a moment, when the feelings of just having come ebb out, Amy continues the blowjob she was giving Xerxes and before too much longer, the husky girl's enthusiastic sucking drives his lust through the roof. As she goes down on the human dog's cock again, he[if lust of Xerxes >= 4] moans 'Aaah - Good Amy' and[end if] yips as he comes, shooting long blasts of cum into her mouth. When she pulls off his cock after he's done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her and Xerxes both 'Good dog', tousling their hair, then pull Amy's head to yours and give her a deep kiss. Lying down on the mattress with your two friends after that, you enjoy each other's warmth and closeness for a while[if lust of Xerxes >= 4]. 'Mmm... Amy and Master nice,' Xerxes mumbles softly, snuggling up to your back lovingly[end if].";
+			NPCSexAftermath Amy receives "OralCock" from Xerxes;
+		NPCSexAftermath Amy receives "PussyFuck" from Player;
 	else:[Xerxes gets on Amy]
 		LineBreak;
 		if lust of Xerxes >= 4:[awesome/intelligent Xerxes]
 			say "     You pat Xerxes shoulder and say 'Go for it' with a grin. Having gained intelligence to go along with his canine mind, he is able to hold back his instinctive desire to rut her hard and fast for a while, taking the time to run his hands over Amy's back and female curves first. He leans close against her back to cup two of the husky's breasts with his hands while moving his hips to position his shaft at her opening. Then, with a quick thrust accompanied by two persons very satisfied moans, he sinks his manhood into her dripping wet pussy. Xerxes takes slower thrusts at first, enjoying the feel of Amy's hot, wet hole around his pulsing shaft. His hands roam over her[if lust of Xerxes < 7] almost as if he were petting Amy[else], stroking and caressing Amy's body with growing adeptness[end if]. He nuzzles at the back of the young husky's neck, panting with a growing excitement that has his pace quicken in response.";
 			LineBreak;
-			say "     Having quickly gotten rid of your clothes and gear while your two companions got into fucking each other, you now stand naked beside them, your cock hard and ready for action. How do you want to join in on their coupling? (Y = have Amy suck you, N = fuck Xerxes ass) ";
+			say "     Having quickly gotten rid of your clothes and gear while your two companions got into fucking each other, you now stand naked beside them, your cock hard and ready for action. How do you want to join in on their coupling? (Y = have Amy suck you, N = fuck Xerxes ass)[line break]";
 		else:[basic Xerxes]
-			say "     Almost before you're finished saying 'Go for it, boy', Xerxes is on top of Amy, his muscular chest against her back as he hugs her tightly and grinds his crotch against her body. Being a natural in the typical 'doggie-style', his shaft quickly finds her dripping opening and plunges deep into the husky's body. Quickly stripping off your own clothes as they start fucking each other, you now stand naked beside them, your cock hard and ready for action. How do you want to join in on their coupling? (Y = have Amy suck you, N = fuck Xerxes ass) ";
+			say "     Almost before you're finished saying 'Go for it, boy', Xerxes is on top of Amy, his muscular chest against her back as he hugs her tightly and grinds his crotch against her body. Being a natural in the typical 'doggie-style', his shaft quickly finds her dripping opening and plunges deep into the husky's body. Quickly stripping off your own clothes as they start fucking each other, you now stand naked beside them, your cock hard and ready for action. How do you want to join in on their coupling? (Y = have Amy suck you, N = fuck Xerxes ass)[line break]";
 		if player consents: [have Amy blow the player]
 			LineBreak;
 			say "     Walking around the two of them till you're in front of Amy, you sit down and hold your hard shaft out for her. The young husky takes it in her muzzle, carefully keeping her teeth away as she starts bobbing up and down. She really is a natural at giving blowjobs, holding her lips tight around your shaft and teasing it with her tongue. While you're getting an amazing blowjob, Xerxes fucks Amy with a relentless wild energy, his hard thrusts hitting very sensitive spots again and again, making her pant and yip in pleasure. This soon drives Amy's arousal to the max, giving her a mind-blowing orgasm that moistens Xerxes cock with even more slippery femcum. He obviously likes the feeling of that, as his growls of lust increase and he speeds up before plunging in one last time and filling Amy's womb with his human seed.";
 			say "     After a moment of riding out her own orgasm, Amy continues the blowjob she was giving you and before too much longer, the husky girl's enthusiastic sucking drives your lust through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her and Xerxes both 'Good dog', tousling their hair, then pull Amy's head to yours and give her a deep kiss. Lying down on the mattress with your two friends after that, you enjoy each other's warmth and closeness for a while[if lust of Xerxes >= 4]. 'Mmm... Amy good fuck,' Xerxes mumbles softly, snuggling up to your back lovingly and nuzzling your neck[end if].";
+			NPCSexAftermath Amy receives "OralCock" from Player;
 		else: [assfuck for Xerxes]
 			LineBreak;
 			say "     Walking around the two of them till you're behind Xerxes, you kneel down and quickly lube up your shaft. Running your hands down the muscular back of your human dog, from up on his shoulders down to his hips, you grip them tightly to hold him still for a moment and bring your hard cock against his pucker. Telling him in soft tones to relax, you push forward and slide into his body. Xerxes hole is incredibly warm and tight - no wonder, with only Mike and maybe one or two of the other human dogs having been in there before you. You take a moment to appreciate the tightly gripping feel of his ass as you bottom out, then start fucking him, with Xerxes panting and yipping in lust as you slide in and out[if lust of Xerxes >= 4]. 'Good master,' he moans, pressing his rear back into your thrusts[end if]. As you pound into him from behind, your pet's shaft gets pushed deeper into Amy's pussy in turn, making her pants and moans join Xerxes. That almost makes you feel like you're fucking them both at the same time...";
 			say "     You run your hands over Xerxes sexy body, caressing his lovely skin[if lust of Xerxes >= 7] and running your fingers along his collar tattoo[end if] as you lean overtop of him. This draws added moans and yips of pleasure from him and he pushes himself back into your thrusts, his ass squeezing along your shaft as you fuck him like a dog. You play with his nipples while fucking him, whispering in his ear what a good boy he is.";
 			WaitLineBreak;
 			say "     Getting shafted while being in Amy himself soon drives Xerxes over the edge, and as you do another deep thrust into his tight ass he gives a deep grunt and climaxes, squirting blast after blast of his human seed directly into the young husky's womb. With the flexing of his anal muscles around your shaft with each of his spurts, you're close behind him, moaning loudly as you cream his asshole with your sperm. With your cock twitching inside, painting his insides white, you pull Xerxes upper body against your chest and give him a deep kiss. Then, after your last shot, you pull your little trio down to lie on Amy's mattress, where you enjoy each other's warmth and closeness for a while as you come down from your respective orgasms[if lust of Xerxes >= 4]. 'Mmm... Amy nice. Master fuck Xerxes good,' he mumbles softly, snuggling up to you lovingly[end if][if lust of Xerxes >= 7] as you kiss along the tattooed collar ringing his neck[end if].";
+			NPCSexAftermath Xerxes receives "AssFuck" from Player;
+		NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 	if Lust of Amy is 0: [not pregnant yet]
 		let AmyPregchance be a random number from 1 to 20;
 		if AmyPregchance > 13:
 			now Lust of Amy is 24; [someone has knocked her up - either the player or Xerxes]
-	now lastfuck of Amy is turns;
-	now lastfuck of Xerxes is turns;
 
 to say AmySex7: [Felinoid+Amy+Player Threesome]
 	say "     Accompanied by Klauz, you walk over to the mattress you put up here in the library for Amy. The large cat sniffs the female husky's bedding with interest, then turns his head to you and gives a questioning rumble from his throat. Running both hands through his warm fur and scratching him affectionately behind the ears, you answer, 'Yeah, let's have some fun with her.'";
@@ -1292,12 +1292,14 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 		say "     Even though he is a quite virile male, everyone's stamina has its limits. When Amy suddenly gives a pleased yip and orgasms, her female juices dripping down to soak into her bedding, that gives the large cat the last nudge too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Amy's womb with his seed.";
 		WaitLineBreak;
 		say "     After a moment of riding out her own orgasm, Amy continues the blowjob she was giving you and before too much longer, the husky girl's enthusiastic sucking drives your lust through the roof. As she goes down on your cock again, you hold her head against your crotch, shooting long blasts of cum into her mouth. When she pulls off your cock after you're done, Amy shows you the large load on her tongue, then swallows it demonstratively. Jokingly, you call her a 'Good dog', tousling their hair, then pull Amy's head to yours and give her a deep kiss. Lying down on the mattress with your two friends after that, you enjoy each other's warmth and closeness for a while, accompanied by Klauz's rumbling purr.";
+		NPCSexAftermath Amy receives "OralCock" from Player;
 	else: [fucking the Felinoid]
 		LineBreak;
 		say "     Your own libido awakened by the images of the large cat on top of the human-like Amy, as well as Klauz's touch and musk, you quickly decide that it's time to join in. Putting a hand on your raging [cock of player] hard-on, you grab the bottle of lube you've got lying around not too far way. After spreading some of the slick substance on your shaft, you step up behind the large shape of the rutting felinoid. Running your hands up through the soft fur on his lower back, you grab the feline's hips tightly then slam forward, burying your cock to the hilt in his warm, tight cave. Roaring at the sudden anal intrusion, Klauz stops thrusting into Amy for a moment, looking back over his shoulder with partly bared teeth. That doesn't last long, though - moving in and out of his hole, your shaft stimulates his sensitive prostate, and soon your big cat is purring in satisfaction and fucking Amy again.";
 		say "     Even though you'd wish your threesome could last forever, everyone's stamina has its limits. When Amy suddenly gives a pleased yip and orgasms, her female juices dripping down to soak into her bedding, that gives the large cat the last nudge too. A deep rumble of satisfaction vibrates in Klauz's throat as he pushes his member as deep as it will go and fills Amy's womb with his seed. The big cat's insides in turn grip your penis tightly with each shot of cum shooting through his shaft, making you follow them to an amazing orgasm. You gasp as you grind your hips against the felinoid's furry behind and blast after blast of your sperm shoot into his tight chute.";
 		WaitLineBreak;
 		say "     After a moment of just holding on to the large feline and catching your breath, you pull out and watch Klauz's pink pucker snap shut before any of your seed can leak out. Satisfied but exhausted after this session, you sink down on Amy's mattress. The big cat and husky girl separate from each other too, then lie down next to you, with Amy cuddling up to the felinoid's soft and warm belly fur. Purring as loud as an idling motor, the big cat starts licking her fur. Looks as if he wants to spread his scent over all of the husky's body.";
+		NPCSexAftermath Klauz receives "AssFuck" from Player;
 	if Fang is in the Grey Abbey Library:
 		LineBreak;
 		if HP of Fang is 1 or HP of Fang is 2: [Beta Fang]
@@ -1316,8 +1318,7 @@ to say AmySex7: [Felinoid+Amy+Player Threesome]
 		let AmyPregchance be a random number from 1 to 20;
 		if AmyPregchance > 13:
 			now Lust of Amy is 24; [someone has knocked her up - either the player or the Felinoid]
-	now lastfuck of Amy is turns;
-	now lastfuck of Felinoid Companion is turns;
+	NPCSexAftermath Amy receives "PussyFuck" from Klauz;
 
 to say AmySex8: [Fang+Amy+Player Threesome]
 	if (HP of Fang is 1 or HP of Fang is 2): [Beta Fang]
@@ -1339,12 +1340,14 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 			WaitLineBreak;
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed.";
 			say "     That should satisfy even as horny a husky as Amy for a while. With both of them standing where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate, you lay back on the mattress and get comfortable.";
+			NPCSexAftermath Amy receives "OralCock" from Player;
 		else: [fucking Fang]
 			LineBreak;
 			say "     Your eyes searching out your goal - the tight hole under Fang's tail - you stroke your hard cock and step closer to Fang's rear end. Running your hands through the fur on his lower back, you grab hold of the wolf's hips and sink your [cock of player] shaft into him with one deep thrust. After giving a loud yelp at the sudden anal invasion, Fang stops for a second and looks back. Seeing it's you, he accepts being fucked as his due to the Alpha, even tightening his anal muscles around you as you move inside him. Then the hot threesome continues, all of you moving together to give each other as much pleasure as you can.";
 			WaitLineBreak;
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed. That only leaves you, with Fang's anal muscles twitching and gripping your manhood tightly as you thrust in one last time. Filling the wolf's back passage with a huge load of your seed, you once again prove your dominance as Alpha over him.";
 			say "     Resting on Fang's furry back for a moment, you then pull your cock out of his cum-filled hole and sink down on Amy's mattress. Satisfied but exhausted after this session, you lie on it lengthwise and get comfortable. Both Amy and Fang still stand where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate.";
+			NPCSexAftermath Fang receives "AssFuck" from Player;
 		if felinoid companion is tamed: [rivalry message - Beta Fang vs Felinoid]
 			LineBreak;
 			if level of Amy is 0: [felinoid didn't fuck her yet]
@@ -1374,12 +1377,14 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 			WaitLineBreak;
 			say "     After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed.";
 			say "     That should satisfy even as horny a husky as Amy for a while. With both of them standing where they fucked, breathing heavily and patiently waiting for Fang's knot to go down and allow them to separate, you lay back on the mattress and get comfortable.";
+			NPCSexAftermath Amy receives "OralCock" from Player;
 		else: [fucking Amy]
 			LineBreak;
 			say "     Deciding that you'll wait your turn, you move to sit on the other end of Amy's mattress, watching your Alpha rut the husky girl and jerk off a bit. After some more hot and heavy fucking, Fang does one especially deep thrust that pops his knot inside Amy, then holds still as it expands. Getting tied to Fang was the last straw for the aroused husky, and her body shudders as the feelings from her pussy make her gush femcum to drip down and soak into her bedding. Deep inside her, Fang's cock pulses with burst after burst of wolf cum, filling Amy's womb with his fertile seed.";
 			WaitLineBreak;
 			say "     You move over to crouch beside them, fondling and stroking both their bodies as you wait for Fang's knot to go down. Some time later, the wolf pulls out of Amy's hole and sits down on the floor nearby, curling up to lick himself clean. With Amy's pussy still gaping a bit and dripping femcum and your Alpha's seed, you quickly get on top of her and ram your erection home. Even stretched by Fang's shaft, she's still nicely tight and feeling your strong Alpha wolf's cum filling her hole and squishing around your thrusting member is a definite plus. It doesn't take all that long until you feel a familiar tingling in your balls, and with one last thrust, you bottom out inside Amy and come, adding your seed to Fang's load.";
 			say "     Phew. Satisfied and just a bit exhausted, you keep your slowly softening shaft in Amy's pussy, just lowering the two of you down to lie on her bedding together.";
+			NPCSexAftermath Amy receives "PussyFuck" from Player;
 		if felinoid companion is tamed: [rivalry message - Alpha Fang vs Felinoid]
 			LineBreak;
 			if level of Amy is 0: [Felinoid hasn't fucked Amy yet]
@@ -1392,7 +1397,7 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 		let AmyPregchance be a random number from 1 to 20;
 		if AmyPregchance > 13:
 			now Lust of Amy is 24; [someone has knocked her up - either the player or Fang]
-	now lastfuck of Amy is turns;
-	now lastfuck of Fang is turns;
+	NPCSexAftermath Amy receives "PussyFuck" from Fang;
+
 
 Amy ends here.

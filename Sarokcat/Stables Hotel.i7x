@@ -88,12 +88,14 @@ Object	Name
 Hotel Stable	"Hotel Stable"
 
 Hotel Stable is a room.
+The earea of Hotel Stable is "Stable".
 
 Table of GameRoomIDs (continued)
 Object	Name
 Hotel Stalls	"Hotel Stalls"
 
 Hotel Stalls is a room.
+The earea of Hotel Stalls is "Stable".
 
 The description of Stables Hotel is "     The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately, there doesn't appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.".
 
@@ -126,6 +128,7 @@ Object	Name
 Mares Quarters	"Mares Quarters"
 
 Mares Quarters is a room.
+The earea of Mares Quarters is "Stable".
 
 The description of Mares Quarters is "     This rather large hall leads to a large open room, with several smaller rooms opening up onto it. Someone has set out quite a bit of food on the side of the room, and a few mares are browsing the selection absently when you come in. A small desk has been set up near the entry, and a rather amused-looking white mare wanders over to the desk and looks you up and down as you approach.".
 Fancy is in Mares Quarters.

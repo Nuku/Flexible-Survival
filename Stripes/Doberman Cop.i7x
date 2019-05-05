@@ -510,7 +510,7 @@ When Play begins:
 	now name entry is "Doberman";
 	now enemy title entry is "Doberman Cop";
 	now enemy name entry is "Alexandra";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[dobermanattack]";
 	now defeated entry is "[beattheDoberman]";
 	now victory entry is "[losetoDoberman]";

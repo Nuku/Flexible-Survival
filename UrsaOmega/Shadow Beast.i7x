@@ -36,7 +36,6 @@ to say losetoshadowbeast:
 			say "     The cat is clearly pleased at your submission to it, adopting a more relaxed stance. The beast tugs at your gear, indicating that you should remove it - a request you comply with quickly, putting your gear aside and kneeling before the creature.";
 			say "[sbdoggy style]";
 		else:
-	[	if fightoutcome is 20 or fightoutcome is 21: [Damage and lust succumb]		]
 			say "     The shadowy cat's onslaught is too much to bear, and you fall prostrate before it. The beast senses the last of your resistances failing, and adopts a more relaxed stance, advancing on you with purpose. Despite your weak struggling, it manages to remove your gear quickly with its teeth and tentacles, leaving you shivering and naked on the floor before it.";
 			say "[sbmissionary]";
 

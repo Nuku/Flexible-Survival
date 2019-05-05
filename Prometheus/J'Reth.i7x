@@ -54,6 +54,10 @@ Section 3 - Sex
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Introduction By Soup	"Introduction By Soup"
+
 Introduction By Soup is a situation.
 The level of Introduction By Soup is 0.
 The sarea of Introduction By Soup is "Nowhere".
@@ -78,6 +82,10 @@ to IntroductionBySoupEvent:
 	now Introduction By Soup is resolved;
 	now Mantis Meeting is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Mantis Meeting	"Mantis Meeting"
+
 Mantis Meeting is a situation.
 Mantis meeting is inactive.
 The level of Mantis Meeting is 0.
@@ -98,6 +106,9 @@ to MantisMeetingEvent:
 	now Mantis Meeting is resolved;
 	now Soup & Sexual Gratification is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Soup & Sexual Gratification	"Soup & Sexual Gratification"
 
 Soup & Sexual Gratification is a situation.
 Soup & Sexual Gratification is inactive.

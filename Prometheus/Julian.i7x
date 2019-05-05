@@ -248,6 +248,10 @@ Section 5 - Events
 
 [See Sylvia for start]
 
+Table of GameEventIDs (continued)
+Object	Name
+Wolf's Invitation	"Wolf's Invitation"
+
 Wolf's Invitation is a situation.
 Prereq1 of Wolf's Invitation is Unnatural Heat.
 Prereq1Resolution of Wolf's Invitation is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
@@ -281,6 +285,10 @@ to WolfsInvitationEvent: [Room invitation from Julian]
 		now hp of Julian is 100; [Rejected him]
 	now Wolf's Invitation is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Julian's Room Event	"Julian's Room Event"
+
 Julian's Room Event is a situation.
 Prereq1 of Julian's Room Event is Wolf's Invitation.
 Prereq1Resolution of Julian's Room Event is { 1 }.
@@ -296,6 +304,10 @@ to JuliansRoomEvent: [First Time to Julian's Room]
 	now hp of Julian is 3; [Met him in his room]
 	now resolution of Julian's Room Event is 1;
 	now Julian's Room Event is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Suppressant Supply Run	"Suppressant Supply Run"
 
 Suppressant Supply Run is a situation.
 Prereq1 of Suppressant Supply Run is Julian's Room Event.

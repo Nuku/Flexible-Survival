@@ -136,19 +136,21 @@ instead of fucking Zoe:
 				add "Propositioned" to the Traits of Zoe;
 			else:
 				say "     Zoe looks annoyed that you make another attempt. 'Sorry, but it's still no.' You insist, and the bunny's annoyance suddenly turns to anger. 'I said no! I don't want someone else to use me. Not again. What the fuck is wrong with you, people?!' Realizing that she began to shout, Zoe's ears flopped down in embarrassment. 'Sorry, I did not want to shout. It's just... It's not personal. I don't want to do it, okay?";
+			if Loyalty of Zoe < 11:
+				increase Loyalty of Zoe by 1;
 		else if Loyalty of Zoe is 5: [got saved]
 			if Virgin of Zoe is true: [This branch can only be reached by getting the quest's best outcome]
 				say "[ZoeFirstTime]";
 			else:
 				say "[ZoeSecondTime]";
 			NPCSexAftermath Zoe receives "PussyFuck" from player;
+			if Loyalty of Zoe < 11:
+				increase Loyalty of Zoe by 1;
 		else:
 			if lastfuck of Zoe - turns < 6:
 				say "     'What? Again?' Zoe asks. She seems amused by your request, but denies it with a small shake of her white-furred head. 'Sorry, [if player is female]miss Pussycat[else]mister Stallion[end if], but I'm still tired from before. Can we wait until tomorrow?'";
 			else:
 				say "[ZoeGoodFuckMenu]";
-		if Loyalty of Zoe < 11:
-			increase Loyalty of Zoe by 1;
 	else:
 		say "[ZoeMolest]";
 
@@ -206,6 +208,7 @@ to say ZoeSecondTime:
 8: unlocks pegging and normal DP
 9: unlocks dom RP
 10: unlocks special DP and sub RP]
+
 to say ZoeGoodFuckMenu:
 	project the figure of Zoe_face_icon;
 	say "     'Good timing. I was feeling... Lonely,' the bunny replies your invitation. She walks by you, brushing your body with her furry legs. 'Come on, we go to the usual place.' On your way to Zoe's old hideout, you discuss about what you want to do today.";
@@ -215,7 +218,7 @@ to say ZoeGoodFuckMenu:
 		-- 9: say "On the way, Zoe suddenly cuts your chatter. 'Say. I wanted to try something new today. You know, about what happened with this wolverine. It keeps working my brain. I'm thinking that, if we tried some kind of dom/sub scenario, I would be able to... You know, work it out.' [if player is submissive]You look like the type that would enjoy themselves in this kind of thing[else]I mean, once you feel ready to do some [bold type]submissive[roman type] play, that is[end if].";
 		-- 10: say "On the way, Zoe suddenly cuts your chatter. 'You know, what we did last time? It helped. A lot. And I thought... Since I trust you... I want to roleplay that kind of thing again, but I want to be in control, you know what I mean? Do you want to try it out?' [if player is dominant]I don't know why, but I feel both safe and excited talking you about it[else]You don't streak me as a [bold type]dominant[roman type] though, so nevermind[end if].";
 		-- 11: say "On the way, Zoe suddenly cuts your chatter. 'I saw a mutant the other day. He had, like, three cocks hanging around. [if cocks of player > 1]And you're the same, too. [end if]I think it would be kind of hot if, you know, you used them all at the same time? Do you want to try it out?'";
-	say "[bold type]What do you want to do with Zoe?[roman type]";
+	say "[bold type]What do you want to do with Zoe?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -298,21 +301,35 @@ to say ZoeGoodFuckMenu:
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
 					NPCSexAftermath Zoe receives "PussyFuck" from player;
-				if nam is "Anal":
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "Anal":
 					say "[ZoeSexAnal]";
 					NPCSexAftermath Zoe receives "AssFuck" from player;
-				if nam is "Pegging":
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "Pegging":
 					say "[ZoeSexPeg]";
-				if nam is "Roleplay (sub)":
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "Roleplay (sub)":
 					say "[ZoeSexRPSub]";
 					NPCSexAftermath Zoe receives "PussyFuck" from player;
-				if nam is "Roleplay (dom)":
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "Roleplay (dom)":
 					say "[ZoeSexRPDom]";
 					NPCSexAftermath Zoe receives "PussyFuck" from player;
-				if nam is "Multi-cock fun":
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "Multi-cock fun":
 					say "[ZoeSexDP]";
 					NPCSexAftermath Zoe receives "PussyFuck" from player;
 					NPCSexAftermath Zoe receives "AssFuck" from player;
+					if Loyalty of Zoe < 11:
+						increase Loyalty of Zoe by 1;
+				else if nam is "*Anal - Locked*" or nam is "*Pegging - Locked*" or nam is "*Roleplay (sub) - Locked*" or nam is "*Roleplay (dom) - Locked*" or nam is "*Multi-cock fun - Locked*":
+					say "     Doesn't look like that's on the menu for you right now. Suggesting it leads to a bit of an awkward moment, followed by Zoe turning away from you and gaining some distance.";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;

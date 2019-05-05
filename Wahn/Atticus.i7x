@@ -390,7 +390,7 @@ to say AtticusElijahThreesomeMenu:
 		now title entry is "Get a shared blowjob, with both of them on their knees";
 		now sortorder entry is 1;
 		now description entry is "Make Atticus and Elijah service you";
-	[]
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Sink to your knees and worship both of their dicks";
 	now sortorder entry is 2;
@@ -419,7 +419,7 @@ to say AtticusElijahThreesomeMenu:
 		now title entry is "Do a three man chain-fuck";
 		now sortorder entry is 6;
 		now description entry is "Have some anal fun";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

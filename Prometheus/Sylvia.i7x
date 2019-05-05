@@ -546,6 +546,10 @@ to say SylviaSex5: [Tribbing]
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Despairing Biologist	"Despairing Biologist"
+
 Despairing Biologist is a situation.
 The level of Despairing Biologist is 0.
 The sarea of Despairing Biologist is "Campus".
@@ -614,6 +618,10 @@ to DespairingBiologistEvent: [Meet Sylvia]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Room 059	"Room 059"
+
 Room 059 is a situation.
 Prereq1 of Room 059 is Despairing Biologist.
 Prereq1Resolution of Room 059 is { 1, 2, 3 }.
@@ -652,6 +660,10 @@ to Room059Event: [First time to Sylvia's room]
 	else:
 		now hp of Sylvia is 3; [Met her in her room]
 	now Room 059 is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Unnatural Heat	"Unnatural Heat"
 
 Unnatural Heat is a situation.
 Prereq1 of Unnatural Heat is Room 059.
@@ -812,6 +824,10 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 		now hp of Julian is 1;
 	now Unnatural Heat is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Beach Field Research	"Beach Field Research"
+
 Beach Field Research is a situation.
 Prereq1 of Beach Field Research is Unnatural Heat.
 Prereq2 of Beach Field Research is Julian's Room Event.
@@ -866,6 +882,10 @@ to SylviaJobProp: [Opens up interactions between Sylvia and Pets/Companions]
 	now hpM of Sylvia is 5;
 	now hpF of Sylvia is 5;
 	now Sylvia's Reward is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Sylvia's Reward	"Sylvia's Reward"
 
 Sylvia's Reward is a situation.
 Sylvia's Reward is inactive.
@@ -976,6 +996,10 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 	now hp of Sylvia is 7;
 	now Sylvia's Reward is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Bad Breakup	"Bad Breakup"
+
 Bad Breakup is a situation.
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
@@ -1000,6 +1024,10 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	now resolution of Bad Breakup is 1;
 	now Bad Breakup is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Cheat's Retribution	"Cheat's Retribution"
 
 Cheat's Retribution is a situation.
 Prereq1 of Cheat's Retribution is Bad Breakup.
@@ -1044,6 +1072,10 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 		now SylviaTrapVar is 1;
 	now Cheat's Retribution is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Charming Picnic	"Charming Picnic"
+
 Charming Picnic is a situation.
 Prereq1 of Charming Picnic is Unnatural Heat.
 Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
@@ -1062,6 +1094,10 @@ to CharmingPicnicEvent: [Picnic]
 	say "     Julian sits next to her, eying some slices of ham, letting out chuckles as Sylvia continues her tale. All of them seem very fond of each other, casually touching each other as they pass food and express concern and support as they exchange stories. Julian tells them of his childhood, of walks through the snowy forests of Canada and watching wolves hunt through his father's binoculars. The twins then regale them with how they convinced some soldiers to eat some peaches, leaving before they noticed the effects. You smile, glad that people still take the time for such activities as picnics, that would have been viewed as mundane before the outbreak, but now are a reminder of what was and the hope for the future. As you leave, you turn your head and watch as Julian finally grabs the ham, devouring it in three bites.";
 	now Charming Picnic is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Badminton One	"Badminton One"
 
 Badminton One is a situation.
 Prereq1 of Badminton One is Unnatural Heat.
@@ -1154,7 +1190,12 @@ to say FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 			now resolution of Unnatural Heat is 15; [FPref, Searched your bag, Suppressant not found]
 	now hpf of Sylvia is 3; [helped with heat]
 
-[Sylvia City Research One is a situation. [Huskies]
+[
+Table of GameEventIDs (continued)
+Object	Name
+Sylvia City Research One	"Sylvia City Research One"
+
+Sylvia City Research One is a situation. [Huskies]
 Prereq1 of Sylvia City Research One is Beach Field Research.
 Prereq1Resolution of Sylvia City Research One is { 1, 2 }.
 The sarea of Sylvia City Research One is "Outside".
@@ -1165,6 +1206,10 @@ Instead of resolving Sylvia City Research One:
 to say SylviaCityResearchOneEvent:
 	say "     As you wander along down the street, you notice ";
 	[remember to cater for male of female being banned]
+
+Table of GameEventIDs (continued)
+Object	Name
+Sylvia City Research Two	"Sylvia City Research Two"
 
 Sylvia City Research Two is a situation. [Hyenas]
 Prereq1 of Sylvia City Research Two is Beach Field Research.

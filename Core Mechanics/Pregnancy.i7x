@@ -182,9 +182,7 @@ to pregprotocol:
 					increase score by 15; [15 base +5/child]
 					extend game by 4;
 					now pregtype is 0;
-					if "Chris's Breeder Slut" is listed in feats of player:
-						remove "Chris's Breeder Slut" from feats of player;
-					else if "Human Carrier" is listed in feats of player:
+					if "Human Carrier" is listed in feats of player:
 						remove "Human Carrier" from feats of player;
 				else: [routine for various hijacks]
 					repeat with y running from 1 to snakeocc:
@@ -402,6 +400,19 @@ To Birth:
 		else:
 			say "regulars";
 		increase ChaseOffspring by 1;
+	else if "Chris's Breeder Slut" is listed in feats of player: [Special Pregnancy from Warrior Chris]
+		if player is female and pregtype < 2:
+			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+		else if breasts of player > 0:
+			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+		else:
+			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. Not only nutrition but personality and knowledge seep through the nipple into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
+		if player is in Sitting Area and Chris is in Sitting Area:
+			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
+		else:
+			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he says, [if player is booked or player is bunkered]'I'll go say hello to dad now. See ya later!' [else]'I'll go say hello to dad now. Maybe fuck a guy or two on the way too. See ya later!'[end if] With that said, he wanders off, naked as a jaybird and erect, in an open challenge to anyone who might see him.";
+		if "Chris's Breeder Slut" is listed in feats of player:
+			remove "Chris's Breeder Slut" from feats of player;
 	else if "Fang's Mate" is listed in feats of player: [Special Pregnancy from Fang]
 		if hunger of Fang is 1:
 			if "All-Mother's Blessing" is listed in feats of player: [Appeared in arms]
@@ -443,7 +454,7 @@ To Birth:
 		increase hunger of player by 3;
 		increase thirst of player by 3;
 	if "Wild Womb" is not listed in feats of player:
-		if ("Chase's Breeder" is not listed in feats of player) and ("Fang's Mate" is not listed in feats of player):
+		if ("Chase's Breeder" is not listed in feats of player) and ("Fang's Mate" is not listed in feats of player) and ("Chris's Breeder Slut" is not listed in feats of player):
 			add facename of child to childrenfaces;
 			add bodyname of child to childrenbodies;
 			add skinname of child to childrenskins;

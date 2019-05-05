@@ -231,7 +231,7 @@ BeachEnd is a Room.
 earea of BeachEnd is "Beach".
 
 to say BeachEndDesc:
-	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the cean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly trashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and swim that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
+	say "     The sand here curves sharply towards the cliff-side, meeting it a little further south, just where the cliff actually ends in the ocean. Beyond, the water gets deeper quickly, and numerous craggy rocks stick out of the ocean, constantly thrashed by crashing waves. That looks like a rather unhealthy area to get into the water - but wait, at one spot, there is a kind of coral-encrusted arch allowing passage through the rocks. Maybe you could brave the ocean after all and swim that way? Of course, if you just want to get wet, why not head east instead - inside the bay, the waters are shallow and much calmer. Otherwise, you can head northeast to the public beach or north to the foot of the rocky cliff where it gets much taller and more jagged.";
 
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";

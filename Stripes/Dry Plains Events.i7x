@@ -310,9 +310,10 @@ Instead of resolving a Watering Hole:
 					say "     Deciding that you'd rather have the water, regardless of the consequences, you lean in and drink your fill of the tainted waters. You can taste the arousing flavor of their semen mixed into the water, but you're too excited now to stop. As you finish your long drink, you spot a reflection in the water and, looking up, you spot more eagles soaring above you. You decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot, only pausing to grab a couple of the feathers lying around before you go.";
 					increase carried of eagle feather by 2;
 					let ponddrinks be ( 1 + ( ( thirst of player - 1 ) / 25 ) );
-					repeat with y running from 1 to ponddrinks:
-						infect "Bald Eagle";
-						decrease humanity of player by a random number between 1 and 4;
+					if "Iron Stomach" is not listed in feats of player:
+						repeat with y running from 1 to ponddrinks:
+							infect "Bald Eagle";
+							decrease humanity of player by a random number between 1 and 4;
 					increase score by 10;
 					now thirst of player is 0;
 					now Resolution of Watering Hole is 3; [Defeated Eagle, Drank]

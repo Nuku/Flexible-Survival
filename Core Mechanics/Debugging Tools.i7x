@@ -12,6 +12,8 @@ Version 2 of Debugging Tools by Core Mechanics begins here.
 debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
 RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
+[ Todo: write Debug code to display _all_ NPC variables]
+
 debugmode is an action applying to nothing.
 understand "npcdebug" as debugmode.
 understand "npc debug" as debugmode.

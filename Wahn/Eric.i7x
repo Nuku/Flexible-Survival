@@ -2840,19 +2840,19 @@ to say EricCarlThreesome8: [player rides Carl's cock while Eric straddles his fa
 	say "     <This scene is WIP, please have some patience for the next update>";
 
 
-after going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+after going down from Grey Abbey 2F while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsAlexandra]";
 
-after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+after going up from Bunker while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
 	if debugactive is 1:
 		say "     DEBUG: ERIC MEETS ALEXANDRA - AlexandraEricInteraction: [AlexandraEricInteraction][line break]";
 	try looking;
 	say "[EricMeetsAlexandra]";
 
-instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
+instead of navigating Grey Abbey Library while (Eric is in Bunker and (HP of Eric > 9 and HP of Eric < 20) and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and AlexandraEricInteraction is 0 and lust of Alexandra is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
