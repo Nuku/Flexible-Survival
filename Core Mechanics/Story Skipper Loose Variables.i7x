@@ -100,6 +100,8 @@ to TextVariableSave:
 	choose blank row in Table of GameTexts;
 	now TextVarName entry is CurrentVariableName;
 	if CurrentVariableName is:
+		-- "PronounChoice":
+			now TextVarValue entry is PronounChoice of player;
 		-- "battleground":
 			now TextVarValue entry is battleground;
 		-- "bcfinalchairform":
@@ -3763,6 +3765,8 @@ to VariableTextLoad:
 			if debugactive is 1:
 				say "Restoring text [TextVarName entry].";
 			if TextVarName entry is:
+				-- "PronounChoice":
+					now PronounChoice of player is TextVarValue entry;
 				-- "battleground":
 					now battleground is TextVarValue entry;
 				-- "bcfinalchairform":

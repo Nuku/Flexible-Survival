@@ -75,6 +75,10 @@ Section 4 - Sex
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Dual Leadership	"Dual Leadership"
+
 Dual Leadership is a situation.
 Prereq1 of Dual Leadership is Den of the Pack.
 Prereq1Resolution of Dual Leadership is { 1 }.
@@ -115,7 +119,12 @@ to DualLeadershipEvent:
 	change the down exit of Sanctuary Conference Room to Sanctuary Hotel Lobby; [connecting the location to the travel room]]
 	now Dual Leadership is resolved;
 
-[Foxes of Dark & Light is a situation.
+[
+Table of GameEventIDs (continued)
+Object	Name
+Foxes of Dark & Light	"Foxes of Dark & Light"
+
+Foxes of Dark & Light is a situation.
 Foxes of Dark & Light is inactive.
 Prereq1 of Foxes of Dark & Light is Dual Leadership.
 The level of Foxes of Dark & Light is 0.

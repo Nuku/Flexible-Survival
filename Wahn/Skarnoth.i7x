@@ -296,11 +296,13 @@ to say SkarnothSex7: [Spank Skarnoth's ass]
 
 Section 4 - Events
 
+[
 instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 	move player to Half-Renovated Room;
 	if debugactive is 1:
 		say "     DEBUG: SKARNOTH WALK-IN - HP OF SKARNOTH: [HP of Skarnoth], THIRST OF Skarnoth: [thirst of Skarnoth][line break]";
 	say "     .";
+]
 
 Section 5 - Infection for combat purposes
 

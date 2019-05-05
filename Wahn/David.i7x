@@ -11,13 +11,14 @@ Version 1 of David by Wahn begins here.
 [   4: liaison to the player - in the Bunker                            ]
 [ 100: demon brute pet's slave - in the amulet                          ]
 [                                                                       ]
-[ thirst states of David - Relationship with the Player                 ]
+[ thirst states of David - Relationships                                ]
 [   0: had no sex of any kind with the player                           ]
 [   1: had some sort of intimate contact with the player - once         ]
 [   2: had some sort of intimate contact with the player - often        ]
 [   5: the point at which he'll ask the player to be his girl/boyfriend ]
 [  10: is the player's fuck-buddy                                       ]
 [  20: player is his girl/boyfriend                                     ]
+[  21: player/Brutus threesome relationship                             ]
 [                                                                       ]
 [ lust states of David - Gay Sex Variable                               ]
 [   0: anal virgin                                                      ]
@@ -305,6 +306,8 @@ The scent of David is "     David has a nice masculine human smell.".
 Instead of fucking David:
 	if (lastfuck of David - turns < 5):
 		say "     David says 'I'd love to, but I'm still pretty worn out from the last time...'";
+	else if Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50: [he needs to talk about Gabriel]
+		say "[DavidGabrielTalkAftermath]";
 	else:
 		if David is in Parade Ground:
 			say "     You walk up to David and tell him you want to 'talk' to him - alone. [if thirst of David < 2]He salutes and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier[else]He gives you a knowing wink and leads you to a nearby tent. Soon you're standing between several bunk beds, alone in the tent with the handsome soldier[end if]...";
@@ -433,6 +436,8 @@ instead of conversing David:
 	project the figure of David_face_icon;
 	if HP of David is 2:
 		say "     David says 'I'm still waiting for my number to come up. Doesn't seem as frightening as before though - maybe it's the strange smell in the air here...'";
+	else if Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50: [he needs to talk about Gabriel]
+		say "[DavidGabrielTalkAftermath]";
 	else if HP of David > 2:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
@@ -623,7 +628,7 @@ to say DavidTalk4: [talk about Brutus]
 					LineBreak;
 					say "     Looks like they'll stay like that for a while yet, just holding each other and being close together, so you make your exit from the scene before they might spot you after all. Moving back down into the bunker, you busy yourself with some work so it doesn't see, that you were waiting on them. Some time later, David and Brutus also come back down from above. With it having been ripped up, the young man is now shirtless and his hair is a bit disheveled, while the large demon following him has a pretty self-satisfied grin on his face. As the two of them walk up to you, David says 'Just a lot of books, writing supplies and other useless crap, sorry. We moved them to block the back door though, that should help a bit at least to keep the building safer.' Noticing you looking at his bare chest, David's cheeks get a slight tinge of redness and he quickly says 'I caught my shirt on a crate's splintered edge and ripped it. That's all. Nothing else.' He quickly moves over to his bed, grabbing a new shirt to put on.";
 				else: [female]
-					say "     <Sex scene with David + cuntboy Brutus here>";
+					say "     <WIP Sex scene with David + cuntboy Brutus here>";
 			else: [give them privacy]
 				LineBreak;
 				say "     Nah, you decide to let them deal with what they'll do in private, without you following them around and snooping in. Though with your curiosity still burning, almost making you go back on your choice, you start various time-consuming tasks in the bunker to distract yourself.";
@@ -634,7 +639,22 @@ to say DavidTalk4: [talk about Brutus]
 			LineBreak;
 			say "     Maybe it's not such a great idea after all. David might not like you arranging things, manipulating him and Brutus...";
 	else if libido of David is 54 or libido of David is 55: [talking after they had sex]
-		say "     As you bring your demon companion up, David gets a bit red in the face then hastily says 'Err - he was a great help in the storeroom. Too bad we didn't find anything usef-' Stopping himself, the handsome soldier bites his lip for a second, then bursts out 'Ah, what the hell - I'll just admit it - we had sex with each other. And it was awesome! Brutus is a really great guy - so big and strong, but nevertheless so gentle when it counts, and so nice even though he's a demon and...' Then suddenly his stream of words abates and he really takes in your knowing expression throughout all this in for the first time. 'Wait - why are you grinning like that? Did you... know?' As the light of realization goes on in his eyes, David continues 'You arranged it, didn't you? Thank you! Thank you for helping me get over the... demon thing... and letting me get to know him.' He throws his arms around you and gives you a hug, just holding on to you for a while and giving a happy sigh.";
+		if Thirst of David is 20: [player + David are lovers]
+			say "     As you bring your demon companion up, David gets a bit red in the face then hastily says 'Err - he was a great help in the storeroom. Too bad we didn't find anything usef-' Stopping himself, the handsome soldier bites his lip for a second, then bursts out in a sobbed, 'I - damn it! I fucked up and had sex with Brutus! What's wrong with me? Coming to this city and meeting you, falling for you even though I had a girlfriend back home. And now, I can't resist getting it on with an acutal demon! God, but Brutus is a really great guy - so big and strong, but nevertheless so gentle when it counts, and so nice even though he's a demon and...' His stream of words abates suddenly and he really takes in your knowing expression throughout all this in for the first time. 'Wait - why are you grinning like that? Did you... know?' As the light of realization goes on in his eyes, David continues, 'You arranged it, didn't you? But - but what about us?' Looking unsure and confused in a very cute way, he turns to you for answers.";
+			LineBreak;
+			say "     [bold type]What do you tell David in response?[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - You love him, and Brutus too, so why not make this a three way relationship.";
+			say "     ([link]N[as]n[end link]) - Being with him sure is fun, but you didn't want to stand in the way of what he and Brutus could have.";
+			if player consents: [three way relationship!]
+				LineBreak;
+				say "     Drawing him close to you and kissing the soldier on the mouth, you caress David's cheek and tell him that you love him, as well as Brutus. And with the demon having sworn his undying service to your person, you're quite sure that he'd jump at being with both of you at the same time too. The conflict of his shared affection for two people melts away in David's mind and he smiles, then cries in happyness about what you're telling him. For the next little while, you just hold him and make out with him, until the ecstatically happy man finally calms down and gives a happy sigh.";
+				now thirst of David is 21; [player + David + Brutus three way relationship]
+			else: [step back to fuck buddy status]
+				LineBreak;
+				say "     Drawing him close and giving David's arm a friendly squeeze, you tell him that sex with him is a blast, but in the end you didn't want to stand in the way of what Brutus and he might have - do have, really. It's obvious to you that they're meant for each other. Still conflicted, David cries from the mixture of being sad and happy at the same time, and you just hold him for a little while, until he sniffs and says, 'Thank you. Thank you so much, I don't really know how anyone could be as selfless as you. Thank you for helping me get over the... demon thing... and letting me get to know him.'";
+				now thirst of David is 10; [player + David are fuck buddies]
+		else: [no relationship with the player]
+			say "     As you bring your demon companion up, David gets a bit red in the face then hastily says 'Err - he was a great help in the storeroom. Too bad we didn't find anything usef-' Stopping himself, the handsome soldier bites his lip for a second, then bursts out, 'Ah, what the hell - I'll just admit it - we had sex with each other. And it was awesome! Brutus is a really great guy - so big and strong, but nevertheless so gentle when it counts, and so nice even though he's a demon and...' Then suddenly his stream of words abates and he really takes in your knowing expression throughout all this in for the first time. 'Wait - why are you grinning like that? Did you... know?' As the light of realization goes on in his eyes, David continues 'You arranged it, didn't you? Thank you! Thank you for helping me get over the... demon thing... and letting me get to know him.' He throws his arms around you and gives you a hug, just holding on to you for a while and giving a happy sigh.";
 		if libido of David is 55: [only talked with Brutus]
 			now libido of David is 57; [both talks done]
 		else:
@@ -642,12 +662,12 @@ to say DavidTalk4: [talk about Brutus]
 	else if libido of David is 56 or libido of David is 57 or libido of David is 58 or libido of David is 59: [after having talked with David about him and Brutus having sex]
 		say "     As you bring your demon companion up, David gets dreamy look in his eyes for a moment, then gives a happy little sigh and focuses back on you. 'I can't believe how much I care about Brutus. I know he was a demon but he's so nice and... gentle when he wants to be. And that body is hot - nice and tall, with those muscles and... you know.' *he does a little wave to his own crotch area and gives you a knowing nod* 'Thank you for redeeming him from his evil ways and letting me get to know him!'";
 	else if libido of David is 60: [Brutus controlled to suppress urges, David does not know]
-		say "     As you bring your demon companion up, David gets dreamy look in his eyes for a moment, then gives a happy little sigh and focuses back on you. 'I can't believe how much I care about Brutus. I know he was a demon but he's so nice and... gentle when he wants to be. And that body is hot - nice and tall, with those muscles and... you know.' *he does a little wave to his own crotch area and gives you a knowing nod*";
+		say "     As you bring your demon companion up, David gets dreamy look in his eyes for a moment, then gives a happy little sigh and focuses back on you. 'I can't believe how much I care about Brutus[if thirst of David is 21] and yourself[end if]. I know he was a demon but he's so nice and... gentle when he wants to be. And that body is hot - nice and tall, with those muscles and... you know.' *he does a little wave to his own crotch area and gives you a knowing nod*";
 		say "     Then suddenly, a thoughtful expression crosses David's face, 'I noticed he's a little bit more closed-up and less talkative lately. Everything is alright with him, isn't it?' As you don't want to worry David with something he can't help with at the moment, you just nod, keeping Brutus's problems under wraps.";
 	else if libido of David is 61: [Brutus controlled to suppress urges, David does know]
-		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features. His eyes get a faraway look for a moment and he bites his lips, then gives a little sigh and focuses back on you. 'I can't believe how much I care about Brutus. I know he was a demon and that there are still these urges in him frightens me, but... I really want to be close to him and can't stay away. He loves me, that I know. Just look at him when we're together.' A pleading look fills his eyes as he continues, 'But even then, there's the knowledge that the inside of his mind is twisted into knots and he's hurting - because of me. Please, there must be a way to help him get over this?!'";
+		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features. His eyes get a faraway look for a moment and he bites his lips, then gives a little sigh and focuses back on you. 'I can't believe how much I care about Brutus[if thirst of David is 21] and yourself[end if]. I know he was a demon and that there are still these urges in him frightens me, but... I really want to be close to him and can't stay away. He loves me, that I know. Just look at him when we're together.' A pleading look fills his eyes as he continues, 'But even then, there's the knowledge that the inside of his mind is twisted into knots and he's hurting - because of me. Please, there must be a way to help him get over this?!'";
 	else if libido of David is 62: [Talked with Nermine about sharing Brutus with David - refused]
-		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that Nermine might have a solution, then presses his lips together and nods as you recount the deal the jackaless offered. 'If you go that way again and maybe visit her... I'd say let him do it. Please. It's just sex, after all. I just want to be with him, together.'";
+		say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that Nermine might have a solution, then presses his lips together and nods as you recount the deal the jackaless offered. 'If you go that way again and maybe visit her... I'd say let him do it. Please. It's just sex, after all. I just want [if thirst of David is 21]the three of us[else]to be with him[end if], together.'";
 	else if libido of David is 63: [Ritual by Nermine is ready (sharing Brutus with David)]
 		if companion of player is not demon brute:
 			say "     As you bring your demon companion up, a mixture of love and concern spreads over David's features as the dominance issue between Brutus and him rears its head. He gets a hopeful expression as you explain that you got what should be a solution from Nermine. 'So, if I - if we - do the ritual together, he'll be bound to me too? Through the amulet? I - I can't agree to that without talking to him first. Could you please call him?' After a quick intonation of the magic words with your demontooth amulet held high, Brutus appears in a cloud of purple smoke, solidifying in his usual tall and naked form. ";

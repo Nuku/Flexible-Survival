@@ -156,6 +156,32 @@ object	name
 Leon	"Leon"
 
 Leon is a man.
+[Physical details as of game start]
+ScaleValue of Leon is 3. [human sized]
+SleepRhythm of Leon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Leon is 1. [X cock]
+Cock Length of Leon is 12. [X Inches]
+Cock Width of Leon is 9.
+Testes of Leon is 2. [X balls]
+Cunts of Leon is 0. [X pussy]
+Cunt Length of Leon is 0. [X Cunt]
+Cunt Width of Leon is 0. [X Cunt]
+Breasts of Leon is 2. [X nipples]
+Breast Size of Leon is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Leon is false. [can not take oversized members without pain]
+Sterile of Leon is false.
+PlayerMet of Leon is false.
+PlayerRomanced of Leon is false.
+PlayerFriended of Leon is false.
+PlayerControlled of Leon is false.
+PlayerFucked of Leon is false.
+OralVirgin of Leon is true.
+Virgin of Leon is true.
+AnalVirgin of Leon is true.
+PenileVirgin of Leon is false.
+SexuallyExperienced of Leon is true.
+MainInfection of Leon is "Ram".
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".
 The conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
@@ -166,6 +192,32 @@ object	name
 Mary	"Mary"
 
 Mary is a woman.
+[Physical details as of game start]
+ScaleValue of Mary is 3. [human sized]
+SleepRhythm of Mary is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Mary is 0. [X cock]
+Cock Length of Mary is 0. [X Inches]
+Cock Width of Mary is 0.
+Testes of Mary is 0. [X balls]
+Cunts of Mary is 1. [X pussy]
+Cunt Length of Mary is 12. [X Cunt]
+Cunt Width of Mary is 8. [X Cunt]
+Breasts of Mary is 2. [X nipples]
+Breast Size of Mary is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Mary is false. [can not take oversized members without pain]
+Sterile of Mary is false.
+PlayerMet of Mary is false.
+PlayerRomanced of Mary is false.
+PlayerFriended of Mary is false.
+PlayerControlled of Mary is false.
+PlayerFucked of Mary is false.
+OralVirgin of Mary is false.
+Virgin of Mary is false.
+AnalVirgin of Mary is true.
+PenileVirgin of Mary is false.
+SexuallyExperienced of Mary is true.
+MainInfection of Mary is "Ewe".
 The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
 The conversation of Mary is { "Baa, honey!" }.
 the fuckscene of Mary is "[sexwithmary]".
@@ -267,8 +319,9 @@ to say sexwithLeon:
 	else if EweFucked > 0:
 		say "     'Well that sounds like an interesting offer,' Leon says, 'But I'm not the one you should be talking to now am I? You wouldn't want your little lamb over there to get lonely would you?'";
 	else if lastfuck of Leon - turns < 6:
-		say "     Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that. But if you come back later, I'm sure we could find some time,' your handsome flock leader says with some amusement..";
+		say "     Leon smiles at you as you approach, before shaking his head sadly at you. 'Much as I'd like to spend some more time with you, you aren't the only one in the flock that needs my personal attention. And it wouldn't be fair to the rest of them for me to neglect them like that. But if you come back later, I'm sure we could find some time,' your handsome flock leader says with some amusement.";
 	else:
+		now PlayerFucked of Leon is true;
 		now lastfuck of Leon is turns;
 		let ram be "Ram";
 		let ewe be "Ewe";

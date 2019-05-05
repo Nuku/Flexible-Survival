@@ -61,10 +61,16 @@ to say ValDesc:
 	say "     Val is a very handsome orc breeder, with a muscled physique that lacks the sheer bulk and mass of the orc warriors. Being completely naked, you can see that his cock is a bit smaller than those of the bigger orcs, though still respectably sized. His features are almost pretty but still masculine, with a somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders underlines his good looks";
 	if ValPregnancy is 1:
 		say ". There is a kind of special glow about him";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	else if ValPregnancy is 2:
 		say ". A slight bulge of his stomach shows the first visible proof of his pregnancy";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	else if ValPregnancy is 3:
 		say ". He is quite obviously pregnant, with a bulging belly showing proof of [if thirst of Val is 1]his masters['][else]your sperm's[end if] virility";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	say ".";
 	say "     As Val notices your intense gaze upon him, he presents himself for your viewing pleasure, stretching and slowly turning to show off his well-rounded ass. He's certainly become a well-trained slave in the short time since his capture.";
 
@@ -129,6 +135,8 @@ to say ValTalk2:
 
 to say ValTalk3:
 	say "     Putting a hand on the bulge in his stomach, Val says, 'Vincent would never have dreamed of how amazing this is. To feel a new life growing inside you, knowing that you'll be a parent soon.' His expression takes on a thoughtful cast for a moment. 'I worry a bit about what will become of my child, though. I love my masters, but... I want him to be more than just another brute or breeder. And that's the choices to be had here in the lair.'";
+	if HP of Val < 2:
+		now HP of Val is 2;
 
 An everyturn rule:
 	if ValPregCounter is 1:
@@ -175,6 +183,10 @@ An everyturn rule:
 		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
 	else if ValPregCounter is 12:
 		now ValPregnancy is 3;   [very visible pregnancy]
+		if player is in Slave Cell 1:
+			say "     [bold type]Seeing Val's belly bulge larger and larger, you start wondering what will happen once his time to give birth comes.[roman type]";
+		else if HP of Val is 2: [player knows he is pregnant]
+			say "     [bold type]You remember that the time for the birth of Val's child should be sometime during the next day or two. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
 	else if ValPregCounter is 24:
 		now ValPregnancy is 2;   [visible pregnancy]
 	if ValPregCounter > 1:

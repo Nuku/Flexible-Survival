@@ -1226,6 +1226,9 @@ to say A_Task54:	[Group Rescue]
 		say "     'Have you had a chance to go through that strange forest? Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if HP of Alexandra is 62]. Not wanting to get her hopes up too high, you let her know you're following some leads. Having been reminded, you start thinking about going back again. Perhaps you'll be able to convince at least a few of them to come with you[end if].";
 		now sextablerun is 0; [continued talking allowed]
 
+Table of GameEventIDs (continued)
+Object	Name
+Survivor Group	"Survivor Group"
 
 Survivor Group is a situation. Survivor Group is inactive.
 The sarea of Survivor Group is "Forest".
@@ -1560,6 +1563,9 @@ to say A_Task57:
 		say "     'I need you to check out the [bold type]Microchip Factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
 		now sextablerun is 0; [continued talking allowed]
 
+Table of GameEventIDs (continued)
+Object	Name
+Microchip Factory	"Microchip Factory"
 
 Microchip Factory is a situation. Microchip Factory is inactive.
 The sarea of Microchip Factory is "Capitol".
@@ -1588,6 +1594,10 @@ instead of resolving Microchip Factory:
 	say "     Finally given a chance to think, you wonder what's going on. From the state of the factory and the pack of pewter consorts living there, it's clear that the automatons aren't up to anything there and likely never were. That final part fills you with concern. You'd best make your way back to the Police Station and let Alexandra know something is amiss.";
 	now HP of Alexandra is 70;
 	now Microchip Factory is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Overmind's Retaliation	"Overmind's Retaliation"
 
 Overmind's Retaliation is a situation.
 Overmind's Retaliation is inactive.
@@ -1641,7 +1651,7 @@ to OvermindsRetaliationEvent:
 				now Resolution of Overmind's Retaliation is 9; [Normal size, sneak, not stealthy]
 		say "     The heavy metal crashes into the two automatons, sending them face-first into the ground. Alexandra steps out of the doorway and tazes them both as they attempt to regain their feet. 'Quick, get inside. Leave them there. We don't have time,' she urgently whispers. You comply as she frantically gestures for you to follow her, bolting the door behind you. 'I hope that the Microchip Factory had some information of use to us since the automatons began surrounding us not long after you left. At first, it was slow, and I was able to drive them off without too much trouble, but then they came in larger numbers, and I didn't think it was safe to confront them. Our prisoner wasn't helpful either. She either refuses to speak, or laughs and tells us that we'll all be assimilated,' the tense policewoman states as she guides you through the police station to the reception area. You regretfully shake your head and tell her that it was a distraction, probably to allow them time to attack the police station and rescue the Master Mind. Her shoulders slump, but other than that, she maintains her air of professionalism, eyeing the gathering horde.";
 	WaitLineBreak;
-	say "     'I'm not sure how long we have before they decide to force an entry, and we don't stand a chance when they do. I'm not entirely sure why they haven't made a serious attempt yet, so we need to make the most of our fortune. Jimmy [if hp of Paula > 2]and Paula are[else]is[end if] helping the people we had rescued escape through a manhole in the maintenance closet near the locker rooms. Could you go and help there please?' the policewoman asks you. You ask her if there is anything you can do to defend the police station once the survivors have escaped. 'I would doubt it. It doesn't matter how capable you are, we are greatly outnumbered, and one mistake could lead to someone being lost or killed. My duty is to the people, not the building. Once the civilians are evacuated, I'll be retreating too, bringing up the rear.[if player is dominant]' Agreeing with her plan[else] Now go, we're on borrowed time.' Having been given your orders[end if], you gesture for the last few civilians to follow you and run to the locker rooms to help the corgi [if hp of Paula > 2]and fox [end if]coordinate the civilian evacuation.";
+	say "     'I'm not sure how long we have before they decide to force an entry, and we don't stand a chance when they do. I'm not entirely sure why they haven't made a serious attempt yet, so we need to make the most of our fortune. Jimmy [if hp of Paula > 2]and Paula are[else]is[end if] helping the people we had rescued escape through a manhole in the Maintenance Storeroom near the locker rooms. Could you go and help there please?' the policewoman asks you. You ask her if there is anything you can do to defend the police station once the survivors have escaped. 'I would doubt it. It doesn't matter how capable you are, we are greatly outnumbered, and one mistake could lead to someone being lost or killed. My duty is to the people, not the building. Once the civilians are evacuated, I'll be retreating too, bringing up the rear.[if player is dominant]' Agreeing with her plan[else] Now go, we're on borrowed time.' Having been given your orders[end if], you gesture for the last few civilians to follow you and run to the locker rooms to help the corgi [if hp of Paula > 2]and fox [end if]coordinate the civilian evacuation.";
 	if hp of Paula > 2: [Paula rescued]
 		say "     Entering the locker room, you are met by the business end of a taser in the paws of Paula, though she quickly lowers it upon seeing who it is. 'I wondered when you would return, but you sure picked an exciting time to do so. The people you rescued should be waiting at the bottom of the ladder here', the vulpine nurse says, anxiety straining her speech. 'Is Alexandra with you?' Jimmy asks, supervising the last person as they clamber down the manhole. 'They should be fine waiting for a bit, but something down there may risk approaching eventually even with such a gathering.' You reply that the doberman should be coming soon, but wanted to make sure everyone else had got out first. The corgi's ears dip for a moment but a reassuring pat on the shoulder from Paula restores some of his usual cheerfulness. 'I'm sure she'll be fine. She's a tough cookie,' the small dog says in an attempt to reassure everyone.";
 		WaitLineBreak;

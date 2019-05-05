@@ -208,9 +208,9 @@ When Play begins:
 	now lev entry is 13;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;                 [ Monster's average damage when attacking. ]
 	now area entry is "Museum";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 0;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 0;           [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 0;            [ Cock width, more commonly used for ball size. ]
+	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 10;          [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 6;            [ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
@@ -269,7 +269,7 @@ An everyturn rule:
 			setmonster "Jaguar Warrior";
 			choose row monster from the Table of Random Critters;
 			if "Female Preferred" is not listed in feats of player:
-				now sex entry is "Male";
+				now sex entry is "Both";
 			now hoodequipped is 1;
 		infect "Jaguar Warrior";
 	else if hoodequipped is 1:

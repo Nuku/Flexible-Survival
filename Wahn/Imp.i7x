@@ -3,32 +3,40 @@ Version 1 of Imp by Wahn begins here.
 
 "Adds a Male Imp to Flexible Survival's Wandering Monsters table, with impreg chance"
 
+[ ImpType - which variant of imp is being fought       ]
+[   0: Skarnoth's scout imps                           ]
+[   1: trash-dumping imp                               ]
+
 when play begins:
 	add { "Imp" } to infections of guy;
 
 LastImpMeeting is a number that varies.	LastImpMeeting is usually 999.
 ImpPlayerMarkingTurn is a number that varies.
+ImpType is a number that varies. [@Tag:NotSaved]
 
 Section 1 - Monster Responses
 
 to say Imp wins:
-	if HP of player > 0:[player submits]
-		say "     As you submit to the little demon, the imp puffs up his chest and gives an imperious nod, then starts to smile. His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth and he calls out, 'Not as stupid as you look, I see. At least some mortals realize they are no match for demonic powers, hah! Strip naked slave!' After those words, the foot-tall being flutters around you as you obey and take off your gear and clothes, dropping them to the ground one by one. The imp demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - then commands you to lie down on your back. With a flutter of wings, he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
-	else:[player loses]
-		say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'You really should have realized that you're no match for me! I'm a demon, dumb-fuck!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
-	say "     'Oh yeah, that's definitively the proper place for a mortal,' the red-skinned humanoid gleefully says as he taps his right hoof on your chest and rubs his crotch. Wearing nothing but a threadbare loincloth, it is painfully obvious that the demon is hard as a rock - his well-sized cock (for the small body-size) standing straight out under the fabric and tenting it. He clearly gets off on ordering others around. With the flick of a clawed hand, your little captor pulls aside the loincloth a moment later, revealing his bright red shaft and starting to jerk it off with gleeful intensity.";
-	if graphics is true:
+	if ImpType is 0: [Skarnoth's scouts]
+		if HP of player > 0:[player submits]
+			say "     As you submit to the little demon, the imp puffs up his chest and gives an imperious nod, then starts to smile. His too-broad mouth pulls into a wide grin showing off a whole row of sharp teeth and he calls out, 'Not as stupid as you look, I see. At least some mortals realize they are no match for demonic powers, hah! Strip naked slave!' After those words, the foot-tall being flutters around you as you obey and take off your gear and clothes, dropping them to the ground one by one. The imp demands that you take some lewd poses to show off - like shaking and spreading your ass or air-humping with your crotch - then commands you to lie down on your back. With a flutter of wings, he lands on your chest a moment later, placing tiny hooves to stand on your breastbone.";
+		else:[player loses]
+			say "     You are left swaying badly after the last hit of the little demon and the imp gives an evil chuckle as he flies right up to your face in a flutter of wings. With his too-broad mouth pulling into a wide grin showing off a whole row of sharp teeth, he reaches out to poke your forehead with one finger, then gives a small shove - enough to make you keel over backwards. 'You really should have realized that you're no match for me! I'm a demon, dumb-fuck!' With those words, the foot-tall being lands on your chest, placing tiny hooves to stand on your breastbone.";
+		say "     'Oh yeah, that's definitively the proper place for a mortal,' the red-skinned humanoid gleefully says as he taps his right hoof on your chest and rubs his crotch. Wearing nothing but a threadbare loincloth, it is painfully obvious that the demon is hard as a rock - his well-sized cock (for the small body-size) standing straight out under the fabric and tenting it. He clearly gets off on ordering others around. With the flick of a clawed hand, your little captor pulls aside the loincloth a moment later, revealing his bright red shaft and starting to jerk it off with gleeful intensity.";
+		if graphics is true:
+			WaitLineBreak;
+			project the figure of Imp_naked_icon;
 		WaitLineBreak;
-		project the figure of Imp_naked_icon;
-	WaitLineBreak;
-	say "     'You're nothing but a weak little mortal brought down by my might and power, are you? Go on - say it!' he demands from you while beating off, and given your current position you've got little choice but to obey. This arouses the imp even more, prompting him to play with his balls - squeezing them while stroking his shaft faster and faster. Soon, the groans and grunts of his surprisingly deep voice build to a half-shouted roar, and he bucks his hips against the hand gripping his cock, spraying long blasts of cum all over your face. The sheer volume of demonic seed he puts out is almost admirable - but what isn't is the face that he purposely aims to hit you in inconvenient places like up your nose or in an eye. Thankfully, the little fucker doesn't have good aim, but eventually you're forced to close your eyes tightly as a splashed line of cum covers your cheek up to your forehead.";
-	say "     With closed eyes, you feel the warmth and wetness of further spurts even more clearly as the imp creams your face, then chin and neck as his orgasm slowly ebbs off. The next thing you feel is his hooves stepping forward a bit and little hands bracing against your jaw as the imp half climbs your face, then demands that you stick out your tongue. 'That's a good fucktoy!' he giggles as you obey, then taste his spicy cum as he wipes off his prick on your tongue. His tiny hands rub over your face, seemingly smearing the cum splashes all over it - but then you realize that he's actually scooping it up to do some finger-painting on your forehead. You feel him draw the letters B, I, T, C and H on your skin in his still warm cum, giggling as he does so.";
-	WaitLineBreak;
-	say "     'Well well - it's been fun playing with you, slut. Wish I could just keep ya, but it'd be a pain to drive you to the hell-gate through this fucked-up monster nest of a city,' the imp says to you and smiles as you carefully open the eye that hasn't got demon cum splashed on its eyelid. Then he grimaces a little and admits, 'And I was only supposed to find you anyways. The big boss - Skarnoth - called dibs on ripping you a new one after your stunt of stealing that angel dick-bait. So... you're fucked, haha! Gonna be dragged to hell and get an introduction to his demon dong. Well - eventually, you will. The pack of hellhounds that was supposed to come along with me and the others is busy enjoying the sights of this place for the moment - chasing down people to chew on and hump - but they'll get around to collecting you soon when the boss gets impatient and breaks out the choking collars. Should take two days or three, tops. And you can forget about hiding - getting a facial with infernal cum leaves a mark they can sniff out from miles away!' Pulling his loincloth aside again and lewdly wagging a half-hard cock at you, the imp gives a cruel laugh and then takes off, flying out of sight in a few moments.";
-	LineBreak;
-	say "     If the imp is to be believed, you're kinda fucked right now. [bold type]You have two - or three - days before a ravening pack of hellhounds will sniff you out.[roman type] Thinking back to the fight between Elijah and the demons in the red light district, even one of those beasts was a dire threat... a whole pack of them would surely be too much to handle alone. [bold type]You really should talk to your angelic friend about an option to prevent becoming a demon fucktoy.[roman type]";
-	now libido of Skarnoth is 10; [player got found and marked]
-	now ImpPlayerMarkingTurn is turns;
+		say "     'You're nothing but a weak little mortal brought down by my might and power, are you? Go on - say it!' he demands from you while beating off, and given your current position you've got little choice but to obey. This arouses the imp even more, prompting him to play with his balls - squeezing them while stroking his shaft faster and faster. Soon, the groans and grunts of his surprisingly deep voice build to a half-shouted roar, and he bucks his hips against the hand gripping his cock, spraying long blasts of cum all over your face. The sheer volume of demonic seed he puts out is almost admirable - but what isn't is the face that he purposely aims to hit you in inconvenient places like up your nose or in an eye. Thankfully, the little fucker doesn't have good aim, but eventually you're forced to close your eyes tightly as a splashed line of cum covers your cheek up to your forehead.";
+		say "     With closed eyes, you feel the warmth and wetness of further spurts even more clearly as the imp creams your face, then chin and neck as his orgasm slowly ebbs off. The next thing you feel is his hooves stepping forward a bit and little hands bracing against your jaw as the imp half climbs your face, then demands that you stick out your tongue. 'That's a good fucktoy!' he giggles as you obey, then taste his spicy cum as he wipes off his prick on your tongue. His tiny hands rub over your face, seemingly smearing the cum splashes all over it - but then you realize that he's actually scooping it up to do some finger-painting on your forehead. You feel him draw the letters B, I, T, C and H on your skin in his still warm cum, giggling as he does so.";
+		WaitLineBreak;
+		say "     'Well well - it's been fun playing with you, slut. Wish I could just keep ya, but it'd be a pain to drive you to the hell-gate through this fucked-up monster nest of a city,' the imp says to you and smiles as you carefully open the eye that hasn't got demon cum splashed on its eyelid. Then he grimaces a little and admits, 'And I was only supposed to find you anyways. The big boss - Skarnoth - called dibs on ripping you a new one after your stunt of stealing that angel dick-bait. So... you're fucked, haha! Gonna be dragged to hell and get an introduction to his demon dong. Well - eventually, you will. The pack of hellhounds that was supposed to come along with me and the others is busy enjoying the sights of this place for the moment - chasing down people to chew on and hump - but they'll get around to collecting you soon when the boss gets impatient and breaks out the choking collars. Should take two days or three, tops. And you can forget about hiding - getting a facial with infernal cum leaves a mark they can sniff out from miles away!' Pulling his loincloth aside again and lewdly wagging a half-hard cock at you, the imp gives a cruel laugh and then takes off, flying out of sight in a few moments.";
+		LineBreak;
+		say "     If the imp is to be believed, you're kinda fucked right now. [bold type]You have two - or three - days before a ravening pack of hellhounds will sniff you out.[roman type] Thinking back to the fight between Elijah and the demons in the red light district, even one of those beasts was a dire threat... a whole pack of them would surely be too much to handle alone. [bold type]You really should talk to your angelic friend about an option to prevent becoming a demon fucktoy.[roman type]";
+		now libido of Skarnoth is 10; [player got found and marked]
+		now ImpPlayerMarkingTurn is turns;
+	else if ImpType is 1: [trash-dumping imp]
+		say "...";
 
 to say Imp loses:
 	if graphics is true:
@@ -42,35 +50,36 @@ to say Imp Sex Menu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Tie him up and leave him";
-	now sortorder entry is 0;
-	now description entry is "Hog-tie the little demon and hang him up for someone else to find";
+	if ImpType is 0: [Skarnoth's scouts]
+		choose a blank row in table of fucking options;
+		now title entry is "Tie him up and leave him";
+		now sortorder entry is 0;
+		now description entry is "Hog-tie the little demon and hang him up for someone else to find";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Kill him";
-	now sortorder entry is 1;
-	now description entry is "Snap the little demon's neck";
+	if ImpType is 0: [Skarnoth's scouts]
+		choose a blank row in table of fucking options;
+		now title entry is "Kill him";
+		now sortorder entry is 1;
+		now description entry is "Snap the little demon's neck";
 	[]
-	[
-	if player is male:
+	if ImpType is 1 and player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Wrap him around your dick and jerk off";
 		now sortorder entry is 2;
 		now description entry is "Use the little demon as a cock-sleeve";
 	[]
-	if player is female:
+	if ImpType is 1 and player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Stick him in your pussy";
 		now sortorder entry is 3;
 		now description entry is "Use the little demon as a living dildo";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Stick him in your ass";
-	now sortorder entry is 4;
-	now description entry is "Use the little demon as a living dildo";
+	if ImpType is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Stick him in your ass";
+		now sortorder entry is 4;
+		now description entry is "Use the little demon as a living dildo";
 	[]
-	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -140,8 +149,11 @@ to say ImpSex3:
 
 to say ImpDesc:
 	setmongender 3;
-	say "     A rapid flutter of wings draws your attention to an incoming threat in the shape of a small, red-skinned creature about a foot in height! The slender being has a pair of bat-like wings on his back, a spade-tipped tail, and its relatively handsome face is crowned by an unruly mop of black hair out of which two curved horns poke out of. Wearing nothing but a thin, skimpy loincloth that sways from side to side with every motion, there is little doubt that this tiny demon is male.";
-	say "     Swooping down on you, the imp gives you a lewd grin before clearing his throat and booms out in a demonic tone. 'Kneel! You're now mine, mortal!' The voice does have a proper horror film ring to it, but the effect is pretty underwhelming considering how small he is. You can't quite suppress a snort at how poorly his larger than life bravado goes with his tiny body, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
+	if ImpType is 0: [Skarnoth's scouts]
+		say "     A rapid flutter of wings draws your attention to an incoming threat in the shape of a small, red-skinned creature about a foot in height! The slender being has a pair of bat-like wings on his back, a spade-tipped tail, and its relatively handsome face is crowned by an unruly mop of black hair out of which two curved horns poke out of. Wearing nothing but a thin, skimpy loincloth that sways from side to side with every motion, there is little doubt that this tiny demon is male.";
+		say "     Swooping down on you, the imp gives you a lewd grin before clearing his throat and booms out in a demonic tone. 'Kneel! You're now mine, mortal!' The voice does have a proper horror film ring to it, but the effect is pretty underwhelming considering how small he is. You can't quite suppress a snort at how poorly his larger than life bravado goes with his tiny body, drawing you a hateful glare from the imp. 'We'll see who's laughing after I give you a well-deserved thrashing, whelp!' he shouts and raises a hand, forming a ball of fire above his palm about an inch in diameter.";
+	else if ImpType is 1: [trash-dumping imp]
+		say "...";
 
 Section 2 - Monster Insertion
 

@@ -518,7 +518,7 @@ Definition: A person (called x) is neuter:
 A person can be booked. A person can be bunkered. A person is usually not booked. A person is usually not bunkered.
 
 Definition: A person (Called x) is booked:
-	If x is the player, no;
+[	If x is the player, no;]
 	If x is Trixie, no;
 	if x is Velos, no;
 	if the location of x is Grey Abbey Library, yes;
@@ -542,7 +542,7 @@ Definition: A person (Called x) is booked:
 	no;
 
 Definition: A person (Called x) is bunkered:
-	If x is the player, no;
+[	If x is the player, no;]
 	if x is Velos, no;
 	if the location of x is Bunker, yes;
 	if the location of x is Communal Shower, yes;
@@ -930,7 +930,7 @@ title	subtable	description	toggle
 
 Table of Random Critters
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
-"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	1	"default"	false
+"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	0	"default"	false
 
 understand the command "feed" as something new.
 
@@ -1089,6 +1089,11 @@ when play begins:
 Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
 	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of Swimlist;
+
+OviImpregnatorList is a marker. [list of infections capable of ovi impregnation]
+when play begins:
+	add { "Frost Drake" } to infections of OviImpregnatorList;
+
 
 Part 2 - Rules
 
@@ -1652,7 +1657,7 @@ To process (x - a grab object):
 				increase morale of player by 30;
 				if morale of player > 0, now morale of player is 0;
 				say "You feel better having eaten.";
-	if x is chips:
+	else if x is chips:
 		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
 			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		else if "Junk Food Junky" is listed in feats of player:
@@ -1674,7 +1679,7 @@ To process (x - a grab object):
 				increase morale of player by 15;
 				if morale of player > 0, now morale of player is 0;
 				say "You feel better having eaten.";
-	if x is glob of goo:
+	else if x is glob of goo:
 		if hunger of player > 5:
 			increase score by 2;
 		PlayerEat 6;
@@ -1683,7 +1688,7 @@ To process (x - a grab object):
 			increase morale of player by 15;
 			if morale of player > 0, now morale of player is 0;
 			say "You feel better having eaten.";
-	if x is water bottle:
+	else if x is water bottle:
 		if "Junk Food Junky" is listed in feats of player:
 			if thirst of player > 0:
 				increase score by thirst of player divided by 3;
@@ -1706,7 +1711,7 @@ To process (x - a grab object):
 				increase morale of player by 62;
 				if morale of player > 0, now morale of player is 0;
 				say "After drinking something, you feel better.";
-	if x is dirty water:
+	else if x is dirty water:
 		if "Junk Food Junky" is listed in feats of player:
 			if thirst of player > 0:
 				increase score by thirst of player divided by 3;
@@ -1736,7 +1741,7 @@ To process (x - a grab object):
 				now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
 				choose row RandomRow from the Table of Random Critters;
 			infect name entry;
-	if x is soda:
+	else if x is soda:
 		if "Junk Food Junky" is listed in feats of player:
 			if thirst of player > 0:
 				increase score by thirst of player divided by 3;
@@ -1761,10 +1766,13 @@ To process (x - a grab object):
 				if morale of player > 0, now morale of player is 0;
 				say "You feel better having drunken something.";
 		sfsodadrink;
-	if x is gryphon milk:
+	else if x is gryphon milk:
 		say "The milk is thick, like a shake, but warmer, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
 		PlayerDrink 15;
-	if x is dog milk:
+	else if x is manufactured milk:
+		say "The milk is thick, like a shake, flowing down your throat in sweet creamy waves that send tingles of pleasure through your body as you guzzle it down. Only after you've drunk it all down do you notice that some has run down your chin in your excitement. That is some good milk!";
+		PlayerDrink 15;
+	else if x is dog milk:
 		say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
 		PlayerDrink 15;
 		repeat with Z running from 1 to number of filled rows in Table of Random Critters:
@@ -1774,7 +1782,7 @@ To process (x - a grab object):
 				now monster is Z;
 				break;
 		if "Iron Stomach" is not listed in feats of player, follow the sex change rule;
-	if x is distilled milk:
+	else if x is distilled milk:
 		say "Ugh, dry milk. It takes some effort to force the almost sickeningly sweet powder down your throat, but once it hits your belly, your body is wracked with powerful waves of alternating lust and breathlessness.";
 		increase thirst of player by 5;
 		grow breasts by 3;
@@ -1788,7 +1796,7 @@ To process (x - a grab object):
 				now found is 1;
 				break;
 		if found is 1, infect;
-	if x is a journal:
+	else if x is a journal:
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
 		if the humanity of player < 100:
@@ -1805,7 +1813,7 @@ To process (x - a grab object):
 			say "([humanity of player]/100).";
 			now Lastjournaluse is turns;
 		follow turnpass rule;
-	if x is a armament:
+	else if x is a armament:
 		if weapon of player is weapon of x:		[unequip]
 			now weapon of player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
 			now weapon damage of player is 4;
@@ -1826,7 +1834,7 @@ To process (x - a grab object):
 				else:
 					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
-	if x is equipment:
+	else if x is equipment:
 		if x is equipped: [unequip]
 			if x is not cursed: [explanation why the item can't be taken off is to be done in the item description]
 				say "     [bold type]You take off the [x].[roman type][line break]";
@@ -1861,7 +1869,7 @@ To process (x - a grab object):
 			else:
 				say "     [bold type]You start wearing the [x].[roman type]";
 				now x is equipped;
-	if x is a medkit:
+	else if x is a medkit:
 		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
 		if "Expert Medic" is listed in the feats of player:
 			if Paula is visible:
@@ -1891,12 +1899,12 @@ To process (x - a grab object):
 				say "You manage to save the medkit with your amazing skills.";
 			else:
 				delete medkit;
-	if x is a pepperspray:
+	else if x is a pepperspray:
 		if inafight is 1:
 			say "[line break][usepepperspray]";
 		else:
 			say "It would not be good idea to use that on yourself. Spicy eyes!";
-	if x is a healing booster:
+	else if x is a healing booster:
 		let healed be 20;
 		if "Expert Medic" is listed in the feats of player:
 			now healed is 25;
@@ -4846,6 +4854,7 @@ Include Anime Babe by Stripes.
 Include Anthro Shaft Beast by Guest Writers.
 Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
+Include Army Ant by Glitch.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
 Include Awesome Tree by Damaged.
@@ -5132,6 +5141,7 @@ Include Andrew by Stripes.
 Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
+Include Arthur by Luneth.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
 Include Atticus by Wahn.
@@ -5202,7 +5212,7 @@ Include HornyHorsey by femtoAmpere.
 [Include Horus by Rikaeus.]
 Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
-Include HypnoGeeks by Wasp.
+Include HypnoGeeks by Luneth.
 Include Icarus by Stripes.
 Include Ice Fox by Wahn.
 Include Inflatable Orca by Song.
@@ -5226,6 +5236,7 @@ Include Kurt by Rikaeus.
 Include Kyle by Qazarar.
 Include Kyrverth by Speedlover.
 Include Lance by Verath.
+Include Landon by Luneth.
 Include Larissa by Stripes.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
@@ -5233,6 +5244,7 @@ Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
+Include Malik by Wahn.
 Include Mark by Wahn.
 Include Master Mind by Stripes.
 Include Matriarch NPC by Stripes.
@@ -5260,10 +5272,12 @@ Include Percy by Taelyn.
 Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
+Include Poseidon by Rikaeus.
 Include Pretty Kitty by Xenophiliac.
 Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
+Include Reece by Luneth.
 Include RexxyEvent by AGentlemanCalledB.
 Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
@@ -5274,6 +5288,7 @@ Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Savina by Kurainyx.
+Include Serafino by Rikaeus.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.

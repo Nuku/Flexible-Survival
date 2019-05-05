@@ -129,6 +129,7 @@ to say ChaseDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP of Chase: [HP of Chase], Dexterity: [Dexterity of Chase], LIBIDO: [libido of Chase], LUST: [lust of Chase], ChaseSexCounter: [ChaseSexCounter], THIRST: [thirst of Chase], ChaseMarking: [ChaseMarking], ChasePetplay: [ChasePetplay] <- DEBUG[line break]";
 	if HP of Chase < 3: [regular Chase]
+		project the figure of Chase_face_icon;
 		say "     The tall, striped tiger-morph you helped out earlier is hanging around near the side of the den, watching over several of the other tiger-like people here as they go about their business. He's pretty fit looking, with a swimmer's build and seems well at ease with his new form. Chase's electric blue eyes sweep the room, making sure that everyone under his care is safe and accounted for. Staring at him, you also notice his stripes seem to differ from the other tigers. For the most part, they all have matching markings, whereas Chase has prominent black stripes coming over his shoulders to almost meet at the center of his chest. Every so often, he rubs the leather choker bearing a yin yang brand around his neck. The collar almost looks cute... but you doubt anyone would ever mention that to him. All in all, he seems strangely alluring, with a strong, masculine presence that you can't help but find attractive.";
 		say "     As you continue to stare at the friendly beastman, he notices your gaze, giving you a cocky smirk. Acting as if you aren't watching, he strikes a pose that shows off compact muscles, making sure to put all of his assets on display. While your eyes are transfixed by his biceps and pecs, Chase flexes them for your perusal. Running a paw down the white fur of his washboard abs, the tiger's hand finally reaches his sheath and balls. To a casual observer, it would appear that he's only adjusting himself, but you know better. Casually rolling each ball around with his paw, the great cat allows his cock to begin to harden only slightly. Turning his back to you, he shows off his sculpted ass, flexing it as he bends over to pick something up that you're pretty sure isn't even there. When he stands erect again, he glances over his shoulder with wink, that same cocky smirk on his face. Heading over to a wall, Chase leans up against it acting as if he hadn't just put on an enticing show for you. You can't help but giggle a little bit at the tiger-morph's antics. You have heard of guys peacocking, but this is the first time you have seen a cat do anything pertaining to something bird-like.";
 	else if HP of Chase is 3 or HP of Chase is 4: [Chase became a dominant king]
@@ -143,6 +144,7 @@ instead of conversing the Chase:
 	if HP of Chase is 0: [not rescued yet]
 		say "     ERROR: Chase shouldn't be where a player can see him yet! Please report to Wahn on the FS discord or forum and quote this tracking number for easier bugfixing: [HP of Chase]";
 	else if HP of Chase is 1: [initial talk with regular Chase]
+		project the figure of Chase_face_icon;
 		say "     Chase waves at you as you approach. 'Hey. Welcome to our little hideout[if player is not defaultnamed], [name of player][end if]. We call it the tiger den,' he says with a soft chuckle. 'Not a bad little place here either. Not sure who found it to begin with, or if they are even still around or ended up changed by one of the tigertaurs.' Chase lets out a soft sigh at that. 'The damn tigertaurs are catching more and more of us each time we go out to forage or try to find people to help. We actually have a good stockpile of supplies here,' he says with a gesture to one of the locked doors. 'But as you can see, we have a decent amount of people here too, and no idea how long we need to wait for rescue, if it's even coming.' Chase shrugs slightly before proceeding to show you around the rather large solid basement, several of the tiger people stopping to watch as the two of you pass by.";
 		say "     Noting your interest in all the various different tiger-like people, Chase stops for a minute to explain. 'When I first ended up down here, not long after this place was started, there were many different types of minorly infected here, and we even had a number of people who hadn't been infected yet at all. Still,' the tiger says with a shrug, 'the longer we all stayed down here together, the more tiger-like everyone else seemed to become, until at this point I'm not sure if there are any non-tigers left down here. Most people actually seem to have adapted to the changes without any real regrets though. I mean heck,' Chase says with an amused grin on his tiger-like muzzle, 'what's NOT to like about being a tiger? I mean not only are we amazingly strong and fast hunters, but you seem to come through the change with your mind intact unlike a lot of the other infected. Most of all though,' Chase says as he strokes a hand down his tiger-furred side in amusement, 'tigers are so just damn sexy, with the stripes and all, don't you agree?' Chase says as he poses his long, lean body for your examination. Taking your silence as a sign of agreement, the tiger man grins as he finishes up the tour and goes back to watching the rest of the den members go about their business.";
 		now HP of Chase is 2;
@@ -169,6 +171,7 @@ instead of conversing the Chase:
 		say "     ERROR: Chase is in an undefined state. Please report to Wahn on the FS discord or forum and quote this tracking number for easier bugfixing: [HP of Chase]";
 
 to say RegularChaseTalkMenu:
+	project the figure of Chase_face_icon;
 	say "     What do you want to talk to Chase about?";
 	LineBreak;
 	now sextablerun is 0;
@@ -473,6 +476,7 @@ instead of fucking the Chase:
 			say "[ChaseSexMenu]";
 
 to say ChaseSexMenu:
+	project the figure of Chase_face_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

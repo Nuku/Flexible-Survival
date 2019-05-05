@@ -1,9 +1,9 @@
 [Version 1 of Anastasia Loyalty by Luneth begins here.
 [Version 1: added loyalty variable and Master/Slave route - Luneth]
 
-[ Loyalty of Anastasia                                                     ]
+[ Loyalty of Anastasia                                                    ]
 [   0: No loyalty has been earned                                         ]
-[   1: Recruited Anastasia                                                 ]
+[   1: Recruited Anastasia                                                ]
 [   2: Gained a loyalty point                                             ]
 [   3: Continuation                                                       ]
 [  5+: Unchaining Event can come up                                       ]
@@ -12,7 +12,7 @@
 [  12: Master/Slave event 2 done                                          ]
 [  13: Master/Slave event 3 done                                          ]
 
-[ AnastasiaMasterSlave                                                     ]
+[ AnastasiaMasterSlave                                                    ]
 [  -4: player locked in as sub                                            ]
 [  -3: player has been submissive thrice                                  ]
 [  -2: player has been submissive twice                                   ]
@@ -23,15 +23,15 @@
 [   3: player has been dominant thrice                                    ]
 [   4: player locked in as master                                         ]
 
-[ AnastasiaThongStatus                                                     ]
+[ AnastasiaThongStatus                                                    ]
 [   0: Default                                                            ]
 [   1: Allowed him to keep his underwear                                  ]
 [   2: Destroyed his thong leaving him naked                              ]
 
-[ AnastasiaDrugStatus                                                      ]
+[ AnastasiaDrugStatus                                                     ]
 [   0: Default                                                            ]
-[   1: Anastasia is not an addict                                          ]
-[   2: Anastasia is an addict                                              ]
+[   1: Anastasia is not an addict                                         ]
+[   2: Anastasia is an addict                                             ]
 
 AnastasiaMasterSlave is a number that varies.
 AnastasiaThongStatus is a number that varies.

@@ -43,6 +43,29 @@ The assault of gshep is "[gshep_attack]".
 the scent of the gshep is "Korvin has a masculine scent of canine arousal.".
 The fuckscene of gshep is "[korvinsexmenu]".
 GShepLastScene is a number that varies. GShepLastScene is usually 255.
+ScaleValue of gshep is 3. [human sized]
+Cocks of gshep is 1.
+Cock Length of gshep is 9.
+Cock Width of gshep is 4.
+Testes of gshep is 2.
+Cunts of gshep is 0.
+Cunt Length of gshep is 9.
+Cunt Width of gshep is 2.
+Breasts of gshep is 2. [2 nipples]
+Breast Size of gshep is 0.
+[Basic Interaction states as of game start]
+PlayerMet of gshep is false.
+PlayerRomanced of gshep is false.
+PlayerFriended of gshep is false.
+PlayerControlled of gshep is false.
+PlayerFucked of gshep is false.
+OralVirgin of gshep is false.
+Virgin of gshep is true.
+AnalVirgin of gshep is false.
+PenileVirgin of gshep is false.
+SexuallyExperienced of gshep is true.
+MainInfection of gshep is "German Shepherd".
+
 
 to say SummonKorvin:
 	now Korvin is nowhere;

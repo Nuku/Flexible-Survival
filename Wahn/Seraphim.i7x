@@ -2,18 +2,39 @@ Version 2 of Seraphim by Wahn begins here.
 [Version 2 - Actual Monster now with full infection and fight texts]
 
 [ HP of Gabriel                                                              ]
-[  0: not around yet                                                         ]
-[  1: Elijah has been corrupted                                              ]
-[  2: player saw Gabriel appear and ask for Elijah                           ]
-[  3: player had a run-in with Gabriel before                                ]
-[  4: Gabriel got fucked - now has genitals                                  ]
-[  5: Gabriel got fucked - repeat                                            ]
+[   0: not around yet                                                        ]
+[   1: Elijah has been corrupted                                             ]
+[   2: player saw Gabriel appear and ask for Elijah                          ]
+[   3: player had a run-in with Gabriel before                               ]
+[   4: Gabriel got fucked - now has genitals                                 ]
+[   5: Gabriel got fucked - repeat                                           ]
+
+[ Intelligence of Gabriel - commands for interaction with David              ]
+[   0: everything goes                                                       ]
+[  21: friendship only                                                       ]
+[  41: sex only                                                              ]
+[  99: interaction forbidden                                                 ]
+
+[ Charisma of Gabriel - interaction with David (David's side)                ]
+[   0: never talked                                                          ]
+[  10: player made Gabriel suck off David                                    ]
+[  11: talked after BJ, encouraged it                                        ]
+[  30: David ran off after the player 'caught' him touching Gabriel          ]
+[  31: talked after touching, encouraged it                                  ]
+[  50: David and Gabriel kissed without player intervention                  ]
+[  51: talked after kiss, encouraged it                                      ]
+[  70: sex blocked from David's side, might become friends                   ]
 
 [ libido of Gabriel - cumslut training                                       ]
 [   0: not offered yet                                                       ]
 [   1: training stage 1: player made him lick up his cum, then a BJ/Fuck     ]
+[  10: training stage 2: desperate for cum - sucks player of while they sleep]
+[  11: training stage 2: allowed to suck sleeping player                     ]
+[  12: training stage 2: forbidden from sucking sleeping player              ]
 [  99: postponed                                                             ]
 [ 100: refused                                                               ]
+
+[ Stamina of Gabriel - last cum dose                                         ]
 
 [ Energy of Gabriel - talk tracking                                          ]
 [   0: never talked to him                                                   ]
@@ -183,8 +204,7 @@ to say SeraphDefeated:
 					now monster is y;
 					now area entry is "Nowhere";
 					break;
-		if PlayerFucked of Gabriel is false:
-			now PlayerFucked of Gabriel is true;
+		now PlayerFucked of Gabriel is true;
 	else:
 		LineBreak;
 		say "     You decide to just go, leaving Gabriel to pick himself up on his own.";
@@ -411,6 +431,9 @@ to say GabrielTalkMenu:
 					say "[GabrielTalk5]";
 				else if (nam is "Offer him a bottle of demon seed to drink"):
 					say "[GabrielTalk6]";
+				else if (nam is "His interactions with David"):
+					say "     You lead Gabriel into one of the side rooms for a private chat. The beautiful angel you've turned into your private sex toy obeys immediately, coming to stand in front of you at attention. Looking into those innocent eyes, you reach out to run a hand up and down his toned chest while you think about what you want to tell him about his future interactions with David.";
+					say "[GabrielDavidInteractionChoice]";
 				wait for any key;
 				say "[GabrielTalkMenu]"; [looping back for more talk]
 		else if calcnumber is 0:
@@ -433,6 +456,7 @@ to say GabrielTalk3:
 	LineBreak;
 	say "[bold type]You lose 1 orc cum![roman type][line break]";
 	decrease carried of orc cum by 1;
+	now Stamina of Gabriel is turns; [last cum dose]
 	if libido of Gabriel < 10:
 		increase libido of Gabriel by 2; [big increase through the overdose]
 
@@ -448,6 +472,7 @@ to say GabrielTalk4:
 	say "[bold type]You lose 1 centaur cum![roman type][line break]";
 	decrease carried of centaur cum by 1;
 	NPCSexAftermath Gabriel receives "OralCock" from Gabriel;
+	now Stamina of Gabriel is turns; [last cum dose]
 	if libido of Gabriel < 10:
 		increase libido of Gabriel by 2; [big increase, fav cum drink]
 
@@ -459,6 +484,7 @@ to say GabrielTalk5:
 	LineBreak;
 	say "[bold type]You lose 1 wolf cum![roman type][line break]";
 	decrease carried of wolf cum by 1;
+	now Stamina of Gabriel is turns; [last cum dose]
 	if libido of Gabriel < 10:
 		increase libido of Gabriel by 1; [normal increase, regular cum drink]
 
@@ -475,6 +501,7 @@ to say GabrielTalk6: [demon seed]
 	say "     By the time your orgasm has run its course, it becomes obvious that the demon seed's effect on Gabriel is far more temporary than Elijah's seems to have been, possibly because he fought off its power and didn't internalize it. This leaves you with a somewhat cum-smeared and breathless blue-eyed Seraphim kneeling before you, looking up with wide eyes. 'I'm sorry [master], I don't know what came over me when I drank that stuff. I - I thank you for reminding me of my place.' Wiping off a stray bit of cum from his lip and then pushing your finger into Gabriel's mouth to let him suck it off, you grin and tousle his hair as you remind him that he's yours, now and forever.";
 	say "[bold type]You lose 1 demon seed![roman type][line break]";
 	decrease carried of demon seed by 1;
+	now Stamina of Gabriel is turns; [last cum dose]
 	if libido of Gabriel < 10:
 		increase libido of Gabriel by 2; [big increase, special cum drink]
 
@@ -590,6 +617,7 @@ to say GabrielSex2: [player gets BJ]
 		WaitLineBreak;
 		say "     Seeing the Seraphim licking even the tiniest droplet of cum off his lips, you can't help but be reminded of the idea to train your angelic toy into being a total cum-slut, really pushing him to crave a man's seed beyond all bounds.";
 		say "[GabrielCumSlutTraining1]";
+	now Stamina of Gabriel is turns; [last cum dose]
 	NPCSexAftermath Gabriel receives "OralCock" from Player;
 
 to say GabrielCumSlutTraining1:
@@ -617,10 +645,12 @@ to say GabrielCumSlutTraining1:
 			say "     Having come before, you don't feel quite the same urge to cum into him as before, instead even giving him a little while to simply worship your cock, relaxing the grip on his head to allow him to move instead of just hammering into him. As you do so, you stress to your sex pet that he must work on perfecting his technique and become the best cocksucker he can be. Gabriel gives you a happy, 'Mmhmmm!' hummed around the piece of man-meat between his lips and proceeds to try out some new things with his tongue. One of those has you moaning out loud within a second, hand gripping him tightly by the hair and grinding his face against your crotch from the sheer pleasure. He reacts by simply sucking even harder, driving you over the edge mere seconds later. A volley of cum blasts shoots down his throat, joining all the other seed the angel has already eaten today.";
 			WaitLineBreak;
 			say "     Only when your orgasm eventually ebbs off do you actually let go of his head, allowing him to pull off your erection. Gabriel does so slowly and carefully, his lips wrapped tightly around the shaft all the way. When he finally pulls off your dickhead, the sexy male does so with a slurp, smacking his lips happily and giving you a broad smile. 'Thank you for sharing your seed with me, [master]. I'm starting to see now what you meant about cum being precious and that it should never be wasted. I'll be ready so you can give it all to me, alright?' Chuckling about his devotion, you brush the tip of your index finger over his wet lips, then slide it in between them, letting Gabriel suck a little on your digit while you stroke his shoulders and naked chest, telling him what a good boy he is.";
+			now Stamina of Gabriel is turns; [last cum dose]
 		else: [assfuck]
 			say "     Making your way behind Gabriel as he continues to lick up and swallow his own cum, you stroke the length of your erection and then crouch down to his level. With his face down against the ground, your sexy hunk of a fucktoy literally has to raise his ass in a very inviting way. It's no trouble at all to line yourself up with his back door and slam into him from behind with a harsh thrust that has the angel rearing up with a gasp, only to be pushed down again by your hands, face-planting into the puddle of cum. With your hands grasping his shoulders tightly and holding Gabriel down, you're just grinding against his ass, reveling in the sensation of his hole tightly gripping your shaft. Giving little thrusts to underline each word, you tell him that this is what he's made for - eating cum, lying in a pool of it and taking it up the ass like the needy cum-slut he is.";
 			say "     Already broken in to obedience and getting a vigorous fuck to boot, Gabriel's responses to your statements are simply long, drawn-out moans that speak of his desire to be dominated. He definitively is a happy slut of a sex pet for you and even flexes his ass muscles in just the right way as you tell him to, milking your cock inside his tight chute. It only takes a little while longer before this drives you over the edge, erupting into the angel's bowels with your cock buried balls-deep inside. Spurt after spurt of creamy seed floods his inner passage, painting it white and once more confirming your claim on Gabriel as your sex pet. While your cock is still filling him with more and more cum, you draw the man up into embracing him from behind and whisper into his ear that he's pleased his [master]. Then you wipe your finger over his cum-slick cheek and make him lick it off before pushing him back down to finish cleaning off his spilled seed.";
 			NPCSexAftermath Gabriel receives "AssFuck" from Player;
+			now Stamina of Gabriel is turns; [last cum dose]
 		now libido of Gabriel is 1; [started the cumslut training]
 	else if calcnumber is 2: [postpone]
 		LineBreak;
@@ -712,6 +742,7 @@ instead of going down from Grey Abbey Library while (libido of Gabriel > 4 and G
 			say "     Gruffly deciding to cut down on Gabriel's self-pleasure, give his hair a sharp tug and then remind your pet that you control what he does, not him. His eyes widen and he gives you a submissive murmur around the cock between his lips, immediately obeying the command to put his hands behind his back right after. Glancing down, you see his erection throbbing as it swings between his legs. Almost looks like he's getting even harder from you dominating him like this. Chuckling, you focus your concentration back on face-fucking the attractive man, giving him some more deep thrusts, one after the other. It just feels so good to have his throat contract around your dick every time he swallows, Adam's Apple bouncing up and down as he does so. Given such delightful sensations, it doesn't take all that much longer before the urge to cum builds sharply in your balls, and so you call out to your pet that you'll give him his reward now, grinding hard against his face to sink as much of your length as you can into him.";
 			say "     With a deep grunt, you blast the first splash of cum straight into Gabriel's stomach, followed by another and another that trickles down his throat. Yet a good cumslut doesn't just need to be filled, he also needs to love the taste of cum, so you soon pull back, withdrawing your shaft until only the very tip is inside the angel's mouth, with the further spurts of seed painting his tongue white. Filling your happy little sub's mouth with cum is the last little push he needed to reach his own orgasm, so with a needy groan, Gabriel stiffens before you, the muscles of his arms trembling as he forces himself to not to reach for his cock. Humping his hips forward reflexively, his cock starts to erupt like a geyser, spraying long streaks of angelic cum over the concrete floor of the bunker. The two of you ride out your respective orgasms, in the course of which you relax your grip on the angel's head, allowing him to pull off and give you a beaming smile after licking the last droplets of cum from his lips. Afterwards, he lets out a happy, 'Thank you [master]!'";
 		NPCSexAftermath Gabriel receives "OralCock" from Player;
+		now Stamina of Gabriel is turns; [last cum dose]
 		if libido of Gabriel < 10:
 			increase libido of Gabriel by 1;
 	else if calcnumber is 2: [make him self-suck]
@@ -724,6 +755,7 @@ instead of going down from Grey Abbey Library while (libido of Gabriel > 4 and G
 		WaitLineBreak;
 		say "     Counting the shots of cum, you keep massaging and stroking Gabriel's cock and balls to coax out even more. Only then his orgasm eventually ebbs off and the man starts giving you pleading looks to give his now sensitive manhood a little rest do you relent, letting go with a last caress. Afterwards, you leave Gabriel free to stretch out on his back once more, finally relaxing from his ass over head position. Taking in the blissful expression on his face and seeing some slight movements of his cheeks, you just know that he's swishing his cum around in his mouth, reveling in the taste. Then his Adam's Apple starts to bob as he swallows a first little bit, in which you interrupt Gabriel by clearing your throat loudly and demand that he show you first. The handsome angel bows his head submissively, then stretches out his tongue and shows the white cum on it, creating a few little strings to his upper lips. Praising your cum-slut for giving you such a nice show, you allow him his full treat now and Gabriel hungrily swallows, followed by an earnest, 'Thank you [master]!'";
 		NPCSexAftermath Gabriel receives "OralCock" from Gabriel;
+		now Stamina of Gabriel is turns; [last cum dose]
 		if libido of Gabriel < 10:
 			increase libido of Gabriel by 1;
 	else if calcnumber is 3: [reject him gently]
@@ -733,5 +765,272 @@ instead of going down from Grey Abbey Library while (libido of Gabriel > 4 and G
 	else if calcnumber is 4: [reject him harshly]
 		LineBreak;
 		say "     Giving the angel's hair a sharp tug that makes him wince in pain, you frown at him and demand that he tell you what the relationship between you two is. 'I - I'm yours, [master]. You claimed me with sex and I obey you!' he replies, at times hesitating and with a tremble in his voice. Huffing in disapproval, you go on to say that you didn't tell him to arrange this little pad and wait for you like this. He's supposed to serve, not to make decisions on his own after all! Paling visibly at your rejection, Gabriel opens his mouth a few times as if to say something, but can't bring out any words, so in the end he just looks down and sniffles. Waving a hand in a curt movement to dismiss him, you watch as he gathers up his blankets and trots towards the bed that is his. The angel's wings droop significantly further down than their usual straight and slightly raised position, showing that he's stricken and sad about your anger and not getting any sex or cum.";
+
+after resting while ((Player is bunkered or Player is booked) and Player is male and Gabriel is in Bunker and libido of Gabriel > 9 and libido of Gabriel < 99 and Stamina of Gabriel - turns > 15): [everyone present, cum slut training stage 2, 2 days not fed]
+	if Libido of Gabriel is 10: [first time]
+		say "[FirstTimeGabrielSleepBJ]";
+	else if Libido of Gabriel is 11: [allowed to suck player during sleep]
+		say "     As you drift up from the depths of sleep, you become aware of a quite pleasurable sensation coursing through your body. Still shaking off last vestiges of dreams that melt away like fog in the sun, you move your hand towards the source of the slurping noises down at your crotch and soon feel the soft curls of Gabriel's long hair under your fingers. He's bobbing up and down on your shaft in an urgent tempo while massaging your balls, giving you a clear sign that your angelic cum-slut is desperate for your seed. Feeling a little lazy right now, you only open your eyes a tiny bit to allow them to get used to the light while just leaving your hand on Gabriel's head and letting him continue at his fast pace. It doesn't take all that long before your angelic slut's enthusiastic efforts drive you past the point of no return. Reflexively humping upwards, you force your whole length down his throat and blast the first big spurt of cum directly into his stomach.";
+		say "     Gabriel quickly pulls back, keeping just your head between his lips to catch any following cum shots on his tongue, with whorish moans speaking of his pleasure in doing so. The well-tamed sex slave caresses your body and suckles on your cock until the last spurts of your orgasm have ebbed off, then pulls off your dick and gives its head a careful kiss. You push yourself up on your elbows to look at the ecstatic and oh so very naked male, who then opens his mouth to show the white froth of your seed and his spit, drawing strings in the air as he stretches his tongue out to show it to you. Without losing one drop, he demonstratively swallows your cum, then suddenly starts to twitch and tremble. Following the movement of his hands, you realize that he just came from being allowed to feed on your seed!";
+		WaitLineBreak;
+		say "     Gabriel is sure to catch his own load in the palm of his hand, both not to make a mess as well as enabling him to slurp the white spunk up with his tongue. He moans happily as he does so, though not as much as when he was feeding on the sperm of his [master]. You've definitively created a happy little cum-slut in your sex pet, and you caress him once again to express your pleasure about his progress before you start to get up. He happily fulfills the role as a servant too, bringing your clothes and gear up to you as you get dressed, all the while being very nice eye-candy as he nakedly moves around.";
+		NPCSexAftermath Gabriel receives "OralCock" from Player;
+		now Stamina of Gabriel is turns; [last cum dose]
+	else if Libido of Gabriel is 12: [forbidden to suck the player during sleep, but desperate enough to do it anyways]
+		say "     As you drift up from the depths of sleep, you become aware of a quite pleasurable sensation coursing through your body. Still shaking off last vestiges of dreams that melt away like fog in the sun, you move your hand towards the source of the slurping noises down at your crotch and soon feel the soft curls of Gabriel's long hair under your fingers. He's going down on you, even after you specifically told him not to do so in the future! The angelic cum-slut is bobbing up and down on your shaft in an urgent tempo while massaging your balls, giving you a clear sign that your angelic cum-slut is desperate for your seed. Annoyance pushes aside the arousal burning in your veins and you grab a handful of your sex-pet's hair to wrench him away from your erection. Pushing yourself up into a half-sitting position and freezing Gabriel in motion with a wordless stare, your eyebrows draw together, followed by one of them rising in a demand for an explanation.";
+		say "     '[Master]! Please, please forgive me,' the seraphim wails, tears starting to well up in his eyes. 'I was weak, the hunger for your sweet nectar just became too powerful! Punish me as you will later, but could you find it in your heart to give me your seed? I feel empty without it!' Bringing his hands together in front of himself, Gabriel is now literally begging for you to shoot a load down his throat.";
+		LineBreak;
+		say "     [bold type]How do you react?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Indulge him, and let him sate his need likewise in the future. It's not like waking up to a blowjob isn't fun.";
+		say "     [link](2)[as]2[end link] - Scold him not to do so again, but allow him this taste of your cum.";
+		say "     [link](3)[as]3[end link] - Punish Gabriel and forbid doing this, now and in the future.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to get morning blowjobs, [link]2[end link] to discourage morning blowjobs or [link]3[end link] to forbid morning blowjobs.";
+		if calcnumber is 1: [allow]
+			LineBreak;
+			say "     Grabbing a handful of his brown curls, you give them a sharp tug and remind Gabriel that he's your sex-pet and shouldn't get used to having ideas of his own. He gulps and whimpers apologetically, with an earnest expression on his face. Still as you expect that he'll be unable to control himself in the future, being the cum-slut that you made him into, you wait a moment longer for the lesson to sink in, then finally relent and tell him that he may wake you up in the future, like he did today. Something about his happy smile tells you that he'll likely do it every day, unless you give him his daily dose of creamy seed some other way first. Having given your command, you nod for the angelic slut to continue and then lay back with your hands behind your head. Gabriel immediately gets back to the frantic bobbing from earlier, slurping on your shaft and letting out needy groans as he goes down on you. His hands move to caress your thighs and cup your balls at the same time, quickly inflaming the still sizzling fires of your lust.";
+			say "     It doesn't take all that long before your angelic slut's enthusiastic efforts drive you past the point of no return. Reflexively humping upwards, you force your whole length down his throat and blast the first big spurt of cum directly into his stomach. Then he pulls back, keeping just your head between his lips to catch any following cum shots on his tongue, with whorish moans speaking of his pleasure in doing so. The well-tamed sex slave caresses your body and suckles on your cock until the last spurts of your orgasm have ebbed off, then pulls off your dick and gives its head a careful kiss. You push yourself up on your elbows to look at the ecstatic male, who then opens his mouth to show the white froth of your seed and his spit, drawing strings in the air as he stretches his tongue out to show it to you. Without losing one drop, he demonstratively swallows your cum, then suddenly starts to twitch and tremble. Following the movement of his hands, you realize that he just came from being allowed to feed on your seed!";
+			WaitLineBreak;
+			say "     Gabriel is sure to catch his own load in the palm of his hand, both not to make a mess as well as enabling him to slurp the white spunk up with his tongue. He moans happily as he does so, though not as much as when he was feeding on the sperm of his [master]. You've definitively created a happy little cum-slut in your sex pet, and you caress him once again to express your pleasure about his progress before you start to get up. He happily fulfills the role as a servant too, bringing your clothes and gear up to you as you get dressed, all the while being very nice eye-candy as he nakedly moves around.";
+			NPCSexAftermath Gabriel receives "OralCock" from Player;
+			now Stamina of Gabriel is turns; [last cum dose]
+			now Libido of Gabriel is 11; [sleep sucking allowed]
+		else if calcnumber is 2: [scold]
+			LineBreak;
+			say "     Grabbing a handful of his brown curls, you give them a sharp tug and remind Gabriel that he's your sex-pet and shouldn't get used to having ideas of his own. He gulps and whimpers apologetically, nodding as you tell him that unasked-for blowjobs are not allowed in the future. He seems ready to beat a hasty retreat from his less than amused [master], but you keep your hold of him and add that you actually do want to make use of him right now. With that said, you plant both hands on the young-looking man's head and jerk it down against your crotch, burying your [cock of player] shaft in his mouth. Happy to get back to sucking on your dick, the cum-slut takes all of your length readily, slurping on your shaft and letting out pleased little grunts as you guide him to bob on your cock. His hands move to caress your thighs and cup your balls while he goes down on you, quickly inflaming the still sizzling fires of your lust.";
+			say "     It doesn't take all that long before your angelic slut's enthusiastic efforts drive you past the point of no return and you push his head down forcefully to take in the whole length of your cock, blasting spurt after spurt of cum down his throat. Gabriel tries to pull back a little to taste your seed on his tongue, but you just hold firm and gruffly explain that this isn't supposed to be fun for him, just taking care of the problem he created. You can feel his Adam's apple bobbing in his disappointment of not even getting a little of your cum. When your orgasm has run its course, you withdraw from his mouth in a swift pull, leaving his sucking lips with a plop. Then you shove him to the side and start to get dressed, preparing yourself for another day of surviving in the city.";
+			NPCSexAftermath Gabriel receives "OralCock" from Player;
+			now Stamina of Gabriel is turns; [last cum dose]
+			now Libido of Gabriel is 12; [sleep sucking forbidden]
+		else if calcnumber is 3: [forbid]
+			LineBreak;
+			say "     Grabbing a handful of his brown curls, you wrench the tamed angel back from your cock and give him a stern talking-to. With him soon being almost in tears, you declare that he will not be getting what he wanted because of his disobedience. Instead, you keep a tight grip on his hair and jerk off, quickly pushing yourself over the edge and blasting cum all over his glorious curls to give him a somewhat patchy appearance. With a dire warning that he may not remove the cum until it's well and truly dried, you send him scurrying away.";
+			now Libido of Gabriel is 12; [sleep sucking forbidden]
+	NPCSexAftermath Gabriel receives "OralCock" from Player;
+	now Stamina of Gabriel is turns; [last cum dose]
+
+after resting while ((Player is bunkered or Player is booked) and Player is male and Gabriel is bunkered and libido of Gabriel > 9 and libido of Gabriel < 12 and Stamina of Gabriel - turns > 7): [everyone present, cum slut training stage 2, 1 day not fed]
+	if Libido of Gabriel is 10: [first time]
+		say "[FirstTimeGabrielSleepBJ]";
+	else if Libido of Gabriel is 11: [allowed to suck player during sleep]
+		say "     As you drift up from the depths of sleep, you become aware of a quite pleasurable sensation coursing through your body. Still shaking off last vestiges of dreams that melt away like fog in the sun, you move your hand towards the source of the slurping noises down at your crotch and soon feel the soft curls of Gabriel's long hair under your fingers. He's bobbing up and down on your shaft in a steady rhythm, from time to time pulling off to let his tongue wander up the side of your shaft, tease the head of your dick around the rim or lap at your balls. Your angelic cum-slut is apparently hungry for your seed, but also wants to please his [master] as well as he can. Feeling a little lazy right now, you only open your eyes a tiny bit to allow them to get used to the light while just leaving your hand on Gabriel's head and giving him caressing pats as he continues at his own pace. Even so, it doesn't take all that long before your angelic slut's quite enthusiastic efforts drive you past the point of no return. Reflexively humping upwards, you force your whole length down his throat and blast the first big spurt of cum directly into his stomach.";
+		say "     Gabriel quickly pulls back, keeping just your head between his lips to catch any following cum shots on his tongue, with whorish moans speaking of his pleasure in doing so. The well-tamed sex slave caresses your body and suckles on your cock until the last spurts of your orgasm have ebbed off, then pulls off your dick and gives its head a careful kiss. You push yourself up on your elbows to look at the ecstatic and oh so very naked male, who then opens his mouth to show the white froth of your seed and his spit, drawing strings in the air as he stretches his tongue out to show it to you. Without losing one drop, he demonstratively swallows your cum, then suddenly starts to twitch and tremble. Following the movement of his hands, you realize that he just came from being allowed to feed on your seed!";
+		WaitLineBreak;
+		say "     Gabriel is sure to catch his own load in the palm of his hand, both not to make a mess as well as enabling him to slurp the white spunk up with his tongue. He moans happily as he does so, though not as much as when he was feeding on the sperm of his [master]. You've definitively created a happy little cum-slut in your sex pet, and you caress him once again to express your pleasure about his progress before you start to get up. He happily fulfills the role as a servant too, bringing your clothes and gear up to you as you get dressed, all the while being very nice eye-candy as he nakedly moves around.";
+		NPCSexAftermath Gabriel receives "OralCock" from Player;
+		now Stamina of Gabriel is turns; [last cum dose]
+	NPCSexAftermath Gabriel receives "OralCock" from Player;
+	now Stamina of Gabriel is turns; [last cum dose]
+
+to say FirstTimeGabrielSleepBJ:
+	say "     As you drift up from the depths of sleep, you become aware of a quite pleasurable sensation coursing through your body. Still shaking off last vestiges of dreams that melt away like fog in the sun, you don't understand at first why you're so horny right now, until you hear a slurping nose coming from the area of your crotch. Blinking open eyes that take a moment to adapt to the light, you glance down and see a head bobbing up and down on your erect cock. It is framed in long hair with brown curls that brushes over your skin with sensual softness every time the person goes down on you. Recognizing the source of your surprise blowjob as a fully naked Gabriel isn't hard, even before you bring your hands to rest on his head and pull it up to look him in the eyes. Panting in needy arousal, the tamed seraphim licks his lips as he shyly meets your gaze, then hastily tries to explain: '[Master], I - I wanted to give you an especially pleasant waking experience.'";
+	say "     Something makes you feel there is more to it than that, so you just continue to stare at him, raising an eyebrow expectantly. Gabriel's alabaster skin flushes a little as he realizes he's been caught out in not giving you the whole truth, followed by him pleadingly adding, 'I - oh, forgive me, please! In truth, I just couldn't resist any longer. The craving! I just can't! I need your cum! It's been so long since you gave it to me!' His frantic breath washes over the spit-slickened shaft of your cock as your enslaved angel looks down in shame, or just possibly hunger, at your erect cock. Seems like your cumslut training is having the intended effect on Gabriel. The only question is if you want to allow him this level of autonomy, with him just choosing to suck you off on his own accord.";
+	LineBreak;
+	say "     [bold type]How do you react?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Allow it. He's pleasing you quite nicely actually.";
+	say "     [link](2)[as]2[end link] - Scold him not to do so again. Well, after getting you off this time.";
+	say "     [link](3)[as]3[end link] - Punish Gabriel and forbid doing this, now and in the future.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to get morning blowjobs, [link]2[end link] to discourage morning blowjobs or [link]3[end link] to forbid morning blowjobs.";
+	if calcnumber is 1: [allow]
+		LineBreak;
+		say "     Running your hands through the soft, brown curls of Gabriel's hair, you caress him possessively and praise him for anticipating his [master]'s desires. That he's craving regular cum is exactly what you had planned for your obedient sex pet after all. He looks ecstatic at your touch and relieved that you understand his needs, more moaning than saying, 'Anything for you, [master]!' With you having decided to be generous with him, you expressly give him permission to wake you up just like he did today. Something about his happy smile tells you that he'll likely do it every day, unless you give him his daily dose of creamy seed some other way first. Having given your command, you nod for the angelic slut to continue and then lay back with your hands behind your head. Gabriel very happily gets back to the gentle sucking from earlier, slurping on your shaft and letting out pleased little grunts as he bobs up and down on it. His hands move to caress your thighs and cup your balls while he goes down on you, quickly inflaming the still sizzling fires of your lust.";
+		say "     It doesn't take all that long before your angelic slut's enthusiastic efforts drive you past the point of no return. Reflexively humping upwards, you force your whole length down his throat and blast the first big spurt of cum directly into his stomach. Then he pulls back, keeping just your head between his lips to catch any following cum shots on his tongue, with whorish moans speaking of his pleasure in doing so. The well-tamed sex slave caresses your body and suckles on your cock until the last spurts of your orgasm have ebbed off, then pulls off your dick and gives its head a careful kiss. You push yourself up on your elbows to look at the ecstatic male, who then opens his mouth to show the white froth of your seed and his spit, drawing strings in the air as he stretches his tongue out to show it to you. Without losing one drop, he demonstratively swallows your cum, then suddenly starts to twitch and tremble. Following the movement of his hands, you realize that he just came from being allowed to feed on your seed!";
+		WaitLineBreak;
+		say "     Gabriel is sure to catch his own load in the palm of his hand, both not to make a mess as well as enabling him to slurp the white spunk up with his tongue. He moans happily as he does so, though not as much as when he was feeding on the sperm of his [master]. You've definitively created a happy little cum-slut in your sex pet, and you caress him once again to express your pleasure about his progress before you start to get up. He happily fulfills the role as a servant too, bringing your clothes and gear up to you as you get dressed, all the while being very nice eye-candy as he nakedly moves around.";
+		NPCSexAftermath Gabriel receives "OralCock" from Player;
+		now Stamina of Gabriel is turns; [last cum dose]
+		now Libido of Gabriel is 11; [sleep sucking allowed]
+	else if calcnumber is 2: [scold]
+		LineBreak;
+		say "     Grabbing a handful of his brown curls, you give them a sharp tug and remind Gabriel that he's your sex-pet and shouldn't get used to having ideas of his own. He gulps and whimpers apologetically, nodding as you tell him that unasked-for blowjobs are not allowed in the future. He seems ready to beat a hasty retreat from his less than amused [master], but you keep your hold of him and add that you actually do want to make use of him right now. With that said, you plant both hands on the young-looking man's head and jerk it down against your crotch, burying your [cock of player] shaft in his mouth. Happy to get back to sucking on your dick, the cum-slut takes all of your length readily, slurping on your shaft and letting out pleased little grunts as you guide him to bob on your cock. His hands move to caress your thighs and cup your balls while he goes down on you, quickly inflaming the still sizzling fires of your lust.";
+		say "     It doesn't take all that long before your angelic slut's enthusiastic efforts drive you past the point of no return and you push his head down forcefully to take in the whole length of your cock, blasting spurt after spurt of cum down his throat. Gabriel tries to pull back a little to taste your seed on his tongue, but you just hold firm and gruffly explain that this isn't supposed to be fun for him, just taking care of the problem he created. You can feel his Adam's apple bobbing in his disappointment of not even getting a little of your cum. When your orgasm has run its course, you withdraw from his mouth in a swift pull, leaving his sucking lips with a plop. Then you shove him to the side and start to get dressed, preparing yourself for another day of surviving in the city.";
+		NPCSexAftermath Gabriel receives "OralCock" from Player;
+		now Stamina of Gabriel is turns; [last cum dose]
+		now Libido of Gabriel is 12; [sleep sucking forbidden]
+	else if calcnumber is 3: [forbid]
+		LineBreak;
+		say "     Grabbing a handful of his brown curls, you wrench the tamed angel back from your cock and give him a stern talking-to. With him soon being almost in tears, you declare that he will not be getting what he wanted because of his disobedience. Instead, you keep a tight grip on his hair and jerk off, quickly pushing yourself over the edge and blasting cum all over his glorious curls to give him a somewhat patchy appearance. With a dire warning that he may not remove the cum until it's well and truly dried, you send him scurrying away.";
+		now Libido of Gabriel is 12; [sleep sucking forbidden]
+
+after of going to Bunker while (David is bunkered and Gabriel is bunkered and Charisma of Gabriel is 0):
+	if debugactive is 1:
+		say "     DEBUG: David/Gabriel Talk Walkin[line break]";
+	say "     As you enter the bunker, you see David and Gabriel stand not too far away, next to one of the side walls of the underground refuge. They're talking, with the male soldier's back turned your way and you overhear David say, 'Wait, you mean -?' 'Yes, I'm the [master]'s servant. Before, I was someone else, something else. [SubjectProCap of Player] fought and won against me, held me down and changed me. Now I belong to [ObjectPro of player].' Gabriel pats the leather restraint cuffs resting around his wrists, then lowers his hands to rest just above his crotch as he bends his head. 'B-but that's slavery! No one can own other people!' David replies in a shocked tone, only to find the angel reaching out to cover his mouth with a gentle touch of his fingers. 'My kind was made to serve, to follow the grand plan to perfection. But how could I do so after having been changed? Impure thoughts in my head and the urges of this new flesh between my legs, they mark me as an abomination. I bear the mark of the [master], so now I serve [ObjectPro of player].'";
+	say "     David gapes at the convoluted logic that Gabriel just laid out, unsure what to say. The silence is filled by Gabriel a few heartbeats later, who switches topics to submissively ask, 'You are a guest of the [master] here, are you not? Shall I service you too?' The tame angel's gaze flicks over to meet your own as he does so, while David bursts out with, 'WHAT? No, wait! What brought this on? I-I'm not demanding that you do anything!' Forgetting his argument about slavery to tightly grab the seraphim's hand as it moves forward to brush against his crotch, the confused soldier bends Gabriel's arm to the side hastily, then freezes in motion as he realizes he's manhandling the angel.";
+	LineBreak;
+	say "     [bold type]How do you react?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Give Gabriel a commanding nod and mime a blowjob.";
+	say "     [link](2)[as]2[end link] - Loudly clear your throat and 'Catch' David with his hands on Gabriel.";
+	say "     [link](3)[as]3[end link] - Just stand back and see how the man gets himself out of the situation.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to make Gabriel blow David, [link]2[end link] to 'catch' David with his hands on Gabriel or [link]3[end link] to stand back and watch.";
+	if calcnumber is 1: [BJ]
+		LineBreak;
+		say "     Giving your angelic cock-slut a meaningful look, you point your finger at him, then down to the ground and mime him sucking a cock. A simple little nod tells you that your command has been understood and Gabriel gently extracts himself from David's grasp, then sinks to his knees before the man. 'I live to please,' he coos softly as he looks up at David, hands working on the button and zipper of his pants. 'W-wait,' the soldier protests weakly, yet doesn't do anything beyond that to prevent Gabriel from pulling out his cock. The next thing coming out of his mouth is a soft moan as the angel licks over his dickhead, followed by engulfing the shaft with his lips. David relents to just placing his hands on Gabriel's head, running his hands through his hair as the other male goes down on him expertly, lips and tongue creating intensely pleasurable sensations for the standing soldier.";
+		say "     'Fuuck, that's good,' David groans out as he is serviced by Gabriel, with the angel eagerly bobbing on his cock. Your sex pet gives him the very best attention he can muster, showing off some tricks with his tongue that he learned since you broke him in for sex. Given such exceptional service from a being totally focused on the pleasure of his partner, it doesn't take all that long for David to be brought to the brink of orgasm. 'I'm pretty close! You might wanna pull off now!' the panting soldier grunts out, yet Gabriel just continues with his motions, maybe even sucking a bit harder than before. Then the point of no return is reached, with David letting out a masculine grunt as his hips hump forward, grinding his dick into Gabriel's throat and burying the angel's nose in his pubes. The first few spurts of cum shoot right down into Gabriel's stomach, followed by him pulling back to catch anything after that on his tongue.";
+		WaitLineBreak;
+		say "     After the soldier's orgasm has run its course, your angelic pet swishes the man's load around in his mouth for a second, then swallows it demonstratively, showing off his clean tongue afterwards. David stares down at him with wide eyes for a few seconds, then says under his breath, 'Damn, that was something else. You've got skills, Gabe!' Still licking his lips, Gabriel rises to his feet and replies, 'Thank you for the kind words. If I can serve you in any way, just ask,' Gabriel tells his new friend happily. With the words, 'Sure. I - I gotta go. See ya later,' the soldier then hurries off, maybe to make sense of what just happened between them.";
+		say "     Watching the soldier go, you wave Gabriel over to yourself and take him to one of the side rooms for a private chat. The beautiful angel you've turned into your private sex toy obeys immediately, coming to stand in front of you at attention. Looking into those innocent eyes, you reach out to run a hand up and down his toned chest while you think about what you want to tell him about his future interactions with David.";
+		say "[GabrielDavidInteractionChoice]";
+		now Charisma of Gabriel is 10; [player made Gabriel suck off David]
+	else if calcnumber is 2: [catch]
+		LineBreak;
+		say "     Hearing you close behind him without any warning makes David flinch and whirl around in shock, which creates a bit of a tangle as he still is holding on to Gabriel's arm. Shocked embarrassment colors his face red as the two of them almost fall over and only catch themselves by clutching on to each other and Gabriel giving a frantic beat or two of his wings. 'Er, I- we were just talking. This isn't what it looks like.' A smirk plays over your features as you give him a knowing nod, then glance down to where David's hand is holding on to Gabriel's thigh. His blush deepening, the soldier extracts himself from the all too intimate touching, then rushes off with the words, 'I got to go!'";
+		say "     Watching the soldier go, you wave Gabriel over to yourself and take him to one of the side rooms for a private chat. The beautiful angel you've turned into your private sex toy obeys immediately, coming to stand in front of you at attention. Looking into those innocent eyes, you reach out to run a hand up and down his toned chest while you think about what you want to tell him about his future interactions with David.";
+		say "[GabrielDavidInteractionChoice]";
+		now Charisma of Gabriel is 30; [David ran off after the player 'caught' him touching Gabriel]
+	else if calcnumber is 3: [watch]
+		LineBreak;
+		say "     'S-sorry, I didn't mean to grab you that hard! You just surprised me,' David bursts out and snatches his hand away as if it was touching a hot stove. Gabriel's expression falls and his wings droop behind his back, followed by the question, 'Am I unappealing for the [master]'s guest that touching me repulses him?' He seems to have internalized his role as your subby sex pet far enough that the rejection actually starts tears welling up in his eyes. 'No, no, no! That's not what I meant,' comes the hasty reply from the soldier, who grabs Gabriel's upper arms in a lighter touch this time and tries to make him stand up straight again. As a first tear starts to trickle down the flawless alabaster face of the angel, David quickly wipes it away with a finger and pants out, 'You're a very beautiful man, it's just that-' His next words are stilled as Gabriel acts on one of the impulses that boils up inside him, leaning forward to kiss the human soldier on the mouth.";
+		say "     Soft lips brush against each other, seemingly unloading all the tension that built up between the two men, and the moment seems to stretch on and on. It goes so far that David's raised hand moves to cradle the back of Gabriel's head, buried in his soft brown curls as the two of them share share each other's breath. Then time seems to re-start and they pull apart, with Gabriel smiling at the soldier and David replying in kind. 'Thank you for the kind words. If I can serve you in any way, just ask,' Gabriel tells his new friend happily. With the words, 'Sure. I - I gotta go. See ya later,' the soldier then hurries off, maybe to make sense of what just happened between them.";
+		WaitLineBreak;
+		say "     Watching the soldier go, you wave Gabriel over to yourself and take him to one of the side rooms for a private chat. The beautiful angel you've turned into your private sex toy obeys immediately, coming to stand in front of you at attention. Looking into those innocent eyes, you reach out to run a hand up and down his toned chest while you think about what you want to tell him about his future interactions with David.";
+		say "[GabrielDavidInteractionChoice]";
+		now Charisma of Gabriel is 50; [David and Gabriel kissed without player intervention]
+
+to say GabrielDavidInteractionChoice:
+	LineBreak;
+	say "     [bold type]What are your commands in regards to Gabriel and David's relationship?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - He's free to befriend David, up to and including sex.";
+	say "     [link](2)[as]2[end link] - He can befriend David, but must not let the man touch him.";
+	say "     [link](3)[as]3[end link] - You want him to be nothing but a slut. He can have sex with David, but isn't allowed to hang out otherwise.";
+	say "     [link](4)[as]4[end link] - Forbid him to interact with David at all.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 4:
+		say "Choice? (1-4)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3 or calcnumber is 4:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to let Gabriel befriend and fuck David, [link]2[end link] to let Gabriel befriend David, [link]3[end link] to let him fuck around with David or [link]4[end link] to forbid them to interact.";
+	if calcnumber is 1:
+		say "     Reaching out to caress Gabriel's cheek and smiling at the angel, you tell him that he may hang out with David and be friendly with him. Or fuck around with him, like the good little sex pet you made him into. A happy little smile plays over his flawless features, leading over into Gabriel coyly biting his lower lip as he imagines doing more than just hang out with David. And even if he doesn't, the young-looking man clearly has some hope of having a friend to keep him company in the quiet hours down here in the bunker while you're out. 'Thank you, [master]! Thank you so much,' he says in an upbeat tone, then stretches his arms out to give you a hug. In the generous mood you are in, you let him do it and squeeze him right back, though not without groping the sexy hunk a little at least. As you go back into the main room of the bunker with him afterwards, he walks with a happy little spring in his step.";
+		now Intelligence of Gabriel is 1; [everything goes]
+	else if calcnumber is 2:
+		say "     Reaching out to caress Gabriel's cheek and smiling at the angel, you tell him that he may hang out with David and be friendly with him. Nothing more though, as he's your sex pet and you're the one who decides when he gets fucked. A happy little smile plays over his flawless features at the hope of having a friend to keep him company in the quiet hours down here in the bunker while you're out. 'Thank you, [master]! Thank you so much,' he says in an upbeat tone, then stretches his arms out to give you a hug. In the generous mood you are in, you let him do it and squeeze him right back, though not without groping the sexy hunk a little at least. As you go back into the main room of the bunker with him afterwards, he walks with a happy little spring in his step.";
+		now Intelligence of Gabriel is 21; [friendship only]
+	else if calcnumber is 3:
+		say "     Lowering your hand to cup Gabriel's crotch and giving it a squeeze, you smirk at the angel and tell him that you want him to be a slutty sex pet in all his interactions with David. They shouldn't hang out with each other though, unless it involves him getting his face or ass pounded by a hard dick. The seraphim takes in a shallow breath, letting out a quiet moan as he imagines himself being used that way, but the look in his eyes speaks of sadness as he nods to you. 'Of course, [master]. By your command,' he says quietly, then slinks out of the room back into the main chamber of the bunker, his wings drooping a bit. You follow after him closely.";
+		now Intelligence of Gabriel is 41; [sex only]
+	else if calcnumber is 4:
+		say "     Putting on a stern expression, you tell Gabriel that he's forbidden from talking to David, or doing anything physically with him. The seraphim looks at you with sad eyes, then takes a slow breath and presses his lips together. 'Of course, [master]. By your command,' he says quietly, then slinks out of the room back into the main chamber of the bunker, his wings drooping a bit. You follow after him closely.";
+		now Intelligence of Gabriel is 99; [interaction forbidden]
+
+
+after of going to Bunker while (David is bunkered and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)): [he needs to talk about Gabriel]
+	if debugactive is 1:
+		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
+	say "[DavidGabrielTalkAftermath]";
+
+after of going to Parade Ground while (David is in Parade Ground and (Charisma of Gabriel is 10 or Charisma of Gabriel is 30 or Charisma of Gabriel is 50)): [he needs to talk about Gabriel]
+	if debugactive is 1:
+		say "     DEBUG: David/Gabriel Talk Walkin Aftermath[line break]";
+	say "[DavidGabrielTalkAftermath]";
+
+to say DavidGabrielTalkAftermath:
+	project the figure of David_clothed_icon;
+	if Charisma of Gabriel is 10:
+		say "     As you approach David, a serious expression crosses his face and he clears his throat. 'Listen, I think we need to talk about Gabriel. I had a word with him and -' he pauses for a second there, blushing as he thinks back to the blowjob you arranged to follow that discussion, then continues to say, 'And he said you... did things to him. Is that true?'";
+	else if Charisma of Gabriel is 30:
+		say "     As you approach David, a serious expression crosses his face and he clears his throat. 'Listen, I think we need to talk about Gabriel. I had a word with him and -' he pauses for a second as he remembers the embarrassing scene of you 'catching' him with an arm on the arm of a flirtatious Gabriel, then continues to say, 'And he said you... did things to him. Is that true?'";
+	else if Charisma of Gabriel is 50:
+		say "     As you approach David, a serious expression crosses his face and he clears his throat. 'Listen, I think we need to talk about Gabriel. I had a word with him and -' he pauses for a second as he remembers the kiss between him and Gabriel that ended the discussion, then continues to say, 'And he said you... did things to him. Is that true?'";
+	LineBreak;
+	say "     [bold type]What do you reply?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Just lay it out bluntly: You fought Gabriel, fucked him and took him as your sex pet.";
+	say "     [link](2)[as]2[end link] - Give David a 'softened' version of how you came to be Gabriel's master.";
+	say "     [link](3)[as]3[end link] - Reject any blame for Gabriel's mental state and say you just took him in.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to tell the truth, [link]2[end link] to lie a moderate amount or [link]3[end link] to lie a lot.";
+	if calcnumber is 1:
+		say "     With a shrug, you begin laying out the facts for David: You ran into Gabriel in the Red Light District, with him being quite confrontative from the start. Things escalated in short order and you fought him and won. Then when he was on his knees, beaten and weak, you took the opportunity to enjoy yourself with him, which had some physical and mental effects. This went on for several clashes between the two of you, until you finally had enough and put a collar on him. Now he's your sex pet, and you certainly enjoy his services while having one less dangerous enemy roaming around that is after you.";
+		say "     David frowns at the reality of Gabriel's fate that you explain to him, his eyebrows drawing together as you get to having sex with the defeated angel and then pushing him into servitude. As you finish, he takes a deep breath, then lets it out slowly, finally shaking his head as if to clear it. 'That's pretty fucked up, if I have to be honest. Horrible, what this plage makes people do. It just worms its way into your head, isn't that right?' David says, then looks at you questioningly, to which you sway your head in a half-nod, not commenting any further on it. 'I know you're a good person, having saved me from a gruesome fate in the hands of that demon, so please, try to fight your impulses! As for Gabriel, I fear what's done is done, isn't it? Maybe therapy or something after all of this will help him. I'll try to be a friend to him in the meantime.' With nothing more to say for now, David walks some distance away from you, a thoughtful expression on his face. [bold type]You're quite sure he'll reject any sexual matters concerning Gabriel from now on.[roman type][line break]";
+		now Charisma of Gabriel is 70; [David will no longer participate in sex with Gabriel, might become a friend though]
+	else if calcnumber is 2:
+		say "     Putting a consoling hand on David's arm, you clear your throat and begin an only somewhat made-up tale: You ran into Gabriel in the Red Light District, and like so many creatures roaming around, he was hostile and attacked. With litlte choice but to defend yourself - several times too - you fought him off and won, and in doing so all of the lust and sex out there just got to you in the end. You somewhat shame-facedly admit that you fucked around with the angel after beating him off, and that this caused him to glomp onto you as his absolute lord and master. All of his former aggressiveness and fight just went out of him after that, so you had little choice but to take him in. With Gabriel being so obsessed about his [master], you thought it best to indulge him in his fantasy.";
+		say "     David frowns at the reality of Gabriel's fate that you explain to him, pressing his lips together as you get to succumbing into having sex with the defeated angel and the way that made Gabriel see you afterwards. As you finish, he takes a deep breath, then lets it out slowly, finally shaking his head as if to clear it. 'The reality of how this plage messes with people's heads just makes me cringe sometimes. Both in your case, as well as Gabriel's. Do you think he can be cured somehow?' In a serious tone, you tell him that you really hope it'll be possible once all of you get out of here. Therapy can work wonders and all that. But for now, it might be best to not complicate matters with Gabriel any further. He's stable in his assumed role as your servant, so everyone should treat him accordingly and not give him any undue stress by contradicting it. 'Oh. Ooooh,' David says, his eyes widening a bit as he takes in the thought, possibly applying it to yourself too in the privacy of his mind. He puts an earnest expression on his face, then nods, 'Okay, if that's how it must go, I will do my best to play along.'";
+		say "[DavidGabrielTalkAftermath2]";
+	else if calcnumber is 3:
+		say "     Pressing your lips together and shaking your head, you let out an artfully delivered sigh and give David's arm a consoling squeeze. Then you lay it on thick: You don't really know what happened to Gabriel out in the wild streets, but you ran into him in the state he is now, sexually abused and still dripping with cum all over him. Bending over the unconscious man lying in the street, you checked on him, which is when he opened his eyes and focused on you with an unhinged expression on his face. Kinda like imprinting with animal babies, suddenly you were his master in Gabriel's mind and he kept begging for your orders. He didn't seem capable of surviving out in the streets on his own, so you took him in for his own good. Faking embarrassment, you admit that you even had to indulge his fantasies physically since Gabriel is just so obsessed about serving his [master].";
+		say "     David eats up your words, getting a bit pale as you paint a picture of Gabriel's mind shattering under his previous experiences. 'I - oh god, that is horrible! Do you think he can be cured somehow?' In a serious tone, you tell him that you really hope it'll be possible once all of you get out of here. Therapy can work wonders and all that. But for now, it's best to not complicate matters with Gabriel any further. He's stable in his assumed role as your servant, so everyone should treat him accordingly and not give him any undue stress by contradicting it. Doing an fairly good job in spinning this web of lies, you get David so far that he quietly nods and promises, 'Okay, if that's how it must go, I will do my best to play along.' He gulps as he says this, but then presses his lips together and puts a determined look on his face.";
+		say "[DavidGabrielTalkAftermath2]";
+
+to say DavidGabrielTalkAftermath2:
+	WaitLineBreak;
+	say "     Clearing his throat after staring into space for a moment, David turns back to you. 'Listen, since we're lying everything on the table about Gabriel right now, I got to bring up that ";
+	if Charisma of Gabriel is 10: [BJ]
+		say "he did give me a blowjob. Just sprung it on me, all of a sudden, and I - I couldn't resist. Didn't resist. Does that make me a horrible person? I'm contributing to him slipping deeper into his sex slave role! [if thirst of David is 20 and libido of David > 68 and Libido of David < 91]And I cheated on both Brutus and you with him too!' [else if thirst of David is 20]And I cheated with him on you too!' [else if libido of David > 68 and Libido of David < 91]And I cheated with him on Brutus too!' [else]And I cheated with him on my girlfriend.' [end if][line break]";
+		LineBreak;
+		say "     [bold type]What do you tell David in response?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Gabriel internalized his sex slave role completely. David should indulge him to not distress the poor angel.";
+		say "     ([link]N[as]n[end link]) - Maybe he should just be a platonic friend to Gabriel. That'll be the best for everyone.";
+		if player consents: [encourage a relationship beyond friends]
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might just be best to indulge Gabriel's urges and ideas of serving others. At least David can be a friend as well as a source for pleasure to Gabriel, much better than if the angel got rejected walked out of the library in confusion, to end up who knows where. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 11; [talked after the BJ, encouraged it]
+		else:
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might be best if he kept things platonic from now on. Having a friend to rely on might be just what Gabriel needs. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 70; [David will no longer participate in sex with Gabriel, might become a friend though]
+	else if Charisma of Gabriel is 30: [almost BJ]
+		say "he was kinda coming on to me when you walked in on us. Kinda innocent but also lusty. And I think I wouldn't have resisted much longer. Does that make me a horrible person? I'm contributing to him slipping deeper into his sex slave role! [if thirst of David is 20 and libido of David > 68 and Libido of David < 91]And I almost cheated on both Brutus and you with him too!' [else if thirst of David is 20]And I almost cheated with him on you too!' [else if libido of David > 68 and Libido of David < 91]And I almost cheated with him on Brutus too!' [else]And I almost cheated with him on my girlfriend.' [end if][line break]";
+		LineBreak;
+		say "     [bold type]What do you tell David in response?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Gabriel internalized his sex slave role completely. David should indulge him to not distress the poor angel.";
+		say "     ([link]N[as]n[end link]) - Maybe he should just be a platonic friend to Gabriel. That'll be the best for everyone.";
+		if player consents: [encourage a relationship beyond friends]
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might just be best to indulge Gabriel's urges and ideas of serving others. At least David can be a friend as well as a source for pleasure to Gabriel, much better than if the angel got rejected walked out of the library in confusion, to end up who knows where. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 31; [talked after the flirting, encouraged it]
+		else:
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might be best if he kept things platonic from now on. Having a friend to rely on might be just what Gabriel needs. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 70; [David will no longer participate in sex with Gabriel, might become a friend though]
+	else if Charisma of Gabriel is 50: [kiss]
+		say "we kissed. It felt really, really nice. Does that make me a horrible person? He's vulnerable and confused, so isn't this contributing to him slipping deeper into his sex slave role? [if thirst of David is 20 and libido of David > 68 and Libido of David < 91]And I kinda cheated on both Brutus and you with him too!' [else if thirst of David is 20]And I kinda cheated with him on you too!' [else if libido of David > 68 and Libido of David < 91]And I kinda cheated with him on Brutus too!' [else]And I kinda cheated with him on my girlfriend.' [end if][line break]";
+		LineBreak;
+		say "     [bold type]What do you tell David in response?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Having a loving influence in his life right now will do Gabriel good! And under the special circumstances for everyone here, cheating isn't really a concept that he should worry about right now.";
+		say "     ([link]N[as]n[end link]) - Maybe he should just be a platonic friend to Gabriel. That'll be the best for everyone.";
+		if player consents: [encourage a relationship beyond friends]
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, a kiss and a more 'romantic' relationship might be just what Gabriel needs. Maybe they can find a bit of peace in each other. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 51; [talked after the kiss, encouraged it]
+		else:
+			LineBreak;
+			say "     David looks at you thoughtfully as you explain that from your viewpoint, it might be best if he kept things platonic from now on. Having a friend to rely on might be just what Gabriel needs. As for the 'cheating', that's not really applicable with all of the madness that rules the city these days. People do what they must and everyone will surely understand in the end.";
+			now Charisma of Gabriel is 70; [David will no longer participate in sex with Gabriel, might become a friend though]
+
+
+[
+after of going to Bunker while (David is bunkered and Gabriel is bunkered and Charisma of Gabriel > 0 and libido of Gabriel > 9 and (Intelligence of Gabriel is 1 or Intelligence of Gabriel is 41)): [Gabriel + David present, have met, Gabriel Cumslut Stage 2, sex allowed]
+	if debugactive is 1:
+		say "     DEBUG: David/Gabriel Cumslut Walkin[line break]";
+]
 
 Seraphim ends here.

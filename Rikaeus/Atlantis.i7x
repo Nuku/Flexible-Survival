@@ -134,6 +134,8 @@ Object	Name
 Atlantis City Market	"Atlantis City Market"
 
 Atlantis City Market is a room.
+Atlantis City Market is South of White Tiger Alchemy Shop.
+Atlantis City Market is Southwest of of Phoenix Rebirth Spa Lobby.
 The description of Atlantis City Market is "[AtlantisMarket]".
 earea of Atlantis City Market is "Atlantis".
 
@@ -201,6 +203,18 @@ earea of Royal Bed Chambers is "Atlantis".
 
 to say PoseidonBedroom:
 	say "     The room around you seems a bit vague and indistinct, as if the forces that are shaping reality are still undecided what it shall look like.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Atlantis City Park	"Atlantis City Park"
+
+Atlantis City Park is a room.
+Atlantis City Residential is east of Atlantis City Park.
+The description of Atlantis City Park is "[AtlantisPark]".
+earea of Atlantis City Park is "Atlantis".
+
+to say AtlantisPark:
+	say "     Looking through the arched entrances of this park you're rather surprised to see grass in a park at an underwater city. Though to be completely fair what else would there be in such a place. You guess it's just rather surreal to see it in its current location of all things. Nevertheless, the public garden is rather gorgeous in comparison to the water just sitting within the edges of your vision. There's diverse swathes of flowers and trees as well as large open patches of grass for people to probably lay and possibly have picnics. However, noticeably a big portion of the flowers in the back appear to be the same kind, a bunch of purple pom-pom flowers with snaking leaves. They all surround a statue of a beautiful woman wearing what looks to be priestess robes. Beyond all that, it appears to be a pretty average looking park complete with the arch to your east that leads back into the residential areas.";
 
 Section 3 - Events
 

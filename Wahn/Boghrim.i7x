@@ -109,6 +109,7 @@ Virgin of Boghrim is true.
 AnalVirgin of Boghrim is false.
 PenileVirgin of Boghrim is false.
 SexuallyExperienced of Boghrim is true.
+The MainInfection of Boghrim is "Orc Breeder".
 The description of Boghrim is "[BoghrimDesc]".
 The conversation of Boghrim is { "Mew!" }.
 The icon of Boghrim is Figure of Boghrim_clothed_icon.
