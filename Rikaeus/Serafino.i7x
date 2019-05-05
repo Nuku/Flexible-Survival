@@ -21,7 +21,7 @@ Object	Name
 Phoenix Rebirth Spa Lobby	"Phoenix Rebirth Spa Lobby"
 
 Phoenix Rebirth Spa Lobby is a room.
-Phoenix Rebirth Spa Lobby is Northeast Atlantis City Market.
+Phoenix Rebirth Spa Lobby is northeast of Atlantis City Market.
 The description of Phoenix Rebirth Spa Lobby is "[PhoenixRebirthLobby]".
 earea of Phoenix Rebirth Spa Lobby is "Atlantis".
 
@@ -90,7 +90,7 @@ to say SerafinoTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -107,16 +107,12 @@ to say SerafinoTalkMenu:
 				-- "Back Massage":
 					say "[SerafinoMassage1]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the white tiger who just scoffs at you before getting back to work.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the white tiger who just scoffs at you before getting back to work.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SerafinoTalk1:
@@ -144,11 +140,11 @@ to say SerafinoSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Blow him under the counter";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -162,16 +158,12 @@ to say SerafinoSexMenu:
 				if (nam is "Under Counter Blowjob"):
 					say "[SerafinoSex1]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You shake your head and say you actually don't have anything in mind, which just causes the bird to chuckle and return to his work.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You shake your head and say you actually don't have anything in mind, which just causes the bird to chuckle and return to his work.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SerafinoSex1:

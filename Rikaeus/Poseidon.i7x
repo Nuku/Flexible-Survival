@@ -38,18 +38,21 @@ Cunt Width of Poseidon is 0. [Doesnt have a vagina to get stretched]
 Breasts of Poseidon is 2. [Has two normal nipples]
 Breast Size of Poseidon is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
+TwistedCapacity of Poseidon is false. [can not take oversized members without pain]
+Sterile of Poseidon is true.
 PlayerMet of Poseidon is false.
 PlayerRomanced of Poseidon is false.
 PlayerFriended of Poseidon is false.
 PlayerControlled of Poseidon is false.
 PlayerFucked of Poseidon is false.
 OralVirgin of Poseidon is false.
-Virgin of Poseidon is false.
-AnalVirgin of Poseidon is true.
+Virgin of Poseidon is true.
+AnalVirgin of Poseidon is false.
 PenileVirgin of Poseidon is false.
 SexuallyExperienced of Poseidon is true.
-The description of Poseidon is "[PoseidonDesc]".
-The conversation of Poseidon is { "<This is nothing but a placeholderss!>" }.
+MainInfection of Poseidon is "".
+The description of Poseido is "[PoseidonDesc]".
+The conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
 The scent of Poseidon is "He smells heavily of the sea and the earth. It's an odd combination but it works for him".
 
 to say PoseidonDesc:
@@ -82,10 +85,12 @@ to say PoseidonTalkMenu:
 		now title entry is "First Date";
 		now sortorder entry is 3;
 		now description entry is "Ask him on a date";
+	[]
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -103,16 +108,12 @@ to say PoseidonTalkMenu:
 				if (nam is "First Date"):
 					say "[PoseidonTalk3]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which simply causes the king to return to whatever he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You shake your head, which simply causes the king to return to whatever he was doing.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say PoseidonTalk1:
@@ -156,11 +157,11 @@ to say PoseidonSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Have romantic sex with the merman";
 	[]
-	Sort the table of fucking options in sortorder order;
+	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -174,16 +175,12 @@ to say PoseidonSexMenu:
 				if (nam is "Make Love Anally"):
 					say "[PoseidonSex1]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You say that you've changed your mind, which just causes Poseidon to smile and say it's alright before leading you back to the palace throne room. ";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You say that you've changed your mind, which just causes Poseidon to smile and say it's alright before leading you back to the palace throne room. ";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say PoseidonSex1:

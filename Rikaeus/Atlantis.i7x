@@ -134,8 +134,6 @@ Object	Name
 Atlantis City Market	"Atlantis City Market"
 
 Atlantis City Market is a room.
-Atlantis City Market is South of White Tiger Alchemy Shop.
-Atlantis City Market is Southwest of of Phoenix Rebirth Spa Lobby.
 The description of Atlantis City Market is "[AtlantisMarket]".
 earea of Atlantis City Market is "Atlantis".
 
@@ -492,120 +490,5 @@ to say AlanaTalk2:
 
 instead of fucking Alana:
 	say "     The woman glares at you and behind her you can see Triton furiously shaking his head, practically telling you to stop that train of conversation. Perhaps it's best not to talk to her about this.";
-
-An everyturn rule:
-	if daytimer is night:
-		now Poseidon is nowhere;
-	else if daytimer is day:
-		move Poseidon to Royal Throne Room;
-
-Table of GameCharacterIDs (continued)
-object	name
-Poseidon	"Poseidon"
-
-Poseidon is a man.
-[Physical details as of game start]
-ScaleValue of Poseidon is 3. [human sized]
-SleepRhythm of Poseidon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Poseidon is 1. [X cock]
-Cock Length of Poseidon is 10. [X Inches]
-Cock Width of Poseidon is 6.
-Testes of Poseidon is 2. [X balls]
-Cunts of Poseidon is 0. [X pussy]
-Cunt Length of Poseidon is 0. [X Cunt]
-Cunt Width of Poseidon is 0. [X Cunt]
-Breasts of Poseidon is 2. [X nipples]
-Breast Size of Poseidon is 0. [X at the start]
-[Basic Interaction states as of game start]
-TwistedCapacity of Poseidon is false. [can not take oversized members without pain]
-Sterile of Poseidon is true.
-PlayerMet of Poseidon is false.
-PlayerRomanced of Poseidon is false.
-PlayerFriended of Poseidon is false.
-PlayerControlled of Poseidon is false.
-PlayerFucked of Poseidon is false.
-OralVirgin of Poseidon is false.
-Virgin of Poseidon is true.
-AnalVirgin of Poseidon is false.
-PenileVirgin of Poseidon is false.
-SexuallyExperienced of Poseidon is true.
-MainInfection of Poseidon is "".
-The description of Poseido is "[PoseidonDesc]".
-The conversation of Poseidon is { "<This is nothing but a placeholder!>" }.
-The scent of Poseidon is "He smells heavily of the sea and the earth. It's an odd combination but it works for him".
-
-to say PoseidonDesc:
-	say "     Poseidon is a strong looking man with a visible six pack and muscular arms. The king of Atlantis is different than most mermen in the fact that he doesn't appear to wear a shirt. The god-like male has shoulder length black hair and stormy blue eyes that could and probably do, draw attention. He has a powerful aura emanating from him, clearly letting everyone know that he has strength. When he notices you looking at him, he smiles at you.";
-
-instead of conversing the Poseidon:
-	say "     The merman king smiles at you before waiting for you to say something.";
-	wait for any key;
-	say "[PoseidonTalkMenu]";
-
-to say PoseidonTalkMenu:
-	LineBreak;
-	say "What do you wish to talk about with Triton?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	if PoseidonRelationship is 99:
-		choose a blank row in table of fucking options;
-		now title entry is "Courtship";
-		now sortorder entry is 1;
-		now description entry is "Ask him about the courtship";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Siblings";
-	now sortorder entry is 2;
-	now description entry is "Ask him about his siblings";
-	[]
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "Courtship"):
-					say "[PoseidonTalk1]";
-				if (nam is "Siblings"):
-					say "[PoseidonTalk2]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You shake your head, which simply causes the king to return to whatever he was doing.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say PoseidonTalk1:
-	say "     Recalling what the buff male asked of you last time, a question pops into your head.";
-	say "     [bold type]Do you wish to accept the courtship this time?[roman type][line break]";
-	LineBreak;
-	say "     ([link]Y[as]y[end link]) - It wouldn't hurt to give it a try.";
-	say "     ([link]N[as]n[end link]) - No, I'm not a marrying-type of person.";
-	if player consents:
-		say "     Shrugging your shoulders mentally you voice that you want to accept his courtship. This causes the merman's face to light up. 'Great! It's official then!' he says with a smile. You ask him what this relationship will consist of, something that Poseidon promptly gives a response to. 'Simple, we go on dates, if it turns out well then perhaps marriage,' the buff male tells you. Well... you guess that was kind of obvious, causing you to wonder out loud when the first date will be. 'Oh, that, don't worry I'll plan the date and let you know when it's time,' he says, waving your concerns off. With a shrug you figure you should go on your way, heading back out of the palace, to the entrance.";
-		move player to Royal Palace Entrance;
-		now PoseidonRelationship is 3;
-	else:
-		say "     You mentally shake your head and tell him that you didn't have anything to say and apologize. The king shrugs his shoulders at you and goes on with his business.";
-
-to say PoseidonTalk2:
-	say "     You ask the king if he's actually the god of the sea and earthquakes and if so, what about his siblings. The causes him to chuckle softly. 'In the eyes of you mortals, we'd be gods but we really aren't. We were just humans like you who got immense power and were called such by others,' he says, shaking his head in mirth. 'Of course for some of us it went to our heads, like my brother Zeus, who basically forced Hera into a marriage. Others it made people think differently of, like Hades who people were terrified of because he gained control over souls,' Poseidon tells you. You nod at that, vaguely remembering the various myths surrounding the Greek Gods. Curious, you ask him where they are now. 'Well, I only really keep track of the ones I like. For example, Aphrodite has been roaming around as a matchmaker and Hestia has taken in refugees from this event,' the man explains. You get the feeling that this is a rough subject so you leave it be for now, stepping away from him.";
-
-instead of fucking Poseidon:
-	if PoseidonRelationship is 99:
-		say "     The king looks at you oddly before shaking his head. 'I won't bed you unless we're courting, it wouldn't be fair to you,' he says firmly, causing you to sigh.";
-	else if PoseidonRelationship is 3:
-		say "     The king chuckles at you and smiles. 'Sorry my dear but not until we're further into the courtship,' he tells you waving you off. You shrug your shoulders and figure you can wait.";
 
 Atlantis ends here.
