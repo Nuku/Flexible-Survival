@@ -1,7 +1,7 @@
-Version 1 of Army Ant by Glitch begins here.
+Version 1 of army ant by Glitch begins here.
 [ Version 1 - Transformations and descriptions - Glitch]
 
-"Adds an Army Ant infection to Flexible Survival's Wandering Monsters table"
+"Adds an army ant infection to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -19,7 +19,7 @@ to say armyantdesc:
 to say losetoarmyant:
 	if noncon is not banned:
 		if anal is not banned:
-			say "     Sliding his arms up under your own from behind, the Army Ant pulls you back into a full nelson. With your current state, the powerful restraint keeps you locked in even as his lower pair of arms dip down, venturing over your hips and back. The breadth of his palms clap to your ass, groping the mounds firmly, feeling their shape before his thumbs dig into the cleft between buttocks and spread you wide. The ant man's lips peel into a leer between those pincers, and you can hear a wet 'snikt' sound from between his legs. The slippery shape of his retractable cock slaps its curved underbelly into your spread valley, sawing to smear its juiciness all over your lining and across your star. Pitching forwards, the insectile assailant drives the point in deep, thrusting.";
+			say "     Sliding his arms up under your own from behind, the army ant pulls you back into a full nelson. With your current state, the powerful restraint keeps you locked in even as his lower pair of arms dip down, venturing over your hips and back. The breadth of his palms clap to your ass, groping the mounds firmly, feeling their shape before his thumbs dig into the cleft between buttocks and spread you wide. The ant man's lips peel into a leer between those pincers, and you can hear a wet 'snikt' sound from between his legs. The slippery shape of his retractable cock slaps its curved underbelly into your spread valley, sawing to smear its juiciness all over your lining and across your star. Pitching forwards, the insectile assailant drives the point in deep, thrusting.";
 			say "     Hot fire boils through your backside as he forces your ring around the girth of his need, and his lower hands release your cheeks only to grab at your hips to prevent you from pulling away. Sinew creaks as his abdomen's taut muscle crunch and flex in rapid succession, his piston-like thrusts forcing your bowels to throttle his plunging organ again and again. The wet slap of his balls crack against your rump and the backs of your thighs while he takes what he wants. Every burning thrust is like a brand, penetrating your depths, filling you with his heat until the rock hard cock bloats, and you can feel the rush of his seed saturating your bowels. His guttural groan floods as free as his seed, and when he pulls out, the flowery stench of his spunk mixes with the fresh fucked smell.";
 			if a random chance of 1 in 3 succeeds:
 				LineBreak;
@@ -28,7 +28,7 @@ to say losetoarmyant:
 				say "     The two that have been assailing your ass have been replaced a couple times with fresh intruders, and with the pressing bodies, a third manages to wedge in and obscenely stretch you just that bit more. Your body is bathed in the seed of the army of ants, and their insectile figures continue to crowd. Every bit of you is coated in the nectar-like seeed, and as consciousness fades from your senses, you are but a gooey puddle amongst the rest of the goo hard bodies and jizz.";
 				SanLoss 10;
 		else:
-			say "     The Army Ant's taloned digits slide against your scalp, gripping firmly with two hands while his feet fiercely kick your support out from beneath you. The wet pop of his crotch's plates parting and the slippery shine of his cock retracting from within and distending out is palpable to your senses. The nectar-like fragrance of his musk is bitten with masculine spice, pungent when wet like this. With his lower pair of hands, the Army Ant works his thumbs into between your jaws, spreading your mouth open and weding firmly just before the gleaming barb of his organ rams home. Every inch of the hardened meat drags over your tongue and bucks against the back of your throat, forcing you to gag with its initial punch. The heat of his thighs is ground against your face.";
+			say "     The Army Ant's taloned digits slide against your scalp, gripping firmly with two hands while his feet fiercely kick your support out from beneath you. The wet pop of his crotch's plates parting and the slippery shine of his cock retracting from within and distending out is palpable to your senses. The nectar-like fragrance of his musk is bitten with masculine spice, pungent when wet like this. With his lower pair of hands, the army ant works his thumbs into between your jaws, spreading your mouth open and weding firmly just before the gleaming barb of his organ rams home. Every inch of the hardened meat drags over your tongue and bucks against the back of your throat, forcing you to gag with its initial punch. The heat of his thighs is ground against your face.";
 			say "     His damp sac drags against your chin while he holds within, reveling in how your throat convulses to try and expel the intruder, your slick insides grinding in futility across the savory, musk-drenched meat. While his talons dig deeper to hold your head in place, his hips roughly buck, a piston-like shove slamming him in after a brief pull back, like the plunger of a pinball machine. The wet slap of his nuts audibly resounds, and he takes your throat again and again. The husky grunts that click from his maw mingle with the juicy ravishing of your esophagus, combined with the obscene squelch of your throat juices forced around that driving scepter. It is not long before a guttural cry roars from his throat, and his organ bloats thickly.";
 			say "     The salty rush of his honeysuckle spunk overwhelms your throat, spilling out past your lips faster than you could spit or swallow, and he pulls out roughly. Several ropes of his seed slap across your face, but he is finished, leaving both you and your mouth a mess.";
 			if a random chance of 1 in 3 succeeds:
@@ -37,12 +37,12 @@ to say losetoarmyant:
 				say "     Everywhere, there is cock. The sight, the smell, the flavor, even the tangible palpitations of each throbbing length surrounding you. Taloned hands reach out, grabbing at you, jerking your face in close and mashing your face into first one dick, soon joined by a couple brothers. They saw against your face as hard bodies press down against you. Nothing is safe from them, grinding against your back, your front, against your limbs. The sweat-drenching miasma topples your senses, a kaleidoscope of virile lascivity reigning over your world. Hot pulses are followed by ropes of spunk arcing and showering over your body, spent cocks moved aside only for a fresh comer to join the army of fraternal fuckers. All fades into the sea of wet, juicy wads raining over you.";
 				SanLoss 10;
 	else:
-		say "     Once you are no longer able to fight, the ArmyAnt looks over you, antennae twitching. Not finding much of interest in either your bearing or just something else, he backs away with an aire of menace still about him, as if ready to strike again should you take any untoward action.";
+		say "     Once you are no longer able to fight, the army ant looks over you, antennae twitching. Not finding much of interest in either your bearing or just something else, he backs away with an aire of menace still about him, as if ready to strike again should you take any untoward action.";
 
 
 
 to say beatthearmyant:
-	say "     Staggering back and taking a knee, the Army Ant shows little weakness otherwise. He glares with those alien, insect eyes before backing away, rising form the stooped position slowly. Soon as there's an exit, he ducks out of sight.";
+	say "     Staggering back and taking a knee, the army ant shows little weakness otherwise. He glares with those alien, insect eyes before backing away, rising form the stooped position slowly. Soon as there's an exit, he ducks out of sight.";
 
 Section 2 - Monster Insertion
 
@@ -56,7 +56,7 @@ When Play begins:
 	now enemy title entry is "Ant Warrior";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]The Army Ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The Army Ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the Army Ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the Army Ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The Army Ant delivers a sweeping blow, stooping low witht he strike while his leg kicks out.[or]With his sinews creaking tightly, the Army Ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the Army Ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
+	now attack entry is "[one of]The army ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The army ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the army ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the army ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The army ant delivers a sweeping blow, stooping low witht he strike while his leg kicks out.[or]With his sinews creaking tightly, the army ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the army ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
 	now victory entry is "[losetoarmyant]"; [ Text when monster wins. Change 'template' as above. ]
 	now desc entry is "[armyantdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "smooth and planed with chitin bands arching across the center, concealing where a nose would normally be. Fine, articulated plates form the brow and jawline, and the features are lean and stoic. Paired antennae jut from the scalp, and a pair of mandibular pincers flanks the mouth, which is otherwise humanoid. The eyes are ovoid and segmented, a honeycomb of fine gems forming otherwise homogenous orbs";
@@ -79,7 +79,7 @@ When Play begins:
 	now HP entry is 42; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Park"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 36; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 30; [ Cock width, more commonly used for ball size. ]
@@ -107,9 +107,9 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Army Ant":
 		if humanity of player < 10:
-			say "     You succumb to your Army Ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other Army Ants by the scent your kind leaves, instinctually drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
+			say "     You succumb to your army ant infection. Life is far easier when the decisions are made by others. It was easy enough to find other Army Ants by the scent your kind leaves, instinctually drawn to the rest of the Hive. It's quite nice, not worrying about nervous, stressful things like what tomorrow brings because the Hive is what takes priority, what all is done to maintain, and you are but one cog in that living machine. You live for the Hive, and the Hive provides, whether it be sustenance or pleasures, companions or security.";
 		else:
-			say "     You survive, but were infected by the Army Ant.";
+			say "     You survive, but were infected by the army ant.";
 			if cocks of player > 0:							[MALE/HERM]
 				say "     Living with an internalized cock will be just something you will have to adjust to.";
 				say "     Though you still have your humanity, it's difficult to go beyond your physical limitations at times when coordinating with others. There's always that drive to be part of something bigger than yourself, greater than yourself, but the differences between you and others drives a wedge through that sort of comradery. Struggle as you might in this new, changed world, you are an ant without a hive, a cog without a machine mixed in with all the screws and bolts.";
