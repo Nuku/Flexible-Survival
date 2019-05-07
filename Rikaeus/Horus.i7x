@@ -574,7 +574,7 @@ instead of resolving Patient Zero:
 		say "     Putting the papers away, you make your way over to the destroyed vials you notice the pool of stuff on the floor. Seeing that there's an intact vial you grab it and carefully try to edge the pool into the vial, using whatever you can find to push it in. Once you filled it up you pocket it safely and then stand up, brushing off your legs. Turning around, something catches your eye on a chair, causing you to walk over to it. When you get there, you find a piece of cloth with some blood on it. Thinking that'll be enough you pocket and head on out, making your way down and out of the building. Hopefully the doctor will be able to do something with the stuff you've found.";
 		now HorusRelationship is 9;
 
-instead of navigating Pediatrics Lobby while HorusRelationship is 7:
+instead of navigating Pediatrics Lobby while HorusRelationship is 9:
 		say "[NavCheck Pediatrics Lobby]";
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;

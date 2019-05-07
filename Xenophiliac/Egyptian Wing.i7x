@@ -467,7 +467,6 @@ instead of conversing Amuran:
 		say "     After a few days away, it seems that Amuran has returned. In the familiar position of calm meditation, it seems that Amuran has completed his assignment, and seems quite satisfied with the situation. Leisurely ambling up to the stoic beetle-man, you're quite curious as to the conclusion of his quest. Sensing your approach, Amuran casually stands up, visibly content, and dare you say, happy. Asking him how his search went, he leisurely responds, more relaxed than you've ever seen him.";
 		say "     'Well, young one. It took some nights, but I was able to locate the ashen ruins where the lost relic lay. Recovering Horus's ankh was simple enough, though the inhabitants of the heated world proved partly a nuisance; but they could not stand against Horus's light. The lost piece of Horus has been returned, and my lord is quite pleased with the situation; which, of course, pleases me to no end. I have been informed that my services will not be required for as long as Horus's foresight can see; as such, I am free for now. I believe I shall take many seasons to explore and investigate this world again; it has been aeons since I've done so. For manyith a time, young one, I must extend my gratitude for your assistance in recovering the lost sigils; without that, my task would not be done.' Crossing his arms and bowing to you, it seems that Amuran will remain on Earth for a long, long time (most likely for millennia after your death).";
 		now AmuranAwoken is 5;
-		now Sky Tower is active;
 		now HP of Amuran is 6;
 	else if AmuranAwoken is 2:
 		say "     'Have you made progress in your search?' Amuran says to you, his black eyes staring at you questioningly. Informing him that you've yet to find both conduits, Amuran gives you a nod before returning to his meditations.";
@@ -576,6 +575,7 @@ to say FinalQuestConclusion:
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
 	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the foreseeable future.";
 	now AmuranAwoken is 5;
+	now Sky Tower is active;
 
 to say AmuranSexMenu:
 	now calcnumber is -1;
