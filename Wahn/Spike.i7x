@@ -1128,7 +1128,7 @@ to say SpikeSex6: [player pussy fucked by Spike]
 		now Lust of Spike is 2; [player pussy fucked by Spike]
 	NPCSexAftermath Player receives "PussyFuck" from Spike;
 
-to say SpikeSex6: [Spike fucks player ass]
+to say SpikeSex7: [Spike fucks player ass]
 	say "     A";
 	NPCSexAftermath Player receives "AssFuck" from Spike;
 
