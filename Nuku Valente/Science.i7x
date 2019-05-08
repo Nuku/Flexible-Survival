@@ -8,7 +8,7 @@ Book - Science Advisor
 
 Nerd is a person. "A science advisor awaits your attention. They have a name, but most just call them the [bold type]nerd[roman type]. Perhaps you want to discuss [bold type]research[roman type].".
 Nerd is in Village center.
-The description of nerd is "[science advisor of tribe of player]".
+The description of nerd is "[science advisor of tribe of Player]".
 
 After examining the nerd:
 	if progress of current of nerd < cost of current of nerd:
@@ -49,7 +49,7 @@ Check researching:
 Carry out researching:
 	say "[description of noun]";
 	say "[line break]Begin?";
-	if player consents:
+	if Player consents:
 		now current of nerd is noun;
 		say "You begin researching [noun].";
 	else:
@@ -86,7 +86,7 @@ Definition: A Research (called J) is complete:
 	if progress of J >= cost of J:
 		yes;
 	else:
-		if the printed name of J is listed in perks of tribe of player:
+		if the printed name of J is listed in perks of tribe of Player:
 			yes;
 		else:
 			no;
@@ -103,11 +103,11 @@ The cost of it is 30.
 The completion of it is Local Survey Rule.
 
 This is the local survey rule:
-	now perception of tribe of player is ( perception of tribe of player * 105 ) / 100;
-	say "The perception of your tribe is now [perception of tribe of player]";
+	now perception of tribe of Player is ( perception of tribe of Player * 105 ) / 100;
+	say "The perception of your tribe is now [perception of tribe of Player]";
 
 An everyturn rule (this is the SCIENCE rule):
-	if science of tribe of player < 1, continue the action; [ No research without research points ]
+	if science of tribe of Player < 1, continue the action; [ No research without research points ]
 	if current of nerd is complete and current of nerd is not indefinite:
 		say "Your current research topic is complete. You should pick a new one.";
 		continue the action;
@@ -115,14 +115,14 @@ An everyturn rule (this is the SCIENCE rule):
 	increase foragers by 1; [The nerd is always there. They love you!]
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
-	increase x by (Intelligence of tribe of player) / 5;
-	if "Brilliant" is listed in perks of tribe of player:
+	increase x by (Intelligence of tribe of Player) / 5;
+	if "Brilliant" is listed in perks of tribe of Player:
 		increase x by 20;
 	now x is x * foragers * 2;
 	now x is x / 100;
 	let z be x;
-	if z > science of tribe of player:
-		now z is the science of tribe of player;
+	if z > science of tribe of Player:
+		now z is the science of tribe of Player;
 	if x > 0: [ There is science to be done ]
 		if z > 0:
 			say "Your science advances: +[z]";
@@ -131,8 +131,8 @@ An everyturn rule (this is the SCIENCE rule):
 				say ". [bold type][current of nerd][roman type] is complete!";
 				follow the completion of current of nerd;
 				if the perk of current of nerd is not "":
-					add the perk of current of nerd to perks of tribe of player;
-			decrease science of tribe of player by z;
+					add the perk of current of nerd to perks of tribe of Player;
+			decrease science of tribe of Player by z;
 			if current of nerd is indefinite and progress of current of nerd > cost of current of nerd:
 				say " Research continues on [current of nerd].";
 				now progress of current of nerd is 0;
@@ -140,7 +140,7 @@ An everyturn rule (this is the SCIENCE rule):
 				increase level of current of nerd by 1;
 		now x is x / 2;
 		if x < 1, now x is 1;
-		increase science of tribe of player by x;
+		increase science of tribe of Player by x;
 
 
 

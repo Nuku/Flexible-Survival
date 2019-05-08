@@ -38,14 +38,14 @@ Serafino is a man.
 [physical details as of game start]
 Humanity of Serafino is 80. [is thousands of years old]
 ScaleValue of Serafino is 3. [human size]
-Cocks of Serafino is 1. [has a cock]
+Cock Count of Serafino is 1. [has a cock]
 Cock Length of Serafino is 8. [has an 8 inch cock]
-Cock Width of Serafino is 3. [size of balls]
-Testes of Serafino is 2. [has a pair of balls]
-Cunts of Serafino is 0. [no vagina]
+Ball Size of Serafino is 3. [size of balls]
+Ball Count of Serafino is 2. [has a pair of balls]
+Cunt Count of Serafino is 0. [no vagina]
 Cunt Length of Serafino is 0. [Doesnt have a vagina to get stretched]
-Cunt Width of Serafino is 0. [Doesnt have a vagina to get stretched]
-Breasts of Serafino is 2. [Has two normal nipples]
+Cunt Tightness of Serafino is 0. [Doesnt have a vagina to get stretched]
+Nipple Count of Serafino is 2. [Has two normal nipples]
 Breast Size of Serafino is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 PlayerMet of Serafino is false.
@@ -98,7 +98,7 @@ to say SerafinoTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is:
@@ -152,7 +152,7 @@ to say SerafinoSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Under Counter Blowjob"):
@@ -185,19 +185,19 @@ to say SerafinoMassage1:
 		say "     [bold type]Aware that you are carrying enough jars of blue gel, do you want to give it to him?[roman type][line break]";
 		say "     [link]Y[as]y[end link] - Yeah!";
 		say "     [link]N[as]n[end link] - Nah.";
-		if player consents:
+		if Player consents:
 			say "     Passing the jars over to the phoenix he happily accepts them before standing up. 'Alrighty then! Come on then!' He says with a cheerful smile, leading you through the door directly behind his counter. It leads into a hallways that leads into a room with a full body length table. Once you're in here you remove anything that would get in the way of the massage and wait for Serafino who chuckles. 'Oh, you don't have to wait, get on the table my friend,' he says with a smile, gesturing to the area. You nod and climb on top, laying chest down and exposing your back to him so that he can take care of you.";
 			say "     While you're on your stomach you hear the phoenix moving some jars around, clearly opening a few. 'I think you'll love this massage,' he says with a chuckle. Seconds later you feel a cool sensation on your back before pressure is applied to a specific section. A pleasurable sensation shoots through you as a knot is undone, causing you to moan out loud. The hands on you move to another section and push again, causing more good feelings to reverberate through your body. As Serafino continuously undoes knots in your back you can't help but think this is definitely something you needed.";
 			WaitLineBreak;
 			say "     However, you soon feel something heavy, thick, and long between your ass cheeks, unsure as to what it is. It slides back and forth, causing a groan to slip from your mouth with the moans from the massages. It isn't until you feel something blunt at your hole that you realize it's more than likely your phoenix masseuse's cock. He gives a tiny little push and the tip of his cock pops into you, making your pleasurable sounds end up being much louder. Serafino slowly inches himself into you, his girth widening your insides. Despite all of this, he still keeps up his efforts at massaging you, moving onto your shoulders, working on a difficult knot.";
 			say "     Your masseuse then begins to pick up the pace, his feathered balls starting to slap heavily against your cheeks. You just close your eyes and let yourself fall into the bliss of the massage and the sensation of his cock rubbing against your insides, enjoying it all. You're loving it to the point that you're moving your ass back to meet his thrusts. With your added help you manage to assist Serafino's cock in finding your prostate, making the already massive amounts of pleasure you're feeling grow much larger. The phoenix above you chuckles at your slowly unraveling self.";
 			WaitLineBreak;
-			say "     It's soon clear though that your masseuse is approaching his climax as his cock seems to be slowly swelling in his hole. When it finally reaches what appears to be maximum girth, Serafino slams into you one last time before warmth fills you, signaling that the phoenix has shot his load. [if player is neuter]The sensation causes your pleasure to skyrocket, the nerves all over your body lighting up and flaring. Normally this would cause fluid to come out but since you don't have any it just causes the good feelings to practically triple[else if player is herm]The sensation causes your pleasure to skyrocket and your cock to shoot its load, the cum not having anywhere to really go and end up smearing itself against your belly. Your pussy is just the same, ending up leaking a lot of femcum that just ends up going on your legs[else if player is male]The sensation causes your pleasure to skyrocket and your cock to shoot its load, the cum not really having anywhere to go and it ends up smearing itself against your stomach, making quite a mess[else if player is female]The sensation causes your pleasure to skyrocket and your pussy to spasm before starting to leak copious amounts of femcum. However, it doesn't have anywhere to go but your legs so the fluids just smear themselves there[end if]. Once the both of you come down from your sexual high, you feel your friend pull out and move away for a few seconds. When he comes back a towel is placed on you and you're rubbed down.";
+			say "     It's soon clear though that your masseuse is approaching his climax as his cock seems to be slowly swelling in his hole. When it finally reaches what appears to be maximum girth, Serafino slams into you one last time before warmth fills you, signaling that the phoenix has shot his load. [if Player is neuter]The sensation causes your pleasure to skyrocket, the nerves all over your body lighting up and flaring. Normally this would cause fluid to come out but since you don't have any it just causes the good feelings to practically triple[else if Player is herm]The sensation causes your pleasure to skyrocket and your cock to shoot its load, the cum not having anywhere to really go and end up smearing itself against your belly. Your pussy is just the same, ending up leaking a lot of femcum that just ends up going on your legs[else if Player is male]The sensation causes your pleasure to skyrocket and your cock to shoot its load, the cum not really having anywhere to go and it ends up smearing itself against your stomach, making quite a mess[else if Player is female]The sensation causes your pleasure to skyrocket and your pussy to spasm before starting to leak copious amounts of femcum. However, it doesn't have anywhere to go but your legs so the fluids just smear themselves there[end if]. Once the both of you come down from your sexual high, you feel your friend pull out and move away for a few seconds. When he comes back a towel is placed on you and you're rubbed down.";
 			say "     'Can't leave you dirty after all, turn over if you will,' he asks out loud, his request you happily comply with. After you end up on your back he continues to rub the towel all over you, though he focuses on your ass, making sure to clean it of his cum. Once you're nice and clean, Serafino holds out a hand to help you up, which you gladly take. When you are standing up, the phoenix leads you back through the hallway and into the lobby. 'Remember, come back when you want another massage!' He says happily, clearly having enjoyed the event just as much. You tell him you will, letting him return to his work.";
 			if PlayerFucked of Serafino is false:
 				now PlayerFucked of Serafino is true;
 			now lastfuck of Serafino is turns;
-			increase humanity of player by 20;
+			increase humanity of Player by 20;
 		else:
 			say "     You shake your head, telling him that you've decided against the massage today even though you have the gel. The phoenix chuckles at you and waves it off. 'Don't worry! Just come back when you want one,' he says, his voice telling you that it's perfectly fine. After he finishes speaking he returns to work and you alone in the center of the lobby.";
 	else:

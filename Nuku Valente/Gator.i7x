@@ -6,7 +6,7 @@ Version 2 of Gator by Nuku Valente begins here.
 
 "Adds a gator to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 gatordefeat is a number that varies.
 gatorconsent is a number that varies.
@@ -25,9 +25,9 @@ to say GatorWins:
 		GatorBind;
 	else:
 		say "     'Weak little thing. Too bad, I thought you had more in you,' she growls as she pushes you to the ground roughly. 'I suppose that I can still have some fun with you...' She crawls up on top of you, peeling off your clothes as she goes. You try to wriggle free, but a soft, albeit painful bite to your shoulder stills you. She wraps her arms around you and hefts your ass up into the air. Her angry-looking manhood juts up from her groin, dripping thin streams of lubricant as she moves you into position.";
-		if player is female: [Vaginal]
+		if Player is female: [Vaginal]
 			say "     She smoothly presses into your exposed cunt. You try to wriggle from her, but she just draws you back fully onto her powerful spear, starting to breed you urgently. 'Gonna fill a little slut up with my squealing gator pups,' she hisses in an ear. 'Little, weak cunts are no good for anything but mothering and being fucked.' She pulls you back firmly against each powerful stroke into your yielding form, balls slapping up against your bottom with every movement. Her breath grows faster and faster as she works at you, her generous breasts rubbing along your back. Her cock goes stiff inside of you as she squeezes you in a tight hug, hands grasping at your chest as she begins to fill you with thick sprays of her eager seed, filling your womb with her cum as she groans in satisfaction. As the waves of warmth begin to fade, she draws free of you and swats you smartly on the rump. 'You come back for a rematch, if you have the guts,' she invites, laughing as she rises to her feet and saunters off, still erect shaft wagging.[impregchance]";
-		else if player is twistcapped: [Anal, very accommodating ass]
+		else if Player is twistcapped: [Anal, very accommodating ass]
 			say "     You give a last ditch pull from her, but she snarls and wrenches you right back onto her. She smears her precum over your sensitive rim, lathering your pucker in a thin sheen of fluids, only to forgo further foreplay and drive deep into your well-trained passage. [one of]'Mmh, nice and stretchy, too. You must have had quite the adventures out in the city.' [or]'Mmh, an extra-wide parking spot, just for me? You're far too kind, my lewd little slut.' [or]'Now this is a backside I can get behind. It's a shame that it'll be gaping so lewdly by the time I'm done with you.' [or]'My, what a welcoming piece of ass you've got. I can't wait to stuff it with my seed.' [at random]The gator laughs derisively as she pulls you firm to her scale-bound crotch, rigid length pulsing in your fleshy abyss.";
 			say "     She starts rocking firmly atop you, her soft, leathery hands holding you still as she takes advantage of you. 'You make for such a nice ride,' she croons as she rocks. 'Maybe next time, I'll just drag you [if gator den is known]back to the nest[else]home[end if] and make you my personal cocksleeve forever.' Trembling at her words, your reflexively clenching anus relaxes further, skillfully massaging her tapering cockmeat. Soon, your own body is pulsing with arousal and pleasure, apexing with every powerful thrust into your malleable ass. Your forms shudder together, and her balls slap against you one last time before she rests atop you, unloading into your bowels, filling you with powerful blasts of her hot, sticky cream.";
 			say "     After withdrawing from your cum-sullied hole, the gator stuffs two digits past your rim and licks her lips, pushing all the way to the knuckle in your soft, stretchy ring. Her fingers splay in those creamy confines, gauging your elasticity while they tickle at your nerve-packed lining. 'You should really consider [if gator den is known]staying with me[else]being mine[end if],' she purrs. 'An ass like yours is a national treasure, and I'd love to [if gator den is known]explore your deepest reaches at my leisure[else]steal you away to explore your deepest reaches[end if].' Turning from you, you scarcely notice her meaty tail swinging before its scaly heft connects and knocks you out cold. When you come to, the gator has departed, probably to hunt something, or someone, else.[mimpregchance]";
@@ -37,7 +37,7 @@ to say GatorWins:
 
 to say GatorLoses:
 	if gator den is unknown:
-		say "     Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth. 'Kind of turns me on... I could use a nice, strong partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptilian dick wags under her at half mast as she stretches out. 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm, soft curves of her front pressed against you even as her cock nudges against a thigh. [if player is male]Your own member[smn] stiffen[smv] unconsciously, responding to the obvious signals of readiness this beast is sending. [end if]'We don't have to fight. I can be very accommodating.'";
+		say "     Successfully subduing the great green beast, you stand over her as she pants and heaves. 'You put up a good fight,' she says, smiling with her sharp teeth. 'Kind of turns me on... I could use a nice, strong partner.' She slowly gets to her feet, but makes no immediate motion to resume the battle. Her reptilian dick wags under her at half mast as she stretches out. 'We could have so much fun.' She approaches you slowly and leans in, whispering the location of her den, then slipping her arms around you. You can feel the warm, soft curves of her front pressed against you even as her cock nudges against a thigh. [if Player is male]Your own member[smn] stiffen[smv] unconsciously, responding to the obvious signals of readiness this beast is sending. [end if]'We don't have to fight. I can be very accommodating.'";
 		say "     You wrap your hands around her in return in a brief exchange. Your hands find that, despite her thick-looking scales, the gator is soft to the touch, and quite round. If you close your eyes, you can imagine her as nothing but a full-bodied woman, with a few extras. Her fertile form gently squirms from you with a snap of her great jaws. 'Visit, soon. I will be waiting,' she promises, slipping away into the darkness with a sway of her thick tail.";
 		now gator den is known;
 		move Sewer Gator to gator den;
@@ -47,21 +47,21 @@ to say GatorLoses:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Help the horny female with your tongue.";
 		say "     ([link]N[as]n[end link]) - Turn down the reptile's request.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			if anallevel is 3 and a random chance of 1 in 2 succeeds:
 				say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but every breath you take also gives you a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. [one of]'Seems like you're really enjoying my butt down there, so let's change things up. Instead of my cunt, you're going to give my ass a good licking,' the gator commands, grinding her butt into your face[or]'Ahh, I had you pegged for an ass muncher, good,' the croc coos and grinds her hole against your nose momentarily. 'Go on. Eat. It. Out,' she bellows lustfully[at random].";
-				say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";
+				say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if Player is male]wrap around your cock[smn][else if Player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";
 				WaitLineBreak;
-				say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks while her both her cunt and cock spurt all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. Soon after, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] how you end a good fight,' she says while she effortlessly pulls you up. 'Can't wait for the next fight, or if you just want to skip to the fucking, come to my place. For now though, I gotta find some grub. All that fighting and fucking has left me famished.' And with that, the horny reptile turns to leave.";
+				say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks while her both her cunt and cock spurt all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if Player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if Player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. Soon after, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] how you end a good fight,' she says while she effortlessly pulls you up. 'Can't wait for the next fight, or if you just want to skip to the fucking, come to my place. For now though, I gotta find some grub. All that fighting and fucking has left me famished.' And with that, the horny reptile turns to leave.";
 				if vorelevel is 3:
 					say "     While you had just serviced the gator's ass, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 					say "[GatorVoreOffer]";
 			else:
 				say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but with your nose and mouth being mashed into the her cunt, every breath you take is a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. 'Much as I like you giving my ass a nice rub, it's not doing much in getting me off. Get your tongue in there,' the gator commands, grinding her cunt into your mouth.";
-				say "     Obeying the demanding herm, you thrust your tongue into her pussy, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. The taste of her leaking cunt is slightly bitter, but not unpleasant, and you lap up her juices with gusto while your hands try to pull the scaly behind even more into your face. As you continue to explore the horny female's depths, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words and your aching loins, you sink your tongue into her cunt as far as you can, earning you a gasp from the gator.";
+				say "     Obeying the demanding herm, you thrust your tongue into her pussy, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. The taste of her leaking cunt is slightly bitter, but not unpleasant, and you lap up her juices with gusto while your hands try to pull the scaly behind even more into your face. As you continue to explore the horny female's depths, you feel her fingers [if Player is male]wrap around your cock[smn][else if Player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words and your aching loins, you sink your tongue into her cunt as far as you can, earning you a gasp from the gator.";
 				WaitLineBreak;
-				say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks, her juices spraying onto your face while her cock spurts her cum all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. After a few moments of basking in the heady odor of the gator's juices, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] how you end a good fight,' she says while she effortlessly pulls you up. 'Can't wait for the next fight, or if you just want to skip to the fucking, come to my place. For now though, I gotta find some grub. All that fighting and fucking has left me famished.' And with that, the horny reptile turns to leave.";
+				say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks, her juices spraying onto your face while her cock spurts her cum all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if Player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if Player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. After a few moments of basking in the heady odor of the gator's juices, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] how you end a good fight,' she says while she effortlessly pulls you up. 'Can't wait for the next fight, or if you just want to skip to the fucking, come to my place. For now though, I gotta find some grub. All that fighting and fucking has left me famished.' And with that, the horny reptile turns to leave.";
 				if vorelevel is 3:
 					say "     While you had just serviced the gator's cunt, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 					say "[GatorVoreOffer]";
@@ -79,7 +79,7 @@ to say GatorVoreOffer:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Feed yourself to the predator.";
 	say "     ([link]N[as]n[end link]) - Don't become gator chow.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     'What? You want to go for another round or something?' the gator asks when you call her back. You aren't sure if she is talking about fighting, sex, or both when she says 'another round', but that's not why you got her attention. You tell her that you're willing to offer yourself to help with her hunger. The reptile's brow arches upward in equal parts amusement and curiosity. 'Seriously? You actually want me to eat you? If that's what you wanted, why did you even bother fighting back?' She shrugs and strides up to you, her thick hips swaying seductively. 'Whatever floats your boat, I guess, but fair warning; [one of]don't expect me to spit you out without a fight[or]don't expect me to spit you out. I'm famished[or]I won't mind if you make me spit you out, but if you're too weak to resist my stomach, don't be surprised if I let you become gator food[at random]. I'm only interested in hanging out with the strong,' she says in a low rumble, [one of]licking her lips[or]smacking her lips[at random] and eyeing you ravenously.";
 		say "     Before you could have any second thoughts, the ravenous reptile places her hands on your shoulders and shoves your head into her maw. Even though you put up a struggle because of her warnings, a part of you is excited, even wanting, to explore the gator's stomach. As the scaly herm roughly stuffs the rest of you into her mouth, her sharp teeth nicks and scratches you more than a few times, but thankfully, you don't receive any deep or serious wounds. As expected, the gator is as strong on the inside as she is on the outside, her throat walls squeezing you tightly, almost crushingly so, while you are pulled deeper into the reptile. She gives your legs a playful lick as they pass through her mouth before she snaps her jaws shut, enjoying the feel of your squirming form going through her. Her powerful muscles quickly move you through her body until you land with a splash in the belly of the beast.";
@@ -89,17 +89,18 @@ to say GatorVoreOffer:
 	else:
 		say "     You shake off the odd thoughts in your head and resume your explorations.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Sewer Gator"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Sewer Gator"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[GatorLoses]"; [ Text or say command used when Monster is defeated.]
@@ -108,7 +109,7 @@ When Play begins:
 	now face entry is "long reptilian snout, with nostrils perched at the top end and long tearing teeth filling your crocodilian maw";
 	now body entry is "full-bodied, with wide hips and a narrow waist. Your form feels full of strength and tough to boot. Peeking behind you reveals that you have two sets of bony ridges running down towards your ass";
 	now skin entry is "[one of]green-scaled[or]softly scaled[or]thick-scaled[at random]";
-	now tail entry is "You have a broad, reptilian tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of player] flesh and sways behind you with every step.";
+	now tail entry is "You have a broad, reptilian tail. It has two ridges that run along the top, converging at the tip. It is covered in [skin of Player] flesh and sways behind you with every step.";
 	now cock entry is "[one of]reptilian[or]gator[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "as it draws forward into a long gator snout";
 	now body change entry is "you swell with the appearance of muscles and height. Large scaly patterns appear over most of your body as ridges grow along your spine";
@@ -126,15 +127,15 @@ When Play begins:
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
 	now area entry is "Mall"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 5; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6; [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 5; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 6; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -148,19 +149,110 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 when play ends:
-	if bodyname of player is "Sewer Gator":
+	if bodyname of Player is "Sewer Gator":
 		if voreloss is true:
 			if gator den is known:
 				say "     Having spent too long in the predator's stomach, you become too tired to do anything. The gator snorts in amusement when she feels your struggles come to an end. 'Oops, looks like I forgot about you being in there,' she says mockingly while she pats her stomach. 'Sucks that I'm down a lover now, but I guess that if you couldn't survive my stomach, you weren't going to be much of a mate down the line.' With you becoming no more than a layer of pudge for the predator, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
 			else:
 				say "     Bested by the predator's overwhelming strength, you are too tired to struggle anymore, let alone escape the twisted confines. Your body goes limp as your consciousness fades. The gator chuckles when she feels your struggles come to an end. Patting her stomach, she taunts, 'You might not have been good enough to be my fuckbuddy, but at least you were good for a snack.' With you becoming no more than a layer of pudge for the reptile, the scaly herm goes off to search for her next victim to fuck and likely also devour. Rubbing her stomach, which was less full than it was hours ago, she says, 'Don't worry, I'm sure that you'll make my future lovers happy, with where you settled.' She eyes her breasts, a good cup bigger than they were before.";
-		else if humanity of player < 10:
+		else if humanity of Player < 10:
 			if gatorconsent is 1:
 				say "     You settle down with that gator, your mind ensnared by her enchanting voice. She welcomes you with open arms and conditions you with love and affection, soon making you a perfectly obedient little pet for her.";
-				if player is male:
+				if Player is male:
 					say "     She sates her female urges on your cock, riding it whenever she gets in the proper mood. Her frequent dalliances result in children, but they are feral at birth, and usually flee off to parts unknown. It does not seem to bother her greatly.";
-				if player is female:
+				if Player is female:
 					say "     When her hunting goes poorly, you prove to be a very skilled outlet for her frustration. She rides you in every position over the rest of your life, filling your belly with child after child, squealing snapping beasts that stay only long enough to get a rough meal from your chest before fleeing into the wilds.";
 			else:
 				say "     Your fragile mind snaps, and you growl, seeking a nice dark place to hide. You prey on mutants and humans foolish enough to come too close, grabbing them in your great jaws and hauling them to your den to violate[if vorelevel > 1]. If your hunger is too great, they never leave. Fortunately, this is only about one in five, and the others are left[else] and leave[end if] dizzy with pleasure, but unharmed. Humans are mutated, but most leave, except for one. Even snapping at the odd person doesn't get them to budge. Eventually, you give up and gain a partner.";
@@ -173,8 +265,8 @@ when play ends:
 to gatorfy:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Sewer Gator":
-			now monster is y;
+		if Name entry is "Sewer Gator":
+			now MonsterID is y;
 			break;
 	infect;
 	infect;
@@ -240,7 +332,7 @@ to say gator den scene:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -262,8 +354,8 @@ to say gator den scene:
 
 to say GatorDenSex:
 	now gatorconsent is 1;
-	if bodyname of player is "Sewer Gator":
-		say "     'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip onto the bed to join her, she wraps her arms around you, pressing her soft, warm scales to your [skin of player] front, grinding gently as she presses her snout to you and gives a slow kiss. She's quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
+	if bodyname of Player is "Sewer Gator":
+		say "     'You are still looking mighty fine. Come over here and let me give you a kiss,' she beckons. As you slip onto the bed to join her, she wraps her arms around you, pressing her soft, warm scales to your [skin of Player] front, grinding gently as she presses her snout to you and gives a slow kiss. She's quiet for long moments as her hands wander across your back eagerly. Your body grows warm, responding to her desire for a mate, changing to be more like her ideal catch.";
 	else:
 		say "     'You are still missing a little something,' she chastises gently, patting the bed for you. When you slip up beside her, she slips in against you, one hand reaching between your legs and rubbing slowly as she begins to nuzzle across your neck and cheek, nipping carefully with those large teeth. As she cuddles in closer, your body grows warm, nanites rushing to modify you towards her ideal lover.";
 	WaitLineBreak;
@@ -273,32 +365,32 @@ to say GatorDenSex:
 	if a random chance of 1 in 3 succeeds: [She just talks]
 		say "     'I want to talk, get to know you,' she says, leaning in and snuggling against your front. She chats with you quietly as she gropes and fondles you, drawing out your name and your old job, and telling you about her old life as a bus driver. She confides that she loves her new body. 'I just want someone to share it with,' she says, nuzzling you with her great snout as she speaks. 'We can be together, have little alligatorettes. It would be nice...' she assures in a sultry whisper. Her words seem to wriggle insidiously in your mind, feeling like a better idea by the moment. Though she does not change your body any further in the long chat, your mind feels a bit bent.";
 		[Though she does not change your body any further in the long chat, your mind feels a bit bent, and you look forward to your next visit all the more for it.]
-		decrease humanity of player by a random number from 5 to 20;
+		decrease humanity of Player by a random number from 5 to 20;
 	else: [Sex]
 		if a random chance of 1 in 2 succeeds and player is male: [She wants to be fucked]
-			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of player], [cock of player] cock[smn] rise[smv] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
-			if cock length of player < 4:
+			say "     She rolls over and raises her thick tail over her back, exposing the pinkened lips nestled between her large thighs. 'Come show me just how much a stud you are,' she invites. Your [cock size desc of Player], [cock of Player] cock[smn] rise[smv] to attention quickly, and you scramble up to accept the offer, perhaps faster than you normally would. Something about her round rump just seems to call to you, and you heed the call, slamming home into her.";
+			if Cock Length of Player < 4:
 				say "     She gets an odd expression when you sink into her, then looks over her shoulder. 'Mi amor, you need help,' she croons, curling her tail around you and squeezing. The warmth returns to you, filling you with hot tingles that slowly sink into your groin as things begin to change down there, swelling up inside of the gator as she gasps and coos. The pleasure of changing while sheathed in the fertile female burns at your mind, eroding your human sensibilities.";
 				follow the sex change rule;
 				follow the sex change rule;
-				decrease humanity of player by 5;
-			if cock length of player > 10: [Too large]
-				say "     She squeals loudly as you try to cram [if cocks of player > 1]one of [end if]your oversized manhood[smn] into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you. 'Poor little dear,' she says with a smile. 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the telltale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw[if cocks of player > 1] while your other length[smn] spray[smv] across her scaly back[end if].";
-				if cock width of player > 20:
+				decrease humanity of Player by 5;
+			if Cock Length of Player > 10: [Too large]
+				say "     She squeals loudly as you try to cram [if Cock Count of Player > 1]one of [end if]your oversized manhood[smn] into her, but it's too much. She scampers away from you in a wriggle, but before you can be disappointed, you feel her soft hands on you, stroking firmly at you. 'Poor little dear,' she says with a smile. 'I will help us both,' she promises, engulfing you in the warm heat of her mouth, lapping at you with a large tongue and stroking at you with her skilled fingers. Your body tingles with pleasure, and change, as your genitals throb with the telltale hint of transformation as she works you towards a peak rapidly. The changing throbbing reaches its climax just as you do, spilling your seed into her waiting maw[if Cock Count of Player > 1] while your other length[smn] spray[smv] across her scaly back[end if].";
+				if ball size of Player > 20:
 					say "     The force and volume of your seed is so great that it overflows her long snout and runs down her front in great rivers, painting her heaving breasts in your pearly virility. She groans as her belly distends, gulping down as much as she can even as it gets everywhere else, leaving her quite a mess.";
 				follow the sex change rule;
-				decrease humanity of player by 5;
+				decrease humanity of Player by 5;
 			else: [Just right]
 				say "     You pull back, tool glistening with the generous lubricants of the reptile woman. She pushes back against you, sinking you back into herself as she gives a soft, hissing growl. You begin to dance with her, rocking smoothly against one another. She mates like a wild animal at first, as if desperate to prove what is going on to the world itself, slamming her deliciously soft cheeks into your thighs. Her own cock wags with each movement, dripping onto the bed with her excitement as you moan softly together.";
-				say "     You reach for one of her legs and lift it up, thrusting up into her and making her frame jiggle with every slam into her, feeling yourself sink all the deeper from the new angle. She groans and praises you, tail rubbing against your chest as she flexes powerfully around your [cock of player] shaft. All too suddenly, your [short ball size] orbs contract, and you can feel your vital fluid rushing up into the scaled female. She hisses as her passage clamps like a vice around you, drawing out the seed towards her hungry womb.";
+				say "     You reach for one of her legs and lift it up, thrusting up into her and making her frame jiggle with every slam into her, feeling yourself sink all the deeper from the new angle. She groans and praises you, tail rubbing against your chest as she flexes powerfully around your [cock of Player] shaft. All too suddenly, your [short ball size] orbs contract, and you can feel your vital fluid rushing up into the scaled female. She hisses as her passage clamps like a vice around you, drawing out the seed towards her hungry womb.";
 		else if a random chance of 1 in 2 succeeds: [She fucks]
-			if player is female:
+			if Player is female:
 				say "     She presses firmly to your front, rubbing chests together in slow circles as her firmness grows against you, poking into your belly lightly. 'Gonna make you squeal,' she says with a smile, reaching for your hips and pulling up. She shimmies to light herself up to enter your moist cavern without delay";
-				if cunt length of player < 8:
+				if Cunt Length of Player < 8:
 					say ". Her cock stretches your relatively small cunt as it spears up into your cavern. By the second motion, you find yourself gushing wet, making her motions all the easier as she works at you, loosening your sex with her eager thumps";
-					increase cunt length of player by 2;
-					increase cunt width of player by 2;
-				else if cunt length of player > 12:
+					increase Cunt Length of Player by 2;
+					increase Cunt Tightness of Player by 2;
+				else if Cunt Length of Player > 12:
 					say ". She sinks easily into your gaping hole, thrusting with loud lewd slurps as she grinds and groans with the pleasure of your hot tunnel around her eager shaft, not minding your large nature at all";
 				say ".";
 				say "     She wraps her arms around you in a fond embrace, rubbing her scaly cheek against your own as she coos soft, delightful things to you. Her words echo in erotic tingles through your body even as she starts to piston against you, filling you with her urgent and virile pole. Her thick tail thrashes about with every movement even as your own hips start to rise to meet her, crashing together in a dance of love and lust.";
@@ -310,11 +402,11 @@ to say GatorDenSex:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the herm rail your ass.";
 				say "     ([link]N[as]n[end link]) - Have the gator use another hole.";
-				if player consents:
+				if Player consents:
 					LineBreak;
-					say "     With your approval, she grins and flips you right over. She runs her soft, scaly palms over your rump as she rumbles appreciatively. 'Don't you worry one bit. Mother will be gentle.' She licks a finger, running it across the wet surface of her tongue before pressing the dangerously sharp tip of her claw to your puckered back door. She gently nudges your ring apart, wriggling the finger into your [if player is twistcapped]elastic[else]tight[end if] flesh as she leans in over you. 'Open up for mother, relax...' Her voice soothes you, and you find yourself relaxing at her command, allowing her digit to [if player is twistcapped]smoothly[else]slowly[end if] push past, embedding fully in you. You can feel it moving inside of you as she ensures your readiness.";
-					say "     She draws the finger back, then clambers up behind you fully, her hot member rubbing against your ass cheeks as she leans over you. She hugs you from behind, snuggling against your back, her breasts rubbing slowly against you as she nudges herself into position, then begins to slowly rock her ready tool into your loosened doughnut. She slips in [if player is twistcapped]painlessly, your well-trained ass more than capable of spreading around her length. The bestial[else]almost painlessly, and what little discomfort is soon forgotten as her[end if] rod begins to stroke into you, teasing sensitive portions of you as she pulls you back into her eager motions. She licks at your ears from behind as she couples, growling soft appreciations. Her balls slap up against you with each increasingly fast thrust.";
-					say "     With a loud groan, you feel her body stiffen over your own, and her shaft swells and explodes powerfully into you. [if player is neuter]She[else]Pleasure explodes abruptly, causing you to seize in a climax of your own, echoing her in tremble and timber as she[end if] holds you preciously close, clutching almost desperately as the feelings pass. When composure returns, she pulls free of you and swats you smartly on the bottom. 'Good work. You made momma really happy. Come back anytime - momma always has time for you,' she insists, sending you on your way.[mimpregchance]";
+					say "     With your approval, she grins and flips you right over. She runs her soft, scaly palms over your rump as she rumbles appreciatively. 'Don't you worry one bit. Mother will be gentle.' She licks a finger, running it across the wet surface of her tongue before pressing the dangerously sharp tip of her claw to your puckered back door. She gently nudges your ring apart, wriggling the finger into your [if Player is twistcapped]elastic[else]tight[end if] flesh as she leans in over you. 'Open up for mother, relax...' Her voice soothes you, and you find yourself relaxing at her command, allowing her digit to [if Player is twistcapped]smoothly[else]slowly[end if] push past, embedding fully in you. You can feel it moving inside of you as she ensures your readiness.";
+					say "     She draws the finger back, then clambers up behind you fully, her hot member rubbing against your ass cheeks as she leans over you. She hugs you from behind, snuggling against your back, her breasts rubbing slowly against you as she nudges herself into position, then begins to slowly rock her ready tool into your loosened doughnut. She slips in [if Player is twistcapped]painlessly, your well-trained ass more than capable of spreading around her length. The bestial[else]almost painlessly, and what little discomfort is soon forgotten as her[end if] rod begins to stroke into you, teasing sensitive portions of you as she pulls you back into her eager motions. She licks at your ears from behind as she couples, growling soft appreciations. Her balls slap up against you with each increasingly fast thrust.";
+					say "     With a loud groan, you feel her body stiffen over your own, and her shaft swells and explodes powerfully into you. [if Player is neuter]She[else]Pleasure explodes abruptly, causing you to seize in a climax of your own, echoing her in tremble and timber as she[end if] holds you preciously close, clutching almost desperately as the feelings pass. When composure returns, she pulls free of you and swats you smartly on the bottom. 'Good work. You made momma really happy. Come back anytime - momma always has time for you,' she insists, sending you on your way.[mimpregchance]";
 				else:
 					LineBreak;
 					say "     'Well then, we still have one other option.' She flashes her teeth, then scooches up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close. 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips, and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
@@ -323,8 +415,8 @@ to say GatorDenSex:
 			say "     'Well then, I know just what to do.' She flashes her teeth, then scooches up along your body until her groin is at your face, already firm cock bumping against you and the scent of her balls close. 'Put your mouth to work for me,' she bids, thick tail swaying back and forth eagerly. Before you can muster up much argument one way or the other, her slick member nudges past your lips, and she draws you forward by the back of the head, gently petting at you as she gives reptilian purrs. Her cock is salty at first, but becomes clean as you suck at it. Your reservations seem to fade like vapor as she whispers encouragement, rocking and fucking your face.";
 			say "     Your tongue explores the alien textures of her smooth member, teasing it, to her vocal approval. She rubs along the back of your head as she presses forward, shaft twitching as you feel the seed splatter hotly across tongue and mouth. It tastes a little bitter and salty, but you loyally swallow the offering, soft tingles rewarding you in addition to her gentle words of encouragement. She pulls away and slips down to sit beside you. 'Good. I needed that. Maybe next time, you get a turn.' She winks, then reclines, looking ready to relax.";
 	WaitLineBreak;
-	decrease humanity of player by 5;
-	if humanity of player < 10:
+	decrease humanity of Player by 5;
+	if humanity of Player < 10:
 		end the story saying "You decide against leaving after all.";
 	[else:
 		say "     You head home afterwards.";]
@@ -339,17 +431,17 @@ to say GatorDenVore:
 to say GatorDenFaceSit:
 	if anallevel is 3 and a random chance of 1 in 2 succeeds:
 		say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but every breath you take also gives you a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. [one of]'Seems like you're really enjoying my butt down there, so let's change things up. Instead of my cunt, you're going to give my ass a good licking,' the gator commands, grinding her butt into your face[or]'Ahh, I had you pegged for an ass muncher, good,' the croc coos and grinds her hole against your nose momentarily. 'Go on. Eat. It. Out,' she bellows lustfully[at random].";
-		say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";
+		say "     Obeying the demanding herm, you work your tongue around the edge of her sphincter, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. However, after a few moments of the rimjob, the female's legs and buttcheeks squeeze down on your head. '[one of]Stop pussying around down there!' the reptile barks. 'I want your tongue in my ass, not around it!'[or]Get in there,' she groans impatiently, smothering you with her puckered hole[at random]. You dutifully accommodate her command and thrust your tongue into the horny female. You are rewarded with a satisfied groan from the gator, and after a moment, you feel her fingers [if Player is male]wrap around your cock[smn][else if Player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words, you sink your tongue into her ass as far as you can, earning you a gasp from the gator.";
 		WaitLineBreak;
-		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks while her both her cunt and cock spurt all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. Soon after, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
+		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks while her both her cunt and cock spurt all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if Player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if Player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. Soon after, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
 		if vorelevel is 3:
 			say "     While you had just serviced the gator's ass, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 			say "[GatorVoreOffer]";
 	else:
 		say "     The gator strides up to you when you agree to her offer and pushes you on your back. A bit dazed from the fall, you are unable to react when you see the reptile's ass right above you. You don't even have a chance to protest when the giant green blobs descend on you, blotting out the light as she smothers your face in scaly flesh. Your hands swiftly reach for the gator's butt to get her off of you, but your feeble pushes don't even budge her. The herm then starts grinding on your face, giving you the chance to get some air every now and then, but with your nose and mouth being mashed into the her cunt, every breath you take is a lungful of her intoxicating musk. Soon, your hands stop trying to fight her off and start kneading the firm, muscular posterior that's dominating you. 'Much as I like you giving my ass a nice rub, it's not doing much in getting me off. Get your tongue in there,' the gator commands, grinding her cunt into your mouth.";
-		say "     Obeying the demanding herm, you thrust your tongue into her pussy, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. The taste of her leaking cunt is slightly bitter, but not unpleasant, and you lap up her juices with gusto while your hands try to pull the scaly behind even more into your face. As you continue to explore the horny female's depths, you feel her fingers [if player is male]wrap around your cock[smn][else if player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words and your aching loins, you sink your tongue into her cunt as far as you can, earning you a gasp from the gator.";
+		say "     Obeying the demanding herm, you thrust your tongue into her pussy, licking as though your life depended on it, and with the limited amount of air you're getting underneath the gator, it's a pretty accurate statement. The taste of her leaking cunt is slightly bitter, but not unpleasant, and you lap up her juices with gusto while your hands try to pull the scaly behind even more into your face. As you continue to explore the horny female's depths, you feel her fingers [if Player is male]wrap around your cock[smn][else if Player is female]thrust into your cunt[sfn][else]rub your crotch[end if]. Her attention to you is rough, but your lust-addled mind only derives pleasure from her ministrations while you continue to service her. Just as you approach your climax, she barks, 'Come on! Give it to me! I want us cumming together! It will be hella hot!' Spurred on by her words and your aching loins, you sink your tongue into her cunt as far as you can, earning you a gasp from the gator.";
 		WaitLineBreak;
-		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks, her juices spraying onto your face while her cock spurts her cum all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. After a few moments of basking in the heady odor of the gator's juices, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
+		say "     With both of you working each other at a feverish pace, it doesn't take much longer for the scaly female to get her wish as you climax together. The gator grunts as her tail reaches under the back of your head, the strong, prehensile limb pulling your face so that it squishes into her encompassing cheeks, her juices spraying onto your face while her cock spurts her cum all over your chest and legs. At the same time, your loud moans are muffled by the asscheeks sandwiching your head[if Player is male], your cum spraying onto your legs and mixing with the reptile's seed[else if Player is female], your orgasm spilling onto your legs and mixing with the reptile's seed[end if]. After a few moments of basking in the heady odor of the gator's juices, you are finally brought out of the darkness as your fuckbuddy stands back up. 'Now [italic type]that's[roman type] what I like in a mate,' she says while she effortlessly pulls you up.";
 		if vorelevel is 3:
 			say "     While you had just serviced the gator's cunt, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 			say "[GatorVoreOffer]";
@@ -362,7 +454,7 @@ Gator Den is a room. "[gator den entrance]". It is unknown. It is fasttravel. It
 
 [Turned off automatically going back to Grey Abbey after any den scene]
 [After navigating gator den:
-	if humanity of player > 9:
+	if humanity of Player > 9:
 		move player to Grey Abbey Library;
 		follow the turnpass rule;]
 
@@ -371,48 +463,48 @@ Gator Den is a room. "[gator den entrance]". It is unknown. It is fasttravel. It
 Section 4 - Bound State
 
 to GatorBind:
-	now lustatt is libido of player;
+	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		if humanity of player < 50:
+		if humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if player is male]grasp your hardened member[smn] and jerk yourself off[else if player is female]play with your clit[sfn][else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again.";
+			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if Player is male]grasp your hardened member[smn] and jerk yourself off[else if Player is female]play with your clit[sfn][else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again.";
 			LineBreak;
 			now struggleatt is 0;
-			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
-			now lustatt is libido of player;
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
 			if enduring is true:
-				decrease humanity of player by 8 + (psycheadjust * 2);
+				decrease humanity of Player by 8 + (psycheadjust * 2);
 			else:
-				decrease humanity of player by 15 + (psycheadjust * 5);
+				decrease humanity of Player by 15 + (psycheadjust * 5);
 				if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		say "     Resting inside of the gator's stomach, you try to assess your situation. [one of]It's hard to think with all of the liquid and smells affecting your mind[or]The belly sways around as the herm chases after more prey in the sewers[or]Your space jostles around while the gator takes a swim[or]The place rumbles and shakes with you inside, the walls pushing against you[or]Your mind distorts and reminds you of what will happen if you don't get out of here[or]Your body tingles from all the stomach juices splashing onto you[or]The air is heavy and acrid with the smell of stomach juices everywhere[at random]. Your only options are to [bold type]S[roman type]truggle [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if].[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [GatorStruggle]";
-		if humanity of player < 1:
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [GatorStruggle]";
+		if humanity of Player < 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Sewer Gator":
-					now monster is y;
+				if Name entry is "Sewer Gator":
+					now MonsterID is y;
 					break;
 			now voreloss is true;
-			now bodyname of player is "Sewer Gator";
-			now facename of player is "Sewer Gator";
-			now tailname of player is "Sewer Gator";
-			now skinname of player is "Sewer Gator";
-			now cockname of player is "Sewer Gator";
-			now tail of player is tail entry;
-			now face of player is face entry;
-			now skin of player is skin entry;
-			now body of player is body entry;
-			now cock of player is cock entry;
+			now bodyname of Player is "Sewer Gator";
+			now facename of Player is "Sewer Gator";
+			now tailname of Player is "Sewer Gator";
+			now skinname of Player is "Sewer Gator";
+			now cockname of Player is "Sewer Gator";
+			now tail of Player is tail entry;
+			now face of Player is face entry;
+			now skin of Player is skin entry;
+			now body of Player is body entry;
+			now cock of Player is cock entry;
 			now Trixieexit is 1;
 			end the story saying "You got eaten by a gator";
 		else:

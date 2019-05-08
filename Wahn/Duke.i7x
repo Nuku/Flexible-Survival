@@ -41,13 +41,13 @@ instead of conversing the Duke:
 		if HP of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
 		else if HP of Duke is 1:
-			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I haven't seen you around here before, so you came in from elsewhere in the city? And you're a sheep-person!' He turns his head to look at his 'special' ram friend, then back to you. 'I was hoping that there might be... sheep-people out there somewhere - and now you just walk into our farm and come to talk to me.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German Shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
 				say "     He sniffs a bit, then continues 'I tried to... infect him with being a German Shepherd, but it doesn't work. Nothing someone here on the farm has worked so far. I think having a similar infection might be the only way to make him a person again - a sheep-person, like you' Duke gives you a pleading look and a wag of his tail 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
-				if player consents:
+				if Player consents:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "[DukeShawnFirstTimeSex]";
@@ -60,7 +60,7 @@ instead of conversing the Duke:
 				if carried of Tainted wool > 2:
 					LineBreak;
 					say "     Remembering that you - by an amazing coincidence - already have several tufts of sheep fur in your pack, do you offer them to Duke?";
-					if player consents:
+					if Player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - it really must be fate that you already have that and just now came to us. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down beside him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
@@ -73,11 +73,11 @@ instead of conversing the Duke:
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
 					now HP of Duke is 2;
 		else if HP of Duke is 2:
-			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
-				if player consents:
+				if Player consents:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "[DukeShawnFirstTimeSex]";
@@ -89,7 +89,7 @@ instead of conversing the Duke:
 				if carried of Tainted wool > 2:
 					LineBreak;
 					say "     Remembering that you have several tufts of sheep fur in your pack, do you offer them to Duke?";
-					if player consents:
+					if Player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - you're a really nice person to help us out with this. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down beside him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
@@ -102,11 +102,11 @@ instead of conversing the Duke:
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now HP of Duke is 2;
 		else if HP of Duke is 3:
-			if (bodyname of player is "ram" or bodyname of player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
-				if player consents:
+				if Player consents:
 					say "     As you agree, Duke quickly goes to get Shawn, leading the young ram over to you. Kneeling down beside him, you wrap your arms around his furred body, giving him a hug and rubbing your own fur against him. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 					WaitLineBreak;
 					say "[DukeShawnFirstTimeSex]";
@@ -118,7 +118,7 @@ instead of conversing the Duke:
 				if carried of Tainted wool > 2:
 					LineBreak;
 					say "     Remembering that you have several tufts of sheep fur in your pack, do you offer them to Duke?";
-					if player consents:
+					if Player consents:
 						say "     Duke's tail wags exuberantly as you show him the wool and the shepherd gives you a beaming smile. 'Thank you. Thank you - you're a really nice person to help us out with this. Wait, I'll get Shawn...' With that, Duke quickly jogs over to the sheep and leads the young ram over to you. Kneeling down beside him, you take out the small bundles of wool, holding them up for Shawn to smell, then rub them over his sheep face and the rest of his body. At first, there isn't any noticeable change, then suddenly Shawn gives a rather surprised 'Meeeh' as his body starts shifting and he loses his balance, falling to the ground. Accompanied by disconcerting crackles and pops, his body quickly turns more humanoid, some moments later stabilizing in an anthro sheep's form.";
 						WaitLineBreak;
 						decrease carried of Tainted wool by 3;
@@ -138,7 +138,7 @@ to say DukeShawnFirstTimeSex:
 	say "     There is a moment of silence as the two of them just look into each other's eyes, then suddenly, they kiss and start making out with each other. Basically forgetting the world around them, Duke and Shawn just keep going at it, hands exploring each other's body while they're busy tongue-wrestling or Duke licks Shawn's face. It doesn't take long until the anthro canine sinks to the floor, still embracing Shawn and pulling him down with him to lie together in the green grass. Their make-out-session continues some more with Shawn now lying on top of Duke - until there is a moaned 'Fuck me' audible from Duke between their kisses.";
 	LineBreak;
 	say "     Do you want to watch them go at it ([link]Y[as]y[end link]), or would you rather give [']em some privacy ([link]N[as]n[end link])?";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Giving his canine lover a last loud smooch, Shawn moves back a little bit, coming to kneel between Duke's legs and looking down on him. A smile on the ram's face, he takes hold of his hard cock and rubs it against the German Shepherd's knotted shaft, then takes both of them in one hand and strokes them together. Next, he moves his hands to Duke's legs, rubbing the insides of his thighs and lifting the legs up into the air. Duke readily helps him out with that, taking over holding his own legs in that position, his tail beating against the ground in the dog-morph's eagerness for what will come next.";
 		say "     With Duke's hips raised a bit and his legs spread, he's in a perfect position for Shawn, who quickly aims his hard cock then pushes its tip against the German Shepherd's pucker, easily stretching it around his shaft as he did so many times before when they were animals. Still, now with both of them in anthro shape, it's kind of their first time, so Shawn takes it slow, sinking his manhood into the dog bit by bit and taking breaks for him to get used to it. When he finally is all the way inside, Shawn leans forward, with Duke meeting his lips for a kiss. Then the ram takes up thrusting into his partner, quickly getting faster and harder as his libido runs high.";
@@ -214,7 +214,7 @@ instead of fucking the Duke:
 
 to say DukeSexMenu:
 	blank out the whole of table of fucking options;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -232,13 +232,13 @@ to say DukeSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Duke and jerk him off at the same time.";
 		now toggle entry is DukeSex rule;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Duke's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the German Shepherd's ass with your cock.";
 		now toggle entry is DukeSex rule;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 7;
@@ -254,7 +254,7 @@ This is the DukeSex rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Have him blow your cock"):
@@ -311,7 +311,7 @@ to say DukeSex4: [Duke fucked in the ass]
 
 to say DukeSex5: [Player fucked in the ass]
 	setmonster "German Shepherd";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German Shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with,' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
 	WaitLineBreak;
 	say "     Putting your arms around Duke from behind, you feel his muscular chest, then whisper in his ear that he's not the only one who likes hard dick in his ass, reaching down to grab his erect canine manhood. Inviting him to be the top for a change, you walk around Duke, stripping your clothes off on the move to stop on your hands and knees in the grass in front of the German Shepherd. Looking back at him, wiggling your naked ass invitingly, you tell him to mount you. Duke is a bit hesitant at first, always having been the bottom in his pairing with Shawn, then his natural (though nanite-enhanced) urges take over, making him follow the guiding arrow of his erect penis.";

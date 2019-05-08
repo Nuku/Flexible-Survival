@@ -38,14 +38,14 @@ a special-style	a text-justification	an obliquity	a number	a number	a boldness	a
 To initialize user styles:
 	repeat through the Table of User Styles
 	begin;
-		if there is a justification entry, apply justification of (justification entry) to (style name entry);
-		if there is an obliquity entry, apply obliquity (obliquity entry) to (style name entry);
-		if there is an indentation entry, apply (indentation entry) indentation to (style name entry);
-		if there is a first-line indentation entry, apply (first-line indentation entry) first-line indentation to (style name entry);
-		if there is a boldness entry, apply (boldness entry) boldness to (style name entry);
-		if there is a fixed width entry, apply fixed-width-ness (fixed width entry) to (style name entry);
-		if there is a relative size entry, apply (relative size entry) size-change to (style name entry);
-		if there is a glulx color entry, apply (assigned number of glulx color entry) color to (style name entry);
+		if there is a justification entry, apply justification of (justification entry) to (style Name entry);
+		if there is an obliquity entry, apply obliquity (obliquity entry) to (style Name entry);
+		if there is an indentation entry, apply (indentation entry) indentation to (style Name entry);
+		if there is a first-line indentation entry, apply (first-line indentation entry) first-line indentation to (style Name entry);
+		if there is a boldness entry, apply (boldness entry) boldness to (style Name entry);
+		if there is a fixed width entry, apply fixed-width-ness (fixed width entry) to (style Name entry);
+		if there is a relative size entry, apply (relative size entry) size-change to (style Name entry);
+		if there is a glulx color entry, apply (assigned number of glulx color entry) color to (style Name entry);
 	end repeat.
 
 To apply (color change - a number) color to (chosen style - a special-style):

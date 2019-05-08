@@ -101,7 +101,7 @@ to say Darius's Inventory List:
 			if rule failed:
 				next;
 			say "[link]Buy[as]buy [object entry][end link] ";
-			say "[name entry] - [price entry] food";
+			say "[Name entry] - [price entry] food";
 	else:
 		say "     A handwritten sign on the kitchen counter tells you that you need to pay with food for anything you want, but it seems that Darius put away his stash before leaving the house. You'll have to wait till he is back if you want to buy something.";
 

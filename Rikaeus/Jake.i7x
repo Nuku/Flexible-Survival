@@ -31,7 +31,7 @@ instead of resolving Panda Inspiration:
 	FirstJakeEvent;
 
 to FirstJakeEvent:
-	say "     When you head on into the hallway that makes up the student lounge on the first floor of the male dorms you suddenly bump into somebody. Turning to whoever you ran into you hear a voice apologize as you do. 'Oh I'm sorry, I wasn't paying attention.' A low-toned voice emanates from them. When you finally see them, you're intrigued, at the very least because of his appearance and the worry on his face. What's before you is obviously a college student that has to be in art classes with the 'Art is Life' shirt and the paint splatters all over his clothes. Beyond that he appears to be a male panda, [if scalevalue of player < 4]and bigger than you in just about everything. [else if scalevalue of player is 4]and the same size as you interestingly enough. [else if scalevalue of player > 4]and smaller than you, which amuses you a little bit. [end if]";
+	say "     When you head on into the hallway that makes up the student lounge on the first floor of the male dorms you suddenly bump into somebody. Turning to whoever you ran into you hear a voice apologize as you do. 'Oh I'm sorry, I wasn't paying attention.' A low-toned voice emanates from them. When you finally see them, you're intrigued, at the very least because of his appearance and the worry on his face. What's before you is obviously a college student that has to be in art classes with the 'Art is Life' shirt and the paint splatters all over his clothes. Beyond that he appears to be a male panda, [if scalevalue of Player < 4]and bigger than you in just about everything. [else if scalevalue of Player is 4]and the same size as you interestingly enough. [else if scalevalue of Player > 4]and smaller than you, which amuses you a little bit. [end if]";
 	say "     The panda looks you up and down before he gets a look on his face, the worry he previously had on it changing to something you can perceive as hope. 'Could you possibly help me with something?' he asks, a slight bit of desperation to his tone. You wonder as to what he possibly needs from you that could be so urgent, after all he just met you. Saying as much, you're sure that if the panda could blush, he would. 'Ah, well I have an assignment due real soon and you're the perfect help for it...' the male says, trailing off. You raise a brow at him causing him to look even more embarrassed. 'Oh I'm so sorry! I'm asking this question without introducing myself! The name's Jake!' he says with a smile, holding out his hand.";
 	WaitLineBreak;
 	say "     Taking a look at the panda's paw before mentally shrugging and accepting it, you shake his hand. His smile widens a bit before he rubs the back of his head with his free hand. Suddenly though he looks as if he's had an idea. 'Hey! Before I ask you to help, how about I show you what I do?' Jake asks you. Now that's an interesting proposition, asking him what he means. 'Well, I want to show you my gallery, it'll help you understand what I do,' the panda says. You nod, what he's asking makes sense, him basically giving you an idea of what you're getting yourself into is a fair offer. So with a shrug you nod your head. He smiles at you and bounces lightly on the pads of his feet.";
@@ -172,14 +172,14 @@ Jake is a man.
 [physical details as of game start]
 Humanity of Jake is 80. [lives at the campus]
 ScaleValue of Jake is 4. [orc-sized]
-Cocks of Jake is 1. [has a cock]
+Cock Count of Jake is 1. [has a cock]
 Cock Length of Jake is 10. [has a ten inch cock]
-Cock Width of Jake is 5. [size of balls]
-Testes of Jake is 2. [no balls]
-Cunts of Jake is 0. [no vagina]
+Ball Size of Jake is 5. [size of balls]
+Ball Count of Jake is 2. [no balls]
+Cunt Count of Jake is 0. [no vagina]
 Cunt Length of Jake is 0. [Doesn't have a vagina to get stretched]
-Cunt Width of Jake is 0. [Doesn't have a vagina to get stretched]
-Breasts of Jake is 2. [Has two normal nipples]
+Cunt Tightness of Jake is 0. [Doesn't have a vagina to get stretched]
+Nipple Count of Jake is 2. [Has two normal nipples]
 Breast Size of Jake is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 TwistedCapacity of Jake is false. [can not take oversized members without pain]
@@ -236,7 +236,7 @@ to say JakeTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "His Art"):
@@ -292,7 +292,7 @@ to say JakeSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Oral"):
@@ -307,7 +307,7 @@ to say JakeSexMenu:
 	clear the screen and hyperlink list;
 
 to say JakeSex1:
-	say "     Grabbing the panda by the hand you pull him over to his couch before you push him down so that he's sitting. Taking a glance over his body you're sure that you'll enjoy this[if scalevalue of player < 4] especially if the package matches the body[end if]. Eager to begin you kneel down and begin to unbutton Jake's worn jeans, revealing that he appears to go commando when he's painting, showing [if scalevalue of player < 4]a rather large sized cock[else if scalevalue of player is 4]a decently sized cock[else]an average sized cock[end if] that matches the male. Bringing your face to his furry balls you inhale, taking in the underlying musk that hid under the paint oil scent.";
+	say "     Grabbing the panda by the hand you pull him over to his couch before you push him down so that he's sitting. Taking a glance over his body you're sure that you'll enjoy this[if scalevalue of Player < 4] especially if the package matches the body[end if]. Eager to begin you kneel down and begin to unbutton Jake's worn jeans, revealing that he appears to go commando when he's painting, showing [if scalevalue of Player < 4]a rather large sized cock[else if scalevalue of Player is 4]a decently sized cock[else]an average sized cock[end if] that matches the male. Bringing your face to his furry balls you inhale, taking in the underlying musk that hid under the paint oil scent.";
 	say "     Deciding to get to work, you lap your tongue at his scrotum, tasting the sweat that had been gathering from his, you assume, hours standing while painting and his walking about the school to head to class. Jake lets out a moan from your actions, clearly enjoying what you're doing. In fact, he leans back and leaves you to do as you please which causes you to smirk. Turning your attention back to his balls you continue to lick at them, occasionally taking one of the orbs into your mouth to suck on. While doing this you mindlessly contemplate what you'll do to mess with the panda to make it an enjoyable experience before getting a few ideas.";
 	WaitLineBreak;
 	say "     Deciding to enact your first idea, you start trailing up the length of his cock before reaching the head of it. Once you get there you wrap your mouth around the tip and start lightly sucking, swirling your tongue around it. This prompts Jake to moan and grip tightly at cushion of the couch. Happy that your actions got a reaction, you continue, slowly moving down on his manhood, taking it inch by inch, making sure to use your tongue as best as you can to make the panda come undone. When you manage to get all of his cock in your mouth you take a look and see that he's heavily panting. You're obviously doing a good job by what you can see.";

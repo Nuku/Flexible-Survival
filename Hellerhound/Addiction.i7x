@@ -25,7 +25,7 @@ before using a grab object (called x):
 				now addicted is 1;
 				now addictlefttime is 16 divided by the speed entry;
 				now currentaddictionspeed is the speed entry;
-				now addictname is name entry;
+				now addictname is Name entry;
 				break;
 		if foundaitem is 0:
 			say "ERROR: ADDICTION NOT FOUND";

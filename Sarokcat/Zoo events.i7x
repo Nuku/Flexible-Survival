@@ -64,7 +64,7 @@ The sarea of Useful pamphlet is "Zoo".
 
 Instead of Resolving a Useful pamphlet:
 	say "     Wandering around the zoo, you come across an area dedicated to visitor information. You browse through the few remaining pamphlets and find a couple that seem to be very pertinent on how to defend yourself from wild animals. Useful information indeed under the current circumstances!";
-	increase XP of player by 5;
+	increase XP of Player by 5;
 	say "Your XP increases slightly due to the helpful pamphlet!";
 	if a random chance of 1 in 6 succeeds:
 		now Useful pamphlet is resolved;
@@ -81,8 +81,8 @@ The sarea of Unidentified sex scene is "Zoo".
 
 Instead of Resolving a Unidentified sex scene:
 	say "     Traveling through the zoo area, you arrive at one of the resting areas. In the mood for a short break, you move closer. Unfortunately, it seems several other people or creatures were here before you, and it is obvious not much [']resting['] occurred, although several of the participants were probably horizontal at one point. Looking around, you survey the splatters of cum from several unidentified participants, several articles of shed clothing tossed around haphazardly, and a variety of mixed animal prints tracked in the dirt. You really aren't sure just who all or what all enjoyed themselves here, but they definitely had a lot of fun. Sighing, you leave without taking a rest, the scene making you too nervous, and aroused, to stay there any longer.";
-	increase libido of player by 20;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 20;
+	if Libido of Player > 100, now Libido of Player is 100;
 	now Unidentified sex scene is resolved;
 
 
@@ -115,7 +115,7 @@ The sarea of Tasty Treats is "Zoo".
 
 Instead of Resolving a Tasty Treats:
 	say "     Wandering along the zoo pathways, you come across a zoo candy cart, stuffed full with plenty of still-wrapped treats and snacks. After checking around to make sure it is safe, you take a short break to help yourself to several different delicious snacks before moving on your way, feeling happy and full.";
-	now hunger of player is 0;
+	now hunger of Player is 0;
 	now Tasty Treats is resolved;
 
 
@@ -165,7 +165,7 @@ The sarea of Instructional video is "Zoo".
 
 Instead of Resolving a Instructional video:
 	say "     Coming across one of the zoo buildings in your wanderings, you try taking a look inside and find a small, open, class-like area with several desks set up and a projector hooked up to a VCR. Taking a closer look at the VCR, you notice that it's labelled [']Animal Handling Training[']. Feeling curious, you push play and settle down to watch a bit. Soon you are caught up in all the tips and tricks the training tape teaches to aspiring zookeepers on how to handle the animals and deal with any trouble. By the time the tape clicks off an hour later, you find yourself feeling much more confident about your ability to deal with any animals or beasts that you might come across.";
-	increase XP of player by 30;
+	increase XP of Player by 30;
 	now Instructional video is resolved;
 
 
@@ -183,16 +183,16 @@ Instead of Resolving a Vet supplies:
 	if isHellhound is true:
 		say "     But before you can even come to any sort of decision, you feel the burning pain of hellfire within you. Your hellhound tainted body clearly will not allow you to use such measures to potentially alter your pact with the fel beast.";
 		now Vet supplies is resolved;
-	else if player consents:
+	else if Player consents:
 		say "     Deciding to try your luck with the animal drugs, you sort them out until you have male and female hormone shots and treatments fully laid out, as well as having figured out just how to apply them properly. Now that leaves you with just one last decision... which shots do you want to take? Female (1), male (2), both (3) or change your mind and take none (0)?";
 		now calcnumber is -1;
 		while calcnumber < 0 or calcnumber > 3:
 			say "Choice? (0-3)>[run paragraph on]";
 			get a number;
 		if calcnumber > 0 and calcnumber < 4:		[***not aborted - temporary fix***]
-			remove "Single Sexed" from feats of player, if present;
-			remove "Always Cocky" from feats of player, if present;
-			remove "Always A Pussy" from feats of player, if present;
+			remove "Single Sexed" from feats of Player, if present;
+			remove "Always Cocky" from feats of Player, if present;
+			remove "Always A Pussy" from feats of Player, if present;
 			now gsgl is 0;  [gender lock variable nulled to remove no-lock bonus]
 		if calcnumber is 1:
 			say "[vetsup_fshots]";
@@ -209,61 +209,61 @@ Instead of Resolving a Vet supplies:
 
 to say vetsup_fshots:
 	say "     Examining the female shots you have laid out before you, you decide to discard the male shots, and slowly begin the process of injecting yourself with the female chemicals, your skin seeming to twitch as each animal based injection enters your body, and your head seeming to swim as a surge of estrogen rushes through your body, altering your perspective on things...";
-	if "Female Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of Player:
 		say "     While the chemicals running through your body rushes to your head, you groan as your instincts surge and makes you feel even more bestial than ever, you seem to feel as if your body could not truly be even more female oriented, and all the shots seem to do is make you feel more animalistic and feral than ever.";
-		decrease humanity of player by 40;
-	else if "Male Preferred" is listed in feats of player:
+		decrease humanity of Player by 40;
+	else if "Male Preferred" is listed in feats of Player:
 		say "     You can feel the female hormones running through your body as they counter your strong male orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into females to suit their pleasure and bear their offspring again...";
-		remove "Male Preferred" from feats of player;
-		decrease HP of player by 30;
-	else if "Herm Preferred" is listed in feats of player:
+		remove "Male Preferred" from feats of Player;
+		decrease HP of Player by 30;
+	else if "Herm Preferred" is listed in feats of Player:
 		say "     You can feel the female hormones running through your body as they seek to over-balance your dual-natured bias. Your body is at war with itself painfully as the hormones shift your body towards a female-biased direction. Your body surges with the primal need to be bred and formerly divided instincts are focused towards this urge. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely female anymore!";
-		remove "Herm Preferred" from feats of player;
-		add "Female Preferred" to feats of player;
-		decrease HP of player by 20;
+		remove "Herm Preferred" from feats of Player;
+		add "Female Preferred" to feats of Player;
+		decrease HP of Player by 20;
 	else:
 		say "     You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
-		decrease humanity of player by 20;
-		add "Female Preferred" to feats of player;
+		decrease humanity of Player by 20;
+		add "Female Preferred" to feats of Player;
 
 to say vetsup_mshots:
 	say "     Discarding the female shots, you focus your attention on the male treatments you have laid out, and slowly begin the process of injecting yourself with the chemicals, your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone rushing through your body.";
-	if "Male Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of Player:
 		say "     While the testosterone running through your body rushes to your head, and makes you feel even more bestial than ever, you seem to feel as if your body could not truly be even more male oriented, and all the shots seem to do is make you feel more animalistic than ever.";
-		decrease humanity of player by 40;
-	else if "Female Preferred" is listed in feats of player:
+		decrease humanity of Player by 40;
+	else if "Female Preferred" is listed in feats of Player:
 		say "     You can feel the Male hormones running through your body as they counter your strong female orientation, your body at war with itself painfully as the hormones bringing your body back into proper equilibrium. Now you are afraid the beasts can change you into males to suit their pleasure again...";
-		Remove "Female Preferred" from feats of player;
-		decrease HP of player by 30;
-	else if "Herm Preferred" is listed in feats of player:
+		Remove "Female Preferred" from feats of Player;
+		decrease HP of Player by 30;
+	else if "Herm Preferred" is listed in feats of Player:
 		say "     You can feel the male hormones running through your body as they seek to over-balance your dual-natured bias. Your body is at war with itself painfully as the hormones shift your body towards a male-biased direction. Your body surges with the primal need to breed and formerly divided instincts are focused towards this urge. You feel a rush of aggressive, male urges as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming anything but purely male anymore!";
-		remove "Herm Preferred" from feats of player;
-		add "Male Preferred" to feats of player;
-		decrease HP of player by 20;
+		remove "Herm Preferred" from feats of Player;
+		add "Male Preferred" to feats of Player;
+		decrease HP of Player by 20;
 	else:
 		say "     You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendencies are enhanced and strengthened. You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a female anymore!";
-		decrease humanity of player by 20;
-		add "Male Preferred" to feats of player;
+		decrease humanity of Player by 20;
+		add "Male Preferred" to feats of Player;
 
 to say vetsup_hshots:
 	say "     Taking an assortment from both sets of treatments you have laid out, you slowly begin the process of injecting yourself with the chemicals. Your skin seeming to twitch with each animal based injection, and your head seeming to swirl with a roar of bestial testosterone and estrogen rushing through your body.";
-	if "Male Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of Player:
 		say "     While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges. You can feel the hormones running through your body as they seek to push your body out of male focus to some strange union of both. Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction. You have the urge to breed and be bred, both to sire and bear young. Your male-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
-		Remove "Male Preferred" from feats of player;
-		add "Herm Preferred" to feats of player;
-		decrease HP of player by 20;
-	else if "Female Preferred" is listed in feats of player:
+		Remove "Male Preferred" from feats of Player;
+		add "Herm Preferred" to feats of Player;
+		decrease HP of Player by 20;
+	else if "Female Preferred" is listed in feats of Player:
 		say "     While the medley of bestial hormones running through your body rushes to your head, it seems as if your body is infused with wild, lustful urges. You can feel the hormones running through your body as they seek to push your body out of female focus to some strange union of both. Your body is at war with itself painfully as the hormones shift your body towards this dual-biased direction. You have the urge to breed and be bred, both to sire and bear young. Your female-focused body alters and changes, becoming capable of achieving both of these lustful goals.";
-		Remove "Female Preferred" from feats of player;
-		add "Herm Preferred" to feats of player;
-		decrease HP of player by 20;
-	else if "Herm Preferred" is listed in feats of player:
+		Remove "Female Preferred" from feats of Player;
+		add "Herm Preferred" to feats of Player;
+		decrease HP of Player by 20;
+	else if "Herm Preferred" is listed in feats of Player:
 		say "     While the medley of hormones running through your body rushes to your head, and makes you feel even more bestial and lustful than ever, it seems as if your body is already as focused on having a dual-gendered nature as it can be. All the shots seem to do is make you feel more animalistic than ever.";
-		decrease humanity of player by 40;
+		decrease humanity of Player by 40;
 	else:
 		say "     You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendencies are enhanced and strengthened. You feel both eager to breed and be bred as the chemicals react with and alter your body. These changes shift you towards a dual-biased direction. You feel very sure that you will be able to maintain a state of both male and female at once!";
-		decrease humanity of player by 20;
-		add "Herm Preferred" to feats of player;
+		decrease humanity of Player by 20;
+		add "Herm Preferred" to feats of Player;
 
 
 
@@ -281,9 +281,9 @@ when play begins:
 
 Instead of Resolving a Feeding time:
 	say "     Traveling through the twisting paths of the zoo, you come across a rather strange sight. Someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around, you can't see any reason for someone to have done so, and the food and water could be pretty useful. Still, it is rather suspicious. Do you try to take it?";
-	if player consents:
+	if Player consents:
 		say "     You can't resist the temptation to snag some fresh supplies and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
-		decrease HP of player by 15;
+		decrease HP of Player by 15;
 		challenge "Tigertaur";
 		if lost is 0:
 			say "     Grinning at the silly beast that thought it could beat you, you quickly pocket the food and water it so graciously left here for you, and whistling continue on your way, keeping your eye out for other traps like this one... after all you could use the supplies.";
@@ -316,8 +316,8 @@ when play begins:
 
 Instead of Resolving a Security Station:
 	say "     Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop. Moving into the small security area, you note that it smells like bestial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can't stay in here for long without becoming even more aroused than usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over. Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you... Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
-	now libido of player is 100;
-	decrease humanity of player by 10;
+	now Libido of Player is 100;
+	decrease humanity of Player by 10;
 	now Security Station is resolved;
 
 
@@ -400,8 +400,8 @@ when play begins:
 Instead of Resolving a Lazy River:
 	say "     Traveling through the zoo area, you spot something odd in the hippo enclosure. Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsack. Floating lazily along, he pumps and strokes his throbbing shaft. You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.";
 	say "     You are shaken out of your fantasy when the large beast man roars out in orgasm, painting his belly and filling the nearby water with sticky white seed. Afterwards, he flops around in the water, looking relaxed and content as he bobs along. You shake your head clear and slip away quietly before something notices you, feeling quite aroused by the whole voyeuristic experience.";
-	increase libido of player by 30;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 30;
+	if Libido of Player > 100, now Libido of Player is 100;
 	now Lazy River is resolved;
 
 

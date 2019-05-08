@@ -14,19 +14,19 @@ to say LolaDesc:
 instead of conversing the Lola:
 	if HP of Lola is 0: [first time]
 		say "     As you approach the bunny girl's desk, she acknowledges your presence with a businesslike smile and says, 'Just a second,' before she finishes typing a sentence or two in the document she has open. Saving it and locking her workstation with a practiced move of her slender fingers, she stands up and points the way at one of the glass-walled side rooms. 'Why don't we have our chat in there, [sir].' You allow yourself to be led into the small meeting room, where Lola closes the glass door to give you some privacy. ";
-		if libido of Melanie is 1: [player groped during the introduction]
+		if Libido of Melanie is 1: [player groped during the introduction]
 			say "She ignores the table and chairs in the little room, instead just looking at you with a somewhat confrontational expression on her face and crossing her arms. 'While we're talking in private here, let me make some things clear: You're not my boss. I don't work for you. What I am is the key account manager dealing with Mr. Branson's most important clients.'";
 			say "     Lola lets her words sink in for a second, her face never wavering from the uncompromising expression she is giving you. Her stony gaze makes additional words of explanation unnecessary, as you can easily guess that making any unrequited moves on her wouldn't end well for you. 'I'm glad we understand each other,' she states with a smile that would have been at home with a proud lioness. Casually waving at the desk next to her own where the pretty Labrador girl of the team is sitting, Lola adds in a business-like tone, 'But of course, as a business partner of Mr. Branson, you will be treated as a welcome guest here. My assistant Elise will take care of your needs, whatever they may be. She's a good girl - it's in her nature.' It isn't hard to recognize the air of superiority in her tone as Lola says this. Seems like she doesn't have too high an opinion of Elise's intelligence.";
 			WaitLineBreak;
 			say "     After waiting a few seconds, Lola turns her head to direct your attention to the other desks more toward the front of the room, occupied by a regal tigress and the second bunny girl of the bunch. The anthro woman explains, 'Bella is a junior manager. She can make her own arrangements with you. As for her assistant - Layla, my little sister - she'll spread her legs at the drop of a hat for anyone. She's always been that way.' Sighing about the low standards of her twin, Lola calmly adds, 'But she's family, you know. I'll gut you if you hurt her, so you'd best control any violent impulses you may have.' The matter of fact way she says those words creates the impression that this bunny girl is definitely ready to make good on her threat despite her delicate build.";
 			say "     'Glad we had this talk. Have a nice day in our office,' your conversation partner adds, and her practiced smile returns effortlessly as she turns and opens the door. Without waiting for a reaction, she walks back over to her desk and takes a seat.";
-		else if libido of Melanie is 2: [player was business-like during introduction]
+		else if Libido of Melanie is 2: [player was business-like during introduction]
 			say "She and you take a seat at the table in the little room, with the white-furred anthro leaning back a little in her chair. The move pushes out her breasts just a little bit and gives her an air of confident security, as you are on Lola's turf here. 'While we're talking in private, let me make some things clear: While you are a business partner for Mr. Branson, and a new, junior partner at that, I still am the key account manager dealing with his most important clients. I'm sure we won't have any problems as long as you remember this.'";
 			say "     Lola lets her words sink in for a second, her face friendly in a professional way that does little to mask her rock-solid will. 'I'm glad we understand each other,' she states with a smile that would have been at home with a proud lioness. Casually waving towards the desk next to her own where the pretty Labrador girl of the team is sitting, Lola adds in a business-like tone, 'But of course, as a business partner of Mr. Branson, you will be treated as a welcome guest here. My assistant Elise will take care of your needs, whatever they may be. She's a good girl - it's in her nature.' It isn't hard to recognize the air of superiority in her tone as Lola says this. Seems like she doesn't have too high an opinion of Elise's intelligence.";
 			WaitLineBreak;
 			say "     After waiting a few seconds, Lola turns her head to direct your attention to the other desks more toward the front of the room, occupied by a regal tigress and the second bunny girl of the bunch. The anthro woman explains, 'Bella is a junior manager, she can make her own arrangements with you. As for her assistant Layla, who is also my little sister...' Lola stops for a second and lets out a short sigh. 'I won't mince words. She's a slut, but that doesn't mean she isn't my family. Do not hurt her, or we'll have some words.' The calm way she says that makes you guess that it'll be more than just words she has for you in that case, and despite her delicate build as a slender and not too tall female, you're fairly certain that she could make quite an impact if antagonized.";
 			say "     'Glad we had this talk. Have a nice day in our office,' your conversation partner adds, and her practiced smile returns effortlessly as she stands up and gives you a respectful nod. Without waiting for a reaction, she walks out of the room and goes back to her desk.";
-		else if libido of Melanie is 3: [player was friendly during introduction]
+		else if Libido of Melanie is 3: [player was friendly during introduction]
 			say "She and you take a seat at the table in the little room, with the white-furred anthro leaning back a little in her chair. The move pushes out her breasts just a little bit and gives her an air of confident security, as you are on Lola's turf here. 'You do seem like a nice enough person, but let me make one thing clear: I am the key account manager dealing with Mr. Branson's most important clients. As long as you remember that, I'm sure we won't have any problems.'";
 			say "     Lola lets her words sink in for a second, her face friendly but still showing some of her underlying, rock-solid will. She holds you in her gaze long enough to ensure you know that she's a person to be reckoned with, then relaxes in a slight but still noticeable way. 'Anyways, glad to have you on the team. The fact that you turned on the power and got us that data really moved Mr. B's plans ahead. And another friendly face in here is great, especially with so many beasts and assholes roaming the streets these days.' Something else fills Lola's eyes for a second, and you can't help but feel like you're being evaluated as a potential mate by not a bunny, but a proud lioness. Seems like you didn't rate too badly, as she shows a slight, somewhat calculating smile before letting her gaze wander towards the desks in the office.";
 			WaitLineBreak;
@@ -65,7 +65,7 @@ to say LolaSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Mr. Branson"):
@@ -119,7 +119,7 @@ to say LolaSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Eat her out"):

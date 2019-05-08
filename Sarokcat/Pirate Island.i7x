@@ -72,7 +72,7 @@ carry out treasurehunt:
 				else:
 					say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
 					say "Your XP has increased!";
-					increase XP of player by 50;
+					increase XP of Player by 50;
 					now treasurefound is 1;
 					stop the action;
 			else:
@@ -88,11 +88,11 @@ carry out treasurehunt:
 				if T is 3:
 					say "     Walking through the caves, you find yourself starting to jog a bit, and then a bit more, as you move along the long cave, always following the left passage when it appears in an attempt to solve the maze of passages within. After some time you begin to tire, but there is no end to the cave in sight, as you move in the dim light you realize your surrounding seem increasingly familiar even as you continue to jog along. Finally in frustration you take a right turn instead of a left turn, and almost immediately shoot back out onto the beach from the cave you entered from, with an embarrassed glance behind you, you realize the left part of that cave looped in a large circle, and you have been running around it for hours. You sigh as you plop down on the beach to rest for a minute, still you do feel slightly more dexterous from all that jogging you find yourself thinking, as you let the waves lap at your body.[line break]";
 					say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-					increase dexterity of player by 1;
+					increase dexterity of Player by 1;
 					stop the action;
 				If T is 4:
 					say "     Traveling along the dim caves, you can see small bits of light filter through from holes far above you in the cave walls, leaving you barely enough light to see as you slowly feel your way forward. The cave stretches on endlessly before you as you hunt for the treasure you know is in here somewhere, eventually you grow slightly careless as you move forward, and your foot comes down on empty air as you tumble forward into a natural pit in the rock. You lie there for a minute, cursing at the dark hole as your body aches with pain. Slowly you climb back out of the pit, and in too much pain to continue, you carefully make your way back to the entrance, the treasure still safe in its caves, for now...";
-					decrease HP of player by 20;
+					decrease HP of Player by 20;
 					stop the action;
 				if T is 5:
 					say "     Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
@@ -101,7 +101,7 @@ carry out treasurehunt:
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
-							add loot entry to invent of player;
+							add loot entry to invent of Player;
 							say "[bold type]You acquired 1 dirty water![roman type][line break]";
 							increase carried of dirty water by 1;
 						else:
@@ -120,7 +120,7 @@ carry out treasurehunt:
 					else:
 						say "     Having driven back the sea dragon for now, you investigate the small pool where you saw the glint earlier. Looking down into the small pool, you see what appears to be an empty chest, someone else got to the treasure before you did! You sigh despondently, before realizing that an empty chest doesn't glint, looking around for the thing that made the glint, you spot a small handful of gold coins scattered around the bottom of the pool, and excited you quickly dive in and gather them all up. Heading out of the cave with your new bit of treasure, you realize that you may not have found a large pirates hoard, but just staring at the gold coins you did find makes you grin and feel better about your adventure, and the great experience you had finding it, and a bit of gold sure won't hurt once you get back to civilization either![line break]";
 						say "[bold type]Your gain 50 XP![roman type][line break]";
-						increase XP of player by 50;
+						increase XP of Player by 50;
 						now treasurefound is 1;
 						stop the action;
 				if T is 7:
@@ -133,7 +133,7 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of player;
+							add loot entry to invent of Player;
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
 							say "You acquired some dirty water!";
@@ -147,7 +147,7 @@ carry out treasurehunt:
 					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
-							add loot entry to invent of player;
+							add loot entry to invent of Player;
 							say "You acquired 1 [loot entry].";
 							increase carried of dirty water by 1;
 							say "You acquired some dirty water!";
@@ -160,14 +160,14 @@ carry out treasurehunt:
 					stop the action;
 				if T is 8:
 					say "     Hunting through the dark and dreary caves, you begin to wonder if you will ever find the treasure that is supposedly to be hidden in this place, sighing you continue your long journey through the caves, only to come across a cave exit that leads to a secluded pool on the interior of the island. Looking around you realize this place is absolutely beautiful, and seems to speak to something deep down inside you. Deciding not to worry about treasure for a time, you spend some time basking in the beautiful light as you watch it shine off the pool, and drinking your fill of the gloriously clear water. Eventually you get back up to leave, feeling much happier after your visit to the nice pool.";
-					now thirst of player is 0;
-					increase humanity of player by 15;
+					now thirst of Player is 0;
+					increase humanity of Player by 15;
 					stop the action;
 				if T is 9:
 					say "     Wandering through the caves of the island, you hear a strange, rhythmic noise coming from one of the caverns up ahead. Do you want to investigate?";
-					if player consents:
+					if Player consents:
 						say "     Moving ahead, you find yourself in a large open beach cave, a strangely pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if player is female or girl is banned:
+						if Player is female or girl is banned:
 							infect "Feral Sea Dragon";
 							infect "Feral Sea Dragon";
 						else:
@@ -201,7 +201,7 @@ tmapfound is a number that varies.
 
 Instead of resolving a Noteinbottle:
 	say "     Walking along the beach and enjoying the view of the surf, you notice something bobbing on the waves just out of reach of shore. Do you dive in to try to get it?";
-	if player consents:
+	if Player consents:
 		now fightoutcome is 100;
 		fight;
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -222,7 +222,7 @@ Instead of resolving a Noteinbottle:
 
 [ - moved into Rod's dialog set
 Instead of conversing Rod Mallrat while tmapfound is 1:
-	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < 7]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
+	say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of Player < 7]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
 	increase tmapfound by 1;
 ]
 

@@ -32,26 +32,26 @@ sblzephyr is a truth state that varies. sblzephyr is usually false.
 
 to say zephyrlobbydesc:
 	say "     This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with bright, fluorescent lights shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter.";
-	if sblzephyr is false and bodyname of player is "Skunkbeast Lord" and player is pure:
+	if sblzephyr is false and bodyname of Player is "Skunkbeast Lord" and player is pure:
 		WaitLineBreak;
 		if HP of Larissa is 0:		[not familiar w/Larissa]
 			say "     There is a soft chime as you enter the branch office, causing the woman behind the counter to glance up at you sharply. Her eyes then dart quickly between watching you, her terminal and some lights on her desk. She does her best to compose herself and presses a few buttons to stop the lights. You notice that the place's discreet guards are no longer quite so discreet, having moved up beside your large, mephit form even as another pair enter from the back.";
-			say "     'Please be calm, [if player is female]ma'am[else]sir[end if],' the woman says in a cheerfully rehearsed tone. 'This is purely routine. Please go with these gentlemen for a complementary examination.' From the way the guards are resting their hands on their holsters, it's clear this complementary examination isn't going to be a voluntary one. Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room. The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
+			say "     'Please be calm, [if Player is female]ma'am[else]sir[end if],' the woman says in a cheerfully rehearsed tone. 'This is purely routine. Please go with these gentlemen for a complementary examination.' From the way the guards are resting their hands on their holsters, it's clear this complementary examination isn't going to be a voluntary one. Deciding to go along with this, at least for the moment, you allow yourself to be escorted into a small, vaguely medical room. The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
 			WaitLineBreak;
 			say "     The four guards outside the door talk nervously in hushed tones, stopping only once an examiner arrives. He's clearly a little uneasy and insists on having one of the guards inside the increasingly cramped room with you. You're quickly checked over, photographed and analyzed by some unfamiliar scanners. The doctor, technician or whatever he is never gives his name and steadfastly refuses to explain anything or even talk to you beyond asking you to move from time to time. Finally, a blood sample is taken before you're escorted back into the lobby by the edgy guards.";
-			say "     Approaching the front desk, you ask the woman there what that was all about. 'Oh... Ah... I'm sorry about that. It was just a routine examination. Nothi-' She cuts herself off as you give her a stern look, your imposing form looming large over the counter. 'Okay, I'll level with you. When you came in, you'd set off an outstanding notification and triggered an automated alert. It seems HQ'd sent out a team to... investigate a creature similar to your current infection, but they didn't make it back. But don't worry about it. You seem [if humanity of player > 66]pretty[else if humanity of player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.'";
+			say "     Approaching the front desk, you ask the woman there what that was all about. 'Oh... Ah... I'm sorry about that. It was just a routine examination. Nothi-' She cuts herself off as you give her a stern look, your imposing form looming large over the counter. 'Okay, I'll level with you. When you came in, you'd set off an outstanding notification and triggered an automated alert. It seems HQ'd sent out a team to... investigate a creature similar to your current infection, but they didn't make it back. But don't worry about it. You seem [if humanity of Player > 66]pretty[else if humanity of Player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings.'";
 		else:
 			say "     There is a soft chime as you enter the branch office, startling Larissa from her crossword puzzle. Her eyes dart quickly to the terminal and some flashing lights on her desk. She quickly presses a few buttons to stop the lights even as she waves her arm to stop the two guards discreetly approaching you. Another pair enter the lobby from the back and she tells them to stand down and wait. They remain on edge, watching you from the doorway while she talks with someone over her headset. Partway through the call, she puts them on hold to address you.";
 			say "     'We're going to need you to go into the back for a routine examination,' she says in a cheerfully rehearsed tone while motioning for you to come up. 'It shouldn't take too long and there's nothing to worry about. I'll fill you in after,' she adds in a hushed tone. Knowing you'll just have to trust her on this, you allow yourself to be escorted by one of the guards into a small, vaguely medical room. The room is rather cramped given your [if skrp is 1]tauric [end if]Skunkbeast form.";
 			WaitLineBreak;
 			say "     The guard, having gotten some reassurance from Larissa, is fairly relaxed if stoically quiet. The examiner, on the other hand, is clearly a little uneasy and insists on having the guard inside the increasingly cramped room with you. You're quickly checked over, photographed and analyzed by some unfamiliar scanners. The doctor, technician or whatever he is never gives his name and steadfastly refuses to explain anything or even talk to you beyond asking you to move from time to time. Finally, a blood sample is taken before you're escorted back into the lobby by the guard.";
-			say "     Approaching the front desk, you lean in to chat with Larissa. 'I'm sorry about all that. The system had an outstanding notification about a creature like you, so you'd set off an automated alert. It seems HQ'd sent out a team to [']investigate[']' she says, making the air-quotes, 'the beast, but they didn't make it back. But you shouldn't worry about it... You seem [if humanity of player > 66]pretty[else if humanity of player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings. I can't really tell you much more. Seems it's all classified stuff above my pay bracket. Still, if they let you go after, it'll probably be alright,' she teases cheerfully.";
+			say "     Approaching the front desk, you lean in to chat with Larissa. 'I'm sorry about all that. The system had an outstanding notification about a creature like you, so you'd set off an automated alert. It seems HQ'd sent out a team to [']investigate[']' she says, making the air-quotes, 'the beast, but they didn't make it back. But you shouldn't worry about it... You seem [if humanity of Player > 66]pretty[else if humanity of Player > 33]fairly[else]somewhat[end if] stable and the data from the examination didn't bring up any major warnings. I can't really tell you much more. Seems it's all classified stuff above my pay bracket. Still, if they let you go after, it'll probably be alright,' she teases cheerfully.";
 			WaitLineBreak;
 			say "     Taking another glance around the room, she motions for you to lean in a little closer. 'How'd you come by an infection so high up on our alert status?' Do you tell her what happened?";
-			if player consents:
+			if Player consents:
 				say "     You tell her how you'd stumbled across the battle between Zephyr and the previous Skunkbeast Lord. You gloss over some of the details while enhancing the epicness of your struggle with the monstrous mephit. Leaving out the orgiastic nature of your transformation process, you do reassure her that the previous Lord was deposed.";
 				say "     So you're in charge of those skunks in the forest now?' she asks with more than casual curiosity in her tone. Remembering who she works for and how they reacted to you even having the infection, you decide it probably wouldn't be healthy to let that be known. 'No, no,' you say with a dismissive wave. 'The skunks leave me alone, but that's about it. There's plenty more of the skunkbeast ones around, so one of them has probably taken over or something.' She seems to buy it and asks you for a few more details before saying she has to get back to work. While you're browsing in the lobby, she seems calm enough as she types away. From the way she glances over on occasion, a paranoid corner of your mind does suspect she's filing some report about what you've just told her.";
-				decrease morale of player by 3;
+				decrease morale of Player by 3;
 			else:
 				say "     Given what you'd just gone through, you decide to play it safe. You tell her you'd picked it up from a mess you'd ended up stepping in (which is true enough, after a fashion). She nods and comments that she hears about that sort of thing happening often. She does end up asking you when and where this happened, what it looked like and so on. She tries to seem casual about her questioning, but you can tell she's fishing for details. You make some generic answers, suspecting they'll all end up in some report. And sure enough, as soon as your chat's done, she's busily typing away at her computer.";
 		now sblzephyr is true;
@@ -82,7 +82,7 @@ Carry out vialselling:
 	let found be 0;
 	let z be 1;
 	let q be a topic;
-	repeat with x running through vials of player:
+	repeat with x running through vials of Player:
 		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
@@ -101,23 +101,23 @@ Carry out vialselling:
 				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
 				continue the action;
 	[locates target within the Table of Random Critters]
-	now monster is 0;
+	now MonsterID is 0;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is target:
-			now monster is y;
+		if Name entry is target:
+			now MonsterID is y;
 			break;
-	if monster is 0:
+	if MonsterID is 0:
 		say ", but she shakes her head. 'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
 		continue the action;
-	choose row monster in Table of Random Critters;
+	choose row MonsterID in Table of Random Critters;
 	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;
 	else if found > 1:
 		now basevalue is ( basevalue / ( found + 1 ) );
 	if basevalue < 1:
-		say ", but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [name entry] creatures. Try hunting for bigger game.'";
+		say ", but she shakes her head. 'We have met our quota for that sample and have no more interest in nanites from [Name entry] creatures. Try hunting for bigger game.'";
 		continue the action;
 	if found is 0:
 		say " and she smiles, taking it from you. 'We were hoping to get one of these samples for our bureau's collection.' She credits you for [special-style-1][basevalue][roman type] freecred.";
@@ -126,8 +126,8 @@ Carry out vialselling:
 	else if found >= 2:
 		say " and she nods, taking it from you. 'We have a few of these already, so I can't pay you as much for more.' She only credits you with [special-style-1][basevalue][roman type] freecred for it.";
 	increase freecred by basevalue;
-	remove entry z from vials of player;
-	add name entry to vials of Larissa;
+	remove entry z from vials of Player;
+	add Name entry to vials of Larissa;
 
 
 Section 4 - Purchasing from Zephyr
@@ -144,7 +144,7 @@ to say price list:
 		if rule failed:
 			next;
 		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[name entry] - [price entry] Creds";
+		say "[Name entry] - [price entry] Creds";
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -172,7 +172,7 @@ name	price	object	allowed
 "pepperspray"	320	pepperspray	pepper rule
 "water bottle"	100	water bottle	true rule
 
-nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if player bought a nanite collector]
+nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if Player bought a nanite collector]
 pepped is a number that varies. pepped is usually 0.	[marks how many pepperspray a player's bought]
 
 This is the true rule:
@@ -184,7 +184,7 @@ This is the noresearch rule:
 	rule succeeds;
 
 This is the pepper rule:
-	if ( level of player / 4 ) < pepped:
+	if ( level of Player / 4 ) < pepped:
 		rule fails;
 	rule succeeds;
 
@@ -272,14 +272,14 @@ Instead of resolving a Beach Detector Site:
 			now Resolution of Beach Detector Site is 2; [detector not placed yet, lost fight]
 		else:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
-			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
+			let bonus be ( dexterity of Player + strength of Player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
 			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:
 				say "You manage to make it partway to the top on your first attempt, but slip as a large wave crashes against the spire and sends chilling water slamming against you. You are bashed against the stone pillar and sent tumbling back down into the water. You are scratched and bruised when you finally make it to the top on your second attempt.";
-				decrease HP of player by 20;
+				decrease HP of Player by 20;
 			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire. Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place. Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr. Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
 			now Resolution of Beach Detector Site is 1; [detector placed]
@@ -303,8 +303,8 @@ Instead of resolving a Red Light Detector Site:
 	else:
 		say ". There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out. Going in from the front is simply out of the question.";
 		say "     It takes some effort to work your way around to the back of the building, this area much denser in creature activity, probably due to the highly sexual nature of the place, but you eventually find a way around back and scale the fire escape. On your way up, you spy several ongoing orgies inside the building, including one group which seems to be on display for the others, though there is little difference between the audience and the show save for the audience members paying a little more attention to the show than the other way around. You find yourself briefly captivated by the display, watching [one of]a male lizard plowing into a smaller dog girl[or]twin cats sucking on a wolf's cock[or]a female hyena sandwiched between a cheetah stuffing her ass and a horse filling her cunt, their combined seed bloating her belly[or]a small, male tiger getting buggered by a tigress herm[or]a chimp in a suit getting sucked off by a bear[at random] and growing quite aroused. You feel a strong compulsion to open the window and join them, which you have to struggle to fight down.";
-		increase libido of player by 15;
-		decrease humanity of player by 5;
+		increase Libido of Player by 15;
+		decrease humanity of Player by 5;
 		WaitLineBreak;
 		say "     Reaching the building's roof, you find that you are not alone. There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below. You try to slip around her quietly, but her eyes lock on you and she grins.";
 		challenge "Hermaphrodite Latex Vixen";
@@ -357,9 +357,9 @@ Instead of resolving a High Rise Detector Site:
 			now Resolution of High Rise Detector Site is 2; [detector not placed, lost fight]
 		else:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there. It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building. The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
-			increase thirst of player by 12;
-			increase hunger of player by 6;
-			decrease HP of player by ( HP of player divided by 6 );
+			increase thirst of Player by 12;
+			increase hunger of Player by 6;
+			decrease HP of Player by ( HP of Player divided by 6 );
 			say "     Heading over to the central spire, you place the black box against a flat spot and turn it on. There is a whirr as the screws drill into the smooth stone and secure the detector in place. You are about to congratulate yourself on a job well done when you hear the shifting of stone nearby. Looking around, you notice that one of the decorative gargoyles lining the building's edge doesn't match the others and has begun to move. Aroused from its nap by the sound of the device locking itself into place, the huge creature takes to the air and swoops around, coming in to attack you.";
 			challenge "Gargoyle";
 			say "     Your battle the with creature completed, you stagger back down to the street level, sore, tired and exhausted, but one step of this job completed at least.";
@@ -408,10 +408,10 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 	say "     Once at the top, it takes a few knocks to get the warped hatch to the bell chamber open. You can't help to snag a final peek under the red panda's robe before you both enter the top of the tower, noting that his cock's begun to poke free of its sheath. The bell chamber is dusty and the bell system is in disrepair, clearly having fallen out of use even before the outbreak. Peter explains that the church was unable to pay to maintain the bells for the last few years, so no one ever comes up here and that your device should be safe enough. Opening one of the outer windows, you place the black box on the wooden ledge with the Zephyr logo turned to the wall to further hide it and turn it on. After a brief pause, there is a whirring sound as the screw bolts dig into the wood, locking it firmly into place.";
 	WaitLineBreak;
 	say "     With that chore done, you pause for a moment, wondering if you want to thank Peter in a more personal way for his help. Shall you try to sex up the red panda?";
-	if player consents:
+	if Player consents:
 		setmonster "Red Panda";
 		say "     As he moves to head back down the hatch, you move in close to the red panda and slide your arms around his waist, running your hands over his tummy and down to his groin. You whisper in his ear that you'd like to really thank him for all his help. He moans softly and mumbles something about not giving into baser urges, so you slip up the front of his robe and fondle his sheath directly, pleased to see that his cock's slipped further from it. You tell him that you think he's very cute and that you only want to show how much you appreciate his help, all while sliding your fingertips across his stiffening member. He releases a soft [']wah['] of pleasure and pulls his robe up further, blushing redder under his fur.";
-		if player is female:
+		if Player is female:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
 			say "     Eager to get that cock inside you, you guide him to lay back on the dusty floor and climb atop him. His paws run over your body as you hold his penis in position and sink your pussy down around it. The red panda releases a wah of pleasure as your cunt envelops his maleness and you start riding up and down it. Despite his small stature, he's got an impressive eight inch cock that pulses and throbs inside of you as you fuck. His nimble paws caress your breasts and tease your nipples as the russet furred fellow squirms in delight beneath you. You moan in pleasure as he releases another, louder wah and cums hard, blasting his thick seed into your pussy and up into your womb.[impregchance]";
@@ -419,9 +419,9 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";
 				now skinname of child is "Red Panda";
-		else if player is male and scalevalue of player > 1:
-			say "     Being [if scalevalue of player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and slowly sink into him[if cock length of player > 16]. He slaps both paws over his muzzle to muffle a long, pleasured wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if cock length of player > 8]. He slaps a paw over his muzzle to muffle a pleasured wah as you slowly push your large meat into him, stuffing the little fellow full[else], the red panda releasing another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor while you fuck him. You pound his gripping ass until you can't hold back any longer and blast your [cum load size of player] load into his depths, your release driving him to a shuddering orgasm that stains the ground with his seed.";
-		else if player is male and scalevalue of player is 1:
+		else if Player is male and scalevalue of Player > 1:
+			say "     Being [if scalevalue of Player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and slowly sink into him[if Cock Length of Player > 16]. He slaps both paws over his muzzle to muffle a long, pleasured wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if Cock Length of Player > 8]. He slaps a paw over his muzzle to muffle a pleasured wah as you slowly push your large meat into him, stuffing the little fellow full[else], the red panda releasing another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor while you fuck him. You pound his gripping ass until you can't hold back any longer and blast your [Cum Load Size of Player] load into his depths, your release driving him to a shuddering orgasm that stains the ground with his seed.";
+		else if Player is male and scalevalue of Player is 1:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
 			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently, and he starts to thrust while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
@@ -471,7 +471,7 @@ It is not temporary.
 to say onelessndm:
 	repeat with y running from 1 to number of filled rows in table of game objects:
 		choose row y in table of game objects;
-		if name entry is "nanite density monitor":
+		if Name entry is "nanite density monitor":
 			decrease weight entry by 5;
 			break;
 	if weight entry > 0:

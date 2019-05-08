@@ -49,7 +49,7 @@ instead of resolving College Hopeful:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'll help him.";
 		say "     ([link]N[as]n[end link]) - Nah you don't have the time.";
-		if player consents:
+		if Player consents:
 			say "     You voice your answer to the otter who immediately hugs you tight, thanking you profusely. You just pat the male on the head and say it's alright before asking him when he wants to leave. 'Oh! I need to get prepared. A lot of my stuff is back in my little cove I have set up,' he murmurs before taking a look towards the cliffside of the beach. 'How about we meet up outside the beach whenever both of us are ready?' the otter says with a tilt of his head in your direction. You nod and say that's alright though you'll wish to get your escort's name first. Instantly the male blushes, clearly embarrassed for having forgotten to give you his name. 'W-well, my name is Wally,' he stutters out. You tell him it's nice to meet him and that you'll see him soon hopefully. 'Same here!' the otter shouts as he heads off towards the cliffside.";
 			now HP of Wally is 1;
 			now College Hopeful is resolved;
@@ -64,7 +64,7 @@ instead of resolving College Hopeful:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'll help him.";
 		say "     ([link]N[as]n[end link]) - Nah you don't have the time.";
-		if player consents:
+		if Player consents:
 			say "     Deciding that the conundrum that is this otter won't be solved unless you accept, you walk up to the guy who smiles when he sees you. 'Have you thought on my request at all?' he asks, causing you to nod your head in his direction. You voice your answer to the otter who immediately hugs you tight, thanking you profusely. You just pat the male on the head and say it's alright before asking him when he wants to leave. That promptly causes his eyes to widen before he gives you a rather quick answer.";
 			say "     'Oh! I need to get prepared. A lot of my stuff is back in my little cove I have set up,' he murmurs before taking a look towards the cliffside of the beach. 'How about we meet up outside the beach whenever both of us are ready?' the otter says with a tilt of his head in your direction. You nod and say that's alright though you'll wish to get your escort's name first. Instantly the male blushes, clearly embarrassed for having forgotten to give you his name. 'W-well, my name is Wally,' he stutters out. You tell him it's nice to meet him and that you'll see him soon hopefully. 'Same here!' the otter shouts as he heads off towards the cliffside.";
 			now HP of Wally is 1;
@@ -107,7 +107,7 @@ instead of resolving Otter Escort Mission while HP of Wally is 1:
 		say "     Your sex partner also lets out a grunt but for a different reason than you. He's clearly enjoying the vice grip that is your tight hole. As soon as he ends up balls deep in you the green-skinned male begins setting a pace, a rather rough one at that, practically jack-hammering into you. The sound of his balls slapping against your cheeks fill the area. Of course that's not the only thing as by now your assailant is leaking copious amounts of precum, the warm fluid filling your ass. The same thing that was happening to you before occurs again but much stronger, causing the sensations of the cock going in and out of you to turn into pleasure tenfold.";
 		say "     Seeing your groans turn into moans, the green-skinned male smirks and speaks up. 'I knew you would enjoy it,' he says, with a chuckle at the end. You can tell, quite blurrily in mind, that the enemy is getting close to his climax, which means you as well possibly if his actual cum has the same properties as his precum. A side thought comes up, wondering what the hell Wally is doing while you were being assaulted by this person. However, that stray idea was ripped away when the tusky male manages to thrust just right, causing you to gasp out loud in pleasure, screaming, 'Fuck!' Soon enough, though, you can feel his hard length grow a bit larger in you, signaling that he is about to cum.";
 		WaitLineBreak;
-		say "     With a loud grunt, the green-skinned male thrusts one last time before you feel a deluge of warm liquid flood your hole, filling you with an almost ecstatic, euphoric sensation. [if player is herm]With a groan, your body shudders, your cock spilling rope after rope of cum all over the enemy's chest. On the other hand your pussy has its climax as well, leaking copious amounts of femcum, causing it to mix with the sperm coming out of your hole. [else if player is male]You groan out loud, a shudder of pleasure going through you. As this happens ropes of cum shoot out of your cock, splattering all over the tusky enemy's chest. [else if player is female]Your body spasms as you are wracked with your orgasm, causing you to moan loudly. When this happens your pussy begins to leak large amounts of femcum, that of which mixes with the sperm the enemy had just unloaded into your hole. [else]Your eyes practically roll into the back of your head as you are wracked with amazing pleasurable sensations. You moan and groan out loud as practical pins and needles of excitement dance across your skin. [end if]As your slowly coming down from your high, you hear a painful yelp in front of you and suddenly you fall to the ground. Looking up you see Wally above you, giving you a concerned look and below him, the orc clearly unconscious. It appears that your friend landed a kick to the balls. The otter holds out a hand and helps you up, giving you whatever clothes you need to put them on. Once you've made yourself decent you turn to him and ask him if he still wants to continue.";
+		say "     With a loud grunt, the green-skinned male thrusts one last time before you feel a deluge of warm liquid flood your hole, filling you with an almost ecstatic, euphoric sensation. [if Player is herm]With a groan, your body shudders, your cock spilling rope after rope of cum all over the enemy's chest. On the other hand your pussy has its climax as well, leaking copious amounts of femcum, causing it to mix with the sperm coming out of your hole. [else if Player is male]You groan out loud, a shudder of pleasure going through you. As this happens ropes of cum shoot out of your cock, splattering all over the tusky enemy's chest. [else if Player is female]Your body spasms as you are wracked with your orgasm, causing you to moan loudly. When this happens your pussy begins to leak large amounts of femcum, that of which mixes with the sperm the enemy had just unloaded into your hole. [else]Your eyes practically roll into the back of your head as you are wracked with amazing pleasurable sensations. You moan and groan out loud as practical pins and needles of excitement dance across your skin. [end if]As your slowly coming down from your high, you hear a painful yelp in front of you and suddenly you fall to the ground. Looking up you see Wally above you, giving you a concerned look and below him, the orc clearly unconscious. It appears that your friend landed a kick to the balls. The otter holds out a hand and helps you up, giving you whatever clothes you need to put them on. Once you've made yourself decent you turn to him and ask him if he still wants to continue.";
 		say "     With a blush the otter nods rather eagerly. 'Y-yeah, you went through all that and still wish to help...' he says with a stutter. So with a groan you stretch your body and gather yourself. Wally wanders over to where he left his backpack and picks it up, putting it on his back. Once you both are all ready to go, you start making your way through the fire and brimstone area once more. On the way through your friend speaks to you. 'Are you alright?' he asks you with a tone of concern. You smile at him and say you're alright and for him not to worry at all. That manages to get him to smile in return, clearly happy at your response.";
 		WaitLineBreak;
 		if (PlayerMet of Hailey is true and PlayerMet of Marcus is true):
@@ -189,14 +189,14 @@ Wally is a man.
 [physical details as of game start]
 Humanity of Wally is 60. [lived at the beach]
 ScaleValue of Wally is 3. [human size]
-Cocks of Wally is 1. [has a cock]
+Cock Count of Wally is 1. [has a cock]
 Cock Length of Wally is 6. [has a 6 inch cock]
-Cock Width of Wally is 3. [size of balls]
-Testes of Wally is 2. [has a pair of balls]
-Cunts of Wally is 0. [no vagina]
+Ball Size of Wally is 3. [size of balls]
+Ball Count of Wally is 2. [has a pair of balls]
+Cunt Count of Wally is 0. [no vagina]
 Cunt Length of Wally is 0. [Doesn't have a vagina to get stretched]
-Cunt Width of Wally is 0. [Doesn't have a vagina to get stretched]
-Breasts of Wally is 2. [Has two normal nipples]
+Cunt Tightness of Wally is 0. [Doesn't have a vagina to get stretched]
+Nipple Count of Wally is 2. [Has two normal nipples]
 Breast Size of Wally is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 TwistedCapacity of Wally is false. [can not take oversized members without pain]
@@ -254,7 +254,7 @@ to say WallyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "His Reasons"):
@@ -297,7 +297,7 @@ to say WallySexMenu:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	if player is male:
+	if Player is male:
 		now title entry is "Seduce him";
 		now sortorder entry is 1;
 		now description entry is "Put your moves on him, his cock, and his hole";
@@ -314,7 +314,7 @@ to say WallySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Seduce him"):
@@ -336,7 +336,7 @@ to say WallySex1:
 	say "     As the two of you are making out, you position yourself at his hole, your tip resting at his pucker. Suddenly the otter freezes but expecting that you move from kissing him to nuzzling his neck, as a gesture to calm him down, practically inhaling the salty-sea and musk-filled scent that emanated from him. Your actions do the trick and Wally pulls you back into the kiss, much more calm and collected about being sexual with you for the moment. So, taking that as permission to go, you slowly push into him, the tip of your cock managing to pop in. You take your time, going inch by inch and making sure as to not rush it and hurt the otter.";
 	WaitLineBreak;
 	say "     Once you're fully in you let the otter get used to you for a few seconds. After he does you pull out a bit and then thrust back in, angling back in, trying to find his prostate. You manage to have some luck as Wally lets out a low moan, his own cock leaking precum. Smirking at seeing that your plan to have your friend enjoy it worked you pull him into another kiss, setting a slow pace moving in and out of his hole. Deciding to give him some more pleasure, you reach down and start to masturbate him, which ends up encouraging the otter into humping your hand rather eagerly. 'Fuck!' Wally mutters into the kiss, surprising you with his choice of words.";
-	say "     Deciding to speed up your guys['] fun, you start to thrust a little faster into his hole, practically jabbing at his prostate. By now your friend is leaking copious amounts of precum, coating the top of your hand with it. You yourself are getting close to your own climax if the building sensation in your lower half says anything, you don't think you have much less a minute before you spill. So, you make the most of it by thrusting hard and deep into Wally. [if player is a herm]Just like you predicted, a minute later you let out a moan and slam all the way in, letting your seed pour into the otter and at the same time your pussy is leaking femcum. The combined orgasms from your genitals causes your eyes to practically roll back into your head in euphoria. [else]Just like expected, about a minute later you moan loudly as you slam all the way in, your balls slapping against the otter as you spill your seed into your friend, filling him to the brim. [end if]As you cum so does Wally, his splattering all over the two of you as he pants, his eyes heavy with pleasure.";
+	say "     Deciding to speed up your guys['] fun, you start to thrust a little faster into his hole, practically jabbing at his prostate. By now your friend is leaking copious amounts of precum, coating the top of your hand with it. You yourself are getting close to your own climax if the building sensation in your lower half says anything, you don't think you have much less a minute before you spill. So, you make the most of it by thrusting hard and deep into Wally. [if Player is a herm]Just like you predicted, a minute later you let out a moan and slam all the way in, letting your seed pour into the otter and at the same time your pussy is leaking femcum. The combined orgasms from your genitals causes your eyes to practically roll back into your head in euphoria. [else]Just like expected, about a minute later you moan loudly as you slam all the way in, your balls slapping against the otter as you spill your seed into your friend, filling him to the brim. [end if]As you cum so does Wally, his splattering all over the two of you as he pants, his eyes heavy with pleasure.";
 	WaitLineBreak;
 	say "     Pulling back from the kiss you look at the otter as you two come down from the sexual high. [if WallyTrust < 2]The male gives you a slightly afraid look, as if you're about to leave. [end if]You smile at him and tug him down onto your chest as you fall onto the bed. [if WallyTrust < 2]He gives you a tentative smile at your gesture, clearly reassured by it. [end if]Following what you do, Wally then nuzzles his face into your chest and cuddles into you, ignoring the sticky cum that is in between the two of you. You take your hand and run it through his fur on his head, petting and rubbing there. A rumble runs through the otter's chest, signifying that he's clearly enjoying it, which prompts you to continue it. The two of you lay like this for a while, relishing in each other's presence until he gets up from his position, stretching. 'I should probably get back to work. Thanks for that,' he says with a soft smile at the end. You nod and return the facial expression before getting up and letting him return to work.";
 	now WallyTrust is 2;

@@ -150,13 +150,13 @@ Instead of resolving Urban Cliff:
 		now Urban Cliff is resolved;
 
 to say RubyCombatFuck:
-	if player is male:
+	if Player is male:
 		say "     Shoving over the defeated dragon woman you stand over her victorious in your fight. The woman appears to be crawling away, using her feet to kick herself slowly into the mouth of the cave. You put a stop to that, an evil grin appearing on your face as you grab out at her scaly, clawed foot. You yank her towards you quickly and with relative ease, rolling the weakened dragon onto her belly and spreading her before you. 'N-no! Again you bastards?!' She groans in pained annoyance. You pay her no mind, slipping a finger into her burning hot sex while you hold her in place. She squirms and tries to wiggle free but her body starts to respond to your ministrations. Your finger slowly pressing in and out of her hot quim is covered in musky girl cum, and soon, your hand as well. The nameless, furry-dragon groans as much in pleasure as she does in annoyance and anger.";
 		say "     Seeing the fight knocked out of her you reach down and begin stroking yourself to full mast. It doesn't take long what with the beautiful dragon lady sprawled out, defeated before you. Pressing her forcefully down to further instill your dominance here and now, you run another hand along her soft scaly ass and align your manhood with her traitorous, dragon-dripping cunt. It has a slightly more reddish texture to it than a human cunt, and as you press deeper in, she gets ever-more hotter. And as you hilt yourself inside her juicy quim, it feels as if a hellish succubus grips your dick. Her burning cauldron of a pussy feels too good and too hot to hold it still for long and you push yourself into action, pulling out and slamming back in the squirming dragon.";
 		WaitLineBreak;
 		say "     She moans and curses out at you, calling you all forms of colorful names and insults before you bring down a hand to slap across her backside as you fuck it. That shuts her up fast, mainly because she's too busy groaning to insult you. You grope and grind into her, intent on not only getting your rocks off, but proving you're the real dominant one here. Pounding and slapping into your dragon slut, you can feel yourself rapidly approaching your finish. Speeding up, you can feel her insides clenching and tightening around you until her toothy maw opens and her tongue rolls out as she lets out a low growl, into the dirt. Girl cum shoot out of her spasming sex and coats your member in its warm ambrosia. You follow closely after, sending her into multiple mini orgasms as you hump into her. Holding yourself inside her you dump your load of creamy deposit into her burning womb, painting her insides and pulling out to cover her ass in the remainder of your seed.";
 		say "     She drops and goes limp, ass raised, passed out and leaking cum out of gaped quim you stand to admire the sight before you. Brushing yourself off and walking forward to check out her abode. You wander in the front entrance and look around the inside, you find some wrapped dry meat and a few bottles of water, as well as a medkit tucked into a makeshift shelf. You take it all and walk back out, the dragon woman still passed out near the entrance. You smile a bit sadistically down at her and then make your way back up the slope you came down from, quite satisfied with yourself. That's probably the last you'll see of that dragon... well, unless she comes for revenge.";
-	else if player is female:
+	else if Player is female:
 		say "     Shoving over the defeated dragon woman you stand over her victorious in your fight. The woman appears to be crawling away, using her feet to kick herself slowly into the mouth of the cave. You put a stop to that, an evil grin appearing on your face as you grab out at her scaly, clawed foot. You yank her towards you quickly and with relative ease, rolling the weakened dragon onto her back and spreading her before you. 'N-no! Again you bastards?!' She groans in pained annoyance. You pay her no mind, slipping a finger into her burning hot sex while you hold her in place. She squirms and tries to wiggle free but her body starts to respond to your ministrations. Your finger slowly pressing in and out of her hot quim is covered in musky girl cum, and soon, your hand as well. The nameless, furry-dragon groans as much in pleasure as she does in annoyance and anger.";
 		say "     You then clamber up her hot, scaly body dragging your nipples across her taut abs. Soon your straddling her head, your woman-hood only inches from her scaly maw. She grimaces and squirms beneath you but you put a stop to it when you grab her head and shove it; snout first into your wet, feminine sex. She gasps in surprise and receives a mouth full of cunt while your fingers play with her silky opening. Her tongue, in its panic, shoots forward and lashes at your sensitive sex. Meanwhile, you grin down at her and grind your hips into her face, covering her in your musky juices. Your fingers play in her burning cunt as you take your pleasure from her. Her eyes squint with hate, but your hand roughly grabbing her furry scalp encourages her to keep working her long, wet, draconic organ all over your snatch. She doesn't have much technique, but the exotic sight of dominating such a powerful creature certainly makes up for it!";
 		WaitLineBreak;
@@ -184,14 +184,15 @@ to say RubyCombatDesc:
 	say ""; [dealt with in the event calling up the fight]
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Crimson Dragon";
+	now NewTypeInfection entry is false;
+	now Name entry is "Crimson Dragon";
 	now enemy title entry is "Crimson Dragon";
-	now enemy name entry is "Ruby";
+	now enemy Name entry is "Ruby";
 	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]The dragoness smashes against your body with hers![or]A scaly punch comes to collide with your head leaving you seeing stars.[or]The furry dragon strikes at you with fists first![at random]";
 	now defeated entry is "[BeatRuby]";
@@ -218,15 +219,15 @@ When Play begins:
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 11; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ Case sensitive]
-	now cocks entry is 0; [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 0;
-	now cock width entry is 0; [ Size of balls ]
-	now breasts entry is 2; [ Number of nipples. ]
-	now breast size entry is 4; [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 8;
-	now cunt width entry is 4;
+	now Cock Count entry is 0; [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 0;
+	now Ball Size entry is 0; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples. ]
+	now Breast Size entry is 4; [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Length entry is 8;
+	now Cunt Tightness entry is 4;
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -240,6 +241,97 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 Section 3 - NPC
 
 Table of GameCharacterIDs (continued)
@@ -250,14 +342,14 @@ Ruby is a woman.
 Ruby is in Ruby's Cave.
 [physical details as of game start]
 ScaleValue of Ruby is 4. [human sized]
-Cocks of Ruby is 0. [no cock]
+Cock Count of Ruby is 0. [no cock]
 Cock Length of Ruby is 0. [no cock length]
-Cock Width of Ruby is 0. [no ball size]
-Testes of Ruby is 0. [no balls]
-Cunts of Ruby is 1. [1 pussy]
+Ball Size of Ruby is 0. [no ball size]
+Ball Count of Ruby is 0. [no balls]
+Cunt Count of Ruby is 1. [1 pussy]
 Cunt Length of Ruby is 8. [gets stretched a bit by an alpha husky]
-Cunt Width of Ruby is 3. [gets stretched a bit by an alpha husky]
-Breasts of Ruby is 2. [4 nipples]
+Cunt Tightness of Ruby is 3. [gets stretched a bit by an alpha husky]
+Nipple Count of Ruby is 2. [4 nipples]
 Breast Size of Ruby is 4. [B cup at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Ruby is false. [can not take oversized members without pain]
@@ -309,7 +401,7 @@ instead of fucking Ruby:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck her"):
@@ -324,7 +416,7 @@ instead of fucking Ruby:
 	clear the screen and hyperlink list;
 
 to say RubySex1:
-	if player is male:
+	if Player is male:
 		say "     You embrace the dragoness, returning her sweet kiss. Pressing your lips against Ruby's while running your tongue along her scaly lips, begging to deepen your kiss. Her tongue reaches out to meet yours as her strong arms press you tightly against her, scaly hands reaching down to caress your ass and lower back. She moves forward, pushing you up against the back wall of her cave while her hands play at your body and her breathing intensifies. Her burning hot mouth seems to suck at your very breath, and pressed up so closely to this fiery dragoness your beginning to feel the heat! She pulls back, looking at you with devilishly lusty eyes. She then throws you behind her and onto her many piles of fur scraps. 'Oh god... I haven't felt like this in... so long. Everything off, I need you now, right now!' she says before pouncing on top of you, planting both her claws on either side of your head.";
 		say "     The dragoness straddles herself above you, panting a little as she does, clearly well beyond aroused at this point as she grinds against your prone form. She trails kisses and licks down and up your body, drooling warm saliva over your vulnerable body until her long, reptilian tongue slurps upward and collides with the crest of your neck, running up your jaw and against your lips. Ruby then straddles your waist, lifting any obstructions out of the way as she does, revealing your male-hood in all its glory. 'Hmm, hope you don't mind but I'm past most foreplay, I need this bad boy in me, now!' she says, reaching back to grasp your male member to press against the soft crest of her scaly ass. For your part you reach up to grasp her waspy hips and pull her against your hardened member.";
 		WaitLineBreak;
@@ -332,7 +424,7 @@ to say RubySex1:
 		say "     Grunting and driving into Ruby, you pull your head forward against her claws and nuzzle at her neck, inhaling a thick drought of her intoxicating scent. One of her claws reaches back to keep your head there, against her neck as Ruby's hips go into overdrive. Speeding up in a way you didn't expect from Ruby, you hold on tight to this bucking reptilian-mammal as claws dig into you and girl bum splashed on your lap. During her ride you slip a digit between the two of you and use it to brush against her protruding clit bouncing against your hips. At that she throws her head back and cums. Squeezing down on your cock to the point of it being near painful. Hot dragon juice spills across your groin, soaking you and the air itself with the fragrance of the sex. You follow a few thrusts after Ruby, grinding deeply into her until you shoot your plentiful load, rocketing inside her and painting her red womb with your seed. She moans, and screams in pleasure along with you as you both ride the tide of orgasms that wash over both of you.";
 		WaitLineBreak;
 		say "     After who knows how long, you find yourself dribbling what remains of your load across her taut belly. Ruby has a blissed out look on her face and blushes when she catches you staring. 'Daaamn that was good sex if I've ever seen it,' she says, smiling broadly. 'God damn...' You give her a pat on the ass and agree wholeheartedly, she's a hell of a ride! You both stand and you dress silently, exchanging a few kisses with your lovely dragon lover as you do. Ruby has a glow about her as she rests herself against a wall, eyeing you and fingering her sloppy cunny causally. Eventually, after some temptation, your up and ready to continue your apocalypse.";
-	else if player is female:
+	else if Player is female:
 		say "     You embrace the dragoness, returning her sweet kiss. Pressing your lips against Ruby's while running your tongue along her scaly lips, begging to deepen your kiss. Her tongue reaches out to meet yours as her strong arms press you tightly against her, scaly hands reaching down to caress your ass and lower back. She moves forward, pushing you up against the back wall of her cave while her hands play at your body and her breathing intensifies. Her burning hot mouth seems to suck at your very breath, and pressed up so closely to this fiery dragoness your beginning to feel the heat! She pulls back, looking at you with devilishly lusty eyes. She then throws you behind her and onto her many piles of fur scraps. 'Oh god... I haven't felt like this in... so long. Everything off, I need you now, right now!' she says before pouncing on top of you, planting both her claws on either side of your head.";
 		say "     Ruby straddles herself above you, panting a little as she does, clearly well beyond aroused at this point as she grinds against your prone form. She trails kisses and licks down and up your body, drooling warm saliva over your vulnerable body until her long, reptilian tongue slurps upward and collides with the crest of your neck, running up your jaw and against your lips. Ruby then moves to straddle your face. She plants her hot dragon-cunt directly onto your waiting mouth. And while your vision is blocked by a plush, scaly ass, you can hear Ruby moan out as she makes contact with your lips. She gyrates her hips against your face and your hands come up to grab and caress Ruby's warm thighs. 'Fuuuck, you're so hot, you know that? Can't believe how damn wet you've gotten me, big girl.' She punctuates this by turning around on your face and once again plants her ass on your face.";
 		WaitLineBreak;
@@ -362,7 +454,7 @@ instead of going down from Ashen Cliff while (Ruby is in Ruby's Cave):
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return her affections.";
 		say "     ([link]N[as]n[end link]) - Reject the dragoness's approach.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[RubySex1]";
 			now PlayerRomanced of Ruby is true;

@@ -9,7 +9,7 @@ Version 1 of Danny by Wahn begins here.
 [   0: hasn't met the player yet                                                       ]
 [   1: knows the player                                                                ]
 
-[ libido of Danny                                                                      ]
+[ Libido of Danny                                                                      ]
 [   0: not watched Nermine get fucked yet                                              ]
 [   1: watched Nermine get fucked                                                      ]
 
@@ -37,7 +37,7 @@ The conversation of Danny is { "Woof." }.
 
 to say DannyDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Danny], LIBIDO: [libido of Danny] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Danny], LIBIDO: [Libido of Danny] <- DEBUG[line break]";
 	say "     Danny is a young adult mall rat, wearing his signature sleek and stylish long coat that hangs down to his knees and highlights his slender frame. His face is pretty cute, with a pointy nose and large ears, framed by unruly streaks of green-dyed hair. He usually has a shiny black smartphone in one of his fine-boned hands, using the precious piece of still-working technology to take photos and videos of just about anything he sees.";
 
 The scent of Danny is "     Danny smells hip, like the coolest rat ever.".
@@ -82,7 +82,7 @@ to say DannyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
@@ -99,7 +99,7 @@ to say DannyTalkMenu:
 	clear the screen and hyperlink list;
 
 to say DannyTalk1:
-	say "     Walking up to Danny again, you're greeted with a wide smile from the friendly anthro rodent, accompanied by a welcoming pat on your arm. 'Glad to see you here again!' he says in a genuine tone, then starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. [if libido of Danny is 0]He warns you about the jackaless, saying that strange things go on in her store[else]But then, you both know what happens in her store these days, and there's a whole other kind of grin being shared between you as he pulls out his mobile and flicks through the images of the sexy scene[end if].";
+	say "     Walking up to Danny again, you're greeted with a wide smile from the friendly anthro rodent, accompanied by a welcoming pat on your arm. 'Glad to see you here again!' he says in a genuine tone, then starts a conversation with you about how things stand outside the mall. He is clearly interested in what new types of beings now live in the city and eagerly shows you some of the pictures he took since the whole trouble with the nanites started. There clearly are quite a few more types of creatures than you had even realized, and those are just the ones peaceful enough to be allowed in the mall. After a while, the topic of conversation swings over to the mall itself and its inhabitants, from Danny's ratty compatriots to the more unique Santa Claws and even the mysterious Nermine. [if Libido of Danny is 0]He warns you about the jackaless, saying that strange things go on in her store[else]But then, you both know what happens in her store these days, and there's a whole other kind of grin being shared between you as he pulls out his mobile and flicks through the images of the sexy scene[end if].";
 
 to say DannyTalk2:
 	if Dexterity of Danny is 0:
@@ -108,7 +108,7 @@ to say DannyTalk2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Nod for him to continue telling the story.";
 		say "     ([link]N[as]n[end link]) - Wave him off. Just mentioning Nermine's name tells you that the camera has some weird properties.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Danny smiles at your interest and starts to lay out the details. 'Not long after all this started happening and the guards turned into wolverines, they got it into their heads that the mall was supposed to close at some point in the night... and they were ready to just shove everyone out the door till 'opening time' the next morning. Imagine that - all of our people helpless on the streets! You should have seen the chaos and panic that announcement created!'";
 			say "     The slender mall rat shudders at the memory, then turns his attention back to you and says, 'Anyways, people were scrambling around and trying to find any reason at all that the guards would accept for them staying... there were fights for all of the stupid name badges of shops in here, I kid you not. Meanwhile, I kinda stumbled into the jackaless's strange shop, narrowly avoiding a wolverine. She was on me in a second, all smiles and friendly, greeting me. Before I knew it, she had this thing in her paws and was offering it to me - [']just what the dear customer needs['], she said.'";
@@ -125,7 +125,7 @@ to say DannyTalk2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
-		if player consents: [agree]
+		if Player consents: [agree]
 			LineBreak;
 			say "     You agree to help the young mall rat out and remind him that it is dangerous outside and he needs to be careful. 'Don't worry about me,' he replies, 'I can run faster than you think.' You shake your head but don't say anything in response and instead ask him what creatures he would like to find first. 'I heard there was this thing that looked like a giant cock on legs. That would be pretty cool to see, or one of those things made from latex. Or pretty much anything else that would be cool to photograph.' You quickly run through a quick list of monsters you can remember. 'Wow there are that many!' he shouts with excitement, 'I had no idea.'";
 			say "     Asking Danny which ones he wants to see first, the slender male replies, 'Well still the cock monster thing, and latex creature. But the gryphon would look majestic flying around, any demons, chocolate dog, the gooey monsters, and a reindeer. Maybe we could even bring the reindeer back and give it to Santa Claws that would put the finish in the malls little winter wonderland. This is so cool! We should try to get a photo of all of them but let's try our luck with these ones first to see what we can handle. Thank you so much. I got an idea how to repay you for all the effort too when we're done.' He gives you a subtle wink at the end of his last comment. You tell him to go and charge up his smartphone (since you're sure he'll want to take not only pictures but video too) and you'll grab him when you're ready. 'You got it boss,' he says before skipping away, overjoyed that he found someone to help him.";
@@ -139,7 +139,7 @@ to say DannyTalk2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Agree to help him out.";
 		say "     ([link]N[as]n[end link]) - Talk him out of risking a trip out into the city.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You agree to help the young mall rat out and remind him that it is dangerous outside and he needs to be careful. 'Don't worry about me,' he replies, 'I can run faster than you think.' You shake your head but don't say anything in response and instead ask him what creatures he would like to find first. 'I heard there was this thing that looked like a giant cock on legs. That would be pretty cool to see, or one of those things made from latex. Or pretty much anything else that would be cool to photograph.' You quickly run through a quick list of monsters you can remember. 'Wow there are that many!' he shouts with excitement, 'I had no idea.'";
 			say "     Asking Danny which ones he wants to see first, the slender male replies, 'Well still the cock monster thing, and latex creature. But the gryphon would look majestic flying around, any demons, chocolate dog, the gooey monsters, and a reindeer. Maybe we could even bring the reindeer back and give it to Santa Claws that would put the finish in the malls little winter wonderland. This is so cool! We should try to get a photo of all of them but let's try our luck with these ones first to see what we can handle. Thank you so much. I got an idea how to repay you for all the effort too when we're done.' He gives you a subtle wink at the end of his last comment. You tell him to go and charge up his smartphone (since you're sure he'll want to take not only pictures but video too) and you'll grab him when you're ready. 'You got it boss,' he says before skipping away, overjoyed that he found someone to help him.";
@@ -159,7 +159,7 @@ to say DannyTalk2:
 		WaitLineBreak;
 		say "     As he himself explained to you before, the magic camera doesn't actually make Danny invisible, just keeps him below the level of interest of people and creatures - unless the user does something stupid like actively drawing their attention. The cock cannon rears up and you can see some twitching going through its balls, with the vertical slit on its head widening noticeably... uh oh, looks like it is preparing to blast your mall rat friend off his feet with a giant spurt of cum! With you too far away to do anything about it, the only thing that saves the male rodent is the fact that he turns on the pretty bright flash of his camera, disorienting the cock cannon for a moment. By the time it gets back to its senses and lets loose with a titanic splurge of creamy cum, Danny has already retreated to a much safer distance - yet he stopped again to capture the eruption on film too.";
 		say "     The cock cannon seems to 'blink' with its vertical cum-slit, surprised that there isn't a drenched mall rat where it shot its big load. Then it rears up and seems to focus on where Danny is actually standing by now. It lets out a strange gurgling sound - possibly of displeasure at missing, and very likely signifying that it is preparing another cum blast - then starts sprinting after Danny. 'Aaah! Oh shit oh shit oh shit!' the young adult rodent calls out as he runs away from the large monster, heading in your direction. With a shake of your head at the inexperienced mall rat having ignored all your previous warnings about being careful, you step out from behind the dumpster you were at and step into the path of the cock cannon to save his ass.";
-		if "Female Preferred" is listed in feats of player:
+		if "Female Preferred" is listed in feats of Player:
 			say "     The creature breaks off its charge to 'look' at you, aiming the cum-slit of its phallic head right towards you. Apparently, it must not like what it sees, because it immediately turns around and leaves.[line break](The creature won't fight you if you have the Female Preferred feat.)";
 			say "     Danny comes over to you a moment later. 'Wow, that was exciting!' Danny says with a sparkle in his eyes, 'Thank you for distracting it so I could get away.' You shake your head and wave for him to follow, then start on your trek back to the mall. On the way, you have a word or three with him about not dashing forward without you and getting himself into trouble like with the cock cannon. It remains to be seen if the young rodent will take that to heart....";
 		else:
@@ -185,7 +185,7 @@ to say DannyTalk2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure thing. You'll go right now!";
 		say "     ([link]N[as]n[end link]) - Not at the moment...";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[PhotoSafari_Zebra]";
 		else:
@@ -197,7 +197,7 @@ to say DannyTalk2:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure thing. You'll go right now!";
 		say "     ([link]N[as]n[end link]) - Not at the moment...";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You cave to your mall rat's wishes and tell him that you will help him find the zebra. He looks a little surprised at first, then his ears perk up, and he gives a little hop before saying, 'Okay, just give me one second.' Sprinting towards his makeshift room, you assume that he's going to grab his camera. When the slender rodent gets back almost instantaneously, he looks ready to go. 'Okay,' Danny says with a smile, adjusting the camera. 'So from what I heard, our stallion can be found roaming the pathways of the Zoo. Rumor has it that he's always looking for volunteers to join his herd.' You nod along as he recounts some tales he heard about the zebra. Danny is talking a lot faster than usual, and it is fairly hard to understand his eager babble. You can barely make out what he's saying sometimes. 'Alright,' he eventually says, 'Let's get going!'";
 			say "[PhotoSafari_Zebra]";
@@ -228,7 +228,7 @@ to say PhotoSafari_Zebra:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Allow the zebra to get up and make use of his mouth. Danny seems to want that, from what you can see.";
 			say "     ([link]N[as]n[end link]) - Just grab your mall rat companion and take him back to the mall. Enough photos for now.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     You crouch down and quietly tell the zebra that he may have a good time with Danny, but not to overdo it. Without hesitation, the striped hunk climbs to his feet. 'Why don't you and him just join my herd?' he answers, but as you give him a hard look, he raises his hands in a consoling gesture. 'Fine, fine. I'll take what fun I can get then.' With those words, he starts making his way towards Danny. The slender mall rat starts to look a bit concerned as he is approached by the strapping stud, yet your presence just a few steps behind the zebra does keep him from being too frightened. As the anthro equine steps up to Danny and lets his hand wander down over the front of the young man, you move to pull the camera out of Danny's hands and tell him with a chuckle that he has nothing to worry about.";
 				say "     Danny's breath starts to come much quicker as the zebra escalates the situation by wrapping his arm around the mall rat and pulling him close. 'You smell like you could help me with a little problem,' the dominant stud says and points down to his crotch. Danny's eyes light up, and you snap a quick picture of that cute expression of joy on his face, followed by several more as he sinks to his knees. 'All you had to do was tell me that you wanted to pleasure me,' the zebra stallion says in a charming voice, patting his head lightly. Danny wraps his hands around the muscled equine's throbbing member, handling the impressively long cock with admiration. Looking at it intently, the young mall rat watches precum drip down onto the grass beneath them and milks out a few more drops.";
@@ -246,7 +246,7 @@ to say PhotoSafari_Zebra:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sure thing.";
 			say "     ([link]N[as]n[end link]) - Look away.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Danny's breath starts to come much quicker as the zebra escalates the situation by wrapping his arm around the mall rat and pulling him close. 'You smell like you could help me with a little problem,' the dominant stud says and points down to his crotch. Danny's eyes light up, and you snap a quick picture of that cute expression of joy on his face, followed by several more as he sinks to his knees. 'All you had to do was tell me that you wanted to pleasure me,' the zebra stallion says in a charming voice, patting his head lightly. Danny wraps his hands around the muscled equine's throbbing member, handling the impressively long cock with admiration. Looking at it intently, the young mall rat watches precum drip down onto the grass beneath them and milks out a few more drops.";
 				say "     After a few moments of just slowly jerking his stallion, Danny leans forward and wraps his lips around the zebra's cock. He slides his lips over the proud equine's member, taking a fair bit into his mouth before pulling back to take a deep breath. And then, all of a sudden, the smallish rat does a passable impression of a sword-swallower, taking down the strapping zebra member in one go, right down to the base. Bobbing his head up and down on that comparatively monstrous shaft, your ratty companion reveals his skills at deep-throating, much to the pleasant surprise of the striped hunk he is sucking off. The equine throws his head back and lets out a long moan of 'Fuuuckk, you're good at this, dude!' Grinning at the interaction between the two of them, you slowly circle the pair of males, shooting photo after photo to give Danny something to remember this moment by.";
@@ -294,7 +294,7 @@ to say DannySexMenu:
 	setmonster "Mall Rat";
 	project the figure of Danny_naked_icon;
 	say "     What do you want to do with the young adult mall rat?";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -303,19 +303,19 @@ to say DannySexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job";
 	[
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck your cock";
 		now sortorder entry is 2;
 		now description entry is "Get a blow-job";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him eat you out";
 		now sortorder entry is 3;
 		now description entry is "Get a blow-job";
 	]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Danny";
 		now sortorder entry is 4;
@@ -326,13 +326,13 @@ to say DannySexMenu:
 	now sortorder entry is 5;
 	now description entry is "Let the mall rat fill your ass with his seed";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Danny's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the mall rat's ass with your cock";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Danny fuck your pussy";
 		now sortorder entry is 7;
@@ -350,7 +350,7 @@ to say DannySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Suck Danny's cock":
@@ -417,10 +417,10 @@ to say DannySex5: [Danny fucks the player's ass]
 	say "     Pouring a goodly amount of the slippery fluid on his cock, the twink of a mall rat strokes himself and rubs it in, making sure that his well-sized pink shaft is lubed for what will come next. After putting away the bottle again and wagging his hard dick towards the camera with a grin, the mall rat kneels down behind you and lines himself up with your waiting hole. 'This is great,' he chuckles, 'you being my hero - and a bottom at the same time.' Licking his lips in excitement, he brushes his tip over the opening of your hole once, then again and again, never quite penetrating. 'I would never have guessed before that I'll just get to fuck the hero of our own local nanite apocalypse! One always imagines someone like you to be butch and domineering, wanting to take charge...'";
 	WaitLineBreak;
 	say "     With as much as Danny enjoys teasing you, stretching out the time before he actually pushes in, you are getting increasingly frustrated at not having a hard cock inside you yet. Soon you can't hold back and look over your shoulder, telling him to fuck you already! The naked young man laughs, then finally starts pushing the tip of his cock against your pucker in earnest. You let out a long moan as it pops past the resistance of your back door, sliding into your waiting body. He continues to slowly sink himself further and further into you, filling the small room with your shared moans. Then finally, you feel the soft hairs of his furry nut-sack brush against your perineum - he's all the way inside you. For being such a twink of a rodent, Danny surely has a very nice piece of equipment. It is at least eight inches long - if not more, giving you a nice full feeling.";
-	say "     'Man, that feels nice,' he says before slowly beginning to pump his hips back and forth. Danny takes slow shallow thrusts causing more moans to escape your lips. This low-intensity fucking lasts for a few short minutes before he begins pulling his cock all the way out to the tip, followed by smoothly pushing all the way back in, still keeping the same gentle speed as he did before. His long slow thrusts send a ripple of pleasure up your spine. For such a small guy he sure knows how to use his dick. Before long, his thrusts begin to rapidly pick up in pace as his arousal at being inside you soars higher and higher. Each thrust forces his average-sized balls to slap up against [if player is female]the base of your pussy[else if player is male]your own[else]your perineum[end if].";
+	say "     'Man, that feels nice,' he says before slowly beginning to pump his hips back and forth. Danny takes slow shallow thrusts causing more moans to escape your lips. This low-intensity fucking lasts for a few short minutes before he begins pulling his cock all the way out to the tip, followed by smoothly pushing all the way back in, still keeping the same gentle speed as he did before. His long slow thrusts send a ripple of pleasure up your spine. For such a small guy he sure knows how to use his dick. Before long, his thrusts begin to rapidly pick up in pace as his arousal at being inside you soars higher and higher. Each thrust forces his average-sized balls to slap up against [if Player is female]the base of your pussy[else if Player is male]your own[else]your perineum[end if].";
 	WaitLineBreak;
-	say "     Danny's fast thrusts cause [if player is male]a trickle of pre to escape your rock hard cock[else if player is female]a trickle of female juices to drip down from your increasingly moist nether lips[else]sweat to drip from your brow as you feel hotter and hotter[end if], along with more than a few lewd moans from your mouth. The sounds of your coupling - moans, the slap of his balls against you and the slurping noises of his wet cock abusing your asshole - get loud enough that anyone who passes by the photo shop must surely hear them. Especially since Danny left the doors standing open, something you clearly remember despite the lusty haze that has come over your mind.";
-	say "     On occasion Danny changes the position he fucks you in - from kneeling to crouching over you, and back again, trying out a few different things in between - all of which serves to open up a whole new angle for his cock to push into you. With such eager and arousing experimentation, the male rodent soon finds an ideal position to grind against your prostate. His long cock rapidly rubs back and forth against your most sensitive spot, immensely intensifying your pleasure and the volume of your moans. Only a few minutes later you find yourself clenching your hole around his cock as [if player is male]your own manhood starts spraying a heavy load all over the sheets of Danny's mattress[else if player is female]femcum starts to gush out of your needy pussy, dripping down onto the sheets of Danny's mattress[else]your whole body is filled with the tingling sensation of a breathtaking orgasm[end if].";
+	say "     Danny's fast thrusts cause [if Player is male]a trickle of pre to escape your rock hard cock[else if Player is female]a trickle of female juices to drip down from your increasingly moist nether lips[else]sweat to drip from your brow as you feel hotter and hotter[end if], along with more than a few lewd moans from your mouth. The sounds of your coupling - moans, the slap of his balls against you and the slurping noises of his wet cock abusing your asshole - get loud enough that anyone who passes by the photo shop must surely hear them. Especially since Danny left the doors standing open, something you clearly remember despite the lusty haze that has come over your mind.";
+	say "     On occasion Danny changes the position he fucks you in - from kneeling to crouching over you, and back again, trying out a few different things in between - all of which serves to open up a whole new angle for his cock to push into you. With such eager and arousing experimentation, the male rodent soon finds an ideal position to grind against your prostate. His long cock rapidly rubs back and forth against your most sensitive spot, immensely intensifying your pleasure and the volume of your moans. Only a few minutes later you find yourself clenching your hole around his cock as [if Player is male]your own manhood starts spraying a heavy load all over the sheets of Danny's mattress[else if Player is female]femcum starts to gush out of your needy pussy, dripping down onto the sheets of Danny's mattress[else]your whole body is filled with the tingling sensation of a breathtaking orgasm[end if].";
 	WaitLineBreak;
 	say "     The rhythmic tightening of your hole is enough to push the young rat past the point of no return as well. He shouts, 'Oooh FUCK YEAH!' as his cock erupts deep inside you, painting your passage with spurt after spurt of his hot spunk. When his orgasm ebbs off after a little while, Danny pulls his spent cock from your ass slowly, creating a wet slurp as the tip slips out of your anus. He rests his dick between your buttocks for a moment, panting loudly, then takes a deep breath and proudly announces, 'I just bred the hero of the nanite apocalypse.' Confused about who he is talking to, you look over your shoulder and see Danny look to the side, a beaming smile on his face and raising his thumb. Following the line of his sight, you spot the smartphone and see the blinking red light at its corner, realizing that he filmed everything.";
 	setmonster "Mall Rat";
@@ -444,21 +444,21 @@ to say DannySex6: [player fucks Danny's ass]
 
 to say DannySex7: [Danny fucks the player's pussy]
 	say "     'Why don't you strip down so we can have our fun,' he says with a grin, then waits till you're busy with that before he casually places his smartphone in a spot where it overlooks the mattress. After a few quick swipes of his finger, the device is set to record - and that with you none the wiser about it. He turns to you to watch as you pull off the rest of your gear and clothes, giving your naked body eager looks before starting to put on a little strip-show himself. His long coat is the first to go, being slipped off his shoulders and thrown over a nearby chair, quickly followed by the black t-shirt covering Danny's chest. The young mall rat has an attractive slender figure, with his usually brown fur lightening to an off-white shade down his front side, the border between the colors being just on the outside of Danny's cute pink nipples.";
-	say "     And those are not the only thing that is pink on him - as the young man reveals a bright pink pair of skimpy briefs as he pushes down his shorts next. The undies show a quite respectable bulge at the front and Danny pulls their front down for a second to show off his already hard cock before tucking it back inside the stretched fabric with a grin. Flicking a streak of his bright green hair behind one of his big ears, the male rat strolls over to you, confident in his color choices and eager to have fun. Coming to stand before you, he pulls you into a make-out session while rubbing his cock against [if player is male]yours[else]your crotch[end if] with just the soft fabric of his underwear between you.";
+	say "     And those are not the only thing that is pink on him - as the young man reveals a bright pink pair of skimpy briefs as he pushes down his shorts next. The undies show a quite respectable bulge at the front and Danny pulls their front down for a second to show off his already hard cock before tucking it back inside the stretched fabric with a grin. Flicking a streak of his bright green hair behind one of his big ears, the male rat strolls over to you, confident in his color choices and eager to have fun. Coming to stand before you, he pulls you into a make-out session while rubbing his cock against [if Player is male]yours[else]your crotch[end if] with just the soft fabric of his underwear between you.";
 	WaitLineBreak;
 	say "     After a little while of tongue-wrestling and grinding his crotch against yours, Danny eventually pulls away to catch his breath, then guides you over to the mattress by the hand. He pushes softly on your shoulders until you sink down to your knees, then tells you to get down on all fours. 'Let's do it doggy style,' he says, excitement clearly audible in his voice. Out of your line of sight - but very much in the focus of the camera - he poses a little while standing behind and over you, hands on his slender hips and humping the air with his bulged out pink undies. Then Danny playfully slides off his skimpy briefs, casually dropping them on the ground.";
 	say "     After wagging his hard dick towards the camera with a grin, the mall rat kneels down behind you and slides a hand between your legs, seeking out your pussy with his fingers. Rubbing over the slightly spread nether lips, he pushes his fingers into your dripping wet vagina and pumps in and out a few times, then gets his dick wet with your juices by stroking it a few times. With his shaft glistening in femcum, he lines himself up with your waiting hole. 'This is great,' he chuckles, 'you being my hero - willing to let me fuck you at the same time.' Licking his lips in excitement, he brushes his tip over the folds of your nether lips once, then again and again, never quite penetrating. 'I would never have guessed before that I'll just get to fuck the hero of our own local nanite apocalypse! One always imagines someone like you refusing anyone but some rich and handsome hunk to have a go...'";
 	WaitLineBreak;
 	say "     With as much as Danny enjoys teasing you, stretching out the time before he actually pushes in, you are getting increasingly frustrated at not having a hard cock inside you yet. Soon you can't hold back and look over your shoulder, telling him to fuck you already! The naked young man laughs, then finally nudges apart your nether lips and slides the tip of his cock in between. You let out a long moan as it slides into your depths, soothing the fire of need that had been growing in your loins. He continues to slowly sink himself further and further into you, filling the small room with your shared moans. Then finally, you feel the soft hairs of his furry nut-sack brush against your crotch - he's all the way inside you. For being such a twink of a rodent, Danny surely has a very nice piece of equipment. It is at least eight inches long - if not more, giving you a nice full feeling.";
-	say "     'Man, that feels great,' he says before slowly beginning to pump his hips back and forth. Danny takes slow shallow thrusts causing more moans to escape your lips. This low-intensity fucking lasts for a few short minutes before he begins pulling his cock all the way out to the tip, followed by smoothly pushing all the way back in, still keeping the same gentle speed as he did before. His long slow thrusts send a ripple of pleasure up your spine. For such a small guy he sure knows how to use his dick. Before long, his thrusts begin to rapidly pick up in pace as his arousal at being inside you soars higher and higher. Each thrust forces his average-sized balls to slap up against [if player is female]your pussy lips[else if player is male]your own[else]your perineum[end if].";
+	say "     'Man, that feels great,' he says before slowly beginning to pump his hips back and forth. Danny takes slow shallow thrusts causing more moans to escape your lips. This low-intensity fucking lasts for a few short minutes before he begins pulling his cock all the way out to the tip, followed by smoothly pushing all the way back in, still keeping the same gentle speed as he did before. His long slow thrusts send a ripple of pleasure up your spine. For such a small guy he sure knows how to use his dick. Before long, his thrusts begin to rapidly pick up in pace as his arousal at being inside you soars higher and higher. Each thrust forces his average-sized balls to slap up against [if Player is female]your pussy lips[else if Player is male]your own[else]your perineum[end if].";
 	WaitLineBreak;
-	say "     Danny's fast thrusts cause [if player is male]a trickle of pre to escape your rock hard cock[else if player is female]a trickle of female juices to drip down from your increasingly moist nether lips[else]sweat to drip from your brow as you feel hotter and hotter[end if], along with more than a few lewd moans from your mouth. The sounds of your coupling - moans, the slap of his balls against you and the slurping noises of his wet cock abusing your pussy - get loud enough that anyone who passes by the photo shop must surely hear them. Especially since Danny left the doors standing open, something you clearly remember despite the lusty haze that has come over your mind.";
-	say "     On occasion Danny changes the position he fucks you in - from kneeling to crouching over you, and back again, trying out a few different things in between - all of which serves to open up a whole new angle for his cock to push into you. With such eager and arousing experimentation, the male rodent soon finds an ideal position to grind into your needy snatch. His long cock rapidly rubs back and forth against your most sensitive spots inside, immensely intensifying your pleasure and the volume of your moans. Only a few minutes later you find yourself clenching the muscles of your vagina around his thrusting cock as [if player is male]your own manhood starts spraying a heavy load all over the sheets of Danny's mattress[else if player is female]femcum starts to gush out of your needy pussy, dripping down onto the sheets of Danny's mattress[else]your whole body is filled with the tingling sensation of a breathtaking orgasm[end if].";
+	say "     Danny's fast thrusts cause [if Player is male]a trickle of pre to escape your rock hard cock[else if Player is female]a trickle of female juices to drip down from your increasingly moist nether lips[else]sweat to drip from your brow as you feel hotter and hotter[end if], along with more than a few lewd moans from your mouth. The sounds of your coupling - moans, the slap of his balls against you and the slurping noises of his wet cock abusing your pussy - get loud enough that anyone who passes by the photo shop must surely hear them. Especially since Danny left the doors standing open, something you clearly remember despite the lusty haze that has come over your mind.";
+	say "     On occasion Danny changes the position he fucks you in - from kneeling to crouching over you, and back again, trying out a few different things in between - all of which serves to open up a whole new angle for his cock to push into you. With such eager and arousing experimentation, the male rodent soon finds an ideal position to grind into your needy snatch. His long cock rapidly rubs back and forth against your most sensitive spots inside, immensely intensifying your pleasure and the volume of your moans. Only a few minutes later you find yourself clenching the muscles of your vagina around his thrusting cock as [if Player is male]your own manhood starts spraying a heavy load all over the sheets of Danny's mattress[else if Player is female]femcum starts to gush out of your needy pussy, dripping down onto the sheets of Danny's mattress[else]your whole body is filled with the tingling sensation of a breathtaking orgasm[end if].";
 	WaitLineBreak;
 	say "     The tremble of your inner muscles around his manhood is enough to push the young rat past the point of no return as well. He shouts, 'Oooh FUCK YEAH!' as his cock erupts deep inside you, breeding you with spurt after spurt of his hot spunk. When his orgasm ebbs off after a little while, Danny pulls his spent cock from your dripping pussy slowly, creating a wet slurp as the tip slips out between the swollen nether lips. He rests his dick between your buttocks for a moment, panting loudly, then takes a deep breath and proudly announces, 'I just bred the hero of the nanite apocalypse.' Confused about who he is talking to, you look over your shoulder and see Danny look to the side, a beaming smile on his face and raising his thumb. Following the line of his sight, you spot the smartphone and see the blinking red light at its corner, realizing that he filmed everything.";
 	setmonster "Mall Rat";
 	say "[fimpregchance]";
-	say "     'Hope you don't mind,' Danny says, putting a hand on the small of your back in a try to keep you calm. 'I promise - the only person who will see that vid is me.' You don't even need to look to know that he has one hand behind his back with crossed finger as he says that. As you chuckle at the antics of your photo- and video-obsessed friend, a little bit of his cum starts to leak out of your pussy. 'Wait - hold still for a moment,' Danny says excitedly, then jumps up to snatch his smartphone, bringing its camera close to your rear end to focus on your creamy hole. Lowering his voice (but still clearly audible to you), the slender mall rat talks to the smartphone, 'Look at that sight folks. The well-bred hero of the land. And bred by yours truly. Just look at the mess[if player is impreg_able]. Maybe I even knocked her up[end if].' With that said, he brings his hand to your pussy and pushes two fingers inside, pumping them in and out a bit to make more and more cum squirt out.";
+	say "     'Hope you don't mind,' Danny says, putting a hand on the small of your back in a try to keep you calm. 'I promise - the only person who will see that vid is me.' You don't even need to look to know that he has one hand behind his back with crossed finger as he says that. As you chuckle at the antics of your photo- and video-obsessed friend, a little bit of his cum starts to leak out of your pussy. 'Wait - hold still for a moment,' Danny says excitedly, then jumps up to snatch his smartphone, bringing its camera close to your rear end to focus on your creamy hole. Lowering his voice (but still clearly audible to you), the slender mall rat talks to the smartphone, 'Look at that sight folks. The well-bred hero of the land. And bred by yours truly. Just look at the mess[if Player is impreg_able]. Maybe I even knocked her up[end if].' With that said, he brings his hand to your pussy and pushes two fingers inside, pumping them in and out a bit to make more and more cum squirt out.";
 	WaitLineBreak;
 	say "     After a few more moments of being fingered by Danny, he whispers to the camera, 'That's it for today.' Turning the smartphone off and setting it down, he then proceeds to grab a little towel and helps you to clean up. 'Hope I didn't get too carried away earlier, or did I?' he says while giving you a friendly smile afterwards. You can't really hold it against him - getting recorded during sex was almost assured with this cheeky mall rat after all. Pulling him close to plant a kiss on his cute little nose, you tell Danny not to worry about it.";
 

@@ -27,7 +27,7 @@ Instead of Resolving Stabled Situation:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Try to convince the guards to let you in.";
 		say "     ([link]N[as]n[end link]) - Don't risk dealing with the horses.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Investigating the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into the building, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on any subsequent visits that you might make. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit. You begin searching through your pack as you approach the doors to see if you have anything that the guards might be willing to take in trade.";
 			if chips is owned and soda is owned:
@@ -55,7 +55,7 @@ Instead of Resolving Stabled Situation:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Try to convince the guards to let you in.";
 		say "     ([link]N[as]n[end link]) - Don't risk dealing with the horses.";
-		if player consents:
+		if Player consents:
 			if chips is owned and soda is owned:
 				LineBreak;
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously, as you pull out several items to see how they react, only to be disappointed each time as they continue to watch you with suspicion. Finally, your pack is almost empty by the time you pull out some chips and soda, and you notice the horsemen lick their lips and shift on their hoof-like feet as they seem to realize just how hungry guard duty has made them. Grinning, you offer the snack food to the guards, only to pull it back when one of them reaches for it, gesturing at the closed door between the two guards as you give them a questioning look. The horsemen sigh as they glance at each other for a minute, before nodding at you, and one of them waves you on inside as you hand them the junk food to share. As you enter, you hope that they will pass the word to the next group of guards as well, since you would rather not have to go through that every time you come here.";
@@ -169,9 +169,9 @@ Carry out Marefeeding:
 		say "     Wandering over to the table filled with food on the side of the room, you notice that several of the mares seem quite amused as you browse the selection, a few even coming over to help. The mares select several different bits of food for you to try, all the while giggling to themselves as you enjoy the strangely flavorful food selections. By the time the mares let you go after you have sampled at least a bite or two of most of the dishes set out on the table, you are definitely starting to feel a bit strange yourself, and definitely horny from all of the attention the mares have been giving you.";
 		PlayerEat 10;
 		infect "Mareslut";
-		increase libido of player by 20;
-		if libido of player > 100, now libido of player is 100;
-		decrease humanity of player by 5;
+		increase Libido of Player by 20;
+		if Libido of Player > 100, now Libido of Player is 100;
+		decrease humanity of Player by 5;
 
 
 Table of GameRoomIDs (continued)

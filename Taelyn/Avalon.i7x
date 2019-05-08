@@ -70,7 +70,7 @@ to WispFollow:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Enjoy the show.";
 		say "     ([link]N[as]n[end link]) - Crash the party.";
-		if player consents:[Watch]
+		if Player consents:[Watch]
 			LineBreak;
 			say "     Not wanting to risk interrupting or upsetting the fantastical lovers or their onlooker, you decide that it is for the best to wait the whole situation out. The cervitaur girl's human-like torso is pressed against the smooth stone as she holds tightly to the chains bolted to the side of the table to steady herself. Her [']stallion['] has speared himself deep into her arousal-slickened cunt, rocking her whole body forwards as she moans. The unicorn is no gentleman though, and as soon as he is in, he pulls out, only to slam back into her with a wet slap as their hips press together. The two continue, the girl letting out sounds of pleasure each time he sinks into her depths just right.";
 			say "     The unicorn rams deep into the cervitaur a few more times before letting out a majestic whinny in triumph. His [']doe['] cries out joyfully as her belly bulges impressively with a large load of magical pony jizz. The two are left panting as the lizard creature, now bored with the show, finishes off the last of its snack before tossing the bag to the ground and wandering off. It isn't long after that the unicorn pulls out of the girl, heading into the forest on his own. Lastly, the cervitaur looks toward you, blushing a little before bounding away as well, leaving you alone to ponder what you had just witnessed and where you now are.";
@@ -123,7 +123,7 @@ to WispFollow:
 		say "     Choosing this option will prevent access to a lot of content. Are you sure?";
 		say "     ([link]Y[as]y[end link]) - Yes, I don't want the content.";
 		say "     ([link]N[as]n[end link]) - No, let me have a chance to try again later.";
-		if player consents:
+		if Player consents:
 			say "     Following strange, glowing forest-spirits seems like a good way to get yourself cursed or killed. Turning the other way, you leave the wisp behind, wanting nothing to do with it.";
 			now Fall-O-the-Wisp is resolved;
 			move Runestone to NPC Nexus;

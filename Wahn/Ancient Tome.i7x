@@ -39,7 +39,7 @@ instead of navigating Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
-	if player consents: [take it]
+	if Player consents: [take it]
 		LineBreak;
 		say "     Clearing your throat, you ask Eric to hand you the book - twice actually, as he doesn't react the first time and just keeps staring at the cover. Only when you repeat yourself does he look up, blinking a few times before focusing on you. With a shrug, he holds out the book and you quickly pack it away into your backpack.";
 		LineBreak;
@@ -65,7 +65,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yup. Better safe than sorry.";
 	say "     ([link]N[as]n[end link]) - You're just imagining things. Let him have the book, it'll give him something to do.";
-	if player consents: [take the book]
+	if Player consents: [take the book]
 		LineBreak;
 		say "     Clearing your throat, you ask Eric to hand you the book - and he doesn't react to that at all, almost as if he hadn't heard a word you said. After waiting a moment or two, you finally decide to just take it. Reaching down, you pull the book out from under Eric's nose, closing the cover with a thud and tugging the tome under your arm. 'Hey!' Eric reacts with a slight delay, almost as if he had been in a trance. 'I was reading that, give it back!' the red-headed college student complains, but you tell him in a friendly, but firm, tone that you'll have to check this thing out for yourself first. He reaches out in a bid to snatch the book back, but you keep it out of his reach. Finally, he sits up and gives a sigh, then adds, 'Fine. I'll get something else to read then.' With a somewhat sullen expression on his face, Eric walks off towards the stairwell.";
 		LineBreak;
@@ -90,7 +90,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Walk over and wake him if he is having a nightmare or something.";
 	say "     ([link]N[as]n[end link]) - It'll just be a strange dream. You'd bet that he will forget all about it by the time he wakes up naturally.";
-	if player consents: [check on him]
+	if Player consents: [check on him]
 		LineBreak;
 		say "     Moving over to the bed in which the college athlete sleeps, you see that he is indeed very unruly in his sleep. Sweat glistens on his face and he is breathing quickly, letting out some sudden pants from time to time. His feet and legs seem especially agitated, twitching and moving under the blanket. Concerned, you step forward in order to feel his forehead for fever and in doing so, hit something with your foot. It is the leather-bound tome Eric has been reading lately. Must have fallen off the bed due to Eric's fidgeting. It lies there, opened with the face down. Somehow you can't help yourself and pick it up. One of the images Eric mentioned is visible in between the strange text on the open page - a depiction of countless black tentacles that almost seems to move as you look at it.";
 		say "     Suddenly, Eric lets out a noise that you can only describe as a moan and bucks his hips up under the blanket. With the ancient tome still held in your arm, you feel the college student's forehead - sweaty, but not feverish. Deciding that waking him should would be best, you shake Eric by the shoulder after that, but he just groans a little with his eyes closed, no further sign of coming to except that. And then it hits you - he may be twitching unruly in his sleep, but unless Eric has suddenly grown an... extra appendage between his legs, there is one too many bulges under that blanket!";
@@ -101,7 +101,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch in shock (or arousal?) as Eric is penetrated by the creature.";
 		say "     ([link]N[as]n[end link]) - Stop it!";
-		if player consents: [watch]
+		if Player consents: [watch]
 			LineBreak;
 			say "     In the blink of an eye, the tentacle cock strikes, plunging in between Eric's nether lips and making the transgendered teen buck and moan on the bed - still asleep though, with not even being fucked able to wake him from the clearly unnatural slumber. [if EricVirginityTaken is 0]A groan leaves his mouth as the relentless plunge breaks through Eric's hymen, losing his virginity to this black-tentacled beast - and that without Eric even consciously realizing it. [end if]The creature worms into him deeper and deeper while its other tentacles seem to hold the college student in a firm but gentle embrace, making sure he isn't pushed back or accidentally falls out of the bed while thrashing and moaning in helpless lust. You can't help but gape as his belly starts to bulge out a little, showing the shape of the tentacle cock's head - the creature pushed all the way into Eric's womb!";
 			say "     You watch with tense attention as Eric gets tentacle-fucked hard and deep, the thick appendage between his legs writhing and throbbing as it thrusts into his pussy and womb again and again. Satisfied burbling noises come from beneath the bed as the creature violates the sleeping college student, its sounds of pleasure eventually rising in a way that reminds you of a kettle about to boil. Then the smaller gripping tentacles suddenly tighten their hold on the naked human and you can literally see a series of slightly thicker bulges move up the tentacle cock in a rapid progression. Before you can even think of maybe doing anything about that, the first heavy throb of monster cum gushes deep into Eric, followed by countless others.";
@@ -126,7 +126,7 @@ after going down from Grey Abbey Library while (Eric is in Bunker and HP of Eric
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Grab the tentacle cock and wrestle it away from Eric!";
 			say "     ([link]N[as]n[end link]) - Quickly drop to the ground and look under the bed. Maybe this thing follows the classic rules...";
-			if player consents: [wrestle]
+			if Player consents: [wrestle]
 				LineBreak;
 				say "     Throwing yourself forward, you manage to intercept the tentacle cock - barely - as it pounces on Eric. Hands closing around the wriggling appendage, you stop it short just before it touches the moaning trans-boy's crotch and burrows in between his nether lips. In reply, a strange burble of sound from under the bed seems to express the creature's displeasure. The tentacle in your grip splurges another throb of defiant ooze over Eric's crotch, then begins to writhe against your hold as you pull it away from him. Further black tentacles snake from beneath the bed or let go of Eric to attack you and things quickly escalate to a full-on wrestling match between the monster and yourself.";
 				say "     The smaller tentacles move frantically against you - wrapping around anything they can reach or snaking directly under your clothing to touch you in rather intimate places, leaving behind slimy feelings of ooze against your skin. A few times as you let go with one hand to deal with such mostly annoying distractions, the big tentacle cock almost writhes out of your grasp, really throwing around every little bit of power in it. But no, you keep hold of it with grim determination, resisting any attempt to pull away and turn back on its original target, creating a considerable amount of frustration for the beast (if you are judging the sound of wet clay being punched correctly that comes from beneath the bed).";

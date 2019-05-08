@@ -3,13 +3,13 @@ Jackalman by Sarokcat begins here.
 "Adds a jackalman to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 
 to say jackalman attack:
 	say "'wow you got here how did that happen.'";
 	wait for any key;
-	if player is male:
+	if Player is male:
 		say "yay";
 		infect "Jackalman";
 	else:
@@ -20,17 +20,18 @@ to say jackalman attack:
 To say jackalman loss:
 	say "how the heck did you manage to get this, you are just that awesome I guess.'";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Jackalman";
+	now NewTypeInfection entry is false;
+	now Name entry is "Jackalman";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
 	now defeated entry is "[jackalman loss]";
@@ -57,15 +58,15 @@ When Play begins:
 	now lev entry is 10;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 30;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Shop";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;  [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;  [ Size of balls ]
-	now breasts entry is 2;  [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;
-	now cunt width entry is 4;
+	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4;  [ Size of balls ]
+	now Nipple Count entry is 2;  [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 4;  [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 9;
+	now Cunt Tightness entry is 4;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
@@ -79,11 +80,102 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 to jackalmanify:
 	repeat with y running from 1 to number of rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Jackalman":
-			now monster is y;
+		if Name entry is "Jackalman":
+			now MonsterID is y;
 			break;
 	now non-infectious entry is false;  [swap to allow infection...]
 	infect;
@@ -91,16 +183,16 @@ to jackalmanify:
 
 
 when play ends:
-	if bodyname of player is "Jackalman":
-		if humanity of player < 10:
-			if player is male:
+	if bodyname of Player is "Jackalman":
+		if humanity of Player < 10:
+			if Player is male:
 				say "Finally giving in to the dark primal urges within, you swiftly return to the shop in the mall, Nermine welcoming you back eagerly as you pin her to the counter, and fuck her again and again. She eagerly submits to your needs, your strong jackal-like body and male musk making you irresistible to the strange shopkeeper, as with every strong thrust of your canine cock you make her even more subservient to your will. Eventually sated, you enjoy looking around your new shop with amusement, while your new little jackal fucktoy licks your paws eagerly. An evil grin stretches across your jackal muzzle as you ponder all the amusement this store full of unusual treasures could bring you. You and Nermine quickly pack up her shop as the military close in, and she shows you how to change the location of the store, soon you are setting up in a lovely and unsuspecting college town. The foolish students are soon flocking to your store to buy all sorts of strange and unusual transformative trinkets, and you are more than happy to have your pet shopkeep sell them to them. The amusing sights of the people who fail to use the items carefully make you and Nermine laugh heartily, as you both begin to enjoy the game of seeing how badly your customers can misuse the items, enjoying their new forms immensely. Some few manage to 'win' by being careful and using their purchases responsibly, and those few you often give even nicer toys to as a reward, some of them you even reward personally by making them into your own personal pets. When the military comes to investigate the strange outbreak of infection in the town, they find your shop already gone, moved on to a new town already, and looking forward to a long and enjoyable existence with your lovely pet jackalwoman...";
 			else:
 				say "Finally giving in to your darker desires, you quickly head back to the strange shop and the shopkeeper you know so well. Nermine greets you eagerly as you return, and is soon on her knees before you like a good little submissive as you pet her head. You enjoy reveling in her submission for several moments, her body helpless to resist the strong urges you bring out in her, you are about to take her to the back room to enjoy your new pet fully, when the door jingles as someone walks in. You look around to see who it is, only to gasp as an amazingly arousing scent washes over you, making you feel both incredibly horny and submissive at the same time. 'Ah here you both are,' the jackal headed man from before says as he looks at the two of you with a grin on his muzzle. You find yourself moaning as you drop to your knees next to Nermine, realizing that that wonderful dominant scent is coming from the jackalman, making your pussy clench with a deep need that you know only he can fulfill.";
 				say "Seeing your reaction, the jackal headed man grins as he pets you with one of his clawed hands, sending pleasure shooting through your body at his touch. 'Surely you didn't think I used all of that mixture on your little ankh?' he says in a teasing voice, 'Not when I have been waiting so very long to see this one on her knees before me like this?' the jackal man says as he gestures at Nermine. 'And now I get to have you too as a bonus,' he says in amusement. He takes your paw and Nermine's and leads you both into the back room. You find yourself almost wanting to protest as he pushes you both down onto the mattress, but his strong powerful scent, and dominant attitude soon has your body responding eagerly to his touches, as it goes into heat for this strong male jackal. He breeds both you and Nermine deep into the night, and for several days following, the two of you writhing underneath him in turn, as he fills you both up with his divinely amazing seed.";
 				say "You are unable to resist his scent and touches as he masters your mind and tames your body to his touch, his soft suggestions of how a proper little jackal-woman should be settling into your mind like commands, as he ensures your obedience now and forever. Eventually he leaves the two of you lying there together in the back room of the shop, two well-fucked jackalwomen panting like animals. When the two of you eventually come back to your senses, you realize that you look just like Nermine does, and this fact seems to please you on some deep level, since your powerful mate likes you like this. Soon you and Nermine reopen the shop, the other jackalwoman being slightly submissive towards you still, even though you both know that you are really both pets for the more powerful jackalman. The shop open, you both take turns manning the counter, and selling all sorts of strange and unusual items to the unsuspecting populace outside the city, often amused at how they fail to read the instructions or take care when using dangerous transformative magic. Running the shop becomes more of a chore as you and Nermine both soon begin to show signs that your night with the wonderful Jackal man was productive, your bellies swelling large with his offspring. The feeling of his children growing in your belly makes you both smile eagerly as you wait for them to be born, looking forward both to the children themselves, but to his promises of the many more breedings to come...";
 		else:
-			if player is male:
+			if Player is male:
 				say "When the rescue comes, you are ready and waiting for it, and while your new jackal man form disturbs some of the military who have come to rescue you, you are easily able to convince them you aren't a threat. Quickly released from military custody due to your persuasive ways and dominant manner, you soon begin looking around for your place in the outside world. Discarding most regular jobs as beneath you at this point, you begin picking up strange odd jobs, and hunting down rare items for your contacts. While not all of the items you retrieve for people may necessarily have been retrieved legally, you don't really mind, in fact that just makes it all the more challenging. Soon you are rather well off money wise, with a nice little collection of rare items of your own, and you stop taking jobs for just the money, demanding your clients service you in whatever manner you wish before you retrieve their items. Occasionally some of them try to evade your terms, especially the men, agreeing and then trying to talk their way out of it, these fools learn not to mess with you, as you demonstrate that even outside of the city, you still retain the ability to alter others forms. These clients quickly become your favorite pets, once transformed into submissive little jackal women for your pleasure, also serving as a lesson to others about trying to cheat you. Strangely enough, sometimes even the clients you only enjoy for several nights become so addicted to your jackal body they ask to join your harem of pets, and you certainly don't refuse them. You occasionally wonder how Nermine is doing in her shop that started it all, but for the most part are more than happy living your new life as a rich and powerful modern day lord...";
 			else:
 				say "When the rescue comes, you remember all you have learned from survival in the city and your time working with mysterious items, and use that knowledge to secure a number of valuable items from the city and smuggle them out when you are rescued. Once outside, you retrieve the unique and generally impossible to find items, and quickly open up a small shop of your own in a large city, advertising items from within the city to an elect clientele. Your business, while secret to most, is a booming success, selling the infectious samples of creatures from within the city to those who want to try being something more unusual. Though usually your items are purchased with the intent to turn someone else, usually a rival, into a little sexpet for the buyer, you don't generally care too much, although you always find it amusing when they forget to read the instructions and end up changing themselves instead. Your shop eventually gains a wider variety of items traded for or acquired from all over the world, many of them strange and unusual in their own ways. While you never quite manage to get as impressive a collection as the jackal-woman you first worked with, your shop soon becomes a close rival to her own, and you even begin to stock and carry items for the portion of the populace that can do 'special' tricks. Eventually trading with them for some simple tricks and enchantments on the shop itself, much like those on the shop you first encountered, and if your stock isn't as impressive yet, well you figure you have plenty of time to fix that, as you don't seem to be aging anymore either. You are definitely looking forward to a long and prosperous life of trading in unusual and strange things, and you especially look forward to those few fools who try to cheat or steal from your shop... they make such wonderful sexy pets after all...";

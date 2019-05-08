@@ -53,37 +53,37 @@ to neutpronouns:
 Section 2 Stripes's Definitions
 
 to say subjpro_cap of (x - a person): [Subjective Pronoun: He/She]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "He";
 	else:
 		say "She";
 
 to say subjpro of (x - a person): [subjective pronoun: he/she]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "he";
 	else:
 		say "she";
 
 to say possadj_cap of (x - a person): [Possessive Adjective: His/Her <something>]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "His";
 	else:
 		say "Her";
 
 to say possadj of (x - a person): [possessive adjective: his/her <something>]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "his";
 	else:
 		say "her";
 
 to say objpro of (x - a person): [objective pronoun: <to> him/her]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "him";
 	else:
 		say "her";
 
 to say posspro of (x - a person): [possessive pronoun: <something> = his/hers]
-	if cunts of x is 0:
+	if Cunt Count of x is 0:
 		say "his";
 	else:
 		say "hers";
@@ -93,85 +93,85 @@ Section 3 - Plurals
 [short singular/plural statements - these add an s, es, y/ies as needed to a noun or a verb based on one or the other sexual characteristic]
 
 to say smn: [stick an s on if multiple male - noun]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "s";
 	else:
 		say "";
 
 to say sfn: [stick an s on if multiple female - noun]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "s";
 	else:
 		say "";
 
 to say esmn: [stick an es on if multiple male - noun]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "es";
 	else:
 		say "";
 
 to say esfn: [stick an es on if multiple female - noun]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "es";
 	else:
 		say "";
 
 to say ymn: [sticks y/ies on if multiple male - noun]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "ies";
 	else:
 		say "y";
 
 to say yfn: [sticks y/ies on if multiple female - noun]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "ies";
 	else:
 		say "y";
 
 to say smv: [stick an s on if single male - verb]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "";
 	else:
 		say "s";
 
 to say sfv: [stick an s on if single female - verb]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "";
 	else:
 		say "s";
 
 to say esmv: [stick an es on if single male - verb]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "";
 	else:
 		say "es";
 
 to say esfv: [stick an es on if single female - verb]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "";
 	else:
 		say "es";
 
 to say ymv: [sticks y/ies on if single male - verb]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "y";
 	else:
 		say "ies";
 
 to say yfv: [sticks y/ies on if single female - verb]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "y";
 	else:
 		say "ies";
 
 to say ismv: [uses is/are based on cock pluralization - verb]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "are";
 	else:
 		say "is";
 
 to say isfv: [uses is/are based on cunt pluralization - verb]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "are";
 	else:
 		say "is";
@@ -188,97 +188,97 @@ say "Your cock[smn] smash[esmv] into the goblin's face. Your juicy puss[yfn] the
 [short singular/plural pronoun statements - these pick between the two relevant pronouns based on plurality of either male of female sex organs]
 
 to say ittheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "they";
 	else:
 		say "it";
 
 to say ittheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "they";
 	else:
 		say "it";
 
 to say itthemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "them";
 	else:
 		say "it";
 
 to say itthemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "them";
 	else:
 		say "it";
 
 to say itstheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "their";
 	else:
 		say "its";
 
 to say itstheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "their";
 	else:
 		say "its";
 
 to say itstheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "theirs";
 	else:
 		say "its";
 
 to say itstheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "theirs";
 	else:
 		say "its";
 
 to say ItTheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "They";
 	else:
 		say "It";
 
 to say ItTheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "They";
 	else:
 		say "It";
 
 to say ItThemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "Them";
 	else:
 		say "It";
 
 to say ItThemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "Them";
 	else:
 		say "It";
 
 to say ItsTheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "Their";
 	else:
 		say "Its";
 
 to say ItsTheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "Their";
 	else:
 		say "Its";
 
 to say ItsTheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
-	if cocks of player > 1:
+	if Cock Count of Player > 1:
 		say "Theirs";
 	else:
 		say "Its";
 
 to say ItsTheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
-	if cunts of player > 1:
+	if Cunt Count of Player > 1:
 		say "Theirs";
 	else:
 		say "Its";
@@ -485,33 +485,33 @@ carry out monnumsetting:
 Section 5 - Wahn's Definitions
 
 to say heshe:
-	if player is female:
+	if Player is female:
 		say "she";
-	else if player is male:
+	else if Player is male:
 		say "he";
 	else:
 		say "it";
 
 to say HeShe:
-	if player is female:
+	if Player is female:
 		say "She";
-	else if player is male:
+	else if Player is male:
 		say "He";
 	else:
 		say "It";
 
 to say hisher:
-	if player is female:
+	if Player is female:
 		say "her";
-	else if player is male:
+	else if Player is male:
 		say "his";
 	else:
 		say "its";
 
 to say himher:
-	if player is female:
+	if Player is female:
 		say "her";
-	else if player is male:
+	else if Player is male:
 		say "him";
 	else:
 		say "it";
@@ -584,7 +584,7 @@ To SetNeutralPronouns for (x - a person):
 	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:
-	if PronounChoice of player is:
+	if PronounChoice of Player is:
 		-- "Male":
 			SetMalePronouns for player;
 		-- "Female":
@@ -594,13 +594,13 @@ This is the SetPlayerPronouns rule:
 		-- "Neutral":
 			SetNeutralPronouns for player;
 		-- "Auto":
-			if player is herm:
-				if breast size of player > 0: [herm]
+			if Player is herm:
+				if Breast Size of Player > 0: [herm]
 					SetHermPronouns for player;
 				else: [male herm]
 					SetMalePronouns for player;
 			else:
-				if breast size of player > 0: [shemale, female, neuter fem]
+				if Breast Size of Player > 0: [shemale, female, neuter fem]
 					SetFemalePronouns for player;
 				else: [male, cuntboy, neuter masc]
 					SetMalePronouns for player;
@@ -614,7 +614,7 @@ understand "pronoun menu" as pronounsetting.
 
 carry out pronounsetting:
 	say "     This menu allows you to set how the game will refer to you, the player, when referring to you in the third person. This is usually not used as the game mostly refers to the player in 2nd person, but this option will determine how it's handled in conversations between NPCs, for example. This menu can be called again in game with [bold type]pronoun menu[roman type][line break]";
-	say "Current Pronoun Choice: [bold type][PronounChoice of player][roman type][line break]";
+	say "Current Pronoun Choice: [bold type][PronounChoice of Player][roman type][line break]";
 	say "- [link](1) Auto[as]1[end link] - Game will decide pronouns based on current body configuration.";
 	say "- [link](2) Male[as]2[end link] - Game will always use He/His/Him/Himself pronouns for the player.";
 	say "- [link](3) Female[as]3[end link] - Game will always use She/Her/Her/Herself pronouns for the player.";
@@ -627,19 +627,19 @@ carry out pronounsetting:
 		get a number;
 		if calcnumber is:
 			-- 1:
-				now PronounChoice of player is "Auto";
+				now PronounChoice of Player is "Auto";
 			-- 2:
-				now PronounChoice of player is "Male";
+				now PronounChoice of Player is "Male";
 			-- 3:
-				now PronounChoice of player is "Female";
+				now PronounChoice of Player is "Female";
 			-- 4:
-				now PronounChoice of player is "Herm";
+				now PronounChoice of Player is "Herm";
 			-- 5:
-				now PronounChoice of player is "Neutral";
+				now PronounChoice of Player is "Neutral";
 			-- otherwise:
 				say "Invalid choice. Pick from 0 to 5.";
-	if PronounChoice of player is not "Auto":
-		say "You are now set to [PronounChoice of player] pronouns.";
+	if PronounChoice of Player is not "Auto":
+		say "You are now set to [PronounChoice of Player] pronouns.";
 	else:
 		say "You are now set to automatic pronoun handling.";
 	follow the SetPlayerPronouns rule;
@@ -650,56 +650,56 @@ understand "testpronouns" as pronountesting.
 
 carry out pronountesting:
 	say "[master].";
-	say "[PronounChoice of player].";
-	say "[PronounSet of player].";
-	say "[SubjectPro of player]";
+	say "[PronounChoice of Player].";
+	say "[PronounSet of Player].";
+	say "[SubjectPro of Player]";
 	say "[isare]";
 	say "[waswere]";
 
 to say master:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "master";
 	else:
 		say "mistress";
 
 to say Master:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "Master";
 	else:
 		say "Mistress";
 
 to say boygirl:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "boy";
 	else:
 		say "girl";
 
 to say guygal:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "guy";
 	else:
 		say "gal";
 
 to say mister:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "mister";
 	else:
 		say "miss";
 
 to say Mister:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "Mister";
 	else:
 		say "Miss";
 
 to say Sir:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "Sir";
 	else:
 		say "Ma'am";
 
 to say sir:
-	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+	if PronounSet of Player is "Male" or PronounSet of Player is "Neutral":
 		say "sir";
 	else:
 		say "ma'am";

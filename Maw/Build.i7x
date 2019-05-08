@@ -32,9 +32,9 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if player consents:
+	if Player consents:
 		now building of blueprints is noun;
-		now origin of blueprints is location of player;
+		now origin of blueprints is location of Player;
 		now facing of blueprints is second noun;
 		now blueprints is started;
 		say "Your builders begin constructing [noun].";
@@ -106,10 +106,10 @@ This is the Ranch Output Rule:
 	now x is x + ( workers of hunter / 20 );
 	if agricultural zone is adjacent to Ranch:
 		increase x by 1;
-	if "Meat" is listed in diet of tribe of player:
-		increase food of tribe of player by x;
+	if "Meat" is listed in diet of tribe of Player:
+		increase food of tribe of Player by x;
 	else:
-		increase creds of tribe of player by x;
+		increase creds of tribe of Player by x;
 
 This is the ranchcheck rule:
 	if farming is complete, rule succeeds;
@@ -129,10 +129,10 @@ This is the Agri Output Rule:
 	if a random chance of 1 in 4 succeeds:
 		increase x by 1;
 	now x is x + ( workers of farmer / 20 );
-	if "Plant" is listed in diet of tribe of player:
-		increase food of tribe of player by x;
+	if "Plant" is listed in diet of tribe of Player:
+		increase food of tribe of Player by x;
 	else:
-		increase creds of tribe of player by x;
+		increase creds of tribe of Player by x;
 
 This is the agricheck rule:
 	if farming is complete, rule succeeds;
@@ -141,7 +141,7 @@ This is the agricheck rule:
 Section - Well
 
 Well is a construct.
-The description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of player] people hanging around at most times of the day, socializing near the wellspring of life.".
+The description of it is "A simple source of water. A salvaged bucket has been provided to lower down and bring up some, mostly delicious, water. You see some [bodyadj of tribe of Player] people hanging around at most times of the day, socializing near the wellspring of life.".
 The cost of it is 50.
 The validation of it is agricheck rule.
 The proximity of it is "You can see people hanging around a well to the".
@@ -153,10 +153,10 @@ This is the well rule:
 	if well is adjacent to agricultural zone:
 		increase x by 1;
 		now x is x + ( workers of farmer / 20 );
-	if "Plant" is listed in diet of tribe of player:
-		increase food of tribe of player by x;
+	if "Plant" is listed in diet of tribe of Player:
+		increase food of tribe of Player by x;
 	else:
-		increase creds of tribe of player by x;
+		increase creds of tribe of Player by x;
 
 Section - Shelter
 
@@ -177,11 +177,11 @@ An everyturn rule (this is the Can We Build It rule):
 		continue the action;
 	let foragers be workers of builder;
 	now foragers is foragers * 2; [ Builders are worth 2 points each ]
-	increase foragers by ( population of tribe of player - occupied of tribe of player ) / 5; [ idle people are worth 1/5th points each ]
+	increase foragers by ( population of tribe of Player - occupied of tribe of Player ) / 5; [ idle people are worth 1/5th points each ]
 	[First check for easy to grab salvage, will become more scarce over time]
 	let x be a random number from 80 to 120; [mild variance]
-	increase x by (Handiness of tribe of player) / 5;
-	if "Deft" is listed in perks of tribe of player:
+	increase x by (Handiness of tribe of Player) / 5;
+	if "Deft" is listed in perks of tribe of Player:
 		increase x by 20;
 	now x is ( x * foragers ) / 100;
 	if x > 0: [ There is building to be done ]
@@ -192,7 +192,7 @@ An everyturn rule (this is the Can We Build It rule):
 			say ". [bold type][building of blueprints][roman type] is constructed!";
 			follow the completion of building of blueprints;
 			if the perk of building of blueprints is not "":
-				add the perk of building of blueprints to perks of tribe of player;
+				add the perk of building of blueprints to perks of tribe of Player;
 			change the facing of blueprints exit of origin of blueprints to building of blueprints;
 			change the opposite of facing of blueprints exit of building of blueprints to origin of blueprints;
 			now building of blueprints is placed;
@@ -338,7 +338,7 @@ The validation of builder is the buildervailable rule.
 The maximum of builder is maxbuilder rule.
 
 This is the maxbuilder rule:
-	now max of builder is population of tribe of player;
+	now max of builder is population of tribe of Player;
 
 This is the buildervailable rule:
 	let x be the number of valid incomplete constructs;

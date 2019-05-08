@@ -458,7 +458,7 @@ before examining a thing (called t):
 	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
 
@@ -467,7 +467,7 @@ to inline_project (x - a figure name):
 	if graphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
@@ -478,7 +478,7 @@ to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				if formatrule entry is "normal":
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Normal Mode";
@@ -507,7 +507,7 @@ to project (x - a figure name):
 	else if graphics is true and NewGraphics is false: [legacy fallback (new disabled)]
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
@@ -517,7 +517,7 @@ to project (x - a figure name):
 			if graphics is true and NewGraphics is true:
 				repeat with y running from 1 to number of filled rows in table of game art:
 					choose row y in table of game art;
-					if icon entry is x and artist entry is not listed in BlockList of player:
+					if icon entry is x and artist entry is not listed in BlockList of Player:
 						[blank window to backgroundcolor entry;]
 						now graphics background color is backgroundcolor entry;
 						if NewGraphicsDebugMode is true: [inline debug report toggled by "graphics_debug"]
@@ -531,7 +531,7 @@ to project (x - a figure name):
 							if graphics is true and NewGraphics is false:
 								repeat with y running from 1 to number of filled rows in table of game art:
 									choose row y in table of game art;
-									if icon entry is x and artist entry is not listed in BlockList of player:
+									if icon entry is x and artist entry is not listed in BlockList of Player:
 										display x;
 										break;]
 
@@ -540,14 +540,14 @@ to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				follow the ngraphics_open rule;
 				now the currently shown picture is x;
 				follow the current graphics drawing rule;
 	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
 
@@ -708,7 +708,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Helot"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
-"Hermaphrodite Gryphon"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
 "Herm Hyena"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
@@ -1284,17 +1284,17 @@ to artistbanmenu: [more compact version]
 			artistbanswitch entry calcnumber of artistlist;
 
 to BlockCheck (x - text):
-	if x is not listed in BlockList of player:
+	if x is not listed in BlockList of Player:
 		say "[bold type][special-style-1]On  [roman type]";
 	else:
 		say "[bold type][special-style-2]Off  [roman type]";
 
 to artistbanswitch (name - text):
-	if name is not listed in BlockList of player:
-		add name to Blocklist of player;
+	if name is not listed in BlockList of Player:
+		add name to Blocklist of Player;
 		say "[name] Blocked!";
-	else if name is listed in Blocklist of player:
-		remove name from Blocklist of player;
+	else if name is listed in Blocklist of Player:
+		remove name from Blocklist of Player;
 		say "[name] Unblocked!";
 
 

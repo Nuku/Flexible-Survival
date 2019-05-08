@@ -15,13 +15,13 @@ Instead of resolving a Beach Bum:
 	if Resolution of Beach Bum is 0:
 		say "     Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach. The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		say "     The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items. Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
-		if player consents:
+		if Player consents:
 			say "     The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
 			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
 			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					add loot entry to invent of player;
+					add loot entry to invent of Player;
 					say "You acquired 1 [loot entry].";
 				else:
 					increase carried of dirty water by 1;
@@ -40,7 +40,7 @@ Instead of resolving a Beach Bum:
 			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					add loot entry to invent of player;
+					add loot entry to invent of Player;
 					say "You acquired 1 [loot entry].";
 				else:
 					increase carried of dirty water by 1;
@@ -49,7 +49,7 @@ Instead of resolving a Beach Bum:
 			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					add loot entry to invent of player;
+					add loot entry to invent of Player;
 					say "You acquired 1 [loot entry].";
 				else:
 					increase carried of dirty water by 1;
@@ -61,7 +61,7 @@ Instead of resolving a Beach Bum:
 			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
-					add loot entry to invent of player;
+					add loot entry to invent of Player;
 					say "You acquired 1 [loot entry].";
 				else:
 					increase carried of dirty water by 1;
@@ -158,7 +158,7 @@ when play begins:
 
 Instead of resolving a Dragon voyeurism:
 	say "     Moving along the beach, you hear strange noises from up ahead, causing you to move cautiously as you look around the upcoming dune. You gasp at the strange sight before you, a male sea dragon in the shallows mounting what looks to be a mixture of a human and sea dragoness, shreds of a divers wetsuit still cling to her expanding body as he fucks her roughly. The expression on the woman's face is screwed up into one of the purest ecstasy as he thrusts into her, her happy cries and the strong musk of their mating causing you to grow excited as well. You find yourself unable to move on your eyes locked to the strangely erotic scene in front of you even as your hands begin to roam your body. The woman cooing and writhing wantonly under the dragon, even as her changes continue sweeping over her, until finally the sea dragon roars as he spills his seed into what used to be a human diver, and is now indistinguishable from just another sea dragon. The dragons stay there in the low surf for a minute, shuddering in pleasure, before the male sea dragon pulls out, and drags himself back out into the surf. The newly made dragoness looks around for a minute as if confused by something, before fixating on his retreating form, she quickly dives into the surf after him, swimming along quickly to catch up to the beast that changed her, and now owns her. You gasp in relief tinged with disappointment as they move away, your body tingling both from the sheer erotic nature of the sight you just witnessed, as well as the strong scent of sea dragon mating that covers the area and seems to cling to you strongly.";
-	increase libido of player by 30;
+	increase Libido of Player by 30;
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
@@ -208,7 +208,7 @@ when play begins:
 
 Instead of resolving a Tainted Yacht:
 	say "     While moving along the nearly deserted coast, you spot a small, sixty foot yacht anchored nearby. You think with a bit of effort you might be able to swim out to the anchored boat. Do you try?";
-	if player consents:
+	if Player consents:
 		fight;
 		say "     Making it to the ship at last, you tiredly haul yourself aboard, only to stare around you in shock. The deck is a slippery mess of fluid, and champagne glasses and bits of clothing lie scattered around the deck forlornly. Looking around inside carefully, you find the ship seems deserted, at least the front cabin is, you look around to try to figure out what happened here, and spot a few small journal entries in the log. Skimming the log you begin to understand what happened. While apparently the owners of this yacht were intending to wait out the infection in style with a close group of friends, one of the people they let on the boat must have been infected already and not shown it yet. Soon after they set up anchor for their nightly party, the orgy must have started, spreading the conversion throughout the small enclosed ship like a wildfire.";
 		say "     Searching the ship further could be dangerous, as not all of the creatures may have abandoned ship fully, still you decide to check to see if the boat still runs. Unfortunately something seems to have flooded the engines, rendering them currently inoperable, moving forward to open the hatchway leading to the engines, you are overcome with the strong scent of musk and sex, making your skin twitch with the first signs of impending change. Quickly slamming the door shut you realize that an orgy seems to have taken place near the engine room, and whatever the engine is flooded with, trying to clean it out would most likely result in you turning into whatever creature these people became. Quickly abandoning that idea, you go check the food supplies only to find that they like everything else on the ship, are tainted with the results of the boats occupants long orgy. Sighing, you go about gathering up some of the least tainted of the water supplies before heading back to shore, only slightly changed by your experience.";
@@ -266,11 +266,11 @@ when play begins:
 
 Instead of resolving a Cream stand:
 	say "     Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, though you don't spot anyone nearby. It is something of a hot day - perhaps you should go help yourself to some ice cream?";
-	if player consents:
+	if Player consents:
 		say "     Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream. Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat. The taste of the ice cream makes you wonder for a second, as it doesn't taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways. Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more than wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
-		decrease HP of player by 20;
-		infect "Hermaphrodite Gryphon";
-		challenge "Hermaphrodite Gryphon";
+		decrease HP of Player by 20;
+		infect "Blue Gryphon";
+		challenge "Blue Gryphon";
 		say "     The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
 		now Resolution of Cream stand is 1; [got ice cream]
@@ -294,7 +294,7 @@ Instead of resolving a Lucky seashell:
 	let T be a random number between one and five;
 	if T is 1:
 		say "     Finding the shell makes you scour the beach and pay much more attention to your surroundings as you continue on your walk, just in case there are any other such treasures. And while you don't actually find any more treasures on your trip down the beach, you do feel as if your eyes have become a bit sharper from the experience.";
-		increase perception of player by 2;
+		increase perception of Player by 2;
 		say "[bold type]Your perception has increased by 2![roman type][line break]";
 	else if T is 2:
 		say "     Walking along the beach afterwards with a spring in your step, you scan the sands around you just in case something else useful turns up, and after just a short time, you spot a bottle of water! Wow this really must be your lucky day!";
@@ -302,11 +302,11 @@ Instead of resolving a Lucky seashell:
 	else if T is 3:
 		say "     Walking along the beach with the shell in hand, you can't help but play at tossing the thing up and down in your hands as you travel, enjoying the look of it as it spins in the air, and the challenge of catching it quickly and accurately. Eventually you manage to drop it into the surf, and no matter how hard you look you don't find the shining shell again. Still you resolve to pay a bit more attention to how you move your hands from now on so you don't drop anything else important, and playing with the shell already made you more aware of their positioning, so it isn't a total loss";
 		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
-		increase dexterity of player by 2;
+		increase dexterity of Player by 2;
 	else if T is 4:
 		say "     Traveling along with the shell, it seems like tripping over it was the least of your worries today! Your walk turns into a harrowing experience as you slip on the sand and fall several times, the wind blows sand into your face, and your feet seem to find every rock on the beach. Deciding maybe it was the shells fault after the fourth time you are nearly dragged out to sea by a sudden wave, you toss the shining pretty thing into the sea from whence it came. You feel much more ragged from the experience, though it has taught you a bit about stubbornly enduring things...";
 		say "[bold type]Your stamina has increased by 2![roman type][line break]";
-		increase stamina of player by 2;
+		increase stamina of Player by 2;
 	else:
 		say "     Taking the shell along with you, you find that it seems to make the day brighter as you carry it and makes you feel a bit more human just to have it with you. Eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		SanBoost 20;

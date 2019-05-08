@@ -40,7 +40,7 @@ Version 1 of Alexandra Cuckolding by Wahn begins here.
 [ 13-24 = plumply preggers                            ]
 [ if ( HP of Alexandra is 3 and lust of Alexandra > 12 ) or HP of Alexandra > 3 = bigger breasts ]
 
-[ libido of Alexandra                                 ]
+[ Libido of Alexandra                                 ]
 [ number of offspring                                 ]
 
 [ level of Alexandra                                  ]
@@ -74,7 +74,7 @@ AlexandraBrutusInteraction is a number that varies.
 AlexandraKorvinInteraction is a number that varies.
 AlexandraCarlInteraction is a number that varies.
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -82,13 +82,13 @@ instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of 
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going up from Bunker while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of going up from Bunker while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
 	say "[AlexandraBrutusCuckScene]";
 
-instead of going down from Grey Abbey 2F while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
+instead of going down from Grey Abbey 2F while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is demon brute and (DBCaptureQuestVar is 6 or DBCaptureQuestVar is 7) and DemonBruteStatus < 2 and AlexandraBrutusInteraction < 100 and (AlexandraBrutusInteraction is 0 or (AlexandraBrutusInteraction > 0 and a random chance of 1 in 4 succeeds))):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra bangs Brutus - AlexandraBrutusInteraction: [AlexandraBrutusInteraction][line break]";
@@ -100,12 +100,12 @@ to say AlexandraBrutusCuckScene:
 	WaitLineBreak;
 	say "     Turning to the two of them with a wide-eyed expression, you find Alexandra grinning at you. Then she strokes up and down over Brutus's manhood with an eager hand, clearly enjoying the edge of envy that is creeping into your demeanor. 'If our big friend here is protecting you at all times with such tireless devotion, I think he deserves a bit of a reward boss. You'd like to have some fun, isn't that right you demon hunk?' Brutus gives a deep-throated rumble and a heavy throb goes through his prick, making it swell a bit more and twitch upwards. His wide row of sharp teeth is revealed as he grins down at the bitch and licks his lips. The purple giant opens his mouth to reply, which is exactly when Alexandra bends forward to run her floppy canine tongue along his prick, tracing the thick throbbing veins on its shaft.";
 	say "     'Yeah, I want to fuck this slut hard!' Brutus almost roars, moving one of his large clawed hands to easily cup the doberwoman's breasts and squeeze them appreciatively. She laughs at his reaction, eyes focusing on yourself in a way that holds more than a little challenge. 'Can't say no to such obvious need boss. The poor guy might get blue - err... more purple - balls otherwise. ";
-	if player is not male: [female or neuter player]
+	if Player is not male: [female or neuter player]
 		say "And I deserve to be properly fucked too. Been waiting all day for a real man to smack something like this mighty shaft into my pussy!' She hefts your demonic companion's rapidly hardening prick in one hand as her gaze wanders downwards to your own crotch before she glances back up and into your eyes. The implication is clear - you don't even have a cock, so she's looking in other places to satisfy her needs.";
-	else if player is male: [male + herm player]
-		if cock length of player < 6: [cock up to 5 inch - Brutus has 18]
+	else if Player is male: [male + herm player]
+		if Cock Length of Player < 6: [cock up to 5 inch - Brutus has 18]
 			say "And I deserve to be properly fucked too. Been waiting all day for a real man to smack something like this mighty shaft into my pussy!' She hefts your demonic companion's rapidly hardening prick in one hand as her gaze wanders downwards to the small bulge your prematurely erect little cock makes before she glances back up and into your eyes. The implication is clear - your small manhood is far from enough for the bitch, so she's looking in other places to satisfy her needs.";
-		else if cock length of player < 15: [cock up to 14 inch- Brutus has 18]
+		else if Cock Length of Player < 15: [cock up to 14 inch- Brutus has 18]
 			say "And I deserve to be properly fucked too. Been waiting all day for a real man to smack something like this mighty shaft into my pussy!' She hefts your demonic companion's rapidly hardening prick in one hand as her gaze wanders downwards to the bulge your own erection makes before she glances back up and into your eyes. The implication is clear - you might have a nice size for a human, but the bitch wants more and is looking in other places to satisfy her needs.";
 		else: [cock 15 inch and up, so not that much smaller or even bigger than Brutus's 18]
 			say "And I deserve to be properly fucked too. Been waiting all day for a real man to smack something like this mighty shaft into my pussy!' She hefts your demonic companion's rapidly hardening prick in one hand as her gaze wanders downwards to the bulge your own erection makes before she glances back up and into your eyes. The implication from her stressing the words 'real man' is clear - you might have a large cock, but the bitch is still looking elsewhere to satisfy her needs. Maybe he has some quality you don't or she just gets off on making you jealous.";
@@ -114,18 +114,18 @@ to say AlexandraBrutusCuckScene:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Endure the humiliation of being a mere bystander at their coupling.";
 	say "     ([link]N[as]n[end link]) - Crack down hard on this! You may have allowed Alexandra to get ideas about challenging you, but Brutus is a truly devoted pet and will follow your commands no matter what.";
-	if player consents: [they fuck]
+	if Player consents: [they fuck]
 		LineBreak;
 		say "     You can't bring yourself to interfere with the fun Alexandra has planned on having with Brutus - may it be because you actually agree with her arguments or the fact that you can't help but feel aroused at the thought of seeing her impaled on Brutus's giant pole. No matter which, you just stand there for the moment, acting as a living clothes-hanger while she rubs up against and gets groped by your demonic companion. Soon Alexandra undoes the button and zipper of her jeans and bends over to push them down over her shapely rump - oh so coincidentally giving you a glimpse of her dripping wet pussy. Pushing the jeans down her long legs, her tail wags back and forth in front of you, then she steps out of the crumpled garment and kicks it over towards you.";
 		say "     Without giving you a second glance, Alexandra looks up at the towering demon and tells him in a lewd tone, 'Take me, you big beast!' Brutus's response is basically just a horny roar and he snatches the doberwoman bitch up, pressing her to his chest. He holds her up with one hand cupping Alexandra's furry butt while its index finger rubs her nether lips, the other one cradling her back as he licks the full orbs of her breasts. While playing his tongue over the canine woman's chest, matting her short fur to cling to every curve, Brutus proceeds to fondle her crotch, then at one point just pushes his broad digit into her. Alexandra is impaled on his finger now, gasping out loud as he slides in and out of her pussy and pushes the bitch to new heights of arousal. You can literally see her juices run down over his knuckles and drip to the ground!";
 		WaitLineBreak;
 		say "     Being fondled, finger-fucked and licked by a large muscled demon - and all that right in front of her so-called 'boss' - Alexandra is quickly pushed to a screamed orgasm, writhing in Brutus's grasp as she comes hard! Watching her like this and hearing her excited barks, you can't help but move a free hand to your own crotch, sliding it inside your pants to ";
-		if player is male: [male + herm player]
-			if cock length of player < 6: [cock up to 5 inch]
+		if Player is male: [male + herm player]
+			if Cock Length of Player < 6: [cock up to 5 inch]
 				say "grasp the regretfully small shaft of your manhood and start pumping it";
 			else: [cock 6 inch and up]
 				say "grasp the hard shaft constrained within, almost painfully so, and starts pumping its length";
-		else if player is female: [female]
+		else if Player is female: [female]
 			say "reach your wet folds and start playing with yourself";
 		else:
 			say "stroke your sexless crotch";
@@ -137,9 +137,9 @@ to say AlexandraBrutusCuckScene:
 		WaitLineBreak;
 		say "     And then... Alexandra puts the final flourish on cuckolding you with your own demonic pet. Having recovered from her own orgasm, the bitch throws her arms around Brutus's shoulders and pulls herself up against him, sliding off his still erupting shaft with a wet slurp. No longer sheathed in her soggy pussy, his huge erection flops down and the next spurt of cum leaves a long splattered line over the floor and your lower legs, followed by another shot hitting you right in the chest and making a hell of a mess. Then Brutus glances past the grinning doberwoman clinging to his chest and sees that he creamed you, head to toe more or less, and quickly adjusts his stance to blast any further shots of his demon seed over a bookshelf, not his master.";
 		say "     Holding an armful of Alexandra's clothing and being soaked in demon cum, you think for a moment about saying something, then tell yourself to just go with the flow and ";
-		if player is not male: [female or neuter player]
+		if Player is not male: [female or neuter player]
 			say "concentrate on fingering yourself. It doesn't take long before your frantic hand movements drive you over the edge, cumming hard inside your pants - soaking them from the inside, just as they are from without. ";
-		else if player is male: [male + herm player]
+		else if Player is male: [male + herm player]
 			say "concentrate on masturbating. It doesn't take long before your frantic hand movements drive you over the edge, cumming hard inside your pants - soaking them from the inside, just as they are from without. ";
 		say "While you are still creaming your underwear, Alexandra convinces her demon fuck-buddy to set her back down. She looks at your pretty bedraggled state, dripping cum and pleasuring yourself, then lets out an amused bark. Strolling over to you - a bit bow-legged from her own demon fuck though - she reaches out to pluck her clothes from your grasp. She looks at the cum stains all over them (the clothes got splurged, just like you), then takes a sniff and tells you with a teasing grin, 'And here I thought I gave these to you to keep clean. No matter, I like the smell actually - reminds me of a good time.' With that, she saunters off, still naked and with Brutus's cum trickling down the inside of her legs from her still somewhat gaping pussy.";
 		now AlexandraBrutusInteraction is 1;
@@ -155,7 +155,7 @@ to say AlexandraBrutusCuckScene:
 		say "     'Spoilsport,' Alexandra barks, less than amused, then makes a few steps to pick up the jacket you so unceremoniously dumped on the floor. She shrugs into it, then zips up the front (a rare occurrence as she usually loves to present her breasts) and turns back to throw you a dirty look. 'Guess I'll have to look elsewhere to find something long and hard,' she adds in a mocking tease, stroking her fingers up and down the nightstick hanging from her belt. With that, she whirls around with a huff and stalks off.";
 		now AlexandraBrutusInteraction is 100;
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction is 0):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -175,7 +175,7 @@ to say AlexandraKorvinCuckScene1:
 	say "     Alexandra is about to climb on top of Korvin's lap, putting cuckold's horns on you another time! [bold type]Will you simply let this happen?[roman type]";
 	say "     ([link]Y[as]y[end link]) - Endure the humiliation of being a mere bystander at their coupling.";
 	say "     ([link]N[as]n[end link]) - Crack down hard on this! You may have allowed Alexandra to get ideas about challenging you, but Korvin is your trained attack dog! He'll obey if you call him to heel vehemently enough.";
-	if player consents: [they fuck]
+	if Player consents: [they fuck]
 		LineBreak;
 		say "     Doing nothing - except walking a bit closer so you have a better view - you simply watch as Alexandra climbs on top of the sofa, spreading her legs to straddle the German Shepherd's hips. The bitch leans forward to kiss him lustfully, their tongues exploring each other's muzzles, then reaches down to take his hard shaft and line it up with her pussy. And just like that, she sinks herself onto his cock, throwing her head back to bark in ecstasy as the thick piece of man-meat fills her. The doberwoman grinds her hips against his, her hungry pussy taking Korvin's whole shaft - knot and all - then starts to bounce up and down on it, popping his knot in and out of her wet snatch.";
 		say "     'Fuck yeah!' Korvin groans out loud as Alexandra fucks herself on his cock, but soon the canine isn't content with a simply passive role anymore. He reaches up to cup her breasts, groping them and leaning forward to lick their nipples, switching up from one to the other. After a few moments of this, the dog pulls back a little, looking Alexandra right in the eye as he says, 'You're one sexy bitch! But there's just one little problem...' Stroking a lock of her dyed-red head hair out of her face, Alexandra gives an amused snort as she replies, 'So?! What is it?' ...while at the same time squeezing Korvin's cock with her inner muscles and reducing his reply to nothing but a drawn-out lusty groan.";
@@ -197,7 +197,7 @@ to say AlexandraKorvinCuckScene1:
 		say "     As Korvin grunts deeply and starts to come soon after, spraying quite a few long strings of his cum into your bent palm, you loudly say what a good pet he is. With a snide look at Alexandra, you add a moment later that at least one doggie here knows how to behave himself, then raise your hand to Korvin's muzzle. As the canine starts to eat his own load, you grin at the doberwoman bitch. Nothing more needs to be said, as it becomes clear to her that Korvin is YOURS, and Alexandra walks off with a huff.";
 		now AlexandraKorvinInteraction is 100; [stopped things cold]
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -216,7 +216,7 @@ to say AlexandraKorvinCuckScene2:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oh yeah, bring on that canine action!";
 	say "     ([link]N[as]n[end link]) - Nah. Find a book or something to occupy yourself while you - try - to tune out their sounds.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     With more of a growl than any intelligible words, Korvin pounces on Alexandra, hastily taking a place between her legs on the sofa and guiding his cock forward. The pre-cum glistening tip thrusts into her pussy deeply and the two of them share an aroused grunt, followed by him giving her a lust-filled kiss, muzzle to muzzle and long canine tongues sliding against each other. Alexandra wraps her arms and legs around the horny dog as he makes out with her while the slender tail between her legs thumps against the sofa cushions. Then Korvin tenses his muscles a little, pulling back incrementally before humping against her crotch hard and popping the bulge of his knot into his needy bitch!";
 		say "     Doing nothing - except walking a bit closer so you have a better view - you simply watch as Alexandra thrashes around a little in helpless lust, overwhelmed by the sensation of him penetrating her with the tennis ball-sized knot... and then jerking it out of her again to go for another hard thrust. With her legs wrapping around his hips even tighter and Alexandra's fingers digging into the fur on his back to hold on, Korvin revels in the power he has over the canine slut under him. While he keeps getting her hole acquainted with his knot, the muscular male leaks copious amounts of pre into her by now soaked cunt, his bushy tail wagging up a storm behind his back.";
@@ -234,12 +234,12 @@ to say AlexandraKorvinCuckScene2:
 		say "     With more of a growl than any intelligible words, Korvin pounces on Alexandra, hastily taking a place between her legs on the sofa and guiding his cock towards her nether lips. And that is the last you see of them, as you turn away and start walking, doing your best to ignore to grunts, growls and moans coming from behind you. You might be imagining things, but it seems like Alexandra's exclamations of lust and shouts of 'Pound me Korvin!' spontaneously get louder a few moments later. It'd fit the provocative bitch to try to wind you up even as you are leaving them behind and don't want to watch them fuck. And the bad thing is... it's working!";
 		say "     Walking down the long bookshelves until you reach the end of the ground floor, you can still hear them go at it clear as day - Korvin matching his partner bark for bark and basically shouting his words too. You draw a book at random from the nearest shelf, flipping it open to read and distract yourself, but it is almost impossible to concentrate on the words over the constant aroused yips and howls Alexandra lets out. FUCK - this building has far too good acoustics... must have been great for a choir in its abbey days, but... damn, you just can't get away from the bitch making use of your attack dog.";
 		WaitLineBreak;
-		say "     Giving up on the hopeless try with the book, you snap it shut and shove it back in its place, then slide a hand down to your crotch and start stroking yourself. In front of your mind's eye, the muscular German Shepherd is humping into the bitch beneath him - your bitch, the doberwoman you've worked hard to fight and subdue! Almost on cue, a satisfied bark from Alexandra echoes through the library, prompting you to imagine yourself in his place, making use of the former cop as you rub your [if player is male]own erection[else if player is female]wet pussy[else]genderless crotch[end if] and build up your arousal in leaps and bounds. By the time you hear the two dogs howl in orgasm, you're ready to go yourself and make a bit of a mess, [if player is male]covering the books in the shelf in front of you with long streaks of white cum[else if player is female]dripping a few gushes of femcum all over the floor[else]knocking some books out of the shelf behind you as you twitch and stumble from the sensations of your own orgasm.";
+		say "     Giving up on the hopeless try with the book, you snap it shut and shove it back in its place, then slide a hand down to your crotch and start stroking yourself. In front of your mind's eye, the muscular German Shepherd is humping into the bitch beneath him - your bitch, the doberwoman you've worked hard to fight and subdue! Almost on cue, a satisfied bark from Alexandra echoes through the library, prompting you to imagine yourself in his place, making use of the former cop as you rub your [if Player is male]own erection[else if Player is female]wet pussy[else]genderless crotch[end if] and build up your arousal in leaps and bounds. By the time you hear the two dogs howl in orgasm, you're ready to go yourself and make a bit of a mess, [if Player is male]covering the books in the shelf in front of you with long streaks of white cum[else if Player is female]dripping a few gushes of femcum all over the floor[else]knocking some books out of the shelf behind you as you twitch and stumble from the sensations of your own orgasm.";
 	now lastdobiemess is 95; [Korvin creamed her pussy]
 	impregAlexandraChance with "Korvin";
 	NPCSexAftermath Alexandra receives "PussyFuck" from gshep; [Korvin's pet object is called gshep]
 
-instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and companion of Player is not gshep and gsd_pet > 59 and gsd_pet < 100 and AlexandraKorvinInteraction > 0 and AlexandraKorvinInteraction < 100 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -260,7 +260,7 @@ to say AlexandraKorvinCuckScene3:
 	impregAlexandraChance with "Korvin";
 	NPCSexAftermath Alexandra receives "PussyFuck" from gshep; [Korvin's pet object is called gshep]
 
-instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
+instead of going up from Grey Abbey Library while ("Cuckold" is listed in feats of Player and Alexandra is in Grey Abbey Library and HP of Alexandra < 50 and (lastfuck of Alexandra - turns >= 8) and Carl is in Grey Abbey 2F and HP of Carl > 9 and HP of Carl < 40 and AlexandraCarlInteraction is 0):
 	move player to Grey Abbey Library;
 	if debugactive is 1:
 		say "     DEBUG: Alexandra makes a move on Carl - AlexandraCarlInteraction: [AlexandraCarlInteraction][line break]";
@@ -273,13 +273,13 @@ to say AlexandraCarlOralCuckScene:
 	say "     'It'll be priceless for scouts to be able to sniff out details about their surroundings. Like the fact that there's a wyvern somewhere a block or two up-wind. Must be a male that caught someone, with how thick the cum-smell is in the air.' Alexandra gives an interested nod as Carl explains this, although you can see that her eyes are pointed your way, having noticed you a moment before. A hint of a challenging grin crosses her muzzle, then she turns her attention fully to the husky beside her once more. The other anthro is still oblivious to your presence, thanks to the wyvern scent wafting in through the window and the sexy distraction standing right next to him.";
 	say "     'So, I'm curious about you,' Alexandra tells him in a friendly tone and reaches out to stroke up Carl's arm, then squeezes the soldier's bicep admiringly. '...you must have been quite strong and handsome guy to become such a strapping husky.' Carl chuckles at the compliment, raising a hand-paw to rub the back of his neck as he replies, 'Can't say that any of the lovely ladies I've been with have ever complained. I'm hoping that won't change now either. All the best chicks dig big friendly dogs anyways.' With an amused bark, Alexandra raises her eyebrow at the other canine and comments, 'Hah! Is that how it goes? You know... you're not wrong about that.' Then the doberwoman slides her and down Carl's front and keeps going till she is cupping the growing bulge in his pants.";
 	WaitLineBreak;
-	say "     Your husky [CarlStatus]visibly tenses at the sudden switch from somewhat naughty banter to Alexandra groping him, his tail stopping in mid-motion and raising to attention, pointing upwards. 'Uhm,' the husky soldier says nervously, then lets out a groan of pleasure as Alexandra goes on to squeeze his dick through the fabric of his pants. 'Aren't you... uhm, you know... taken?' come the next words from Carl, to which she replies by stepping closer to him making her naked breasts brush against his arm. 'It's just a bit of fun, [if player is female]she[else]he[end if] doesn't have to know,' Alexandra tells the horny guy in a seductive tone of voice, flashing a second of a grin at you before going on to rub Carl's manhood a little more.";
+	say "     Your husky [CarlStatus]visibly tenses at the sudden switch from somewhat naughty banter to Alexandra groping him, his tail stopping in mid-motion and raising to attention, pointing upwards. 'Uhm,' the husky soldier says nervously, then lets out a groan of pleasure as Alexandra goes on to squeeze his dick through the fabric of his pants. 'Aren't you... uhm, you know... taken?' come the next words from Carl, to which she replies by stepping closer to him making her naked breasts brush against his arm. 'It's just a bit of fun, [if Player is female]she[else]he[end if] doesn't have to know,' Alexandra tells the horny guy in a seductive tone of voice, flashing a second of a grin at you before going on to rub Carl's manhood a little more.";
 	say "     Carl still hesitates, although his tail starts a slow wag once again at the sexy doberwoman's soothing words, and he doesn't actively object as she slides herself in front of him and crouches down. The sound of his zipper being pulled down a heartbeat later paints a fairly clear picture of what the dobie slut wants to do next.";
 	LineBreak;
 	say "     [bold type]Will you simply stand back let her give the canine soldier a blowjob?[roman type]";
 	say "     ([link]Y[as]y[end link]) - Endure the humiliation of watching Alexandra go down on him, showing off as she fucks around right in front of you.";
 	say "     ([link]N[as]n[end link]) - Stop the doberwoman's advances. Carl's a good guy, so it'd take little more than clearing your throat to break this up.";
-	if player consents: [they fuck]
+	if Player consents: [they fuck]
 		LineBreak;
 		say "     Doing nothing - except walking a bit closer so you have a better view - you simply watch as Alexandra holds up Carl's erection and laps at it, running her tongue from the knot at its base to the pointy tip. Groaning lustfully at the sensations, Carl grasps the window-frame tightly and stands where he is with closed eyes, reveling in the sexy doberwoman going down on his cock. Alexandra slurps on his canine prick with great enthusiasm and you're fairly certain that she even creates an extra bit of noise and sucking sounds just to rile you up a little more. From where you stand, you can see that the material of her jeans is soaked at the doberwoman's crotch, showing how much she enjoys being with the hunky husky - and also rubbing your nose in it.";
 		say "     With the skillful blowjob Carl is getting right now, it is little wonder that he gets closer and closer to a quickly building orgasm, moaning and panting while Alexandra bobs on his cock. She also fondles the male husky's balls while she sucks, then eventually builds up to the grand finale by sliding her hand further between his legs and feeling around for his furry buns. After giving the soldier's ass a grope, Alexandra proceeds to run a finger up and down his crack, then goes on to suddenly push a finger against his pucker, sliding it in all the way before he even the hint of a chance to clench down on it. A little wiggle of her index finger is enough after that to get Carl off, pushing the magic button of his prostate while she sucks extra hard on his manhood.";
@@ -291,7 +291,7 @@ to say AlexandraCarlOralCuckScene:
 	else: [stop this - the player might not like Carl being used this way, even if he has allowed Alexandra to get into cuck status]
 		LineBreak;
 		say "     Clearing your throat loudly, you watch Carl flinch and whirl around, his canine shaft sticking out of the open front of his camo shorts, hard and erect as it swings through the air. The husky's eyes go wide as he sees you, his tail drooping instantly and tucking between the man's legs. 'I - um, we were just...' he starts to stammer, then shuts up and tries to tug his canine cock into his pants first. Having some difficulty at stuffing the long and still fairly hard shaft into his pants, especially with shaking fingers, it takes a moment before the soldier can zip back up. Now he stands before you at attention and shame-facedly at still showing a lewd bulge in his pants.";
-		say "     You relieve some of the tension in the room by telling Carl that it is okay - he didn't start this, after all. With a sigh of relief, the soldier relaxes at least a little bit. Meanwhile, Alexandra stands up behind him and leans forward to push her breasts against his back, then says, 'Could have shown you an amazing time. But if you're not man enough to take what you really want, I guess I was wasting my time anyways!' With that, the doberwoman pushes past him, purposefully hitting him with her shoulder as she goes along, then striding down the steps sullenly without giving you another glance. After she is gone, Carl apologizes to you and adds, 'She's a wild one that likes to tease, eh? No worries, I'll keep my distance from Alexandra from now on. The last thing I wanna do is create any uncomfortable situations for the [if player is female]gal[else]guy[end if] who rescued me.'";
+		say "     You relieve some of the tension in the room by telling Carl that it is okay - he didn't start this, after all. With a sigh of relief, the soldier relaxes at least a little bit. Meanwhile, Alexandra stands up behind him and leans forward to push her breasts against his back, then says, 'Could have shown you an amazing time. But if you're not man enough to take what you really want, I guess I was wasting my time anyways!' With that, the doberwoman pushes past him, purposefully hitting him with her shoulder as she goes along, then striding down the steps sullenly without giving you another glance. After she is gone, Carl apologizes to you and adds, 'She's a wild one that likes to tease, eh? No worries, I'll keep my distance from Alexandra from now on. The last thing I wanna do is create any uncomfortable situations for the [if Player is female]gal[else]guy[end if] who rescued me.'";
 		now AlexandraCarlInteraction is 100; [stopped things cold]
 
 

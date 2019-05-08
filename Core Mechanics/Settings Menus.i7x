@@ -22,23 +22,23 @@ carry out Trixiecheating:
 	while Trixieexit is 0:
 		say "[bold type]Unerring Hunter[roman type] will let you automatically succeed while hunting as long as your target exists in the area. [bold type]Automatic Survival[roman type] removes your need for food and water. [bold type]Open World[roman type] grants you access to all nav points which aren't private (locked by event or NPC). [bold type]Lil Better[roman type] gives +1 to all stats. [bold type]Booster Feats[roman type] gives you one additional basic and fun feats. [bold type]Play On[roman type] removes the time limit to the game. [bold type]Weak-Willed[roman type] makes you prone to spontaneously surrendering during combat. You can also set your [bold type]humanity[roman type] or [bold type]libido[roman type] to any number from 0 to 100.";
 		say "[bold type]Cheats:[roman type][line break]";
-		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of player]Active[else]Inactive[end if][line break]";
-		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of player]Active[else]Inactive[end if][line break]";
-		say "[if Open World is listed in feats of player](3) Open World cannot be deactivated[else][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
-		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of player]Active[else]Inactive[end if][line break]";
+		say "[link](1) Unerring Hunter[as]1[end link] - [if Unerring Hunter is listed in feats of Player]Active[else]Inactive[end if][line break]";
+		say "[link](2) Automatic Survival[as]2[end link] - [if Automatic Survival is listed in feats of Player]Active[else]Inactive[end if][line break]";
+		say "[if Open World is listed in feats of Player](3) Open World cannot be deactivated[else][link](3) Open World[as]3[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
+		say "[link](4) Lil Better[as]4[end link] - [if Lil Better is listed in feats of Player]Active[else]Inactive[end if][line break]";
 		say "[if boosterfeats > 0](5) Booster Feats cannot be deactivated[else][link](5) Booster Feats[as]5[end link] - Inactive (Cannot be deactiveated)[end if][line break]";
 		say "[link](6) Play On[as]6[end link] - [if playon is 0]Inactive[else]Active[end if] (Score halved to reactivate)[line break]";
 		say "[link](7) Weak-Willed[as]7[end link] - [if weakwilled is true]Active[else]Inactive[end if] (Bonus if activated)[line break]";
-		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of player][roman type][line break]";
-		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][libido of player][roman type][line break]";
+		say "[link](8) Set Humanity[as]8[end link] - Current Humanity: [bold type][humanity of Player][roman type][line break]";
+		say "[link](9) Set Libido[as]9[end link] - Current Libido: [bold type][Libido of Player][roman type][line break]";
 		say "[link](10) Insomniac[as]10[end link] - [if Terminatorsleep is false][bold type]Off[roman type] - You must sleep occasionally[else if Terminatorsleep is true][bold type]On[roman type] - You do not require sleep[else]Error[line break]";
 		LineBreak;
 		say "[bold type]Game settings:[roman type][line break]";
 		say "[link](11) Set anal play content level[as]11[end link] - Currently: [bold type][if anallevel is 1]Less Anal[else if anallevel is 2]Standard[else]More Anal[end if][roman type][line break]";
 		say "[link](12) Set watersports (WS) content level[as]12[end link] - Currently: [bold type][if WSlevel is 1]No WS[else if WSlevel is 2]Standard[else]Full WS[end if][roman type][line break]";
 		say "[link](13) Access the vore menu[as]13[end link] - Player victim: [bold type][if vorelevel is 1]No Vore[else if vorelevel is 2]Standard[else]More Vore[end if][roman type] & [bold type][if UBlevel is 1]No UB[else if UBlevel is 2]Standard[else]Full UB[end if][roman type][line break]";
-		if playercanvore is true:
-			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if playercanub is false]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
+		if Playercanvore is true:
+			say "-- Player predator: [bold type][if vorechoice is 0]Player choice vore[else if vorechoice is 1]Automatic vore[else]Never vore[end if][roman type] w/Hard Vore frequency: [bold type][if hvorelevel is 1]None[else if hvorelevel is 2]Basic (25%)[else if hvorelevel is 3]High (56%)[end if][roman type] & [bold type][if Playercanub is false]Inactive UB[else if ubchoice is 0]Player choice UB[else if ubchoice is 1]Automatic UB[else]Never UB[end if][roman type][line break]";
 		say "[link](14) Set egg-pregnancy (ovi) content level[as]14[end link] - Currently: [bold type][if ovipreglevel is 1]No Ovi[else if ovipreglevel is 2]Standard[else]Always Ovi[end if][roman type][line break]";
 		say "[link](15) Adjust flags[as]15[end link] - View/change warding settings[line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
@@ -50,29 +50,29 @@ carry out Trixiecheating:
 			else:
 				say "Invalid choice. Pick from 0 to 15.";
 		if calcnumber is 1:
-			if "Unerring Hunter" is listed in feats of player:
-				remove "Unerring Hunter" from feats of player;
+			if "Unerring Hunter" is listed in feats of Player:
+				remove "Unerring Hunter" from feats of Player;
 				increase score by 250;
 				say "Your 'Unerring Hunter' cheating ability has been removed.";
 			else:
-				add "Unerring Hunter" to feats of player;
+				add "Unerring Hunter" to feats of Player;
 				decrease score by 500;
 				say "You have gained the 'Unerring Hunter' cheat, but are penalized 500 points.";
 				say "You now have access to the 'huntinglist' listing (appearing as [bracket]Hunt[close bracket]).";
 		else if calcnumber is 2:
-			if "Automatic Survival" is listed in feats of player:
-				remove "Automatic Survival" from feats of player;
+			if "Automatic Survival" is listed in feats of Player:
+				remove "Automatic Survival" from feats of Player;
 				say "Your 'Automatic Survival' cheating ability has been removed.";
 				increase score by 300;
 			else:
-				add "Automatic Survival" to feats of player;
+				add "Automatic Survival" to feats of Player;
 				decrease score by 600;
 				say "You have gained the 'Automatic Survival' cheat, but are penalized 600 points.";
 		else if calcnumber is 3:
-			if "Open World" is listed in feats of player:
+			if "Open World" is listed in feats of Player:
 				say "This ability cannot be removed once gained.";
 			else:
-				add "Open World" to feats of player;
+				add "Open World" to feats of Player;
 				decrease score by 400;
 				say "You have gained the 'Open World' cheat, but are penalized 400 points.";
 				repeat with Q running through fasttravel not private rooms:
@@ -84,38 +84,38 @@ carry out Trixiecheating:
 				now College Campus is known;
 				now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		else if calcnumber is 4:
-			if "Lil Better" is listed in feats of player:
-				remove "Lil Better" from feats of player;
+			if "Lil Better" is listed in feats of Player:
+				remove "Lil Better" from feats of Player;
 				say "Your 'Lil Better' cheating ability has been removed.";
 				increase score by 200;
-				decrease strength of player by 1;
-				decrease capacity of player by 5;
-				decrease dexterity of player by 1;
-				decrease stamina of player by 1;
-				decrease intelligence of player by 1;
-				decrease charisma of player by 1;
-				decrease perception of player by 1;
-				if remainder after dividing stamina of player by 2 is 1:
-					decrease maxHP of player by level of player plus 1;
-					if HP of player > maxHP of player, now HP of player is maxHP of player;
+				decrease strength of Player by 1;
+				decrease capacity of Player by 5;
+				decrease dexterity of Player by 1;
+				decrease stamina of Player by 1;
+				decrease intelligence of Player by 1;
+				decrease charisma of Player by 1;
+				decrease perception of Player by 1;
+				if remainder after dividing stamina of Player by 2 is 1:
+					decrease maxHP of Player by level of Player plus 1;
+					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 			else:
-				add "Lil Better" to feats of player;
+				add "Lil Better" to feats of Player;
 				decrease score by 400;
 				say "You have gained the 'Lil Better' cheat, but are penalized 400 points.";
-				increase strength of player by 1;
-				increase capacity of player by 5;
-				increase dexterity of player by 1;
-				increase stamina of player by 1;
-				increase intelligence of player by 1;
-				increase charisma of player by 1;
-				increase perception of player by 1;
-				if remainder after dividing stamina of player by 2 is 0:
-					increase maxHP of player by level of player plus 1;
+				increase strength of Player by 1;
+				increase capacity of Player by 5;
+				increase dexterity of Player by 1;
+				increase stamina of Player by 1;
+				increase intelligence of Player by 1;
+				increase charisma of Player by 1;
+				increase perception of Player by 1;
+				if remainder after dividing stamina of Player by 2 is 0:
+					increase maxHP of Player by level of Player plus 1;
 		else if calcnumber is 5:
 			if boosterfeats > 0:
 				say "This ability cannot be removed once gained.";
 			else:
-				add "Booster Feats" to feats of player;
+				add "Booster Feats" to feats of Player;
 				now boosterfeats is 1;
 				say "You have gained the 'Booster Feats' cheat, but are penalized 400 points. Pick your feats:";
 				featget;
@@ -146,7 +146,7 @@ carry out Trixiecheating:
 			say "Set your humanity (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
-				now humanity of player is calcnumber;
+				now humanity of Player is calcnumber;
 				say "Humanity adjusted. Score penalized by 50.";
 				decrease score by 50;
 			else:
@@ -155,22 +155,22 @@ carry out Trixiecheating:
 			say "Set your libido (1-100) or 0 to abort> [run paragraph on]";
 			get a number;
 			if calcnumber > 0 and calcnumber <= 100:
-				now libido of player is calcnumber;
+				now Libido of Player is calcnumber;
 				say "Libido adjusted. Score penalized by 50.";
 				decrease score by 50;
 			else:
 				say "Invalid choice - returning to menu.";
 		else if calcnumber is 10:
 			if Terminatorsleep is false:
-				if "Well Rested" is listed in feats of player: [They have slept recently, reduce/remove feat.]
+				if "Well Rested" is listed in feats of Player: [They have slept recently, reduce/remove feat.]
 					FeatLoss "Well Rested";
 					say "     Due to activating [bold type]Insomniac[roman type] You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
-					decrease strength of player by 2;
-					decrease dexterity of player by 2;
-					decrease stamina of player by 2;
-					decrease charisma of player by 2;
-					decrease intelligence of player by 2;
-					decrease perception of player by 2;
+					decrease strength of Player by 2;
+					decrease dexterity of Player by 2;
+					decrease stamina of Player by 2;
+					decrease charisma of Player by 2;
+					decrease intelligence of Player by 2;
+					decrease perception of Player by 2;
 				if TerminatorSleepActivated is false:
 					now TerminatorSleepActivated is True;
 					decrease score by 100;
@@ -225,18 +225,18 @@ carry out analadjusting:
 	if calcnumber is 1:
 		say "You are now set to receive Less Anal.";
 		now anallevel is 1;
-		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
-		if "Less Anal" is not listed in feats of player, add "Less Anal" to feats of player;
+		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
+		if "Less Anal" is not listed in feats of Player, add "Less Anal" to feats of Player;
 	else if calcnumber is 2:
 		say "You are now set to receive the standard amount of anal sex.";
 		now anallevel is 2;
-		if "More Anal" is listed in feats of player, remove "More Anal" from feats of player;
-		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
+		if "More Anal" is listed in feats of Player, remove "More Anal" from feats of Player;
+		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
 	else if calcnumber is 3:
 		say "You are now set to receive More Anal.";
 		now anallevel is 3;
-		if "Less Anal" is listed in feats of player, remove "Less Anal" from feats of player;
-		if "More Anal" is not listed in feats of player, add "More Anal" to feats of player;
+		if "Less Anal" is listed in feats of Player, remove "Less Anal" from feats of Player;
+		if "More Anal" is not listed in feats of Player, add "More Anal" to feats of Player;
 	else:
 		say "Exiting menu.";
 		LineBreak;
@@ -289,7 +289,7 @@ understand "voremenu" as voremenuing.
 understand "vore menu" as voremenuing.
 
 check voremenuing:
-	if playercanvore is false, say "Your character is currently incapable of such actions.";
+	if Playercanvore is false, say "Your character is currently incapable of such actions.";
 
 carry out voremenuing:
 	say "     You have accessed the [bold type]vore menu[roman type]. It is here that you may adjust some settings related to vore content in the game. Options 1-3 deal with the frequency the player may be subject to vore by others, typically monsters. While rare in the game at present, this will tell the game to bias for or against it in situations where it might occur. Your selection may not apply in certain situations, especially when dealing with special, scripted scenes. Options 4-6 are similar, but apply to unbirthing (UB) content.";
@@ -304,15 +304,15 @@ carry out voremenuing:
 		say "- [link](4) No UB[as]4[end link] - Skip most scenes of the player getting unbirthed[if UBlevel is 1]. [bold type]Selected[roman type][line break][else].[end if]";
 		say "- [link](5) Standard[as]5[end link] - Player may infrequently get unbirthed[if UBlevel is 2]. [bold type]Selected[roman type][line break][else].[end if]";
 		say "- [link](6) Full UB[as]6[end link] - Player more likely to get unbirthed when possible[if UBlevel is 3]. [bold type]Selected[roman type][line break][else].[end if]";
-		if playercanvore is true:
+		if Playercanvore is true:
 			say "[link](7) Choice to vore[as]7[end link] - [if vorechoice is 0]Player choice[else if vorechoice is 1]Automatic vore[else]Never vore[end if][line break]";
 		else:
 			say "(7) Vore by player - Inactive.";
-		if playercanvore is true:
+		if Playercanvore is true:
 			say "[link](8) Hard vore frequency[as]8[end link] - [if hvorelevel is 1]Off (0%)[else if hvorelevel is 2]Basic (25%)[else]High (56%)[end if][line break]";
 		else:
 			say "(8) Hard vore frequency - Inactive.";
-		if playercanub is true:
+		if Playercanub is true:
 			say "[link](9) Choice to UB[as]9[end link] - [if ubchoice is 0]Player choice[else if ubchoice is 1]Automatic UB[else]Never UB[end if][line break]";
 		else:
 			say "(9) UB by player - Inactive.";
@@ -343,7 +343,7 @@ carry out voremenuing:
 			say "You are now set to receive full unbirthing content.";
 			now UBlevel is 3;
 		else if calcnumber is 7:
-			if playercanvore is false:
+			if Playercanvore is false:
 				say "This option is currently inactive and unlocked via gameplay.";
 			else if vorechoice < 2:
 				increase vorechoice by 1;
@@ -352,7 +352,7 @@ carry out voremenuing:
 				now vorechoice is 0;
 				say "The option to use of your voring ability has been reset to 'Player choice'.";
 		else if calcnumber is 8:
-			if playercanvore is false:
+			if Playercanvore is false:
 				say "This option is currently inactive and unlocked via gameplay.";
 			else if hvorelevel < 3:
 				increase hvorelevel by 1;
@@ -361,7 +361,7 @@ carry out voremenuing:
 				now hvorelevel is 0;
 				say "Hard vore scenes have been turned off.";
 		else if calcnumber is 9:
-			if playercanub is false:
+			if Playercanub is false:
 				say "This option is currently inactive and unlocked via gameplay.";
 			else if ubchoice < 2:
 				increase ubchoice by 1;
@@ -467,20 +467,20 @@ huntinglisting is an action applying to nothing.
 understand "huntinglist" as huntinglisting.
 
 check huntinglisting:
-	if "Unerring Hunter" is not listed in feats of player:
+	if "Unerring Hunter" is not listed in feats of Player:
 		say "You do not currently have this ability." instead;
-	if earea of location of player is "void":
+	if earea of location of Player is "void":
 		say "I don't see any good hunting grounds around here." instead;
 
 carry out huntinglisting:
 	sort Table of Random Critters in lev order;
-	now battleground is the earea of location of player;
+	now battleground is the earea of location of Player;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
 		if there is no area entry, next;
-		if there is no name entry, next;
+		if there is no Name entry, next;
 		if area entry matches the text battleground, case insensitively:
-			say "[link][name entry][as]hunt [name entry][end link][line break]";
+			say "[link][Name entry][as]hunt [Name entry][end link][line break]";
 
 
 Settings Menus ends here.

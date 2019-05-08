@@ -26,18 +26,18 @@ instead of resolving Pure Pool:
 	else if PurePoolSeen is true:
 		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
 		say "     Do you check out the situation?";
-		if player consents:
+		if Player consents:
 			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
-			if player is male and libido of player > 49:
-				if cockname of player is "Wyvern":
+			if Player is male and Libido of Player > 49:
+				if cockname of Player is "Wyvern":
 					say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
-					if player consents:
-						say "     You begin stroking your [cock size desc of player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load";
+					if Player consents:
+						say "     You begin stroking your [cock size desc of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load";
 						if a random chance of 1 in 2 succeeds:
 							say ". They begin stroking as well, rushing to come before you.";
 						else:
 							say ". They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "     You blow your load into the pool, thick streams of seed spraying from your [cock of player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
+						say "     You blow your load into the pool, thick streams of seed spraying from your [cock of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
 						now PurePoolPolluted is true;
 						now PurePoolPollutedByPlayer is true;
 						now Resolution of Pure Pool is 2; [player polluted it]
@@ -52,7 +52,7 @@ instead of resolving Pure Pool:
 		else:
 			say "watched the wyvern infect earlier";
 		say ". Do you wish to drink from it?";
-		if player consents:
+		if Player consents:
 			say "     You dip your head into the cloudy pool and drink deeply.";
 			infect "Wyvern";
 			infect "Wyvern";
@@ -64,7 +64,7 @@ instead of resolving Pure Pool:
 
 to say stop wyvern:
 	say "     Do you try to stop them?";
-	if player consents:
+	if Player consents:
 		challenge "Wyvern";
 		say "     After you finish with the first wyvern, the second attacks!";
 		wait for any key;
@@ -74,7 +74,7 @@ to say stop wyvern:
 		now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
 	else:
 		say "     You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
-		if player consents:
+		if Player consents:
 			challenge "Wyvern";
 			say "     After you finish with the first wyvern, the second attacks!";
 			wait for any key;

@@ -49,7 +49,7 @@ The sarea of Champion is "High".
 Instead of resolving a Champion:
 	say "     While making your way the streets of the high rise district, you find yourself pausing as you come across a shadow boxing bipedal silver wolf. The graceful form of the large and slightly shaggy furred creature makes you look on in awe as you note the way the wolf is moving around while striking out at his own darkened form mimicking him against a nearby brick wall. With a pair of black jeans strapped onto his lower end and an open orange vest clinging around his back and shoulders the other doesn't seem the least bit out of sorts, given the circumstances that have taken over the city.";
 	say "     Not quite knowing what to think about this, you are taken by surprise when a large...mole wearing a martial arts uniform and a bandana across its head pops up out of nowhere after stepping out of a large cloud of smoke. Beady black eyes watch the wolf, who hasn't so much as twitched an ear at the appearance of the other. Not sure what is supposed to happen next you turn away to go about your business. You're sudden departure causes you to miss what happens next as the silver wolf turns to regard the mole and the charges for the brown furred creature with fist raised. The mole is more than ready for the challenge and ends up clashing against the silver wolf in an epic battle of claws and fists!";
-	increase XP of player by 10;
+	increase XP of Player by 10;
 	say "Watching the silver wolf you think you've picked up a trick or two!";
 	increase score by 1;
 	now Champion is resolved;
@@ -73,8 +73,8 @@ Instead of resolving a Cosplay:
 	say "     'Forget it, I'm not getting into this fetish of yours, even if we both do look like furry cosplay characters.' From the small smile that is blooming across the other's muzzle you can tell that the vulpine is wavering ever so slightly in his conviction. When the wolf tries again to get his companion to wear the clothing he had held in between his paws the fox turns to wag his long plume of a tail at the other in playful indignation. That proves to be a mistake on the vulpine's part.";
 	WaitLineBreak;
 	say "     With the kind of agility than only an animal can possess the wolf tosses the clothes off to the side and then tackles the fox to the ground. From what you can see as you lift yourself up higher against the window the lupine wastes no time as he lifts up his friend's naked rump up, unzips the crotch of the pants he happens to be wearing and then mounts the smaller male with a rough and eager thrust of his hips. Backing away from the window you don't feel that the vulpine is in any danger as the protective embrace the wolf has his companion wrapped up in speaks of a kind of passion only lovers or best friends could muster into being. The primal howls and yips of ecstasy that the fox lets out are another sign that everything is going to be alright with the pair.";
-	increase libido of player by 5;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 5;
+	if Libido of Player > 100, now Libido of Player is 100;
 	increase score by 1;
 	now Cosplay is resolved;
 
@@ -122,15 +122,15 @@ Instead of resolving a Controversy:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Hit it.";
 	say "     ([link]N[as]n[end link]) - Nah.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		say "     Figuring what the hell, you wave for the bear to pass the joint over to you. The ursine doesn't say a words as he walks up to you, blows smoke away from your face, and then hands you the roach. Taking it, putting it between your [facename of player] lips and sucking on it once you feel the heated smoke trail down into your [bodyname of player] lungs and then cough as you choke the foul stuff out. 'Whoa, whoa, not too fast man,' the weasel says and you get a few thumps on the back by the bear before nodding and handing him back the joint.";
+		say "     Figuring what the hell, you wave for the bear to pass the joint over to you. The ursine doesn't say a words as he walks up to you, blows smoke away from your face, and then hands you the roach. Taking it, putting it between your [facename of Player] lips and sucking on it once you feel the heated smoke trail down into your [bodyname of Player] lungs and then cough as you choke the foul stuff out. 'Whoa, whoa, not too fast man,' the weasel says and you get a few thumps on the back by the bear before nodding and handing him back the joint.";
 		say "     Thanking the guy for the hit, you let the smoke fill up your lungs as best you can before sighing and then letting the buzz of the stuff flow through your mind. Hearing some laughter from the weasel you smirk at the other before deciding to make some small talk with the two. Asking them what they're doing here out by themselves seems to be the first thing that comes to mind.";
 		WaitLineBreak;
 		say "     'Me and my friend here came down from Jersey to try and find some hot and immoral babes to fuck,' the weasel says simply. 'But wouldn't you know it, just when we got here this plague shit hit and all the women around here got dicks now. Man, what the fuck is up with that?' The weasel snorts before taking the roach back from the bear and puffing on it once again.";
 		say "     Not sure what to say you can only shrug as you look to the blonde weasel before turning to look around the area you're in. While it may be the high rise district the place you're currently hanging around at looks more like the slums.";
 		WaitLineBreak;
-		say "     Hanging out with the weasel and black bear for almost thirty minutes just shootin['] the breeze, you find yourself leaving the duo a few minutes later as your slightly fogged brain remembers you what it was that you had come through this side of town for. 'Catch you later man!' The weasel throws up his hand to wave at you before you can leave and the bear simply nods at you. Making your way down the street you don't get far before the sounds of motorbikes fill your [facename of player] ears causing you to freeze. When you hear whooping and hollering a second later you have just enough time to duck as something whizzes over your head.";
+		say "     Hanging out with the weasel and black bear for almost thirty minutes just shootin['] the breeze, you find yourself leaving the duo a few minutes later as your slightly fogged brain remembers you what it was that you had come through this side of town for. 'Catch you later man!' The weasel throws up his hand to wave at you before you can leave and the bear simply nods at you. Making your way down the street you don't get far before the sounds of motorbikes fill your [facename of Player] ears causing you to freeze. When you hear whooping and hollering a second later you have just enough time to duck as something whizzes over your head.";
 		say "     Lifting your head you find yourself surrounded by some gnarly looking bikers dudes, but from the look of them these are [if Grant is in the Hyena Hideout or HP of Grant > 0]not the normal hyenas you've come to know and slightly respect[else]friendly motorcyclists out for a pleasant ride[end if]. These guys... well they look like something that crawled out of the devil's asshole as their faces are messed up with a mixture of different mutations and their bodies are bulging with enough muscles to put a silverback gorilla to shame. When one of the bikers, who happens to currently waving a massive chain around into the air in his right hand, suddenly lets out a growl you prepare yourself for a fight.";
 		WaitLineBreak;
 		say "     'Snooch to the Nooch!' is all you hear before hell breaks loose as two dark forms drop down from the sky to wail on the bikers surrounding you. Not knowing what's going on you can only stand there in shock as you watch the weasel from before and his black bear companion tear the badass thugs new holes with some seriously impressive fights skills. The bikers find themselves quickly outmatched by the duo and end up driving off quick, fast and in a hurry with more than a few bruises for their troubles. When the last of the bikers are gone you turn to watch the pair, who don't have a scratch on them, give each other dap before turning to look at you. 'You okay?' The weasel asks and you just nod to him in astonishment.";
@@ -145,7 +145,7 @@ Instead of resolving a Controversy:
 		say "     Shaking your head at the offer, you watch as the black bear nods to you before blowing out smoke off to the side before taking another puff. Making up your mind to make some small talk with the two guys you ask them what they're doing out here by themselves. 'Me and my friend here came down from Jersey to try and find some hot and immoral babes to fuck,' the weasel says simply. 'But wouldn't you know it, just when we got here this plague shit hit and all the women around here got dicks now. Man, what the fuck is up with that?' The weasel snorts before taking the roach back from the bear and puffing on it once again.";
 		say "     Not sure what to say, you can only shrug as you look to the blonde weasel before turning to look around the area you're in. While it may be the high rise district the place you're currently hanging around at looks more like the slums.";
 		WaitLineBreak;
-		say "     Hanging out with the weasel and black bear for almost thirty minutes just shootin['] the breeze, you find yourself leaving the duo a few minutes later as your slightly fogged brain remembers you what it was that you had come through this side of town for. 'Catch you later man!' The weasel throws up his hand to wave at you before you can leave and the bear simply nods at you. Making your way down the street you don't get far before the sounds of motorbikes fill your [facename of player] ears causing you to freeze. When you hear whooping and hollering a second later you have just enough time to duck as something whizzes over your head.";
+		say "     Hanging out with the weasel and black bear for almost thirty minutes just shootin['] the breeze, you find yourself leaving the duo a few minutes later as your slightly fogged brain remembers you what it was that you had come through this side of town for. 'Catch you later man!' The weasel throws up his hand to wave at you before you can leave and the bear simply nods at you. Making your way down the street you don't get far before the sounds of motorbikes fill your [facename of Player] ears causing you to freeze. When you hear whooping and hollering a second later you have just enough time to duck as something whizzes over your head.";
 		say "     Lifting your head, you find yourself surrounded by some gnarly looking bikers dudes, but from the look of them these are not the normal hyenas you've come to know and slightly respect. These guys...well they look like something that crawled out of the devil's asshole as their faces are messed up with a mixture of different mutations and their bodies are bulging with enough muscles to put a silverback gorilla to shame. When one of the bikers, who happens to currently waving a massive chain around into the air in his right hand, suddenly lets out a growl you prepare yourself for a fight.";
 		WaitLineBreak;
 		say "     'Snooch to the Nooch!' is all you hear before hell breaks loose as two dark forms drop down from the sky to wail on the bikers surrounding you. Not knowing what's going on you can only stand there in shock as you watch the weasel from before and his black bear companion tear the badass thugs new holes with some seriously impressive fights skills. The bikers find themselves quickly outmatched by the duo and end up driving off quick, fast and in a hurry with more than a few bruises for their troubles. When the last of the bikers are gone you turn to watch the pair, who don't have a scratch on them, give each other dap before turning to look at you. 'You okay?' The weasel asks and you just nod to him in astonishment.";
@@ -179,7 +179,7 @@ Instead of resolving a Dr Feel Good:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Grunting in the pit of your throat, you find all three vulpines turning to regard you with a mix of expressions draped across their respective muzzles. 'Who are you? And what are you doing in here?' One of the females asks and you simply say you were stopping by before smiling imploringly at the nurse. 'That's nice, but I think you need to leave...now. We're in the middle of something rather important here.' Looking between the two vulpines and then to fennec huddled up against the bed in almost an upright fetal position you politely ask the nurses what's happening with the youth there.";
 		say "     'Well nosy, this one came in here not too long ago looking for someone. After politely telling him that the person he was searching for wasn't here anymore he started to raise a fuss, so we had one of the orderlies place him into this room until a doctor could come by to speak to him. Since all of the doctors are busy at the moment we two were sent here to handle this situation.' The nurse not holding the needle replies and you look to the fennec to try and get his side of the story. When the young one looks up at you and then drops his head into his knees you can see that what the vixen had to tell you was the truth.";
@@ -189,13 +189,13 @@ Instead of resolving a Dr Feel Good:
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			Challenge "Vixen Nurse";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Beating the two females off you wipe some sweat down from off of your brow and then turn to speak to the young fennec, only to find yourself getting glomped around the waist as you do. Turning your head to the side to see what's grabbed you, you find the fennec from before nuzzling into the side of your [bodyname of player] chest with furry muzzled soaked with tears.";
+				say "     Beating the two females off you wipe some sweat down from off of your brow and then turn to speak to the young fennec, only to find yourself getting glomped around the waist as you do. Turning your head to the side to see what's grabbed you, you find the fennec from before nuzzling into the side of your [bodyname of Player] chest with furry muzzled soaked with tears.";
 				say "     'Thankyouthankyouthankyou! They were going to try to...! And...I was so scared! And then you came and saved me! And!' The constant babble goes on for about a minute and you patiently wait it out while patting the youth on the back in an effort to soothe his trepidation. When he finally gets some control of himself the fennec teen pulls back from you to give you a cheeky smile.";
 				WaitLineBreak;
 				say "     'Man, I didn't think that that would happen! I just came here looking for my girlfriend!' The fennec rambles, more to himself than you before shaking his head and then grunting out loud, 'Oh, that's so it! I'm going back home to go wash off and then I'm going to go wait for her at her place! If she doesn't show up then...' Mildly you wonder how the other is going to [']wash off['] considering that the water for the city is off, but before you can voice you inquiry the fennec is heading over to the corner and then pulling out something.";
 				say "When he comes back over to you he reveals that what he went to go retrieve was a doctor's uniform, complete with the standardized coat and white pair of pants. 'Here, you can have these. I was going to use them try and sneak around in here to look for my girlfriend, but I think that these will work out better for you.";
 				WaitLineBreak;
-				say "     Shoving the coat and pants into your [bodyname of player] hands, the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
+				say "     Shoving the coat and pants into your [bodyname of Player] hands, the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
 				now carried of doctor's uniform is 1;
 				Increase score by 10;
 				now Dr Feel Good is resolved;
@@ -204,25 +204,25 @@ Instead of resolving a Dr Feel Good:
 			say "     Getting your tail beaten by the two vixens, you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out. You are uncertain how much time passes while you're unconscious.";
 			now heat enabled is false; [temporarily turning off heat effects]
 			now skipturnblocker is 1; [temporarily turns off several other visible end of turn effects]
-			if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
-			if "Regeneration" is not listed in feats of player, follow the turnpass rule;
+			if "Rapid Healing" is not listed in feats of Player, follow the turnpass rule;
+			if "Regeneration" is not listed in feats of Player, follow the turnpass rule;
 			follow the turnpass rule;
 			follow the turnpass rule;
 			now heat enabled is true; [heat effects turned back on]
 			now skipturnblocker is 0; [restores normal end of turn functions for the final turn skip after the scene]
-			say "     When next you wake up, you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on. Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
+			say "     When next you wake up, you find yourself lying on the bed the fennec boy had been on, the other being nowhere in sight, with some confusion as to what's going on. Slowly the memories return to you and you grunt in vexation before trying rising up off of the stiff mattress underneath your [bodyname of Player] back. When you find that all of your motor function are a little out of whack a slight bit of panic crosses your mind, but soon your body's natural healing factor is kicking into gear to get everything back into order.";
 			WaitLineBreak;
-			say "     Once you are up and about, you look over yourself to see if everything is as it should be before giving yourself a few test pats. Seeing that both your arms and legs are just as they had been before your little clash with the vixen you find yourself calling everything to an immediate halt when you rub your palm over your groin. Blinking as you feel that something is not as it should be you undo your pants and then have a look down. What you see makes your mouth slowly drop open as you look to find that [if player is not male]you now have a cock dangling between your legs[else]your cock has gotten a little bigger[end if].";
+			say "     Once you are up and about, you look over yourself to see if everything is as it should be before giving yourself a few test pats. Seeing that both your arms and legs are just as they had been before your little clash with the vixen you find yourself calling everything to an immediate halt when you rub your palm over your groin. Blinking as you feel that something is not as it should be you undo your pants and then have a look down. What you see makes your mouth slowly drop open as you look to find that [if Player is not male]you now have a cock dangling between your legs[else]your cock has gotten a little bigger[end if].";
 			WaitLineBreak;
-			say "     Not knowing how to feel about this, though [if player is not male]mildly uncomfortable with the fact that your womanhood has just been violated[else]slightly impressed that you now have something bigger to work with[end if], you simply remain stunned for a moment before taking slow and deep breaths and then closing your pants back up to go about your way.";
+			say "     Not knowing how to feel about this, though [if Player is not male]mildly uncomfortable with the fact that your womanhood has just been violated[else]slightly impressed that you now have something bigger to work with[end if], you simply remain stunned for a moment before taking slow and deep breaths and then closing your pants back up to go about your way.";
 			say "     In the back of your mind you wonder if the fennec got out of the room while you were fighting, but in the end you decide not to worry about it. If the kid had any good sense he would be long gone by now and if not, well by the looks of things downstairs the nurses won't be too hard on him if they catch him.";
-			if player is not male:
-				increase cocks of player by 1;
-				now cock length of player is 3;
-				now the cock width of player is 2;
+			if Player is not male:
+				increase Cock Count of Player by 1;
+				now Cock Length of Player is 3;
+				now the ball size of Player is 2;
 			else:
-				increase cock length of player by 1;
-				increase the cock width of player by 1;
+				increase Cock Length of Player by 1;
+				increase the ball size of Player by 1;
 			decrease score by 14;
 			now Resolution of Dr Feel Good is 2; [fought & lost/ran]
 			now Dr Feel Good is resolved;

@@ -20,31 +20,31 @@ To ListOpenQuests:
 		say "     ";
 		HospQuestLog;
 		[Dry Plains]
-		if "Farm Quests" is listed in OpenQuests of player or "Other Dry Plains Quest" is listed in OpenQuests of player:
+		if "Farm Quests" is listed in OpenQuests of Player or "Other Dry Plains Quest" is listed in OpenQuests of Player:
 			say "[bold type]Dry Plains[roman type]:";
-			if "Farm Quests" is listed in OpenQuests of player:
+			if "Farm Quests" is listed in OpenQuests of Player:
 				say "     ";
 				AnthonyQuestlog;
-			if "Other Dry Plains Quest" is listed in OpenQuests of player:
+			if "Other Dry Plains Quest" is listed in OpenQuests of Player:
 				say "     ";
 				[
 				OtherDryPlainsQuestlog;
 				]
-		if "Sylvia Quest" is listed in OpenQuests of player or "Julian Quest" is listed in OpenQuests of player:
+		if "Sylvia Quest" is listed in OpenQuests of Player or "Julian Quest" is listed in OpenQuests of Player:
 			say "[bold type]Tenvale College Campus[roman type]:";
-			if "Sylvia Quest" is listed in OpenQuests of player:
+			if "Sylvia Quest" is listed in OpenQuests of Player:
 				say "     ";
 				SylviaQuestLog;
-			if "Julian Quest" is listed in OpenQuests of player:
+			if "Julian Quest" is listed in OpenQuests of Player:
 				say "     ";
 				JulianQuestLog;
 		[		
-		if "Industrial Sector Quest 1" is listed in OpenQuests of player or "Industrial Sector Quest 2" is listed in OpenQuests of player:
+		if "Industrial Sector Quest 1" is listed in OpenQuests of Player or "Industrial Sector Quest 2" is listed in OpenQuests of Player:
 			say "[bold type]Industrial Sector[roman type]:":
-			if "Industrial Sector Quest 1" is listed in OpenQuests of player:
+			if "Industrial Sector Quest 1" is listed in OpenQuests of Player:
 				say "     ";
 				IndustrialSectorQuest1Log;
-			if "Industrial Sector Quest 2" is listed in OpenQuests of player:
+			if "Industrial Sector Quest 2" is listed in OpenQuests of Player:
 				say "     ";
 				IndustrialSectorQuest2Log;
 		]
@@ -68,25 +68,25 @@ To ListCompletedQuests:
 		say "     ";
 		HospQuestLog;
 		[Dry Plains]
-		if "Farm Quests" is listed in CompletedQuests of player or "Other Dry Plains Quest" is listed in CompletedQuests of player:
+		if "Farm Quests" is listed in CompletedQuests of Player or "Other Dry Plains Quest" is listed in CompletedQuests of Player:
 			say "[bold type]Dry Plains[roman type]:";
-			if "Farm Quests" is listed in CompletedQuests of player:
+			if "Farm Quests" is listed in CompletedQuests of Player:
 				say "     ";
 				AnthonyQuestlog;
-			if "Other Dry Plains Quest" is listed in OpenQuests of player:
+			if "Other Dry Plains Quest" is listed in OpenQuests of Player:
 				say "     ";
 				[
 				OtherDryPlainsQuestlog;
 				]
 		[
-		if "Industrial Sector Quest 1" is listed in CompletedQuests of player or "Industrial Sector Quest 2" is listed in CompletedQuests of player:
+		if "Industrial Sector Quest 1" is listed in CompletedQuests of Player or "Industrial Sector Quest 2" is listed in CompletedQuests of Player:
 			say "[bold type]Industrial Sector[roman type]:";
-			if "Industrial Sector Quest 1" is listed in CompletedQuests of player:
+			if "Industrial Sector Quest 1" is listed in CompletedQuests of Player:
 				say "     ";
 				[
 				IndustrialSectorQuest1Log;
 				]
-			if "Industrial Sector Quest 2" is listed in CompletedQuests of player:
+			if "Industrial Sector Quest 2" is listed in CompletedQuests of Player:
 				say "     ";
 				[
 				IndustrialSectorQuest2Log;

@@ -3,7 +3,7 @@ Version 2 of Catgirl by Wahn begins here.
 
 "Adds a Catgirl to Flexible Survival's Wandering Monsters table."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ CatgirlFucked                                            ]
 [  0 - never                                               ]
@@ -41,13 +41,13 @@ to say Catgirl_Loses:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		if player is female and cocks of player < 1: [female]
+		if Player is female and Cock Count of Player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls lustfully under your massaging fingers, your own libido awakens. You quickly remove your clothes and play with your own female parts in tandem with the catgirl's.";
 			say "     Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your high. She proves her amazing flexibility by not only licking up any female juices that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
-		else if player is male: [male + herm]
+		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Quickly throwing off your clothes, you take hold of your already half-hard cock and kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust.";
 			say "     It feels great to reap the pleasure you earned by defeating her, the now willing catgirl gripping your cock tightly with her inner muscles as you fuck her. The sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her soft fur until your shaft softens and slips from her body. She proves her amazing flexibility by not only licking up any cum that had flowed out of her pussy, but cleaning up the rest of her fur as well. Watching her bend and stretch has an invigorating effect on your maleness, and you're almost ready for another go when the catgirl finishes her cleaning and dashes off. Pretty flighty, these hot felines - [if CatgirlFucked > 3]though you don't have any cause to complain, really - you already have Fiona hanging out near the library to have fun with, so having another street-cat run off on you isn't so bad[else]too bad, since having one all to yourself would be awesome. For now, it looks like you'll have to hunt down either her or another one of the street-cats if you want another round[end if].";
@@ -64,19 +64,20 @@ to say Catgirl_Desc:
 	setmongender 4; [female]
 	say "     A slender black-furred female comes out of an alley a short distance ahead from you, meowing as she comes closer to have a look at you. She's a mixture between human and cat, having short fur covering her humanoid body, pointy ears, typical cat's eyes and a long tail. She walks with seductive grace on two digitigrade paws.";
 	say "     After a moment of studying you from a distance, it seems she comes to a decision and starts to give you a bit of a show. With flowing movements, she runs her hands over her own body, stroking over her own breasts and flirting her tail at you. Then she demonstratively bends over, flashing you her moist and ready pussy.";
-	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if player is male]to be mated - but only by a partner who proves his strength and virility. [else]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
+	say "     You find yourself almost hypnotized by her flowing movements and seductive demeanor and take a step closer before you can stop yourself. But as you do so, she hisses and bares her claws, though she is still showing off her body. Looks like she's in heat and wants [if Player is male]to be mated - but only by a partner who proves his strength and virility. [else]someone to soothe her desires - but nevertheless only a person who proves their worth first. [end if]And she really wants to know if you qualify, it seems - jumping you a moment later with outstretched claws.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Catgirl";
+	now NewTypeInfection entry is false;
+	now Name entry is "Catgirl";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She rakes you with her claws, leaving long bloody marks on your body.[or]Sharp fangs pierce your skin as the catgirl bites you.[or]With a lightning-quick move, she vaults over you, dragging a clawed hand down your back as she lands.[at random]";
 	now defeated entry is "[Catgirl_Loses]";
@@ -103,15 +104,15 @@ When Play begins:
 	now lev entry is 8;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";      [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
-	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;         [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6;          [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0;          [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 2;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;         [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 6;          [ Width of female sex infection will try and give you ]
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
@@ -123,7 +124,98 @@ When Play begins:
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 instead of navigating Grey Abbey Library while (CatgirlFucked is 3):
 	say "[NavCheck Grey Abbey Library]";
@@ -161,14 +253,14 @@ to say FionaFirstMeeting:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. As your hands move to set down your gear on the floor and start undoing the fastenings of your clothing, that purr intensifies even more and finally leads over into a lust-filled mrowl. While you strip, the catgirl drops on all fours and flirts her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
-		if player is female and cocks of player < 1: [female]
+		if Player is female and Cock Count of Player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls under your massaging fingers, your own libido awakens, leading you to play with your own female parts in tandem with the catgirl's. Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices that had flowed out of her pussy, and cleaning the every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
-		else if player is male: [male + herm]
+		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Taking hold of your already half-hard cock, you kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust. It feels great to reap the pleasures you earned by proving a worthy mate, the eager and willing catgirl now gripping your cock tightly with her inner muscles as you fuck her. Your sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to the catgirl for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum that had flowed out of her pussy, and cleaning the every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
@@ -192,14 +284,14 @@ to say FionaRepeatMeeting:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Coming up to the sofa, you pet the catgirl, resulting in her rubbing her head against you and purring. [if CatgirlFucked is 4]Then you tell her that you've decided to call her Fiona, to which she turns her head a bit as if in thought, then gives an accepting meow and resumes her purring. [end if]As your hands move to set down your gear on the floor and start undoing the fastenings of your clothing, that purr intensifies even more and finally leads over into a lust-filled mrowl. While you strip, Fiona drops on all fours and flirts her tail at you. She lowers her chest and spreads her legs a bit, presenting you with a pussy just ready to be mounted.";
-		if player is female and cocks of player < 1: [female]
+		if Player is female and Cock Count of Player < 1: [female]
 			say "     Not having a cock to fulfill the catgirl's needs, you nevertheless step up and stroke her soft fur, softly pushing her over to sprawl on her back. Sitting down beside her, you run your hands over her breasts and then start to fondle her pussy. As she purrs and mrowls under your massaging fingers, your own libido awakens, leading you to play with your own female parts in tandem with the catgirl's. Her yowls and moans get louder and louder, and before too much longer, the catgirl orgasms from your stimulating fingers. With her in the throes of lust, female juices running down into her fur, you focus more on your own pussy, rubbing your fingers over its sensitive lips. Then you get another idea and softly take hold of the feline's tail, rubbing it against your pussy. With its soft length rubbing your private parts, you soon join the catgirl in her bliss.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to Fiona for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the female juices dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
-		else if player is male: [male + herm]
+		else if Player is male: [male + herm]
 			say "     Who could resist such a nice invitation? Taking hold of your already half-hard cock, you kneel behind the catgirl. Her fur feels amazingly soft against your shaft as you rub it over the inside of her legs, before bringing it to her moist opening. The feline girl gives a lust-filled yowl as you plunge in deep, burying your manhood into her in one quick thrust. It feels great to reap the pleasures you earned by proving a worthy mate, the eager and willing catgirl now gripping your cock tightly with her inner muscles as you fuck her. Your sexy little feline is deep in the grip of heat, using her flexible body in any way she can to get you to cum inside her. Before long, her efforts bear fruit as the urgent need to spend your load rises in your balls. With one last deep thrust, you bottom out within her, shooting spurt after spurt of seed directly into her womb.";
 			WaitLineBreak;
 			say "     Breathing deeply, you hold on to Fiona for a while, stroking her fur as you come down from your orgasmic high. She stays with you like that some time, enjoying your close touch, then glides out of your grasp in a fluid move and starts to clean herself up. Proving her amazing flexibility, she manages to bend far enough to even lick up the cum dripping out of her pussy, as well as being able to clean every other part of her fur as well. Watching the sexy kitty bend and stretch has an invigorating effect on you, and you're almost ready for another go when the catgirl finishes and dashes off, streaking away between the bookshelves to vanish through whatever door or window she used to sneak in.";
@@ -242,7 +334,7 @@ to say FionaFangSex:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Watch.";
 		say "     ([link]N[as]n[end link]) - Leave.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Just a moment later, your catgirl Fiona streaks into view from behind a row of bookshelves, a hunted look on her face and her tail all thick and bushy. Her eyes go wide as she turns her head to look at you, and that small moment of distraction is enough to make her step on a book someone left lying on the floor, lose her balance and take a tumble. Only a second behind her is Fang, panting excitedly from the hunt after this intruder into his domain. The wolf is on top of the catgirl in a flash, standing over her and setting his jaws to lightly nip at the fur of her neck while he gives a warning growl.";
 			say "     Fiona stiffens under the feral wolf and you can see the claws on her hand-paws slowly sliding out of their sheaths as she prepares to claw her way out of this situation - only to pull back again as she feels something poke the side of her hips. Looks like Fang got excited in more way than one from the little chase, as his canine cock is dangling fully erect between his legs. Well, if the catgirl came to seek you out again, she's likely at the height of her heat, something the wolf will undoubtedly have smelled immediately. So even though she came for you, the look on Fiona's face as she glances back and sees Fang's shaft speaks volumes.";
@@ -274,7 +366,7 @@ to say FionaCarlMeet:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Deciding you don't want the two of them mating with each other, you quickly walk over before it gets any further. As you clear your throat to attract their attention, Carl lets go of Fiona and the catgirl dashes off to vanish through the way she sneaked in, wanting to put some ground between her and the fight she believes you and the husky will have now. But contrary to her expectation, Carl simply raises his hands in a placatory manner, then says 'So - that's... your cat, I assume? Sorry, didn't mean to move in on anyone's territory. It's just that she's a mighty fine piece of tail and did make eyes at me...' With a shrug at the missed opportunity, he walks over to the stairs and gets back to where he usually holds lookout.";
 		now FionaCarlStatus is 100; [stopped them hooking up]
@@ -284,7 +376,7 @@ to say FionaCarlMeet:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Carl strokes and fondles Fiona's breasts for a while, at some point sliding a hand down to rub her nether lips too. The catgirl purrs loudly at his touch and gives small needy meows when he slips a finger in to rub and tease her sensitive folds. Eventually, the husky gives Fiona's muzzle an affectionate lick and pants 'Let's move on to the real fun now. You want it, don't you? I can feel how wet you are...' Giving an affirmative mrowl, the feline beauty slides out of his embrace and sashays over to the sofa, her hips swaying alluringly. Once there, Fiona drops on all fours and flirts her tail at the soldier. She lowers her chest and spreads her legs a bit, presenting him with a pussy just ready to be mounted.";
 			say "     Not one to hesitate at such a sexy offer, Carl is kneeling behind her in just a moment and lines his canine shaft up with her hole. Then he thrusts in with a satisfied grunt that is immediately joined by a fulfilled mrowl from Fiona. Taking the young woman from behind in the typical doggie-style position, Carl's manhood rubs her sensitive spots in all the right ways, clearly showing that it was made for this style of fucking. Just pounding into the catgirl in a way that simply feels right to him, the strong husky really takes out all the stops, mounting her with truly animal-like intensity that takes Fiona's breath away and makes her whimper in arousal from the sensations it creates.";
@@ -322,7 +414,7 @@ to say FionaCarlRepeatFuck:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Silently walking towards them, you watch as Carl takes the young woman from behind in the typical doggie-style position, Carl's manhood rubbing her sensitive spots in all the right ways, clearly showing that it was made for this style of fucking. Just pounding into the catgirl in a way that simply feels right to him, the strong husky really takes out all the stops, mounting her with truly animal-like intensity that takes Fiona's breath away and makes her whimper in arousal from the sensations it creates.";
 		say "     With the wild ride he's giving Fiona, it doesn't take all that long until Carl's arousal builds up to a pretty spectacular climax, with him growling and grunting deeply as he grinds his hips against her shapely form. The knot at the base of his shaft swells up to lock their bodies together and Carl's canine member starts to spurt blast after blast of his fertile seed deep into his feline partner's womb. Feeling the warm pulse of his cum into her body, filling her up, is the last straw that pushes Fiona over the edge right with him, giving a lust-filled yowl as she reaches her climax. Fiona's pussy gets really wet around Carl's cock and femcum starts to drip out of it and down onto the sofa.";
@@ -339,16 +431,16 @@ to say FionaCarlRepeatFuck:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Catgirl" and player is female:
-		if humanity of player < 10: [succumbed]
+	if bodyname of Player is "Catgirl" and player is female:
+		if humanity of Player < 10: [succumbed]
 			say "Before long, your instincts take over, with your human life only a fading memory. Driven by powerful urges to be bred by any strong male, no matter what shape, you roam the streets of the city and flirt your sexy body in front of those you meet.";
-			if "Sterile" is not listed in feats of player: [F-BREEDABLE]
+			if "Sterile" is not listed in feats of Player: [F-BREEDABLE]
 				say "When the military finally moves in, a scouting soldier finds you in a fight with another potential mate and 'saves' you, driving off the creature with a few shots in the air. As worked up as you are, you immediately rub up against him and soon have the human's cock balls deep inside you. Several more matings follow as he escorts you out of the city, and before you even arrive at the holding facility, your belly starts to bulge with the fruit of your soldier's fertile seed. The man smuggles you past the checkpoints and brings you home with him as his private sex-pet, very well taken care of and fucked daily. You bear him several litters of kittens, many of whom go to his buddies who helped smuggle you out.";
 			else: [F-STERILE]
 				say "When the military finally moves in, a scouting soldier finds you in a fight with another potential mate and 'saves' you, driving off the creature with a few shots in the air. As worked up as you are, you immediately rub up against him and soon have the human's cock balls deep inside you. Several more matings follow as he escorts you out of the city, and before you arrive at the holding facility, the man radios a few of his buddies to meet the two of you in an abandoned building some blocks away. With all of them gangbanging you that whole night until dawn, your soldier has no problem convincing them to smuggle you past the checkpoints and brings you home with him as his private sex-pet. From then on, you are very well taken care of and fucked daily by the soldier or his friends coming over for some action.";
 			stop the action; [no other succumb endings, as the player isn't in the city anymore]
 		else: [sane]
-			if "Sterile" is not listed in feats of player: [F-BREEDABLE]
+			if "Sterile" is not listed in feats of Player: [F-BREEDABLE]
 				say "When the military moves in, you're brought to a holding facility with all the other survivors, with doctors and scientists struggling to check out everyone coming in. As you wait for your turn, day after day in overfilled quarters, you spend your time flirting with several of the younger soldiers, leading to more than one intimate encounter. Despite your body urging you to let them knock you up, you're always careful to use condoms, not wanting to end up like one of the baby factories you see around you.";
 			else: [F-STERILE]
 				say "When the military moves in, you're brought to a holding facility with all the other survivors, with doctors and scientists struggling to check out everyone coming in. As you wait for your turn, day after day in overfilled quarters, you spend your time flirting with several of the younger soldiers, leading to more than one intimate encounter. Despite your body urging you to let them knock you up and the knowledge that you're likely to be completely sterile, you're always careful to use condoms, not wanting to end up like one of the baby factories you see around you.";

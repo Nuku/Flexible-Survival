@@ -8,14 +8,14 @@ Reese	"Reese"
 Reese is a man.
 [physical details as of game start]
 ScaleValue of Reese is 3. [human sized]
-Cocks of Reese is 1.
+Cock Count of Reese is 1.
 Cock Length of Reese is 10.
-Cock Width of Reese is 5.
-Testes of Reese is 2.
-Cunts of Reese is 0.
+Ball Size of Reese is 5.
+Ball Count of Reese is 2.
+Cunt Count of Reese is 0.
 Cunt Length of Reese is 0.
-Cunt Width of Reese is 0.
-Breasts of Reese is 2.
+Cunt Tightness of Reese is 0.
+Nipple Count of Reese is 2.
 Breast Size of Reese is 0.
 [Basic Interaction states as of game start]
 PlayerMet of Reese is false.

@@ -12,7 +12,7 @@ emap is a number that varies. emap is usually 0.
 [ 1 = Nav Map is enabled ]
 
 zpc_inzone is a truth state that varies. zpc_inzone is false.
-[ true if player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
+[ true if Player is currenting displaying an image. This is referenced to display the no signal 'error' message when the player leaves ]
 
 zpc_Zc is a number that varies.
 zpc_Zf is a figure name that varies.[@Tag:NotSaved]
@@ -100,14 +100,14 @@ to zpc_checklocation: [returns Zc value of 1 or 0]
 	now zpc_Zc is 0; [zeros returning value]
 	repeat with n running from 1 to number of filled rows in table of Zpc Location Reference:
 		choose row n in table of Zpc Location Reference;
-		if location entry is location of player:
+		if location entry is location of Player:
 			now zpc_Zc is 1; [returns value (true/false)]
 
 to zpc_getfigure: [returns Zf value of respective figure name]
 	now zpc_Zf is figure of pixel; [zeros returning value]
 	repeat with n running from 1 to number of filled rows in table of Zpc Location Reference:
 		choose row n in table of Zpc Location Reference;
-		if location entry is location of player:
+		if location entry is location of Player:
 			now zpc_Zf is icon entry; [returns value for projection]
 
 Section 5 - Handling (External)
@@ -117,15 +117,15 @@ this is the zpc_lookoverride rule:
 	if emap is 1:
 		zpc_checklocation; [runs location check function first to fill Zc value]
 		if zpc_Zc is 1:
-			if zpc_inzone is false: [case if player not in zone yet]
+			if zpc_inzone is false: [case if Player not in zone yet]
 				zpc_getfigure; [runs function to get Zf value (figure name)]
 				project zpc_Zf; [projecting intro]
 				now zpc_inzone is true;
-			else: [case if player in zone]
+			else: [case if Player in zone]
 				zpc_getfigure; [runs function to get Zf value (figure name)]
 				project zpc_Zf;
 		else if zpc_Zc is 0: [case for player exiting]
-			if zpc_inzone is true: [case if player already in zone]
+			if zpc_inzone is true: [case if Player already in zone]
 				project the figure of emap_special_signalnotfound_icon;
 				now zpc_inzone is false;
 

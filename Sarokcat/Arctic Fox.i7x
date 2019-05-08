@@ -3,11 +3,11 @@ Arctic Fox by Sarokcat begins here.
 "Adds a Arctic fox to Flexible Survival's Wandering Monsters table"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 
 to say Arctic fox attack:
-	if player is female:
+	if Player is female:
 		say "tease-.[line break]";
 		say ".'";
 		infect "Arctic fox";
@@ -20,17 +20,18 @@ to say Arctic fox attack:
 To say Arctic fox loss:
 	say "she loses! The horror!.'";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Arctic fox";
+	now NewTypeInfection entry is false;
+	now Name entry is "Arctic fox";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster than the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the arctic fox purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground![or]She bunches her powerful hind legs up, and leaps directly at you, painfully knocking you back![or]She grins at you, baring her sharp canid teeth, before leaping forward and biting you.[at random]";
 	now defeated entry is "[Arctic fox loss]";
@@ -57,15 +58,15 @@ When Play begins:
 	now lev entry is 3;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;  [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;  [ Size of balls ]
-	now breasts entry is 0;  [ Number of Breasts infection will give you. ]
-	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4;  [ Size of balls ]
+	now Nipple Count entry is 0;  [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 0;  [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
@@ -79,18 +80,109 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 
 
 
 when play ends:
-	if bodyname of player is "Arctic fox":
-		if humanity of player < 10:
-			if player is male:
+	if bodyname of Player is "Arctic fox":
+		if humanity of Player < 10:
+			if Player is male:
 				say "Giving in to your more feral instincts, you return to the Palomino and your sexy vixen mate. Janice seems rather surprised at first by your intensity, but soon is moaning just as wantonly as you sheathe yourself in her body again and again until she is as lost to the pleasure of her new body as you are. After you have recovered, you find that you enjoy spending time at the club, the two of you occasionally teasing other club goers to give in and join you as slutty arctic foxes. When the military arrives, you find that you have even more opportunity for fun as they prove particularly susceptible to your sexy mate's teasing looks, although you are always the one to mate them and make them proper vixens. Before long, there are several vixens on stage at any time, though you settle in and make one of the private rooms into your fox den. The other club goers seem only slightly interested in your actions, perhaps because many of them have started adapting similar habits. Eventually though, the club comes under attack from the military, and you and your mates are forced out into the streets to help deal with the problem, the hunt proving surprisingly fun as you, Janice, and your other vulpine converts enjoy tricking and trapping the military. Before long, you have broken out of the military containment area as a large group, and you only pause for a minute to get your bearings, before you all split up and begin to head north. You grin ferally as you imagine the military trying to chase all of your nice, pregnant vixen mates down, and you snicker, knowing that there is no way that they can catch even a quarter of your clever foxy mates before you all escape to the north. Though, you certainly hope that they come looking for you and your fellow arctic foxes up in the snowy north once you get there... you could always use some new converts after all...";
 			else:
 				say "Giving in to your more feral instincts, you return to the Palomino and your sexy vixen sister. Janice seems rather surprised at first by your intense changes, but after a while, she comes to embrace and enjoy her new instincts just as fully, having already fallen in love with her new form. Before long, you and Janice are often found up on stage. As she shows you how to move your body to your best advantage, the cheers of the crowd as you tease them all with your sexy vixen body makes you hot, and you often invite several of them back to your private nook for you and Janice to play with together. The eventual military arrival is a big deal, however, as you and Janice finally manage to get a male fox to play with as one of the soldiers joins you on a more permanent basis in the club, and several new vixen sisters end up joining soon afterwards as well. You find yourself smiling happily as you feel your mate's young begin to grow in your belly, enjoying the feeling as much as you know Janice is. You just can't wait for your next breeding season together!";
 		else:
-			if player is male:
+			if Player is male:
 				say "When the military finally arrive at the club, they find that you and Janice are more than happy to return to their base with them, although many other club members decide to stay behind in their newly found home. At the military camp, it is easy enough for the two of you to manipulate manners in your favor, and soon, with a few phone calls to some old acquaintances in the modeling community, the two of you are released from military custody. You find yourself grinning with amusement at how eager people are not to piss your lovely mate off, her contacts proving exceptionally useful as she reestablishes her identity and reclaims her bank accounts. Soon, you are settling in to a nice, comfy den, which you celebrate by enjoying each other on every surface possible. Before long, you find yourself feeling mildly restless as your mate's heat begins to fade, and you take to wandering around your new property a bit. You are thus surprised one day to return to find your mate with a sexy twinkle in her eye as several of her female contacts wait nervously nearby. It doesn't take long to figure out Janice's plan, and before long, you have seduced them all, and sent them off to transfer their money and get their affairs in order so that they can become vixens as well. The thought of have a nice little harem of your own warms your heart, and before long, you have a nice house full of vixens, many of them with connections to movie or modeling industries. It seems almost inevitable that you would find yourself on screen soon enough, your lithe form and cavalier attitude capturing the imagination and making you rather popular, and your sexy mates acquire more than a bit of a following as well. Though, you find yourself staying at home with your mates as much as possible as they slowly swell with your virile seed, and you can't wait to have a bunch of little fox kits running around the house. The thought makes you smile, even as you relax in a warm pile of fur and hold your first, and favorite, mate close, looking forward to a long and eventful foxy life.";
 			else:
 				say "When the military finally arrive at the club, they find that you and Janice are more than happy to return to their base with them, although many other club members decide to stay behind in their newly found home. At the military camp, it is easy enough for the two of you to manipulate manners in your favor, and soon, with a few phone calls to some old acquaintances in the modeling community, the two of you are released from military custody. You find yourself grinning with amusement at how eager people are not to piss your lovely sister off, her contacts proving exceptionally useful as she reestablishes her identity and reclaims her bank accounts. Before long, you are both living quite comfortably together, and you enjoy exploring your bodies together as often as possible. Still, Janice has that mischievous twinkle in her eye again soon enough, and before long, she is talking about taking up modeling and showmanship again, though with an entirely new twist this time.";

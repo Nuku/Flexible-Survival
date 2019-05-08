@@ -20,9 +20,9 @@ the usedesc of Hiking Backpack is "[HBPuse]".
 
 to say HBPuse:
 	if Hiking Backpack is equipped:
-		decrease capacity of player by 10;
+		decrease capacity of Player by 10;
 	else:
-		increase capacity of player by 10;
+		increase capacity of Player by 10;
 
 Happy Trails is a scavevent. The sarea of Happy Trails is "Allzones".
 
@@ -35,7 +35,7 @@ instead of resolving a Happy Trails:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, it looks like it would allow you to carry more supplies.";
 	say "     ([link]N[as]n[end link]) - Nah, leave it. Who knows if it has been contaminated by scavengers.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Carefully you pick your way through the broken glass and crouch near the backpack. Grabbing a strap with one hand and lifting the display with the other, you manage to slip it out quietly. Thankfully the fabric appears to be free of cum stains or the other strange goos that now stain the city. With your new backpack in hand, you retrace your steps and exit the store. Pausing for only a moment to exhale in relief before leaving the area.";
 		increase carried of Hiking Backpack by 1;

@@ -44,7 +44,7 @@ Instead of conversing the Doctor Matt:
 			say "He focuses his gaze on you for a moment, then comments, 'You don't look nearly as lost and confused as most. Are you another researcher? Excellent. I'm looking into a cure for this plague, but my research is just in the beginning stages to be honest. There is something else of interest however...";
 		else:
 			say "He laughs a little, nervous and forced. 'Anyway, before you ask, no, we did not have anything to do with the nanite infestation. You didn't know it was nanites? Now you do. I have been studying them for some time since the grid went dark. I'm not much closer to a cure... but I did find something else of interest however,' he says, pausing for effect.";
-		say "     'I can manipulate existing strains, just a little, for those already infected, like you. Don't look at me like that. Anyone not in a fully sealed environment is infected by now. [if humanity of player < 80]In fact, I'd say you've already been pretty badly infected. Interesting... [end if]But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself. 'There's only one catch... I haven't had any test subjects to actually try it on so far. The creatures roaming around outside are too far gone to even talk to, and Orthas has to stay on post to guard the entrance.' The man gives you a calculating gaze, then adds in a persuasive tone, 'So how about you? You could [bold type]volunteer[roman type] for some tests, and we'll make you better than when you started. That'll help your chances to outlast this situation and what you might encounter outside and allow me to progress in my research. A fair deal, right?'";
+		say "     'I can manipulate existing strains, just a little, for those already infected, like you. Don't look at me like that. Anyone not in a fully sealed environment is infected by now. [if humanity of Player < 80]In fact, I'd say you've already been pretty badly infected. Interesting... [end if]But now for the good news. As you develop resistances to the nanite infection and your system becomes stronger, I can redirect that growth to amazing, and planned, almost superhuman abilities,' he declares, sounding quite proud of himself. 'There's only one catch... I haven't had any test subjects to actually try it on so far. The creatures roaming around outside are too far gone to even talk to, and Orthas has to stay on post to guard the entrance.' The man gives you a calculating gaze, then adds in a persuasive tone, 'So how about you? You could [bold type]volunteer[roman type] for some tests, and we'll make you better than when you started. That'll help your chances to outlast this situation and what you might encounter outside and allow me to progress in my research. A fair deal, right?'";
 		WaitLineBreak;
 		say "     He doesn't really wait for you to reply, instead immediately turning to one of the monitors and starting a new file about 'Test Subject B'. Under his breath, the man murmurs to himself, 'Maybe the authorities will finally listen to me about delaying if I can show some first results. They simply must learn to understand that throwing more people at this will be worse than useless unless they know what they're getting into.'";
 		extend game by 16;
@@ -76,7 +76,7 @@ to say DrMattNaniteInfoMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Nanite Basics"):
@@ -142,7 +142,7 @@ to say DrMattTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Helping him"):
@@ -186,7 +186,7 @@ to DrMattSampleQuestStart:
 	say "     Raising one hand as if to nervously brush over his graying hair, Matt stops himself before he hits the helmet, letting his gloved fingers drop with a frown. 'Anyways, since we only have this limited amount of time, I would suggest you move quickly. I have been trying to delay convince the military to delay its [']surge['], but without data to support my warnings, they're easily ignored. Please come over here for a moment with me,' he says, then walks to a nearby terminal and sits down in front of it. He opens up a folder named 'observed specimens', which contains a whole row of still images from surveillance cams. 'Thankfully the exterior security system's cameras do have battery backup, so they've captured footage of some interesting creatures since the outbreak. Here, this is something that I earmarked being of special interest.'";
 	WaitLineBreak;
 	if hermaphrodite is not banned and furry is not banned:
-		if bodyname of player is "Hermaphrodite Blue Gryphon":
+		if bodyname of Player is "Blue Gryphon":
 			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. You know the shape well, as it is what your body currently looks like. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
 			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor.";
 			DrMattGryphonExam;
@@ -198,7 +198,7 @@ to DrMattSampleQuestStart:
 		say "     (Note: This quest stage was skipped due to your ban settings)[line break]";
 		now Strength of Doctor Matt is 1; [Gryphon stage skipped]
 	WaitLineBreak;
-	if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+	if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
 		say "     The next image that he pulls up shows a humanoid figure walking, or maybe gliding, along the sidewalk down the road from the Trevor Labs building, only seen for a moment. It is a bit grainy from being zoomed in to. 'This here is another specimen that had me guessing since it was captured on tape. Vaguely humanoid and semitransparent, yet with no recognizable internal organs. I must admit that I do not know how it can exist and be capable of any greater intelligence than an amoeba, but as you can see, it moves with focused intent and mimics the external shape of a human quite well.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
 		DrMattGooExam;
 		if Strength of Doctor Matt is 0: [nothing delivered yet]
@@ -241,9 +241,9 @@ to DrMattGooExam:
 	say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then pokes and prods your partially liquid body experimentally and makes some notes with observations, one of which is that you do not really feel pain when part of your mass is displaced from its previous location. Finally, he pulls out a sampling cup and labels it, then directs you to scoop a little bit of material from your torso into it and screw on the lid. Raising the plastic cup and looking with interest at the sample that sloshes back and forth on its own inside, the doctor then places it in a laboratory fridge for later examination. 'Thank you for your willingness to advance the effort in understanding the infection,' Dr. Matt adds with a smile, then turns back to the workstation he's doing most of his research on.";
 
 to DrMattGryphonExam:
-	if player is male: [male + herm]
+	if Player is male: [male + herm]
 		say "He clears his throat and requests a sample of your sexual fluids too, but is less hands-on in gathering that, simply providing you a sample cup to jerk off into instead. Watching unashamedly as you stroke your dick and fill it with throbs of cum, the suited scientist accepts the screw-top cup eagerly and labels it, then stashes a small box with all of your samples in a laboratory fridge. ";
-	else if player is female:
+	else if Player is female:
 		say "He clears his throat and requests a sample of your sexual fluids too, but is less hands-on in gathering that, simply providing you a swab-stick with cotton end. Watching unashamedly as you rub yourself, then brush the swab along the inside of your wet nether lips, he accepts the sample eagerly and puts it in a labeled screw-top cup, then stashes a small box with all of your samples in a laboratory fridge. ";
 	else:
 		say "He clears his throat and asks a few questions about your genderlessness, then takes a cotton swab and moistens it with a few drips of distilled water, brushing it over your flat crotch a few times before putting that in a screw-top sample cup and labeling it. Afterwards, he stashes a small box with all of your samples in the laboratory fridge. ";
@@ -260,7 +260,7 @@ to DrMattSampleDelivery:
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [not enough milk, but enough goo]
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -269,7 +269,7 @@ to DrMattSampleDelivery:
 				now Strength of Doctor Matt is 2; [goo delivered]
 			DrMattGooDelivery;
 		else if carried of gryphon milk is 0 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [no milk, but enough goo]
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have any gryphon samples for analysis. But then, since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -278,7 +278,7 @@ to DrMattSampleDelivery:
 				now Strength of Doctor Matt is 2; [goo delivered]
 			DrMattGooDelivery;
 		else if carried of gryphon milk > 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [got milk, not enough goo]
-			if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+			if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
 				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 				LineBreak;
 				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
@@ -292,12 +292,12 @@ to DrMattSampleDelivery:
 				decrease carried of gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [milk delivered]
 			else:
-				if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+				if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
 					say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 					LineBreak;
 					DrMattGooExam;
@@ -305,12 +305,12 @@ to DrMattSampleDelivery:
 				else:
 					say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0 and (carried of glob of goo is 0 and carried of blue gel is 0 and carried of pink gel is 0 and carried of purple gel is 0): [neither enough milk nor goo]
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of the hybrid gryphon infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
 				say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
-			else if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+			else if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of a fluidic infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
 				DrMattGooExam;
 				now Strength of Doctor Matt is 2; [goo delivered]
@@ -322,7 +322,7 @@ to DrMattSampleDelivery:
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else: [not enough goo]
-			if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+			if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 				DrMattGooExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -336,14 +336,14 @@ to DrMattSampleDelivery:
 			decrease carried of gryphon milk by 2;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1: [not enough milk]
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a thoughtful nod, then says, 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
 			else:
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0:
-			if bodyname of player is "Hermaphrodite Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon":
 				say "gives a slight frown, then says, 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -414,8 +414,8 @@ to say DrMattQuestTalk:
 			now HP of Susan is 1;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Deer":
-					now monster is y;
+				if Name entry is "Deer":
+					now MonsterID is y;
 					break;
 			now area entry is "Park";
 		now HP of Doctor Matt is 8;
@@ -451,7 +451,7 @@ to say DrMattQuestTalk:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if player consents:
+				if Player consents:
 					delete Chipped tooth;
 					increase score by 10;
 					say "     'It is good to see that you appreciate the importance of my work.' He picks up the large fang in his gloves and places it in a sample dish.";
@@ -540,16 +540,16 @@ to say DrMattQuestTalk:
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him. I shall inform the military of these events, as well as the increased threat level at the hospital. They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion. He seems too intelligent to not have an exit strategy already formulated.'";
 		now HP of Doctor Matt is 12;
 		now level of Doctor Matt is turns;
-	else if hospquest is 13 and "Mental Booster" is not listed in feats of player:
+	else if hospquest is 13 and "Mental Booster" is not listed in feats of Player:
 		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on. Trying to deal with the infected city can be mentally harrowing as well as physically harrowing. It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess. As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others. This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment. At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily. You don't suddenly know more information, but you can better process all that you have learned to make more out of it. You also feel a little more confident in dealing with the world because of it.";
-		add "Mental Booster" to the feats of player;
-		increase intelligence of player by 2;
-		increase perception of player by 2;
-		increase charisma of player by 2;
-		increase morale of player by 4;
+		add "Mental Booster" to the feats of Player;
+		increase intelligence of Player by 2;
+		increase perception of Player by 2;
+		increase charisma of Player by 2;
+		increase morale of Player by 4;
 		say "[bold type]Your Intelligence, Perception and Charisma are all increased by 2.[roman type][line break]";
-[	if HP of Doctor Matt is 12 and "Automatic Survival" is listed in feats of player:
+[	if HP of Doctor Matt is 12 and "Automatic Survival" is listed in feats of Player:
 		now HP of Doctor Matt is 14; [Supply Run skipped entirely]
 		WaitLineBreak;]
 	else if HP of Doctor Matt is 12 and level of Doctor Matt minus turns < 16:
@@ -634,28 +634,28 @@ to say DrMattQuestTalk:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "     You tell the doctor that you are of course willing to get your humanity back. The doctor smiles and nods, opening up a drawer and pulling out a rat's nest of wires and bio-sensors. 'Okay. Strip down so I can get you hooked up. This sort of thing isn't my usual area of expertise, but thankfully another of my former associates was doing bio-research, so I can use their equipment. She won't be needing it now that she's a feral mutant.'";
-			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if breasts of player > 0]. Some are even placed directly over your nipples[end if][if player is male]. One is placed upon your [cock of player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if player is male and player is not internal]. A linked pair are attached upon your balls[end if][if player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
+			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if Nipple Count of Player > 0]. Some are even placed directly over your nipples[end if][if Player is male]. One is placed upon your [cock of Player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if Player is male and player is not internal]. A linked pair are attached upon your balls[end if][if Player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
 			WaitLineBreak;
 			say "     With a final smack, the doctor adheres a large suction cup to your forehead. The thin wires from all of these separate sensors are wound together into one larger cable which is then plugged into a monitoring device. It starts up, showing blips and waveforms on its screens while outputting a constant stream of ticker tape.";
 			say "     'Alright, we're ready to go,' the doctor says with enthusiasm. The prospect of science has brightened his mood and he quickly snatches up the spray can[if susan is visible]. Susan, while clearly concerned about you, takes several large steps back to avoid getting hit[end if]. The doctor starts spraying you all over, spreading the mist of strange antiseptic-smelling liquid all over you. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
 			WaitLineBreak;
-			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if player is female]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
-			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
+			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if Player is female]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
+			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if Player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
 			setmonster "Human";
-			choose row monster from the Table of Random Critters;
-			now tailname of player is "Human";
-			now facename of player is "Human";
-			now skinname of player is "Human";
-			now bodyname of player is "Human";
-			now cockname of player is "Human";
+			choose row MonsterID from the Table of Random Critters;
+			now tailname of Player is "Human";
+			now facename of Player is "Human";
+			now skinname of Player is "Human";
+			now bodyname of Player is "Human";
+			now cockname of Player is "Human";
 			attributeinfect;
-			now tail of player is tail entry;
-			now face of player is face entry;
-			now skin of player is skin entry;
-			now body of player is body entry;
-			now cock of player is cock entry;
+			now tail of Player is tail entry;
+			now face of Player is face entry;
+			now skin of Player is skin entry;
+			now body of Player is body entry;
+			now cock of Player is cock entry;
 			SanBoost 20;
 		else:
 			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.' He stores the can away.";
@@ -665,11 +665,11 @@ to say DrMattQuestTalk:
 		say "     'Orthas has also received some news from travelers about the state of the city hospital after the incidents there. Some new chimeric creatures have been observed. It seems these are different from the other ones you've earlier observed. They are likely [if HP of Doctor Mouse is 1]released[else]escaped[end if] test subjects that have been left to roam the halls. They have either subsumed or displaced the earlier chimeras. The accounts state that they are more powerful, so I thought it best to advise you of the occurrence. Exercise caution should you go there.'";
 		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received. 'I have little else for you to do at the moment. Please check back in a day or so. Until then, go keep yourself occupied elsewhere for now,' he says dismissively.";
 		setmonster "Enhanced Chimera";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		now area entry is "Hospital";
 		now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		now area entry is "Nowhere";
 		now HP of Doctor Matt is 19;
 		now level of Doctor Matt is turns;
@@ -688,7 +688,7 @@ to say DrMattQuestTalk:
 	else if HP of Doctor Matt is 22:
 		say "     You turn over Dr. Medea's collected data to Dr. Matt. And while he seems quite caught up in reviewing the material from Zephyr, a quick review soon has him going through the notes in detail. 'These case files and medical charts are excellent. The notes are a little heavy on the medical jargon and the handwriting is suitably atrocious as befits a physician, but they are very rich in detail. Even explicit detail in many cases. I shall have to review it more thoroughly in private later.'";
 		say "     He makes a show of straightening the papers and looking professional. 'Ahem. I've been preparing an update to your PISM. If you'll hook it up over there,' he says, pointing to the infection monitor, 'I should be able to determine the necessary values and statuses from these notes while the terminal downloads the logs.' While he alternates between the stack of files, a calculator and his computer, he asks you to report on the functionality of the device and your experiences with using it. You answer his questions as best you can, trying to relay any bugs and quirks you can remember.";
-		say "     Eventually he falls silent and you're left waiting again as he clacks away. Thankfully, it's not nearly as long nor are you interrupted before he's finished. As the upgrade is being sent to the device, he looks over the cobbled-together piece of tech. 'This is about as much as this version of the device will be able to handle. Unfortunately, it is the best I could do with what I have available. If all goes well with my research, we will have to send you elsewhere to get a better version built. For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if player is not female]. And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if]. As before, please continue to test this device. The better we can make it, the better the final product I need to create for the military will be.'";
+		say "     Eventually he falls silent and you're left waiting again as he clacks away. Thankfully, it's not nearly as long nor are you interrupted before he's finished. As the upgrade is being sent to the device, he looks over the cobbled-together piece of tech. 'This is about as much as this version of the device will be able to handle. Unfortunately, it is the best I could do with what I have available. If all goes well with my research, we will have to send you elsewhere to get a better version built. For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if Player is not female]. And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if]. As before, please continue to test this device. The better we can make it, the better the final product I need to create for the military will be.'";
 		say "     With that, Dr. Matt gets back to reviewing the material from Zephyr. Soon he's caught up in this, waving you off for now. It seems like he's got nothing more for you to do at the moment.";
 		say "[bracket]PISM upgraded to display pregnancy/heat status and approximate duration.[close bracket][line break]";
 		say "((Main storyline ends here for now.))[line break]";
@@ -727,42 +727,60 @@ check monitoring:
 
 to monitor:
 	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
-	say "Head status: [facename of player]     Body status: [bodyname of player][line break]";
-	say "Skin status: [skinname of player]     Tail status: [tailname of player][line break]";
-	if player is male:
-		if player is female:
-			say "Cock status: [cockname of player]     Gender: Herm[line break]";
+	if NewTypeInfectionActive is true: [new body parts]
+		say "Head status: [HeadName of Player]     Torso status: [TorsoName of Player][line break]";
+		say "Back status: [BackName of Player]     Arms status: [ArmsName of Player][line break]";
+		say "Legs status: [LegsName of Player]     Ass status: [AssName of Player][line break]";
+		say "Tail status: [TailName of Player][line break]";
+		if Player is male:
+			say "Cock status: [CockName of Player] ";
+		if Player is female:
+			say "Cunt status: [CuntName of Player] ";
+		if Player is herm:
+			say "     Gender: Herm[line break]";
+		else if Player is male:
+			say "     Gender: Male[line break]";
+		else if Player is female:
+			say "     Gender: Female[line break]";
 		else:
-			say "Cock status: [cockname of player]     Gender: Male[line break]";
-	else if player is female:
-		say "Groin status: [cockname of player]     Gender: Female[line break]";
-	else:
-		say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
+	else: [old body parts]
+		say "Head status: [facename of Player]     Body status: [bodyname of Player][line break]";
+		say "Skin status: [skinname of Player]     Tail status: [tailname of Player][line break]";
+		if Player is male:
+			if Player is female:
+				say "Cock status: [cockname of Player]     Gender: Herm[line break]";
+			else:
+				say "Cock status: [cockname of Player]     Gender: Male[line break]";
+		else if Player is female:
+			say "Groin status: [cockname of Player]     Gender: Female[line break]";
+		else:
+			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	if ( HP of Doctor Matt >= 23 and HP of Doctor Matt < 100 ) or hospquest >= 23:
 		let defaultheat be true;
 		let heatname be "Default";
 		choose row 1 in table of infection heat;
-		if cockname of player is a infect name listed in Table of infection heat:	[check name of heat]
-			choose a row with a infect name of (cockname of player) in Table of infection heat;
-			if player is female and fheat entry is false:	[no female heat for that form]
+		if cockname of Player is a infect name listed in Table of infection heat:	[check name of heat]
+			choose a row with a infect name of (cockname of Player) in Table of infection heat;
+			if Player is female and fheat entry is false:	[no female heat for that form]
 				choose row 1 in table of infection heat;
-			else if player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
+			else if Player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
 				choose row 1 in table of infection heat;
 			else:
 				now defaultheat is false;
 		else:
 			choose row 1 in table of infection heat;
-		now heatname is infect name entry;
-		if "Sterile" is listed in feats of player:
+		now heatname is infect Name entry;
+		if "Sterile" is listed in feats of Player:
 			say "Pregnancy Status: Sterile[line break]";
-		else if player is not female and player is not mpreg_ok:
+		else if Player is not female and player is not mpreg_ok:
 			now score is score;
-		else if player is impreg_now:
+		else if Player is impreg_now:
 			say "Pregnancy Status: Pregnant     ";
 			now tempnum is gestation of child;
-			if "Maternal" is listed in feats of player and a random chance of 1 in 3 succeeds:
+			if "Maternal" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 				now tempnum is tempnum / 2;
-			else if "Fertile" is listed in feats of player:
+			else if "Fertile" is listed in feats of Player:
 				now tempnum is ( 2 * tempnum ) / 3;
 				say "Expecting: ~[tempnum] hours[line break]";
 				say "Current fetal form: Body: [bodyname of child]   Face: [facename of child]   Skin: [skinname of child][line break]";

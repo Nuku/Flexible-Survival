@@ -214,7 +214,7 @@ to say TylerBodyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "The Cuts"):
@@ -294,7 +294,7 @@ to say TawnyaTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fur Suspicion"):
@@ -318,7 +318,7 @@ to say TawnyaFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     She seems like a pretty trustworthy person, so you nod at her comment that she has no fur. Seeing the time, you realize you've been here a tiny bit and it appears the guard knows this too. The guard walks up and grabs Tawnya by the hand. He tells you that if you want to talk to her again, just approach her, otherwise she needs to go back to her cell. You nod and follow the guard and the irritated lizard woman back to lockup where you're once more face to face with the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
@@ -328,12 +328,12 @@ to say TawnyaFurEvidence:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
-			if player consents:
+			if Player consents:
 				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immediately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realize being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her, kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep,' Tawnya says, almost moaning as lust starts affecting her.";
 				say "     You do as she asks and start moving your tongue inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signaling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend,' she says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 				now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
 			else:
-				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let bonus be (( charisma of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 				if diceroll + bonus >= 16:
@@ -348,7 +348,7 @@ to say TawnyaFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, she seems trustworthy.";
 		say "     ([link]N[as]n[end link]) - Nope, it's time to strip!";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You shake your head and decide to accept her statement once again. For one, the female lizard appears to be getting rather pissed at you and for two, while that anger is there, she does seem to be trustworthy. So, with a sigh you tell the Wolverine that you're done for now. He moves to Tawnya and grabs her arm, a little tightly if the wince on the lizard woman's face said anything. But then again she should have known better than to get angry in the presence of a wolverine when she's a suspect. They don't take no shit from potential law breakers, especially severe ones like murder. The two of you are then directed back to the lockup where you see the other suspects.";
 			now TawnyaFurSuspicion is 1; [she said she has none]
@@ -358,12 +358,12 @@ to say TawnyaFurEvidence:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sex her up";
 			say "     ([link]N[as]n[end link]) - Talk her into showing you everything";
-			if player consents:
+			if Player consents:
 				say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immediately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realize being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her, kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep,' Tawnya says, almost moaning as lust starts affecting her.";
 				say "     You do as she asks and start moving your tongue inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signaling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend,' she says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 				now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
 			else:
-				let bonus be (( charisma of player minus 10 ) divided by 2);
+				let bonus be (( charisma of Player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 				if diceroll + bonus >= 16:
@@ -378,7 +378,7 @@ to say TawnyaFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
-		if player consents:
+		if Player consents:
 			say "     You offer to lick Tawnya's pussy in exchange for seeing her naked, which prompts a smile from the lizard girl. 'You really know how to convince a girl,' she says a toothy smile aimed towards you. Turning towards the guard, you ask him to leave the two of you alone, said male shrugging before doing so. Immediately after that Tawnya gets rid of her clothes, revealing her scaly legs and breasts, proving very much so far that she's all lizard. You hesitate worrying for a moment if she might try anything but you realize being in a locked room with a guard right outside the door there's little reason to be concerned. Following that thought, you move over to her, kneeling in front of her before she moves her musky pussy over your face. 'I'll appreciate it if you lick nice and deep,' Tawnya says almost moaning as lust starts affecting her.";
 			say "     You do as she asks and start moving your tongue inside her twat as the lizard girl squirms and releases a steady flow of nectar which you quickly lap up. Soon she starts releasing a steady stream of quiet moans obviously trying to suppress the sound she makes as you continue eat her out. Eventually after some time of stimulating her Tawnya pushes herself harder onto your face making it difficult to breathe while releasing a long rolling moan signaling her orgasm, you put pressure on her legs to try and get room to breathe and she finally starts standing up. 'You have a gift there, my friend,' she says, slowly getting dressed, briefly turning around to allow you to get a look of her back. Once that's done, you call the guard back in and have him escort the both of you back to lockup where you wonder what to do next.";
 			now TawnyaFurSuspicion is 3; [the player has seen her naked after sex and _knows_ she has none]
@@ -449,7 +449,7 @@ to say CaneTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fur Suspicion"):
@@ -531,7 +531,7 @@ to say BarryTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fur Suspicion"):
@@ -555,7 +555,7 @@ to say BarryFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
-		if player consents:
+		if Player consents:
 			say "     You smile at him and nod, causing the bear to give you a happy laugh. Turning to the guard, you ask him to leave the two of you alone. The guard looks weirdly at you before shrugging his shoulders and leaving to probably guard the door. Once you guys are alone, the bear starts shedding himself of his clothes, soon completely in the nude. You admire his body, the buff yet chubby looks of Barry, as well as what will be a big cock, if its soft state says anything. 'Hurry up and strip too, I gotta prepare you,' the guy cheerfully asks of you. Prepare? 'Mhm, I only do anal or blowjobs, but I want your ass right now.' The guy rumbles, the sound sending shivers up your spine. You shrug your shoulders and do as he asks, ridding yourself of your vestments and leaving you as naked as the day you were born. The bear then requests that you get up on the table, your ass facing him. Seeing no reason to ignore what he asks, you do so.";
 			say "     Mere seconds later you feel the big guy's muzzle at your pucker, which is quickly proceeded by a wet feeling back there. You groan as his tongue, which it must be as you're pretty sure fingers can't bend that way, begins to explore your insides. The sensation continues for a bit, making you moan and wiggle on the table, ass in the bear's face as he rims you. Soon though, he pulls back, making you whine. 'Mmm well aren't you tasty,' Barry says, before placing two fingers at your asshole. He slowly pushes them in and begins to scissor at your entrance, causing you wince. 'Aw, don't be like that my little teddy bear. I have to get you ready.' The big bear rumbles, causing heat to pool in the cheeks on your face. After he stretches you for a while he pulls back his fingers. 'Alright, now come here and sit on my lap,' Barry tells you. You get up and see that he's sitting in his chair, legs wide open and cock slowly hardening.";
 			WaitLineBreak;
@@ -573,7 +573,7 @@ to say BarryFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure! He doesn't seem too bad for a murder suspect.";
 		say "     ([link]N[as]n[end link]) - Err, no - better not...";
-		if player consents:
+		if Player consents:
 			say "     You smile at him and nod, causing the bear to give you a happy laugh. Turning to the guard, you ask him to leave the two of you alone. The guard looks weirdly at you before shrugging his shoulders and leaving to probably guard the door. Once you guys are alone, the bear starts shedding himself of his clothes, soon completely in the nude. You admire his body, the buff yet chubby looks of Barry, as well as what will be a big cock, if its soft state says anything. 'Hurry up and strip too, I gotta prepare you,' the guy cheerfully asks of you. Prepare? 'Mhm, I only do anal or blowjobs, but I want your ass right now.' The guy rumbles, the sound sending shivers up your spine. You shrug your shoulders and do as he asks, ridding yourself of your vestments and leaving you as naked as the day you were born. The bear then requests that you get up on the table, your ass facing him. Seeing no reason to ignore what he asks, you do so.";
 			say "     Mere seconds later you feel the big guy's muzzle at your pucker, which is quickly proceeded by a wet feeling back there. You groan as his tongue, which it must be as you're pretty sure fingers can't bend that way, begins to explore your insides. The sensation continues for a bit, making you moan and wiggle on the table, ass in the bear's face as he rims you. Soon though, he pulls back, making you whine. 'Mmm well aren't you tasty,' Barry says, before placing two fingers at your asshole. He slowly pushes them in and begins to scissor at your entrance, causing you wince. 'Aw, don't be like that my little teddy bear. I have to get you ready.' The big bear rumbles, causing heat to pool in the cheeks on your face. After he stretches you for a while he pulls back his fingers. 'Alright, now come here and sit on my lap,' Barry tells you. You get up and see that he's sitting in his chair, legs wide open and cock slowly hardening.";
 			WaitLineBreak;

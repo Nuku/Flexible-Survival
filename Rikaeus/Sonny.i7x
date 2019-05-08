@@ -26,7 +26,7 @@ Version 1 of Sonny by Rikaeus begins here.
 [   1: NPC in the mall lockerroom                          ]
 [   2: NPC in the bunker                                   ]
 
-[ libido of Sonny                                          ]
+[ Libido of Sonny                                          ]
 [   0: anal virgin                                         ]
 [   1: player fucked him                                   ]
 
@@ -44,14 +44,14 @@ Sonny is a man. The HP of Sonny is usually 0.
 [Physical details as of game start]
 ScaleValue of Sonny is 3. [human sized]
 SleepRhythm of Sonny is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Sonny is 1. [X cock]
+Cock Count of Sonny is 1. [X cock]
 Cock Length of Sonny is 6. [X Inches]
-Cock Width of Sonny is 4.
-Testes of Sonny is 2. [X balls]
-Cunts of Sonny is 0. [X pussy]
+Ball Size of Sonny is 4.
+Ball Count of Sonny is 2. [X balls]
+Cunt Count of Sonny is 0. [X pussy]
 Cunt Length of Sonny is 0. [X Cunt]
-Cunt Width of Sonny is 0. [X Cunt]
-Breasts of Sonny is 2. [X nipples]
+Cunt Tightness of Sonny is 0. [X Cunt]
+Nipple Count of Sonny is 2. [X nipples]
 Breast Size of Sonny is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Sonny is false. [can not take oversized members without pain]
@@ -139,7 +139,7 @@ to say SonnyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -203,7 +203,7 @@ to say SonnySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -214,19 +214,19 @@ to say SonnySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the sheep boy's ovine shaft";
 	][]
-	if player is male and libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
+	if Player is male and Libido of Sonny is 0: [only males and herms can fuck him, virgin Sonny]
 		choose a blank row in table of fucking options;
 		now title entry is "Talk the friendly sheep into giving up his virginity";
 		now sortorder entry is 3;
 		now description entry is "Take Sonny's ass for a ride";
 	[
-	if player is male and libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
+	if Player is male and Libido of Sonny is 1: [only males and herms can fuck him, also just for Sonny who isn't a virgin]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the friendly sheep";
 		now sortorder entry is 4;
 		now description entry is "Take Sonny's ass for a ride";
 	][
-	if player is female: [only females and herms can take him in the pussy]
+	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Sonny's shaft in your pussy";
 		now sortorder entry is 5;
@@ -249,7 +249,7 @@ to say SonnySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):
@@ -294,7 +294,7 @@ to say SonnySex3: [virgin Sonny fucked]
 	say "     That shout turned out to be the sheep cumming first, his anal muscles clamping down into a tight vice around your cock. That in turn sets you off, making you cum and release your load into the ovine. With the last of your strength before you collapse from pleasure, you move the two of you to Sonny's mattress, promptly falling onto it, the both of you now laying up against each other. You and the sheep settle into a post-coitus cuddle session, you nuzzling your face against Sonny's, enjoying the sweet bliss that occurs after orgasm. Your friend has a different idea, turning your face towards his before kissing you chastely, these kisses much different than the ones during sex. No, these ones were sweet and loving, which told you a lot about the sheep and made you question a few things. Like why didn't you romance him first? Sure, nowadays it's usually fucking with loving gestures being a rare occurrence.";
 	say "     You ponder this for a while as the two of you trade loving kisses between each other. About an hour later, you stand up, leaving a soft kiss on his cheek before getting dressed. Once you're dressed you watch Sonny get dressed, admiring the look of your cum leaking out of his ass. When the sheep is dressed you hug him and thank the guy for the time before heading off. As you're heading back to your journey, your cuddle session thoughts pop up. Maybe you should find a way to make this relationship go further, at least other than fucking?";
 	now lastfuck of Sonny is turns;
-	now libido of Sonny is 1;
+	now Libido of Sonny is 1;
 	now SonnyRelationship is 5; [has taken his virginity]
 
 to say SonnySex4: [non-virgin Sonny fucked]
@@ -363,7 +363,7 @@ Section 5 - Endings
 
 when play ends:
 	if (HP of Sonny > 0): [player met him and got as far as seeing him as an NPC]
-		if humanity of player < 10: [player went feral]
+		if humanity of Player < 10: [player went feral]
 			if HP of Sonny is 1: [Sonny is at the mall when the game ends]
 				if SonnyRelationship < XXX: [non romance ending]
 					say "     ...";

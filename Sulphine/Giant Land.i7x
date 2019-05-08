@@ -27,7 +27,7 @@ after going to Library Garden while (magic beans are owned):
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, why not.";
 	say "     ([link]N[as]n[end link]) - Nope, you're not taking orders from legumes!";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     <Scene for choice A>";
 	else:

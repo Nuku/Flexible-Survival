@@ -9,7 +9,7 @@ Version 1 of Mall Expansion by Wahn begins here.
 lastMallInteriorScene is a number that varies. lastMallInteriorScene is usually 10000.
 BullTerrierSiblingsVar is a number that varies.
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is companion of player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and gshep is companion of Player and gsd_pet >= 60 and BullTerrierSiblingsVar is 0 and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event - Korvin sniffs out a fertile bull terrier - BullTerrierSiblingsVar: [BullTerrierSiblingsVar][line break]";
@@ -19,7 +19,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yeah, why not. Might be fun to see him try to talk his way into her pants...";
 	say "     ([link]N[as]n[end link]) - Nope! You tamed Korvin from being a wild dog, attacking people in the streets. He doesn't need the temptation.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Letting yourself get taken up in Korvin's eager hunt for the white-furred anthro, you start walking a little faster. Together, you prowl after the bull terrier, keeping her in sight. As the crowds thin out a little, you manage to catch some more glimpses of the rest of her. Small in stature but muscular, with a sleeveless blue t-shirt on her body. And... is she bottomless?! Ah no, the thin strap of a skimpy pair of underwear is visible just under her tail. Your quarry moves along with determined steps, turning right and into the east wing of the mall. There, she quickly reaches a door to a slender store that a sign above the door makes out as a real estate agent. You can see some sofas and comfortable furnishings in there - looks fairly nice.";
 		say "     The white-furred female looks through the glass door and seems disappointed by something. Maybe she was expecting someone? Meanwhile, Korvin gives you a grin and with the words, 'I'll show you how this is done,' he sets out to stroll up to the bitch he sniffed out. Your attack dog struts forward confidently, raising a hand and opening his muzzle to chat her up - just as a deep voice calls out, 'Heya sis!' The bull terrier whirls around, showing you that she looks quite presentable from this side too - her attractively canine face drawn into a smile and two hand-sized bumps under her t-shirt. The person who called out to her is... enormous is almost too weak a word. Another bull terrier, this one male and about one and a half times her height is walking up to the young woman. The similarities between the two of them are fairly obvious - same powerful build, hair color, even the features if one allows for the fact that the big one is male...";
@@ -30,7 +30,7 @@ instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns 
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Anthro dogs humping in heat? Sure!";
 		say "     ([link]N[as]n[end link]) - Nah, pass.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Walking up to the store, you soon spot something through the still open door - a pair of black panties lying on the ground, barely a step inside the real estate agent's office. They certainly were eager to start! A lustful bark draws your attention deeper into the room so you walk in, catching sight of the dogs after a few steps. On the ground behind a large sofa, the big dog is on all on all fours - or three, actually as one large hand is holding his sister by the up as he humps is bright red cock into her pussy. The young woman's shirt has been pushed up over her breasts, showing off the well-rounded orbs with their pink nipples, complete with shiny silver nipple rings. 'Fuck me Boomer! Damn I like that prick of yours!' she barks out excitedly, writhing under him as he takes her deep.";
 			say "     In reply, the muscular brute of a dog plants a hungry kiss on her muzzle, pushing his tongue between her lips to wrestle with hers as he keeps up the non-stop humping into the smaller female. It looks pretty awe-inspiring that she can take the thick rod between his legs - especially with the bulging knot at the base of it that he pops in and out of her again and again in little extra thrusts after sliding most of the way into her. Wow, he must be pretty deep in the grip of his bestial urges if his knot is already that big, almost ready to tie to her! Looks like she's not the only one being ridden by the imperatives of her heat.";
@@ -66,7 +66,7 @@ lastABEncounter is a number that varies. lastABEncounter is usually 10000.
 AmirRelationship is a number that varies.
 ByronRelationship is a number that varies.
 
-instead of going north from Smith Haven Mall Lot South while (lastMallInteriorScene - turns > 0 and findwires is 2 and fixedgens is 2 and AmirRelationship is 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
+instead of going north from Smith Haven Mall Lot South while (lastMallInteriorScene - turns > 0 and findwires is 2 and fixedgens > 2 and AmirRelationship is 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
 	move player to Mall Foodcourt;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the food court - Amir and Byron (Bison and Mall-Rat)[line break]";
@@ -78,7 +78,7 @@ instead of going north from Smith Haven Mall Lot South while (lastMallInteriorSc
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
 	say "     ([link]N[as]n[end link]) - Nah, you got better things to do.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     'Come on, we're holding up the line,' the mall rat says and takes hold of the larger guy's strong hand with his slender fingers, then leads him off to the side without any resistance. You unobtrusively follow the two of them to the entrance of a very plain service hallway between two stores and hang around to observe what happens next. Stopping a few steps into the passage, the rat looks up at the burly man and smiles, then holds out his slender paw with the words, 'So then. I'm Byron, by the way.' Visibly swallowing, the bison shakes hands with him and replies, 'Amir. I - um... do you do this often?' Byron chuckles as he says, 'What? Proposition strangers? Only the hot ones. Let me guess - never been with a guy?' As the bison shakes his head, he adds, 'You're in for a treat.'";
 		say "     With that said, Byron crouches down and undoes the button of Amir's pants, then pulls the zipper all the way down. He pulls the nervous man's pants down, baring his naked crotch, showing a respectably sized soft cock. 'Going commando, eh? Nice!' the rat cheers, to which his new acquaintance replies, 'Wearing two layers of clothes with this fur gets too hoo-hot!' He momentarily stutters as Byron cups his weighty balls, giving them an appreciative squeeze. Then the adventurous rat slides his fingers around Amir's manhood and starts to stroke it, coaxing the broad-shouldered man to full hardness quickly. A second later, he licks the bison's erection, causing him to gasp out, 'Fuck. That feels nice!'";
@@ -102,7 +102,7 @@ instead of going north from Smith Haven Mall Lot South while (lastMallInteriorSc
 	now lastABEncounter is turns;
 
 [
-instead of going north from Smith Haven Mall Lot South while (findwires is 2 and fixedgens is 2 and AmirRelationship > 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
+instead of going north from Smith Haven Mall Lot South while (findwires is 2 and fixedgens > 2 and AmirRelationship > 0 and (lastABEncounter - turns > 10) and a random chance of 1 in 3 succeeds):
 	move player to Mall Foodcourt;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the food court - Amir and Byron (Bison and Mall-Rat) - lastABEncounter: [lastABEncounter], ByronRelationship: [ByronRelationship], AmirRelationship: [AmirRelationship][line break]";
@@ -112,7 +112,7 @@ instead of going north from Smith Haven Mall Lot South while (findwires is 2 and
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, they seem an interesting couple of guys.";
 	say "     ([link]N[as]n[end link]) - Nah, you got better things to do.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     ";
 		if ByronRelationship is 0:

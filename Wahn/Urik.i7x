@@ -25,14 +25,14 @@ Urik	"Urik"
 
 Urik is a man.
 ScaleValue of Urik is 4.
-Cocks of Urik is 1.
+Cock Count of Urik is 1.
 Cock Length of Urik is 15.
-Cock Width of Urik is 11.
-Testes of Urik is 2.
-Cunts of Urik is 0.
+Ball Size of Urik is 11.
+Ball Count of Urik is 2.
+Cunt Count of Urik is 0.
 Cunt Length of Urik is 0.
-Cunt Width of Urik is 0.
-Breasts of Urik is 2. [2 nipples]
+Cunt Tightness of Urik is 0.
+Nipple Count of Urik is 2. [2 nipples]
 Breast Size of Urik is 0.
 TwistedCapacity of Urik is false.
 Sterile of Urik is false.
@@ -85,7 +85,7 @@ Instead of fucking Urik:
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
 		[]
-		if player is female:
+		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Urik fuck your pussy";
 			now sortorder entry is 3;
@@ -97,7 +97,7 @@ Instead of fucking Urik:
 			now sortorder entry is 4;
 			now description entry is "Let the orc warrior fill your ass with his seed";
 		]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Urik's ass";
 			now sortorder entry is 5;
@@ -115,7 +115,7 @@ Instead of fucking Urik:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
 					now sextablerun is 1;
@@ -231,7 +231,7 @@ instead of conversing Urik:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -299,13 +299,13 @@ instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Cand
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure. The furry boy-slut is grinning at you from his position over Urik's shoulder!";
 	say "     ([link]N[as]n[end link]) - Nope. Urik should get used to not being a free orc warrior anymore. You decide where and if he sticks his dick anywhere now!";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     [bold type]Do you want to go after them and watch?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, looks like a good time.";
 		say "     ([link]N[as]n[end link]) - Nah, not right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			project the figure of Urik_naked_icon;
 			say "     Following Urik as he walks up the stairs, you face Candy on the way, who keeps smiling happily and making kissy faces at you. Soon, the three of you arrive at Urik's camp, with the orc kicking a few strewn-about possessions of his aside to walk up to the comfy sofa he claimed as his resting place. He pulls Candy off his shoulder and drops him on the cushions, then almost rips off his own loincloth, revealing the thick shaft of his orcish manhood. 'Oh wow, you really are a big boy all over,' Candy comments gleefully and sits up, reaching out to touch Urik's erection. The raccoon strokes it with both hands, prompting a satisfied grunt from Urik at being jerked off. Soon, a glistening drop of pre-cum forms at the tip of the orc's shaft.";

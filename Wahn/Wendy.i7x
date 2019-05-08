@@ -42,8 +42,8 @@ Instead of resolving a Cow Hunting:
 		say "     The cowboy shouts out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry is "Cowboy Cuntboy":
-				now monster is y;
+			if Name entry is "Cowboy Cuntboy":
+				now MonsterID is y;
 				now area entry is "Plains";
 				now non-infectious entry is false;
 				break;
@@ -77,7 +77,7 @@ Instead of resolving a Missing Cow:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Wait and watch.";
 	say "     ([link]N[as]n[end link]) - Attack the gryphon.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners['] coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
 		say "     The sex continues with unabated wildness for some more time, until you notice the feral gryphon getting louder in his shrieks and faster with his thrusts. Finally he pushes all of his hard cock into her a final time, knotting the bovine as he blasts another large load of his seed into her. Staying bound to Wendy for some more time after that, her pussy and womb flooded with his seed held in by the knot, the gryphon rubs the side of his beak and head against her back affectionately, taking care not to hurt her with the sharp tip of his beak.";
@@ -101,18 +101,18 @@ Instead of resolving a Missing Cow:
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;
-	if player is male:
+	if Player is male:
 		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it?";
 		LineBreak;
 		say "     [bold type]What now?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take a turn fucking Wendy.";
 		say "     ([link]N[as]n[end link]) - Just bring the cow back to the McDermott Farm right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
-			if scalevalue of player < 3:
+			if scalevalue of Player < 3:
 				say "     The will to act may be there, but you're just too small to actually do it. There's no way you could get your cock up into Wendy's pussy on your own, and the number of stepladders available out here in the plains is rather low.";
-			else if scalevalue of player is 3:
+			else if scalevalue of Player is 3:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence. Since she's just a bit too tall for you to just take her, you lead her over a few feet to the stubby remains of a building that stood here before, maneuvering her into the right position next to a fallen wall. Standing on the low rocks, you gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
 			else:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence and lowers her head again to graze. Then you walk to her back end, gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
@@ -142,14 +142,14 @@ Wendy	"Wendy"
 
 Wendy is a woman.
 ScaleValue of Wendy is 4.
-Cocks of Wendy is 0.
+Cock Count of Wendy is 0.
 Cock Length of Wendy is 0.
-Cock Width of Wendy is 0.
-Testes of Wendy is 0.
-Cunts of Wendy is 1.
+Ball Size of Wendy is 0.
+Ball Count of Wendy is 0.
+Cunt Count of Wendy is 1.
 Cunt Length of Wendy is 30.
-Cunt Width of Wendy is 15.
-Breasts of Wendy is 4. [4 nipples]
+Cunt Tightness of Wendy is 15.
+Nipple Count of Wendy is 4. [4 nipples]
 Breast Size of Wendy is 0.
 TwistedCapacity of Wendy is true.
 Sterile of Wendy is true.
@@ -176,15 +176,15 @@ to say WendyDesc:
 	say "     Wendy is a cow - but not just any cow. She's had quite a bit of excitement out in the dry plains lately, getting lost and having an... interesting time with a large feral gryphon. As you walk up to her stall, she gives a greeting 'Mooh', seemingly recognizing you. Then she turns, moving her hindquarters in your direction and looking back at you. Might just be your imagination, but it's a bit as if she was presenting herself to you, wanting a little more interspecies attention.";
 
 instead of fucking the Wendy:
-	if player is not male:
+	if Player is not male:
 		say "     Sadly, you won't get very far with Wendy in your current gender state. She might be horny for another fuck by an exotic partner, but just isn't intelligent enough to take an active role and do anything but get fucked by someone's cock.";
 	else if lastfuck of Wendy - turns < 4:
 		say "     Wendy still seems a little worn from your earlier fun with her. It might be better to give her a bit more of a break. Besides, what if you got caught?";
 	else:
-		if scalevalue of player < 3:
+		if scalevalue of Player < 3:
 			say "     Looking to have some sexy time with Wendy, you look around a bit for something to solve the problem that you're so much smaller than her. Finally, you push a hay-bale over into her stall, then climb on it. Speaking in calming tones to the cow, you stroke her fur for a moment so she gets used to your touch, then gently lift her tail and look at her pussy. It's pretty large in human terms, as expected from a bigger creature, and it seems like she's ready and waiting for you to fuck her - seeing that she's pretty wet already. You pull out your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. Wendy's pussy is surprisingly tight, as she instinctively grips your member with her inner muscles. You pound into her with eager thrusts, filling the barn with lustful moans and moos. Fucking the docile bovine without holding back for a second, it doesn't take all that long until you blast your cum deep into her body.";
 			say "     Satisfied, you pull out, then climb down from the hay-bale and get your clothes back in order. You're just carrying the bale out of Wendy's stall when [one of]a horseman farmhand comes into the barn and notices what you're doing. His eyes go from the hay-bale to you, then to Wendy, still with her backside turned to the stall entrance, leaking white cum from her freshly fucked pussy. A knowing smile spreading over his face, the man gives you a wink, then takes another cow to be milked.[or]you hear a creak from above. Looking up, you don't see anyone at the edge of the hayloft, but there might have been someone up there the whole time, watching you fuck the cow...[at random]";
-		else if scalevalue of player is 3:
+		else if scalevalue of Player is 3:
 			say "     Looking to have some sexy time with Wendy, you look around a bit for something to solve the problem that you're somewhat smaller than her. Finally, you grab a part of a cut-up wooden beam and lay it on the ground in her stall, stepping up on it. Perfect, now you're the right height. Speaking in calming tones to the cow, you stroke her fur for a moment so she gets used to your touch, then gently lift her tail and look at her pussy. It's pretty large in human terms, as expected from a bigger creature, and it seems like she's ready and waiting for you to fuck her - seeing that she's pretty wet already. You pull out your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. Wendy's pussy is surprisingly tight, as she instinctively grips your member with her inner muscles. You pound into her with eager thrusts, filling the barn with lustful moans and moos. Fucking the docile bovine without holding back for a second, it doesn't take all that long until you blast your cum deep into her body.";
 			say "     Satisfied, you pull out, then step off your piece of wood and get your clothes back in order. You're just carrying the short beam out of Wendy's stall when [one of]a horseman farmhand comes into the barn and notices what you're doing. His eyes go from the piece of wood to you, then to Wendy, still with her backside turned to the stall entrance, leaking white cum from her freshly fucked pussy. A knowing smile spreading over his face, the man gives you a wink, then takes another cow to be milked.[or]you hear a creak from above. Looking up, you don't see anyone at the edge of the hayloft, but there might have been someone up there the whole time, watching you fuck the cow...[at random]";
 		else:

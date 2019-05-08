@@ -9,14 +9,14 @@ Bryony is a woman. Bryony is in Equinoid Camp.
 [Physical details as of game start]
 ScaleValue of Bryony is 4. [large human sized]
 SleepRhythm of Bryony is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Bryony is 1. [X cock]
+Cock Count of Bryony is 1. [X cock]
 Cock Length of Bryony is 14. [X Inches]
-Cock Width of Bryony is 8.
-Testes of Bryony is 2. [X balls]
-Cunts of Bryony is 1. [X pussy]
+Ball Size of Bryony is 8.
+Ball Count of Bryony is 2. [X balls]
+Cunt Count of Bryony is 1. [X pussy]
 Cunt Length of Bryony is 12. [X Cunt]
-Cunt Width of Bryony is 4. [X Cunt]
-Breasts of Bryony is 1. [X nipples]
+Cunt Tightness of Bryony is 4. [X Cunt]
+Nipple Count of Bryony is 1. [X nipples]
 Breast Size of Bryony is 4. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Bryony is false. [can not take oversized members without pain]
@@ -47,12 +47,12 @@ BryonyBearFuckWatched is a number that varies. BryonyBearFuckWatched is usually 
 
 to say BryonyDesc:
 	say "     Bryony stands guard at the front of the camp. The herm's black mane is kept straight and out of her face, showing off her feminine muzzle and dark brown eyes. The white toga keeping her body modest is free of dirt or stains, showing only minor tears from past confrontations. The spear she wields consists of a simple arrowhead attached to a Bo staff with copper wire, making crude use of salvaged materials. Below, solid black hooves are planted on the ground in a proud, sturdy stance, suggesting she takes her role here very seriously.";
-	say "     Spotting you watching her, Bryony [if player is blequinoidbodied]gives a nod of acknowledgement. She may not fully trust you yet, but your fully equinoid form puts some of her worries to rest[else]shakes her head and looks away. It seems she's unenthused by an impure creature hanging around the camp[end if].";
+	say "     Spotting you watching her, Bryony [if Player is blequinoidbodied]gives a nod of acknowledgement. She may not fully trust you yet, but your fully equinoid form puts some of her worries to rest[else]shakes her head and looks away. It seems she's unenthused by an impure creature hanging around the camp[end if].";
 
 Instead of conversing the Bryony:
-	if player is blequinoidbodied:
+	if Player is blequinoidbodied:
 		if HP of Bryony > 2:
-			say "     You approach the stoic equinoid, who quickly stands at attention. 'Hail!' she calls. 'What brings you here, [if player is defaultnamed]warrior[else][name of player][end if]?'";
+			say "     You approach the stoic equinoid, who quickly stands at attention. 'Hail!' she calls. 'What brings you here, [if Player is defaultnamed]warrior[else][name of Player][end if]?'";
 		else:
 			say "     You approach the stoic equinoid, who sighs and stands at attention. 'Hail,' she says, although it's clear by her unenthused tone that she still doesn't view you as an equal. 'What are you here for?'";
 		say "[BryonyTalkMenu]";
@@ -107,7 +107,7 @@ to say BryonyTalkMenu: [Runs only if the player is fully black equinoid. Otherwi
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				let nam be title entry;
 				if (nam is "Ask Bryony how her shift is going"):
@@ -152,7 +152,7 @@ to say BryonyGuard1:
 	say "     Heeding the herm's words, you attempt to straighten your back and look as dignified as possible. Bryony criticizes your posture repeatedly, albeit constructively. 'Pull your stomach in. Keep your abs straight. Chest out but not ballooning. Shoulders back, glutes tight. Hold your spear straight. Don't lean your weight to one hoof. Hmn, looking better already.' The horse seems pleased by how quickly you're taking to her instructions. 'Most volunteers flake out by now. Good on you for showing some semblance of discipline for a change.' Something about her praise sends a warm, fuzzy feeling through your body that alleviates any stress or discomfort.";
 	WaitLineBreak;
 	say "     The rest of your stay proves largely uneventful. A handful of equinoids pass in and out for their daily routine, and some partly transformed stragglers approach in search of food or water. Bryony drives a hard bargain with these visitors, exchanging medkits, weapons, and even the clothes off their back for scraps. Regardless of how lopsided the deal, most of them seem grateful for the opportunity, and those that don't are quickly driven off by the threat of being skewered. When you ask about her draconian attitude, Bryony is quick to explain, 'We cannot afford to run a charity here. Either offer us something substantial in return, or get lost, and don't even try to barter with us.'";
-	say "     Sensing some anger in her voice, you decide to drop the subject and go quiet again, focusing on the sounds of nature instead. At times, you swear you hear a sigh cut through the din, but you decide not to broach the subject. Eventually, the equinoid turns her head to say, 'Alright, [if player is defaultnamed]outsider[else][name of player][end if]. I think that'll be all for now. Thank you for taking the time to help out here, and let me know whenever you'd like another shift by my side.' Satisfied with your performance, the equinoid instructs you to return the borrowed spear and turns back to her duties.";
+	say "     Sensing some anger in her voice, you decide to drop the subject and go quiet again, focusing on the sounds of nature instead. At times, you swear you hear a sigh cut through the din, but you decide not to broach the subject. Eventually, the equinoid turns her head to say, 'Alright, [if Player is defaultnamed]outsider[else][name of Player][end if]. I think that'll be all for now. Thank you for taking the time to help out here, and let me know whenever you'd like another shift by my side.' Satisfied with your performance, the equinoid instructs you to return the borrowed spear and turns back to her duties.";
 	wait for any key;
 	now HP of Bryony is 2;
 	follow the turnpass rule;
@@ -162,10 +162,10 @@ to say BryonyGuard2:
 	say "     As before, the majority of your time spent at your post is without incident. Hunting parties come and go, survivors come to trade for supplies, and Bryony meets them all with the same cold condescension she did on your previous joint shift. However, you are taken by surprise when a naked woman stumbles through the forest. Her clothes lie in tatters, and her exposed body is covered in scratches and fluids. You are tempted to run forward and assist her, but Bryony holds you back with her spear, waiting for her to approach.";
 	WaitLineBreak;
 	say "     'Please! I need help! Somebody, please!' the woman calls out. Even as she speaks, brown fur quickly spreads across her head, her face drawing forward into a muzzle and teeth extending to predatory points. 'Halt!' Bryony calls out, raising the edge of her weapon. 'Stand back and explain yourself.' The woman whimpers as fur spreads down her neck and shoulders, mammary flesh swelling and breath growing heavy. 'I- I was attacked and raped by a bear in the woods! Please, I don't have time to go into detail, just let me in!' she pleads. Bryony ignores her request, shaking her head adamantly. 'I cannot. Your transformation poses a threat to the tribe. Stand back.' 'No, no, no!' the woman cries out. 'I'm just going to turn into another mindless beast! Please, I'm begging you, don't just stand there and let this happen! Help me!'";
-	say "     To your surprise, Bryony's cool demeanor begins to waver somewhat. 'No, I will not! That is final. Now calm yourself and try to breathe,' she urges. The panicking woman sinks to her hands and knees and bursts out into tears, sobbing uncontrollably as the transformation flows down her torso, her muscles expanding while fat billows from her core. '[if player is defaultnamed]Outsider[else][name of player][end if], I need you to hurry inside and grab a towel from the bathhouse. That is an order.' Adrenaline coursing through your veins, you rush through groups of warriors to the bath where you were initiated, grab a dry towel, and sprint back toward the entrance. Bryony is waiting, legs spread in a sturdy fighting stance and spear extended toward the woman, whose cries have devolved into babbling and moaning as she frantically fingers her sopping wet slit. 'It may be too late for her, but we might as well try,' Bryony reasons as she snatches the towels from your hand.";
+	say "     To your surprise, Bryony's cool demeanor begins to waver somewhat. 'No, I will not! That is final. Now calm yourself and try to breathe,' she urges. The panicking woman sinks to her hands and knees and bursts out into tears, sobbing uncontrollably as the transformation flows down her torso, her muscles expanding while fat billows from her core. '[if Player is defaultnamed]Outsider[else][name of Player][end if], I need you to hurry inside and grab a towel from the bathhouse. That is an order.' Adrenaline coursing through your veins, you rush through groups of warriors to the bath where you were initiated, grab a dry towel, and sprint back toward the entrance. Bryony is waiting, legs spread in a sturdy fighting stance and spear extended toward the woman, whose cries have devolved into babbling and moaning as she frantically fingers her sopping wet slit. 'It may be too late for her, but we might as well try,' Bryony reasons as she snatches the towels from your hand.";
 	WaitLineBreak;
 	say "     With no time to waste, the equinoid tosses you her spear and runs towards the transforming woman, brushing off the milk and nectar still clinging to her face. 'Stay with me,' she commands. You stand back from the spectacle, training your weapon of choice on the couple. Reaching beneath her form, Bryony pulls the bear's hands away and seizes her wrists in an iron grasp, giving her no opportunity to indulge her burning lusts. 'Nooo! Let me go! I need this!' the woman pleads in a low, throaty voice that scarcely resembles her old self. Bryony clearly has no intention to stop, rolling the bear over onto her back and pinning her arms down beneath her knees. 'Oh, will you just pull yourself together?' the equinoid grumbles as she holds the bear's jaws apart with one hand and swabs out the inside of her mouth with a towel, much to the uncomfortable gagging of her subject. When the first one is soaked, she simply tosses it aside and finishes the job with another, wiping away any trace of wetness from the ursine's maw, sex, and milk-leaking nipples.";
-	say "     However, try as she might, the transformation has simply progressed too far. With a roar, the female bear continues to squirm and thrash beneath Bryony's brawn, her hips bucking into the air as she throws a lust-fueled fit. 'Oh for fuck's sake-' Bryony grumbles, her tail flicking around in obvious agitation as her muscles strain to keep the increasingly large ursine still. '[if player is defaultnamed]Outsider[else][name of player][end if], don't just stand there! Come and help me keep this whore down!' Heeding her order, you hurry forward and kneel between the bear's legs, hands planting on her thighs to still her wild flailing. Even with your combined strength, the bear proves a challenge to contain, a surge of new instincts driving her to escape at all costs. 'We won't be able to hold her down forever,' Bryony observes, the herm looking up at you a worried expression. 'What do you think we should do?'";
+	say "     However, try as she might, the transformation has simply progressed too far. With a roar, the female bear continues to squirm and thrash beneath Bryony's brawn, her hips bucking into the air as she throws a lust-fueled fit. 'Oh for fuck's sake-' Bryony grumbles, her tail flicking around in obvious agitation as her muscles strain to keep the increasingly large ursine still. '[if Player is defaultnamed]Outsider[else][name of Player][end if], don't just stand there! Come and help me keep this whore down!' Heeding her order, you hurry forward and kneel between the bear's legs, hands planting on her thighs to still her wild flailing. Even with your combined strength, the bear proves a challenge to contain, a surge of new instincts driving her to escape at all costs. 'We won't be able to hold her down forever,' Bryony observes, the herm looking up at you a worried expression. 'What do you think we should do?'";
 	say "[BryonyBearOptions]";
 
 to say BryonyBearOptions:
@@ -180,7 +180,7 @@ to say BryonyBearOptions:
 	choose a blank row in table of fucking options;
 	now title entry is "Fuck her";
 	now sortorder entry is 2;
-	now description entry is "Attempt to overwhelm her strain with [if player is neuter]Bryony's[else]your[end if] fluids";
+	now description entry is "Attempt to overwhelm her strain with [if Player is neuter]Bryony's[else]your[end if] fluids";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Let her go";
@@ -198,7 +198,7 @@ to say BryonyBearOptions:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				let nam be title entry;
 				if (nam is "Incapacitate her"):
@@ -228,19 +228,19 @@ to say BryonyBearFuckOptions:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 1;
 		now description entry is "Stuff her slit while Bryony takes her mouth";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her mouth";
 		now sortorder entry is 2;
 		now description entry is "Stretch her throat while Bryony takes her cunt";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride her face (vaginal)";
 		now sortorder entry is 3;
@@ -277,7 +277,7 @@ to say BryonyBearFuckOptions:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				let nam be title entry;
 				if (nam is "Fuck her pussy"):
@@ -299,7 +299,7 @@ to say BryonyBearFuckOptions:
 	clear the screen and hyperlink list;
 
 to say BryonyBearFuck1: [Fuck her pussy]
-	say "     While making out with Bryony, you take hold of your equine cock and align its flared tip with bear's dripping sex. You push forward in a single smooth motion, sinking inch after inch of your [cock size desc of player] shaft into her smooth, drenched channel. The ursine's supple folds caress your pulsing cockflesh, clenching and rippling in a stimulating massage that erodes your every inhibition. You begin to thrust into the bear's sordid pussy, driving yourself to the hilt in her softly squeezing depths before pulling almost all the way out again. Your medial ring plucks at her labia with every slam and withdrawal, drawing grunts and low moans from your pinned and eager partner.";
+	say "     While making out with Bryony, you take hold of your equine cock and align its flared tip with bear's dripping sex. You push forward in a single smooth motion, sinking inch after inch of your [cock size desc of Player] shaft into her smooth, drenched channel. The ursine's supple folds caress your pulsing cockflesh, clenching and rippling in a stimulating massage that erodes your every inhibition. You begin to thrust into the bear's sordid pussy, driving yourself to the hilt in her softly squeezing depths before pulling almost all the way out again. Your medial ring plucks at her labia with every slam and withdrawal, drawing grunts and low moans from your pinned and eager partner.";
 	say "     Soon, Bryony is following your lead, bringing her throbbing flare to the bear's hungry maw before stretching her jaw with her man-meat. The freshly transformed woman's throat proves more than accommodating, forming a warm, wet vise that visibly bulges around Bryony's girth. She shudders and grinds roughly against the bear's face before pulling back to set her pace, arrhythmically pounding her muzzle in her wild need to breed. The potent scent of sex clouds your mind, filling the air in a heady miasma as your slick impacts sound out for all to hear. Catching wind of the commotion, a handful of equines trot over to watch with piqued interest, groping their tits and pumping their lengths to vicariously enjoy the rough and hazy sex the three of you share in.";
 	say "     In time, the threesome becomes too much to bear. Poor, pent-up Bryony is the first to flood the bear's depths, pulse after pulse of hot, virile seed washing directly down her gullet. What doesn't stay down splashes out against her crotch, streaking down the bear's muzzle and leaving a growing puddle below. You soon follow suit, taking several hard strokes before grinding your crotch to the bear's gaping folds. You tremble in orgasm, an ecstatic whinny leaving your muzzle as your balls unload in the bear's waiting womb. The thought of siring foals with her sends a shiver down your spine, and your balls begin to ache as you spill all you can give into the ursine's wanton cunt. Your powerful release drives the bear to her own messy climax, squirting and writhing with pure, carnal bliss as a muffled roar ripples over Bryony's cum-slick dick. You've nearly forgotten about your lustful voyeurs, who helpfully spray thick ropes of their seed across the bear's torso, the mess of transformative fluids coating your lover inside and out.";
 	WaitLineBreak;
@@ -310,7 +310,7 @@ to say BryonyBearFuck1: [Fuck her pussy]
 
 to say BryonyBearFuck2: [Fuck her mouth]
 	say "     After making out with Bryony, you request to switch positions to make the most out of the situation. You reason that you'd rather take the bear's mouth, and wouldn't she enjoy a nice, snug cleft to stuff and fill with her foals? Subsumed by her lusts, Bryony can't help but agree with your offer, and the two of you rise on unsteady hooves. The bear doesn't budge in the time it takes to swap places, lusting to be used in whatever way her dominant lovers please.";
-	say "     Once ready, you kneel atop the ursine's face, taking hold of your length to align its thick, pulsing flare with her maw. The woman licks her chops, then opens her mouth wide, her tongue lolling out lavishly in invitation. You push forward in a single smooth motion, smearing your cockmeat across her palate as her jaw stretches to accept your [cock size desc of player] shaft. The feeling of that warm, wet vise gripping around your sensitive manhood sends a shiver down your spine, and you urgently grind forward, leaving a visible impression of your cock in her throat.";
+	say "     Once ready, you kneel atop the ursine's face, taking hold of your length to align its thick, pulsing flare with her maw. The woman licks her chops, then opens her mouth wide, her tongue lolling out lavishly in invitation. You push forward in a single smooth motion, smearing your cockmeat across her palate as her jaw stretches to accept your [cock size desc of Player] shaft. The feeling of that warm, wet vise gripping around your sensitive manhood sends a shiver down your spine, and you urgently grind forward, leaving a visible impression of your cock in her throat.";
 	WaitLineBreak;
 	say "     Soon, Bryony is following your lead, bringing her throbbing flare to the bear's slavering muff before sinking herself into that accommodating channel. The equinoid groans at the feeling, her fingers digging into the earth below as she works herself deeper with several short, rough bucks until she bottoms out the bear's hot cleft. She nickers and grinds roughly against her lover's crotch before pulling back to set her pace, arrhythmically pounding her pussy in her wild need to breed. The potent scent of sex clouds your mind, filling the air in a heady miasma as your slick impacts sound out for all to hear. Catching wind of the commotion, a handful of equines trot over to watch with piqued interest, groping their tits and pumping their lengths to vicariously enjoy the rough and hazy sex the three of you share in.";
 	say "     In time, the threesome becomes too much to bear. Poor, pent-up Bryony is the first to succumb, her balls tensing up before she floods the ursine's depths, pulse after pulse of hot, virile seed washing directly into her womb. What doesn't stay in splashes out against her crotch, streaking down her thighs and leaving a growing puddle below. The bliss of being bred drives the bear over the edge, squirting and writhing with pure, carnal bliss as a muffled roar resonates around your cock. The powerful vibrations finally bring you to orgasm, an ecstatic whinny leaving your muzzle as you feed your ravenous partner thick ropes of seed, her throat squeezing rhythmically to milk of your balls of every last drop. You've nearly forgotten about your lustful voyeurs, who helpfully spray thick ropes of their seed across the bear's torso, the mess of transformative fluids coating your lover inside and out.";
@@ -384,7 +384,7 @@ to say BryonyBearFuckConclusion: [Used in all bearfuck scenes except 'watch']
 
 to say BryonyBear3: [Let the bear go]
 	say "     Bryony gives you a questioning look at your answer. 'You sure about that?' she asks, only to shake her head with a gentle sigh. 'I would've put her out of her misery, but I'll trust your judgment on this one.' Counting down to three, the two of you pull away from the bear in unison and grab your weapons, keeping them trained on the feral beast. Frightened for her life, the woman's first instinct is to bolt from her perceived attackers, grunting with every four-legged lope in the direction of the forest.";
-	say "     Relieved to have defused the situation, you wipe your brow and look back at Bryony. The equinoid continues to watch the fleeing bear until it's out sight before turning her attention to you again. 'Well, that went better than I expected,' Bryony admits somewhat sheepishly. 'Good call on letting her go, [if player is defaultnamed]outsider[else][name of player][end if]. I'm glad that we didn't have to resort to more extreme measures.' The equinoid shakes her head again. 'I think I need some time alone, now. Feel free to come back later for another shift together.'";
+	say "     Relieved to have defused the situation, you wipe your brow and look back at Bryony. The equinoid continues to watch the fleeing bear until it's out sight before turning her attention to you again. 'Well, that went better than I expected,' Bryony admits somewhat sheepishly. 'Good call on letting her go, [if Player is defaultnamed]outsider[else][name of Player][end if]. I'm glad that we didn't have to resort to more extreme measures.' The equinoid shakes her head again. 'I think I need some time alone, now. Feel free to come back later for another shift together.'";
 	wait for any key;
 	now HP of Bryony is 3;
 	follow the turnpass rule;
@@ -448,7 +448,7 @@ to say BryonyTalkMenuImpure: [Runs when the player is not fully black equinoid]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				let nam be title entry;
 				if (nam is "Ask about her behavior"):
@@ -478,7 +478,7 @@ to say BryonyTalkImpure3:
 
 
 Instead of fucking Bryony:
-	if player is blequinoidbodied:
+	if Player is blequinoidbodied:
 		say "     Bryony smirks at your offer. 'Tempting, but I have a job to do. Sex is just another distraction that I cannot afford right now.'";
 	else:
 		say "     Bryony scowls at your offer. 'I would [italic type]never[roman type] indulge the thought of having sex with an impure creature like yourself!'";

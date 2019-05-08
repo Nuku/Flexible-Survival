@@ -40,14 +40,14 @@ Jenna is a woman.
 [Physical details as of game start]
 ScaleValue of Jenna is 3. [human sized]
 SleepRhythm of Jenna is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Jenna is 0. [X cock]
+Cock Count of Jenna is 0. [X cock]
 Cock Length of Jenna is 0. [X Inches]
-Cock Width of Jenna is 0.
-Testes of Jenna is 0. [X balls]
-Cunts of Jenna is 1. [X pussy]
+Ball Size of Jenna is 0.
+Ball Count of Jenna is 0. [X balls]
+Cunt Count of Jenna is 1. [X pussy]
 Cunt Length of Jenna is 8. [X Cunt]
-Cunt Width of Jenna is 4. [X Cunt]
-Breasts of Jenna is 2. [X nipples]
+Cunt Tightness of Jenna is 4. [X Cunt]
+Nipple Count of Jenna is 2. [X nipples]
 Breast Size of Jenna is 2. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Jenna is false. [can not take oversized members without pain]
@@ -125,7 +125,7 @@ to say JennaTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Lockup"):
@@ -178,7 +178,7 @@ to say JennaTalk3: [Solve the Murder]
 	if calcnumber is 1:
 		LineBreak;
 		say "     'What?! It's not me!' the big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of player is "dead";
+		now bodyname of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 2:
 		LineBreak;
@@ -210,12 +210,12 @@ to say JennaTalk3: [Solve the Murder]
 	else if calcnumber is 3:
 		LineBreak;
 		say "     'What?! It's not me!' the lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of player is "dead";
+		now bodyname of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 4:
 		LineBreak;
 		say "     'What?! It's not me!' the dog shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Cane's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of player is "dead";
+		now bodyname of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 5:
 		LineBreak;

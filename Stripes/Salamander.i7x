@@ -4,7 +4,7 @@ Version 2 of Salamander by Stripes begins here.
 
 "Adds a Salamander creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Salamander" } to infections of girl;
@@ -19,9 +19,9 @@ to say salamanderdesc:
 	say "     Her smooth skin is a rich red color with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
 
 to say losetosalamander:
-	if vorelevel is 3 and scalevalue of player < 4 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
-		if HP of player > 0:
-			say "     When you submit to the red amphibian she exploits the opening by lashing you from afar with her elongated tongue. The hot, sticky thing clinging against your [bodytype of player] form, the creature reels you in close, wrapping the appendage around you, loop by loop, as it gets some slack from your approach.";
+	if vorelevel is 3 and scalevalue of Player < 4 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):
+		if HP of Player > 0:
+			say "     When you submit to the red amphibian she exploits the opening by lashing you from afar with her elongated tongue. The hot, sticky thing clinging against your [bodytype of Player] form, the creature reels you in close, wrapping the appendage around you, loop by loop, as it gets some slack from your approach.";
 			say "     Limbs bound by her tongue, her wide maw savors your compliance by doting on you, kissing and nuzzling your face. It's quickly apparent that she seems to be sizing you up, hot breath washing over you as you're given a glimpse into her crimson abyss of a maw. If you don't try to break free, it looks like you'll end up as a meal for salamander!";
 		else:
 			say "     Starting to exhaust yourself, you're unable to defend yourself from being lashed by the red amphibian's elongated tongue. Briefly stunned, it takes a second to realize that the hot, sticky appendage clings to you, utterly refusing to let go!";
@@ -30,31 +30,32 @@ to say losetosalamander:
 		wait for any key;
 		salabind;
 	else:
-		if HP of player > 0:
+		if HP of Player > 0:
 			say "     Rather than resist, you submit to the red amphibian. You allow her to push you to the ground, after which she moves atop you to have her way with you";
 		else:
 			say "     The red amphibian's latest blow leaves you weak and staggered. After that, she's easily able to knock you to the ground and moves atop you to have her way with you";
 		say ". With you down, she reins in her heat and rubs her smooth body against yours. Her flesh is slick with a thin coating of slime that causes your own skin to tingle where it touches. This tingling blossoms into a blissful warmth that is arousing, but also mind-numbing. Your thoughts get jumbled and manage to focus on little past having sex with the increasingly alluring amphibian.";
-		if player is male and a random chance of 2 in 3 succeeds:		[usually opts for sex]
-			say "     Taking your [cock size desc of player] erection in hand, she runs her elongated tongue across her muzzle as she eyes it[if cock length of player > 24]. With great effort[else if cock length of player > 16]. With considerable effort[else]. With obvious eagerness[end if], she lowers herself down onto your pulsing rod. As she starts working her dripping[if cock length of player > 16] and overstuffed[end if] cunt over your [cock of player] cock, she presses her lizard-like face to yours and wriggles her long tongue into your mouth for a tonsil-licking kiss that causes your addled head to spin. Soon you're cumming into that heated, vice-like cunt of hers as she drains your [cum load size of player] load into her womb. Once she's gotten what she wanted, you're left sticky with cum and slime until you can recover your senses.";
+		if Player is male and a random chance of 2 in 3 succeeds:		[usually opts for sex]
+			say "     Taking your [cock size desc of Player] erection in hand, she runs her elongated tongue across her muzzle as she eyes it[if Cock Length of Player > 24]. With great effort[else if Cock Length of Player > 16]. With considerable effort[else]. With obvious eagerness[end if], she lowers herself down onto your pulsing rod. As she starts working her dripping[if Cock Length of Player > 16] and overstuffed[end if] cunt over your [cock of Player] cock, she presses her lizard-like face to yours and wriggles her long tongue into your mouth for a tonsil-licking kiss that causes your addled head to spin. Soon you're cumming into that heated, vice-like cunt of hers as she drains your [Cum Load Size of Player] load into her womb. Once she's gotten what she wanted, you're left sticky with cum and slime until you can recover your senses.";
 		else:
-			say "     Pressing her shapely thighs around your head, she pushes her wet and heated cunny right in your face. With her hot juices dripping down onto your mouth, you can't help yourself and dive into licking her smooth-skinned snatch. Already muddleheaded and aroused by effects of her slime, the taste of her pussy overwhelms you. Your tongue plunges into her cunt and licks at her clit as you lap up every drop you can get of her delicious juices[if player is herm]. While you're eating her out, her long, slick tongue slathers across your loins, licking your cock[smn] and diving into your cunt[sfn][else if player is male]. While you're eating her out, her long, slick tongue slathers across your loins, licking your cock[smn][else if player is female]. While you're eating her out, her long, slick tongue slathers across your loins, diving into your cunt[sfn][else]. While you're eating her out, her long, slick tongue slathers across your bare groin[end if]. You keep going at her non-stop until she cums with a messy gush of steaming-hot femcum. Once she's gotten what she wanted, you're left sticky with cum and slime until you can recover your senses.";
+			say "     Pressing her shapely thighs around your head, she pushes her wet and heated cunny right in your face. With her hot juices dripping down onto your mouth, you can't help yourself and dive into licking her smooth-skinned snatch. Already muddleheaded and aroused by effects of her slime, the taste of her pussy overwhelms you. Your tongue plunges into her cunt and licks at her clit as you lap up every drop you can get of her delicious juices[if Player is herm]. While you're eating her out, her long, slick tongue slathers across your loins, licking your cock[smn] and diving into your cunt[sfn][else if Player is male]. While you're eating her out, her long, slick tongue slathers across your loins, licking your cock[smn][else if Player is female]. While you're eating her out, her long, slick tongue slathers across your loins, diving into your cunt[sfn][else]. While you're eating her out, her long, slick tongue slathers across your bare groin[end if]. You keep going at her non-stop until she cums with a messy gush of steaming-hot femcum. Once she's gotten what she wanted, you're left sticky with cum and slime until you can recover your senses.";
 
 to say beatthesalamander:
 	say "     Your final blow sends the slender creature stumbling back. The hot aura around her wavers as she's unable to maintain it any longer. She blows you a big, messy raspberry with her elongated tongue and runs off.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Salamander";
+	now NewTypeInfection entry is false;
+	now Name entry is "Salamander";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]salamander[or]salamander femme[or]female amphibian[or]red salamander[or]speckled salamander[at random] [one of]scratches at you with her claws[or]smacks you with her tail[or]bites you with her wide mouth[or]contorts in an unnatural manner to punch you in the side[or]grabs onto you and turns up her personal heat, cooking your flesh[in random order].";
 	now defeated entry is "[beatthesalamander]";
@@ -81,15 +82,15 @@ When Play begins:
 	now lev entry is 9;
 	now wdam entry is 8;
 	now area entry is "Capitol";
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 2; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;
-	now cunt width entry is 5;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 5; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 2; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;
+	now Cunt Tightness entry is 5;
 	now libido entry is 45; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -103,57 +104,148 @@ When Play begins:
 	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 Section 3 - Bound State
 [ - Blue Bishop]
 
 to salabind:
-	now lustatt is libido of player;
+	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		if HP of player > 0 or humanity of player < 50:
+		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
 			if boundsegment is 1:
-				say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these wet, smoldering confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+				say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these wet, smoldering confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the supple flesh[else if Player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and ball size of Player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			else:
-				say "     Finding yourself overtaken by lust you cry out in ecstasy against the salamander's slick, writhing appendage, [if player is male]unloading your [cum load size of player] load against the open air[else if player is female]cunt throbbing firmly against the open air[else]a particularly trying task given your lack of outlet[end if]. Panting to catch your breath, ";
+				say "     Finding yourself overtaken by lust you cry out in ecstasy against the salamander's slick, writhing appendage, [if Player is male]unloading your [Cum Load Size of Player] load against the open air[else if Player is female]cunt throbbing firmly against the open air[else]a particularly trying task given your lack of outlet[end if]. Panting to catch your breath, ";
 				if enduring is true and struggleatt > 0:
 					say "you manage to fight her off from pulling you any closer, at least for now...";
 				else:
 					say "she immediately exploits you moment of weakness! Grabbing you between your shoulders, she firmly plunges your head[if tempnum2 is 1] back[end if] down her wide maw.";
-					say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
+					say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of Player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 					say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 					now struggleatt is 0;
 					now tempnum2 is 0;
 					now boundsegment is 1;
-			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
-			now lustatt is libido of player;
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
 			if enduring is true:
-				decrease humanity of player by 8 + (psycheadjust * 2);
+				decrease humanity of Player by 8 + (psycheadjust * 2);
 			else:
-				decrease humanity of player by 15 + (psycheadjust * 5);
+				decrease humanity of Player by 15 + (psycheadjust * 5);
 				if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		if boundsegment is 1:
 			if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
-				increase hunger of player by 1;
-				increase thirst of player by 2;
+				increase hunger of Player by 1;
+				increase thirst of Player by 2;
 			else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
-				increase thirst of player by 1;
+				increase thirst of Player by 1;
 			say "     You're trapped within the stomach of a slamander. [one of]The slick walls grind relentlessly against your vulnerable form[or]The heat of this prison causes you to groan[or]The soft glow of your confines is all you can see[at random]. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		else:
 			say "     You're tethered to the salamander by her long, adhesive tongue, who doesn't seem intent on letting you go anytime soon! [if struggleatt is 0]She's practically kissing you, she so close to you right now. [else if struggleatt is 1]There's very little distance between you and her. [else if struggleatt is 2]There seems a reasonable amount of distance between you and her. [else]She's straining to keep a hold of you, you're nearly free! [end if]You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [salastrugglebar]";
-		if humanity of player < 1:
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [salastrugglebar]";
+		if humanity of Player < 1:
 			LineBreak;
 			say "     Eventually you become so drained - both mentally and physically - that you wholly give in to your captor, ";
-			if bodyname of player is "Salamander" and player is pure:
+			if bodyname of Player is "Salamander" and player is pure:
 				say "compelled by your strain to obey her every whim";
 			else:
 				say "completely transforming into one of her kin, this new strain compelling you to obey her every whim";
@@ -161,19 +253,19 @@ to salabind:
 			wait for any key;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Salamander":
-					now monster is y;
+				if Name entry is "Salamander":
+					now MonsterID is y;
 					break;
-			now bodyname of player is "Salamander";
-			now facename of player is "Salamander";
-			now tailname of player is "Salamander";
-			now skinname of player is "Salamander";
-			now cockname of player is "Salamander";
-			now tail of player is tail entry;
-			now face of player is face entry;
-			now skin of player is skin entry;
-			now body of player is body entry;
-			now cock of player is cock entry;
+			now bodyname of Player is "Salamander";
+			now facename of Player is "Salamander";
+			now tailname of Player is "Salamander";
+			now skinname of Player is "Salamander";
+			now cockname of Player is "Salamander";
+			now tail of Player is tail entry;
+			now face of Player is face entry;
+			now skin of Player is skin entry;
+			now body of Player is body entry;
+			now cock of Player is cock entry;
 			now voreloss is true;
 			now Trixieexit is 1;
 			end the story saying "You lost your mind while bound!";
@@ -204,7 +296,7 @@ to salabind:
 					if struggleatt < 2:
 						say "     You struggle against this tight and hot prison, causing it to groan and churn against you.";
 						increase lustatt by 7 + (lustadjust * 2);
-						if bodyname of player is "Salamander" and player is pure:
+						if bodyname of Player is "Salamander" and player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -227,7 +319,7 @@ to salabind:
 						say "     You actively allow the [one of]salamander[or]amphibian[at random] to [if struggleatt is -2]finish you off[else]pull you in close[end if]";
 						if struggleatt < 0:
 							say ". Once[if struggleatt is not -2] you're in range and[end if] she's ready she grabs you between your shoulders and firmly plunges your head[if tempnum2 is 1] back[end if] down her wide maw.";
-							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
+							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of Player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 							say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 							now struggleatt is 0;
 							now tempnum2 is 0;
@@ -249,7 +341,7 @@ to salabind:
 						say "     You submit to the [one of]salamander[or]amphibian[at random]'s pull";
 						if struggleatt < 0:
 							say ". Once[if struggleatt is not -1] you're in range and[end if] she's ready, she grabs you between your shoulders and firmly plunges your head[if tempnum2 is 1] back[end if] down her wide maw.";
-							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
+							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of Player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 							say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 							now struggleatt is 0;
 							now tempnum2 is 0;
@@ -258,7 +350,7 @@ to salabind:
 							say ", [if struggleatt is 0]who's practically kissing you by this point[else if struggleatt is 1]who's quickly closing the distance between the two of you[else]who's gradually closing the distance between the two of you[end if].";
 					else:
 						say "     You make an effort to tolerate your twisted fate, [one of]fleshy[or]slick[at random] prison [one of]briefly tightening around[or]groaning against[at random] you.";
-						if bodyname of player is "Salamander" and player is pure:
+						if bodyname of Player is "Salamander" and player is pure:
 							if a random chance of 1 in 5 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -280,7 +372,7 @@ to salabind:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within this bondage, recovering a small portion of your lost humanity";
 						if struggleatt < 0:
 							say ". However, this distraction allows her to [if struggleatt is -1]finish you off[else]pull you in close enough[end if], grabbing you between your shoulders and firmly plunging your head[if tempnum2 is 1] back[end if] down her wide maw.";
-							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
+							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of Player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 							say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 							now tempnum2 is 0;
 							now struggleatt is 0;
@@ -293,10 +385,10 @@ to salabind:
 					else:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 						if a random chance of 2 in 3 succeeds:
-							decrease thirst of player by 2;
-							decrease hunger of player by 1;
+							decrease thirst of Player by 2;
+							decrease hunger of Player by 1;
 						else:
-							decrease thirst of player by 1;
+							decrease thirst of Player by 1;
 					now boundrecover is false;
 					SanBoost 3;
 				else:
@@ -304,7 +396,7 @@ to salabind:
 						say "     You actively try to hold your ground and prevent the [one of]salamander[or]amphibian[at random] from pulling you in closer";
 						if struggleatt < 0:
 							say ". However, it's not enough to stop her from [if struggleatt is -1]finishing you off[else]pulling you in close enough[end if], grabbing you between your shoulders and firmly plunging your head[if tempnum2 is 1] back[end if] down her wide maw.";
-							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
+							say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of Player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 							say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 							now tempnum2 is 0;
 							now struggleatt is 0;
@@ -332,8 +424,8 @@ to say salastrugglebar:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Salamander": [Needs to be corrected if standard endings are added]
-		if voreloss is true and humanity of player < 10:
+	if bodyname of Player is "Salamander": [Needs to be corrected if standard endings are added]
+		if voreloss is true and humanity of Player < 10:
 			say "     Doomed to be a plaything for the Salamander, she often enjoys your company both inside and outside of her. Having completely lost your sanity you can only eagerly oblige your fiery new mistress and attend to her every need. You memory soon becomes nothing more than a blur of your seemingly eternal attendance and the warm feel of her soft, inner flesh...";
 		[
 		else:

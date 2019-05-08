@@ -24,14 +24,14 @@ Logan	"Logan"
 
 Logan is a man.
 ScaleValue of Logan is 3. [human sized]
-Cocks of Logan is 1.
+Cock Count of Logan is 1.
 Cock Length of Logan is 14.
-Cock Width of Logan is 8.
-Testes of Logan is 2.
-Cunts of Logan is 0.
+Ball Size of Logan is 8.
+Ball Count of Logan is 2.
+Cunt Count of Logan is 0.
 Cunt Length of Logan is 0.
-Cunt Width of Logan is 0.
-Breasts of Logan is 2. [2 nipples]
+Cunt Tightness of Logan is 0.
+Nipple Count of Logan is 2. [2 nipples]
 Breast Size of Logan is 0.
 [Basic Interaction states as of game start]
 PlayerMet of Logan is false.
@@ -59,43 +59,43 @@ to say LoganDesc:
 an everyturn rule:
 	if LoganRelationship > 10 and LoganRelationship < 90:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
-			if player is in Logan's Bedroom and Logan is nowhere:
+			if Player is in Logan's Bedroom and Logan is nowhere:
 				project the figure of Logan_face_icon;
 				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A short moment later, the three of them come into the Bedroom and Logan greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, the man sets down his gear next to the bed, quickly strips off and gets into bed, slipping under the covers dressed only in some baggy boxer shorts. His two wolves quickly follow, cuddling up to their master and getting some pats from him before all three of them doze off.";
-			else if player is in Survivor Refuge and Logan is nowhere:
+			else if Player is in Survivor Refuge and Logan is nowhere:
 				project the figure of Logan_face_icon;
 				say "     The front door is unlocked with the key and Logan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Logan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
-			else if player is in Logan's Bathroom and Logan is nowhere:
+			else if Player is in Logan's Bathroom and Logan is nowhere:
 				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that must have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
 			move Logan to Logan's Bedroom;
 		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Logan sleeps]
 		[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Logan sleeps in]
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-			if player is in Logan's Bedroom:
+			if Player is in Logan's Bedroom:
 				project the figure of Logan_face_icon;
 				say "     Waking up after a restful night, Logan sits up between the two wolves cuddled up against him and stretches his arms, which gives you a good view of his broad-shouldered chest and trained body. He yawns and says good morning to you, then gently shakes Romulus and Remus awake and goes into the main room of the apartment to feed them. Logan returns a little while later, still in nothing but his baggy boxer shorts. 'Did I miss anything exciting going on out there?' he asks with a nod to the city outside the large windows and his telescope specifically. As you shake your head, he smiles and goes to grab his usual outfit, getting dressed before he sits down at his desk.";
-			else if player is in Survivor Refuge:
+			else if Player is in Survivor Refuge:
 				say "     Suddenly, the door to the bedroom opens and Logan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
-			else if player is in Logan's Bathroom:
+			else if Player is in Logan's Bathroom:
 				say "     You hear a door open and close, then happy barks by Romulus and Remus. Sounds like Logan woke up and just went to feed them.";
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-			if player is in Logan's Bedroom:
+			if Player is in Logan's Bedroom:
 				project the figure of Logan_face_icon;
 				say "     Sitting up from working at his desk, where he was updating some lists and his journal, Logan stretches out and goes into the main room of the loft apartment.";
-			else if player is in Survivor Refuge:
+			else if Player is in Survivor Refuge:
 				project the figure of Logan_face_icon;
 				say "     Logan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
-			else if player is in Logan's Bathroom:
+			else if Player is in Logan's Bathroom:
 				say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
 			move Logan to Survivor Refuge;
 		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-			if player is in Survivor Refuge and Logan is in Survivor Refuge:
+			if Player is in Survivor Refuge and Logan is in Survivor Refuge:
 				project the figure of Logan_face_icon;
 				say "     Finishing with a fairly well-rounded exercise routine, Logan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Logan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
 			if ((player is in Logan's Bedroom or player is in Logan's Bathroom) and Logan is in Survivor Refuge):
 				say "     You hear Logan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
-			else if player is in Survivor Refuge and Logan is in Survivor Refuge:
+			else if Player is in Survivor Refuge and Logan is in Survivor Refuge:
 				project the figure of Logan_face_icon;
 				say "     Going to collect his gear - backpack, baseball bat and taser - Logan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Logan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companions to the door and leaves.";
 			now Logan is nowhere; [stashed in another dimension]
@@ -133,7 +133,7 @@ instead of conversing the Logan:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -172,7 +172,7 @@ to say LoganSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Push him down to get a blowjob";
 		now sortorder entry is 1;
@@ -183,13 +183,13 @@ to say LoganSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Give the handsome demon some oral pleasure";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take control and fuck Logan's ass";
 		now sortorder entry is 3;
 		now description entry is "Bend him forward and give the incubus a hard pounding";
 	[
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Logan's cock in your pussy";
 		now sortorder entry is 4;
@@ -212,7 +212,7 @@ to say LoganSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Push him down to get a blowjob"):
@@ -249,7 +249,7 @@ to say LoganSex3: [ass fuck on Logan]
 	say "     Giving Logan's shoulder a squeeze, you move your hand to the back of his head and draw him towards you, meeting the incubus's smiling lips in a demanding kiss. As you invade his mouth with your tongue, wrestling his appendage down in a bout for supremacy over the cocky young man, he replies in kind, tensing is muscles and spreading his wings a bit further as if to appear bigger and more powerful. His hands wander down your body, stroking and touching, soon coming to rest on your crotch and squeezing it. 'Someone's eager to be with me here,' he laughingly says as both of you pull back to catch your breaths. Then he sticks out his tongue and licks the tip of your nose as he goes on to tease, 'You just can't control yourself, getting hard and dripping at just the thought of feeling my dick in you. Pounding in and out of your mouth or ass, eh? Pleasuring your very own son!'";
 	say "     Being the sex-demon that he is, it's almost certain that Logan knows exactly what you want to do to him, but still the young buck can't help but tease and prod you a little. Which in the end just makes it so much more satisfying to push against his chest and make him stumble back against the wall, then catching his wrists one by one to pin them against the soot-stained stone. Holding him tight like that, you kiss his full lips forcefully before moving on to lick the side of his neck and nibbling at his earlobe. Grunting into his ear that you'll make him your moaning bitch, you then grab his shoulder and turn Logan around, overwhelming the token resistance he puts up against you. Man-handling the incubus, you get him standing against the wall in a classic police pat-down pose, legs spread and hands planted wide apart against the stone.";
 	WaitLineBreak;
-	say "     'You'll never break me, copper!' Logan growls playfully over his shoulder, his tail waving sinuously in front of your face, then pointing down towards his ass with the spaded tip. Happy to follow the invitation, you quickly free your [cock of player] erection and smack it a few times against the globes your demonic offspring's amazing bubble butt. Gathering a bit of spit to let drip down onto your shaft, you then line yourself up with his rear entrance and thrust in with a sharp push, sinking into the young man with a satisfied grunt in both of your voices. 'Fffuuckkk!' he groans out lustfully, raising his ass a little to receive you. 'Soo good! Love the girth of your prick inside me, daddy! Pound me, I've been a bad, bad boy!'";
+	say "     'You'll never break me, copper!' Logan growls playfully over his shoulder, his tail waving sinuously in front of your face, then pointing down towards his ass with the spaded tip. Happy to follow the invitation, you quickly free your [cock of Player] erection and smack it a few times against the globes your demonic offspring's amazing bubble butt. Gathering a bit of spit to let drip down onto your shaft, you then line yourself up with his rear entrance and thrust in with a sharp push, sinking into the young man with a satisfied grunt in both of your voices. 'Fffuuckkk!' he groans out lustfully, raising his ass a little to receive you. 'Soo good! Love the girth of your prick inside me, daddy! Pound me, I've been a bad, bad boy!'";
 	say "     Sinking all the way into the incubus's tight hole, you have to grab hold of his shoulders to keep standing as he squeezes his muscles around your length and gives you a mind-bogglingly good sensation that way. He doesn't let off doing that afterwards either, making every thrust into him akin to a hand closing around your cock and milking it. 'Feels good, doesn't it daddy?' Logan asks over his shoulder, that challenging tone rising back in his voice as he can't help but needle you. This time, you've got enough of his cocky attitude though and with a quick grab, you snatch his tail and shove the spaded tip into his mouth, telling him to suck it and be quiet. Finally having shut your incubus boy-toy up, you pull yourself out all the way from his ass, then shove your prick back into him all of a sudden, followed by jack-hammering in and out of his fuckhole too fast for him to start his tricks again.";
 	WaitLineBreak;
 	say "     Mercilessly pounding the young demon's ass, you reduce him to moaning and grunting around the tail-tip still in his mouth, the muscles in his arms flexing as he braces against your thrusts. Reaching around, you find his own cock fully erect and literally dripping long streaks of pre, making your fingers slick and wet. Wrapping them around his boner, you jerk your sexy partner in rhythm with your own deep thrusts, driving his arousal to new heights. You can hear his breaths coming faster and faster and soon, there's a throb of his cock as a spurt of pre splashes out - at which point you stop your thrusts and just clamp your fingers tight around his length. Logan moves to grind back against you for a second, only to be brought to a stand still by your other hand tightly clasping his hip. Leaning forward, you grunt into his ear that you're in control now and will decide if and when he can come.";
@@ -271,7 +271,7 @@ to say LoganElijahThreesomeMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Get a shared blowjob, with both of them on their knees";
 		now sortorder entry is 1;
@@ -282,25 +282,25 @@ to say LoganElijahThreesomeMenu:
 	now sortorder entry is 2;
 	now description entry is "Let them use your mouth";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Spit-roast Logan";
 		now sortorder entry is 3;
 		now description entry is "Bend him the incubus over the altar and fuck him from both ends";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Spit-roast Elijah";
 		now sortorder entry is 4;
 		now description entry is "Bend him the incubus over the altar and fuck him from both ends";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Be spit-roasted between them";
 		now sortorder entry is 5;
 		now description entry is "Take the incubus and angel at the same time, front and back";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Do a three man chain-fuck";
 		now sortorder entry is 6;
@@ -318,7 +318,7 @@ to say LoganElijahThreesomeMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a shared blowjob, with both of them on their knees"):
@@ -343,14 +343,14 @@ to say LoganElijahThreesomeMenu:
 	clear the screen and hyperlink list;
 
 to say LoganEliThreesomeSex1: [two man oral]
-	say "     Quickly peeling off what gear and clothing you have, you step up to the waiting men with your [cock of player] shaft leading the way, already hard and ready from watching their antics. The two of them greet you with hungry looks and lewd grins. For a second, it seems like Elijah is going to take the lead, but before he can you've already given the command to get on their knees. The incubus immediately complies, letting out a playfully over-acted moan as he sinks down. '[if Charisma of Logan is 1]Yes daddy, anything for you,[else]I love it when [SubjectPro of Player]'s all bossy,[end if]' the young demon says as he tugs on his angelic fuck-buddy's hand, having to do it twice before Elijah shrugs and joins him on the ground before you. Looking down on the handsome faces of your two partners, one framed in long black hair, the other with red hair and pointy little horns, you feel your prick throb in your hand.";
+	say "     Quickly peeling off what gear and clothing you have, you step up to the waiting men with your [cock of Player] shaft leading the way, already hard and ready from watching their antics. The two of them greet you with hungry looks and lewd grins. For a second, it seems like Elijah is going to take the lead, but before he can you've already given the command to get on their knees. The incubus immediately complies, letting out a playfully over-acted moan as he sinks down. '[if Charisma of Logan is 1]Yes daddy, anything for you,[else]I love it when [SubjectPro of Player]'s all bossy,[end if]' the young demon says as he tugs on his angelic fuck-buddy's hand, having to do it twice before Elijah shrugs and joins him on the ground before you. Looking down on the handsome faces of your two partners, one framed in long black hair, the other with red hair and pointy little horns, you feel your prick throb in your hand.";
 	say "     It may be the middle of the nanite apocalypse, but moments like this almost make the fall of civilization and having to fight for your life worth it all on their own. Such a perfect opportunity to have two sexy studs to play with, one created by yourself when you bred and knocked up Lilith, the other the result of you giving him a hard shove to fall from his lofty status to become a sex fiend. As these thoughts go through your mind, your cum-slit leaks a drop of pre, forming a glistening bead at the tip of your dick. It starts to run down the curve of your erection's head a little as more pre-cum wells up, then suddenly is stopped by Logan's tongue as the demon laps it up. 'Mmmh, tasty!' he sighs in pleasure, being joined by Elijah a second later, who kisses the side of your shaft and mouths at it, his tongue playing along the underside.";
 	WaitLineBreak;
 	say "     Putting your hands on the heads of both of your willing sluts, you lean your head back and close your eyes for the moment, fully concentrating on the duo of mouths and tongues teasing and caressing your sex. Almost constantly, you have one and sometimes even two tongues lapping at your dickhead, intermixed with eager lips sliding over your head to lightly suckle at it. Their hands glide up and down along your thighs and back to your buttocks, stroking and feeling you up, with the one that isn't working your dickhead usually licking your shaft or taking your balls into his mouth and playing over them with his tongue. Your burning libido is audible in your voice as you praise them for their service, moan and grunt at the things they do to pleasure your body. For a while, you are simply content to have them servicing you at their own pace and revel in the sensations, but as you start to feel the familiar tingle of a nearing orgasm in your balls, you decide you want more.";
 	say "     Looking down at your happily sucking and licking sluts, you get a bit of a firmer grip of their heads and guide them to work on both sides of your erection at the same time. Eye to eye with each other, the demon and angel's lips form an almost unbroken circle around your shaft, with the tips of their tongues playing over your sex. It is a lot of fun to hump your hips back and forth to feel the oral pleasure zone all along your dick, rapidly bringing you closer and closer to the point of no return. When the rising urge to come can barely be denied any longer, you withdraw from between them with a sharp pull, making Logan's and Elijah's lips meet as they suddenly lose contact with the dick they were servicing. Your two kneeling studs take this in stride, tongues wrestling with each other as they start to make out lustfully. And that is when you finally erupt, blasting thick ropes of seed to paint your kissing sluts faces in white splatters.";
 	WaitLineBreak;
 	say "     Logan and Elijah bask in the fruits of their oral service, stopping their kisses just long enough to lick up this or that streak of cum and then sharing it with the other. Now that the edge of your own lust is ebbing, you manage to focus past your own dick and their faces, seeing that the two of them are joined in another way: Logan is holding their dicks together in his hands, one atop the other as he's stroking the two shafts in a rapid pace. Meanwhile, Elijah humps his hips back and forth a little to grind against his grasp and rub the demon's cock with his own. With you out of the picture, the two intensify their efforts to please each other, which results in an explosive finish before much longer, with Logan starting to blast his infernal seed over Elijah's crotch while the angel in turn covers his balls and inner thighs with his own cum. Sinking forward to lean against each other as they pant and gasp for breath, your two fuck buddies ride out their shared orgasms together.";
-	say "     'That was FUN!' Logan bursts out with an eager smile, looking up at you, then down again at Elijah. 'Wanna do so again, sometime soon?' he asks in an eager tone, drawing a laugh from Elijah who wipes up the cum from his crotch with one hand and raises it to shove two cum-dripping fingers between Logan's lips. As the incubus sucks his own load off, the fallen angel replies, 'Who could resist such an eager little whore? You know[if player is not defaultnamed] [Name of Player],[else],[end if] I think I'll have to come by to visit this ruin regularly from now on. What it's lacking in amenities it more than makes up in the slutty boy-toy.' Laughing along with him and watching Elijah pull Logan into a demanding kiss, you saunter back over to your dropped gear and get dressed.";
+	say "     'That was FUN!' Logan bursts out with an eager smile, looking up at you, then down again at Elijah. 'Wanna do so again, sometime soon?' he asks in an eager tone, drawing a laugh from Elijah who wipes up the cum from his crotch with one hand and raises it to shove two cum-dripping fingers between Logan's lips. As the incubus sucks his own load off, the fallen angel replies, 'Who could resist such an eager little whore? You know[if Player is not defaultnamed] [Name of Player],[else],[end if] I think I'll have to come by to visit this ruin regularly from now on. What it's lacking in amenities it more than makes up in the slutty boy-toy.' Laughing along with him and watching Elijah pull Logan into a demanding kiss, you saunter back over to your dropped gear and get dressed.";
 	NPCSexAftermath Logan receives "OralCock" from Player;
 	NPCSexAftermath Elijah receives "OralCock" from Player;
 

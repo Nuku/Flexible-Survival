@@ -35,7 +35,7 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, go and talk to her.";
 		say "     ([link]N[as]n[end link]) - Not your problem.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You approach the young woman and try to talk to her, but she clearly isn't in the right headspace to register even the most gently stated words. Instead, the part-equine woman immediately shies away, standing up and running off. Within moments, she is lost in the crowd and out of sight. You can't help but wonder what will become of her. Maybe you should search for her to have a chance to talk once she's calmed down at least a little.";
 			now GloryFate is 1;
@@ -52,7 +52,7 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Walk up to the door and knock.";
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
-		if player consents:
+		if Player consents:
 			say "[GloryDoorApproach]";
 		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
@@ -63,17 +63,17 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Walk up to the door and knock.";
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
-		if player consents:
+		if Player consents:
 			say "[GloryDoorApproach]";
 		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
 
 to say GloryDoorApproach:
-	if bodyname of player is listed in infections of Equinelist or facename of player is listed in infections of Equinelist:
+	if bodyname of Player is listed in infections of Equinelist or facename of Player is listed in infections of Equinelist:
 		say "     Remembering the woman's reaction to just bumping into a horseman before, you look at yourself and decide that you shouldn't try to approach her looking like you currently are. Maybe you should come back when you have a form that is less threatening to her...";
 	else:
 		LineBreak;
-		let bonus be (( charisma of player minus 10 ) divided by 2);
+		let bonus be (( charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 		if diceroll + bonus >= 15:
@@ -129,7 +129,7 @@ to say GloryChoices:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Console her yourself"):
@@ -151,7 +151,7 @@ to say GloryChoices:
 	clear the screen and hyperlink list;
 
 to say GloryChoice1: [player charm]
-	let bonus be (( charisma of player minus 10 ) divided by 2);
+	let bonus be (( charisma of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 15:

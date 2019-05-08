@@ -10,14 +10,14 @@ Malik is a man.
 Malik is in NPC Nexus. [not currently placed in the game]
 [physical details as of game start]
 ScaleValue of Malik is 3. [human sized]
-Cocks of Malik is 1.
+Cock Count of Malik is 1.
 Cock Length of Malik is 13.
-Cock Width of Malik is 3.
-Testes of Malik is 2.
-Cunts of Malik is 0.
+Ball Size of Malik is 8.
+Ball Count of Malik is 2.
+Cunt Count of Malik is 0.
 Cunt Length of Malik is 0.
-Cunt Width of Malik is 0.
-Breasts of Malik is 2. [2 nipples]
+Cunt Tightness of Malik is 0.
+Nipple Count of Malik is 2. [2 nipples]
 Breast Size of Malik is 0.
 [Basic Interaction states as of game start]
 PlayerMet of Malik is true.
@@ -51,13 +51,13 @@ to say MalikTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Himself";
 		now sortorder entry is 1;
 		now description entry is "Ask the orc about himself";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Sex";
 		now sortorder entry is 2;
@@ -75,7 +75,7 @@ to say MalikTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -108,7 +108,7 @@ Instead of fucking the Malik:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Get a blowjob from Malik";
 			now sortorder entry is 1;
@@ -119,13 +119,13 @@ Instead of fucking the Malik:
 		now sortorder entry is 2;
 		now description entry is "Suck the orc off";
 		[]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck the orc's ass";
 			now sortorder entry is 3;
 			now description entry is "Pound your dick into Malik";
 		[]
-		if libido of Malik is 2:
+		if Libido of Malik is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Let the orc take your ass";
 			now sortorder entry is 4;
@@ -148,7 +148,7 @@ Instead of fucking the Malik:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
 					now sextablerun is 1;
@@ -266,7 +266,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Stamina of Chris
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Run him down!";
 				say "     ([link]N[as]n[end link]) - Stand aside and make excuses if he escapes.";
-				if player consents: [assist]
+				if Player consents: [assist]
 					LineBreak;
 					say "     Playing along with Malik's plans, you jog down the path he indicated and arrive at the far corner of the block just as the ";
 					if randomnumber is:
@@ -301,7 +301,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Stamina of Chris
 				say "     His breaths come quicker and quicker as the urge to come builds in the young orc's balls thanks to your stimulation, and eventually he reaches the end of his (sexual) endurance. Hands clamping down hard on your head, he wrenches you against his crotch, forcing his whole length into your mouth. Before you can get over the shock of suddenly deep-throating your son, his erection already gives its first heavy throb, blasting rich, creamy orc cum into your stomach. He bucks his hips forward reflexively too, grinding your nose into his pubes as another and another spurt follow. Only by tapping out against his side do you manage to remind the orc that you do actually need to breathe, and he lets you go a moment later to gasp for air while he paints your face with his further splashes of cum.";
 				say "     Already feeling the effects of the orc cum from what you took into your stomach, you feel blissed out and kinda drunk, taking hold of Malik's shaft again to lick it clean from any escaped traces of his seed. The hunky young man chuckles at your cum-slut behavior and playfully scoops his semen off your face to feed it to you with a broad grin on his face. When it is all gone finally, he draws you up to give you a dominant kiss, exploring your mouth with his tongue. By this time, you're almost too blissed out to stand, just moaning into his mouth as he makes out with you. 'Guess I'll have to cut the training short for today. Dad would punch me out if I left your ass here in the alley for any random fucker to make use of while I finished my miles.' With a snort, he bends down to grab you and throw you over his shoulder, then carries you back to the library.";
 				WaitLineBreak;
-				say "     As the two of you arrive on the upper floor, you run into Chris, who looks at his firstborn with a raised eyebrow and asks gruffly, 'What's going on here? Did something happen?!' Malik shrugs, making you shift on his shoulder and let out a panted breath. 'No worries, dad. Just had a workout with breeder-dad that was a bit much apparently and [SubjectPro of Player] got exhausted. Thought I'd bring [ObjectPro of player] here to rest a bit.' Chris huffs a little, looking at you and seeing that you're not really capable of intelligible talk right now. 'Fine. Go ahead boy, but be sure to make [ObjectPro of player] comfortable.' 'Will do, dad!' Malik replies, then carries you off. In your semiconscious state, you see Chris looking after the two of you with a bit of a frown on his face.";
+				say "     As the two of you arrive on the upper floor, you run into Chris, who looks at his firstborn with a raised eyebrow and asks gruffly, 'What's going on here? Did something happen?!' Malik shrugs, making you shift on his shoulder and let out a panted breath. 'No worries, dad. Just had a workout with breeder-dad that was a bit much apparently and [SubjectPro of Player] got exhausted. Thought I'd bring [ObjectPro of Player] here to rest a bit.' Chris huffs a little, looking at you and seeing that you're not really capable of intelligible talk right now. 'Fine. Go ahead boy, but be sure to make [ObjectPro of Player] comfortable.' 'Will do, dad!' Malik replies, then carries you off. In your semiconscious state, you see Chris looking after the two of you with a bit of a frown on his face.";
 				if Strength of Chris < 2: [no sex with Malik so far]
 					now Strength of Chris is 2; [blew Malik]
 			else:
@@ -312,37 +312,37 @@ to say MalikRunningCaptiveSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male and MaliksRandomCaptive is 1:
+	if Player is male and MaliksRandomCaptive is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck the ram as he is fucked";
 		now sortorder entry is 1;
 		now description entry is "Spit-roast the ram between you and Malik";
 	[]
-	if player is male and MaliksRandomCaptive is 2:
+	if Player is male and MaliksRandomCaptive is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck the German Shepherd as he is fucked";
 		now sortorder entry is 1;
 		now description entry is "Spit-roast the canine between you and Malik";
 	[]
-	if player is male and MaliksRandomCaptive is 3:
+	if Player is male and MaliksRandomCaptive is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck the husky as he is fucked";
 		now sortorder entry is 1;
 		now description entry is "Spit-roast the canine between you and Malik";
 	[
-	if player is male and MaliksRandomCaptive is 1:
+	if Player is male and MaliksRandomCaptive is 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the ram (after Malik)";
 		now sortorder entry is 2;
 		now description entry is "Have sloppy seconds in the ram's ass";
 	[]
-	if player is male and MaliksRandomCaptive is 2:
+	if Player is male and MaliksRandomCaptive is 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the dog (after Malik)";
 		now sortorder entry is 2;
 		now description entry is "Have sloppy seconds in the German Shepherd's ass";
 	[]
-	if player is male and MaliksRandomCaptive is 3:
+	if Player is male and MaliksRandomCaptive is 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the dog (after Malik)";
 		now sortorder entry is 2;
@@ -378,7 +378,7 @@ to say MalikRunningCaptiveSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -402,7 +402,7 @@ to say MalikRunSex1: [face-fuck the captive]
 		say "     The ram tries to kick his orc captor between the legs, only to find his hoof deflected and Malik coming down mercilessly on top of him, pinning the brown-furred male to the street. There is a little bit more of a struggle that soon ends with the male sheep's impressive curled horns scraping over the asphalt as Malik pins him down with one forearm pressing against his neck. The captive manages to grunt, '[one of]Get off me, you bastard!' [or]I'll get you for this!' [or]This isn't over!' [at random]which prompts Malik to comment, 'I like it when my breeders have some spunk in them. Shows they'll give good orclings to their masters!' You can hear the mixture of excitement and arousal in the young orc warrior's tone as he goes on to say 'Gonna show you what was missing in your life until now, slut!' With that said, he lines his erect and pre-cum dripping shaft up with the other man's crack and wipes the sticky fluid against his clenched pucker.";
 		say "     'Get off, you -', the ram starts to say, only to let out an involuntary moan as his body shudders in sudden arousal. 'I will, fuckmeat! And when I get off in you and fill you with my load, you'll feel even better than this!' Malik replies in a chuckle, milking his erection to smear more spurts of pre over the ram's skin to deliver the potent aphrodisiacs in it. It doesn't take long at all before the struggles of the ram fade and your orcish offspring begins to nudge his slick cock inside him, stretching the quickly relaxing muscle around his shaft. 'Yeah, nice and tight!' Malik calls out, for all the world to hear, and then pulls his now blissed-out captive up to all fours so he can more easily thrust into him. Looking at the ram, you see an erection bobbing in the air beneath his muscled body and his mouth open as he moans loudly.";
 		WaitLineBreak;
-		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the ram. It is quite easy to just pull his head down on your [cock of player] manhood, what with the horns to provide easy handholds. Slipping your erection between his lips, it slides over the warm and wet tongue of the male anthro and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the ram's mouth around your cock.";
+		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if Player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the ram. It is quite easy to just pull his head down on your [cock of Player] manhood, what with the horns to provide easy handholds. Slipping your erection between his lips, it slides over the warm and wet tongue of the male anthro and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the ram's mouth around your cock.";
 		say "     Between Malik and yourself, the captured cervine is spit-roasted in an intense threesome that goes on for a while before it eventually culminates in your son hammering his shaft all the way into the ram and unloading everything his balls have into the man. Throb after throb of potent orc cum floods the male sheep's insides, which may or may not start the process of growing a womb for male pregnancy in him, but definitively delivers an overwhelming dose of aphrodisiacs. Making gurgling noises around your cock, his Adam's apple bouncing up and down as his body is wracked by spasms of pleasure, the ram orgasms right along with Malik, spraying his seed over the road beneath. You're not far behind, grinding your crotch against his muzzle as your erection sends throbs of cum right down his throat. Overcome by the intensity of your climax, you have to brace against Malik's broad chest as it runs its course, with the orc just giving you a tusk-bearing grin as you do so.";
 		WaitLineBreak;
 		say "     'Good slut, eh?' Malik eventually asks after both of your orgasms have run their course and he pulls his spent cock out of the ram, who just sinks down to lie in the street, ass still raised high. You make some noises to express your own opinion of the guy you took captive, then join the orc warrior in standing up. He rolls the ram over onto his back with a fairly gentle nudge of his foot, then bends over the guy. 'If you want more of this, find me. And if you don't... I'll find you, and give you another dose! As I said, my orclings deserve a strong breeder as their other dad!' With that said, he turns away from the panting and moaning male and pulls his loincloth straight again, so it can (just barely) cover his half-hard cock.";
@@ -413,7 +413,7 @@ to say MalikRunSex1: [face-fuck the captive]
 		say "     The German Shepherd tries to kick his orc captor between the legs, only to find his paw deflected and Malik coming down mercilessly on top of him, pinning the tan and brown-furred male to the street. There is a little bit more of a struggle that soon ends with the male dog's muzzle pressed against the asphalt as Malik pins him down with one forearm across his neck. The captive manages to growl, '[one of]Get off me, you bastard!' [or]I'll get you for this!' [or]This isn't over!'[of]I'll bite your dick off before this is over!' [at random]which prompts Malik to comment, 'I like it when my breeders have some spunk in them. Shows they'll give good orclings to their masters!' You can hear the mixture of excitement and arousal in the young orc warrior's tone as he goes on to say 'Gonna show you what was missing in your life until now, slut!' With that said, he lines his erect and pre-cum dripping shaft up with the other man's crack and wipes the sticky fluid against his clenched pucker.";
 		say "     'Get off, you -', the German Shepherd starts to say, only to let out an involuntary moan as his body shudders in sudden arousal. 'I will, fuckmeat! And when I get off in you and fill you with my load, you'll feel even better than this!' Malik replies in a chuckle, milking his erection to smear more spurts of pre over the German Shepherd's skin to deliver the potent aphrodisiacs in it. It doesn't take long at all before the struggles of the anthro canine fade and your orcish offspring begins to nudge his slick cock inside him, stretching the quickly relaxing muscle around his shaft. 'Yeah, nice and tight!' Malik calls out, for all the world to hear, and then pulls his now blissed-out captive up to all fours so he can more easily thrust into him. Looking at the German Shepherd, you see his red, knotted erection bobbing in the air beneath his furred body and his muzzle hang open as he moans loudly and pants in lust.";
 		WaitLineBreak;
-		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the German Shepherd. Initially at least a little leery about putting your best piece between his teeth, you push your thumb into his mouth, pressing down against the floppy tongue of his. The anthro dog reacts well, just flexing his wet appendage to lick at your finger a little, which gives you the confidence to pull his head down on your [cock of player] manhood. Slipping your erection between his lips, it is soon wrapped by the long, floppy tongue and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the German Shepherd's mouth around your cock.";
+		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if Player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the German Shepherd. Initially at least a little leery about putting your best piece between his teeth, you push your thumb into his mouth, pressing down against the floppy tongue of his. The anthro dog reacts well, just flexing his wet appendage to lick at your finger a little, which gives you the confidence to pull his head down on your [cock of Player] manhood. Slipping your erection between his lips, it is soon wrapped by the long, floppy tongue and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the German Shepherd's mouth around your cock.";
 		say "     Between Malik and yourself, the captured cervine is spit-roasted in an intense threesome that goes on for a while before it eventually culminates in your son hammering his shaft all the way into the German Shepherd and unloading everything his balls have into the man. Throb after throb of potent orc cum floods the male dog's insides, which may or may not start the process of growing a womb for male pregnancy in him, but definitively delivers an overwhelming dose of aphrodisiacs. Making gurgling noises around your cock, his Adam's apple bouncing up and down as his body is wracked by spasms of pleasure, the German Shepherd orgasms right along with Malik, spraying his seed over the road beneath. You're not far behind, grinding your crotch against his muzzle as your erection sends throbs of cum right down his throat. Overcome by the intensity of your climax, you have to brace against Malik's broad chest as it runs its course, with the orc just giving you a tusk-bearing grin as you do so.";
 		WaitLineBreak;
 		say "     'Good slut, eh?' Malik eventually asks after both of your orgasms have run their course and he pulls his spent cock out of the German Shepherd, who just sinks down to lie in the street, ass still raised high. You make some noises to express your own opinion of the guy you took captive, then join the orc warrior in standing up. He rolls the German Shepherd over onto his back with a fairly gentle nudge of his foot, then bends over the guy. 'If you want more of this, find me. And if you don't... I'll find you, and give you another dose! As I said, my orclings deserve a strong breeder as their other dad!' With that said, he turns away from the panting and moaning male and pulls his loincloth straight again, so it can (just barely) cover his half-hard cock.";
@@ -424,7 +424,7 @@ to say MalikRunSex1: [face-fuck the captive]
 		say "     The husky tries to kick his orc captor between the legs, only to find his paw deflected and Malik coming down mercilessly on top of him, pinning the grey and white-furred male to the street. There is a little bit more of a struggle that soon ends with the male dog's muzzle pressed against the asphalt as Malik pins him down with one forearm across his neck. The captive manages to growl, '[one of]Get off me, you bastard!' [or]I'll get you for this!' [or]This isn't over!'[of]I'll bite your dick off before this is over!' [at random]which prompts Malik to comment, 'I like it when my breeders have some spunk in them. Shows they'll give good orclings to their masters!' You can hear the mixture of excitement and arousal in the young orc warrior's tone as he goes on to say 'Gonna show you what was missing in your life until now, slut!' With that said, he lines his erect and pre-cum dripping shaft up with the other man's crack and wipes the sticky fluid against his clenched pucker.";
 		say "     'Get off, you -', the husky starts to say, only to let out an involuntary moan as his body shudders in sudden arousal. 'I will, fuckmeat! And when I get off in you and fill you with my load, you'll feel even better than this!' Malik replies in a chuckle, milking his erection to smear more spurts of pre over the husky's skin to deliver the potent aphrodisiacs in it. It doesn't take long at all before the struggles of the anthro canine fade and your orcish offspring begins to nudge his slick cock inside him, stretching the quickly relaxing muscle around his shaft. 'Yeah, nice and tight!' Malik calls out, for all the world to hear, and then pulls his now blissed-out caprine up to all fours so he can more easily thrust into him. Looking at the husky, you see his red, knotted erection bobbing in the air beneath his furred body and his muzzle hang open as he moans loudly and pants in lust.";
 		WaitLineBreak;
-		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the husky. Initially at least a little leery about putting your best piece between his teeth, you push your thumb into his mouth, pressing down against the floppy tongue of his. The anthro dog reacts well, just flexing his wet appendage to lick at your finger a little, which gives you the confidence to pull his head down on your [cock of player] manhood. Slipping your erection between his lips, it is soon wrapped by the long, floppy tongue and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the husky's mouth around your cock.";
+		say "     Deciding that it is time for you to get your own reward for participating in Malik's little hunt, you [if Player is not naked]quickly take off your clothes and gear, then [end if]step up and kneel in front of the husky. Initially at least a little leery about putting your best piece between his teeth, you push your thumb into his mouth, pressing down against the floppy tongue of his. The anthro dog reacts well, just flexing his wet appendage to lick at your finger a little, which gives you the confidence to pull his head down on your [cock of Player] manhood. Slipping your erection between his lips, it is soon wrapped by the long, floppy tongue and you start to face-fuck the guy, balls slapping against his chin as you adopt a steady rhythm of thrusts. Your muscle-packed offspring gives you a broad grin over the furred back of your shared captive, grunting out, 'Isn't this just the best, breeder-dad?' He clearly doesn't expect a reply as he looks down again right after and concentrates on deep-dicking his bottom boy. Still, you can't help but agree at least partially, not with the great feeling of the husky's mouth around your cock.";
 		say "     Between Malik and yourself, the captured cervine is spit-roasted in an intense threesome that goes on for a while before it eventually culminates in your son hammering his shaft all the way into the husky and unloading everything his balls have into the man. Throb after throb of potent orc cum floods the male dog's insides, which may or may not start the process of growing a womb for male pregnancy in him, but definitively delivers an overwhelming dose of aphrodisiacs. Making gurgling noises around your cock, his Adam's apple bouncing up and down as his body is wracked by spasms of pleasure, the husky orgasms right along with Malik, spraying his seed over the road beneath. You're not far behind, grinding your crotch against his muzzle as your erection sends throbs of cum right down his throat. Overcome by the intensity of your climax, you have to brace against Malik's broad chest as it runs its course, with the orc just giving you a tusk-bearing grin as you do so.";
 		WaitLineBreak;
 		say "     'Good slut, eh?' Malik eventually asks after both of your orgasms have run their course and he pulls his spent cock out of the husky, who just sinks down to lie in the street, ass still raised high. You make some noises to express your own opinion of the guy you took captive, then join the orc warrior in standing up. He rolls the husky over onto his back with a fairly gentle nudge of his foot, then bends over the guy. 'If you want more of this, find me. And if you don't... I'll find you, and give you another dose! As I said, my orclings deserve a strong breeder as their other dad!' With that said, he turns away from the panting and moaning male and pulls his loincloth straight again, so it can (just barely) cover his half-hard cock.";

@@ -25,7 +25,7 @@ Instead of resolving Birthing Time:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Not wanting to leave someone in distress, you find yourself moving on hurried feet over to the African Wild Dog enclosure of the zoo. Moving as fast as you can you can see the form of several African wild dogs hanging around the prone figure of another and stop dead in your tracks before you can get to close. On guard you ready yourself for an altercation but after waiting several seconds you slowly let your guard down when none of the bipedal creatures make their way over to you. Curious as to what's going on you make your way around the cage where the canines had normally been kept to see who or rather what is making that awful yowling-yip noise. When you do though, you find your eyes widening slightly and then a blush staining your cheeks as you watch nature taking its due course of things. Lying onto the ground littered with both quilts and pillows and stuffed toys surrounding it, or rather her, was an anthropomorphic mother African wild dog moaning and writhing while several other males stood around her with worried looks covering their muzzles.";
 		say "     This sight wouldn't at all have been out of place had it not for the small bundle of fluff and fur trying to ease its way from out of the female's gaping cunt. Your body seems to almost lock up in shock as you watch the female canine anthro push with all of her might with her internal muscles can muster while yowling as the small form of her pup wiggles out to freedom. Feeling strangely elated at seeing the miracle of life, you take a sudden step back and then another before finally moving completely away from the group just as the baby African wild dog emerges into the world. Behind you, there are yipping noises from the newborn, which oddly enough seem to be growing louder as more and more whimpers follow after the first set of plaintive cries. Obviously [italic type]mama[roman type] is having a whole litter, no wonder she was groaning.";
@@ -106,7 +106,7 @@ Instead of resolving Spiritual Love:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Not one to be frightened off easily, nor dissuaded by either pain or hardship, you make your way towards the standing group of trees with determined steps that refuse to falter, despite the warning shouts slamming into your mind over and over again. If whatever is going on is powerful enough that it can unnerve you then it just might be something worth seeing and committing to memory. After all, aren't the most treasured memories the ones that come only once in a lifetime? Smiling to yourself wolfishly at your own ingeniousness you continue walking into the shimmering aurora coming from in between the trees until finally you pass through the veil and into the world beyond. Once you do however, you feel your mouth drop down in awe as your eyes take in a vision that can only be out of a fantasy.";
 		WaitLineBreak;
@@ -125,20 +125,20 @@ Instead of resolving Spiritual Love:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			now Spiritual love is resolved;
-			now humanity of player is 0;
+			now humanity of Player is 0;
 			now spiritlove is 1;
-			now tailname of player is "Spirit Wolf";
-			now facename of player is "Spirit Wolf";
-			now skinname of player is "Spirit Wolf";
-			now bodyname of player is "Spirit Wolf";
-			now cockname of player is "Spirit Wolf";
-			now scalevalue of player is 3;
-			now bodydesc of player is "animalistic";
-			now bodytype of player is "lupine";
-			now SleepRhythm of player is 0;
+			now tailname of Player is "Spirit Wolf";
+			now facename of Player is "Spirit Wolf";
+			now skinname of Player is "Spirit Wolf";
+			now bodyname of Player is "Spirit Wolf";
+			now cockname of Player is "Spirit Wolf";
+			now scalevalue of Player is 3;
+			now bodydesc of Player is "animalistic";
+			now bodytype of Player is "lupine";
+			now SleepRhythm of Player is 0;
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;

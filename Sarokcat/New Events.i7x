@@ -30,7 +30,7 @@ Instead of Resolving a Military presence:
 			say "     Sighing, you continue to investigate the rooftop, stepping carefully to avoid the copious amounts of cum and milk spread all over from the gryphon's copulating. You find several scraps of what was obviously a military uniform scattered around the area, as well as a pair of dog tags lying in the middle of a pool of cum. The only other object of note up here appears to be the military issue binoculars, with several useful attachments and a nice case. This was obviously the item you saw glinting on the roof as their former owner scanned the area. Shrugging, you string the nice pair of binoculars around your own neck, as obviously the former owner won't be needing them anymore. Climbing down the fire escape and back into the city, you can already see the binoculars helping out your perception, though you still have more questions than answers about what the person was doing here.";
 			LineBreak;
 			say "[bold type]Your perception has increased by 2![roman type][line break]";
-			increase perception of player by 2;
+			increase perception of Player by 2;
 			now mtp is 2;
 		else:
 			say "Sadly, no matter how hard you search, you can't seem to figure out where the glint of light came from, nor can you determine what exactly it was from the little you saw of it. Chalking it up as just another of the strange events going on in the city, you continue about your way.";
@@ -104,9 +104,9 @@ Instead of Resolving a Hyena Gang:
 	else if hyg is 2:
 		say "     As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.";
 		say "     'Hey don't worry,' the hyena says as she draws closer, making you nervous. 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' she says with a gesture at the graffiti. 'So I thought I'd come over and offer you a chance to join on up. ";
-		if bodyname of player is "Herm Hyena":
+		if bodyname of Player is "Herm Hyena":
 			say "Besides, it looks like you would fit right in around here already,' the hyena says as she eyes your hyena-like frame. 'What do you say to giving us a try?'";
-			if player consents:
+			if Player consents:
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile. 'But first,' she says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
 				now Resolution of Hyena Gang is 3; [herm hyena player talked to gina and agreed]
 				hyenaify;
@@ -116,7 +116,7 @@ Instead of Resolving a Hyena Gang:
 				now Resolution of Hyena Gang is 4; [herm hyena player talked to gina and said no]
 		else:
 			say "Membership comes with some benefits, though you'll end up with a few changes as well,' the hyena says as she looks you up and down. 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
-			if player consents:
+			if Player consents:
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile, looking you over again. 'But first, I think you will need to fit in a bit more,' shi says, right before she pulls your startled body into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by! I look forward to seeing how the changes look on you!' before she vanishes around the corner, your body shuddering as it begins to change.";
 				now Resolution of Hyena Gang is 5; [player talked to gina and agreed]
 				hyenaify;
@@ -355,7 +355,7 @@ The sarea of ruined supplies is "Mall".
 
 Instead of resolving a ruined supplies:
 	say "     Searching the area under the mall again, you find a small pallet of food supplies, obviously intended for use above at the food court. Unfortunately, you were not the first person to find these supplies, as someone has been here before you and made a pig out of themselves. Boxes are ripped open, food was obviously messily consumed, and almost all of the drinks have been opened, leaving the area strewn with wrappers and empty bottles. Eyeing the mess dubiously, you wonder if it is even worth searching through it all to see if there is anything left. Do you?";
-	if player consents:
+	if Player consents:
 		say "     Tossing the supplies and boxes to the side, you realize that tossing things around as you look through the remains of the supplies is actually kind of fun. You find small bits of food and a few mouthfuls of drink left over and continue searching for more. You quickly stuff them in your face, enjoying this strange type of edible scavenger hunt you have embarked on. Before you know it, you look up and realize that you have spread the mess around an even larger area than before and that you have been rooting around in the remains like some sort of pig yourself. As you stand up to leave, you hesitate to leave such an enjoyable bit of fun, and you are sure there are still some crumbs left behind. Thinking this, you begin to turn back to the mess of wrappers and boxes, only to catch a glimpse of yourself in one of the shiny wrappers and realize that you really have started to become rather pig-like yourself from your messy endeavors! Realizing that staying here any longer, however tempting it may be, would almost certainly result in your becoming totally porcine, you quickly hurry away, darting a few longing looks over your shoulder at the remains of the supplies before managing to get a hold of yourself.";
 		piggyify;
 		piggyify;

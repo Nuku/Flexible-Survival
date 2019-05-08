@@ -59,7 +59,7 @@ to say AnalProbingSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his muzzle";
 		now sortorder entry is 1;
@@ -75,7 +75,7 @@ to say AnalProbingSexMenu:
 	now sortorder entry is 3;
 	now description entry is "Milk the bounty of those big balls out of him";
 	[]
-	if player is male: [only males and herms can fuck him]
+	if Player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;
@@ -86,7 +86,7 @@ to say AnalProbingSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Take the lion's cock up your rear end";
 	[]
-	if player is female: [only females and herms can take him in the pussy]
+	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Mount that big dick and slide your pussy down on it";
 		now sortorder entry is 6;
@@ -104,7 +104,7 @@ to say AnalProbingSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck his muzzle"):

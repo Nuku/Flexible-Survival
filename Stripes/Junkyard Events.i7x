@@ -18,7 +18,7 @@ when play begins:
 
 Instead of resolving a Goblin Trap:
 	say "     As you are traveling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
-	decrease HP of player by 12;
+	decrease HP of Player by 12;
 	now goblinfight is 3;
 	challenge "Goblin";
 	if goblinfight is 1:
@@ -51,7 +51,7 @@ Instead of resolving a Raiding Party:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Flee.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Without anywhere worthwhile to hide and watch, you stay in the middle of the path and try to look intimidating. A few seconds later, some goblins come into view dragging something as they laugh cruelly to one another. The trio stops as they notice you just as their burden comes into view. Trapped in a net behind them is a tigress woman dressed in a skimpy outfit with mussed hair. She is largely insensate right now, probably struck by one of the goblins when she started making noise. With you barring their path, the goblin charges to defend their prize.";
 		now goblinfight is 3;
@@ -65,13 +65,13 @@ Instead of resolving a Raiding Party:
 				if goblinfight is 1:
 					say "     With the last goblin fled, you move over to check on the tigress woman. Using the fight as a distraction, she managed to bite through some of the ropes and pulls herself free as you come up. As she stands, you get a better look at her. She is wearing a short, red top and an even shorter, black skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. She has snowy, white fur that covers her bosom and the front of her shapely waist. As she brushes her red hair back into order, you catch sight of the gold earrings in her feline ears and bracelets on her wrists. She growls as she stomps down hard onto the net launcher, smashing it with her feline paw before sending it flying off into the scrapyard.";
 					say "     Looking at you, she grins and runs her paws over her body. 'Well, sweetie, that was mighty nice of you. How about I give you a little reward for your help?' she purrs, motioning to a discarded mattress at the edge of a nearby pile. From the looks of it, it's been used a few times before. As her paws run over her skirt, you can see the bulge there of her poorly concealed maleness. 'No charge this time, sweetie,' the feline whore adds, running hir paws over your chest. 'I can show you a real good time. Anything you like,' shi rumbles with a grin, rubbing hir breasts and sheath against you. Shall you accept hir tempting offer?";
-					if player consents:
+					if Player consents:
 						now junknum is 1;
 						[puts Tigress Hooker as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in Table of Random Critters:
 							choose row y in Table of Random Critters;
-							if name entry is "Tigress Hooker":
-								now monster is y;
+							if Name entry is "Tigress Hooker":
+								now MonsterID is y;
 								break;
 						say "[losetotigress]";
 						now junknum is 0;
@@ -126,7 +126,7 @@ when play begins:
 Instead of resolving a Scattered Trash:
 	say "     You come across a mess of garbage scattered here, sprawling across the path between the junk mounds here. From the looks of it, it seems this stuff has been rummaged through and possibly even rolled around in. As it is just tossed around, there are clear spots to walk while you move through it. You decide to keep your eyes open in case you spot anything of interest while making your way through the trash.";
 	WaitLineBreak;
-	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
+	let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 15:
@@ -138,14 +138,14 @@ Instead of resolving a Scattered Trash:
 		if a random chance of 1 in 2 succeeds:			[Trash Coon]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Trash Coon":
-					now monster is y;
+				if Name entry is "Trash Coon":
+					now MonsterID is y;
 					break;
 		else:								[Pit Bull]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Pit Bull":
-					now monster is y;
+				if Name entry is "Pit Bull":
+					now MonsterID is y;
 					break;
 		infect;
 	now Scattered Trash is resolved;
@@ -168,11 +168,11 @@ Instead of resolving a Stray Cat:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			if dirty water is owned and water bottle is owned:
 				say "     You have both dirty water and fresh water. Which will you give him? (Y=dirty, N=fresh)";
-				if player consents:
+				if Player consents:
 					say "[dirtysnow]";
 					now Resolution of Stray Cat is 1; [created snow bat]
 				else:
@@ -201,10 +201,10 @@ to say dirtysnow:
 	say "     His bat-like ears twitch as he mrowls again and they lock on you. Hearing your echo with his heightened senses, he starts to get up. This breaks the spell of watching his transformation and you turn to get away from this new and potentially dangerous creature you've spawned. You run around one mound, then dash down another path in the hopes of evading him. You start to make a third turn when he comes swooping out of the air, already able to fly on his new wings. Cut off, you will have to face him.";
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Snow Bat":
+		if Name entry is "Snow Bat":
 			now area entry is "Junkyard";
 			now non-infectious entry is false;
-			now monster is y;
+			now MonsterID is y;
 			break;
 	now snowbatfight is 3;
 	challenge "Snow Bat";
@@ -223,6 +223,6 @@ to say bottlesnow:
 	delete water bottle;
 	say "     Quickly pulling off your pack, you reach into it and pull out a bottle of water. You toss it to the charging feline, who bats it aside at first, but then realizes what it is. He drops to all fours, scrambling on the hard ground in an attempt to turn, then runs to chase after the water bottle. Taking the opportunity to head off, you can hear the parched feline gulping it down and a distant [']Thank you['] when he's finished. Wanting to be safe, you keep moving, just in case he decides to come back for more.";
 	increase score by 10;
-	increase morale of player by 3;
+	increase morale of Player by 3;
 
 Junkyard Events ends here.

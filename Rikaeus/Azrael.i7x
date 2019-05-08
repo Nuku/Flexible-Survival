@@ -46,14 +46,14 @@ Azrael is a man.
 [Physical details as of game start]
 ScaleValue of Azrael is 3. [human sized]
 SleepRhythm of Azrael is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Azrael is 1. [X cock]
+Cock Count of Azrael is 1. [X cock]
 Cock Length of Azrael is 8. [X Inches]
-Cock Width of Azrael is 4.
-Testes of Azrael is 2. [X balls]
-Cunts of Azrael is 0. [X pussy]
+Ball Size of Azrael is 4.
+Ball Count of Azrael is 2. [X balls]
+Cunt Count of Azrael is 0. [X pussy]
 Cunt Length of Azrael is 0. [X Cunt]
-Cunt Width of Azrael is 0. [X Cunt]
-Breasts of Azrael is 2. [X nipples]
+Cunt Tightness of Azrael is 0. [X Cunt]
+Nipple Count of Azrael is 2. [X nipples]
 Breast Size of Azrael is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Azrael is true. [can not take oversized members without pain]
@@ -117,7 +117,7 @@ to say AzraelTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Dean"):
@@ -143,7 +143,7 @@ to say AzraelClasses:
 	say "     The angel smiles when you mention enrolling into classes. 'Great! First of all I need you to fill this out,' he says, handing you like two pieces of paper. You take a look and see that it's just two sheets asking for basic information. Although a few of the questions have been catered to the current world situation. Like for example, question twenty, do you ever plan to change infections while on campus. You muse that it probably makes sense to ask this so they could accommodate for any weird changes, like suddenly being partial to water. You mark it as possible, as you are unsure as to whether or not you'll get the whim to transform into something else while at college. While you're filling this out, Azrael explains the courses.";
 	say "     'So, how courses work here compared to they did before the apocalypse is rather simple. To enroll in a class you must pay with either five bottles of water or five pieces of food,' he starts, a thought running through your head, saying it makes sense. 'Once you have either one of those, you come talk to me with them in hand and I'll show you what classes we have,' he informs you. You nod and continue to finish up your paperwork, Azrael continuing to speak. 'We have a lot of courses available but the list I hand you at times may lack some of them as they are either full or something's happened to have that class unavailable at the moment, understand?' Once more you shake your head up and down and hand the angel the two pieces of paper. He accepts them and holds his hand out for you to shake. 'Great! Talk to me again when you want to enroll,' the male tells you.";
 	WaitLineBreak;
-	say "     Before you can leave he stops you and holds something out. It is a silver key with a tag on it, listing a number. 'This is the key to your dorm room. It is in the male dorms, to the northwest as soon as you enter[if player is female]. I do apologize as the female dorms are full[end if],' he explains as you take the key. You nod and turn to leave once more. The angel lets out a parting goodbye before he returns to his work.";
+	say "     Before you can leave he stops you and holds something out. It is a silver key with a tag on it, listing a number. 'This is the key to your dorm room. It is in the male dorms, to the northwest as soon as you enter[if Player is female]. I do apologize as the female dorms are full[end if],' he explains as you take the key. You nod and turn to leave once more. The angel lets out a parting goodbye before he returns to his work.";
 	change northwest exit of Second Floor Male Dorms to Your Dorm Room;
 	change southeast exit of Your Dorm Room to Second Floor Male Dorms;
 	now AzraelRelationship is 2;
@@ -189,7 +189,7 @@ to say ClassPaymentOptions:
 		say "     [bold type]Aware that you are carrying enough food in your backpack, do you want to give it to him?[roman type][line break]";
 		say "     [link]Y[as]y[end link] - Yeah!";
 		say "     [link]N[as]n[end link] - Nah.";
-		if player consents:
+		if Player consents:
 			say "     You pull out the pile of food from your backpack and hand them over to the Dean who gladly accepts it.";
 			decrease carried of food by 5;
 			now ClassPaymentAccepted is true;
@@ -199,7 +199,7 @@ to say ClassPaymentOptions:
 		say "     [bold type]Aware that you are carrying enough water in your backpack, do you want to give it to him?[roman type][line break]";
 		say "     [link]Y[as]y[end link] - Yeah!";
 		say "     [link]N[as]n[end link] - Nah.";
-		if player consents:
+		if Player consents:
 			say "     You pull out the water bottles from your backpack and hand them over to the Dean who gladly accepts it.";
 			decrease carried of water bottle by 5;
 			now ClassPaymentAccepted is true;

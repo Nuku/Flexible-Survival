@@ -28,14 +28,14 @@ Poseidon is a man.
 [physical details as of game start]
 Humanity of Poseidon is 80. [is thousands of years old]
 ScaleValue of Poseidon is 3. [human size]
-Cocks of Poseidon is 1. [has a cock]
+Cock Count of Poseidon is 1. [has a cock]
 Cock Length of Poseidon is 10. [has an 10 inch cock]
-Cock Width of Poseidon is 4. [size of balls]
-Testes of Poseidon is 2. [has a pair of balls]
-Cunts of Poseidon is 0. [no vagina]
+Ball Size of Poseidon is 4. [size of balls]
+Ball Count of Poseidon is 2. [has a pair of balls]
+Cunt Count of Poseidon is 0. [no vagina]
 Cunt Length of Poseidon is 0. [Doesnt have a vagina to get stretched]
-Cunt Width of Poseidon is 0. [Doesnt have a vagina to get stretched]
-Breasts of Poseidon is 2. [Has two normal nipples]
+Cunt Tightness of Poseidon is 0. [Doesnt have a vagina to get stretched]
+Nipple Count of Poseidon is 2. [Has two normal nipples]
 Breast Size of Poseidon is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 TwistedCapacity of Poseidon is false. [can not take oversized members without pain]
@@ -98,7 +98,7 @@ to say PoseidonTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Courtship"):
@@ -122,7 +122,7 @@ to say PoseidonTalk1:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - It wouldn't hurt to give it a try.";
 	say "     ([link]N[as]n[end link]) - No, I'm not a marrying-type of person.";
-	if player consents:
+	if Player consents:
 		say "     Shrugging your shoulders mentally you voice that you want to accept his courtship. This causes the merman's face to light up. 'Great! It's official then!' He says with a smile. You ask him what this relationship will consist of, something that Poseidon promptly gives a response to. 'Simple, we go on dates, if it turns out well then perhaps marriage,' the buff male tells you. Well... you guess that was kind of obvious, causing you to wonder out loud when the first date will be. 'Oh, that, don't worry I'll plan the date and let you know when it's time,' he says, waving your concerns off. With a shrug you figure you should go on your way, heading back out of the palace, to the entrance.";
 		move player to Royal Palace Entrance;
 		now PoseidonRelationship is 3;
@@ -169,7 +169,7 @@ to say PoseidonSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Make Love Anally"):
@@ -193,7 +193,7 @@ to say PoseidonSex1:
 	say "     Thankfully you manage to get it in, and from there it's just slowly sliding yourself down, and boy do you mean slowly. Though, your lover takes you by the lips and slips his tongue in to begin making out with you to distract you quite helpfully. In fact, you're able to focus on the kiss rather than the pain in your ass and it's not long before Poseidon's cock is fully sheathed in you. He allows you to get used to the size, just content to have fun with your lips. This gives you the courage to start yourself, pulling yourself up before dropping back down, causing a muffled moan to come from both of you guys. Though not wanting to control the entire situation you give your lover a look that asks him to help with this, which causes his eyes to shine with mirth.";
 	say "     However, shortly after that it looks like the merman is willing to help cause he bucks his hips, bouncing you upward. This causes you to let out a long moan as his cock brushes past your prostate, sending electrifying impulses through your body. Poseidon begins to repeat these actions, grabbing a hold of your cheeks to find some purchase in bouncing you, though he still makes sure to keep his own lips on yours though by now the kiss is even more passionate than before. Your own pleasure is mounting higher and higher as the Atlantean King repeatedly brushes against your prostate, and you're sure it won't be long till either of you reach climax.";
 	WaitLineBreak;
-	say "     By now the thrusts into your hole are rough, but the kisses are loving and passionate and you can see that Poseidon's eyes are glazed over with a desire for you that fills you with intense feelings. However, just as you suspected it's not long before you feel your merman lover's cock begin to swell inside of you and soon after his seed start to fill you up, warmth coating your insides. [if player is neuter]The sensation sets off a trigger in your mind as you have your own climax but with nowhere for it to go, your body sends the pleasure everywhere from your toes to your head. The feeling is mind-numbing but boy does it feel absolutely amazing[else if player is herm]The sensation causes your cock to jerk and your pussy to twitch with the last edge they needed. Suddenly you start to shoot your own load, your cum coating the Atlantean King's chest with some of the femcum from your pussy leaking onto the bedsheets[else if player is male]The sensation causes your body to alight with pleasure as your dick suddenly jerks with the last bit of edge it needed to shoot its load. Your cum explodes from your length, coating the Atlantean King's chest in sticky streaks[else if player is female]The sensation causes your body to alight with pleasure as your pussy twitches with the last edge it needs before femcum starts to leak and coat your Atlantean lover's balls. With the amount, some of it even ends up making it onto the bedsheets below you two[end if]. By the time the two of you are done with your orgasms, you are both panting in each other's arms.";
+	say "     By now the thrusts into your hole are rough, but the kisses are loving and passionate and you can see that Poseidon's eyes are glazed over with a desire for you that fills you with intense feelings. However, just as you suspected it's not long before you feel your merman lover's cock begin to swell inside of you and soon after his seed start to fill you up, warmth coating your insides. [if Player is neuter]The sensation sets off a trigger in your mind as you have your own climax but with nowhere for it to go, your body sends the pleasure everywhere from your toes to your head. The feeling is mind-numbing but boy does it feel absolutely amazing[else if Player is herm]The sensation causes your cock to jerk and your pussy to twitch with the last edge they needed. Suddenly you start to shoot your own load, your cum coating the Atlantean King's chest with some of the femcum from your pussy leaking onto the bedsheets[else if Player is male]The sensation causes your body to alight with pleasure as your dick suddenly jerks with the last bit of edge it needed to shoot its load. Your cum explodes from your length, coating the Atlantean King's chest in sticky streaks[else if Player is female]The sensation causes your body to alight with pleasure as your pussy twitches with the last edge it needs before femcum starts to leak and coat your Atlantean lover's balls. With the amount, some of it even ends up making it onto the bedsheets below you two[end if]. By the time the two of you are done with your orgasms, you are both panting in each other's arms.";
 	say "     Apparently not wanting to get up, Poseidon keeps you in his arms and kisses you softly before starting to cuddle with you despite how sticky you feel from the sweat and cum. But then you just shrug and let him do as he please cause it's kinda nice anyways. Especially since your merman lover lazily snaps his fingers and all the cum and sweat vanishes. 'Magic is always nice for things like this,' he says with a happy tone before pulling you into his side and snuggling you. You chuckle and agree with him, enjoying the sensation of being held. The two of you lay like this for a good while before there's a knock at the door and in comes a guard saying that Poseidon's needed for something. 'Well, work never ends, I'll lead you out love,' your lover says with a sigh before leading you back to the throne room.";
 	now lastfuck of Poseidon is turns;
 	now PlayerFucked of Poseidon is true;
