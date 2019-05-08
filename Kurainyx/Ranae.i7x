@@ -401,7 +401,7 @@ instead of fucking the Ranae:
 			now sortorder entry is 3;
 			now description entry is "Let Ranae swallow you whole";
 		[]
-		if vorelevel > 1 and "Touched by Madness" is listed in feats of player:
+		if vorelevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Anal Vore";
 			now sortorder entry is 4;
