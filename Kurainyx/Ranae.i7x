@@ -1,6 +1,7 @@
 Version 1 of Ranae by Kurainyx begins here.
 [ Version 1.0 - Created Ranae - Kurainyx ]
-[ Version 2.0 - Add one luxury item event and oral vore/bound state- Kurainyx]
+[ Version 2.0 - Add one luxury item event and oral vore/bound state - Kurainyx]
+[ Version 3.0 - Add two more luxury item events, anal vore scene, and a second bound state ending - Kurainyx]
 
 "Adds a female frog NPC to Flexible Survival"
 
@@ -14,13 +15,22 @@ Version 1 of Ranae by Kurainyx begins here.
 [  6: Gave Ranae black dress                               ]
 [  7: Gave Ranae four rounds of food and water             ]
 [  8: Gave Ranae one round of chips and soda               ]
-[  9: Ranae moves into Abbey                               ]
-[ 10: Gave Ranae one luxury item                           ]
+[  9: Ranae moves into library                             ]
 
 [  Perception of Ranae (Figurine)                          ]
 [  0: Never found Figurine                                 ]
 [  1: Found Figurine                                       ]
 [  2: Gave Ranae Figurine                                  ]
+
+[  Intelligence of Ranae (Drapes)                          ]
+[  0: Never found Drapes                                   ]
+[  1: Found Drapes                                         ]
+[  2: Gave Ranae Drapes                                    ]
+
+[  Charisma of Ranae (Bracelet)                            ]
+[  0: Never found Bracelet                                 ]
+[  1: Found Bracelet                                       ]
+[  2: Gave Ranae Bracelet                                  ]
 
 
 
@@ -33,6 +43,8 @@ Object	Name
 Starving Frog	"Starving Frog"
 Rundown Boutique	"Rundown Boutique"
 Boarded-up Building	"Boarded-up Building"
+Ransacked Shop	"Ransacked Shop"
+Trench Coat Salesman	"Trench Coat Salesman"
 
 Ranae is a woman.
 [physical details as of game start]
@@ -75,6 +87,14 @@ Rundown Boutique is inactive.
 Boarded-up Building is a situation.
 The sarea of Boarded-up Building is "Outside".
 Boarded-up Building is inactive.
+
+Ransacked Shop is a situation.
+The sarea of Ransacked Shop is "Outside".
+Ransacked Shop is inactive.
+
+Trench Coat Salesman is a situation.
+The sarea of Trench Coat Salesman is "Outside".
+Trench Coat Salesman is inactive.
 
 when play begins:
 	add Starving Frog to badspots of girl;
@@ -140,6 +160,20 @@ Instead of resolving a Boarded-up Building:		[Figurine]
 	now perception of Ranae is 1;		[Found figurine]
 	now Boarded-up Building is resolved;
 
+Instead of resolving a Ransacked Shop:		[Drapes]
+	say "     Walking through a street, the sight of a small shop catches your eye. Though the door remains intact, the display window in the front of the building has been completely shattered, glass shards littering the nearby sidewalk. It's obvious the place was ransacked, but you briefly wonder why this particular shop was robbed, given how the adjacent stores seemed to be untouched, but your question is soon answered when you glance up at the place's storefront sign, or rather, what used to be it. You're unable to read the shop's name because the sign is completely covered with graffiti drawings of dicks and other crude images, along with spray-painted words such as [']cheap bastard,['] [']lying asshole,['] and other spiteful titles. It looks like that the owner of the shop wasn't popular, and you guess that someone took advantage of the city's chaos to take action against the supposed swindler.";
+	say "     Taking a look through the broken window, you see that although the shop has been looted, there still seems to be various items lying around. Figuring that it's at least worth a quick look, you climb in through the window, careful to avoid the broken glass. Searching around, you find an assortment of items, all with handmade price tags attached to them, and you guess that this place used to be a sort of pawn shop. Unfortunately, anything worthwhile seems to already be gone, and all of the things that have been left behind are either of little use or too bulky to safely carry out of here. It doesn't take long for you to finish searching the small storefront, and you head through a doorway in the back, only to find a room barely bigger than a closet. With a small desk and a filing cabinet with three drawers in one corner and several small boxes in another, this tiny space doubled as an office and a storage room.";
+	say "     Searching through the filing cabinet first, you find receipts and business-related papers in the top two drawers that pretty much confirms that the shop had been cheating their customers out of a fair deal. When you open the bottom drawer, you find some books, but more importantly, a bottle of water. With the current state of the place and the reputation of the former store owner, you have no qualms taking the precious supply for yourself. You then move on to the boxes, opening them one by one as you search their contents. At first, all you find are various odd knick-knacks or low-quality items that don't look like they would have sold, but you pause when you eventually come upon a bundle of green fabric, its color reminding you of Ranae. Unfolding your find, you see that the fabric is actually a set of drapes with an embroidered pattern of swirls decorating its front. Thinking that the frog staying in the library might like these drapes to help decorate her living space, you stow them into your bag. Finding nothing else of interest in the shop, you climb back through the broken window and resume your exploration.";
+	say "     [bold type]You found a bottle of water[roman type]";
+	increase carried of water bottle by 1;
+	now intelligence of Ranae is 1;		[Found drapes]
+	now Ransacked Shop is resolved;
+
+Instead of resolving a Trench Coat Salesman:		[Bracelet]
+	say "     As you make your way through the city, you stop when you hear someone call out with a 'Pssst.' Looking around, you see your caller standing in a nearby alleyway, waving you over with a black and brown paw. Though the person doesn't seem to be hostile, the long trench coat that almost reach down to their feet and a fedora hat that covers their face doesn't completely put you at ease. Cautiously walking over to the suspicious figure, you're able to see that the person is a male raccoon. 'Hey, you want to buy something?' the raccoon asks as he uses a hand to grab one side of his coat and pull it wide open. Though this act reveals that he's wearing nothing underneath his coat, essentially showing you his furry body, your gaze is focused on the rings, necklaces, bracelets, watches, and other shiny accessories that adorn the inside of his coat. 'I got only the finest stuff here,' the raccoon says with a smirk. 'C'mon, pick a few. I'll give you a good price on them.' However, you aren't able to browse his wares for long before someone from behind yells, 'Hey, you!'";
+	say "     Spinning around, you see two harpies approaching, but for some reason, they both seem to be ignoring you in favor of angrily glaring at the raccoon. 'You sold us fake jewelry!' one of the winged females accuses, and the other one promptly adds, 'Yeah! You're going to pay for trying to trick us!' The raccoon yelps and swiftly bolts into the alley, and you have to jump out of the way of the two raging harpies as they pursue the sleazy salesman. The din caused by the wild chase soon fades away, leaving you by yourself. Shaking your head over the odd scenario, you're about to leave when something shimmering on the ground catches your eye. Picking up the object, you see that it's a silver-colored bracelet with its center holding several emeralds arranged in a circular pattern. The raccoon must have dropped this bracelet in his haste to escape, but given the unsatisfied harpies from earlier, this is no doubt just another piece of fake jewelry. Still, the bracelet looks nice enough. Perhaps Ranae would like it.";
+	now charisma of Ranae is 1;		[Found bracelet]
+	now Trench Coat Salesman is resolved;
 
 
 Section 2 - Froggy Hideout
@@ -183,13 +217,17 @@ to say RanaeDesc:
 	if hunger of Ranae < 5:
 		say "The clothes that she is wearing are little better than dirty rags, and they look like they're going to fall apart at any moment.";
 	else:
-		say "She still wears the black dress that you found for her. The low cut dress is clearly made to show off the wearer's body, with only two narrow strips holding the dress on Ranae's shoulders to prominently display both her arms and the top of her breasts. The fabric stuck close to her skin, showing hints of her lithe figure, but given her bodacious rear, the fabric actually accentuated the rounded curves of her ass. The hemline ended right above her knees. Before, Ranae had a certain charm, but now, she is downright gorgeous.";
+		say "She still wears the black dress that you found for her. The low cut dress is clearly made to show off the wearer's body, the hemline ending right above her knees, and only two narrow strips hold the dress on Ranae's shoulders to prominently display both her arms and the top of her breasts. The fabric sticks close to her skin, showing hints of her lithe figure, but given her bodacious rear, the fabric actually accentuates the rounded curves of her ass. [if charisma of Ranae is 2]The emerald bracelet on her right wrist has not left her since you gave it to her.[end if]Before, Ranae had a certain charm, but now, she is downright gorgeous.";
 
 to say RanaeScent:
 	say "     Ranae has a faint scent that reminds you of lakes.";
 
 Instead of conversing the Ranae:
-	say "     'Hello there[if Player is not defaultnamed], [name of Player][end if],' Ranae says as you approach her.";
+	Linebreak;
+	if hunger of Ranae is 9:
+		say "     'What do you want, servant?' Ranae asks haughtily";
+	else:
+		say "     'Hello there[if player is not defaultnamed], [name of player][end if],' Ranae says as you approach her.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -262,8 +300,10 @@ to say RanaeCheckUp:
 		say "     'I feel great, thanks to this,' Ranae says as she runs a hand through her dress. 'As for food and water, I'm doing alright, but with how you keep ginving me stuff, who am I to refuse your generosity?'";
 	else if hunger of Ranae < 9:
 		say "     'Things are going just great,' Ranae says. 'It will be even better when you bring me the chips and soda that I asked for.'";
+	else if perception of Ranae is 2 and intelligence of Ranae is 2 and charisma of Ranae is 2:
+		say "     'I'm very satisfied with your work, my servant,' Ranae tells you. 'After all of the gifts that you have given me, I am tempted to take you home with me after all of this craziness is over.'";
 	else:
-		say "     'Did you bring me anything?' Ranae asks.";
+		say "     'Did you bring me anything?' Ranae asks. 'I bet that there's all sorts of nice things in the city just waiting for you to pick up for me.'";
 
 to say RanaeSupplies:
 	if carried of food > 0 and carried of water bottle > 0:
@@ -294,14 +334,16 @@ to say RanaeJunkFood:
 			say "     When you hold out your newest offering, Ranae eagerly takes them from you with a grin. She opens the chips first, but her grin shrinks slightly when she peers inside. 'Aww. Half of the chips in here are crushed. Still, I suppose given the circumstances, I cannot fault you for this.' She picks out an unbroken chip and eats it, giving a hum of satisfaction as she savors the salty treat. She eats a few more chips before setting the bag aside and then move on to the soda. Opening the can, she takes a sip and nods in approval. 'At least this soda is still fizzy. Good work. I could use some more though. I know that too much junk food is not good for you, but after everything I went through, I deserve to indulge myself a bit.'";
 			now hunger of Ranae is 8;		[Gave Ranae one round of chips and soda]
 		else if hunger of Ranae is 8:
-			say "     You barely take out more chips and soda from your pack before Ranae snatches them from you and moves to stash them in the corner. However, she pauses when she looks over the supplies that had been accumulating there. 'You know, this place is getting a bit cramped, and I'm going to run out of space if you keep bringing me stuff. I need someplace bigger and better.' The abbey that you have been using as your base of operations quickly comes to mind, and when you mention it to the frog, her eyes widen in surprise. 'I know that place. You actually have that whole building to yourself?' Before you could tell Ranae more about the abbey, she shoves a few pillows into your arms. 'Come on. I can't wait to see my new home. A place as grand as that will be perfect for me!' Despite having to carry all of Ranae's belongings, it was hardly a burden since all she was bringing was a few pillows and her supplies, most of which were actually gifts from you. Thankfully, the journey back to the abbey went without a hitch. ";
+			say "     You barely take out more chips and soda from your pack before Ranae snatches them from you and moves to stash them in the corner. However, she pauses when she looks over the supplies that had been accumulating there. 'You know, this place is getting a bit cramped, and I'm going to run out of space if you keep bringing me stuff. I need someplace bigger and better.' The library that you have been using as your base of operations quickly comes to mind, and when you mention it to the frog, her eyes widen in surprise. 'I know that place. You actually have that whole building to yourself?' Before you could tell Ranae more about the library, she shoves a few pillows into your arms. 'Come on. I can't wait to see my new home. A place as grand as that will be perfect for me!' Despite having to carry all of Ranae's belongings, it was hardly a burden since all she was bringing was a few pillows and her supplies, most of which were actually gifts from you. Thankfully, the journey back to the library went without a hitch. ";
 			if number of booked people + number of bunkered people > 0:
-				say "As the two of you enter the abbey, Ranae pauses when she sees one of the other denizens that live with you. 'Really? There's others here.' Ranae lets out an exasperated sigh as she looks around the area. 'At least it's better than that hole in the wall I was in.'";
-			now hunger of Ranae is 9;		[Ranae moved to Abbey]
+				say "As the two of you enter the library, Ranae pauses when she sees one of the other denizens that live with you. 'Really? There's others here.' Ranae lets out an exasperated sigh as she looks around the area. 'At least it's better than that hole in the wall I was in.'";
+			now hunger of Ranae is 9;		[Ranae moved to library]
 			now Froggy Hideout is unknown;
 			move player to Sitting Area;
 			move Ranae to Sitting Area;
 			now Boarded-up Building is active;
+			now Ransacked Shop is active;
+			now Trench Coat Salesman is active;
 		else:
 			say "     Error encountered. Please report this bug on the Discord channel. Ranae Hu: [hunger of Ranae]";
 		decrease carried of chips by 1;
@@ -310,18 +352,34 @@ to say RanaeJunkFood:
 		say "     You don't have any chips and/or soda to give to Ranae.";
 
 to say RanaeGift:
-	say "     'Did you bring me something?' Ranae asks when as you approach her.";
-	if perception of Ranae is 1:	[Figurine]
-		say "     Recalling your recent search inside of the boarded-up building, you dig out the newspaper-wrapped object you found and give it to her. The frog woman arches her brow in skepticism, but she accepts your offering without a word before quickly tearing off the paper. Ranae grins as she holds up the dancing figurine and remarks, 'Ohhh, I like this. I used to have one of these things.' She turns the windup key a few times, making the soft tinkling of the music box starts playing, and she watches the tiny dancer spin around with rapt attention and a growing grin on her face. A few moments later, the figurine comes to a stop, and Ranae gently places her new possession on a nearby desk. Giving you a nod of satisfaction, she says, 'Good job, servant. You always know the best things to give me.'";
-		now perception of Ranae is 2;
+	if perception of Ranae is 2 and intelligence of Ranae is 2 and charisma of Ranae is 2:
+		say "     'I'm very satisfied with your work, my servant,' Ranae tells you. 'After all of the gifts that you have given me, I am tempted to take you home with me after all of this craziness is over.'";
 	else:
-		say "     You pull out several knickknacks and trinkets that you have found during your exploration, but none of them seems to catch Ranae's eye. When you run out of stuff to show to the frog woman, she snorts in annoyance and gives you a dismissive wave with her hand. 'Go and find me stuff that's actually interesting,' she commands before sending you on your way.";
+		say "     'Did you bring me something?' Ranae asks when as you approach her.";
+		if perception of Ranae is 1:	[Figurine]
+			say "     Recalling your recent search inside of the boarded-up building, you dig out the newspaper-wrapped object you found and give it to her. The frog woman arches her brow in skepticism, but she accepts your offering without a word before quickly tearing off the paper. Ranae grins as she holds up the dancing figurine and remarks, 'Ohhh, I like this. I used to have one of these things.' She turns the windup key a few times, making the soft tinkling of the music box starts playing, and she watches the tiny dancer spin around with rapt attention and a growing grin on her face. A few moments later, the figurine comes to a stop, and Ranae gently places her new possession on a nearby desk. Giving you a nod of satisfaction, she says, 'Good job, servant. You always know the best things to give me.'";
+			now perception of Ranae is 2;
+		else if intelligence of Ranae is 1:	[Drapes]
+			say "     Ranae's eyes light up when she sees you approach with the drapes that you found. She quickly runs up to you and holds up a piece of the fabric to inspect it. 'Nice. Very nice. This place might be safe and all, but it's also pretty drab. These will not only liven things up, but a woman like me needs her privacy.' The frog lady nods in satisfaction as she finishes looking over the drapes and drops it back in your hands. 'Well, what are you waiting for? Set it up for me!' Fortunately, you find a few stands for the drapes in one of the library's storerooms, and it's not long before Ranae's spot is surrounded by decorative green fabric.";
+			now intelligence of Ranae is 2;
+		else if charisma of Ranae is 1:	[Bracelet]
+			say "     As soon as you pull out the emerald bracelet that you [italic type]found[roman type], Ranae's eyes fly wide open, and she quickly snatches the jewlery from you. 'Oh my gosh!' the frog gushes as she holds the bracelet in her left hand and adoringly rubs it with her right one, a giddy smile on her face. 'It's so pretty! You really do know how to spoil a girl.' She slips the bracelet through her right hand, letting it hang on her wrist. Holding her arm up to the light, she giggles in joy over her new accessory. 'It's a perfect fit! I love it!' As Ranae continues to fawn over her bracelet, you realize that the frog isn't aware that the bracelet is a fake. You briefly wonder if you should tell her that, but with how happy she is, you decide to keep quiet.";
+			now charisma of Ranae is 2;
+		else:
+			say "     You pull out several knickknacks and trinkets that you have found during your exploration, but none of them seems to catch Ranae's eye. When you run out of stuff to show to the frog woman, she snorts in annoyance and gives you a dismissive wave with her hand. 'Go and find me stuff that's actually interesting,' she commands before sending you on your way.";
 
 instead of fucking the Ranae:
+	LineBreak;
 	if (lastfuck of Ranae - turns < 6): [Had sex in the last 18 hours = 6 turns]
-		say "     Sorry, but I'm still a bit tired from the last time,' Ranae apologizes. 'Maybe a bit later.'";
+		if hunger of Ranae is 9:
+			say "     'Seriously? Now?' Ranae complains with a huff. 'I just played with you. If you must insist on having another session with me, ask me again after I rest some more.'";
+		else:
+			say "     Sorry, but I'm still a bit tired from the last time,' Ranae apologizes. 'Maybe a bit later.'";
 	else:
-		say "     Ranae smirks. 'Glad to. What shall we do[if Player is not defaultnamed], [name of Player][end if]?'";
+		if hunger of Ranae is 9:
+			say "     Ranae smirks. 'Glad to. Now, what shall I do with my servant?'";
+		else:
+			say "     Ranae smirks. 'Glad to. What shall we do[if player is not defaultnamed], [name of player][end if]?'";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -342,6 +400,12 @@ instead of fucking the Ranae:
 			now title entry is "Oral Vore";
 			now sortorder entry is 3;
 			now description entry is "Let Ranae swallow you whole";
+		[]
+		if vorelevel > 1 and "Touched by Madness" is listed in feats of player:
+			choose a blank row in table of fucking options;
+			now title entry is "Anal Vore";
+			now sortorder entry is 4;
+			now description entry is "Get an inside look of Ranae's ass";
 		[]
 		sort the table of fucking options in sortorder order;
 		repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -365,6 +429,8 @@ instead of fucking the Ranae:
 						say "[RanaeFacesit]";
 					if nam is "Oral Vore":
 						say "[RanaeOralVore]";
+					if nam is "Anal Vore":
+						say "[RanaeAnalVore]";
 					now lastfuck of Ranae is turns;
 					wait for any key;
 			else if calcnumber is 0:
@@ -400,6 +466,15 @@ to say RanaeOralVore:		[Ranae swallows player whole and bound state]
 	else:
 		say "     Despite being [if scalevalue of Player is 3]the same size as[else]larger than[end if] the frog, Ranae is determined to make you her meal. As she continues to cram you inside of her, the hardest part soon comes when she gets to your shoulders. Amidst all of the pushes and squeezing she does to try and gulp you down, somehow, her mouth slowly stretches wider and wider until finally, she manages to take in your shoulders, allowing her to resume consuming you. With the widest part of you taken care of, the rest of your body follows suit down her gullet without much resistance. The journey down her constricting throat is brief. In fact, parts of your legs are still squirming outside of the frog by the time your head arrives in her stomach. No doubt that the infectious nanites is somehow letting her body stretch inhumanely, Ranae eventually manages to gulp you all down, and you're forced to curl up into a ball to fit inside of her stomach. ";
 	say "     'You were simply delicious,' Ranae compliments while she pats her belly, which is now extremely distended to house you. 'Be a good little servant and stay in there. I'll let you out later... if I feel like it.'";
+	wait for any key;
+	RanaeBind;
+
+to say RanaeAnalVore:		[Ranae swallows player whole with her ass and bound state]
+	say "     As Ranae looks over your [bodyname of player] form, you see a sudden glint in her eyes, one born of mischievousness and a hint of insanity. 'I just had an interesting idea,' the female frog informs as she sashays over to you. 'We're going to try something different... very different.' Before you can ask for more details, she pushes you onto the nearby mattress and leers down at you. 'Mmm, something tell me that I'm going to enjoy this... a lot.' Ranae lets her dress slip down to the floor, but you barely have time to take in her naked body before she moves over your prone body, turns around, and drops her bodacious green booty right on your face. You're smothered under her wondrous globes, the combination of her smooth skin and the musky aroma emanating from her rear already starting to arouse you. You're given no respite as the dominating amphibian rocks her hips, wedging you further between her cheeks.";
+	say "     At first, you assume that she wants you to service her with your tongue, but when you try to lick into her crevice, the task is made difficult from her constant movements as she continues to aggressively grind her ass into your face until, somehow, her sphincter stretches to take in your head. Although slightly muffled by her cushioned behind, Ranae moans loudly with pleasure over your anal insertion, and you can feel the muscles of her rectum clamp down as they work on drawing in the rest of your body. Your hands instinctively move to the green globes smothering you to try and push back, but all of your efforts amount to is the equivalent of squeezing and groping the cushy derriere. Ranae moans again from your unintentional massage, and with a giggle, she says, 'With how you've been enamored by my ass, I thought that you would love a closer look at it. Just relax and let it happen. I'm enjoying this, and you can too.'";
+	WaitLineBreak;
+	say "     The heady smell of her musk is amplified now that you're inside the source of it, and you feel the anal walls of the frog constantly clench and squeeze to pull in the rest of your hapless form. Your forced journey into the frog has a bit of a bump when your shoulders reach Ranae's rear hole, but it doesn't stop the twisted amphibian as her anus somehow opens even wider to take [if scalevalue of player > 3]in your larger form[else]you in[end if]. Even though her ass is stretched to inhuman levels, by the sound of Ranae's delighted cries, she's having the time of her life reducing you to nothing more than a giant, squirming dildo. Slowly but surely, the frog takes you in through her back entrance, and when your shoulders finally fully pop into the dark, musky tunnel, Ranae is brought to her climax. She howls in ecstasy and drenches the bottom half of your body with her femcum just before it too is swallowed by her rear, the frog's ass claiming all of you as her own.";
+	say "     Ranae's orgasm is drawn out by you utterly filling her, your squirming body rubbing all over her inner depths, but you barely notice her ecstasy as the tight constricting tunnel of her anal walls draw you deeper into the horny female. Slick flesh rubs into you from all angles as you're ferried through the churning darkness. Your journey eventually comes to an end when you feel yourself being pushed up against a wall, but it only takes a moment for you to be squeezed through it and into a small chamber that forces you to curl up into a ball. As you situate yourself in the twisted confines, you realize that you had ended up in the frog's stomach. 'That... that was awesome,' Ranae comments, her voice weary but clearly pleased. She flops back onto the mattress and then pats her belly, which is now extremely distended to house you. 'It was so hot that I got to use you both as a toy and a meal. Now, be a good little servant and stay in there. I'll let you out later... if I feel like it.'";
 	wait for any key;
 	RanaeBind;
 
@@ -445,11 +520,20 @@ to RanaeBind:
 				follow the turnpass rule;
 				wait for any key;
 			else:
-				say "     'That's a good [if Cock Count of Player > 1]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
-				now voreloss is true;
-				now bodyname of Player is "Frog Food";
-				now Trixieexit is 1;
-				end the story saying "You let a frog have her way with you.";
+				if perception of Ranae is 2 and intelligence of Ranae is 2 and charisma of Ranae is 2:
+					say "     You awaken some time later, only to find yourself still within Ranae's stomach. You're unsure how long you've been trapped inside of the frog, and by all means, you should be worried if she intends to digest you, but instead, you feel calm and relaxed. The pliant flesh of her churning stomach caresses every inch of your weary body, all while the soft, rhythmic beating of her heart echoes in the background, the dulcet sounds acting almost like a lullaby, further pacifying you. There's nothing but warmth, comfort, and safety within Ranae, and you eventually fall asleep again. Every time you come to, you find that you are still within the amphibian's embrace, and sometimes, you either feel Ranae cradle her filled belly or hear her words of how you're such a good servant to her before you are lulled back into restful slumber. Thoughts of time and your responsibilities disappear, replaced by nothing more than adoration and submission for your amphibian mistress, and you are more than willing to remain inside of her, even if it means that you will eventually fade away, your final act of servitude as her servant.";
+					say "     However, ending up as food for her doesn't seem to be on the menu just yet as after some more time had passed, you feel your surroundings churn violently before pushing you up and out of Ranae's stomach, and after a short trip through the constricting tunnel of her throat, you are spat out of the frog and onto the floor. Shivering from the cold and the hard ground, you already long to be returned to the warm, soft embrace of your mistress. You can see that you are back in Ranae's space in the library, and the domineering frog herself is smiling at you with both smugness and pride. 'Aww, what's the matter? Already missing being eaten by me?' she teases. 'I'll have to admit, you're absolutely delicious, and I was tempted to actually make you into my dinner. But that would be such a waste of a good servant. You've done nothing but obediently follow my orders and shower me with gifts. I'm not going to get rid all of that just for a quick meal. Don't worry though. I know how much that you loved being inside of me, and you're lucky that I like having you fill my belly, so here's how things are going to go. From now on, you're mine. You're going to be at my beck and call, twenty-four seven, which includes being my belly filler. Got it?'";
+					say "     You agree to Ranae's terms without hesitation, binding yourself to a lifetime of servitude to the domineering frog.";
+					now voreloss is true;
+					now bodyname of player is "Froggy Servant";
+					now Trixieexit is 1;
+					end the story saying "You became a fulltime servant for a frog.";
+				else:
+					say "     'That's a good [if cocks of player > 1]boy[else]girl[end if]. No more struggling. Just give yourself to me,' Ranae says, even though your movements had ceased some time ago. The frog woman hugs her bulging belly and giggles softly. 'You know, I'm actually going to miss you. With how you kept on spoiling me, I would've loved to keep you around as my servant. Unfortunately, this city has all sorts of crazy stuff going on, and I'm not going to let some freaks take you away from me. At least this way, I get to keep you forever, not to mention having you as a tasty treat.' Ranae pauses for a moment when her stomach gurgles, and she smiles as she uses her hands to rub gentle circles over her belly. 'Rest well, my servant. You're mine now... All mine...'";
+					now voreloss is true;
+					now bodyname of player is "Frog Food";
+					now Trixieexit is 1;
+					end the story saying "You let a frog have her way with you.";
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -506,6 +590,14 @@ to RanaeBind:
 
 to say RanaeStruggle:
 say "< [bracket]-[if struggleatt > 0]X[else]-[end if][close bracket]";
+
+
+Section 5 - Endings
+
+
+when play ends:
+	if bodyname of player is "Froggy Servant":
+		say "     When the military comes, you and Ranae are processed together. Though your subservient attitude to your froggy mistress raises a few eyebrows, the both of you are eventually deemed safe and released back into the outside world. With you in tow, Ranae is quick to make contact with her parents. The reunion is met with all sorts of surprise on the parents' side when they find that not only is their daughter now an anthropomorphic frog, but she has a much more confident and domineering attitude, especially when she introduces you as her servant. Nonetheless, they are more than happy to welcome you and their froggy daughter. With Ranae's parents both being influential business people, the frog gets a managerial position in a small company, with you as her personal assistant. While you tend to your mistress's every need, Ranae finds great success in her new role, thanks to the assertiveness that she gained. With the money Ranae rakes in from her work, you have the opportunity to live close to the lap of luxury, but instead, you find more comfort in the stomach of your mistress whenever she has you fulfil your role as her belly filler.";
 
 
 Ranae ends here.
