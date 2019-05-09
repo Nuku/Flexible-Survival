@@ -35,7 +35,7 @@ Version 1 of Chris by Wahn begins here.
 [  99: Urik warned away from breeder Chris         ]
 
 MaliksRandomCaptive is a number that varies. [@Tag:NotSaved]
-
+Perception of Chris is usually 20000.[@Tag:NotSaved]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -64,7 +64,7 @@ Virgin of Chris is true.
 AnalVirgin of Chris is true.
 PenileVirgin of Chris is true.
 SexuallyExperienced of Chris is false.
-The MainInfection of Chris is "Orc Breeder".
+The MainInfection of Chris is "Orc Warrior".
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
@@ -86,13 +86,13 @@ to say ChrisDesc:
 		say "     As Chris notices your intense gaze upon him, he presents himself for your viewing pleasure, turning to show off his well-rounded ass. He really takes after his father, now that he's become an orc breeder.";
 	else if Libido of Chris is 2: [warrior Chris]
 		say "     Chris is a young orc, but he already has the tall and powerful stature of an orc warrior, with rippling muscles on his big arms, strong pecs and washboard abs. As he's wearing nothing but a rather tight pair of shorts, you can clearly see the outline of a very respectable cock in them. His features are almost a bit brutish, in a 'handsome caveman' kind of way, with a strongly pronounced brow, a square jaw and yellow eyes. Two sharp tusks protrude from his lower mandible, giving him a dashing, somewhat wild look. Short, bristly black hair on his head completes the picture of an untamed orcish warrior.";
-		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'. [if Dexterity of Chris > 0 and Dexterity of Chris < 100]Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.[end if]";
+		say "     As Chris notices your intense gaze upon him, he gives you a leering smile, as if to say 'I can take you when I want to'. [if Dexterity of Chris > 0 and Dexterity of Chris < 100]Proof of his aggressively dominant nature is never far away from the young orc warrior, in the form of Kai, the male zebra he took captive in the zoo. You're not too sure that you can strictly call the guy a zebra anymore though, with his green and black striped fur and the set of orcish tusks he sports now. Seems like he's more of an equine orc breeder now.[end if][line Break]";
 		if Stamina of Chris > 4:
-			say "     As a result of the many virile loads Chris pumped into you, the library has become the haven of a new tribe of orcs. Several of your [Stamina of Chris] orc warrior sons usually hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
+			say "     As a result of the many virile loads Chris pumped into you, the library has become the haven of a new tribe of orcs. [if Strength of Chris is 0]Several of your [Stamina of Chris] orc warrior sons[else]Malik and his brothers[end if] usually hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
 		else if Stamina of Chris > 1:
-			say "     The multiple orc warrior sons that you've fathered together with Chris often hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
+			say "     [if Strength of Chris is 0]The multiple orc warrior sons that you've fathered together with Chris[else]Malik and his brothers[end if] often hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
 		else if Stamina of Chris > 0:
-			say "     The orc warrior son you've fathered together with Chris usually hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
+			say "     [if Strength of Chris is 0]The orc warrior son you've fathered together with Chris[else]Malik[end if] usually hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
 
 instead of conversing the Chris:
 	say "[ChrisTalkMenu]";
@@ -327,6 +327,7 @@ to say ChrisSex1: [Chris sucks the player]
 	else if Libido of Chris is 2:
 		say "     Walking up to Chris, you tell him that you'd love to have some fun with him, giving a little nod to your crotch as you do. The young orc grins as he looks down and sees the bulge in your pants, saying 'So? If you wanna have fun, why don't YOU suck MY cock. You can jerk off while you deep-throat me.' Changing your approach, you playfully insinuate that it's okay and you won't hold it against him that he's not man enough to take your whole shaft. 'Hah - there's nothing a real orc can't do,' he grunts, then falls to his knees before you. 'Bring it on - I'll show you what's what!' Hooking two fingers under your waistband, he pulls your pants down with a powerful wrench, then leans forward to lick your soon hardening shaft, sliding his soft lips over the cock-head in short notice.";
 		say "     Throwing your head back and moaning loudly, you enjoy the amazing blowjob Chris is giving you. He really is a natural at pleasing men, licking and teasing with your balls and cock a talented tongue in between having those sexy lips wrapped around your shaft. You feel yourself getting closer and closer to your building orgasm and gasp that you're about to cum - making Chris increase his efforts, going down on you with a vengeance. Unsurprisingly, this pushes you over the edge within moments, making you pant loudly as you start blasting away into his mouth and down his throat. The handsome orc hungrily swallows everything you can give him and doesn't stop until he's milked you for even the last little drop. Finally pulling off your shaft, he smacks his lips contently, then stands up and wipes a bit of cum off the corner of his mouth. 'See - told ya. Orc warriors are the best at everything!'";
+	NPCSexAftermath Chris receives "OralCock" from Player;
 
 to say ChrisSex2: [player gives Chris a BJ]
 	if Libido of Chris is 0: [base state]
@@ -349,6 +350,7 @@ to say ChrisSex2: [player gives Chris a BJ]
 		WaitLineBreak;
 		say "     Starting to bob up and down on the young orc's erection, you trace the veins on his shaft with your tongue and hungrily gobble up every drop of pre he leaks into your mouth. 'Damn, I love having a needy little breeder servicing my cock! Faster, slut!' the orc warrior calls out, his loud voice carrying throughout the library. You're only to happy to follow the request, accelerating your movements to service his erection even as he himself starts to hump his hips forward to meet you. This frequently buries your nose deep in the bush of his pubes, huffing the aroma of a young orc in his prime - and of course, his heavy balls slap against your chin every time you take all of his dick. Guided by strong hands that soon take hold of your head, you find yourself face-fucked hard by Chris. Already half drunk on the orc's pre-cum alone, you hunger for the chance to be his cum-dump... and your wish is fulfilled not long after.";
 		say "     'Fuuuckkkk! Take it, cum-slut!' Chris suddenly bellows and forces his whole cock down your throat, then lets out a deep grunt as the first spurt of cum is pumped directly into your stomach. Heavy throbs of his cock deliver the orc's rich, creamy cum into your body, which eagerly absorbs the potent mixture. You can't help but gurgle giddily as its effects make you drunk almost out of your mind, your body twitching with suddenly spiking lust and arousal. [if Player is male]Your own cock immediately starts to spew forth its own load, creaming the inside of your pants[else if Player is female]Your pussy immediately starts to tingle, leaking sticky femcum and soaking the inside of your pants[else]Your sexless crotch tingles as the sensation becomes too much to bear and you orgasm[end if]. And that is pretty much the last thing you consciously sense for a while, as the overload of fresh orc cum puts you into a sexual haze, feeling nothing but pleasure and knowing you are exactly where you belong - on your knees, serving an orc master.";
+	NPCSexAftermath Player receives "OralCock" from Chris;
 
 to say ChrisSex3: [the player fucks Chris]
 	if Libido of Chris is 0: [base state]
@@ -396,6 +398,7 @@ to say ChrisSex3: [the player fucks Chris]
 		WaitLineBreak;
 		say "     Given the wild ride you're giving Chris, it's no big wonder that he soon moans 'Almost ready *pant* to cum'. Reaching between his legs to grab his hard cock, you stroke it a few times, aiming it at Chris's head with a grin. Just a second later, the orc gives a satisfied grunt and starts to tremble and twitch with each shot of his cum that blasts from his cock... to splatter his face. The orc's anal muscles flex around your cock at the same time, which gives you the rest too in short order. As you feel the orgasm rapidly approaching, you drive into your partner's deliciously tight asshole one last time, grinding your hips against his as you fill him with your seed.";
 		say "     After your shaft shoots its last sting of cum into Chris, you slowly pull out of him and flop down to lie beside him for a moment. He raises himself up on his elbows in the meantime, then gives you a 'light' bump on the shoulder with his hand. 'See - I totally had no problem with taking you on. It'll take larger dicks to make this orc afraid!'";
+	NPCSexAftermath Chris receives "AssFuck" from Player;
 
 to say ChrisSex4: [Chris fucks the player]
 	if Libido of Chris is 0: [base state]
@@ -412,12 +415,13 @@ to say ChrisSex4: [Chris fucks the player]
 		say "     Under his breath, Chris says, 'Fuck that's hot,' staring down at the ring muscle staying stretched wide for a few seconds, then clenching together before it reflexively opens again in a 'wink' and a few more another after that. You still haven't got yourself fully under control again when Chris's restraint wanes and he slides his cock back into you, starting to fuck your ass hard and with untamed intensity. As the big orc cock plunges in and out of you in a rapid tempo, your own shaft gets fully erect in short notice, and just like Chris is leaking precum into your insides, stimulating you even more, you see a string of fluid oozing out of your own cock-head, drawing a sticky string between your abs and the tip of your shaft. Man, being plowed by an orcish hunk sure got you going!";
 		say "     Meanwhile, Chris winds himself up more and more, reveling in the sensations of a tight hole around his oversized shaft. His grunts and bellows get more and more intense, and before much longer he grips your thighs with both hands, holding on tight so you don't slide back as he pounds your ass. 'Nnngh - I'm gonna breed you good,' you can hear from him, and feel thrust after thrust as his crotch hits your ass. Then he goes wild - pounding your butt with his crotch back and forth, the slapping noises of flesh on flesh echoing through the library. It doesn't take much longer before your orcish partner reaches the point of no return and bellows in lust, grinding his hips down as gush after gush of potent orc cum splashes into your depths. You can feel a pleasant warm buzz filling you as the orc warrior's seed gets absorbed by your body, prompting you to loudly moan and push your rear against him hard.";
 		WaitLineBreak;
-		say "     'Yeah, that's it baby,' Chris groans to you, leaning forward as his cock keeps spurting, seeking your lips for him to kiss. He grunts in rhythm with further cumshots as he makes out with you. Feeling his dick pulsing inside you, his arms wrapped around your body in a nice and comfortable way, it takes but a moment longer before your own orgasm hits hard[if Player is male] and a heavy load sprays all over your front, splattering you with cum[else if Player is female] and your pussy starts to squirt femcum, soaking his crotch and running down to soak the sofa underneath you[end if].[mimpregchance]";
+		say "     'Yeah, that's it baby,' Chris groans to you, leaning forward as his cock keeps spurting, seeking your lips for him to kiss. He grunts in rhythm with further cumshots as he makes out with you. Feeling his dick pulsing inside you, his arms wrapped around your body in a nice and comfortable way, it takes but a moment longer before your own orgasm hits hard[if Player is male] and a heavy load sprays all over your front, splattering you with cum[else if Player is female] and your pussy starts to squirt femcum, soaking his crotch and running down to soak the sofa underneath you[end if].";
 		say "     Your mutual climaxes rock though the two of you, only slowly ebbing off as Chris still humps against you in a determined pace, but even though both of you wish to just keep going, eventually things run out of steam and you quiet down, only panting hanging in the air for a moment. 'Damn, that was amazing,' Chris says with obvious affection in his voice, then adds, 'I wanna fuck you again - and soon.' He gives another little thrust of his hips against your rear, then licks the side of your neck and nibbles on you, his tusks lightly nipping your skin. Between the orc's amorous advances, a big load of his potent cum inside your ass and his hands stroking and groping your body, you barley have time to really think - your mind lost in a lustful haze. But then, why not just enjoy the moment and let your problems melt away for now...";
 		if bodyname of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum Chris blasted into you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of Player;
+		NPCSexAftermath Player receives "AssFuck" from Chris;
 	else if Libido of Chris is 1:
 		setmonster "Orc Breeder";
 		say "     <placeholder for sub Chris on player anal>";
@@ -430,7 +434,7 @@ to say ChrisSex4: [Chris fucks the player]
 		say "     Grunting in satisfaction, the young orc grinds his cock into you some more, both his hands gripping your butt-cheeks and groping them harshly. Then he pulls his hips back, leaving an... empty... feeling inside you as the hot, soft but yet rock-hard piece of man-meat slides out of you more and more. Finally nothing more than the cock-head is inside of you and he lightly pulls against your pucker from the inside with its flared rim - followed by a hard yank that leaves your back door gaping with a wet slurp. Chris chuckles deeply as he looks down at the ring muscle stay stretched wide for a few seconds, then clench together and reflexively open again. You still haven't got yourself fully under control again when Chris's patience wanes and he hammers his cock back into you, starting to fuck your ass hard and with untamed intensity.";
 		WaitLineBreak;
 		say "     As the big orc cock plunges in and out of you in a rapid tempo, your own shaft gets fully erect in short notice, and just like Chris is leaking precum into your insides, stimulating you even more, you see a string of fluid oozing out of your own cock-head, creating a wet spot on the mattress. Man, being plowed by an orcish hunk sure got you going. Meanwhile, Chris winds himself up more and more, reveling in the sensations of a tight hole around his oversized shaft. His grunts and bellows get more and more intense, and before much longer he grips your hip with one hand, the other one pushing on your back to keep you down. 'I'm gonna breed you like a good little slut,' you can hear from him, and feel the warmth of Chris breath against your back as he leans forward and pushes his crotch against your ass.";
-		say "     Then he goes wild - pounding your butt with his crotch going up and down, the slapping noises of flesh on flesh echoing through the library. It doesn't take much longer before your orcish partner reaches the point of no return and bellows in lust, grinding his hips down as gush after gush of potent orc cum splashes into your depths. You can feel a pleasant warm buzz filling you as the orc warrior's seed gets absorbed by your body, prompting you to loudly moan and push your rear against him hard. 'Yeah, that's it baby,' Chris groans to you, his hot breath against your neck as he shudders and grunts with each new blast into you. Feeling him pulsing inside and on top of you, his arms gripping your body in a very possessive way, it takes but a moment longer before your own orgasm hits hard [if Player is male]and a heavy load sprays all over the mattress below, adding another cum-stain to Chris's bedding[else if Player is female]and your pussy starts to squirt femcum all over the mattress below, adding another stain to Chris's bedding[else]and you shudder and tremble in pleasure, digging your hands into the blanket below[end if].[mimpregchance]";
+		say "     Then he goes wild - pounding your butt with his crotch going up and down, the slapping noises of flesh on flesh echoing through the library. It doesn't take much longer before your orcish partner reaches the point of no return and bellows in lust, grinding his hips down as gush after gush of potent orc cum splashes into your depths. You can feel a pleasant warm buzz filling you as the orc warrior's seed gets absorbed by your body, prompting you to loudly moan and push your rear against him hard. 'Yeah, that's it baby,' Chris groans to you, his hot breath against your neck as he shudders and grunts with each new blast into you. Feeling him pulsing inside and on top of you, his arms gripping your body in a very possessive way, it takes but a moment longer before your own orgasm hits hard [if Player is male]and a heavy load sprays all over the mattress below, adding another cum-stain to Chris's bedding[else if Player is female]and your pussy starts to squirt femcum all over the mattress below, adding another stain to Chris's bedding[else]and you shudder and tremble in pleasure, digging your hands into the blanket below[end if].";
 		WaitLineBreak;
 		say "     Your mutual climaxes rock though the two of you, only slowly ebbing off as Chris still humps against you in a determined pace, but even though both of you wish to just keep going, eventually things run out of steam and you quiet down, only panting hanging in the air for a moment. 'Oh yeah,' Chris says with a chuckle in his voice, then adds, 'I knew you'd want to be my little breeder. So eager to take a real orc's dick. I'll keep fucking you until you're knocked up. You'd want that, isn't that right?' He gives a little thrust of his hips against your rear as you open your mouth to answer, then licks the side of your neck and nibbles on you, his tusks lightly nipping your skin.";
 		say "     Between the orc's somewhat rough amorous advances, a big load of his potent cum inside your ass and his hands stroking and groping your body, you barley have time to really think - about the offer of being his breeder, giving yourself to the strong, young orc -or anything really. The only thing you manage to get out is a vaguely assenting groan, which Chris answers with a satisfied grunt, then proceeds to pinch your nipples and gives you a love-bite on the bend of your neck. The two of you spend some more time in intimate closeness on the mattress, then the orc warrior eventually pushes himself up, giving your ass a last grope before standing up and looking around for his clothes. 'All the fun made me hungry. I'll go out and grab a bite,' he says in the effortless confidence that nothing he could meet would be dangerous for an orc. Then Chris walks down the stairs after giving your still naked form a very satisfied once-over.";
@@ -439,6 +443,13 @@ to say ChrisSex4: [Chris fucks the player]
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum Chris blasted into you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of Player;
+		if Player is mpreg_able: [can become mpregnant]
+			NPCSexAftermath Player receives "AssFuck" from Chris;
+			if Player is mpreg_now: [has become pregnant]
+				say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
+				add "Chris's Breeder Slut" to feats of Player; [orc baby, no matter what]
+		else:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
 		increase WarriorChrisPlayerFucked by 1;
 
 to say ChrisSex5: [milk cum out of Chris]
@@ -485,7 +496,7 @@ instead of navigating Grey Abbey Library while (Libido of Chris is 2 and Chris i
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	if debugactive is 1:
-		say "     DEBUG: CHRIS ZEBRA BUTTFUCK WALKIN - DEXTERITY OF CHRIS: [Dexterity of Eric][line break]";
+		say "     DEBUG: Chris ZEBRA BUTTFUCK WALKIN - DEXTERITY OF Chris: [Dexterity of Eric][line break]";
 	say "     Coming back into the library, you hear a commotion somewhere upstairs, on the second floor of the library. Then a panicky sounding male voice shouts, 'No, please! Don't... I - I'll blow you again. Just not... that.' The only reply is a deep-voiced chuckle, followed by a noise that makes you think of a thick, hard cock being slapped against an open palm. Running footsteps are next, the stomp of hooves on the upstairs floor, then the person responsible comes into sight - a panting anthro zebra who half-falls against, half-catches himself on the upper floor railing. He must have stumbled in his rush for the stairs, missing the curve after running out between the bookshelves up there.";
 	say "     Bent forward over the railing, hands clutching it tightly as not to go over - and also in the reflexive intensity of his desperation, the zebra stares down right at you, panting hard. You can see that the fur on his face and his mane is matted in sweat - and another fluid, sticky and white, showing in long splashes. A second or two stretch and stretch as he blinks away the terror in his eyes, then really focuses, giving you a pleading look as he shouts, 'Help me! He's...' Right behind the zebra, as it turns out. The muscled green shape of Chris steps into view, and one strong arm of the young orc warrior wraps around the striped equine's chest from behind. Drawing the struggling male against his broad chest, Chris holds him firmly and says with a chuckle, 'Don't run from me, pony. We've got so much fun to have yet!'";
 	LineBreak;
@@ -525,7 +536,7 @@ instead of navigating Grey Abbey Library while (Libido of Chris is 2 and Chris i
 			LineBreak;
 			say "     Telling Chris he had his fun, you step up and start prying on his muscle-packed arm off the zebra. There is a short moment of resistance, then the young orc gives an annoyed grunt and lets go. 'Fine, but only because it's your place I'm staying at right now. If I see you again out in the city Kai, your ass is mine!' And with that, the green-skinned brute turns away, stalking down a path between two bookshelves, no doubt on the way to his bedding.";
 			say "     With a relieved sigh, Kai babbles to you, 'THANKYOU! Thankyou! Thank you. I don't think I could have taken... you know, his thing. Could barely get my mouth around it and he wants to stick that monster up my ass?!' Sounds like he's rather buzzed by his orc cum drink earlier, but one thing is for sure - you got a very thankful and relieved zebra on your hands. He gladly lets himself be led downstairs, then out of the library, and after walking with him for a block or two, he thanks you again, then sprints off in the direction of the zoo.";
-			now Dexterity of Chris is 1; [fucked Kai and made him green]
+			now Dexterity of Chris is 100; [let Kai go]
 	else:
 		LineBreak;
 		say "     Answering the zebra's pleading look with a shrug, you look away and walk over to the librarian's desk, from where there isn't a line of sight to that section of the upper floor railing. About time you sorted out your backpack a bit anyways, the better to find your stuff if you need it in a hurry. The gasps and sounds of rough fucking from above you just tune out, as you're used to by now from out on the streets.";
@@ -562,9 +573,15 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum Chris blasted into you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of Player;
+		if Player is mpreg_able:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
+			if Player is mpreg_now: [has become pregnant]
+				say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
+				add "Chris's Breeder Slut" to feats of Player; [orc baby, no matter what]
+		else:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
 		increase WarriorChrisPlayerFucked by 1;
 		now WarriorChrisDominance is 1; [player got pushed to be Chris's breeder slut]
-		now lastfuck of Chris is turns;
 	else: [refuse]
 		say "     Shaking your head, you push aside the thoughts of submitting to him and try to start a conversation with the young orc warrior - but Chris isn't having any of that. Not falling into line to do as he wanted leads to him putting on a brooding expression and then standing up from the sofa. 'I'll find someone else to fuck then - and he'll beg for more when I'm done with him!' the green-skinned brute tells you as he starts to walk towards the stairs, grudgingly shouldering you aside as he passes by. Seems like your reaction disappointed his urge for dominating as an orc warrior, and now Chris will find someone else to satisfy his desires on.";
 		now WarriorChrisDominance is 50; [player refused Chris]
@@ -590,9 +607,9 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum Chris blasted over your body soaks into your skin and completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 		add "MPreg" to feats of Player;
+	NPCSexAftermath Player receives "AssDildoFuck" from Chris;
 	increase WarriorChrisPlayerFucked by 1;
 	now WarriorChrisDominance is 2; [player got pushed to be Chris's breeder slut - twice]
-	now lastfuck of Chris is turns;
 
 instead of going up from Grey Abbey Library while (Chris is in Sitting Area and Libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 2 and (lastfuck of Chris - turns) > 12):
 	move player to Sitting Area;
@@ -619,9 +636,9 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum Chris blasted into your stomach completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 		add "MPreg" to feats of Player;
+	NPCSexAftermath Player receives "OralCock" from Chris;
 	increase WarriorChrisPlayerFucked by 1;
 	now WarriorChrisDominance is 3; [player got pushed to be Chris's breeder slut - three times]
-	now lastfuck of Chris is turns;
 
 instead of going up from Grey Abbey Library while (Chris is in Sitting Area and Libido of Chris is 2 and WarriorChrisPlayerFucked > 2 and WarriorChrisDominance is 3 and (lastfuck of Chris - turns) > 8 and a random chance of 1 in 3 succeeds):
 	move player to Sitting Area;
@@ -642,10 +659,13 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 		WaitLineBreak;
 		say "     As blast after blast throbs into you, your own lust is pushed past any hope of holding back and you join Chris in orgasm. Your inner muscles twitch and flex around your master's cock [if Player is male]in rhythm with each spurt of your cock that showers the library below in your cum[else if Player is female]while your pussy starts dripping femcum, with it trickling down the inside of your legs[else]while you grasp the railing even tighter and shiver from all the pleasure[end if]. By the time Chris's orgasm subsides, you're literally filled to overflowing, some of his seed squelching out around the shaft as he pumps it in and out of your ass. The creamy load starts to run down the back and inside of your legs too, leaving you rather sticky and wet... but it still somehow feels good. Something about being marked by your orc master and smelling of his cum just seems to click in your brain, giving you a nice boost in pleasure at this treatment. Things become a little blurry after that, as you are in an orc-cum-induced lusty haze for quite a while.";
 		infect "Orc Breeder";
-		say "[mimpregchance]";
-		if Player is impreg_now: [has become pregnant]
-			say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
-			add "Chris's Breeder Slut" to feats of Player; [orc baby, no matter what]
+		if Player is mpreg_able:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
+			if Player is mpreg_now: [has become pregnant]
+				say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
+				add "Chris's Breeder Slut" to feats of Player; [orc baby, no matter what]
+		else:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
 		say "     You remember being carried and held, and when you eventually come to again fully, you find yourself in an interesting and fairly pleasant position - lying against Chris's broad chest as he lounges on the couch he claimed has his own. Looking down, you see the orc's half hard cock between your legs. Chris is slowly stroking you with one hand between your legs, the other one resting on your belly. He keeps brushing his finger over your pucker again and again, taking pleasure in feeling up his devoted breeder slut. 'Back awake, eh? You did good, breeder! Can't wait to see your belly bulge with my orcling.' The orc chuckles and leans his head forward to lick your cheek, then keeps you against his chest for a while longer, arms wrapped around your midriff. Eventually, he dozes off, giving you the opportunity of extracting yourself from his grasp and starting to collect the strewn about pieces of your gear.";
 	else if Player is mpreg_now: [already mpregnant]
 		say "     Breathing in your scent, the orc gives a satisfied growl and licks the side of your neck, then pulls you back a little from himself to look you up and down. Placing one large green hand on your belly, he gives it an almost gentle caress as he says, 'Oh yeah, you're one fine slut. Can't wait till you bear the little tyke in there. I wanna put an orcling in you soon after!' Shifting his hands to your buttocks, the young orc squeezes and kneads them under his fingers, clearly enjoying himself quite a bit. His cocks seems to get even harder than before and pokes you a little as he leans in against you. Then Chris says, 'You know what - I really can't wait. Gonna fuck you now! And it'll be good for the kid too - orc cum makes [']em grow extra fast, and strong!'";
@@ -682,6 +702,13 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 			LineBreak;
 			say "     You feel something change deep inside you, as all the cum Chris blasted into your stomach completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The [']MPreg['] feat has been added to your list.";
 			add "MPreg" to feats of Player;
+		if Player is mpreg_able:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
+			if Player is mpreg_now: [has become pregnant]
+				say "[bold type]'Chris's Breeder Slut' has been added to your feats![roman type][line break]";
+				add "Chris's Breeder Slut" to feats of Player; [orc baby, no matter what]
+		else:
+			NPCSexAftermath Player receives "AssFuck" from Chris;
 		increase WarriorChrisPlayerFucked by 1;
 		now lastfuck of Chris is turns;
 

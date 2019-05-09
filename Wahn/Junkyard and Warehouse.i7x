@@ -50,6 +50,19 @@ Definition: a person is facially human:
 	if facename of Player is "Viking", yes;
 	if facename of Player is "Knight", yes;
 	if facename of Player is "Squire", yes;
+	if HeadName of Player is "Human", yes;
+	if HeadName of Player is "Herm Human", yes;
+	if HeadName of Player is "Awesome tree", yes;
+	if HeadName of Player is "Siren", yes;
+	if HeadName of Player is "Greek Nymph", yes;
+	if HeadName of Player is "Spartan", yes;
+	if HeadName of Player is "Helot", yes;
+	if HeadName of Player is "Amazonian", yes;
+	if HeadName of Player is "Naiad", yes;
+	if HeadName of Player is "Math Teacher", yes;
+	if HeadName of Player is "Viking", yes;
+	if HeadName of Player is "Knight", yes;
+	if HeadName of Player is "Squire", yes;
 	no;
 
 Definition: a person is skintone human:

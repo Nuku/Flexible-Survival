@@ -207,9 +207,9 @@ instead of addfeating the basic feats:
 	if "Fertile" is not listed in feats of Player, addfeat "Sterile" with "You are incapable of mothering a child.";
 	if "Fertile" is listed in feats of Player:
 		addfeat "Maternal" with "You love children. Faster gestation and improves morale from childbirth.";
-	if number of entries in childrenfaces > 0:
+	if number of filled rows in the Table of PlayerChildren > 0:
 		addfeat "Spirited Youth" with "Your child will lend their aid in combat, occasionally dealing damage to the enemy.";
-	if "Spirited Youth" is listed in feats of Player and number of entries in childrenfaces > 2:
+	if "Spirited Youth" is listed in feats of Player and number of filled rows in the Table of PlayerChildren > 2:
 		addfeat "Youthful Tides" with "Once in a while, all of your kids will swarm to your aid in battle.";
 	if charisma of Player > 14:
 		addfeat "Haggler" with "You are an especially skilled haggler. Sometimes, you end up with two of what you are trading for!";

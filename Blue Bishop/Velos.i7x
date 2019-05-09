@@ -754,9 +754,9 @@ to say beverlymusing:
 
 Part 19 - Christy
 
-the vmusings of Christy is "[christymusing]";
+the vmusings of Christy is "[Christymusing]";
 
-to say christymusing:
+to say Christymusing:
 	say "     Calling Velos out, Christy is immediately taken aback by your now-apparent resident, though her large scale likely prevents her from being really all that intimidated by its presence, soon moving closer to investigate.";
 	If dragontype > 0:
 		say "     'Oh, you naughty little thing, you wanted to see what it was like from my perspective, didn't you?' The dragoness's query eliciting a curious look from the serpent.";

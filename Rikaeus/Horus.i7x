@@ -140,7 +140,7 @@ to say HorusTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about the named Sun God and why he goes by that title now.";
 	[]
-	if HorusRelationship > 0 and HorusRelationship < 4:
+	if (HorusRelationship > 0 and HorusRelationship < 4) or HorusRelationship is 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Darkness";
 		now sortorder entry is 2;

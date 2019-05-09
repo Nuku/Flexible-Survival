@@ -90,13 +90,8 @@ to say sallypussy:
 
 
 to say sallyimpreg:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Huskybunny";
-		now bodyname of child is "Huskybunny";
-		now skinname of child is "Huskybunny";
+	[TODO: Make Huskybunny infection for impregnation]
 
 
 Section 3 - Endings

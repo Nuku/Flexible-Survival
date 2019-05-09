@@ -61,7 +61,7 @@ SexuallyExperienced of Serafino is true.
 The description of Serafino is "[SerafinoDesc]".
 The conversation of Serafino is { "<This is nothing but a placeholder!>" }.
 The scent of Serafino is "     The phoenix gives off a smell that reminds you of a rough mixture of flames, oils and ashes.".
-Serafino is in White Tiger Alchemy Shop.
+Serafino is in Phoenix Rebirth Spa Lobby.
 
 to say SerafinoDesc:
 	say "     Looking over at the phoenix the first thing you notice are his vermillion colored feathers which stand out brightly alongside his blue eyes in the spa lobby. Next to that is his outfit, which is rather... mundane for a noble. Serafino is wearing a black tank top that doesn't seem to exactly fit him, as it quite tightly hug his figure. Paired with his shirt is a set of form-fitting cargo pants revealing his legs and ass shape to the world, as if he doesn't care that everyone sees his figure. All you're getting from looking at him, is that you are pretty sure he's an exhibitionist. Though the phoenix does seem to notice you staring and winks in your direction";

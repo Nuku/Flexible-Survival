@@ -547,17 +547,15 @@ to ubbyplayer:
 		infect;
 		now researchbypass is 0;
 	increase ubcount by 1;
-	if "They Have Your Eyes" is listed in feats of Player:
-		now skinname of child is skinname of Player;
-		now bodyname of child is bodyname of Player;
-		now tailname of child is tailname of Player;
-		now facename of child is facename of Player;
-	else:
-		now skinname of child is Name entry;
-		now bodyname of child is Name entry;
-		now tailname of child is Name entry;
-		now facename of child is Name entry;
-
+	let Impregnator be a person;
+	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
+	now HeadName of child is Name entry;
+	now TorsoName of child is Name entry;
+	now BackName of child is Name entry;
+	now ArmsName of child is Name entry;
+	now LegsName of child is Name entry;
+	now AssName of child is Name entry;
+	now TailName of child is Name entry;
 
 Chapter 6 - UB Scenes
 

@@ -424,16 +424,17 @@ to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) fro
 		let TakingCharIsNPC be 0;
 		let GivingChar be a person;
 		let TakingChar be a person;
-		if there is a name of GivingCharName in the Table of GameCharacterIDs:
-			now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
-			now GivingCharIsNPC is 1;
-			say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
-		if there is a name of TakingCharName in the Table of GameCharacterIDs:
-			now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
-			now TakingCharIsNPC is 1;
-			say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
-		if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
-			say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
+		if debugactive is 1:
+			if there is a name of GivingCharName in the Table of GameCharacterIDs:
+				now GivingChar is the object corresponding to a name of GivingCharName in the Table of GameCharacterIDs;
+				now GivingCharIsNPC is 1;
+				say "GivingCharName: [GivingCharName], GivingCharIsNPC: [GivingCharIsNPC]";
+			if there is a name of TakingCharName in the Table of GameCharacterIDs:
+				now TakingChar is the object corresponding to a name of TakingCharName in the Table of GameCharacterIDs;
+				now TakingCharIsNPC is 1;
+				say "TakingCharName: [TakingCharName], TakingCharIsNPC: [TakingCharIsNPC]";
+			if GivingCharIsNPC is 0 and TakingCharIsNPC is 0:
+				say "Error: The CreatureSexAftermath function should include at least one NPC if it is used. Please report this on the FS Discord and quote this full message. Giving Char: '[GivingCharName]' Taking Char: '[TakingCharName]'";
 
 
 to StatChange (Statname - a text) by (Value - a number):

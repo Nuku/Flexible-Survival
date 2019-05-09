@@ -339,15 +339,9 @@ to say sexwithsnow02:	[Anal on Snow]
 
 to say sexwithsnow03:	[Vaginal on player]
 	setmonster "Hyper Squirrel";
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "     She grabs at your hips and suddenly thrusts you up against a library counter, deft fingers working at your clothes, 'You won't be needing any of that,' she promises as she leaves it pooled around your ankles with a bright grin and increasingly large, throbbing, bulge in her pants. The presence looks almost painful as she gives you a firm slap across your [bodyname of Player] ass. She starts to squirm free of her pants as she speaks softly, 'Now don't you worry none. I'll be right gentle.' She allows her huge pink member to pop free, bulging with thick veins along its human-shaped but inhumanly pink and massive length. Thick gobs of preseed run down its underbelly towards her heavy, grapefruit-sized balls. At least she's not as big as those panther taurs.";
 	say "     She brushes the tip of the member against your [cunt size desc of Player] [cockname of Player] nethers, teasing at you for a long moment before she eases into you, giving a playful growl as she does so. 'You know,' she says, suddenly looking thoughtful even as she plunges into you, '[one of]I cannot remember if I was a girl or a boy to start[or]Fucking you is the best fuck I ever had[or]Will you bear my child? You would make an awesome mom, I bet[or]Maybe next time you can be on top[at random].' As the moment of glib passes, she grips your hips more firmly, starting to rock against you in deep, urgent, pushes, pistoning against your wet sex as she leans in against your back.";
 	say "     Her breasts as absolutely huge, aided in part by her gift of distilled milk, pressing their furry mass against your [skin of Player] back as she grinds against you, moaning with increasing fervor as her heavy balls slap against your thighs with every rapid pierce into your [bodyname of Player] body, her hands eagerly caressing you from behind, exploring your every contour. With a sudden lurch, she seals herself against you, and heat spreads through your body in pulsing waves of rich squirrel seed running through your body.[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Hyper Squirrel";
-		now bodyname of child is "Hyper Squirrel";
-		now skinname of child is "Hyper Squirrel";
 	now Wild Squirrels is active;
 
 to say sexwithsnow04:	[Anal on player]
@@ -355,8 +349,6 @@ to say sexwithsnow04:	[Anal on player]
 
 to say sexwithsnow05:	[Dommed and fucked]
 	setmonster "Hyper Squirrel";
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Snow grins and moves in on you, grabbing your wrists and pressing you back against one of the stone wooden columns. 'Mmm... now, I can tell you're the kind that likes to let someone else take charge, so I think I'll do just that,' she says with a husky rumble of arousal in her voice. She grinds her throbbing manhood against your hip and looks you over with lustful intent";
 	if Player is female and Cunt Length of Player >= 10 and Cunt Tightness of Player >= 4:
 		say ". She presses a paw between your legs, roughly fingering your pussy as she sizes you up. Finding you adequate for her imposing manhood, she grins all the wider and turns you around, pressing you face first against the pillar.";
@@ -368,10 +360,6 @@ to say sexwithsnow05:	[Dommed and fucked]
 		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your tight pucker. Giving your neck a firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your anal ring around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your ass aches from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure[if Player is male]. The feel of her throbbing meat against your prostate more than makes up for the pain until the burning sensation fades[end if].";
 		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you. [one of]'Mmm... you like it up the ass, don't you?' [or]'I'm going to enjoy stuffing your slutty hole.' [or]'Time to dump a nice load of my nut butter into you.' [or]'You're mine to fuck and fill now, slut.' [or]'I'm going to enjoy hiding my nutty load inside you.' [at random][if Player is neuter]This soon proves to be too much for you and your [bodydesc of Player] body trembles and quivers with unfocused release[else]That proves to be enough to push you over the edge and you cry out in orgasmic release[end if].";
 		say "     Feeling your anus clenching down around her excites the herm all the more and she gives you a few final hard thrusts before burying her rod completely inside you and filling you up with her sticky cum. Blast after blast of her semen is pumped deep into your bowels before she finally pulls out and lets you sag to the floor. Your belly is left rounded and a steady trickle of creamy while cum leaks out of your sorely stretched asshole. You feel wonderfully used and can't help but finger your sticky hole as you bask in the afterglow.[mimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Hyper Squirrel";
-		now bodyname of child is "Hyper Squirrel";
-		now skinname of child is "Hyper Squirrel";
 	now Wild Squirrels is active;
 
 to say sexwithsnow06:	[Fellatio]
@@ -444,8 +432,6 @@ Wild Squirrels is a situation.
 Wild Squirrels is inactive.
 
 Instead of resolving a Wild Squirrels:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "     As you wander, you get the feeling that you are being watched somehow...";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
@@ -515,10 +501,6 @@ Instead of resolving a Wild Squirrels:
 	else:
 		setmonster "Hyper Squirrel";
 		say "The pleasure overwhelms you as your front and back explode in the ecstasy of being filled. You manage a loud, muffled moan of bliss as darkness gently slips over you. Despite passing out, you can still, somehow, feel the squirrels settling you to the ground and kissing over your body as it changes, growing furrier and more squirrel like by the moment. Their soft tongues clean you entirely before they leave, and finally the dreams come. When you awaken, they are nowhere in sight.[impregchance]";
-		if baby is 0 and gestation of child is not 0:
-			now facename of child is "Hyper Squirrel";
-			now bodyname of child is "Hyper Squirrel";
-			now skinname of child is "Hyper Squirrel";
 	now bodyname of Player is "Hyper Squirrel";
 	now skinname of Player is "Hyper Squirrel";
 	now body of Player is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws.";

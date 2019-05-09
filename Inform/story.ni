@@ -182,7 +182,6 @@ The player has a text called cockname. cockname is usually "Human".
 The player has a text called tailname. Tailname is usually "Human".
 
 [Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
-
 [expanded set of Player specific infection parts]
 The player has a text called HeadName. HeadName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
@@ -289,18 +288,11 @@ A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Un
 A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
 
 
-The child has a text called bodyname. Bodyname is usually "Human".
-The child has a text called facename. Facename is usually "Human".
-The child has a text called skinname. Skinname is usually "Human".
-The child has a text called cockname. cockname is usually "Human".
-The child has a text called tailname. Tailname is usually "Human".
 The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
 The player has a text called weapon type. Weapon type is usually "Melee".
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
 A person has a list of text called Traits.
-
-
 
 freecred is a number that varies.
 playon is a number that varies.
@@ -320,6 +312,32 @@ The player has a list of text called PenileVirginitiesTaken.
 
 A person can be a trader.
 Scenario is a text that varies.
+
+Child is a person.
+The printed name of Child is "Child".
+The Child has text called name. The name of Child is usually "".
+Child has a number called Gestation.
+Child can be born. Child is not born.
+The child has a text called bodyname. Bodyname is usually "Human".
+The child has a text called facename. Facename is usually "Human".
+The child has a text called skinname. Skinname is usually "Human".
+The child has a text called cockname. cockname is usually "Human".
+The child has a text called tailname. Tailname is usually "Human".
+Child has a text called HeadName. HeadName is usually "Human".
+Child has a text called TorsoName. TorsoName is usually "Human".
+Child has a text called BackName. BackName is usually "Human".
+Child has a text called ArmsName. ArmsName is usually "Human".
+Child has a text called LegsName. LegsName is usually "Human".
+Child has a text called AssName. AssName is usually "Human".
+Child has a text called TailName. TailName is usually "Human".
+Childrenfaces is a list of text that varies.
+Childrenskins is a list of text that varies.
+Childrenbodies is a list of text that varies.
+
+Table of PlayerChildren
+Name (text)	BirthTurn (number)	Head (text)	Torso (text)	Back (text)	Arms (text)	Legs (text)	Ass (text)	Tail (text)	ShowTail (truth state)	Pureblood (truth state)
+with 100 blank rows
+
 Allobjs is a list of text that varies.[@NotSaved]
 Grab Object is a kind of thing.
 a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
@@ -367,13 +385,6 @@ Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
 showlocale is a truth state that varies. showlocale is usually true.
-Child is a person.
-The printed name of Child is "Child".
-Child has a number called Gestation.
-Child can be born. Child is not born.
-Childrenfaces is a list of text that varies.
-Childrenskins is a list of text that varies.
-Childrenbodies is a list of text that varies.
 NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
@@ -550,22 +561,46 @@ Definition: A person (called x) is perminfected:
 	no;
 
 Definition: A person (called x) is pure:
-	if bodyname of x is facename of x:
-		if bodyname of x is tailname of x:
-			if bodyname of x is skinname of x:
-				if bodyname of x is cockname of x:
-					yes;
-	no;
+	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+		if bodyname of x is facename of x:
+			if bodyname of x is tailname of x:
+				if bodyname of x is skinname of x:
+					if bodyname of x is cockname of x:
+						yes;
+		no;
+	else:
+		if HeadName of x is TorsoName of x:
+			if HeadName of x is BackName of x:
+				if HeadName of x is ArmsName of x:
+					if HeadName of x is LegsName of x:
+						if HeadName of x is AssName of x:
+							if HeadName of x is TailName of x:
+								if HeadName of x is CockName of x:
+									if HeadName of x is CuntName of x:
+										yes;
+		no;
 
 Definition: A person (called x) is purehuman:
-	if bodyname of Player is "Human" or bodyname of Player is "Herm Human":
-		if facename of Player is "Human" or facename of Player is "Herm Human":
-			if tailname of Player is "Human" or tailname of Player is "Herm Human":
-				if skinname of Player is "Human" or skinname of Player is "Herm Human":
-					if cockname of Player is "Human" or cockname of Player is "Herm Human":
-						yes;
-	no;
-
+	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+		if bodyname of Player is "Human" or bodyname of Player is "Herm Human":
+			if facename of Player is "Human" or facename of Player is "Herm Human":
+				if tailname of Player is "Human" or tailname of Player is "Herm Human":
+					if skinname of Player is "Human" or skinname of Player is "Herm Human":
+						if cockname of Player is "Human" or cockname of Player is "Herm Human":
+							yes;
+		no;
+	else:
+		if HeadName of Player is "Human" or HeadName of Player is "Herm Human":
+			if HeadName of Player is "Human" or TorsoName of Player is "Herm Human":
+				if HeadName of Player is "Human" or BackName of Player is "Herm Human":
+					if HeadName of Player is "Human" or ArmsName of Player is "Herm Human":
+						if HeadName of Player is "Human" or LegsName of Player is "Herm Human":
+							if HeadName of Player is "Human" or AssName of Player is "Herm Human":
+								if HeadName of Player is "Human" or TailName of Player is "Herm Human":
+									if HeadName of Player is "Human" or CockName of Player is "Herm Human":
+										if HeadName of Player is "Human" or CuntName of Player is "Herm Human":
+											yes;
+		no;
 Definition: A person (called x) is male:			[note: this is both male and herm]
 	if Cock Count of x > 0, yes;
 
@@ -1317,7 +1352,7 @@ Table of Fancy Status
 left	central	right
 "Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of Player]"	"HP:[HP of Player]/[maxHP of Player]"
 "Freecred: [freecred]"	"Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces > 0]  Kids: [number of entries in childrenfaces][end if]"	"XP:[XP of Player]/[level up needed]"
+"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]  Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
 ""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
 
 to say exitlist:
@@ -3263,6 +3298,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now tailname of Player is Name entry;
 			now tail of Player is tail entry;
+			now AssName of Player is ""; [wiping out the new style parts]
 	if x is 4: [body]
 		follow the breast change rule;
 		if bodyname of Player is not Name entry:
@@ -3270,6 +3306,8 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now bodyname of Player is Name entry;
 			now body of Player is body entry;
 			now TorsoName of Player is ""; [wiping out the new style parts]
+			now LegsName of Player is ""; [wiping out the new style parts]
+			now ArmsName of Player is ""; [wiping out the new style parts]
 		attributeinfect; [sets the new attributes]
 		follow the sex change rule;
 		say "[line break]";
@@ -4096,7 +4134,7 @@ This is the turnpass rule:
 	if the HP of the player < 0, now the HP of the player is 1;
 	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of Player + 1 ) ):
 		increase hunger of Player by 1;
-		if number of entries in childrenfaces > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
+		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
 			decrease hunger of Player by 1;
 	if "Vore Predator" is listed in feats of Player:
@@ -4105,7 +4143,7 @@ This is the turnpass rule:
 			decrease hunger of Player by 1;
 	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
 		increase thirst of Player by 3;
-		if number of entries in childrenfaces > 0, increase thirst of Player by 1;
+		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
 		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
 			decrease thirst of Player by 1;
 	if "Automatic Survival" is listed in feats of Player:
@@ -4487,7 +4525,7 @@ This is the self examine rule:
 		say "Pulling out a small mirror you check yourself over from head to toe, attempting to make sense of your current form. Your face and head resemble that of [Head Description of Player] with [Eye Color of Player] [Eye Adjective of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair that has been styled into a [Hair Style of Player]. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
-	if Torso Skin Adjective of Player is "": [old infection]
+	if TorsoName of Player is "": [old infection]
 		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
 	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
 		say "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]. [if Player is HasBackAdornments]Your back tickles with the feeling of movement caused by [Back Adornments of Player]. [end if]";
@@ -4575,9 +4613,9 @@ This is the self examine rule:
 		follow the cunt descr rule;
 		if player is female:
 			if Cunt Count of Player > 1:
-				now cunttext is " have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Length of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Length of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 			else:
-				now cunttext is " have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Length of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Length of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	[displaying the texts]
 	if cocktext is not "":
 		if cunttext is "":
@@ -4655,21 +4693,67 @@ This is the self examine rule:
 			say " [descmod of x]";
 	[ ^^ Eqipment Descriptions Done ]
 	[ Children Descriptions Below   ]
+	[old style children, imported]
+	LineBreak;
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+		say "Trailing behind come your children:[line break]";
+	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+		say "Trailing behind comes your child:[line break]";
 	if the number of entries in childrenfaces > 0:
 		if the number of entries in childrenfaces is 1:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
-				say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
+				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			else:
-				say "Trailing behind you, your child is a pure blood [entry 1 of childrenfaces].";
+				say "Your child is a pure blood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		else:
-			say "Trailing behind you come your children.";
 			repeat with x running from 1 to number of entries in childrenfaces:
 				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
 					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				else:
 					say "One is a pure blood [entry x of childrenfaces].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+	[new style children]
+	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
+		if number of filled rows in Table of PlayerChildren is 1:
+			choose row 1 in Table of PlayerChildren;
+			let Childage be ((Birthturn entry - turns ) divided by 8);
+			if Pureblood entry is false:
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+				if Name entry is "":
+					say "child";
+				else:
+					say "child [Name entry]";
+				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if].";
+			else:
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+				if Name entry is "":
+					say "child";
+				else:
+					say "child '[Name entry]'";
+				say " is a pure blood [Head entry].";
+		else:
+			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
+				choose row x in the Table of PlayerChildren;
+				let Childage be ((Birthturn entry - turns ) divided by 8);
+				if Pureblood entry is false:
+					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+					if Name entry is "":
+						say "child";
+					else:
+						say "child '[Name entry]'";
+					say " has a [Head entry] head, [Torso entry] front and [Back entry] back. They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if].";
+				else:
+					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+					if Name entry is "":
+						say "child";
+					else:
+						say "child [Name entry]";
+					say " is a pure blood [Head entry].";
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
 		say "Accompanying you, you have a level [level of companion of Player] [link][companion of Player][as]look [companion of Player][end link]. [initial appearance of companion of Player]";
 	now looknow is 0;

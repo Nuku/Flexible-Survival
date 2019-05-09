@@ -155,7 +155,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	if mindshield helmet is equipped:
 		increase plmindbonus by 3;
 	now petchance is 0;
-	if the player is not lonely or number of entries in childrenfaces > 0:
+	if the player is not lonely or number of filled rows in the Table of PlayerChildren > 0:
 		now petchance is ( charisma of Player * 250 ) / 12;
 		if petchance > 500, now petchance is 500;
 		if "Good Teacher" is listed in feats of Player, increase petchance by 20;
@@ -505,7 +505,7 @@ This is the player attack rule:
 			increase dam by y;
 		else if a random chance of petchance in 4000 succeeds and "Youthful Tides" is listed in feats of Player:
 			let y be 0;
-			repeat with s running from 1 to number of entries in childrenfaces:
+			repeat with s running from 1 to number of filled rows in the Table of PlayerChildren:
 				increase y by a random number from 2 to 4;
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at the [Name entry in lower case] for [special-style-2][y][roman type] damage!";

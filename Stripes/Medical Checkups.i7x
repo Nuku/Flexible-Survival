@@ -348,7 +348,29 @@ to say Medeaadjustments:
 				if nam is "Check for pregnancy":
 					say "     Doctor Medea takes out a machine and places it against your [bodyname of Player] abdomen. It buzzes, and she looks at the results. She ";
 					if the gestation of the child > 0:
-						say "smiles. 'Congratulations, you are pregnant. According to these readings, it currently has [skinname of child] skin, a [bodyname of child] body, and a [facename of child] face.'";
+						[Checking for visible tails]
+						let ShowTail be false;
+						let Pureblood be false;
+						if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
+							choose a row with name of TailName of Child in the Table of New Infection Parts;
+							if Tail Description entry is not "":
+								now ShowTail is true;
+						say "smiles. 'Congratulations, you are pregnant. ";
+						if HeadName of Child is TorsoName of Child:
+							if HeadName of Child is BackName of Child:
+								if HeadName of Child is ArmsName of Child:
+									if HeadName of Child is LegsName of Child:
+										if HeadName of Child is AssName of Child:
+											if HeadName of Child is TailName of Child:
+												now Pureblood is true;
+						if Pureblood is true:
+							say "According to these readings, your child is a pureblood [Headname of Child]";
+						else:
+							say "According to these readings, it currently has a [Headname of Child] head, [TorsoName of Child] front and [BackName of Child] back. Your child has [ArmsName of Child] arms, [LegsName of Child] legs[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if]";
+						if "They Have Your Eyes" is listed in feats of Player:
+							say ". Things do still seem to be in flux a bit though, from what I can see. Seems like your body is trying to make the child come out as a specific form, and I can't quite guarantee that it will still look like this when it is born.'";
+						else:
+							say ".'";
 					else:
 						say "shakes her head in disappointment. 'You are not pregnant.'";
 				else if nam is "Remove impregnation control":
@@ -482,7 +504,6 @@ to say Medeaadjustments:
 					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it. Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step. Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
 					if girl is not banned:
 						setmonster "Female Husky";
-						choose row MonsterID from the Table of Random Critters;
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a female husky. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these cute girls, there is a certain symmetry to that. She seems pleased to see you as well, smelling your arousal and sniffing her way towards your crotch. Making no effort to dissuade her, you seem like a willing playmate and she approaches with eager caution.";
 						say "     When she brings her muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute husky with new, maternally longing instincts, feeling that she'd be perfect to fill it. Before you can even think about it, you grab the husky by the head and yank it forward, driving her muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull her in, stretching around her canine head with an orgasmic effort that has you moaning. Your juices soak her head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need. Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides. There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -492,7 +513,6 @@ to say Medeaadjustments:
 						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy. There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down. With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive. You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[else]a placenta form to connect you to your prey[end if]. Soon enough, she's drifted off into slumber and you are in late-term pregnancy. Crossing the [if ovipreglevel is 3]egg membrane[else]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another. You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body. You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
 					else:
 						setmonster "Latex Fox";
-						choose row MonsterID from the Table of Random Critters;
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that. He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch. Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it. Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning. Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need. Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides. There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -512,16 +532,14 @@ to say Medeaadjustments:
 						now researchbypass is 1;
 						infect;
 						now researchbypass is 0;
-					if "They Have Your Eyes" is listed in feats of Player:
-						now skinname of child is skinname of Player;
-						now bodyname of child is bodyname of Player;
-						now tailname of child is tailname of Player;
-						now facename of child is facename of Player;
-					else:
-						now skinname of child is Name entry;
-						now bodyname of child is Name entry;
-						now tailname of child is Name entry;
-						now facename of child is Name entry;
+					[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
+					now HeadName of child is Name entry;
+					now TorsoName of child is Name entry;
+					now BackName of child is Name entry;
+					now ArmsName of child is Name entry;
+					now LegsName of child is Name entry;
+					now AssName of child is Name entry;
+					now TailName of child is Name entry;
 				else if nam is "Pills":		[First time asking about cunt pills]
 					say "     When you inquire Medea about what she meant by her work on pills earlier, the lizard doctor asks, 'Did I accidentally let that slip? Well, that's alright. You did bring me the supplies that I needed, after all. To answer your question, I have been researching the nanites and have developed a concoction that will allow users without the proper anatomy to experience pregnancy without flooding their bodies with estrogen. In layman terms, it will give them a cunt. While the medicine hasn't been fully developed, it is safe enough to consume, and I am willing to share it with you, for a price. They are not exactly easy to produce, and I need medkits and healing boosters to continue my research, as well as using them to treat any patients who come here. Bring me either item, and I will trade you a pill in return.'";
 					now Medeapill is true;
@@ -688,7 +706,7 @@ to say Medeapandafight:
 		if Player consents:
 			LineBreak;
 			say "     At this point, both the expectant mother and the doctor largely ignore you, though the latter does ask you pass the occasional item - usually towels. With her legs up in the stirrups, the panda's dilating cunt is easily visible for you. As she breathes and pushes, the wet folds slowly spread further and juices leak from her pussy. This is helped along all the more by the lizard doctor working several fingers in and out of the panda's vagina in a manner that is not at all clinical. The mother-to-be's face is a mix of effort and ecstasy more than pain, the nanites sparing the fecund female the bulk of that.";
-			say "     Still staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction. The following one reveals it a little more and a little longer, and the next one has it remain visible. A few more pushes after that and the baby panda girl slides out into a towel held by Doctor Medea. She's quickly wiped and given over to the very happy mom, who nurses her from one of her milk-laden breasts[if feralbirths > 0 or number of entries in childrenfaces > 0]. As you've personally experienced[else]. To your surprise[end if], the child matures incredibly rapidly, moving quickly from babe to toddler to pre-teen in very short order. After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if Player is male] and giving you a final wink on the way out[end if].";
+			say "     Still staring raptly, you watch as the rounded and thinly furred head of the baby panda becomes briefly visible during one contraction. The following one reveals it a little more and a little longer, and the next one has it remain visible. A few more pushes after that and the baby panda girl slides out into a towel held by Doctor Medea. She's quickly wiped and given over to the very happy mom, who nurses her from one of her milk-laden breasts[if feralbirths > 0 or (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]. As you've personally experienced[else]. To your surprise[end if], the child matures incredibly rapidly, moving quickly from babe to toddler to pre-teen in very short order. After a final check-up, the two pandas leave, mother holding her new daughter's hand as they exit[if Player is male] and giving you a final wink on the way out[end if].";
 		else:
 			LineBreak;
 			say "     With the doctor able to tend to her patient now, you slip out of the room discreetly. You wait out the birthing process in the lobby, which aside from being a little noisy, is comparatively brief and doesn't seem to be overly painful. Thanks the nanites infesting both her and her offspring, they're up and ready to leave shortly after having given birth. The young panda is already a budding teen by the time she exits hand in hand with her pleased looking mother[if Player is male]. You observe their exit from behind the cover of the receptionist's desk, not wanting to see if the new mother is in the mood to get knocked up again[end if].";

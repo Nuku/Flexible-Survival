@@ -124,16 +124,6 @@ to TextVariableSave:
 			now TextVarValue entry is BodyShopGuaranteedTail;
 		-- "ButterflyAttire":
 			now TextVarValue entry is ButterflyAttire;
-		-- "ButterflyBabyBodyName":
-			now TextVarValue entry is ButterflyBabyBodyName;
-		-- "ButterflyBabyCockName":
-			now TextVarValue entry is ButterflyBabyCockName;
-		-- "ButterflyBabyFaceName":
-			now TextVarValue entry is ButterflyBabyFaceName;
-		-- "ButterflyBabySkinName":
-			now TextVarValue entry is ButterflyBabySkinName;
-		-- "ButterflyBabyTailName":
-			now TextVarValue entry is ButterflyBabyTailName;
 		-- "ButterflyBreastDesc":
 			now TextVarValue entry is ButterflyBreastDesc;
 		-- "ButterflyTummy":
@@ -3791,16 +3781,6 @@ to VariableTextLoad:
 					now BodyShopGuaranteedTail is TextVarValue entry;
 				-- "ButterflyAttire":
 					now ButterflyAttire is TextVarValue entry;
-				-- "ButterflyBabyBodyName":
-					now ButterflyBabyBodyName is TextVarValue entry;
-				-- "ButterflyBabyCockName":
-					now ButterflyBabyCockName is TextVarValue entry;
-				-- "ButterflyBabyFaceName":
-					now ButterflyBabyFaceName is TextVarValue entry;
-				-- "ButterflyBabySkinName":
-					now ButterflyBabySkinName is TextVarValue entry;
-				-- "ButterflyBabyTailName":
-					now ButterflyBabyTailName is TextVarValue entry;
 				-- "ButterflyBreastDesc":
 					now ButterflyBreastDesc is TextVarValue entry;
 				-- "ButterflyTummy":

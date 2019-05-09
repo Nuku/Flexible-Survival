@@ -362,7 +362,7 @@ Figure of Zoe_face_icon is the file "Zoe_face.jpg".
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
 Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg". [Encased by Bottlenose Toy]
-Figure of Christyend_icon is the file "christyend_ig.jpg". [for 'Tourist Attraction' ending only.]
+Figure of Christyend_icon is the file "Christyend_ig.jpg". [for 'Tourist Attraction' ending only.]
 Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg". [riding the cat]
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg". [Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg". [The Down Under Pub's floor show.]
@@ -426,7 +426,7 @@ Figure of emap_mall_atrium_icon is the file "emap_mall_atrium.png".
 Figure of emap_mall_bodyshop_icon is the file "emap_mall_bodyshop.png".
 Figure of emap_mall_bransonpartner_icon is the file "emap_mall_bransonpartner.png".
 Figure of emap_mall_brookstonebooks_icon is the file "emap_mall_brookstonebooks.png".
-Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillage.png".
+Figure of emap_mall_Christmasvillage_icon is the file "emap_mall_Christmasvillage.png".
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
@@ -925,7 +925,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_Christmasvillage_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"

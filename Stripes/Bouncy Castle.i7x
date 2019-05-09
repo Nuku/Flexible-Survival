@@ -567,7 +567,7 @@ to say bcgreathall:
 Chapter 7 - King's Chambers
 
 to say bckingschamber:
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	now bcplayroomlast is false;
 	say "     This room is designed to be the king's chambers. The wall designs have a pair of guards by the door, tapestries by the windows, a bed and treasure chest as large decals to show a childish representation of this. There's no exit from this room save the one you entered by. There's a window on the north wall and another two on the east. There's not much in this room - a few beach balls, some other assorted odds and ends, and ";
@@ -610,7 +610,7 @@ to say bckingschamber:
 
 to say bckingchair:
 	let chairescape be false;
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	say "     As you start awake, you realize that the inflatable chair has started to stick to you. You can see its armrests clinging to your arms, the material pulling them gradually in. As you try to stand, you can feel that the same is happening to your back and legs. There's something pleasant and appealing about the touch of the material upon you, but you try to shake it off. Unsure what its plans are, but suspecting that they're not good at all, you start to struggle";
 	if compnumber is 1:
@@ -693,7 +693,7 @@ to say bckingchair:
 
 
 to say bckingchair_accept:
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	say "     Choosing not to resist the chair's call this time, you drop your gear and flop down onto it. Its plastic material gives a happy squeak as it rubs against the rubbery floor. Settling into it, you rub your body against the padded seat and grip the arm rests, pressing yourself lightly against the chair's material. Sure enough, it starts to slide over you as your body starts to sink into it with a pleasant sensation";
 	if compnumber is 1:
@@ -769,7 +769,7 @@ to say bcpunchingpillars:
 
 to say bcpptendril:
 	let tendrilescape be false;
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	sort primarycolorlist in random order;
 	now ppcolor is entry 1 in primarycolorlist;
@@ -859,7 +859,7 @@ to say bcpptendril:
 
 
 to say bcpptendril_accept:
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	say "     Choosing not to resist the pillar's attempt to ensnare you this time, you drop your gear and step towards the tentacles, allowing them to latch onto you. The wolf design on it seems to smile as you acquiesce and it rubs its gooey tentacles across your flesh, leaving trails of [ppcolor] latex[if compnumber is 1]. Your companion, also ensnared, struggles at first, but soon relents as they see you accepting the tentacles[else if compnumber > 1]. Your companions, also ensnared, struggle at first, but soon relent as they see you accepting the tentacles[end if]. Some of the tendrils slide across your arms and legs while others wrap around your chest.";
 	say "     You can't help but moan as one goes to your waist and [ppcolor] latex flows over your [if Player is neuter]barren crotch[else]loins[end if], sending a rush of arousal through you as the goo spreads across your [if Player is herm]cock[smn] and even into your puss[yfn][else if Player is male]cock[smn][else if Player is female]cunt[sfn][else]ass and pushes into your asshole[end if]";
@@ -962,7 +962,7 @@ to say bcupperhall:
 Chapter 14 - Western Parapets
 
 to say bcwestparapets:
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	say "     Up at the top level of the castle, this room is designed to look like its western parapets. This section covers roughly the western third of the bouncy castle with a wall dividing the two parts and a pair of arched doorways leading to the middle section. The floor is covered in a regular pattern of large, red dots, and while springy and swaying, seems just as solid as those below despite being the inflatable ceiling to the area below. The floor and walls here are sky blue, as are the towers rising up to enclose the room between mesh netting to keep excited children from falling. The netting around the parapets extends above you as well, enclosing the space for safety. The only gap in this outer mesh allows access to the blue waterslide down into the sea below.";
 	say "     There is a constant flow of water and even some sprinklers running on the way down despite the lack of any motor or pump you could hear anywhere in the castle to keep it inflated or to send water up here.";
@@ -1031,7 +1031,7 @@ to say bcwestparapets:
 				try bcsliding;
 
 to chairboundstate:
-	let compnumber be the number of entries in childrenfaces;
+	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	now lustatt is Libido of Player;
 	now calcnumber is -1;
@@ -1214,7 +1214,7 @@ to chairpassivelosses:
 			increase lustatt by 35 + (lustadjust * 5);
 
 [to say bcchairfight:
-	let compnumber be ( number of entries in childrenfaces / 3 );
+	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
 	if companion of Player is not nullpet, increase compnumber by 1;
 	let bcchairescape be 0;
 	let x be a random number between 1 and 3;
@@ -1905,7 +1905,7 @@ to say dolcheckD:		[complete tf - fight]
 
 
 to say dolcheckE:		[vixen]
-	let compnumber be ( number of entries in childrenfaces / 3 );
+	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
 	if companion of Player is not nullpet, increase compnumber by 1;
 	say "     With some effort, you make your way over to one of the large dolphin inflatables and start looking for the seam to open it. It takes a little time to find it, having partially melded itself shut, but you manage to start working it open. As you begin to get it open, it starts to shift and move with the struggles of someone inside. When you get it open, you're pleased to see the orange color of the vixen you seek. Her fur has become a smooth, latex skin, but you continue on in the hope that it's not already too late. As you get her head free and pull the breathing tube from her muzzle, her struggles grow all the more fervent.";
 	say "     'Mmm... Can we play now? No! Ah! Get me out of this silly thing!' she yips with a definite squeak to her voice. You inform her that you're trying to free her, but that you want something in return. 'Oh! That'd be fun!' she giggles. 'This thing's been teasing me for so long, I could certainly go for the real thing,' she adds with a moan. After elaborating that you're actually after her stash of supplies, she nods and manages to focus enough to be more serious. 'No prob. We'll split it if you can get me out of this mess,' she says eagerly, still fighting against the suit which seems very reluctant to release her. With the both of you working at it, she's able to keep the suit from resealing her while you struggle to deflate it to the point it can no longer strive to hold her.";
@@ -1948,7 +1948,7 @@ to say dolcheckE:		[vixen]
 Chapter 1 - Western Chair Escape
 
 to say bcchairfinal1: [FLOT - Check?]
-	let compnumber be ( number of entries in childrenfaces / 3 );
+	let compnumber be ( (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces) / 3 );
 	if companion of Player is not nullpet, increase compnumber by 1;
 	let bcchairescape be 0;
 	let bcchairstage be 1;
@@ -2352,7 +2352,7 @@ when play ends:
 		else:
 			say "     You emerge as a [if Player is female]magenta[else]dusty red[end if] orca and she as an orange one. Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily. After licking the tasty fluids from each other, you turn your attention to each other's pussy and eating it out until you've shared several sticky climaxes. From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you. Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
 	else if bodyname of Player is "Captured" and bcending is 5:
-		let compnumber be the number of entries in childrenfaces;
+		let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 		if companion of Player is not nullpet, increase compnumber by 1;
 		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolor] latex. Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar. Soon enough, you're rooted in place among the others of your kind in the room. On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolor] surface[if compnumber is 1]. Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[else if compnumber > 1]. Your companions, similarly transformed, have become colorful pillars with designs suiting their previous forms[end if].";
 		say "     Your existence is a simple one, your previous mind erased and left empty save for thoughts of lust and transforming others into joining with the bouncy castle as you have. Pleasure mostly comes in the form of dolphin girls who wander into the room to be sexually assaulted by your tendrils until you're both satiated. On other occasions, you send out tendrils to some of the other pillars and pleasure one another, forming phalli and orifices for them, spraying your latex cum onto and into each other. But sometimes, your greatest delight will come when some wanderer makes their way into your room. When this happens, you grapple them with tentacles of [ppcolor] goo, sexually pleasuring yourself and them as you draw them inexorably into you to be consumed and transformed into another punching pillar, as was done to you on that fateful day.";

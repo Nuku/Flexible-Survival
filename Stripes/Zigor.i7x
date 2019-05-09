@@ -149,16 +149,10 @@ to say zigor_S1_01_MM:	[stage 1 - stocks/oral - MM]
 
 
 to say zigor_S1_02_MM:	[stage 1 - sling/anal - MM]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Once inside, he grabs you by the back of the neck before your eyes can adjust to the low light and pushes you onto a leather sling. In it, you are suspended face down off the ground at waist height[if scalevalue of Player > 3]. Given its size and reinforced chains, it has clearly been made after the outbreak to hold [Body Size Adjective of Player] mutants like yourself[end if][if HP of Zigor is 4]. When you try to get up, you're given a smack on the back of the head by the wolf as he growls for you to stay where he puts you[else]. Knowing what's coming, you get settled into the sling and hold out your arms and legs for your dominator[end if]. Picking up some manacles and shackles, he places them around your ankles and wrists, tightening the chains enough that you can swing, but are unable to resist or escape. With you secure, he strides over to his shelf and selects a [one of]hard[or]leather[or]wooden[or]long[or]wide[at random] paddle with considerable care while you are forced to watch him mull over his decision, increasing your trepidation and anticipation further. His choice made, he gives it a hard SMACK! across your rear, making you cry out.";
 	say "     Your rear is tenderized by several more painful blows, each one accompanied by a twitch of your cock and a spurt of precum. The stinging of your rump is soothed by the soft caress of his sheath fur and the dribbling precum leaking from his emerging shaft. Getting himself lined up, he thrusts hard into you without preamble, the suddenness of the penetration only adding to the aching pleasure you're feeling. He fucks you hard and fast, rocking you in the sling. From time to time he pulls on the chains to force himself in harder or swats your shoulder, back or thigh with the paddle. Despite, or perhaps because of the pain, the rough fucking feels wonderful, your asshole clenching tightly around his lupine penis with every blow, allowing you to feel every push, throb and grind it makes inside your oversensitive ass.";
-	say "     After a good, long session of painful fucking, he drives his foot long cock into you, knot and all. With a howl and his claws sinking into your tender ass, he cums. His lupine seed blasts into you, filling your ass with his creamy load. This sends you over the edge and you cry out, cumming messy streaks of cum onto the floor as you spill your [Cum Load Size of Player] load onto the stone floor. Zigor hardly waits for his knot to go down before yanking it out hard, causing you to cry out even as his oily cum leaks out to soothe it. He leaves you suspended like that for a while, disciplining you with more blows from the paddle. It is only once you're hard again that he releases you, aching and aroused, to go back upstairs.[mimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Leather Wolf";
-		now bodyname of child is "Leather Wolf";
-		now skinname of child is "Leather Wolf";
-
+	say "     After a good, long session of painful fucking, he drives his foot long cock into you, knot and all. With a howl and his claws sinking into your tender ass, he cums. His lupine seed blasts into you, filling your ass with his creamy load. This sends you over the edge and you cry out, cumming messy streaks of cum onto the floor as you spill your [Cum Load Size of Player] load onto the stone floor. Zigor hardly waits for his knot to go down before yanking it out hard, causing you to cry out even as his oily cum leaks out to soothe it. He leaves you suspended like that for a while, disciplining you with more blows from the paddle. It is only once you're hard again that he releases you, aching and aroused, to go back upstairs.";
+	[TODO: Make Leather Wolf infection for m-impregnation]
 
 to say zigor_S1_analtraining:
 	say "     Once inside, he directs you to the padded bench you used on your first visit with a hard swat from a switch he pulled off the wall. With a whimper of delight, you get naked and onto it as quickly as you can[if HP of Player is 6], earning a second lashing as you're not quite fast enough for your dominator's liking[end if]. As quick as before, he has you shackled down onto it, leaving you at his not-so-tender mercies.";
@@ -244,8 +238,6 @@ to say zigor_S2_01_MM:	[stage 2 - spreader/pain choice/oral - MM]
 
 
 to say zigor_S2_02_MM:	[stage 2 - sling/anal/accessory - MM]
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "     Once inside, he directs you back to the sling you've used before with a swat on your rear. 'Back into your seat, mi cachorro. I wish to enjoy my needy pet again,' he says sensually. You are told to lay on your back in the sling this time and are secured into it. Straps around your wrists are connected to the heavy chains holding up the swing, leaving you at the wolf's not-so-tender mercies. Zigor runs his paws over your [bodytype of Player] body, looking it over as he tries to decide how best to [']enhance['] the experience for you.";
 	let x be a random number between 1 and 2; [1 = nipple clamps / 2 = cock ring]
 	if x is 1:
@@ -258,10 +250,8 @@ to say zigor_S2_02_MM:	[stage 2 - sling/anal/accessory - MM]
 		say "     Under the constant fucking and teasing, you are pushed to aching arousal that achieves explosive release when Zigor's yanks firmly on the nipple clamps while driving his thick knot fully into your stretched hole. You cry out and cum hard, your first volley of cum spraying past your shoulder and staining the floor past you. Shot after shot of your [Cum Load Size of Player] load sprays onto your [bodydesc of Player] body, leaving you increasingly sticky with semen. Clearly enjoying the messy state he's driven you to, he growls and cums, shooting his own heavy load into your bowels as he stakes a fresh claim on your ass. In the end, you are left sticky with seed both inside and out.[mimpregchance]";
 	else:
 		say "     Under the constant fucking and teasing, you are pushed to aching arousal that can only build and build, your semen trapped in your balls by the cock ring. The wolf grins at your moans and whimpers, telling you how sexy he finds them, and drives his knot deep inside you. With his cock buried fully inside you, he cums, shooting his heavy load into your bowels as he stakes a fresh claim on your ass. As you feel his seed filling you, he pops the clasp on the leather strap restraining your loins. You cry out in orgasmic relief and cum very hard, your first several blasts spraying past your shoulder to stain the floor past you. Shot after shot of your [Cum Load Size of Player] load sprays onto your [bodydesc of Player] body, leaving you increasingly sticky with semen. In the end, you are left sticky with seed both inside and out.[mimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Leather Wolf";
-		now bodyname of child is "Leather Wolf";
-		now skinname of child is "Leather Wolf";
+	[TODO: Make Leather Wolf infection for m-impregnation]
+
 
 
 to say zigor_S2_03_MM:	[stage 3 - gangbang/orgy - Mx7]

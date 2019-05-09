@@ -192,8 +192,8 @@ Section 3 - Genitals
 					say " [descmod of x]";
 	[ ^^ Eqipment Descriptions Done ]
 	[ Children Descriptions Below   ]
-	if the number of entries in childrenfaces > 0:
-			if the number of entries in childrenfaces is 1:
+	if the number of filled rows in the Table of PlayerChildren > 0:
+			if the number of filled rows in the Table of PlayerChildren is 1:
 					if ( 1 of childrenskins is not 1 of childrenbodies ) or ( 1 of childrenskins is not 1 of childrenfaces ):
 							say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 					else:
@@ -201,7 +201,7 @@ Section 3 - Genitals
 					say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 			else:
 					say "Trailing behind you come your children.";
-					repeat with x running from 1 to number of entries in childrenfaces:
+					repeat with x running from 1 to number of filled rows in the Table of PlayerChildren:
 							if ( x of childrenskins is not x of childrenbodies ) or ( x of childrenskins is not x of childrenfaces ):
 									say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 							else:

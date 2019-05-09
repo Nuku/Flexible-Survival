@@ -238,7 +238,7 @@ to say enhancedattack:
 			increase dam by y;
 		else if a random chance of 2 in 25 succeeds and "Youthful Tides" is listed in feats of Player:	[+3% of Youthful Tide onslaught]
 			let y be 0;
-			repeat with s running from 1 to number of entries in childrenfaces:
+			repeat with s running from 1 to (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces):
 				increase y by a random number from 2 to 4;
 			increase dam by y;
 			say "In a great flurry, your children [one of]swarm across and make distracting grabs[or]hurl a torrent of rocks[or]taunt and jeer in chorus[or]seem to decide start a massive orgy[or]practice their martial arts[at random] at [Name entry] for [special-style-2][y][roman type] damage!";

@@ -219,15 +219,15 @@ when play begins:
 	add Locked Lockers to badspots of furry;
 
 Instead of Resolving a Locked Lockers:
-	if christyquest is 0:
+	if Christyquest is 0:
 		say "     Traveling through the fair, you note a sign up on a half hidden door. The sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, and you can't seem to find any other way into the area. Sighing, you move back off into the fairgrounds.";
-	else if christyquest is 1:
+	else if Christyquest is 1:
 		say "     Traveling through the fair, you note a sign up on a half hidden door. The sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, causing you to sigh and turn to leave, only to remember the key Boris gave you earlier! Turning back to the door, you try out the key, and success! The door opens into a rather nice, well-lit locker room, though the room appears to be in a bit of disarray, since it looks like several people tried to make a stand in here. Indeed as you move inside the room you find some of them are still here! Or what is they have become anyways!";
 		challenge "Rubber tigress";
 		challenge "Rubber tigress";
 		say "     Recovering from the unexpected assault, you take another look around the room, from the looks of the room and the smell of sex in the air, somehow you doubt those were all the participants in whatever happened here, making you eye the two other doors leading out of the room with some trepidation. Deciding it might be best just to be about your business as quickly as possible, you search the room for the box Boris asked you for. You find several strange items, and even a couple of cans of soda someone had stuck in their locker, but are about to give up on the package, when you notice a rather unwieldy box stuck back on top of some of the lockers. Hauling the box down, you note it has the letters 'Christy' scrawled on the top in black marker, you wonder what this Christy could have had that Boris thinks will be so helpful. Sadly the box is tied up tight with several bits of twine, and you don't want to annoy Boris if he needs the box unopened, you decide just to take it back to him to find out. Besides, you think as you hurry out of the room, you thought you heard something coming from one of the other doors.";
 		increase carried of soda by 2;
-		now christyquest is 2;
+		now Christyquest is 2;
 		now Resolution of Locked lockers is 1;
 		now Locked lockers is resolved;
 

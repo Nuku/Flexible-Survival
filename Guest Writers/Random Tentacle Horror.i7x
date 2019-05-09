@@ -262,31 +262,6 @@ to say horror victory:
 to say horror impreg:
 	impregnate with "Tentacle Horror";
 
-[
-	let x be "Tentacle Horror";
-	let infection be "";
-	if a random number from 1 to 100 > 50:
-		now infection is x;
-	else:
-		now infection is skinname of Player;
-	now skinname of child is infection;
-	if a random number from 1 to 100 > 50:
-		now infection is x;
-	else:
-		now infection is bodyname of Player;
-	now bodyname of child is infection;
-	if a random number from 1 to 100 > 50:
-		now infection is x;
-	else:
-		now infection is tailname of Player;
-	now tailname of child is infection;
-	if a random number from 1 to 100 > 50:
-		now infection is x;
-	else:
-		now infection is facename of Player;
-	now facename of child is infection;
-]
-
 to say horror description:
 	setmongender 3; [creature is male]
 	if lasttentaclebattleoutcome is 0:

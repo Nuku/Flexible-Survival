@@ -8,6 +8,7 @@ The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
+The File of ChildrenSave (owned by another project) is called "FSPlayerChildrenSave".
 The File of TraitSave (owned by another project) is called "FSTraitSave".
 The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
@@ -351,8 +352,8 @@ to CharacterSave:
 			now Testes entry is Ball Count of x;
 			now Cunts entry is Cunt Count of x;
 			now Cunt Length entry is Cunt Length of x;
-			now Cunt Tightness entry is Cunt Tightness of x;
-			now Nipple Count entry is Nipple Count of x;
+			now Cunt Width entry is Cunt Tightness of x;
+			now Breasts entry is Nipple Count of x;
 			now Breast Size entry is Breast Size of x;
 			now PlayerMet entry is PlayerMet of x;
 			now PlayerRomanced entry is PlayerRomanced of x;
@@ -428,7 +429,7 @@ to CharacterRestore:
 				now Ball Count of CharacterObject is Testes entry;
 				now Cunt Count of CharacterObject is Cunts entry;
 				now Cunt Length of CharacterObject is Cunt Length entry;
-				now Cunt Tightness of CharacterObject is Cunt Tightness entry;
+				now Cunt Tightness of CharacterObject is Cunt Width entry;
 				now Nipple Count of CharacterObject is Breasts entry;
 				now Breast Size of CharacterObject is Breast Size entry;
 				now PlayerMet of CharacterObject is PlayerMet entry;
@@ -587,6 +588,21 @@ to PlayerRestore:
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	blank out the whole of Table of PlayerLists; [empty out all old data]
 
+to ChildrenSave:
+	say "Saving Children...";
+	write File of ChildrenSave from the Table of PlayerChildren;
+	if debugactive is 1:
+		say "DEBUG -> File of ChildrenSave written.[line break]";
+
+to ChildrenRestore:
+	if the File of ChildrenSave exists:
+		say "Restoring Children...";
+		read File of ChildrenSave into the Table of PlayerChildren;
+		if debugactive is 1:
+			say "DEBUG -> CHildren restored from FSPlayerChildrenSave.[line break]";
+	else:
+		say "No Children Save File Found!";
+
 to BeastSave:
 	say "Saving Beasts...";
 	blank out the whole of Table of GameBeasts; [empty out all old data]
@@ -656,6 +672,7 @@ To SaveEverything:
 	RoomSave;
 	PossessionSave;
 	CharacterSave;
+[	ChildrenSave;]
 	PlayerSave;
 	BeastSave;
 	VariableSave;
@@ -679,6 +696,7 @@ to say ProgressionImport:
 	RoomRestore;
 	PossessionRestore;
 	CharacterRestore;
+	ChildrenRestore;
 	TraitRestore;
 	PlayerRestore;
 	BeastRestore;

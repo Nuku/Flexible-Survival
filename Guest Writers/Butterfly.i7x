@@ -28,11 +28,6 @@ ButterflyTummy is a text that varies. ButterflyTummy is usually "".
 ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0.
 ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True.
 ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest, exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles[else]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly[end if] as her wings flap.".
-ButterflyBabyBodyName is a text that varies. ButterflyBabyBodyName is usually "Human".
-ButterflyBabyFaceName is a text that varies. ButterflyBabyFaceName is usually "Human".
-ButterflyBabySkinName is a text that varies. ButterflyBabySkinName is usually "Human".
-ButterflyBabyCockName is a text that varies. ButterflyBabyCockName is usually "Human".
-ButterflyBabyTailName is a text that varies. ButterflyBabyTailName is usually "Human".
 
 ButterflyBabyGestation is a number that varies.
 
@@ -597,28 +592,76 @@ when play ends:
 
 Section 6 - Monster Rules
 
+Table of GameCharacterIDs (continued)
+object	name
+ButterflyBaby	"ButterflyBaby"
+
+ButterflyBaby is a person.
+ButterflyBaby is in NPC Nexus. [and there it will stay, as it is just a coding tool]
+ButterflyBaby has text called name. The name of ButterflyBaby is usually "".
+ButterflyBaby has a text called HeadName. HeadName is usually "Human".
+ButterflyBaby has a text called TorsoName. TorsoName is usually "Human".
+ButterflyBaby has a text called BackName. BackName is usually "Human".
+ButterflyBaby has a text called ArmsName. ArmsName is usually "Human".
+ButterflyBaby has a text called LegsName. LegsName is usually "Human".
+ButterflyBaby has a text called AssName. AssName is usually "Human".
+ButterflyBaby has a text called TailName. TailName is usually "Human".
+
 To impregnatebutterfly:
-	let infection be "";
-	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of Player:
-		now infection is "Butterfly";
-	else:
-		now infection is skinname of Player;
-	now ButterflyBabySkinName is infection;
-	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of Player:
-		now infection is "Butterfly";
-	else:
-		now infection is bodyname of Player;
-	now ButterflyBabyBodyName is infection;
-	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of Player:
-		now infection is "Butterfly";
-	else:
-		now infection is tailname of Player;
-	now ButterflyBabyTailName is infection;
-	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of Player:
-		now infection is "Butterfly";
-	else:
-		now infection is facename of Player;
-	now ButterflyBabyFaceName is infection;
+	let Impregnator be a person;
+	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
+		now HeadName of Impregnator is FaceName of Player;
+		now TorsoName of Impregnator is BodyName of Player;
+		now BackName of Impregnator is BodyName of Player;
+		now ArmsName of Impregnator is BodyName of Player;
+		now LegsName of Impregnator is BodyName of Player;
+		now AssName of Impregnator is TailName of Player;
+		now TailName of Impregnator is TailName of Player;
+	else: [player has all the parts]
+		now HeadName of Impregnator is HeadName of Player;
+		now TorsoName of Impregnator is TorsoName of Player;
+		now BackName of Impregnator is BackName of Player;
+		now ArmsName of Impregnator is ArmsName of Player;
+		now LegsName of Impregnator is LegsName of Player;
+		now AssName of Impregnator is AssName of Player;
+		now TailName of Impregnator is TailName of Player;
+	if "They Have Your Eyes" is listed in feats of Player: [ButterflyBaby will always look like the player]
+		now HeadName of ButterflyBaby is HeadName of Impregnator;
+		now TorsoName of ButterflyBaby is TorsoName of Impregnator;
+		now BackName of ButterflyBaby is BackName of Impregnator;
+		now ArmsName of ButterflyBaby is ArmsName of Impregnator;
+		now LegsName of ButterflyBaby is LegsName of Impregnator;
+		now AssName of ButterflyBaby is AssName of Impregnator;
+		now TailName of ButterflyBaby is TailName of Impregnator;
+	else: [random choosing]
+		if a random chance of 1 in 2 succeeds:
+			now HeadName of ButterflyBaby is "Butterfly";
+		else:
+			now HeadName of ButterflyBaby is HeadName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now TorsoName of ButterflyBaby is "Butterfly";
+		else:
+			now TorsoName of ButterflyBaby is TorsoName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now BackName of ButterflyBaby is "Butterfly";
+		else:
+			now BackName of ButterflyBaby is BackName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now ArmsName of ButterflyBaby is "Butterfly";
+		else:
+			now ArmsName of ButterflyBaby is ArmsName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now LegsName of ButterflyBaby is "Butterfly";
+		else:
+			now LegsName of ButterflyBaby is LegsName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now AssName of ButterflyBaby is "Butterfly";
+		else:
+			now AssName of ButterflyBaby is AssName of Impregnator;
+		if a random chance of 1 in 2 succeeds:
+			now TailName of ButterflyBaby is "Butterfly";
+		else:
+			now TailName of ButterflyBaby is TailName of Impregnator;
 	now ButterflyBabyGestation is 0; [1;]
 	follow the ButterflyTummyDesc rule;
 	now ButterflyPregnant is True;
@@ -827,10 +870,28 @@ to say butterfly grove scene:
 		say "[bold type]You gain 1 testosterone pill![roman type][line break]";
 		now carried of testosterone pill is 1;
 	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
-		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [ButterflyBabyFaceName] face and [ButterflyBabyBodyName] body, covered in [ButterflyBabySkinName] skin. Your child, hungry for knowledge and experience of the world decides to stay with you.";
-		add ButterflyBabyFaceName to childrenfaces;
-		add ButterflyBabyBodyName to childrenbodies;
-		add ButterflyBabySkinName to childrenskins;
+		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [Headname of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
+		say "[bold type]Please name your child: [roman type]";
+		get typed command as playerinput;
+		now Name of ButterflyBaby is playerinput;
+		choose a blank row in the Table of PlayerChildren;
+		now Name entry is Name of ButterflyBaby;
+		now BirthTurn entry is turns;
+		now Head entry is Headname of ButterflyBaby;
+		now Torso entry is TorsoName of ButterflyBaby;
+		now Back entry is BackName of ButterflyBaby;
+		now Arms entry is ArmsName of ButterflyBaby;
+		now Legs entry is LegsName of ButterflyBaby;
+		now Ass entry is AssName of ButterflyBaby;
+		now Tail entry is TailName of ButterflyBaby;
+		now Showtail entry is false;
+		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
+			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
+				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
+					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
+						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
+							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
+								now Pureblood entry is true;
 		[now ButterflyProcreated is True;]
 		now ButterflyBabyGestation is 0;
 		now ButterflyPregnant is False;
@@ -958,10 +1019,28 @@ to say butterfly grove scene:
 	else if ButterflyLove is True and ButterflyBabyGestation is 3 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
-		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [ButterflyBabyFaceName] face and [ButterflyBabyBodyName] body, covered in [ButterflyBabySkinName] skin. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
-		add ButterflyBabyFaceName to childrenfaces;
-		add ButterflyBabyBodyName to childrenbodies;
-		add ButterflyBabySkinName to childrenskins;
+		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [Headname of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
+		say "[bold type]Please name your child: [roman type]";
+		get typed command as playerinput;
+		now Name of ButterflyBaby is playerinput;
+		choose a blank row in the Table of PlayerChildren;
+		now Name entry is Name of ButterflyBaby;
+		now BirthTurn entry is turns;
+		now Head entry is Headname of ButterflyBaby;
+		now Torso entry is TorsoName of ButterflyBaby;
+		now Back entry is BackName of ButterflyBaby;
+		now Arms entry is ArmsName of ButterflyBaby;
+		now Legs entry is LegsName of ButterflyBaby;
+		now Ass entry is AssName of ButterflyBaby;
+		now Tail entry is TailName of ButterflyBaby;
+		now Showtail entry is false;
+		if HeadName of ButterflyBaby is TorsoName of ButterflyBaby:
+			if HeadName of ButterflyBaby is BackName of ButterflyBaby:
+				if HeadName of ButterflyBaby is ArmsName of ButterflyBaby:
+					if HeadName of ButterflyBaby is LegsName of ButterflyBaby:
+						if HeadName of ButterflyBaby is AssName of ButterflyBaby:
+							if HeadName of ButterflyBaby is TailName of ButterflyBaby:
+								now Pureblood entry is true;
 		now ButterflyProcreated is True;
 		now ButterflyBabyGestation is 0;
 		now ButterflyPregnant is False;

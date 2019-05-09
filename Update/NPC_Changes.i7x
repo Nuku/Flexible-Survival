@@ -233,9 +233,6 @@ Child is a person.
 The printed name of Child is "Child".
 Child has a number called Gestation.
 Child can be born. Child is not born.
-Childrenfaces is a list of text that varies.
-Childrenskins is a list of text that varies.
-Childrenbodies is a list of text that varies.
 NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.

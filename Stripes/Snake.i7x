@@ -62,6 +62,13 @@ to say losetosnake:
 		say "     Eventually, [if HP of Player > 0]you recover enough from the ordeal[else]the venom wears off[end if], allowing you to slowly get back to your feet, [if scalevalue of Player < 4]overly bloated body making this a particularly difficult task[else if snakeocc > 0]forced to contend with your further exacerbated pregnancy[else]forced to contend with your new and significantly progressed pregnancy[end if], to say nothing of the your unsated lust in the wake of such treatment.";
 		if snakeocc is 0:
 			now snakehijack is 1;
+			now HeadName of child is "Snake";
+			now TorsoName of child is "Snake";
+			now BackName of child is "Snake";
+			now ArmsName of child is "Snake";
+			now LegsName of child is "Snake";
+			now AssName of child is "Snake";
+			now TailName of child is "Snake";
 			now preghijack is true;
 			choose row MonsterID from the Table of Random Critters;
 			now Name entry is "Snake";
@@ -179,10 +186,10 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 		increase tempnum by snakeocc;
 	else:
 		now tempnum is 0;
-	if "Touched by Madness" is listed in feats of Player and (player is fem_vacant or snakeocc > 0) and player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	if "Touched by Madness" is listed in feats of Player and (player is total_vacant or snakeocc > 0) and player is female and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now fsnakevalid is true;
 		now msnakevalid is false;
-	else if "Touched by Madness" is listed in feats of Player and (player is male_vacant or snakeocc > 0) and Cunt Count of Player is 0 and player is mpreg_ok and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
+	else if "Touched by Madness" is listed in feats of Player and (player is total_vacant or snakeocc > 0) and Cunt Count of Player is 0 and player is mpreg_ok and a random chance of tempnum in 10 succeeds and snakehijacktimer - turns >= 16:
 		now msnakevalid is true;
 		now fsnakevalid is false;
 	else:

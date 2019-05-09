@@ -733,15 +733,15 @@ to monitor:
 		say "Legs status: [LegsName of Player]     Ass status: [AssName of Player][line break]";
 		say "Tail status: [TailName of Player][line break]";
 		if Player is male:
-			say "Cock status: [CockName of Player] ";
+			say "Cock status: [CockName of Player]     ";
 		if Player is female:
-			say "Cunt status: [CuntName of Player] ";
+			say "Cunt status: [CuntName of Player][line break]";
 		if Player is herm:
-			say "     Gender: Herm[line break]";
+			say "Gender: Herm[line break]";
 		else if Player is male:
-			say "     Gender: Male[line break]";
+			say "Gender: Male[line break]";
 		else if Player is female:
-			say "     Gender: Female[line break]";
+			say "Gender: Female[line break]";
 		else:
 			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	else: [old body parts]
@@ -783,7 +783,13 @@ to monitor:
 			else if "Fertile" is listed in feats of Player:
 				now tempnum is ( 2 * tempnum ) / 3;
 				say "Expecting: ~[tempnum] hours[line break]";
-				say "Current fetal form: Body: [bodyname of child]   Face: [facename of child]   Skin: [skinname of child][line break]";
+				[Checking for visible tails]
+				let ShowTail be false;
+				if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
+					choose a row with name of TailName of Child in the Table of New Infection Parts;
+					if Tail Description entry is not "":
+						now ShowTail is true;
+				say "Current fetal form: Head: [Headname of Child] Torso: [TorsoName of Child] Back: [BackName of Child] Arms: [ArmsName of Child] Legs: [LegsName of Child] Ass: [AssName of Child] [if ShowTail is true] Tail: [TailName of Child][end if][line break]";
 		else if heat enabled is false:
 			say "Estrus Status: Inactive[line break]";
 		else if animal heat is false:
