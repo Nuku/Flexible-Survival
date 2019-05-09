@@ -191,14 +191,14 @@ carry out browsebooks:
 			say "     Beverly points to a set of shelves in one corner of the store. 'There should be a book over there discussing self defense. It might be of help to you.' You thank her and head for the shelf she pointed to. After a minute of searching you find a book titled [bold type]Self Defense 101[roman type]. Taking it, you settle into a chair and look through your recent acquisition. As you suspected when you picked up the book, it's more or less basic defensive tactics, though you do manage to pick up a few pointers on how to parry and dodge attacks.";
 			Increase dexterity of Player by 1;
 			LineBreak;
-			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
+			say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else if sdbook is 1:
 			say "     Even though you found the pointers in the self defense book pretty basic, you decide to delve into it some more to see if you can pick up anything else from it. You manage to find a few more pieces of advice, though it's all still pretty basic, on using your opponent's energy against them to counter their attack.";
 			Increase dexterity of Player by 1;
 			LineBreak;
-			say "[bold type]You're dexterity has increased by 1![roman type][line break]";
+			say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 			Increase sdbook by 1;
 			Follow the turnpass rule;
 		else:
