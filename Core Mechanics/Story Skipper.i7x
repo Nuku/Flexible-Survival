@@ -672,7 +672,7 @@ To SaveEverything:
 	RoomSave;
 	PossessionSave;
 	CharacterSave;
-[	ChildrenSave;]
+	ChildrenSave;
 	PlayerSave;
 	BeastSave;
 	VariableSave;
