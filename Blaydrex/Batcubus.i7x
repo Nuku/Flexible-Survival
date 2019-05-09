@@ -4,37 +4,37 @@ Version 2 of Batcubus by Blaydrex begins here.
 
 "Adds a Batcubus to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Batcubus" } to infections of girl;
 	add { "Batcubus" } to infections of furry;
 
 to say Batcubus attack:
-	if player is female and ( cocks of player is 0 or a random chance of 2 in 3 succeeds ):
+	if Player is female and ( Cock Count of Player is 0 or a random chance of 2 in 3 succeeds ):
 		say "     The batcubus saunters over to your defeated form. 'Well, well. Smells like somebody is a little excited,' she says as she starts to look over your body, especially your groin. She wastes no time in removing your clothes and giggles with delight when she sees your aroused cunt. She lowers her head and begins to kiss your pussy, practically making out with it. Her technique is remarkable, bringing you close to the edge countless times, but always stopping just before you can climax. She spends what seems like an eternity denying you release before she decides you are ready. You feel a little pressure against your pussy and a small insertion. You look down to see she has put her nipple in you. She squeezes her breast, making milk pour into your desire-filled fuckhole. She fills you with her milk before kissing your tummy where your uterus is. A warm feeling fills your womb as your pussy clamps down to stop the milk from leaking. You writhe on the ground as your body desires release heavily while being denied the pleasure once again. As quickly as the feeling began, it stops. You see some of her milk pour out, but for some odd reason it seems more consistent with sperm. She stands up and licks her purple lips, giggling to herself. 'That was fun. I hope we can meet again sometime,' she says before kissing you passionately on the lips and walking off, with you still needing release.[impregchance]";
-	else if player is male and a random chance of 2 in 3 succeeds:
+	else if Player is male and a random chance of 2 in 3 succeeds:
 		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. She smiles and rips your pants off and gazes at your prick, eyes burning with lust. 'Oooooh. Hopefully this can get me the relief I need,' she says as she lowers her dripping cunt to grind against your stiff member. She sighs in bliss as she lowers until you are fully hilted in her. She begins to ride you like a slut who has been denied sex for a long time. Her cunt grips you tightly, like that of a virgin. Soon, it becomes too much for you to bear and you begin to shoot your load into her waiting womb, causing her to orgasm on your cock. She rewards you with bringing her large breasts to your face, forcing you to suckle her nipple until milk floods into your mouth. You stay there until you've had your fill. She gets up and kisses you sweetly on the lips before walking off to find another victim.";
-	else if player is male:
+	else if Player is male:
 		say "     She takes a deep breath in through her bat-like nose and shudders as she moans. Her eyes quickly snap to the bulge in you pants. 'Mmm... I'm so thirsty...' she says sensually while running her long tongue disturbingly across her fang. She rips your pants off and gazes at your prick, eyes burning with a hungry lust. The sight of her fanged maw approaching your cock sends a shiver of fearful anticipation through you...";
-		say "     Thankfully though, she only slides her purple-lipsticked lips down over your cock and starts sucking it in the conventional manner. Your [cock of player] manhood pulses and throbs as she sucks your pre down while [if player is female and a random chance of 3 in 5 succeeds]fingering your cunny mercilessly[else if cockname of player is listed in infections of internallist]groping your ass[else]kneading your balls with a lustful desire for their contents[end if]. You pant and moan under her oral assault as she expertly works her lips, tongue and [if cock length of player < 6]palate[else]throat[end if] over your drooling shaft.";
-		say "     She tantalizes and teases you for a long time, to the point that you're almost begging her to let you cum. She grins maliciously at your torment, delighting in it almost as much as she's delighting in sucking your [cock size desc of player] cock. Eventually though, she does let you cum. When you do, she slurps down every last drop of your [cum load size of player] load, even milking the final dregs from you by winding her tongue around your shaft and orally jerking you off to get every last drop you'll give. You're left exhausted and drained from the experience, barely noticing as the slutty bat creature strides off.";
+		say "     Thankfully though, she only slides her purple-lipsticked lips down over your cock and starts sucking it in the conventional manner. Your [cock of Player] manhood pulses and throbs as she sucks your pre down while [if Player is female and a random chance of 3 in 5 succeeds]fingering your cunny mercilessly[else if cockname of Player is listed in infections of internallist]groping your ass[else]kneading your balls with a lustful desire for their contents[end if]. You pant and moan under her oral assault as she expertly works her lips, tongue and [if Cock Length of Player < 6]palate[else]throat[end if] over your drooling shaft.";
+		say "     She tantalizes and teases you for a long time, to the point that you're almost begging her to let you cum. She grins maliciously at your torment, delighting in it almost as much as she's delighting in sucking your [cock size desc of Player] cock. Eventually though, she does let you cum. When you do, she slurps down every last drop of your [Cum Load Size of Player] load, even milking the final dregs from you by winding her tongue around your shaft and orally jerking you off to get every last drop you'll give. You're left exhausted and drained from the experience, barely noticing as the slutty bat creature strides off.";
 	else:
 		say "     She takes a deep breath in through her bat-like nose and seems a little disappointed. She slides up closer to you, sniffing again and again as her face drifts down to your crotch. Finding you lacking any loins, she gives a pouting [']harrumph['] before grinning playfully. She gives your bare crotch several slow licks with her long tongue, sending shivers through you.";
 		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezing them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
 
 to say beatthebatcubus:
 	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give in to these urges?";
-	if player consents:
-		if player is male:
+	if Player consents:
+		if Player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
-			if cock length of player > 17 or cock width of player > 9:
+			if Cock Length of Player > 17 or ball size of Player > 9:
 				say "     Something about her cunt makes you want to shove your large cock in her, so that is exactly what you decide you must do. You line up your cock with her cunt and ram it into her nice and hard. Her passage gives little resistance, but is extremely tight on your cock. Before you ca do anything she begins kissing you, repeatedly. Each kiss spreads warmth at the site and increases your lust more. You soon lose control and begin fucking her mercilessly, her tight passage bringing you to orgasm quickly. But your cock doesn't soften and your lust only grows. You begin fucking her harder and faster. You cum in her a total of five times before you begin to calm down. She gives you yet another kiss on your lips, placing your hand on her wonderful globes. You get the message and begin to suckle the milk from her nipple greedily. You drink your fill and realize she is fast sleep, obviously from exhaustion due to all the pleasure. As you begin to leave you whimper softly, missing the feeling of her kisses and her pussy as your cock lets out some cum at the thought and you feel strangely odd, but quickly dismissing the thought and continuing.";
 			else:
-				say "     The invitation may look like fun, but something about those beautiful lips draws you to desire that much more than her cunt. She smiles softly and gets on her knees, crawling to you. She nuzzles against your cock affectionately before placing a gentle kiss on your balls. Something churns in your balls and they feel fuller and the need to release becomes more prominent. This just makes her giggle before kissing the head of your cock, making your eyes go wide as heat spreads across your cock as if an invisible pussy or mouth were wrapping around it. You whimper in need as she places kiss after kiss on your rod, driving your lust to heights you never thought possible. Your cock begins to throb insanely, pre coming out by the bucket. She giggles and looks up at you, giving an orgasmic face. This is too much for you, bringing you to cum. Your cock is basically a cum hose now, shooting the biggest load of your life all onto her face and her breasts. When you are done, it looks like she just had a cum bath, which she technically did. She just smiles. She lifts your balls and cock gently and kisses [if player is female]your puss[yfn][else]where your pussy would be if you had one[end if]. You walk away from the beautiful bat-girl thinking of how weird her thanks was...";
-		else if player is female:
+				say "     The invitation may look like fun, but something about those beautiful lips draws you to desire that much more than her cunt. She smiles softly and gets on her knees, crawling to you. She nuzzles against your cock affectionately before placing a gentle kiss on your balls. Something churns in your balls and they feel fuller and the need to release becomes more prominent. This just makes her giggle before kissing the head of your cock, making your eyes go wide as heat spreads across your cock as if an invisible pussy or mouth were wrapping around it. You whimper in need as she places kiss after kiss on your rod, driving your lust to heights you never thought possible. Your cock begins to throb insanely, pre coming out by the bucket. She giggles and looks up at you, giving an orgasmic face. This is too much for you, bringing you to cum. Your cock is basically a cum hose now, shooting the biggest load of your life all onto her face and her breasts. When you are done, it looks like she just had a cum bath, which she technically did. She just smiles. She lifts your balls and cock gently and kisses [if Player is female]your puss[yfn][else]where your pussy would be if you had one[end if]. You walk away from the beautiful bat-girl thinking of how weird her thanks was...";
+		else if Player is female:
 			say "     The scent of her arousal fills your nose and you feel your cunt getting more and more wet by the second, soon having a thick trail of your liquid need running down your leg. You turn around and look at her, unable to do anything other than slide your hand under your clothes and start masturbating yourself. She notices your actions and smiles softly and beckons you to come over and have some fun.";
-			if cunt width of player < 3 or cunt length of player < 6:
+			if Cunt Tightness of Player < 3 or Cunt Length of Player < 6:
 				say "     Your eyes hone in on her perfect breasts. You can see small trails of milk leaking from her large nipples. You smirk as a nice thought comes to your mind. You want something to fill your cunt and womb, might as well try milk. You walk up to her and roughly grab her breast. She looks surprised, obviously not used to someone being so rough and forceful. Her milk leaks out more rapidly as a sign of her growing arousal. You push her breast against your cunt, her nipple and some breast going inside. You smile and squeeze, making her milk flood into your cunt. You whimper, your pussy drinking up all that delicious milk. After you finish emptying one breast you move to the next, until that one empties as well. You pop it free, milk pouring from your cunt. She smiles, something made her happy. She kisses your abdomen where your womb is. Your uterus feels strange and your body heats up. You drop to your knees as your pussy tightens, no more milk escaping from it. You go through an intense orgasm that lasts a while. When you come down you see some more milk leaking out, but not much. But something seems off. It is thicker and looks more like cum. Her kiss must have changed the milk to sperm.[impregchance]";
 			else:
 				say "     Your eyes remain glued to her lovely lips covered with her purple lipstick. Something about them makes you just want to kiss them. She smiles and waits patiently for you to close in before kissing you passionately on the lips, making you more horny. You stand up and place your pussy near her lips. She kisses your pussy and clit lovingly before licking with passion. Her technique is incredible, quickly bringing you to the edge. You can't help but cum, covering her face in your juices. She waits a second and begins her assault again. Your sensitive pussy is even more sensitive, causing you to moan like a little whore. She makes you cum countless times before you drop out of exhaustion. She gets up and walks away, leaving you oddly more horny than when you started.";
@@ -45,18 +45,19 @@ to say beatthebatcubus:
 		say "     Managing to resist this final temptation, you grab the bat creature by one arm, pull her up and shove her on her way. She pouts, clearly upset that you've not fallen for her trap and strides off indignantly in search of some new, more cooperative victim.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Batcubus"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Batcubus"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She grabs your groin roughly with her gloved hand while giggling.[or]She slaps you hard on the face, leaving a red mark of a hand.[or]The batcubus knocks you down and places the heel of her purple boot hard on your chest, blowing a kiss before jumping away, giggling.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthebatcubus]"; [ Text or say command used when Monster is defeated.]
@@ -83,15 +84,15 @@ When Play begins:
 	now lev entry is 6;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";        [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;          [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
-	now breast size entry is 16;        [ Size of breasts infection will try to attain ]
-	now male breast size entry is 16;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;        [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 7;          [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 0;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0;          [ Size of balls apparently ;) sneaky Nuku]
+	now Nipple Count entry is 2;             [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 16;        [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 16;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 12;        [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 7;          [ Width of female sex infection will try and give you ]
 	now libido entry is 80;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "batcubus milk";  [ Loot monster drops, ]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
@@ -103,7 +104,98 @@ When Play begins:
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Drop Item
@@ -126,14 +218,14 @@ to say batcubus milk use:
 Section 4 - Endings
 
 When play ends:
-	if bodyname of player is "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
-		if humanity of player < 10:
+	if bodyname of Player is "Batcubus" and matriarchdefeated is 0 and matriarchowned is 0:
+		if humanity of Player < 10:
 			say "You search the city looking for males to impregnate you and anybody to kiss, your cunt always dripping, ready to be fucked at any time. Sometimes thoughts of your past return, but a single lick of your lips quickly sends your lust soaring and you can't help but forget again and go look for relief you so desperately need.";
 		else:
 			say "Life as a batcubus proves fun. Every time you find someone you enjoy all you have to do is kiss them and they are putty in your hands. Thanks to this you have a good life, letting you have everything you want, never needing to work a day in your life";
-			if player is herm:
+			if Player is herm:
 				say "You spend your days fighting the urge to lick your lips. Being one gender or the other would allow you to instinctively lick them safely, but the combined lust of your female and male sex organs would be too much. A single lick could send you into a sexual fury. Last time it happened you tried to turn a whole town into batcubuses. Hopefully one day someone can find out how to get this lipstick off you.";
-			else if player is male:
+			else if Player is male:
 				say "You find that having a cock isn't as fun as having a slavering cunt like most other batcubuses, but you make do. Your cock is insatiable, no matter how much you cum and fuck. One day you find a tigress hooker, who takes an interest in you. Shi wastes no time in raping you and dominating you until you submit to hir. Shi claims you as hir own and shi is actually able to keep up with your sex drive, so it works out. You spend the rest of your days happily mated to hir.";
 			else:
 				say "...";

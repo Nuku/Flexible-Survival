@@ -13,24 +13,24 @@ Pretty Kitty	"Pretty Kitty"
 
 The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
 Instead of examining the The Pretty Kitty entrance:
-	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens is 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
+	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens > 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
 
 [Describing the store & NPC beginning descriptions]
 The description of The Pretty Kitty is "[PKDesc]".
 to say PKDesc:
 	if thirst of Andromeda is 0:
-		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
+		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens > 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
 		LineBreak; [There for first description clarification]
 		say "     'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
 		now thirst of Andromeda is 1;
 	else:
-		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
-		if libido of Andromeda >= 2:
+		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens > 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
+		if Libido of Andromeda >= 2:
 			say "     Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
 			LineBreak;
 			say "     Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a holler if you need anything, beautiful.'";
 		else:
-			say "     'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
+			say "     'Hi [if Player is female]miss[else if Player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
 
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
@@ -54,14 +54,14 @@ the scent of Andromeda is "     Andromeda smells clean, obviously taking care of
 [Talking with NPC - Individual scenes play till done, then random talks]
 instead of conversing Andromeda:
 	if debugactive is 1:
-		say "DEBUG ->HP: [HP of Andromeda], LUST: [lust of Andromeda], LIBIDO: [libido of Andromeda], XP: [XP of Andromeda] <- DEBUG[line break]";
+		say "DEBUG ->HP: [HP of Andromeda], LUST: [lust of Andromeda], LIBIDO: [Libido of Andromeda], XP: [XP of Andromeda] <- DEBUG[line break]";
 	if HP of Andromeda is 0:
-		say "     'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
+		say "     'Hi [if Player is female]miss[else if Player is male]mister[else]there[end if]! It's nice to meet you! Do you live around here? Is this your first time in the mall? You look new, do you like it here?' You're immediately bombarded by the catgirl proprietor, whatever question you had in your head erased by the barrage of questions. It takes you a few moments to recover yourself, and you find Andromeda staring expectantly at you, eyes gleaming with joy.";
 		say "     You smile nervously, unsure what she's waiting for. '...Yes?' you answer nervously, hoping that was the right answer.";
 		say "     Andromeda claps her hands together excitedly and beams a smile at you, bounding around the counter and taking your hand in record time. 'Well come on then, I'll show you around my store,' she says as she pulls you forward, surprisingly strong for her size.";
 		say "     You spend the next half-hour being shown around the girl's clothing store, roaming through aisles of different clothes and being shown any piece that sparks your interest. Throughout the tour, Andromeda bounces happily, continuing to bombard you with every question imaginable, and some even unimaginable. You do your best to answer as many of them as you can, but the onslaught is relentless, and a few of them go unanswered. Not that that seems to bother her. In between questions, the bubbly catgirl makes small talk, talking about the weather or what your opinions on fish are. You can't seem to figure out how someone so cheerful still lives here.";
 		say "     You're almost sad when the tour ends, and you both find yourself back at the checkout counter. Andromeda takes her place behind the counter, smiling happily at you. 'Thanks for coming along, it's been a while since I've had someone new to talk to! If you find anything you like, bring it up here and we'll get you ready to go!' Thinking to herself for a moment, she lets out an audible [']Oops['], as if she'd just remembered something important. 'As much as I'd like to, I can't give away this stuff for free. Limited supply right now, as I'm sure you know. It'll be some food. I hate finding that stuff myself; the people outside the mall are mean now!' She lets out an audible [']Humph['] at the thought. 'Or if you happen across some milk, I'll gladly take that for these! The milk from those gryphons is soo good,' Andromeda tells you as her tail trembles at the thought of it.";
-		say "     You wave goodbye to Andromeda, having to go for now. She beams another happy smile at you and yells 'Come again soon [if player is female]miss[else if player is male]mister[else]you hear[end if]!'";
+		say "     You wave goodbye to Andromeda, having to go for now. She beams another happy smile at you and yells 'Come again soon [if Player is female]miss[else if Player is male]mister[else]you hear[end if]!'";
 		increase HP of Andromeda by 1;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:		[Leather jacket for Hadiya's quest]
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
@@ -95,17 +95,17 @@ instead of conversing Andromeda:
 
 [Fucking with NPC]
 instead of fucking Andromeda:
-	if player is male:
+	if Player is male:
 		say "     Walking up to the counter, with your intent clear in your head, you quietly ask the perky catgirl if she wants to have any 'fun'. Instead of most of the reactions you're used to in this town, Andromeda looks utterly confused. Cocking her head to the side and staring at you vacantly, you're unsure if Andromeda is feigning ignorance or if she really is as innocent as she seems. Instead of continuing this train of thought, you drop the subject, and her bright smile once again shines through.";
-	else if player is female and HP of Andromeda < 2:
+	else if Player is female and HP of Andromeda < 2:
 		say "     Walking up to the counter, with your intent clear in your head, you quietly ask the perky catgirl if she wants to have any 'fun'. Instead of most of the reactions you're used to, Andromeda looks utterly confused. Cocking her head to the side and staring at you vacantly, you're unsure if Andromeda is feigning ignorance or if she really is as innocent as she seems. Instead of continuing this train of thought, you drop the subject, and her bright smile once again shines through.";
 		say "     Walking away from the perky catgirl, you're unable to see her biting her lip, preventing herself from saying something to you.";
 	else if (lastfuck of Andromeda - turns < 6):
 		say "     'I know that you're looking for more fun, but you gotta give me a break sometimes, beautiful,' the perky catgirl says to you with a lighthearted wink.";
 	else:
-		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if libido of Andromeda > 0]She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl[else]Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
+		say "     Heading over to the checkout counter, you jump up on it, planting your rear on the counter next to her. She lets out an [']EEP['] of surprise at your actions, but grinning happily as you plop down next to her, comfortable with your presence. Sitting there in silence for a few moments, you lean over and whisper in her ear, asking her if she's positively sure she doesn't want to have any fun. [if Libido of Andromeda > 0]She smiles slyly at you, jumping off the counter and making a show of herself as she deftly flips on the closed sign, then walking to the storage room. Trailing behind her, you wonder just what kind of fun you'll have with the lanky girl[else]Your question sends her into what looks to be deep thought and concentration, and you think that she might just truly be THAT innocent. That is, until Andromeda flips on the closed sign, grabbing your arm and almost pulling you off the counter, dragging you towards a storage room in the back[end if].";
 		say "     Following her, you both find yourselves in the storage room, where Andromeda shuts and locks the door. Crates of what are probably excess clothes are stacked along the walls of this bare room, with the only other furnishings being a haphazard mess of blankets and pillows on the ground. You figure that Andromeda must sleep here at night. Turning around to you, her eyes have taken on a lustful look, and she is panting quietly, her tongue already lolling out of her mouth.";
-		say "     Under panted breaths, you hear Andromeda talking. [if libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you?'[else]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.'[end if] Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
+		say "     Under panted breaths, you hear Andromeda talking. [if Libido of Andromeda > 0]'You just had to go and get me all worked up again, didn't you?'[else]'If you've taken an interest in little ol['] me, I can't say no to a beautiful thing like you. Not anymore at least.'[end if] Already sneaking a hand down into her jeans, it's obvious that, even with such a little question, you've gotten her quite worked up. What do you propose to do with her?";
 		LineBreak;
 		now calcnumber is -1;
 		now XP of Andromeda is 0;
@@ -122,32 +122,32 @@ instead of fucking Andromeda:
 				else:
 					say "Invalid Number. Try Again.";
 			if calcnumber is 1:
-				say "     Deciding to give the slim catgirl some relief, you saunter up to her, making sure to show off your [breast size desc of player] breasts as you approach the moaning girl. Stopping just short of bumping into Andromeda, you lean in and start kissing and licking under her neck, while your hands dive lower and start to undo the catgirl's pants. Panting even faster from your lavish show and affection, Andromeda's tongue is lolling out of her mouth, her mind lost in pleasure. Removing yourself from the catgirl's neck, you finally undo her jeans, and they fall to the floor, followed by her panties. Quickly taking off your own clothes, and placing them aside, you kneel in front of the catgirl, her dripping cunt filling your vision and her smell filling the air. Taking a long inhale, the scent of her feminine sex and arousal fills your nostrils, and lights your senses aflame. Immediately feeling a burning desire in your chest and loins, you grab her hips and pull her to you. Diving right in, you begin roving your tongue throughout Andromeda's cunt, feeling her insides with your wiggling appendage.";
+				say "     Deciding to give the slim catgirl some relief, you saunter up to her, making sure to show off your [breast size desc of Player] breasts as you approach the moaning girl. Stopping just short of bumping into Andromeda, you lean in and start kissing and licking under her neck, while your hands dive lower and start to undo the catgirl's pants. Panting even faster from your lavish show and affection, Andromeda's tongue is lolling out of her mouth, her mind lost in pleasure. Removing yourself from the catgirl's neck, you finally undo her jeans, and they fall to the floor, followed by her panties. Quickly taking off your own clothes, and placing them aside, you kneel in front of the catgirl, her dripping cunt filling your vision and her smell filling the air. Taking a long inhale, the scent of her feminine sex and arousal fills your nostrils, and lights your senses aflame. Immediately feeling a burning desire in your chest and loins, you grab her hips and pull her to you. Diving right in, you begin roving your tongue throughout Andromeda's cunt, feeling her insides with your wiggling appendage.";
 				say "     Your sudden intrusion turns Andromeda's groans into screams of pleasure, echoing through the storage room as you dig greedily into the catgirl's cunt. The trickles of juices running from her womanhood have turned into streams, drenching your face and chest in her tasteful fluids. Lapping up as much as you can still doesn't stop the flow, the catgirl constantly producing a prodigious amount of fluids. Ignoring the rivers of catgirl cum, you dive back into her needy pussy, giving it some much-needed attention. Burying your face into her cunt, you don't notice that her tail has begun to work its way around you, writhing its way around to your back. Positioning itself at the entrance to your seizing cunt, you're too preoccupied with massaging every crevice of Andromeda's pussy to notice it.";
 				WaitLineBreak;
-				say "     You do notice it, however, when she forces her tail as far into your [cunt size desc of player], dripping pussy. You stop all action as your mind goes blank with pleasure, your brain unable to handle the massive amount of stimulation you just received from your slit. Regaining thought a few seconds later, you're unable to hold back your moans and screams as her tail jams itself into you in short, savage thrusts. Groaning, panting, and drowning in pleasure, you are able to start your tongue-fucking once again. Both of you are soon a cacophony of moans and screams, with your tongue triggering every nerve inside Andromeda's quivering cunt, and her tail, now nothing more than a girl-cum soaked spear, impaling itself inside your gripping cunt. You're unable to process the incredible pangs of pleasure shooting to your head, and you yell out in climax, soaking her tail in your juices. Recovering yourself, you find that Andromeda hasn't cum, and that her tail is still pistoning your twitching pussy. Gripping her hips close to her face, you get back to the job ahead of you, doing your best to wring out every drop of catcum you can.";
+				say "     You do notice it, however, when she forces her tail as far into your [cunt size desc of Player], dripping pussy. You stop all action as your mind goes blank with pleasure, your brain unable to handle the massive amount of stimulation you just received from your slit. Regaining thought a few seconds later, you're unable to hold back your moans and screams as her tail jams itself into you in short, savage thrusts. Groaning, panting, and drowning in pleasure, you are able to start your tongue-fucking once again. Both of you are soon a cacophony of moans and screams, with your tongue triggering every nerve inside Andromeda's quivering cunt, and her tail, now nothing more than a girl-cum soaked spear, impaling itself inside your gripping cunt. You're unable to process the incredible pangs of pleasure shooting to your head, and you yell out in climax, soaking her tail in your juices. Recovering yourself, you find that Andromeda hasn't cum, and that her tail is still pistoning your twitching pussy. Gripping her hips close to her face, you get back to the job ahead of you, doing your best to wring out every drop of catcum you can.";
 				say "     Eventually, after given two or three more mind-blowing tailgasms, Andromeda finally succumbs to your ministrations. Her eyes roll up into her head as the dam in her cunt breaks open. A tidal wave of fluid rushes out of her cunt, covering you in Andromeda's tasteful fluids. Barely able to keep yourself up, you sag down onto the floor, leaning against a wall, Andromeda's tail still twitching in your cunt, sending spasms of pleasure through you. Andromeda finally returns to her senses, eyes rolling back to where they should be. Sitting on the crate for a few moments, Andromeda gets up and withdraws her tail from you, eliciting a pleasured groan from you. Grabbing her clothes and a towel, she cleans herself up as best she can, but she's still a little drenched as she redresses. Giving you a loving kiss and whispering 'Thanks' into your ear, Andromeda leaves a towel beside you as she walks back outside; you're not entirely sure that one towel will be enough. Resting against the wall for a few minutes, you finally recover yourself, and clean up as best you can. Walking outside past the lovable catgirl, you can't help but notice her eyes on you. Doing your best sensual walk, you're positively sure you see her bite her lip, Andromeda once again getting aroused. Grinning to yourself, you walk out of the store, still covered in the smell of lust and cat.";
-				now libido of player is 0;
+				now Libido of Player is 0;
 				now XP of Andromeda is 1;
-				if libido of Andromeda < 3, increase libido of Andromeda by 1;
+				if Libido of Andromeda < 3, increase Libido of Andromeda by 1;
 			else if calcnumber is 2:
 				say "     Figuring that the poor girl needs help, you quickly undress yourself and set your clothes on a nearby crate, Andromeda watching with aroused eyes as you do so. Walking over to her, you remove her hand from her dripping cunt, drawing out a loud [']Mew['] of displeasure. Deciding to help her out, you pull her in for an erratic kiss, which she haphazardly returns. You can sense her arousal through the kiss, her tongue darting around randomly, doing its best to find yours. You engage in a drawn-out tongue wrestle, all while hugging her closer and sneaking your hands under her clothes, caressing every inch of fur you can find. Sneaking a hand down into her jeans and underwear, you begin to lightly run your fingers along the outside of her cunt, and you can feel the heat emanating off of her slit. She breaks the kiss with a long, low-pitched groan of pleasure, and you feel her cunt dripping fluids into her panties. Internally deciding that that isn't a good idea, your other hand worms it way down there, unbuckling her jeans and pulling them down along with her panties, and then throwing them aside.";
 				say "     Quickly slipping out of your own lower garments and putting them aside, you keep one of your hands gently stimulating Andromeda's seizing cunt, reveling in how you've made the catgirl's eyes roll completely into her head. She's not as unresponsive as you thought, however, if her paw groping at your cunt is any indication. Unable to restrain yourself, you let out a groan of pleasure, involuntarily seizing yourself up. Her deft paws, obviously skilled at pleasuring a woman, quickly reduce you to a panting, dripping mess with a combination of rubs, gropes, and massaging. Not wanting to be outdone, you stop caressing her gripping womanhood, and line up a few digits to start finger-fucking your quivering catgirl lover.";
 				WaitLineBreak;
 				say "     Andromeda must've had the same idea you had, as you soon feel a furry digit bury itself completely into your throbbing cunt. Sagging forward into her, Andromeda supports you up as your head is flooded with pleasure. A knowing smirk crosses Andromeda's face as she hits every nerve in your slit, reducing you to a pile of quivers and moans. Recovering yourself enough to remember what's going on, you push two of your fingers into Andromeda's twitching cunt, with her response obvious as a loud yelp echoes through the storage room. While one of Andromeda's furry claws explores every inch of your cunt and reaching places you didn't even know were there, another one begins to caress your outer lips, drawing gently across the entrance to your pussy. This digit soon buries itself into your cunt, joining its twin in their exploration of your cunt. You do the exact same thing, adding a third digit to the two thrusting in and out of Andromeda's now dripping cunt.";
 				say "     Feeling your orgasm not far off, you pull Andromeda into an affectionate, sloppy kiss. She responds readily, the two of you making out while your fingers are buried in each other's cunts. Confirming your suspicion, you're soon wracked with an orgasm, brought on by Andromeda's skilled fingers. You moan heavily into her mouth as you cum, your feminine juices drenching her hand and the floor below. Lost in a sea of pleasure, you continually jackhammer your fingers into her spasming cunt, mindlessly trying to make her cum. Your wish is soon granted, with the feeling of her cunt gripping your fingers and a river of fluid drenching your hand. Mewing loudly as she cums, she breaks the kiss and pants heavily and sags into your grip. You do the same to her, both of you holding onto each other as you recover. Both of you recovering after a few minutes of rest, you withdraw from each other; your hands are covered in each other's fluids. Licking herself clean, Andromeda takes your hand and cleans it, watching you lustfully as you gather your things. Cleaned up and ready to leave, you're pulled into an aggressive kiss by the normally-bubbly catgirl, her tongue catching yours in a sensual embrace. Breaking off the kiss, she gives your ass a playful slap and tells you to 'Come back soon', the sentence punctuated by a throaty purr. You do your best to remember to visit again as you walk contentedly out of the shop, prepared for whatever is ahead.";
-				now libido of player is 0;
+				now Libido of Player is 0;
 				now XP of Andromeda is 1;
-				if libido of Andromeda < 3, increase libido of Andromeda by 1;
+				if Libido of Andromeda < 3, increase Libido of Andromeda by 1;
 			else if calcnumber is 3:
 				say "     Moving over to the lust-filled catgirl, you pull her into a sloppy kiss, and moving your hands under her shirt. She eagerly complies with your kiss, moaning quietly as you begin to fondle her, running your hands through her short, soft fur. One of your hands finds her small A-cup breasts, and you begin kneading her breast and lightly tugging her nipple. You remove your other hand, and commence stripping yourself, slowly removing all the clothes you can get off with one hand and setting them aside. Finally breaking the long, lust-filled kiss, Andromeda is filled with arousal, furiously masturbating and panting heavily. You remove your hand from her breast, giving it one last tug, with a groan being the result, and make a show of removing the rest of your clothes. Watching you intently with wide eyes, Andromeda absorbs every inch of your body, obviously turned on even more by the show. Quickly realizing that she is still dressed, Andromeda rips off her clothes and throws them haphazardly on a crate nearby. Her tight slit is revealed, dripping and running lubricant down her thighs. You're not far behind her, you yourself beginning to feel a heat all over your body. Not wanting to wait anymore, you tell the catgirl to lie down on her bed, moving yourself atop her as you do so, finding yourself face to face with Andromeda's womanhood. She finds herself in the same position, with your cunt hovering right above her face.";
-				say "     Finally finding yourself face to face with the perky girl's slit, you run your fingers over the catgirl's vagina, deftly massaging her folds and tugging lightly on her clit. A pleasured moan is the result of your teasing, and this moan quickly turns into a high-pitched screech as you dive a digit into her spasming cunt. While you begin to finger the spasming woman, you shake your ass slightly, signaling Andromeda to start her own playing. You suddenly feel her hands on your hips as she forcefully pulls your slit to her face, giving her uninhibited access and making you gasp loudly. Pangs of pleasure shoot through you as Andromeda immediately dives her long tongue into your [cunt size desc of player] cunt, the rough appendage scraping on your inner walls and eliciting moans of pleasure from you.";
+				say "     Finally finding yourself face to face with the perky girl's slit, you run your fingers over the catgirl's vagina, deftly massaging her folds and tugging lightly on her clit. A pleasured moan is the result of your teasing, and this moan quickly turns into a high-pitched screech as you dive a digit into her spasming cunt. While you begin to finger the spasming woman, you shake your ass slightly, signaling Andromeda to start her own playing. You suddenly feel her hands on your hips as she forcefully pulls your slit to her face, giving her uninhibited access and making you gasp loudly. Pangs of pleasure shoot through you as Andromeda immediately dives her long tongue into your [cunt size desc of Player] cunt, the rough appendage scraping on your inner walls and eliciting moans of pleasure from you.";
 				WaitLineBreak;
 				say "     Removing your drenched finger from Andromeda, you quickly push your face into her seizing cunt, beginning your own brand of tongue care. Immediately pushing your wriggling tongue into her inviting folds, you're drenched in the taste of her feminine juices. Exploring Andromeda's depths is brought to a quick halt when her rough tongue hits a truly sensitive spot, triggering a moan from you, muffled as your mouth is currently occupied. You quickly dive back in, savoring the smell and taste of the lithe catgirl. Your reentrance does not go unnoticed; hearing the girl groan into your cunt is all the confirmation you needed. You quickly forget how long you and Andromeda have been at each other, constant waves of pleasure having eroded all of your other senses. Lost in the overwhelming sensations of her tongue caressing every inch of your depths, you barely notice when Andromeda lets out a loud mew, her fluids exploding all over your face in a long, exhaustive orgasm. Your own climax is not far off, and you find yourself groaning loudly into her slit as your own feminine fluids drenches her muzzle. You sag down, exhausted but sated, sighing loudly as you feel Andromeda dutifully licking your juices off of your pussy (and her face). Rolling yourself off of her and climbing next to her, you cuddle up next to her and rest your head, feeling her rough tongue cleaning your face off. You soon drift off to sleep, lulled by the feeling of Andromeda hugging you.";
 				say "     You wake up some time later, still in the comforting embrace of the fuzzy catgirl. You slowly get up and gather your things, being careful as to not wake her. Unlocking the door and stepping out, you're able to faintly hear Andromeda telling you to 'Come back soon, beautiful.' Smiling happily, you step out into the store, ready to go on your way, the faint smell of cat hanging over you.";
-				now libido of player is 0;
+				now Libido of Player is 0;
 				now XP of Andromeda is 1;
-				if libido of Andromeda < 3, increase libido of Andromeda by 1;
+				if Libido of Andromeda < 3, increase Libido of Andromeda by 1;
 			else:
 				say "     Seeing that Andromeda seems to have everything under control, seeing as how she is already furiously masturbating, you quietly unlock the door and exit the store, re-locking the door on your way out. You figure you might visit her some other time.";
 				now XP of Andromeda is 1;
@@ -216,13 +216,13 @@ check SummerObtain:
 [Tshirt action]
 carry out TshirtObtain:
 	say "     Taking the T-shirt & Blue Jean set up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the T-shirt/Blue Jean combo.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -253,13 +253,13 @@ carry out TshirtObtain:
 [Blouse action]
 carry out BlouseObtain:
 	say	"     Taking the Blouse & Skirt up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the blouse set.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -290,13 +290,13 @@ carry out BlouseObtain:
 [Tuxedo action]
 carry out TuxedoObtain:
 	say	"     Taking one of the black tuxedos up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the suit.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -327,13 +327,13 @@ carry out TuxedoObtain:
 [Summer action]
 carry out SummerObtain:
 	say	"     Taking the loose-fitting summer clothes up to the counter, Andromeda smiles happily as you approach. Setting your purchase on the counter, you smile back at the bouncing proprietor and mention that you'd like to purchase the baggy outfit.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -396,13 +396,13 @@ understand "procure nametag collar" as NametagCollarObtain.
 
 carry out SpikedCollarObtain:
 	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -436,13 +436,13 @@ carry out SpikedCollarObtain:
 
 carry out FuzzyCollarObtain:
 	say	"     Bringing the fuzzy collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -476,13 +476,13 @@ carry out FuzzyCollarObtain:
 
 carry out NametagCollarObtain:
 	say	"     Bringing the nametag collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
-	if scalevalue of player >= 5 or scalevalue of player <= 1:
-		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
+	if scalevalue of Player >= 5 or scalevalue of Player <= 1:
+		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of Player <= 1]get bigger[else if scalevalue of Player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if player consents:
+		if Player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if player consents:
+			if Player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -614,13 +614,13 @@ It is not temporary.
 the scent of girl's jacket is "The jacket smells of leather.".
 
 instead of using the girl's jacket:
-	say "[if scalevalue of player > 2]Aside from being too small for you, you[else]You[end if] don't want to risk it getting damaged before giving it to Gobby. You instead stow it away safely.";
+	say "[if scalevalue of Player > 2]Aside from being too small for you, you[else]You[end if] don't want to risk it getting damaged before giving it to Gobby. You instead stow it away safely.";
 
 Section 6 - Comments and Variables
 
 [HP of Andromeda - Variable for player-triggered talking scenes]
 [XP of Andromeda - variable used to work the sex menu]
-[libido of Andromeda - Variable for sex count, used to trigger some scenes]
+[Libido of Andromeda - Variable for sex count, used to trigger some scenes]
 [lust of Andromeda - Variable for talk scene regarding collars]
 [thirst of Andromeda - Used for store description]
 

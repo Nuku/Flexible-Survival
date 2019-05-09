@@ -65,7 +65,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "head"	"Your head regains it's human form, you hope you can keep it this time."	"Pure human head."	"Your human head changes"
 "chest"	"Your chest returns to normal."	"Pure human chest."	"Your human chest changes"
 "gut"	"Your beer belly returns, drat."	"Pure human belly."	"Your human belly changes"
-"pelvis"	"You once more have a human [if playerfemale is 1]vagina[else]penis[end if]."	"Pure human crotch."	"Your human hips and groin changes"
+"pelvis"	"You once more have a human [if Playerfemale is 1]vagina[else]penis[end if]."	"Pure human crotch."	"Your human hips and groin changes"
 "left upper arm"	"Your left upper arm returns to normal."	"Pure human left upper arm."	"Your human left upper arm changes"
 "left forearm"	"Your left forearm returns to normal."	"Pure human left forearm."	"Your human left forearm changes"
 "left hand"	"Your left hand returns to normal."	"Pure human left hand."	"Your human left hand changes"
@@ -79,7 +79,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right shin returns to normal."	"Pure human right shin."	"Your human right shin changes"
 "right foot" 	"Your right foot returns to normal."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear returns to normal."	"Pure human rear."	"Your human rear changes"
-"full" 	"human"	"You're just an ordinary [if playerfemale is 1]gal[else]guy[end if]."	--
+"full" 	"human"	"You're just an ordinary [if Playerfemale is 1]gal[else]guy[end if]."	--
 
 Table Female Human - Template
 Segment	Shift Text	Desc Text	Unshift Text
@@ -147,7 +147,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right shin changes."	"Pure human right shin."	"Your human right shin changes"
 "right foot" 	"Your right foot changes."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear changes."	"Pure human rear."	"Your human rear changes"
-"full" 	"werewolf"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female werewolf, a blend of attractive and fit human female and snarling feral wolf. Your body is just human enough to intrigue those not sent running, with wide hips and tight, B cupped breasts. Your snout hides long deadly looking teeth and slender fingers hide very capable claws for those that don't get the first hint[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the pregnant of player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"werewolf"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female werewolf, a blend of attractive and fit human female and snarling feral wolf. Your body is just human enough to intrigue those not sent running, with wide hips and tight, B cupped breasts. Your snout hides long deadly looking teeth and slender fingers hide very capable claws for those that don't get the first hint[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a cross between a well built man and a wolf. Your large gray ears can detect any sound, and you move quietly. Heck, it seems the people around you barely even notice you're there. Your short tail wags behind you and you feel full of feral power. Now seems a good time to expand the pack[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Were Fennec
 
@@ -170,7 +170,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right shin changes."	"Pure human right shin."	"Your human right shin changes"
 "right foot" 	"Your body is covered in soft, fluffy, fur. You feel warm and wonderful, and just... cute. You are a were fennec, and you want to share this lovely condition with everyone, to show them the pleasure of it, rather than letting them fall to other, depraved, infections. You can save them, and your tail wags at the thought."	"Pure human right foot."	"Your human right foot changes"
 "rear" 	"Your rear changes."	"Pure human rear."	"Your human rear changes"
-"full" 	"were fennec"	"You are entirely naked, but no one seems to notice. Well you do have fur. You are a fennec, with a long soft tail and large ears, standing on two legs easily with agile fingers. You have nice wide hips and firm bust along with a large, knotted, member. Your thoughts drift constantly to those less fortunate than yourself. If you could show them the pleasures of being a fennec, everything else would fall into place[if the pregnant of player is greater than 0]. Your body is even curvier than usual with the weight you are gaining in pregnancy[end if]."	--
+"full" 	"were fennec"	"You are entirely naked, but no one seems to notice. Well you do have fur. You are a fennec, with a long soft tail and large ears, standing on two legs easily with agile fingers. You have nice wide hips and firm bust along with a large, knotted, member. Your thoughts drift constantly to those less fortunate than yourself. If you could show them the pleasures of being a fennec, everything else would fall into place[if the pregnant of Player is greater than 0]. Your body is even curvier than usual with the weight you are gaining in pregnancy[end if]."	--
 
 Section - Vixen
 
@@ -193,7 +193,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Smooth red fur spreads across your right leg."	"Your right leg is covered in red fur."
 "right foot"	"Bones crack as your right foot shrinks dramatically into a small black paw."	"Where once was a foot, your right foot has become a black furry paw of a fox."
 "rear" 	"A long red tail emerges from your bottom, swaying stiffly behind you with every step."	"You have a fox's tail, stiffer than pictured in most art. It has red fur, except for some black at the tip."
-"full"	"Vixen"	"You have become a perfectly ordinary red vixen. Only the light of intelligence in your eyes give any clue to your old self. Red fur covers most of your body, white and black on your ears, paws, and tailtip, and white running along your underbelly. You have the most unreasonable urge to find a rodent and sink your teeth into it[if the pregnant of player is greater than 0]. Your belly bulges with new kits[end if]."
+"full"	"Vixen"	"You have become a perfectly ordinary red vixen. Only the light of intelligence in your eyes give any clue to your old self. Red fur covers most of your body, white and black on your ears, paws, and tailtip, and white running along your underbelly. You have the most unreasonable urge to find a rodent and sink your teeth into it[if the pregnant of Player is greater than 0]. Your belly bulges with new kits[end if]."
 
 Section - Slutrat
 
@@ -414,7 +414,7 @@ Segment	Shift Text	Desc Text
 "head"	"Your lips begin to tingle as they swell and turn a deep red shade. Your skull reforms as new thoughts flitter in your changing mind. Your old life begins to disgust you, what a waste! It's time to liven up this city with a little kiss or two. Your vision becomes slightly blocked by a short, cream furred, snout as white fur spreads over the rest of your head, new huge ears included."	"You have the head of a cartoon bat, with large triangular ears, blue shaded eyes, a black button nose and cream colored snout. Your pouting lips are a bright shade of red."
 "chest"	"A dirty thrill runs over your back, towards your front, centering in the two growing mounds of furry flesh. Just as your breasts finish forming and white fur has covered your upper torso, a soft constriction is felt as a bodice wraps around you, snuggling your chest delightfully, lifting them up into prominent view."	"You have large, white-furred breasts in a pink and purple, heart-shaped bodice that holds them aloft as if offering them."
 "gut"		"White fur carpets your belly as a dark purple, tight, suit flows down your front towards your groin."	"You have a slim, white furred, belly, concealed by a purple bodice."
-"pelvis"	"You suddenly look down to see your groin changing. [if player is butch]Your cock goes rigid, throbbing before it begins to climax powerfully. With every spray, your shaft and balls dwindles a little. You are paralyzed as your maleness is milked from you, creating a huge puddle and leaving nothing behind. [end if]White fur covers your inner thighs and crotch as you form thick, wet, lips. A soft shudder runs through your body as the change slows."	"You have a white furred crotch with, thick lips within, soft pink in shade, damp with desire. Concealing it is the crotch of a purple bodice."
+"pelvis"	"You suddenly look down to see your groin changing. [if Player is butch]Your cock goes rigid, throbbing before it begins to climax powerfully. With every spray, your shaft and balls dwindles a little. You are paralyzed as your maleness is milked from you, creating a huge puddle and leaving nothing behind. [end if]White fur covers your inner thighs and crotch as you form thick, wet, lips. A soft shudder runs through your body as the change slows."	"You have a white furred crotch with, thick lips within, soft pink in shade, damp with desire. Concealing it is the crotch of a purple bodice."
 "left upper arm"	"Your left arm becomes slender and graceful."	"Your left arm is slender and petite."
 "left forearm"	"White fur spreads over your left arm."	"You have soft white fur across your left arm and hand."
 "left hand"	"With a soft feeling of squeezing, a white glove appears over your left hand and runs up, concealing your left arm up to the elbow."	"You have a long glove on your left hand, running up to your elbow."
@@ -520,7 +520,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your right leg bulges with new muscle even as it shifts in stance to accommodate your digitigrade stance."       	"You have the powerful musculature and bone structure of a cow in your right leg."	--
 "right foot"	"Your right foot clenches as your toes flow together into a large powerful hoof, the rest raising from the ground as fur runs to cover it."            	"You have a cow's hoof instead of your right foot."	--
 "rear" 	"As brown fur runs around to your ass, a faint flash of pain signals the appearance of a long, swaying tail with a large tuft at the end."              	"You have a long, thin, cow's tail with a brown tuft at the end."	--
-"full" 	"minotaur"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female minotaur, with brown fur and white spots. Your powerful frame still has potent signs of your female charms, with wide hips and huge breasts, all eight teats exposed and long, promising of bounty[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a blend of two extreme sexualities wrapped up in a bovine package. Your huge bull's cock competes with your milk bearing breasts, leaving others unsure of which they may receive, perhaps both[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a huge and powerful bull minotaur, with bulging muscles on your everything, and a cock that could punch a hole in a door with a good thrust[end if][if the pregnant of player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"minotaur"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female minotaur, with brown fur and white spots. Your powerful frame still has potent signs of your female charms, with wide hips and huge breasts, all eight teats exposed and long, promising of bounty[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a blend of two extreme sexualities wrapped up in a bovine package. Your huge bull's cock competes with your milk bearing breasts, leaving others unsure of which they may receive, perhaps both[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a huge and powerful bull minotaur, with bulging muscles on your everything, and a cock that could punch a hole in a door with a good thrust[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Latex Fox
 
@@ -543,7 +543,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Your joints are reshaped by the red fluid pouring over your right shin, pulling and pushing them into the shape of a canine's leg."      	"Your right shin looks canine."	"Your red skin flows as your right shin reforms"
 "right foot" 	"The red latex runs down your right foot, leaving a paw in its place."           	"You have a latex fox paw for a right foot."	"Latex peels off your right foot as it changes"
 "rear" 	"Your rear quickly turns red from the rubber moving over it."              	"Your rear end is coated in red rubber."	"Your rear feels odd as the latex shifts"
-"full" 	"latex fox"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female latex fox, made of shiny red rubber, wielding a large squeaking tail[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic latex fox. Your extreme curves are only challenged by your massive white rubber cock[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male anthropomorphic fox made of latex rubber[end if][if the pregnant of player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"latex fox"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female latex fox, made of shiny red rubber, wielding a large squeaking tail[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic latex fox. Your extreme curves are only challenged by your massive white rubber cock[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male anthropomorphic fox made of latex rubber[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 
 Section - Hippo Alchemist
@@ -567,7 +567,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right shin"	"Purple flesh runs along your right shin as your muscles compete with soft fat."       	"Your right shin looks large and purple."	"Your purple skin flows as your right shin reforms"
 "right foot"	"Your foot becomes large and purple as if injured, but there is no pain there, only strength."            	"You have a large flat purple foot with big darker purple toes."	"The purple flesh of your right foot begins to change"
 "rear" 	"Purple skin pushes outwards into a little twitchy nub of a tail."              	"Your have a naked purple nub of a tail."	"Your rear feels odd as the latex shifts"
-"full" 	"hippo alchemist"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard[end if][if the pregnant of player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
+"full" 	"hippo alchemist"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1]You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1]You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard[end if][if the pregnant of Player is greater than 0]. Your body is rounder still for the pregnancy you are experiencing[end if]."	--
 
 Section - Kangaroo
 
@@ -1762,12 +1762,12 @@ Check flaring:
 	If the noun is not a person, say "Being immobile, it shows no interest in you." instead;
 	If the ctype of noun is phoenix, say "They are already reborn." instead;
 	if the tf table of chest is not table phoenix or the player is not femme, say "You need the heart of a phoenix, and female organs to perform this" instead;
-	if the pregnant of player is not 0, say "Your belly is already occupied with new life." instead;
+	if the pregnant of Player is not 0, say "Your belly is already occupied with new life." instead;
 
 Carry out flaring:
 	say "You burst into wild flames and approach [Noun]. They look terrified, and try to escape, but you are on them in a moment. They get out a startled yelp, but as soon consumed in your intense flames. A moment later and you are flesh again. You can feel fiery energy flowing through you as your belly swells.";
 	remove noun from play;
-	now the pregnant of player is 1;
+	now the pregnant of Player is 1;
 	now ychecker is ctype of chest;
 	let u be a random not same touchable body part;
 	if u is not nothing, infect u with chest;
@@ -1789,12 +1789,12 @@ Check Grabbing:
 	If the noun is not a person, say "Being immobile, it shows no interest in you." instead;
 	If the ctype of noun is huge dragoness, say "They are already a sister." instead;
 	if the tf table of chest is not table huge dragoness or the player is not femme, say "You're not big enough to consider doing that..." instead;
-	if the pregnant of player is not 0, say "Your belly is already occupied with new life." instead;
+	if the pregnant of Player is not 0, say "Your belly is already occupied with new life." instead;
 
 Carry out Grabbing:
 	say "You reach suddenly and grab [Noun]. [Noun] gets out a scream of terror as you stuff them into your waiting and empty cunt. Your new, powerful, cunt draws them up into your womb, where warmth builds within you. You just need seed to quicken this precious egg of essence within you.";
 	remove noun from play;
-	now the pregnant of player is 1;
+	now the pregnant of Player is 1;
 	now the player is not fertilized;
 
 every turn while there is a not heavy on-stage compatible person and the tf table of pelvis is table huge dragoness:
@@ -1835,7 +1835,7 @@ Check feeding:
 	if the tf table of chest is table huge dragoness, say "I don't think that will work..." instead;
 	If the noun is not a person, say "Being immobile, it shows no interest in you." instead;
 	If the noun is a large bee, say "The bee shows no interest in you in that way." instead;
-	if the pregnant of player is greater than 20:
+	if the pregnant of Player is greater than 20:
 		say "Your heavily pregnant breasts allow you to do this.";
 		continue the action;
 	if the tf table of pelvis is not table fox taur and the tf table of chest is not table phoenix and the tf table of chest is not table icat and the tf table of chest is not table felitaur and the tf table of gut is not table felitaur and the feline torso is not a part of the rear, say "Your breasts don't have that property." instead;
@@ -1846,7 +1846,7 @@ Carry out feeding:
 			say "You have something over your chest, making this hard.";
 			stop the action;
 		say "You present your breasts towards [Noun], easy to do with so many, jiggling them enticingly as your long tail flickers and sways";
-		if tf table of noun is the tf table of player or a random chance of 3 in the willpower of ctype of noun succeeds:
+		if tf table of noun is the tf table of Player or a random chance of 3 in the willpower of ctype of noun succeeds:
 			if noun is neuter:
 				say " and she licks her lips before approaching. She begins to nurse from you eagerly, nipping at your thick teats as it spills its deliciously thick load across her tongue.";
 				if a random chance of 1 in 3 succeeds:
@@ -1854,9 +1854,9 @@ Carry out feeding:
 				if a random chance of 1 in 3 succeeds and the pelvis is not secret:
 					if the player is femme:
 						say "She pops free of a teat, panting, but another need must be fulfilled. Her heavy shaft throbs as she moves around behind you. You lift your tail and she is soon on top of you, thrusting against you in great satisfying thrusts. You rock your back hips against her motions, purring in delight before she releases deep inside of you, scratching an itch in your trembling passage.";
-						if a random chance of 1 in 3 succeeds and the pregnant of player is 0 and the ctype of pelvis is not semifertile:
+						if a random chance of 1 in 3 succeeds and the pregnant of Player is 0 and the ctype of pelvis is not semifertile:
 							say "Your belly swells forward as pregnancy overtakes you.";
-							now the pregnant of player is 1;
+							now the pregnant of Player is 1;
 						now the player is fertilized;
 				if a random chance of 1 in 3 succeeds and the pelvis is not secret:
 					if the player is butch:
@@ -1872,9 +1872,9 @@ Carry out feeding:
 				if a random chance of 1 in 3 succeeds and the pelvis is not secret:
 					if the player is femme:
 						say "He slips out from under you, panting, and moves up behind you. He grabs your tail and pets slowly with one hand as the other lifts it up out of the way. Soon he is pushing a thick firmness into your waiting passage, riding you as you pant and smile, enjoying his attentions. Your form trembles as he releases into you, clenching tight about him.";
-						if a random chance of 1 in 3 succeeds and the pregnant of player is 0 and the ctype of pelvis is not semifertile:
+						if a random chance of 1 in 3 succeeds and the pregnant of Player is 0 and the ctype of pelvis is not semifertile:
 							say "Your belly swells forward as pregnancy overtakes you.";
-							now the pregnant of player is 1;
+							now the pregnant of Player is 1;
 						now the player is fertilized;
 					else if the player is butch:
 						say "Overtaken by the moment, he grabs at your cock and begins to pull at it insistently. He strokes you in firm rapid motions, encouraging you on until you release in shuddering jets, spraying across his front as he draws back from the teat.";
@@ -1900,7 +1900,7 @@ Carry out feeding:
 			say "You have something over your chest, making this hard.";
 			stop the action;
 		say "You present your breasts towards [Noun] with a coy smile, offering a treat with a wiggle of your hips";
-		if tf table of noun is the tf table of player or a random chance of 3 in the willpower of ctype of noun succeeds:
+		if tf table of noun is the tf table of Player or a random chance of 3 in the willpower of ctype of noun succeeds:
 			if noun is neuter:
 				say " and she licks her lips before approaching. She begins to nurse from you eagerly, nipping at your thick teats as it spills its deliciously thick load across her tongue.";
 				if a random chance of 1 in 3 succeeds:
@@ -1908,9 +1908,9 @@ Carry out feeding:
 				if a random chance of 1 in 3 succeeds and the pelvis is not secret:
 					if the player is femme:
 						say "As she gluts herself, she grinds her thick organ against you urgently. She soon has your thighs parted, and is thrusting up against you even as she feeds. Her body is tense as a cord as she rocks powerfully. Warmth explodes inside of you, shuddering as she finally draws off your teat, satisfied.";
-						if a random chance of 1 in 3 succeeds and the pregnant of player is 0 and the ctype of pelvis is not semifertile:
+						if a random chance of 1 in 3 succeeds and the pregnant of Player is 0 and the ctype of pelvis is not semifertile:
 							say "Your belly swells forward as pregnancy overtakes you.";
-							now the pregnant of player is 1;
+							now the pregnant of Player is 1;
 						now the player is fertilized;
 					else if the player is butch:
 						say "You feel her hand grabbing between your legs, stroking at your cock as she feeds. She presses close, and soon mounts you, rocking up and down against your thick member as it pierces her even as she takes shuddering draws from your chest. Your cock goes tense, then you release into her in a series of blissful cannon blasts.";
@@ -1925,9 +1925,9 @@ Carry out feeding:
 				if a random chance of 1 in 3 succeeds and the pelvis is not secret:
 					if the player is femme:
 						say "He nudges you back a little, leaning in his arms as he works your thighs apart and is soon making almost frenzied love with you, rocking up powerfully as he feeds. All too soon, he is releasing, flooding your waiting womb with his potent mix.";
-						if a random chance of 1 in 3 succeeds and the pregnant of player is 0 and the ctype of pelvis is not semifertile:
+						if a random chance of 1 in 3 succeeds and the pregnant of Player is 0 and the ctype of pelvis is not semifertile:
 							say "Your belly swells forward as pregnancy overtakes you.";
-							now the pregnant of player is 1;
+							now the pregnant of Player is 1;
 						now the player is fertilized;
 					else if the player is butch:
 						say "Overtaken by the moment, he grabs at your cock and begins to pull at it insistently. He strokes you in firm rapid motions, encouraging you on until you release in shuddering jets, spraying across his front as he draws back from the teat.";
@@ -2379,8 +2379,8 @@ To TF (subject - a person): [transforms people into monsters]
 		repeat with x running through visible body parts:
 			infect x with n;
 		now the player is pacified;
-		now the ctype of player is pc;
-		now the tf table of player is table 0;
+		now the ctype of Player is pc;
+		now the tf table of Player is table 0;
 		now the reflex of pc is the reflex of n;
 		now the willpower of pc is the willpower of n;
 		stop the action;
@@ -2409,7 +2409,7 @@ To TF (subject - a person): [transforms people into monsters]
 			now N is selected;
 			break;
 
-	let N be a random selected monster;
+	let N be a random selected MonsterID;
 	if N is not nothing:
 		move N to the location of the subject;
 		now the tf table of the subject is table 0;
@@ -2721,13 +2721,13 @@ Instead of attacking a person (called the victim): [handles attacks on people, i
 						now victim is immobile;
 						now victim is pacified;
 				else:
-					let the way be the best route from the location of player to the home of ctype of ychecker, using doors;
+					let the way be the best route from the location of Player to the home of ctype of ychecker, using doors;
 					say "You nudge [victim] towards [the way] insistently.";
 					try victim going the way;
 					try the player going the way;
 					now the victim is stunned;
 			else if the victim is not same and the right hand is infected and ctype of right hand is not sanitized:
-				if the attack type of ctype of player is "growth" or the attack type of ctype of player is "engulf":
+				if the attack type of ctype of Player is "growth" or the attack type of ctype of Player is "engulf":
 					say "You strike at [Victim], infecting them!";
 				else:
 					now targetx is victim;
@@ -2739,7 +2739,7 @@ Instead of attacking a person (called the victim): [handles attacks on people, i
 				remove victim from play;
 				repeat with u running through engulfed persons:
 					if engulfer of u is victim:
-						move u to the location of player;
+						move u to the location of Player;
 						say "[U] comes spilling out of the fresh body!";
 				if victim is Prometheus:
 					say "As Prometheus dies, he points at you, 'You will revive our people, just as you sought to snuff it.' And powerful magic flows through you, changing you rapidly.";
@@ -2784,14 +2784,14 @@ Carry out offering a person (called the victim): [attempts to infect person]
 		if the humanity of victim is greater than 3:
 			say "[Victim] gazes at your form with some longing, but manages to resist your offer, for now.";
 			decrease the humanity of victim by 1;
-			decrease the humanity of player by 1;
+			decrease the humanity of Player by 1;
 			stop the action;
 		if the victim is male:
 			say "[one of]You prowl towards [Victim] and purr at him in a low growl. He looks at you at first with some fear, but that emotion fades quickly. You nuzzle him along the leg, then lick across his groin, drawing a shuddering moan from him. As your teeth hook into the zipper, he reaches to assist, working off his pants. His shaft springs free, radically changed. It looks very similar to your own, pink and bestial and ready. You turn your rump towards the panting human in invitation.[line break][line break]He comes up behind you and grabs your massive furry hips, driving his alien shaft deep into your wet cunt. You howl and rock against him as he goes taught, then begins to shudder. The world is lost to him as his body locks into a steady torrent of climax, filling your body with his seed and humanity. Every spurt from his swelling balls causes his body to degrade further, until another Uber Fox rests on your back, knotted tightly to you, his humanity fled.[or]You fan your tails at [victim] and he loses it. He yanks down his pants, revealing his erect fox shaft, and practically tackles you to the ground. You yelp, but do not resist as he rolls you to your back and begins pounding into your body with desperate fury. Pleasure builds within you, cresting when his knot seals in your wet thick lips. He begins to spray and spray and spray, unable to stop, surrendering his humanity to you in a long stream of seed. He falls across you, bestial and furry, his humanity gone.[at random]";
 		else:
 			say "[one of]You rear up on your hindlegs, then settle back onto your haunches. [Victim] looks over at you and licks her lips before she approaches, shedding clothes as she goes. By the time she gets to you, she is naked. You can see that a large wet vulpine sex rests between her legs and is soon settling onto your cock as she sits in your lap and hugs you tightly. With a growl, you begin to thrust up into her, taking her in eager pushes until your knot swells and locks into the ecstatic human. [Victim] yelps as you seal with her, then begins to change rapidly, her humanity fleeing her as she becomes another fox, tied to you for a few moments longer as you lick at one another's faces.[or]You sneak up behind [Victim] and nuzzle into her ass, sniffing at her. She swats at you, but you return, sniffing again. After [a random number between 3 and 7] times she finally turns to face you, but stops, panting instead. She silently pulls down her pants, then falls to all fours, offering herself to you. Without hesitation, you leap on her and begin pounding forward into her tight fox cunt. As you explode powerfully into her, your body draws the humanity from her and she is soon covered in thick fur and muscles, another uber fox.[at random]";
 		decrease the humanity of victim by 5;
-		decrease the humanity of player by 5;
+		decrease the humanity of Player by 5;
 		now the tf table of victim is table uber fox;
 		now the ctype of victim is uberfox;
 		now the victim is pacified;
@@ -2985,7 +2985,7 @@ every turn:
 				Increase the skunkpregnant of the player by 2;
 				decrease the reflex of the player by a random number from 0 to 0;
 				choose row with Segment of "full" in table 14;
-				now desc text entry is "You are a female anthro skunk. Your belly has swollen quite a bit, however, from a very rough mating that you got from a horny beast. It feels difficult to stand on two legs, and it's getting more and more tempting to drop to all fours.[if skunkpregnant of player is greater than 0] The massive amount of goo still inside you makes you shudder, and something tells you that there's going to be a lot more four-legged giant skunks soon...[end if]";
+				now desc text entry is "You are a female anthro skunk. Your belly has swollen quite a bit, however, from a very rough mating that you got from a horny beast. It feels difficult to stand on two legs, and it's getting more and more tempting to drop to all fours.[if skunkpregnant of Player is greater than 0] The massive amount of goo still inside you makes you shudder, and something tells you that there's going to be a lot more four-legged giant skunks soon...[end if]";
 				choose row with Segment of "gut" in table 14;
 				now desc text entry is "Your belly sloshes a bit as you walk, and the sensations remind you of the beast that filled you with his seed. For some reason, you have a growing desire to let yourself be dragged down to all fours and join him as his pet bitch.";
 				if the tf table of gut is not table 14, infect gut with U;
@@ -3027,7 +3027,7 @@ every turn:
 		if a random chance of 1 in 10 succeeds, say "You feel a kick from within your large round belly.";
 		let u be the pregnant of the player;
 		increase the pregnant of the player by a random number from 0 to 3;
-		if the pregnant of player is greater than 29 and the ctype of pelvis is semifertile and the player is not fertilized, now the pregnant of player is 29;
+		if the pregnant of Player is greater than 29 and the ctype of pelvis is semifertile and the player is not fertilized, now the pregnant of Player is 29;
 		if the destined masculinity of the player is 0 and the tf table of pelvis is table latex fox and prickpreg is 1 and the pregnant of the player is greater than 9:
 			say "Your belly grows alarmingly warm. The seed within you flares with powerful tingling all through your limbs before it focuses on your wet rubbery lips. You can do little more than groan and whimper as soft squeaks of stretching rubber greet the arrival of a large, white, canine shaft.";
 			now the destined masculinity of the player is 1;
@@ -3045,7 +3045,7 @@ every turn:
 				let z be a random off-stage person;
 				now the tf table of z is the tf table of pelvis;
 				tf z;
-				move z to the location of player;
+				move z to the location of Player;
 				say "[The Z] shakes off birthing fluids and begins to grow rapidly, soon full sized and ready for action.";
 				now the matron of z is the player;
 	if the tf table of pelvis is table 21:
@@ -3063,7 +3063,7 @@ every turn:
 				Increase the pregnant of the player by 1;
 				decrease the reflex of the player by a random number from 0 to 0;
 				choose row with Segment of "full" in table 21;
-				now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front[if pregnant of player is greater than 0]. You look as if you are about eight months pregnant, with a huge furry belly that juts out in front of you proudly[end if].";
+				now desc text entry is "You are a female lioness. You are only about four feet tall, though you have huge D cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on, leaking a constant stream of thick cream down your front[if pregnant of Player is greater than 0]. You look as if you are about eight months pregnant, with a huge furry belly that juts out in front of you proudly[end if].";
 				choose row with Segment of "gut" in table 21;
 				now desc text entry is "Your belly protrudes in a grand sphere, making you look like you're in the third trimester of pregnancy, so full you are. You can even fill a kick once in a while with a shudder.";
 				if the tf table of gut is not table 21, infect gut with U;
@@ -3075,12 +3075,12 @@ Section - Sex/Cat Girl
 
 [general kissing]
 
-Female sex of things is usually "[if the player is butch]You lean her back and begin to piston into her juicy depths with increasing lust. Soon you are both trembling with building tension. As you spill your essence into her body, she squeals in delight and holds close to you for a few moments, holding your cock deep inside of her[end if][if player is femme and player is not butch]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax[end if][if the player is not butch and the player is not femme]Though you lack genitals of your own, you eagerly push her back and dive between her legs, licking and nibbling at her until she's crying with pleasure, rocking against your face as you work at her[end if].".
+Female sex of things is usually "[if the player is butch]You lean her back and begin to piston into her juicy depths with increasing lust. Soon you are both trembling with building tension. As you spill your essence into her body, she squeals in delight and holds close to you for a few moments, holding your cock deep inside of her[end if][if Player is femme and player is not butch]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax[end if][if the player is not butch and the player is not femme]Though you lack genitals of your own, you eagerly push her back and dive between her legs, licking and nibbling at her until she's crying with pleasure, rocking against your face as you work at her[end if].".
 
-female sex of irish cat is "[if player is femme]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax[else if noun is compatible]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. You get up and saunter off calmly[else]As she approaches you, the Irish Cat fills up a mug full of beer and shoves it into your hands as she slowly drops her miniskirt to the ground to reveal her dripping wet Aqua blue pussy to you. Her paws grip your shoulders softly as you drink the beer you feel her slowly plunge your cock deep into her wonderfully tight pussy, her vaginal walls tug and massage at your shaft as she continues to ride you slowly and hard. Really drawing it out as her double-C cup breasts bounced and moved softly inside of her outfit, the mug falling from your hands as you place them on her hips firmly. It is all just moments later when you cum hard into the Irish Cats aqua colored pussy and drain your load into her womb. After you finish blowing your load into her, she gives you a deep kiss on the lips as she orgasms all over your cock and balls. Getting off of you as she saunters off[end if].".
+female sex of irish cat is "[if Player is femme]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax[else if noun is compatible]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. You get up and saunter off calmly[else]As she approaches you, the Irish Cat fills up a mug full of beer and shoves it into your hands as she slowly drops her miniskirt to the ground to reveal her dripping wet Aqua blue pussy to you. Her paws grip your shoulders softly as you drink the beer you feel her slowly plunge your cock deep into her wonderfully tight pussy, her vaginal walls tug and massage at your shaft as she continues to ride you slowly and hard. Really drawing it out as her double-C cup breasts bounced and moved softly inside of her outfit, the mug falling from your hands as you place them on her hips firmly. It is all just moments later when you cum hard into the Irish Cats aqua colored pussy and drain your load into her womb. After you finish blowing your load into her, she gives you a deep kiss on the lips as she orgasms all over your cock and balls. Getting off of you as she saunters off[end if].".
 male sex of irish cat is "[if noun is female]You decide to share in the pleasure giving, licking and suckling at her eagerly even as she gravitates towards your new female equipment and begins to bathe you in saliva and attention. You are soon trembling and squealing with growing delight as you bring each other to crashing climax[else]You let out a yowl of pain as your aqua colored pussy becomes damp with arousal, pain flooding through your body and the desperate urge to find a male immediately hits you hard. You throw yourself at the nearest male and land underneath him on your back. The male attempts to fight back against his urges only to fail, he starts to thrust hard into your tight, damp cunt with increasingly fast thrusts. His climax hits after a few minutes and you have him cumming hard into your body as he fills up your pussy and womb with his fertile seed. You then proceed to unwrap your legs from around [printed name of noun] and kick him up and out of your tight pussy. You get up and saunter off calmly[end if].".
-male sex of things is usually "[if player is butch]You guide your cock to his waiting entrance and ease smoothly into their form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling them back against your rocking motions until you fill their bowels with thick gouts of seed, groaning with relief[else]You approach the [printed name of noun] and reach for their cock, but they refuse you, instead grabbing at your hips and moving into position against you. Soon they are pistoning against you, rocking deeper with every stroke along your sensitive loins as you both sing in pleasure. You can feel their seed spraying deep into your waiting womb as your body shudders in climax[end if].".
-female sex of momma nido is "[if player is butch][one of]The matronly looking creature looks at you as you approach with your jutting cock. She smiles and extends her hands to you. You move into her embrace eagerly, grinding your arousal to her urgently. She makes soft soothing sounds at you as she leans you back slowly, then swats you firmly on the ass. [apostrophe]Naughty boy, you will not play with mother like that,[apostrophe] she chastises with a grin. She slides up against you and starts to stroke over your excited pole, bringing you to full hardness, then keeping you on the edge as she coos into your ear. Your body trembles as your seed begins to spill wildly, spraying across the both of you before she finally releases you[or]You sneak up behind [Noun], hoping to catch her by surprise. Just as you move to leap at her, her thick tail slices across the ground and you're sent sprawling. She is on you in a flash, pulling your rump into her lap and starting to smack it with the flesh of her palm, bringing shameful burning stinging to your butt as she dispenses maternal justice. Only after it feels like you're glowing red does she flip you over and cradle you like a baby against her curvaceous form, slowly stroking your member hard, then to bursting, letting you spray your hot cum across yourself as her soft fingers work at you[at random][else]You approach [Noun] and smile at her, and she smiles back. As if sensing your urge, she reaches for your hips and pulls you closer. [apostrophe]I know you're becoming a big girl, but I cannot fulfill you that way. Lay back and I will put that fire out for a little while.[apostrophe] She soon has you on your back and her soft fingers are flicking over your netherlips, teasing and taunting you to a fever pitch as she plays you like an instrument. Your body goes rigid as you reach climax, then another, trembling under her unending assault on your cunt, smearing your flowing honey across your form as she works. Eventually, with your body limp and sated, she rises, looking satisfied[end if].".
+male sex of things is usually "[if Player is butch]You guide your cock to his waiting entrance and ease smoothly into their form. Your pre cum splashes out, lubricating the way as you drive harder and deeper, pulling them back against your rocking motions until you fill their bowels with thick gouts of seed, groaning with relief[else]You approach the [printed name of noun] and reach for their cock, but they refuse you, instead grabbing at your hips and moving into position against you. Soon they are pistoning against you, rocking deeper with every stroke along your sensitive loins as you both sing in pleasure. You can feel their seed spraying deep into your waiting womb as your body shudders in climax[end if].".
+female sex of momma nido is "[if Player is butch][one of]The matronly looking creature looks at you as you approach with your jutting cock. She smiles and extends her hands to you. You move into her embrace eagerly, grinding your arousal to her urgently. She makes soft soothing sounds at you as she leans you back slowly, then swats you firmly on the ass. [apostrophe]Naughty boy, you will not play with mother like that,[apostrophe] she chastises with a grin. She slides up against you and starts to stroke over your excited pole, bringing you to full hardness, then keeping you on the edge as she coos into your ear. Your body trembles as your seed begins to spill wildly, spraying across the both of you before she finally releases you[or]You sneak up behind [Noun], hoping to catch her by surprise. Just as you move to leap at her, her thick tail slices across the ground and you're sent sprawling. She is on you in a flash, pulling your rump into her lap and starting to smack it with the flesh of her palm, bringing shameful burning stinging to your butt as she dispenses maternal justice. Only after it feels like you're glowing red does she flip you over and cradle you like a baby against her curvaceous form, slowly stroking your member hard, then to bursting, letting you spray your hot cum across yourself as her soft fingers work at you[at random][else]You approach [Noun] and smile at her, and she smiles back. As if sensing your urge, she reaches for your hips and pulls you closer. [apostrophe]I know you're becoming a big girl, but I cannot fulfill you that way. Lay back and I will put that fire out for a little while.[apostrophe] She soon has you on your back and her soft fingers are flicking over your netherlips, teasing and taunting you to a fever pitch as she plays you like an instrument. Your body goes rigid as you reach climax, then another, trembling under her unending assault on your cunt, smearing your flowing honey across your form as she works. Eventually, with your body limp and sated, she rises, looking satisfied[end if].".
 female sex of coyote is "[if noun is compatible][one of][Noun] barks softly at you and you freeze in place as if struck with lightning. She approaches and runs her soft hands over your sides, crossing together at your cock. As she slowly strokes along it, your body begins to relax, the effects of her bark wearing off. You lean in and lick at her snout, and she returns the favor, then she shoves. You are soon on your back, with her settling on top of you, guiding your cock into her waiting wet depths. She begins to moan and pant, long tongue dangling, as she rides you energetically. You watch her many breasts jiggle with every bounce and reach, caressing and stroking at them until climax strikes. You grab for her hips and pull her down into a thrust, locking your knot in her and filling her as you both howl your pleasure[or]You approach [noun] with a grin and bark at her. She yips in return, then goes to all fours, raising her tail at you and wagging her bottom. You need no further permission, and leap atop her, grabbing her shoulders and starting to pound into her body. Her curvy form bounces and jostles with each motion as the both of you groan and pant with delight. You slide in closer to her, letting your large balls slap against her as your hands explore the soft warmth of her many breasts. Your knot pops into her, making your motions shorter, sharper, then the bliss hits peak. You howl as you fire thick jets of seed into her waiting cunt[at random][else if noun is neuter and noun is not tauric]You feel uncertain a moment, approaching something that has the curves you lust for, and a cock as well, but the lust wins out. You grab [noun] and lick her cheek before you thrust right up into her without foreplay. She takes it with grace, grabbing your ass firmly and driving her thick cock against your belly. You rock against one another with increasing anxiety until you both release in powerful torrents. Seed flowing into her womb as hers splatters messily over your belly[else]You creep up on [Noun] from behind before hugging from behind and shoving your large cock into their waiting passage. You begin to pant as you casually rape them, though they seem to be growing warm to the attention as it goes on. They do make a delightful yelp as your swollen knot is forced into them, then your seed flows, rushing deep within their trembling body[end if].".
 [male sex of coyote is "";]
 male sex of felitaur is "[if noun is tauric and noun is male]You approach [Noun] and seize his rear hips, drawing him back as you rear up and slide onto his back. Your lower breasts tingle with delight as they brush against his back and your cock slips free. He wriggles under you almost nervously as you line up your huge member, then push it into his waiting pucker. The fit is quite tight, almost too much, but he loosens with every push, and the two of you begin to rock together before you make a mess of the area, seed firing so thickly that it back washes over your own balls and the ground beneath your legs.[end if][if noun is not tauric and noun is male]You grab for them and they resist, grabbing at your own breasts. They bite and nibble at the great spheres, making you mewl and purr with pleasure. Your milk, unbidden, spills out from your excited teats, leaking down your front and across [Noun]'s chest. [Noun]'s arousal pushes up against your sexless frontgroin and you growl, nudging him forward and swinging around, offering your vast rump to him. He moves up and takes a hold of your rear hips, pushing himself into you and starting to rut, rocking with you until warmth rushes out into your waiting womb.[end if]".
@@ -3406,7 +3406,7 @@ every turn:
 		repeat with N running through visible lionette people:
 			if a random chance of 1 in the willpower of ctype of the player succeeds and nursing of the player is 0:
 				if chest is secret:
-					if a random number from 1 to reflex of player is less than a random number from 1 to reflex of N:
+					if a random number from 1 to reflex of Player is less than a random number from 1 to reflex of N:
 						say "     The small cat lashes out with her claws, destroying your shirt!";
 						let H be a random topped worn clothing;
 						try silently taking off H;
@@ -3430,7 +3430,7 @@ every turn:
 			now the nursing of the player is 0;
 			repeat with Q running through off-stage monster persons:
 				if no monster person is selected and the TF Table of Q is table 21, now Q is selected;
-			let Q be a random selected monster;
+			let Q be a random selected MonsterID;
 			if Q is not nothing:
 				move Q to the location of the player;
 				now Q is not selected;
@@ -3533,23 +3533,23 @@ before wearing something: [makes sure you're not already wearing something there
 		stop the action;
 	let x be clothing type of noun;
 	if clothing type of noun is "shirt":
-		if shirt of player is 1:
+		if shirt of Player is 1:
 			say "You are already wearing a shirt.";
 			stop the action;
 	else if x is "pants":
-		if pants of player is 1:
+		if pants of Player is 1:
 			say "You are already wearing pants.";
 			stop the action;
 	else if x is "shoes":
-		if shoes of player is 1:
+		if shoes of Player is 1:
 			say "You are already wearing shoes.";
 			stop the action;
 	else if x is "headwear":
-		if headwear of player is 1:
+		if headwear of Player is 1:
 			say "You are already wearing a hat.";
 			stop the action;
 	else if x is "headwear":
-		if headwear of player is 1:
+		if headwear of Player is 1:
 			say "You are already wearing a hat.";
 			stop the action;
 
@@ -3573,7 +3573,7 @@ after wearing something: [infects if clothing is infectible, otherwise conceals]
 			now gut is secret;
 			now left upper arm is secret;
 			now upper right arm is secret;
-			now shirt of player is 1;
+			now shirt of Player is 1;
 	else if x is "necklace":
 		say "The necklace drapes over your chest.";
 		if the tf table of the noun is not table 0:
@@ -3596,7 +3596,7 @@ after wearing something: [infects if clothing is infectible, otherwise conceals]
 			now rear is secret;
 			now left shin is secret;
 			now right shin is secret;
-			now pants of player is 1;
+			now pants of Player is 1;
 	else if x is "shoes":
 		say "You put on some shoes and feel more secure in the fact that your feet are now protected.";
 		if the tf table of the noun is not table 0:
@@ -3606,7 +3606,7 @@ after wearing something: [infects if clothing is infectible, otherwise conceals]
 		else:
 			now left foot is secret;
 			now right foot is secret;
-			now shoes of player is 1;
+			now shoes of Player is 1;
 	else if x is "headwear":
 		say "You put on [the noun] and feel safer.";
 		if the tf table of the noun is not table 0:
@@ -3614,7 +3614,7 @@ after wearing something: [infects if clothing is infectible, otherwise conceals]
 			remove noun from play;
 		else:
 			now head is secret;
-			now headwear of player is 1;
+			now headwear of Player is 1;
 
 after taking off something: [informs of exposure and sets parts as exposed]
 	let x be clothing type of noun;
@@ -3626,7 +3626,7 @@ after taking off something: [informs of exposure and sets parts as exposed]
 		now gut is exposed;
 		now left upper arm is exposed;
 		now upper right arm is exposed;
-		now shirt of player is 0;
+		now shirt of Player is 0;
 	else if x is "pants":
 		say "Your bottom half is exposed.";
 		now the rear is exposed;
@@ -3635,16 +3635,16 @@ after taking off something: [informs of exposure and sets parts as exposed]
 		now pelvis is exposed;
 		now left thigh is exposed;
 		now right thigh is exposed;
-		now pants of player is 0;
+		now pants of Player is 0;
 	else if x is "shoes":
 		say "Your feet are now exposed.";
 		now the right foot is exposed;
 		now left foot is exposed;
-		now shoes of player is 0;
+		now shoes of Player is 0;
 	else if x is "headwear":
 		say "Your head is now exposed.";
 		now the head is exposed;
-		now headwear of player is 0;
+		now headwear of Player is 0;
 
 Instead of a person (called the wearer) wearing a thing(called the victim): [controls npc's wearing of wearables]
 	try silently wearer taking the victim;
@@ -3721,7 +3721,7 @@ before reading Chakona Tails:
 		say "You start to read through the magazine, at first snickering, but then becoming engrossed. You lose track of time as you focus on the words, then lose them. You're standing in a grassy field, naked as the day you were born. It's a nice sunny day though, and you feel comfortable. Your partner and lover is beside you. She (or is that shi?) has carried lunch here on her broad back.[line break][line break]She looks to you with those brown eyes and a smile on her fanged and long snout. You can't seem to remember how you met her, but you love her. You embrace her upper torso firmly, mashing her huge breasts against your chest as you kiss her. She bursts into delighted giggles as her long tongue flickers over your lips. You, in turn, move your hands back and grab at her soft breasts. Her breasts are enormous, perfectly round cushions of joy. There are four on her chest, and you begin to play with them in earnest as your cock grows hard against her, sliding against the fur of the lower pair as you work.[line break][line break]She begins to make soft growling and whining sounds, enjoying your touches. 'Enough', she suddenly says, stepping back on her graceful paws. It is something of a wonder that she remains so agile, with her lower torso bearing equally enormous pillows, big enough to take up all the space between all four legs in many rows of milk producing hedonism. Despite this, she gingerly turns around, raising her long feline tail to reveal her pouting nethers. Beneath, large furry balls and the start of a sheath. You've seen that thing ready before, ready for a horse. That isn't your concern right now though.[line break][line break]You hurry up behind her and grab around her lower hips, pulling her back as you sink into her. Your cock tingles with delight as her wet tunnel grasps tightly at you, and you begin to make love. You lose track of how long you go at it, but eventually you're standing with the magazine again. Something feels different...";
 	else if the player is femme:
 		say "You browse the magazine a little cautiously, curious as to what's inside. Whoa, four legged centaurs, but cats, and they're, ugh, doing it on every couple of pages. You don't stop reading despite the initial revulsion, however, and get lose in it. You're in your bedroom. No, not that small apartment. You have a nice big bedroom, with a big soft bed. You know, you're on it, wearing nothing but a bath robe over yourself.[line break][line break]Your lover, a big feline taur with a charming smile, comes padding in, her many breasts all jiggling. You do wonder how she manages to carry them all without discomfort, but she never so much as stumbles, let alone gripes of weight. She reaches the side of the bed and rears up onto it, 'My love,' she whispers, 'I can smell you, you are in season. Allow me to satisfy you.'[line break][line break]It was true. Your cunt was tingling with need, and your lover was very good at taking care of that itch. You smile at her and reach, tweaking her large nipples slowly, teasing her. She was like a man this way, if you let her, she'd leap on you and get to business, but it's so much nicer to work up to it. You have her squirming in place, her huge shaft jutting powerfully. It's at least two feet long, with stiff fleshy barbs near the tip. Those tips had scared you witless the first time, now you only lick your lips with anticipation.[line break][line break]You can't keep her on edge forever, she eventually advances on you, ignoring your complaints and pressing you back onto the bed. Your face becomes lost in furry breasts as she works her member deep into your body. Size is no concern to her, seeming to stretch you right out to your maximum point and no further. Your body explodes in delight, and you lose all sense of self as the pleasure builds so rapidly and never lets up. You're not even sure when you stopped reading...";
-		increase the pregnant of player by 1;
+		increase the pregnant of Player by 1;
 	else:
 		say "Just stupid furry stuff, and they're having sex. In your current sexless state, this has no interest for you at all, stupid junk. You stop reading.";
 		stop the action;
@@ -4693,15 +4693,15 @@ To Infection Menu:
 		get typed command as playerinput;
 		let tex be indexed text;
 		now tex is playerinput;
-		if playerinput matches "a":
+		if Playerinput matches "a":
 			repeat with z running through infectitem things:
 				now z is selected;
 			next;
-		if playerinput matches "d":
+		if Playerinput matches "d":
 			repeat with z running through infectitem things:
 				now z is not selected;
 			next;
-		if playerinput matches "q", break;
+		if Playerinput matches "q", break;
 		change the text of the player's command to playerinput;
 		repeat with z running through infectitem things:
 			if printed name of z in lower case matches the text tex in lower case:
@@ -4718,7 +4718,7 @@ The destined masculinity of the player is a number that varies.[@Tag:NotSaved]
 The destined femininity of the player is a number that varies.[@Tag:NotSaved]
 
  When play begins:
-[	now the right hand status line is "[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";]
+[	now the right hand status line is "[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]|P:[number of not infected body parts]";]
 	repeat with x running through infection models:
 		now x is a part of pelvis;
 	now The destined masculinity of the player is a random number from 0 to 1;
@@ -4773,9 +4773,9 @@ instead of opening the pasture door for the first time:
 	let z be a random on-stage npc person;
 	now the tf table of z is table sheep;
 	tf z;
-	now the tf table of player is table collie;
+	now the tf table of Player is table collie;
 	tf player;
-	now the ctype of player is pc;
+	now the ctype of Player is pc;
 	say "[line break]A second shape charges past you, 'You let my sheep out, bad! Now you can help me get them back.'";
 	let u be a random off-stage person;
 	if u is not nothing:
@@ -4852,7 +4852,7 @@ Every turn while the player is in Apartment roof:
 	else if dragoncounter is 4:
 		say "Despite your attempts to avoid it, her talons close around you, and lift you clear off the roof. For a moment you can see nothing but the scaly insides of her hands before they unfold. You can see much more of the city from this dizzying height. She is smiling at you, She must be six stories tall, with a body to match. If you fell, you could hope to land on a breast, should slide you down a full story. Beyond that, though, was a huge... tower... of a cock, half as tall as she is, dripping thick gobs of pre to splash noisily on the street below.[line break][line break][apostrophe]Don't you worry a bit, little one, you'll be big and strong soon.[apostrophe], she coos in a soothing tone as she spreads her stance out a bit and lowers you past the ridged shaft, past the huge breasts and wide hips. A new scent assails your nose, making you dizzy with lust as her huge cunt comes towering into view, getting larger by the moment all too swiftly.";
 	else if dragoncounter is 5:
-		now the tf table of player is table huge dragoness;
+		now the tf table of Player is table huge dragoness;
 		tf player;
 		now the player is pacified;
 		let u be a random on-stage person;
@@ -4862,7 +4862,7 @@ Every turn while the player is in Apartment roof:
 		say "Wetness suddenly descends over you as you're plunged into that seeping orifice. Powerful, slick, muscles grip and pull you upwards as you struggle for breath, senses reeling as the pheromones threaten to drive you mad with desire. Seemingly forever later, you spill out into a dark watery tomb, swimming around in an Olympic pool all to yourself. You finally succumb to the need to breathe and open your mouth, then cough violently, but soon you are breathing normally despite it. Your body tingles faintly, but otherwise you begin to feel almost... normal. Normal as anyone can feel inside a giant womb.[line break][line break]Your tranquility is interrupted as the chamber begins to shudder and quake in rapid but rhythmic motions. An unexplained pleasure builds in your groin before cresting in a crashing orgasm, your liquids added to the womb as you muffledly groan with sourceless pleasure. Sudden heat washes up along your feet, legs, hips. Your eyes, adjusting to the gloom, can see that it is a soft gray. Someone just fucked your new mother! The cum flows up over your body and the tingling triples in intensity.[line break][line break]You groan and shudder, growing and gaining mass rapidly. Your body is covered in fine scales and your chest forms into plentiful breasts. Your changing hands, becoming talons, grab at your thickening shaft, stroking it in quick jerks as you groan and pant. Between your legs, behind your balls, a new burning is felt, and you stray a hand back to it, teasing at yourself with your new claws. All too soon, your body becomes cramped, curled up inside your new mother, your shaft wedged into your own mouth, suckling it and waiting.[line break][line break]She does not keep you waiting long. The chamber clenches powerfully, and begins to push. Like a sudden water luge, you slip down into her tunnel, and flop out powerfully to the ground, whumph! [apostrophe]There you are, my child. Your sister is already out in the city. Find her, fertilize the captured humans with her. The one who bears the most will get a special favor of me[apostrophe], she promises with a toothy grin. While you struggle to your feet, she saunters off, leaving the city behind.";
 		move the player to downtown;
 		say "[bold type]((You feel like you could just 'grab' people up! Note, you cannot do this while pregnant ))[roman type]";
-		now the command prompt is "Pregnancy: [pregnant of player] Fertilized:[if player is fertilized]Yes[else]No[end if]>";
+		now the command prompt is "Pregnancy: [pregnant of Player] Fertilized:[if Player is fertilized]Yes[else]No[end if]>";
 
 
 Every turn while a mousey npc person is visible and corruption is less than 5:
@@ -4879,7 +4879,7 @@ Every turn while a person (called victim) is stuck to a pentagram (called pentie
 	if the male rat tail is visible:
 		now the victim is not stuck to the pentie;
 		now a random visible rope is not stuck to the pentie;
-		now the tf table of player is table slutrat;
+		now the tf table of Player is table slutrat;
 		tf player;
 		repeat with u running through on-stage monster persons:
 			if ctype of u is rat dude:
@@ -5255,7 +5255,7 @@ every turn while there are no unchanged on-stage npc persons and the pasture doo
 	end the story saying "There are no more people to save.";
 
 every turn while there are uber on-stage persons:
-	if the player is uber, now the command prompt is "Humanity: [0 minus humanity of player]>";
+	if the player is uber, now the command prompt is "Humanity: [0 minus humanity of Player]>";
 	repeat with N running through uber on-stage persons:
 		let U be the number of not uber unchanged persons in the location of N;
 		if U is 0, next;
@@ -5270,7 +5270,7 @@ every turn while there are uber on-stage persons:
 				if J is visible, say "[if J is male][J] has a clear erection, squirming and looking anxious[else][J] rubs their legs together softly, glancing around[end if].";
 			else:
 				if J is visible:
-					if a random chance of 1 in willpower of ctype of player succeeds:
+					if a random chance of 1 in willpower of ctype of Player succeeds:
 						say "You notice [J] staring at you. You are certain they are ready to surrender and oblige them.";
 						try player offering J;
 					else:
@@ -5496,11 +5496,11 @@ when play ends:
 				else:
 					say "When the armed retaliation arrives, they find a city full of buxom, happy, females. They are greeted warmly and eventually depart with no enemy to face. The people of the city are alert, coherent, and are even going about their business. There's nothing to report or do. The media attention is fierce at first, especially with how eager this 'city of females' is to kiss and hug on camera.[line break][line break][apostrophe]You should come join us.[apostrophe] says one interviewed female. [apostrophe]We might all be ladies, but guys are more than welcome. There's no crime. You won't be left out of our warm community. In fact, I can assure, it will grow on you.[apostrophe][line break][line break]For your own part, you find a fennec that you love a little more than the others and become her mate. You give one another many cubs over the years and live in bliss in your city of fennecs.";
 			if tf table of head is table uber fox:
-				if humanity of player is greater than -10:
+				if humanity of Player is greater than -10:
 					say "You wander the city, searching for something you can't even work up the word for. You knew a lot of words, once. Why can't you figure it out now. Ah well, may as well go home... Where was that? You frown and snarl. Everything is becoming harder to remember. You can't even grasp your own name anymore. You become a horror of the night, skulking the shadows, little more than a feral beast.";
-				else if humanity of player is greater than -100:
+				else if humanity of Player is greater than -100:
 					say "The humanity you have absorbed begins to stir in your cursed flesh. With a grunt and a groan, you manage to pull yourself up to two paws, shaking. It is easier to be on all fours, but you have fingers again, and can talk. Looking down over yourself, you see that your frightening visage is softened. With enough clothes, perhaps you could hide. You seek out the one that changed you, but never find her. Your sexual scent draws other sorts of attention though. Communicating with your old friends via library terminals, you are invited to a convention, there you meet your internet friends for the first time.[line break][line break]At first, they think you have the best fur suit of all times, but when they are convinced it is real, they fall in love with you. After a night of wrestling in the sheets, you watch in fascination and horror as they twist and deform, becoming another fox. Fortunately, there are many humans in the hotel, and you help them become at least as human as yourself before fleeing. At least you have a mate.";
-				else if humanity of player is greater than -200:
+				else if humanity of Player is greater than -200:
 					say "As the last of the humanity in the city is drained away, you feel warmth build in your bones. The power you have stolen whirls through you in an erotic eddy as you rise smoothly to your feet. Your huge breasts withdraw, becoming smaller, then fading entirely until you only have two, human-sized breasts, and your shaft shrinks down to a 'mere' six inches. You find some clothes and a hat and look perfectly presentable by the time any other humans arrive, and you are escorted away as a 'lucky survivor'. Besides your foxish ears, and your cock, you appear as a very pretty human woman. When aroused, your foxish traits burst into the fore, making you look like an anthro fox.[line break][line break]When you escape the city, you are hugged from behind. A glance reveals the original fox that left you, 'I knew you were special', she whispered in your ear and licked it. You then lived together. You could keep one another's balance, remaining mostly human, seducing the rare human when energies ran low, and leaving the city with another uber fox to puzzle over as it ran wild through the streets.";
 				else:
 					say "Your body trembles with an abundance of stolen human energy. You rise up to two feet rapidly, marveling and admiring your sleek, human form. You're so pretty and charming, perfectly divine in every way. As you stroke your hands across your sides and let out a laugh, it comes out as a rough yipping bark. You clap a hand over your face, and see the hand is a paw! You fall forward, body growing, swelling, pain racking you as you back slide into being an uber fox, the energy collapsing to a tight ball inside you. Too much! It was all too much! You are soon left quadrupedal again, whining, tears streaming from your eyes, cursed to remain this sexual beast forever. For better or worse, your mind remains sharp, stuck inside this inhuman form.";
@@ -5525,7 +5525,7 @@ when play ends:
 					say "You and the [u] others flee the city and meet up in the Mojave desert, where you form a commune of coyotes. The females never seem to get enough of you, and that's alright with you, because your new, enhanced, cock seems to never get tired of them. You wake most mornings to one of them squatting down over you to ride, or slurping away at you with their soft tongues. You couldn't imagine a finer life.";
 			if tf table of head is table minotaur:
 				let u be the number of compatible npc on-stage persons;
-				if player is femme and player is not butch and u is less than 10:
+				if Player is femme and player is not butch and u is less than 10:
 					say "You ran away toward the farm side, where you have hidden. Some would say that you could feel lonely as the only one of Your kind, yet the silent and secluded farmstead soon become famous for very welcoming owner, which took care of guests[apostrophe] needs in every possible way.";
 				if the player is femme and u is greater than 9:
 					say "You flee the city with your herd mates, and become one of the herd, bearing children and milk for the good of your people. New members of the tribe come from breeding and the occasional human convert, though your infectiousness seems much lower than it was in those intense first hours.";
@@ -6120,7 +6120,7 @@ Definition: a direction (called D) is valid if the room D from the location of t
 
 Table of Fancy Status
 left	central	right
-" Location: [the player's surroundings]"	"P:[number of body parts - number of infected body parts]"	"[if player is femme]F[end if][if player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]"
+" Location: [the player's surroundings]"	"P:[number of body parts - number of infected body parts]"	"[if Player is femme]F[end if][if Player is butch]M[end if]|W:[willpower of ctype of the player]|R:[reflex of ctype of the player]"
 " Exits: [list of valid directions]"	""	"[time of day]"
 [" You are:[Player_Status], [Player_Gender_Status]"	""	""]
 

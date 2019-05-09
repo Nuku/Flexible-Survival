@@ -19,7 +19,7 @@ the scent of the Matriarch is "[matriarchscent]".
 to say matriarchscent:
 	say "The powerful scent of the matriarch makes you feel aroused and submissive.";
 	if lust of Matriarch - turns >= 8:
-		increase libido of player by 5 + HP of Matriarch;
+		increase Libido of Player by 5 + HP of Matriarch;
 		now lust of Matriarch is turns;
 
 to say matriarchdesc:
@@ -42,7 +42,7 @@ Section 2 - Sexxxings
 the fuckscene of the Matriarch is "[sexwithMatriarch]".
 
 to say sexwithMatriarch:
-	if bodyname of player is not "Herm Hyena":
+	if bodyname of Player is not "Herm Hyena":
 		say "     The hyena matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over. 'Someone deal with that unhyena bitch and make her more pleasing to me,' she growls. You're dragged off and presented to the hyena gang members, who are more than happy to have a plaything presented to them by the matriarch.";
 		WaitLineBreak;
 		now lastfuck of Gang Members is turns + 8;
@@ -63,7 +63,7 @@ to say sexwithMatriarch:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Put you in your place as the gang slut.";
 			say "     ([link]N[as]n[end link]) - Demote you to hyena food again.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     [HyenaMatSexScenes]";
 			else:
@@ -74,8 +74,8 @@ to say sexwithMatriarch:
 	[puts Herm Hyena as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Herm Hyena":
-			now monster is y;
+		if Name entry is "Herm Hyena":
+			now MonsterID is y;
 			break;
 	now sex entry is "Female";
 	infect "Herm Hyena";
@@ -83,7 +83,7 @@ to say sexwithMatriarch:
 	now sex entry is "Both";
 
 to say HyenaMatSexScenes:
-	if player is female:
+	if Player is female:
 		say "     Your matriarch runs a paw down between your legs, fingering your wet pussy, drawing a long and needful moan out of you. 'Mmm... nothing but a needy, proper bitch now, aren't you?' she rumbles with pleasure. Sliding a pair of fingers into you, your body trembles, wanting more. 'Doesn't that feel better? You were meant to be needy bitch, [one of]needing cock inside you, getting bred all the time[or]wanting to just be fucked. I could tell it the moment I mounted you[or]meant to carry pups for the gang[or]a slutty breeder[or]the gang's fucktoy[purely at random],' she rumbles to you. You nod eagerly, grinding your hot pussy down onto those fingers, wishing they were her penis. Lost to your growing lust, you can't help but agree with her words, your submissive instincts telling you that's what you want.";
 		WaitLineBreak;
 		let Z be a random number between 0 and 100;
@@ -99,7 +99,7 @@ to say HyenaMatSexScenes:
 			else if T is 3:
 				say "     The large hyena grins and gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face. 'Get licking, little bitch.'";
 				say "[hyenamatnosex3]";
-			decrease humanity of player by 5;
+			decrease humanity of Player by 5;
 			now lastfuck of Matriarch is turns;
 		else if Z < 105:	[sex variations]
 			let T be a random number between 1 and 3;
@@ -110,9 +110,9 @@ to say HyenaMatSexScenes:
 			else if T is 3:
 				say "[hyenamatsex3]";
 			if HP of Matriarch is 0, now HP of Matriarch is 1;
-			decrease humanity of player by 10;
-			if cunt length of player < 10, increase cunt length of player by 1;
-			if cunt width of player < 4, increase cunt width of player by 1;
+			decrease humanity of Player by 10;
+			if Cunt Length of Player < 10, increase Cunt Length of Player by 1;
+			if Cunt Tightness of Player < 4, increase Cunt Tightness of Player by 1;
 			now lastfuck of Matriarch is turns;
 		else:			[special sex variations]
 			let T be a random number between 1 and 2;
@@ -123,9 +123,9 @@ to say HyenaMatSexScenes:
 				say "[hyenamatspecial2]";
 				now lastfuck of Matriarch is turns - 2;
 			if HP of Matriarch is 1, now HP of Matriarch is 2;
-			decrease humanity of player by 12;
+			decrease humanity of Player by 12;
 	else:
-		if player is male:		[MALE/HERM]
+		if Player is male:		[MALE/HERM]
 			say "     Your matriarch reaches down and grabs your twitching cock, growling a little. '[one of]And what does a little bitch like you think she's going to do with this?' she rumbles[or]A submissive bitch like you doesn't need something like this,' she growls[or]And why do you have a useless toy like this?' she laughs[or]You don't need this useless thing any more, you submissive bitch,' she teases[at random]. She swats your shaft away, slapping it against your thigh with disdain. ";
 		else:				[NEUTER]
 			say "     Your matriarch reaches down and rubs a paw over your bare crotch, laughing a little. '[one of]I see that useless cock of yours is gone, though you haven't gotten anything in trade for it yet,' she rumbles[or]And now you just need a juicy pussy to make you a proper girly bitch for me,' she chuckles[or]How could you hope to run the gang when you can't even keep track of your own cock?' she teases[or]I'm not interested in a genderless slut. You were meant to be a breeding slut, weren't you?' she rumbles in your ear[in random order]. She gives your empty crotch a swat, sending faint shivers through you. ";
@@ -142,7 +142,7 @@ to say HyenaMatSexScenes:
 			say "She gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face. 'Get licking, little bitch. Maybe we can make a proper breeding girl out of you yet.'";
 			WaitLineBreak;
 			say "[hyenamatnosex3]";
-		decrease humanity of player by 5;
+		decrease humanity of Player by 5;
 		now lastfuck of Matriarch is turns;
 
 
@@ -151,7 +151,7 @@ Section 3 - Sex Scenes
 Chapter 1 - No-sex Variations
 
 to say hyenamatnosex1:
-	say "     Pinning you down under one of her heavy paws, she kneads her toes over your chest as she strokes herself. She pumps her meaty phallus as she stands proudly above you, grinning down at you. You moan softly caressing her leg, feeling the strength of her muscles, feeling as if she could crush your weak body with ease and are aroused by her might. When she brings her foot up to your face, you start licking and kissing at it, lavishing attention upon them. She rumbles happily, clearly pleased by your submissive display[if player is female]. With a paw between your legs, you frantically finger your dripping pussy[end if][if player is male]. You leave your cock hard but unattended, feeling it is unneeded just as your matriarch said[end if]. As the strong and virile hyena above you cums, she releases a barking laugh with each heavy splatter of her cum that she sprays across you[if player is female]. You jam some fingers deep into your cunt, frigging yourself hard as you orgasm as well, soaking your thighs in your juices[end if]. Once she's done with you, the matriarch leaves you there, soaking in a pool of her cum. With one of her attendants licking her foot clean and another on her cock, she turns back to her duties.";
+	say "     Pinning you down under one of her heavy paws, she kneads her toes over your chest as she strokes herself. She pumps her meaty phallus as she stands proudly above you, grinning down at you. You moan softly caressing her leg, feeling the strength of her muscles, feeling as if she could crush your weak body with ease and are aroused by her might. When she brings her foot up to your face, you start licking and kissing at it, lavishing attention upon them. She rumbles happily, clearly pleased by your submissive display[if Player is female]. With a paw between your legs, you frantically finger your dripping pussy[end if][if Player is male]. You leave your cock hard but unattended, feeling it is unneeded just as your matriarch said[end if]. As the strong and virile hyena above you cums, she releases a barking laugh with each heavy splatter of her cum that she sprays across you[if Player is female]. You jam some fingers deep into your cunt, frigging yourself hard as you orgasm as well, soaking your thighs in your juices[end if]. Once she's done with you, the matriarch leaves you there, soaking in a pool of her cum. With one of her attendants licking her foot clean and another on her cock, she turns back to her duties.";
 
 to say hyenamatnosex2:
 	say "     With the matriarch's hard cock and heavy balls pressed against the side of your face, you're given a noseful of her virile musk, making you whimper with need. You kiss at her furry groin, licking at what your tongue can reach as she holds you there while her scent overwhelms you. You can feel her hard shaft and swelling knot throb against your cheek as she rubs her glans, dripping precum down your back. You whimper and moan, wanting at that cock and begging her to fuck you with it, but she holds you firmly, only letting you fondle her hefty balls and stroke her pussy. 'No, my submissive slut, I'll only give you the hard fucking you deserve once you learn to be a good girl for me,' she chuckles.";
@@ -166,19 +166,19 @@ Chapter 2 - Sex Variations
 
 to say hyenamatsex1:
 	say "     The sexy matriarch decides to give you what you want, pushing you onto all fours and moving in behind you. You moan and raise your ass, a mix of pleas for her to fuck you hard and thanks for deigning to fill such a lowly bitch flowing from your mouth. She gives a hearty laugh and lets her throbbing erection slide across your ass, teasing against your bottom and brushing over your wet folds. You want to spear yourself backwards onto it so badly, but you obediently wait, your hips trembling as you try to hold them back. Finally, after what seems like an eternity in that brief moment, she thrusts forward, driving several inches of her thick cock into you in one go. You release a barking laugh, manic delight filling you as the matriarch starts to breed you like the hyena bitch you are.";
-	say "     As she pounds into you, pushing more and more of her large meat into your needy body[if cunt length of player < 10 or cunt width of player < 4], stretching your smaller cunt to accommodate her large breeding pole[end if]. 'Mmm... you like this, don't you? Why else would someone like you have challenged me again, but to get fucked and bred?' She licks your ears and nuzzles your neck. 'You're my good girl now. A proper hyena girl like you were meant to be, ready to be bred full of strong pups.' You nod, your sex-addled mind accepting her words, wanting nothing more than for her to impregnate you again and again.";
+	say "     As she pounds into you, pushing more and more of her large meat into your needy body[if Cunt Length of Player < 10 or Cunt Tightness of Player < 4], stretching your smaller cunt to accommodate her large breeding pole[end if]. 'Mmm... you like this, don't you? Why else would someone like you have challenged me again, but to get fucked and bred?' She licks your ears and nuzzles your neck. 'You're my good girl now. A proper hyena girl like you were meant to be, ready to be bred full of strong pups.' You nod, your sex-addled mind accepting her words, wanting nothing more than for her to impregnate you again and again.";
 	WaitLineBreak;
 	say "     Her hard cock pulses and throbs inside you, making you feel so good. You're glad you lost to her. You were meant to lose. You meant to lose from the very beginning. All so you could feel the joy of being her sexy girl and get bred with her pups. When she thrusts hard into you one last time, driving her thick knot inside you and tying with you, you cry out in ecstasy, your whole body feeling the rush of your orgasm as you receive her virile gift of semen as she seeks to breed you. 'Oh, you are my good girl,' she rumbles. 'Take it. Take it all!' she growls as she cums. When she's done with you, you're left feeling bloated and full with her heavy load, loving its hot warmth inside you and hoping it takes root.[impregchance]";
 
 to say hyenamatsex2:
 	say "     Your sexy matriarch decides to give you what you want, pushing you down to the floor and grabbing your legs. You moan and wrap them around her waist, letting her grab your ass and squeeze it. Her erection's fully hard now and she slides the underside of it along your pussy's dripping folds. You whimper with need, feeling that cock against you feels delightful, but your body cries out for more because of the tantalizing touch. You lick your lips and grind back against her as best you can against the object of your submissive, lustful desires. Once she's satisfied you're ready, she slides her hips back, lines up her dripping glans with your lips and thrusts into you firmly, making you bark in delight.";
-	say "     Keeping a strong grip on you, she starts breeding you like the hyena bitch that you are[if cunt length of player < 10 or cunt width of player < 4], stretching out your relatively small cunt to take her impressive pole[end if]. 'Isn't it [one of]better[or]easier[in random order] to just be a good girl for your matriarch? A proper hyena fucking's all you've ever wanted,' she says, thrusting harder into you. You pant and nod, unable to deny how great it feels to be the matriarch's breeding bitch.";
+	say "     Keeping a strong grip on you, she starts breeding you like the hyena bitch that you are[if Cunt Length of Player < 10 or Cunt Tightness of Player < 4], stretching out your relatively small cunt to take her impressive pole[end if]. 'Isn't it [one of]better[or]easier[in random order] to just be a good girl for your matriarch? A proper hyena fucking's all you've ever wanted,' she says, thrusting harder into you. You pant and nod, unable to deny how great it feels to be the matriarch's breeding bitch.";
 	WaitLineBreak;
 	say "     Her thick cock slices in and out of you, sending ripples of pleasure running through your submissive body. You feel so good getting fucked like this. Your needy body tells you that you were always meant to be fucked and bred like this by hyenas, that it was what you've always wanted, dreamed of it your whole life. 'You make a fine horny slut, my pretty hyena girl. And pretty hyena girls get bred,' she matriarch rumbles, growling out the last few words as she pushes hard to pop her knot inside you before cumming. Her hot seed blasts into you again and again, stuffing your womb full of her virile seed, working to breed you full of more strong pups for the gang. You orgasm loudly, for all to hear, as the powerful and sexy matriarch breeds you. When she's finally done and her knot goes down, she pulls out and the excess seed your womb can't hold flows out of you, pooling between your legs as you lay there on the floor, panting, used and loving it.[impregchance]";
 
 to say hyenamatsex3:
 	say "     The sexy hyena herm decides to give you what you want, pulling you into her arms as she kneels on the ground. Her stiff erection is between you both as she holds you in her lap. She licks and nibbles along your shoulder and neck, making you moan with pleasure and grind your hyena body firmly against her penis, her growing knot pressed to your needy pussy. Feeling it there, you want it inside you even more and whimper with need, rocking your hips to slather your juices across that bulb of firm flesh. As your excess juices soak her knot, they flow down over her sheath and ballsack. She raises your hips up slowly, licking and kissing across your body as she lets your pussy slide along her cock gradually until her glans rests waiting at your body's eager entrance.";
-	say "     Keeping her paws firmly on your hips, she lowers you down onto her cock at what feels like an excruciatingly slow rate for your needy, lust-addled body. You whimper and groan with need, your pussy quivering and your inner walls squeezing and pulling at her meat, wanting to have it all in you[if cunt length of player < 10 or cunt width of player < 4]. Her slow penetration stretches out your relatively small cunt around her impressive maleness[end if]. 'Oh, doesn't that feel good, my sexy girl? A good fucking for is just what a horny slut like you needs,' she moans, clearly holding back from fucking you hard and fast as well. Somewhere deep inside, it makes you feel good to know the matriarch wants to breed you almost as bad as you want her to do it.";
+	say "     Keeping her paws firmly on your hips, she lowers you down onto her cock at what feels like an excruciatingly slow rate for your needy, lust-addled body. You whimper and groan with need, your pussy quivering and your inner walls squeezing and pulling at her meat, wanting to have it all in you[if Cunt Length of Player < 10 or Cunt Tightness of Player < 4]. Her slow penetration stretches out your relatively small cunt around her impressive maleness[end if]. 'Oh, doesn't that feel good, my sexy girl? A good fucking for is just what a horny slut like you needs,' she moans, clearly holding back from fucking you hard and fast as well. Somewhere deep inside, it makes you feel good to know the matriarch wants to breed you almost as bad as you want her to do it.";
 	WaitLineBreak;
 	say "     Eventually, she has the whole of her cock stuffed inside you, with her hard knot throbbing against your dripping folds once more. You moan and grind down on it before she raises you up a little and starts thrusting into you. Unlike the slow penetration, this fucking is hard and fast, almost brutally so, but your body loves it. As if making up for the slow start, the matriarch pounds into you with animalistic speed that has you moaning and barking lustfully.";
 	if a random chance of 1 in 2 succeeds:
@@ -260,50 +260,50 @@ to say HyenaMatVoreRepeat:
 Section 5 - Bound State
 
 to HyenaMatBind:
-	now lustatt is libido of player;
+	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
-		if humanity of player < 50:
+		if humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if player is male]grasp your hardened member and jerk yourself off[else if player is female]play with your clit[else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again. The matriarch's influence and the churning flesh overwhelm your lust-addled body, and you grind your[if player is male] cock[smn][else if player is female] cunt[sfn][else]self[end if] against the stomach walls until you hit your climax[if player is male], your cum adding to the juices sloshing around[else if player is female], your femcum adding to the juices sloshing around[end if]. You regain a bit of clarity from your orgasm, but at the same time, it becomes more tempting to remain in your current arousing situation.";
+			say "     Your mind blanks out as your arousal comes to a head, and you can't help but [if Player is male]grasp your hardened member and jerk yourself off[else if Player is female]play with your clit[else]thrust your fingers in and out of your ass[end if] until you reach your climax. Your orgasm relieves a bit of the pressure in your mind, and you can think straight again. The matriarch's influence and the churning flesh overwhelm your lust-addled body, and you grind your[if Player is male] cock[smn][else if Player is female] cunt[sfn][else]self[end if] against the stomach walls until you hit your climax[if Player is male], your cum adding to the juices sloshing around[else if Player is female], your femcum adding to the juices sloshing around[end if]. You regain a bit of clarity from your orgasm, but at the same time, it becomes more tempting to remain in your current arousing situation.";
 			LineBreak;
 			now struggleatt is 0;
-			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
-			now lustatt is libido of player;
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
 			if enduring is true:
-				decrease humanity of player by 8 + (psycheadjust * 2);
+				decrease humanity of Player by 8 + (psycheadjust * 2);
 			else:
-				decrease humanity of player by 15 + (psycheadjust * 5);
+				decrease humanity of Player by 15 + (psycheadjust * 5);
 				if struggleatt > 0, decrease struggleatt by 1;
 		now enduring is false;
 		say "     Stewing inside of the hyena matriarch's stomach, you try and assess your situation. [one of]You internally struggle between getting out of this stifling prison or just submitting to the twisted confines[or]The matriarch and Gina are having a chat, often talking about how much of a slut you are[or]The matriarch barks orders at various gang members, her rotund figure not diminishing her leadership at all[or]'Having fun in there?' Gina asks you as she rubs the matriarch's belly[or]The walls press into you as Gina giggles and pushes down on you from the outside[at random]. Your only options are to [bold type]S[roman type]truggle [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if].[line break]";
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
-		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [HyenaMatStruggle]";
-		if humanity of player < 1:
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [HyenaMatStruggle]";
+		if humanity of Player < 1:
 			say "     The churning flesh pressing down on you from all around, combined with the taunting laughter of the hyena leader, wears you down until you are no longer able to resist the influence of the matriarch's stomach anymore.";
 			wait for any key;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Herm Hyena":
-					now monster is y;
+				if Name entry is "Herm Hyena":
+					now MonsterID is y;
 					break;
 			now voreloss is true;
-			now bodyname of player is "Herm Hyena";
-			now facename of player is "Herm Hyena";
-			now tailname of player is "Herm Hyena";
-			now skinname of player is "Herm Hyena";
-			now cockname of player is "Herm Hyena";
-			now tail of player is tail entry;
-			now face of player is face entry;
-			now skin of player is skin entry;
-			now body of player is body entry;
-			now cock of player is cock entry;
+			now bodyname of Player is "Herm Hyena";
+			now facename of Player is "Herm Hyena";
+			now tailname of Player is "Herm Hyena";
+			now skinname of Player is "Herm Hyena";
+			now cockname of Player is "Herm Hyena";
+			now tail of Player is tail entry;
+			now face of Player is face entry;
+			now skin of Player is skin entry;
+			now body of Player is body entry;
+			now cock of Player is cock entry;
 			now Trixieexit is 1;
 			end the story saying "You were demoted to hyena food";
 		else:
@@ -364,10 +364,10 @@ to HyenaMatBind:
 			say "Invalid action.";
 
 to HyenaMatBoundSex:
-	if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of player > 59 or thirst of player > 59):
+	if bsextimer > 5 and a random chance of bsextimer in 18 succeeds or (hunger of Player > 59 or thirst of Player > 59):
 		say "     The stomach walls give a sudden lurch before you are dragged upwards, making the brief journey through the matriarch's throat and then being spat out onto the floor. The sudden shift from the sweltering innards and into the cold, airy warehouse makes you shiver, and a small part of you yearns to return to the sauna-like conditions of the matriarch's stomach. You move to get up, thinking that you are being let go, but you freeze at the sight of two dominant hyenas leering down at your sprawled form.";
 		if a random chance of 1 in 2 succeeds:
-			say "     The matriarch roughly flips you onto your stomach with her foot and then picks up your hips with her hands. 'Having prey squirming inside of me has made me so horny,' she explains as she rubs her thick, dark cock [if player is female]along the lips of your cunt[else]between your buttcheeks[end if]. 'Good thing that I have a breeder bitch handy to take care of that.' The twisted confines that you were released from had already kindled your lust, and the anticipation of being bred by the powerful, dominant herm only adds to it. You soon start pushing back to try and get that wondrous shaft inside of you, but the matriarch just lets out a barking laugh at your submissive urges and does not give you what you want. She continues to tease you, all while you needily moan, until she finally pulls back her coveted cock for a split second, just to plunge deep inside of you.";
+			say "     The matriarch roughly flips you onto your stomach with her foot and then picks up your hips with her hands. 'Having prey squirming inside of me has made me so horny,' she explains as she rubs her thick, dark cock [if Player is female]along the lips of your cunt[else]between your buttcheeks[end if]. 'Good thing that I have a breeder bitch handy to take care of that.' The twisted confines that you were released from had already kindled your lust, and the anticipation of being bred by the powerful, dominant herm only adds to it. You soon start pushing back to try and get that wondrous shaft inside of you, but the matriarch just lets out a barking laugh at your submissive urges and does not give you what you want. She continues to tease you, all while you needily moan, until she finally pulls back her coveted cock for a split second, just to plunge deep inside of you.";
 			WaitLineBreak;
 			say "     The hyena cock inside of you drags against your inner walls, sending flares of pleasure as it is slowly pulled out, and you whimper in need when only the tip remains inside of you. The matriarch swiftly remedies that by thrusting right back into you. You occasionally wince in pain as the matriarch roughly fucks you, but it is heavily overshadowed by the ecstasy of having her thick rod fill you. As you continue to get railed, each thrust sending you into a blissful haze, you almost forget about the other hyena until Gina bends down in front of your face with a devilish grin. 'You look adorable with our matriarch's dick inside of you, but I think that you'll look even better if you took mine as well.' The matriarch snorts derisively when Gina lifts your upper half with her arms, but she still helps the small hyena hoist you off of the floor, all the while continuing to pound you without missing a beat.";
 			say "     Held aloft by the two strong hyenas, you are put at eye-level with Gina's own hardened cock as she presses it against your lips. Already lost in the lustful haze from the matriarch's fucking, you eagerly take Gina's twitching rod into your mouth, reveling in the taste of delectable hyena precum and heady musk. Your efforts to suckle and lick Gina's cock are sloppy at best with the matriarch pounding you from behind, but the recruiter doesn't seem to mind as she thrusts in and out of your mouth. There is no rhythm or coordination between the two hyenas on either end of you, each focusing on their own pleasure as they use your body, but somehow, they reach their climaxes at nearly the same time. The matriarch laughs gleefully as she drives herself up to the hilt inside of you and pumps you full of her cum while Gina yowls in pleasure as she spurts her own load into your mouth, her spunk dribbling down your face as you try to gulp down as much as you can.";
@@ -379,12 +379,12 @@ to HyenaMatBoundSex:
 			say "     Soon afterwards, the matriarch gets off of you, giving you a breather, but your relief instantly vanishes when you see the cross glare that she's giving you. 'You're going to have to do better than that if you're going to be a proper bitch,' the gang leader scolds. You're not sure if your tonguework really was poor or if the matriarch is simply taunting you for her own amusement, but you know better than to talk back. 'I don't think you even deserve the honor of being bred by me,' the matriarch continues. 'Still, I know how much of a slut you are, and while you're not going to get fucked by me, I'm generous enough to let you have some of my cum.' She grabs Gina and shoves her, and the smaller hyena's leaking cunt lands right on your face.";
 			WaitLineBreak;
 			say "     Gina coos in delight when your tongue instinctively thrusts into her used pussy, probing for any trace of the matriarch's delectable baby batter. 'You really do enjoy being a bottom,' Gina remarks as she wiggles her hips, and you can't help but agree that there is something comforting about having a warm, soft hyena tushy dominate you. As you dig deeper into her cum-slicked hole, Gina hums in satisfaction and says, 'You might not have satisfied our matriarch, but I think you are doing a wonderful job as a slut. Just a little bit more, and you'll get your reward.' Spurred on by the praise and the promise of the matriarch's coveted cum, you plunge deep into the hyena's cunt, finding and stimulating her sensitive spots. Gina's teasing stops as she devolves into lustful pants, and it doesn't take much longer before she yowls as she climaxes again, and you try to gulp down the slurry of hyena cum and juices the best you can while the rest splatters onto your face.";
-			say "     When the wave of musky fluids come to an end, you let your head fall back onto the floor. Dazed by the heady scent of hyena sex flooding your senses and the arousing situations that you were subjected to, your lust is at a boiling point, and you [if player is male]jerk yourself off[else if player is female]play with your clit[else]desperately rub your crotch[end if]. In your aroused state, it doesn't take much before you achieve your own climax, and Gina giggles while your body spasms under her. Exhausted by your orgasm and having to service two hyenas, you barely budge when the furry globes rise off of you, nor do you have the strength to do much when the matriarch picks you up and quickly wolfs you down, returning you to her stomach, as Gina [one of]gives you a kissy face and playfully flips you her middle finger[or]waves goodbye to you[at random].";
+			say "     When the wave of musky fluids come to an end, you let your head fall back onto the floor. Dazed by the heady scent of hyena sex flooding your senses and the arousing situations that you were subjected to, your lust is at a boiling point, and you [if Player is male]jerk yourself off[else if Player is female]play with your clit[else]desperately rub your crotch[end if]. In your aroused state, it doesn't take much before you achieve your own climax, and Gina giggles while your body spasms under her. Exhausted by your orgasm and having to service two hyenas, you barely budge when the furry globes rise off of you, nor do you have the strength to do much when the matriarch picks you up and quickly wolfs you down, returning you to her stomach, as Gina [one of]gives you a kissy face and playfully flips you her middle finger[or]waves goodbye to you[at random].";
 		now bsextimer is 1;
 		now struggleatt is 0;
-		if libido of player > 10, decrease libido of player by (libido of player / 10) + 1;
-		now lustatt is libido of player;
-		decrease humanity of player by 3 + psycheadjust;
+		if Libido of Player > 10, decrease Libido of Player by (Libido of Player / 10) + 1;
+		now lustatt is Libido of Player;
+		decrease humanity of Player by 3 + psycheadjust;
 	else:
 		increase bsextimer by 2;
 

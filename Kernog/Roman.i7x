@@ -46,14 +46,14 @@ Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 [Physical details as of game start]
 ScaleValue of Team Captain Roman is 3. [human sized]
 SleepRhythm of Team Captain Roman is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Team Captain Roman is 0. [X cock]
+Cock Count of Team Captain Roman is 0. [X cock]
 Cock Length of Team Captain Roman is 0. [X Inches]
-Cock Width of Team Captain Roman is 0.
-Testes of Team Captain Roman is 0. [X balls]
-Cunts of Team Captain Roman is 1. [X pussy]
+Ball Size of Team Captain Roman is 0.
+Ball Count of Team Captain Roman is 0. [X balls]
+Cunt Count of Team Captain Roman is 1. [X pussy]
 Cunt Length of Team Captain Roman is 8. [X Cunt]
-Cunt Width of Team Captain Roman is 4. [X Cunt]
-Breasts of Team Captain Roman is 2. [X nipples]
+Cunt Tightness of Team Captain Roman is 4. [X Cunt]
+Nipple Count of Team Captain Roman is 2. [X nipples]
 Breast Size of Team Captain Roman is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Team Captain Roman is false. [can not take oversized members without pain]
@@ -166,7 +166,7 @@ instead of conversing the Team Captain Roman:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -218,14 +218,14 @@ to say RomanTalk1:
 	say "     [first time]'Oh, a new head. Welcome to the Astroslide Football Field. The name's Roman,' the team captain greets you. [only]You make small talk with Roman, while the large gorilla keeps an eye on the football field. The discussion seems to switch back and forth between girls -and men-, and the best ways to fuck them, and many sportive anecdotes about him and the other players, both before and after the infection. He seems like an amicable, if slightly obnoxious, man.";
 
 to say RomanTalk2:
-	say "     'Hey, if it isn't [if player is not defaultnamed][name of player], [end if]my favorite [if GorillasMember is 3]laundry boy[else if GorillasMember is 4]water-boy[else]player[end if]!' Roman welcomes you, before giving you a warm and breath-cutting hug. The large-and-in-charge primate makes small talk with you, giving news of every other member of team. 'Did you know that [one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[or]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random] [one of]got himself a cheetah girl when he visited the zoo, the other day?[or]almost got molested by that goat janitor when he went to the hospital[or]scored himself one of these husky gals roaming the street?[or]got gangbanged by a gang of hyenas[or]found that neat bar; the Palomino, it was called.[or]tried to score one of these rats who hang around in the mall, but got rejected[or]almost ended up zipped up in a pooltoy, at the beach?[at random]";
+	say "     'Hey, if it isn't [if Player is not defaultnamed][name of Player], [end if]my favorite [if GorillasMember is 3]laundry boy[else if GorillasMember is 4]water-boy[else]player[end if]!' Roman welcomes you, before giving you a warm and breath-cutting hug. The large-and-in-charge primate makes small talk with you, giving news of every other member of team. 'Did you know that [one of]Bradley[or]Brian[or]Gavin[or]Nate[or]Andy[or]Ike[or]Vinny[or]Reid[or]Tom[or]Everett[at random] [one of]got himself a cheetah girl when he visited the zoo, the other day?[or]almost got molested by that goat janitor when he went to the hospital[or]scored himself one of these husky gals roaming the street?[or]got gangbanged by a gang of hyenas[or]found that neat bar; the Palomino, it was called.[or]tried to score one of these rats who hang around in the mall, but got rejected[or]almost ended up zipped up in a pooltoy, at the beach?[at random]";
 
 to say RomanTalk3:
 	say "     You sadistically ask Roman how he is doing. Roman recognizes your voice, and tilts his head to look at you. His broken stare slowly turns into hate. 'Whm? Whm... Mhm hhmm muuuh!' It seems Roman does not appreciate his current treatment. Then again, he should not have been so careless about his secret, didn't he?";
 
 to say RomanTalk4: [Team recruits Quest start]
 	if HP of Roman is 5:
-		say "     'Hey, [if player is not defaultnamed][name of player][else]friend[end if], how's it going? I have a favor to ask of you. Hear me out.' Curious, you take a seat on a bench and listens to the team captain. 'The tryouts allowed me to find several good players, but I'm certain there are more promising talents hiding in this city. Since you roam the city a lot, I wanted to ask you to investigate the rumors I catch left and right.' You nod, and promise to keep your eyes opened. 'Awesome,' Roman replies. 'The first potential recruit to investigate is an orca, at the beach. Apparently, he's making a killing at beach volley. So, if you ever find yourself there, try to look for this orca volleyball player for me.'";
+		say "     'Hey, [if Player is not defaultnamed][name of Player][else]friend[end if], how's it going? I have a favor to ask of you. Hear me out.' Curious, you take a seat on a bench and listens to the team captain. 'The tryouts allowed me to find several good players, but I'm certain there are more promising talents hiding in this city. Since you roam the city a lot, I wanted to ask you to investigate the rumors I catch left and right.' You nod, and promise to keep your eyes opened. 'Awesome,' Roman replies. 'The first potential recruit to investigate is an orca, at the beach. Apparently, he's making a killing at beach volley. So, if you ever find yourself there, try to look for this orca volleyball player for me.'";
 		now HP of Roman is 6;
 	else if HP of Roman is 7:
 		say "     'Awesome!' Roman says when you give him the news of Willy's arrival. 'Next target for your head hunt is a black horse roaming the Park with his pack. According to one of the boys, he was interested in joining before everything turns into a furry orgy, but he lost contact with each other.' You ask for more information. 'That's all I know. His last text was incoherent ramblings about being assaulted by a giant horse while jogging in the Park, which is how we pieced two and two together. Name's Jo. Keep your eyes open.'";
@@ -260,7 +260,7 @@ to say FootballTryoutsResults:
 		say "     'Congratulations you made it into the team,' the primate says with a grin and holds out his hand in congratulation. Accepting a firm grip on your forearm and returning the same on his powerful furry limb, you are told, 'When we put everyone's data on the planning board, you rated well in the upper third. Didn't take much convincing for everyone to agree that you deserve a shot on the team.' Waving his hand to indicate the large locker room, he goes on to say, 'Be sure to come by regularly to train. You should make it to the main team in no time.' You thank him and walk away, and into the midst of the gathered football players, getting a very warm welcome (and a few friendly gropes) from the guys.";
 		now GorillasRep is 4;  [b team player]
 	else: [moderate to bad results]
-		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait, I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be either a [if player is female]water girl or a laundry girl[else]water boy or a laundry boy[end if].' Roman gives you a supportive slap on the shoulder. 'It will be no small job, managing all these boys['] laundry, but every effort counts, and for that you have my thanks. [bold type]If you work for the team enough times, I am certain that someone will put a good word for you, and put your name forward for the next draft[roman type]. Come back anytime you want, champ. I'm sure that I'll see you on the football field in no time.'";
+		say "     'Listen, we had a look at your results and... made a team decision that you will not be joining as a player,' the primate tells you with a somewhat apologetic expression. Yet as you bow your head in shame and begin turning to walk away, he grabs hold of your arm and adds, 'Wait, I haven't finished yet. I thought it was brave of you to do the tryouts, no matter what came of it, so... I have an offer for you. A way you can still be part of the team and help out. You could be either a [if Player is female]water girl or a laundry girl[else]water boy or a laundry boy[end if].' Roman gives you a supportive slap on the shoulder. 'It will be no small job, managing all these boys['] laundry, but every effort counts, and for that you have my thanks. [bold type]If you work for the team enough times, I am certain that someone will put a good word for you, and put your name forward for the next draft[roman type]. Come back anytime you want, champ. I'm sure that I'll see you on the football field in no time.'";
 		now GorillasRep is 0;
 
 
@@ -274,8 +274,8 @@ to say RomanConvince:
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if GorillasMember > 3:
 		increase bonus by 2;
-	if player is female and breast size of player is 0:
-		if player is not male:
+	if Player is female and Breast Size of Player is 0:
+		if Player is not male:
 			increase bonus by 5;
 		else:
 			increase bonus by 2;
@@ -284,7 +284,7 @@ to say RomanConvince:
 	increase diceroll by bonus;
 	if diceroll > 16:
 		say "     Roman sighs. 'Okay. Just... Come here a minute.' The gorilla leads you to the same, isolated place than last time.";
-		say "     'It happened at the start of this whole mess. I had been already turned into an ape by then. I was strolling the city, curious about how it looked like outside and, and I got ambushed. Some crazy husky male ambushed me. Then, he knocked me out, and had me raped by his pack of bitches again, and again, for fun. It was not enough to turn me into a dog, but it was well enough to make my bits shrink, and eventually be replaced by this.' Roman gestures at his padded shorts. 'They mocked me all the way until I turned into a woman down there. It was not pleasant, to say the least. And I just can't confront the guys about it. I... You see them. [if player is female]You see the lewd looks they give you because of your lady parts. [end if]If they learn, they will throw me out; or worse.'";
+		say "     'It happened at the start of this whole mess. I had been already turned into an ape by then. I was strolling the city, curious about how it looked like outside and, and I got ambushed. Some crazy husky male ambushed me. Then, he knocked me out, and had me raped by his pack of bitches again, and again, for fun. It was not enough to turn me into a dog, but it was well enough to make my bits shrink, and eventually be replaced by this.' Roman gestures at his padded shorts. 'They mocked me all the way until I turned into a woman down there. It was not pleasant, to say the least. And I just can't confront the guys about it. I... You see them. [if Player is female]You see the lewd looks they give you because of your lady parts. [end if]If they learn, they will throw me out; or worse.'";
 		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now you're on the page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there will be enough women and herms in the team, their look will change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
 		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
@@ -308,7 +308,7 @@ to say RomanEncourage:
 		say "'We love you coach! Don't abandon us like this!'";
 		say "     One after the others, the entire team starts to shout and protest to Roman. To accept himself. To stay. The reaction of the senior players, all male gorillas, is more lukewarm, but some of them rally to the rest of the crowd, and the rest seem to simply accept the situation. 'Roman! Roman! Roman! Coach!' they all chant.";
 		say "'Sniff... Sob... You... You big morons! Look at you! You're making me cry!' You are crying too.";
-		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if player is not defaultnamed][name of player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
+		say "     Everyone goes back to their business, and once Roman finishes to say goodbye to the last group, he traps you in a very, very tight hug. '[if Player is not defaultnamed][name of Player], [end if]I cannot find the words to thank you,' he says. 'It's like a weight just lifted from my shoulders. If I can do anything... [italic type]anything[roman type] to repay you, tell me. I consider you one of my closest friends. Actually...'";
 		say "     Roman runs to the locker-room, and comes back a couple of minutes later, a football helmet in his hands. 'I want you to take this. First one I received when joining the team, and still good,' the Gorilla explains as he lobs the helmet in your arms. 'You're going back into the city, right? You'll need it.' Thanking profusely Roman, you strap the helmet to your backpack.";
 		say "[bold type]You gain a football helmet![roman type][line break]";
 		increase carried of football helmet by 1;
@@ -333,7 +333,7 @@ instead of fucking Team Captain Roman:
 			say "[RomanFuck2]";
 			LibidoLoss 50;
 		else:
-			say "     'Already?' Roman asks. 'Sorry, [if player is not defaultnamed][name of player][else]pal[end if], but I have some team business to take care of. Can it wait a little?'";
+			say "     'Already?' Roman asks. 'Sorry, [if Player is not defaultnamed][name of Player][else]pal[end if], but I have some team business to take care of. Can it wait a little?'";
 	else if HP of Roman > 1:
 		say "     'Look, don't get the wrong idea,' Roman sighs. 'You're nice and all that, but I don't feel like having sex after what happened. And with you-know-what. People aren't as [']fluid['] as you, you know?'";
 	else:
@@ -345,25 +345,25 @@ to say RomanFuck1:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal fuck";
 		now sortorder entry is 1;
 		now description entry is "That's all he is good for, is he not";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck";
 		now sortorder entry is 2;
 		now description entry is "Assert Roman's progress in his gag suppression training";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Strap-on";
 		now sortorder entry is 3;
 		now description entry is "Someone has left a strap-on next to the bench";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
@@ -381,7 +381,7 @@ to say RomanFuck1:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -409,20 +409,20 @@ to say RomanFuck1:
 to say RomanFuck1Vag:
 	say "     You circle the bench on which Roman is tied, and close on him. His cunt-man pussy is slightly gaping, but still looks usable. Nanites do wonders for sexual stamina, as usual. The gorilla looks at your predatory approach. He mumbles through the sock that plugs his mouth. Is he asking for you to release him? No matter. You grind a pair of fingers against his lower lips, delighting yourself when you hear the ape grunt in a low voice, then grunt louder when you slip your fingers as deep as you can. You prod and test; when you pull out, your fingers are wet, and not just from the remnants of semen from Roman's previous users. You line up your member, and push forward.";
 	WaitLineBreak;
-	if (cock length of player < 12):
+	if (Cock Length of Player < 12):
 		say "     You take your time breeding the gorilla. His pussy accommodates your cock easily, and you allow yourself to pound him lazily. After countless forced fucks, Roman does not try to pull on his bindings anymore. He just takes it, his breathing getting quicker and quicker, as his nanites do their jobs and provide pleasure for him, and lubrication for you. Life continues as usual around you; you are not the first to fuck the ape, nor will you be the last.";
-	else if (cock length of player < 18):
-		say "     Roman heaves as your cock head splits his hole apart. Despite the continuous ponding, the size of his pussy can only do so much to accommodate your [cock size desc of player] maleness. You still manage to bottom out inside the gorilla. He grinds his teeth and pulls on his bindings, but in the meantime you lean over him and give hearty thrusts that make the sturdy bench creak. Eventually, you hear him moan into your ear, thanks to the action of the nanites. Life continues as usual around you, although a couple of onlookers do stop what they are doing, to watch you pound Roman's pussy with wild abandon.";
+	else if (Cock Length of Player < 18):
+		say "     Roman heaves as your cock head splits his hole apart. Despite the continuous ponding, the size of his pussy can only do so much to accommodate your [cock size desc of Player] maleness. You still manage to bottom out inside the gorilla. He grinds his teeth and pulls on his bindings, but in the meantime you lean over him and give hearty thrusts that make the sturdy bench creak. Eventually, you hear him moan into your ear, thanks to the action of the nanites. Life continues as usual around you, although a couple of onlookers do stop what they are doing, to watch you pound Roman's pussy with wild abandon.";
 	else:
-		say "     Roman's eyes bulge. Is someone trying to fist him, like last time? You grin, all teeth bared, as he realizes the size of your [cock size desc of player] maleness. Grabbing the sides of the bench for leverage, you ram your member as far as you can, rearranging the poor ape's insides. Everyone around you stops what they are doing to look at you. They can all witness Roman's bulging belly, the shape of your [cock of player] cock deforming the layer of fat and muscles, which retreats then plunges further as you push it into his rapidly stretching womb. The sight is both shocking and alluring, especially when you manage to push your dick almost all the way in. Roman is in his own world, his eyes empty and his body limp, but you can tell from the many tremors that reverberate through your rod that the nanites make him go through orgasm after orgasm.";
+		say "     Roman's eyes bulge. Is someone trying to fist him, like last time? You grin, all teeth bared, as he realizes the size of your [cock size desc of Player] maleness. Grabbing the sides of the bench for leverage, you ram your member as far as you can, rearranging the poor ape's insides. Everyone around you stops what they are doing to look at you. They can all witness Roman's bulging belly, the shape of your [cock of Player] cock deforming the layer of fat and muscles, which retreats then plunges further as you push it into his rapidly stretching womb. The sight is both shocking and alluring, especially when you manage to push your dick almost all the way in. Roman is in his own world, his eyes empty and his body limp, but you can tell from the many tremors that reverberate through your rod that the nanites make him go through orgasm after orgasm.";
 	WaitLineBreak;
-	if cock width of player < 12:
-		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock spurts your [cum load size of player] load inside Roman's womb, mixing it with the many already present.";
-	else if cock width of player < 25:
-		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock floods Roman's womb with your [cum load size of player] load, the overfill spilling out quickly.";
+	if ball size of Player < 12:
+		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock spurts your [Cum Load Size of Player] load inside Roman's womb, mixing it with the many already present.";
+	else if ball size of Player < 25:
+		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock floods Roman's womb with your [Cum Load Size of Player] load, the overfill spilling out quickly.";
 	else:
-		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock cums, and cums, and cums. Roman's belly bulges obscenely, as your cock acts as a plug and as the ape's body cannot keep up with the quantity of your [cum load size of player] release. When you pull out, it is followed by a flush of thick seminal fluid pooling on the locker-room's floor.";
-	if cock length of player >= 18:
+		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. Your cock cums, and cums, and cums. Roman's belly bulges obscenely, as your cock acts as a plug and as the ape's body cannot keep up with the quantity of your [Cum Load Size of Player] release. When you pull out, it is followed by a flush of thick seminal fluid pooling on the locker-room's floor.";
+	if Cock Length of Player >= 18:
 		say "     Roman pants heavily though his sock gag. Meanwhile, a waiting line has formed behind you. But nobody seems in a hurry to pass after you, and take Roman's now [italic type]very[roman type] gaping cunt. It seems that the football team's sex pet earned himself a few hours of rest.";
 	else:
 		say "     Roman pants heavily though his sock gag. Meanwhile, a waiting line has formed behind you. It seems that the football team's sex pet will not have any rest until a few hours.";
@@ -430,22 +430,22 @@ to say RomanFuck1Vag:
 to say RomanFuck1Blow:
 	say "     You walk near Roman's head, and pull out the sock which is muffling his sounds. 'You... You trait-umg!' You are not here to hear the pussy-boy whine, and silence him by plugging his mouth with your cock. Roman gives you a weak glare, but the fear of punishment prevents him from biting your bits off. You grin, grab the ape's big head, and start fucking his face.";
 	WaitLineBreak;
-	if cock length of player < 8:
+	if Cock Length of Player < 8:
 		say "     You enjoy the gorilla's warm mouth. You cram your entire length inside, and feel Roman instantly suckling on it. He barely gags on your meat, too. How many times did he do this already? The marker scribbles on his forehead have stopped counting at fifteen, but it must be more. You savor the long, leisurely blowjob, occasionally pumping your hips to make things faster. Eventually, you feel the need to cum.";
-	else if cock length of player < 18:
-		say "     You enjoy the gorilla's struggles to take your entire length inside his mouth; not that he has a choice in the matter. You feel the tip of your cock leave the confines of Roman's muzzle, and dive into his throat. You eventually reach as far as your [cock length of player] inches cock allows you. With Roman's head tilted upwards like this, the sensations are very nice. When the ape's gag reflex starts to make him retch, and pull on his bindings, you pull out, only to push back again right after he takes a breath, turning this quickly into a proper face-fuck, until you feel the need to cum.";
+	else if Cock Length of Player < 18:
+		say "     You enjoy the gorilla's struggles to take your entire length inside his mouth; not that he has a choice in the matter. You feel the tip of your cock leave the confines of Roman's muzzle, and dive into his throat. You eventually reach as far as your [Cock Length of Player] inches cock allows you. With Roman's head tilted upwards like this, the sensations are very nice. When the ape's gag reflex starts to make him retch, and pull on his bindings, you pull out, only to push back again right after he takes a breath, turning this quickly into a proper face-fuck, until you feel the need to cum.";
 	else:
-		say "     Roman whines, as you stretch his mouth to the limits with your [cock size desc of player] cock. You have barely pushed the head in, when you already feel his uvula. The gorilla coughs and wheezes, but still does his best. He suckles your tip, and tries to use his tongue. Eventually, you have enough. You pull out, and using Roman's attached legs as lever, you frot your dick against the furry chest. 'Mmf! Wmmf! Nnnf!' Roman whimpers. Your [ball size] pouch smacks him like a metronome, smothering his protests. Eventually, you feel the need to cum and push your glans back inside Roman for the finale.";
+		say "     Roman whines, as you stretch his mouth to the limits with your [cock size desc of Player] cock. You have barely pushed the head in, when you already feel his uvula. The gorilla coughs and wheezes, but still does his best. He suckles your tip, and tries to use his tongue. Eventually, you have enough. You pull out, and using Roman's attached legs as lever, you frot your dick against the furry chest. 'Mmf! Wmmf! Nnnf!' Roman whimpers. Your [ball size] pouch smacks him like a metronome, smothering his protests. Eventually, you feel the need to cum and push your glans back inside Roman for the finale.";
 	WaitLineBreak;
-	if cock width of player < 12:
-		say "     You unload your [cum load size of player] release inside Roman's mouth. The thick male juice trickles down his throat, mixing it with the many already present in his stomach. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
-	else if cock width of player < 25:
-		say "     You block Roman's throat for several seconds as you empty [cum load size of player] load inside his stomach, filling it to the brim. When you finally pull out, Roman coughs violently, strands of cum escaping his mouth, having followed your [cock of player] dick on the way out. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
+	if ball size of Player < 12:
+		say "     You unload your [Cum Load Size of Player] release inside Roman's mouth. The thick male juice trickles down his throat, mixing it with the many already present in his stomach. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
+	else if ball size of Player < 25:
+		say "     You block Roman's throat for several seconds as you empty [Cum Load Size of Player] load inside his stomach, filling it to the brim. When you finally pull out, Roman coughs violently, strands of cum escaping his mouth, having followed your [cock of Player] dick on the way out. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
 	else:
-		say "     You drown Roman with your [cum load size of player] release. His belly bulges more and more as you overload it with your cum. The sheer quantity makes the gorilla throw up cum through his mouth and nose, and after you pull out, each of his coughs is accompanied by a glob of semen. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
+		say "     You drown Roman with your [Cum Load Size of Player] release. His belly bulges more and more as you overload it with your cum. The sheer quantity makes the gorilla throw up cum through his mouth and nose, and after you pull out, each of his coughs is accompanied by a glob of semen. You ensure that Roman has taken all of your seed, one way or another, then put the sock back in his mouth and let the big ape digest his meal.";
 
 to say RomanFuck1Strap:
-	say "     You circle the bench on which Roman is tied, and close on him. His cunt-man pussy is slightly gaping, but still looks usable. Nanites do wonders for sexual stamina, as usual. The gorilla looks at your [body of player] approach, like a predator. He mumbles through the sock that plugs his mouth. Is he asking for you to release him? No matter. You grind a pair of fingers against his lower lips, delighting yourself when you hear the ape grunt in a low voice, then grunt louder when you slip your fingers as deep as you can. You prod and test; when you pull out, your fingers are wet, and not just from the remnants of semen from Roman's previous users. You fasten the strap-on on you. The toy is double-ended, with a small, bulbous end that you insert in your [cunt width of player] pussy. You feel it press from the inside against the region of your clitoris. Once you are ready, you line up your toy with Roman's lower hole, and push forward.";
+	say "     You circle the bench on which Roman is tied, and close on him. His cunt-man pussy is slightly gaping, but still looks usable. Nanites do wonders for sexual stamina, as usual. The gorilla looks at your [body of Player] approach, like a predator. He mumbles through the sock that plugs his mouth. Is he asking for you to release him? No matter. You grind a pair of fingers against his lower lips, delighting yourself when you hear the ape grunt in a low voice, then grunt louder when you slip your fingers as deep as you can. You prod and test; when you pull out, your fingers are wet, and not just from the remnants of semen from Roman's previous users. You fasten the strap-on on you. The toy is double-ended, with a small, bulbous end that you insert in your [Cunt Tightness of Player] pussy. You feel it press from the inside against the region of your clitoris. Once you are ready, you line up your toy with Roman's lower hole, and push forward.";
 	WaitLineBreak;
 	say "     You take your time fucking the gorilla. His pussy accommodates your strap-on easily, and you allow yourself to pound him at your own rhythm. The vibrations of the strap-on reverberates on the bulbous end of the sex-toy, which are then distributed to the rest of your crotch, and you take an immense pleasure topping the gorilla. After countless forced fucks, Roman does not try to pull on his bindings anymore. He just takes it, his breathing getting quicker and quicker as his nanites do their jobs, and provide pleasure for him, and lubrication for you. Life continues as usual around you; you are not the first to fuck the ape, nor will you be the last.";
 	say "     Roman eventually cums. His man-pussy contracts violently around the dildo of the strap-on. The resulting rumbling through the rubber-toy pushes you past your limits as well, and you too go through a powerful climax. Your sexual urges satisfied, you pull out, and put the strap-on back where you found it. As you go back to your own business, a [one of]gorilla[or]wolfman[or]horse[or]cat[or]satyr[at random] wastes no time taking your place. [one of]He plunges his dick, a real one this time, inside Roman's wet pussy[or]She picks up the femcum-covered strap-on, and prepares to give Roman another round of rubber dildo fuck[at random].";
@@ -453,8 +453,8 @@ to say RomanFuck1Strap:
 to say RomanFuck1Cuni:
 	say "     You walk near Roman's head and pull out the sock which is muffling his sounds. 'You... You trait-umg!' You are not here to hear the pussy-boy whine, and silence him by sitting on him, and smothering his complaints with your crotch. Roman gives you a weak glare, but the fear of punishment prevents him from biting your bits off. You grin, grab the ape's big head, and start grinding his face.";
 	WaitLineBreak;
-	say "     Roman whines, although you can tell that he welcomes the change from the way he instantly starts lapping your slit. And he's good at it, too! You turn around on your living seat and look the gorilla right in the eye, giving him directions. You have him focus on your clit. Then, once you are aroused enough, you grab the back of his head, and encourage him to delve as deep as he can inside of your [cunt size desc of player] pussy.";
-	say "     Eventually, you feel your climax approaching. You squeeze Roman's head between your quivering [body of player] legs, and grind your orgasm on the ape's immobilized face, gushing femcum over his thick, black fur. You order Roman to clean up his mess. Once you judge that he did a proper job, you stand up. To his dismay, a [one of]gorilla[or]wolfman[or]horse[or]cat[or]satyr[at random] hastily replaces you and [one of]plunges his dick inside Roman's lube coated mouth[or]straddles him as well[at random] while you go back to your own business.";
+	say "     Roman whines, although you can tell that he welcomes the change from the way he instantly starts lapping your slit. And he's good at it, too! You turn around on your living seat and look the gorilla right in the eye, giving him directions. You have him focus on your clit. Then, once you are aroused enough, you grab the back of his head, and encourage him to delve as deep as he can inside of your [cunt size desc of Player] pussy.";
+	say "     Eventually, you feel your climax approaching. You squeeze Roman's head between your quivering [body of Player] legs, and grind your orgasm on the ape's immobilized face, gushing femcum over his thick, black fur. You order Roman to clean up his mess. Once you judge that he did a proper job, you stand up. To his dismay, a [one of]gorilla[or]wolfman[or]horse[or]cat[or]satyr[at random] hastily replaces you and [one of]plunges his dick inside Roman's lube coated mouth[or]straddles him as well[at random] while you go back to your own business.";
 
 [2  - Roman good ending]
 to say RomanFuck2:
@@ -462,25 +462,25 @@ to say RomanFuck2:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal fuck";
 		now sortorder entry is 1;
 		now description entry is "Show Roman the pleasures of being a woman";
 	[]
-	if player is not neuter:
+	if Player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 2;
 		now description entry is "Everything is in the name";
 	[]
-	if (player is female and Breast Size of player > 0):
+	if (player is female and Breast Size of Player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Tribadism";
 		now sortorder entry is 3;
 		now description entry is "Have some [']girl time['] with Roman";
 	[]
-	if (player is female and Breast Size of player is 0):
+	if (player is female and Breast Size of Player is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Cunt-boy special";
 		now sortorder entry is 4;
@@ -498,7 +498,7 @@ to say RomanFuck2:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -527,33 +527,33 @@ to say RomanFuck2:
 	clear the screen and hyperlink list;
 
 to say RomanFuck2Vag:
-	say "     Roman's eyes light up. The both of you take your time to go through foreplay. You grope each other, and make out, sprawled on the mattress. You prepare your partner's pussy by inserting one finger, then two. You even manage to insert a third one and pump them for some time, before Roman urges you to let him take your [cock of player] dick in. You kiss one more time, as you gently lay on your back. Roman puts himself in position, and lowers himself gently on your maleness.";
-	if (cock length of player < 12):
+	say "     Roman's eyes light up. The both of you take your time to go through foreplay. You grope each other, and make out, sprawled on the mattress. You prepare your partner's pussy by inserting one finger, then two. You even manage to insert a third one and pump them for some time, before Roman urges you to let him take your [cock of Player] dick in. You kiss one more time, as you gently lay on your back. Roman puts himself in position, and lowers himself gently on your maleness.";
+	if (Cock Length of Player < 12):
 		say "     Your dick slides effortlessly down the ape's warm pussy. The both of you let out an almost simultaneous coo, as Roman bottoms out your entire length inside of him. You can feel his primate heart pulse rapidly through your member. Roman wastes no time pumping up and down your rod. His usual timidness is now gone as he rides you like there was no tomorrow, his trained body ensuring that he will not run out of stamina any time soon. You try to follow the rhythm, but each time you try to get your bearings, a well-place bump or squeeze makes you gasp. Eventually, Roman leans over you and slips his tongue inside your mouth, playing with your own appendage as you both approach climax";
 	else:
-		say "     Roman tries his best to accommodate your [cock size desc of player] maleness. You want to tell him that he does not have to try so hard, but the primate uses your pinned body as a leverage, and keeps trying to push more and more of your [cock length of player] inches cock inside of him. The nanites helping, he eventually manages to fit all of it inside, and you have a close view of his distended belly, showing the silhouette of your cock behind the short black fur. Roman seems ready to cum at any moment, and you are already seeing stars, but the gorilla carries on and uses his well-built legs to lift his stretched body up and down as much as he can. The both of you do not last very long.";
+		say "     Roman tries his best to accommodate your [cock size desc of Player] maleness. You want to tell him that he does not have to try so hard, but the primate uses your pinned body as a leverage, and keeps trying to push more and more of your [Cock Length of Player] inches cock inside of him. The nanites helping, he eventually manages to fit all of it inside, and you have a close view of his distended belly, showing the silhouette of your cock behind the short black fur. Roman seems ready to cum at any moment, and you are already seeing stars, but the gorilla carries on and uses his well-built legs to lift his stretched body up and down as much as he can. The both of you do not last very long.";
 	WaitLineBreak;
-	if cock width of player < 12:
-		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. You spurt your [cum load size of player] load inside Roman's womb, his own inner muscles milking your cock for all it is worth. Roman moans loudly and keeps your member as deep as he can inside you, while you give your last squirts of semen. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
+	if ball size of Player < 12:
+		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. You spurt your [Cum Load Size of Player] load inside Roman's womb, his own inner muscles milking your cock for all it is worth. Roman moans loudly and keeps your member as deep as he can inside you, while you give your last squirts of semen. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
 	else:
-		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. You flood Roman's womb with your [cum load size of player] load, the overfill spilling out quickly. Roman's pussy milks you for all you are worth, but even he cannot hold out everything, and the pressure soon obliges him to pull out. You squirt the rest of your load all over his chest. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
+		say "     You feel your [short ball size] balls churn, and a powerful orgasm overtakes you. You flood Roman's womb with your [Cum Load Size of Player] load, the overfill spilling out quickly. Roman's pussy milks you for all you are worth, but even he cannot hold out everything, and the pressure soon obliges him to pull out. You squirt the rest of your load all over his chest. Roman and you look at each other. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
 
 to say RomanFuck269:
-	say "     Roman's eyes light up. You fall together on the mattress, and start making out with each other. Eventually, you let Roman straddle you and turn around, giving you access to his pussy. You grab his large thighs and adjust his crotch to the level of your mouth. As you were about to give Roman's pleasure button a playful lick, you feel the ape's mouth wrap around [if cocks of player > 1]each of your cocks in turn[else if cocks of player is 1]your [cock size desc of player] cock[else]your clit[end if] and suckle heartily. You gasp of surprise and pleasure; the bets are on, then. You plunge your face into your friend's crotch and give a long, rough lick. Roman's loud 'Ook!' reverberates around the room. The team captain understood the message, and the both of you go at each other and test the other's endurance.";
-	if player is male:
-		say "     Roman's tongue focuses on your glans, making you moan with each assault on the sensitive flesh. Then, without warning, he gulps your rod down as far as he can. He keeps it there a moment, sucking on it like a lollipop, before rising his head and focus again on the head of your dick. He alternates between the two, while his hands keep your other cock[if cocks of player > 2]s[end if] occupied. Feeling brave, he even tries to take [if cocks of player is 2]both[else]two of them[end if] simultaneously in his mouth, as far as they can, squeezing them together in the tight confines of his mouth.";
-	else if player is herm:
-		say "     Roman's tongue focuses on your glans, making you moan with each assault on the sensitive flesh. Then, without warning, he gulps your rod down as far as he can. He keeps it there a moment, sucking on it like a lollipop, before rising his head and focus again on the head of your dick. He alternates between the two, while his fingers keep your pussy occupied, prodding inside your [Cunt Size Desc of player] or playing with your clit.";
-	else if player is female:
+	say "     Roman's eyes light up. You fall together on the mattress, and start making out with each other. Eventually, you let Roman straddle you and turn around, giving you access to his pussy. You grab his large thighs and adjust his crotch to the level of your mouth. As you were about to give Roman's pleasure button a playful lick, you feel the ape's mouth wrap around [if Cock Count of Player > 1]each of your cocks in turn[else if Cock Count of Player is 1]your [cock size desc of Player] cock[else]your clit[end if] and suckle heartily. You gasp of surprise and pleasure; the bets are on, then. You plunge your face into your friend's crotch and give a long, rough lick. Roman's loud 'Ook!' reverberates around the room. The team captain understood the message, and the both of you go at each other and test the other's endurance.";
+	if Player is male:
+		say "     Roman's tongue focuses on your glans, making you moan with each assault on the sensitive flesh. Then, without warning, he gulps your rod down as far as he can. He keeps it there a moment, sucking on it like a lollipop, before rising his head and focus again on the head of your dick. He alternates between the two, while his hands keep your other cock[if Cock Count of Player > 2]s[end if] occupied. Feeling brave, he even tries to take [if Cock Count of Player is 2]both[else]two of them[end if] simultaneously in his mouth, as far as they can, squeezing them together in the tight confines of his mouth.";
+	else if Player is herm:
+		say "     Roman's tongue focuses on your glans, making you moan with each assault on the sensitive flesh. Then, without warning, he gulps your rod down as far as he can. He keeps it there a moment, sucking on it like a lollipop, before rising his head and focus again on the head of your dick. He alternates between the two, while his fingers keep your pussy occupied, prodding inside your [Cunt Size Desc of Player] or playing with your clit.";
+	else if Player is female:
 		say "     Roman's tongue focuses on your clit, making you moan with each assault on the sensitive button. Then, without warning, he presses his mouth against your pussy and slip his tongue as far as he can. He keeps it there a moment, lashing the inside with powerful tongue strikes, before leaving his head and focus again on your clitoris. He alternates between the two, keeping you on your toes.";
 	WaitLineBreak;
-	say "     You are seeing stars, but you remain as focused as you can on Roman's private bits, giving them every kind of attention you can think of. You find out quickly that the gorilla seems to like you exploring his cunt with your tongue while pinching his clit with your fingers [italic type]very[roman type], judging by the loud moans and the erratic oral ministrations from your partner. Eventually, the both of you reach orgasm almost simultaneously. Your concert of moans is quickly followed by gush of femcum flooding your face, while [if player is male]Roman gulps down dutifully your [cum load size of player] release, not letting a single drop escape[else]the inner muscles of your pussy contracts around Roman's tongue, coating it in slick lubrication fluid[end if]. Roman and you cuddle for a moment, letting the high of your common orgasm subside slowly. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
+	say "     You are seeing stars, but you remain as focused as you can on Roman's private bits, giving them every kind of attention you can think of. You find out quickly that the gorilla seems to like you exploring his cunt with your tongue while pinching his clit with your fingers [italic type]very[roman type], judging by the loud moans and the erratic oral ministrations from your partner. Eventually, the both of you reach orgasm almost simultaneously. Your concert of moans is quickly followed by gush of femcum flooding your face, while [if Player is male]Roman gulps down dutifully your [Cum Load Size of Player] release, not letting a single drop escape[else]the inner muscles of your pussy contracts around Roman's tongue, coating it in slick lubrication fluid[end if]. Roman and you cuddle for a moment, letting the high of your common orgasm subside slowly. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
 
 to say RomanFuck2Trib:
 	say "     Roman's eyes light up. You fall together on the mattress, and start making out with each other. Eventually, you sit on the mattress, and pass one of your legs over Roman's crotch, while he does the same under your direction. You feel his black-skinned pussy touch yours. It is already slick wet from the mere excitement. You begin to move, and make circles against Roman's crotch. His puffy lower-lips frot with yours, the odd movement making them stroke your pleasure buttons. 'Oh, this feels... Good...' Roman pants. Encouraged by his reaction, you give his cunt a hearty grind that makes him jerk his head back in pleasure. 'Oh! Oh...'";
-	say "     Basking in please, the trans-man rests on his back, and brings his hands to his nipples, caressing and pinching them while you take care of his pussy. His leg wiggles slowly against your chest, and this gives you an idea. You put the gorilla's big, prehensile foot at face level, and give the sole a good lick. This makes Roman jump, and his big, flexible foot grab your head reflexively. Amused, you give it a tongue bath, extracting a lewd moan from the gorilla with each lick. 'Ah! Pl-please stop[if player is not defaultnamed], [name of player][end if]. I'm gonna... Ah!' Instead of stopping, you accelerate both your tongue lashes, and the grinding of your pussy against his.";
+	say "     Basking in please, the trans-man rests on his back, and brings his hands to his nipples, caressing and pinching them while you take care of his pussy. His leg wiggles slowly against your chest, and this gives you an idea. You put the gorilla's big, prehensile foot at face level, and give the sole a good lick. This makes Roman jump, and his big, flexible foot grab your head reflexively. Amused, you give it a tongue bath, extracting a lewd moan from the gorilla with each lick. 'Ah! Pl-please stop[if Player is not defaultnamed], [name of Player][end if]. I'm gonna... Ah!' Instead of stopping, you accelerate both your tongue lashes, and the grinding of your pussy against his.";
 	WaitLineBreak;
-	say "     'C-cummnng!' Roman's body tenses up in the throes of climax. Judging by the way his back arches, or his prehensile foot squeezes your head, it seems to be an intense one. It goes on for a long minute, until you feel the ape finally relax. You need your own release too. However, as you were starting to lower your hand to your crotch, Roman stops you. 'Since it seems you like my feet so much... Let me help you.' Without warning, his free foot grabs your pussy, and cradles it. You lose your own self-control when you feel one of the toes part your lower lips and prod inside your [cunt size desc of player] cunt, and it is your turn to cum hard in Roman's hands -well, toes.";
+	say "     'C-cummnng!' Roman's body tenses up in the throes of climax. Judging by the way his back arches, or his prehensile foot squeezes your head, it seems to be an intense one. It goes on for a long minute, until you feel the ape finally relax. You need your own release too. However, as you were starting to lower your hand to your crotch, Roman stops you. 'Since it seems you like my feet so much... Let me help you.' Without warning, his free foot grabs your pussy, and cradles it. You lose your own self-control when you feel one of the toes part your lower lips and prod inside your [cunt size desc of Player] cunt, and it is your turn to cum hard in Roman's hands -well, toes.";
 	say "     Roman and you cuddle for a moment, letting the high of your common orgasm subside slowly. After one last, deep kiss, you head for the showers. As you get out, you notice a crowd hurriedly going back to its own business, as if you had interrupted something. It looks like you had your own peepers.";
 
 to say RomanFuck2Cunt:
@@ -591,7 +591,7 @@ to say RomanFuck2Cunt:
 			say "     You can tell that Roman went through several orgasms during the foursome, judging by the two males['] reactions, when his insides squeezed their dicks like vices. Eventually, the rest of you cum as well. You can hear the wolfman behind you grunt, and the bunny jock in front of you close his eyes and grit his teeth, as they paint Roman's holes white with their cum.";
 	say "     Spent, the four of you lie down on the grass. Everyone has a smile on their face, and Roman's is probably the happiest. Eventually, you part ways with the two males. 'See you soon, babe,' the bunny says.";
 	say "     'We should stay in contact, Roman. Have a [']private match['], just the two of us, one of these days,' the wolfman picks up.";
-	say "     You walk back an elated Roman back to the football field. 'These were among the best hours of my life. Actually, the times when you are around are all the best hours of my life.' Roman accompanies his thanks with a warm kiss. 'Gotta go back to supervise training. See you around, [if player is not defaultnamed][name of player][else]champ[end if].'";
+	say "     You walk back an elated Roman back to the football field. 'These were among the best hours of my life. Actually, the times when you are around are all the best hours of my life.' Roman accompanies his thanks with a warm kiss. 'Gotta go back to supervise training. See you around, [if Player is not defaultnamed][name of Player][else]champ[end if].'";
 
 [Outside event for finding Roman's tape]
 
@@ -605,7 +605,7 @@ The sarea of Grocery Store Security Camera is "Outside".
 instead of resolving Grocery Store Security Camera:
 	say "     You find a grocery store on your way. The place has been looted until only the metallic shelves remain, but you still decide to give the place a quick check, just in case. As you have guessed, the store is totally empty. The floor is covered with cum stains, who go all the way to the back room. A soft whirr catches your attention to the ceiling, and your eye meet the one of a small motion-activated security camera. Taken by a sudden inspiration, you fetch a stool lying nearby, and open the security camera to grab its tape. This could prove useful[if Lost Camera is unresolved], provided you find some kind of viewing equipment, like a video camera[end if].";
 	say "[bold type]Grocery Store Tape has been added to your tape inventory![roman type][line break]";
-	add "Grocery Store Tape" to tapes of player;
+	add "Grocery Store Tape" to tapes of Player;
 	now Grocery Store Security Camera is resolved;
 
 to say RomanTransformationFootage:
@@ -634,14 +634,14 @@ Instead of resolving a Orca Volleyball Player:
 	if HP of Roman is not 6:
 		say "     You mix yourself with the crowd and watch the match. While all the players play well, the killer whale is undoubtedly the best one. Despite his large body, he manages to cover a lot of ground, and his smashes leave no chance to its opponents. You do not mind the match to be unbalanced, if it means being able to ogle the orca's generous package flopping in his skin-tight swimming trunks. You take your leave at the same time the gorgeous cetacean leaves the field.";
 	else:
-		say "     You remember Ronan's request. [one of]This must be the cetacean that the rumors talk about. You wait patiently for the end of the match, then walk to the orca and present yourself and why you want to talk to him. Willy, that's his name, seems to ponder the idea for a moment. 'Football team? You mean the one of the University? I can see why you'd want me in, but why would I go at the other end of the city to play sports?'[or]You sigh and muster the courage to talk to Willy the orca again after his match. 'Oh, it's you,' the cetacean says as you approach him once again. 'You're a stubborn [bodyname of player], you know that?'[stopping]";
+		say "     You remember Ronan's request. [one of]This must be the cetacean that the rumors talk about. You wait patiently for the end of the match, then walk to the orca and present yourself and why you want to talk to him. Willy, that's his name, seems to ponder the idea for a moment. 'Football team? You mean the one of the University? I can see why you'd want me in, but why would I go at the other end of the city to play sports?'[or]You sigh and muster the courage to talk to Willy the orca again after his match. 'Oh, it's you,' the cetacean says as you approach him once again. 'You're a stubborn [bodyname of Player], you know that?'[stopping]";
 		say "     You try to use your best arguments in order to convince Willy to join the team. All you manage to do is annoy him [one of]with your babble[or]again[stopping]. 'Stop right there. I said it was not about [']being part of something big[']. I'm not interested in joining your bunch of pansies.' Insulted, you [one of]reply coarsely that he should stop talking shit and just follow you already. 'Make me, or I'll clean your runny mouth in my own fashion,' [or]insult Willy's relatives. The orca frowns. 'I guess you need another mouth cleaning, asshole,' [stopping]he says while he walks towards you.";
 		WaitLineBreak;
 		now inasituation is true;
 		challenge "Killer Whale";
 		now inasituation is false;
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			say "     Willy falls like a log on the sand. The orca catches his breath, then sits on the warm sand. Your scuffle attracted an audience, who look at you as if you were David felling down Goliath. The orca erupts suddenly in a boisterous laughter. 'That's what I call a punch! Seems that you can back what you bark, [bodyname of player]!' You can't help but chuckle too. You offer your hand to Willy, but the cetacean gets back on his feet, with surprising ease. 'Wouldn't want me, if I couldn't take a few tackles, would you?' he asks, as he dusts the sand off his black and white skin. 'Gimme a minute to tell my friends where I'm going. I'll see you on the football field.'";
+			say "     Willy falls like a log on the sand. The orca catches his breath, then sits on the warm sand. Your scuffle attracted an audience, who look at you as if you were David felling down Goliath. The orca erupts suddenly in a boisterous laughter. 'That's what I call a punch! Seems that you can back what you bark, [bodyname of Player]!' You can't help but chuckle too. You offer your hand to Willy, but the cetacean gets back on his feet, with surprising ease. 'Wouldn't want me, if I couldn't take a few tackles, would you?' he asks, as he dusts the sand off his black and white skin. 'Gimme a minute to tell my friends where I'm going. I'll see you on the football field.'";
 			say "     While Willy jogs away, you make a mental note to report back to Roman about your successful recruitment.";
 			now HP of Roman is 7;
 			now Resolution of Orca Volleyball Player is 1; [won against the orca]
@@ -667,7 +667,7 @@ Instead of resolving a Husky Gang:
 		say "     You have no business with them. So you let the horde pass. The mutants do not notice you, chattering to each other as they travel to their next destination. Once they are gone, you walk away from your hiding place, and after some more exploration decide to return to your starting point.";
 		now Husky Gang is resolved;
 	else:
-		say "     The Alpha's appearance perfectly fits the description that Roman gave you, at the Football Field. It seems that you found your cheerleaders. You walk away from your hiding place. [one of]The Alpha Husky instantly growls as he sees you. 'Who the fuck are you?' You quickly explain why you are here. 'Roman? Oh yeah, that gorilla. Does he make good use of the pussy I gave him?' he asks sarcastically. 'I'll let the girls take care of you once I knock you on your ass[or]'You again?' the Alpha growls. He cracks his fingers and walks towards you with a determined look on his face. 'Was the last lesson not enough? Fine by me. I won't say no to one more bitch in my pack[stopping].' Behind him, the females shout encouragements for their champion. '[one of]Yeah, bite his ass[or]Take that loser off[or]That wimpy [bodyname of player] is no match for our boy[at random]!'";
+		say "     The Alpha's appearance perfectly fits the description that Roman gave you, at the Football Field. It seems that you found your cheerleaders. You walk away from your hiding place. [one of]The Alpha Husky instantly growls as he sees you. 'Who the fuck are you?' You quickly explain why you are here. 'Roman? Oh yeah, that gorilla. Does he make good use of the pussy I gave him?' he asks sarcastically. 'I'll let the girls take care of you once I knock you on your ass[or]'You again?' the Alpha growls. He cracks his fingers and walks towards you with a determined look on his face. 'Was the last lesson not enough? Fine by me. I won't say no to one more bitch in my pack[stopping].' Behind him, the females shout encouragements for their champion. '[one of]Yeah, bite his ass[or]Take that loser off[or]That wimpy [bodyname of Player] is no match for our boy[at random]!'";
 		WaitLineBreak;
 		now inasituation is true;
 		challenge "Alpha Husky";
@@ -679,8 +679,8 @@ Instead of resolving a Husky Gang:
 			now Resolution of Husky Gang is 1; [won against the huskies]
 			now Husky Gang is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
-			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [bodyname of player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
-			say "     Two of them play with your [breasts of player] breasts, pulling your nipples and kneading your [breast size desc of player] chest. There is no intent to please you. Instead, they try to entice the most reactions out of you, to the collective amusement[if player is male]. The Huskies play with your cock[smn]. They pinch, squeeze and nibble your shaft[smn], making sure to keep you on your toes. They quickly start the game of polishing your [cock size desc of player] dickhead[smn], puffing in amusement as you moan and writhe under them from the overstimulation[end if][if player is female]. The oldest in the band pushes a finger. 'Watch me spread that bitch. She's gonna wish she had jumped our man's cock instead of putting up a fight!' After that, she rams in a second finger, and quickly after, two more. Once she deems you stretched enough, she balls her hand in a fist, and slowly forces it inside your vagina. She pushes in as much of her arm as she can, while the other Huskies holler and whistle at the scene, and rub the bump traveling up and down your lower belly. 'How's my fist in your puss, bitch?' the dog asks in a vicious tone. You cannot answer her, as your mouth is busy being grinded by another female. Your only response is to squeeze around the fist filling your pussy and cover it in your juices. 'That's what I thought, bitch.'[else].[end if]";
+			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [bodyname of Player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
+			say "     Two of them play with your [Nipple Count of Player] breasts, pulling your nipples and kneading your [breast size desc of Player] chest. There is no intent to please you. Instead, they try to entice the most reactions out of you, to the collective amusement[if Player is male]. The Huskies play with your cock[smn]. They pinch, squeeze and nibble your shaft[smn], making sure to keep you on your toes. They quickly start the game of polishing your [cock size desc of Player] dickhead[smn], puffing in amusement as you moan and writhe under them from the overstimulation[end if][if Player is female]. The oldest in the band pushes a finger. 'Watch me spread that bitch. She's gonna wish she had jumped our man's cock instead of putting up a fight!' After that, she rams in a second finger, and quickly after, two more. Once she deems you stretched enough, she balls her hand in a fist, and slowly forces it inside your vagina. She pushes in as much of her arm as she can, while the other Huskies holler and whistle at the scene, and rub the bump traveling up and down your lower belly. 'How's my fist in your puss, bitch?' the dog asks in a vicious tone. You cannot answer her, as your mouth is busy being grinded by another female. Your only response is to squeeze around the fist filling your pussy and cover it in your juices. 'That's what I thought, bitch.'[else].[end if]";
 			say "     Once every Female Husky has had her way with you, the gang discards your tired body on the side of the street. Your last sight of them before the nanite infection starts ramping up in your body is the Alpha leaning over you. 'Hope you learned your lesson this time. You're welcome.'";
 			infect "Female Husky";
 			infect "Female Husky";

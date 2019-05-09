@@ -3,7 +3,7 @@ Nightmare by Sarokcat begins here.
 "Adds a Nightmare to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 to say Nightmare attack:
 	say "     Unable to continue fighting the stronger and more experienced stablemaster, you collapse helplessly on top of a pile of cushions, and try to catch your breath after the battering your mind and body has endured during the combat, fortunately for you, the stablemaster seems distracted for a second as he hunts among the cushions nearby. You hear a soft whimpering noise over in the corner, and manage with some effort to turn your equine head to look, only to see the mare Daisy touching her body as she stares at you and the stablemaster with ever-increasing arousal, her heat-filled scent still permeating the room. Your attention is drawn back to the stablemaster however, as the powerful black stallion steps up next to your prone form and bends over you. Looking back up at him, you realize in a panic that the golden collar you had made to chain the stablemaster is now in his hands! You try to lift up your hands to ward him off, but are far too slow and weakened from the combat to react in time, as he slips the collar around your neck and latches it firmly shut. You groan in despair as you try to grasp it with your hands, only to moan in pain as the golden treasure seems to burn into your body, melding with your neck as it sinks down under your fur.";
@@ -15,17 +15,18 @@ To say Nightmare loss:
 	infect "Nightmare";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Nightmare";
+	now NewTypeInfection entry is false;
+	now Name entry is "Nightmare";
 	now enemy title entry is "Nightmare Stallion";
-	now enemy name entry is "Alp";
+	now enemy Name entry is "Alp";
 	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]He stares at you with his blazing red eyes, the flame within seeming to tear at your mind and unbalance your sense of self.[or]He strikes out at you with one powerful hoof-tipped hand, knocking you backwards![or]The powerful musk of the stablemaster fills your nostrils, causing you to pause for a minute as a wave of submissiveness sweeps over you.[or]He lashes out at you with one of his blood red hooves, knocking the wind out of you![or]The stablemaster grabs hold of you and tries to wrestle you down to the ground![or]Your opponent strokes his cock teasingly, the sight making you pause as a strange desire sweeps through you for a minute, before you shake off the effects.[at random]";
 	now defeated entry is "[Nightmare loss]";
@@ -52,15 +53,15 @@ When Play begins:
 	now lev entry is 25;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "None";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 16;  [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5;  [ Size of balls ]
-	now breasts entry is 0;  [ Number of Breasts infection will give you. ]
-	now breast size entry is 0;  [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 16;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 5;  [ Size of balls ]
+	now Nipple Count entry is 0;  [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 0;  [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]
 	now loot entry is "Chipped tooth";  [ Loot monster drops, ]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
@@ -75,23 +76,114 @@ When Play begins:
 	now altcombat entry is "bearhugger";  [ Uses the 'bearhugger' entry from the Table of Critter Combat ]
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Nightmare":
+	if bodyname of Player is "Nightmare":
 		if nightmareslavery is 1:
 			say "     You easily settle into your new life as your master's pet and slut in the stables, happy to tell him anything he wants to know and serve your amazing master in any way he wishes. Best of all though, you aren't alone as his pet for very long, as soon enough Fancy joins you in his office with a lovely new collar all her own! She seems a little confused at first, but soon comes around after you explain what an honor it is to be the slave of such a handsome and powerful stallion. Your stallion seems to find this to be amusing and pleasing as well, and he often has you tell him what a wonderful and sexy stallion he is, and how lucky you are to be his pet, and how your body constantly burns for his touch. Happily enough, he is more than willing to touch you quite often, breeding both you and your fellow pet often, until both your bellies are full of his seed and his foals. Though sometimes he does share you out as a special reward for some of the other horsemen, which is always lovely and filling, but just not the same as having your powerful stallion bury himself in you. Eventually as his favored pet you help him expand his territory in the city, your strength now serving your master as you fight beside him on the few times his authority is challenged, often surprising his opponents with your capability and might. And when it finally comes time for the stables to be relocated elsewhere, you are proud to follow your master to a new city where you can start up another stables, and breed him many strong and powerful foals... You are just so glad to have managed to find such a wonderful and fulfilling life as a slave of such a handsome stallion!";
 		if Nightmaremastery is 1:
-			if humanity of player < 10:
+			if humanity of Player < 10:
 				say "     Your mind overwhelmed by lust and the images of all the fun you can have with your pets and servants, you quickly return to the stables where you can enjoy yourself properly. You quickly settle in to your office again, enjoying the fruits of your labors and the bodies of your many sexy mares and stallions, and while you begin to let things not related to sex slide just like the previous stablemaster did. You are more than cunning enough to ensure that fancy is no longer in a position to cause problems for you even as you give in more and more to your increasingly lustful urges. Though of course you do love visiting her in her new cell in the breeders quarters, her belly already nice and round with foal, her lust-filled eyes and moans of pleasure as you tease her body are some of the most arousing things to you even now. And while the maintenance of the stables and the mares quarters does drop off a bit with her gone, you really don't care too much as long as there are always plenty of mares for you and the clients to enjoy, and the stables keeps expanding...";
 			else:
 				say "     When the military arrive in force, you quickly return to the stables and set up a proper welcoming party for them, with everyone being nice and well behaved, and plenty of sexy mares ready to 'properly thank' the male soldiers for rescuing them. Though you grin with amusement as you think about just how many of those mares were former soldiers themselves. Your peaceful display however confuses the military somewhat, as you knew it would, and allows you to strike a deal with several of the military leaders involved... a deal which was no doubt influenced by the teasing glimpses of naked horseflesh you allow them to see, as well as your newly acquired skill at mesmerizing people. Before long in return for some of your guards aid in pacifying some of the areas of the city, and their information on the hyena gang (which has mostly already slipped out of the city, not that they need to know that,). You have secured their agreement to transport your entire stables to a safer and more isolated location without any testing or issues, since obviously you are all still sane... of course, while all this is happening you end up quartered just behind the military lines for a while.";
 				say "     This allows a number of the bored and horny soldiers plenty of time to visit your always eager mares, it and lets you get a considerable amount of influence over the troops, as well as the people in charge of arranging for your move to your new stable. A location which soon, amusingly enough, changes from an isolated and remote location, to a rather nice spot right outside another major city, with easy access to another military base just a short drive away. Once you have secured this change, it isn't long before you begin slipping more and more of your people out to the new spot to begin 'getting it ready'. Fancy doing an amazing job of setting the new building up for you with all the supplies you manage to coax out of the military, and you smile with amusement as the military continues to arm and train your own guards as they go through the city. What is even more amusing is how they never seem to realize that your squads often go into the city smaller than they come out, while their own troops often vanish into the city instead. Your ranks swelling as more and more soldiers are seduced into becoming slutty little mares or powerful horseguards.";
 				say "     When the situation starts to get bad for the blockade, you leave only a token group of guards there to continue to help, as the rest of you relocate to your new home. Your obligation to the military fulfilled, you turn your full attention to building a new clientele in the city around your new home, and even begin setting up a few cameras to start dabbling in some of the more amusing porn and fetish industries. Eventually the Hyena gang makes contact again under a new matriarch, and you renew your mutually beneficial partnership with the crazy beasts, your business expanding faster than ever as time goes on. And you look forward to leaving a powerful and influential legacy to one of your many foals one day, while you retire and enjoy the fine life with Fancy and a few other hand picked equines...";
 		else: [full quest, never took on stablemaster]
-			if humanity of player < 10:
-				if player is male:
+			if humanity of Player < 10:
+				if Player is male:
 					say "     Finally giving in to the powerful and bestial instincts of your new stallion body, you return to the stables and try to force your way in, though you are eventually driven back by the sheer numbers of guards. Crying out in rage and lust, you take the few guards and mares you managed to convert to your side during the combat, and roam the streets of the city looking for an appropriate location to build your new harem at. It isn't long before you manage to find a spot for your small harem to shelter, though building up a proper harem from the few mares you managed to acquire is rather hard as unchanged humans are harder than ever to find now. Eventually however the military moves into the city, and while you manage to convert several squads into more mares for your harem, they manage to drive your small band of equines back farther and farther... until eventually you are forced to slip out of the city with only a handful of mares again under cover of night. Seething with rage and lust, you waste no time searching out a small town nearby and go about rebuilding your harem and your forces once again in a night long orgy across the town. Once the town is converted, you and your new mares and guards vanish into the wilderness before any response can come, already looking for new people to convert into breeding mares so your harem can grow stronger and you can take revenge on the military and anyone else that tries to drive you out again...";
 				else:
 					say "     With your new Nightmarish instincts overwhelming your mind, you return to the stables to try to establish your dominance once and for all, though you barely make in the door before the guards try to spring a trap on you with nearly overwhelming force. You manage to slip away, beating down many of the guards to make your escape, and while they pursue you for a while, you are much faster and more capable and you eventually manage to slip away. Annoyed and angry, you wander the city streets for a while, smashing everything that gets in your way, as you take out your frustration and lust on anything and everything you can. Unfortunately, this leaves you tired and surprised when the military finally move in, and after quite a struggle they eventually manage to capture you and bring you in for study. Which actually finally lets you rest long enough to begin to influence your captors, who have no idea just how much more potent your transformation is and how much more powerful you are than the average infected beast.";

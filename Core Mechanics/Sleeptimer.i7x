@@ -8,16 +8,16 @@ WellRestedTimer is a number that varies. WellRestedTimer is usually 0.
 
 an everyturn rule:
 	if Terminatorsleep is false: [Cheat not activated, player gets tired.]
-		if "Well Rested" is listed in feats of player: [They have slept recently, reduce/remove feat.]
+		if "Well Rested" is listed in feats of Player: [They have slept recently, reduce/remove feat.]
 			if WellRestedTimer <= 0:
 				FeatLoss "Well Rested";
 				say "     It has been a while since you last rested and any benefit you gained from it is now gone. You have lost the 'Well Rested' Feat, and all stats have decreased by 2 as a result.";
-				decrease strength of player by 2;
-				decrease dexterity of player by 2;
-				decrease stamina of player by 2;
-				decrease charisma of player by 2;
-				decrease intelligence of player by 2;
-				decrease perception of player by 2;
+				decrease strength of Player by 2;
+				decrease dexterity of Player by 2;
+				decrease stamina of Player by 2;
+				decrease charisma of Player by 2;
+				decrease intelligence of Player by 2;
+				decrease perception of Player by 2;
 			else:
 				decrease WellRestedTimer by 1;
 		else: [Not slept recently, getting tired.]
@@ -65,12 +65,12 @@ an everyturn rule:
 			Sleeptimercount is now 0;
 		FeatGain "Well Rested";'
 		say "     Well Rested - All stats increased by 2!";
-		increase strength of player by 2;
-		increase dexterity of player by 2;
-		increase stamina of player by 2;
-		increase charisma of player by 2;
-		increase intelligence of player by 2;
-		increase perception of player by 2;
+		increase strength of Player by 2;
+		increase dexterity of Player by 2;
+		increase stamina of Player by 2;
+		increase charisma of Player by 2;
+		increase intelligence of Player by 2;
+		increase perception of Player by 2;
 		now WellRestedTimer is 6;]
 
 Sleeptimer ends here.

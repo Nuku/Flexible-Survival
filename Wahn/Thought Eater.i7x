@@ -3,7 +3,7 @@ Version 1 of Thought Eater by Wahn begins here.
 
 "Adds a Thought Eater to Flexible Survival's Wandering Monsters table, with impregnation chance."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Thought Eater" } to infections of guy;
@@ -22,12 +22,12 @@ to say Thought_Eater_Wins:
 	say "     As you find yourself stripped to stand naked in front of him, stretching and posing to show off your form, the next order echoes through your mind, your hands immediately getting to work on the fastenings of his jumpsuit. Pulling down the long zipper at the front and pushing the suit's fabric over his shoulders to pull it down, you bare more and more of your master's body, which is very tall, making it look spindly even though he actually is lightly muscled. Then you arrive down at the crotch, pulling the jumpsuit carefully over his bulge, freeing a long and erect shaft with two sizable balls from their confinement. His manhood looks more or less human, but... moves, bending a bit to rub against your arm as you peel the tight jumpsuit further down the thought eater's body.";
 	say "     Soon you're both bare-ass naked, the creature now inspecting you, touching your body with his hands and also his tentacle-like cock. While his hands are on your sides and chest, it rubs against your leg, softly stroking, and you start panting in arousal at the certainty of getting his member into you soon. This feels right, this is right, exactly what you're on the world to do - those thoughts are at the forefront of your mind, caused by the by now very familiar touch of your master's mental appendages guiding your mind to what he wants.";
 	WaitLineBreak;
-	if player is female: [female+herm]
+	if Player is female: [female+herm]
 		say "     Eager to be fucked by your amazing master, you bend forward as he commands you to, spreading your legs slightly to bare your ready and moist pussy. Stepping up behind you, the thought eater lets his tentacle-like cock stroke between the buns of your ass, then push against your pucker softly before snaking its way further down and reaching your pussy. Rubbing against your sensitive pussy lips and your clit with the tip of his maleness, he gets you hornier and hornier, your female juices by now literally dripping from your cunt.";
 		say "     Positioning the tip of his tentacle cock at your opening, he then thrusts into you, going deep and stretching your inner passages around his girth. It's just amazing to be so intimately connected with your lord, feeling him move inside you, his flexible shaft pushing all the right buttons as it winds itself deeper and deeper. He gives you sensations unrivaled by what you felt before, reacting to what feels best instantly by reading your mind. Soon he's all the way in you, the thought eater's balls against your ass and his cockhead testingly poking against your cervix.";
 		WaitLineBreak;
 		say "     Starting to move in and out, your beloved master fucks you hard and deep, his hands moving forward to grip your shoulders. Pounding his erection into your pussy, the thought eater gets into taking you quite a bit, soon making lustful noises with his beak that aren't even close to anything human. Your mind now closely linked to his magnificent intellect, he takes double pleasure in your coupling, drawing on your own sensations and feelings as he fucks you. A bit of that connection leaks to your conscious self too, giving you the breathtaking (if slightly disorienting) impression of fucking your own pussy.";
-		say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, driving you towards the edge of your climax. Then, just as the desire to cum becomes almost unbearably strong, the tip of his tentacle-like cock strongly pushes against your cervix, wiggling in just the right way to gain entrance to your womb itself with the muscle at its entrance stretched around his shaft. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting straight into your womb, giving you a pleasantly full feeling as well as the pleasure at having spread your seed[if player is male]. Your own hard [cock of player] cock sprays its load at the same time, splattering the floor below with streaks of white cum[end if].";
+		say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, driving you towards the edge of your climax. Then, just as the desire to cum becomes almost unbearably strong, the tip of his tentacle-like cock strongly pushes against your cervix, wiggling in just the right way to gain entrance to your womb itself with the muscle at its entrance stretched around his shaft. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting straight into your womb, giving you a pleasantly full feeling as well as the pleasure at having spread your seed[if Player is male]. Your own hard [cock of Player] cock sprays its load at the same time, splattering the floor below with streaks of white cum[end if].";
 		say "     [fimpregchance]";
 		WaitLineBreak;
 		say "     Staying connected for a while longer, your body getting stroked and... kissed(?) on the back, as far as that's possible with four tentacles and a beak, you feel nothing but bliss at being together with your master. Then suddenly, his mental grip lessens, panic at being alone rising inside you, which he quickly sweeps away with a thought-tentacle and devours like a piece of candy. As his cock pulls out of you, followed by a trickle of cum dripping down between your legs, you hear your master's voice in your head. 'You have pleased me, pet. I'll let you go back out into the city for now, to make more delightful memories I can feast upon. Return later with something that interests me.'";
@@ -36,10 +36,10 @@ to say Thought_Eater_Wins:
 		say "     Eager to be fucked by your amazing master, you bend forward as he commands you to, spreading your legs slightly to bare your asshole. Stepping up behind you, the thought eater lets his tentacle-like cock stroke between the buns of your ass, then wiggle against your pucker before he pushes in against it. Almost imperceptibly, a mental appendage of the creature brushes against a part of your mind, causing you to totally relax back there, letting your muscle easily stretch around the tentacle cock pushing inside your body. He thrusts deep, causing you to moan loudly as he plunges his member into your inner passages. It's just amazing to be so intimately connected with your lord, feeling him move inside you, his flexible shaft pushing all the right buttons as it winds itself deeper and deeper. He gives you sensations unrivaled by what you felt before, reacting to what feels best instantly by reading your mind. Soon he's all the way in you, the thought eater's balls against your ass and his cockhead testingly poking your inner walls.";
 		WaitLineBreak;
 		say "     Starting to move in and out, your beloved master fucks you hard and deep, his hands moving forward to grip your shoulders. Pounding his erection into your ass, the thought eater gets into taking you quite a bit, soon making lustful noises with his beak that aren't even close to anything human. Your mind now closely linked to his magnificent intellect, he takes double pleasure in your coupling, drawing on your own sensations and feelings as he fucks you. A bit of that connection leaks to your conscious self too, giving you the breathtaking (if slightly disorienting) impression of fucking your own ass.";
-		if player is not mpreg_ok:[normal assfuck]
-			say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, bringing your orgasm closer and closer. The desire to cum soon becoming almost unbearably strong, he slams into you one last time, burying his whole shaft in your ass. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting into your body, giving you a pleasantly full feeling as well as the pleasure at having spent your load. [if player is male]Your own hard cock sprays its load at the same time, splattering the floor below with streaks of white cum[else]Your whole body convulses in pleasure as you orgasm[end if].";
+		if Player is not mpreg_ok:[normal assfuck]
+			say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, bringing your orgasm closer and closer. The desire to cum soon becoming almost unbearably strong, he slams into you one last time, burying his whole shaft in your ass. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting into your body, giving you a pleasantly full feeling as well as the pleasure at having spent your load. [if Player is male]Your own hard cock sprays its load at the same time, splattering the floor below with streaks of white cum[else]Your whole body convulses in pleasure as you orgasm[end if].";
 		else: [mpreg fuck]
-			say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, bringing your orgasm closer and closer. Then, just as the desire to cum becomes almost unbearably strong, the tip of his tentacle-like cock seeks out the entrance to your womb, strongly pushes against it, wiggling in just the right way to gain entrance. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting straight into your womb, giving you a pleasantly full feeling as well as the pleasure at having spread your seed. [if player is male]Your own hard [cock of player] cock sprays its load at the same time, splattering the floor below with streaks of white cum[else]Your whole body convulses in pleasure as you orgasm[end if].";
+			say "     Your master's narrow hips slapping against your ass and his shaft moving deep inside you drives your linked arousal to new heights, bringing your orgasm closer and closer. Then, just as the desire to cum becomes almost unbearably strong, the tip of his tentacle-like cock seeks out the entrance to your womb, strongly pushes against it, wiggling in just the right way to gain entrance. Then he comes, or you both do, in your extraordinary coupling, linked body and mind. You feel the tightness of his balls as if they were yours, the pulsing of his/your shaft in the tight cave he/you are fucking, as well as your own sensation of having your master's erection stretching your inner walls. Burst after burst of cum shoots through his cock, blasting straight into your womb, giving you a pleasantly full feeling as well as the pleasure at having spread your seed. [if Player is male]Your own hard [cock of Player] cock sprays its load at the same time, splattering the floor below with streaks of white cum[else]Your whole body convulses in pleasure as you orgasm[end if].";
 			say "     [mimpregchance]";
 		WaitLineBreak;
 		say "     Staying connected for a while longer, your body getting stroked and... kissed(?) on the back, as far as that's possible with four tentacles and a beak, you feel nothing but bliss at being together with your master. Then suddenly, his mental grip lessens, panic at being alone rising inside you, which he quickly sweeps away with a thought-tentacle and devours like a piece of candy. As his cock pulls out of you, followed by a gush of cum, you hear your master's voice in your head. 'You have pleased me, pet. I'll let you go back out into the city for now, to make more delightful memories I can feast upon. Return later with something that interests me.'";
@@ -57,7 +57,7 @@ to say Thought_Eater_Loses:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Let the slave's charms distract you.";
 	say "     ([link]N[as]n[end link]) - Keep going for the thought eater instead.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Taking your eyes off the retreating shape of your opponent, you look closer at the slave he called to make his getaway. It's an Asian man in his mid-twenties you'd say, relatively tall and skinny. He's got a handsome face and hairless chest, with a quite respectable cock hanging between his legs, plus that pussy under it he showed you earlier. His only piece of clothing is a white lab-coat, loosely worn with an open front. A Trevor Labs name-plate on it makes the man out to be Lee Sato, junior researcher.";
 		say "     Relieved that his ploy is working, Lee gives you his best seductive look, stroking over his chest and abs, jerking his manhood demonstratively and then pulls his nether lips apart to show an already moist pussy. With a flowing movement, he also turns around and leans his upper body forward a bit, running a hand over a very nicely rounded and perky butt. 'I'm ready to please you,' he coos over his shoulder, then moves to stand directly in front of you, his hand rubbing your crotch.";
@@ -70,12 +70,12 @@ to say Thought_Eater_Loses:
 
 to say TESlaveSexMenu:
 	setmonster "Thought Eater";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is true;
 	setmonster "Herm Human";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	blank out the whole of table of fucking options;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -86,25 +86,25 @@ to say TESlaveSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put the Asian dude's shaft in your mouth.";
 	now toggle entry is TESlaveSex rule;
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
 		now description entry is "Put the herm slave's mouth to good use.";
 		now toggle entry is TESlaveSex rule;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the herm slave's pussy with your cock.";
 		now toggle entry is TESlaveSex rule;
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 5;
 		now description entry is "Ride the Asian dude's cock.";
 		now toggle entry is TESlaveSex rule;
-	if (cocks of player > 1):
+	if (Cock Count of Player > 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Take his ass";
 		now sortorder entry is 6;
@@ -130,7 +130,7 @@ This is the TESlaveSex rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Have him blow your cock"):
@@ -167,7 +167,7 @@ to say TESlaveSex2: [sucking Lee's cock]
 
 to say TESlaveSex3: [cunt licked by Lee]
 	say "     As you put your hands on his shoulders and softly push down on them, the slave willingly kneels, eager to fulfill his task. While you drop your pack and gear, his hands are on your hips, sliding down any clothing you're wearing to reveal your already swollen pussy. He brushes his fingers over it, caressing your sensitive nether lips and making you moan. Then he proceeds to rub your clit a bit before leaning forward and teasing it with his tongue. It just feels amazing how he pleases you orally, and he has you panting and moaning in no time at all, holding on to his head to keep him going.";
-	say "     Then he brings a hand to your crotch again, spreading your pussy lips and inserting a finger between them, pushing into your by now pretty wet love tunnel. With how easy he can slide it in and out, it's not much longer until Lee adds another finger, then another, fondling your inner passage as he does so. Sucking and nibbling on your clit while he fucks his three digits in and out of you, the enslaved researcher quickly drives you to the edge of climax - and then across. Gasping in lust, nearly shouting your moans, you grab his hair tightly with your hands, holding the Asian herm against your crotch as you come, femcum squirting out against his chin and over his flat chest[if player is male]. Your cock shoots long strings of cum, landing on the concrete floor of the underground passage you are in[end if].";
+	say "     Then he brings a hand to your crotch again, spreading your pussy lips and inserting a finger between them, pushing into your by now pretty wet love tunnel. With how easy he can slide it in and out, it's not much longer until Lee adds another finger, then another, fondling your inner passage as he does so. Sucking and nibbling on your clit while he fucks his three digits in and out of you, the enslaved researcher quickly drives you to the edge of climax - and then across. Gasping in lust, nearly shouting your moans, you grab his hair tightly with your hands, holding the Asian herm against your crotch as you come, femcum squirting out against his chin and over his flat chest[if Player is male]. Your cock shoots long strings of cum, landing on the concrete floor of the underground passage you are in[end if].";
 	WaitLineBreak;
 	say "     With you having gotten your rocks off and his master having gotten away, Lee gives a pleased smile at having done his job well. He plants a soft kiss on your clit, then stands up and says 'There, wasn't that better than hurting the master?' His eyes get a faraway look for a second, then he continues 'I have to return to my chamber now. Please don't try to follow me.' With that, he dashes off down the nearest hallway, pretty fast in his unencumbered, nearly naked state.";
 	infect "Herm Human";
@@ -181,7 +181,7 @@ to say TESlaveSex4: [Lee's pussy fucked by player]
 
 to say TESlaveSex5: [player's pussy fucked by Lee]
 	say "     As you drop your gear and undress, then lay down on your spread-out garments with spread legs, you see a look of surprise cross the herm slave's face, followed by a beaming smile. Seems like it's usually him that's getting fucked. Taking hold of his quickly hardening cock, the young scientist kneels between your legs and rubs its head over your nether lips, making a shudder of lust run through your body as he rubs against your clit. He keeps going for a while, rubbing and stroking you, driving your arousal to new heights until you finally can't take it anymore and tell him to fuck you already. Eager to follow your order, the young herm puts the tip of his cock between your swollen pussy lips, then slowly pushes in, sinking his manhood in between your folds. Feeling his manhood stretch your inner passage around it after him winding you up so much makes you gasp in pleasure, your legs wrapping around his hips to pull him against you and drive his cock deeper into you.";
-	say "     Leaning over you, Lee runs his hands over your chest, stopping to stroke over your nipples for a moment, then moves in for a kiss. The moment his lips meet yours, he starts moving his hips again, fucking you with rapid thrusts deep into your vagina, making you moan into his mouth. And he just keeps going like that, making out with you as he fucks you, thrusting forward with each little kiss, lick and nibble on your earlobes. The constant stimulation of his hard prick inside you and his lips and tongue on your skin has you reeling a bit, lost in a lustful haze. You don't know how long he keeps you like that - nor do you care - until the moment in which your arousal just can't be contained anymore. With a lust-filled scream, you wrap your arms around Lee, holding on to him as a breathtaking orgasm rocks your whole body[if player is male]. Your hard cock shoots several long spurts of cum too, making your pressed-together bodies rather wet and sticky[end if].";
+	say "     Leaning over you, Lee runs his hands over your chest, stopping to stroke over your nipples for a moment, then moves in for a kiss. The moment his lips meet yours, he starts moving his hips again, fucking you with rapid thrusts deep into your vagina, making you moan into his mouth. And he just keeps going like that, making out with you as he fucks you, thrusting forward with each little kiss, lick and nibble on your earlobes. The constant stimulation of his hard prick inside you and his lips and tongue on your skin has you reeling a bit, lost in a lustful haze. You don't know how long he keeps you like that - nor do you care - until the moment in which your arousal just can't be contained anymore. With a lust-filled scream, you wrap your arms around Lee, holding on to him as a breathtaking orgasm rocks your whole body[if Player is male]. Your hard cock shoots several long spurts of cum too, making your pressed-together bodies rather wet and sticky[end if].";
 	WaitLineBreak;
 	say "     With you having gotten your rocks off and his master having gotten away, Lee gives a pleased smile and lets himself go as well, no longer holding back on his own orgasm. With a loud grunt, he sinks his manhood into your pussy all the way, shooting blast after blast of cum deep into your pussy. Panting, he stays on top of you for a while longer, stroking your side lazily. Then he gives you a quick kiss on the cheek and scoots back a bit, pulling his softening cock out of you before saying 'There, wasn't that better than hurting the master?' His eyes get a faraway look for a second, then he continues 'I have to return to my chamber now. Please don't try to follow me.' With that, he jumps up and dashes off down the nearest hallway, pretty fast in his unencumbered, nearly naked state.[fimpregchance]";
 	infect "Herm Human";
@@ -196,7 +196,7 @@ to say TESlaveSex6: [fucking Lee's ass]
 
 to say TESlaveSex7: [player's ass fucked by Lee]
 	say "     As you drop your gear and undress, then get on all fours on your spread-out garments and present your ass to him, you see a look of surprise cross the herm slave's face, followed by a beaming smile. Seems like it's usually him that's getting fucked. Taking hold of his quickly hardening cock, the young scientist kneels behind you and rubs its head up and down your crack, making a shudder of lust run through your body as he brushes over your pucker. He keeps going for a while, rubbing up against you, teasingly pushing against your pucker, driving your arousal to new heights until you finally can't take it anymore and tell him to fuck you already. Eager to follow your order, the young herm puts the tip of his cock up against your back door, then slowly pushes in, stretching it around his hard shaft as he sinks into you. Feeling his manhood invade your inner passage after him winding you up so much makes you gasp in pleasure, and before he can get more than halfway in, you rock back against him and push more of his manhood into you.";
-	say "     Leaning over you, Lee kisses your back and reaches around to touch your chest, feeling your muscles and stroking over your nipples. Then his hands wander further down, stroking the sides of your body until they get to your hips. He grabs them tightly, then pulls back until his shaft is only just inside you - and thrusts forward again until his hips meet your ass in a satisfying slap. Keeping up the pace just like that, he fucks your ass with hard and deep strokes, reliably hitting your prostate with each new thrust and making you gasp and moan with the feelings that gives you. [if player is male]With the herm slave giving you a first-class fucking, it's not much longer until you feel the need to cum rise in your balls and pass the point of no return. Grunting in satisfaction with each shot, you come, spraying your load all over your clothes below[else if player is female]With the herm slave giving you a first-class fucking, it's not much longer until he drives you past the point of no return and you climax. Panting loudly, you dig your fingers in your clothes under you, your pussy just dripping with femcum, which starts running down your leg[else]With the herm slave giving you a first-class fucking, it's not much longer until a tingly feeling fills your whole being, making your whole body tremble in lust as you reach your climax[end if].";
+	say "     Leaning over you, Lee kisses your back and reaches around to touch your chest, feeling your muscles and stroking over your nipples. Then his hands wander further down, stroking the sides of your body until they get to your hips. He grabs them tightly, then pulls back until his shaft is only just inside you - and thrusts forward again until his hips meet your ass in a satisfying slap. Keeping up the pace just like that, he fucks your ass with hard and deep strokes, reliably hitting your prostate with each new thrust and making you gasp and moan with the feelings that gives you. [if Player is male]With the herm slave giving you a first-class fucking, it's not much longer until you feel the need to cum rise in your balls and pass the point of no return. Grunting in satisfaction with each shot, you come, spraying your load all over your clothes below[else if Player is female]With the herm slave giving you a first-class fucking, it's not much longer until he drives you past the point of no return and you climax. Panting loudly, you dig your fingers in your clothes under you, your pussy just dripping with femcum, which starts running down your leg[else]With the herm slave giving you a first-class fucking, it's not much longer until a tingly feeling fills your whole being, making your whole body tremble in lust as you reach your climax[end if].";
 	WaitLineBreak;
 	say "     With you having gotten your rocks off and his master having gotten away, Lee gives a pleased smile and lets himself go as well, no longer holding back on his own orgasm. After a few more strokes, he sinks his manhood into your ass all the way with a loud grunt, shooting blast after blast of cum deep into your hole. Panting, he stays on top of you for a while longer, stroking your side lazily. Then he gives you a quick kiss on the back and scoots back a bit, pulling his softening cock out of you before saying 'There, wasn't that better than hurting the master?' His eyes get a faraway look for a second, then he continues 'I have to return to my chamber now. Please don't try to follow me.' With that, he jumps up and dashes off down the nearest hallway, pretty fast in his unencumbered, nearly naked state.[mimpregchance]";
 	infect "Herm Human";
@@ -215,20 +215,21 @@ to say Thought_Eater_Desc:
 	else:
 		if carried of mindshield helmet > 0 and mindshield helmet is not equipped:
 			say "     Uhoh - it might have been a good idea to put your shiny mindshield helmet actually on your head. Well, too late now...";
-		decrease HP of player by ((HP of player * 75) / 100);
+		decrease HP of Player by ((HP of Player * 75) / 100);
 		say "     Stars dance in front of your eyes and you feel as if the thought eater's tentacles were winding themselves into your head, prodding and poking your mind. When your vision clears a bit, you see the tall creature standing right in front of you, clawed hands outstretched to finish you off.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Thought Eater";
+	now NewTypeInfection entry is false;
+	now Name entry is "Thought Eater";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The creature concentrates and suddenly your left arm punches you in the side.[or]With a slash of long, clawed fingers, the thought eater leaves bloody streaks on your skin.[or]One of the thought eater's four tentacles slaps you in the face.[at random]";
 	now defeated entry is "[Thought_Eater_Loses]";
@@ -255,15 +256,15 @@ When Play begins:
 	now lev entry is 12;                  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Case sensitive]
-	now cocks entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 12;
-	now cock width entry is 4;            [ Size of balls ]
-	now breasts entry is 2;               [ Number of nipples. ]
-	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 12;
+	now Ball Size entry is 4;            [ Size of balls ]
+	now Nipple Count entry is 2;               [ Number of nipples. ]
+	now Breast Size entry is 0;           [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
 	now libido entry is 25;               [ Amount player Libido will go up if defeated ]
 	now loot entry is "tentacle tip";     [ Loot monster drops, ]
 	now lootchance entry is 40;           [ Chance of loot dropping 0-100 ]
@@ -276,6 +277,98 @@ When Play begins:
 	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -293,17 +386,17 @@ to say tentacle tip use:
 
 to TEInfect:
 	setmonster "Thought Eater";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
 	infect "Thought Eater";
 	now non-infectious entry is true;
 
 when play ends:
-	if bodyname of player is "Thought Eater":
-		if humanity of player < 10: [succumbed]
+	if bodyname of Player is "Thought Eater":
+		if humanity of Player < 10: [succumbed]
 			say "     Your worldview shifting further and further from anything close to human, you eventually succumb to your urges to own and control others. Your first victim is a husky you meet out on the street, easily overpowering her mind and making her yours. From then on, it's pretty easy to gather more slaves, using her as a puppet to parade in front of others and draw them closer.";
 			say "     As your power and number of followers grows more and more, you prepare for the impending arrival of the military by moving your lair to a mostly empty industrial area, keeping your slaves out of sight in a large warehouse. When one, then a day later another, army scout finally comes along, you manage to dominate them quickly enough so neither of them can give word of anything, then send them on their way. With the men reporting the area to be empty, the military's sweep just passes over you and your slaves, leaving you undiscovered.";
-			if player is male:
+			if Player is male:
 				say "     Several days later, the first of your two soldier slaves returns, bringing a female soldier with him whom he promised a good time. Which she most definitively has - riding your cock after quickly succumbing to your mental power. While you fuck and impregnate your new harem slave, you let one of your other servants take care of the scout as a reward, then send him back out to bring you another human woman.";
 		else:[sane]
 			say "     When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. It's not easy to find a place in society looking as you do, and after a while of getting hostile stares and insulting comments, a human even attacks you outside of a bar one night.";

@@ -15,7 +15,7 @@ Instead of resolving a Road Fuck Aftermath:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, they are designer shoes!";
 	say "     ([link]N[as]n[end link]) - Nope. What use are such things in a situation like yours?";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     It takes some effort not to come into contact with the drying goop on the car seat, but eventually, you manage to pry the shoes out of the windshield and add them to your pack.";
 		LineBreak;

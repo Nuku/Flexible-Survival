@@ -7,7 +7,7 @@ Version 2 of Squid by Stripes begins here.
 
 "Adds a female Squid creature to Flexible Survival."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 squidcolor is a number that varies.
 
@@ -21,33 +21,33 @@ to say squiddesc:
 		say "     Rising from the waters is a female squid creature. Her sleek and smooth body, made for gliding through the water with ease, is covered in wet-looking yellow flesh. Her head is almost human, except for having an elongated crown and large, dark eyes. The squid girl's chest is a slightly lighter color than the rest of her body and has a pair of small, flat breasts. Her arms are long tentacles lined with rows of suckers and ending in pad-like hands. Her legs are a collection of tentacles, eight in number, that twist and roll as she moves around. Her ass is small and compact, barely disturbing the silhouette of her body. Beneath the shifting tentacles, you spot her wet pussy, quivering with need.";
 	else:
 		say "     You are suddenly accosted by what looks to be a strange squid-girl. Sleek and smooth in form, her streamlined build gives an almost fey appearance. Seemingly gliding towards you, she exposes her glistening yellow flesh. Head human-like, it is exaggerated by an elongated crown and large, dark eyes. Further informing you of her lithe body, the creature's chest is a slightly paler facet, adorned with a pair of small, flat breasts. Her arms long tentacle-like appendages, they are lined with rows of suckers and ending in pad-like hands. Pretty much everything below the waist is obscured by a writhing mass of tentacles, twisting and rolling as she moves to attack you, strangely determined in spite of her seemingly frail appearance.";
-	if bodyname of player is "Anime Babe":
+	if bodyname of Player is "Anime Babe":
 		say "     Your anime girl body, particularly vulnerable to tentacle attack, has trouble resisting the squid's swaying tentacles. You moan and squeal in barely suppressed pleasure as those tentacles squirm around you, quickly draining your resistance.";
 		decrease plfleebonus by 3;
 		decrease pldodgebonus by 3;
 		decrease plmindbonus by 3;
-		now HP of player is ( 2 * HP of player ) / 3;
-		now libido of player is ( 100 + libido of player + libido of player ) / 3;
+		now HP of Player is ( 2 * HP of Player ) / 3;
+		now Libido of Player is ( 100 + Libido of Player + Libido of Player ) / 3;
 
 to say losetosquid:
-	if HP of player > 0:
+	if HP of Player > 0:
 		say "     You stand down and throw your hands up in submission against the tentacled lady. Cautiously, she advances upon you, and once sufficiently satisfied with your compliance she starts to gently relinquish you of your attire before having her fun.";
 	else:
 		say "     Quickly moving, you find you're too weak to react before her suctioned tendrils grab hold of you and throw you to the ground, getting a faceful of sand. She then roughly exonerates your clothing from its beleaguered owner, its lewd intent made transparent to your vulnerable form.";
-	if player is male:
-		say "     Partially engulfed in a writhing mass of tentacles, the girl descends her torso upon your crotch, the soft and affection caress of these appendages quickly influencing you into arousal, and though you cannot see past the mess of flesh you doubtlessly feel your [cock size desc of player] rod engulfed in the folds of the slinky creature's tight cunt[if cocks of player > 2]. In addition to the assault on your single organ, she's not one to let your additional equipment go neglected, and proceeds to let a couple tentacles attend to these tools, her proceeding kneads and strokes exasperated by the suctioned surface of such dexterous limbs[else if cocks of player is 2]. In addition to the assault on your single organ, she's not one to let your second rod go neglected, and proceeds to let a tentacle wrap around its length, her proceeding kneads and strokes exasperated by the suctioned surface of such a dexterous limb[end if].";
-	if player is female:
-		say "     [if cunts of player > 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, more tentacles invading your additional feminine holes one by one. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else if cunts of player is 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, followed by another in your second female passage. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades your exposed cunt. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[end if].";
-	if breasts of player > 1 and breast size of player > 0:
-		say "[if breasts of player > 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, occasionally switching between the numerous sets. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else if breasts of player is 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, switching between the main set and the second on occasion. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of player] breasts, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[end if][if scalevalue of player > 3]. It's a little awkward for her to overpower a creature substantially larger than herself, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
+	if Player is male:
+		say "     Partially engulfed in a writhing mass of tentacles, the girl descends her torso upon your crotch, the soft and affection caress of these appendages quickly influencing you into arousal, and though you cannot see past the mess of flesh you doubtlessly feel your [cock size desc of Player] rod engulfed in the folds of the slinky creature's tight cunt[if Cock Count of Player > 2]. In addition to the assault on your single organ, she's not one to let your additional equipment go neglected, and proceeds to let a couple tentacles attend to these tools, her proceeding kneads and strokes exasperated by the suctioned surface of such dexterous limbs[else if Cock Count of Player is 2]. In addition to the assault on your single organ, she's not one to let your second rod go neglected, and proceeds to let a tentacle wrap around its length, her proceeding kneads and strokes exasperated by the suctioned surface of such a dexterous limb[end if].";
+	if Player is female:
+		say "     [if Cunt Count of Player > 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, more tentacles invading your additional feminine holes one by one. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else if Cunt Count of Player is 2]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades one of your exposed cunts, followed by another in your second female passage. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[else]Subject to her tentacle's irreverent embrace, her deceptively gentle appearance exasperates the abrupt feeling of one of her appendages as it invades your exposed cunt. The wriggling organ illustrates the creature's aptitude for pleasure as it attends to your inner confines with amazing precision[end if].";
+	if Nipple Count of Player > 1 and Breast Size of Player > 0:
+		say "[if Nipple Count of Player > 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of Player] breasts, occasionally switching between the numerous sets. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else if Nipple Count of Player is 4]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of Player] breasts, switching between the main set and the second on occasion. The audible noise of her suckers as they a pulled from your vulnerable flesh makes you twitch and jerk about, much to her amusement[else]She bears down upon you, her suctioned 'hands' affectionately kneading your [breast size desc of Player] breasts, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[end if][if scalevalue of Player > 3]. It's a little awkward for her to overpower a creature substantially larger than herself, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
 	else:
-		say "     She bears down upon you, her suctioned 'hands' affectionately kneading your [bodydesc of player] chest, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[if scalevalue of player > 3]. It's a little awkward for her to overpower a creature substantially larger than her, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
+		say "     She bears down upon you, her suctioned 'hands' affectionately kneading your [bodydesc of Player] chest, the audible noise of her suckers as they a pulled from your vulnerable flesh making you twitch and jerk about, much to her amusement[if scalevalue of Player > 3]. It's a little awkward for her to overpower a creature substantially larger than her, but it's transparent that she enjoys the unique challenge of abusing such a sizeable beast[end if].";
 	if anallevel is 3:
 		say "     Her pleasurable amusement certainly lacking in restraint, you're jolted with the immediate sensation of one of her numerous tendrils teasing at your exposed ass. The slick and smooth organ slowly worms its way into these confines, causing you to moan. She giggles merrily, your subsequent protests a source of mirthful amusement to the diminutive creature, her tentacle wriggling its way deeper into your bowels, forcing you to contend with its irreverent stimulation.";
-	if player is male:
-		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, her own climax matching yours as your ejaculate into her hidden depths[if cocks of player > 2]. Your additional organs aimed at you, they too explode against her tendril's affection, dousing you with your own fluids[else if cocks of player is 2]. Your second organ aimed at you, it too explodes against her tendril's affection, dousing you with your own fluids[end if][if cunts of player > 1]. Further exacerbating your release, your abused cunts tighten against the small creature's intrusions[else if player is female]. Further exacerbating your release, your abused cunt tightens against the small creature's intrusion[end if]. Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
-	else if player is female:
-		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, [if cunts of player > 1]your abused cunts tightening against the small creature's intrusions[else if player is female]your abused cunt tightening against the small creature's intrusion[end if]. Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
+	if Player is male:
+		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, her own climax matching yours as your ejaculate into her hidden depths[if Cock Count of Player > 2]. Your additional organs aimed at you, they too explode against her tendril's affection, dousing you with your own fluids[else if Cock Count of Player is 2]. Your second organ aimed at you, it too explodes against her tendril's affection, dousing you with your own fluids[end if][if Cunt Count of Player > 1]. Further exacerbating your release, your abused cunts tighten against the small creature's intrusions[else if Player is female]. Further exacerbating your release, your abused cunt tightens against the small creature's intrusion[end if]. Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
+	else if Player is female:
+		say "     With such extensive perversion imposed upon you, it's not long before you orgasm against the creature's ministrations, [if Cunt Count of Player > 1]your abused cunts tightening against the small creature's intrusions[else if Player is female]your abused cunt tightening against the small creature's intrusion[end if]. Satisfied, she slowly pries her limbs from your beleaguered form, departing with a merry giggle and a gentle kiss.";
 	else:
 		say "     She watched you as you writhe against her perverse affections, very much amused by your protests as she arouses you, lacking any sexual outlet to sate her relentless assault. You're about to pass out from exhaustion before she finally relents, slowly prying her limbs from your beleaguered form, and departing with a merry giggle and a gentle kiss.";
 	say "     'Come back soon,' she whispers to you, 'I'll be waiting,' before she descends back into the depths of the coast. Regardless of how you feel about the circumstances which unfurled before you, you have to admit that it's a little embarrassing to be covered in all these welts from the abuse of the squid girl's suckers.";
@@ -65,17 +65,18 @@ to say squidskinchange:
 	say "a sensation like cold, rushing water flooding through your veins as your skin sheds away revealing slick smooth red flesh below. As you admire your new skin with wonder, it suddenly shifts to blue. Your surprise brings on a yellow hue. With a bit of practice, you settle on a color that suits you";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Squid";
+	now NewTypeInfection entry is false;
+	now Name entry is "Squid";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The squid girl whips her tentacles at you, slapping you around with her numerous tentacles![or]The female cephalopod turns and squids ink at you, temporarily blinding you and letting her strike at you with her tentacles![or]The squid girl wraps her tentacles around you and squeezes, trying to crush the fight out of you![or]The squid's tentacle arms manage to latch onto you, pulling you into her embrace for a cold, wet kiss![or]The squid girls tentacles grab you, groping you all over![at random]";
 	now defeated entry is "[beatthesquid]";
@@ -102,15 +103,15 @@ When Play begins:
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 1; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;
-	now cunt width entry is 5;
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 1; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;
+	now Cunt Tightness entry is 5;
 	now libido entry is 33; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -124,13 +125,104 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 
 Section 3 - Endings
 
 when play ends:
-	if bodyname of player is "Squid":
-		if humanity of player < 10:
-			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind. Discarding you pack, you slide your sleek body into the water and swim out to find the other squids. You join their underwater school, frolicking and fondling one another happily under the waves[if player is male]. Having a cock, you are quite popular with the cute girls[end if].";
+	if bodyname of Player is "Squid":
+		if humanity of Player < 10:
+			say "     With thoughts of the cool waters of the ocean, you head back to the beach area as your infection starts rewriting your mind. Discarding you pack, you slide your sleek body into the water and swim out to find the other squids. You join their underwater school, frolicking and fondling one another happily under the waves[if Player is male]. Having a cock, you are quite popular with the cute girls[end if].";
 		else:
 			say "     Being partially aquatic now, the military keep you in a special holding facility for those with aquatic transformations. There is some interest in you and the others and they get several marine biologists to study your group. Several members of the military speak to you as well. While several of the others are swayed and recruited by the military, you have little interests in their offers and are happy just to swim around and enjoy your sensitive, new form. You do make friends with one of the marine biologists though, and she helps you make contact to join a marine park's staff after your release. Given your extensive transformation, you are given work as part of the cleaning staff. Able to clean the tanks and scrub the walls from within while filled, that is your primary task. You don't mind though, as it lets you [']make friends['] with all the lovely whales and dolphins after hours.";
 

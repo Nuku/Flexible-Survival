@@ -92,14 +92,14 @@ Horus is a man.
 [physical details as of game start]
 Humanity of Horus is 80. [is thousands of years old]
 ScaleValue of Horus is 3. [human size]
-Cocks of Horus is 1. [has a cock]
+Cock Count of Horus is 1. [has a cock]
 Cock Length of Horus is 10. [has an 10 inch cock]
-Cock Width of Horus is 4. [size of balls]
-Testes of Horus is 2. [has a pair of balls]
-Cunts of Horus is 0. [no vagina]
+Ball Size of Horus is 4. [size of balls]
+Ball Count of Horus is 2. [has a pair of balls]
+Cunt Count of Horus is 0. [no vagina]
 Cunt Length of Horus is 0. [Doesnt have a vagina to get stretched]
-Cunt Width of Horus is 0. [Doesnt have a vagina to get stretched]
-Breasts of Horus is 2. [Has two normal nipples]
+Cunt Tightness of Horus is 0. [Doesnt have a vagina to get stretched]
+Nipple Count of Horus is 2. [Has two normal nipples]
 Breast Size of Horus is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 TwistedCapacity of Horus is false. [can not take oversized members without pain]
@@ -140,7 +140,7 @@ to say HorusTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about the named Sun God and why he goes by that title now.";
 	[]
-	if HorusRelationship > 0 and HorusRelationship < 4:
+	if (HorusRelationship > 0 and HorusRelationship < 4) or HorusRelationship is 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Darkness";
 		now sortorder entry is 2;
@@ -175,7 +175,7 @@ to say HorusTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Ra"):
@@ -270,7 +270,7 @@ to say HorusSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Throne Fuck"):
@@ -291,8 +291,8 @@ to say HorusSex1:
 	say "     The sound of you slurping on the sun deity's cock fills the throne room for a little while, your saliva covering his length as you do so. However, after a bit, you pull off, causing Horus to give you a raised eyebrow. That look soon goes away when you clamber onto the throne, positioning your hole right above his dick. Slowly, you then lower yourself on his thick cock, allowing inch by inch to penetrate you and fill you, the sensations causing your nerves to flare with pleasure and pain due to the only lube being used being your saliva. Once all ten inches are seated inside your passage you let out a low groan, feeling a lot of things at being completely filled.";
 	say "     However, after a few seconds of getting used to the size, it appears Horus can't wait any longer as he begins to bounce you upward, causing you to go off of his cock a bit before slamming back down, making you let out a long moan. The sun deity continues to do this, allowing his big dick to enter and re-enter you repeatedly, as well as causing his balls to slap loudly against your cheeks, the sounds loud enough that you're sure the retainers can hear even outside the room. On top of that, both of you are moaning loadly, your voices mixing with the slapping and the squelching of his cock entering your hole to create a symphony of sexual sounds.";
 	WaitLineBreak;
-	say "     The sensations of him repeatedly thrusting into you is causing [if player is neuter]your body to scream out in pleasure all over[else if player is herm]your cock and your pussy to both leak their sexual fluids, creating a pool on the throne the two of you are sitting on[else if player is male]your cock to leak copious amounts of precum, creating a pool on the throne the two of you are sitting on[else if player is female]your pussy to get really wet and your entire body to scream out in pleasure[end if]. This only appears to encourage your partner who makes his gestures into your body faster, and seems to be aiming his dick for a particular spot. It doesn't take him long before he actually hits your prostate, causing you to scream out in ecstasy and beg for him to do it again, your hole clenching around him on reflex. 'Your wish is my command my friend,' Horus says with a chuckle, before making his thrusts rougher, practically abusing that tiny bundle of nerves. As he does this, you can very much tell it won't be long before the both of you reach your climaxes.";
-	say "     And just as you thought, half a minute of agonizingly pleasurable thrusts later you can feel the sun deity's cock swell up inside you before a deluge of fluids start to fill you, signaling that he's cumming. The sensation of being filled with Horus' semen sets off your own sensations as you hit your own orgasm. [if player is neuter]When that happens, your mind blanks from all thoughts as all neurons fire on pleasure, due to the sole fact that there's nowhere for it to go but your body. Everywhere from your toe to your head is filled with it, driving you absolutely mad, but it's a feeling you crave[else if player is herm]When it happens, your cock stiffens before you let out a loud moan, letting your own load fly, managing to get a decent arc that coats the floor of the throne room. On the other hand, your pussy starts leaking copious amounts of femcum, causing the pool on the throne to grow enough to coat yours and Horus' thighs[else if player is male]When it happens, your cock starts to stiffen before you moan loadly, lettling loose your own load, your cum coating the floor of the throne room in a line. Some of it actually hits you in the face as you shoot, covering yourself in a bit of your own fluids[else if player is female]When it happens, your pussy begins to leak copious amounts of femcum, causing it to drip down between your legs and down Horus' balls before finally pooling onto the throne below you, making a tiny puddle[end if]. It takes a while for the both of you to come down from your climaxes but when you do, the sun deity helps you up before snapping his fingers, suddenly making both of you clean. Smiling at you, he allows you to put whatever you took off back on and then thanks you for the wonderful sex, of which you thank him aswell. Sadly though both of you have to get back to what you were doing previously, as Horus calls back in his retainers.";
+	say "     The sensations of him repeatedly thrusting into you is causing [if Player is neuter]your body to scream out in pleasure all over[else if Player is herm]your cock and your pussy to both leak their sexual fluids, creating a pool on the throne the two of you are sitting on[else if Player is male]your cock to leak copious amounts of precum, creating a pool on the throne the two of you are sitting on[else if Player is female]your pussy to get really wet and your entire body to scream out in pleasure[end if]. This only appears to encourage your partner who makes his gestures into your body faster, and seems to be aiming his dick for a particular spot. It doesn't take him long before he actually hits your prostate, causing you to scream out in ecstasy and beg for him to do it again, your hole clenching around him on reflex. 'Your wish is my command my friend,' Horus says with a chuckle, before making his thrusts rougher, practically abusing that tiny bundle of nerves. As he does this, you can very much tell it won't be long before the both of you reach your climaxes.";
+	say "     And just as you thought, half a minute of agonizingly pleasurable thrusts later you can feel the sun deity's cock swell up inside you before a deluge of fluids start to fill you, signaling that he's cumming. The sensation of being filled with Horus' semen sets off your own sensations as you hit your own orgasm. [if Player is neuter]When that happens, your mind blanks from all thoughts as all neurons fire on pleasure, due to the sole fact that there's nowhere for it to go but your body. Everywhere from your toe to your head is filled with it, driving you absolutely mad, but it's a feeling you crave[else if Player is herm]When it happens, your cock stiffens before you let out a loud moan, letting your own load fly, managing to get a decent arc that coats the floor of the throne room. On the other hand, your pussy starts leaking copious amounts of femcum, causing the pool on the throne to grow enough to coat yours and Horus' thighs[else if Player is male]When it happens, your cock starts to stiffen before you moan loadly, lettling loose your own load, your cum coating the floor of the throne room in a line. Some of it actually hits you in the face as you shoot, covering yourself in a bit of your own fluids[else if Player is female]When it happens, your pussy begins to leak copious amounts of femcum, causing it to drip down between your legs and down Horus' balls before finally pooling onto the throne below you, making a tiny puddle[end if]. It takes a while for the both of you to come down from your climaxes but when you do, the sun deity helps you up before snapping his fingers, suddenly making both of you clean. Smiling at you, he allows you to put whatever you took off back on and then thanks you for the wonderful sex, of which you thank him aswell. Sadly though both of you have to get back to what you were doing previously, as Horus calls back in his retainers.";
 	now lastfuck of Horus is turns;
 	now PlayerFucked of Horus is true;
 
@@ -304,14 +304,14 @@ Zerbo is a man.
 [physical details as of game start]
 Humanity of Zerbo is 60. [has recently returned to sanity]
 ScaleValue of Zerbo is 3. [human size/really gnome sized]
-Cocks of Zerbo is 1. [has a cock]
+Cock Count of Zerbo is 1. [has a cock]
 Cock Length of Zerbo is 6. [has an 10 inch cock]
-Cock Width of Zerbo is 3. [size of balls]
-Testes of Zerbo is 2. [has a pair of balls]
-Cunts of Zerbo is 0. [no vagina]
+Ball Size of Zerbo is 3. [size of balls]
+Ball Count of Zerbo is 2. [has a pair of balls]
+Cunt Count of Zerbo is 0. [no vagina]
 Cunt Length of Zerbo is 0. [Doesnt have a vagina to get stretched]
-Cunt Width of Zerbo is 0. [Doesnt have a vagina to get stretched]
-Breasts of Zerbo is 2. [Has two normal nipples]
+Cunt Tightness of Zerbo is 0. [Doesnt have a vagina to get stretched]
+Nipple Count of Zerbo is 2. [Has two normal nipples]
 Breast Size of Zerbo is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
 PlayerMet of Zerbo is false.
@@ -366,7 +366,7 @@ to say ZerboTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is:
@@ -419,7 +419,7 @@ to say ZerboSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Blowjob"):
@@ -452,7 +452,7 @@ instead of navigating Pediatrics Lobby while HorusRelationship is 5:
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;
 		say "     Making your way into the lobby of the Pediatrics Clinic, you take a look around and see that the place hasn't changed much since you've last been here. A little bit of the cum has been cleaned up and some of the shattered cushions have been stacked up against the wall, but other than that it looks the same. However your goal isn't in this part of the building, but rather the secure looking door at the other end. That's where Doctor Medea resides, the only pediatric doctor that remains in this facility. Feeling around for where you put the petri dish and sensing that it's there you let out a breath of relief before steeling yourself and walking forward and knocking on the door.";
-		say "     'Come in!' A familiar voice resonates from behind the door, resulting in you turning the handle and opening the door. Upon entering you can see that Medea looks a bit ruffled but still presentable. Sitting herself on her chair she turns your way and gives you her best professional look and speaks. 'So, what brings you to my office today?' she asks with a tilted head. Looking a little nervous you grasp a hold of the petri dish though the doctor seems to come to the wrong assumptions. '[if player is male]Did you get someone pregnant? [else if player is female]Did someone get you pregnant? [else]Do you need someone to talk to? [end if]I can help you, you know?' she says with a smile on her face, though the smile seems rather sultry. You shake your head rather profusely and say it's something else entirely, which seems to intrigue her nonetheless.";
+		say "     'Come in!' A familiar voice resonates from behind the door, resulting in you turning the handle and opening the door. Upon entering you can see that Medea looks a bit ruffled but still presentable. Sitting herself on her chair she turns your way and gives you her best professional look and speaks. 'So, what brings you to my office today?' she asks with a tilted head. Looking a little nervous you grasp a hold of the petri dish though the doctor seems to come to the wrong assumptions. '[if Player is male]Did you get someone pregnant? [else if Player is female]Did someone get you pregnant? [else]Do you need someone to talk to? [end if]I can help you, you know?' she says with a smile on her face, though the smile seems rather sultry. You shake your head rather profusely and say it's something else entirely, which seems to intrigue her nonetheless.";
 		WaitLineBreak;
 		say "     Rather quickly you pull out the petri dish and present it to her, causing her to look at it curiously. 'What's this supposed to be?' she asks, taking it from you and looking at the writhing mass from all angles. You quickly explain how you got it and the horrifying monster that it came from. There's a slightly disturbing inquisitive gaze on her face as she stares at it with the new information you've given her. Though you can see a slightly horrified look as well, so that eases the weirdness. 'So, what made you think to bring this to a Pediatrics Doctor of all things?' Medea asks, tilting her head at you rather questioningly.";
 		say "     You admit that you didn't have many options as the person you're working with doesn't know many scientists or doctors anymore. However, you knew of her and that there was the smallest chance that she could know a way to learn of something from it, even if it was one in a million. With a sigh, she leans back, setting the dish on the counter. 'Well, you're in luck, I just so happen to actually have a degree in genetic engineering and research,' Medea says, causing you to give her a look of shock. The excitable doctor appears to have dropped all pretenses, adopting a rather serious persona, which you guess fits, given the situation.";
@@ -490,8 +490,8 @@ instead of resolving Pediatrics Troublemakers:
 			say "     Having taken care of one of the trio you look to the rest of them and gesture for them to continue forward if they want to fight. The bunny with guns lets out a roar of anger and charges in your general direction. You let out a breath of relaxation as you prepare yourself for another fight, hoping you can beat into these three's heads to leave Medea alone.";
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Groaning on the floor you push up and get ready to fight again, not letting what just happened get to you. With a determined look, suddenly a mystical and powerful sensation runs through your body, you suddenly feel revitalized and healed a little for battle. You charge forward at the next one you can see, which is the bunny with guns, ready for a fight hoping you can win this one.";
-			increase HP of player by 40;
-			if HP of player > maxHP of player, now HP of player is maxHP of player;
+			increase HP of Player by 40;
+			if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 			increase PediatricsLoss by 1;
 		else if fightoutcome >= 30: [fled]
 			say "     Deciding that your enemies are far too difficult to face at the moment you back away and then quickly dart out of the alleyway. As you turn your head the three enemies are growing smaller and smaller until you can't see them anymore. Once you're out of sight, you realize that you'll need to go back eventually but for now you just lean up against a wall to catch your breath.";
@@ -511,8 +511,8 @@ instead of resolving Pediatrics Troublemakers:
 					say "[PediatricsTroubleFail]";
 				else:
 					say "     You feel a burst of mystical and powerful energy fill you before you reach your enemy, healing you in preparation for the fight ahead!";
-					increase HP of player by 40;
-					if HP of player > maxHP of player, now HP of player is maxHP of player;
+					increase HP of Player by 40;
+					if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 			else if fightoutcome >= 30: [fled]
 				say "     Realizing that you can't finish off the leopard, you turn tail and run, disappearing into the alley and out the end you came in. Panting and breathing hard, you lean up against a building on the streets and think that you definitely will have to come back later when you can. After all, you have to hold up your end of the deal with Dr. Medea.";
 				if TroublemakerLost is false:
@@ -574,7 +574,7 @@ instead of resolving Patient Zero:
 		say "     Putting the papers away, you make your way over to the destroyed vials you notice the pool of stuff on the floor. Seeing that there's an intact vial you grab it and carefully try to edge the pool into the vial, using whatever you can find to push it in. Once you filled it up you pocket it safely and then stand up, brushing off your legs. Turning around, something catches your eye on a chair, causing you to walk over to it. When you get there, you find a piece of cloth with some blood on it. Thinking that'll be enough you pocket and head on out, making your way down and out of the building. Hopefully the doctor will be able to do something with the stuff you've found.";
 		now HorusRelationship is 9;
 
-instead of navigating Pediatrics Lobby while HorusRelationship is 9:
+instead of navigating Pediatrics Lobby while HorusRelationship is 7:
 		say "[NavCheck Pediatrics Lobby]";
 		if NavCheckReturn is false, stop the action; [can't navigate there right now]
 		move player to Pediatrics Lobby;
@@ -615,11 +615,11 @@ Instead of resolving Nightmare Mutation:
 			now Nightmare Mutation is resolved;
 		else if fightoutcome is 22: [submitted]
 			say "     Realizing you can't do anything against this creature you drop to the ground with your hands up, and quickly realize this was the worst possible thing to do. Because as soon as you do this, it charges right at you and grasps a hold of you and you start feeling something... something horrifying. Your insides start to shift, as if the nanites that make you up are protesting against whatever the being is doing. However, it appears that they can't put up a fight for long as suddenly your body starts pulsing outwardly before what happened to the orc starts happening to you. As soon as you see your flesh turn to dust your mind blanks, as if your sanity can't comprehend it, you're going to be a part of this thing and you can't do anything about it. Mere seconds later does blackness cover your consciousness as you are no more.";
-			now bodyname of player is "dead";
+			now bodyname of Player is "dead";
 			end the story saying "You're dead - DEAD!";
 		else if fightoutcome > 19 and fightoutcome < 30:
 			say "     The creature lunges forward to grab at you and you try your best to move out of the way but you're too tired, too exhausted. So, without any resistance the being wraps its body around you, causing what you're sure happened to the orc occur to you. The sensation is horrifying as a sensation of your insides beginning to shift runs throughout your entire person, as if the nanites are fighting the incursion against you. But it's a losing fight for them as the outsides of your body begin to gurgle and pulse, the pressure and pain on your senses increasing as time goes on. Seconds later your flesh starts to turn to dust, causing your mind to blank, your sanity unable to process what's occurring. One last thought though does run through your head before utter blackness; You're going to be a part of this creature and you can't do anything about it.";
-			now bodyname of player is "dead";
+			now bodyname of Player is "dead";
 			end the story saying "You're dead - DEAD!";
 
 Table of GameEventIDs (continued)
@@ -660,27 +660,27 @@ Instead of resolving Nightmare Showdown:
 					now Loyalty of Zerbo is 1;
 				else if fightoutcome is 22: [submitted]
 					say "     Feeling that this fight is way too hard, you hold your hands up in surrender, hoping that the creature will grant you mercy. However it never comes as the ginormous mass instead rumbles towards you before engulfing you, causing your body to scream in pain as it starts to rapidly rip itself apart and absorb into the creature. The rate at which you dissolve is so fast though that your mind quickly blacks out as you fade away into bliss.";
-					now bodyname of player is "dead";
+					now bodyname of Player is "dead";
 					end the story saying "You're dead - DEAD!";
 				else if fightoutcome > 19 and fightoutcome < 30:
 					say "     Panting heavily, you don't think you'll be able to make it. True enough, as you're about to dodge, you stumble and the mass grabs you, causing your body to screech in pain as it starts to ripple and then flake apart rapidly into pieces. The rate at which you're dissolving is so fast however that your mind quickly blacks out, so you promptly fade away into bliss as you are absorbed into the creature.";
-					now bodyname of player is "dead";
+					now bodyname of Player is "dead";
 					end the story saying "You're dead - DEAD!";
 			else if fightoutcome is 22: [submitted]
 				say "     Realizing you wont win, you hold up your hands, hoping to lull it into a sense of false security. However, that doesn't work at all, as instead it just lunges straight at you. Its entire body slams right into yours and the tendrils latches onto you. Suddenly your skin ripples as a horrifying sensation goes throughout your body and pieces of it start to flake away and float into the wind. As larger and bigger pieces begin to float away, immense pain tears through your mind, as if the creature is trying to cause the most agony to you it can before it absorbs you. Luckily, at least that is the last thought that passes in your head, you fade away quickly after that and become one with the being.";
-				now bodyname of player is "dead";
+				now bodyname of Player is "dead";
 				end the story saying "You're dead - DEAD!";
 			else if fightoutcome > 19 and fightoutcome < 30:
 				say "     Tiring of the second fight, you are unable to react when the blob charges right at you. It swings one of its tendrils at you, latching straight onto your body. When it does so, you can feel your senses and nerves screaming at you in pain. Your body ripples in front of your very eyes in a horrifying fashion before flecks and pieces of your flesh start to fall away and float in the wind. When larger amounts begin to float away, the pain increases massively, as if the creature is trying to cause the most pain to you. However whether good or bad, your mind blanks out as you fade away, becoming one with the being itself.";
-				now bodyname of player is "dead";
+				now bodyname of Player is "dead";
 				end the story saying "You're dead - DEAD!";
 		else if fightoutcome is 22: [submitted]
 			say "     Realizing that you're going to lose anyway you put up your hands, hoping to get close enough to it to pull the pen on it. However quickly you notice it was a horrible idea as it lunges at you and grabs a hold. You start to feel something terrifying happen as your body ripples before your very eyes. Right after that flecks and pieces of your skin start to fall off as the nanites in your body groan, as if trying to resist the intruder to your biological ecosystem. As your flesh turns to dust whether good or bad, your mind blacks out as you fade from this world and become one with this creature.";
-			now bodyname of player is "dead";
+			now bodyname of Player is "dead";
 			end the story saying "You're dead - DEAD!";
 		else if fightoutcome > 19 and fightoutcome < 30:
 			say "     Panting heavily you curse when you realize the creature is about to lunge towards you. You try to dodge but realize that you don't have the energy to do so. Thus, the destabilizing mutant is able to slam into you and grab ahold of you. Suddenly you start to feel a terrifying sensation happen as your body ripples right before your eyes. Quickly after that flecks and parts of your skin start to fall off and float away as the nanites in your body groan, trying their best to resist the intruder to your body. However they obviously fail as your flesh suddenly turns to dust and your mind blacks out causing you to fade from this world, becoming one with this creature.";
-			now bodyname of player is "dead";
+			now bodyname of Player is "dead";
 			end the story saying "You're dead - DEAD!";
 
 Section C - Code for Destabilizing Mutant and Its Boss Form
@@ -702,14 +702,15 @@ to say Destabilizing Mutant Desc:
 
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Destabilizing Mutant";
+	now NewTypeInfection entry is false;
+	now Name entry is "Destabilizing Mutant";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The spasmodic blob that once was a person lunges towards you![or]The horror incarnate creature undulates in your direction before striking in your direction.[or]The rapidly shifting glob of semi-humanoid mass charges straight at you![at random]";
 	now defeated entry is "[Destabilizing Mutant Loses]";
@@ -736,15 +737,15 @@ When Play begins:
 	now lev entry is 10;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";      [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
-	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;         [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6;          [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4;          [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 2;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;         [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 6;          [ Width of female sex infection will try and give you ]
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
@@ -756,7 +757,98 @@ When Play begins:
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say Destabilizing Mass Wins:
 	if inasituation is true:
@@ -774,14 +866,15 @@ to say Destabilizing Mass Desc:
 	say ""; [for now]
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Destabilizing Mass";
+	now NewTypeInfection entry is false;
+	now Name entry is "Destabilizing Mass";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The spazmodic mass that once was a single blob shambles towards you![or]The horror incarnate creature undulates in your direction before slaming into you.[or]The rapidly shifting mass of semi-blobular creatures charges straight at you![at random]";
 	now defeated entry is "[Destabilizing Mass Loses]";
@@ -808,15 +901,15 @@ When Play begins:
 	now lev entry is 15;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 14;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";      [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
-	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;         [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6;          [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4;          [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 2;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;         [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 6;          [ Width of female sex infection will try and give you ]
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
@@ -828,7 +921,98 @@ When Play begins:
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section D - Gnome infection
 
@@ -842,14 +1026,15 @@ to say GnomeDesc:
 	say "";
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Gnome";
+	now NewTypeInfection entry is false;
+	now Name entry is "Gnome";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "***";
 	now defeated entry is "[GnomeLoses]";
@@ -876,15 +1061,15 @@ When Play begins:
 	now lev entry is 15;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 14;                [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";      [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 8;         [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of Breasts infection will give you. ]
-	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 8;         [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 6;          [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 8;         [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 4;          [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 2;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 8;         [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 6;          [ Width of female sex infection will try and give you ]
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Loot monster drops, ]
 	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
@@ -896,6 +1081,97 @@ When Play begins:
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Horus ends here.

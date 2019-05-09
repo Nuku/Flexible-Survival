@@ -4,7 +4,7 @@ Version 1 of Triceratops by Stripes begins here.
 "Adds a Triceratops creature to Flexible Survival's Wandering Monsters table"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
@@ -21,33 +21,33 @@ to say tricdesc:
 to say losetotric:
 	if dinonest is 1:
 		now dnfightresult is 2;
-	if player is male and cockname of player is "Triceratops":
+	if Player is male and cockname of Player is "Triceratops":
 		say "     Having exhausted your will to resist, you fall to your knees before her. She strides up to you and pushes you to lay back with one of her platform shoes. Her saurian paws run over your body, going for the triceratops cock she can smell enticing her. With a few strokes, she has you to full hardness, then slips herself out of her beautiful dress. She lowers herself down onto your cock, taking you in to her wide pussy with a loud moan of pleasure. She grips your shoulders and writhes atop you, moving her body to a beat that you can't quite hear. Your bodies move in time as her inner walls squeeze and tug at your cock in rhythm to her motions, exciting you further. Eventually, you can take no more and shoot your hot seed deep inside the beautiful female riding you. After panting to recover, she pulls herself up and off of you. She then grabs you and pulls you up, shoving you on your way. As you stagger off, she returns to dancing to that unheard beat.";
 	else:
 		say "     The dinosaur woman growls angrily and knocks you to the ground with a swipe of her heavy tail. She then strides overtop of you as she slides out of her disco dress. She reaches down and grabs your head roughly with one of her large, saurian hands, jamming it between her thighs. The scent of her wet pussy fills your nose and soon you are compelled to lick at it. As you lap at her dripping folds, she rocks her body with a quickening rhythm. Her hot juices flow out over your face as she cries out 'Ah yeah, baby!' in climax. Finished with you, she pushes you roughly away, slamming your head against the floor, making lights swirl in your eyes. When you come to, you are elsewhere, she is gone and you are left aroused and unsatisfied.";
-		increase libido of player by 10;
-		if libido of player > 100:
-			now libido of player is 100;
+		increase Libido of Player by 10;
+		if Libido of Player > 100:
+			now Libido of Player is 100;
 
 
 to say beatthetric:
 	if dinonest is 1:
 		now dnfightresult is 1;
-	if player is male and libido of player > 24 and cockname of player is "Triceratops":
+	if Player is male and Libido of Player > 24 and cockname of Player is "Triceratops":
 		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins. It feels as if you haven't had sex in 65 million years and it's time to get funky! Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy. She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
 		follow the sex change rule;
 		LineBreak;
-		say "     You bury your [cock size desc of player] saurian shaft into the funky lady, intent on showing her your moves now. She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo. You tease her nipples as you dance the oldest dance with her. You can feel her inner walls squeeze and tug at your cock, while your hearts pound like base drums. In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you. You both pant as you catch your breath, then kiss before parting, your mating dance over.";
-		decrease libido of player by 25;
-		if libido of player < 0:
-			now libido of player is 0;
-	else if player is male and libido of player > 49:
+		say "     You bury your [cock size desc of Player] saurian shaft into the funky lady, intent on showing her your moves now. She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo. You tease her nipples as you dance the oldest dance with her. You can feel her inner walls squeeze and tug at your cock, while your hearts pound like base drums. In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you. You both pant as you catch your breath, then kiss before parting, your mating dance over.";
+		decrease Libido of Player by 25;
+		if Libido of Player < 0:
+			now Libido of Player is 0;
+	else if Player is male and Libido of Player > 49:
 		say "     The strong female falls to her knees, no longer able to keep fighting. With a moan, she runs her paws over her body and slides open her dress, exposing her large bosom to you.";
 		say "     [bold type]She coos softly as she sways her body, tempting you to finish your dance with her.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You stride over to her and pull out your cock, which has gotten quite hard as you watched her tease herself. She takes it in one paw and starts licking at it with her broad tongue. You let her suck on it a little before pulling back and guiding her to lay on her back. She slides out of the rest of her funky dress with a sensual wiggle, exposing her large, wet pussy for you.";
 			say "     You line yourself up and sink down into her and start thrusting. You pound away at her, making her moan and wiggle beneath you. She moves to a beat that you can't hear and that you can't quite follow. Her inner walls squeeze and tug at your cock with her motions, coaxing a hot load of your cum from you after a good, long fuck. She moans in climax as well, but seems a little unsatisfied. But you are, so you leave the dinosaur to continue on your way.";
@@ -58,17 +58,18 @@ to say beatthetric:
 		say "     The strong female falls to her knees, no longer able to keep fighting. With a moan, she runs her paws over her body and slides open her dress. You can here her continue to moan with lustful desire, but you are already walking away.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Triceratops"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Triceratops"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The powerful female, after a flourish of quick steps, strikes you with a heavily armored punch![or]The dinosaur strides towards you, stepping to an unheard beat. She slashes her claws across your arm, leaving bloody scrapes![or]The triceratops waves her arms to the sides as she swings her hips, then turns suddenly and bashes your side with her tail while flashing her ass at you![or]With a flourish of funkability, the dinosaur thrusts her large horns at you. You manage to grab them to save yourself from being gored, but are sent tumbling![or]The dinosaur does a dancing spin and strikes you square in the jaw with her platform shoes, filling your eyes with visions of goldfish for a moment![or]The triceratops charges suddenly at you. Unable to dodge in time, you try to grab her horns, but she drops and slides on her knees. One horn jabs into your side![or]The dinosaur woman manages to grab your head and headbutts your with her bony skull, crying 'Oh yeah, baby!' as she does![at random]";
 	now defeated entry is "[beatthetric]";
@@ -95,15 +96,15 @@ When Play begins:
 	now lev entry is 7; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Museum"; [ Location of monster, in this case the High Rise District]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0; [ Number of Breasts infection will give you. ]
-	now breast size entry is 0; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 5; [ Size of balls apparently ;) sneaky Nuku]
+	now Nipple Count entry is 0; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
 	now libido entry is 45; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -117,16 +118,107 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 when play ends:
-	if bodyname of player is "Triceratops":
-		if humanity of player < 10:
+	if bodyname of Player is "Triceratops":
+		if humanity of Player < 10:
 			say "     You can feel a growing rhythm in your mind, almost like music. You start to follow that funky beat, drawing you through the city. As you travel, you spot a clothing store display and break into it, wanting the clothes on display. With your change in attire, you continue on, eventually coming to the museum, striding in with confidence. You snap your fingers and stride to the beat playing in your mind. Your platform shoes echo in the antechamber as you start to dance. The sphinx at the front desk watches you with an inscrutable expression, but it is not for her you are dancing. When the rhythm of your steps is matched by that of another, the female triceratops striding into the room from one of the museum halls, then your dance can begin in earnest with your partner.";
-			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance[if player is male]. Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]. Resplendent in your lime-green wrap dress, you sway your hips and while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";
+			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance[if Player is male]. Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]. Resplendent in your lime-green wrap dress, you sway your hips and while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";
 		else:
 			say "     After leaving military custody, you settle into a rather boring daytime life of office work. It fills your day and earns your money, but you have no passion for it. You continue like this for a time, until one evening you hear music faintly from the corner of your ear. You follow it, coming to a small club off the beaten path. You would have completely missed it had not someone exited at that moment to free the sound. You go in and are met with music, lights and sights that breath life into you, filling you with energy. Your style, always seeming outdated to the rest of the world, fits right in here. You stride out onto the flashing dance floor under the disco ball and take center stage, stealing the show with your moves and rhythm. Despite your altered appearance, your disco dancing breaks down all barriers and you are a star.";
-			if player is male: [MALE/HERM]
+			if Player is male: [MALE/HERM]
 				say "     You dance with lady after lady that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the women are always captivated by your dance, giving you countless lovers. When a few grow heavy and eventually bear eggs, despite not being saurian, you can only smile and dance all the more, filled with the dance of life.";
-			else if "Sterile" is not listed in feats of player: [F-BREEDABLE]
+			else if "Sterile" is not listed in feats of Player: [F-BREEDABLE]
 				say "     You dance with man after man that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the guys are always captivated by your dance, giving your countless lovers. When you eventually grow heavy with eggs, you have to stop dancing for a time, but instead work the club and play with your many lovers between their sets.";
 			else: [F-STERILE]
 				say "     You dance with man after man that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the guys are always captivated by your dance, giving your countless lovers.";

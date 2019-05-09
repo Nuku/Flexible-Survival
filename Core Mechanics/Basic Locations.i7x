@@ -176,7 +176,7 @@ The description of Library Microwave is "[LibraryMicrowaveDesc]".
 
 to say LibraryMicrowaveDesc:
 	say "     A black, mid-sized microwave stands on one of the countertops in the breakroom. ";
-	if findwires is not 2 and fixedgens is not 2:
+	if findwires < 2 and fixedgens < 3:
 		say "Sadly, without power it doesn't work.";
 	else:
 		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!";

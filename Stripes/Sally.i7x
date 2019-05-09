@@ -31,13 +31,13 @@ to say sexwithSally:
 	else:
 		now lastSallyfucked is turns;
 		say "     Sally, hearing you step up, stops what she was doing and dashes towards you. She whines softly and tugs at her leash, looking at you longingly. When you smile down at her, she bounds around happily on all fours, knowing what's coming and needing it badly. She hops back onto her bunk and rolls over, panting like a dog as she whines again, displaying her hybrid herm body that is available for your enjoyment. The air around the bunk is saturated in the scent of her arousal and her male and female cum, exciting you greatly.";
-		if player is male:
+		if Player is male:
 			say "     As your needy fucktoy is a herm, how would you like to enjoy your puppy-bun pet?";
 			say "     [bold type]Do you feel like enjoying her pussy or her cock this time?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Her cock.";
 			say "     ([link]N[as]n[end link]) - Her pussy.";
-			if player consents:
+			if Player consents:
 				say "[sallycock]";
 			else:
 				say "[sallypussy]";
@@ -45,7 +45,7 @@ to say sexwithSally:
 			say "[sallycock]";
 
 to say sallycock:
-	say "     Deciding you want go at the huskybunny's cock, you straddle her on the bed and rub your hips down onto her throbbing meat. She moans and yips softly, grinding up against you, looking at you with mindless adoration. You reach back and fondle her balls before taking a hold of her cock and lining it up. Once in position, you rub your [if player is female]wet pussy against her glans[else]tight pucker against her glans, letting her pre act as lube[end if] before easing down. You moan in pleasure as you feel that canine cock sinking into you.";
+	say "     Deciding you want go at the huskybunny's cock, you straddle her on the bed and rub your hips down onto her throbbing meat. She moans and yips softly, grinding up against you, looking at you with mindless adoration. You reach back and fondle her balls before taking a hold of her cock and lining it up. Once in position, you rub your [if Player is female]wet pussy against her glans[else]tight pucker against her glans, letting her pre act as lube[end if] before easing down. You moan in pleasure as you feel that canine cock sinking into you.";
 	WaitLineBreak;
 	say "     Now that her transformation is complete, she's fully adapted to be your perfect fucktoy. Somehow sensing what you want most out of any session, her cock shifts and alters its size and shape to best satisfy your lustful desires at any given time.";
 	increase lust of Sally by 1;
@@ -57,17 +57,17 @@ to say sallycock:
 		say "     As you ride her shaft, you can feel it growing long and slender. Its tip flares and a medial ring forms as it takes on an equine form. To better take this long cock, you move onto all fours and let her mount you, which she does happily. Her horsecock dives into your slick, stretched hole and pounds away at you. You moan and groan in pleasure as it pushes deep inside you as she fucks you like a stallion, just what your body is aching for. When she finally cums, her seed blasts deep inside you, sending shivers through your body as you orgasm as well. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master.[sallyimpreg]";
 		say "     After a long wait for her throbbing shaft to return to normal, she eases off of you and you scritch her long, bunny ears. She smiles at this, long tongue hanging from her muzzle as she pants happily. As you walk off, she leans over and starts licking her cock clean.";
 	else if lust of Sally is 3:		[knotted canine]
-		say "     As you ride her shaft, you can feel it swelling at the base as it starts to shift to fit your slick hole perfectly. It alters itself, becoming a perfectly sized canine cock for your [if player is female]pussy[else]bottom[end if], just right for stuffing and tying with you. To better enjoy that this knot, you move onto all fours and let her mount you doggy style, which she happily does. Her dog cock dives into your slick, stretched [if player is female]pussy[else]asshole[end if] and pounds away at you. You moan and grown in pleasure as that knot pops in and out of you repeatedly, getting ready to tie with you like a bitch in heat, just what your body is aching for. When she finally cums, her seed blasts inside you, sending shivers through your body as you orgasm as well. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master.[sallyimpreg]";
+		say "     As you ride her shaft, you can feel it swelling at the base as it starts to shift to fit your slick hole perfectly. It alters itself, becoming a perfectly sized canine cock for your [if Player is female]pussy[else]bottom[end if], just right for stuffing and tying with you. To better enjoy that this knot, you move onto all fours and let her mount you doggy style, which she happily does. Her dog cock dives into your slick, stretched [if Player is female]pussy[else]asshole[end if] and pounds away at you. You moan and grown in pleasure as that knot pops in and out of you repeatedly, getting ready to tie with you like a bitch in heat, just what your body is aching for. When she finally cums, her seed blasts inside you, sending shivers through your body as you orgasm as well. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master.[sallyimpreg]";
 		say "     After a long wait for her throbbing shaft to return to normal and her knot releases you, she eases off of you and you scritch her long, bunny ears. She smiles at this, long tongue hanging from her muzzle as she pants happily. As you walk off, she leans over and starts licking her cock clean.";
 	else if lust of Sally is 4:		[barbed feline]
-		say "     As you ride her shaft, you can feel it changing shape, becoming thick and growing stimulating barbs. It alters itself, becoming a chubby, feline cock, a little wide for your hole to spread it wide and leaving it vulnerable to those stimulating bumps. Your body quivers in delight at this sensation and you ride her meat eagerly, loving how this is just what you needed. The shivers of those along your stretched, sensitive [if player is female]vaginal[else]anal[end if] walls make you moan and groan in pleasure. When she finally cums, her seed blasts inside you, sending shivers through your body as you orgasm as well. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master.[sallyimpreg]";
+		say "     As you ride her shaft, you can feel it changing shape, becoming thick and growing stimulating barbs. It alters itself, becoming a chubby, feline cock, a little wide for your hole to spread it wide and leaving it vulnerable to those stimulating bumps. Your body quivers in delight at this sensation and you ride her meat eagerly, loving how this is just what you needed. The shivers of those along your stretched, sensitive [if Player is female]vaginal[else]anal[end if] walls make you moan and groan in pleasure. When she finally cums, her seed blasts inside you, sending shivers through your body as you orgasm as well. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master.[sallyimpreg]";
 		say "     After a long wait for her throbbing shaft to return to normal, you ease yourself off her and scritch her long, bunny ears. She smiles at this, long tongue hanging from her muzzle as she pants happily. As you walk off, she leans over and starts licking her cock clean.";
 	else if lust of Sally is 5:		[big-balled dragon]
-		say "     As you ride her shaft, you can feel it changing, gaining stimulating ridges and a curved shape with a pointed glans. It alters its size and length to fit you perfectly, prodding that spaded tip against your [if player is female]cervix[else]prostate[end if] to make you moan loudly. Her balls swell and swell, becoming the size of cantaloupes. Your body quivers in delight at the prospect of having this draconic cock pump you full of her hot seed, just what you desire right now. The ridges of her cock rub against all your sensitive spots as you ride that cock. When she finally cums, her spaded tip [if player is female]pushes past your cervix and into your womb, allowing her to blast her ample semen deep inside[else]presses firmly at your prostate, allowing you to feel each and every powerful blast as those large balls drain themselves into your rump[end if], causing you to orgasm as well. You quiver in delight as her voluminous load makes your tummy swell before finally stopping, leaving you deliciously fully and sloshing with huskybunny cum. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and seeded [if player is female]her[else]him[end if] so well.[sallyimpreg][sallyimpreg]";
+		say "     As you ride her shaft, you can feel it changing, gaining stimulating ridges and a curved shape with a pointed glans. It alters its size and length to fit you perfectly, prodding that spaded tip against your [if Player is female]cervix[else]prostate[end if] to make you moan loudly. Her balls swell and swell, becoming the size of cantaloupes. Your body quivers in delight at the prospect of having this draconic cock pump you full of her hot seed, just what you desire right now. The ridges of her cock rub against all your sensitive spots as you ride that cock. When she finally cums, her spaded tip [if Player is female]pushes past your cervix and into your womb, allowing her to blast her ample semen deep inside[else]presses firmly at your prostate, allowing you to feel each and every powerful blast as those large balls drain themselves into your rump[end if], causing you to orgasm as well. You quiver in delight as her voluminous load makes your tummy swell before finally stopping, leaving you deliciously fully and sloshing with huskybunny cum. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and seeded [if Player is female]her[else]him[end if] so well.[sallyimpreg][sallyimpreg]";
 		say "     After a long wait for her throbbing shaft to return to normal, you ease yourself off her and clench down to keep as much of her load inside you. You scritch her long, bunny ears and she smiles with her long tongue hanging from her muzzle as she pants happily. As you walk off, she leans over and starts licking her cock clean.";
-	decrease humanity of player by a random number between 0 and 2;
-	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
-	increase morale of player by 2;
+	decrease humanity of Player by a random number between 0 and 2;
+	now Libido of Player is ( ( Libido of Player + 1 ) * 2 ) / 3;
+	increase morale of Player by 2;
 
 to say sallypussy:
 	if a random chance of 1 in 2 succeeds:
@@ -78,9 +78,9 @@ to say sallypussy:
 		say "     You pound away at her, enjoying a nice, long lovemaking session. She hooks her legs around you, freeing up your hands to roam over her sexy body. Your fingers tease her all over, having so many sensitive spots and such delightful responses to your touches. Dr Mouse indeed did a fine job with her infection, making her into one of the best fucks you've ever had. You finally drive hard into her and unleash your hot seed, pushing your glans past her cervix and into eager womb. Her vaginal walls squeeze and tug at your spurting member, milking you to get as much as she can. She yips and barks excitedly, husky tail wagging frantically, happy to have pleased her master and at having been seeded with his cum.";
 		WaitLineBreak;
 		say "     After a long wait for your afterglow to pass and for your cock to start to soften, you slip out of her with a wet pop. Her pussy clamps down automatically, wanting to keep all your seed inside. You scritch her long, bunny ears and she smiles with her long tongue hanging from her muzzle as she pants happily. As you walk off, she leans over and starts licking her sticky cunt clean.";
-		decrease humanity of player by a random number between 0 and 2;
-		now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
-		increase morale of player by 2;
+		decrease humanity of Player by a random number between 0 and 2;
+		now Libido of Player is ( ( Libido of Player + 1 ) * 2 ) / 3;
+		increase morale of Player by 2;
 	else:
 		say "     Climbing onto Sally's bunk, you roll her over onto all fours. She responds immediately by raising her tail and yipping eagerly, wagging excitedly as she offers up her dripping pussy to you. You grin at the sight and grab that sexy ass of hers, pulling her onto your shaft. She moans and yips in delight as you start fucking her. Her pussy quiver and squeezes around your cock perfectly, providing delicious stimulation to your throbbing member. Her canine shaft throbs and dribbles pre onto the cum-stained mattress.";
 		WaitLineBreak;
@@ -90,26 +90,21 @@ to say sallypussy:
 
 
 to say sallyimpreg:
-	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
 	say "[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "Huskybunny";
-		now bodyname of child is "Huskybunny";
-		now skinname of child is "Huskybunny";
+	[TODO: Make Huskybunny infection for impregnation]
 
 
 Section 3 - Endings
 
 when play ends:
 	if HP of Doctor Matt is 104:						[Sally the slutpet]
-		if humanity of player < 10:
+		if humanity of Player < 10:
 			say "     Not long after you give in to your infection, Sally comes running up to you and snuggles up against you. You have trouble remembering quite who she is, but you both know that she belongs to you. Glancing at her leash, you can see that she chewed through it, probably worried that you've not come back for her. Wherever back was. But regardless, she is here with you now and is your special slutpet. Despite any changes you may go through or any creatures you may encounter, she remains a huskybunny plaything. She eagerly submits to any and all of your needs and is a lover and breedtoy for you and any lovers you may find in your new life.";
 		else:
 			say "     The military allows you to take Sally with you, mostly because they're too run off their feet to protest the situation or properly examine her. You are careful to keep her calm, constantly whispering to her and reminding her to be a good girl. You can see it takes her a lot of effort, but she manages to contain herself during the time at the military base. After your release, you make certain to reward her with a long, lustful session.";
-			if player is male:
+			if Player is male:
 				say "     You pound into her long and hard, somehow able to give her a night of wild sex that doesn't end until the sun is coming up. A few months later, her tummy starts to show, becoming pregnant with the first of many litters of huskybunny herms. These creatures, like their mother, are lustful and obedient, making wonderful fucktoys. After some careful [']training['], these beautiful sexpets fetch a high price from rich buyers.";
-			else if "Sterile" is not listed in feats of player:
+			else if "Sterile" is not listed in feats of Player:
 				say "     She pounds you long and hard, filling you again and again with her pent-up seed until you can no longer contain any more and it just keeps pouring out, and keeps fucking even after that point. Your long, lustful night of wild sex doesn't end until the sun comes up. A few months later, your tummy starts to show, becoming pregnant with the first of many litters of huskybunny herms. These creatures, like their father, are lustful and obedient, making wonderful fucktoys. After some careful [']training['], these beautiful sexpets fetch a high price from rich buyers.";
 			else:
 				say "     She pounds you long and hard, filling you again and again with her pent-up seed until you can no longer contain any more and it just keeps pouring out, and keeps fucking even after that point. Your long, lustful night of wild sex doesn't end until the sun comes up. Being shared around often, you smile happily as her belly starts to swell with the first of many litters of huskybunny herms. These creatures, like their mother, are lustful and obedient, making wonderful fucktoys. After some careful [']training['], these beautiful sexpets fetch a high price from rich buyers.";

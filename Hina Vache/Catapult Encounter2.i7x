@@ -17,7 +17,7 @@ instead of resolving Loaded Catapult:
 		now demandIndex is a random number from 1 to the number of entries in BaitList;
 		now the Bait of Diego is entry demandIndex of BaitList;
 	say "     As you walk down the street, you find something you had only seen illustrated in old history textbooks: a catapult. Looking around and deciding it is safe to check it out, you approach the medieval siege weapon. The design is proper but rather simple compared to what most illustrations had depicted of one, seeming to be made of spare parts and somewhat worn 2x4 boards the creator must have scavenged somewhere. But the biggest surprise has to be what is in the spoon of the contraption. A massive, industrial grade bag lies in wait, ready to be tossed far and high by whomever decides to fire the weapon. At first you think nothing of the bag, but your curiosity gets the better of you and you soon find yourself carefully opening the bag to see what is inside.";
-	say "     [if level of player > 4]To no surprise[else]Shockingly[end if], the bag is filled with gallons of seed, far too much to be from a single source. You quickly close the bag, careful to not get any of the nanite-infused baby batter on you. As you continue to inspect the machine, you notice ";
+	say "     [if level of Player > 4]To no surprise[else]Shockingly[end if], the bag is filled with gallons of seed, far too much to be from a single source. You quickly close the bag, careful to not get any of the nanite-infused baby batter on you. As you continue to inspect the machine, you notice ";
 	if Bait of Diego is medkit:
 		say "a medkit ";
 	else if Bait of Diego is water bottle:
@@ -33,9 +33,9 @@ instead of resolving Loaded Catapult:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, it'll be useful for you!";
 	say "     ([link]N[as]n[end link]) - Better not - who knows what this thing is aimed at?";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		let bonus be (( dexterity of player minus 10 ) divided by 2);
+		let bonus be (( dexterity of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 		if diceroll + bonus >= 15:
@@ -48,7 +48,7 @@ instead of resolving Loaded Catapult:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - All cum-cannons to full blast!";
 			say "     ([link]N[as]n[end link]) - Hell no!";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     An evil grin crosses your face. It's the apocalypse! Who cares if something like this gets flung through the air? People have been going through much worse lately than a bag of monster cum splashing around them. Surely. Well, probably anyways. You <...>";
 			else:
@@ -89,16 +89,16 @@ catadiff is 20.
 
 instead of resolving a loaded catapult:
 	say "You find a loaded catapult, a large plastic grocery bag filled with a thick liquid in the cup, and the arms just waiting to let fly.";
-	say "You look up to find the target, tilting your [face of player] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
+	say "You look up to find the target, tilting your [face of Player] head into the distance. There seems to be a large military blockade there, a huge earthen wall with turrets and barbed wire, giant tanks in lines behind that, and then armed men stretching as far as the eye can see. They are all alert and tense, probably from the one who set this up.";
 	say "Do you want to check out what the bags are filled with?";
-	if player consents:
+	if Player consents:
 		say "You tear a bag open at random, and find they are containing large volumes of cum, milk, and piss. Whoever did this was not on the side of the rescuers. ";
 		say "You could drink some of the reeking liquids, though that would not be without consequences for your health.";
-		if player consents:
-			say "Overcoming your disgust, you dip your [face of player] head into the mess, slurping it up.";
-			decrease thirst of player by 25;
-			decrease humanity of player by 10;
-			if "Iron Stomach" is not listed in feats of player:
+		if Player consents:
+			say "Overcoming your disgust, you dip your [face of Player] head into the mess, slurping it up.";
+			decrease thirst of Player by 25;
+			decrease humanity of Player by 10;
+			if "Iron Stomach" is not listed in feats of Player:
 				weakrandominfect;
 				weakrandominfect;
 			WaitLineBreak;
@@ -107,7 +107,7 @@ instead of resolving a loaded catapult:
 	else:
 		say "You watch your step, careful not to get too close to the bags lest they pop.";
 	say "Do you wish to fire the catapult?";
-	if player consents:
+	if Player consents:
 		say "[catapult fire]";
 	else:
 		if gotcatares is 0:
@@ -115,7 +115,7 @@ instead of resolving a loaded catapult:
 		else:
 			say "You find that someone has renewed the supplies, though they seem harder to get this time. Do you wish to try to get them anyway?";
 			increase catadiff by 10;
-		if player consents:
+		if Player consents:
 			say "You begin to wriggle into the tangle of ropes.";
 			if a random number between one and catadiff is greater than the dexterity of the player:[the catapult fires]
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";

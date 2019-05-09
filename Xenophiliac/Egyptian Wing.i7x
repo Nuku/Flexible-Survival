@@ -46,7 +46,7 @@ an everyturn rule:
 instead of resolving Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
-	let bonus be ((dexterity of player minus 10) divided by 2);
+	let bonus be ((dexterity of Player minus 10) divided by 2);
 	let dice be ( a random number from 1 to 20);
 	say "     You roll 1d20 ([dice]) + ([bonus]) versus 14 - You scored [dice plus bonus] in a dexterity check.";
 	if dice + bonus >= 14:
@@ -141,10 +141,10 @@ understand "analyze mural" as EgyptMuralExamine.
 understand "analyze murals" as EgyptMuralExamine.
 
 check EgyptMuralExamine:
-	if player is not in Mythical Murals, say "     There are no murals to examine here." instead; [works?]
+	if Player is not in Mythical Murals, say "     There are no murals to examine here." instead; [works?]
 
 carry out EgyptMuralExamine:
-	if intelligence of player > 15:
+	if intelligence of Player > 15:
 		say "     Deciding that trying to learn what these murals are depicting would be something to do, you approach the murals and put your mind to the task of deciphering the painting.";
 		say "     The northern mural, most likely being the first in the set, is your first target. Looking over it, the left of the massive painting is taken up by a large man sitting on a throne, staring regally ahead. You immediately recognize the seated man as Osiris, the Egyptian god of the dead; both the husband of Isis and the father of Horus. Dressed in exquisite, regal garb and wearing a magnificent crown, he is portrayed as the pharaoh of Egypt and the benefactor of the Egyptian people. Strangely enough, instead of illustrated with green skin, signifying his death, Osiris is instead depicted as a living man, not yet having met his fate.";
 		say "     On the other side of this mural, under the watchful gaze of Osiris, the people of Egypt bow before their rightful pharaoh. Men, women, and children kneel down in front of his throne, giving themselves over to the rule of Osiris. This mural is obviously depicting the time when Osiris was the ruling pharaoh of Egypt, bringing forward an age of prosperity for the empire of the Nile.";
@@ -208,7 +208,7 @@ instead of going north from Golden Doors while EgyptianRiddle is 0: [add cycling
 				say "Invalid Number. Try Again.";
 		if calcnumber is 0:
 			say "     Deciding to take a wild guess, you mull over the riddle in your head and say out loud the first thing that comes to your mind.";
-			let bonus be ((intelligence of player minus 10) divided by 2);
+			let bonus be ((intelligence of Player minus 10) divided by 2);
 			let dice be ( a random number from 1 to 20);
 			say "     You roll 1d20 ([dice]) + ([bonus]) versus 22 - You scored [dice plus bonus] in an intelligence check.";
 			if dice + bonus >= 22:
@@ -265,7 +265,7 @@ instead of going north from Golden Doors while EgyptianRiddle is 1:
 				say "Invalid Number. Try Again.";
 		if calcnumber is 0:
 			say "     Deciding to take a wild guess, you mull over the riddle in your head and say out loud the first thing that comes to your mind.";
-			let bonus be ((intelligence of player minus 10) divided by 2);
+			let bonus be ((intelligence of Player minus 10) divided by 2);
 			let dice be ( a random number from 1 to 20);
 			say "     You roll 1d20 ([dice]) + ([bonus]) versus 22 - You scored [dice plus bonus] in an intelligence check.";
 			if dice + bonus >= 22:
@@ -296,7 +296,7 @@ instead of going west from Golden Doors while SethTempleNumber is 1:
 The description of Temple of Set is "[TempleOfSetDesc]".
 
 to say TempleOfSetDesc:
-	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
+	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of Player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
 	say "     Finally drawing your eyes to what lies on the altar, you barely contain a gasp as the item lying there. An exquisite golden sword lies on the altar, torchlight glinting off of the exquisite blade. It would take almost no effort to [bold type]pick up[roman type] the[bold type] antique sword[roman type] off of the altar.";
 
 instead of sniffing Temple of Set:
@@ -308,7 +308,7 @@ SethTempleNumber is a number that varies.
 SwordOfSeth is an action applying to nothing.
 
 check SwordOfSeth:
-	if player is not in Temple of Set, say "     What sword?" instead;
+	if Player is not in Temple of Set, say "     What sword?" instead;
 
 understand "pick up antique sword" as SwordOfSeth.
 understand "pick up sword" as SwordOfSeth.
@@ -355,14 +355,14 @@ Golden Doors is south of Sanctum of Horus.
 RevealAmuran is an action applying to nothing.
 
 check RevealAmuran:
-	if player is not in Sanctum of Horus, say "     There's no sarcophagus to open here." instead;
+	if Player is not in Sanctum of Horus, say "     There's no sarcophagus to open here." instead;
 
 understand "remove the cover" as RevealAmuran.
 understand "remove cover" as RevealAmuran.
 
 carry out RevealAmuran:
 	say "     Looking at the sarcophagus across the water, do you want to try and open the golden casket?";
-	if player consents: [Smut, more interactions and quest to come soon]
+	if Player consents: [Smut, more interactions and quest to come soon]
 		say "     In the end, you decide to go against your better judgment, wanting to reveal whatever it is that lies inside the sarcophagus. Walking around the pool of water and up to the shining coffin, the sarcophagus is even more glorious up close. While it looked made of plain gold from afar, the sarcophagus is actually inlaid with multitudes of precious gemstones, many of which you're unable to name. Alongside the gemstones, you're able to tell that the sarcophagus is not made of just gold; strings of different-colored metals run beautifully across the coffin's surface; it looks as if the metals are actually flowing. You can't begin to comprehend how much money this thing is worth to the right person; selling it would make you exceedingly rich.";
 		say "     Unfortunately for you, there probably isn't a buyer in the city right now, considering the condition it's in. You still let yourself make a mental reminder to pick this up when everything blows over; if it blows over, that is. Checking delicately along the seal of the sarcophagus, it seems that the lid is latched on at a few points around the coffin; it would be a (somewhat) simple matter to unseal this sarcophagus. You're soon able to pop out a latch, releasing with a loud, grating screech. Soon enough, the cover of the sarcophagus is unlatched; all you have to do is push the lid aside.";
 		say "     Once again pushing with all your might, the lid of the sarcophagus falls before you, screeching aside and falling to the ground with a massive [']THUMP[']. Taking a deep breath, you step in front of the open coffin, waiting for the worst to happen. It takes a moment for light to filter into the dark sarcophagus, but once you see what's in there, you're unable to hold back a gasp of surprise.";
@@ -394,7 +394,7 @@ instead of conversing Amuran:
 		WaitLineBreak;
 		say "     A deep, sorrowful sigh meets your questioning. 'My duty within this plagued city, ordained by my lord Horus, is to... locate an object that was... misplaced. An object that, luckily, was revealed by the chaos caused the scourge now rampaging throughout your homestead. That, in and of itself, would not be a difficult task; but the complexity of my order has deepened considerably. We divine servants, along with our natural abilities, are afforded conduits of energy, through which we channel our deities['] will; the same conduits which I falsely accused you of plundering. Mine, however, were displaced in my expedition to this place.' Amuran once again sighs deeply, visibly distressed at the situation. 'Without them, I am not within my full powers; I cannot leave this mystic sanctuary, either. The doors you so easily crossed keep me locked within, and without divine interference, I am trapped here.'";
 		say "     'And that, young one, is both who I am and what my task is. How long my undertaking shall last, I do not know. Intervention from my lord is needed for me to continue, but,' Amuran pauses for a moment, 'the gods are... flighty. Beseeching my lord will take time, but so do all things.' Taking a more postured and regal stance, Amuran crosses his arms across his chest and bows to you, apparently thanking you. 'I am grateful to you for the conversation, young one. As simple and self-pitying as it was, millennia have elapsed since I last spoke to a mortal. It has been invigorating.' Seemingly done speaking for now, Amuran ambles over to a spot in front of the glimmering pool, subsequently sitting down and assuming a meditative stance; if you had to guess, he's trying to talk to someone high up. Mulling the entire situation over in your head, you consider offering your help to the divine servant. Do you?";
-		if player consents:
+		if Player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
 			now Finding Winged Orb is active;
@@ -403,7 +403,7 @@ instead of conversing Amuran:
 			now AmuranAwoken is 3;
 	else if AmuranAwoken is 3:
 		say "     Finding Amuran once again deep in meditation, it seems that he has not done anything but meditate since you've last seen him. Thinking back to your last conversation, the offer to help him in his quest once again comes to the forefront of your thoughts. Do you bring up the offer to the divine insect-man?";
-		if player consents:
+		if Player consents:
 			say "[AmuranQuestAccept]";
 		else:
 			say "[AmuranQuestReject]";
@@ -412,9 +412,9 @@ instead of conversing Amuran:
 		say "     Swiftly rising to his feet, Amuran slowly brings his chitinous hands to rest on the gleaming scarab; the metal sigil immediately releases a blast of white light, visually exploding in the warm air of the sanctuary. When your vision returns, the sigil is gone! Amuran still stands in front of you, however; releasing a long, contented sigh, you can tell he's quite pleased with the turn of events.";
 		say "     'Many thanks to you, young one, for returning that which was lost. I have little of value to you, but power should suffice.' Instantly bringing a plated hand to your head, you feel energy surge through you, overwhelming your mind. Mere seconds later, you feel Amuran's hand leave your head; you take a few moments to steady yourself and figure out what was done to you. You think that he gave you some sort of divine ability; you feel much stronger mentally!";
 		say "[bold type]     Your perception, intelligence, and charisma have all increased by 1![roman type]";
-		increase charisma of player by 1;
-		increase intelligence of player by 1;
-		increase perception of player by 1;
+		increase charisma of Player by 1;
+		increase intelligence of Player by 1;
+		increase perception of Player by 1;
 		increase lust of Amuran by 1;
 		decrease carried of jade scarab by 1;
 	else if carried of winged sun is 1:
@@ -422,9 +422,9 @@ instead of conversing Amuran:
 		say "     Rapidly closing his chitinous hands over his sigil, beams of light begin to emanate from the emblem, shining out brilliantly in the warm air surrounding you. In a few seconds, a blast of orange light shoots out from the shining emblem; as the light fades, it seems that the sigil is gone. Standing in front of you is a contented-looking Amuran, stretching out happily in the shining rays of the sun.";
 		say "     'I extend my thanks to you, mortal, for bringing back that which belongs to me. There is nothing physical that I can give you in return, but I hope that power should do.' Rapidly putting an insectoid hand to your head, you feel bolts of divine energy shoot through you, soon overpowering your senses. Only seconds later, the bursts of energy end; Amuran removes his hand, and you take a few moments to gather your thoughts. Looking over yourself, you feel stronger, faster; it seems as if you were given a small blessing!";
 		say "[bold type]     Your strength, dexterity, and stamina have all increased by 1![roman type]";
-		increase strength of player by 1;
-		increase dexterity of player by 1;
-		increase stamina of player by 1;
+		increase strength of Player by 1;
+		increase dexterity of Player by 1;
+		increase stamina of Player by 1;
 		increase lust of Amuran by 1;
 		decrease carried of winged sun by 1;
 	else if lust of Amuran is 2:
@@ -433,7 +433,7 @@ instead of conversing Amuran:
 		say "     'Simply locate it and return it to my lord Horus, mortal. It will still take some time, unfortunately; while my gifts of seering have strengthened with the return of Horus's seals, the prevalence of untamed magic amongst this city has blocked much of my sight. I only know that it is located in a place of fire and smoke; a rampaging inferno amongst the ruins of civilization. I must find my way through this maze of stone and metal you call a city, in order to find this burning conflagration and complete my task.'";
 		WaitLineBreak;
 		say "     Having explored parts of the city, you could say that you are somewhat proficient in navigating the 'maze of stone and metal'. The opportunity to one again assist Amuran presents itself; do you want to help him complete his charge, or let him finish his task alone?";
-		if player consents:
+		if Player consents:
 			if Approaching the Capitol Building is known:
 				say "     As Amuran prepares to head out into the city, you once again grab his attention; you inform him that you (probably) know right where the relic is. In all of your explorations, there's only one place that you've found that matches what he described; the area around the Capitol building. Telling Amuran that it would be no problem to show him where it is, he stops and stares at you unwaveringly.";
 				say "     After a few seconds of Amuran glaring holes into your head, it seems that you may have offended him somehow. As you begin to apologize for your apparent slight, he rears his head back and starts laughing. After a few (more) seconds, he calms down, looking at you with the insectoid equivalent of a smile.";
@@ -467,6 +467,7 @@ instead of conversing Amuran:
 		say "     After a few days away, it seems that Amuran has returned. In the familiar position of calm meditation, it seems that Amuran has completed his assignment, and seems quite satisfied with the situation. Leisurely ambling up to the stoic beetle-man, you're quite curious as to the conclusion of his quest. Sensing your approach, Amuran casually stands up, visibly content, and dare you say, happy. Asking him how his search went, he leisurely responds, more relaxed than you've ever seen him.";
 		say "     'Well, young one. It took some nights, but I was able to locate the ashen ruins where the lost relic lay. Recovering Horus's ankh was simple enough, though the inhabitants of the heated world proved partly a nuisance; but they could not stand against Horus's light. The lost piece of Horus has been returned, and my lord is quite pleased with the situation; which, of course, pleases me to no end. I have been informed that my services will not be required for as long as Horus's foresight can see; as such, I am free for now. I believe I shall take many seasons to explore and investigate this world again; it has been aeons since I've done so. For manyith a time, young one, I must extend my gratitude for your assistance in recovering the lost sigils; without that, my task would not be done.' Crossing his arms and bowing to you, it seems that Amuran will remain on Earth for a long, long time (most likely for millennia after your death).";
 		now AmuranAwoken is 5;
+		now Sky Tower is active;
 		now HP of Amuran is 6;
 	else if AmuranAwoken is 2:
 		say "     'Have you made progress in your search?' Amuran says to you, his black eyes staring at you questioningly. Informing him that you've yet to find both conduits, Amuran gives you a nod before returning to his meditations.";
@@ -575,7 +576,6 @@ to say FinalQuestConclusion:
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
 	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the foreseeable future.";
 	now AmuranAwoken is 5;
-	now Sky Tower is active;
 
 to say AmuranSexMenu:
 	now calcnumber is -1;
@@ -583,7 +583,7 @@ to say AmuranSexMenu:
 	while XP of Amuran is 0:
 		LineBreak;
 		say "(0) [link]Nevermind[as]0[end link][line break]";
-		if player is female:
+		if Player is female:
 			say "(1) [link]Get Fucked[as]1[end link][line break]";
 			say "(2) [link]Get Stuffed - Anal[as]2[end link][line break]";
 			say "(3) [link]Jerk Him[as]3[end link][line break]";
@@ -635,13 +635,13 @@ to say AmuranBlown:
 	say "     It's quite a strange sensation, having the insect's cock stuffed in your mouth; with his cock being made of the same hard, plated material covering his form, the chitin is definitely a unique feeling. It's not at all unpleasant, however, and the pleasured sounds coming from your scarab beetle partner continue to goad you on, wanting to give the bug as best a climax as you can. Taking more and more of Amuran's segmented cock down your throat as you bob your head, you soon find that you've taken his entire length down your throat, your face level with a chitin plate at his groin. Finally taking a part in the activities, the bug-man above you brings two of his plated claws to your head, beginning to rub and knead gently, obviously quite worked up from your ministrations.";
 	WaitLineBreak;
 	say "     Surprisingly enough, Amuran's stamina is much greater than you thought, especially for someone who (likely) hasn't engaged in sex in a very, very long time. After a while, you figure it's been long enough, and use all of your talents to get the chittering scarab off. Licking over whatever exposed dick you can while sucking along his entire length finally brings him to the edge. Releasing a low groan while buzzing his wings wildly, Amuran shoots glob after glob of dense bug-sap down your throat, still caressing your head gently as he does. Eventually, after you've swallowed what feels like gallons of bug-juice, his flow of seed finally slows, just as he settles himself down. Languorously withdrawing his chitinous cock from your throat, you take deep gasps of air as a few weak spurts of insect-cream hit your face and mouth.";
-	say "     After a few moments of recovery, you unsteadily stand up, your stomach thoroughly full of savory seed and face covered with it. With a low, contented sigh, Amuran sags down, apparently somewhat exhausted. [one of]'Mm, thanks to you, young one. It looks as though you've learned some things from your stay here.' [or]'You mortals always seem to be experts in the art of pleasure, if my judgment is to be trusted. Thanks to you, mortal.' [or]Not saying anything, he scratches across your head lovingly, silently thanking you for your gift of bliss. [at random]Stepping up, [if scalevalue of player > 2]you give him a rough kiss on his cheek, returning his affections[else]you find yourself unable to reach his height; he, instead, crouches down, allowing you to give him a rough kiss on his cheek, showing your own passions[end if].";
-	if player is kinky:
+	say "     After a few moments of recovery, you unsteadily stand up, your stomach thoroughly full of savory seed and face covered with it. With a low, contented sigh, Amuran sags down, apparently somewhat exhausted. [one of]'Mm, thanks to you, young one. It looks as though you've learned some things from your stay here.' [or]'You mortals always seem to be experts in the art of pleasure, if my judgment is to be trusted. Thanks to you, mortal.' [or]Not saying anything, he scratches across your head lovingly, silently thanking you for your gift of bliss. [at random]Stepping up, [if scalevalue of Player > 2]you give him a rough kiss on his cheek, returning his affections[else]you find yourself unable to reach his height; he, instead, crouches down, allowing you to give him a rough kiss on his cheek, showing your own passions[end if].";
+	if Player is kinky:
 		say "     Gathering up your things, you lavishly gather up all of his seed splattered across your face, letting it dribble off your hand straight into your waiting mouth. Making absolutely sure he saw that, you give him a sensuous wave and a wink, telling him that you'll soon be back.";
 	else:
 		say "     Gathering up your things, you quickly clean yourself off, washing up in the pool of water conveniently present. Giving Amuran one last wave, you head out, wondering what other kinds of fun you could have with him.";
 	infect "Scarab Beetle";
-	increase libido of player by 20;
+	increase Libido of Player by 20;
 	now XP of Amuran is 1;
 	infect "Scarab Beetle";
 
@@ -649,56 +649,56 @@ to say AmuranJerkedOff:
 	say "     Taking the initiative and wrapping a hand around your scarab partner's rigid cock, his insectile chucklings are soon turned into chitters of pleasure as you run your hand over the ridged tool that Amuran has. Deciding to quickly pleasure the bug with your skillful hands, you massage up and down his motionless length, pleasured churrs being your reward. Bringing your other hand to meet its brother, the insect-man is soon quivering uncontrollably, his wings buzzing wildly in the warm air. Kneeling down in front of the shivering scarab, you continue to rub and caress his segmented tool, hands kneading every inch of his plated cock. Amuran's chittering continues to grow wilder as you pleasure him, his claws gripping the air repeatedly as his wings whirr constantly; your affections are very welcome, it seems.";
 	say "     Eventually, after what seems like forever, your talented ministrations bring the insect-man to a spectacular finish. With a low groan while his wings go into overdrive, Amuran blasts wave after wave of insect-seed out of his ridged dick, directly onto your waiting form. Feeling every throb of his bug-cock as each blast of cum splatters across your face and chest, you can't help but become more and more aroused as you get fully plastered in his celestial seed. Finally his flow of seed stops, though not after you've been fully painted white. Coming down from his orgasmic high, Amuran is greeted by the sight of you coated in his load; taking a moment to absorb the sight, the scarab's familiar chuckling soon returns. Slightly aggravated at his [']constant['] chuckling, especially after the (presumably) enjoyable handjob you just gave him, you irritatedly ask him what he finds so humorous.";
 	say "     'Nothing in particular, young one. It has just been a very long time since a mortal knelt before me like you do so now. Thanks to you, young one, for the gift of pleasure.' Offering the pool of water for your cleaning purposes, you take him up on the offer and clean yourself up as best you can. Gathering up your equipment, you throw the bug one last wave and wink before heading out, hoping to come back soon.";
-	increase libido of player by 15;
+	increase Libido of Player by 15;
 	now XP of Amuran is 1;
 	infect "Scarab Beetle";
 
 to say AmuranAnal:
 	say "     Knowing right where you want the bug, you tantalizingly remove all of your clothes, making sure every movement arouses him even more. Throwing your clothes to the side after your sensual show, Amuran watches you intently as you lay yourself back on the warm, sun-lit pool rim, displaying your ";
-	if player is herm:
-		say "[if cocks of player > 1]slick cocks[else]hardening cock[end if] and [if cunts of player > 1]dripping womanhoods[else]dripping cunt[end if]";
-	else if player is male:
-		say "[if cocks of player > 1]already-hard cocks[else]rock-solid cock[end if]";
-	else if player is female:
-		say "[if cunts of player > 1]feminine slits[else]cunt[end if]";
+	if Player is herm:
+		say "[if Cock Count of Player > 1]slick cocks[else]hardening cock[end if] and [if Cunt Count of Player > 1]dripping womanhoods[else]dripping cunt[end if]";
+	else if Player is male:
+		say "[if Cock Count of Player > 1]already-hard cocks[else]rock-solid cock[end if]";
+	else if Player is female:
+		say "[if Cunt Count of Player > 1]feminine slits[else]cunt[end if]";
 	else:
-		say "[bodydesc of player] thighs and ass";
-	say " to the lascivious celestial. [if player is not neuter]You have no intention of using your equipment, however; you have a different plan in mind. [end if]His pitch-black eyes roving over your prone form, you give Amuran a [']come hither['] expression as he eyes you; he quickly obliges, each step bobbing his cock in the warm air. Stopping just short of running you over, Amuran seems to be on the same train of thought as you; slowly lining his plated cock up with your rear, he grips your legs with his chitinous hands, steadying you against the ridged member pressing at your back entrance. Doing your best to relax, you reach out and stroke Amuran's chitinous chest, your touch wordlessly edging him on.";
-	say "     With a suddenness you're not used to seeing from the cautious, deliberate bug, you abruptly feel your rear filled with the first few inches of insect cock; you're unable to do anything but moan in pleasure at the sudden intrusion. Amuran churrs lowly as he enters you, your rear clenching down on his cock, gripping it ever so pleasurably. Stopping his advance into your back end, his solid cock throbbing sensually as he breathes; you're able to feel every one, all of them sending blasts of pleasure through your [bodydesc of player] self. You stay like that for a few moments, locked to the bug by the ridged dick spearing your rear";
-	if player is herm:
-		say ". [if cocks of player > 1]Your cocks standing rigid[else]Your cock rock-hard[end if] and [if cunts of player > 1]cunts already dripping[else]your slit already waiting to be filled[end if]";
-	else if player is male:
-		say ". [if cocks of player > 1]Your cocks solid in the warm air[else]Your dick rigid from all the pleasure you're feeling[end if]";
-	else if player is female:
-		say ". [if cunts of player > 1]Your pussies dripping and neglected[else]Your feminine gash wishing to be filled[end if]";
+		say "[bodydesc of Player] thighs and ass";
+	say " to the lascivious celestial. [if Player is not neuter]You have no intention of using your equipment, however; you have a different plan in mind. [end if]His pitch-black eyes roving over your prone form, you give Amuran a [']come hither['] expression as he eyes you; he quickly obliges, each step bobbing his cock in the warm air. Stopping just short of running you over, Amuran seems to be on the same train of thought as you; slowly lining his plated cock up with your rear, he grips your legs with his chitinous hands, steadying you against the ridged member pressing at your back entrance. Doing your best to relax, you reach out and stroke Amuran's chitinous chest, your touch wordlessly edging him on.";
+	say "     With a suddenness you're not used to seeing from the cautious, deliberate bug, you abruptly feel your rear filled with the first few inches of insect cock; you're unable to do anything but moan in pleasure at the sudden intrusion. Amuran churrs lowly as he enters you, your rear clenching down on his cock, gripping it ever so pleasurably. Stopping his advance into your back end, his solid cock throbbing sensually as he breathes; you're able to feel every one, all of them sending blasts of pleasure through your [bodydesc of Player] self. You stay like that for a few moments, locked to the bug by the ridged dick spearing your rear";
+	if Player is herm:
+		say ". [if Cock Count of Player > 1]Your cocks standing rigid[else]Your cock rock-hard[end if] and [if Cunt Count of Player > 1]cunts already dripping[else]your slit already waiting to be filled[end if]";
+	else if Player is male:
+		say ". [if Cock Count of Player > 1]Your cocks solid in the warm air[else]Your dick rigid from all the pleasure you're feeling[end if]";
+	else if Player is female:
+		say ". [if Cunt Count of Player > 1]Your pussies dripping and neglected[else]Your feminine gash wishing to be filled[end if]";
 	else:
 		say ". Blasts of pleasure overwhelming your mind";
 	say ", you wrap your legs around the bugman's chitinous body, locking the two of you together in an affectionate bond. Taking you up on your wordless offer, Amuran thrusts forward, burying his plated cock in your rear.";
 	WaitLineBreak;
 	say "     Your world goes blank, you being entirely unable to process [']anything['] that's happening. Storms of pleasure wrack your head as your ass is crammed full of bug-cock, the ridged dick utterly filling your rear. Your pleasured moans combine with Amuran's low churrs, combining into a cacophony of noise echoing throughout the sanctum. Within seconds, he begins slowly thrusting into you, withdrawing more and more of his ridged cock with each thrust. Within mere moments, he's pistoning rapidly into your rear, every drive making explosions go off in your head as gasps of joy escape your lips. Soon enough, the ability for logical thought leaves you, the only thing you can think about are the consecutive feelings of emptiness and fullness coming from your backside. You finally give up trying to follow what's happening; laying back down, you let your eyes roll into your head as Amuran thrusts swiftly into you, basking in the white-hot glow of pleasure. After a few more minutes of this, the dam finally bursts; with a wordless yell of pleasure, you hit your climax, ";
-	if player is herm:
-		say "[if cocks of player > 1]your cocks spraying your seed all across your stomach[else]blasting your load into the air[end if] while [if cunts of player > 1]your cunts gush femcum down onto the ground[else]your cunt sprays liquid onto the stone below[end if]";
-	else if player is male:
-		say "[if cocks of player > 1]your cocks shooting your seed everywhere[else]cock firing cum into the warm air[end if]";
-	else if player is female:
-		say "[if cunts of player > 1]your pussies spraying femcum onto the cock below them[else]cunt spasming wildly as it looks for something to grasp[end if]";
+	if Player is herm:
+		say "[if Cock Count of Player > 1]your cocks spraying your seed all across your stomach[else]blasting your load into the air[end if] while [if Cunt Count of Player > 1]your cunts gush femcum down onto the ground[else]your cunt sprays liquid onto the stone below[end if]";
+	else if Player is male:
+		say "[if Cock Count of Player > 1]your cocks shooting your seed everywhere[else]cock firing cum into the warm air[end if]";
+	else if Player is female:
+		say "[if Cunt Count of Player > 1]your pussies spraying femcum onto the cock below them[else]cunt spasming wildly as it looks for something to grasp[end if]";
 	else:
 		say "ass spasming wildly around the dick spearing it";
 	say ". Your convulsing body triggers the insect-man's own orgasm, a thrumming churr echoing out as he fills your bowels with bug-cum, filling you with both a cock and cum. You sag down completely, savoring the utter fullness residing in your stomach.";
 	say "     Letting loose one last groan, Amuran lethargically withdraws his cock from your rear, every second of it sending little bolts of pleasure through you. Finally, the whole of his cock is withdrawn, the last segment making you groan as it's removed. Letting you down, he takes a few steps back, stretching out as his cock retreats back behind a chitinous plate. After a few moments of resting peacefully on the warm stone below you, you heft yourself up, feeling your belly slosh with every movement. Contentedly gathering your gear, you give the bug-man a sensuous wink and letting him know that you might be back soon. Turning to head out, you're left with the low chuckles of the bug as you head out.";
 	now XP of Amuran is 1;
-	now libido of player is 0;
+	now Libido of Player is 0;
 	infect "Scarab Beetle";
 
 to say AmuranCuntStuffed:
-	say "     Looking over Amuran's chitinous, insectoid self, the desire to have him filling your [cunt size desc of player] cunt overwhelms you; quickly taking the initiative, you remove your clothes and throw them aside, revealing your [if breasts of player > 2][breasts of player]-titted[else][short breast size desc of player][end if] bosom to the warm air of the sanctum. Amuran watches you intently, enjoying the show you're putting on; chittering quietly, he [if AmuranAwoken is 6]ambles towards you[else]holds you closer[end if], his own desires awoken. [if AmuranAwoken is 6]Putting on a sensuous pose, you slowly wiggle yourself around as Amuran approaches you, giving him even more of a show as he walks up to you. With a sudden roughness that you wouldn't expect from him, he wraps his arms around your [bodytype of player] figure and lifts you off your feet; this brings him face-to-face with you, while also placing his ridged cock at your cunt, solid and throbbing[else]Shuffling you around while churring quietly, the bug-man lines up his prodigious, segmented cock up with your dripping slit, preparing for the fun to come[end if].";
-	say "     Bringing his head up next to yours, Amuran nuzzles your head appreciatively, his fuzzy antennae tickling your face. His chittering rapidly turns a deeper tone, as suddenly you find your [bodydesc of player] form impaled upon [if cunt length of player > 13]the entirety of his segmented cock, his insectile tool sending waves of incredible pleasure throughout your quivering body[else]some of his chitinous dick, each segment inside you rubbing your trembling walls perfectly[end if]. The insect-man, having slammed you down as far as he could, releases a low churr as he's overrun with pleasure; you, on the other hand, are unable to restrain blissful gasps as his thick tool rubs every inch of your gripping womanhood, the segmented cock filling you wonderfully.";
+	say "     Looking over Amuran's chitinous, insectoid self, the desire to have him filling your [cunt size desc of Player] cunt overwhelms you; quickly taking the initiative, you remove your clothes and throw them aside, revealing your [if Nipple Count of Player > 2][Nipple Count of Player]-titted[else][short breast size desc of Player][end if] bosom to the warm air of the sanctum. Amuran watches you intently, enjoying the show you're putting on; chittering quietly, he [if AmuranAwoken is 6]ambles towards you[else]holds you closer[end if], his own desires awoken. [if AmuranAwoken is 6]Putting on a sensuous pose, you slowly wiggle yourself around as Amuran approaches you, giving him even more of a show as he walks up to you. With a sudden roughness that you wouldn't expect from him, he wraps his arms around your [bodytype of Player] figure and lifts you off your feet; this brings him face-to-face with you, while also placing his ridged cock at your cunt, solid and throbbing[else]Shuffling you around while churring quietly, the bug-man lines up his prodigious, segmented cock up with your dripping slit, preparing for the fun to come[end if].";
+	say "     Bringing his head up next to yours, Amuran nuzzles your head appreciatively, his fuzzy antennae tickling your face. His chittering rapidly turns a deeper tone, as suddenly you find your [bodydesc of Player] form impaled upon [if Cunt Length of Player > 13]the entirety of his segmented cock, his insectile tool sending waves of incredible pleasure throughout your quivering body[else]some of his chitinous dick, each segment inside you rubbing your trembling walls perfectly[end if]. The insect-man, having slammed you down as far as he could, releases a low churr as he's overrun with pleasure; you, on the other hand, are unable to restrain blissful gasps as his thick tool rubs every inch of your gripping womanhood, the segmented cock filling you wonderfully.";
 	WaitLineBreak;
-	say "     Already reduced to a trembling mess, being speared on thick scarab-cock and such, you barely recover your composure before a sudden emptiness overwhelms you; languorously withdrawing himself from your [cunt size desc of player] slit, Amuran chitters and buzzes in pleasure as his cock scrapes against the walls of your cunt, reveling in the sensations of your [bodytype of player] form is giving him. Leaving just the first segment of his rigid dick buried in your juicy cunt, he holds the both of you there for a few moments; you're able to feel every minuscule throb of his chitinous cock, every quick beat of his buzzing wings as you're held still, pleasure filling you to the brim. Soon enough, and with a low churr, Amuran hilts himself in you as far as he can, replacing the gaping emptiness with a lovely fullness once again. Still hefting your [bodydesc of player] figure off the ground, the scarab-man soon begins thrusting into you rapidly, his apparent instinctual urges taking over. Every thrust of his ridged cock sends bolts of pleasure through your entire form, and you're soon left a panting, lustful mess in his chitinous claws.";
+	say "     Already reduced to a trembling mess, being speared on thick scarab-cock and such, you barely recover your composure before a sudden emptiness overwhelms you; languorously withdrawing himself from your [cunt size desc of Player] slit, Amuran chitters and buzzes in pleasure as his cock scrapes against the walls of your cunt, reveling in the sensations of your [bodytype of Player] form is giving him. Leaving just the first segment of his rigid dick buried in your juicy cunt, he holds the both of you there for a few moments; you're able to feel every minuscule throb of his chitinous cock, every quick beat of his buzzing wings as you're held still, pleasure filling you to the brim. Soon enough, and with a low churr, Amuran hilts himself in you as far as he can, replacing the gaping emptiness with a lovely fullness once again. Still hefting your [bodydesc of Player] figure off the ground, the scarab-man soon begins thrusting into you rapidly, his apparent instinctual urges taking over. Every thrust of his ridged cock sends bolts of pleasure through your entire form, and you're soon left a panting, lustful mess in his chitinous claws.";
 	say "     You can't keep track of anything as you're speared repeatedly, entirely unable to think of anything except for the blasts of pleasure coming from your speared cunt. His unearthly stamina revealing itself, your scarab partner thrusts into you continuously, seemingly intent on fucking you forever. Finally unable to handle the ocean of pleasure washing over you, you cry out wildly as your orgasm hits; gushes of your fluid soak his cock and the ground below you as your eyes roll to the back of your skull, mind going blank as your nerves are fried from pleasure. Your wild movements and spasming cunt prove to be too much for the ancient bug to handle, and with a loud series of chitters, globs of bug-sap well up from his chitinous form and hit your waiting womb, packing you full of Amuran's heavy seed. You can do nothing but moan incoherently as you both hit your peaks, savoring the fullness of your bug-stuffed cunt.";
 	say "     Both of you simultaneously letting out a contented sigh, one of Amuran's hands moves up to stroke your head absent-mindedly; hefting you up against his body, you both bask in the afterglow of your union. 'I did not believe you would desire me; I am glad to be proven wrong, young one,' he says after a moment, still churring quietly. Slowly removing his ridged tool from your well-creamed cunt, with every inch drawing weak gasps, the scarab-man finally untangles himself from you, setting you down on wobbly legs. Taking a few moments to regain your strength (after being held up for who knows how long), you rub your seed-stuffed stomach absent-mindedly, a wonderful feeling of warmth emanating from your womb. Leaning up, you give Amuran a kiss on his chitinous cheek, getting a soft churr as a response. Leisurely gathering up your equipment, you prepare to head out, feeling happy and content at the fullness residing in your belly.";
 	now XP of Amuran is 1;
-	now libido of player is 0;
+	now Libido of Player is 0;
 	infect "Scarab Beetle";
 
 Section X - Items

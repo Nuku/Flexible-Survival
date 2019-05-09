@@ -10,10 +10,10 @@ A pet has a text called assault.
 A pet has a number called lastfight. lastfight is usually 255.
 The player has a pet called companion.
 Definition: A person is lonely:
-	if companion of player is nullpet, yes;
+	if companion of Player is nullpet, yes;
 
 Definition: A person is not lonely:
-	if companion of player is nullpet, no;
+	if companion of Player is nullpet, no;
 
 before examining a pet (called x):
 	if debugactive is 1:
@@ -35,11 +35,11 @@ Dismissing is an action applying to nothing.
 understand "pet dismiss" and "dismiss" as dismissing.
 
 carry out dismissing:
-	if player is lonely:
+	if Player is lonely:
 		say "There is no pet around to dismiss.";
 	else:
-		say "[dismissdesc of companion of player]";
-		now companion of player is nullpet;
+		say "[dismissdesc of companion of Player]";
+		now companion of Player is nullpet;
 
 Calling is an action applying to one thing.
 
@@ -57,20 +57,20 @@ Carry out petcounting:
 		LineBreak;
 	else:
 		say "[list of tamed pets]";
-	if companion of player is nullpet:
+	if companion of Player is nullpet:
 		say "Active pet: NONE[line break]";
 	else:
-		say "Active pet: [companion of player][line break]";
+		say "Active pet: [companion of Player][line break]";
 	say "PET COMMANDS:[line break]";
 	say "[bold type]pet <name>[roman type] - Make the named pet your active one.";
 	say "[bold type]pet dismiss[roman type] - Stop using any pet for now.";
 
 carry out calling a pet (called x):
-	if companion of player is not x:
-		if player is not lonely:
-			say "[dismissdesc of companion of player]";
+	if companion of Player is not x:
+		if Player is not lonely:
+			say "[dismissdesc of companion of Player]";
 			LineBreak;
-		now the companion of player is x;
+		now the companion of Player is x;
 		say "[summondesc of x]";
 	else:
 		say "They are already your current companion.";

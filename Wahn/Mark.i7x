@@ -55,21 +55,21 @@ an everyturn rule:
 		[if TimekeepingVar is 1 or TimekeepingVar is -7:] [midnight - unused, Mark sleeps]
 		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Mark sleeps]
 		if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Mark gets up early]
-			if player is in Mall Foyer:
+			if Player is in Mall Foyer:
 				say "     Mark the polar bear comes strolling into the Mall Foyer from the south, dressed in his usual jeans and checkered flannel shirt. The large man has a heavy duty backpack strapped to his back and seems ready for a trip into the chaotic streets outside. But before he does so, Mark stops at the coffee shop that the wolverines have occupied as their local headquarters, chatting with the grumpy mustelids and even sharing a cup of coffee with them.";
 			move Mark to Mall Foyer;
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-			if player is in Mall Foyer and Mark is in Mall Foyer:
+			if Player is in Mall Foyer and Mark is in Mall Foyer:
 				say "     Finishing up his coffee and wishing the wolverines a safe day of keeping the Mall protected, Mark adjusts his backpack and leaves, setting out confidently into the chaos-riddled streets of the city.";
 			now Mark is nowhere; [stashed in another dimension]
 		[else if TimekeepingVar is 5 or TimekeepingVar is -3:] [noon - unused, Mark scavenges]
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon - unused, Mark scavenges]
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-			if player is in Mall Foyer:
+			if Player is in Mall Foyer:
 				say "     Coming in through the entrance to the north, Mark the polar bear arrives in the Mall Foyer, his backpack stuffed with the loot that he picked up out in the city during the day. Setting the heavy pack down on one of the tables in front of the coffee shop that the wolverines have occupied as their local headquarters, the large, white-furred man chats with the mustelids and even hands out some choice items from his backpack - a reward for keeping the Mall (and by extension, his boyfriend) safe, as he only half-jokingly says. Being offered a cup of coffee, Mark sits down and chats with the otherwise grumpy mustelids for a long while.";
 			move Mark to Mall Foyer;
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - unused, Mark spends time with Jay]
-			if player is in Mall Foyer and Mark is in Mall Foyer:
+			if Player is in Mall Foyer and Mark is in Mall Foyer:
 				say "     Finishing up his coffee and wishing the wolverines a quiet night, Mark picks his heavy backpack up and walks deeper into the Mall, soon vanishing into the bustling crowd of people.";
 			now Mark is nowhere; [stashed in another dimension]
 
@@ -168,7 +168,7 @@ to say MarkTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Learn more about him"):
@@ -216,15 +216,15 @@ to say MarkDinnerTalk:
 
 to say MarkDinnerInvite:
 	if thirst of Mark is 1: [single invite]
-		say "     As you bring up the dinner invitation, Mark smiles and nods, then gets up from where he is sitting and hefts the well-stuffed backpack onto his shoulder. 'Okay then, let's get going!' he says in a warm and companionable tone and leads you through the crowd of mall inhabitants, striding towards the food court. His partner Jay is already waiting there for Mark, standing up from a booth he was sitting in to welcome the polar bear with a kiss (after being lifted by strong, white-furred arms). 'We'll have some company for dinner today honey,' Mark explains to his lover when they pull apart again, nodding to you as he does so. 'Hello [if player is not defaultnamed][name of player][else]there[end if], nice to see you again and wanna have dinner with us,' the elf says to you, then asks Mark to put him down and goes to the nearest food counter to have a few words with one of the mall rats. Only a little while later, a large food carrier bag is pushed over the counter, to be picked up by Mark and carried off, with Jay and yourself following behind.";
+		say "     As you bring up the dinner invitation, Mark smiles and nods, then gets up from where he is sitting and hefts the well-stuffed backpack onto his shoulder. 'Okay then, let's get going!' he says in a warm and companionable tone and leads you through the crowd of mall inhabitants, striding towards the food court. His partner Jay is already waiting there for Mark, standing up from a booth he was sitting in to welcome the polar bear with a kiss (after being lifted by strong, white-furred arms). 'We'll have some company for dinner today honey,' Mark explains to his lover when they pull apart again, nodding to you as he does so. 'Hello [if Player is not defaultnamed][name of Player][else]there[end if], nice to see you again and wanna have dinner with us,' the elf says to you, then asks Mark to put him down and goes to the nearest food counter to have a few words with one of the mall rats. Only a little while later, a large food carrier bag is pushed over the counter, to be picked up by Mark and carried off, with Jay and yourself following behind.";
 		say "     'You haven't been at our place yet, have you?' Jay asks conversationally as the two of you walk in the wake of Mark's passage through the busy mall. 'We've managed to negotiate the use of one of the administration offices. Given the circumstances, it is pretty nice and private, as compared to just camping out in one of the stores.' Soon, the three of you arrive in the east wing and the elven man pulls a key from his pocket to unlock a fairly inconspicuous door between two stores. There is a 'Staff only' sign on it, and the doorknob apparently doesn't turn at all, making the key the only way to even open the door. Beyond lies a narrow service corridor, which has a stairway up to the second floor after a little bit. Your little group goes upstairs, passing an office or two until Jay and Mark guide you into a room that has been re-purposed as a kind of loft, with living arrangements and a salvage storage area.";
 		WaitLineBreak;
 		say "     Mark busies himself with putting away his backpack and fresh salvage, leaving you free to look around a little. Relatively spartan as it is, the place still is filled with the atmosphere of being someone's home, and you recognize the effort that the polar bear put into making things comfortable for both of them. For example, the Mall didn't include a furniture store, but there is a large coffee table set up in front of the row of windows overlooking the interior of the east wing of the Smith Haven Mall. Mark must have salvaged it from some place out in the city and carried it here, simply to give his partner a place to sit at without feeling small. A very large mattress dominates the back of the room, complete with an unruly pile of blankets and a few pillows. It is clear that the two of them do make regular use of that, and not just for sleeping.";
 		say "     'Come on, you can put down your stuff over there, then sit down. You're our guest so just relax and let us take care of everything,' Jay tells you, then guides you to the coffee table, where you sit down cross-legged while he sets the table, laying out napkins and your choice of chopsticks or cutlery. Sitting down on a footstool just the right height to act as a chair for his diminutive form, the Christmas Elf has a little bit of small talk with you until Mark joins in, sitting down on the ground. 'Dig in everyone,' he says cheerfully, opening the isolated bag and setting box after box of Chinese take-out on the table. The polar bear, elf and yourself have a pleasant dinner together, sharing various dishes between each other and leaving everyone very well-sated.";
 		WaitLineBreak;
 		say "     Afterwards, you have a little more conversation about general themes of the Mall and what is going on in the city, before Jay and Mark eventually call it a night when things wind down. With the elf smiling and saying, 'Thanks again for your help. It was nice of you to step in,' you are led out of their private place.";
-		now hunger of player is 0;
-		now thirst of player is 0;
+		now hunger of Player is 0;
+		now thirst of Player is 0;
 		now thirst of Mark is 2; [single invite done]
 	else if thirst of Mark is 2:
 		say "     ERROR: Mark shouldn't be offering you dinner after the initial invite got expended. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: thirst of Mark: [thirst of Mark]";
@@ -323,7 +323,7 @@ to say MarkScavengingTarget2: [hawkman nest]
 to say MarkScavengingTarget3:
 	say "     [one of]'In that building over there, people often come together for a swap meet. [or]'Back to the swap meet we go. [stopping]Places like this really are the only chance to get many items in this disaster-struck city, but with the state of things out here in the streets, there is always danger involved too. Criminals, ferals and the like,' Mark explains and puts a large paw-hand on your shoulder, giving it a friendly squeeze. 'I appreciate that you are coming along. Someone reliable by my side is worth a lot.' Setting out towards the meet's location, the two of you soon enter through an open rolling door, stepping into what looks like it was once a loading dock of a long-closed department store. A moderately sized group of people is scattered in the available indoor area, talking and bartering about who knows what. At least some of the trades going on have a sexual component too, judging from the slurping sounds of blowjobs audible from darker corners of the large room.";
 	WaitLineBreak;
-	say "     'Welcome back,' a somewhat squirrelly lizardman standing behind a rickety table says to Mark as the polar bear walks up to him, then glances at you with a calculating gaze. And then, he demonstrates the rather shocking feat of licking his own eyeballs with a long and flexible tongue, as if to see you better and more clearly after. 'Halvar, this is [if player is not defaultnamed][name of player][else]a friend of mine[end if],' Mark introduces the two of you to each other and you shake the trader's hand. He looks to be a kind of gecko, with mostly yellow scales and a blue stripe over his head and down the back. Quite a firm grip too, as the special ability of his hands makes them stick to yours until he peels it off again. 'My pleasure, always good to meet new customers,' the reptile tells you with a wide grin, then turns his attention back to Mark. The two of them begin to haggle about the trade-in for what your companion brought, and the items that he wants to receive in return.";
+	say "     'Welcome back,' a somewhat squirrelly lizardman standing behind a rickety table says to Mark as the polar bear walks up to him, then glances at you with a calculating gaze. And then, he demonstrates the rather shocking feat of licking his own eyeballs with a long and flexible tongue, as if to see you better and more clearly after. 'Halvar, this is [if Player is not defaultnamed][name of Player][else]a friend of mine[end if],' Mark introduces the two of you to each other and you shake the trader's hand. He looks to be a kind of gecko, with mostly yellow scales and a blue stripe over his head and down the back. Quite a firm grip too, as the special ability of his hands makes them stick to yours until he peels it off again. 'My pleasure, always good to meet new customers,' the reptile tells you with a wide grin, then turns his attention back to Mark. The two of them begin to haggle about the trade-in for what your companion brought, and the items that he wants to receive in return.";
 	if a random chance of 1 in 2 succeeds: [orc thugs]
 		say "     While Mark is busy trading, you let your attention wander through the room, checking out people, goods and the general vibe of the place. It certainly is fascinating to see all of the different species and forms of post-humanity present in this setting, interacting in a bazaar atmosphere. Some things that change hands are mundane, others weird and exotic, leaving you to wonder what might be presented next. About fifteen minutes into the negotiation between the lizardman and Mark, with them having made two piles on the table, adding and removing offered and requested items, you notice the mood of the swap meet shift suddenly. This is clearly brought on by two new arrivals in the building: two towering brutes with green skin, bulging muscles and cocky attitudes. Garbed only in loin-cloths and with their tusks on open display as they grin at people that give them worried glances, you have little trouble to recognize them as orc warriors.";
 		WaitLineBreak;
@@ -446,9 +446,9 @@ to say MarkSuitQuest:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure thing. Let's go!";
 		say "     ([link]N[as]n[end link]) - Night right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
-			say "     Telling the friendly polar bear that you want to help him arrange a very special evening for Jay leads to him throwing a thick, white-furred arm around your shoulders and giving you a squeeze. 'Thanks a lot, I really appreciate everything you've been doing for us [if player is not defaultnamed][name of player][else]my friend[end if]!' The large man is very eager to get going, so the two of you set out right away, leaving the Mall and starting your trip to the downtown area. Skirting around more than one pileup of multiple cars, trash heaps and all sorts of creatures that roam, hunt and rut in the area, Mark shakes his head and comments, 'Wow, this part of the city has really gone downhill. I know why I keep my scavenging mostly to the outskirts and residential areas. The city center is teeming with both ferals as well as the more ruthless looters that are mainly out for valuables.";
+			say "     Telling the friendly polar bear that you want to help him arrange a very special evening for Jay leads to him throwing a thick, white-furred arm around your shoulders and giving you a squeeze. 'Thanks a lot, I really appreciate everything you've been doing for us [if Player is not defaultnamed][name of Player][else]my friend[end if]!' The large man is very eager to get going, so the two of you set out right away, leaving the Mall and starting your trip to the downtown area. Skirting around more than one pileup of multiple cars, trash heaps and all sorts of creatures that roam, hunt and rut in the area, Mark shakes his head and comments, 'Wow, this part of the city has really gone downhill. I know why I keep my scavenging mostly to the outskirts and residential areas. The city center is teeming with both ferals as well as the more ruthless looters that are mainly out for valuables.";
 			say "     Eventually, the two of you reach a broad avenue on the west side of the downtown area and Mark raises one large paw to get you to stop. 'It's over there,' he says quietly and points out a clearly high-class restaurant with an all-glass front wall. Parts of it are frosted, to show the name 'Tati's' in large letters, as well as other decorative elements. The front door lies shattered into a million pieces on the sidewalk in front of the restaurant, a clear sign that tension-tempered safety glass was used - and that you're not the first people interested in the place. 'Let's hope they came and went already,' Mark says in a slightly nervous tone, but as you move closer, you can see that someone is inside the building, having what seems to be a bit of a party.";
 			WaitLineBreak;
 			say "     A group of hyenas is inside the restaurant, feasting and drinking like they own the place. Seems like the hyena gang is occupying Tati's! This might prove a dangerous hindrance to your plans, especially since the more than a few of them noticed your approach. Arriving at the shattered entrance of the restaurant, you see that there are more than a dozen herm hyenas inside, eating, drinking and having a good time. Most of them are standing around a table where an arm-wrestling competition is going on, or are downing shots of Mastica spirits at the bar. Another hyena is being openly rutted on top of a table in the back, still showing some physical characteristics of having been some sort of bunny before her recent recruitment into the gang. Besides the one fucking her, another hyena is standing in line to have a go next, slowly jerking his cock as he is eager to have a turn.";
@@ -473,14 +473,14 @@ to say MarkSuitQuest:
 			say "     'Welcome to Tati's,' Mark's deep voice suddenly says, with the polar bear stepping forward from where he had been standing behind the door. 'Your table is waiting, sir.' Jay draws in a breath as he looks at his husband, dressed in the waiter's uniform of the place where they met. Glancing back at you too a moment later, he sees your broad grin and bursts out, 'Aha! So you've planned this together! Totally got me, I have to admit.' Then Mark gently picks him up in his arms and happily says, 'Surprise,' followed by a deep kiss. Setting his lover back down, Mark guides Jay and yourself over to the table and bids you to sit down, then serves up an excellent meal of Romanian dishes, complete with a fancy entree and a savory main course. All three of you sit down and start to eat heartily, with Mark explaining the little adventure you and he went through to get the restaurant accessories. The two of them frequently hold hands while you eat, with Jay's hand almost vanishing in the much larger paw of his lover.";
 			WaitLineBreak;
 			project the figure of Jay_suit_quest_icon;
-			say "     Eventually, when the three of you have finished off all of the food and conversation has drifted on to some old stories of theirs being recounted for you, Mark clears his throat. 'So Jay, we've got another surprise for you. But I'll let our friend [if player is not defaultnamed][name of player] [end if]give it to you. After all, [SubjectPro of player] was the one who actually had it made.' With a grin to you, Mark nods towards a flat carton box that you quickly retrieve. Carrying it on both outstretched arms, you bring the box to the table and set it down in front of Jay. Visibly touched by yet another gift, the slender elf holds his breath and lifts the lid of the box. He swallows and then releases the gasp of air, then bursts out, 'Oh my god! Is that - yes, it is!' Lifting the jacket of his new suit out of the box, he runs a hand over the shiny black fabric and smiles broadly.";
+			say "     Eventually, when the three of you have finished off all of the food and conversation has drifted on to some old stories of theirs being recounted for you, Mark clears his throat. 'So Jay, we've got another surprise for you. But I'll let our friend [if Player is not defaultnamed][name of Player] [end if]give it to you. After all, [SubjectPro of Player] was the one who actually had it made.' With a grin to you, Mark nods towards a flat carton box that you quickly retrieve. Carrying it on both outstretched arms, you bring the box to the table and set it down in front of Jay. Visibly touched by yet another gift, the slender elf holds his breath and lifts the lid of the box. He swallows and then releases the gasp of air, then bursts out, 'Oh my god! Is that - yes, it is!' Lifting the jacket of his new suit out of the box, he runs a hand over the shiny black fabric and smiles broadly.";
 			say "     'It's perfect!' the elf says in a cheerful outburst, then lays the garment down carefully so he can stand up and peel the Christmas elf tunic and skin-tight green shirt off his body. The getup is carelessly thrown to the side and Jay slips the suit jacket on, closing its middle button over his slender, naked chest. 'Thank you so much!' a beaming Jay says to both of you, nodding to you and directing a lust-filled gaze at his husband. 'You don't know how much I missed being properly dressed.' Mark chuckles and nods his head, eyes resting on his lover's crotch, where a quickly hardening erection can be seen in the elf's skin-tight green leggings. 'Oh, I have a good guess if that's the indicator. Seems like it's time for dessert, my little hottie.' With that said, he starts to take off his waiter uniform, drawing Jay's full attention.";
 			WaitLineBreak;
 			project the figure of Jay_undies_icon;
-			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if player is not male]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
+			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if Player is not male]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
 			say "     The moment passes as Jay leans in to nibble Mark's furry ear a little and lets his hands wander over the large ursine's body. Mark replies in kind, and you're all but forgotten for now as the two of them start to make out and undress even further. Now actually making your way out of the room, you close the door behind you and start hearing moans from inside as you walk away. Leaving the polar bear and elf couple, you feel pretty good about yourself, not just because of the excellent meal filling your stomach, but also the good turn you arranged for your new friends. And maybe you'll make use of their other offer sometime too...'";
-			now hunger of player is 0;
-			now thirst of player is 0;
+			now hunger of Player is 0;
+			now thirst of Player is 0;
 			now thirst of Jay is 9; [suit delivered]
 			now the icon of Jay is Figure of Jay_suit_icon;
 		else:
@@ -498,7 +498,7 @@ to say TatiHyenaMenu:
 		now sortorder entry is 1;
 		now description entry is "Just make use of your matriarch status";
 	[]
-	if HP of player > 50:
+	if HP of Player > 50:
 		choose a blank row in table of fucking options;
 		now title entry is "Drink them under the table";
 		now sortorder entry is 2;
@@ -536,7 +536,7 @@ to say TatiHyenaMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Command them to step aside"):
@@ -567,7 +567,7 @@ to say TatiHyenaMatriarch:
 
 to say TatiHyenaDrinking:
 	say "     You step up to the bar and just grab a high chair for yourself, much to the amusement of the hyenas, who joke about how many glasses it will take before you keel out of your chair. Then the first round of shot glasses is filled, with you taking one of them in hand and throwing it back, feeling the potent liquor burn down your throat.";
-	let bonus be (( stamina of player minus 10 ) divided by 2);
+	let bonus be (( stamina of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Stamina Check):[line break]";
 	if diceroll + bonus >= 15:
@@ -582,7 +582,7 @@ to say TatiHyenaDrinking:
 
 to say TatiHyenaWrestle:
 	say "     You step up to the table with the arm-wrestling, focusing your attention on the bruiser of a hyena just demolishing a contender. The muscles of her arm bulge and flex as she holds her arm rock steady despite everything that the other hyena can do, until she thumps the back of their hand on the wooden table with a solid thunk that leaves the loser rubbing their smarting knuckles. As he stands up from the chair, you quickly move in and sit down yourself, kicking off a whole bunch of talk all around as the spectators start making bets (mostly against you). The arm-wrestling champion lets out a mocking laugh, then places her elbow on the table again, holding out a hand for you to take hold of.";
-	let bonus be (( strength of player minus 10 ) divided by 2);
+	let bonus be (( strength of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Strength Check):[line break]";
 	if diceroll + bonus >= 15:
@@ -597,7 +597,7 @@ to say TatiHyenaWrestle:
 
 to say TatiHyenaJuggle:
 	say "     You step up to the bar and just grab several empty shot glasses, then start juggling with them, sending the little things flying through the air in a high arch. Three glasses become four as you quickly snatch up another one, adding it to the glassware in the air and earning interested looks from some of the nearby hyenas. A small crowd forms around you and calls for even more glasses, or tricks being done rise in the group.";
-	let bonus be (( Dexterity of player minus 10 ) divided by 2);
+	let bonus be (( Dexterity of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Dexterity Check):[line break]";
 	if diceroll + bonus >= 15:
@@ -612,7 +612,7 @@ to say TatiHyenaJuggle:
 
 to say TatiHyenaCharm:
 	say "     Walking up to one hyena that seems to have some level of influence in their group, you strike up a conversation to negotiate access to the stuff you need.";
-	let bonus be (( Charisma of player minus 10 ) divided by 2);
+	let bonus be (( Charisma of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 15:
@@ -628,7 +628,7 @@ to say TatiHyenaCharm:
 to say TatiHyenaFuck:
 	setmonster "Herm Hyena";
 	say "     Walking up to the hyenas fucking their new recruit, you step next to the one jerking his own cock and waiting his turn. The horny guy opens his mouth to warn you off and say that he's up next, only to let out a burst of laughter as you pull your clothes off and bend over the table instead, presenting yourself for him. 'Seems like I'm done waiting,' he tells his companion and shares a fist-bump with them, then steps up behind you and rubs his shaft up and down between the buns of your ass. ";
-	if player is female:
+	if Player is female:
 		say "Proceeding to brush the dickhead further down, your hyena moans in pleasure as he touches the soft folds of your sex. He pushes into your pussy without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet pussy,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
 		infect "Herm Hyena";
@@ -661,7 +661,7 @@ Section 4 - Fucking
 [***********************************************************]
 
 instead of fucking the Mark:
-	if player is not male:
+	if Player is not male:
 		say "     Sniffing the air a little and glancing down to your crotch, Mark gives a rumbling sound from the depth of his broad chest as he clears his throat, then shakes his head. 'Sorry, but I'm gay. Not really interested in anything but men, at least in terms of sex....'";
 	else:
 		if thirst of Jay < 9:
@@ -687,7 +687,7 @@ to say MarkSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -710,7 +710,7 @@ to say MarkSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):

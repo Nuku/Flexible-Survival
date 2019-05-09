@@ -50,10 +50,10 @@ Instead of resolving a Raided Corner Store:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.";
 		if hyg is 4:
-			if the bodyname of player is "Herm Hyena" or facename of player is "Hyena Herm":
+			if the bodyname of Player is "Herm Hyena" or facename of Player is "Hyena Herm":
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.";
 				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
@@ -128,7 +128,7 @@ Instead of resolving a Strip Bar:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[stripbarsearch]";
 		else:
 			say "     You go off, deciding to find a safer place to search.";
@@ -140,7 +140,7 @@ Instead of resolving a Strip Bar:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[stripbarsearch]";
 		else:
 			say "     You go off, deciding to find a safer place to search.";
@@ -153,7 +153,7 @@ Instead of resolving a Strip Bar:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[stripbarsearch]";
 		else:
 			say "     You go off, deciding to find a safer place to search.";
@@ -192,7 +192,7 @@ to say stripbarsearch:
 		weakrandominfect;
 		randominfect; [researcher still gets one]
 		decrease score by 5;
-		decrease humanity of player by 5;
+		decrease humanity of Player by 5;
 	if T > 7:
 		say "Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. Clearly someone became something large and aggressive. The booze rack has been knocked completely over and the bottles are shattered. There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived. Well, better luck next time.";
 		increase score by 1;
@@ -229,9 +229,9 @@ Instead of resolving a Evangelist:
 	fight;
 	now battleground is "Red";
 	say "     Taking a quick breath, you look back to what remains of the man, but find him but another piece of the writhing mass of orgiastic sex. Only the tattered remains of his clothes let you spot him, he is shifting almost constantly as he is spit-roasted by a leopard guy at the front and a raccoon herm at the rear. Several others stroke their cocks, spraying cum all over him, and he seems to be loving it. Lost in the release of his long pent-up inhibitions, he has joined the mindlessly infected.";
-	if libido of player > 39:
+	if Libido of Player > 39:
 		say "     The sights, sounds and scents around you are becoming more and more cloying. You look around, seeing so many attractive pairings and trios of lustful animals. You are tempted to join them - to simply give in to the lustful mass and join the orgy.";
-		if libido of player > 74:
+		if Libido of Player > 74:
 			say "[orgyoutcome]";
 			increase score by 50;
 			now Evangelist is resolved;
@@ -240,7 +240,7 @@ Instead of resolving a Evangelist:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Join them.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if player consents:
+			if Player consents:
 				say "[orgyoutcome]";
 				increase score by 50;
 				now Evangelist is resolved;
@@ -256,47 +256,47 @@ to say orgyoutcome:
 	say "     Behind you, you feel soft paws grip your bottom and a rubbery squeak before a wet cock teases against your ass before mounting you. You moan around your mouthful of cock. From the corner of your eye, you see a brief flash of orange. You probably have one of those latex foxes at your rear. You can feel him pounding you hard and fast, eager to send his hot seed into you.";
 	say "     Your mouth is filled with a hot blast of juices from the ivory unicorn. You swallow it down eagerly between moans as the fox tries to stuff his knot fully into you. The unicorn is abruptly pulled away from you, still spurting as a large lion male moves to take hir place. He stuffs his cock into your mouth, facefucking you roughly. Though, in your lust-filled state, you certainly don't mind at all. And finally having that thick fox-knot locked inside you certainly helps as well.";
 	say "     After getting a bellyfull of tasty lionseed and the sated fox's knot shrinks enough to pop free, you look over to the cause of this wonderful sexcapade you've found yourself in. Seeing that the leopard has prevailed against the other prospective lovers, you lick your lips as you watch him plowing into the newly corrupted leopardess beneath him. They both yowl in feline ecstasy as he pumps his heavy load into her womb, seeking to breed his new mate. You consider heading over to join them, but spot the herm raccoon who was there earlier. Being much closer and currently unoccupied, you give hir a kiss, taking hir hard cock in hand. Shi moans in pleasure and wraps hir arms around you, returning the lustful kiss by sliding hir tongue between your lips.";
-	if player is herm:				[ HERM! ]
+	if Player is herm:				[ HERM! ]
 		say "     Deciding it's high time you tend to your cock, you guide the raccoon onto all fours and slide your cock into hir dripping pussy. Hir pussy grips you tightly as you plow into hir again and again. Surprisingly strong for hir size, you find shi's able to support your weight easily, freeing your hands to play with hir tits and cock while you fuck hir. Shi turns out to be a wonderful fucktoy, squealing and moaning in delight as you have your way with hir until finally spraying your hot load into hir. Hir heavy nuts drain their load onto the pavement as you pump hir cock while seeding hir, forming a large puddle of coonseed.";
 		say "     As you withdraw, you're pulled into the arms of a herm gryphon. Sitting you in hir lap, shi bounces you on hir hard pole. Then it's off to mount a lioness before sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
-	else if player is female:		[ FEMALE! ]
+	else if Player is female:		[ FEMALE! ]
 		say "     Deciding you want a taste of the thick coon meat, you bring your lips to it and start to suck it hungrily. The raccoon moans in pleasure, running hir hands over your head while your tongue slides up and down that tasty cock. Equipped with a heavy set of balls, you roll the gray-furred sac in your paws until they finally give up their thick load. You swallow it all down, feeling its warmth flowing into your belly.";
 		say "     As you move back, you're pulled into the arms of a pair of stallions. They appear to be from two different strains, one a large draft horse and the other a quarter horse. Pressing you between them, the pair take you in the pussy and ass at once, stuffing you so deliciously full of horse cock, and later horse cum. Once satisfied, the pair move on and you're joined by a herm gryphon to takes your messy pussy while you eat out a sexy lioness. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
-	else if player is male:		[ MALE! ]
+	else if Player is male:		[ MALE! ]
 		say "     Deciding it's high time you tend to your cock, you guide the raccoon onto all fours and slide your cock into hir dripping pussy. Hir pussy grips you tightly as you plow into hir again and again. Surprisingly strong for hir size, you find shi's able to support your weight easily, freeing your hands to play with hir tits and cock while you fuck hir. Shi turns out to be a wonderful fucktoy, squealing and moaning in delight as you have your way with hir until finally spraying your hot load into hir. Hir heavy nuts drain their load onto the pavement as you pump hir cock while seeding hir, forming a large puddle of coonseed.";
 		say "     As you withdraw, you're pulled into the arms of a lioness. Shoving you down, she wraps her muzzle around your cock while offering her pussy for you to lick. Your tongues please one another until you both reach a powerful climax. Then it's off to have a herm gryphon fill your ass again while sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
 	say "     This wild romp continues for hours, with numerous monsters sharing you or being shared by you. You quickly lose track of all the creatures you mate with and cycle through a myriad of positions and partners before it finally all falls apart from exhaustion. Your grip on your identity has been shaken from the intensity of the orgy, but you are quite sexually sated - for the time being.[randomimpreg][randomimpreg]";
 	LineBreak;
-	decrease humanity of player by 25;
-	decrease libido of player by 40;
-	if libido of player < 0:
-		now libido of player is 0;
+	decrease humanity of Player by 25;
+	decrease Libido of Player by 40;
+	if Libido of Player < 0:
+		now Libido of Player is 0;
 	randominfect; [4 different infections]
 	now researchbypass is 1;
-	increase monster by 1;
-	choose row monster from Table of Random Critters;
-	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from Table of Random Critters;
-		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+	increase MonsterID by 1;
+	choose row MonsterID from Table of Random Critters;
+	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+		increase MonsterID by 1;
+		choose row MonsterID from Table of Random Critters;
+		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;
-	increase monster by 1;
-	choose row monster from Table of Random Critters;
-	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from Table of Random Critters;
-		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+	increase MonsterID by 1;
+	choose row MonsterID from Table of Random Critters;
+	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+		increase MonsterID by 1;
+		choose row MonsterID from Table of Random Critters;
+		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;
-	increase monster by 1;
-	choose row monster from Table of Random Critters;
-	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from Table of Random Critters;
-		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+	increase MonsterID by 1;
+	choose row MonsterID from Table of Random Critters;
+	while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
+		increase MonsterID by 1;
+		choose row MonsterID from Table of Random Critters;
+		if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	infect;

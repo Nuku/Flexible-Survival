@@ -207,9 +207,9 @@ Section 4 - Endings
 
 
 when play ends:
-	if bodyname of player is "Cowboy":
-		if humanity of player < 10:
-			if level of player > 10:
+	if bodyname of Player is "Cowboy":
+		if humanity of Player < 10:
+			if level of Player > 10:
 				say "     A";
 			else:
 				say "     B";

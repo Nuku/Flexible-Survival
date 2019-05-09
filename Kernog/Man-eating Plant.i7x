@@ -2,7 +2,7 @@ Version 1 of Man-eating Plant by Kernog begins here.
 
 "Adds a man-eating plant creature to Flexible Survival's Wandering Monsters table. Works in the same fashion as the parasitic plant, adds a bound state."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 to say beattheplant:
 	if inasituation is false:
@@ -17,17 +17,18 @@ to say ManEatingPlantDesc:
 	else: [event]
 		say ""; [dealt with at the event source]
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Man-eating Plant"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Man-eating Plant"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beattheplant]"; [ Text or say command used when Monster is defeated.]
@@ -54,15 +55,15 @@ When Play begins:
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
 	now area entry is "Island"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 4; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 20; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 8; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 5; [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 4; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 20; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 6; [ Size of balls apparently ;) sneaky Nuku]
+	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 8; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 15; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 5; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "man-eating flower seed";
 	now lootchance entry is 33; [ Chance of loot dropping 0-100 ]
@@ -75,6 +76,97 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
 
 Section 3 - Alt Combat
 
@@ -91,8 +183,8 @@ this is the maneatingPlantCaptureInc rule:			[increasing likelihood of alt attac
 this is the maneatingPlantCapture rule:			[player capture alternative attack]
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 10; [resets alt attack probability]
-	choose row monster from Table of Random Critters;
-	let playernum be 150 + dexterity of player - libido of player + ( level of player * 2 );
+	choose row MonsterID from Table of Random Critters;
+	let playernum be 150 + dexterity of Player - Libido of Player + ( level of Player * 2 );
 	say "     One of the vines manage to coil around your arm. The plant begins to pull you towards its main body.";
 	if tempnum is 1, decrease playernum by 30;
 	let maneatingPlantcaught be 1;
@@ -115,7 +207,7 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
 		say "     With surprising power, the plant reels you in, like a fisherman. You lose your footing, and vines quickly take advantage to tie up your legs. Your legs are pulled into the plant's hole, and you feel the wet and squishy touch of its inner walls.";
-	if maneatingPlantcaught is 1 and HP of player > 0 and libido of player < 110:							[third attempt. -10 malus on playernum applies]
+	if maneatingPlantcaught is 1 and HP of Player > 0 and Libido of Player < 110:							[third attempt. -10 malus on playernum applies]
 		let playernum be a random number between 10 and playernum;
 		let maneatingPlantnum be a random number between 10 and maneatingPlantnum;
 		say "[special-style-1][playernum - 10][roman type] vs [special-style-2][maneatingPlantnum][roman type]: ";
@@ -123,8 +215,8 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
-		say "     The plant's body wiggles and contracts around your lower limbs, taking you further in. Soon, your waist is trapped into the plant. You feel the plant [if player is male]squeeze your cock[else]grind against your pussy[end if], involuntarily exciting you. Your time runs short.";
-	if maneatingPlantcaught is 1 and HP of player > 0 and libido of player < 110:							[caught and fighting. -20 malus on playernum applies]
+		say "     The plant's body wiggles and contracts around your lower limbs, taking you further in. Soon, your waist is trapped into the plant. You feel the plant [if Player is male]squeeze your cock[else]grind against your pussy[end if], involuntarily exciting you. Your time runs short.";
+	if maneatingPlantcaught is 1 and HP of Player > 0 and Libido of Player < 110:							[caught and fighting. -20 malus on playernum applies]
 	[		say "TEST: [playernum] vs [maneatingPlantnum]:[line break]"; ]
 		let playernum be a random number between 1 and playernum;
 		let maneatingPlantnum be a random number between 1 and maneatingPlantnum;
@@ -133,7 +225,7 @@ this is the maneatingPlantCapture rule:			[player capture alternative attack]
 		say "     In desperation, your legs kick frantically inside the plant. Your efforts pay off when the plant, under your struggle, decide to spit you out and weaken you a little more before attempting to swallow you.";
 		now maneatingPlantcaught is 0;
 	else if maneatingPlantcaught is 1:													[still caught]
-		say "     With one powerful contraction, the plant swallows your torso. [if breast size of player is 0]Your flat chest quickly follows[else if breast size of player <= 3]It takes the plant another suction to squeeze your [breast size desc of player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
+		say "     With one powerful contraction, the plant swallows your torso. [if Breast Size of Player is 0]Your flat chest quickly follows[else if Breast Size of Player <= 3]It takes the plant another suction to squeeze your [breast size desc of Player] mammaries inside, squeezing them against your chest[else]It takes the plant several more suctions to squeeze your [breast size desc of Player] inside, squeezing them against your chest[end if], and leaving only your neck free.";
 		say "     Another muscle spasm, and you slide down completely inside, while the plant closes shut after you. In complete darkness, you slide down the skin-tight feeding tube. The air coming from outside is now damp, and laden with a spicy smell which begins to make you excited. You eventually slide down to a small pouch, which stretches to welcome your body, before vacuuming around you, leaving only a small layer of drug-filled air for you to breathe. Your brain urges you to push or claw your way out, before it is too late.";
 		now fightoutcome is 23;
 		Lose;
@@ -150,39 +242,39 @@ to say ManEatingPlantVoreScene:
 	manEatingPlantVore;
 
 to manEatingPlantVore:
-	now lustatt is libido of player;
+	now lustatt is Libido of Player;
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
-		if HP of player > 0 or humanity of player < 50:
+		if HP of Player > 0 or humanity of Player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vacuum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if player is herm]various sexual fluids[else if player is male][cum load size of player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.";
-			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
-			now lustatt is libido of player;
+			say "     The silky touch of the plant's sack and the heavy pheromones in the air pushes you into a powerful climax. Your body, suspended into the vacuum-tight confines of the pod, is overtaken by several spasms, as you soak your prison with your [if Player is herm]various sexual fluids[else if Player is male][Cum Load Size of Player] discharge[else]vaginal juices[end if]. The fluids slowly pool down the pod, to be absorbed by the plant. You struggle to catch your breath, as you feel your sanity fade away.";
+			if Libido of Player > 25, decrease Libido of Player by (Libido of Player / 10) + 1;
+			now lustatt is Libido of Player;
 			if struggleatt is 1, now struggleatt is 0;
 			if struggleatt > 1, decrease struggleatt by 2;
 			if enduring is true:
-				decrease humanity of player by 8 + (psycheadjust * 2);
+				decrease humanity of Player by 8 + (psycheadjust * 2);
 			else:
-				decrease humanity of player by 15 + (psycheadjust * 5);
+				decrease humanity of Player by 15 + (psycheadjust * 5);
 		if (enduring is true and a random chance of 2 in 5 succeeds) or (enduring is false and a random chance of 4 in 5 succeeds):
-			increase hunger of player by 1;
-			increase thirst of player by 2;
+			increase hunger of Player by 1;
+			increase thirst of Player by 2;
 		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
-			increase thirst of player by 1;
+			increase thirst of Player by 1;
 		say "     You are trapped into the skin-tight confines of a man-eating plant's feeding pod. The silky-soft skin of the pod is keeping you vacuum-sealed inside the pod, preventing you from moving more than a couple of centimeters. The top of the pod is still open, letting a small stream of aphrodisiac-laced air reach your lungs. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
-		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
-		if humanity of player < 1:
+		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [maneatingPlantStruggleBar][line break][run paragraph on]";
+		if humanity of Player < 1:
 			now voreloss is true;
 			now Trixieexit is 1;
-			now bodyname of player is "Man-eating Plant";
+			now bodyname of Player is "Man-eating Plant";
 			end the story saying "Became plant nanite nutriment";
 		else:
 			let k be 0;
@@ -216,7 +308,7 @@ to manEatingPlantVore:
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
 				LineBreak;
 				if obliging is true:
-					say "     Basking in the pleasurable sensation of the vacuum seal over your skin, you grind your [if player is male]cock[else]pussy[end if] against your prison, while taking big breathes of the pleasure-inducing air circulating inside the plant.";
+					say "     Basking in the pleasurable sensation of the vacuum seal over your skin, you grind your [if Player is male]cock[else]pussy[end if] against your prison, while taking big breathes of the pleasure-inducing air circulating inside the plant.";
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					say "     Another maddening contraction around your groin has you deem your current efforts to be useless, and you decide to stop struggling.";
@@ -248,7 +340,7 @@ to say maneatingPlantStruggleBar:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Man-eating Plant":
+	if bodyname of Player is "Man-eating Plant":
 		say "     Three weeks after your capture, a military expedition lands on the island. As they progress through the forest, they come upon the plant that captured you. They watch with resignation at the outline of your body, trapped inside like many other victims before and after you throughout the island, unmoving and slowly digested by the plant. Sighing, the leader of the platoon signals one of the flamethrower-wielding troopers and has him burn the plant, the tree, and your half-digested, forever unidentified corpse.";
 
 Section 6 - man-eating flower seed
@@ -264,11 +356,11 @@ instead of sniffing man-eating flower seed:
 	say "As you take a sniff of the seed, you feel a sudden pang of hunger in your stomach. The effect leaves as quickly as it came.";
 
 to say man-eating flower seed use:
-	if playercanvore is false:
+	if Playercanvore is false:
 		say "     You muster all your courage, and throw the seed in your mouth, then gulp down. A violent stomach ache makes you double over, as the seed provokes a dramatic reaction in the nanites. A mutant stumbles upon your prone form, and run away as fast as they can when they notice the deadly glare in your eyes. [italic type]Food[roman type] the thought crosses your mind. The next couple of minutes are fuzzy. You remember lunging at the mutant and, after knocking him out, you start putting their feet in your mouth. Your mouth grows wide, wide, wide, as the mutant slowly descends in your stomach. When you return to full consciousness, the mutant is gone, and your stomach absurdly huge. You watch, fascinated, as you quickly digest your first prey, and your stomach returns to normal size.";
 		HungerReset;
 		say "You gained the [bold type]Vore Predator[roman type] feat.";
-		add "Vore Predator" to feats of player;
+		add "Vore Predator" to feats of Player;
 		now playercanvore is true;
 		increase vorecount by 1;
 	else:

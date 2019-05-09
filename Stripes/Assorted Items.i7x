@@ -19,43 +19,43 @@ the usedesc of nullo wafers is "[nullo wafers use]";
 
 to say nullo wafers use:
 	say "     Pulling out the box of cookies, you start by planning on having just a few, but something about their bland crunchiness has you keep eating until you end up polishing off the whole box. Maybe you were hungrier than you thought. Your tummy gives a bit of an upset rumble and a wave of cool tingles wash through you that flows down to your loins.";
-	if player is herm:		[HERM]
+	if Player is herm:		[HERM]
 		let cockgone be false;
 		let cuntgone be false;
 		let cockcountdown be false;
 		let cuntcountdown be false;
-		decrease cock length of player by 2;
-		decrease cock width of player by 1;
-		decrease cunt length of player by 2;
-		decrease cunt width of player by 1;
-		if cock length of player >= 10:
+		decrease Cock Length of Player by 2;
+		decrease ball size of Player by 1;
+		decrease Cunt Length of Player by 2;
+		decrease Cunt Tightness of Player by 1;
+		if Cock Length of Player >= 10:
 			decrease cock length by cock length / 8;
-		if cock width of player >= 10:
+		if ball size of Player >= 10:
 			decrease cock width by cock width / 8;
-		if cunt length of player >= 10:
-			decrease cunt length by cunt length / 8;
-		if cunt width of player >= 10:
+		if Cunt Length of Player >= 10:
+			decrease Cunt Length by Cunt Length / 8;
+		if Cunt Tightness of Player >= 10:
 			decrease cunt width by cunt width / 8;
-		if cock length of player <= 0 or cock width of player <= 0:
-			now cocks of player is 0;
-			now cock length of player is 0;
-			now cock width of player is 0;
+		if Cock Length of Player <= 0 or ball size of Player <= 0:
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
+			now ball size of Player is 0;
 			now cockgone is true;
-		if cunt length of player <= 0 or cunt width of player <= 0:
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
+		if Cunt Length of Player <= 0 or Cunt Tightness of Player <= 0:
+			now Cunt Count of Player is 0;
+			now Cunt Length of Player is 0;
+			now Cunt Tightness of Player is 0;
 			now cuntgone is true;
-		if cocks of player > 1 and a random chance of cocks of player in 5 succeeds:
-			decrease cocks of player by 1;
+		if Cock Count of Player > 1 and a random chance of Cock Count of Player in 5 succeeds:
+			decrease Cock Count of Player by 1;
 			now cockcountdown is true;
-		if cunts of player > 1 and a random chance of cunts of player in 5 succeeds:
-			decrease cunts of player by 1;
+		if Cunt Count of Player > 1 and a random chance of Cunt Count of Player in 5 succeeds:
+			decrease Cunt Count of Player by 1;
 			now cuntcountdown is true;
 		say "     Checking on your crotch, you watch as your dual-gendered genitals start to shrink. It is somehow a strangely arousing thing to experience and to watch";
 		if cockgone is true and cuntgone is true:
 			say ". Your tiny cock and cunt shrink and shrink until, with a wet quiver, they both disappear entirely. This leaves you completely genderless, your crotch bare but still strangely sensitive. After a few minutes, your arousal from the unusually erotic change fades, leaving you calmer... though you now lack an outlet for release should you become sexually excited again.";
-			now libido of player is libido of player / 3;
+			now Libido of Player is Libido of Player / 3;
 			say "[bracket]Note: A lot of game content lacks material for neuter players or will mistake them for one gender or the other. - The Mgmt[close bracket][line break]";
 		else if cockgone is true and cuntcountdown is true:
 			say "cock gone, lost a cunt and cunt shrunk";
@@ -81,14 +81,14 @@ the usedesc of libido pill is "[libido pill use]".
 
 to say libido pill use:
 	say "[line break]     You pop the sex drug into your mouth and swallow it. There's a slight medicinal taste to it, but you forget that as it quickly gets to work. Soon you're feeling hot and aroused, your libido climbing rapidly.";
-	increase libido of player by 15;
-	increase libido of player by a random number between 1 and 9;
-	decrease humanity of player by a random number between 1 and 3;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
-	if "Horny Bastard" is listed in feats of player, increase libido of player by 3;
-	if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 15;
+	increase Libido of Player by a random number between 1 and 9;
+	decrease humanity of Player by a random number between 1 and 3;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
+	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 3;
+	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 3;
+	if Libido of Player > 100, now Libido of Player is 100;
 	now heatdrive is 1;
 	drive heat;
 
@@ -123,7 +123,7 @@ check pillgiving someone (called x):
 	else if x is a pet:
 		if x is not tamed:
 			say "Who?" instead;
-		else if x is not companion of player:
+		else if x is not companion of Player:
 			say "I don't see them around right now. You'll have to call them over first." instead;
 		else if fuckscene of x is empty:
 			say "There's little point in giving a pill to them." instead;

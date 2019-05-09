@@ -21,7 +21,7 @@ Version 1 of Kyle by Qazarar begins here.
 [  99: GertyQuest refused                                    ]
 [ 100: GertyQuest failed                                     ]
 
-[ libido of Kyle                                             ]
+[ Libido of Kyle                                             ]
 [   0: not sexable                                           ]
 [   1: sexable                                               ]
 
@@ -50,14 +50,14 @@ Kyle is a man. The hp of Kyle is usually 0.
 [Physical details as of game start]
 ScaleValue of Kyle is 3. [human sized]
 SleepRhythm of Kyle is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Kyle is 1. [X cock]
+Cock Count of Kyle is 1. [X cock]
 Cock Length of Kyle is 7. [X Inches]
-Cock Width of Kyle is 5.
-Testes of Kyle is 2. [X balls]
-Cunts of Kyle is 0. [X pussy]
+Ball Size of Kyle is 5.
+Ball Count of Kyle is 2. [X balls]
+Cunt Count of Kyle is 0. [X pussy]
 Cunt Length of Kyle is 0. [X Cunt]
-Cunt Width of Kyle is 0. [X Cunt]
-Breasts of Kyle is 0. [X nipples]
+Cunt Tightness of Kyle is 0. [X Cunt]
+Nipple Count of Kyle is 0. [X nipples]
 Breast Size of Kyle is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Kyle is false. [can not take oversized members without pain]
@@ -93,7 +93,7 @@ instead of conversing the Kyle:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay and talk with the lizardman.";
 		say "     ([link]N[as]n[end link]) - Not right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[KyleIntroTalk]";
 			now KyleRelationship is 1;
@@ -107,7 +107,7 @@ instead of conversing the Kyle:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay and talk with the lizardman.";
 		say "     ([link]N[as]n[end link]) - Not right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[KyleIntroTalk]";
 			now KyleRelationship is 1;
@@ -157,7 +157,7 @@ to say KyleTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Talk to him about a relationship";
 	[]
-	if KyleRelationship is 10 and libido of Kyle is 0:
+	if KyleRelationship is 10 and Libido of Kyle is 0:
 		choose a blank row in the table of fucking options;
 		now title entry is "Having Sex";
 		now sortorder entry is 6;
@@ -187,7 +187,7 @@ to say KyleTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -243,7 +243,7 @@ to say KyleTalk4: [talk about his friend]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept the task.";
 		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
@@ -252,13 +252,13 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
 			now GertyQuest is 99;
-	if GertyQuest is 99: [if player refused before]
+	if GertyQuest is 99: [if Player refused before]
 		say "     Kyle looks at you pleadingly. 'Have you reconsidered looking for Gerty?'";
 		say "     [bold type]Do you tell him you'll look for Gerty?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept the task.";
 		say "     ([link]N[as]n[end link]) - No, it's too dangerous.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
@@ -283,7 +283,7 @@ to say KyleTalk5: [talk about relationship]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you'll date him";
 		say "     ([link]N[as]n[end link]) - No, not right now";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
 			now KyleRelationship is 6;
@@ -301,7 +301,7 @@ to say KyleTalk5: [talk about relationship]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you'll date him";
 		say "     ([link]N[as]n[end link]) - No, not right now";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Kyle looks incredibly happy. 'Oh, man, this is gonna be great. But what should we do...' He thinks for a moment, and looks through a few things at his table. 'Okay, I've got an idea. I don't really want to head too far out, so that cuts a lot of options. But let's meet up in the Mall Atrium, and go from there. Whenever you're ready I'll see you there, and we can do this.";
 			now KyleRelationship is 6;
@@ -312,8 +312,8 @@ to say KyleTalk5: [talk about relationship]
 
 to say KyleTalk6: [talk about banging]
 	say "     The lizardman seems to have some trouble properly responding to your questioning, stammering somewhat as he tries to answer. After a few moments, he pauses and properly collects himself, taking a few breaths. 'Okay, I hadn't really expected that. I probably should have, but somehow it still totally blindsided me.' He smiles, somewhat abashed. 'Despite how things mostly are nowadays, I haven't spent a lot of time thinking about that sort of thing. I've been far too shy when it comes to, well, sexual stuff. But there's nobody I'd rather do things like that with than you.' Kyle still looks somewhat embarrassed, but you can see his gaze is determined. 'With you, I'd be willing. Just make sure to take it slow, please.'";
-	if libido of Kyle < 1:
-		now libido of Kyle is 1;
+	if Libido of Kyle < 1:
+		now Libido of Kyle is 1;
 
 to say KyleTalk7: [ask for date]
 	if hp of Kyle is 0:
@@ -336,18 +336,18 @@ instead of fucking the Kyle:
 		say "     Kyle looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
 	else if (KyleRelationship < 3): [relationship not high enough]
 		say "     'Sorry, I'm not ready to just go and sleep with somebody I still don't know very well.'";
-	else if libido of Kyle is 0: [not convinced yet]
+	else if Libido of Kyle is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
 	else if thirst of Kyle is 0: [first time]
 		say "     When you broach the subject again, Kyle becomes visibly both nervous and excited. 'Okay, I think I'm ready for this. Let's head to the back room, okay?' The lizardman turns around and walks through the bookshop towards the back room, his pace faster than usual. Just as excited as Kyle, you follow. Once the two of you are together in the privacy of the rear area of the store, he turns back towards you. For a moment, he closes his eyes and breathes deeply. 'Alright, whenever you're ready.' You don't give Kyle the chance to be nervous, and you press right up against him, kissing him deeply. You put your arms around him, holding tight as he reciprocates. The intense lip locking is only broken occasionally to breathe.";
 		say "     You pull back slightly, and grin at Kyle. From his expression, you can tell he would be blushing if he were capable. At the same time, you let go of Kyle with one of your hands, and reach downwards to his pants. You take a few moments to fiddle with the button on the front as you make out with him, until eventually it comes open. Wasting no time, you grab the side of the waistline and yank, lowering his pants just enough that his now-hard member becomes partially visible. After that it is a simple task for you to reach in and quickly grasp his shaft, pulling it free of the legwear. For a time, you simply stand there, your hand wrapped around Kyle's reptilian cock, and your lips locked with his.";
 		WaitLineBreak;
-		if player is male: [for males and herms]
-			say "     Slowly you start to stroke the cock in your hand, pressing yourself more closely against Kyle. After a few moments of this, he relaxes slightly, and reaches downward himself, wrapping his scaled hand around your [cockname of player in lower case] cock, and beginning to match your pace. The two of you remain like that for a while, staring into each other's eyes as you each stroke the other's dick, mere inches away from each other. Soon enough, however, the arousal between the two of you grows stronger, and you each stroke faster, kiss harder, and push more deeply against the other. The friction heats up as you furiously masturbate each other, your cocks occasionally bumping against the other member.";
+		if Player is male: [for males and herms]
+			say "     Slowly you start to stroke the cock in your hand, pressing yourself more closely against Kyle. After a few moments of this, he relaxes slightly, and reaches downward himself, wrapping his scaled hand around your [cockname of Player in lower case] cock, and beginning to match your pace. The two of you remain like that for a while, staring into each other's eyes as you each stroke the other's dick, mere inches away from each other. Soon enough, however, the arousal between the two of you grows stronger, and you each stroke faster, kiss harder, and push more deeply against the other. The friction heats up as you furiously masturbate each other, your cocks occasionally bumping against the other member.";
 			say "     In the moment of heated action, you're pressing so hard against Kyle that he falls, and as entwined as you are, you fall as well. You knock a stack of books over, and land in the pile it creates, still close to the lizardman's body. Not deterred in the least, you resume your energetic stroking, and it's mere moments before Kyle decides to do the same, and you're back to the state you were in before, albeit on the ground now. Soon, however, the lust builds to a peak, and finally both you and Kyle climax, repeated spurts of seed leaping outward, and covering both of your chests, as well as a number of books. You begin to breathe more slowly, and can hear that Kyle is doing the same, as you each melt into a simple embrace, laying on the discarded books, and unaffected by the sticky fluids pressed between you.";
 			WaitLineBreak;
 			say "     Your rest is interrupted, however, by the sound of an opening door and a voice. 'Is everything alright back here? I heard a crash.' Looking towards the door, you have just enough time to see Beverly peeking her head in before she gasps and closes it again. After that, you can't help but chuckle, and soon Kyle does the same. 'Okay, I'll admit, this whole situation is pretty funny.' He looks down at you and the pile you're laying on. 'Though maybe we got slightly out of hand. Next time we'll have to be more careful.' Kyle stands up, and reaches down to pull you up with him. 'And there's definitely going to be a next time, love. That was fantastic, believe me.' The lizardman suddenly leans forward and kisses you. 'Now, get out of here. I'll clean up back here and try to calm down Beverly. See you again soon.' You nod, and after a parting hug, leave the bookstore back room.";
-		else if player is female: [female variant]
+		else if Player is female: [female variant]
 			say "     Sorry, this text is a placeholder. There is currently no scene here for female players.";
 		now thirst of Kyle is 1;
 	else: [ready for sex]
@@ -360,7 +360,7 @@ to say KyleSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -371,7 +371,7 @@ to say KyleSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the lizardman's reptilian shaft";
 	[]
-	if player is male: [only males and herms can fuck him]
+	if Player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;
@@ -394,7 +394,7 @@ to say KyleSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):
@@ -415,7 +415,7 @@ to say KyleSexMenu:
 	clear the screen and hyperlink list;
 
 to say KyleSex1: [oral on the player]
-	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding to the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of player in lower case] cock, and reaches below to tease your sack as well.";
+	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding to the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of Player in lower case] cock, and reaches below to tease your sack as well.";
 	say "     In no time at all, your pleasure peaks, and your shaft begins to pulse just as Kyle looks back up at you, sending strands of cum down the lizardman's throat. Just as they start to slow, he pulls back off of your dick, and the last few spurts end up on his face, and on his glasses. He stands up, and takes his glasses off, and wipes them off with a cloth from the nearby table before putting them back on. 'I hope you liked that, love. I certainly did, even if the cleanup might be a bit messy.' He steps forward once again, and plants a quick kiss on your lips. 'We've probably spent enough time back here for now though. Let's do this again sometime.' You nod, and the two of you head back out into the bookstore, though you can't help but notice Kyle still has a streak of seed on his cheek.";
 
 to say KyleSex2: [oral on Kyle]
@@ -428,7 +428,7 @@ to say KyleSex2: [oral on Kyle]
 	say "     Eventually he breaks off, and pulls back just enough that he can breathe. 'Thanks for that. You're a real treasure, love.' He smiles at you warmly, only looking away to gather his discarded pants, and slip them back on. Once he looks presentable again, he walks over towards the door. 'We're definitely going to have to do this again, you and me.' He gives a grin, and leaves the back room. You smile to yourself, and follow him.";
 
 to say KyleSex3: [Kyle fucked]
-	say "     Moments after you've entered the back room, Kyle has already stripped off his pants and thrown them off to the side. As you move closer, he directs you towards one of the chairs. 'Take a seat there, please.' You comply, and sit down. Kyle comes over to you, and reaches down, grasping your [cock of player in lower case] member, teasing it to full hardness with his scaled hands. Once you're fully erect, he leans in and gives it a single lick before standing up. Kyle steps forward, now standing over you, and sits down on your lap. With his new position, your dick is right behind him, pressed against his rear. The two of you lock eyes, as you sit together, and the lizardman speaks. 'Alright, I'm gonna take this slow, okay?'";
+	say "     Moments after you've entered the back room, Kyle has already stripped off his pants and thrown them off to the side. As you move closer, he directs you towards one of the chairs. 'Take a seat there, please.' You comply, and sit down. Kyle comes over to you, and reaches down, grasping your [cock of Player in lower case] member, teasing it to full hardness with his scaled hands. Once you're fully erect, he leans in and gives it a single lick before standing up. Kyle steps forward, now standing over you, and sits down on your lap. With his new position, your dick is right behind him, pressed against his rear. The two of you lock eyes, as you sit together, and the lizardman speaks. 'Alright, I'm gonna take this slow, okay?'";
 	say "     You nod, and Kyle lifts himself up slightly, and then back just enough that he is holding himself up above your erect cock. Slowly, he lowers himself downward, until the tip of your dick is pressed against his rear hole. The lizardman edges himself further down, spreading himself open around the head of your erection. You can feel his ring sliding down around your shaft, gripping you tightly as you sink deeper into him. After what seems like an eternity, he comes to a stop, sitting back on your lap again, the few inches change making all the difference in the world. You look into Kyle's eyes as he sits there, impaled on your cock, and he looks back into yours, and you can see that he is just as awash in pleasure as you.";
 	WaitLineBreak;
 	say "     Soon enough the pleasure intensifies as Kyle begins to properly ride you, rising up and down on your shaft. You can feel the warm tightness of his ass around you, the friction bringing ever greater sensations. The lizardman seems to be feeling similarly, as his bouncing pace increases, and he starts to let out moans, a slight peaking in the tone each time his cheeks slap back against your thighs. Time seems to get away from you, blurring into a sexual haze as Kyle continues to ride your cock like there's no tomorrow. Eventually the growing pleasure begins to surge, cutting through the haze, and bringing the scene back into sharp clarity just as you start to come. Your erection throbs, and you can feel yourself releasing deep into Kyle, as he holds himself pressed down all the way, taking your shaft completely. As you cry out in orgasm, Kyle follows soon after, his member jerking and firing spurts of seed across each of your chests.";
@@ -551,7 +551,7 @@ to say KyleDateMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "The Mall"):

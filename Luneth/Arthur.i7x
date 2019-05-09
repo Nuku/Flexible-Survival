@@ -10,14 +10,14 @@ Arthur	"Arthur"
 Arthur is a man.
 [physical details as of game start]
 ScaleValue of Arthur is 3. [human sized]
-Cocks of Arthur is 1.
+Cock Count of Arthur is 1.
 Cock Length of Arthur is 8.
-Cock Width of Arthur is 6.
-Testes of Arthur is 2.
-Cunts of Arthur is 0.
+Ball Size of Arthur is 6.
+Ball Count of Arthur is 2.
+Cunt Count of Arthur is 0.
 Cunt Length of Arthur is 0.
-Cunt Width of Arthur is 0.
-Breasts of Arthur is 2.
+Cunt Tightness of Arthur is 0.
+Nipple Count of Arthur is 2.
 Breast Size of Arthur is 0.
 [Basic Interaction states as of game start]
 PlayerMet of Arthur is false.

@@ -35,14 +35,14 @@ instead of going Northwest from College Walkway Northwest while CloudKnowledge i
 	now CloudKnowledge is 1;
 
 instead of going Up from College Belltower:
-	if bodyname of player is listed in infections of flightlist:
+	if bodyname of Player is listed in infections of flightlist:
 		say "     With a hard push you use your ability to fly to launch yourself into the air. When you do remove yourself from the ground your beginning flight is rather unsteady. You have to quickly correct your path so that you don't crash into the belltower itself. Once you're out of the turbulence of the tower you easily glide up to the fluffy white clouds. You reach them in no time, landing yourself on the vast expanse of surprisingly solid water vapor.";
 		move player to The Clouds;
 	else:
 		say "     You get a confused look on your face when you try to go up. What would make you think you could fly without wings or some infection that can do so without. So instead you shrug and remain where you are, unable to get to the clouds.";
 
 instead of going Down from The Clouds:
-	if bodyname of player is listed in infections of flightlist:
+	if bodyname of Player is listed in infections of flightlist:
 		say "     With a burst of speed you run before flipping yourself off the clouds. Your ability to fly kicks in right away allowing you to hover in place. Once you've gathered your bearings you begin a dive to the ground. It's not long before you gracefully land in front of the College Belltower, leaving you to continue on your journey.";
 		move player to College Belltower;
 	else:
@@ -81,14 +81,14 @@ Stewart is a man.
 [Physical details as of game start]
 ScaleValue of Stewart is 3. [human sized]
 SleepRhythm of Stewart is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Stewart is 1. [X cock]
+Cock Count of Stewart is 1. [X cock]
 Cock Length of Stewart is 7. [X Inches]
-Cock Width of Stewart is 4.
-Testes of Stewart is 2. [X balls]
-Cunts of Stewart is 0. [X pussy]
+Ball Size of Stewart is 4.
+Ball Count of Stewart is 2. [X balls]
+Cunt Count of Stewart is 0. [X pussy]
 Cunt Length of Stewart is 0. [X Cunt]
-Cunt Width of Stewart is 0. [X Cunt]
-Breasts of Stewart is 2. [X nipples]
+Cunt Tightness of Stewart is 0. [X Cunt]
+Nipple Count of Stewart is 2. [X nipples]
 Breast Size of Stewart is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Stewart is false. [can not take oversized members without pain]
@@ -169,7 +169,7 @@ to say StewartTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "College"):
@@ -197,8 +197,8 @@ to say StewartStudying:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, why not?";
 		say "     ([link]N[as]n[end link]) - No, you don't want to possibly see penises on a book.";
-		if player consents:
-			let bonus be (( intelligence of player minus 10 ) divided by 2);
+		if Player consents:
+			let bonus be (( intelligence of Player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
 			if diceroll + bonus >= 18:
@@ -208,8 +208,8 @@ to say StewartStudying:
 				say "     'W-what are you doing?' he stutters out. You quickly hush him and unbutton his dress pants. To your shock, he appears to go commando as you are quickly hit in the face with his above average dick, which leaves a trail of precum on your cheek. When you look up you see that Stewart is trying to not moan just from the cool air hitting his cock. You decide to give the harpy boy a hand, or in this case a mouth, as you swallow the tip of his manhood. This forces him to let out a strangled moan, which thankfully for him isn't too loud. Swirling your tongue around the head of his dick you moan as well, savoring the taste of your study partner's fluids. Briefly you pull off and lick a trail from his heavy balls to the tip before taking his prick back into your mouth.";
 				say "     This time around you decide to deepthroat his manhood, taking him all the way to the root. You hear Steward moan, but it sounds to be muffled. Looking up with his schlong still in your throat, you realize why. The harpy boy has currently stuffed his mouth with his fist and is biting down on it. Shortly after you look at him though, his breath hitches, possibly from seeing you stare at him while he's balls deep in your gullet. You try to convey your wishes for him to fuck your face. It takes a while but you manage to belay your desires to him as he gains a blissful look and removes his fist from his mouth before taking both of his hands and placing them on your head.";
 				WaitLineBreak;
-				say "     Quite soon after that he grips your head tightly and begins to thrust furiously into your throat. When the sounds of balls slapping against your chin and a dick going in and out of your mouth fill the room you wonder why nobody has noticed you two. But you quickly realize that they probably have but just don't care. So, instead you relish the feeling of the delicious cock entering and leaving your gullet rapidly, moaning whenever you taste his precum. [if player is not neuter]You begin to masturbate yourself rather determinedly, trying to reach your own orgasm, the gesture making you start to pant as well. [end if]However, soon Stewart's thrusts become much more frantic, which makes you realize that your sex partner is slowly reaching his peak, something that doesn't take too long to actually happen.";
-				say "     With a loud grunt, the harpy boy thrusts one last time before he starts spilling his copious load into your stomach. However, he has just enough cognitive functions to pull back and let the cum pool in your mouth. [if player is not neuter]Just as your partner finishes, you reach your own orgasm, grunting out loud as you ride it out. [end if]While the two of you would probably love to enjoy your post-coital bliss, you are in a public place so you promptly clean up and slide back into the chair next to him. 'Ah-uh that was nice....' he trails off, blushing rather hard. 'Um, if you want to help me later or something, you can see me in my room, I'm only there late at night though,' Stewart says. You ask him which dorm room his is. 'Oh! My room is immediately south as soon as you enter the building,' he tells you before he quickly gets back to work, you standing up.";
+				say "     Quite soon after that he grips your head tightly and begins to thrust furiously into your throat. When the sounds of balls slapping against your chin and a dick going in and out of your mouth fill the room you wonder why nobody has noticed you two. But you quickly realize that they probably have but just don't care. So, instead you relish the feeling of the delicious cock entering and leaving your gullet rapidly, moaning whenever you taste his precum. [if Player is not neuter]You begin to masturbate yourself rather determinedly, trying to reach your own orgasm, the gesture making you start to pant as well. [end if]However, soon Stewart's thrusts become much more frantic, which makes you realize that your sex partner is slowly reaching his peak, something that doesn't take too long to actually happen.";
+				say "     With a loud grunt, the harpy boy thrusts one last time before he starts spilling his copious load into your stomach. However, he has just enough cognitive functions to pull back and let the cum pool in your mouth. [if Player is not neuter]Just as your partner finishes, you reach your own orgasm, grunting out loud as you ride it out. [end if]While the two of you would probably love to enjoy your post-coital bliss, you are in a public place so you promptly clean up and slide back into the chair next to him. 'Ah-uh that was nice....' he trails off, blushing rather hard. 'Um, if you want to help me later or something, you can see me in my room, I'm only there late at night though,' Stewart says. You ask him which dorm room his is. 'Oh! My room is immediately south as soon as you enter the building,' he tells you before he quickly gets back to work, you standing up.";
 				now StewartRelationship is 2;
 				change south exit of Tenvale College Male Dorms to Stewart's Room;
 				change north exit of Stewart's Room to Tenvale College Male Dorms;
@@ -238,7 +238,7 @@ to say StewartSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Rim the cute harpy boy";
 	[]
-	if player is male: [one males and herms can do 69]
+	if Player is male: [one males and herms can do 69]
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Stewart";
 		now sortorder entry is 2;
@@ -261,7 +261,7 @@ to say StewartSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Eat his ass"):
@@ -300,11 +300,11 @@ to say StewartSex2:
 
 to say StewartSex3:
 	setmonster "Harpy";
-	say "     You decide against speaking and instead straddle the harpy boy's lap, grinding your ass against his clothed crotch. 'That sounds like a brilliant idea,' he murmurs, trailing his hands on your body, slowly taking off your clothes. When he manages to get them off, he tosses them in a pile on the floor, leaving your bare ass against his slowly hardening erection that's hidden behind his shorts. Not wanting to get straight to it, Stewart pulls you into a rough kiss, quickly pushing his tongue into your mouth. Both of you groan into the liplock, slowly losing yourselves to it. While this is happening, you are inhaling his musky male scent[if player is female], something that makes your pussy wet[else if player is male and cunts of player < 1], something that makes your dick begin to throb[end if].";
+	say "     You decide against speaking and instead straddle the harpy boy's lap, grinding your ass against his clothed crotch. 'That sounds like a brilliant idea,' he murmurs, trailing his hands on your body, slowly taking off your clothes. When he manages to get them off, he tosses them in a pile on the floor, leaving your bare ass against his slowly hardening erection that's hidden behind his shorts. Not wanting to get straight to it, Stewart pulls you into a rough kiss, quickly pushing his tongue into your mouth. Both of you groan into the liplock, slowly losing yourselves to it. While this is happening, you are inhaling his musky male scent[if Player is female], something that makes your pussy wet[else if Player is male and Cunt Count of Player < 1], something that makes your dick begin to throb[end if].";
 	say "     A couple of minutes into the make-out session you feel the harpy boy begin to ease his own clothing off, quickly tossing his shorts on top of the pile your own clothes are in. Now his hard dick is hotdogging your cheeks, leaking precum onto your backside. Stewart looks you in the eyes before giving you a soft smile. 'Are you ready for this?' he asks you, clearly caring for your well being. With a moan you let out a tone of assent, very eager for your coupling to begin. That response makes the harpy boy's smile widen even further before he kisses you roughly once more. Following that he grabs a hold of your hips and positions your ass so that the tip of his cock is against your pucker.";
 	WaitLineBreak;
-	say "     Slowly Stewart inches his cock into your hole, the stretching makes you moan as you are filled with his manhood. It doesn't take long for the harpy boy to bottom out, his balls now resting against your cheeks. Eager to get started, you grind your ass against his crotch, enjoying the sounds of his moans. Having been encouraged, the male begins to thrust in and out of your hole, his balls slapping wetly against your ass. [if player is male]Thankfully your partner manages to successfully find your sweet spot, making you leak even more precum from your cock. [end if]Both of you go at you rut for a while, both of you slowly edging towards your peaks. As the harpy boy approaches his orgasm his thrusts get wilder and wilder.";
-	say "     When Stewart finally reaches it, he slams into you one last time loosing his load into your hole. You moan at the feeling of being filled with his sperm, enjoying it thoroughly. [if player is female]The sensation sets you off, making you moan loudly in pleasure, causing you to spill your juices from your pussy. [else if player is male]The sensation sets you off, making you roar in pleasure as you spray your cum all over the two of you. [end if]Both of you let out sighs of joy, slumping onto the bed. The harpy boy cuddles up to you, letting his dick slip out of your ass. The two of you remain like that for an hour or so before you figure you should get going. When you get up, he smiles at you and thanks you for the fun.[mimpregchance]";
+	say "     Slowly Stewart inches his cock into your hole, the stretching makes you moan as you are filled with his manhood. It doesn't take long for the harpy boy to bottom out, his balls now resting against your cheeks. Eager to get started, you grind your ass against his crotch, enjoying the sounds of his moans. Having been encouraged, the male begins to thrust in and out of your hole, his balls slapping wetly against your ass. [if Player is male]Thankfully your partner manages to successfully find your sweet spot, making you leak even more precum from your cock. [end if]Both of you go at you rut for a while, both of you slowly edging towards your peaks. As the harpy boy approaches his orgasm his thrusts get wilder and wilder.";
+	say "     When Stewart finally reaches it, he slams into you one last time loosing his load into your hole. You moan at the feeling of being filled with his sperm, enjoying it thoroughly. [if Player is female]The sensation sets you off, making you moan loudly in pleasure, causing you to spill your juices from your pussy. [else if Player is male]The sensation sets you off, making you roar in pleasure as you spray your cum all over the two of you. [end if]Both of you let out sighs of joy, slumping onto the bed. The harpy boy cuddles up to you, letting his dick slip out of your ass. The two of you remain like that for an hour or so before you figure you should get going. When you get up, he smiles at you and thanks you for the fun.[mimpregchance]";
 	now lastfuck of Stewart is turns;
 
 Stewart ends here.

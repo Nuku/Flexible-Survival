@@ -58,7 +58,7 @@ to say TreeAscention1_Continue:
 
 to say TreeAscention2_Elevator: [reordered this before the other choice, since the other one continues on]
 	LineBreak;
-	now bodyname of player is "Elevator Plant";
+	now bodyname of Player is "Elevator Plant";
 	end the story saying "It seems you will never leave this building, and you don't appear to mind one bit. Your adventure is over.";
 
 to say TreeAscention2_Stairs:
@@ -119,11 +119,11 @@ to say TreeAscention4_Fight:
 		say "     After your last hit, the alpha feral wolf falls to the ground, knocked out. For a moment you fear that the rest of the pack might attack you in revenge, but the submissives are all looking down in fear, their tails tucked between their legs. Careful not to let down your guard, you start walking away, and although they keep staring at you until you are out of view, they don't follow. You keep progressing at a slow pace in case more of them are around, but when the path of footsteps you are following joins the one left by the scavengers who chose to go right, you feel like you made it. Looking at the footsteps of the way you came, you notice only now that there are less of them than when it started. Some scavengers were likely spotted by the wolves, and have now become wolves themselves. Luckily, you did not meet the same fate as those unlucky ones, and progress forward.";
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Having defeated you, the alpha wolf pounds you, closing his jaws around your neck, not strong enough to actually harm you, but definitely strong enough to send a message. Having no choice, you drop your weapon and surrender to him, to the delight of the excited submissives who all seem overjoyed to have a new pack member.";
-		now bodyname of player is "Ascension Wolf";
+		now bodyname of Player is "Ascension Wolf";
 		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 	else if fightoutcome is 30: [fled]
 		say "     When you realize that you fleeing is your best chance at making it out of here, you pretend to attack the alpha wolf, before turning away at the last second and run away as fast as you can. However, you realize how terrible an idea this was when the entire pack jumps you at the same time. Visibly, seeing you try to flee like a coward washed away any fear of you the submissives had, and you can only curse yourself as they drag you back to the waiting alpha. When they offer you to him, you realize a little too late that you lost your weapon while they were dragging you back, and are left defenseless in front of the feral wolf.";
-		now bodyname of player is "Ascension Wolf";
+		now bodyname of Player is "Ascension Wolf";
 		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 	say "     [after successful second floor]";
 
@@ -137,7 +137,7 @@ to say TreeAscention4_Sneak:
 		say "     Progressing as slowly as you can, you take one step after the other, stooping each time to make sure you don't hear any of the wolves move. Thankfully, you are sneaky enough to put some distance between you and the sleeping pack. You keep progressing at a slow pace in case more of them are around, but when the path of footsteps you are following joins the one left by the scavengers who chose to go right, you feel like you made it. Looking at the footsteps of the way you came, you notice only now that there are less of them than when it started. Some scavengers were likely spotted by the wolves, and have now become wolves themselves. Luckily, you did not meet the same fate as those unlucky ones, and progress forward.";
 	else:
 		say "     Progressing as slowly as you can, you take one step after the other, stopping each time to make sure you don't hear any of the wolves move. When you hear an unmissable sound, and realize that you messed up completely by stepping on a glass shard, you don't even have time to check if the wolves are awake before they jump you, pinning you to the ground under their weight. You feel a maw full of very sharp teeth close on your throat, not strong enough to actually harm you, but definitely strong enough to send a message. Having no choice, you drop your weapon and surrender. As another pack member drags your weapon away with their maw, the wolf threatening you releases their grip, and as you look up to them, there is no mistake that this is the pack's alpha.";
-		now bodyname of player is "Ascension Wolf";
+		now bodyname of Player is "Ascension Wolf";
 		end the story saying "It seems you will never leave this building, having found a new place in this world as the wolves['] bitch. Your adventure is over.";
 
 Tree Ascension ends here.

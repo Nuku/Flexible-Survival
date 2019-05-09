@@ -48,11 +48,11 @@ to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now pewtergenitalcap is 0;
 
 to wyvhumanityroll: [Pending a rename - it's used in all standard vore sanity rolls]
-	now tempnum is ((hunger of player + thirst of player) / 2) / 10;
+	now tempnum is ((hunger of Player + thirst of Player) / 2) / 10;
 	if tempnum < 1, now tempnum is 1;
 	let endurvariance be 1;
 	if enduring is true, now endurvariance is 2;
-	decrease humanity of player by (((5 * tempnum) + (psycheadjust * tempnum)) - 2 ) / endurvariance;
+	decrease humanity of Player by (((5 * tempnum) + (psycheadjust * tempnum)) - 2 ) / endurvariance;
 
 Section 2 - Templates
 

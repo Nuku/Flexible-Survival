@@ -82,7 +82,7 @@ to HellTrashEvent:
 to DemonicRitualTapeGet:
 	say "     With a quick dash, you approach the pile and get your hands down on the pile of torn boxes, empty cans, ragged clothes, and you're careful enough not to touch any of those odd stains you detect in the fabrics. Your efforts allow you to find something quaint, a small camera in the middle of the junk. You take it and see if it works. When you turn it on, it flickers and goes back to black with a loud 'click' sound. Despite your attempts to revive the device, it keeps refusing to work. However, you manage to recover a tape in relatively good conditions. Intrigued, you keep it to yourself, leave the broken camera behind and leave the place. Perhaps there is a way to watch this tape, provided you find some sort of working gadget able to play it...";
 	say "     [bold type]Demonic Ritual Tape has been added to your tape inventory![roman type][line break]";
-	add "Demonic Ritual Tape" to tapes of player;
+	add "Demonic Ritual Tape" to tapes of Player;
 	now resolution of Hellish Trashpile is 2;
 	now LastTrashSearchTurn is turns;
 

@@ -9,7 +9,7 @@ Version 1 of Joey by Qazarar begins here.
 [   4-9: towards warrior                                     ]
 [   10: warrior Joey locked in                               ]
 
-[ libido of Joey                                             ]
+[ Libido of Joey                                             ]
 [   0: naive Joey, not sexable                               ]
 [	1: warrior Joey, sexable                                   ]
 [	2: slut Joey, sexable                                      ]
@@ -24,14 +24,14 @@ Joey is a man. The hp of Joey is usually 3.
 [Physical details as of game start]
 ScaleValue of Joey is 3. [human sized]
 SleepRhythm of Joey is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Joey is 1. [X cock]
+Cock Count of Joey is 1. [X cock]
 Cock Length of Joey is 6. [X Inches]
-Cock Width of Joey is 4.
-Testes of Joey is 2. [X balls]
-Cunts of Joey is 0. [X pussy]
+Ball Size of Joey is 4.
+Ball Count of Joey is 2. [X balls]
+Cunt Count of Joey is 0. [X pussy]
 Cunt Length of Joey is 0. [X Cunt]
-Cunt Width of Joey is 0. [X Cunt]
-Breasts of Joey is 2. [X nipples]
+Cunt Tightness of Joey is 0. [X Cunt]
+Nipple Count of Joey is 2. [X nipples]
 Breast Size of Joey is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Joey is false. [can not take oversized members without pain]
@@ -47,7 +47,7 @@ AnalVirgin of Joey is true.
 PenileVirgin of Joey is true.
 SexuallyExperienced of Joey is false.
 MainInfection of Joey is "".
-The libido of Joey is usually 0.
+The Libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
 The conversation of Joey is { "<This is nothing but a placeholder!>" }.
 The scent of Joey is "     Joey has a nice, furry scent.".
@@ -58,9 +58,9 @@ to say JoeyDesc:
 Section 2 - Talk
 
 instead of conversing the Joey:
-	if libido of Joey is 0:
+	if Libido of Joey is 0:
 		say "     As you walk up to Joey, he brightens and smiles at you. 'Hey coach, what's up?'";
-	else if libido of Joey is 1:
+	else if Libido of Joey is 1:
 		say "     As you walk up to Joey, he gives a confident grin. 'Hey coach. Up for some more training?'";
 	else:
 		say "     As you walk up to Joey, he gives a seductive smile. 'Hey coach, is it time for more training?'";
@@ -96,7 +96,7 @@ to say JoeyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -113,9 +113,9 @@ to say JoeyTalkMenu:
 	clear the screen and hyperlink list;
 
 to say JoeyTalk1: [talk about him]
-	if libido of Joey is 0:
+	if Libido of Joey is 0:
 		say "     After you ask, it doesn't take long before Joey gives you an answer. 'The day of the incident, I was attacked by one of those feral catgirls on my way home, and I barely got away. After seeing what happened to me, and what else was out there, I was terrified of everything outside, and stayed cooped up where it would be safe. Eventually though, I got tired of hiding, and decided to stop being scared anymore. But it's hard to explore and leave safety when I can barely handle even the weakest things out there. And now I've got you to train me!' He smiles at you. 'Looking forward to it, coach!'";
-	else if libido of Joey is 1:
+	else if Libido of Joey is 1:
 		say "     'After all that training, I feel like a whole new person. I was never this strong or confident before. I like it. And I know I have you thank for it. If you ever need anything, be sure to ask.'";
 	else:
 		say "     Joey looks up at the ceiling for a moment, thinking. 'I used to want to be strong, so that nobody could push me around. Looking back, though, it seems so silly. Now I know that what I really wanted was to be pushed around more, and shown how weak I actually was.' He looks directly at you, and smiles impishly. 'So thanks for showing me what a huge slut I was deep down. Who knows how much longer it might have taken me to figure it out on my own, only getting railed by some of the massive cocks out there, instead of all of them?'";
@@ -129,7 +129,7 @@ instead of fucking the Joey:
 	say "     'I don't know, maybe we should just focus on my training right now.'";
 	[if (lastfuck of Joey - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Joey looks somewhat apologetic. 'Sorry, I'm still worn out from last time. You're almost more than I can handle. Definitely later though.'";
-	else if libido of Joey is 0: [not convinced yet]
+	else if Libido of Joey is 0: [not convinced yet]
 		say "     'I know you pretty well now and all, but I don't think I'm quite ready for that.'";
 	else: [ready for sex]
 		say "     As you ask about getting intimate, Joey immediately looks interested, and waits for you to say more.";
@@ -142,7 +142,7 @@ to say JoeySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -153,7 +153,7 @@ to say JoeySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Taste his feline shaft";
 	[]
-	if player is male: [only males and herms can fuck him]
+	if Player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the catboy";
 		now sortorder entry is 3;
@@ -171,7 +171,7 @@ to say JoeySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):
@@ -212,7 +212,7 @@ instead of resolving a Stray Catboy:
 	say "     While exploring the area, your attention is drawn by the sounds of battle. Curious about what is going on, you head in that direction, rounding a corner just in time to see the end of the fight, with a short feline lying prone on the ground, clearly worse for wear, and a feral wolf looming over him. From the rigid member hanging below the wolf, you can clearly tell what is about to happen. If you stepped in, you could almost certainly do something.";
 	say "     [bold type]Do you want to save the cat from their fate?[roman type][line break]";
 	LineBreak;
-	if player consents: [Protecting Joey]
+	if Player consents: [Protecting Joey]
 		LineBreak;
 		now inasituation is true;
 		now fightoutcome is 0; [reset]
@@ -221,7 +221,7 @@ instead of resolving a Stray Catboy:
 			say "     With the feral wolf defeated, you turn your attention to the feline on the ground, who is only just starting to climb to their feet. No longer occupied in battling the mutant, you notice much more detail about the cat before you. They are a little shorter than most you see around the city, and their overall features seem somewhat feminine, though the completely flat chest makes it more difficult to say for certain. That, combined with the slight bulge visible around his crotch, leads you to assume the feline is male. Finally the feline seems to gather his wits, and looks at you. 'Can you teach me?' You're thrown off slightly by the sudden statement, but before you can respond, he speaks again. 'Okay, let me try that again. I'm Joey, and I'm sick of getting beaten up by everything in this city. You really seem to know what you're doing, can you train me, please?' The catboy looks at you pleadingly.";
 			say "     [bold type]Do you want to train Joey?[roman type][line break]";
 			LineBreak;
-			if player consents: [Agreeing to train Joey]
+			if Player consents: [Agreeing to train Joey]
 				say "     You nod, and tell the catboy that you will help train him. He claps his hands together, and looks at you expectantly. 'Fantastic! I can't wait to learn from someone as awesome as you.' He darts forward and hugs you, his head against your shoulder. 'If you have space for me, I'll come with you, so that you can train with me as often as possible. The best would be somewhere higher up, if there's a spot like that.' After several minutes of Joey expressing thanks and clinging to you, you finally get on your way, taking him to the library.";
 				now hp of Joey is 1;
 				move Joey to Grey Abbey 2F;
@@ -287,7 +287,7 @@ to say JoeyTraining: [Training Joey] [{]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "A Latex Fox"):
@@ -308,14 +308,14 @@ to say JoeyTraining: [Training Joey] [{]
 	clear the screen and hyperlink list;
 
 to say FoxTraining:
-	say "     Your choice made, you take Joey out into the city in search of a monster you know he can defeat. Slipping through the streets until you find the signs of your target, Joey eagerly following behind[if libido of Joey is 1]. As you go, you give him as much advice as you can about combat, and the basics. When you think he has the basics down, you focus fully on finding your target[end if]. Once you manage to track down a latex fox, it's time for your student to take the lead. You tell him what to do, and he nods, approaching the fox.";
+	say "     Your choice made, you take Joey out into the city in search of a monster you know he can defeat. Slipping through the streets until you find the signs of your target, Joey eagerly following behind[if Libido of Joey is 1]. As you go, you give him as much advice as you can about combat, and the basics. When you think he has the basics down, you focus fully on finding your target[end if]. Once you manage to track down a latex fox, it's time for your student to take the lead. You tell him what to do, and he nods, approaching the fox.";
 	WaitLineBreak;
-	if libido of Joey is 2 or hp of Joey is 0: [Slut option only]
+	if Libido of Joey is 2 or hp of Joey is 0: [Slut option only]
 		say "     At this point, Joey abandons all pretense of training, showing what he is really here for. He comes out into the open by the fox, and calls out to it to get its attention. When the latex creature looks his way, turns the opposite direction, and gets on all fours. He looks over his shoulder back at the fox, and gives his best cute wiggle, showing off his ass in the tight shorts he is wearing. The fox's interest is clearly piqued, and it starts walking to the kneeling catboy. As it advances, Joey continues to give it something of a show, reaching back behind him with one hand and starting to pull down his shorts, wiggling all the while, until they were just far enough down for his hole to be clearly on display for the vulpine behind him.";
 		say "     From there it is only moments before the fox gives him what he so dearly wants, getting into a mating position above him, and prodding the head of its shaft up against his taint as it searches for the right spot. Joey has begun exhaling groans of pleasure already, the simple anticipation of what is coming enough to arouse him incredibly, but is not so out of it that he can't use his free hand to guide the fox into place, putting the tip right up against his puckered star. Without warning, the fox humps forward, driving the cock into the feline below it, causing the cat to let out a pleasured yelp, before settling into more of a rhythmic series of moans and groans as the latex creature begins fucking him in earnest. As the fox humps him repeatedly, Joey also reciprocates the motion, pressing himself backwards onto the dick with each motion.";
 		say "     At last it comes to an end, as the fox presses right up against Joey, releasing a wave of seed into the depths of the catboy. At the same time, the tent in the front of his tight shorts seems to bob up and down, with the tip of that bulge soaking through. It seems the catboy came from the sensation of having his slutty ass filled with fox cum. Eventually the fox pulls out, and scampers off back into the city, leaving Joey in the same state you found him so long ago, prone on the ground. This time, however, he is truly the way his is meant to be, basking in the pleasure of the act he has just finished, and his needy hole dripping streaks of white. You smile, knowing you were the one who unleashed his inner slut. Time to let him enjoy it for a few more minutes before you bring him back to the library.";
-		if libido of Joey < 2:
-			now libido of Joey is 2;
+		if Libido of Joey < 2:
+			now Libido of Joey is 2;
 	else:
 		say "     Joey springs into action, rushing at the fox for a surprise attack, and sending it reeling when it connects. Following what he's learned from you, he doesn't give the fox a chance to recover, as he keeps attacking it. Soon enough the fox whimpers, and Joey lets up, allowing it to run away[if hp of Joey is 3]. Joey seems pleased at his first victory, and the fact that he was able to win that fight on his own[end if]. Joey returns to where you stood, watching the fight, ready to listen to what you have to say about it. You tell him he did well[if libido is 0], but point out what you noticed that could maybe help him improve[end if], and then bring him back to the library, training concluded for the moment[if hp of Joey is 4]. Next time, you think he'll be ready to face something harder[end if].";
 		if hp of Joey < 4:
@@ -370,7 +370,7 @@ to say MinotaurTraining:
 		say "     The victorious warrior smirks, and presses his clothed crotch up against the minotaur, rubbing the covered erection up against his muzzle. The bestial creature seems resigned to the action and his defeat, making no move to stop him. Following that, Joey unbuttons his shorts, freeing his average cock, and drapes it onto the minotaur's face, simply leaving it there for a few moments. Soon enough the catboy persuades the minotaur to act, and the bull begins to service the prick before him, licking it slowly, and taking it into his large mouth with ease. For several minutes, Joey is content to let the creature work, but as he nears his climax, he takes matters into his own hands. He grabs the minotaur by the horns, and starts fucking his mouth, slamming in and out much more rapidly than before. The increased pace pays off soon, with Joey releasing his load into the bull's maw. Finally he lets go, and leaves the defeated minotaur where he lies, before returning over to you, victorious. Now you have nothing left to teach him.";
 		if hp of Joey < 10:
 			increase hp of Joey by 1;
-			now libido of Joey is 1;
+			now Libido of Joey is 1;
 [}]
 
 Joey ends here.

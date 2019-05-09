@@ -12,16 +12,16 @@ Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 The sarea of Mysterious Stranger is "Outside".
 
 Instead of resolving a Mysterious Stranger:
-	say "     'Hey, you over there with the [facename of player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
+	say "     'Hey, you over there with the [facename of Player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
 	WaitLineBreak;
-	say "     'Say, you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if player is male]him[else]them[end if] up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them, you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
+	say "     'Say, you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if Player is male]him[else]them[end if] up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them, you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
 	WaitLineBreak;
 	say "     'Don't worry. It's not dope or anything like that - though something stronger than a gin and tonic might be a necessity in these strange times. Let's just call these little joys...[italic type]stamina boosters[roman type] and leave it like that.' The man chuckles at you from underneath the shade of the black detective hat that he has draped onto his head before picking up his pack and then slinging it over his shoulder. 'Be seeing you around.' And with that the other is gone. Not sure you blink as you watch the other go off about his way before shaking your head as you realize just where you are at the moment.";
 	WaitLineBreak;
 	say "     Pocketing the capsules, you hurry off on your way before anything can come from out of the shadows to try and accost you.";
-	Add "Capsule" to invent of player;
-	Add "Capsule" to invent of player;
-	Add "Capsule" to invent of player;
+	Add "Capsule" to invent of Player;
+	Add "Capsule" to invent of Player;
+	Add "Capsule" to invent of Player;
 	now Mysterious Stranger is resolved;
 	Increase score by 1;
 
@@ -64,10 +64,10 @@ Instead of resolving a Air Drop:
 	say "     When the hook the container is attached to the hook is suddenly unclasped, probably by means of remote, you watch as the crate sails down and then crashes onto a cleared out area on the ground. Looking back up and watching as the whirlybird heads off in the direction it just came from you hear the screech of a flock of wyvern just before seeing several flying reptiles honing in on the helicopter. When the sounds of gunfire begin to assault the air you whimsically shake your head before heading over to have a look at what exactly the whirlybird just dropped off.";
 	WaitLineBreak;
 	say "     Upon getting to the container you find yourself flipping open the latch holding the doors of the crate closed on a whim and then gasp in awe as you find yourself looking at a plethora of food and water stacked to the brim before you. As your mind goes to wondering about the who, how and why of the situation you find the sounds of people racing into your general position teasing across the end of your field of hearing. Not wanting to be caught by people who probably wouldn't be too thrilled to see you looting their obvious provision you quickly grab what you can and then haul ass before the others can arrive.";
-	Add "food" to invent of player;
-	Add "food" to invent of player;
-	Add "water bottle" to invent of player;
-	Add "water bottle" to invent of player;
+	Add "food" to invent of Player;
+	Add "food" to invent of Player;
+	Add "water bottle" to invent of Player;
+	Add "water bottle" to invent of Player;
 	now Abandoned Lot is known;
 	now Air Drop is resolved;
 	Increase score by 1;
@@ -92,7 +92,7 @@ Instead of resolving a Magical Girl:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Looking around and seeing no one in the immediate area, you figure why not as a sudden plume of giddiness sings through your blood. Lifting the wand up and then shouting 'Sailor Star Power' you find yourself immediately regretting your action when a burst of rainbow colored light swallows you up. A sudden bout of confusion overcomes you as you first feel a wave crash over your body, followed by a feeling of nakedness and then finally something like ribbons strapping themselves all across your form before quickly everything slows down and you finally can blink open your eyes to see the world again. What you find however, turns out to be rather... extraordinary as you look down over yourself.";
 		say "     Where once before you had been dressed somewhat normally, you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";

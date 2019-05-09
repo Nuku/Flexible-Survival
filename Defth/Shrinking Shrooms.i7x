@@ -18,7 +18,7 @@ Instead of resolving a Mushroom cave:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
-		if player consents:
+		if Player consents:
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of glowing mushroom by 3;
 			now Resolution of Mushroom Cave is 1; [picked shrooms #1]
@@ -31,7 +31,7 @@ Instead of resolving a Mushroom cave:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of Glowing mushroom by 3;
@@ -81,28 +81,28 @@ Instead of resolving a Hungry dog:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Face the beast.";
 		say "     ([link]N[as]n[end link]) - RUN!";
-		if player consents:
+		if Player consents:
 			if glowing mushroom is owned:
 				say "     Coming from inside the dark alley, the German Shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
 				WaitLineBreak;
-				say "     Sniffing you, the dog quickly pushes his muzzle into your backpack. With an impish smile, he quickly grabs the glowing mushrooms that you had. Looks like this dog does know what they do to those who eat them. Holding the mushrooms with one hand and pulling you by the neck with the other, he tries to force the mushrooms into your mouth. Since you won't cooperate, he holds your [facename of player]nose, depriving you of oxygen. Try as you might, you can't escape his hold, and you are starting to need air quick. Opening your mouth just for a bit gives the strong dog enough time to shove the shrooms down your throat, forcing you to eat and swallow them. 'Stupid prey,' the shepherd says with a winning smile. 'You should know your place. Being my meal is the best end for someone like you.'";
+				say "     Sniffing you, the dog quickly pushes his muzzle into your backpack. With an impish smile, he quickly grabs the glowing mushrooms that you had. Looks like this dog does know what they do to those who eat them. Holding the mushrooms with one hand and pulling you by the neck with the other, he tries to force the mushrooms into your mouth. Since you won't cooperate, he holds your [facename of Player]nose, depriving you of oxygen. Try as you might, you can't escape his hold, and you are starting to need air quick. Opening your mouth just for a bit gives the strong dog enough time to shove the shrooms down your throat, forcing you to eat and swallow them. 'Stupid prey,' the shepherd says with a winning smile. 'You should know your place. Being my meal is the best end for someone like you.'";
 				say "     As soon as you swallow, you feel your body changing, quickly losing height and weight. The world keeps getting bigger and bigger, as well as the shepherd in front of you. Soon, all you can see is his paws as the now-absolutely-enormous predator grabs you. When you are brought in front of his giant face, you can see his saliva glistening, while his eyes shine with hunger. 'Thanks for the meal,' is all you hear after that.";
 				decrease carried of glowing mushroom by 1;
 				say "     [bold type]Do you accept your fate?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the huge beast eat you without trying to fight.";
 				say "     ([link]N[as]n[end link]) - It isn't supposed to end like this. You will fight to the end.";
-				if player consents:
+				if Player consents:
 					say "     Not willing to fight back, you accept your fate. Even if you wanted to escape, the beast's grip is too strong on your body. He is pushing your muscles, limbs, and organs to a state of almost being crushed, making the world turn black for a moment. Your mouth is agape as you teeter at the brink of losing consciousness for good. But that smile, even wider than before and showing full well those pearly-white teeth, snags your mind back together with the horror of what is about to come. The shepherd opens his mouth fully, showing you the void that is about to be your future. You can't escape, and you can't even think about what will happen in a moment. There is only terror in your mind, knowing all too well that this is the end.";
-					say "     Before entering his mouth, the beast holds you with its long tongue. The slick texture of the monster's saliva and tongue are a weird yet strangely pleasurable sensation, and you can't help but feel some arousal despite the situation. [if player is male]It makes your member hard against that texture, making you leak pre[else if player is female]Your pussy gets wet as it is rubbed against that texture[end if]. Your oxygen-deprived mind can't tell the difference between the liquid created by your own arousal or the beast's saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth, licking you and throwing you around inside his mouth.";
+					say "     Before entering his mouth, the beast holds you with its long tongue. The slick texture of the monster's saliva and tongue are a weird yet strangely pleasurable sensation, and you can't help but feel some arousal despite the situation. [if Player is male]It makes your member hard against that texture, making you leak pre[else if Player is female]Your pussy gets wet as it is rubbed against that texture[end if]. Your oxygen-deprived mind can't tell the difference between the liquid created by your own arousal or the beast's saliva that lubricate your descent. Your arousal isn't unnoticed by your captor. The giant dog takes this opportunity to play with your body inside his mouth, licking you and throwing you around inside his mouth.";
 					WaitLineBreak;
-					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you open your mouth to scream or get air, you swallow more of his saliva, making it even harder to breathe. The deprivation of oxygen makes you lightheaded, and your arousal mixed with the dog's saliva has an almost euphoric taste. Bracing yourself, you cum hard, [if player is male]spilling your seed, [end if]which the monster happily takes. Starting to feel some tremors, as though the beast is laughing at your own weakness, he finally moves to swallow you.";
+					say "     You are always being pressed against some place of his mouth, sliding with the help of his saliva. Whenever you open your mouth to scream or get air, you swallow more of his saliva, making it even harder to breathe. The deprivation of oxygen makes you lightheaded, and your arousal mixed with the dog's saliva has an almost euphoric taste. Bracing yourself, you cum hard, [if Player is male]spilling your seed, [end if]which the monster happily takes. Starting to feel some tremors, as though the beast is laughing at your own weakness, he finally moves to swallow you.";
 					say "     The horny dog's tongue pushes you to the back of his muzzle, brushing you against his teeth, before forcing you into a dark descent. You are crushed by the walls of flesh that surrounds you. It was difficult to breathe inside his mouth, but now, it's pretty much impossible. You lungs burn with the lack of oxygen. Your head spins, and your vision is turning darker and darker by the moment. Your muscles scream in pain with the pressure, and your bones almost snap. The travel is almost hellish in nature until you finally drop into the beast's stomach. Now, the hell is fully realized.";
 					say "     The foul odors of the monster's last meal assault your nose, and you almost puke. Holding yourself, you take a look at your surroundings. It is almost pitch-black, but somehow, you can see some of what is happening in here. You somehow landed on a safe place, everywhere else being filled with acid. There are some bones and even flesh still intact floating in the caustic sea. But your luck is only finite. With rising dread, you hear the gurgle noises of the digestion starting. Your safe place shifts, making you lose your footing and land in the acid. That is how you die. As someone's meal.";
 					WaitLineBreak;
 					now battleground is "void";
-					now bodyname of player is "dead";
+					now bodyname of Player is "dead";
 					end the story saying "You were eaten alive!";
 				else:
 					say "     You try your hardest to escape his grip, but the beast was already stronger than you with your normal size. Now that you are miniaturized, it doesn't look like there is much you can do. As he brings you near his teeth, you can only see the void of his throat, waiting to swallow you down. It convulses and closes from time to time, as if expecting a nice meal, which in this case, is you. The monster's throat looks almost sexual. With all of the saliva trickling and running inside, it seems like a huge sex organ that is soon to be your passage. The white teeth secure you in place, preventing any escape. Then you are tossed around inside of his mouth as he tries to chew your body. As he catches your leg and arm between his teeth, you feel your bones almost breaking. Despite your skin managing to miraculously keep together, you scream with agony. It wasn't supposed to end like this.";
@@ -111,7 +111,7 @@ Instead of resolving a Hungry dog:
 						say "     The foul odor of his last meal still lingers in the air, if you can even call it air. You hold your nose in a vain chance to stop the smell, but it only opens your mouth to the taste of the air around you. There is a little more room in the beast's stomach, although not much, and you are still held in place. Left without much to do but wait, your own thoughts betray you. The grim reality is that there is only one way out now, and you won't be alive at the end. He moves slightly, and you feel the tremor in his stomach. The gurgle noises are a sign of what is to come, a clamor for food that only those who hunt in this land have, or to someone like in your situation, a herald to their final moments. You take a look around and see the surrounding liquid coming to you like a death tide. You silently weep, once again mourning how it wasn't supposed to end like this...'";
 						WaitLineBreak;
 						now battleground is "void";
-						now bodyname of player is "dead";
+						now bodyname of Player is "dead";
 						end the story saying "You were eaten alive!";
 					else:
 						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
@@ -123,14 +123,14 @@ Instead of resolving a Hungry dog:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Let the beast do what he wants with you.";
 				say "     ([link]N[as]n[end link]) - You can't possibly win against him. Your only hope is to flee.";
-				if player consents:
+				if Player consents:
 					now battleground is "void";
-					say "     Laughing at you now, his grip tightens. As you vainly try to gasp for air, you flail around as your mind melts into a stupor. Your lungs start to burn and wheeze, and drool drips from your gaping mouth, showing the state of your consciousness. When you are close to fainting, the shepherd tosses you inside the alley, making you crash against the wall with bone-shattering force. This brings your mind back to its alerted state, but it almost makes you throw up with the whiplash. Trying to get up on your feet, you're hit again with amazing force. Without enough time to react to his animalistic movements, you are stripped of your clothes, showing your [bodyname of player] body in all of its almost broken glory.";
+					say "     Laughing at you now, his grip tightens. As you vainly try to gasp for air, you flail around as your mind melts into a stupor. Your lungs start to burn and wheeze, and drool drips from your gaping mouth, showing the state of your consciousness. When you are close to fainting, the shepherd tosses you inside the alley, making you crash against the wall with bone-shattering force. This brings your mind back to its alerted state, but it almost makes you throw up with the whiplash. Trying to get up on your feet, you're hit again with amazing force. Without enough time to react to his animalistic movements, you are stripped of your clothes, showing your [bodyname of Player] body in all of its almost broken glory.";
 					say "     The dog is quick with his movements, holding your shoulders in place so that you can have a better view of what is about to come. Opening his mouth, with almost sexual joy, you see it. Dripping with his saliva, the mouth almost looked like a wet pussy, with a nice, pink shade and a dark abyss at the end. If it wasn't for the pearly-white teeth adorning it, reminding you of what is really about to happen with you, you would almost find the sight strangely erotic. You are pulled inside, feeling the slickness of his touch.";
-					say "     Your captor finally bites down, holding you against the tight and lubed place. Twitching, tugging, and pulling you deeper towards the belly of the beast, the pain of being penetrated by his teeth destroy any sense of pleasure in this act. You can't see much, except for some snippets of light that shines into his mouth. Your [facename of player] head is chewed while his tongue holds you in place. The slippery sensation keeps pulling you deeper inside the beast jaws, as it keeps squeezing you with his tightness. The pressure keeps building until your neck snaps, giving you a quick death. But you already knew what was going to happen after that.";
+					say "     Your captor finally bites down, holding you against the tight and lubed place. Twitching, tugging, and pulling you deeper towards the belly of the beast, the pain of being penetrated by his teeth destroy any sense of pleasure in this act. You can't see much, except for some snippets of light that shines into his mouth. Your [facename of Player] head is chewed while his tongue holds you in place. The slippery sensation keeps pulling you deeper inside the beast jaws, as it keeps squeezing you with his tightness. The pressure keeps building until your neck snaps, giving you a quick death. But you already knew what was going to happen after that.";
 					WaitLineBreak;
 					now battleground is "Void";
-					now bodyname of player is "dead";
+					now bodyname of Player is "dead";
 					end the story saying "You were eaten alive!";
 				else:
 					say "     Thrashing around in his grip, you end up punching his muzzle with enough force to daze the dog, giving you an opening to escape with your life intact.";
@@ -187,7 +187,7 @@ Instead of resolving Little trouble:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Try to find another way in"):
@@ -270,7 +270,7 @@ to say LittleShroom:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Grab the supplies and run"):
@@ -313,10 +313,10 @@ to say ChineseUB:
 	say "     Locked in her paw now and with the size and strength of a mouse, you probably won't escape her easily. 'So cute,' your husky captor says as she keeps looking at you. 'Aren't you a pleasant surprise to find?' She giggles as she touches, prods, and squeezes you in every way possible. Then eventually, a meaningful smile spreads over her muzzle. 'You should finish what you started.' Opening her legs again and spreading her feminine folds apart with two fingers, she pushes you against them with some urgency. 'Go on. Make me cum, or else you will be my snack!'";
 	say "     Looks like you will be used as a dildo, and if you don't do a proper job, you will be eaten. The sweet smell coming from her lust fills your lungs easily, given your diminutive size. Without even one second more to think, you are pushed in between her soft folds, your body brushing against the engorged flesh lubed with her arousal. Once more penetrating the anthro girl, just not on your own accord this time, you are pushed and pulled in and out, rubbing up against her inner walls. Your mouth and lungs are filled with her sweet scent every time you try to breathe. After a few moments, it feels like the whole world is just her and the scent of her heat.";
 	WaitLineBreak;
-	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, [if player is male]your hard member slides pleasantly over her supple flesh[else if player is female]your clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]your excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
+	say "     The bitch trembles and squirms as you are turned into her personal dildo. And not to overlook the effects on your own lust, [if Player is male]your hard member slides pleasantly over her supple flesh[else if Player is female]your clit rubs inside the bitch, making you wet yourself and mixing both of your juices[else]your excitement builds up, but without a sex organ to release, you are stuck in a cycle of perpetual denying and teasing[end if]. In her eagerness to get off, the bitch actually pushes you into herself all the way, then continues to shove you further up until only her fingertips touch your feet.";
 	say "     She has pushed you right to the spot where you had planned to go earlier. Well, not quite, as your face is squished somewhat uncomfortably against the ring of her cervix, but the position definitely has its advantages. It isn't hard to snake your absolutely soaked and slippery arm in at the center of the large ring of muscle. The second arm is a bit harder, but still doable, allowing you to really get a grip and pull yourself up. Your heart races as you get a first glimpse of the inside of her womb, then stick your head through the opening, wiggling and pulling to slide in. Such efforts don't go unnoticed - the husky bitch's insides tremble and leak even more fluids in reaction.";
 	WaitLineBreak;
-	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if player is male]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if player is female]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
+	say "     With a final push, your shoulders penetrate her cervix, allowing the rest of your body into the snug cave of her womb as her muscles quake in orgasm, squishing you with its flexible walls. Bouncing and sliding around in her innermost sanctuary, this also pushes you to, and past, the limit of your endurance, [if Player is male]making your cock shoot heavy blasts of seed right into her womb and over yourself[else if Player is female]your love juices slicking the inside of her womb[else]trembling and twitching in orgasm[end if]. Afterwards, you stay in the fetal position for a time, just resting after your breathtaking climax. After all, this is such a nice place. Warm and welcoming, you could live here forever.";
 	infect "Female Husky";
 	infect "Female Husky";
 	infect "Female Husky";
@@ -331,10 +331,10 @@ to say ChineseTrouble:
 	say "     The anthro canine's small body shivers and trembles with every pounce, and as much as her hips want to keep that nice, red rod inside of her, the male has other ideas as he gives in to his instincts. Even his knot is not enough to anchor the little husky to his crotch, and you can see her vagina bulging and gaping every time he pulls it out of her, his seed being splattered all over her belly, crotch, and legs. That doesn't mean his erection is going down though - looks like one orgasm isn't enough to satisfy this beast. He lets go of his partner, but not actually because he wants to let her rest. Instead, the dominant dog turns towards you, somehow having become aware of your presence.";
 	say "     His horny bed-mate reaches out for his prick to guide him back into her, but the anthro dog pushes her aside, much to her dismay. 'Come, little pig,' he scoffs at you as he stands up. 'Let's play!' Both of them jump from the bed and start coming for you. Without proper time to react, your best idea is to hide under a table, but sniffing the air with their excellent noses, the huskies are quick in finding and capturing you. Being snatched up by the male, you are turned and twisted in his grasp as the anthro dog examines your naked form from all sides. By the time he's finally done, you end up feeling more than a little dizzy.";
 	WaitLineBreak;
-	say "     A worrying smile and cruel expression on his face, the husky hands you over to his bitch with the words, 'Hang on to that for a moment, slut!' Then he leaves the room, kicking the door shut behind him. Now at the mercy of the female husky's whims, you are touched and prodded once more, if a little more gently than with her top dog. Soon, the crafty beast comes back holding a pair of shoelaces. Looks like he has some naughty ideas about how to deal with their miniature intruder. 'Hold [if player is female]her[else]him[end if] out for me,' he growls dominantly at his bitch. It doesn't take long before your hands and feet have been tied together, tighter than you could ever hope to wind your way out of.";
-	say "     Your captor then grabs you and proceeds to push his red spear between your legs, sliding you down over its length like an improvised fleshlight. Your [if player is male]penis[else if player is female]vagina[else]bare crotch[end if] brushes against the pulsating red prick, eliciting helpless moans from you, your stomach now slippery with his pre. Pushing your whole body towards his crotch, the husky's dick soon presses against your chest, [if breast size of player > 2]giving him a really small boob-job[else]rubbing your nipples and making them hard[end if].";
+	say "     A worrying smile and cruel expression on his face, the husky hands you over to his bitch with the words, 'Hang on to that for a moment, slut!' Then he leaves the room, kicking the door shut behind him. Now at the mercy of the female husky's whims, you are touched and prodded once more, if a little more gently than with her top dog. Soon, the crafty beast comes back holding a pair of shoelaces. Looks like he has some naughty ideas about how to deal with their miniature intruder. 'Hold [if Player is female]her[else]him[end if] out for me,' he growls dominantly at his bitch. It doesn't take long before your hands and feet have been tied together, tighter than you could ever hope to wind your way out of.";
+	say "     Your captor then grabs you and proceeds to push his red spear between your legs, sliding you down over its length like an improvised fleshlight. Your [if Player is male]penis[else if Player is female]vagina[else]bare crotch[end if] brushes against the pulsating red prick, eliciting helpless moans from you, your stomach now slippery with his pre. Pushing your whole body towards his crotch, the husky's dick soon presses against your chest, [if Breast Size of Player > 2]giving him a really small boob-job[else]rubbing your nipples and making them hard[end if].";
 	WaitLineBreak;
-	say "     Finally, his giant penis reaches your arms, as you are forced to hug it. You are finally up against his crotch all the way now, your[if player is male] penis and[else if player is female] vagina and[end if] ass pressing against his knot. Face pressed directly against his shaft, the husky's strong, manly scent fills your lungs. You can't help but feel intoxicated by the aroma, despite the dire situation you're in right now. Then the horny dog starts using you to masturbate. Pulling and pushing you along, his cock slides hotly against your body, pulsating against your skin with his heartbeat.";
+	say "     Finally, his giant penis reaches your arms, as you are forced to hug it. You are finally up against his crotch all the way now, your[if Player is male] penis and[else if Player is female] vagina and[end if] ass pressing against his knot. Face pressed directly against his shaft, the husky's strong, manly scent fills your lungs. You can't help but feel intoxicated by the aroma, despite the dire situation you're in right now. Then the horny dog starts using you to masturbate. Pulling and pushing you along, his cock slides hotly against your body, pulsating against your skin with his heartbeat.";
 	say "     Your whole body soon is properly lubed with his pre, the degradation of being used as a sex toy increasing second by second. Your mind doesn't even recognize the danger at first as the commanding dog orders his girl to suck his cock until her breath brushes hotly against you. Wait a minute... Is she going to blow him with you still tied to his cock? Now with your mind in an alerted state, you try once more to wiggle off of his cock, but that only helps as far as taking your attention from the open mouth starting to envelop your head.";
 	WaitLineBreak;
 	say "     The horny bitch doesn't even question the guy about something like that. She must be totally submissive and ready to follow anything he commands. Her teeth brush against your hair, her tongue licking the back of your head and pressing it against the cock you are tied to against your will. Now, you're stuck between a tongue and a hard dick, as the bitch keeps sucking her alpha, and by extension, you. Most of the time you are safe enough, with her only going halfway down his cock, but soon, the alpha husky grabs the back of her head and shoves his whole dick inside of her mouth, forcing her to deep-throat him and your body.";
@@ -376,7 +376,7 @@ to say ChineseTrouble:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Kick him in the stomach (from the inside)"):
@@ -390,11 +390,11 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
 				now battleground is "void";
-				now tailname of player is "dead";
-				now facename of player is "dead";
-				now skinname of player is "dead";
-				now bodyname of player is "dead";
-				now cockname of player is "dead";
+				now tailname of Player is "dead";
+				now facename of Player is "dead";
+				now skinname of Player is "dead";
+				now bodyname of Player is "dead";
+				now cockname of Player is "dead";
 				end the story saying "You were eaten alive!";
 				wait for any key;
 			else:
@@ -430,7 +430,7 @@ to say ChineseTrouble:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					now sextablerun is 1;
 					if (nam is "Try to climb out"):
@@ -442,11 +442,11 @@ to say ChineseTrouble:
 				now sextablerun is 1;
 				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
 				now battleground is "void";
-				now tailname of player is "dead";
-				now facename of player is "dead";
-				now skinname of player is "dead";
-				now bodyname of player is "dead";
-				now cockname of player is "dead";
+				now tailname of Player is "dead";
+				now facename of Player is "dead";
+				now skinname of Player is "dead";
+				now bodyname of Player is "dead";
+				now cockname of Player is "dead";
 				end the story saying "You were eaten alive!";
 				wait for any key;
 			else:
@@ -458,11 +458,11 @@ to say AlphaKick:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit. But before you can follow up, a more powerful quake goes through the husky's insides, with the wall of his stomach bulging out suddenly to throw you to the other side of the chamber and land in a puddle of stomach acid. Flinching in pain, you realize that he must have punched his own stomach. You smile at the thought and drag yourself to your feet again, then pummel his insides some more. This won't save you, but at least the bastard is gonna have indigestion.";
 		WaitLineBreak;
 		now battleground is "void";
-		now tailname of player is "dead";
-		now facename of player is "dead";
-		now skinname of player is "dead";
-		now bodyname of player is "dead";
-		now cockname of player is "dead";
+		now tailname of Player is "dead";
+		now facename of Player is "dead";
+		now skinname of Player is "dead";
+		now bodyname of Player is "dead";
+		now cockname of Player is "dead";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit, then a lot! Suddenly, everything shifts on its side, and you are thrown about, then violently ejected back the way you came in. After another voyage through the gullet of the husky, you fall onto the ground in a wash of vomit. Looks like your well-aimed hit made him throw up! With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
@@ -476,11 +476,11 @@ to say AlphaClimb:
 		say "     The walls of his gullet are slick and often twitch, several times feeling as if he is trying to gulp you down again. But you persevere, holding onto anything you can get a grip on. Finally, you're back in his muzzle and run down the squishy length of his tongue to jump out through his parted teeth, only to land in the husky's raised paw. 'So, my prey wants to be properly chewed before being my meal,' he says and gives a sadistic laugh. 'Don't worry, now you will be a proper meal.' You are tossed back in his mouth, but this time, you are chewed down before being swallowed.";
 		WaitLineBreak;
 		now battleground is "void";
-		now tailname of player is "dead";
-		now facename of player is "dead";
-		now skinname of player is "dead";
-		now bodyname of player is "dead";
-		now cockname of player is "dead";
+		now tailname of Player is "dead";
+		now facename of Player is "dead";
+		now skinname of Player is "dead";
+		now bodyname of Player is "dead";
+		now cockname of Player is "dead";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     Well, it's worth a try at least. You try your best to hang onto something, anything. The dog's stomach starts compressing, heralding the beginning of digestion. You scream in desperation, and you finally manage to hold on to something and pull yourself a bit further up. With newfound determination after that first success, you work at pulling yourself up, just in time before the rising level of acid burns the soles of your feet. It is hard work, but you are getting out of here! Feeling something crawling up his gullet can't be comfortable for the husky either, and before long, the tickling sensation in his insides makes him throw up! Being violently ejected on a tide of rising vomit, you fall onto the ground in a foul-smelling wash of his stomach contents. With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
@@ -493,11 +493,11 @@ to say AlphaDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now tailname of player is "dead";
-		now facename of player is "dead";
-		now skinname of player is "dead";
-		now bodyname of player is "dead";
-		now cockname of player is "dead";
+		now tailname of Player is "dead";
+		now facename of Player is "dead";
+		now skinname of Player is "dead";
+		now bodyname of Player is "dead";
+		now cockname of Player is "dead";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through his digestive system until you are finally 'birthed' through his tight asshole. When you fall down, you have a small window to escape your 'parent' before he realizes what is going on. Luckily, he is busy fucking his bitch again, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
@@ -510,11 +510,11 @@ to say BitchClimb:
 		say "     Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside. Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. But still, you make your way to her muzzle, finally seeing the outside world again. Hope comes back to your heart... and are quickly shattered, as the alpha is waiting for you. 'Look at that little rascal,' he says looking directly at you inside her mouth. 'Thought you'd make it, but no. You're still going down!' As the husky laughs, the bitch clamps her teeth shut, closing the last sliver of light you are ever going to see, then throws her head back and swallows you again. This time, you don't have the energy to even struggle anymore...";
 		WaitLineBreak;
 		now battleground is "void";
-		now tailname of player is "dead";
-		now facename of player is "dead";
-		now skinname of player is "dead";
-		now bodyname of player is "dead";
-		now cockname of player is "dead";
+		now tailname of Player is "dead";
+		now facename of Player is "dead";
+		now skinname of Player is "dead";
+		now bodyname of Player is "dead";
+		now cockname of Player is "dead";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     Looking at the hole you just went through, the realization strikes your mind. There are only two places connected to where you are now, up and down. And you don't think you will survive the rest of the way down anyway, so your only option is trying to go back from where you came. Getting back on your feet, you throw your hands up, trying you best to grab at anything at all. Your first attempt is met with failure, but on the second try, you manage to hold onto something. No time to figure out how you are climbing. If you want to survive this you have to continue. Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside.";
@@ -527,11 +527,11 @@ to say BitchDive:
 		say "     You jump in the acid, ignoring all of the pain. It makes your flesh burn as it is eaten away while you try to find any opening deeper into his digestive tract. But it's all in vain. Soon, you pass out from the pain, and are quickly digested without a trace.";
 		WaitLineBreak;
 		now battleground is "void";
-		now tailname of player is "dead";
-		now facename of player is "dead";
-		now skinname of player is "dead";
-		now bodyname of player is "dead";
-		now cockname of player is "dead";
+		now tailname of Player is "dead";
+		now facename of Player is "dead";
+		now skinname of Player is "dead";
+		now bodyname of Player is "dead";
+		now cockname of Player is "dead";
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all of the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through her digestive system until you are finally 'birthed' through her tight asshole. When you fall down, you have a small window to escape your 'parent' before she realizes what is going on. Luckily, she is busy being pounded by her master, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find the escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";

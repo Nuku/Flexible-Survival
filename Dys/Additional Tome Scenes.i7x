@@ -33,13 +33,13 @@ to say TomeSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is puremale and TentacleInteractions > 0:
+	if Player is puremale and TentacleInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a tentacle monster";
 		now sortorder entry is 1;
 		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
 	[]
-	if player is puremale and DemonFoxInteractions > 0:
+	if Player is puremale and DemonFoxInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a demon fox";
 		now sortorder entry is 2;
@@ -57,7 +57,7 @@ to say TomeSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber from table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is:
@@ -68,7 +68,7 @@ to say TomeSexMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
 				wait for any key;
@@ -94,7 +94,7 @@ to say TomeExpansionUse:
 				LineBreak;
 				say "     [link](Y)[as]y[end link] - Give it a quick read.";
 				say "     [link](N)[as]n[end link] - It's probably best not to.";
-				if player consents:
+				if Player consents:
 					say "     You open the tome to a random page, deciding that no real harm can come from just quick glance at it. Your eyes skim over page after page of text and drawings depicting all sorts of monsters and demons, taking all the information in eagerly. For some reason you can't quite comprehend, the contents of the book have really piqued your interest. Nearly two hours later, you find that you've read more than half of the large books contents, and you suddenly blink, realizing how much time you've spent doing this. Shutting the book, you heave a sigh as you place it in your pack before moving on. There's some part of you that eagerly awaits further reading.";
 					now TomeTimer is turns;
 					now TomeInteractions is 1;
@@ -104,7 +104,7 @@ to say TomeExpansionUse:
 				say "[TomeReadMenu]";
 			else if TomeInteractions is 2: [3+ uses]
 				say "     Do you want to [link]read the tome[as]y[end link] (y), or [link]use the tome[as]n[end link] (n)?";
-				if player consents:
+				if Player consents:
 					say "[TomeReadMenu]";
 				else:
 					say "[TomeSexMenu]";
@@ -171,9 +171,9 @@ an everyturn rule:
 			if TomeInfluenceTimer - turns >= 8:
 				say "     You can't help but feel drawn to the book inside your bag. The [bold type]ancient tome[roman type] really seems like it wants you to [if TomeInteractions is 0]read it, now that you finally can[else]read it once more[end if].";
 				now TomeInfluenceTimer is turns;
-	if DemonFoxRead is true and DemonFoxInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 4 and daytimer is night:
+	if DemonFoxRead is true and DemonFoxInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 4 and daytimer is night:
 		say "[DemonFoxFirstEncounter]";
-	if TentacleRead is true and TentacleInteractions is 0 and (cocks of player is not 0 and cunts of player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
+	if TentacleRead is true and TentacleInteractions is 0 and (Cock Count of Player is not 0 and Cunt Count of Player is 0) and TomeTimer - turns >= 8 and (a random chance of 1 in 3 succeeds) or (TomeTimer - turns >= 11):
 		say "[TentaclesFirstEncounter]";
 
 

@@ -3,7 +3,7 @@ Version 1 of Automaton by Stripes begins here.
 
 "Adds Automaton to Flexible Survival."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Automaton" } to infections of girl;
@@ -15,7 +15,7 @@ playermetalskin is a number that varies. playermetalskin is usually 1.
 automatonending is a number that varies.
 
 to say automatondesc:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now autogender is a random number between 1 and 2;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You come across a strange, metallic human. It looks you over with its glowing eyes before striding off as if recognizing that you are not what it is searching for as you don't want to play with it.";
@@ -45,35 +45,35 @@ to say automatondesc:
 		if autogender is 1:		[male]
 			setmongender 3;
 			now sex entry is "Female";
-			if "Male Preferred" is listed in the feats of player, now sex entry is "Male";
+			if "Male Preferred" is listed in the feats of Player, now sex entry is "Male";
 			now lootchance entry is 33;
 		else:
 			setmongender 4; [female]
 			now sex entry is "Male";
-			if "Female Preferred" is listed in the feats of player, now sex entry is "Female";
+			if "Female Preferred" is listed in the feats of Player, now sex entry is "Female";
 			now lootchance entry is 0;
 
 
 to say losetoautomaton:
 	if autogender is 1:
-		if HP of player > 0:
+		if HP of Player > 0:
 			say "     You submit to the metal man, unwilling to fight the robotic person any longer. ";
 		else:
 			say "     You are knocked down by the metal man, unable to continue to fight the robotic person any longer. ";
-		if player is female and a random chance of 3 in 4 succeeds:
+		if Player is female and a random chance of 3 in 4 succeeds:
 			say "He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Laying you on the ground beneath him, the metal man moves atop you and sinks his stiff, metal cock into your pussy. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until you cum. As you orgasm beneath him, you feel the hot pulse of his silvery seed shooting into you, claiming your womb with his mercurial semen. Once he's been drained, he gets up and moves off, searching for a new partner to infect and breed.[impregchance]";
-		else if player is not female and a random chance of anallevel in 4 succeeds:
-			say "He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Pushing you onto all fours, the metal man moves atop you and sinks his stiff, metal cock into your ass. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until [if player is male]you cum. As you orgasm beneath him, [end if]you feel the hot pulse of his silvery seed shooting into you. This mercurial semen flows into you, claiming your ass as the metal man empties his balls into you. Once he's been drained, he gets up and moves off, searching for a new partner to mount and infect.[mimpregchance]";
+		else if Player is not female and a random chance of anallevel in 4 succeeds:
+			say "He grabs you and pins you down beneath him, moving mechanically, but with clear intent. Pushing you onto all fours, the metal man moves atop you and sinks his stiff, metal cock into your ass. His rod is quite hard and is cool at first, but warms up quickly as he thrusts into you with mechanical motion over and over. His rhythm is steady and soon has you moaning beneath him as he drives his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into you until [if Player is male]you cum. As you orgasm beneath him, [end if]you feel the hot pulse of his silvery seed shooting into you. This mercurial semen flows into you, claiming your ass as the metal man empties his balls into you. Once he's been drained, he gets up and moves off, searching for a new partner to mount and infect.[mimpregchance]";
 		else:
-			say "He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch[if HP of player > 0]. Having conceded the fight, you must acceded to his emotionless demand and[else]. Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
+			say "He takes you by the shoulders and firmly pushes you to your knees. Mechanically moving a hand to the back of your head, your face is pressed to his crotch[if HP of Player > 0]. Having conceded the fight, you must acceded to his emotionless demand and[else]. Given the firmness of his emotionless demand, you have little choice but to[end if] open your mouth to welcome his [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] shaft into your mouth. The rod is quite hard and is cool at first, though it warms up quickly as you lick and suck at it.";
 			say "     He remains impassive as he thrusts into you with mechanical motion over and over. His rhythm is steady and allows you to work your tongue and palate over the shiny penis. While it does have a faintly metallic taste, there is something enticing about its flavor as well. His lack of external reaction only goads you on further, working with increasing zeal in your attempt to get the unfeeling robot man to cum. After a few minutes of this, you've gotten yourself quite worked up and are finally rewarded for your efforts with the metal man's mercurial seed. Pulse after pulse of silvery cum shoots across your tongue and down your throat. The taste and texture of it may be unusual, but is also strangely exciting, with both the musky tang of semen and the slickness of the flowing metal. Once he's been drained, you are pushed back and he moves off, searching for a new partner to claim and infect.";
 	else:
-		if HP of player > 0:
+		if HP of Player > 0:
 			say "     You submit to the metal woman, unwilling to fight the robotic person any longer. ";
 		else:
 			say "     You are knocked down by the metal woman, unable to continue to fight the robotic person any longer. ";
-		if player is male and a random chance of 3 in 4 succeeds:
-			say "She grabs you and pushes you to the ground, moving mechanically atop you. Her movements may be stiff, but her intent is clear as she grabs your cock and sinks her lubricated pussy down over your [cock size desc of player] [cock of player] shaft. Her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] lips spread open around your [cock size desc of player] rod with a soft whirr, opening to be a perfect fit for you[if cock width of player > 30]. Your oversized shaft deforms her metal hide as she rides you[else if cock length of player > 20]. Your enlarged shaft makes a noticeable bulge in her metal hide as she rides you[end if]. The robotic woman's cunt is cool at first, but warms up quickly as you fuck her. Her even, mechanical motions over your cock soon has your rod throbbing and pulsing until you're driven to cum inside her, pumping your hot load into her robotic womb. Her function complete, she pulls off of you, pushes you to the ground and strides off.";
+		if Player is male and a random chance of 3 in 4 succeeds:
+			say "She grabs you and pushes you to the ground, moving mechanically atop you. Her movements may be stiff, but her intent is clear as she grabs your cock and sinks her lubricated pussy down over your [cock size desc of Player] [cock of Player] shaft. Her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] lips spread open around your [cock size desc of Player] rod with a soft whirr, opening to be a perfect fit for you[if ball size of Player > 30]. Your oversized shaft deforms her metal hide as she rides you[else if Cock Length of Player > 20]. Your enlarged shaft makes a noticeable bulge in her metal hide as she rides you[end if]. The robotic woman's cunt is cool at first, but warms up quickly as you fuck her. Her even, mechanical motions over your cock soon has your rod throbbing and pulsing until you're driven to cum inside her, pumping your hot load into her robotic womb. Her function complete, she pulls off of you, pushes you to the ground and strides off.";
 		else:
 			say "She grabs you by the head and presses your face between her legs, pushing your lips to her [if metalskin is 1]bronze[else if metalskin is 2]aluminum[else if metalskin is 3]cobalt[else if metalskin is 4]steel[end if] pussy. Those folds are cool and lightly oiled, yielding to your tongue's touch as you set to work. The metal woman remains impassive as you lick her, but shows no intent on letting you go, so you continue attempting to pleasure her, working with increasing zeal as you work all the harder to get the unfeeling robot woman to cum. The only clear signs that it's working is the fact that her pussy grows warmer and wetter as you continue. Eventually, you are met with success of a kind as the automaton presses your head between her thighs and a fresh flow of oily juices soak your face. Apparently satisfied, she pushes you away and strides off.";
 
@@ -82,32 +82,33 @@ to say beattheautomaton:
 	say "     Having beaten the metal [if autogender is 1]man[else]woman[end if], the lights in its eyes go out and it crumples to the ground like an unpowered toy. There's a faint electrical hum from it, soft but slowly growing, as if it's working to charge itself up again.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Automaton"; [ Infection/Creature name. Capitalized. ]
+	now NewTypeInfection entry is false;
+	now Name entry is "Automaton"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] strikes you with a metal fist![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] squeezes your wrist in its painfully strong grip![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] batters you hard blows![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] knees you in the gut with its metal leg![at random]";
 	now defeated entry is "[beattheautomaton]"; [ Text when monster loses. ]
 	now victory entry is "[losetoautomaton]"; [ Text when monster wins. ]
 	now desc entry is "[automatondesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "a [if player is female]feminine[else]masculine[end if] version of your human face, but flat and expressionless. Your eyes glow with a [if playermetalskin is 1]yellow[else if playermetalskin is 2]blue[else if playermetalskin is 3]green[else if playermetalskin is 4]red[end if] light";
-	now body entry is "back to human in form, but moves with stiff, mechanical motions as if you're no longer flesh and blood inside"; [ Body. Format as "Your body is [body of player]." ]
-	now skin entry is "[if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminum[else if playermetalskin is 3]cobalt with a faint blue tint[else if playermetalskin is 4]steel[end if]";
+	now face entry is "a [if Player is female]feminine[else]masculine[end if] version of your human face, but flat and expressionless. Your eyes glow with a [if Playermetalskin is 1]yellow[else if Playermetalskin is 2]blue[else if Playermetalskin is 3]green[else if Playermetalskin is 4]red[end if] light";
+	now body entry is "back to human in form, but moves with stiff, mechanical motions as if you're no longer flesh and blood inside"; [ Body. Format as "Your body is [body of Player]." ]
+	now skin entry is "[if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt with a faint blue tint[else if Playermetalskin is 4]steel[end if]";
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "[one of]metallic[or][if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminum[else if playermetalskin is 3]cobalt[else if playermetalskin is 4]steel[end if][or]human-shaped[at random]";
-	now face change entry is "your head shifts and changes, becoming a [if player is female]feminine[else]masculine[end if] version of your old, human face, but stiff and expressionless with [if playermetalskin is 1]amber[else if playermetalskin is 2]blue[else if playermetalskin is 3]green[else if playermetalskin is 4]red[end if], glowing eyes";
+	now cock entry is "[one of]metallic[or][if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if][or]human-shaped[at random]";
+	now face change entry is "your head shifts and changes, becoming a [if Player is female]feminine[else]masculine[end if] version of your old, human face, but stiff and expressionless with [if Playermetalskin is 1]amber[else if Playermetalskin is 2]blue[else if Playermetalskin is 3]green[else if Playermetalskin is 4]red[end if], glowing eyes";
 	now body change entry is "feels painful, especially at the joints, stiffening your body. Your muscles and bones seems to change inside you, finally settling back down into a normal, human form. Your body now moves quick stiffly with rather mechanical movements as if you're not quite human inside any longer";
 	now skin change entry is "[autoskinchange]";
 	now ass change entry is "your ass whirrs mechanically as it changes, becoming a sexy human rump that moves with a stiff, rocking motion as you walk";
-	now cock change entry is "throbs and pulses, spurting silvery white semen as your flesh becomes metallic [if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminum[else if playermetalskin is 3]cobalt[else if playermetalskin is 4]steel[end if]";
+	now cock change entry is "throbs and pulses, spurting silvery white semen as your flesh becomes metallic [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
 	now str entry is 16; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -119,15 +120,15 @@ When Play begins:
 	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
 	now area entry is "Capitol"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 7; [ Length infection will make cock grow to if cocks. ]
-	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
-	now breast size entry is 3; [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 7; [ Depth of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 4; [ Width of female sex the infection will try to give a player. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 7; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 5; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 3; [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Length entry is 7; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "silver semen"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -141,9 +142,100 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 to say autoskinchange:
 	now playermetalskin is metalskin;
-	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if playermetalskin is 1]bronze[else if playermetalskin is 2]aluminum[else if playermetalskin is 3]cobalt[else if playermetalskin is 4]steel[end if]";
+	say "grows hard and metallic, stiffening into a shifting, flexing skin made of [if Playermetalskin is 1]bronze[else if Playermetalskin is 2]aluminum[else if Playermetalskin is 3]cobalt[else if Playermetalskin is 4]steel[end if]";
 
 
 Table of Game Objects (continued)
@@ -161,9 +253,9 @@ to say silversemenuse:
 	[puts Automaton as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Automaton":
-			now monster is y;
-			if "Male Preferred" is listed in feats of player:
+		if Name entry is "Automaton":
+			now MonsterID is y;
+			if "Male Preferred" is listed in feats of Player:
 				now sex entry is "Male";
 			else:
 				now sex entry is "Female";
@@ -174,14 +266,14 @@ the scent of silver semen is "The contents of the jar has a metallic smell to ac
 
 [
 when play ends:
-	if bodyname of player is "Automaton":
-		if humanity of player < 10:
+	if bodyname of Player is "Automaton":
+		if humanity of Player < 10:
 			say "     You succumb to your automaton infection.";
 		else:
 			say "     You survive, but were infected by the automaton.";
-			if player is male:							[MALE/HERM]
+			if Player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";

@@ -26,14 +26,14 @@ Gordon is a man.
 [Physical details as of game start]
 ScaleValue of Gordon is 3. [human sized]
 SleepRhythm of Gordon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Gordon is 1. [X cock]
+Cock Count of Gordon is 1. [X cock]
 Cock Length of Gordon is 6. [X Inches]
-Cock Width of Gordon is 4.
-Testes of Gordon is 2. [X balls]
-Cunts of Gordon is 0. [X pussy]
+Ball Size of Gordon is 4.
+Ball Count of Gordon is 2. [X balls]
+Cunt Count of Gordon is 0. [X pussy]
 Cunt Length of Gordon is 0. [X Cunt]
-Cunt Width of Gordon is 0. [X Cunt]
-Breasts of Gordon is 2. [X nipples]
+Cunt Tightness of Gordon is 0. [X Cunt]
+Nipple Count of Gordon is 2. [X nipples]
 Breast Size of Gordon is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Gordon is false. [can not take oversized members without pain]
@@ -95,7 +95,7 @@ to say GordonTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fur Suspicion"):
@@ -118,7 +118,7 @@ to say GordonFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
-		if player consents:
+		if Player consents:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
@@ -133,7 +133,7 @@ to say GordonFurEvidence:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
-		if player consents:
+		if Player consents:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
@@ -166,7 +166,7 @@ to say GordonSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -177,13 +177,13 @@ to say GordonSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the monkey's hard shaft";
 	][
-	if player is male: [only males and herms can fuck him]
+	if Player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the unrepentant monkey";
 		now sortorder entry is 3;
 		now description entry is "Take Gordon's ass for a ride";
 	][
-	if player is female: [only females and herms can take him in the pussy]
+	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Gordon's shaft in your pussy";
 		now sortorder entry is 4;
@@ -206,7 +206,7 @@ to say GordonSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):

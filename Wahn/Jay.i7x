@@ -65,25 +65,25 @@ an everyturn rule:
 		[if TimekeepingVar is 1 or TimekeepingVar is -7:] [midnight - unused, Jay sleeps]
 		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Jay sleeps]
 		if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning - Jay gets up early]
-			if player is in Mall East Wing:
+			if Player is in Mall East Wing:
 				say "     A fairly inconspicuous door in a little nook between two stores opens up and two men that you know come out: Jay the Christmas Elf and his polar bear partner Mark. In the second before they shut and lock the door once more, you glimpse a narrow service corridor behind them. Lifting his much shorter lover to give him a goodbye kiss, Mark then leaves in the direction of the atrium while Jay stays behind to chat with other residents who are also just getting up in the morning. People are clearly happy to see him, usually hanging around a little while before they eventually go on and start their own daily business.";
 			move Jay to Mall East Wing;
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning, reading]
-			if player is in Mall East Wing and Jay is in Mall East Wing:
+			if Player is in Mall East Wing and Jay is in Mall East Wing:
 				say "     Having made his rounds to talk to most of his 'neighbors', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
-			if player is in Brookstone Books:
+			if Player is in Brookstone Books:
 				say "     Jay the Christmas Elf walks into the store and wishes Beverly a good morning, then picks up a paperback novel from a shelf and climbs onto a comfortable sofa in the seating area. Sitting down cross-legged, he starts to page through the book with interest.";
 			move Jay to Brookstone Books;
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon, class time]
-			if player is in Brookstone Books:
+			if Player is in Brookstone Books:
 				say "     As the morning progresses, teenagers of varied species and apparent ages gravitate into the bookstore, gathering around Jay. He smiles and greets each of them by name, then leads what is soon a dozen kids to a quiet corner of the store, where a narrow blackboard has been set up. An improvised, yet quite interesting and funny lesson for the young people plays out, at the end of which Jay sends his students off with the words, 'See you tomorrow.' After that, the elf himself leaves too, waving to Beverly as he goes.";
-			if player is in Mall Foodcourt:
+			if Player is in Mall Foodcourt:
 				say "     Jay the Christmas Elf comes walking into the food court from the north, making a beeline for one of the stores. After a short and amicable conversation with the mall rat server on duty, he gets a tablet with a fairly nice lunch handed to him and goes over to a group of tables to eat, then stays sitting there to chat with people passing by.";
 			move Jay to Mall Foodcourt;
 		[else if TimekeepingVar is 4 or TimekeepingVar is -4:] [mid afternoon - Jay hangs out at the food court]
 		[else if TimekeepingVar is 3 or TimekeepingVar is -5:] [evening - Jay hangs out at the food court]
 		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night - unused, Jay spends time with Jay]
-			if player is in Mall Foodcourt and Jay is in Mall Foodcourt:
+			if Player is in Mall Foodcourt and Jay is in Mall Foodcourt:
 				say "     Mark the polar bear comes into the food court and walks over to say hello to Jay, who climbs onto the table he was sitting at to give his lover a kiss. Being picked up by the much larger male, the elf is then carried off while having a conversation about how Mark's day went.";
 			now Jay is nowhere; [stashed in another dimension]
 
@@ -151,7 +151,7 @@ to say JayTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now Sextablerun is 1;
 				if (nam is "Him"):
@@ -257,7 +257,7 @@ Section 5 - Fucking
 [***********************************************************]
 
 instead of fucking the Jay:
-	if player is not male:
+	if Player is not male:
 		say "     Looking you up and down, Jay gives you a friendly smile, but at the same time shakes his head. 'Thanks for the offer, but I'm as gay as a three dollar bill. Got a husband to prove it, too. I'm flattered, but you're at the wrong address here I'm afraid...'";
 	else:
 		if thirst of Jay < 9:
@@ -279,7 +279,7 @@ to say JaySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -302,7 +302,7 @@ to say JaySexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):

@@ -117,7 +117,7 @@ An everyturn rule: [pregnancy progress every turn]
 
 to say NadiaEggBirth: [time to give birth]
 	now NadiaPregCounter1 is 0; [empty place for an egg]
-	if player is in Garden View:
+	if Player is in Garden View:
 		if NadiaPregCounter2 is 0:
 			if NadiaDescription is 1 or NadiaDescription is 2:
 				say "     [NadiaMaidenBirthingText]";
@@ -308,7 +308,7 @@ Instead of fucking the Nadia:
 	else:
 		if (lastfuck of Nadia - turns < 6):
 			say "     'Give me a moment, please,' Nadia says from within the confines of her nest, panting slightly. 'As much as I'd like to be bred again, I need some time to recover.'";
-		else if player is not male:
+		else if Player is not male:
 			say "     Nadia looks askance, crestfallen. 'As much as I'm indebted to you, I can't do that. Not that I have anything against it, but I just don't swing that way.'";
 			say "     It seems that breeding is more important to Nadia than fucking is - she'll probably be far more receptive to your advances if you do possess a cock.";
 		else:
@@ -318,13 +318,13 @@ Instead of fucking the Nadia:
 to say NadiaSexMenu:
 	blank out the whole of table of fucking options;
 [
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
 		now description entry is "Let the beautiful bird blow you.";
 		now toggle entry is NadiaSex rule;
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
@@ -336,13 +336,13 @@ to say NadiaSexMenu:
 	now description entry is "Give the beautiful bird some oral attention.";
 	now toggle entry is NadiaSex rule;
 ]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock.";
 		now toggle entry is NadiaSex rule;
-	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
+	if (player is male and bodyname of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -365,7 +365,7 @@ This is the NadiaSex rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Have her blow your cock"):
@@ -375,7 +375,7 @@ This is the NadiaSex rule:
 		else if (nam is "Eat Nadia out"):
 			say "[NadiaSex3]";
 		else if (nam is "Fuck her pussy"):
-			if (NadiaChar-I is "0" and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
+			if (NadiaChar-I is "0" and bodyname of Player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
 				say "[NadiaSex5]";
 				now NadiaChar-I is "1";
 			else:
@@ -557,7 +557,7 @@ Instead of resolving a Bird Troubles:
 	WaitLineBreak;
 	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
 	say "     'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.'";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
 		say "     'I didn't want to go to college - didn't see the value in it when there aren't really any classes on how to be a wife and mother. What I wanted to do was to raise a family, then maybe later there would be time for everything else, but everyone pressured me to go, said I had no ambition, that I shouldn't...' she chokes back tears. 'I eventually gave in when my mother told me I could earn my Mrs. degree while studying as well, and I'd hoped that picking out education would let me work with children when I graduated.";
@@ -652,7 +652,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	say "     The moment you draw the fertile pill out of your pocket, Nadia perks up in her nest and looks around, her beak slightly open, her wings flapping slightly as she sniffs the air. At last, her eyes fall upon the pill in your palm and something in the back of her mind clicks, her gaze turning from searching to begging as she pants gently, inhaling deep of a scent only she can sense. 'Please...may I have it?' she croons.";
 	LineBreak;
 	say "     Do you let the broody bird have the pill? (Y/N) ";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Chirping with delight, Nadia grabs the fertile pill out of the air with her talons as you toss it to her. You're worried that she might devour it as-is, but she easily rips apart the foil package and tosses it aside before popping the pill into her beak and swallowing. Crooning softly, the broody bird settles back into her nest to wait for it to work, and work it does.";
 		decrease carried of fertile pill by 1;
@@ -700,13 +700,13 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and NadiaChar-H is "0"):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of Player is Exotic Bird and NadiaChar-H is "0"):
 	move player to Garden View;
 	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cozying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
 	now NadiaChar-H is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of Player is Gryphoness) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second story railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
@@ -796,7 +796,7 @@ Section 4 - Endings
 
 when play ends:
 	if HP of Nadia > 0 and HP of Nadia < 99: [player brought her in]
-		if humanity of player < 10:
+		if humanity of Player < 10:
 			say "     When you fail to return to the library, Nadia holds out hope until the very last, only deigning to leave with the military when they evacuate people from the city. Later, when the military is doing one final sweep of the city, a small troop of soldiers checks the now-empty library and bunker for any remaining evacuees.";
 			say "     They don't find anyone, but what they do find is Nadia's empty nest with a broad-leafed, tropical plant in a pot in its middle. The plant is still vibrant and blooming despite having been left indoors for some time now, displaying brilliant flowers in varying shades of red, orange and yellow, and a faint floral scent hangs in the air. The soldiers are strangely moved by the sight - enough that they take the plant along with them when they leave.";
 		else: [player char sane]

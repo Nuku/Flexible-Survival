@@ -36,7 +36,7 @@ The Diet of it is {  }.
 The Perks of it is { "Does Not Eat" }.
 The science advisor of it is "An imperious looking latex vixen. You can tell she's the smart one because she has the glasses on. Nevermind that one of the lenses fell out. Besides, look at that hat, so tall, with bells. She obviously knows her stuff!".
 
-Instead of talking the nerd when tribe of player is latex foxes:
+Instead of talking the nerd when tribe of Player is latex foxes:
 	say "She looks at you with her bespectacled eyes and flashes a rubbery grin, 'I thinks should be working on [run paragraph on]";
 	let z be a random valid not complete research;
 	if z is nothing:

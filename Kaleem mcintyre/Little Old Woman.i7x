@@ -22,8 +22,8 @@ Instead of resolving a Defenseless old lady:
 		increase carried of chips by 1;
 		increase carried of water bottle by 2;
 		say "[bold type]Your strength has increased by 1![roman type][line break]";
-		increase strength of player by 1;
-		increase capacity of player by 5;
+		increase strength of Player by 1;
+		increase capacity of Player by 5;
 		SanBoost 25;
 		increase score by 10;
 	else:
@@ -31,9 +31,9 @@ Instead of resolving a Defenseless old lady:
 		say "     However, soon the vision is replaced by a slightly shriveled hand reaching out to you to give you aid from off the ground. Turning your head so fast that you nearly give yourself whiplash, you find your gaze going up pass the wrinkled hand to the older woman smiling down at you as though you were her long lost grandchild. Smiling nervously, you shakily get up onto your knees, but only after taking the offered hand - no sense upsetting the little woman by being prideful, right? A sense of wonder does come over you though as you marvel when the old woman hefts your greater weight up as though you were a sack of potatoes before dusting you off with her unoccupied hand. Blinking at the incredulity of the situation you try to form words to voice your feelings, but find yourself silenced by a bright smile coming off of the older lady. Reaching down to pull up the hem of her pink dress the little old lady hands you two cans of pepper spray and then pats you on the shoulder before going off onto her way. You could have almost sworn that your eyes faintly caught the sight of silver dog tags shimmering around her neck, but you there is just no way she could be a...or could she? With the automatic rifle she has in hand still smoking lightly from out of the muzzle you playfully wonder if maybe you need to ask her for protection instead of the other way around. However, before you can weigh the pros and cons of this you realize that you are still standing along in the middle of a street covered with enough gore to make you still want to throw up. Thinking better than to stick around and become another target, you hightail it down the street to somewhere much safer, though not without wondering where that older woman got her weaponry from.";
 		say "[bold type]You gain 2 bottles of pepperspray![roman type][line break]";
 		increase carried of pepperspray by 2;
-		decrease humanity of player by 16;
-	decrease libido of player by 15;
-	if libido of player < 0, now libido of player is 0;
+		decrease humanity of Player by 16;
+	decrease Libido of Player by 15;
+	if Libido of Player < 0, now Libido of Player is 0;
 	now Defenseless old lady is resolved;
 
 

@@ -577,7 +577,7 @@ The extension makes a distinction between "open" and "closed" questions. The dif
 
 Open questions:
 
-If player answered "inv" to a number question, the extension will exit question mode and proceed to parse the answer normally. In this case, the player's inventory will be displayed.
+if Player answered "inv" to a number question, the extension will exit question mode and proceed to parse the answer normally. In this case, the player's inventory will be displayed.
 If the player answered 12, we determine whether this is an acceptable answer. If the answer is acceptable, the extension exits question mode and the play resumes. If the answer is unacceptable, for example the player enters 234 when asked his or her age, we can specify whether the question needs to asked again or whether play should proceed without an answer.
 
 Closed questions:

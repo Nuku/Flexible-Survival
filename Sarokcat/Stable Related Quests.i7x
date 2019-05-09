@@ -122,7 +122,7 @@ Instead of Resolving a Hardware Fort:
 				say "You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
 			else:
 				say "You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
-				decrease HP of player by 25;
+				decrease HP of Player by 25;
 			hardwarefortphase1;
 		else if Recoveredhardware is 1:
 			say "     Returning to the hardware store and its fortress-like lot, you prepare yourself once again to take on the wolverine guards, and preparing yourself again you move into their maze-like fortress. You are more careful this time in regards to the cars and supports in the area, but it still isn't long before the noise of your passage alerts the dangerous wolverines as to your arrival, and you brace yourself for a tough fight!";
@@ -188,16 +188,16 @@ to hardwarefortphase3:
 				fight;  [third fight if returning attempt]
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     One of the horsemen gives you an approving nod as you finish driving off the last of the beasts attacking your part of the fort. You feel rather proud of yourself as you look behind you at all the work being done at the store, as items are efficiently loaded up onto makeshift carts and the forklifts move some of the cars around so they have better access to the store itself. One of the equines at the wall gestures at you, and you glance over just in time to catch the medkit he tosses at you with an equine grin on his muzzle. Nodding in thanks, you begin to start patching yourself up slightly, only to be interrupted by several large shadows sweeping over the area, it looks like the aerial creatures have decided to bypass the fort and start attacking you and the others directly!";
-				increase HP of player by 20;
-				if HP of player > maxHP of player, now HP of player is maxHP of player;
+				increase HP of Player by 20;
+				if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 				increase carried of medkit by 1;
 				hardwarefortphase4;
 	if fightoutcome >= 20 and fightoutcome <= 29:	[lost any fight]
 		say "     One of the horsemen gives you a pat on the shoulder as he helps you up after driving off the rest of the creatures. And while you are certainly embarrassed at the situation, and having needed their help at this point, at least they managed to keep things going while you were being [']entertained['] by your recent partner. Feeling somewhat weak after the exertion, when one of them hands you a draft beer and a medkit, you only nod gratefully as you drain the cool drink. You blink for a moment in surprise though as you feel a surge of power shoot through you, and groan as you realize it was a draft horse beer you just drank, and while it definitely makes you feel a bit better, you can already feel your body changing in response. Though you have little time to comment or react as several shadows blot out the sky, and you realize some of the aerial creatures have arrived and are attacking you and your fellow lookouts directly!";
 		infect "Horseman";
 		infect "Horseman";
-		increase HP of player by 40;
-		if HP of player > maxHP of player, now HP of player is maxHP of player;
+		increase HP of Player by 40;
+		if HP of Player > maxHP of Player, now HP of Player is maxHP of Player;
 		increase carried of medkit by 1;
 		hardwarefortphase4;
 	else if fightoutcome >= 30:	[fled any fight]
@@ -208,19 +208,19 @@ to hardwarefortphase3:
 
 
 to hardwarefortphase4:
-	if level of player >= 20:
+	if level of Player >= 20:
 		hardwarefortphase4-20plus;
-	else if level of player >= 10:
+	else if level of Player >= 10:
 		hardwarefortphase4-10plus;
 	else:
 		hardwarefortphase4-basic;
 
 to hardwarefortphase4-basic:
-	challenge "Hermaphrodite Gryphon";
+	challenge "Blue Gryphon";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "Wyvern";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			challenge "Hermaphrodite Gryphon";
+			challenge "Blue Gryphon";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if recoveredhardware < 3:
 					challenge "Wyvern";  [one less fight on re-tries]
@@ -249,7 +249,7 @@ to hardwarefortphase4-basic:
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4-10plus:
-	challenge "Hermaphrodite Gryphon";
+	challenge "Blue Gryphon";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -318,10 +318,10 @@ to hardwarefortphase4-20plus:
 
 to hardwarefortphase4fail:
 	say "     Driven back once again by the assault of the flying creatures, the horsemen are forced to scatter and take cover. Driven from their work site again, they feel in an angry, disorganized mess. In the chaos though, you are grabbed by the team's foreman and, after being given several very powerful punches to your already abused body, you are heaved by him right back into the fray.";
-	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of player < 3]over twenty-five feet[else if scalevalue of player is 3]over fifteen feet[else if scalevalue of player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
-	decrease HP of player by 20;
-	if HP of player > 0:
-		now HP of player is HP of player / 2;
+	say "     'Youz done made a stinkin['] mess ah this and we'z all sick ah it. Let dah beasts have you, yah wretch,' he yells as you fly what must be [if scalevalue of Player < 3]over twenty-five feet[else if scalevalue of Player is 3]over fifteen feet[else if scalevalue of Player is 4]over ten feet[else]almost ten feet despite your massive size[end if]. As you struggle to get back up after that, you hear him call for his stallions to grab what they can and run for it. Before you can rise, you're attacked by another of the fearsome flyers.";
+	decrease HP of Player by 20;
+	if HP of Player > 0:
+		now HP of Player is HP of Player / 2;
 	challenge "Hawkman";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
@@ -424,8 +424,8 @@ Instead of Resolving a horsepowering:
 				now horsepowering is resolved;
 			else:
 				say "Everything is going fine with the wiring until you slip at just the wrong moment and let one of the bare wires you are patching touch you. The world flashes in rainbow colors for a minute as you spasm and flail in agony, destroying most of your work and scattering your notes all over the place. Fortunately you only brushed the wire, but it is still enough of a shock that it takes you several minutes to recover, and your mouth tastes of ozone. Looking down at your shaking hands, you sigh and realize you won't be able to continue any kind of delicate work for a while, and proceed to gather your books back up and stagger out into the Stables proper, forced to come back and start over again at a later time.";
-				decrease HP of player by 25;
-				increase thirst of player by 10;
+				decrease HP of Player by 25;
+				increase thirst of Player by 10;
 				stop the action;
 		else:
 			say "After several hours of pondering the situation, you sigh and feel hopelessly lost at trying to figure the mess of wires out. Feeling a headache coming on, you reluctantly pack up your books and head back out into the Stables, resolving to come back later with a fresher mind to try to figure out how to install the generator without frying yourself or the Stables.";
@@ -464,7 +464,7 @@ Instead of resolving a technicalbookstore:
 		say "Wandering the streets of the city, you come across a small almost overlooked bookshop that appears to be stuffed with survival guides and useful technical manuals. Deciding on impulse to check inside to see if there is any useful information for your current situation, you carefully slip inside the store, the smell of sex filling your nose as you enter, and you can see that someone has been enjoying themselves in here for quite some time. Sexual fluids stain the floor, and several of the books have obviously been used as masturbatory aids rather recently, moving deeper in carefully, you startle the creature which has obviously been either stuck in here for a while, the lust-filled beast reaching for you eagerly!";
 		fight;
 		say "The fight over, and the creature having left through the door you left open when you entered, you gather your wits around you and begin to look around for some book or bit of information worth all the effort. Unfortunately, while you find survival guides for everything from zombie apocalypses, to nuclear winter, but the only survival guide dealing with any situation even remotely resembling your own, happens to be a guide to a computer game! Idly flipping through the 'Flexible Survival' Strategy guide, doesn't seem to help you too much, although several of the tips in there might actually come in handy you think as you slip back out into the city again.";
-		increase XP of player by a random number between 1 and 10;
+		increase XP of Player by a random number between 1 and 10;
 
 
 
@@ -511,20 +511,20 @@ Instead of resolving a contract hyenegotiation:
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "You barely have time to look up from the ground where your recent mating left you, before the hyenas descend on your already abused body, [HyenegotiationHyenaAbuse]";
 				now provingstallionhood is 2;
-				decrease humanity of player by 50;
+				decrease humanity of Player by 50;
 				now Resolution of contract hyenegotiation is 4; [lost]
 				now contract hyenegotiation is resolved;
 			else if fightoutcome is 30: [fled]
 				say "You manage to get away from your attackers, only to run right into the watching hyenas. They bowl you over and descend on your body, [HyenegotiationHyenaAbuse]";
 				now provingstallionhood is 2;
-				decrease humanity of player by 50;
+				decrease humanity of Player by 50;
 				now Resolution of contract hyenegotiation is 5; [fled]
 				now contract hyenegotiation is resolved;
 	else:
 		say "Wandering through the streets of the empty city, you are surprised to hear several loud bursts of laughter and the sounds of cheering coming from down one of the side streets. Feeling slightly curious, you carefully peek down the side street, only to see what appears to be a large gathering of those hyenas that have been wandering the city, many of them wearing bandannas and watching some sort of game or event. Realizing there are far too many of them to have a hope of engaging safely, you quickly back off and go back the way you came, shuddering slightly at your close call, and glad none of the beasts noticed you. Although some part of you is still whispering how much fun it would have been to let all those lusty spotted beasts play with your body until you were just as lusty and sexy as they are...";
 
 to say HyenegotiationHyenaAbuse:
-	say "their hands teasing and stroking your [skin of player] skin. Before long, you are dragged into the crowd, where tons of spotted forms rub up against you, and soon their thick, knotted cocks are rubbing up against you as every orifice on your body is stuffed full of their thick hyena meat. You lose track of time and the number of cocks that use your weakened body through the evening, your body responding with increasing eagerness to their assault as they pass you around like a party favor as the celebration continues. You hear the sounds of several other fights going on in the background, but find it hard to care about anything other than the next lovely black cock that is about to be stuffed into you. Eventually your mind is unable to take any more stimulation, and you pass out even as they continue to use your all to pliant and sexy form to slake their perverse desires. When you finally wake up much later, you are relieved to discover that while you are almost completely covered in the hyenas sticky cum, they appear to have left you lying there on the street where the party was rather than taking you with them. Shifting your aching body slightly, you hear something crinkle, and you look down to see that someone has tossed a note and the paper from fancy down next to you. Picking up the note first, you begin to read the hyenas message. 'Well that was certainly a fun night, almost worth the concessions you asked for, so hey we signed your little paper. Not that we really think a weakling like you has a chance to take over the Stables, but at least if you do we know it won't be hard to renegotiate if we really need to. Besides, the thought of such an eager hyena slut in charge of the Stables is pretty amusing you have to admit,' it says, and you sigh as you check and see that yes they did indeed sign the new agreement, though somehow you really don't think you will be telling Fancy about just how you got the hyena gang to agree as you pick yourself up and head back to the library to clean up.";
+	say "their hands teasing and stroking your [skin of Player] skin. Before long, you are dragged into the crowd, where tons of spotted forms rub up against you, and soon their thick, knotted cocks are rubbing up against you as every orifice on your body is stuffed full of their thick hyena meat. You lose track of time and the number of cocks that use your weakened body through the evening, your body responding with increasing eagerness to their assault as they pass you around like a party favor as the celebration continues. You hear the sounds of several other fights going on in the background, but find it hard to care about anything other than the next lovely black cock that is about to be stuffed into you. Eventually your mind is unable to take any more stimulation, and you pass out even as they continue to use your all to pliant and sexy form to slake their perverse desires. When you finally wake up much later, you are relieved to discover that while you are almost completely covered in the hyenas sticky cum, they appear to have left you lying there on the street where the party was rather than taking you with them. Shifting your aching body slightly, you hear something crinkle, and you look down to see that someone has tossed a note and the paper from fancy down next to you. Picking up the note first, you begin to read the hyenas message. 'Well that was certainly a fun night, almost worth the concessions you asked for, so hey we signed your little paper. Not that we really think a weakling like you has a chance to take over the Stables, but at least if you do we know it won't be hard to renegotiate if we really need to. Besides, the thought of such an eager hyena slut in charge of the Stables is pretty amusing you have to admit,' it says, and you sigh as you check and see that yes they did indeed sign the new agreement, though somehow you really don't think you will be telling Fancy about just how you got the hyena gang to agree as you pick yourself up and head back to the library to clean up.";
 	infect "Herm Hyena";
 	infect "Herm Hyena";
 	infect "Herm Hyena";
@@ -542,7 +542,7 @@ The sarea of Horsepitfight is "Stable".
 instead of resolving a Horsepitfight:
 	if provingstallionhood is 2:
 		say "Wandering through the halls of the Stables, you notice there seems to be a bit of hush over the area, and you almost aren't surprised when several stallions appear up ahead and gesture you to follow them. You feel increasingly nervous as they lead you to a rather large conference room, with seats scattered around the area, and a cleared circle in the center. From the smell of sweat and sex in the room, it is fairly obvious that the horsemen practice combat here on a fairly regular basis, and just as obvious what happens to the loser. Shaking your head slightly to clear it, you wince as several rather large horsemen step into the center of the circle and smirk at you, looking around you can see a number of other horsemen in the area pretending not to be interested in the building situation. 'Well so you're the new blood eh? I just don't see it happening, not for someone as scrawny as you anyways...' one of the horsemen in the circle says with a laugh, setting several of the others to chuckling as well. 'You may have impressed those hyenas out there, but if you want to get any further you will have to show us you can take on some real stallions, of course if you win we certainly won't object any further to your making the attempt... But if you lose...' The stallion pauses for dramatic effect, and you hear a jingle from one side of the circle and look over to see one of the other stallions showing off a full set of bondage gear obviously intended for use on you. You feel slightly nervous as you see the fully lockable gloves designed to make the hands resemble full hooves, and the straps which would force you to walk on all fours at all times... 'So what do you think, you ready to take us on little mare?' the horseman says with a smug grin on his face and an obviously erect cock as he draws your attention back to him and the other 2 standing proudly in the circle. Looking around at all the other horsemen watching, you realize that if you lose this battle you certainly won't be walking out of here on two legs, if they even let you leave again. Do you step into the ring to take up the challenge?";
-		if player consents:
+		if Player consents:
 			say "The brutish horsemen grin eagerly as you step into the ring, two of them backing off while the one in the middle prepares to fight you first, and as the spectators gather, you feel increasingly nervous as you prepare for the upcoming three combats, knowing you won't get a chance to rest until the end... either your end or theirs...";
 			let HorsemanFightCounter be 0;
 			now fightoutcome is 0; [reset]
@@ -575,13 +575,13 @@ when play ends:
 to say HorsePitFightAbuse:
 	say "You moan and try to struggle limply as they slip your new harness on, though the straps of leather feel increasingly comfortable as they slip into place on your changing body, the leather straps pushing your increasingly large female breasts out and making them incredibly sensitive. The tail ring holds your tail up, exposing your increasingly sexy, pert little ass and fresh and dripping mare sex, and the boots locking on your hands and feet make it impossible for you to even handle the simplest of things like doors and feeding yourself. Though perhaps the last and most intense embarrassment is when they slip your new halter over your head, the bit fitting nicely in your new equine muzzle and preventing any attempt at speech you might make. Fully outfitted like a slutty little mare, you can only moan helplessly as their hands rove over your new sleek and sexy body, and you find yourself finding it hard to concentrate on anything except the touch of all the powerful male stallions surrounding you. You completely give up trying to think about things when one of them slides their thick stallionhood into your damp, needy pussy, making you cry out with pleasure around the bit, much to their amusement. As the first of the many stallions surrounding you begins to use your newly bound body, you find yourself trying to recall what you were doing here, something about a quest? No, that's silly. What kind of quest would a slutty mare like you have? Unless it was to see just how many of these sexy stallions surrounding you you can get to blow their load in your cunt, that is...";
 	now provingstallionhood is 4;
-	now humanity of player is 0;
-	now body of player is "";
-	now bodyname of player is "equine";
-	now scalevalue of player is 3;
-	now bodydesc of player is "sultry";
-	now bodytype of player is "[one of]equine[or]horse-like[at random]";
-	now SleepRhythm of player is 0;
+	now humanity of Player is 0;
+	now body of Player is "";
+	now bodyname of Player is "equine";
+	now scalevalue of Player is 3;
+	now bodydesc of Player is "sultry";
+	now bodytype of Player is "[one of]equine[or]horse-like[at random]";
+	now SleepRhythm of Player is 0;
 	follow the turnpass rule;
 
 

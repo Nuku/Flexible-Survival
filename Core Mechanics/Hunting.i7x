@@ -40,8 +40,8 @@ check HuntAction:
 	else if there is a dangerous door in the location of the player: [danger door]
 		let y be a random dangerous door in the location of the player;
 		now battleground is the marea of y;
-	else if earea of location of player is not "void": [explore/hunt anywhere]
-		now battleground is earea of location of player;
+	else if earea of location of Player is not "void": [explore/hunt anywhere]
+		now battleground is earea of location of Player;
 	else: [neither option available]
 		say "I don't see any good hunting grounds around here." instead;
 
@@ -53,19 +53,19 @@ carry out HuntAction:
 	if debugactive is 1:
 		say "DEBUG -> Battleground: [battleground]; Target: [HuntId][line break]";
 	[extra encounter chances]
-	if "Unerring Hunter" is not listed in feats of player: [only adds random monsters if the player isn't an unerring hunter]
-		if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and companion of player is not mouse girl:	[hunted by the mouse collective]
+	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
+		if ( bodyname of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
 				add "Mental Mouse" to PossibleEncounters;
-				if humanity of player < 75:
-					repeat with x running from 1 to ( ( 100 - humanity of player ) / 25 ):
+				if humanity of Player < 75:
+					repeat with x running from 1 to ( ( 100 - humanity of Player ) / 25 ):
 						add "Mental Mouse" to PossibleEncounters;
 		if insectlarva is true and larvaegg is 1 and gestation of child is 0: [hunted by wasp hive anywhere outdoors]
 			if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 				if there is a name of "Black Wasp" in the Table of Random Critters:
 					add "Black Wasp" to PossibleEncounters;
-					if libido of player > 30:
-						repeat with x running from 1 to ( libido of player / 30 ):
+					if Libido of Player > 30:
+						repeat with x running from 1 to ( Libido of Player / 30 ):
 							add "Black Wasp" to PossibleEncounters;
 					if larvacounter > 3:
 						repeat with x running from 1 to ( larvacounter / 3 ):
@@ -73,7 +73,7 @@ carry out HuntAction:
 	if there is a name of HuntId in the Table of GameRoomIDs:
 		choose a row with name of HuntId in the Table of GameRoomIDs;
 		if debugactive is 1:
-			say "DEBUG -> Target Room: [name entry] found by exact match with: [HuntId][line break]";
+			say "DEBUG -> Target Room: [Name entry] found by exact match with: [HuntId][line break]";
 		if object entry is private:
 			if debugactive is 1:
 				say "DEBUG -> This room is private and can't be found![line break]";
@@ -84,14 +84,14 @@ carry out HuntAction:
 				now Found is 23;
 		else:
 			say "It should be somewhere...";
-			if "Unerring Hunter" is not listed in feats of player:
+			if "Unerring Hunter" is not listed in feats of Player:
 				let bonus be (( the Perception of the player minus 10 ) divided by 2);
-				if "Curious" is listed in feats of player, increase bonus by 2;
+				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 				increase diceroll by bonus;
 				if diceroll >= 15:
-					say "You manage to find your way towards [name entry]!";
+					say "You manage to find your way towards [Name entry]!";
 					huntingfightchance;
 					move player to object entry;
 					now object entry is known;
@@ -101,7 +101,7 @@ carry out HuntAction:
 					now Found is 22; [perception check fail]
 					huntingfightchance;
 			else:
-				say "You manage to find your way towards [name entry]!";
+				say "You manage to find your way towards [Name entry]!";
 				huntingfightchance;
 				move player to object entry;
 				now object entry is known;
@@ -109,7 +109,7 @@ carry out HuntAction:
 	else if there is a name of HuntId in the Table of GameEventIDs: [exact situation name match]
 		choose a row with name of HuntId in the Table of GameEventIDs;
 		if debugactive is 1:
-			say "DEBUG -> Situation found: [name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
+			say "DEBUG -> Situation found: [Name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
 		if object entry is resolved:
 			now Found is 34; [found, but it is resolved]
 			if debugactive is 1:
@@ -122,7 +122,7 @@ carry out HuntAction:
 			now Found is 37; [found, but the event was banned]
 			if debugactive is 1:
 				say "DEBUG -> Event banned / inactive.[line break]";
-		else if level of player < level of object entry:
+		else if level of Player < level of object entry:
 			now Found is 32; [found, level too low]
 			if debugactive is 1:
 				say "DEBUG -> Player's level is too low![line break]";
@@ -134,15 +134,15 @@ carry out HuntAction:
 		else:
 			now Found is 30; [event found]
 			say "It should be somewhere...";
-			if "Unerring Hunter" is not listed in feats of player:
+			if "Unerring Hunter" is not listed in feats of Player:
 				let bonus be (( the Perception of the player minus 10 ) divided by 2);
-				if "Curious" is listed in feats of player, increase bonus by 2;
+				if "Curious" is listed in feats of Player, increase bonus by 2;
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 				increase diceroll by bonus;
 				if diceroll >= 15:
 					now inasituation is true;
-					say "You manage to find your way to [name entry]!";
+					say "You manage to find your way to [Name entry]!";
 					try resolving object entry;
 					now inasituation is false;
 				else:
@@ -151,31 +151,31 @@ carry out HuntAction:
 					huntingfightchance;
 			else:
 				now inasituation is true;
-				say "You manage to find your way to [name entry]!";
+				say "You manage to find your way to [Name entry]!";
 				try resolving object entry;
 				now inasituation is false;
 	else if there is a name of HuntId in the Table of Random Critters: [exact creature match]
 		choose a row with name of HuntId in the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Creature: [name entry] found by exact match with: [HuntId][line break]";
+			say "DEBUG -> Target Creature: [Name entry] found by exact match with: [HuntId][line break]";
 		if there is an area entry:
 			if area entry exactly matches the text battleground:
-				say "You are almost certain you saw some [name entry] tracks...";
-		add name entry to PossibleEncounters; [basic chance to find the creature]
+				say "You are almost certain you saw some [Name entry] tracks...";
+		add Name entry to PossibleEncounters; [basic chance to find the creature]
 		[extra encounter chances]
-		let zed be perception of player / 3;
+		let zed be perception of Player / 3;
 		if zed > 8:
 			now zed is 8;
 		repeat with N running from 1 to zed:
-			add name entry to PossibleEncounters;
-		if "Curious" is listed in feats of player:
-			add name entry to PossibleEncounters;
-		if "Expert Hunter" is listed in feats of player:
-			add name entry to PossibleEncounters;
-			add name entry to PossibleEncounters;
-		if "Master Baiter" is listed in feats of player:
-			repeat with N running from 1 to ( perception of player / 3 ):
-				add name entry to PossibleEncounters;
+			add Name entry to PossibleEncounters;
+		if "Curious" is listed in feats of Player:
+			add Name entry to PossibleEncounters;
+		if "Expert Hunter" is listed in feats of Player:
+			add Name entry to PossibleEncounters;
+			add Name entry to PossibleEncounters;
+		if "Master Baiter" is listed in feats of Player:
+			repeat with N running from 1 to ( perception of Player / 3 ):
+				add Name entry to PossibleEncounters;
 		[right time to find this creature?]
 		if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 			if debugactive is 1:
@@ -207,9 +207,9 @@ carry out HuntAction:
 			if z is private, next;
 			if printed name of z matches the text HuntId, case insensitively:
 				say "It should be somewhere...";
-				if "Unerring Hunter" is not listed in feats of player:
+				if "Unerring Hunter" is not listed in feats of Player:
 					let bonus be (( the Perception of the player minus 10 ) divided by 2);
-					if "Curious" is listed in feats of player, increase bonus by 2;
+					if "Curious" is listed in feats of Player, increase bonus by 2;
 					let diceroll be a random number from 1 to 20;
 					say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 					increase diceroll by bonus;
@@ -235,15 +235,15 @@ carry out HuntAction:
 				choose row X from the Table of Random Critters;
 				if there is no area entry, next; [broken creatures / empty lines get ignored]
 				if area entry is "Nowhere", next; [nowhere creatures can't be hunted]
-				if there is no name entry, next; [broken creatures / empty lines get ignored]
-				if Found is not 10 and (name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy name entry matches the text HuntId, case insensitively): [no target creature found yet]
+				if there is no Name entry, next; [broken creatures / empty lines get ignored]
+				if Found is not 10 and (Name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy Name entry matches the text HuntId, case insensitively): [no target creature found yet]
 					if debugactive is 1:
-						say "DEBUG -> Found creature: [name entry].[line break]";
+						say "DEBUG -> Found creature: [Name entry].[line break]";
 					let CreatureUnavailable be 0;
 					[right area for the creature?]
 					if area entry exactly matches the text battleground or area entry is "Everywhere":
 						now Found is 10; [creature found, right area and time]
-						say "You are almost certain you saw some [name entry] tracks...";
+						say "You are almost certain you saw some [Name entry] tracks...";
 						if debugactive is 1:
 							say "DEBUG -> Found: [Found], Area '[Area Entry]' matches Battleground '[Battleground]'.[line break]";
 					else:
@@ -263,44 +263,44 @@ carry out HuntAction:
 						if debugactive is 1:
 							say "DEBUG -> The creature has been banned from the game![line break]";
 					if CreatureUnavailable is 0: [adding the creature only if it is available]
-						add name entry to PossibleEncounters; [basic chance to find the creature]
+						add Name entry to PossibleEncounters; [basic chance to find the creature]
 						[extra encounter chances]
-						let zed be perception of player / 3;
+						let zed be perception of Player / 3;
 						if zed > 8:
 							now zed is 8;
 						repeat with N running from 1 to zed:
-							add name entry to PossibleEncounters;
-						if "Curious" is listed in feats of player:
-							add name entry to PossibleEncounters;
-						if "Expert Hunter" is listed in feats of player:
-							add name entry to PossibleEncounters;
-							add name entry to PossibleEncounters;
-						if "Master Baiter" is listed in feats of player:
-							repeat with N running from 1 to ( perception of player / 3 ):
-								add name entry to PossibleEncounters;
-				if "Unerring Hunter" is not listed in feats of player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds random monsters if the player isn't an unerring hunter, and the area matches]
+							add Name entry to PossibleEncounters;
+						if "Curious" is listed in feats of Player:
+							add Name entry to PossibleEncounters;
+						if "Expert Hunter" is listed in feats of Player:
+							add Name entry to PossibleEncounters;
+							add Name entry to PossibleEncounters;
+						if "Master Baiter" is listed in feats of Player:
+							repeat with N running from 1 to ( perception of Player / 3 ):
+								add Name entry to PossibleEncounters;
+				if "Unerring Hunter" is not listed in feats of Player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds random monsters if the player isn't an unerring hunter, and the area matches]
 					if there is a lev entry:
-						if lev entry > level of player + 1, next;
+						if lev entry > level of Player + 1, next;
 					else:
 						next;
 					if (DayCycle entry is 1 and daytimer is day) or (DayCycle entry is 2 and daytimer is night), next; [wrong time of day for that creature]
-					if "Expert Hunter" is listed in feats of player and a random chance of 1 in 3 succeeds: [chance to avoid random critters]
+					if "Expert Hunter" is listed in feats of Player and a random chance of 1 in 3 succeeds: [chance to avoid random critters]
 						next;
 					let skipit be 0;
 					repeat with s running through warded flags:
-						if name entry is listed in infections of s:
+						if Name entry is listed in infections of s:
 							now skipit is 1;
 							break;
 					if skipit is 1, next;
-					add name entry to PossibleEncounters;
+					add Name entry to PossibleEncounters;
 					if debugactive is 1:
-						say "DEBUG -> Other creature [name entry] found for the battleground: [battleground].[line break]";
-				if "Like Attracts Like" is listed in the feats of player and "Unerring Hunter" is not listed in feats of player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds player fav infection if they're not an unerring hunter]
-					if bodyname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-					if facename of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-					if skinname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-					if tailname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
-					if cockname of player is name entry and a random chance of 1 in 2 succeeds, add name entry to PossibleEncounters;
+						say "DEBUG -> Other creature [Name entry] found for the battleground: [battleground].[line break]";
+				if "Like Attracts Like" is listed in the feats of Player and "Unerring Hunter" is not listed in feats of Player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds player fav infection if they're not an unerring hunter]
+					if bodyname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if facename of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if skinname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if tailname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if cockname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
 		if Found is 0 or (Found > 10 and Found < 20): [no simple room or creature match, moving on to events]
 			if debugactive is 1:
 				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";
@@ -316,7 +316,7 @@ carry out HuntAction:
 						now Found is 37; [found, but the event was banned]
 						if debugactive is 1:
 							say "DEBUG -> Event banned / inactive.[line break]";
-					else if level of player < level of z:
+					else if level of Player < level of z:
 						now Found is 32; [found, level too low]
 						if debugactive is 1:
 							say "DEBUG -> Found: [Found]; Player's level is too low![line break]";
@@ -328,9 +328,9 @@ carry out HuntAction:
 					else:
 						now Found is 30; [event found]
 						say "It should be somewhere...";
-						if "Unerring Hunter" is not listed in feats of player:
+						if "Unerring Hunter" is not listed in feats of Player:
 							let bonus be (( the Perception of the player minus 10 ) divided by 2);
-							if "Curious" is listed in feats of player, increase bonus by 2;
+							if "Curious" is listed in feats of Player, increase bonus by 2;
 							let diceroll be a random number from 1 to 20;
 							say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Perception Check):[line break]";
 							increase diceroll by bonus;
@@ -360,13 +360,13 @@ carry out HuntAction:
 		choose a row with name of RandomChosenMonster in the Table of Random Critters;
 		setmonster RandomChosenMonster;
 		if debugactive is 1:
-			say "DEBUG -> Randomly chosen creature is: [name entry][line break]";
+			say "DEBUG -> Randomly chosen creature is: [Name entry][line break]";
 		now monsterHP is HP entry;
-		if (name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy name entry matches the text HuntId, case insensitively):
+		if (Name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy Name entry matches the text HuntId, case insensitively):
 			now ishunting is true;
 		challenge;
 		now ishunting is false;
-		if ((hardmode is true and a random chance of 1 in 8 succeeds) or ("Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds)) and battleground is not "void":
+		if ((hardmode is true and a random chance of 1 in 8 succeeds) or ("Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds)) and battleground is not "void":
 			say "As you are trying to recover from your last encounter, another roving creature finds you.";
 			Fight;
 	if Found is:
@@ -402,13 +402,13 @@ carry out HuntAction:
 
 to huntingfightchance:
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Stealthy" is listed in feats of player, now bonus is -1;
-	if "Curious" is listed in feats of player, increase bonus by 2;
-	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if "Stealthy" is listed in feats of Player, now bonus is -1;
+	if "Curious" is listed in feats of Player, increase bonus by 2;
+	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
 	if a random number from 1 to 20 < 7 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 

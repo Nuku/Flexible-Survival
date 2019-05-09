@@ -99,14 +99,14 @@ Instead of examining the Rat Twins Stash:
 
 to say RatTwinsTapeGet:
 	say "     You approach from the pile of cots and clothes[if HP of Erin >= 2] belonging to the twins[end if]. A note that reads 'Back shortly. Keep your hands off our stuff' is taped on one of the bags. ";
-	if "Rat Twin Tape" is not listed in tapes of player:
+	if "Rat Twin Tape" is not listed in tapes of Player:
 		if Lost Camera is unresolved:
 			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. If you find a compatible camera, this could prove an interesting watch.";
 		else:
 			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. It seems compatible with the camera that you [if carried of video camera is 1]carry[else]put somewhere[end if].";
 		say "[if HP of Erin >= 2]You grab the tape while the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]You grab the tape while no one is here to watch you[end if].";
 		say "[bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
-		add "Rat Twin Tape" to tapes of player;
+		add "Rat Twin Tape" to tapes of Player;
 		now Rat Twins Stash is nowhere;
 
 [Public Beach]
@@ -383,7 +383,7 @@ instead of entering the Confession Booth:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Ask about the church"):
@@ -409,8 +409,8 @@ to say ChurchLustConfess:
 	say "     You hear a soft sigh. 'Indeed, you speak of one of the most dangerous aspects of the infection, for it leads towards loosing yourself. Please just listen, and I will attempt to help you overcome its controlling nature.'";
 	if ( lastconfession - 7 ) > turns:
 		say "     The priestess's words and advice do indeed help, granting you better control over your lusts, at least for now.";
-		Decrease libido of player by 20;
-		if libido of player < 0, now libido of player is 0;
+		Decrease Libido of Player by 20;
+		if Libido of Player < 0, now Libido of Player is 0;
 		now lastconfession is turns;
 	else:
 		say "     Unburdening yourself again, you sadly discover it has little effect as you had nothing to add since your last confession session.";

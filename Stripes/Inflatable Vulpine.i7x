@@ -3,7 +3,7 @@ Version 1 of Inflatable Vulpine by Stripes begins here.
 
 "Adds an Inflatable Vulpine infection for use with Bubble the Inflatable Vixen"
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 last_infvulp_airhead is a number that varies. last_infvulp_airhead is usually 255.
 infvulpstate is a number that varies.
@@ -17,18 +17,18 @@ when play begins:
 
 to say losetoinfvulp:
 	say "     You were beaten by the creature.";
-	if player is male:
+	if Player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
 
 to say beattheinfvulp:
 	say "     You were victorious over the creature.";
-	if libido of player > 40:
+	if Libido of Player > 40:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if player consents:
+		if Player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if player is female:
+			if Player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -41,17 +41,18 @@ to say infvulpdesc:
 	say "     Monster description paragraph 2.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Inflatable Vulpine"; [ Infection/Creature name. Capitalized. ]
+	now NewTypeInfection entry is false;
+	now Name entry is "Inflatable Vulpine"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheinfvulp]";
@@ -66,7 +67,7 @@ When Play begins:
 	now body change entry is "[infvulpbodychange][infvulp_reset]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes glossy and shifts like liquid plastic. You turn a bright orange in color, though areas of black and white start to distinguish themselves as well. These sections divide off into patches joined together by melted seams as your skin becomes a thin layer of colorful latex";
 	now ass change entry is "a sense of pressure grows there. This feeling builds up until finally, with a cartoonish 'Pop!' you suddenly gain a balloon-like fox tail";
-	now cock change entry is "it feels like it's swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
+	now cock change entry is "it feels like it's swelling up, though no change in size is occurring. While pleasurable, this mysterious feeling continues until finally the pressure releases in a blast of spooge. Your [cock size desc of Player] penis becomes a balloon version of a cock, vulpine in shape with an inflatable knot at the base. It even comes with a sheath of white latex skin to house it when deflated";
 	now str entry is 8; [ These are now the creature's stats... ]
 	now dex entry is 8; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 8; [ These values may be used as part of alternate combat.]
@@ -78,15 +79,15 @@ When Play begins:
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
-	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 12;
-	now cunt width entry is 5;
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 5; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Length entry is 12;
+	now Cunt Tightness entry is 5;
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -100,16 +101,107 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 
 to say infvulpbody:
 	if infvulpstate <= 2:
-		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if player is female]lovely curves and a narrow waist[else]a slender physique[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
+		say "empty, filled only with air like a balloon. You've got a very sexy figure, with [if Player is female]lovely curves and a narrow waist[else]a slender physique[end if]. Your arms and legs end in paw-like hands with pads of textured latex";
 	else:
 		say "empty, filled only with air like a balloon. You've got a rounded and full figure thanks to your increased inflation level, making you adorably plump and huggable";
 
 to say infvulpbodychange:
 	if infvulpstate <= 2:
-		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if player is female]a lovely curves and a narrow waist[else]slender physique[end if]. Your hands change, puffing up into cute paws, and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
+		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain [if Player is female]a lovely curves and a narrow waist[else]slender physique[end if]. Your hands change, puffing up into cute paws, and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 	else:
 		say "it grows lighter and you giggle merrily for no reason. As your insides are replaced with air, you gain a rounded and full figure as you keep inflating until you're adorably plump and huggable. Your hands change, puffing up into cute paws, and soon your feet do the same. By the time it's over, your body is that of some kind of inflatable balloon creature";
 
@@ -120,23 +212,23 @@ to say infvulp_reset:
 Section 3 - Everyturn Airhead
 
 an everyturn rule:
-	now tempnum is intelligence of player + 6;
-	increase tempnum by humanity of player / 10;
-	decrease tempnum by libido of player / 10;
+	now tempnum is intelligence of Player + 6;
+	increase tempnum by humanity of Player / 10;
+	decrease tempnum by Libido of Player / 10;
 	if a random chance of 5 in tempnum succeeds and last_infvulp_airhead - 2 > turns:
-		if facename of player is "Inflatable Vulpine" or bodyname of player is "Inflatable Vulpine":
+		if facename of Player is "Inflatable Vulpine" or bodyname of Player is "Inflatable Vulpine":
 			now last_infvulp_airhead is turns;
 			let T be a random number between 1 and 3;
 			if T is 1:
 				say "     [one of]Overcome with a fit of giddiness, you giggle happily for no reason.[or]You bounce around happily, an empty-headed cheeriness filling you.[or]You're briefly distracted as a colorful scrap of paper blows by and you end up chasing it.[or]The vapid chorus to some silly pop song come to mind and soon you're humming along happily. As you try to sing along to the song in your head, you try to remember the rest of the lyrics, but keep substituting sexual words throughout without even realizing it.[in random order]";
-				if morale of player < ( charisma of player + perception of player ) / 2:
-					increase morale of player by 1; [half of 'maxmorale']
+				if morale of Player < ( charisma of Player + perception of Player ) / 2:
+					increase morale of Player by 1; [half of 'maxmorale']
 			else if T is 2:
 				say "     [one of]You start listing off the creatures you've seen, trying to come up with your own [']top 10 sexiest['] list.[or]An air-headed, lustful thought pops into your head to go off in a random direction and ask the next creature you find to fuck you. It sounds like such a fun game full of surprises.[or]You lose track of what you were doing, sit down and start masturbating without a care in the world. You're doing this for a few minutes before reality sets back in and you regain control of yourself.[or]You plop yourself down with a happy giggle and masturbate with a vacant grin on your face. You stop suddenly a few minutes later when you suddenly realize what you're doing.[in random order]";
-				increase libido of player by 3;
+				increase Libido of Player by 3;
 			else:
 				say "     [one of]You end up staring at your reflection in [if the player is in the bunker]a bathroom mirror[else]a window[end if], smiling happily at how cute you look.[or]You are about to rush outside to find some cute mutants to [']play['] with. Thankfully you come to your senses and head back into cover.[or]Seeing a cute mutant passing by, you imagine having some fun with them and almost rush off after them as they turn the corner.[or]You're captivated by touching your altered features, especially pleased by your balloon-like nature.[or]You forget yourself momentarily, overcome by vapid, vulpine thoughts.[in random order]";
-				decrease humanity of player by 2;
+				decrease humanity of Player by 2;
 		else:
 			now last_infvulp_airhead is -2147483648;
 
@@ -144,14 +236,14 @@ Section 4 - Endings
 
 [
 when play ends:
-	if bodyname of player is "Inflatable Vulpine":
-		if humanity of player < 10:
+	if bodyname of Player is "Inflatable Vulpine":
+		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if player is male:							[MALE/HERM]
+			if Player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";

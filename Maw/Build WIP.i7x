@@ -42,7 +42,7 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if player consents:
+	if Player consents:
 		now current2 of blueprints is noun;
 		now lolcation is second noun;
 		say "Your builders begin constructing [noun] in the [second noun].";
@@ -78,7 +78,7 @@ Definition: A Construct (called C) is complete:
 		no;
 
 Carry out Completion:
-		Change the lolcation exit of the location of player to the construct;
+		Change the lolcation exit of the location of Player to the construct;
 		Change the opposite of lolcation exit of the construct to the location of the player;
 
 Part 2 - Constructs

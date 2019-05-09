@@ -13,7 +13,7 @@ the sarea of Gill Fruits Tree is "Beach".
 Instead of resolving a Gill Fruits Tree:
 	say "You come across an odd tree, half in and half out of the water, with slitted fruits on the branches. This must be the elusive gill fruit tree.";
 	say "Do you wish to pick some?";
-	if player consents:
+	if Player consents:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
 		now Resolution of Gill Fruits Tree is 1; [got a fruit]
@@ -32,10 +32,10 @@ name	desc	weight	object
 to say gill fruit use:
 	say "You eagerly gulp the fruit.";
 	now hasgills is 1;
-	decrease thirst of player by 10;
-	decrease hunger of player by 10;
-	if thirst of player < 0, now thirst of player is 0;
-	if hunger of player < 0, now hunger of player is 0;
+	decrease thirst of Player by 10;
+	decrease hunger of Player by 10;
+	if thirst of Player < 0, now thirst of Player is 0;
+	if hunger of Player < 0, now hunger of Player is 0;
 	increase score by 10;
 	say "You feel a tingling in your neck, and somehow understand that if you were to go underwater you could breathe.";
 	follow the turnpass rule;
@@ -48,7 +48,7 @@ instead of going down from Open Ocean:
 	if hasgills is 1:
 		say "     You dive into the water, making your way to the sunken ship, feeling the gills appear on your neck to allow you to breath. It doesn't take you that long to get their thankfully so you quite quickly arrive at the ship.";
 		move player to Sunken Ship;
-	else if facename of player is listed in infections of swimlist:
+	else if facename of Player is listed in infections of swimlist:
 		say "     With your natural ability to breathe underwater due to your infection, you dart under and swim towards the sunken ship. Thankfully for your patience it doesn't take you long to reach the ship.";
 		move player to Sunken Ship;
 	else:
@@ -63,9 +63,9 @@ name	desc	weight	object
 the scent of sea dragon cum is "The cum smells powerfully of a male sea dragon.".
 
 to say sea dragon cum use:
-	if player is female:
+	if Player is female:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
-		if player consents:
+		if Player consents:
 			if a random chance of one in two succeeds and guy is not banned:
 				infect "Feral Sea Dragon";
 			else:

@@ -65,8 +65,8 @@ to say useelectricprod:
 			say "You've already successfully used the prod once this battle. It needs time to cool down and recharge the capacitors.";
 			wait for any key;
 		else:
-			choose row monster from the Table of Random Critters;
-			let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus + scale entry - 10;
+			choose row MonsterID from the Table of Random Critters;
+			let the attack bonus be dexterity of Player + ( level of Player * 2 ) + plhitbonus + scale entry - 10;
 			let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
 			let the combat bonus be attack bonus - defense bonus;
 			if hardmode is true:
@@ -83,7 +83,7 @@ to say useelectricprod:
 			say "[line break]You roll 1d50([roll])+[combat bonus] -- [roll plus combat bonus]: ";
 			if the roll plus the combat bonus > 40:
 				decrease eptarget by 1;
-				say "Direct hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust squarely at the [name entry]. Getting a solid hit, the electricity courses through it and makes it stagger back, severely weakening it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
+				say "Direct hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust squarely at the [Name entry]. Getting a solid hit, the electricity courses through it and makes it stagger back, severely weakening it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
 				decrease mondodgebonus by 2;
 				decrease monhitbonus by 2;
@@ -101,7 +101,7 @@ to say useelectricprod:
 					if eprecharge >= 2, delete electric prod;
 			else if roll + combat bonus > 20:
 				decrease eptarget by 1;
-				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
+				say "Hit: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry]. Getting a glancing blow, the electricity shocks it and makes it stagger back, taking some of the fight out of it. Ozone hangs in the air and your electric shocker [if eptarget is 0]sputters and sparks, burning out with the smell of magic smoke[else]is overheated. It will be a while before you can use it again[end if]";
 				now eprodused is true;
 				let HPdamage be a random number between 20 and 40;
 				let lvlresist be lev entry / 3;
@@ -116,10 +116,10 @@ to say useelectricprod:
 					now electric prod is not fast;
 					if eprecharge >= 2, delete electric prod;
 			else:
-				say "Miss: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [name entry], but end up missing.";
+				say "Miss: You charge up the [one of]stun rod[or]electric prod[or]cattle prod[or]shock stick[or]electric shocker[at random] and thrust at the [Name entry], but end up missing.";
 				if a random chance of 1 in 4 succeeds and eptarget is not 1, decrease eptarget by 1;
 			choose row monstercom from table of Critter Combat;
-			if playerpoison > 0, follow the playerpoisoned rule;
+			if Playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
 				follow the continuous entry;
 			if combat abort is 0 and skipretaliate is false, follow the combat entry;

@@ -75,29 +75,29 @@ to new ban menu:
 		now countnumber is 1; [Must reset to 1 or it wont print the list again]
 
 to bancheck (name - text):
-	if name is listed in BanList of player:
+	if name is listed in BanList of Player:
 		say "[bold type]BANNED[roman type]";
-	else if name is listed in WardList of player:
+	else if name is listed in WardList of Player:
 		say "[bold type]WARDED[roman type]";
 	else:
 		say "[bold type]Normal[roman type]";
 	say "[line break]";
 
 to banchange (name - text):
-	if name is listed in BanList of player:
-		remove name from BanList of player;
+	if name is listed in BanList of Player:
+		remove name from BanList of Player;
 		oldflagunban name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now normal[roman type]";
-	else if name is listed in WardList of player:
-		remove name from WardList of player;
+	else if name is listed in WardList of Player:
+		remove name from WardList of Player;
 		oldflagunward name;
-		add name to BanList of player;
+		add name to BanList of Player;
 		oldflagban name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now banned[roman type]";
 	else:
-		add name to WardList of player;
+		add name to WardList of Player;
 		oldflagward name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now warded[roman type]";

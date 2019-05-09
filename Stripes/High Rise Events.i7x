@@ -45,10 +45,10 @@ Instead of resolving a Pigging Out:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "     When you first step in, the pig is somewhat startled by your presence. Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude. With a grin, she picks up a handful of food from the floor with her left hand, the one she'd had in her pussy. As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more. You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
 			say "     As you eat, she helps you out of your clothes, tossing them onto a knocked over table. With you now naked, she runs her messy hands over your body as she pulls you into her arms. She grabs another of the scattered pastries from the floor and stuffs it into her mouth before sloppily kissing you, smearing the creamy filling into your mouth with her tongue.";
-			if player is male:
+			if Player is male:
 				say "     You place your hands on her sow tits, making her squeal in pleasure. She lays herself back on the floor, squishing some of the expensive food beneath her bulk. You bury your face in her teats, licking and suckling at them playfully. She oinks and moans in pleasure between mouthfuls. You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beckons to you.";
 				say "     You grab a nearby bottle of maple syrup and tear off the top, pouring it right onto those wet lips before you bury your face between her large thighs. You lick all over her messy pussy, the maple sweetness tasting wonderful with her porcine juices. You stuff your tongue into her, delving deeper for more of her sweet honey until she finally orgasms and soaks your face with it.";
 				say "     You smile up at her, licking your chops as she motions for you to climb atop her. You do so eagerly, bringing your hard cock into position at her pussy before burying it in her ample folds. With your face pressed to her piggish snout, she snuffles at your face and licks away the sticky syrup and her own juices with squeals of pleasure as you fuck her.";
@@ -64,8 +64,8 @@ Instead of resolving a Pigging Out:
 			infect "Messy Pig";
 			infect "Messy Pig";
 			PlayerEat 30;
-			decrease libido of player by 18;
-			if libido of player < 0, now libido of player is 0;
+			decrease Libido of Player by 18;
+			if Libido of Player < 0, now Libido of Player is 0;
 			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
@@ -76,7 +76,7 @@ Instead of resolving a Pigging Out:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
+			if Player consents:
 				challenge "Messy Pig";
 				if lost is 1:
 					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
@@ -101,7 +101,7 @@ Instead of resolving a Pigging Out:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			challenge "Messy Pig";
 			if lost is 1:
 				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
@@ -122,15 +122,15 @@ Instead of resolving a Pigging Out:
 			now Resolution of Pigging Out is 4; [didn't fight the pig for food]
 	now Pigging Out is resolved;
 
-to say piggycheck:	[to check if player has a pig-like head or body]
+to say piggycheck:	[to check if Player has a pig-like head or body]
 	now tempnum is 0;
-	if the bodyname of player is "Messy Pig":
+	if the bodyname of Player is "Messy Pig":
 		now tempnum is 1;
-	if the facename of player is "Messy Pig":
+	if the facename of Player is "Messy Pig":
 		now tempnum is 1;
-	if the bodyname of player is "Piggy":
+	if the bodyname of Player is "Piggy":
 		now tempnum is 1;
-	if the facename of player is "Piggy":
+	if the facename of Player is "Piggy":
 		now tempnum is 1;
 
 Table of Game Objects (continued)
@@ -162,7 +162,7 @@ Instead of resolving a Small Park:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		say "[dogparksearch]";
 		now Resolution of Small Park is 1; [searched the dog park]
 	else:
@@ -210,16 +210,16 @@ to say dogparksearch:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "     You move in closer to the tree and start to sniff around it. The heady scent of dogs, both males and females, fill your nostrils. You pant a little, tasting the scent of heat as well from many of them. Your mind grows hazy and you roll on the ground in front of the tree, through several cum puddles, letting their scent get on you. Getting up, you shamelessly add your scent to the base of the tree before heading off, leaving the dog park now that you've marked that you've been there.";
 			[triple random canine infection]
 			say "[doggyinfect]";
 			say "[doggyinfect]";
 			say "[doggyinfect]";
-			increase libido of player by 10;
-			if libido of player > 100:
-				now libido of player is 100;
-			decrease humanity of player by 10;
+			increase Libido of Player by 10;
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			decrease humanity of Player by 10;
 			decrease score by 10;
 		else:
 			say "     You resist the urge to give in to those cloying scents and move away. You try to continue searching, but find yourself drift back to the tree several times and finally decide to abandon the dog park entirely.";
@@ -297,35 +297,35 @@ when play begins:
 
 Instead of resolving a Veterinary Hospital:
 	if lust of Medea is 1:
-		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if player is female]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
+		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if Player is female]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
 		WaitLineBreak;
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you do your best to remain focused by repeatedly looking at the list you were given as a reminder of what you need to find. As you're nearing the end, it is becoming quite difficult, all those intense, sexual, animal scents have you panting with lust. A large part of you just wants to give up on humanity, find some beast and let it have its way with you as long and as often as it likes. Knowing you can't tarry any longer, you pack up what you've found and make for the exit";
 		if furry is not banned and hermaphrodite is not banned:
 			say ".";
 			say "     And that's when you turn around to find your path back to the lobby barred by one of those large panther taurs. She's wearing the remains of a doctor's coat over her upper body. She moves in on you, growling lustfully as she advances.";
-			now libido of player is ( 100 + libido of player + libido of player ) / 3;
-			decrease humanity of player by 5;
+			now Libido of Player is ( 100 + Libido of Player + Libido of Player ) / 3;
+			decrease humanity of Player by 5;
 			challenge "Panther Taur";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm. Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests. It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger. Once outside, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
 				now lust of medea is 2;
 				now Resolution of Veterinary Hospital is 2; [won and got medea's supplies]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
-				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
+				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if Player is impreg_ok] with a belly full of her cubs[end if].";
 				setmonster "Panther Taur";
-				choose row monster from the Table of Random Critters;
-				now humanity of player is 0;
-				if libido of player < 90, now libido of player is 90;
-				now tailname of player is "Panther Taur";
-				now facename of player is "Panther Taur";
-				now skinname of player is "Panther Taur";
-				now bodyname of player is "Panther Taur";
-				now cockname of player is "Panther Taur";
-				now body of player is body entry;
-				now face of player is face entry;
-				now tail of player is tail entry;
-				now skin of player is skin entry;
-				now cock of player is cock entry;
+				choose row MonsterID from the Table of Random Critters;
+				now humanity of Player is 0;
+				if Libido of Player < 90, now Libido of Player is 90;
+				now tailname of Player is "Panther Taur";
+				now facename of Player is "Panther Taur";
+				now skinname of Player is "Panther Taur";
+				now bodyname of Player is "Panther Taur";
+				now cockname of Player is "Panther Taur";
+				now body of Player is body entry;
+				now face of Player is face entry;
+				now tail of Player is tail entry;
+				now skin of Player is skin entry;
+				now cock of Player is cock entry;
 				attributeinfect;
 				follow the sex change rule;
 				follow the sex change rule;
@@ -339,8 +339,8 @@ Instead of resolving a Veterinary Hospital:
 				now Resolution of Veterinary Hospital is 3; [fled]
 		else:
 			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Finding a sexy beast to fuck you remains high on your list.";
-			now libido of player is ( 100 + libido of player + libido of player ) / 3;
-			decrease humanity of player by 5;
+			now Libido of Player is ( 100 + Libido of Player + Libido of Player ) / 3;
+			decrease humanity of Player by 5;
 			now Resolution of Veterinary Hospital is 4; [fight banned, so the player just ran out with the supplies]
 		now lust of Medea is 2;
 	else:
@@ -349,7 +349,7 @@ Instead of resolving a Veterinary Hospital:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[vetsearch]";
 			now Resolution of Veterinary Hospital is 1; [searched the place]
 		else:
@@ -361,7 +361,7 @@ Instead of resolving a Veterinary Hospital:
 
 to say vetsearch:
 	let T be a random number between one and twelve;
-	decrease humanity of player by 3;
+	decrease humanity of Player by 3;
 	if T is 1:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you scout around and are fortunate to find a medical supply kit that is suitable for your needs. You tuck it under one arm and quickly head out to get some fresh air.";
 		increase carried of medkit by 1;
@@ -386,7 +386,7 @@ to say vetsearch:
 			say "     You obtain the equivalent of 2 food.";
 			increase carried of food by 2;
 			increase score by 3;
-		else if hunger of player > 49:		[starving]
+		else if hunger of Player > 49:		[starving]
 			say "     You look at the cans of pet food for a moment and your stomach rumbles. Despite being pet food, you are very hungry and need something to eat. As they are sealed and were probably canned months before the outbreak in another city, you feel they are safe to eat. Resigned to your fate, you take one of the cans and add it to your supply. You then quickly head back outside before the scents filling the veterinary hospital get to be too much and you give in to the urges.";
 			say "     You obtain the equivalent of 1 food.";
 			increase carried of food by 1;
@@ -420,12 +420,12 @@ to say vetsearch:
 
 to say doggycheck:		[See the Flags section of story.ni file for Caninelist/Felinelist]
 	now doggyness is 0;
-	if bodyname of player is listed in the infections of Caninelist or facename of player is listed in infections of Caninelist:
+	if bodyname of Player is listed in the infections of Caninelist or facename of Player is listed in infections of Caninelist:
 		now doggyness is 1;
 
 to say kittycheck:
 	now kittyness is 0;
-	if bodyname of player is listed in the infections of Felinelist or facename of player is listed in infections of Felinelist:
+	if bodyname of Player is listed in the infections of Felinelist or facename of Player is listed in infections of Felinelist:
 		now kittyness is 1;
 
 
@@ -527,9 +527,9 @@ Instead of resolving a Cameo:
 		challenge "Chocolate Lab";
 		if choclabfight is 1:
 			say "     With a second down, you ready yourself to face the last of them. As you look first to the gap your previous opponent took, you catch sight of it out of the corner of your eye. It quietly flowed up the counter as your last fight ended and makes a leap at you.";
-			let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
-			if "Wary Watcher" is listed in feats of player, increase bonus by 3;
-			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
+			let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
+			if "Wary Watcher" is listed in feats of Player, increase bonus by 3;
+			if "Bad Luck" is listed in feats of Player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
 			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -537,76 +537,76 @@ Instead of resolving a Cameo:
 				say "You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine. It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around. This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
 			else:
 				say "The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
-				decrease HP of player by 15;
-				increase libido of player by 12;
+				decrease HP of Player by 15;
+				increase Libido of Player by 12;
 			now choclabfight is 0;
 			challenge "Chocolate Lab";
 			if choclabfight is 1:
 				say "     Having defeated the last of them, you pant for breath as the chocolate dogs slink off like beaten curs. They press themselves to the ground so much that their legs melt away beneath them and flow out as dog-shaped blobs. With them dispatched, you are free to look around the remains of the store. It seems that much of the merchandise has already been consumed by the dogs or tainted by them during their lustful gorging. The boxes of chocolates and cameos on display at the back are thankfully still good, so you snatch them up and exit the store before the strong scent of chocolates and sex arouses you into sampling from the tainted wares.";
-				if "Junk Food Junky" is listed in feats of player:
+				if "Junk Food Junky" is listed in feats of Player:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. Your junk food fueled metabolism finds the chocolates quite satisfying and you still have enough chocolates and almond bark to be equivalent to roughly two more snacks.";
 					PlayerEat 15;
-					if morale of player < 0:
-						increase morale of player by 36;
-						if morale of player > 0, now morale of player is 0;
+					if morale of Player < 0:
+						increase morale of Player by 36;
+						if morale of Player > 0, now morale of Player is 0;
 						say "You feel much better after having your snack.";
-					increase morale of player by 1;
+					increase morale of Player by 1;
 					increase carried of chips by 2;
 					increase score by 15;
 				else:
 					say "     Outside, you give in and satisfy your craving for chocolate by stuffing yourself with the small cameo pack. The fine chocolates are quite delicious. You store the rest for later consumption. While not very nutritious, you still have enough chocolates and almond bark to be equivalent to roughly one meal.";
 					PlayerEat 6;
-					if morale of player < 0:
-						increase morale of player by 15;
-						if morale of player > 0, now morale of player is 0;
+					if morale of Player < 0:
+						increase morale of Player by 15;
+						if morale of Player > 0, now morale of Player is 0;
 						say "You feel better having eaten.";
 					increase carried of food by 1;
 					increase score by 5;
 	if choclabfight is 0:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
 	else if choclabfight is 2:
-		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if cunts of player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if cunts of player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if cocks of player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if cocks of player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
+		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if Cunt Count of Player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if Cunt Count of Player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if Cock Count of Player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if Cock Count of Player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
 		WaitLineBreak;
-		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if player is male] while you pump your own cum out for them to enjoy[end if]";
-		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
+		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if Player is male] while you pump your own cum out for them to enjoy[end if]";
+		if bodyname of Player is "Chocolate Lab" or facename of Player is "Chocolate Lab":
 			say ".";
 			WaitLineBreak;
 			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors. It feels like you are simultaneously filled and drained over and over again as your lovers mate you. You seem to flow into them as they flow into you in an orgasmic melding of pleasure. You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
-			decrease humanity of player by a random number between 25 and 35;
-			increase hunger of player by 12;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+			decrease humanity of Player by a random number between 25 and 35;
+			increase hunger of Player by 12;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		else:
 			say ". It feels like you are simultaneously filled and drained over and over again as your lovers mate you. You seem to flow into them as they flow into you in an orgasmic melding of pleasure.";
-			decrease humanity of player by a random number between 20 and 30;
-			increase hunger of player by 12;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
+			decrease humanity of Player by a random number between 20 and 30;
+			increase hunger of Player by 12;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry is "Chocolate Lab":
-				now monster is y;
+			if Name entry is "Chocolate Lab":
+				now MonsterID is y;
 				break;
-		now tailname of player is "Chocolate Lab";
-		now facename of player is "Chocolate Lab";
-		now skinname of player is "Chocolate Lab";
-		now bodyname of player is "Chocolate Lab";
-		now cockname of player is "Chocolate Lab";
+		now tailname of Player is "Chocolate Lab";
+		now facename of Player is "Chocolate Lab";
+		now skinname of Player is "Chocolate Lab";
+		now bodyname of Player is "Chocolate Lab";
+		now cockname of Player is "Chocolate Lab";
 		attributeinfect;
-		now tail of player is tail entry;
-		now face of player is face entry;
-		now skin of player is skin entry;
-		now body of player is body entry;
-		now cock of player is cock entry;
+		now tail of Player is tail entry;
+		now face of Player is face entry;
+		now skin of Player is skin entry;
+		now body of Player is body entry;
+		now cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
 		WaitLineBreak;
-		if libido of player < 70, now libido of player is 70;
+		if Libido of Player < 70, now Libido of Player is 70;
 		say "     When they are finally sated, they flow away from you, leaving you in a pool of creamy chocolate. You struggle to sit up as they flow over the last of the scattered chocolates before heading out the door. One of them, which you somehow sense to be the one who defeated you, turns back and looks at you, as if to see if you will follow before flowing after the others.";
 		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants. You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";
-		if humanity of player < 10:
+		if humanity of Player < 10:
 			say ". You flow into the shape of a flowing, chocolate dog and head out after them with a wet yip, having lost too much of yourself to them and succumbing to the bizarre, confectionary infection. When you catch up to them, they grin and give you slobbery, chocolatey licks and nuzzles, welcoming you into the pack.";
 			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
 			now battleground is "void";
@@ -630,15 +630,15 @@ The sarea of Wild Kingdom is "High".
 Instead of resolving a Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out. Inside you find the small place crammed full of animal people or all kinds. A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade. In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";
 	say "     Looking around, you are struck by several oddities. Looking up, you see a turtle-man with his chest stuck to the ceiling. He cranes his neck back lazily and waves down at you with a smile. There's also a bulletin board in the foyer that includes a sign-up sheet for [']Poodle Flying Lessons['], but it's all filled up.";
-	if bodyname of player is "Badger" or facename of player is "Badger":
+	if bodyname of Player is "Badger" or facename of Player is "Badger":
 		say "     When Raul notices you, he gets quite upset, pushing his way over to you. 'Badgers? Badgers? We don't need not steenkin['] badgers!' He quickly shuffles you out the door and slams it in your face.";
-	else if bodyname of player is "Pink Poodle" or facename of player is "Pink Poodle":
+	else if bodyname of Player is "Pink Poodle" or facename of Player is "Pink Poodle":
 		say "     When Raul notices you, he smiles excitedly and comes over to you. 'You must be here for the flying lessons. Unfortunately, we're all filled up right now, but you can try back in a few days. Just be sure to bring your insurance information; you know, sometimes it takes you a little longer to learn how to do it right.";
 		say "     You mill around briefly with the others there, but things are quite hectic. They're certainly friendly enough, if rather odd. Still, it turns out to be a pleasant break from being attacked or hit on.";
-		increase morale of player by 1;
+		increase morale of Player by 1;
 	else:
 		say "     You mill around briefly with the others there, but things are quite hectic. They're certainly friendly enough, if rather odd. Still, it turns out to be a pleasant break from being attacked or hit on.";
-		increase morale of player by 1;
+		increase morale of Player by 1;
 	increase score by 1;
 	now Wild Kingdom is resolved;
 

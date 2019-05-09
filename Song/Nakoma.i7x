@@ -9,14 +9,14 @@ Nakoma is a woman. Nakoma is in Nakoma's Tent.
 [Physical details as of game start]
 ScaleValue of Nakoma is 4. [large human sized]
 SleepRhythm of Nakoma is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Nakoma is 1. [X cock]
+Cock Count of Nakoma is 1. [X cock]
 Cock Length of Nakoma is 12. [X Inches]
-Cock Width of Nakoma is 8.
-Testes of Nakoma is 2. [X balls]
-Cunts of Nakoma is 1. [X pussy]
+Ball Size of Nakoma is 8.
+Ball Count of Nakoma is 2. [X balls]
+Cunt Count of Nakoma is 1. [X pussy]
 Cunt Length of Nakoma is 12. [X Cunt]
-Cunt Width of Nakoma is 4. [X Cunt]
-Breasts of Nakoma is 2. [X nipples]
+Cunt Tightness of Nakoma is 4. [X Cunt]
+Nipple Count of Nakoma is 2. [X nipples]
 Breast Size of Nakoma is 4. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Nakoma is false. [can not take oversized members without pain]
@@ -40,7 +40,7 @@ to say NakomaDesc:
 	say "     Nakoma is the leader of the equinoid tribe. She is a strikingly beautiful specimen, flaunted a perfectly tended mane and immaculate black fur, the oily hair both rich and lustrous. Wise brown eyes behold you in turn as a welcoming smile creases her muzzle, speaking of intellect beyond that of her kin. Her pert breasts are scarcely concealed by her loose-fitting toga, and her long, muscular legs often show through a part in the fabric. An ornate headdress of carved wood and wire crowns her head, further distinguishing the herm from the rest of her tribe. The only aspect marring her features is a scar on her cheek, although it seems to have healed long ago.";
 
 Instead of conversing the Nakoma:
-	say "     You step up to Nakoma and respectfully nod to the tribe's leader, whose muzzle creases in a smile at your reverent approach. 'Hail, [if player is defaultnamed]warrior[else][name of player][end if]. What brings you to me?'";
+	say "     You step up to Nakoma and respectfully nod to the tribe's leader, whose muzzle creases in a smile at your reverent approach. 'Hail, [if Player is defaultnamed]warrior[else][name of Player][end if]. What brings you to me?'";
 	say "[NakomaTalkMenu]";
 
 to say NakomaTalkMenu:
@@ -85,7 +85,7 @@ to say NakomaTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				let nam be title entry;
 				if (nam is "Ask about the tribe's past"):
@@ -123,13 +123,13 @@ to say NakomaTalk4:
 	say "     Nakoma admits a gentle laugh. 'Bryony is set in her ways. She means no ill will with what she says, but I do find some of her views objectionable. Much like Amaryllis, she must expand her point of view and learn to empathize with others.' The equinoid reaches up to straighten her headdress. 'However, I am proud of her feats in the field. She is a skillful fighter and would give her life to save another of our kind. You would do well to learn from her loyalty.' Nakoma's last words are ambiguous, difficult to tell whether meant as advice or a threat. The implications make you shiver.";
 
 to say NakomaTalk5:
-	if player is blequinoidbodied:
+	if Player is blequinoidbodied:
 		say "     'Ah, so you are interested in doing more than just looking pretty?' the equinoid teases, a playful smile parting her muzzle. 'Mmh, shame, though I won't begrudge you your eagerness. We could always use more guards for the perimeter. In fact, there's a position open right now.' When you ask about the details, Nakoma explains, 'Bryony's old partner was captured during a recent raid on our camp. Since then, she's been guarding the main entrance valiantly, albeit alone. I suggest you provide her some company to help her through these trying times.'";
 		say "     [bold type]Do you accept Nakoma's offer?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You look forward to defending the tribe.";
 		say "     ([link]N[as]n[end link]) - You changed your mind and would prefer something else.";
-		if player consents:
+		if Player consents:
 			say "     You nod in affirmation. Nakoma takes your hands in her own and gives them a gentle squeeze. 'Seeing that you have not yet fully embraced your sisters, I am permitting you the luxury to come and go as you please. I expect you to abide by a more stringent schedule once you cease your wandering ways and settle in with us for good. Please speak with Bryony once you are ready to begin your first shift.'";
 			now HP of Bryony is 1;
 		else:
@@ -138,9 +138,9 @@ to say NakomaTalk5:
 		say "     'We are not accepting assistance from those who do not look the part,' Nakoma explains. You open your mouth to ask why, but the horse is quick to press a hoof-tipped finger to your lips. The leader leans in close to speak softly into your ear, 'If it appears like we're accepting help from outsiders, then we risk demoralizing our own. This also signals to slaving parties and rival tribes that we're too weak to fend for ourselves, inviting attacks. Best not to risk such a thing,' she explains. You give a gentle nod and drop the subject, reminding yourself to talk to her again later.";
 
 Instead of fucking Nakoma:
-	if player is blequinoidbodied:
+	if Player is blequinoidbodied:
 		say "     Nakoma casts you a sleazy smile. 'You flatter, but I'm unfortunately far too busy at the moment. Perhaps later?' the equinoid offers, reaching below to brush her fingers along the growing bulge in her toga.";
 	else:
-		say "     The equinoid shakes her head adamantly. 'Not in your current form, [if player is defaultnamed]warrior[else][name of player][end if]. Besides, I am far too busy to indulge these carnal urges at the moment.'";
+		say "     The equinoid shakes her head adamantly. 'Not in your current form, [if Player is defaultnamed]warrior[else][name of Player][end if]. Besides, I am far too busy to indulge these carnal urges at the moment.'";
 
 Nakoma ends here.

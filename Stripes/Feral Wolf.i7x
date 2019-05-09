@@ -5,7 +5,7 @@ Version 4 of Feral Wolf by Stripes begins here.
 "Adds a Feral Wolf to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 fangcount is a number that varies.
 
@@ -17,10 +17,10 @@ to say Feral Wolf attack:
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
 		if FeralWolfdefeat is 0:
-			say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if bodyname of player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
-			say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
-			say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
-			say "     Your mind begins to wander slightly, dreaming of feral bitches in heat, when it's suddenly snapped back to reality by the feeling of a large, quickly growing, part of the wolf's shaft that is trying to force its way into your mouth. It's not hard to figure out that this growth is his knot, and that he intends to tie your mouth with it no matter what. You quickly decide it's best to [if scalevalue of player > 3]oblige the wolf, lest he harm you further, engulfing the knot in its entirety with little difficulty, much to his growling approval[else]help the wolf get it in, so that your less likely to be injured, and force your jaw open as wide as you can, pressing against his knot as it spreads your jaw painfully wider until it finally pops in, swelling up more and making it impossible to take out until the wolf has drained his balls into you[end if].";
+			say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if bodyname of Player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
+			say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of Player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
+			say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of Player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
+			say "     Your mind begins to wander slightly, dreaming of feral bitches in heat, when it's suddenly snapped back to reality by the feeling of a large, quickly growing, part of the wolf's shaft that is trying to force its way into your mouth. It's not hard to figure out that this growth is his knot, and that he intends to tie your mouth with it no matter what. You quickly decide it's best to [if scalevalue of Player > 3]oblige the wolf, lest he harm you further, engulfing the knot in its entirety with little difficulty, much to his growling approval[else]help the wolf get it in, so that your less likely to be injured, and force your jaw open as wide as you can, pressing against his knot as it spreads your jaw painfully wider until it finally pops in, swelling up more and making it impossible to take out until the wolf has drained his balls into you[end if].";
 			say "     The wolf snarls and growls more, now bucking into your maw with short, hard strokes, his length deep in your gullet and making it hard for you to breath. His thrusts soon becoming erratic, his breathing and snarling turning into hard panting and soft whining, and his shaft swelling up as the wolf seems to be trying to hold himself back from orgasm.";
 			say "     The wolf gives one hard thrust and howls out in climax, claws digging deep into your skin, his heavy balls pulling up as their contents come flooding out, being pumped straight down your throat and into your stomach, your belly soon swelling slightly with thick wolf cum.";
 			say "     The wolf collapses on top of you, panting hard and wagging his tail happily, the last bit of his seed spurting out of his shaft and down your gullet. You lay there for a good number of minutes before the wolf's knot has deflated enough to be yanked out from between your lips.";
@@ -30,9 +30,9 @@ to say Feral Wolf attack:
 			say "     Satisfied, he pads back over to your face and gives you a playful lick before bounding off into the streets of the infected city.";
 			now FeralWolfdefeat is 1;
 		else:
-			if player is female and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
-				if cunt length of player < 15 or cunt width of player < 10:
-					say "     He pushes you over onto your stomach and climbs up on top of you, grinding his quickly hardening shaft against your rump. You whimper as he digs his claws into your hips and presses the tip of his shaft against [if cunts of player > 1]one of your cunts[else]your cunt[end if]. Wasting no time, he slams it into you, making you gasp out in both pain and pleasure, his grip on you making it easy for him to pound his shaft you. He growls and bites down on your neck, pulling back slightly in a canine mating bite and you quickly submit to him both in body and mind.";
+			if Player is female and ((anallevel is 3 and a random chance of 1 in 3 succeeds) or (anallevel < 3 and a random chance of 1 in 2 succeeds)):
+				if Cunt Length of Player < 15 or Cunt Tightness of Player < 10:
+					say "     He pushes you over onto your stomach and climbs up on top of you, grinding his quickly hardening shaft against your rump. You whimper as he digs his claws into your hips and presses the tip of his shaft against [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if]. Wasting no time, he slams it into you, making you gasp out in both pain and pleasure, his grip on you making it easy for him to pound his shaft you. He growls and bites down on your neck, pulling back slightly in a canine mating bite and you quickly submit to him both in body and mind.";
 					say "     Within minutes, you are yipping and barking like a good little breeding bitch, howling out your submission for all to hear. You shiver and moan out, panting harder, as you feel the wolf's thick knot ramming against your cunt's moist lips, begging him to tie you and pump you full of fertile seed. He roars out his dominance and spreads your pussy open with his knot, your back arching in pleasure as you are bred. His knot's soon swollen to 3 times the size and has locked you to him, his thrusting and quickly speeding up.";
 					say "     The wolf arches his back and howls out, his climax hitting hard and driving you over the edge and into orgasm, his thick feral seed being planted deep into your womb and making your belly distend from all the cum he's pumping into you. The wolf pulls his shaft free of you, ";
 				else:
@@ -41,7 +41,7 @@ to say Feral Wolf attack:
 				if wslevel is 3 or (wslevel is 2 and (a random chance of 1 in 3 succeeds or (player is kinky and a random chance of 1 in 3 succeeds))):
 					say "soon turning to position himself over you. Lifting his leg he starts to empty his bladder all over your torso and face, marking you as his before ";
 				say "leaving you collapsed on the ground, leaking the wolf's fertile seed as he walks off to find another bitch to fuck.[impregchance]";
-			else if anallevel > 1 and (cunts of player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or (player is mpreg_ok and a random chance of 1 in 5 succeeds)):
+			else if anallevel > 1 and (Cunt Count of Player is 0 or anallevel is 3) and (a random chance of 1 in 2 succeeds or (anallevel is 3 and a random chance of 1 in 3 succeeds) or (player is mpreg_ok and a random chance of 1 in 5 succeeds)):
 				say "     He circles around you a few times, examining your limp form before rolling you onto your stomach and climbing up onto your ass. You look back and whine fearfully as you see the wolf's shaft already rock hard and leaking pre. He leans forward over you and presses the tip of his length against your asshole, giving you a threatening snarl before he thrust in. You gasp and scream out in pain as he forces you wide open, his bucking fast and hard from the start and causing you to whimper in pain as this big wolf rapes your tight asshole.";
 				say "     It's not long until you feel his thick knot being rammed against your tight ring. You start to struggle with all that's left in you, begging the wolf not to try and force it in. All you get for your actions is a mean swipe from his claws and an even more powerful thrust against your hole, making your mouth gape open, speechless and gasping for breath as the wolf uses all his strength to spread you wide open and pop his knot in. He leans forward as far as he can and starts to pound your ass with all his strength, your tight ring quickly bringing him to climax as he howls out, filling you up with his seed.[mimpregchance]";
 				say "     He doesn't wait for his knot to deflate and just pulls it out, making you yelp in pain. You lie there on the ground, shivering from the hard fucking the wolf gave you. ";
@@ -49,10 +49,10 @@ to say Feral Wolf attack:
 					say "You look as you see him position himself above you. You begin to think that he must want your mouth next when he starts to empty his bladder all over your torso and face. ";
 				say "Offering you a dark growl as a parting remark, you tremble at what ill intent he might have in store for you should you meet him again.";
 			else:
-				say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if bodyname of player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
-				say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
-				say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
-				say "     Your mind begins to wander slightly, dreaming of feral bitches in heat, when it's suddenly snapped back to reality by the feeling of a large, quickly growing, part of the wolf's shaft that is trying to force its way into your mouth. It's not hard to figure out that this growth is his knot, and that he intends to tie your mouth with it no matter what. You quickly decide it's best to [if scalevalue of player > 3]oblige the wolf, lest he harm you further, engulfing the knot in its entirety with little difficulty, much to his growling approval[else]help the wolf get it in, so that your less likely to be injured, and force your jaw open as wide as you can, pressing against his knot as it spreads your jaw painfully wider until it finally pops in, swelling up more and making it impossible to take out until the wolf has drained his balls into you[end if].";
+				say "     The Feral Wolf roars as he slams you down onto your back. He then sits back and lets out a howl of victory into the [if daytimer is night]night [end if]sky before padding over to your head and [if scalevalue of Player > 3]briefly lording over his victory[else]standing above you[end if]. Your position forcing you to look up into the strong[if bodyname of Player is listed in infections of caninelist]er[end if] canine's crotch, your eyes widening as you see his thick canine shaft quickly swelling up, getting rather hard. A few drops of musky pre dripping off his shaft, landing in your mouth and on your face. The strong smell of his musk makes you shiver and groan slightly as he continues to slowly paint your face with his pre, drop by drop.";
+				say "     After a few minutes of this treatment, the wolf shifts his stance, lying down on your [bodydesc of Player] chest, his cock resting on your face. Once he is properly situated on top of you, he pulls his hips back, lifting his shaft off of you. The tip of his length slides up your face until it reaches your lips, where it slips between them as spurts a few good pumps of pre before the wolf slams his shaft down into your mouth, snarling and growling in dominance.";
+				say "     The wolf's claws dig into your chest as he rams his shaft down your throat, [if scalevalue of Player > 3]forcing you to oblige his tainted organ. His twisted pre-cum compels your compliance further upon this imposed task[else]stretching your jaw out uncomfortably. The only relief you get comes in the form of how slick your mouth and gullet are from all the pre-cum he is pumping into you, making it easier to take his length[end if]. You shiver and moan beneath the wolf as he orally rapes you, his big furry balls smacking against your nose with each thrust, forcing you to take in the slightly addictive smell of the strong feral beast that is now claiming you as his.";
+				say "     Your mind begins to wander slightly, dreaming of feral bitches in heat, when it's suddenly snapped back to reality by the feeling of a large, quickly growing, part of the wolf's shaft that is trying to force its way into your mouth. It's not hard to figure out that this growth is his knot, and that he intends to tie your mouth with it no matter what. You quickly decide it's best to [if scalevalue of Player > 3]oblige the wolf, lest he harm you further, engulfing the knot in its entirety with little difficulty, much to his growling approval[else]help the wolf get it in, so that your less likely to be injured, and force your jaw open as wide as you can, pressing against his knot as it spreads your jaw painfully wider until it finally pops in, swelling up more and making it impossible to take out until the wolf has drained his balls into you[end if].";
 				say "     The wolf snarls and growls more, now bucking into your maw with short, hard strokes, his length deep in your gullet and making it hard for you to breath. His thrusts soon becoming erratic, his breathing and snarling turning into hard panting and soft whining, and his shaft swelling up as the wolf seems to be trying to hold himself back from orgasm.";
 				say "     The wolf gives one hard thrust and howls out in climax, claws digging deep into your skin, his heavy balls pulling up as their contents come flooding out, being pumped straight down your throat and into your stomach, your belly soon swelling slightly with thick wolf cum.";
 				say "     The wolf collapses on top of you, panting hard and wagging his tail happily, the last bit of his seed spurting out of his shaft and down your gullet. You lay there for a good number of minutes before the wolf's knot has deflated enough to be yanked out from between your lips. ";
@@ -74,22 +74,22 @@ to say beatferalwolf:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Against your better judgment, you take pity on this battered wolf and decide to take him as your own. You decide it best to show this wolf creature who's in charge right away and grab his nape roughly, holding him down while ";
-				if player is herm:
+				if Player is herm:
 					say "you decide what to do with him. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours. But being both male and female, there are options open to you.";
 					say "     [bold type]Would you prefer to fuck the wolf or ride his lupine cock?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the wolf.";
 					say "     ([link]N[as]n[end link]) - Ride his cock.";
-					if player consents:
+					if Player consents:
 						LineBreak;
 						say "[feralwolfmalesex]";
 					else:
 						LineBreak;
 						say "[feralwolffemalesex]";
-				else if player is male:
+				else if Player is male:
 					say "you stroke your swelling cock. You are getting quite aroused by the prospect of sexually dominating this wild beast and making it yours.";
 					say "[feralwolfmalesex]";
 				else:
@@ -130,14 +130,14 @@ to say FeralWolfVictorySex:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
-		if player is male:
-			if player is female:
+	if Player consents:
+		if Player is male:
+			if Player is female:
 				LineBreak;
 				say "     Deciding to have some fun with this poor wolf, you stop and think about how exactly you want to use him. Being a herm, you could easily roll him over and ride his thick canine shaft, or you could mount that tight little ass of his. (Y=Ride, N=Fuck)";
-				if player consents:
-					say "     You lick your lips and smile, striding over to the wolf, your cock[smn] getting nice and hard, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
-					say "     After a few minutes of teasing the poor wolf, you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur, your own cock[smn] twitching and leaking pre onto the wolf's belly.";
+				if Player consents:
+					say "     You lick your lips and smile, striding over to the wolf, your cock[smn] getting nice and hard, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
+					say "     After a few minutes of teasing the poor wolf, you take hold of his throbbing cock and line it up with [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur, your own cock[smn] twitching and leaking pre onto the wolf's belly.";
 					say "     You start to ride his canine cock, slowly at first but quickly picking up speed. By now the wolf has gained some of his strength back and is eagerly bucking up into your snatch, his cock throbbing and spurting pre into your depths. You shiver and groan, looking down at the wolf beneath you, seeing that he clearly isn't going to last much longer, and you don't think you will either.";
 					WaitLineBreak;
 					say "     You start panting hard and begin slamming down on his length. You feel his knot swelling, slipping in and out of your cunt, steadily gaining size. Soon it's too big to just slip in, so you pull yourself almost completely of his cock before slamming back down and forcing that knot inside you.";
@@ -154,10 +154,10 @@ to say FeralWolfVictorySex:
 				say "     Soon you are panting hard and climaxing hard, filling the formerly dominant wolf with your thick cum. Once you finish, you pull out of the wolf and walk around front to present your shaft to him for cleaning[if HP of Fang is 0]. Smiling to yourself, you think of how much fun it would be to have a wolf like this for a pet[end if].";
 				CreatureSexAftermath "Feral Wolf" receives "AssFuck" from "Player";
 		else:
-			if player is female:
+			if Player is female:
 				LineBreak;
-				say "     You lick your lips and smile, striding over to the wolf, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if cunts of player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
-				say "     After a few minutes of teasing the poor wolf you take hold of his throbbing cock and line it up with [if cunts of player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur.";
+				say "     You lick your lips and smile, striding over to the wolf, your cunt[sfn] slick with fem juices. You push the wolf over onto his back and straddle him, grinding [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if] up and down his thick length, making him squirm and moan.";
+				say "     After a few minutes of teasing the poor wolf you take hold of his throbbing cock and line it up with [if Cunt Count of Player > 1]one of your cunts[else]your cunt[end if] before sliding down onto it. As you do so, you gasp and moan in pleasure, arching your back as it slides in, your hands gripping the wolf's chest fur.";
 				say "     You start to ride his canine cock, slowly at first but quickly picking up speed. By now the wolf has gained some of his strength back and is eagerly bucking up into your snatch, his cock throbbing and spurting pre into your depths. You shiver and groan, looking down at the wolf beneath you, seeing that he clearly isn't going to last much longer, and you don't think you will either.";
 				WaitLineBreak;
 				say "     You start panting hard and begin slamming down on his length. You feel his knot swelling, slipping in and out of your cunt, steadily gaining size. Soon it's too big to just slip in, so you pull yourself almost completely of his cock before slamming back down and forcing that knot inside you.";
@@ -187,19 +187,20 @@ to say FeralWolfDesc:
 			say "     Finally the last member steps forward, growling as he closes up to you. He looks bigger than the other ones, almost a third of your height, with great muscles under dense white fur. He has icy blue eyes and white, sharp, canine teeth. His legs are thick and powerful looking, his whole form obviously built for hunting fast prey. His fur is almost as dark as coal, and it doesn't shine, almost as if absorbing all the light around him.";
 			say "     As his pack's last standing predator, the beast doesn't hesitate one second before he pounces on you, lips peeled back to expose his dangerous teeth. [one of]'Grrrrrrrr!' he growls[or]He barks aggressively[or]He howls[at random], a look of feral rage in his eyes.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Feral Wolf" to infections of guy;
 	add "Feral Wolf" to infections of furry;
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Feral Wolf"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Feral Wolf"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He slams into you and bites down.[or]He roars and swipes at you with his claws.[or]He pounces you and pins you down, tearing into you with his claws.[at random]";
 	now defeated entry is "[beatferalwolf]";
@@ -226,15 +227,15 @@ When Play begins:
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 10; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 15; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 9; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 6; [ Number of Breasts infection will give you. ]
-	now breast size entry is 9; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;
-	now cunt width entry is 10;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 9; [ Size of balls apparently ;) sneaky Nuku]
+	now Nipple Count entry is 6; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 15;
+	now Cunt Tightness entry is 10;
 	now libido entry is 50; [ Amount player Libido will go up if defeated ]
 	now loot entry is "wolf cum";
 	now lootchance entry is 30; [ Chance of loot dropping 0-100 ]
@@ -248,11 +249,102 @@ When Play begins:
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
+
 when play ends:
-	if bodyname of player is "Feral Wolf":
+	if bodyname of Player is "Feral Wolf":
 		if HP of Fang is 3 or HP of Fang is 4:				[alpha Fang]
-			if humanity of player < 10:
-				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if player is female]alpha bitch[else]slutty beta[end if][if ColleenAlpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+			if humanity of Player < 10:
+				say "     Giving in to your feral nature, you return to the Library and submit yourself to Fang again, letting him take you as he pleases. After a wild fucking, he leads you off into the city to form a pack of his own with you as his [if Player is female]alpha bitch[else]slutty beta[end if][if ColleenAlpha is 0 and HP of Fang is 3]. Taking Sandra with him, she becomes his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
 			else if Felinoid companion is tamed:
 				say "     When the military comes, you worry about how they'll react to you and Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. But you are surprised as they move towards him and he slowly stretches and stands upright, resembling the larger alpha wolves you've seen in the city than the feral wolf he once was. Despite a little unsteadiness on his reformed legs, he speaks confidently, telling a tale about how you rescued him from a fate of being an omega in a wolf pack and brought him here to safety. He alludes in passing that your current form is a result of the rescue, but doesn't elaborate. Having heard many tales from those barely able to escape after being transformed, the soldiers don't question this rather loosely accurate story. You pad over to your alpha and lean against him while he scritches your ears.";
 				say "     When they turn their attention to your felinoid companion, they are easily enough swayed to feel similar sympathy for him when you tell them about how you both got away from those plant vines in the park, his injury and eventual recovery. You add that he's been a loyal bodyguard since then. There are some concerns, but they are inclined to trust your word. It certainly helps that the big feline is on his best behavior and makes no trouble for the soldiers.";
@@ -262,11 +354,11 @@ when play ends:
 			else:
 				say "     When the military comes, you worry about how they'll react to you and Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. But you are surprised as they move towards him and he slowly stretches and stands upright, resembling the larger alpha wolves you've seen in the city than the feral wolf he once was. Despite a little unsteadiness on his reformed legs, he speaks confidently, telling a tale about how you rescued him from a fate of being an omega in a wolf pack and brought him here to safety. He alludes in passing that your current form is a result of the rescue, but doesn't elaborate. Having heard many tales from those barely able to escape after being transformed, the soldiers don't question this rather loosely accurate story. You pad over to your alpha and lean against him while he scritches your ears.";
 				say "     Still having some humanity, despite your more animal form, Fang takes charge of you once your release from the military. He moves in with another female wolf and soon becomes the master of her ranch house as she submits as his newest bitch. You live with him in his newly acquired home, to which he adds a few others with lupine infections, adding them to his little pack of lovers. While the others quickly become nothing but slutty pets, he does keep you as the beta among them, letting you lead your life outside the home and with your other friends and lovers. You sometimes even get to partake in some fun with the other slutty pack-mates. Fang, being a virile alpha, soon has the females growing round with his pups.";
-			if HP of Fang is 3 and humanity of player >= 10:
+			if HP of Fang is 3 and humanity of Player >= 10:
 				say "     Sandra, lustful for the big wolf, comes over to visit often. Fang fucks her like a wild animal, stuffing his throbbing cock into her and keeping her coming back for more. The kinky bunny also enjoys watching the wolf ravage you as well, finding the sight of it very arousing between her own turns beneath the alpha wolf. The bunny's tummy grows large after one of these visits and Fang has her move in, adding her to his harem of lovers. She eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 		else:						[no Alpha Fang]
-			if humanity of player < 10:
-				if player is male:
+			if humanity of Player < 10:
+				if Player is male:
 					say "Giving in to your feral nature, you prowl the city street, looking for females to mount and dominate. Your mind is gone and now only the most primal of instincts remain.";
 				else:
 					say "Giving in to your feral nature, you prowl the city street, looking for a worthy male to mount and breed you. Your mind is gone and now only the most primal of instincts remain.";
@@ -286,8 +378,8 @@ the usedesc of Wolf Cum is "[Wolf Cum use]";
 
 to say Wolf Cum use:
 	say "You shrug and gulp down the creamy liquid, gasping as you feel a sudden heat in your groin. Moaning as you rub your crotch, you realize that you need to get fucked, NOW!";
-	if libido of player < 75:
-		now libido of player is 75;
+	if Libido of Player < 75:
+		now Libido of Player is 75;
 
 Wolf Cum is infectious. The strain of Wolf Cum is "Feral Wolf".
 

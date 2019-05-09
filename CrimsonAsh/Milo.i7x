@@ -44,7 +44,7 @@ instead of resolving Bobcat Encounter:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 			say "     ([link]N[as]n[end link]) - No, reject the bobcat's advances.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "[SexWithMilo1]";
 			else:
@@ -75,7 +75,7 @@ instead of resolving Bobcat Encounter:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 		say "     ([link]N[as]n[end link]) - No, not right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Well... the cat was pretty good the last time you two fucked, may as well give a repeat visit. Following the tree markings for a few minutes, you eventually come across Milo and his hidey-hole. Milo's currently out of the hovel and is digging in the ground a few yards away from it. He then pulls out an acorn and drops it in before pushing dirt back over it. As you approach, his ears perk up and look over to you. At first, caution appears on Milo's face, but it relaxes as recognition runs across it. 'Ahh, heyo there, Kit! Long time no see and all,' he says, skipping up to you. 'Come back for another round? I think that I got some more food if you're up for the trade?'";
 			say "     He pauses to snicker to himself. 'I bet that you don't even need the food. Sex that good, huh?' He gives you a cocky smirk and places his paw on his hip. You roll your eyes but nod your head. Free food and free sex sound pretty good to you. Milo then gives himself a little fist pump and jumps in place enthusiastically. 'Fantastic, Kit!' He then moves over to his hole-home and fishes out another can of food and hands it to you gingerly. 'Now, beautiful, assume the position!' he says, trying to sound authoritative but is lessened by his playful laugh.";
@@ -83,7 +83,7 @@ instead of resolving Bobcat Encounter:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Bend over and present yourself for fucking.";
 			say "     ([link]N[as]n[end link]) - Move up to him and blow the bobcat.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "[SexWithMilo1]"; [fuck]
 			else:
@@ -97,7 +97,7 @@ instead of resolving Bobcat Encounter:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, let's have some fun!";
 		say "     ([link]N[as]n[end link]) - No, reject the bobcat's advances.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[SexWithMilo1]";
 		else:
@@ -106,26 +106,26 @@ instead of resolving Bobcat Encounter:
 
 to say SexWithMilo1:
 	setmonster "Bobcat";
-	if player is female:
+	if Player is female:
 		say "     Thinking a moment, you chew your lip, eyeing the catboy up and down until you finally nod slowly, eyes stopping on his hardened member. He claps his paws together and bounces excitedly in place. 'Excellent!' he says anxiously, his malehood throbbing in anticipation. He hands you the can of food, and you store it away in your pack. Turning back to the cat-morph, he grabs hold of his bumpy shaft and begins stroking it before you, licking his sharp incisors while his eyes sparkle with lustful ideas for you. 'Down, on your hands and knees,' he says as a command, humping his hips forward slightly. Blushing at the order, you do as he asks, kicking off what clothing you have until your butt naked before Milo. You then turn around, bend over, and present your naked ass to your new dom.";
 		say "     He pads up to your backside and runs his paws over your ass, caressing your cheeks and gently digging little claws into your skin. A slap echoes briefly as Milo's soft paw whacks against your backside, causing you to yelp. 'Hmm, you smell pretty good. Let's see if you taste just as sweet.' As he says this, you turn your head to see what he means exactly. You see his head drop low and bury into your loins. Whiskers tickle your flesh as a rough tongue makes contact with your sex, pressing into you eagerly. He works with skillful tongue lashes on your sensitive lips while his soft paws grope your ass cheeks wantonly. Every now and again, his sharp fore-teeth chew gently on your clit, sending a dagger of pleasure up your body and causing your limbs to wobble.";
 		WaitLineBreak;
 		say "     Milo brings you close, but holds off right before your climax. He withdraws his face and tongue from your spit-lathered crotch with a loud slurp and a pleasant smirk. 'Not bad at all, but time for the real deal now,' he says as he strokes himself off behind you, scooting up till his erection is pressing right up against the entrance of your sex. You wiggle your hips, pressing him into you half an inch before he pulls back with a groan. 'Easy there, girl!' He laughs, giving your cheek another softer slap. 'Don't worry, you'll get what you want.' He grins widely, not that you can see on your hands, preparing yourself for a good fucking.";
 		say "     After a little more teasing of your now soaking wet cunny, Milo, without warning, thrusts into your waiting sex. You throw your head back and groan as the bumpy, barbed member files into you, filling you with all eight inches in a single motion. Milo [']mrowls['] lowly, emanating a light purr while he holds himself inside of you. You feel soft, furry paws kneading your tender skin when he starts to pull out of you, only for him to slam back into your cunt, nearly sending you face first into the ground. Milo starts his lust-fueled rut into you, pulling out and pushing in with ever increasing speed.";
 		WaitLineBreak;
-		say "     Your moans grow wild, much like his erratic movements that send shockwaves of pleasure through you. After a series of impressive thrusts and a final slap of your tail end, you find yourself brought to a screaming climax, orgasming around his cat-cock, squeezing it tightly and squirting girl cum all over and around Milo's crotch. [if player is male]Meanwhile a little lower, your manhood[smn] shoots its load onto the soft dirt below, staining it gooey white. [end if]Your vice-like grip around him triggers his own, and with a groan and a rather cute [']meowl['], Milo explodes into you.";
+		say "     Your moans grow wild, much like his erratic movements that send shockwaves of pleasure through you. After a series of impressive thrusts and a final slap of your tail end, you find yourself brought to a screaming climax, orgasming around his cat-cock, squeezing it tightly and squirting girl cum all over and around Milo's crotch. [if Player is male]Meanwhile a little lower, your manhood[smn] shoots its load onto the soft dirt below, staining it gooey white. [end if]Your vice-like grip around him triggers his own, and with a groan and a rather cute [']meowl['], Milo explodes into you.";
 		say "     A torrent of cat seed fills your shaking tunnel, painting your womb white as Milo humps inside of you fully. Pushing back against him, you grind as much pleasure from him as possible until he slowly disconnects himself from you. His paws stay on your ass however, squeezing and groping possessively as he takes a moment to appreciate your well-fucked form, utterly submitted to him and leaking his seed. You hear him lick his lips loudly and stand up. 'That was a good little romp I'd say, Kit. If I didn't have food to replace, I might just be up for round two, buuut for now, let's call it. Do visit again though, I'd love to see this beautiful ass again, raised and ready for a fucking,' he says, giving your butt one last squeeze.[fimpregchance]";
 		WaitLineBreak;
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your sex and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
 		now Resolution of Bobcat Encounter is 1; [talked, pussy fuck for food]
 	else:
 		say "     Thinking a moment, you chew your lip, eyeing the catboy up and down until you finally nod slowly, eyes stopping on his hardened member. He claps his paws together and bounces excitedly in place. 'Excellent!' he says anxiously, his malehood throbbing in anticipation. He hands you the can of food, and you store it away in your pack. Turning back to the cat-morph, he grabs hold of his bumpy shaft and begins stroking it before you, licking his sharp incisors while his eyes sparkle with lustful ideas for you. 'Down, on your hands and knees,' he says as a command, humping his hips forward slightly. Blushing at the order, you do as he asks, kicking off what clothing you have until your butt naked before Milo. You then turn around, bend over, and present your naked ass to your new dom.";
-		say "     [if player is neuter]Milo pauses a moment when he sees that you have no sex organs. 'Jeez, you're one of those, huh? Ah well, I ain't judgy. Besides, all's you need is this sweet ass.' [end if]He pads up to your backside and runs his paws over your ass, caressing your cheeks and gently digging little claws into your skin. A slap echoes briefly as Milo's soft paw whacks against your backside, causing you to yelp. The cat-morph then leans forward and shoves his face deep into your ass crack. He inhales deeply and then lets his tongue roam. It shoots out of his toothy maw and makes contact with your sensitive sphincter, pressing in and lathering it in warm saliva, all while his soft paws caress and grope at your hips.";
+		say "     [if Player is neuter]Milo pauses a moment when he sees that you have no sex organs. 'Jeez, you're one of those, huh? Ah well, I ain't judgy. Besides, all's you need is this sweet ass.' [end if]He pads up to your backside and runs his paws over your ass, caressing your cheeks and gently digging little claws into your skin. A slap echoes briefly as Milo's soft paw whacks against your backside, causing you to yelp. The cat-morph then leans forward and shoves his face deep into your ass crack. He inhales deeply and then lets his tongue roam. It shoots out of his toothy maw and makes contact with your sensitive sphincter, pressing in and lathering it in warm saliva, all while his soft paws caress and grope at your hips.";
 		WaitLineBreak;
-		say "     His tongue lashes against your asshole and beyond, trailing around your tight back door before diving into it again. His rough tongue tickles your very core, feeling almost as if he's licking you from the inside out. [if player is male]Your throbbing manhood pulses from the stimulation, sending little spurts of pre unto the ground below. [end if]Eventually though after nearly five minutes of eating your ass and feeling up your body, Milo's head withdraws. 'Hmm, damn, not bad.' He licks his incisors loudly. 'You look ready enough!' Milo shouts excitedly and rears back, then forward, pressing the tip of his eager cat cock against the ring of your ass.";
+		say "     His tongue lashes against your asshole and beyond, trailing around your tight back door before diving into it again. His rough tongue tickles your very core, feeling almost as if he's licking you from the inside out. [if Player is male]Your throbbing manhood pulses from the stimulation, sending little spurts of pre unto the ground below. [end if]Eventually though after nearly five minutes of eating your ass and feeling up your body, Milo's head withdraws. 'Hmm, damn, not bad.' He licks his incisors loudly. 'You look ready enough!' Milo shouts excitedly and rears back, then forward, pressing the tip of his eager cat cock against the ring of your ass.";
 		say "     He doesn't wait long. Milo pushes forward with all of his three foot force and pops into your rectum. You pull your head back and moan at the penetration, right alongside Milo as he too mewls in delight. You push back against him, all the way until all eight inches are stuffed inside of your butt. His ribbed cat cock feels absolutely euphoric inside of your clenching backside, and even more so when he pulls back and slams into you again. His soft paws dig into your flesh while his hips start to really move against you. A few slaps echo through the forest as the pleasurable sting of an ass-slapping hand shoots through you.";
 		WaitLineBreak;
-		say "     Milo for his part leans forward overtop you and starts making quick short jabs into your ass instead of long heavy thrusts. The soft fur of his body sends submissive thrills up your spine and through your groin. You nearly fall forward through the rough fuck and can feel yourself quickly reaching your peak of pleasure. [if player is male]Before realizing it, you're shooting your load all over the dirty ground below, splattering a fair bit on your thighs and legs. [end if]Milo follows suit, slamming into your fucked out rectum once more and holding himself there. His teeth find your back and digs into skin and flesh, hard enough to sting but light enough to not draw blood.";
+		say "     Milo for his part leans forward overtop you and starts making quick short jabs into your ass instead of long heavy thrusts. The soft fur of his body sends submissive thrills up your spine and through your groin. You nearly fall forward through the rough fuck and can feel yourself quickly reaching your peak of pleasure. [if Player is male]Before realizing it, you're shooting your load all over the dirty ground below, splattering a fair bit on your thighs and legs. [end if]Milo follows suit, slamming into your fucked out rectum once more and holding himself there. His teeth find your back and digs into skin and flesh, hard enough to sting but light enough to not draw blood.";
 		say "     A veritable flood of cat cum fills your ass with an excess of fruitful seed, filling you up with what feels like a quart of jizz, which slowly leaks out and around Milo's messy, twitching member. He humps slowly into you as he drags his pleasure out from you, using you like his own private cock-masseuse. Pushing back against him, you grind as much pleasure from him as possible until he slowly disconnects himself from you, letting go of your sore flesh that his jaws had dug into when he does. His paws stay on your ass however, squeezing and groping possessively as he takes a moment to appreciate your well-fucked form, utterly submitted to him and leaking his seed. You hear him lick his lips loudly and stand up. 'That was a good little romp I'd say, Kit. If I didn't have food to replace, I might just be up for round two, buuut for now, let's call it. Do visit again though, I'd love to see this beautiful ass again, raised and ready for a fucking,' he says, giving your butt one last squeeze.[mimpregchance]";
 		WaitLineBreak;
 		say "     Milo stretches, cracking his neck and wiping his messy cock off over your soft asscheeks. He sighs and begins to make his way back to his hole-home. 'You've definitely earned the chow. Don't eat it all at once now.' He laughs, hopping back into his home and disappearing from sight. A little woozy, you slowly stand, feeling the cat cum dribble out of your ass and down your thighs. Before you can decide on what to do next or what direction you're even going in, you hear Milo's voice echo from inside of his hidey hole. 'Oh! And if you need to find me again, look for the little M's I carved into some of the trees. Should lead you back here!' Well that's useful. If you ever need quick food or a quick fuck, you can try to find one of Milo's trees to follow.";
@@ -148,14 +148,14 @@ to say SexWithMilo2:
 	increase carried of food by 1;
 
 to say WonAgainstMilo:
-	if player is male:
+	if Player is male:
 		say "     You knock the cute bobcat to the ground face first. As he tries to recover, you come down on him and put pressure down on his back, pushing the cat to the ground and holding him there. 'Grrr, let me go, jerk!' he whines, squirming beneath you but not able to break your hold. You grin maliciously and reveal your manhood to the feline under your grip. His eyes widen in surprise, but you can also see his ribbed cat cock twitch in guilty anticipation. Your grin widens at that, and your fingers go to his tight ass, pressing in with one digit, causing the cat to squeal and his little tail to lash back and forth.";
 		say "     You press into his surprisingly flexible asshole as deep as you can and then withdrawal swiftly. The bobcat below moans at the loss of your finger and unwittingly shakes his ass in eagerness. A loud slap echoes through the forest followed by a yip from the cat as your hand falls down on his firm cheek. Your other hand works your member slowly, getting it to full mast before lining the head up with the bobcat's sphincter. The bobcat puts up a half struggle, still attempting to deny how much this is turning him on.";
 		WaitLineBreak;
 		say "     You thrust in, sinking most of your male-hood into his vice-like asshole. His arms, which were still half holding him up, collapses, and he rolls his head back as he falls into the dirt, moaning and drooling. His little claws scratch and dig into the dirt as you pound into his furry butt while your hands squeeze his firm cheeks roughly. He tries to babble out something vaguely insulting, but when he tries, you slam deep into him, and he [']mrowls['] loudly. His own member is twitching at its full eight inch length and is spurting pre, giving away how he's really feeling.";
 		say "     The tightness of this feline's ass has you reaching a rapidly approaching orgasm as you slam forward once more, looming over the catboy as you cum deep inside of his gut. His own member blows its hefty load onto the dirt ground while you empty your seed into this twitching bobcat. After a few more thrusts into his gaping hole, you expend the last of your jizz in his colon and pull out. He groans as you do and then slumps on his side, passed out. You gather your things and go to examine the hole the cat had greeted you from. Kneeling down and examining it, you reach in and grip something metal. Pulling it out, you find that it's a can of food! You reach down and retrieve two more before putting all three in your pack. You then quickly leave both the strange, fucked-silly bobcat and his home behind.";
 		now Resolution of Bobcat Encounter is 21; [fought, fucked him]
-	else if player is female:
+	else if Player is female:
 		say "     You knock the fight out of the little bobcat, and he falls on his cute furry butt before you. Grinning widely, you eye up your new prize lustfully. He groans and tries to stand, but you shove him back down and plant yourself on his waist butt first. You knock the air out of him, and he squirms pathetically under you. Grabbing a handful of his furred head, you push his face down while fully straddling his waist. He groans, then sighs, and then goes slack under you, realizing that he's at your mercy. You smile down at him and reach back with your other hand to grip his growing cat cock. You rub and stroke it to its full eight inch glory before placing it between your ass cheeks and hot-dogging him between them. He moans lowly and looks away from you shamefully, but his hands grip your hips, seeming to both grope and push at your form.";
 		say "     Raising your hips up, you aim his ribbed, bumpy tip to your heated sex and penetrate yourself slowly. The cat boy you're riding [']mrowls['] out loud as you steadily slide down his pretty fuck stick. Your hips shake, and after one last push, you hilt him inside of your now dripping wet cunt. You hold him in you a moment, gently gyrating your hips, provoking whimpers from the fuck-cat. After the moment passes, you raise yourself up and drop back down on the bobcat's barbed cock, the little bumps massaging your insides marvelously. Your head is thrown back as you start your rhythm of riding the cat boy into the ground. On his side of things, he has his teeth gritted and is thrusting up in short bursts, trying to hide how much he's enjoying the fuck.";
 		WaitLineBreak;
@@ -174,21 +174,21 @@ to say WonAgainstMilo:
 
 to say LostAgainstMilo:
 	setmonster "Bobcat";
-	if player is female:
+	if Player is female:
 		say "     The bobcat leaps at you once again, back paws first, and knocks you down with surprising force! Landing on your upper body, he pins you to the ground and holds your exhausted shape down. His naked, feline crotch rests on your chest, semi flaccid at about six inches, likely from the adrenaline of the battle. 'Jerk!' he yells down at you, growling and baring his small sharp teeth. Then the lithe feline takes a moment to look you over, his eyes moving over your chest, then further down as he twists his upper body a bit to look at your crotch. The feline's growling snarl is replaced by a grin when he looks back at your face, and his hands start pulling aside any gear and clothing that you might have. Soon, he plants his paw-hands on your breasts, squeezing them gently at first, getting a feel for them before moving to tweak two nipples roughly. You can't help but moan in both pain and pleasure while your body starts to heat up.";
-		say "     Your opponent's cock stiffens to full size [if breast size of player > 0]between your chest cushions[else]against your breastbone[end if], standing straight and erect at about eight inches in length. It is feline in shape, covered in small ridges and soft barbs that promise a lot of stimulation to any partner he fucks. The bobcat pushes your [if breast size of player > 0]breasts[else]pecs[end if] together, wedging his length into the resulting crevice as he humps forward gently. 'This is what big jerks like you get. Be a good bottom bitch now,' he says simply, grinning widely and flashing his incisors at you. You strain under his weight, but you're too sore and a little too horny after your fight to put up a good enough struggle. He smiles down at you as you strain to move against him and moves to secure your hands above your head. The thrusting between your [if breast size of player > 0]tits[else]pecs[end if] stops for a moment as he moves his hands to your wrists, holding them tightly and with surprising strength for a creature his size.";
+		say "     Your opponent's cock stiffens to full size [if Breast Size of Player > 0]between your chest cushions[else]against your breastbone[end if], standing straight and erect at about eight inches in length. It is feline in shape, covered in small ridges and soft barbs that promise a lot of stimulation to any partner he fucks. The bobcat pushes your [if Breast Size of Player > 0]breasts[else]pecs[end if] together, wedging his length into the resulting crevice as he humps forward gently. 'This is what big jerks like you get. Be a good bottom bitch now,' he says simply, grinning widely and flashing his incisors at you. You strain under his weight, but you're too sore and a little too horny after your fight to put up a good enough struggle. He smiles down at you as you strain to move against him and moves to secure your hands above your head. The thrusting between your [if Breast Size of Player > 0]tits[else]pecs[end if] stops for a moment as he moves his hands to your wrists, holding them tightly and with surprising strength for a creature his size.";
 		WaitLineBreak;
 		say "     You pull your hands against his, to no avail. In response, he leans down and presses his furry mouth to yours. You let out a gasp in surprise, and he uses that moment to thrust his rough, little tongue in between your lips. He laps inside of your mouth as one paw moves to cup your chin to hold you firmly as he gives you a deep, domineering kiss. His sharp incisors nip at your lips, and his tongue tangles with yours while you lose yourself in his smooch. He's sure to taste you thoroughly, and in turn, let you sample his own intimate taste. After nearly a minute of kissing, he moves back up from your lips, trailing long lines of saliva between the two of you, leaving you out of breath and hotter than you realize. Your cunt lips are soaked, and you're nearly panting in anticipation as to what comes next.";
 		say "     He smiles at your flushed face. 'Good slutty jerk. You taste pretty good,' he says genuinely before glancing back down at your breasts. 'Taste more,' he says lowly as he scoots down your body until his head is between your breasts. Meanwhile, his hands quickly remove any obstructions from your soaking sex, and when he does, his hard cat cock brushes against your wet woman-hood. Moaning at the sensation and a little lust blind, you move your newly freed arms to wrap around the bobcat boy's back. The nameless cat latches onto one of your nipples and bites down. Not hard enough to seriously hurt, but you moan loudly at the pained sensation. It's quickly replaced by a rough tongue and soft lips while he moves his hips forward to penetrate your gripping sex with the tip of his feline length.";
 		WaitLineBreak;
 		say "     Still holding onto his back, you throw your head back and moan loudly as he slowly enters you, one ribbed inch at a time. You bite your bottom lips while he nibbles on your nipple, switching between them and soaking them in saliva as he hilts himself inside of you. He leaves himself there for a moment, just enjoying being inside a warm body for a minute before he withdraws. He drags his bumpy shaft out of your sex before slamming back into you, still suckling on your nipple as he begins to truly fuck you. He slams in and out of you, starting to build up speed as his barbed shaft rubs at every little nerve in your pussy. The bobcat atop you grabs and gropes at your hips, kneading your ass and holding you tight while fucking you, now with wild abandon.";
-		say "     You in turn hold him tightly and against the breasts that he's so much enjoying, and you find yourself reaching an unexpected orgasm which sends you screaming in pleasure. [if player is male]Your male-hood, pressed tightly against your stomach, shoots a jet of seed directly between your two bodies. [end if]The tight grip of your climaxing sex doesn't slow him in the slightest, and he continues thrusting into you at a breakneck pace. Still sensitive from your first orgasm and with his barbed cock rubbing against delicate nerves, you find yourself reaching another orgasm quickly following the first, then another, and a fourth, all one after another. You can feel the bobcat's hot breath against your chest as he speaks. 'What. Big. Jerks. Get!' He mewls into one of your nipples, soft paws gripping your hips possessively right before he hilts himself deep inside of you, and explodes inside of your willing body.";
+		say "     You in turn hold him tightly and against the breasts that he's so much enjoying, and you find yourself reaching an unexpected orgasm which sends you screaming in pleasure. [if Player is male]Your male-hood, pressed tightly against your stomach, shoots a jet of seed directly between your two bodies. [end if]The tight grip of your climaxing sex doesn't slow him in the slightest, and he continues thrusting into you at a breakneck pace. Still sensitive from your first orgasm and with his barbed cock rubbing against delicate nerves, you find yourself reaching another orgasm quickly following the first, then another, and a fourth, all one after another. You can feel the bobcat's hot breath against your chest as he speaks. 'What. Big. Jerks. Get!' He mewls into one of your nipples, soft paws gripping your hips possessively right before he hilts himself deep inside of you, and explodes inside of your willing body.";
 		WaitLineBreak;
-		say "     Rope after rope of thick feline seed fills up your womb with an impressive amount of cat spunk. A little delirious from the amount of orgasms you've received, you hold unto the bobcat for dear life and cry out in pleasure as jets of cum fill your sex and spill out of your plugged lips. [if player is male]There's also a large puddle of sticky seed now running down your entire body and soaking into the dirt below. [end if]Wrapped tightly around the feline, him pressed into your chest, you reach one final climax as you feel his own orgasm winding down. Leaking bobcat cum from your well-fucked cunt, your sex again grips around his now stationary member hilted inside of you and triggers an orgasm that knocks you out cold...[fimpregchance]";
+		say "     Rope after rope of thick feline seed fills up your womb with an impressive amount of cat spunk. A little delirious from the amount of orgasms you've received, you hold unto the bobcat for dear life and cry out in pleasure as jets of cum fill your sex and spill out of your plugged lips. [if Player is male]There's also a large puddle of sticky seed now running down your entire body and soaking into the dirt below. [end if]Wrapped tightly around the feline, him pressed into your chest, you reach one final climax as you feel his own orgasm winding down. Leaking bobcat cum from your well-fucked cunt, your sex again grips around his now stationary member hilted inside of you and triggers an orgasm that knocks you out cold...[fimpregchance]";
 		say "     Waking up sometime later, you quickly sit up and look around. You're fairly sore from the fight and fuck as you stumble to your feet and brush yourself off. Most of your lower half is all but covered in drying cum, and your lips taste of the bobcat you tried to rape, but luckily it looks like all of your stuff is still here. You're also no longer where you were. It seems that you were dragged to a different part of the woods to avoid you finding the bobcat's home again.";
 		now Resolution of Bobcat Encounter is 24; [fought, lost, got fucked (female)]
 	else:
-		say "     The bobcat leaps at you, back paws first and knocks you down with surprising force, landing on your upper body and pinning you to the ground. His naked, feline crotch rests on your chest, semi flaccid at about six inches, likely from the adrenaline of the battle. 'Jerk!' he yells down at you, growling and baring his small sharp teeth. He then takes a moment to look you over, his eyes moving over your chest where his flaccid, barbed member rests, then moving to look behind him and down your lower body as his growling snarl turns to a grin. He looks back at you, still grinning tellingly before his two soft paws go to move aside any obstructions from your chest to tweak your nipples roughly[if player is male]. You can't help but moan in both pain and pleasure while your body starts to heat up and your male member starts to fully engorge[end if].";
+		say "     The bobcat leaps at you, back paws first and knocks you down with surprising force, landing on your upper body and pinning you to the ground. His naked, feline crotch rests on your chest, semi flaccid at about six inches, likely from the adrenaline of the battle. 'Jerk!' he yells down at you, growling and baring his small sharp teeth. He then takes a moment to look you over, his eyes moving over your chest where his flaccid, barbed member rests, then moving to look behind him and down your lower body as his growling snarl turns to a grin. He looks back at you, still grinning tellingly before his two soft paws go to move aside any obstructions from your chest to tweak your nipples roughly[if Player is male]. You can't help but moan in both pain and pleasure while your body starts to heat up and your male member starts to fully engorge[end if].";
 		say "     The cat creature chuckles at your reactions while he starts to stroke himself off in your face. His feline, ribbed member now at its full eight inches in length, his wild but enticing musk fills your senses, causing a wave of heat to wash over you. The dominant cat looks down at you with wide, amber eyes filled with lust. 'Hmm, jerks like you don't deserve it, but you're gonna taste my victory.' He finishes by moving his cute butt further up your chest and pressing his dick against your lips. A little surprised, your mouth gasps open, and the tip of his tapered cock presses in.";
 		WaitLineBreak;
 		say "     You can taste his musky member and even a little sticky pre that leaks from the end of it. Having an opening to your sweet mouth, he thrusts forward further, pressing his bumpy cock to the back of your throat. You gag a bit, but he's unrelenting and thrusts in deeper, nearly hilting all eight inches in your throat. He then withdraws it entirely, leaving you staring at his musky cock covered in your saliva. With one hand on his member and another on the back of your head, he moves up to drag his furry sack up your chin and over your lips. Your nose pressed directly under his member and your lips against his soft pearls, you get a full delivery of his unique, horned-up smell.";
@@ -224,17 +224,18 @@ to say MiloDesc:
 	else:
 		say ""; [nothing in here so far, only one event fight]
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Bobcat";
+	now NewTypeInfection entry is false;
+	now Name entry is "Bobcat";
 	now enemy title entry is "Male bobcat";
-	now enemy name entry is "Milo";
+	now enemy Name entry is "Milo";
 	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]The feline claws at your with razor-sharp paws![or]The bobcat swipes at your feet with his back-paws.[or]The cat rams into you shoulder first![at random]";
 	now defeated entry is "[BeatMilo]";
@@ -244,7 +245,7 @@ When Play begins:
 	now body entry is "short and lithe but with powerful lean muscles and covered with orange fur. Your digitigrade legs end in clawed feet and your hands in clawed cat-paws.";
 	now skin entry is "a soft amber-orange fur over your"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a short nearly one foot long furry tail that protrudes from your well-rounded backside.";
-	now cock entry is "dark pink, tapered"; [ Cock. Format as "You have a 'size' [cock of player] cock."]
+	now cock entry is "dark pink, tapered"; [ Cock. Format as "You have a 'size' [cock of Player] cock."]
 	now face change entry is "it starts to smoosh in on itself and reform in a rather uncomfortable manner into the form of small feline head. You feel yourself over and can feel a new muzzle that has grown on your now furry face. You feel your head and can feel new furry cat ears protruding from the top."; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it remakes itself into that of a three foot tall anthro bobcat with digitigrade legs ending in sharp paws, along with your hands which end in wicked claws."; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "it starts to tickle, then itch, and when you move to scratch the irritated area, you notice a patch of amber-orange fur sprout up from your skin. Then it starts to spread until your whole body is itching, and you're left squirming in place. After a moment of scratching and writhing in discomfort, you stand to find yourself fully covered in this short orange fur."; [ skin change text. format as "Your skin feels funny as (your text)." ]
@@ -261,15 +262,15 @@ When Play begins:
 	now lev entry is 5; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 7; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ Case sensitive]
-	now cocks entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 8;
-	now cock width entry is 6; [ Size of balls ]
-	now breasts entry is 2; [ Number of nipples. ]
-	now breast size entry is 4; [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1; [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 8;
+	now Ball Size entry is 6; [ Size of balls ]
+	now Nipple Count entry is 2; [ Number of nipples. ]
+	now Breast Size entry is 4; [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
 	now libido entry is 60; [ Amount player Libido will go up if defeated ]
 	now loot entry is ""; [ Loot monster drops, ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -282,5 +283,96 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
 
 Milo ends here.

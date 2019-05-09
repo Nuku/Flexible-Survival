@@ -10,7 +10,7 @@ Version 1 of Black Market by Luneth begins here.
 [   2: Player has saved Barrett (Black Market has been relocated to the Library)]
 [  100: Player has decided to turn in Barrett (Black Market lock-out)           ]
 
-[ libido of Barrett - Barrett sex progression                                   ]
+[ Libido of Barrett - Barrett sex progression                                   ]
 [   0: Player knows nothing of Barrett's desires                                ]
 [   1: Player has attempted to hit on Barrett                                   ]
 [   2: Player has accepted Barrett's preferences                                ]
@@ -74,7 +74,7 @@ to say BarrettTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Chat a bit"):
@@ -105,7 +105,7 @@ to say medicine case list:
 		if rule failed:
 			next;
 		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[name entry] - [price entry] Creds";
+		say "[Name entry] - [price entry] Creds";
 
 Table of Zephyr Black Market Medicine Case
 name	price	object	allowed
@@ -145,7 +145,7 @@ to say outfitters rack list:
 		if rule failed:
 			next;
 		say "[link]Buy[as]buy [object entry][end link] ";
-		say "[name entry] - [price entry] Creds";
+		say "[Name entry] - [price entry] Creds";
 
 Table of Zephyr Black Market Outfitters Rack
 name	price	object	allowed
@@ -173,7 +173,7 @@ rule succeeds;
 Section 4 - Events
 
 instead of going to Zephyr Storeroom while HP of Barrett is 0:
-	if "Stealthy" is listed in feats of player:
+	if "Stealthy" is listed in feats of Player:
 		say "     Wanting to find out what is on the other side of the door, you watch Larissa, waiting for the receptionist to turn away and give you a chance to get inside. After a few minutes, a window of opportunity arises. Larissa appears to be completely consumed with some documents on the desk, and you decide to make use of this opening. Drawing from your nanite enhanced reflexes and embracing the inner ambush predator instincts that you have gained, you stealthily move towards the door with both speed and grace, like a shadow. Wrapping your hand around the handle, you quickly pull the door open and slide inside, softly tugging the door close before anyone can be the wiser. Gently placing your ear to the door, you listen intently for any sound that Larissa might have seen you, but you hear nothing but silence. Feeling a little more certain that you had made it in without being noticed, you turn around to take in your surroundings.";
 		say "     It appears to be a warehouse of sorts, with huge crates and containers littering the floors and shelves. Truth be told, you were expecting some little shoddy office or something, not a two story room. Moving closer to one of the containers, you are about to lift the lid when you hear a booming voice come from off to the side. 'Hey! What the fuck do you think you're doing in here?!' Quickly turning to face the direction the voice is coming from, you prepare yourself for a fight. The man before you is huge, and while he looks like a completely human hispanic man, he is still well over six feet tall. The first thing that you take in to gauge him is his age and build. He appears to be in his forties, and while at first he seems to be a heavyset man, you quickly think different as he gets ready for a fight as well, flexing a bit and cracking his knuckles.";
 		WaitLineBreak;

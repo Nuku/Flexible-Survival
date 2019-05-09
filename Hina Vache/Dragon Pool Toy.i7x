@@ -5,7 +5,7 @@ Version 1 of Dragon Pool Toy by Hina Vache begins here.
 "Adds a Dragon Pool Toy creature to Flexible Survival's Wandering Monsters table"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Dragon Pool Toy" } to infections of hermaphrodite;
@@ -18,10 +18,10 @@ to say DragonPoolToyDesc:
 		say "     As you wander the area, you soon find yourself back at the trash pile. Just as before, the Dragon Pool Toy remains motionless on top of the junk. Knowing full well that it is a trap, you merely stare at the beast for a few moments before turning and starting to walk away. A quick series of squeaks is heard behind you. Turning around rapidly, you have just enough time to dodge its attempted tackle. Once more, the dragon rears up and lets out its 'ferocious' squeak of a roar as it prepares to attack.";
 	else:   [First time meeting. Surprises player with a sneak attack]
 		say "     As you explore the surrounding area, you are forced to stifle a laugh. Before you, lying on a pile of junk, is a fully-inflated and very cartoonish dragon toy. The thing is positively massive, standing a good ten feet tall, being the kind of pool toy people place in the waters of a lake or beach to ride on. The object is a neon-purple with fins instead of normal legs, a 'sail' atop its head, and a long tail. Deciding that it is safe to check out, you begin to walk around the toy, inspecting it closely. As you make your way to its rear, you groan and slap your hand into your face, shaking your head slightly. Either this crazy infection got to an innocent toy, or some sick company decided to get real creative by adding both a vagina and a penis, both impressively sized, to the toy. Against your better judgement, you decide to push your hand into the large slit experimentally. Grimacing as you feel the damp walls of the toy, you begin to remove your hand only to see the toy swing at you with its rear flipper.";
-		choose row monster from the Table of Random Critters;
-		let bonus be ( perception of player + dexterity of player - 20 ) divided by 2;
+		choose row MonsterID from the Table of Random Critters;
+		let bonus be ( perception of Player + dexterity of Player - 20 ) divided by 2;
 		let featbonus be 0;
-		if "Wary Watcher" is listed in feats of player:
+		if "Wary Watcher" is listed in feats of Player:
 			increase featbonus by 3;
 		let dice be a random number from 1 to 20;
 		say "     You roll 1d20: [dice]+[bonus]+[featbonus] = [dice + bonus + featbonus][line break]";
@@ -31,29 +31,29 @@ to say DragonPoolToyDesc:
 			let dammy be 8;
 			if hardmode is true:
 				increase dammy by ( square root of lev entry );
-			decrease HP of player by dammy;
+			decrease HP of Player by dammy;
 			say "     You are smacked right in the face, and you groan as you take [dammy] from the attack.";
 		say "     Seems that the plague did more than give this toy a set of genitals, it also gave it life. As you ready yourself for combat, you once again prevent yourself from laughing due to the toy rearing up for a powerful roar, only for a cute squeak to come out.";
 
 to say LoseToDragonPoolToy:
-	if HP of player > 0:	[Player submitted]
+	if HP of Player > 0:	[Player submitted]
 		say "     Instead of fighting the large beast toy, you decide to lower your guard and present yourself. The toy looks at you with its lifeless eyes for a few moments, trying to decide if you're attempting to trick it. After it feels assured enough that you're serious about letting it have its way with you, it moves closer to begin the fun.";
-	if vorelevel > 1 and scalevalue of player < 5 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):	[Oral Vore]
+	if vorelevel > 1 and scalevalue of Player < 5 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):	[Oral Vore]
 		say "     Between the awkward movements the creature makes as it 'walks' due to its fins for legs, and the fact that with each movement a squeak lets out from the dragon, you try your best not to laugh as the creature works its way towards you. The creature seems displeased with you finding enjoyment in its plight, or at least you think it seems displeased if the squeak of a roar is any indication. The beast charges at you once more, but having no will to fight anymore, you can only wait as it finally reaches you. It huffs angrily, squeaking noisily in your face before biting down on your head. Having no real teeth, the bite does not hurt, but it does feel awkward to be engulfed by a plastic maw. The beast doesn't seem to be satisfied with just your head as it soon starts pulling in more and more of you inside. Squirming does not help though, only enticing it to swallow you faster.";
 		say "     Before you know it, you are completely taken into the monster and sliding down its lengthy neck. After a few moments, you're deposited into what appears to be some sort of stomach sack. You press firmly against the walls of your plastic prison, feeling them push out but not all that far. Looking around, you cannot seem to locate the tube that dumped you into here. Before you can locate any means of escape, you can hear the hissing of air escaping the monster, meanwhile the prison seems to get smaller by the second. Starting to freak out, you start punching and kicking your confines, but soon, the prison forms fittingly around your entire frame. You're unable to do anything for a few minutes as you hear your captor move about. Soon, your eyes are able to see something other than plastic walls as the head of the beast slides over yours. You feel a tug on your arm, then another on your leg, and then a third forcing your head to turn.";
 		WaitLineBreak;
 		say "     The beast has not only swallowed you, but has shrunk itself to put itself on you like a suit, and you are now literally looking through its eyes. The creature begins to force you to move, wandering the area as it searches for something. Walking along the edge of the beach, it soon finds exactly what it is looking for as you see a group of Bottlenose Toys laughing and playing with each other. The beast that is holding you captive lets out a squeak to alert them of your presence, to which they all look at your oversexualized body with this 'suit' on. Walking over, it grabs one of the girls, spinning them around, and instantly impaling her on its hard, inflatable draconic member. You feel yourself thrusting away at the girl, but feel none of the pleasure of penetrating her. You are forced to watch as this strange beast pounds away at her sex mercilessly before pumping her full of liquid plastic instead of cum. But that is not the end of it. You are forced to spin around and look at the rest of the flock of girls... This could take a while.";
 		say "     You spend a long time watching as the toy breeds each of the girls tirelessly before the last one falls, and the toy lets out a triumphant squeak. It walks you both back to the pile you found it before carelessly spewing you out of its mouth, luckily depositing you onto the soft sand as it lays down to rest, your own aching body tired and sore from the constant thrusting you were made to perform.";
 		LibidoBoost 20;
-	else if ublevel > 1 and scalevalue of player < 5 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):	[Unbirth Bound State]
+	else if ublevel > 1 and scalevalue of Player < 5 and (a random chance of 1 in 4 succeeds or (player is kinky and a random chance of 1 in 3 succeeds)):	[Unbirth Bound State]
 		say "     As you pant, lying in pure defeat from the ridiculous toy, you raise a curious eyebrow as the beast turns its back to you, seeming to let you escape. But this thought is only for a fleeting moment as the beast soon lowers its backside down atop you, taking your entire head into its female sex in a single instant. Struggle as you may, you are too worn down from the fight to be able to properly resist the monster as it slowly sinks more and more of your being into its female genitals. Before long, you feel your feet being sucked in, the last of you now inside of the dragon. You squirm around as best you can given your tight confines. It isn't long before you hear an odd sound. Looking around in the dimly glowing insides of the monster, you're able to see some strange yellow spots spreading around. A quick prod of one spot near your finger confirms that it's rather hard compared to the soft latex innards of the pool toy. It appears the beast is trying to put you in an egg! What will you do?";
 		LibidoBoost 20;
 		wait for any key;
 		now boundsegment is 1;
 		DragonPoolToyBind;
-	else if player is female:	[Vaginal sex]
+	else if Player is female:	[Vaginal sex]
 		say "     The beast takes its time looking over your prone figure before letting out a series of happy squeaks as it finds what it is looking for. It knocks you onto your stomach before jumping somewhat clumsily on top of you. Given its sheer size, you expect to be crushed instantly, but being full of air, it is fairly light as it lay atop you, shifting nonstop. You wonder what it is doing before you soon have your answer as you feel a prod against your cunt. The beast clearly is eager to use a pussy, and it has found one. It wastes no time in thrusting desperately to try and begin its sexual assault on your much smaller body, though most of the thrusts miss their mark entirely before one finally manages to sink part of the tip into your sex. Before you can prepare yourself, the toy thrusts in extra hard, sinking as much of its tool into you as your body can take.";
-		say "     Given how [if cunt length of player < 11]small you are, you're unable to take more than half of the cock[else if cunt length of player < 20]positively deep your sex goes, you find it fairly easy to take most of his tool, practically the entirety of it[else]impossibly deep you are, you completely engulf his cock in your depths, making the beast squeak happily that it found a mate that could take it so completely[end if]. Wasting no time, the monster begins to pound away in earnest, seeking to breed its newest victim. Each thrust quickly becomes more brutal and bestial than the last, soon having you pushed into the sand below you despite the lack of real weight above you. It does not take long for the beast to reach its climax though as you feel a warm liquid rush into your waiting womb. You begin to wonder which of you two is really the inflatable as you are forced to watch your belly swell before your eyes, soon looking like a woman deep into pregnancy with quadruplets. After what seems like an hour, you finally feel a stop to the increasing pressure in your womb. Looking up, you notice that the toy has shrunken to an easily manageable size, to which you throw it as far as you can. Squatting, you push out as much of the liquid plastic cum as you can onto the ground before leaving, hoping that the fact that it isn't real sperm will prevent you from getting knocked up.[impregchance]";
+		say "     Given how [if Cunt Length of Player < 11]small you are, you're unable to take more than half of the cock[else if Cunt Length of Player < 20]positively deep your sex goes, you find it fairly easy to take most of his tool, practically the entirety of it[else]impossibly deep you are, you completely engulf his cock in your depths, making the beast squeak happily that it found a mate that could take it so completely[end if]. Wasting no time, the monster begins to pound away in earnest, seeking to breed its newest victim. Each thrust quickly becomes more brutal and bestial than the last, soon having you pushed into the sand below you despite the lack of real weight above you. It does not take long for the beast to reach its climax though as you feel a warm liquid rush into your waiting womb. You begin to wonder which of you two is really the inflatable as you are forced to watch your belly swell before your eyes, soon looking like a woman deep into pregnancy with quadruplets. After what seems like an hour, you finally feel a stop to the increasing pressure in your womb. Looking up, you notice that the toy has shrunken to an easily manageable size, to which you throw it as far as you can. Squatting, you push out as much of the liquid plastic cum as you can onto the ground before leaving, hoping that the fact that it isn't real sperm will prevent you from getting knocked up.[impregchance]";
 		LibidoLoss 40;
 		CreatureSexAftermath "Player" receives "PussyFuck" from "Dragon Pool Toy";
 	else:	[Anal]
@@ -66,17 +66,18 @@ to say BeatTheDragonPoolToy:
 	say "     The dragon starts to deflate under your assault, forcing it to retreat and leave you to your exploration.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Dragon Pool Toy";
+	now NewTypeInfection entry is false;
+	now Name entry is "Dragon Pool Toy";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of][or][in random order].";
 	now defeated entry is "[BeatTheDragonPoolToy]";
@@ -103,15 +104,15 @@ When Play begins:
 	now lev entry is 10;
 	now wdam entry is 10;
 	now area entry is "Beach";
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 4; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 20;
-	now cunt width entry is 6;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 5; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Length entry is 20;
+	now Cunt Tightness entry is 6;
 	now libido entry is 0; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -124,6 +125,97 @@ When Play begins:
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight]
+	now Body Definition entry is 5; [scale of 1-9 for body definition]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of male to female]
+	[Gender Adjective is generated out of androginity]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Length entry is 7; [inches deep for anal fucking;]
+	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0;
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0;
+	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Length entry is 0;
+	now Cunt Tightness entry is 0;
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+
 
 
 Section 3 - Bound State

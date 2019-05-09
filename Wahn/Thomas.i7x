@@ -40,10 +40,10 @@ Version 1 of Thomas by Wahn begins here.
 [   4: Sandy saved                                                   ]
 
 an everyturn rule: [fix for old saves]
-	if HP of Thomas > 0 and HP of Thomas < 52 and Cunts of Thomas is 0: [herm Thomas, but doesn't have a cunt]
-		now Cunts of Thomas is 1;
+	if HP of Thomas > 0 and HP of Thomas < 52 and Cunt Count of Thomas is 0: [herm Thomas, but doesn't have a cunt]
+		now Cunt Count of Thomas is 1;
 		now Cunt Length of Thomas is 28;
-		now Cunt Width of Thomas is 15;
+		now Cunt Tightness of Thomas is 15;
 
 Section 1 - Meeting Event
 
@@ -69,9 +69,9 @@ Instead of resolving a Centaur Gangbang:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Watch them take him.";
 	say "     ([link]N[as]n[end link]) - Step in and fight the centaurs.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		say "     Bringing a hand down to your [if player is male]cock[else if player is female]cunt[else]genderless crotch[end if] you start stroking yourself, ready to enjoy the show. And what a show it is - Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Almost as soon as he pulls out, the third stallion moves up and plunges his shaft in and starts thrusting...";
+		say "     Bringing a hand down to your [if Player is male]cock[else if Player is female]cunt[else]genderless crotch[end if] you start stroking yourself, ready to enjoy the show. And what a show it is - Raul keeps fucking the black man with deep thrusts and soon he gives a lust-filled shout as he fills the human's ass with creamy centaur cum. Almost as soon as he pulls out, the third stallion moves up and plunges his shaft in and starts thrusting...";
 		LineBreak;
 		say "     The three centaurs take turns fucking the mare and the human male, then later the two mares as their captive transforms further and further with each load of cum dumped into his hole. Soon he's fully female, sporting a nice pair of breasts and a deep pussy undoubtedly already bearing a developing foal. Finally when they are too exhausted to get their cocks up another time, the stallions herd their well-fucked mares away from the ruins, out into the wide plain where you lose sight of them.";
 	else:
@@ -136,7 +136,7 @@ Instead of resolving a Centaur Gangbang:
 	now Centaur Gangbang is resolved;
 
 to say LoseToCentaurs:
-	if player is submissive:
+	if Player is submissive:
 		say "     As you fall on your ass beaten, the centaurs share a laugh and say 'Now you got a bitch of your own, Danny.' The third stallion moves to stand over you while the other two get back on the mare and the black man. With his long horsecock dangling erect right before your head, it's clear what you're supposed to do, so you eagerly take hold of it and start sucking on the flared head.";
 	else:
 		say "     As you fall on your ass beaten, the centaurs share a laugh and say 'Now you got a bitch of your own, Danny.' The third stallion moves to stand over you while the other two get back on the mare and the black man. With his long horsecock dangling erect right before your head, it's clear what you're supposed to do, so you reluctantly take hold of it and start sucking on the flared head.";
@@ -163,14 +163,14 @@ Thomas	"Thomas"
 
 Thomas is a man.
 ScaleValue of Thomas is 4.
-Cocks of Thomas is 1.
+Cock Count of Thomas is 1.
 Cock Length of Thomas is 28.
-Cock Width of Thomas is 15.
-Testes of Thomas is 2.
-Cunts of Thomas is 0.
+Ball Size of Thomas is 15.
+Ball Count of Thomas is 2.
+Cunt Count of Thomas is 0.
 Cunt Length of Thomas is 0.
-Cunt Width of Thomas is 0.
-Breasts of Thomas is 2. [2 nipples]
+Cunt Tightness of Thomas is 0.
+Nipple Count of Thomas is 2. [2 nipples]
 Breast Size of Thomas is 0.
 TwistedCapacity of Thomas is false.
 Sterile of Thomas is false.
@@ -210,20 +210,20 @@ instead of sniffing Thomas:
 
 to say ThomasDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Thomas], PREGTIMER: [ThomasPregnancy], LIBIDO: [libido of Thomas], LUST: [lust of Thomas] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Thomas], PREGTIMER: [ThomasPregnancy], LIBIDO: [Libido of Thomas], LUST: [lust of Thomas] <- DEBUG[line break]";
 	if (HP of Thomas is 0): [starting state]
 		say "ERROR-Thomas-001A: He should not be around yet anywhere where players can see him.";
 	else if (HP of Thomas is 100):
 		say "ERROR-Thomas-100A: He should be avoiding the player now and not be seen again.";
 	else:
 		say "     Thomas is a good-looking black man with a muscular chest - which leads over to a strong equine body below his belly button. His lower half has a beautiful black coat shining in the [if daytimer is day]sunlight[else]moonlight[end if], while his goatee, shoulder-long dreadlocks, and tail are blond[if HP of Thomas is 52][else], below which, as you know, lies a mare's pussy in addition to his stallion cock and balls[end if][if HP of Thomas is 5]. The belly of his equine body seems a bit fuller than before. He's carrying a foal[end if].";
-		if libido of Thomas > 0 and libido of Thomas is not 20:
+		if Libido of Thomas > 0 and Libido of Thomas is not 20:
 			if HP of Felix is 0: [Felix among the additional centaurs]
 				LineBreak;
-				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 10 or libido of Thomas is 21)]another centaur[else if (libido of Thomas is 2 or libido of Thomas is 11 or libido of Thomas is 22)]two more centaurs[else if libido of Thomas is 12]three centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
-			else if libido of Thomas is not 10: [Felix standing in the room as an NPC]
+				say "     Nearby but still a bit off, you see [if (Libido of Thomas is 1 or Libido of Thomas is 10 or Libido of Thomas is 21)]another centaur[else if (Libido of Thomas is 2 or Libido of Thomas is 11 or Libido of Thomas is 22)]two more centaurs[else if Libido of Thomas is 12]three centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
+			else if Libido of Thomas is not 10: [Felix standing in the room as an NPC]
 				LineBreak;
-				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 21)]another centaur[else if (libido of Thomas is 2 or libido of Thomas is 12 or libido of Thomas is 22)]two more centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
+				say "     Nearby but still a bit off, you see [if (Libido of Thomas is 1 or Libido of Thomas is 21)]another centaur[else if (Libido of Thomas is 2 or Libido of Thomas is 12 or Libido of Thomas is 22)]two more centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
 
 instead of conversing the Thomas:
 	if (HP of Thomas is 0): [not yet met]
@@ -266,7 +266,7 @@ to say ThomasTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Admit that you lied about him having a pussy.";
 	[]
-	if (libido of Thomas > 0 and libido of Thomas is not 20):
+	if (Libido of Thomas > 0 and Libido of Thomas is not 20):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about his herd";
 		now sortorder entry is 5;
@@ -313,7 +313,7 @@ to say ThomasTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
@@ -350,7 +350,7 @@ to say ThomasTalk1:
 		now lastThomasTalk is turns;
 
 to say ThomasTalk2:
-	let bonus be (( charisma of player minus 10 ) divided by 2);
+	let bonus be (( charisma of Player minus 10 ) divided by 2);
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
 	if dice + bonus >= 15:
@@ -364,7 +364,7 @@ to say ThomasTalk2:
 to say ThomasTalk3:
 	if graphics is true:
 		project the figure of Thomas_face_icon;
-	let bonus be (( charisma of player minus 10 ) divided by 2);
+	let bonus be (( charisma of Player minus 10 ) divided by 2);
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
 	if dice + bonus >= 15:
@@ -384,15 +384,15 @@ to say ThomasTalk4:
 to say ThomasTalk5:
 	if graphics is true:
 		project the figure of Thomas_face_icon;
-	if libido of Thomas is 1 or libido of Thomas is 21:
+	if Libido of Thomas is 1 or Libido of Thomas is 21:
 		say "     Thomas looks out towards the other centaur standing further off. 'Sandy is still pretty frightened and shy. Those fuckers really got to her, making her believe she only had value as their sex-pet. Thanks for helping me get her out.'";
-	else if libido of Thomas is 2 or libido of Thomas is 22:
+	else if Libido of Thomas is 2 or Libido of Thomas is 22:
 		say "     Thomas looks out towards the two centaurs standing further off. 'Now that Jill keeps her company, Sandy's gotten a lot better. And Jill is quite happy that she ended up with me and not one of those possessive dicks.'";
-	else if libido of Thomas is 10:
+	else if Libido of Thomas is 10:
 		say "     Thomas looks out towards the other centaur standing further off. 'Felix is such a nice young man. I still can't believe his herd just kicked him out to fend for himself.'";
-	else if libido of Thomas is 11:
+	else if Libido of Thomas is 11:
 		say "     Thomas looks out towards the two centaurs standing further off. 'Sandy is still pretty frightened and shy. Those fuckers really got to her, making her believe she only had value as their sex-pet. At least Felix has been understanding about it and really helps out by calming her down and getting her to open up.'";
-	else if libido of Thomas is 12:
+	else if Libido of Thomas is 12:
 		say "     Thomas looks out towards the three centaurs standing further off. 'Nice little herd, hm? Jill and Felix have become good friends, and with them to keep Sandy company, she's gotten a lot better.'";
 
 to say ThomasTalk6:
@@ -406,7 +406,7 @@ to say ThomasTalk6:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give Thomas the cans.";
 		say "     ([link]N[as]n[end link]) - Say that you'll look for soda later.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     With a surprised look on his face, the black centaur accepts the soda from you. 'Wow, thanks - that was quick. Are you psychic or something and saw this coming?'";
 			now ThomasQuestVar is 2;
@@ -427,7 +427,7 @@ to say ThomasTalk7:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go meet them right now.";
 	say "     ([link]N[as]n[end link]) - Postpone the meeting for now.";
-	if player consents:
+	if Player consents:
 		say "     'Great! Let's go.' Putting the soda into a backpack, Thomas leads you out into the plains.";
 		say "[ThomasTalk8]";
 	else:
@@ -458,7 +458,7 @@ to say ThomasTalk8:
 		infect "Prairie Dog";
 		infect "Prairie Dog";
 	else if calcnumber is 2:[threaten]
-		let bonus be (( strength of player minus 10 ) divided by 2);
+		let bonus be (( strength of Player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
 		if dice + bonus >= 15:
@@ -472,7 +472,7 @@ to say ThomasTalk8:
 			infect "Prairie Dog";
 			infect "Prairie Dog";
 	else:[quick talking]
-		let bonus be (( intelligence of player minus 10 ) divided by 2);
+		let bonus be (( intelligence of Player minus 10 ) divided by 2);
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] vs 15 and score [dice plus bonus]: ";
 		if dice + bonus >= 15:
@@ -503,9 +503,9 @@ to say ThomasTalk9:
 	say "     'Ah, there you are - I'd been wondering if Thomas sent me on a wild goose chase. Name's Vance, by the way. And those are the bitches I was promised?' He nods towards the pit and sets down the sack. It's dog food, you can see now. 'Bit unruly and noisy, but I guess that'll stop in time. Oh well, I've got time to kill - they'll get hungry sometime.' Patting the sack of dry dog food, he gives the captured centaurs a somewhat hungry look. You leave him and his future husky bitches and start walking back towards your usual meeting place with Thomas.";
 	now ThomasQuestVar is turns;
 	now SandySaved is turns;
-	increase libido of Thomas by 1;    [Sandy]
+	increase Libido of Thomas by 1;    [Sandy]
 
-instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and libido of Thomas < 10 and ThomasSaved - turns > 10):
+instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and Libido of Thomas < 10 and ThomasSaved - turns > 10):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
@@ -515,7 +515,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Approach the behemoth.";
 	say "     ([link]N[as]n[end link]) - Leave them and get yourself to safety.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		challenge "Behemoth";
 		if fightoutcome >= 20 and fightoutcome <= 29:[lost]
@@ -524,7 +524,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 			say "     Even though you turned tail and ran, the behemoth followed you quite a bit, which was enough distraction for the young centaur and Thomas to get away safely. When you finally make your way back to your usual meeting point, pretty sweaty from running like hell away from that beast, you find the two centaurs waiting for you there. Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and red hair.";
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having beaten the behemoth, you look around and see Thomas and the young centaur a small distance away. They wave for you to follow, then gallop off, most likely to get out of here before the behemoth decides it wants another round. Hurrying after them, you soon find yourself at the usual meeting spot with Thomas, where the two centaurs await your arrival. Thomas walks up to you and says 'Thank you for your help, my friend. Here, come meet Felix, whom you saved.' He leads you over to the other centaur, a pretty-looking young stallion with sandy coat and red hair.";
-		increase libido of Thomas by 10;
+		increase Libido of Thomas by 10;
 		now FelixSaved is turns;
 		LineBreak;
 		say "     Shaking your hand, Felix smiles and says, 'Thanks for saving me. I really thought I was a goner when that big thing went after me. I guess that was the plan when my herd kicked me out.' Thomas walks up beside him and puts a hand on Felix shoulder. 'Can you believe he came from a herd consisting of only one male and more than a dozen mares? And that fucked-up guy breeds [']em all, then keeps the girls and sends any of his male offspring out on their own all alone. Most don't make it very long, with all those critters out here...' Thomas looks around over the surrounding plains with a wary expression, then shrugs. 'Well, enough of that fucked up shit - you're very welcome to stay as part of my little herd, Felix.'";
@@ -532,21 +532,21 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 		LineBreak;
 		say "     Shouting 'Sorry, I can't fight that.' you run away and only look back when you're in a somewhat safe distance. From there, you see Thomas attack the huge creature and get thrown aside with an almost casual slap. Not long after, the behemoth finally catches up with the young centaur it was chasing and... stuffs him into its pussy? Now that's a rather strange and somewhat disturbing sight. You doubt that what will emerge from those folds later will still be a centaur...";
 		say "     Having struggled to his feet, Thomas limps away from the scene towards you, a rather disappointed expression on his face. 'You were right - it's just too strong,' he sighs, then leaves.";
-		increase libido of Thomas by 20;
+		increase Libido of Thomas by 20;
 
-instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thomas is 11 or libido of Thomas is 21) and SandySaved - turns > 10):
+instead of navigating Dry Plains while ((Libido of Thomas is 1 or Libido of Thomas is 11 or Libido of Thomas is 21) and SandySaved - turns > 10):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
 	project the Figure of Jill_icon;
 	say "     At the same time as your arrival at the meeting place with Thomas, a centaur mare walks up out of the plains too. She's beautiful, with sun-bronzed skin, flowing blond hair and a nice pair of breasts. 'Hello there, I'm Jill. I heard talk about what you did to Raul and his buddies, and... can I please join your herd?' She gives Thomas a pleading smile, then nervously looks back over her shoulder. 'You see, today's my birthday - and father invited all the stallions far and wide to... sell me to the highest bidder. I got to warn you, they're most likely tracking me right now...'";
-	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if libido of Thomas is 1 or libido of Thomas is 21]Sandy and sends her away so she'll be safe[else if libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers, 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
+	say "     Thomas thinks for a short moment, then nods to Jill 'Of course you're welcome. Let's get ready for the search party.' He calls over [if Libido of Thomas is 1 or Libido of Thomas is 21]Sandy and sends her away so she'll be safe[else if Libido of Thomas is 11]Sandy and Felix, sending them away so she'll be safe[end if], then turns to you. 'Are you with us, my friend? This is gonna be a tough one - we have...' He gives a questioning look to Jill and she answers, 'Eight, at least.' '...centaurs coming in. We really could use your help.'";
 	LineBreak;
 	say "     [bold type]What do you decide to do?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay and fight.";
 	say "     ([link]N[as]n[end link]) - Run away.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     'Thank you - let's go over there and wait for them.' Thomas leads Jill and twenty minutes to the east, saying 'Watch out, there's a lot of rabbit holes over here - let's hope some of those guys step into them and stumble.'";
 		LineBreak;
@@ -581,7 +581,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 						say "     Finally, the gang of centaurs has had enough. Cursing you, they flee as fast as they're able.";
 						LineBreak;
 						say "     Jill hugs Thomas and you, then says 'That was my dad you just beat up - and make no mistake, he deserves it. Thank you both for helping me.'";
-						increase libido of Thomas by 1;
+						increase Libido of Thomas by 1;
 	else:
 		LineBreak;
 		say "     Apologizing and saying it's not your fight, you run away. Somehow you doubt that they'll be able to make a stand without you... so you likely won't see Thomas anymore.";
@@ -608,8 +608,8 @@ Instead of fucking the Thomas:
 	[puts Centaur Stallion as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Centaur Stallion":
-			now monster is y;
+		if Name entry is "Centaur Stallion":
+			now MonsterID is y;
 			break;
 	if (HP of Thomas is 0): [not yet met]
 		say "ERROR-Thomas-001C: He should not be around yet anywhere where players can see him.";
@@ -629,7 +629,7 @@ to say ThomasSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -640,7 +640,7 @@ to say ThomasSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Thomas long horsecock in your mouth.";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -658,7 +658,7 @@ to say ThomasSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Fill the herm centaur's pussy with your cock.";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your pussy";
 		now sortorder entry is 6;
@@ -693,7 +693,7 @@ to say ThomasSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Have him blow your cock"):
@@ -724,7 +724,7 @@ to say ThomasSexMenu:
 	clear the screen and hyperlink list;
 
 to say ThomasSex1: [cock sucked by Thomas]
-	say "     Walking up to Thomas, you run your hands over his muscular chest, then pull his lips to yours for a kiss. After coming back up for air, you whisper 'You know what would be hot...' and pull Thomas's hands down to your crotch '...you sucking off my cock.' Smiling, Thomas pulls out your hard [cock of player] cock, pumping it in his hand. 'You know, just a short while ago I'd never have dreamed I'd be sucking someone off willingly. But I like getting you off, and anyways I owe you for saving my ass.'";
+	say "     Walking up to Thomas, you run your hands over his muscular chest, then pull his lips to yours for a kiss. After coming back up for air, you whisper 'You know what would be hot...' and pull Thomas's hands down to your crotch '...you sucking off my cock.' Smiling, Thomas pulls out your hard [cock of Player] cock, pumping it in his hand. 'You know, just a short while ago I'd never have dreamed I'd be sucking someone off willingly. But I like getting you off, and anyways I owe you for saving my ass.'";
 	LineBreak;
 	say "     With that, he leans over and takes your shaft in his mouth, bobbing up and down on it. Being a man, he knows how to handle a cock and what you need, so the blowjob that follows is pretty amazing. Bringing you to the edge of cumming several times, then allowing you to catch your breath to prolong the experience, he has you highly wound up and aching to cum when he finally goes all out. You're deep in Thomas throat with his nose pressed against your crotch when you finally cum, squirting cum right into his stomach. The black centaur pulls back a bit before you're completely done so he can taste your seed, then shows it to you on his tongue and swallows it too.";
 	infect "Centaur Stallion";
@@ -754,12 +754,12 @@ to say ThomasSex4: [Thomas cunt licked/fingered]
 to say ThomasSex5: [Thomas pussy fucked by player]
 	say "     You go and give Thomas a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the centaur herm's lips. Running your hands down over Thomas's muscled chest, then along his flank as you walk around his equine body to his rear end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his blond tail to reveal an already moist pussy. You lean forward and lick over the black centaur's sensitive folds, reveling in the gasps you get out of him. Running your tongue along the inside of his pussy lips, you make Thomas pant and moan, and soon you hear him say 'I'm soo horny - please, fuck me now!'";
 	LineBreak;
-	if cock length of player < 20:
-		say "     Who could resist that? Quickly throwing off your clothes, you bring your rock hard [cock of player] cock to Thomas's wet, winking pussy and thrust deep into him in one go. His pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, Thomas does his best to grip you tight with his vaginal muscles and the two of you enjoy yourselves quite a bit. Fucking the black centaur herm with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of his vagina.";
+	if Cock Length of Player < 20:
+		say "     Who could resist that? Quickly throwing off your clothes, you bring your rock hard [cock of Player] cock to Thomas's wet, winking pussy and thrust deep into him in one go. His pussy is very large, taking everything you've got easily. Though clearly equipped for bigger cocks, Thomas does his best to grip you tight with his vaginal muscles and the two of you enjoy yourselves quite a bit. Fucking the black centaur herm with abandon, you soon feel a familiar tingle in your balls and plunge in deep one last time before you start cumming. Spurt after spurt of your fertile seed jet out of your hard shaft and vanish in the depths of his vagina.";
 		WaitLineBreak;
 		say "     Resting against his muscled hindquarters until you catch your breath, you then pull your cock out of its moist and warm cave. As your partner hasn't come yet, you bring your hand to his pussy and start to massage it. Slipping three, then four fingers, then your whole hand into the centaur's body, you stroke his inner passage, wet with your cum and his juices. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful shouts it draws from Thomas every time you glide over it. Concentrating on that, it doesn't take much longer until the centaur herm orgasms, femcum gushing out of his opening and dripping off your arm.";
 	else:
-		say "     Who could resist that? Quickly throwing off your clothes, you bring your rock hard [cock of player] cock to Thomas's wet, winking pussy and thrust deep into him in one go. His pussy is very large, but your shaft fills it out quite nicely, evoking a whole new level of moans from Thomas. Hitting all the sensitive spots deep inside him, the black centaur gasps, then shouts for you to fuck him harder. Eagerly complying, you fuck Thomas with abandon, thrusting in and out of his equine body.";
+		say "     Who could resist that? Quickly throwing off your clothes, you bring your rock hard [cock of Player] cock to Thomas's wet, winking pussy and thrust deep into him in one go. His pussy is very large, but your shaft fills it out quite nicely, evoking a whole new level of moans from Thomas. Hitting all the sensitive spots deep inside him, the black centaur gasps, then shouts for you to fuck him harder. Eagerly complying, you fuck Thomas with abandon, thrusting in and out of his equine body.";
 		WaitLineBreak;
 		say "     Soon, the wild ride you're giving him pushes the centaur herm over the edge and he orgasms, his pussy becoming even slicker with lots of femcum and a massive load gushing onto the ground out of his erect horsecock. Making him come gives your own arousal a big push, so you're not far behind, sinking your hard shaft deep inside Thomas's body one last time as a familiar tingle awakens in your balls. Then you come, spurt after spurt of your fertile seed jetting into the centaur herm's vagina and flooding his womb with cum.";
 	LineBreak;
@@ -790,7 +790,7 @@ to say ThomasSex7: [fingering Thomas ass]
 to say ThomasSex8: [fucking Thomas ass]
 	say "     You go and give Thomas a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the centaur herm's lips. Running your hands down over Thomas's muscled chest, then along his flank as you walk around his equine body to his rear end. Groping the muscled flesh of his ass, you make him moan in anticipation, then raise his blond tail to reveal his asshole. You lean forward and lick over the black centaur's pucker, reveling in his initial 'Oh? Oh!' and the gasps that follow. Running your tongue up and down his crack, then poking his hole with it, you make Thomas pant and moan and soon you hear him say 'I'm soo horny - please, fuck me now!'";
 	LineBreak;
-	say "     Who could resist that? Quickly throwing off your clothes, you step up to Thomas with your rock hard [cock of player] in your hand. Rubbing it up and down his crack, you tease him a bit with it, pushing the tip against his opening, then going back to more rubbing. Only when you got him so hot and bothered that he begs you to put it in already do you plunge in, thrusting deep into his back passage in one go. Owning to the large size of his equine body, his hole is large too, but Thomas manages to grip your shaft pretty tightly with his anal muscles. All in all, your shaft pushing into his body feels quite nice, and as you start thrusting in and out faster, you evoke a whole new level of moans from Thomas.";
+	say "     Who could resist that? Quickly throwing off your clothes, you step up to Thomas with your rock hard [cock of Player] in your hand. Rubbing it up and down his crack, you tease him a bit with it, pushing the tip against his opening, then going back to more rubbing. Only when you got him so hot and bothered that he begs you to put it in already do you plunge in, thrusting deep into his back passage in one go. Owning to the large size of his equine body, his hole is large too, but Thomas manages to grip your shaft pretty tightly with his anal muscles. All in all, your shaft pushing into his body feels quite nice, and as you start thrusting in and out faster, you evoke a whole new level of moans from Thomas.";
 	WaitLineBreak;
 	say "     Hitting all the sensitive spots deep inside him, the black centaur gasps, then shouts for you to fuck him harder. Eagerly complying, you fuck Thomas with abandon, your hips slapping loudly against his equine body with the force of your thrusts.";
 	say "     Soon, the wild ride you're giving him pushes the centaur over the edge and he orgasms, his sphincter gripping your shaft like a vise as a huge load of cum gushes from his horsecock onto the ground, creating a small puddle. With Thomas's hot hole tight around your cock and creating breathtaking sensations as you fuck him, you soon feel a familiar tingle rise in your balls. Plunging in one last time, you grind your hips against his equine rump and hold on tight as you come, shooting burst after burst of cum deep into his asshole.";
@@ -803,7 +803,7 @@ to say ThomasSex9: [player's ass fucked by Thomas]
 	LineBreak;
 	say "     You quickly get into position on your knees, then reach back to guide the black centaur's long shaft to your asshole. Rubbing its tip up and down your crack, you spread Thomas ample pre-cum around a bit and do your best to lube up with it. Almost trembling in anticipation you reach up and rub Thomas muscled flank and say 'I'm ready.' The two of you gasp in lust as he pushes the flared head of his cock through your opening, then slides more and more of his shaft into you. It's an amazing feeling to be almost literally fucked by a horse, with his warm body above you and that massive cock thrusting in and out, stretching your innermost depths.";
 	WaitLineBreak;
-	say "     'Man, your ass is so hot and tight around my shaft. Makes me totally regret not accepting all my gay buddy Orin's offers when we were out partying.' Eager to experience everything you have to give, Thomas thrusts deep and holds still for a moment, reveling in the feeling of having his shaft buried in your insides. Then he starts up fucking in and out again, tirelessly pounding your ass. Accompanied by the slapping noises of his balls hitting your cheeks, your arousal quickly mounts. Before much longer, you moan loudly and [if player is male]spray your seed all over the ground below[else if player is female]drip copious amounts of femcum onto the ground[else]shudder in orgasm[end if]. As you gasp in lust, Thomas says 'Like that, baby? I'm gonna fill you up now.' That said, he relaxes his self-restraint, plunging in deep a few more times before his cock starts to pulse with spurt after spurt of centaur cum shooting deep into you[if gestation of child is 0]. With the amount of Thomas seed creating a noticeable bulge in your belly, it looks almost as if you're pregnant right now[end if].[mimpregchance][mimpregchance]";
+	say "     'Man, your ass is so hot and tight around my shaft. Makes me totally regret not accepting all my gay buddy Orin's offers when we were out partying.' Eager to experience everything you have to give, Thomas thrusts deep and holds still for a moment, reveling in the feeling of having his shaft buried in your insides. Then he starts up fucking in and out again, tirelessly pounding your ass. Accompanied by the slapping noises of his balls hitting your cheeks, your arousal quickly mounts. Before much longer, you moan loudly and [if Player is male]spray your seed all over the ground below[else if Player is female]drip copious amounts of femcum onto the ground[else]shudder in orgasm[end if]. As you gasp in lust, Thomas says 'Like that, baby? I'm gonna fill you up now.' That said, he relaxes his self-restraint, plunging in deep a few more times before his cock starts to pulse with spurt after spurt of centaur cum shooting deep into you[if gestation of child is 0]. With the amount of Thomas seed creating a noticeable bulge in your belly, it looks almost as if you're pregnant right now[end if].[mimpregchance][mimpregchance]";
 	LineBreak;
 	say "     After he finally stops coming a while later, Thomas pulls his shaft out and quite a bit of his cum gushes out of your open hole to drip on the ground below. He steps to the side to allow you to stand up, then puts his arms around you and pulls you in for a kiss. In between making out vigorously, he says 'You liked the horse-dong, didn't you? At least that's one plus of this whole transformation business. Not that I had any problems before, but this tool is something else...'";
 	infect "Centaur Stallion";
@@ -811,26 +811,26 @@ to say ThomasSex9: [player's ass fucked by Thomas]
 Section 4 - Endings
 
 when play ends:
-	if (HP of Thomas > 0 and HP of Thomas < 100) and Dry Plains is known and humanity of player > 10: [player met him and is sane]
+	if (HP of Thomas > 0 and HP of Thomas < 100) and Dry Plains is known and humanity of Player > 10: [player met him and is sane]
 		say "     After getting out of the city, you see Thomas again a while later and he invites you out to a farming community in the countryside where many non-humanoid infectees settled. Many of the buildings look rather strange, from a human perspective, being very open for large forms or arching high without any stairs since the inhabitants have wings. The black centaur is one of the leaders of the settlement, standing at the head of the herd of centaurs making up about a third of the population. [if HP of Thomas is 51 or HP of Thomas is 52]Most of them are females, their equine bellies bulging with proof of the potency of the black stallion's seed. They seem quite happy, talking and laughing with each other - kinda like a large polygamous family[else]They're more or less evenly split between males and females, with several recognizable couples and the rest enamored with the black centaur herm. Seems like a happy and content group, talking and laughing with each other - kinda like a large polygamous family[end if].";
 		if HP of Thomas is 4 or HP of Thomas is 5:[player knocked him up]
 			say "     Calling a young filly out to meet you, Thomas introduces her to you as Ellen, and you to her as her father. The product of your coupling in the city, the little girl is very nice and chipper, happily chatting to get to know you and showing you around in the herd. Later, after she's gone off to play with other foals, Thomas invites you to his hut to rekindle your relationship and you end up fucking like sex-starved bunnies all night. You come back to visit him quite often after that, both to get it on as well as to see your growing brood of kids that result from your couplings.";
-		else if libido of Thomas is 10 or libido of Thomas is 11 or libido of Thomas is 12 and HP of Felix is not 2: [Felix available]
+		else if Libido of Thomas is 10 or Libido of Thomas is 11 or Libido of Thomas is 12 and HP of Felix is not 2: [Felix available]
 			if HP of Thomas is 1:[player didn't try to have mare sex with Thomas]
 				say "     Calling a young colt out to meet you, Thomas introduces him to you as Kurt, his son with Felix. Being the result of you saving his father, the chipper little boy is very eager to have you tell him all about it, getting pretty big eyes as you recount the size of the beast chasing Felix and your role in getting the centaur away from it. Later, after he's gone off to amaze his friends with the story, Thomas and Felix invite you to their hut and you have a long talk about your time in the city and what happened since.";
 				say "     As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your herm friend's pussy. It's quite a night to remember after that. Having had a ringside seat for the conception of their second child, you end up becoming the new colt's godparent and often come back to visit the centaurs.";
 			else if HP of Thomas is 2 or HP of Thomas is 3:[player was interested in mare sex with Thomas, Felix not lost]
 				say "     Calling a young colt out to meet you, Thomas introduces him to you as Kurt, his son with Felix. Being the result of you saving his father, the chipper little boy is very eager to have you tell him all about it, getting pretty big eyes as you recount the size of the beast chasing Felix and your role in getting the centaur away from it. Later, after he's gone off to amaze his friends with the story, Thomas and Felix invite you to their hut and you have a long talk about your time in the city and what happened since.";
-				if player is male:[knocks Thomas up with one of two twins]
+				if Player is male:[knocks Thomas up with one of two twins]
 					say "     As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your herm friend's pussy. Joining in for some fun yourself, you take turns fucking Thomas with Felix, with each of you shooting several loads into him over the course of that night. When he turns up pregnant afterwards, no one is quite sure who's the father. As it turns out when Thomas gives birth a few weeks later, you both are - it's twins, with one of them looking a lot like you, the other one resembling Felix. You come back to visit them quite often after that, both to get it on as well as to see the growing brood of kids that result from your couplings.";
-				else if player is female:[pussy fucked]
-					if "Sterile" is not listed in feats of player:[player gets knocked up by Felix]
+				else if Player is female:[pussy fucked]
+					if "Sterile" is not listed in feats of Player:[player gets knocked up by Felix]
 						say "     As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your herm friend's pussy. Joining in for some fun yourself, you take turns getting fucked with Thomas, with Felix filling both of you with several loads over the course of that night. Both of you ending up pregnant afterwards, you spend several more weeks there until the foals are born and thereafter return regularly to the community to ride hard centaur cocks and see your growing brood of kids.";
 					else:[player not fertile]
 						say "     As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your herm friend's pussy. Joining in for some fun yourself, you take turns getting fucked with Thomas, with Felix filling both of you with several loads over the course of that night. When Thomas turns up pregnant afterwards, you end up becoming the new colt's godparent and often return to the community to see your friends and get it on with the centaurs.";
 			else if HP of Thomas is 52 and lust of Thomas > 0: [stallion, open to anal]
-				say "     After a day of exploring the village and meeting all kinds of people, Thomas invites you and Felix to his hut and you have a long talk about your time in the city and what happened since. As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your friend's ass. Seems like your [if lust of Thomas is 1]arguments about anal fun have[else]initiation to anal fun has[end if] well and truly taken hold. It's pretty hot to see these two handsome centaurs go at it right in front of you, and [if player is male]you instantly join in when Felix comes and pulls out, driving your own hard cock into Thomas's cum-filled ass. This leads over to a wild threesome, the three of you having sex in all possible permutations[else]you fondle and stretch Felix with your fingers and hand for when it's his turn to take Thomas's black shaft[end if]. Having had a quite memorable night with the two of them, you often return to the centaur community after that to see your friends and have more sex-filled nights of fun.";
-		else if libido of Thomas is 2 or libido of Thomas is 12 or libido of Thomas is 22:[Jill available]
+				say "     After a day of exploring the village and meeting all kinds of people, Thomas invites you and Felix to his hut and you have a long talk about your time in the city and what happened since. As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Felix mounting Thomas, the young stallion's long horsecock driving into your friend's ass. Seems like your [if lust of Thomas is 1]arguments about anal fun have[else]initiation to anal fun has[end if] well and truly taken hold. It's pretty hot to see these two handsome centaurs go at it right in front of you, and [if Player is male]you instantly join in when Felix comes and pulls out, driving your own hard cock into Thomas's cum-filled ass. This leads over to a wild threesome, the three of you having sex in all possible permutations[else]you fondle and stretch Felix with your fingers and hand for when it's his turn to take Thomas's black shaft[end if]. Having had a quite memorable night with the two of them, you often return to the centaur community after that to see your friends and have more sex-filled nights of fun.";
+		else if Libido of Thomas is 2 or Libido of Thomas is 12 or Libido of Thomas is 22:[Jill available]
 			say "     Calling a young colt out to meet you, Thomas introduces him to you as Kurt, his son with Jill. Being the result of you helping to save his mother, the chipper little boy is very eager to have you tell him all about it, getting pretty big eyes as you recount the battle against the centaurs following her. Later, after he's gone off to amaze his friends with the story, Thomas and Jill invite you to their hut and you have a long talk about your time in the city and what happened since.";
 			say "     As the evening progresses and racier topics come up, their arousal rises, and they soon are touching and kissing each other. Not being shy at all about such things, this quickly moves on to Thomas mounting Jill, the black stallion's long horsecock driving into her moist and dripping pussy. It's quite a night to remember after that. Having had a ringside seat for the conception of their second child, you end up becoming the new colt's godparent and often come back to visit the centaurs.";
 

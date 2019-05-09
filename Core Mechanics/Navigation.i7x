@@ -296,10 +296,10 @@ understand "go to [any known fasttravel room]" as navigating.
 understand "return to [any known fasttravel room]" as navigating.
 
 carry out navigating:
-	if location of player is not fasttravel:
+	if location of Player is not fasttravel:
 		say "You can't navigate from here.";
 		stop the action;
-	if noun is location of player:
+	if noun is location of Player:
 		say "You're already there.";
 		stop the action;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -307,7 +307,7 @@ carry out navigating:
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	else:
@@ -322,10 +322,10 @@ NavCheckReturn is a truth state that varies.
 to say NavCheck (CheckRoom - a room): [check if a nav attempt can go through]
 	if debugactive is 1:
 		say "DEBUG -> NavCheck just checked your travel route out! <- DEBUG";
-	if location of player is not fasttravel:
+	if location of Player is not fasttravel:
 		say "You can't navigate from here.";
 		now NavCheckReturn is false;
-	else if location of player is CheckRoom:
+	else if location of Player is CheckRoom:
 		say "You're already here.";
 		now NavCheckReturn is false;
 	else:

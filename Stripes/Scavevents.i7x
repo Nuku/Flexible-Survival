@@ -24,9 +24,9 @@ Instead of resolving a Tight Fit:
 	if x is 3 or x is 4:
 		now y is "water bottle";
 	if x is 5:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -51,19 +51,19 @@ Instead of resolving a Tight Fit:
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
 	say "Always on the lookout for more supplies, you spot a tight [one of]crawlspace[or]hole[or]drainage pipe[at random] that looks like it's recently been disturbed. Heading over to check it out, your suspicions were correct and you spot a [y] that someone has stashed at the far end of the dark tunnel.";
-	if companion of player is bee girl:
+	if companion of Player is bee girl:
 		say "Honey buzzes up to you and grabs your hand as you're pondering going in after it. 'I can get it for you, honeybunch.' And with that, the small bee girl folds in her wings and wriggles into the tunnel and back out, used to negotiating the narrow tunnels of the hive. She hands the [y] to you with a smile.";
-		add y to invent of player;
-	else if companion of player is helper dog:
+		add y to invent of Player;
+	else if companion of Player is helper dog:
 		say "Even as you're pondering your chances of getting in there to reach it, Hobo moves around you crawls into the tunnel. The clever dog comes back out with the [y] in his teeth, dropping it at your feet. Surprised at the dog's cleverness, you scritch his ears.";
-		add y to invent of player;
-	else if companion of player is mouse girl:
+		add y to invent of Player;
+	else if companion of Player is mouse girl:
 		say "While pondering your chances of being able to squeeze in there to get it, Rachel gives you a peck on the cheek. 'Let me take care of this for you, sexy,' she says before scurrying into and out of the hole. She passes you the [y] with a grin. 'Just another reason why it's better to be a mousy like me.'";
-		add y to invent of player;
-	else if scalevalue of player is 1:
-		say "Your small [bodytype of player] body slips easily into the narrow confines, letting you snag the [y] without difficulty.";
-		add y to invent of player;
-	else if scalevalue of player is 3 or scalevalue of player is 2:
+		add y to invent of Player;
+	else if scalevalue of Player is 1:
+		say "Your small [bodytype of Player] body slips easily into the narrow confines, letting you snag the [y] without difficulty.";
+		add y to invent of Player;
+	else if scalevalue of Player is 3 or scalevalue of Player is 2:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
 		say "The tunnel looks like it would be ";
@@ -77,11 +77,11 @@ Instead of resolving a Tight Fit:
 			say "very difficult";
 		else:
 			say "extremely difficult";
-		say " [if scalevalue of player is 3]to squirm in and out of[else if scalevalue of player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
+		say " [if scalevalue of Player is 3]to squirm in and out of[else if scalevalue of Player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
 		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
-		if scalevalue of player is 2, increase bonus by 5;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
+		if scalevalue of Player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -90,8 +90,8 @@ Instead of resolving a Tight Fit:
 		else:
 			say "It is a tight fit at a few spots, but you manage to wriggle your way in and out of the tunnel, snagging the [y] to add to your backpack's contents.";
 			add y to invent of the player;
-	else if scalevalue of player > 3:
-		say "You look at the [y] sitting deep in that hidey-hole and know there's no way your [body size of player] body is going to be able to go in after it. Too far to reach or snag with anything you have around, you have to leave it behind.";
+	else if scalevalue of Player > 3:
+		say "You look at the [y] sitting deep in that hidey-hole and know there's no way your [Body Size Adjective of Player] body is going to be able to go in after it. Too far to reach or snag with anything you have around, you have to leave it behind.";
 	increase tightfitcount by 1;
 	if tightfitcount is 5, now Tight Fit is resolved;
 
@@ -113,9 +113,9 @@ Instead of resolving a Protected Supplies:
 	if x is 3 or x is 4:
 		now y is "water bottle";
 	if x is 5:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -139,12 +139,12 @@ Instead of resolving a Protected Supplies:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
+	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
 	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
 		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
-			if lev entry > level of player and hardmode is false:
+			if lev entry > level of Player and hardmode is false:
 				next;
 		else:
 			next;
@@ -152,27 +152,27 @@ Instead of resolving a Protected Supplies:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 				next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and skinname of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and bodyname of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and cockname of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and facename of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
 		repeat with Z running through q:
-			now monster is Z;
+			now MonsterID is Z;
 			break;
-		choose row monster from the Table of Random Critters;
-		if lev entry < level of player and hardmode is true:
+		choose row MonsterID from the Table of Random Critters;
+		if lev entry < level of Player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		wait for any key;
 		let scavfight be 0;
-		say "But as you move to get it, a [name entry] moves to cut you off, probably wanting to take it for themselves. ";
+		say "But as you move to get it, a [Name entry] moves to cut you off, probably wanting to take it for themselves. ";
 		if a random chance of 1 in 2 succeeds:
 			say "The creature charges to attack before you have a chance to consider falling back.";
 			let scavfight be 1;
@@ -182,24 +182,24 @@ Instead of resolving a Protected Supplies:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
 			now fightoutcome is 100;
-			challenge [name entry];
+			challenge [Name entry];
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "Managing to defeat the creature, you head over and claim the [y] as your prize, adding it to your supplies.";
-				add y to invent of player;
+				add y to invent of Player;
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "Beaten by the creature, you are unable to stop it from taking the [y] as its prize.";
-				decrease morale of player by 1;
+				decrease morale of Player by 1;
 			else:
-				say "Deciding the [y] is not worth fighting over further, you make your escape back into the city, leaving it for the [name entry].";
-				decrease morale of player by 1;
+				say "Deciding the [y] is not worth fighting over further, you make your escape back into the city, leaving it for the [Name entry].";
+				decrease morale of Player by 1;
 		else:
 			say "You back away slowly from the creature, leaving the prize to them. It's not much good to you if you're not alive to use it.";
-			decrease morale of player by 1;
+			decrease morale of Player by 1;
 	else:
 		say "You come across the scenes of a scuffle between two creatures. There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids. In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random]. Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
 
@@ -219,7 +219,7 @@ Instead of resolving a Dropped Handbag:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
@@ -239,12 +239,12 @@ Instead of resolving a Dropped Handbag:
 			sort Table of Random Critters in random order;
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:
 				choose row X from the Table of Random Critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
-					now monster is X;
+				if area entry matches the text battleground and ( there is no non-infectious in row MonsterID of Table of Random Critters or non-infectious entry is false ):
+					now MonsterID is X;
 					break;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			infect;
-			decrease humanity of player by 5;
+			decrease humanity of Player by 5;
 	else:
 		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
@@ -265,8 +265,8 @@ Instead of resolving a Dented Bike:
 	say "You find a dented bicycle, lying abandoned on the road. The shreds of its former owner's clothing are hanging from it and a few small tufts of fur are scattered around, leaving you to wonder what happened to him or her.";
 	let difficulty be a random number from 8 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
-	let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+	let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
+	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice > difficulty:
@@ -301,8 +301,8 @@ Instead of resolving a Looted Supermarket:
 	if t is 1:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
-		let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		let bonus be ( perception of Player + level of Player minus 10 ) divided by 2;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -312,8 +312,8 @@ Instead of resolving a Looted Supermarket:
 	else if t is 2:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
-		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -324,8 +324,8 @@ Instead of resolving a Looted Supermarket:
 	else if t is 3:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
-		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		let bonus be ( intelligence of Player + level of Player minus 10 ) divided by 2;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -337,8 +337,8 @@ Instead of resolving a Looted Supermarket:
 		let x be 0;
 		let difficulty be a random number from 10 to 18;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
-		let bonus be ( strength of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		let bonus be ( strength of Player + level of Player minus 10 ) divided by 2;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		if crowbar is owned:
 			increase bonus by 3;
 			let x be 1;
@@ -367,8 +367,8 @@ Instead of resolving a Abandoned Cars:
 	let x be 0;
 	let difficulty be a random number from 8 to 15;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
-	let bonus be ( strength of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+	let bonus be ( strength of Player minus 10 ) divided by 2;
+	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	if crowbar is owned:
 		increase bonus by 3;
 		let x be 1;
@@ -425,9 +425,9 @@ Instead of resolving a Plains Scavenging:
 	if x is 3 or x is 4:
 		now y is "water bottle";
 	if x is 5:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -457,7 +457,7 @@ Instead of resolving a Plains Scavenging:
 					now y is "water bottle";
 				if scavengetarget is "soda":
 					now y is "soda";
-	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of player][or][bodydesc of player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
+	say "Roaming across the endless field of grass that makes up the plains you find your brushing a hand across your face as a strong and stray breeze passes along your [one of][bodytype of Player][or][bodydesc of Player][at random] body. Striding across one giant grassy knoll you happen to notice [y] not too far off in the distance. Looking around to be sure that you're not seeing a mirage, you quickly run over to [y] to capture it before something else can.";
 	now x is a random number from 1 to 3;
 	if x is 1:
 		say "The item in question waits silently for you [one of]on the ground among some tall grass[or]with small bugs crawling over it[or]on top of a large cropping of bushes[or]within the branches of a lonesome tree[or]down in a large hole[or]resting in a dry puddle[or]underneath a pile of straw[or]down the side of a hill[or]right next to a wooden fence[at random].";
@@ -479,11 +479,11 @@ Instead of resolving a Plains Scavenging:
 		say " to contend with.";
 		let petbonus be false;
 		let bonus be ( the charisma of the player plus level of the player minus 10 ) divided by 2;
-		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute or companion of player is royal tiger:
+		if companion of Player is equinoid warrior or companion of Player is felinoid companion or companion of Player is demon brute or companion of Player is royal tiger:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -491,7 +491,7 @@ Instead of resolving a Plains Scavenging:
 			say "It would seem that negotiations have failed and the mutants now want you gone. By the looks on their faces, it would be wise for you to get lost... and fast!";
 		else:
 			say "Coming to a mutually beneficial agreement, you find that the other mutants are willing to give up the item to you in trade for some information. It would seem that there are still some decent [']people['] in the world after all[if petbonus is true]. Though having an intimidating guard by your side may have helped a little[end if]. You quickly add [y] to your satchel and then bob your head gratefully to the others before going about your way.";
-			add y to invent of player;
+			add y to invent of Player;
 	else if x is 3:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 3;
@@ -507,26 +507,26 @@ Instead of resolving a Plains Scavenging:
 		else:
 			say "extremely difficult";
 		say " to traverse.";
-		if companion of player is bee girl:
+		if companion of Player is bee girl:
 			say "As you prepare to make the treacherous crossing through the rubble, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, carrying her into the air enough to hover up to grab the [y] for you and return with a happy smile.";
-			add y to invent of player;
-		else if companion of player is Exotic Bird:
+			add y to invent of Player;
+		else if companion of Player is Exotic Bird:
 			say "As you prepare to make the dangerous crossing, your bird pet calls out sharply and takes the air. It swoops over to the [y], grabs it in its talons and returns it to you, saving you from climbing across the broken ruins.";
-			add y to invent of player;
-		else if companion of player is Gryphoness:
-			let gryphlets be libido of gryphoness / 4;
+			add y to invent of Player;
+		else if companion of Player is Gryphoness:
+			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the dangerous crossing, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness flaps over to grab the [y] and brings it back to you, earning a warm hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2] from you and your gryphlet children[end if].";
-			add y to invent of player;
+			add y to invent of Player;
 		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty > dice:
 				say "You try your best to traverse the collapsing [one of]store[or]building[or]home[or]structure[at random], but end up setting off the collapse even further. Rubble falls and dust flies up as a portion of a wall falls onto you. Thankfully you're able to get yourself out from under it easily enough, but looking at the devastation, you find that the falling debris has crushed your intended prize as well.";
-				decrease HP of player by 10;
+				decrease HP of Player by 10;
 			else:
 				say "You successfully manage to move across the collapsing [one of]store[or]building[or]home[or]structure[at random] and snag the [y], stuffing it into your backpack.";
 				add y to invent of the player;
@@ -601,21 +601,21 @@ Instead of resolving a Free Drink:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		decrease thirst of player by 10;
-		if thirst of player < 0, now thirst of player is 0;
-		decrease humanity of player by 5;
+		decrease thirst of Player by 10;
+		if thirst of Player < 0, now thirst of Player is 0;
+		decrease humanity of Player by 5;
 		infect "Satyr";
 		infect "Satyr";
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of player is "Satyr" and player is pure and player is male:
+		if bodyname of Player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
@@ -625,16 +625,16 @@ Instead of resolving a Free Drink:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
 			LineBreak;
 			say "     Looking at the jolly satyrs moving on, something inside makes you want to join them, find out what party they're aiming for. Do you go after them and try to score an invitation for the fun?";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     In a quick sprint, you catch up to the satyrs and ask where they're going and if you can come along. One of the satyrs replies, 'Sure, the more the merrier. It's the Phi Alpha Nu frat-house that we're going for. As surprise guests, hah. It'll be legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
 				LineBreak;
 				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";
-			decrease thirst of player by 10;
-			if thirst of player < 0, now thirst of player is 0;
-			decrease humanity of player by 5;
+			decrease thirst of Player by 10;
+			if thirst of Player < 0, now thirst of Player is 0;
+			decrease humanity of Player by 5;
 			infect "Satyr";
 			infect "Satyr";
 			if winefound is 1:
@@ -682,9 +682,9 @@ Instead of resolving a Patient Rooms:
 	if x is 3 or x is 4:
 		now y is "water bottle";
 	if x is 5:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -726,7 +726,7 @@ Instead of resolving a Patient Rooms:
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
 		increase dice by bonus;
@@ -765,7 +765,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -778,30 +778,30 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
 		if dice >= 16:
 			say "     Taking a quick look inside, you luckily feel the kitchen floor starting to give way out from under you and manage to back away before the middle of the kitchen floor caves in and that section of the damaged house collapses into the basement. You move on after that unsuccessful venture and remind yourself to be more careful inside damaged buildings from now on.";
 		else:
-			let dam be ( ( HP of player + maxHP of player ) ) / 7;
-			decrease HP of player by dam;
+			let dam be ( ( HP of Player + maxHP of Player ) ) / 7;
+			decrease HP of Player by dam;
 			say "     Taking a quick look inside, you yell in surprise as the kitchen floor collapses out from under you, dropping you into the basement as more of the room falls in around you. You avoid a close call as the appliances comes tumbling in. Once the dust settles, you grab a few items that fell out of the cubbard and climb out before the whole place collapses on top of you, much more wary about damaged buildings now.";
 			increase carried of food by 1;
 	else if x is 5:
 		say ".";
 		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
 		if dice >= 14:
 			say "     As you're searching through the rubble, you luckily notice some creaking and some plaster dust falling out of the corner of your eye. You get out quickly, avoiding the sudden collapse of the house. Scared but safe, you leave the place behind before the noise can attract anything dangerous.";
 		else:
-			let dam be ( ( HP of player + maxHP of player ) ) / 7;
-			decrease HP of player by dam;
+			let dam be ( ( HP of Player + maxHP of Player ) ) / 7;
+			decrease HP of Player by dam;
 			say "     As you're searching through the rubble, you are too focused on looking for something you can take that you don't notice the growing groans of the building until it's too late and it starts collapsing around you. Debris falls down atop you, hurting you quite a bit and pinning you beneath it. You eventually dig yourself out, but you're left tired and bruised.";
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";

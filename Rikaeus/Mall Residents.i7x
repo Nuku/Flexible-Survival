@@ -95,6 +95,7 @@ instead of going Southwest from Mall West Wing while (LockerroomTrioRelationship
 		WaitLineBreak;
 		say "     'Jenna stop scaring our friend,' Tomas says, shaking his head in exasperation. The trio appear to have separated by now but are now instead holding hands. 'Yeah, he probably already knows not to break laws in front of wolverines,' Jeremy says, having recovered from his bout of self-depreciation. Jen rolls her eyes at the mallrat, as if he says that on a daily basis. 'For all we know he could also be nothing like Jerry here and a saint,' Spike jokes, dodging the mentioned person's half-hearted swat. 'Hey! I don't steal all the time,' he says, giving a fake-hurt look. That statement is met by a burst of laughter from both the cat and the wolf, clearly identifying it as a lie. You wait for the wolverine to snap at the mention of broken laws but she doesn't. Rather she just appears to be exasperated by him instead. You question her as to why that is and instead of Jenna replying, it's Spike. 'She's not ripping apart piece by piece because we make sure he always pays back or makes up for whatever he steals,' the wolf says.";
 		say "     The wolverine nods at that, a toothy smile aimed at the mallrat. 'Yeah, in my books as long as what's been taken ends up paid for I don't mind. It's why I'm so adamant about him going to that job,' she says rather cheerfully. Jeremy just appears to mumble and groan about it. Via a clock on the wall nearby you see you've been here quite a while. So, you say your goodbyes and make your way out, Jenna deciding to leave with you. When you exit the room she pulls you aside. 'Can you please help me keep an eye on Jerry? I really want those three to stay together but if this continues...' she trails off. You finally decide to ask if the three are in a relationship and the wolverine nods. 'Yeah, I actually helped them get together,' Jenna says. Hearing that, you tell her that you'll keep an eye on him. She thanks you and leaves to wherever she's needed to be, leaving you by yourself.";
+		now PlayerMet of Jenna is true;
 		now JennaRelationship is 1; [met, has been seen carrying in Jeremy]
 		now LockerroomTrioRelationship is 4; [player has met Jenna]
 
@@ -104,7 +105,9 @@ instead of going Southwest from Mall West Wing while JennaRelationship is 1 and 
 	say "     Before you can enter the lockerroom, you hear a commotion coming from the direction of the magical shop. You decide to eavesdrop on it, getting rather close to the entrance. Upon peering around the corner and into the shop you see a familiar female wolverine talking to Nermine. The conversation the two are having is rather heated, at least on Jenna's part. Nermine is rather cool and collected, like the jackaless usually is. 'Nermine, you don't even have permission to set up shop here!' Jenna snarls, clearly on the last bit of her patience. All Nermine does is walk over to her register and open a drawer. Out of it she pulls a piece of paper that for some reason she turns towards your direction first. You can vaguely make out an official seal and formal wording before Nermine turns it to Jenna. 'The graceful constabulary will notice that Nermine does have permission to offer her wares here,' the jackaless says.";
 	say "     Jenna takes one look at the paper before raging. 'This paper's over a hundred years old! The mall hasn't even been here that long!' she roars. Nermine however just calmly stands there and waits for Jenna to come down from her anger. When the female wolverine has, the jackaless then speaks up. 'If the wolverine lady would direct her attention to the bottom of the humble storekeeper's document, she will see that it says Nermine has permission to sell here,' she says simply. The other female takes a look at the paper and apparently sees that it is true as she slumps her shoulders. However, the bout of defeat doesn't stay long on her face as Jenna then stands up tall. 'Fine! I'll just keep an eye on you then, that way you can't do anything suspicious,' she says before storming off, not noticing that you're there. It appears though that Nermine has because the jackaless looks in your direction and smiles. Not wanting to stay any longer, you promptly walk away from the store.";
 	now JennaRelationship is 2; [met, has been seen interacting with Nermine]
-instead of going Southwest from Mall West Wing while JennaRelationship is 2 and findwires is 2 and fixedgens is 2: [met, has been seen interacting with Nermine]
+	now PlayerMet of Jenna is true;
+
+instead of going Southwest from Mall West Wing while JennaRelationship is 2 and findwires is 2 and fixedgens > 2: [met, has been seen interacting with Nermine]
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event in the mall lockerroom. JennaRelationship: [JennaRelationship], findwires: [findwires], fixedgens: [fixedgens].[line break]";
 	say "     On your way to the lockerroom you spot a gruff Jenna standing at the entrance to Nermine's shop, apparently occasionally looking in. It looks like the female wolverine has acted upon her statement about guarding the jackaless's shop. When you briefly look into the store you can see Nermine just staring at Jenna with a smile, preparing something at her counter. After about a few minutes, Nermine apparently finishes and then takes it to her store guard. You are quite surprised to see that it appears to be just a cup of hot tea, though the female wolverine is confused at the cup. 'Is this poisoned or something?' she asks, looking at it in confusion. 'No, Nermine would never poison a guest of her store. Not unless that is what the customer wants,' the female jackaless says.";
@@ -151,7 +154,7 @@ to say ANewFriend:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Of course! You can't stand seeing an adorable goat boy sad.";
 		say "     ([link]Y[as]y[end link]) - No, that might be going a bit too far.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     With a gentle movement, you lay your hand upon Scotty's, surprising him and causing the guy to look at you in confusion. You give him a nice warm smile and tell him that it doesn't matter now, that he has you as a friend now, doesn't he? The goat boy's face appears to brighten up quickly as a matching smile shows up on his face. 'You're right, I do have you now,' he says, turning his hand over to grasp a hold of yours. He squeezes your hand softly, as if to confirm that you're there, that you're real. You don't really know exactly how lonely Scotty must have been back in Britain, but you're here for him now. Shortly after you two finish eating and head back to the lockerroom, the both of you holding hands the entire time. You tell him that you two should do something else next time, spice it up. 'Sure! That'd be fun,' he says with a happy smile. You then say your goodbyes and leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
@@ -169,7 +172,7 @@ to say ANewFriend:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You do feel a bit sorry about not doing so last time, so yes.";
 		say "     ([link]Y[as]y[end link]) - No, you don't think it's your place to do so.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You promptly grab a hold of Scotty's hand and squeeze it softly. This surprises him for a second, him turning a confused look at you. You elaborate, saying that he shouldn't feel sad, after all he has you for a friend. The transition on his face is rather instantaneous. The sad smile instantly vanishes, replaced by a blissful, happy one. '...Thanks for that,' Scotty says warmly. Instead of saying anything, you just smile and nod at him. The two of you sit like that, eating you food and just enjoying the warmth that both of you feel in your chests. When you finish and leave, the two of you can be seen holding hands on your way back to the lockerroom. Once there, the goat boy turns to you, a smile that you're coming to like on his face. 'Maybe next time we could do something different?' he asks you tentatively. You tell him that you'd love to, which appears to make his eyes brighten up in even more joy. The two of you say your goodbyes to each other before you leave the lockerroom.";
 			now ScottyRelationship is 3; [met, went on lunch date + held hands]
@@ -195,14 +198,14 @@ to say SheepShaving:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you're not into shaving other people.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Informing the sheep that you're happy to help brings a bright smile to his face. Sonny cheerfully hands you the razor and turns around, presenting his back to you. With the electric razor in hand you take it to the sheep's back, carefully removing the large amount of wool that forms a thick layer there, revealing his actually pretty trim and muscular back. Getting rid of all the extra weight and warmth cheers the male up quite a bit, and you can hear him hum contently as you go along. Minutes go by and more and more wool piles up on the floor, making it look a bit like someone ripped up a pillow. However, soon enough you reach the bottom of the back, just above his pants. You can see that he has a lot of wool on his ass too, if the amount sticking out of his pants says anything. Seeing this, a thought comes up.";
 			say "     [bold type]Do you ask him to drop trousers?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Of course! You don't want to do shoddy work after all.";
 			say "     ([link]Y[as]y[end link]) - Nah, doing his back is fine enough.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				if graphics is true:
 					project the figure of Sonny_shaved_nude_icon;
@@ -211,7 +214,7 @@ to say SheepShaving:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 				say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
-				if player consents:
+				if Player consents:
 					LineBreak;
 					say "     With a grin, you set the razor on the floor and grab a hold of both of his cheeks. Then with a medium amount of pressure, you squeeze. This appears to set Sonny off as he lets out a loud bleat - followed by breathless grunts as rope after rope of cum shoot from his cock and onto the mirror. When the intensity of the orgasm dies off and he stops cumming, the sheep is panting heavily. Shortly after when he breaks out his haze he lets out a yelp of shock. 'A-A-ah! I'm so sorry!' He apologizes. You are sure that if he could blush he would be heavily right now. You wave him off saying it's okay, as you were the one that set him off. 'T-that is true but I should have told you that shaving my ass makes me horny,' he says, putting his underwear and pants on and turning to you. You pick up the razor and then stand up, handing the it to him. With a shy smile, he thanks you for shaving... and taking care of him, bowing his head to you. To avoid prolonging his awkwardness, you head on your way out of the lockerroom - but not without off-handedly saying that you'd be happy to help again if he needs it.";
 					now SonnyRelationship is 3; [met, below the belt shave + groping]
@@ -237,7 +240,7 @@ to say SheepShaving:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, you just don't have the time right now.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			if graphics is true:
 				project the figure of Sonny_halfwool_nude_icon;
@@ -246,7 +249,7 @@ to say SheepShaving:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Why not? You've already went this far.";
 			say "     ([link]N[as]n[end link]) - No, shaving his ass is enough for you.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Putting down the razor, you bring up both of your hands and move them to his ass. Sonny's face in the mirror gains a confused look before it changes into a look of utter bliss as you squeeze his ass-cheeks firmly. This results in him orgasming rather strongly, several ropes of cum spurting out of his cock and splattering the mirror. It takes some time for the sheep to come down from his orgasm, Sonny's tongue lolling out of his mouth all the while. When he does, his eyes widens and he turns, his dick coming right to in front of your eyes, some of the cum flying off and hitting your face. The sheep sees this and starts apologizing rapidly, clearly embarrassed by the action. You wipe the cum off and use some of the wool to clean your hands before telling him it's alright. It was a consequence of groping him after all. He [']oh[']s before quickly getting dressed. Once he is, he tells you he needs to go, rapidly moving out of the lockerroom.";
 				now SonnyRelationship is 3; [met, below the belt shave + groping]
@@ -265,7 +268,7 @@ to say SheepShaving:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, you'd want help if you were in his situation.";
 		say "     ([link]N[as]n[end link]) - Nah, not this time, you're a bit busy.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			if graphics is true:
 				project the figure of Sonny_halfwool_nude_icon;
@@ -274,7 +277,7 @@ to say SheepShaving:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Why not? He liked the groping, so he'll love what you want to do next...";
 			say "     ([link]N[as]n[end link]) - No, just shave his butt this time.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     The idea ends up becoming too much and you agree to it. Quickly you turn the sheep boy towards you, his dick hitting you in the face, causing him to eep in surprise. Before Sonny can say anything you catch the tip of his hard cock in your mouth, swirling your tongue at the head. 'Ooooh that feels nice...' he murmurs out, his hands now threaded in your hair. While you're dick on his tongue you also make sure to shave his ass, being careful to not mess up just because you have a cock in your mouth. The sensations from both the shaving of his ass and his cock being sucked appears to drive him into blissful state, unaware of the world around him. Taking advantage of this, you swallow Sonny's manhood whole, deepthroating it before going back to the tip.";
 				say "     You repeat this for a while, bobbing your head up and down the sheep's hard cock as you shave his butt. Soon enough, you're finished shaving his ass, so you place the razor down and move your hands to his ass. With a thorough squeeze after pulling back, your mouth is filled with ropes of cum. It appears to be a large amount so you try your best to swallow it all. Of course, despite your best efforts some ends up trickling out of the side of your mouth. When you know Sonny's done cumming you pull off and gulp down the cum once more before smacking your lips. By then the sheep has come out of his daze and is staring at you in shock, unable to believe that you just sucked him off. 'D-d-did you just suck my cock?' he asks. You point at the cum still on your face as proof and it causes the sheep to stutter.";
@@ -311,7 +314,7 @@ to say WolfHorseMallSex:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, why not?";
 	say "     ([link]N[as]n[end link]) - No, better not interrupt the persons in there. They found a semi-private place for a reason.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		let randomnumber be a random number from 1 to 4;
 		if randomnumber is:

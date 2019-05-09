@@ -72,7 +72,7 @@ Instead of resolving a Lost Trident:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Toss it.";
 	say "     ([link]N[as]n[end link]) - Keep it.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure rising up out of the sea to take the trident into one of his meaty bronze hands.";
 		now Resolution of Lost Trident is 2; [threw it away]
@@ -235,7 +235,7 @@ instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, why not, it sounds fun.";
 	say "     ([link]N[as]n[end link]) - No, I'm not a marrying-type of person.";
-	if player consents:
+	if Player consents:
 		say "     Shrugging your shoulders you agree, causing the merman's face to light up. 'Great! It's official then!' he says with a smile. You ask him what this relationship will consist of, something that Poseidon promptly gives a response to. 'Simple, we go on dates. If it turns out well, then perhaps marriage,' the buff male tells you. Well... you guess that was kind of obvious, causing you to wonder out loud when the first date will be. 'Oh, that, don't worry. I'll plan the date and let you know when it's time,' he says, waving your concerns off. With a shrug you figure you should go on your way, heading back out of the palace, to the entrance.";
 		move player to Royal Palace Entrance;
 		now PoseidonRelationship is 3;
@@ -295,14 +295,14 @@ Triton is a man. Triton is in Atlantis City Entrance.
 [Physical details as of game start]
 ScaleValue of Triton is 3. [human sized]
 SleepRhythm of Triton is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Triton is 1. [X cock]
+Cock Count of Triton is 1. [X cock]
 Cock Length of Triton is 8. [X Inches]
-Cock Width of Triton is 4.
-Testes of Triton is 2. [X balls]
-Cunts of Triton is 0. [X pussy]
+Ball Size of Triton is 4.
+Ball Count of Triton is 2. [X balls]
+Cunt Count of Triton is 0. [X pussy]
 Cunt Length of Triton is 0. [X Cunt]
-Cunt Width of Triton is 0. [X Cunt]
-Breasts of Triton is 2. [X nipples]
+Cunt Tightness of Triton is 0. [X Cunt]
+Nipple Count of Triton is 2. [X nipples]
 Breast Size of Triton is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Triton is false. [can not take oversized members without pain]
@@ -363,7 +363,7 @@ to say TritonTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Atlantis"):
@@ -403,14 +403,14 @@ Alana is a woman. Alana is in Atlantis City Entrance.
 [Physical details as of game start]
 ScaleValue of Alana is 3. [human sized]
 SleepRhythm of Alana is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Alana is 0. [X cock]
+Cock Count of Alana is 0. [X cock]
 Cock Length of Alana is 0. [X Inches]
-Cock Width of Alana is 0.
-Testes of Alana is 0. [X balls]
-Cunts of Alana is 1. [X pussy]
+Ball Size of Alana is 0.
+Ball Count of Alana is 0. [X balls]
+Cunt Count of Alana is 1. [X pussy]
 Cunt Length of Alana is 8. [X Cunt]
-Cunt Width of Alana is 4. [X Cunt]
-Breasts of Alana is 2. [X nipples]
+Cunt Tightness of Alana is 4. [X Cunt]
+Nipple Count of Alana is 2. [X nipples]
 Breast Size of Alana is 2. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Alana is false. [can not take oversized members without pain]
@@ -465,7 +465,7 @@ to say AlanaTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Triton"):

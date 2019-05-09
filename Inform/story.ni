@@ -144,8 +144,10 @@ Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
 
-monster is a number that varies.[@Tag:NotSaved]
-The player has text called name. The name of player is usually "Player".
+MonsterID is a number that varies.[@Tag:NotSaved]
+NewTypeInfectionActive is a truth state that varies.[@Tag:NotSaved] NewTypeInfectionActive is usually false.
+The player has text called name. The name of Player is usually "Player".
+[base stats of any character]
 A person has a number called Energy.
 A person has a number called HP.
 A person has a number called MaxHP.
@@ -161,22 +163,99 @@ A person has a number called Hunger.
 A person has a number called Thirst.
 A person has a number called Morale.
 A person has a number called Lust.
+A person has a number called Libido.
 A person has a number called Loyalty.
 A person has a number called Humanity.
-A person has a number called Hunger.
-A person has a number called cocks.
-A person has a number called testes.
-A person has a number called Testicle Size.
-A person has a number called breasts.
-A person has a number called Breast Size.
-A person has a number called cunts.
-A person has a number called Cock length.
-A person has a number called Cock Width.
-A person has a number called Cunt length.
-A person has a number called Cunt width.
-A person has a number called armor.
-A person has a number called capacity.
-A person has a number called libido.
+
+[old style body parts - to be phased out once all infections follow the expanded set]
+The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
+The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
+The player has a text called skin. Skin is usually "smooth".
+The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
+The player has a text called face. Face is usually "charmingly human".
+The player has a text called tail. tail is usually "".
+The player has a text called body. Body is usually "charmingly human".
+The player has a text called bodyname. Bodyname is usually "Human".
+The player has a text called facename. Facename is usually "Human".
+The player has a text called skinname. Skinname is usually "Human".
+The player has a text called cockname. cockname is usually "Human".
+The player has a text called tailname. Tailname is usually "Human".
+
+[Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
+[expanded set of Player specific infection parts]
+The player has a text called HeadName. HeadName is usually "Human".
+The player has a text called Head Description. Head Description is usually "a typical human".
+The player has a text called Head Adjective. Head Adjective is usually "human".
+The player has a text called Head Skin Adjective. Head Skin Adjective is usually "smooth".
+The player has a text called Head Adornments. Head Adornments is usually "".
+The player has a number called Hair Length. Hair Length is usually 2.
+The player has a text called Hair Shape. Hair Shape is usually "straight".
+The player has a text called Hair Color. Hair Color is usually "red".
+The player has a text called Hair Style. Hair Style is usually "buzzcut".
+The player has a text called Eye Color. Eye Color is usually "green".
+The player has a text called Eye Adjective. Eye Adjective is usually "round".
+The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
+The player has a text called Tongue Color. Tongue Color is usually "pink".
+The player has a text called TorsoName. TorsoName is usually "Human".
+The player has a text called Torso Description. Torso Description is usually "that of a regular human".
+The player has a text called Torso Adjective. Torso Adjective is usually "human".
+The player has a text called Torso Skin Adjective. Torso Skin Adjective is usually "smooth".
+The player has a text called Torso Color. Torso Color is usually "tanned".
+The player has a text called Torso Pattern. Torso Pattern is usually "".
+The player has a text called Breast Adjective. Breast Adjective is usually "perky".
+The player has a text called Torso Adornments. Torso Adornments is usually "".
+The player has a text called Nipple Color. Nipple Color is usually "light brown".
+The player has a text called Nipple Shape. Nipple Shape is usually "oval".
+The player has a text called BackName. BackName is usually "Human".
+The player has a text called Back Adornments. Back Adornments is usually "".
+The player has a text called Back Skin Adjective. Back Skin Adjective is usually "smooth".
+The player has a text called ArmsName. ArmsName is usually "Human".
+The player has a text called Arms Description. Arms Description is usually "those of a regular human".
+The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "smooth".
+The player has a text called Locomotion. Locomotion is usually "bipedal".
+The player has a text called LegsName. LegsName is usually "Human".
+The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
+The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "smooth".
+The player has a text called AssName. AssName is usually "Human".
+The player has a text called Ass Description. Ass Description is usually "ass".
+The player has a text called Ass Skin Adjective. Ass Skin Adjective is usually "smooth".
+The player has a number called Ass Width. Ass Width is usually 3.
+The player has a text called TailName. TailName is usually "Human".
+The player has a text called Tail Description. Tail Description is usually "".
+The player has a text called Tail Skin Adjective. Tail Skin Adjective is usually "smooth".
+The player has a text called Asshole Color. Asshole Color is usually "pink".
+The player has a text called CockName. CockName is usually "Human".
+The player has a text called Cock Description. Cock Description is usually "is that of a regular human, complete with an uncut foreskin".
+The player has a text called Cock Adjective. Cock Adjective is usually "human".
+The player has a text called Cock Color. Cock Color is usually "tanned".
+The player has a text called Ball Description. Ball Description is usually "balls in a wrinkled, low-hanging sack".
+The player has a text called CuntName. CuntName is usually "Human".
+The player has a text called Cunt Description. Cunt Description is usually "human in shape, with delicate nether lips and a clit at the top".
+The player has a text called Cunt Adjective. Cunt Adjective is usually "human".
+The player has a text called Cunt Color. Cunt Color is usually "pink".
+
+[numerical variables for all characters]
+A person has a number called Body Weight. Body Weight is usually 5.
+A person has a number called Body Definition. Body Definition is usually 5.
+A person has a number called Androginity. Androginity is usually 5.
+A person has a number called Mouth Length. Mouth Length is usually 5.
+A person has a number called Mouth Circumference. Mouth Circumference is usually 7.
+A person has a number called Tongue Length. Tongue Length is usually 3.
+A person has a number called Breast Size. Breast Size is usually 0.
+A person has a number called Nipple Count. Nipple Count is usually 2.
+A person has a number called Asshole Length. Asshole Length is usually 9.
+A person has a number called Asshole Tightness. Asshole Tightness is usually 4.
+A person has a number called Cock Count. Cock Count is usually 1.
+A person has a number called Cock Girth. Cock Girth is usually 7.
+A person has a number called Cock Length. Cock Length is usually 6.
+A person has a number called Ball Count. Ball Count is usually 2.
+A person has a number called Ball Size. Ball Size is usually 3.
+A person has a number called Cunt Count. Cunt Count is usually 1.
+A person has a number called Cunt Length. Cunt Length is usually 9.
+A person has a number called Cunt Tightness. Cunt Tightness is usually 5.
+A person has a number called Clit Size. Clit Size is usually 3.
+A person has a number called Armor.
+A person has a number called Capacity.
 A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
 A person has a text called linkaction.
 A person has a text called FirstAnalPartner.
@@ -184,6 +263,7 @@ A person has a text called FirstVaginalPartner.
 A person has a text called FirstOralPartner.
 A person has a text called FirstPenilePartner.
 A person has a number called SleepRhythm. [day/night bias]
+A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 
 A person has text called Cock Size Desc.
 A person has text called Cunt Size Desc.
@@ -207,30 +287,11 @@ A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefi
 A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Undefined". [bodytype of the player during the last meeting]
 A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
 
-The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
-The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
-The player has a text called skin. Skin is usually "smooth".
-The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
-The player has a text called face. Face is usually "charmingly human".
-The player has a text called tail. tail is usually "".
-The player has a text called body. Body is usually "charmingly human".
-The player has a text called bodyname. Bodyname is usually "Human".
-The player has a text called facename. Facename is usually "Human".
-The player has a text called skinname. Skinname is usually "Human".
-The player has a text called cockname. cockname is usually "Human".
-The player has a text called tailname. Tailname is usually "Human".
-The child has a text called bodyname. Bodyname is usually "Human".
-The child has a text called facename. Facename is usually "Human".
-The child has a text called skinname. Skinname is usually "Human".
-The child has a text called cockname. cockname is usually "Human".
-The child has a text called tailname. Tailname is usually "Human".
+
 The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
 The player has a text called weapon type. Weapon type is usually "Melee".
 A person has a number called Weapon damage. Weapon damage is usually 4.
 A person has a list of text called conversation.
-
-[See the BFandI extension for an explanation on these new variables.]
-A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
 A person has a list of text called Traits.
 
 freecred is a number that varies.
@@ -251,6 +312,32 @@ The player has a list of text called PenileVirginitiesTaken.
 
 A person can be a trader.
 Scenario is a text that varies.
+
+Child is a person.
+The printed name of Child is "Child".
+The Child has text called name. The name of Child is usually "".
+Child has a number called Gestation.
+Child can be born. Child is not born.
+The child has a text called bodyname. Bodyname is usually "Human".
+The child has a text called facename. Facename is usually "Human".
+The child has a text called skinname. Skinname is usually "Human".
+The child has a text called cockname. cockname is usually "Human".
+The child has a text called tailname. Tailname is usually "Human".
+Child has a text called HeadName. HeadName is usually "Human".
+Child has a text called TorsoName. TorsoName is usually "Human".
+Child has a text called BackName. BackName is usually "Human".
+Child has a text called ArmsName. ArmsName is usually "Human".
+Child has a text called LegsName. LegsName is usually "Human".
+Child has a text called AssName. AssName is usually "Human".
+Child has a text called TailName. TailName is usually "Human".
+Childrenfaces is a list of text that varies.
+Childrenskins is a list of text that varies.
+Childrenbodies is a list of text that varies.
+
+Table of PlayerChildren
+Name (text)	BirthTurn (number)	Head (text)	Torso (text)	Back (text)	Arms (text)	Legs (text)	Ass (text)	Tail (text)	ShowTail (truth state)	Pureblood (truth state)
+with 100 blank rows
+
 Allobjs is a list of text that varies.[@NotSaved]
 Grab Object is a kind of thing.
 a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
@@ -298,13 +385,6 @@ Started is a number that varies.
 Freefeats is a number that varies.
 Lost is a number that varies.
 showlocale is a truth state that varies. showlocale is usually true.
-Child is a person.
-The printed name of Child is "Child".
-Child has a number called Gestation.
-Child can be born. Child is not born.
-Childrenfaces is a list of text that varies.
-Childrenskins is a list of text that varies.
-Childrenbodies is a list of text that varies.
 NewGraphics is a truth state that varies. NewGraphics is usually true.
 NewGraphicsInteger is a number that varies. NewGraphicsInteger is usually 2.
 NewGraphicsDebugMode is a truth state that varies. NewGraphicsDebugMode is usually false.
@@ -357,12 +437,12 @@ Definition: A situation (called x) is available:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (level of player + 1):
+		else if the level of x < (level of Player + 1):
 			yes;
 	no;
 
 Definition: A situation (called x) is PrereqComplete:
-	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of player, no;
+	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of Player, no;
 	if PrereqTime is not "Any" and ((PrereqTime is "Day" and Daytimer is night) or (PrereqTime is "Night" and Daytimer is day)), no;
 	if Prereq1ResolvedMandatory of x is true and Prereq1 of x is not resolved, no;
 	if Resolution of Prereq1 of x is not listed in Prereq1Resolution of x, no;
@@ -383,23 +463,23 @@ Definition: A scavevent (called x) is scavable:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (level of player + 1):
+		else if the level of x < (level of Player + 1):
 			yes;
 	no;
 
 Definition: A grab object (called x) is wielded:
-	if weapon object of player is x, yes;
+	if weapon object of Player is x, yes;
 	no;
 
 Definition: A grab object (called x) is unwieldy:		[applies to armaments only]
 	if grab object is journal, no;
-	if the absolute value of ( scalevalue of player - objsize of x ) > 1, yes;
+	if the absolute value of ( scalevalue of Player - objsize of x ) > 1, yes;
 	no;
 
 A person can be defaultnamed. A person is usually defaultnamed.
 
 Definition: A person (called x) is defaultnamed:
-	if name of player is "Player", yes;
+	if name of Player is "Player", yes;
 	no;
 
 A person can be submissive. A person is usually not submissive.
@@ -461,19 +541,19 @@ Definition: A person (called x) is internal:
 A person can be knotted. A person is usually not knotted.
 
 Definition: A person (called x) is knotted:
-	if cockname of player is listed in infections of knotlist, yes;
+	if cockname of Player is listed in infections of knotlist, yes;
 	no;
 
 A person can be barbed. A person is usually not barbed.
 
 Definition: A person (called x) is barbed:
-	if cockname of player is listed in infections of BarbedCocklist, yes;
+	if cockname of Player is listed in infections of BarbedCocklist, yes;
 	no;
 
 A person can be flared. A person is usually not flared.
 
 Definition: A person (called x) is flared:
-	if cockname of player is listed in infections of Bluntlist, yes;
+	if cockname of Player is listed in infections of Bluntlist, yes;
 	no;
 
 Definition: A person (called x) is perminfected:
@@ -481,39 +561,63 @@ Definition: A person (called x) is perminfected:
 	no;
 
 Definition: A person (called x) is pure:
-	if bodyname of x is facename of x:
-		if bodyname of x is tailname of x:
-			if bodyname of x is skinname of x:
-				if bodyname of x is cockname of x:
-					yes;
-	no;
+	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+		if bodyname of x is facename of x:
+			if bodyname of x is tailname of x:
+				if bodyname of x is skinname of x:
+					if bodyname of x is cockname of x:
+						yes;
+		no;
+	else:
+		if HeadName of x is TorsoName of x:
+			if HeadName of x is BackName of x:
+				if HeadName of x is ArmsName of x:
+					if HeadName of x is LegsName of x:
+						if HeadName of x is AssName of x:
+							if HeadName of x is TailName of x:
+								if HeadName of x is CockName of x:
+									if HeadName of x is CuntName of x:
+										yes;
+		no;
 
 Definition: A person (called x) is purehuman:
-	if bodyname of player is "Human" or bodyname of player is "Herm Human":
-		if facename of player is "Human" or facename of player is "Herm Human":
-			if tailname of player is "Human" or tailname of player is "Herm Human":
-				if skinname of player is "Human" or skinname of player is "Herm Human":
-					if cockname of player is "Human" or cockname of player is "Herm Human":
-						yes;
-	no;
-
+	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
+		if bodyname of Player is "Human" or bodyname of Player is "Herm Human":
+			if facename of Player is "Human" or facename of Player is "Herm Human":
+				if tailname of Player is "Human" or tailname of Player is "Herm Human":
+					if skinname of Player is "Human" or skinname of Player is "Herm Human":
+						if cockname of Player is "Human" or cockname of Player is "Herm Human":
+							yes;
+		no;
+	else:
+		if HeadName of Player is "Human" or HeadName of Player is "Herm Human":
+			if HeadName of Player is "Human" or TorsoName of Player is "Herm Human":
+				if HeadName of Player is "Human" or BackName of Player is "Herm Human":
+					if HeadName of Player is "Human" or ArmsName of Player is "Herm Human":
+						if HeadName of Player is "Human" or LegsName of Player is "Herm Human":
+							if HeadName of Player is "Human" or AssName of Player is "Herm Human":
+								if HeadName of Player is "Human" or TailName of Player is "Herm Human":
+									if HeadName of Player is "Human" or CockName of Player is "Herm Human":
+										if HeadName of Player is "Human" or CuntName of Player is "Herm Human":
+											yes;
+		no;
 Definition: A person (called x) is male:			[note: this is both male and herm]
-	if cocks of x > 0, yes;
+	if Cock Count of x > 0, yes;
 
 Definition: A person (called x) is puremale:
-	if cocks of x > 0 and cunts of x is 0, yes;
+	if Cock Count of x > 0 and Cunt Count of x is 0, yes;
 
 Definition: A person (called x) is female:			[note: this is both female and herm]
-	if cunts of x > 0, yes;
+	if Cunt Count of x > 0, yes;
 
 Definition: A person (called x) is purefemale:
-	if cunts of x > 0 and cocks of x is 0, yes;
+	if Cunt Count of x > 0 and Cock Count of x is 0, yes;
 
 Definition: A person (called x) is herm:
-	if cocks of x > 0 and cunts of x > 0, yes;
+	if Cock Count of x > 0 and Cunt Count of x > 0, yes;
 
 Definition: A person (called x) is neuter:
-	if cocks of x is 0 and cunts of x is 0, yes;
+	if Cock Count of x is 0 and Cunt Count of x is 0, yes;
 
 A person can be booked. A person can be bunkered. A person is usually not booked. A person is usually not bunkered.
 
@@ -551,28 +655,28 @@ Definition: A person (Called x) is bunkered:
 	no;
 
 Definition: A person (called x) is CockFitsInPlayerPussy:
-	if "Twisted Capacity" is listed in the feats of player, yes;
-	if cock length of x > cunt length of player + 1, no; [some stretching allowed]
+	if "Twisted Capacity" is listed in the feats of Player, yes;
+	if Cock Length of x > Cunt Length of Player + 1, no; [some stretching allowed]
 	yes;
 
 Definition: A person (called x) is CuntFitsForPlayerCock:
-	if cock length of player > cunt length of x + 1, no; [some stretching allowed]
+	if Cock Length of Player > Cunt Length of x + 1, no; [some stretching allowed]
 	yes;
 
 Definition: A person (called x) is PlayerCumLoadInflates: [yes = inflation; can be adapted for any kind of inflation (egg, enema, etc.)]
-	if ScaleValue of x is 1 and cock width of player >= 6, yes;
-	if ScaleValue of x is 2 and cock width of player >= 12, yes;
-	if ScaleValue of x is 3 and cock width of player >= 16, yes;
-	if ScaleValue of x is 4 and cock width of player >= 25, yes;
-	if cock width of player >= 32, yes;
+	if ScaleValue of x is 1 and ball size of Player >= 6, yes;
+	if ScaleValue of x is 2 and ball size of Player >= 12, yes;
+	if ScaleValue of x is 3 and ball size of Player >= 16, yes;
+	if ScaleValue of x is 4 and ball size of Player >= 25, yes;
+	if ball size of Player >= 32, yes;
 	no;
 
 Definition: A person (called x) is CumLoadInflatesPlayer: [yes = inflation; can be adapted for any kind of inflation (egg, enema, etc.)]
-	if ScaleValue of player is 1 and cock width of x >= 6, yes;
-	if ScaleValue of player is 2 and cock width of x >= 12, yes;
-	if ScaleValue of player is 3 and cock width of x >= 16, yes;
-	if ScaleValue of player is 4 and cock width of x >= 25, yes;
-	if cock width of x >= 32, yes;
+	if ScaleValue of Player is 1 and Ball Size of x >= 6, yes;
+	if ScaleValue of Player is 2 and Ball Size of x >= 12, yes;
+	if ScaleValue of Player is 3 and Ball Size of x >= 16, yes;
+	if ScaleValue of Player is 4 and Ball Size of x >= 25, yes;
+	if Ball Size of x >= 32, yes;
 	no;
 
 Definition: A person (called x) is barefoot:
@@ -624,6 +728,305 @@ Definition: A person (called x) is naked:
 	else:
 		no;
 
+Definition: A person (called x) is conformist:
+	if "Conformist" is listed in feats of x:
+		yes;
+	else:
+		no;
+
+
+A person can be HasHeadHair. A person is usually not HasHeadHair.
+
+Definition: A person (called x) is HasHeadHair:
+	if Hair Length of x > 0, yes;
+	no;
+
+A person can be HasHeadAdornments. A person is usually not HasHeadAdornments.
+
+Definition: A person (called x) is HasHeadAdornments:
+	if Head Adornments of x is not "", yes;
+	no;
+
+A person can be HasBackAdornments. A person is usually not HasBackAdornments.
+
+Definition: A person (called x) is HasBackAdornments:
+	if Back Adornments of x is not "", yes;
+	no;
+
+A person can be HasTorsoAdornments. A person is usually not HasTorsoAdornments.
+
+Definition: A person (called x) is HasTorsoAdornments:
+	if Torso Adornments of x is not "", yes;
+	no;
+
+A person can be HasTail. A person is usually not HasTail.
+
+Definition: A person (called x) is HasTail:
+	if Tail Description of x is not "", yes;
+	no;
+
+A person can be quadrupedal. A person is usually quadrupedal.
+
+Definition: A person (called x) is quadrupedal:
+	if Locomotion of x is "quadrupedal", yes;
+	no;
+
+A person can be bipedal. A person is usually bipedal.
+
+Definition: A person (called x) is bipedal:
+	if Locomotion of x is "bipedal", yes;
+	no;
+
+A person can be serpentine. A person is usually serpentine.
+
+Definition: A person (called x) is serpentine:
+	if Locomotion of x is "serpentine", yes;
+	no;
+
+A person can be sliding. A person is usually sliding.
+
+Definition: A person (called x) is sliding:
+	if Locomotion of x is "sliding", yes;
+	no;
+
+to say Body Size Adjective of ( x - a person ):
+	if scalevalue of x is 1: [~3 ft in height or less]
+		say "tiny";
+	else if scalevalue of x is 2: [4-5 ft in height]
+		say "small";
+	else if scalevalue of x is 3: [5-7 ft in height]
+		say "average";
+	else if scalevalue of x is 4: [8-12 ft in height]
+		say "large";
+	else: [12+ ft in height]
+		say "huge";
+
+to say Body Adjective of ( x - a person ):
+	if Body Weight of x < 4: [low weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "skinny";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "slender";
+		else: [high muscle group]
+			say "lithe";
+	else if Body Weight of x < 7: [mid weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "average";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "fit";
+		else: [high muscle group]
+			say "muscled";
+	else: [high weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "pudgy";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "husky";
+		else: [high muscle group]
+			say "jacked";
+
+to say Ass Shape Adjective of ( x - a person ):
+	if Ass Width of x is 1: [small ass]
+		if Body Definition of x < 4: [low muscle group]
+			say "flat";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "perky";
+		else: [high muscle group]
+			say "hard";
+	else if Ass Width of x is 2: [dainty ass]
+		if Body Definition of x < 4: [low muscle group]
+			say "bouncy";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "bubble-shaped";
+		else: [high muscle group]
+			say "firm";
+	else if Ass Width of x is 3: [round ass]
+		if Body Definition of x < 4: [low muscle group]
+			say "wobbly";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "curvy";
+		else: [high muscle group]
+			say "squeezable, yet firm";
+	else if Ass Width of x is 4: [huge ass]
+		if Body Definition of x < 4: [low muscle group]
+			say "jiggly";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "curvacious";
+		else: [high muscle group]
+			say "squeezable, yet still firm";
+	else if Ass Width of x is 5: [enormous ass]
+		if Body Definition of x < 4: [low muscle group]
+			say "very jiggly";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "thicc";
+		else: [high muscle group]
+			say "expansive, yet somewhat firm";
+
+to say Ass Width Adjective of ( x - a person ):
+	if Ass Width of X is:
+		-- 1:
+			say "small";
+		-- 2:
+			say "dainty";
+		-- 3:
+			say "round";
+		-- 4:
+			say "huge";
+		-- 5:
+			say "enormous";
+
+to say Gender Adjective of ( x - a person ):
+	if Androginity of x is:
+		-- 1:
+			say "hypermasculine";
+		-- 2:
+			say "masculine";
+		-- 3:
+			say "effeminate";
+		-- 4:
+			say "trappish";
+		-- 5:
+			say "androgynous";
+		-- 6:
+			say "feminine butch";
+		-- 7:
+			say "tomboyish";
+		-- 8:
+			say "feminine";
+		-- 9:
+			say "hyperfeminine";
+
+to say Limbs Adjective of ( x - a person ):
+	if Body Weight of x < 4: [low weight group]
+		if body definition of x < 4: [low muscle group]
+			say "rail-thin";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "slender";
+		else: [high muscle group]
+			say "sinewy";
+	else if Body Weight of x < 7: [mid weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "average";
+		else if body definition of x < 7: [mid muscle group]
+			say "firm";
+		else: [high muscle group]
+			say "muscular";
+	else: [high weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "flabby";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "meaty";
+		else: [high muscle group]
+			say "rippling";
+
+[ Coding Idea: Body changes at high noon]
+[ Hunger < 20: -1 weight; Hunger > 80: +1 weight]
+[ Definition - Working out at the fitness studio]
+
+to say Mouth Length Adjective of ( x - a person ):
+	if Mouth Length of x < 3: [inches deep]
+		say "petite";
+	else if Mouth Length of x < 5: [inches deep]
+		say "shallow";
+	else if Mouth Length of x < 9: [inches deep]
+		say "average";
+	else if Mouth Length of x < 15: [inches deep]
+		say "deep";
+	else: [inches deep]
+		say "bottomless";
+
+to say Mouth Circumference Adjective of ( x - a person ):
+	if Mouth Circumference of x < 4: [inches circumference]
+		say "tiny";
+	else if Mouth Circumference of x < 6: [inches circumference]
+		say "small";
+	else if Mouth Circumference of x < 8: [inches circumference]
+		say "normal";
+	else if Mouth Circumference of x < 11: [inches circumference]
+		say "wide";
+	else: [inches deep]
+		say "gaping";
+
+to say Breast Size Description of ( x - a person ):
+	if Breast Size of x < 3:
+		say "A cup";
+	else if Breast Size of x < 5:
+		say "B cup";
+	[...more cups to be added...]
+
+to say Asshole Length Adjective of ( x - a person ):
+	if Asshole Length of x < 3: [inches deep]
+		say "petite";
+	else if Asshole Length of x < 5: [inches deep]
+		say "shallow";
+	else if Asshole Length of x < 9: [inches deep]
+		say "average";
+	else if Asshole Length of x < 15: [inches deep]
+		say "deep";
+	else: [inches deep]
+		say "bottomless";
+
+to say Asshole Tightness Adjective of ( x - a person ):
+	if Asshole Tightness of x < 4: [inches circumference]
+		say "extremely tight";
+	else if Asshole Tightness of x < 6: [inches circumference]
+		say "tight";
+	else if Asshole Tightness of x < 8: [inches circumference]
+		say "well-used";
+	else if Asshole Tightness of x < 11: [inches circumference]
+		say "open";
+	else: [inches deep]
+		say "gaping";
+
+to say Cock Girth Adjective of ( x - a person ):
+	if Cock Girth of x < 4: [inches circumference]
+		say "thin";
+	else if Cock Girth of x < 6: [inches circumference]
+		say "slender";
+	else if Cock Girth of x < 8: [inches circumference]
+		say "average";
+	else if Cock Girth of x < 11: [inches circumference]
+		say "thick";
+	else: [inches deep]
+		say "monstrous";
+
+to say Ball Size Adjective of ( x - a person ):
+	if Ball Size of x is:
+		-- 1:
+			say "acorn-sized";
+		-- 2:
+			say "coin-sized";
+		-- 3:
+			say "egg-sized";
+		-- 4:
+			say "goose-egg sized";
+		-- 5:
+			say "ostrich-egg sized";
+
+to say Cunt Tightness Adjective of ( x - a person ):
+	if Cunt Tightness of x < 4: [inches circumference]
+		say "extremely tight";
+	else if Cunt Tightness of x < 6: [inches circumference]
+		say "tight";
+	else if Cunt Tightness of x < 8: [inches circumference]
+		say "well-used";
+	else if Cunt Tightness of x < 11: [inches circumference]
+		say "open";
+	else: [inches deep]
+		say "gaping";
+
+to say Clit Size Adjective of ( x - a person ):
+	if Clit Size of x is:
+		-- 1:
+			say "very small";
+		-- 2:
+			say "small";
+		-- 3:
+			say "average";
+		-- 4:
+			say "large";
+		-- 5:
+			say "very large";
+
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
 A door can be dangerous.
@@ -638,7 +1041,7 @@ The player is wearing a backpack. The description of the backpack is "A backpack
 
 instead of examining a grab object (called x):
 	say "[the desc corresponding to a object of x in the table of game objects]";
-	if "Weaponsmaster" is listed in feats of player and x is an armament:
+	if "Weaponsmaster" is listed in feats of Player and x is an armament:
 		say "     Looking over the weapon with your expert knowledge, you assess it to be a [weapon damage of x] damage weapon.";
 
 Does the player mean examining a situation: it is very unlikely.
@@ -680,13 +1083,13 @@ The cot is rooted in place. The cot is restful.
 
 Section - Vending Machine
 
-To add (item - a text) to invent of player:
+To add (item - a text) to invent of Player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
 			increase carried of x by 1;
 			break;
 
-To add (item - a text) to the invent of player:
+To add (item - a text) to the invent of Player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
 			increase carried of x by 1;
@@ -704,13 +1107,13 @@ To add (item - a text) to invent of the player:
 			increase carried of x by 1;
 			break;
 
-To remove (item - a text) from invent of player:
+To remove (item - a text) from invent of Player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
 			now carried of x is 0;
 			break;
 
-To remove (item - a text) from the invent of player:
+To remove (item - a text) from the invent of Player:
 	repeat with x running through grab objects:
 		if the printed name of x matches the text item:
 			now carried of x is 0;
@@ -770,7 +1173,7 @@ Instead of attacking the Cola Vending machine:
 	increase dice by bonus;
 	if dice > 15:
 		say "A soda can pops out!";
-		add "soda" to invent of player;
+		add "soda" to invent of Player;
 		increase score by 1;
 		increase dispensed of cola vending machine by 1;
 	else:
@@ -855,7 +1258,7 @@ pocketknife is a armament. It is a part of the player. It has a weapon "[one of]
 understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
 understand "seat" as chair.
-gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
+gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Blue Gryphon". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
 distilled milk is a grab object. It is a part of the player. It is not milky.
 
 
@@ -863,12 +1266,12 @@ The invent of the player is { "journal" }.
 
 Table of Start Game
 title	subtable	description	toggle
-"Strength: [strength of player]"	--	"Your ability to exert force. Helps deal damage with melee weapons, and to carry heavy objects."	finish stats rule
-"Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
-"Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
-"Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
-"Intelligence: [Intelligence of player]"	--	"Your ability to logically compute things. Helps with activities that require 'book smarts'."	finish stats rule
-"Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
+"Strength: [strength of Player]"	--	"Your ability to exert force. Helps deal damage with melee weapons, and to carry heavy objects."	finish stats rule
+"Dexterity: [Dexterity of Player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
+"Stamina: [stamina of Player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
+"Charisma: [Charisma of Player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
+"Intelligence: [Intelligence of Player]"	--	"Your ability to logically compute things. Helps with activities that require 'book smarts'."	finish stats rule
+"Perception: [Perception of Player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
 ["Reroll Stats"	--	"Randomize your stats. Do this as often as you want."	random stats rule]
 "Select a Stat to gain [if started is 0]+5[else]+1[end if]"	--	"You are satisfied with your stats"	--
 "Restore a save"	--	"Restore a save game!"	prerestore the game rule
@@ -876,7 +1279,7 @@ title	subtable	description	toggle
 This is the prerestore the game rule:
 	decrease the menu depth by 1;
 	try restoring the game;
-	if maxHP of player is 0, try restarting the game;
+	if maxHP of Player is 0, try restarting the game;
 
 Table of sex choice
 title	subtable	description	toggle
@@ -919,8 +1322,8 @@ title	subtable	description	toggle
 ["Rest"	--	"Take a breather"	rest rule]
 ["Examine yourself"	--	--	Self examine rule]
 "Help"	Table of Help	"Get some help on this madness!"
-"Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player]."	--	"Stats"	--
-"Health: [HP of player]/[maxHP of player], Lust: [lust of player], Morale: [morale of player], Humanity: [Humanity of player]"	--	"More stats"	--
+"Strength: [strength of Player], Dexterity: [dexterity of Player], Stamina: [stamina of Player], Charisma: [Charisma of Player], Intelligence: [intelligence of Player], Perception: [perception of Player]."	--	"Stats"	--
+"Health: [HP of Player]/[maxHP of Player], Lust: [lust of Player], Morale: [morale of Player], Humanity: [Humanity of Player]"	--	"More stats"	--
 "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
 
 Table of Help
@@ -929,23 +1332,27 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of Random Critters
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
-"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	0	"default"	false
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+false	"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	0	"default"	false
+
+Table of New Infection Parts
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+"Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
 
 understand the command "feed" as something new.
 
 Definition: A person is fastlearning:
-	if "Fast Learner" is listed in feats of player, yes;
+	if "Fast Learner" is listed in feats of Player, yes;
 	no;
 
 To say level up needed:
-	say "[if player is fastlearning][((level of player plus 1) times 8)][else][(level of player plus 1) times 10][end if]";
+	say "[if Player is fastlearning][((level of Player plus 1) times 8)][else][(level of Player plus 1) times 10][end if]";
 
 Table of Fancy Status
 left	central	right
-"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of player]"	"HP:[HP of player]/[maxHP of player]"
-"Freecred: [freecred]"	"Hunger: [hunger of player] Thirst: [thirst of player] Libido: [libido of player]"	"Score:[score]/[maximum score]"
-"Sanity: [humanity of player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if number of entries in childrenfaces > 0]  Kids: [number of entries in childrenfaces][end if]"	"XP:[XP of player]/[level up needed]"
+"Location: [the player's surroundings]"	"Time: [time of day] Lvl: [level of Player]"	"HP:[HP of Player]/[maxHP of Player]"
+"Freecred: [freecred]"	"Hunger: [hunger of Player] Thirst: [thirst of Player] Libido: [Libido of Player]"	"Score:[score]/[maximum score]"
+"Sanity: [humanity of Player]/100"	"Evac: [( turns minus targetturns ) divided by 8] d, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] h[if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 0]  Kids: [(number of filled rows in Table of PlayerChildren + number of entries in childrenfaces)][end if]"	"XP:[XP of Player]/[level up needed]"
 ""	"[if NewGraphicsInteger is 0] [else]Current image artist: [ngraphics_currentartist][end if]"	""
 
 to say exitlist:
@@ -977,9 +1384,9 @@ Mindcontrol is a flag.
 Vore is a flag.
 when play begins:
 	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
-	add { "Ember Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman", "Ebonflame Drake", "Ewe", "Feline", "Female Husky", "Fruit Bat", "German Shepherd", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Hermaphrodite Gryphon", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Shemale Smooth Collie", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of furry;
+	add { "Ember Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman", "Ebonflame Drake", "Ewe", "Feline", "Female Husky", "Fruit Bat", "German Shepherd", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Shemale Smooth Collie", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of furry;
 	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of guy;
-	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Herm Hyena", "Hermaphrodite Dolphin", "Hermaphrodite Gryphon", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Pirate Shark", "Sewer Gator", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of hermaphrodite;
+	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Pirate Shark", "Sewer Gator", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of hermaphrodite;
 	add { "Bear", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman", "Ewe", "Feline", "Female Husky", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of girl;
 	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of feral;
 	add { "Demon Brute" } to infections of hellspawn;
@@ -1023,11 +1430,11 @@ when play begins:
 
 Avianlist is a marker. [list of avian/bird infections]
 when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman", "Hermaphrodite Gryphon", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of Avianlist;
+	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman", "Blue Gryphon", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of Avianlist;
 
 Avianpredlist is a marker. [list of predatory avian/bird infections]
 when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "Hawkman", "Hermaphrodite Gryphon" } to infections of Avianpredlist;
+	add { "Bald Eagle", "Fluffy Owl", "Hawkman", "Blue Gryphon" } to infections of Avianpredlist;
 
 Rodentlist is a marker. [list of rodent infections]
 when play begins:
@@ -1064,7 +1471,7 @@ when play begins:
 
 Knotlist is a marker. [list of infections w/knotted cock]
 when play begins:
-	add { "Alpha Husky", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman", "Dracovixentaur", "Female Husky", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd", "Hellhound", "Hermaphrodite Gryphon", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Shemale Smooth Collie", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Knotlist;
+	add { "Alpha Husky", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman", "Dracovixentaur", "Female Husky", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd", "Hellhound", "Blue Gryphon", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Shemale Smooth Collie", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Knotlist;
 
 Internallist is a marker. [list of infections w/internal male genitals]
 when play begins:
@@ -1084,7 +1491,7 @@ when play begins:
 
 Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
+	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman", "Harpy", "Blue Gryphon", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
 
 Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
@@ -1122,7 +1529,7 @@ carry out vialing:
 	let found be 0;
 	let z be 1;
 	let q be a topic;
-	repeat with x running through vials of player:
+	repeat with x running through vials of Player:
 		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
@@ -1133,17 +1540,17 @@ carry out vialing:
 		say "You don't seem to have any such vial.";
 		continue the action;
 	say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
-	now monster is 0;
+	now MonsterID is 0;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry exactly matches the text target, case insensitively:
-			now monster is y;
+		if Name entry exactly matches the text target, case insensitively:
+			now MonsterID is y;
 			break;
-	if monster is 0:
+	if MonsterID is 0:
 		say "ERROR: That creature infection ([target]) could not be found.";
-		now monster is 1;
+		now MonsterID is 1;
 	else:
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		now researchbypass is 1;
 		if non-infectious entry is true:
 			now non-infectious entry is false;
@@ -1152,12 +1559,12 @@ carry out vialing:
 		else:
 			infect target;
 		now researchbypass is 0;
-		remove entry z from vials of player;
+		remove entry z from vials of Player;
 
 to deletevial (x - text):	[removes 1 vial of a given type from the player's inventory]
 	let found be 0;
 	let z be 0;
-	repeat with y running through vials of player:
+	repeat with y running through vials of Player:
 		increase z by 1;
 		if x in lower case is y in lower case:
 			now found is 1;
@@ -1166,7 +1573,7 @@ to deletevial (x - text):	[removes 1 vial of a given type from the player's inve
 		say "Error - [x] - Expected vial not found.";
 		stop the action;
 	else:
-		remove entry z from vials of player;
+		remove entry z from vials of Player;
 
 understand "vialdrop [text]" as vialdropping.
 
@@ -1178,7 +1585,7 @@ Carry out vialdropping:
 	let found be 0;
 	let z be 1;
 	let q be a topic;
-	repeat with x running through vials of player:
+	repeat with x running through vials of Player:
 		[now q is x;]
 		if t in lower case is x in lower case:
 			now target is x;
@@ -1189,7 +1596,7 @@ Carry out vialdropping:
 		say "You don't seem to have any such vial.";
 		continue the action;
 	say "You chuck the [target] vial away.";
-	remove entry z from vials of player;
+	remove entry z from vials of Player;
 
 understand "vialalldrop [text]" as vialalldropping.
 
@@ -1199,10 +1606,10 @@ Carry out vialalldropping:
 	let t be the topic understood;
 	let target be text;
 	let found be 0;
-	repeat with x running through vials of player:
+	repeat with x running through vials of Player:
 		if t in lower case is x in lower case:
 			now target is x;
-			remove x from vials of player;
+			remove x from vials of Player;
 			now found is 1;
 	if found is 0:
 		say "You don't seem to have any such vial.";
@@ -1240,13 +1647,13 @@ does the player mean doing something with the medkit: it is very likely.
 
 carry out Inventorying:
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
-	sort invent of player;
+	sort invent of Player;
 	let dseed be 0;
 [	let tempname be indexed text;
 	repeat with x running from 1 to the number of rows in the table of game objects:
 		choose row x in the table of game objects;
-		now tempname is name entry in lower case;
-		now sortname entry is tempname;
+		now tempname is Name entry in lower case;
+		now sortName entry is tempname;
 	sort the table of game objects in sortname order; ]
 	let jblouse be 0;
 	if demon seed is owned, now dseed is 1;
@@ -1291,7 +1698,7 @@ carry out Inventorying:
 			let ownedCount be carried of object entry;
 			if ownedCount > 0:
 				increase owneditemindex by 1;
-				let itemname be name entry;
+				let itemname be Name entry;
 				[line feed or switch to next column]
 				if (invcolumns is 1) or (remainder after dividing owneditemindex by invcolumns is 1):
 					say "[line break]";
@@ -1337,10 +1744,10 @@ carry out Inventorying:
 				say " x[if ownedCount < 10] [end if][ownedCount]([if weightnum < 10] [end if][weightnum] lbs)";
 				increase weight by weightnum;
 		say "[line break]";
-		say "[variable letter spacing]Total Weight: [weight]/[capacity of player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if][line break]";
+		say "[variable letter spacing]Total Weight: [weight]/[capacity of Player] lbs. [if the player is overburdened]*OVERBURDENED*[line break][end if][line break]";
 	if scenario is "Researcher" or nanitemeter > 0:
 		say "(You may see your collection of vials using [link][bold type]vial inventory[roman type][end link] or [link][bold type]vinv[roman type][end link] for short.)";
-	if the number of entries in tapes of player > 0:
+	if the number of entries in tapes of Player > 0:
 		say "(You may see your collection of video tapes using [link][bold type]tape inventory[roman type][end link] or [link][bold type]tinv[roman type][end link] for short.)";
 	say "(You can adjust the number of inventory columns with the command [link]set columns[end link].)";
 	now invlinklistfilled is one;
@@ -1389,24 +1796,24 @@ understand "vial inventory" as VialInventorying.
 understand "vial inv" as VialInventorying.
 
 carry out VialInventorying:
-	sort vials of player;
+	sort vials of Player;
 	if scenario is not "Researcher" and nanitemeter is 0:
 		say "You don't possess anything of that nature.";
 		continue the action;
-	if the number of entries in vials of player is 0:
+	if the number of entries in vials of Player is 0:
 		say "Your collection of infection vials is empty.";
-	if the number of entries in vials of player > 0:
+	if the number of entries in vials of Player > 0:
 		say "Type [bold type]vial <name>[roman type] to [bold type][bracket]U[close bracket][roman type]se a vial, [bold type]vialdrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy a vial, [bold type]vialalldrop <name>[roman type] to [bold type][bracket]D[close bracket][roman type]estroy [bracket]A[close bracket]ll of a vial";
 		if ( scenario is "Researcher" or nanitemeter > 0) and Larissa is visible:
 			say " or [bold type]vialsell[roman type] to [bold type][bracket]S[close bracket][roman type]ell a vial";
 		say ".";
 		say "Your infection vial collection consists of:[line break]";
 		let norepeat be a list of text;
-		repeat with x running through vials of player:
+		repeat with x running through vials of Player:
 			if x is listed in norepeat, next;
 			add x to norepeat;
 			let count be 0;
-			repeat with z running through vials of player:
+			repeat with z running through vials of Player:
 				if z is x, increase count by 1;
 			say "[link][bracket][bold type]U[roman type][close bracket][as]vial [x][end link] ";
 			say "[link][bracket][bold type]D[roman type][close bracket][as]vialdrop [x][end link] ";
@@ -1426,10 +1833,10 @@ definition: A person is overburdened:
 			if object entry is owned:
 				let num be carried of object entry;
 				increase weight by weight entry times num;
-	if "Strong Back" is listed in feats of player and strongbacked is 0:
+	if "Strong Back" is listed in feats of Player and strongbacked is 0:
 		now strongbacked is 1;
-		increase capacity of player by 50;
-	if weight > capacity of player, yes;
+		increase capacity of Player by 50;
+	if weight > capacity of Player, yes;
 	no;
 
 instead of examining a watch:
@@ -1592,7 +1999,7 @@ an everyturn rule:
 		if LastTurnDay is true: [last turn was day]
 			say "[bold type]The sun sets and darkness covers the city.[roman type][line break]";
 		now LastTurnDay is false;
-		if player is in Urban Forest and WerewolfRelationship is 0:
+		if Player is in Urban Forest and WerewolfRelationship is 0:
 			if WerewolfWatching is false: [initial message]
 				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
@@ -1639,131 +2046,131 @@ To process (x - a grab object):
 	else:
 		say "[usedesc of x]";
 	if x is food:
-		if "Junk Food Junky" is listed in feats of player:
-			if hunger of player > 8:
+		if "Junk Food Junky" is listed in feats of Player:
+			if hunger of Player > 8:
 				increase score by 2;
 			PlayerEat 9;
 			say "You eat the food, feeling a little disappointed it's not junk food!";
-			if morale of player < 0:
-				increase morale of player by 10;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 10;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel a little better having eaten some boring food.";
 		else:
-			if hunger of player > 11:
+			if hunger of Player > 11:
 				increase score by 4;
 			PlayerEat 12;
 			say "You feel less hungry after wolfing down some food, yum!";
-			if morale of player < 0:
-				increase morale of player by 30;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 30;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having eaten.";
 	else if x is chips:
-		if labhost > 0 and bodyname of player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
+		if labhost > 0 and bodyname of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
 			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
-		else if "Junk Food Junky" is listed in feats of player:
-			if hunger of player > 14:
+		else if "Junk Food Junky" is listed in feats of Player:
+			if hunger of Player > 14:
 				increase score by 5;
 			PlayerEat 15;
 			say "Snack time! You wolf down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random] with delight. YUM!";
-			if morale of player < 0:
-				increase morale of player by 36;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 36;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel much better after having a snack.";
-			increase morale of player by 1;
+			increase morale of Player by 1;
 		else:
-			if hunger of player > 5:
+			if hunger of Player > 5:
 				increase score by 2;
 			PlayerEat 6;
 			say "You feel less hungry after wolfing down some [one of]potato chips[or]somehow still warm fries[or]Doritos[or]trail mix[or]M&Ms[or]hard candy[at random], yum!";
-			if morale of player < 0:
-				increase morale of player by 15;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 15;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having eaten.";
 	else if x is glob of goo:
-		if hunger of player > 5:
+		if hunger of Player > 5:
 			increase score by 2;
 		PlayerEat 6;
 		say "You slurp up the neon colored goo and find that it tastes delicious, and even helps slake your hunger somewhat as you chew at it, mmm...";
-		if morale of player < 0:
-			increase morale of player by 15;
-			if morale of player > 0, now morale of player is 0;
+		if morale of Player < 0:
+			increase morale of Player by 15;
+			if morale of Player > 0, now morale of Player is 0;
 			say "You feel better having eaten.";
 	else if x is water bottle:
-		if "Junk Food Junky" is listed in feats of player:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 15:
-					decrease score by ( thirst of player minus 15 ) divided by 3;
+		if "Junk Food Junky" is listed in feats of Player:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 15:
+					decrease score by ( thirst of Player minus 15 ) divided by 3;
 			PlayerDrink 15;
 			say "You feel a little less thirty after drinking some bland water!";
-			if morale of player < 0:
-				increase morale of player by 20;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 20;
+				if morale of Player > 0, now morale of Player is 0;
 				say "After drinking something, you feel a little better.";
 		else:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 25:
-					decrease score by ( thirst of player minus 25 ) divided by 3;
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 25:
+					decrease score by ( thirst of Player minus 25 ) divided by 3;
 			PlayerDrink 25;
 			say "You feel less thirsty after guzzling some water, yum!";
-			if morale of player < 0:
-				increase morale of player by 62;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 62;
+				if morale of Player > 0, now morale of Player is 0;
 				say "After drinking something, you feel better.";
 	else if x is dirty water:
-		if "Junk Food Junky" is listed in feats of player:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 15:
-					decrease score by ( thirst of player minus 15 ) divided by 3;
+		if "Junk Food Junky" is listed in feats of Player:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 15:
+					decrease score by ( thirst of Player minus 15 ) divided by 3;
 			PlayerDrink 15;
 			say "You feel a little less thirty after drinking some bland water!";
-			if morale of player < 0:
-				increase morale of player by 20;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 20;
+				if morale of Player > 0, now morale of Player is 0;
 				say "After drinking something, you feel a little better.";
 		else:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 25:
-					decrease score by ( thirst of player minus 25 ) divided by 3;
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 25:
+					decrease score by ( thirst of Player minus 25 ) divided by 3;
 			PlayerDrink 25;
 			say "You feel less thirsty after guzzling some water, yum!";
-			if morale of player < 0:
-				increase morale of player by 62;
-				if morale of player > 0, now morale of player is 0;
+			if morale of Player < 0:
+				increase morale of Player by 62;
+				if morale of Player > 0, now morale of Player is 0;
 				say "After drinking something, you feel better.";
-		if "Iron Stomach" is not listed in feats of player:
+		if "Iron Stomach" is not listed in feats of Player:
 			let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
 			choose row RandomRow from the Table of Random Critters;
 			while area entry is "Nowhere": [runs circles until it finds an available creature]
 				now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
 				choose row RandomRow from the Table of Random Critters;
-			infect name entry;
+			infect Name entry;
 	else if x is soda:
-		if "Junk Food Junky" is listed in feats of player:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 30:
-					decrease score by ( thirst of player minus 30 ) divided by 3;
+		if "Junk Food Junky" is listed in feats of Player:
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 30:
+					decrease score by ( thirst of Player minus 30 ) divided by 3;
 			PlayerDrink 30;
-			say "Awesome! Soda! You down the delicious can of [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
-			if morale of player < 0:
-				increase morale of player by 75;
-				if morale of player > 0, now morale of player is 0;
+			say "Awesome! Soda! You down the delicious can of [if Player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if]. YUM!";
+			if morale of Player < 0:
+				increase morale of Player by 75;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel much better having had a soda.";
-			increase morale of player by 1;
+			increase morale of Player by 1;
 		else:
-			if thirst of player > 0:
-				increase score by thirst of player divided by 3;
-				if thirst of player > 12:
-					decrease score by ( thirst of player minus 12 ) divided by 3;
+			if thirst of Player > 0:
+				increase score by thirst of Player divided by 3;
+				if thirst of Player > 12:
+					decrease score by ( thirst of Player minus 12 ) divided by 3;
 			PlayerDrink 12;
-			say "You feel less thirsty after guzzling some soda, [if player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
-			if morale of player < 0:
-				increase morale of player by 30;
-				if morale of player > 0, now morale of player is 0;
+			say "You feel less thirsty after guzzling some soda, [if Player is sugarbodied][one of]cola[or]Dr Pibbston[or]Mountain Don't[or]Burkes['] root beer[at random][else][one of]lemon lime[or]strawberry[or]Dr Pibbston[or]cola[or]orange[or]ginger ale[at random][end if] yum!";
+			if morale of Player < 0:
+				increase morale of Player by 30;
+				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having drunken something.";
 		sfsodadrink;
 	else if x is gryphon milk:
@@ -1778,61 +2185,61 @@ To process (x - a grab object):
 		repeat with Z running from 1 to number of filled rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
 			let zed be "collie";
-			if name entry exactly matches the text zed, case insensitively:
-				now monster is Z;
+			if Name entry exactly matches the text zed, case insensitively:
+				now MonsterID is Z;
 				break;
-		if "Iron Stomach" is not listed in feats of player, follow the sex change rule;
+		if "Iron Stomach" is not listed in feats of Player, follow the sex change rule;
 	else if x is distilled milk:
 		say "Ugh, dry milk. It takes some effort to force the almost sickeningly sweet powder down your throat, but once it hits your belly, your body is wracked with powerful waves of alternating lust and breathlessness.";
-		increase thirst of player by 5;
+		increase thirst of Player by 5;
 		grow breasts by 3;
 		say "[line break]";
-	if x is infectious and "Iron Stomach" is not listed in feats of player:
+	if x is infectious and "Iron Stomach" is not listed in feats of Player:
 		let found be 0;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry is strain of x:
-				now monster is y;
+			if Name entry is strain of x:
+				now MonsterID is y;
 				now found is 1;
 				break;
 		if found is 1, infect;
 	else if x is a journal:
 		follow the brain descr rule;
 		say "You settle down and start scribbling in your journal about your [descr]. ";
-		if the humanity of player < 100:
-			let healed be 10 + ( ( level of player + perception of player - 10 ) / 2 );
-			if caffeinehigh of player > 0:
+		if the humanity of Player < 100:
+			let healed be 10 + ( ( level of Player + perception of Player - 10 ) / 2 );
+			if caffeinehigh of Player > 0:
 				now healed is healed / 2;
 				say " Filled with excess, manic energy, you have difficulty sitting still and focusing on your journal. ";
 			if ssmb is true:
 				now healed is ( healed * 3 ) / 2;
-			increase humanity of player by healed;
-			if humanity of player > 100:
-				decrease healed by humanity of player minus 100;
-				now humanity of player is 100;
-			say "([humanity of player]/100).";
+			increase humanity of Player by healed;
+			if humanity of Player > 100:
+				decrease healed by humanity of Player minus 100;
+				now humanity of Player is 100;
+			say "([humanity of Player]/100).";
 			now Lastjournaluse is turns;
 		follow turnpass rule;
 	else if x is a armament:
-		if weapon of player is weapon of x:		[unequip]
-			now weapon of player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
-			now weapon damage of player is 4;
-			now weapon type of player is "Melee";
-			now weapon object of player is journal;
+		if weapon of Player is weapon of x:		[unequip]
+			now weapon of Player is "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]";
+			now weapon damage of Player is 4;
+			now weapon type of Player is "Melee";
+			now weapon object of Player is journal;
 			say "You stop holding your [x].";
 		else: [equip]
-			now weapon object of player is x;
-			now weapon of player is weapon of x;
-			now weapon damage of player is weapon damage of x;
-			now weapon type of player is weapon type of x;
+			now weapon object of Player is x;
+			now weapon of Player is weapon of x;
+			now weapon damage of Player is weapon damage of x;
+			now weapon type of Player is weapon type of x;
 			if x is ranged:
-				now weapon type of player is "Ranged";
+				now weapon type of Player is "Ranged";
 			say "You ready your [x]";
 			if x is unwieldy:
-				if scalevalue of player > objsize of x:
-					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 4]large[else]massive[end if] [bodyname of player] hand dwarfs the [x], making it [if scalevalue of player - objsize of x > 3]very[else if scalevalue of player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+				if scalevalue of Player > objsize of x:
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [bodyname of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
 				else:
-					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [bodyname of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
 	else if x is equipment:
 		if x is equipped: [unequip]
@@ -1847,31 +2254,31 @@ To process (x - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if (slot of x is "feet" or slot of x is "waist") and (bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "waist") and (bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
-				if (scalevalue of player - size of x > 1): [clothing two size categories smaller]
+				if (scalevalue of Player - size of x > 1): [clothing two size categories smaller]
 					say "     [bold type]You can't even begin to fit into the [x]. [if plural of x is true]They are meant for smaller beings than yourself[else]It is meant for smaller beings than yourself[end if].[roman type][line break]";
 					continue the action;
-				else if (scalevalue of player - size of x is 1): [clothing one size category smaller]
+				else if (scalevalue of Player - size of x is 1): [clothing one size category smaller]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite small for your body size, but still barely fit[else]It is quite small for your body size, but still barely fits[end if].[roman type][line break]";
 					now x is equipped;
-				else if (scalevalue of player - size of x is 0): [clothing same size category]
+				else if (scalevalue of Player - size of x is 0): [clothing same size category]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They fit fairly well[else]It fits fairly well[end if].[roman type][line break]";
 					now x is equipped;
-				else if (scalevalue of player - size of x is -1): [clothing one size category bigger]
+				else if (scalevalue of Player - size of x is -1): [clothing one size category bigger]
 					say "     [bold type]You start wearing the [x]. [if plural of x is true]They are quite big for your body size, but fit more or less with some adjustments[else]It is quite big for your body size, but fits more or less with some adjustments[end if].[roman type][line break]";
 					now x is equipped;
-				else if (scalevalue of player - size of x < -1): [clothing two size categories bigger]
+				else if (scalevalue of Player - size of x < -1): [clothing two size categories bigger]
 					say "     [bold type]The [x] [if plural of x is true]are simply too big! They are meant for much larger beings than yourself[else]is simply too big! It is meant for much larger beings than yourself[end if].[roman type][line break]";
 					continue the action;
 			else:
 				say "     [bold type]You start wearing the [x].[roman type]";
 				now x is equipped;
 	else if x is a medkit:
-		let healed be 10 + level of player + ( ( intelligence of player minus 10 ) divided by 2 );
-		if "Expert Medic" is listed in the feats of player:
+		let healed be 10 + level of Player + ( ( intelligence of Player minus 10 ) divided by 2 );
+		if "Expert Medic" is listed in the feats of Player:
 			if Paula is visible:
 				now healed is ( healed * 133 ) / 100;
 			else:
@@ -1880,22 +2287,22 @@ To process (x - a grab object):
 			now healed is ( healed times 125 ) divided by 100;
 		else if carried of First Aid Manual > 0:
 			increase healed by 2;
-		if "Rapid Healing" is listed in the feats of player:
+		if "Rapid Healing" is listed in the feats of Player:
 			now healed is ( healed times 115 ) divided by 100;
-		if "Regeneration" is listed in the feats of player:
+		if "Regeneration" is listed in the feats of Player:
 			now healed is ( healed times 115 ) divided by 100;
 		if nohealmode is true:
 			now healed is ( healed * 125 ) / 100;
 		if ssmb is true:
 			now healed is ( healed * 3 ) / 2;
-		increase HP of player by healed;
-		if HP of player > maxHP of player:
-			decrease healed by HP of player minus maxHP of player;
-			now HP of player is maxHP of player;
+		increase HP of Player by healed;
+		if HP of Player > maxHP of Player:
+			decrease healed by HP of Player minus maxHP of Player;
+			now HP of Player is maxHP of Player;
 		say "Using your medkit, [if Paula is visible]Paula helps you [one of]treat the worst of your wounds[or]bandage up the worst of your wounds[or]spray your cuts with anesthetic[or]clean and dress your wounds[at random], making sure to kiss them to make it all better[else][one of]you spray your cuts with anesthetic[or]you bandage your worst wounds[at random][end if]. You regain [special-style-1][healed][roman type] HP.";
 		if a random chance of 1 in 10 succeeds:
 			say "You have used up the last of the medkit.";
-			if "Expert Medic" is listed in the feats of player and a random chance of 2 in 10 succeeds:
+			if "Expert Medic" is listed in the feats of Player and a random chance of 2 in 10 succeeds:
 				say "You manage to save the medkit with your amazing skills.";
 			else:
 				delete medkit;
@@ -1906,20 +2313,20 @@ To process (x - a grab object):
 			say "It would not be good idea to use that on yourself. Spicy eyes!";
 	else if x is a healing booster:
 		let healed be 20;
-		if "Expert Medic" is listed in the feats of player:
+		if "Expert Medic" is listed in the feats of Player:
 			now healed is 25;
 		else if carried of First Aid Manual > 0:
 			increase healed by 2;
-		if "Rapid Healing" is listed in the feats of player:
+		if "Rapid Healing" is listed in the feats of Player:
 			increase healed by 2;
-		if "Regeneration" is listed in the feats of player:
+		if "Regeneration" is listed in the feats of Player:
 			increase healed by 3;
 		if nohealmode is true:
 			now healed is ( healed * 125 ) / 100;
-		increase HP of player by healed;
-		if HP of player > maxHP of player:
-			decrease healed by HP of player minus maxHP of player;
-			now HP of player is maxHP of player;
+		increase HP of Player by healed;
+		if HP of Player > maxHP of Player:
+			decrease healed by HP of Player minus maxHP of Player;
+			now HP of Player is maxHP of Player;
 		say "Using your healing booster, you inject the mix into your body, giving a quick boost to your infected body's healing rate. You regain [special-style-1][healed][roman type] HP.";
 		delete healing booster;
 
@@ -1969,35 +2376,35 @@ autoattackmode is a number that varies.
 [5 is submit]
 
 carry out autoattacknormal:
-	if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 0; [default combat, make choices at normal]
 		say "You calm your instincts and regain control of your actions.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
 carry out autoattackberserk:
-	if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 1; [autoattack, no choice, always attack]
 		say "You let your aggressive instincts take the forefront, knowing you will attack at any chance.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
 carry out autoattackpass:
-	if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 3; [autopass, no choice, always pass]
 		say "You feel calm. You're sure everything will work out in the end. Don't mind the monsters attacking you.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
 carry out autoattackcoward:
-	if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 4; [autoflee, no choice, always flee]
 		say "You focus on the need to escape the monsters, the need to run away.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
 carry out autoattacksubmit:
-	if "Instinctive Combat" is listed in feats of player:
+	if "Instinctive Combat" is listed in feats of Player:
 		now autoattackmode is 5; [autosubmit, no choice, always submit]
 		say "Your increased libido clouds your thinking. Wouldn't it be fun to let the monsters play with you?";
 	else:
@@ -2188,7 +2595,7 @@ carry out grabbing something (called x):
 		increase num by 1;
 		if q matches the regular expression printed name of x, case insensitively:
 			now found is 1;
-			Add q to invent of player;
+			Add q to invent of Player;
 			remove entry num from invent of the location of the player;
 			if x is equipment:
 				say "You pick up the [printed name of x] and tuck [if plural of x is true]them[else]it[end if] in your backpack.";
@@ -2241,7 +2648,7 @@ carry out allburninating something (called x):
 		say "You don't seem to be holding any.";
 	else:
 		say "Do you wish to permanently trash all of the '[x]' you have?";
-		if player consents:
+		if Player consents:
 			if x is journal:
 				say "You really don't think that's a good idea.";
 			else if x is an armament:
@@ -2294,8 +2701,8 @@ carry out littering something (called x):
 				say "You're using that right now. Stop using it before you drop it.";
 				continue the action;
 	repeat through table of game objects:
-		if printed name of x matches the text name entry:
-			add name entry to the invent of the location of the player;
+		if printed name of x matches the text Name entry:
+			add Name entry to the invent of the location of the player;
 			break;
 	delete x;
 
@@ -2313,7 +2720,7 @@ carry out looting:
 	repeat with Q running through invent of the location of the player:
 		increase num by 1;
 		now found is 1;
-		Add q to invent of player;
+		Add q to invent of Player;
 		say "You pick up the [q] and tuck it in your backpack.";
 	if found is 0:
 		say "You don't see anything around here.";
@@ -2341,323 +2748,479 @@ Check trading:
 
 Carry out trading:
 	say "You offer up [the noun] to [second noun] and they look it over for a moment before nodding and drawing out a [trade of the noun] and handing it to you. A fair trade, right?";
-	Add trade of the noun to invent of player;
-	if "Haggler" is listed in feats of player and a random chance of 1 in 3 succeeds:
+	Add trade of the noun to invent of Player;
+	if "Haggler" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 		say "You get a second one free with your amazing negotiating skills.";
-		Add trade of the noun to invent of player;
+		Add trade of the noun to invent of Player;
 	let num be 0;
 	delete noun;
 
 skipcockchange is a truth state that varies. skipcockchange is usually false.
 
 This is the sex change rule:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	let singlesexadjust be 0;
-	if "Single Sexed" is listed in feats of player:
-		if player is herm:
+	if "Single Sexed" is listed in feats of Player:
+		if Player is herm:
 			let singlesexadjust be 1; [currently herm]
-		else if player is male:
+		else if Player is male:
 			let singlesexadjust be 2; [currently male]
-		else if player is female:
+		else if Player is female:
 			let singlesexadjust be 3; [currently female]
-	if "Just One" is listed in feats of player:
-		if cocks entry > 1:
-			now cocks entry is 1;
-		if cunts entry > 1:
-			now cunts entry is 1;
-	if ( the sex entry is "Male" or the sex entry is "Both" ) and cock length of player < cock length entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
-		let prevcock be cock length of player;
-		increase cock length of player by 1;
-		increase cock length of player by ( cock length entry minus cock length of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cock length of player > 8:
-			now cock length of player is 8;
-		if prevcock < cock length of player:		[did cock actually grow?]
+	if "Just One" is listed in feats of Player:
+		if Cock Count entry > 1:
+			now Cock Count entry is 1;
+		if Cunt Count entry > 1:
+			now Cunt Count entry is 1;
+	if ( the sex entry is "Male" or the sex entry is "Both" ) and Cock Length of Player < Cock Length entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
+		let prevcock be Cock Length of Player;
+		increase Cock Length of Player by 1;
+		increase Cock Length of Player by ( Cock Length entry minus Cock Length of Player ) divided by 3;
+		if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
+			now Cock Length of Player is 8;
+		if prevcock < Cock Length of Player:		[did cock actually grow?]
 			follow the cock descr rule;
-			say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
-	else if ( the sex entry is "Male" or the sex entry is "Both" ) and cock length of player > ( ( cock length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
-		let prevcock be cock length of player;
-		decrease cock length of player by 1;
-		decrease cock length of player by ( cock length of player - ( ( cock length entry times 150 ) / 100 ) ) divided by 3;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
-			if cock length of player < 5, now cock length of player is 5;
-		if "Modest Organs" is listed in feats of player and cock length of player > 8:
-			now cock length of player is 8;
-		if prevcock > cock length of player:		[did cock actually shrink?]
+			say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+	else if ( the sex entry is "Male" or the sex entry is "Both" ) and Cock Length of Player > ( ( Cock Length entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		let prevcock be Cock Length of Player;
+		decrease Cock Length of Player by 1;
+		decrease Cock Length of Player by ( Cock Length of Player - ( ( Cock Length entry times 150 ) / 100 ) ) divided by 3;
+		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+			if Cock Length of Player < 5, now Cock Length of Player is 5;
+		if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
+			now Cock Length of Player is 8;
+		if prevcock > Cock Length of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of player] [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cocks of player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
-	if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player < cock width entry and cocks of player is not 0 and "Female Preferred" is not listed in feats of player:
-		let prevcock be cock width of player;
-		increase cock width of player by 1;
-		increase cock width of player by ( cock width entry minus cock width of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cock width of player > 5:
-			now cock width of player is 5;
-		if prevcock < cock width of player:		[did balls actually grow?]
+			say " Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of Player in lower case] [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
+	if ( the sex entry is "Male" or the sex entry is "Both" ) and ball size of Player < Ball Size entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
+		let prevcock be ball size of Player;
+		increase ball size of Player by 1;
+		increase ball size of Player by ( Ball Size entry minus ball size of Player ) divided by 3;
+		if "Modest Organs" is listed in feats of Player and ball size of Player > 5:
+			now ball size of Player is 5;
+		if prevcock < ball size of Player:		[did balls actually grow?]
 			follow the cock descr rule;
-			say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
-	else if ( the sex entry is "Male" or the sex entry is "Both" ) and cock width of player > ( ( cock width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
-		let prevcock be cock width of player;
-		decrease cock width of player by 1;
-		decrease cock width of player by ( cock width of player - ( ( cock width entry times 150 ) / 100 ) ) divided by 3;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
-			if cock width of player < 3, now cock width of player is 3;
-		if "Modest Organs" is listed in feats of player and cock width of player > 5:
-			now cock width of player is 5;
-		if prevcock > cock width of player:		[did cock actually shrink?]
+			say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
+	else if ( the sex entry is "Male" or the sex entry is "Both" ) and ball size of Player > ( ( Ball Size entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		let prevcock be ball size of Player;
+		decrease ball size of Player by 1;
+		decrease ball size of Player by ( ball size of Player - ( ( Ball Size entry times 150 ) / 100 ) ) divided by 3;
+		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+			if ball size of Player < 3, now ball size of Player is 3;
+		if "Modest Organs" is listed in feats of Player and ball size of Player > 5:
+			now ball size of Player is 5;
+		if prevcock > ball size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if player is internal]internal[else]impressive[end if] [cockname of player] [one of]balls[or]testes[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
-	if cocks of player < cocks entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of player:
-		let prevcock be cocks of player;
-		if player is not male:
-			increase cocks of player by 1;
-			now cock length of player is 1;
-			now the cock width of player is 1;
-			increase cock length of player by ( cock length entry ) divided by 3;
-			increase the cock width of player by ( cock width entry ) divided by 3;
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [cockname of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [ball size].";
+	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player:
+		let prevcock be Cock Count of Player;
+		if Player is not male:
+			increase Cock Count of Player by 1;
+			now Cock Length of Player is 1;
+			now the ball size of Player is 1;
+			increase Cock Length of Player by ( Cock Length entry ) divided by 3;
+			increase the ball size of Player by ( Ball Size entry ) divided by 3;
 			if skipcockchange is false:
-				now cockname of player is name entry;
-				now cock of player is cock entry;
-			if "Modest Organs" is listed in feats of player and cock length of player > 8:
-				now cock length of player is 8;
-			if "Modest Organs" is listed in feats of player and cock width of player > 5:
-				now cock width of player is 5;
-		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[Extra cocks at 67%]
-			increase cocks of player by 1;
+				now cockname of Player is Name entry;
+				now cock of Player is cock entry;
+			if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
+				now Cock Length of Player is 8;
+			if "Modest Organs" is listed in feats of Player and ball size of Player > 5:
+				now ball size of Player is 5;
+		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of Player:	[Extra cocks at 67%]
+			increase Cock Count of Player by 1;
 		if singlesexadjust is 3 and sex entry is "Both":	[female remains female if herm infection]
-			now cocks of player is 0;
-			now cock length of player is 0;
-			now cock width of player is 0;
-		if prevcock < cocks of player:		[did new cock appear?]
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
+			now ball size of Player is 0;
+		if prevcock < Cock Count of Player:		[did new cock appear?]
 			follow the cock descr rule;
 			say " Your groin throbs with intense sensations as a [descr] [cock entry] [one of]cock[or]penis[or]shaft[or]maleness[at random] erupts from you, spurting a few excited streams of fluid as it settles into place.";
-	if cocks of player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
-		let prevcock be cock length of player;
-		let prevcock2 be cock width of player;
-		decrease cock length of player by 1;
-		decrease cock length of player by cock length of player divided by 3;
-		decrease cock width of player by 1;
-		decrease cock width of player by cock width of player divided by 4;
-		if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
-			if cock length of player < 5, now cock length of player is 5;
-			if cock width of player < 3, now cock width of player is 3;
+	if Cock Count of Player is not 0 and ( the sex entry is "Female" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player:
+		let prevcock be Cock Length of Player;
+		let prevcock2 be ball size of Player;
+		decrease Cock Length of Player by 1;
+		decrease Cock Length of Player by Cock Length of Player divided by 3;
+		decrease ball size of Player by 1;
+		decrease ball size of Player by ball size of Player divided by 4;
+		if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
+			if Cock Length of Player < 5, now Cock Length of Player is 5;
+			if ball size of Player < 3, now ball size of Player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 2) and sex entry is "Female":		[male/herm becomes female if female infection]
-			now cocks of player is 0;
-			now cock length of player is 0;
-			now cock width of player is 0;
-		if prevcock > cock length of player or prevcock2 > cock width of player:		[did cock actually shrink?]
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
+			now ball size of Player is 0;
+		if prevcock > Cock Length of Player or prevcock2 > ball size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cocks of player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if cocks of player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if player is internal] you imagine[end if] your [one of]balls[or]testes[or]nuts[or]gonads[at random] become [ball size]. ";
-			if cock length of player < 1 or cock width of player < 1:
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]man meat[or]shaft[or]pole[at random] as it begins[end if] to shrink. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr] while[if Player is internal] you imagine[end if] your [one of]balls[or]testicles[or]nuts[or]gonads[at random] become [ball size]. ";
+			if Cock Length of Player < 1 or ball size of Player < 1:
 				say "You barely have time to give a whimper as you cease to be a male.";
-				now cocks of player is 0;
+				now Cock Count of Player is 0;
 			else:
 				say "[line break]";
-		if cocks of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
-			say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
-			decrease cocks of player by 1;
-	else if cocks of player > cocks entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
-		say "Sudden pleasure runs through one of your doomed [cock of player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
-		decrease cocks of player by 1;
-	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player < cunt length entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
-		let prevcunt be cunt length of player;
-		increase cunt length of player by 1;
-		increase cunt length of player by ( cunt length entry minus cunt length of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cunt length of player > 8:
-			now cunt length of player is 8;
-		if prevcunt < cunt length of player:	[did cunt actually grow?]
+		if Cock Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
+			say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+			decrease Cock Count of Player by 1;
+	else if Cock Count of Player > Cock Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
+		say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
+		decrease Cock Count of Player by 1;
+	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Length of Player < Cunt Length entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
+		let prevcunt be Cunt Length of Player;
+		increase Cunt Length of Player by 1;
+		increase Cunt Length of Player by ( Cunt Length entry minus Cunt Length of Player ) divided by 3;
+		if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
+			now Cunt Length of Player is 8;
+		if prevcunt < Cunt Length of Player:	[did cunt actually grow?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]pulse[or]quiver[or]throb[at random][end if] as [if cunts of player is 1]it grows[else]they grow[end if] deeper into your body, becoming [descr]!";
-	else if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt length of player > ( ( cunt length entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
-		let prevcunt be cunt length of player;
-		decrease cunt length of player by 1;
-		decrease cunt length of player by ( cunt length of player - ( ( cunt length entry times 150 ) / 100 ) ) divided by 3;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
-			if cunt length of player < 5, now cunt length of player is 5;
-		if "Modest Organs" is listed in feats of player and cunt length of player > 8:
-			now cunt length of player is 8;
-		if prevcunt > cunt length of player:		[did cunt actually shrink?]
+			say "You can see your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]pulse[or]quiver[or]throb[at random][end if] as [if Cunt Count of Player is 1]it grows[else]they grow[end if] deeper into your body, becoming [descr]!";
+	else if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Length of Player > ( ( Cunt Length entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		let prevcunt be Cunt Length of Player;
+		decrease Cunt Length of Player by 1;
+		decrease Cunt Length of Player by ( Cunt Length of Player - ( ( Cunt Length entry times 150 ) / 100 ) ) divided by 3;
+		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+			if Cunt Length of Player < 5, now Cunt Length of Player is 5;
+		if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
+			now Cunt Length of Player is 8;
+		if prevcunt > Cunt Length of Player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
-			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if cunts of player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
-	if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt width of player < cunt width entry and cunts of player is not 0 and "Male Preferred" is not listed in feats of player:
-		let prevcunt2 be cunt width of player;
-		increase cunt width of player by 1;
-		increase cunt width of player by ( cunt width entry minus cunt width of player ) divided by 3;
-		if "Modest Organs" is listed in feats of player and cunt width of player > 5:
-			now cunt width of player is 5;
-		if prevcunt2 < cunt width of player:	[did cunt actually widen?]
+			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cunt Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
+	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Tightness of Player < Cunt Tightness entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
+		let prevcunt2 be Cunt Tightness of Player;
+		increase Cunt Tightness of Player by 1;
+		increase Cunt Tightness of Player by ( Cunt Tightness entry minus Cunt Tightness of Player ) divided by 3;
+		if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
+			now Cunt Tightness of Player is 5;
+		if prevcunt2 < Cunt Tightness of Player:	[did cunt actually widen?]
 			follow the cunt descr rule;
-			say "You can see your [if cunts of player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][end if] [one of]engorge[or]swell[or]throb[at random] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
-	else if ( the sex entry is "Female" or the sex entry is "Both" ) and cunt width of player > ( ( cunt width entry times 150 ) / 100 ) and "One Way" is not listed in feats of player:
-		let prevcunt be cunt width of player;
-		decrease cunt width of player by 1;
-		decrease cunt width of player by ( cunt width of player - ( ( cunt width entry times 150 ) / 100 ) ) divided by 3;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
-			if cunt width of player < 3, now cunt width of player is 3;
-		if "Modest Organs" is listed in feats of player and cunt width of player > 5:
-			now cunt width of player is 5;
-		if prevcunt > cunt width of player:		[did cock actually shrink?]
+			say "You can see your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][end if] [one of]engorge[or]swell[or]throb[at random] as your thighs are nudged apart to make room for those thickening lips, growing wider!";
+	else if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Tightness of Player > ( ( Cunt Tightness entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		let prevcunt be Cunt Tightness of Player;
+		decrease Cunt Tightness of Player by 1;
+		decrease Cunt Tightness of Player by ( Cunt Tightness of Player - ( ( Cunt Tightness entry times 150 ) / 100 ) ) divided by 3;
+		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
+		if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
+			now Cunt Tightness of Player is 5;
+		if prevcunt > Cunt Tightness of Player:		[did cock actually shrink?]
 			follow the cunt descr rule;
-			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm. The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
-	if cunts of player < cunts entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of player:
-		let prevcunt be cunts of player;
-		if player is not female or cunt length of player is 0 or cunt width of player is 0:
-			increase cunts of player by 1;
-			now cunt length of player is 1;
-			now cunt width of player is 1;
-			increase cunt length of player by ( cunt length entry ) divided by 3;
-			increase cunt width of player by ( cunt width entry ) divided by 3;
-			if "Modest Organs" is listed in feats of player and cunt length of player > 8:
-				now cunt length of player is 8;
-			if "Modest Organs" is listed in feats of player and cunt width of player > 5:
-				now cunt width of player is 5;
-		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of player:	[2nd+ cunt at 67%]
-			increase cunts of player by 1;
+			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm. The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
+	if Cunt Count of Player < Cunt Count entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of Player:
+		let prevcunt be Cunt Count of Player;
+		if Player is not female or Cunt Length of Player is 0 or Cunt Tightness of Player is 0:
+			increase Cunt Count of Player by 1;
+			now Cunt Length of Player is 1;
+			now Cunt Tightness of Player is 1;
+			increase Cunt Length of Player by ( Cunt Length entry ) divided by 3;
+			increase Cunt Tightness of Player by ( Cunt Tightness entry ) divided by 3;
+			if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
+				now Cunt Length of Player is 8;
+			if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
+				now Cunt Tightness of Player is 5;
+		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of Player:	[2nd+ cunt at 67%]
+			increase Cunt Count of Player by 1;
 		if singlesexadjust is 2 and sex entry is "Both":	[male remains male if herm infection]
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-		if prevcunt < cunts of player:		[did new cunt appear?]
+			now Cunt Count of Player is 0;
+			now Cunt Length of Player is 0;
+			now Cunt Tightness of Player is 0;
+		if prevcunt < Cunt Count of Player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
-	if cunts of player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of player:
-		let prevcunt be cunt length of player;
-		let prevcunt2 be cunt width of player;
-		decrease cunt length of player by 1;
-		decrease cunt length of player by cunt length of player divided by 3;
-		decrease cunt width of player by 1;
-		decrease cunt width of player by cunt width of player divided by 4;
-		if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Always A Pussy" is listed in feats of player:
-			if cunt length of player < 5, now cunt length of player is 5;
-			if cunt width of player < 3, now cunt width of player is 3;
+	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player:
+		let prevcunt be Cunt Length of Player;
+		let prevcunt2 be Cunt Tightness of Player;
+		decrease Cunt Length of Player by 1;
+		decrease Cunt Length of Player by Cunt Length of Player divided by 3;
+		decrease Cunt Tightness of Player by 1;
+		decrease Cunt Tightness of Player by Cunt Tightness of Player divided by 4;
+		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
+			if Cunt Length of Player < 5, now Cunt Length of Player is 5;
+			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 3) and sex entry is "Male":	[female/herm becomes male if male infection]
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-		if prevcunt > cunt length of player or prevcunt2 > cunt width of player:		[did cunt actually shrink?]
+			now Cunt Count of Player is 0;
+			now Cunt Length of Player is 0;
+			now Cunt Tightness of Player is 0;
+		if prevcunt > Cunt Length of Player or prevcunt2 > Cunt Tightness of Player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
-			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if cunts of player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
-			if cunt length of player < 1 or cunt width of player < 1:
+			say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
+			if Cunt Length of Player < 1 or Cunt Tightness of Player < 1:
 				say "With a sickening noise, you cease to be female all together.";
-				now cunts of player is 0;
+				now Cunt Count of Player is 0;
 			else:
 				say "[line break]";
-		if cunts of player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of player:
+		if Cunt Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
 			say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
-			decrease cunts of player by 1;
+			decrease Cunt Count of Player by 1;
 			follow the cock descr rule;
 			follow the cunt descr rule;
-	else if cunts of player > cunts entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of player:
+	else if Cunt Count of Player > Cunt Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Female" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
 		say "An odd, wet noise has you peeking in time to see one of your [one of]cunts[or]pussies[at random] has vanished!";
-		decrease cunts of player by 1;
+		decrease Cunt Count of Player by 1;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	now skipcockchange is false;
-	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
-
+	if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 This is the breast change rule:
-	choose row monster from the Table of Random Critters;
-	if breasts of player is not breasts entry:
-		decrease breast size of player by 2;
-		follow the breast descr rule;
-		if ( breasts entry > breasts of player and "One Pair" is not listed in feats of player ) or ( breasts of player is 0 and breasts entry > 0 ):
-			say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of player] hide.";
-			increase breasts of player by 2;
-		else if breasts entry < breasts of player and "Bouncy Bouncy" is not listed in feats of player:
-			decrease breasts of player by 2;
-			say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of player] flesh behind.";
-		increase breast size of player by 2;
-	if breasts of player is 0:
-		increase score by 0; [do nothing]
-	else if the sex entry is "Female" or the sex entry is "Both":
-		if breast size of player < breast size entry and ( ( "Male Preferred" is not listed in feats of player and "Flat Chested" is not listed in feats of player ) or "Breasts" is listed in feats of player ):
+	choose row MonsterID from the Table of Random Critters;
+	if TorsoName of Player is not "": [new parts]
+		if Nipple Count of Player is not Nipple Count entry:
+			decrease Breast Size of Player by 2;
 			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			increase breast size of player by 1;
-			increase breast size of player by ( breast size entry minus breast size of player ) divided by 3;
+			if ( Nipple Count entry > Nipple Count of Player and "One Pair" is not listed in feats of Player ) or ( Nipple Count of Player is 0 and Nipple Count entry > 0 ):
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [Torso Adjective of Player] hide.";
+				increase Nipple Count of Player by 2;
+			else if Nipple Count entry < Nipple Count of Player and "Bouncy Bouncy" is not listed in feats of Player:
+				decrease Nipple Count of Player by 2;
+				say " You look down just in time to see two nipples, breasts included, be reabsorbed into your body, leaving nothing but your [Torso Adjective of Player] flesh behind.";
+			increase Breast Size of Player by 2;
+		if Nipple Count of Player is 0:
+			increase score by 0; [do nothing]
+		else if the sex entry is "Female" or the sex entry is "Both":
+			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts[run paragraph on]";
+				increase Breast Size of Player by 1;
+				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts[run paragraph on]";
+				decrease Breast Size of Player by 1;
+				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		else if the sex entry is "Male":
+			let breasttarget be male breast size entry;
+			if "Breasts" is listed in feats of Player:
+				if Male Breast Size entry is 0, now breasttarget is breast size entry;
+			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player:
+				now breasttarget is 0;
+			if Breast Size of Player < breasttarget:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts[run paragraph on]";
+				increase Breast Size of Player by 1;
+				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest as[or]give a loud moan, shuddering as[or]almost tip forward in surprise as[or]look down fearfully as a weird sensation builds and[at random] your [oldbreast] breasts[run paragraph on]";
+				decrease Breast Size of Player by 1;
+				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
+	else: [old style]
+		if Nipple Count of Player is not Nipple Count entry:
+			decrease Breast Size of Player by 2;
 			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-		else if breast size of player > breast size entry and "One Way" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			decrease breast size of player by 1;
-			decrease breast size of player by ( breast size of player minus breast size entry ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	else if the sex entry is "Male":
-		let breasttarget be male breast size entry;
-		if "Breasts" is listed in feats of player:
-			if male breast size entry is 0, now breasttarget is breast size entry;
-		else if "Male Preferred" is listed in feats of player or "Flat Chested" is listed in feats of player:
-			now breasttarget is 0;
-		if breast size of player < breasttarget:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			increase breast size of player by 1;
-			increase breast size of player by ( breasttarget minus breast size of player ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-		else if breast size of player > breasttarget and "One Way" is not listed in feats of player:
-			follow the breast descr rule;
-			let oldbreast be descr;
-			say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-			decrease breast size of player by 1;
-			decrease breast size of player by ( breast size of player minus breasttarget ) divided by 3;
-			follow the breast descr rule;
-			say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
+			if ( Nipple Count entry > Nipple Count of Player and "One Pair" is not listed in feats of Player ) or ( Nipple Count of Player is 0 and Nipple Count entry > 0 ):
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of Player] hide.";
+				increase Nipple Count of Player by 2;
+			else if Nipple Count entry < Nipple Count of Player and "Bouncy Bouncy" is not listed in feats of Player:
+				decrease Nipple Count of Player by 2;
+				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of Player] flesh behind.";
+			increase Breast Size of Player by 2;
+		if Nipple Count of Player is 0:
+			increase score by 0; [do nothing]
+		else if the sex entry is "Female" or the sex entry is "Both":
+			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				increase Breast Size of Player by 1;
+				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				decrease Breast Size of Player by 1;
+				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		else if the sex entry is "Male":
+			let breasttarget be male breast size entry;
+			if "Breasts" is listed in feats of Player:
+				if Male Breast Size entry is 0, now breasttarget is breast size entry;
+			else if "Male Preferred" is listed in feats of Player or "Flat Chested" is listed in feats of Player:
+				now breasttarget is 0;
+			if Breast Size of Player < breasttarget:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				increase Breast Size of Player by 1;
+				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
+				follow the breast descr rule;
+				let oldbreast be descr;
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				decrease Breast Size of Player by 1;
+				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
+				follow the breast descr rule;
+				say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
+		if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 
 To grow breasts by (x - a number):
-	if "Flat Chested" is listed in feats of player or breast size of player >= 26:
+	if "Flat Chested" is listed in feats of Player or Breast Size of Player >= 26:
 		continue the action;
 	follow the breast descr rule;
 	let oldbreast be descr;
-	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of player] skin glistening as your [oldbreast] breasts[run paragraph on]";
-	increase breast size of player by a random number from 1 to x;
-	if breast size of player > 26, now breast size of player is 26;
+	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+	increase Breast Size of Player by a random number from 1 to x;
+	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	follow the breast descr rule;
 	say " become [descr] [one of]orbs[or]breasts[or]jugs[or]tits[at random]! [run paragraph on]";
-	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
+	if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 to grow cock by (x - a number):
-	if "Female Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of Player:
 		continue the action;
-	else if "Single Sexed" is listed in feats of player and player is female:
+	else if "Single Sexed" is listed in feats of Player and player is female:
 		say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
-		now cunts of player is 0;
-		now cunt length of player is 0;
-		now cunt width of player is 0;
-	let prevcock be cock length of player;
-	increase cock length of player by a random number from 1 to x;
-	if "Modest Organs" is listed in feats of player and cock length of player > 8:
-		now cock length of player is 8;
-	if prevcock < cock length of player:		[did cock actually grow?]
+		now Cunt Count of Player is 0;
+		now Cunt Length of Player is 0;
+		now Cunt Tightness of Player is 0;
+	let prevcock be Cock Length of Player;
+	increase Cock Length of Player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
+		now Cock Length of Player is 8;
+	if prevcock < Cock Length of Player:		[did cock actually grow?]
 		follow the cock descr rule;
-		say "You can see your [if cocks of player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if cocks of player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
-	if PronounChoice of player is "Auto", follow the SetPlayerPronouns rule;
+		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]penises[or]shafts[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]!";
+	if PronounChoice of Player is "Auto", follow the SetPlayerPronouns rule;
 
 to grow balls by (x - a number):
-	if "Female Preferred" is listed in feats of player or cocks of player is 0:
+	if "Female Preferred" is listed in feats of Player or Cock Count of Player is 0:
 		continue the action;
-	let prevcock be cock width of player;
-	increase cock width of player by a random number from 1 to x;
-	if "Modest Organs" is listed in feats of player and cock width of player > 5:
-		now cock width of player is 5;
-	if prevcock < cock width of player:		[did balls actually grow?]
+	let prevcock be ball size of Player;
+	increase ball size of Player by a random number from 1 to x;
+	if "Modest Organs" is listed in feats of Player and ball size of Player > 5:
+		now ball size of Player is 5;
+	if prevcock < ball size of Player:		[did balls actually grow?]
 		follow the cock descr rule;
-		say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
+		say "You can [if Player is internal]feel your internal[else]see your[end if] [one of]testicles[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if Player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 
 To Infect:
-	choose row monster from the Table of Random Critters;
-	if there is no name entry or ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true):
+	choose row MonsterID from the Table of Random Critters;
+	if there is no Name entry or ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true):
 		continue the action;
-	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of Table of Random Critters or resbypass entry is false ):
-		vialchance name entry;
-	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the Table of Random Critters or resbypass entry is false ):
+	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
+		vialchance Name entry;
+	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row MonsterID of the Table of Random Critters or resbypass entry is false ):
 		continue the action;
+	if NewTypeInfection entry is true and NewTypeInfectionActive is true:
+		if debugactive is 1:
+			say "DEBUG -> New Style Infection with [Name entry][line break]";
+		NewInfectionRoll;
+	else:
+		if debugactive is 1:
+			say "DEBUG -> Old Style Infection with [Name entry][line break]";
+		OldInfectionRoll;
+	if "Mutable" is listed in feats of Player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
+		OldInfectionRoll;
+	let x be a random number from 1 to 6;
+	if "Mighty Mutation" is not listed in feats of Player:
+		now x is 0;
+	if x is 1:
+		if strength of Player is not str entry:
+			if strength of Player > str entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "Your muscles feel weaker as the infection spreads through you.";
+						decrease strength of Player by 1;
+						decrease capacity of Player by 5;
+			if strength of Player < str entry:
+				say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
+				increase strength of Player by 1;
+				increase capacity of Player by 5;
+	if x is 2:
+		if Intelligence of Player is not Int entry:
+			if Intelligence of Player > Int entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "Your head aches as the infection spreads through you.";
+						decrease Intelligence of Player by 1;
+			if Intelligence of Player < Int entry:
+				say "You feel your mind swelling with [Name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
+				increase Intelligence of Player by 1;
+	if x is 3:
+		if Dexterity of Player is not Dex entry:
+			if Dexterity of Player > Dex entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "Your coordination feels weaker as the infection spreads through you.";
+						decrease Dexterity of Player by 1;
+			if Dexterity of Player < Dex entry:
+				say "You feel your hand eye coordination swelling with [Name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
+				increase Dexterity of Player by 1;
+	if x is 4:
+		if Stamina of Player is not Sta entry:
+			if Stamina of Player > Sta entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "Your constitution feels weaker as the infection spreads through you.";
+						decrease Stamina of Player by 1;
+				if remainder after dividing stamina of Player by 2 is 1:
+					decrease maxHP of Player by level of Player plus 1;
+			if Stamina of Player < Sta entry:
+				say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
+				increase Stamina of Player by 1;
+				if remainder after dividing stamina of Player by 2 is 0:
+					increase maxHP of Player by level of Player plus 1;
+	if x is 5:
+		if Perception of Player is not Per entry:
+			if Perception of Player > Per entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "Your senses dull as the infection spreads through you.";
+						decrease Perception of Player by 1;
+			if Perception of Player < Per entry:
+				say "You feel your senses swelling with [Name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
+				increase Perception of Player by 1;
+	if x is 6:
+		if Charisma of Player is not Cha entry:
+			if Charisma of Player > Cha entry and a random chance of 1 in 10 succeeds:
+				if "Bestial Power" is not listed in feats of Player:
+					if "Mighty Mutation" is listed in feats of Player and a random chance of 1 in 2 succeeds:
+						now x is 0; [do nothing placeholder]
+					else:
+						say "You feel more isolated as the infection spreads through you.";
+						decrease Charisma of Player by 1;
+			if Charisma of Player < Cha entry:
+				say "You feel your social sense swelling with [Name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
+				increase Charisma of Player by 1;
+	if Libido of Player < libido entry:
+[		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [Name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";]
+		let oldlib be Libido of Player;
+		increase Libido of Player by 1;
+		increase Libido of Player by ( libido entry minus Libido of Player ) divided by 3;
+		if oldlib < 80 and Libido of Player > 79:
+			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if Player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if Player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
+		else if oldlib < 50 and Libido of Player > 49:
+			say "Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Player is female] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+
+to OldInfectionRoll: [old infections with less body parts made before 07.05.2019]
+	choose row MonsterID from the Table of Random Critters;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
 	sort bodyparts in random order;
@@ -2665,44 +3228,44 @@ To Infect:
 	repeat with y running through bodyparts:
 		now x is y;
 		if y is 1:
-			if skinname of player is name entry:
+			if skinname of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 2:
-			if facename of player is name entry:
+			if facename of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 3:
-			if tailname of player is name entry:
+			if tailname of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 4:
-			if bodyname of player is name entry:
+			if bodyname of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 5:
-			if cockname of player is name entry:
+			if cockname of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 	if found is 0:
 		now x is 4;
-	if "Resistant" is listed in feats of player and a random chance of 1 in 3 succeeds:
+	if "Resistant" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 		now x is 6; [33% chance of no mutation]
 		if x is 6:
 			say "Your nanites['] programmed resistance to change prevents further mutation.";
 			continue the action;
-	if "Microwaved" is listed in feats of player:
-		say "WARNING: [name entry] nanites detected!";
+	if "Microwaved" is listed in feats of Player:
+		say "WARNING: [Name entry] nanites detected!";
 		if x is 1:
 			say "Skin infection imminent";
 		if x is 2:
@@ -2714,271 +3277,337 @@ To Infect:
 		if x is 5:
 			say "Genital infection imminent";
 		say ", Allow?";
-		if player consents:
+		if Player consents:
 			say "Ok.";
 		else:
 			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 			stop the action;
-	if x is 1:
-		if skinname of player is not name entry:
+	if x is 1: [skin]
+		if skinname of Player is not Name entry:
 			say "Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-			now skinname of player is name entry;
-			now skin of player is skin entry;
-	if x is 2:
-		if facename of player is not name entry:
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	if x is 2: [face]
+		if facename of Player is not Name entry:
 			say "Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-			now facename of player is name entry;
-			now face of player is face entry;
-	if x is 3:
-		if tailname of player is not name entry:
+			now facename of Player is Name entry;
+			now face of Player is face entry;
+			now HeadName of Player is ""; [wiping out the new style parts]
+	if x is 3: [tail]
+		if tailname of Player is not Name entry:
 			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-			now tailname of player is name entry;
-			now tail of player is tail entry;
-	if x is 4:
+			now tailname of Player is Name entry;
+			now tail of Player is tail entry;
+			now AssName of Player is ""; [wiping out the new style parts]
+	if x is 4: [body]
 		follow the breast change rule;
-		if bodyname of player is not name entry:
-			say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-			now bodyname of player is name entry;
-			now body of player is body entry;
+		if bodyname of Player is not Name entry:
+			say "Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+			now bodyname of Player is Name entry;
+			now body of Player is body entry;
+			now TorsoName of Player is ""; [wiping out the new style parts]
+			now LegsName of Player is ""; [wiping out the new style parts]
+			now ArmsName of Player is ""; [wiping out the new style parts]
 		attributeinfect; [sets the new attributes]
 		follow the sex change rule;
 		say "[line break]";
-	if x is 5:
+	if x is 5: [genitals]
 		follow the sex change rule;
-		if cockname of player is not name entry:
-			if player is male, say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-			now cockname of player is name entry;
-			now cock of player is cock entry;
-			if name entry is listed in infections of internallist and internalbypass is true:
+		if cockname of Player is not Name entry:
+			if Player is male, say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+			now cockname of Player is Name entry;
+			now cock of Player is cock entry;
+			now Cock Description of Player is ""; [wiping out the new style parts]
+			now Cunt Description of Player is ""; [wiping out the new style parts]
+			if Name entry is listed in infections of internallist and internalbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
-	if "Mutable" is listed in feats of player and a random chance of 1 in 2 succeeds:		[** Repeat of above code for physical change]
-		let x be a random number from 1 to 5;
-		let bodyparts be { 1, 2, 3, 4, 5 };
-		sort bodyparts in random order;
-		repeat with y running through bodyparts:
-			now x is y;
-			if y is 1:
-				if skinname of player is name entry:
-					next;
-				else:
-					break;
-			if y is 2:
-				if facename of player is name entry:
-					next;
-				else:
-					break;
-			if y is 3:
-				if tailname of player is name entry:
-					next;
-				else:
-					break;
-			if y is 4:
-				if bodyname of player is name entry:
-					next;
-				else:
-					break;
-			if y is 5:
-				if cockname of player is name entry:
-					next;
-				else:
-					break;
-		if "Microwaved" is listed in feats of player:
-			say "WARNING: [name entry] nanites detected!";
-			if x is 1:
-				say "Skin infection imminent";
-			if x is 2:
-				say "Head infection imminent";
-			if x is 3:
-				say "Posterior infection imminent";
-			if x is 4:
-				say "Torso infection imminent";
-			if x is 5:
-				say "Genital infection imminent";
-			say ", Allow?";
-			if player consents:
-				say "Ok.";
-			else:
-				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
-				now x is 6; [skips body tf, but stat change is still possible from first infection]
-		if x is 1:
-			if skinname of player is not name entry:
-				say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-				now skinname of player is name entry;
-				now skin of player is skin entry;
-		if x is 2:
-			if facename of player is not name entry:
-				say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-				now facename of player is name entry;
-				now face of player is face entry;
-		if x is 3:
-			if tailname of player is not name entry:
-				say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-				now tailname of player is name entry;
-				now tail of player is tail entry;
-		if x is 4:
-			follow the breast change rule;
-			if bodyname of player is not name entry:
-				say "Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-				now bodyname of player is name entry;
-				now body of player is body entry;
-			attributeinfect; [sets the new attributes]
-			follow the sex change rule;
-			say "[line break]";
-		if x is 5:
-			follow the sex change rule;
-			if cockname of player is not name entry:
-				if player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-				now cockname of player is name entry;
-				now cock of player is cock entry; [** end of addition for 'Mutable']
-				if name entry is listed in infections of internallist and internalbypass is true:
-					say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
-	now x is a random number from 1 to 6;
-	if "Mighty Mutation" is not listed in feats of player:
-		now x is 0;
-	if x is 1:
-		if strength of player is not str entry:
-			if strength of player > str entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "Your muscles feel weaker as the infection spreads through you.";
-						decrease strength of player by 1;
-						decrease capacity of player by 5;
-			if strength of player < str entry:
-				say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
-				increase strength of player by 1;
-				increase capacity of player by 5;
-	if x is 2:
-		if Intelligence of player is not Int entry:
-			if Intelligence of player > Int entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "Your head aches as the infection spreads through you.";
-						decrease Intelligence of player by 1;
-			if Intelligence of player < Int entry:
-				say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
-				increase Intelligence of player by 1;
-	if x is 3:
-		if Dexterity of player is not Dex entry:
-			if Dexterity of player > Dex entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "Your coordination feels weaker as the infection spreads through you.";
-						decrease Dexterity of player by 1;
-			if Dexterity of player < Dex entry:
-				say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
-				increase Dexterity of player by 1;
-	if x is 4:
-		if Stamina of player is not Sta entry:
-			if Stamina of player > Sta entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "Your constitution feels weaker as the infection spreads through you.";
-						decrease Stamina of player by 1;
-				if remainder after dividing stamina of player by 2 is 1:
-					decrease maxHP of player by level of player plus 1;
-			if Stamina of player < Sta entry:
-				say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
-				increase Stamina of player by 1;
-				if remainder after dividing stamina of player by 2 is 0:
-					increase maxHP of player by level of player plus 1;
-	if x is 5:
-		if Perception of player is not Per entry:
-			if Perception of player > Per entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "Your senses dull as the infection spreads through you.";
-						decrease Perception of player by 1;
-			if Perception of player < Per entry:
-				say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
-				increase Perception of player by 1;
-	if x is 6:
-		if Charisma of player is not Cha entry:
-			if Charisma of player > Cha entry and a random chance of 1 in 10 succeeds:
-				if "Bestial Power" is not listed in feats of player:
-					if "Mighty Mutation" is listed in feats of player and a random chance of 1 in 2 succeeds:
-						now x is 0; [do nothing placeholder]
-					else:
-						say "You feel more isolated as the infection spreads through you.";
-						decrease Charisma of player by 1;
-			if Charisma of player < Cha entry:
-				say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
-				increase Charisma of player by 1;
-	if libido of player < libido entry:
-[		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";]
-		let oldlib be libido of player;
-		increase libido of player by 1;
-		increase libido of player by ( libido entry minus libido of player ) divided by 3;
-		if oldlib < 80 and libido of player > 79:
-			say "You now have trouble thinking of anything but sexual satisfaction![no line break][if player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
-		else if oldlib < 50 and libido of player > 49:
-			say "Your thoughts have sunk to almost constant depravity![no line break][if player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if player is female] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
 
+to NewInfectionRoll:
+	choose row MonsterID from the Table of Random Critters;
+	let MonsterName be name entry;
+	choose a row with name of MonsterName in the Table of New Infection Parts;
+	let x be 0;
+	let bodyparts be { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	sort bodyparts in random order;
+	let found be 0;
+	repeat with y running through bodyparts:
+		now x is y;
+		if y is 1:
+			if HeadName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 2:
+			if TorsoName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 3:
+			if BackName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 4:
+			if ArmsName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 5:
+			if LegsName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 6:
+			if AssName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 7:
+			if TailName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 8:
+			if CockName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+		else if y is 9:
+			if CuntName of Player is Name entry:
+				next;
+			else:
+				now found is 1;
+				break;
+	if found is 0:
+		now x is 2;
+	if "Resistant" is listed in feats of Player and a random chance of 1 in 3 succeeds:
+		now x is 10; [33% chance of no mutation]
+		if x is 10:
+			say "Your nanites['] programmed resistance to change prevents further mutation.";
+			continue the action;
+	if "Microwaved" is listed in feats of Player:
+		say "WARNING: [Name entry] nanites detected!";
+		if x is:
+			-- 1:
+				say "Head infection imminent";
+			-- 2:
+				say "Torso infection imminent";
+			-- 3:
+				say "Back infection imminent";
+			-- 4:
+				say "Arms infection imminent";
+			-- 5:
+				say "Legs infection imminent";
+			-- 6:
+				say "Ass infection imminent";
+			-- 7:
+				say "Tail infection imminent";
+			-- 8:
+				say "Masculine genital infection imminent";
+			-- 9:
+				say "Feminine genital infection imminent";
+		say ", Allow?";
+		if Player consents:
+			say "Ok.";
+		else:
+			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
+			stop the action;
+	if x is 1: [head]
+		if HeadName of Player is not Name entry:
+			say "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Head Change entry].";
+			now HeadName of Player is Name entry;
+			now Head Description of Player is Head Description entry;
+			now Head Adjective of Player is Head Adjective entry;
+			now Head Skin Adjective of Player is Head Skin Adjective entry;
+			now Head Adornments of Player is Head Adornments entry;
+			now Hair Color of Player is Hair Color entry;
+			now Eye Adjective of Player is Eye Adjective entry;
+			now Mouth Length of Player is Mouth Length entry;
+			now Mouth Circumference of Player is Mouth Circumference entry;
+			now Tongue Adjective of Player is Tongue Adjective entry;
+			now Tongue Color of Player is Tongue Color entry;
+			now Tongue Length of Player is Tongue Length entry;
+			if Player is conformist: [full change]
+				now Hair Length of Player is Hair Length entry;
+				now Hair Shape of Player is Hair Shape entry;
+				now Eye Color of Player is Eye Color entry;
+				now Hair Style of Player is Hair Style entry;
+		[setting the old parts too, as old infections will compare to these]
+		if FaceName of Player is not Name entry:
+			choose row MonsterID from the Table of Random Critters;
+			now facename of Player is Name entry;
+			now face of Player is face entry;
+	else if x is 2: [Torso]
+		follow the breast change rule;
+		if TorsoName of Player is not Name entry:
+			say "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry].";
+			now TorsoName of Player is Name entry;
+			now Torso Description of Player is Torso Description entry;
+			now Torso Adjective of Player is Torso Adjective entry;
+			now Torso Adornments of Player is Torso Adornments entry;
+			now Torso Skin Adjective of Player is Torso Skin Adjective entry;
+			now Torso Color of Player is Torso Color entry;
+			now Torso Pattern of Player is Torso Pattern entry;
+			now Breast Adjective of Player is Breast Adjective entry;
+			now Nipple Color of Player is Nipple Color entry;
+			now Nipple Shape of Player is Nipple Shape entry;
+		attributeinfect; [sets the new attributes]
+		follow the sex change rule;
+		say "[line break]";
+		[setting the old parts too, as old infections will compare to these]
+		if BodyName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now bodyname of Player is Name entry;
+			now body of Player is body entry;
+		if SkinName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	else if x is 3: [Back]
+		if BackName of Player is not Name entry:
+			if Back Adornments entry is not "": [no adornments, no message]
+				say "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry].";
+				now Back Adornments of Player is Back Adornments entry;
+			now BackName of Player is Name entry;
+			now Back Skin Adjective of Player is Back Skin Adjective entry;
+		[setting the old parts too, as old infections will compare to these]
+		if SkinName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	else if x is 4: [Arms]
+		if ArmsName of Player is not Name entry:
+			say "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry].";
+			now ArmsName of Player is Name entry;
+			now Arms Description of Player is Arms Description entry;
+			now Arms Skin Adjective of Player is Arms Skin Adjective entry;
+		[setting the old parts too, as old infections will compare to these]
+		if SkinName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	else if x is 5: [Legs]
+		if LegsName of Player is not Name entry:
+			say "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry].";
+			now LegsName of Player is Name entry;
+			now Legs Description of Player is Legs Description entry;
+			now Legs Skin Adjective of Player is Legs Skin Adjective entry;
+			now Locomotion of Player is Locomotion entry;
+		[setting the old parts too, as old infections will compare to these]
+		if SkinName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	else if x is 6: [Ass]
+		if AssName of Player is not Name entry:
+			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry].";
+			now AssName of Player is Name entry;
+			now Ass Description of Player is Ass Description entry;
+			now Ass Skin Adjective of Player is Ass Skin Adjective entry;
+			now Ass Width of Player is Ass Width entry;
+			now Asshole Color of Player is Asshole Color entry;
+			now Asshole Length of Player is Asshole Length entry;
+			if Player is conformist:
+				now Asshole Tightness of Player is Asshole Tightness entry;
+				say "Your asshole quivers as it becomes [Asshole Tightness Adjective of Player].";
+		[setting the old parts too, as old infections will compare to these]
+		if SkinName of Player is not Name Entry:
+			choose row MonsterID from the Table of Random Critters;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	else if x is 7: [Tail]
+		if TailName of Player is not Name entry:
+			say "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry].";
+			now TailName of Player is Name entry;
+			now Tail Description of Player is Tail Description entry;
+			now Tail Skin Adjective of Player is Tail Skin Adjective entry;
+			[setting the old parts too, as old infections will compare to these]
+			choose row MonsterID from the Table of Random Critters;
+			now tail of Player is tail entry;
+	else if x is 8:
+		follow the sex change rule;
+		if cockname of Player is not Name entry:
+			if Player is male, say "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+			now CockName of Player is Name entry;
+			now Cock Description of Player is Cock Description entry;
+			now Cock Adjective of Player is Cock Adjective entry;
+			now Cock Color of Player is Cock Color entry;
+			[setting the old parts too, as old infections will compare to these]
+			choose row MonsterID from the Table of Random Critters;
+			now cock of Player is cock entry;
+			if Name entry is listed in infections of internallist and internalbypass is true:
+				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
+	else if x is 9:
+		follow the sex change rule;
+		if Cuntname of Player is not Name entry:
+			if Player is female, say "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry].";
+			now CuntName of Player is Name entry;
+			now Cunt Description of Player is Cunt Description entry;
+			now Cunt Adjective of Player is Cunt Adjective entry;
+			now Cunt Color of Player is Cunt Color entry;
 
 to attributeinfect:		[sets the player values from the new attributes]
-	choose row monster from the Table of Random Critters;
-	if bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList:
+	choose row MonsterID from the Table of Random Critters;
+	if bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
 				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
-	if there is a scale in row monster of the Table of Random Critters:
-		if scalevalue of player is not scale entry:
-			now scalevalue of player is scale entry;
+	if there is a scale in row MonsterID of the Table of Random Critters:
+		if scalevalue of Player is not scale entry:
+			now scalevalue of Player is scale entry;
 			repeat with z running through equipped equipment:
 				if size of z > 0: [size restricted equipment]
-					if (scalevalue of player - size of z > 1):
+					if (scalevalue of Player - size of z > 1):
 						say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if].[roman type][line break]";
 						now z is not equipped;
-					else if (scalevalue of player - size of z is 1):
+					else if (scalevalue of Player - size of z is 1):
 						say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
-					else if (scalevalue of player - size of z < -1):
+					else if (scalevalue of Player - size of z < -1):
 						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
-					else if (scalevalue of player - size of z is -1):
+					else if (scalevalue of Player - size of z is -1):
 						say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
 	else:
-		now scalevalue of player is 3;
-	if there is a body descriptor in row monster of the Table of Random Critters:
-		now bodydesc of player is body descriptor entry;
+		now scalevalue of Player is 3;
+	if there is a body descriptor in row MonsterID of the Table of Random Critters:
+		now bodydesc of Player is body descriptor entry;
 	else:
-		now bodydesc of player is name entry;
-	if there is a type in row monster of the Table of Random Critters:
-		now bodytype of player is type entry;
+		now bodydesc of Player is Name entry;
+	if there is a type in row MonsterID of the Table of Random Critters:
+		now bodytype of Player is type entry;
 	else:
-		now bodytype of player is name entry;
+		now bodytype of Player is Name entry;
 	if DayCycle entry is 2:
-		now SleepRhythm of player is 2; [night-preferred]
+		now SleepRhythm of Player is 2; [night-preferred]
 	if DayCycle entry is 1:
-		now SleepRhythm of player is 1; [day-preferred]
+		now SleepRhythm of Player is 1; [day-preferred]
 	else:
-		now SleepRhythm of player is 0; [standard]
+		now SleepRhythm of Player is 0; [standard]
 
 To attributeinfect (x - text):
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry exactly matches the text x, case insensitively:
-			now monster is y;
+		if Name entry exactly matches the text x, case insensitively:
+			now MonsterID is y;
 			attributeinfect;
 			break;
 
-
 To Vialchance (x - a text):
-	choose row monster from Table of Random Critters;
+	choose row MonsterID from Table of Random Critters;
 	if researchbypass is 1, continue the action;
-	if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true, continue the action;
-	if there is a resbypass in row monster of Table of Random Critters and resbypass entry is true, continue the action;
+	if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true, continue the action;
+	if there is a resbypass in row MonsterID of Table of Random Critters and resbypass entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
-		let vialcollectible be 10 + ( 2 * intelligence of player ) + ( level of player / 2 );
+		let vialcollectible be 10 + ( 2 * intelligence of Player ) + ( level of Player / 2 );
 		if nanitemeter is 1:
 			decrease vialcollectible by 10;
 			if vialcollectible > 65, now vialcollectible is 65;
@@ -2990,11 +3619,11 @@ To Vialchance (x - a text):
 		let vcoll be 0;
 		if a random number between 1 and 100 <= vialcollectible:
 			now vcoll is 1;
-		else if "Expert Researcher" is listed in feats of player and a random number between 1 and 100 <= vialcollectible:
+		else if "Expert Researcher" is listed in feats of Player and a random number between 1 and 100 <= vialcollectible:
 			now vcoll is 1;
 		if vcoll is 1:
 			say "You manage to extract a vial of [special-style-1][x][roman type] nanites for study and use.";
-			add x to vials of player;
+			add x to vials of Player;
 			now vcoll is 0;
 
 
@@ -3097,28 +3726,28 @@ To translate (k - a number):
 
 
 to Pet level up:
-	if companion of player is nullpet:
+	if companion of Player is nullpet:
 		increase score by 0;
 	else:
-		increase level of companion of player by 1;
-		decrease XP of companion of player by ( level of companion of player minus 1 ) times 10;
-		if "Good Teacher" is listed in feats of player:
-			increase XP of companion of player by ( level of companion of player minus 1 ) times 4;
-		say "Your [companion of player] has gained level [level of companion of player]! Congratulations!";
-		if remainder after dividing level of companion of player by 3 is 0:
-			increase weapon damage of companion of player by 1;
-		if remainder after dividing level of companion of player by 5 is 0:
-			increase dexterity of companion of player by 1;
+		increase level of companion of Player by 1;
+		decrease XP of companion of Player by ( level of companion of Player minus 1 ) times 10;
+		if "Good Teacher" is listed in feats of Player:
+			increase XP of companion of Player by ( level of companion of Player minus 1 ) times 4;
+		say "Your [companion of Player] has gained level [level of companion of Player]! Congratulations!";
+		if remainder after dividing level of companion of Player by 3 is 0:
+			increase weapon damage of companion of Player by 1;
+		if remainder after dividing level of companion of Player by 5 is 0:
+			increase dexterity of companion of Player by 1;
 
 To level up:
-	increase level of player by 1;
-	decrease XP of player by level of player times 10;
-	if "Fast Learner" is listed in feats of player:
-		increase XP of player by ( level of player times 2 );
-	say "You have gained level [level of player]! Congratulations!";
-	if remainder after dividing level of player by 2 is 0:
+	increase level of Player by 1;
+	decrease XP of Player by level of Player times 10;
+	if "Fast Learner" is listed in feats of Player:
+		increase XP of Player by ( level of Player times 2 );
+	say "You have gained level [level of Player]! Congratulations!";
+	if remainder after dividing level of Player by 2 is 0:
 		say "Current stats:[line break]";
-		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player].";
+		say "Strength: [strength of Player], Dexterity: [dexterity of Player], Stamina: [stamina of Player], Charisma: [Charisma of Player], Intelligence: [intelligence of Player], Perception: [perception of Player].";
 		say "Pick a stat to increase.";
 		say "[link]1 - Strength[as]1[end link][line break]";
 		say "[link]2 - Dexterity[as]2[end link][line break]";
@@ -3134,30 +3763,30 @@ To level up:
 		if calcnumber is 7:
 			now calcnumber is a random number between 1 and 6;
 		if calcnumber is 1:
-			increase strength of player by 1;
-			increase capacity of player by 5;
+			increase strength of Player by 1;
+			increase capacity of Player by 5;
 			say "Your strength grows.";
 		else if calcnumber is 2:
-			increase dexterity of player by 1;
+			increase dexterity of Player by 1;
 			say "Your dexterity grows.";
 		else if calcnumber is 3:
-			increase Stamina of player by 1;
+			increase Stamina of Player by 1;
 			say "Your stamina grows.";
 		else if calcnumber is 4:
-			increase charisma of player by 1;
+			increase charisma of Player by 1;
 			say "Your charisma grows.";
 		else if calcnumber is 5:
-			increase intelligence of player by 1;
+			increase intelligence of Player by 1;
 			say "Your intelligence grows.";
 		else if calcnumber is 6:
-			increase perception of player by 1;
+			increase perception of Player by 1;
 			say "Your perception grows.";
 	else:
 		increase ssstash by 1;
-	increase maxHP of player by ( stamina of player minus 10 ) divided by 2;
-	increase maxHP of player by 2;
-	now HP of player is maxHP of player;
-	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of player:
+	increase maxHP of Player by ( stamina of Player minus 10 ) divided by 2;
+	increase maxHP of Player by 2;
+	now HP of Player is maxHP of Player;
+	if the remainder after dividing level of the player by 5 is 0 and "Ultimatum" is not listed in feats of Player:
 		funfeatget;
 	increase score by level of the player times level of the player;
 
@@ -3186,9 +3815,9 @@ Punying is an action applying to nothing.
 understand "Puny" as punying.
 
 carry out punying:
-	now dexterity of player is 1;
-	now stamina of player is 1;
-	now perception of player is 18;
+	now dexterity of Player is 1;
+	now stamina of Player is 1;
+	now perception of Player is 18;
 	say "You feel puny, but perceptive.";
 
 Resting is an action applying to nothing.
@@ -3197,10 +3826,10 @@ roughing is a truth state that varies. roughing is usually false.
 
 check resting:
 	now roughing is false;
-	if caffeinehigh of player > 0:
+	if caffeinehigh of Player > 0:
 		say "You try to settle down to rest, but you are filled with manic, hyperactive energy and unable to rest. Your body just won't settle down and any time to try to relax, you find yourself only thinking of going out and looking for more soda to drink.";
 		stop the action;
-	if location of player is Palomino or location of player is Private Booths:
+	if location of Player is Palomino or location of Player is Private Booths:
 		say "Why are you even trying to sleep here? Everyone's partying like it's the end of the world.";
 		stop the action;
 	if cot is owned:
@@ -3213,24 +3842,24 @@ check resting:
 		say "You rest on the bed in the back of the cell.";
 	else if silk hammock is owned or silk hammock is present:
 		say "You set up your silken hammock at the next appropriate spot and lie in it, resting for a while.";
-	else if "Roughing It" is listed in feats of player:
+	else if "Roughing It" is listed in feats of Player:
 		say "You hunker down somewhere secluded for a quick nap.";
 		now roughing is true;
 	else:
 		say "You have nothing to rest on.";
 		stop the action;
-	if companion of player is not rubber tigress:
-		if ( there is a dangerous door in the location of the player or the location of player is fasttravel or the earea of location of player is not "void") and location of player is not sleepsafe:
+	if companion of Player is not rubber tigress:
+		if ( there is a dangerous door in the location of the player or the location of Player is fasttravel or the earea of location of Player is not "void") and location of Player is not sleepsafe:
 			now battleground is "Outside"; [standard setting]
-			if the earea of location of player is not "void":
-				now battleground is the earea of location of player;
+			if the earea of location of Player is not "void":
+				now battleground is the earea of location of Player;
 			else:
 				let l be a random visible dangerous door;
 				if l is not nothing, now battleground is the marea of l;
 			say "...";
 			attempttowait;
 			let intodds be 3;
-			if "Bad Luck" is listed in feats of player, increase intodds by 1;
+			if "Bad Luck" is listed in feats of Player, increase intodds by 1;
 			if a random chance of intodds in 20 succeeds:
 				say "...but your nap is interrupted by the arrival of a creature.";
 				fight;
@@ -3244,13 +3873,13 @@ to Rest:
 	let num1 be maxHP of the player divided by 4;
 	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
 	if cot is owned or cot is present or the player is in Bunker or silk hammock is owned or silk hammock is present:
-		if num1 >= num2, increase HP of player by num1; [best value chosen]
-		if num2 > num1, increase HP of player by num2;
-	else if "Roughing It" is listed in feats of player:
-		increase HP of player by ( num1 + num2 ) / 2; [average value chosen]
+		if num1 >= num2, increase HP of Player by num1; [best value chosen]
+		if num2 > num1, increase HP of Player by num2;
+	else if "Roughing It" is listed in feats of Player:
+		increase HP of Player by ( num1 + num2 ) / 2; [average value chosen]
 	else: [accessible only when events induce resting]
-		if num1 <= num2, increase HP of player by num1; [lowest value chosen]
-		if num2 < num1, increase HP of player by num2;
+		if num1 <= num2, increase HP of Player by num1; [lowest value chosen]
+		if num2 < num1, increase HP of Player by num2;
 	if Terminatorsleep is false:
 		if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isn't going to fix them]
 			if silk hammock is owned or silk hammock is present:
@@ -3262,35 +3891,35 @@ to Rest:
 				now Sleeptimercount is -2;
 			else: [Turnpass rule fires immediately after this and adds 1 to each, so it becomes -1 and 0.]
 				now Sleeptimercount is -1;
-			if "Well Rested" is not listed in feats of player:
+			if "Well Rested" is not listed in feats of Player:
 				FeatGain "Well Rested";
 				say "     Well Rested - All stats increased by 2!";
-				increase strength of player by 2;
-				increase dexterity of player by 2;
-				increase stamina of player by 2;
-				increase charisma of player by 2;
-				increase intelligence of player by 2;
-				increase perception of player by 2;
+				increase strength of Player by 2;
+				increase dexterity of Player by 2;
+				increase stamina of Player by 2;
+				increase charisma of Player by 2;
+				increase intelligence of Player by 2;
+				increase perception of Player by 2;
 			now WellRestedTimer is 6;
 
 carry out resting:
-	if companion of player is rubber tigress:
+	if companion of Player is rubber tigress:
 		artemisnap;
 		if nohealmode is true:
-			increase HP of player by (level of rubber tigress) / 3; [grants additional rest]
+			increase HP of Player by (level of rubber tigress) / 3; [grants additional rest]
 		else:
-			increase HP of player by (level of rubber tigress) / 2; [grants additional rest]
+			increase HP of Player by (level of rubber tigress) / 2; [grants additional rest]
 	Rest;
 	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
-	say "You are [descr]([HP of player]/[maxHP of player]).";
+	say "You are [descr]([HP of Player]/[maxHP of Player]).";
 
 This is the explore rule:
 	let something be 0;
 	let roomfirst be 1;
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Curious" is listed in feats of player, increase bonus by 3;
+	if "Curious" is listed in feats of Player, increase bonus by 3;
 	if blindmode is true, increase bonus by 3; [increased odds of finding something interesting]
 	if a random chance of 2 in 5 succeeds, now roomfirst is 0; [Will it check for a room or situation first?]
 	if something is 0 and a random number from 1 to 20 < ( bonus + 7 ) and there is an unknown fasttravel room and battleground is "Outside" and roomfirst is 1:
@@ -3327,21 +3956,21 @@ This is the explore rule:
 			plot;
 			now battleground is "void";
 			wait for any key;
-	if "Stealthy" is listed in feats of player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
-	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if "Stealthy" is listed in feats of Player, decrease bonus by 2 plus (( the perception of the player minus 10 ) divided by 2);
+	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
 	if something is 1 and blindmode is true, decrease bonus by 3; [already found something, so normal chance of a critter]
 	if a random number from 1 to 20 < 15 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:
 			now something is 1;
 			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	if something is 0:
 		if battleground is "Smith Haven":
 			say "Wandering around a bit, stroll through the Smith Haven Mall, but don't find anything that really draws your attention right now.";
 		else:
-			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of player].";
+			say "You decide to go exploring, but after three long hours of wandering the ruined, monster infested city you return to the relative safety of the [location of Player].";
 	follow the turnpass rule;
 [	wait for any key;
 	now the menu depth is 0;]
@@ -3352,7 +3981,7 @@ exploring is an action applying to nothing.
 understand "explore" as exploring
 
 check exploring:
-	if location of player is not fasttravel and earea of location of player is "void", say "You cannot explore from here." instead;
+	if location of Player is not fasttravel and earea of location of Player is "void", say "You cannot explore from here." instead;
 
 carry out exploring:
 	if there is a dangerous door in the location of the player:
@@ -3360,18 +3989,18 @@ carry out exploring:
 		if l is not nothing, now battleground is the marea of l;
 		if l is nothing, now battleground is "Outside"; [***]
 	else:
-		now battleground is earea of location of player;
+		now battleground is earea of location of Player;
 	follow the explore rule;
 
 to randomfightchance:
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Stealthy" is listed in feats of player, now bonus is -1;
-	if "Curious" is listed in feats of player, increase bonus by 2;
-	if "Bad Luck" is listed in feats of player, increase bonus by 1;
+	if "Stealthy" is listed in feats of Player, now bonus is -1;
+	if "Curious" is listed in feats of Player, increase bonus by 2;
+	if "Bad Luck" is listed in feats of Player, increase bonus by 1;
 	if a random number from 1 to 20 < 10 plus bonus and battleground is not "void":
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
+			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 
@@ -3384,8 +4013,8 @@ Everyturn rules is a rulebook.
 
 This is the turnpass rule:
 	follow the cock descr rule;
-	if "Sanity Saver" is listed in the feats of player:
-		now humanity of player is 100;
+	if "Sanity Saver" is listed in the feats of Player:
+		now humanity of Player is 100;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now fightstatus is 0;
@@ -3395,208 +4024,208 @@ This is the turnpass rule:
 	if HP of Velos > 2:
 		if Velos is not in the location of the player:		[traveling w/player]
 			now Velos is in the location of the player;
-	if breast size of player > 26, now breast size of player is 26;
-	let oldlib be libido of player;
-	if libido of player < 100 and "Horny Bastard" is listed in feats of player:
-		increase libido of player by square root of ( 55 - ( libido of player / 2 ) );
-		if libido of player > 100, now libido of player is 100;
-	if libido of player > 20 and "Cold Fish" is listed in feats of player and libido of player < 100:
-		decrease libido of player by square root of ( libido of player - 15 );
-	if oldlib < 80 and libido of player > 79:
-		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
-	else if oldlib < 50 and libido of player > 49:
-		say "Your thoughts have sunk to almost constant depravity![no line break][if player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if cunts of player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
-	if hunger of player < 0, now hunger of player is 0;
-	if thirst of player < 0, now thirst of player is 0;
+	if Breast Size of Player > 26, now Breast Size of Player is 26;
+	let oldlib be Libido of Player;
+	if Libido of Player < 100 and "Horny Bastard" is listed in feats of Player:
+		increase Libido of Player by square root of ( 55 - ( Libido of Player / 2 ) );
+		if Libido of Player > 100, now Libido of Player is 100;
+	if Libido of Player > 20 and "Cold Fish" is listed in feats of Player and Libido of Player < 100:
+		decrease Libido of Player by square root of ( Libido of Player - 15 );
+	if oldlib < 80 and Libido of Player > 79:
+		say "You now have trouble thinking of anything but sexual satisfaction![no line break][if Player is male] Your cock[smn] [ismv] fully erect constantly and drool[smv] precum steadily.[no line break][end if][if Player is female] Your cunt[sfn] overflow[sfv] with hot juices that run down your thighs.[no line break][end if][line break]";
+	else if oldlib < 50 and Libido of Player > 49:
+		say "Your thoughts have sunk to almost constant depravity![no line break][if Player is male] Your cock[smn] remain[smv] perpetually hard and leaking precum.[no line break][end if][if Cunt Count of Player is 1] Your cunt[sfn] [isfv] hot and dripping juices as your arousal builds.[no line break][end if][line break]";
+	if hunger of Player < 0, now hunger of Player is 0;
+	if thirst of Player < 0, now thirst of Player is 0;
 	if the HP of the player < the maxHP of the player and nohealmode is false:
 		increase the HP of the player by the stamina of the player divided by 2;
-		if carried of First Aid Manual > 0, increase HP of player by 1;
-	if "Regeneration" is listed in feats of player:
-		increase the HP of the player by (level of player divided by 3);
-	if "Rapid Healing" is listed in feats of player:
+		if carried of First Aid Manual > 0, increase HP of Player by 1;
+	if "Regeneration" is listed in feats of Player:
+		increase the HP of the player by (level of Player divided by 3);
+	if "Rapid Healing" is listed in feats of Player:
 		increase the HP of the player by 2;
 [	let yy be 4;
-	if "Resistant" is listed in feats of player, increase yy by 2;
-	if "Mutable" is listed in feats of player, decrease yy by 1;
+	if "Resistant" is listed in feats of Player, increase yy by 2;
+	if "Mutable" is listed in feats of Player, decrease yy by 1;
 	now yy is 1; ]
 	let yy be 1;
-	if "Singular" is listed in feats of player and a random chance of 1 in yy succeeds:
+	if "Singular" is listed in feats of Player and a random chance of 1 in yy succeeds:
 		let z be 0;
-		if facename of player is bodyname of player:
+		if facename of Player is bodyname of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if tailname of player is bodyname of player:
+		if tailname of Player is bodyname of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if skinname of player is bodyname of player:
+		if skinname of Player is bodyname of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if cockname of player is bodyname of player:
+		if cockname of Player is bodyname of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if bodyname of player is "Human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
+		if bodyname of Player is "Human" or ( shiftable is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y from the Table of Random Critters;
-				if name entry exactly matches the text bodyname of player, case insensitively:
-					if ( there is no resbypass in row monster of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
-						now monster is y;
+				if Name entry exactly matches the text bodyname of Player, case insensitively:
+					if ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row MonsterID of Table of Random Critters or non-infectious entry is false ):
+						now MonsterID is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 						now researchbypass is 1;
 						infect;
 						now researchbypass is 0;
 					break;
-	if "Passing Grade Chest" is listed in feats of player and breast size of player > 4:
-		now breast size of player is 4;
+	if "Passing Grade Chest" is listed in feats of Player and Breast Size of Player > 4:
+		now Breast Size of Player is 4;
 		say "You feel the pressure in your chest suddenly abate with a rush of relief.";
-	if "Always Cocky" is listed in feats of player and cocks of player is 0:
-		now cocks of player is 1;
-		now cock length of player is 5;
-		now cock width of player is 3;
-		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [cock of player] shaft spurts and dribbles with cum from its orgasmic formation.";
-	else if "Always A Pussy" is listed in feats of player and cunts of player is 0:
-		now cunts of player is 1;
-		now cunt length of player is 5;
-		now cunt width of player is 3;
+	if "Always Cocky" is listed in feats of Player and Cock Count of Player is 0:
+		now Cock Count of Player is 1;
+		now Cock Length of Player is 5;
+		now ball size of Player is 3;
+		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
+	else if "Always A Pussy" is listed in feats of Player and Cunt Count of Player is 0:
+		now Cunt Count of Player is 1;
+		now Cunt Length of Player is 5;
+		now Cunt Tightness of Player is 3;
 		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
-		if ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player >= 25:
-			if cockname of player is not "Tanuki" and player is not internal:
-				decrease Dexterity of player by 1 + (dexterity of player / 10 );
-				now balloversize is 1 + (dexterity of player / 10 );
-				say "     Your balls, so huge when compared to your [body size of player] frame, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
-		else if ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player >= 32:
-			if cockname of player is not "Tanuki" and player is not internal:
-				decrease Dexterity of player by 1 + (dexterity of player / 10 );
-				now balloversize is 1 + (dexterity of player / 10 );
+		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and ball size of Player >= 25:
+			if cockname of Player is not "Tanuki" and player is not internal:
+				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
+				now balloversize is 1 + (dexterity of Player / 10 );
+				say "     Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
+		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and ball size of Player >= 32:
+			if cockname of Player is not "Tanuki" and player is not internal:
+				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
+				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, so huge they hang to the ground, are so big and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
-		else if cock width of player >= 40:
-			if cockname of player is not "Tanuki" and player is not internal:
-				decrease Dexterity of player by 1 + (dexterity of player / 10 );
-				now balloversize is 1 + (dexterity of player / 10 );
+		else if ball size of Player >= 40:
+			if cockname of Player is not "Tanuki" and player is not internal:
+				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
+				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, so huge even when compared to your huge frame, are so massive and heavy that it's difficult to drag them around, hindering your ability to move around somewhat.";
 	else:
-		if ( ( scalevalue of player is 1 or scalevalue of player is 2 ) and cock width of player < 25 ) or ( ( scalevalue of player is 3 or scalevalue of player is 4 ) and cock width of player < 32 ) or ( cock width of player < 40 ):
-			increase dexterity of player by balloversize;
+		if ( ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and ball size of Player < 25 ) or ( ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and ball size of Player < 32 ) or ( ball size of Player < 40 ):
+			increase dexterity of Player by balloversize;
 			now balloversize is 0;
-			say "     Your balls, no longer quite so huge compared to your [if scalevalue of player is not 3][body size of player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to drag them around anymore.";
-		else if cockname of player is "Tanuki":
-			increase dexterity of player by balloversize;
+			say "     Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to drag them around anymore.";
+		else if cockname of Player is "Tanuki":
+			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
-		else if player is internal:
-			increase dexterity of player by balloversize;
+		else if Player is internal:
+			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your massive balls, having become internalized, no longer hinder your movement quite so much. You can still feel them there, heavily resting inside you, but they're no longer in the way at least.";
 	follow the check heat rule;
-	if libido of player >= 99 and humanity of player > 0 and skipturnblocker is 0:
+	if Libido of Player >= 99 and humanity of Player > 0 and skipturnblocker is 0:
 		say "[spontaneousorgasm]";
-		decrease humanity of player by a random number between 1 and 2;
-		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-		now libido of player is 75;
-		if "Horny Bastard" is listed in feats of player, now libido of player is 80;
-		if "Cold Fish" is listed in feats of player, now libido of player is 60;
+		decrease humanity of Player by a random number between 1 and 2;
+		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+		now Libido of Player is 75;
+		if "Horny Bastard" is listed in feats of Player, now Libido of Player is 80;
+		if "Cold Fish" is listed in feats of Player, now Libido of Player is 60;
 	if the HP of the player > the maxHP of the player, now the HP of the player is the maxHP of the player;
 	if the HP of the player < 0, now the HP of the player is 1;
-	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of player + 1 ) ):
-		increase hunger of player by 1;
-		if number of entries in childrenfaces > 0 and a random chance of 1 in 2 succeeds, increase hunger of player by 1;
-		if "Spartan Diet" is listed in feats of player and hunger of player > 0 and a random chance of 1 in 2 succeeds:
-			decrease hunger of player by 1;
-	if "Vore Predator" is listed in feats of player:
-		increase hunger of player by a random number between 1 and 5;
-		if "Spartan Diet" is listed in feats of player and hunger of player > 0 and a random chance of 1 in 2 succeeds:
-			decrease hunger of player by 1;
-	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of player + 1 ) ):
-		increase thirst of player by 3;
-		if number of entries in childrenfaces > 0, increase thirst of player by 1;
-		if "Spartan Diet" is listed in feats of player and thirst of player > 0:
-			decrease thirst of player by 1;
-	if "Automatic Survival" is listed in feats of player:
-		now thirst of player is 0;
-		now hunger of player is 0;
+	if ( a random number from 1 to 20 ) > ( a random number between 1 and ( stamina of Player + 1 ) ):
+		increase hunger of Player by 1;
+		if number of filled rows in Table of PlayerChildren > 0 and a random chance of 1 in 2 succeeds, increase hunger of Player by 1;
+		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
+			decrease hunger of Player by 1;
+	if "Vore Predator" is listed in feats of Player:
+		increase hunger of Player by a random number between 1 and 5;
+		if "Spartan Diet" is listed in feats of Player and hunger of Player > 0 and a random chance of 1 in 2 succeeds:
+			decrease hunger of Player by 1;
+	if a random number from 1 to 25 > ( a random number between 1 and ( stamina of Player + 1 ) ):
+		increase thirst of Player by 3;
+		if number of filled rows in Table of PlayerChildren > 0, increase thirst of Player by 1;
+		if "Spartan Diet" is listed in feats of Player and thirst of Player > 0:
+			decrease thirst of Player by 1;
+	if "Automatic Survival" is listed in feats of Player:
+		now thirst of Player is 0;
+		now hunger of Player is 0;
 	if the remainder after dividing turns by 3 is 0:
-		if "Perky" is listed in feats of player:
-			increase morale of player by 1;
+		if "Perky" is listed in feats of Player:
+			increase morale of Player by 1;
 		now restoration is 0;
-		if "Physical Booster" is listed in feats of player and wrcursestatus is not 5:
-			if Strength of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Strength of player by 1;
-				increase capacity of player by 5;
-				increase hunger of player by 6;
+		if "Physical Booster" is listed in feats of Player and wrcursestatus is not 5:
+			if Strength of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Strength of Player by 1;
+				increase capacity of Player by 5;
+				increase hunger of Player by 6;
 				say "Your body strives to restore its lost might and rebuilds your muscles. Your stomach grumbles with hunger at this sudden effort. [bold type]Strength increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Stamina of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Stamina of player by 1;
-				if remainder after dividing stamina of player by 2 is 0:
-					increase maxHP of player by level of player plus 1;
-				increase hunger of player by 6;
+			if Stamina of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Stamina of Player by 1;
+				if remainder after dividing stamina of Player by 2 is 0:
+					increase maxHP of Player by level of Player plus 1;
+				increase hunger of Player by 6;
 				say "Your body strives to restore its lost hardiness and toughens your body. Your stomach grumbles with hunger at this sudden effort. [bold type]Stamina increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Dexterity of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Dexterity of player by 1;
-				increase hunger of player by 6;
+			if Dexterity of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Dexterity of Player by 1;
+				increase hunger of Player by 6;
 				say "Your body strives to regain its lost agility and restores your flexibility. Your stomach grumbles with hunger at this sudden effort. [bold type]Dexterity increased by 1.[roman type][line break]";
 				now restoration is 1;
-		if "Mental Booster" is listed in feats of player and wrcursestatus is not 5:
-			if Intelligence of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Intelligence of player by 1;
-				increase hunger of player by 3;
-				increase thirst of player by 5;
+		if "Mental Booster" is listed in feats of Player and wrcursestatus is not 5:
+			if Intelligence of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Intelligence of Player by 1;
+				increase hunger of Player by 3;
+				increase thirst of Player by 5;
 				say "Your body strives to restore your mental functions. You stomach churns and you sweat profusely from the effort of this process. [bold type]Intelligence increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Charisma of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Charisma of player by 1;
-				increase hunger of player by 3;
-				increase thirst of player by 5;
+			if Charisma of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Charisma of Player by 1;
+				increase hunger of Player by 3;
+				increase thirst of Player by 5;
 				now restoration is 1;
 				say "Your body strives to restore your natural charm and allure. You stomach churns and you sweat profusely from the effort of this process. [bold type]Charisma increased by 1.[roman type][line break]";
 				now restoration is 1;
-			if Perception of player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
-				increase Perception of player by 1;
-				increase hunger of player by 3;
-				increase thirst of player by 5;
+			if Perception of Player < 14 and a random chance of 1 in 2 succeeds and restoration is 0:
+				increase Perception of Player by 1;
+				increase hunger of Player by 3;
+				increase thirst of Player by 5;
 				say "Your body strives to restore your enhance perceptive abilities. You stomach churns and you sweat profusely from the effort of this process. [bold type]Perception increased by 1.[roman type][line break]";
 				now restoration is 1;
-		if hunger of player > 90:
+		if hunger of Player > 90:
 			say "You will die if you don't eat soon.";
-		else if hunger of player > 50:
+		else if hunger of Player > 50:
 			say "Your stomach feels like a black hole of pain.";
-		else if hunger of player > 30:
+		else if hunger of Player > 30:
 			say "You're famished.";
-		else if hunger of player > 3:
+		else if hunger of Player > 3:
 			say "You feel a little hungry.";
-		if hunger of player > 30:
-			decrease the morale of the player by ( hunger of player minus 30 ) divided by 5;
-		if hunger of player > 99:
-			now HP of player is -9999;
+		if hunger of Player > 30:
+			decrease the morale of the player by ( hunger of Player minus 30 ) divided by 5;
+		if hunger of Player > 99:
+			now HP of Player is -9999;
 			end the story saying "You have died of hunger.";
-		if thirst of player > 90:
+		if thirst of Player > 90:
 			say "You will die if you don't drink something soon.";
-		else if thirst of player > 50:
+		else if thirst of Player > 50:
 			say "Your throat is parched and your lips cracking.";
-		else if thirst of player > 30:
+		else if thirst of Player > 30:
 			say "You're really thirsty!";
-		else if thirst of player > 12:
+		else if thirst of Player > 12:
 			say "You feel a little thirsty.";
-		if thirst of player > 30:
-			decrease the morale of the player by ( thirst of player minus 30 ) divided by 5;
-		if thirst of player > 99:
-			now HP of player is -9999;
+		if thirst of Player > 30:
+			decrease the morale of the player by ( thirst of Player minus 30 ) divided by 5;
+		if thirst of Player > 99:
+			now HP of Player is -9999;
 			end the story saying "You have died of thirst.";
-		if hunger of player > 50 or thirst of player > 50:
+		if hunger of Player > 50 or thirst of Player > 50:
 			say "Maybe you should [bold type]scavenge[roman type] for food! Go to a quick travel location and find something quick.";
 		let maxmorale be ( the charisma of the player plus the perception of the player );
 		let moralereset be ( maxmorale plus the level of the player );
-		if "Perky" is listed in feats of player:
+		if "Perky" is listed in feats of Player:
 			increase moralereset by ( moralereset divided by 5);
 			increase maxmorale by ( maxmorale divided by 5);
-		if "Proud Parent" is listed in feats of player:
+		if "Proud Parent" is listed in feats of Player:
 			let SP be SarahPups / 5;
 			if SP > 20, now SP is 20;
 			increase moralereset by SP;
@@ -3605,29 +4234,29 @@ This is the turnpass rule:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now the morale of the player is maxmorale;
 	let corruption be 0;
-	if skinname of player is not "Human", increase corruption by a random number from 0 to 1;
-	if cockname of player is not "Human", increase corruption by a random number from 0 to 1;
-	if bodyname of player is not "Human", increase corruption by a random number from 0 to 1;
-	if tailname of player is not "Human", increase corruption by a random number from 0 to 1;
-	if facename of player is not "Human", increase corruption by a random number from 0 to 1;
+	if skinname of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if cockname of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if bodyname of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if tailname of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if facename of Player is not "Human", increase corruption by a random number from 0 to 1;
 	if corruption > 0:
-		if "Weak Psyche" is listed in feats of player:
+		if "Weak Psyche" is listed in feats of Player:
 			increase corruption by a random number from 0 to 1;
 			increase corruption by a random number from 0 to 1;
-		if "Strong Psyche" is listed in feats of player:
+		if "Strong Psyche" is listed in feats of Player:
 			decrease corruption by a random number from 0 to 2;
 		decrease corruption by a random number from 0 to ( ( Perception of the player minus 10) divided by 2 );
 		decrease corruption by a random number from 0 to ( ( Charisma of the player minus 10) divided by 2 );
 	if corruption > 0:
-		decrease the humanity of player by corruption;
+		decrease the humanity of Player by corruption;
 		follow the brain descr rule;
-		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of player]/100)[line break]";
-		if humanity of player < 50:
+		say "The nanites inside you work at rewiring your stubborn brain, leaving you with [descr] ([humanity of Player]/100)[line break]";
+		if humanity of Player < 50:
 			say "Maybe you should [bold type]use[roman type] that [bold type]journal[roman type] to help collect your thoughts.";
 	pregprotocol; [Moved to pregnancy in core mechanics]
-	if the humanity of player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
+	if the humanity of Player < 1 and Scenario is not "Researcher" and skipturnblocker is 0:
 		end the story saying "Your mind is lost to the infection.";
-	if the humanity of player < 1 and scenario is "Researcher", now humanity of player is 1;
+	if the humanity of Player < 1 and scenario is "Researcher", now humanity of Player is 1;
 	decrease turns by 1;
 	if ( turns minus targetturns ) <= 0 and playon is 0 and skipturnblocker is 0:
 		end the story saying "You survived until the rescue came.";
@@ -3637,18 +4266,18 @@ This is the turnpass rule:
 	rule succeeds;
 
 to say spontaneousorgasm:
-	if player is herm:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if cock width of player + ( 2 * cunt width of player ) < 18]messy splotch[else if cock width of player + ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
-	else if player is male:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground. Your blasted cum leaves a [if cock width of player < 18]messy splotch[else if cock width of player < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
-	else if player is female:
-		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * cunt width of player ) < 18]messy splotch[else if ( 2 * cunt width of player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	if Player is herm:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground while your hot, feminine juices soak your thighs. You leave a [if ball size of Player + ( 2 * Cunt Tightness of Player ) < 18]messy splotch[else if ball size of Player + ( 2 * Cunt Tightness of Player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	else if Player is male:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cock[smn] spray[smv] your hot seed across your clothes and the ground. Your blasted cum leaves a [if ball size of Player < 18]messy splotch[else if ball size of Player < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
+	else if Player is female:
+		say "     Your groin, overflowing with unsatisfied lustful needs, erupts spontaneously and knocks you to your knees. Your cunt[sfn] overflow[sfv] with hot, feminine juices that soak your thighs. You leave a [if ( 2 * Cunt Tightness of Player ) < 18]messy splotch[else if ( 2 * Cunt Tightness of Player ) < 25]messy puddle[else]large puddle[end if] of sexual fluids behind from your outburst, feeling only slightly relieved.";
 	else:		[neuter]
-		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with a painful, aching need. Lacking any other means, you rub over your [bodytype of player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
-		now HP of player is ( 3 * HP of player ) / 4;
+		say "     Your body, consumed with a lust it is unable to satisfy, drops to its knees and trembles with a painful, aching need. Lacking any other means, you rub over your [bodytype of Player] body until it finally passes, leaving you weak, tired and largely unsatisfied.";
+		now HP of Player is ( 3 * HP of Player ) / 4;
 
 This is the monster injury rule:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	let per be ( monsterHP times 100 ) divided by HP entry;
 	if per < 10:
 		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
@@ -3663,183 +4292,171 @@ This is the monster injury rule:
 This is the player injury rule:
 	let per be ( HP of the player times 100 ) divided by maxHP of the player;
 	if per <= 10:
-		now descr is "[if playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
+		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]on death's door[or]almost defeated[or]barely mobile[at random]";
 	else if per <= 40:
-		now descr is "[if playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
+		now descr is "[if Playerpoison > 0][special-style-1]poisoned[roman type] and [end if][one of]wounded[or]bashed around[or]significantly harmed[at random]";
 	else if per <= 80:
-		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]scuffed[or]bruised[or]still in the fight[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	else:
-		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if playerpoison > 0], but [special-style-1]poisoned[roman type]";
+		now descr is "[one of]healthy[or]energetic[or]largely unharmed[at random][if Playerpoison > 0], but [special-style-1]poisoned[roman type]";
 	rule succeeds;
 
 This is the brain descr rule:
-	if humanity of player > 90:
+	if humanity of Player > 90:
 		now descr is "[one of]clean[or]pristine[or]perfectly normal[at random][lusting]";
-	else if humanity of player > 70:
+	else if humanity of Player > 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
-	else if humanity of player > 30:
-		if facename of player is not "Human":
-			now descr is "increasingly [facename of player] perspective[lusting]";
-		else if bodyname of player is not "Human":
-			now descr is "increasingly [bodyname of player] perspective[lusting]";
-		else if skinname of player is not "Human":
-			now descr is "increasingly [skinname of player] perspective[lusting]";
-		else if cockname of player is not "Human":
-			now descr is "increasingly [cockname of player] perspective[lusting]";
-		else if tailname of player is not "Human":
-			now descr is "increasingly [tailname of player] perspective[lusting]";
+	else if humanity of Player > 30:
+		if facename of Player is not "Human":
+			now descr is "increasingly [facename of Player] perspective[lusting]";
+		else if bodyname of Player is not "Human":
+			now descr is "increasingly [bodyname of Player] perspective[lusting]";
+		else if skinname of Player is not "Human":
+			now descr is "increasingly [skinname of Player] perspective[lusting]";
+		else if cockname of Player is not "Human":
+			now descr is "increasingly [cockname of Player] perspective[lusting]";
+		else if tailname of Player is not "Human":
+			now descr is "increasingly [tailname of Player] perspective[lusting]";
 		else:
 			now descr is "increasingly corrupted perspective[lusting]";
 	else:
 		now descr is "almost entirely subsumed[lusting]";
-	if libido of player < 21, now lusting is " thoughts.";
-	if libido of player > 80:
+	if Libido of Player < 21, now lusting is " thoughts.";
+	if Libido of Player > 80:
 		let mun be a random number from 1 to number of filled rows in Table of Random Critters;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row monster of the Table of Random Critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
-	else if libido of player > 40:
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row MonsterID of the Table of Random Critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	else if Libido of Player > 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
-	else if libido of player > 20:
+	else if Libido of Player > 20:
 		now lusting is " thoughts. You are riddled with occasionally dirty lapses.";
 
 This is the breast descr rule:
-	if breast size of player < 1:
+	if Breast Size of Player < 1:
 		now descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
 		now sh-descr is "[one of]nonexistent[or]entirely flat[or]manly[at random]";
-	else if breast size of player < 3:
-		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number breast size of player in cupsize] cup";
+	else if Breast Size of Player < 3:
+		now descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]palmable[or]small[or]dainty[or]slender[or]perky[at random]";
-	else if breast size of player is 3:
-		now descr is "[character number breast size of player in cupsize] cup";
+	else if Breast Size of Player is 3:
+		now descr is "[character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]reasonably-sized[or]average[or]moderate[at random]";
-	else if breast size of player is 4:
-		now descr is "[character number breast size of player in cupsize] cup";
+	else if Breast Size of Player is 4:
+		now descr is "[character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]eye-catching[or]substantive[or]shapely[at random]";
-	else if breast size of player < 5:
-		now descr is "[character number breast size of player in cupsize] cup";
-		now sh-descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[or][character number breast size of player in cupsize] cup[at random]";
-	else if breast size of player < 7:
-		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number breast size of player in cupsize] cup";
+	else if Breast Size of Player < 5:
+		now descr is "[character number Breast Size of Player in cupsize] cup";
+		now sh-descr is "[one of]average-sized[or]normal-sized[or]healthy-sized[or][character number Breast Size of Player in cupsize] cup[at random]";
+	else if Breast Size of Player < 7:
+		now descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]large[or]jiggling[or]well-shaped[or]plump[at random]";
-	else if breast size of player < 9:
-		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number breast size of player in cupsize] cup";
+	else if Breast Size of Player < 9:
+		now descr is "[one of]massive[or]huge[or]heavy[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]massive[or]huge[or]heavy[at random]";
-	else if breast size of player < 12:
-		now descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random] [character number breast size of player in cupsize] cup";
+	else if Breast Size of Player < 12:
+		now descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]enormous[or]giant[or]hulking[or]head-sized[or]basketball-sized[at random]";
 	else:
-		now descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random] [character number breast size of player in cupsize] cup";
+		now descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random] [character number Breast Size of Player in cupsize] cup";
 		now sh-descr is "[one of]gargantuan[or]beachball-sized[or]mountainous[or]colossal[or]gigantic[at random]";
-	now breast size desc of player is descr;
-	now short breast size desc of player is sh-descr;
+	now breast size desc of Player is descr;
+	now short breast size desc of Player is sh-descr;
 	rule succeeds;
 
 This is the cock descr rule:
-	if cock length of player < 3:
+	if Cock Length of Player < 3:
 		now descr is "[one of]tiny[or]very small[or]puny[at random]";
-	else if cock length of player < 6:
+	else if Cock Length of Player < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
-	else if cock length of player < 8:
+	else if Cock Length of Player < 8:
 		now descr is "[one of]average in size[or]normal-sized[at random]";
-	else if cock length of player < 12:
+	else if Cock Length of Player < 12:
 		now descr is "[one of]large[or]sizable[or]well-built[or]longer than average[at random]";
-	else if cock length of player is 12:
+	else if Cock Length of Player is 12:
 		now descr is "foot long";
-	else if cock length of player < 18:
+	else if Cock Length of Player < 18:
 		now descr is "[one of]huge[or]heavy[or]ponderous[or]massive[or]forearm length[at random]";
-	else if cock length of player < 25:
+	else if Cock Length of Player < 25:
 		now descr is "[one of]giant[or]hulking[or]hypertrophied[or]elephantine[or]monstrous[or]towering[at random]";
 	else:
 		now descr is "[one of]mammoth[or]gigantic[or]colossal[or]titanic[or]third leg[or]devastating[at random]";
-	now cock size desc of player is descr;
+	now cock size desc of Player is descr;
 	rule succeeds;
 
 To say ball size:
-	if cock width of player > 0:
-		if cock width of player < 3:
+	if ball size of Player > 0:
+		if ball size of Player < 3:
 			say "[one of]marble-sized[or]tiny[or]very small[at random]";
-		else if cock width of player < 6:
+		else if ball size of Player < 6:
 			say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
-		else if cock width of player < 12:
+		else if ball size of Player < 12:
 			say "[one of]lemon-sized[or]large[at random]";
-		else if cock width of player < 16:
+		else if ball size of Player < 16:
 			say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
-		else if cock width of player < 20:
+		else if ball size of Player < 20:
 			say "[one of]grapefruit-sized[or]massive[at random]";
-		else if cock width of player < 25:
+		else if ball size of Player < 25:
 			say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
-		else if cock width of player < 32:
+		else if ball size of Player < 32:
 			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
 		else:
 			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 		say " [one of]balls[or]testicles[or]gonads[at random]";
 
 To say short ball size:
-	if cock width of player > 0:
-		if cock width of player < 3:
+	if ball size of Player > 0:
+		if ball size of Player < 3:
 			say "[one of]marble-sized[or]tiny[or]very small[at random]";
-		else if cock width of player < 6:
+		else if ball size of Player < 6:
 			say "[one of]plum-sized[or]golf-ball-sized[or]apricot-sized[or]average[at random]";
-		else if cock width of player < 12:
+		else if ball size of Player < 12:
 			say "[one of]lemon-sized[or]large[at random]";
-		else if cock width of player < 16:
+		else if ball size of Player < 16:
 			say "[one of]baseball-sized[or]orange-sized[or]hand-filling[at random]";
-		else if cock width of player < 20:
+		else if ball size of Player < 20:
 			say "[one of]grapefruit-sized[or]massive[at random]";
-		else if cock width of player < 25:
+		else if ball size of Player < 25:
 			say "[one of]cantaloupe-sized[or]giant[or]knee-knocking[at random]";
-		else if cock width of player < 32:
+		else if ball size of Player < 32:
 			say "[one of]basketball-sized[or]ginormous[or]super-inflated[or]watermelon-huge[at random]";
 		else:
 			say "[one of]floor-dragging[or]beachball-sized[or]gargantuan[or]ground-hanging[at random]";
 
 to say cum load size of ( x - a person ):
-	if cock width of x > 0:
-		if cock width of x < 3:			[1, 2]
+	if Ball Size of x > 0:
+		if Ball Size of x < 3:			[1, 2]
 			say "[one of]piddling[or]tiny[or]minuscule[or]feeble[or]small[or]meager[at random]";
-		else if cock width of x < 6:	[3 - 5]
+		else if Ball Size of x < 6:	[3 - 5]
 			say "[one of]average[or]normal-sized[or]fair-sized[or]moderate[or]adequate[or]regular-sized[at random]";
-		else if cock width of x < 12:	[6 - 11]
+		else if Ball Size of x < 12:	[6 - 11]
 			say "[one of]triple-dose[or]half-cup[or]cupful[or]ample[or]above-average[or]generous[or]sizable[at random]";
-		else if cock width of x < 16:	[12 - 15]
+		else if Ball Size of x < 16:	[12 - 15]
 			say "[one of]half-liter[or]considerable[or]impressive[or]pint-full[or]copious[or]substantial[or]large[or]abundant[or]plentiful[at random]";
-		else if cock width of x < 20:	[16 - 19]
+		else if Ball Size of x < 20:	[16 - 19]
 			say "[one of]one-liter[or]flowing[or]heavy[or]quart-sized[or]drenching[or]jumbo[or]whopping[at random]";
-		else if cock width of x < 25:	[20 - 24]
+		else if Ball Size of x < 25:	[20 - 24]
 			say "[one of]two-liter[or]half-gallon[or]giant[or]huge[or]blasting[or]enormous[or]immense[at random]";
-		else if cock width of x < 32:	[25 - 31]
+		else if Ball Size of x < 32:	[25 - 31]
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 		else:								[32+]
 			say "[one of]torrential[or]monumental[or]colossal[or]gigantic[or]immeasurable[or]devastating[or]near-unending[at random]";
 
 This is the cunt descr rule:
-	if cunt length of player < 3:
+	if Cunt Length of Player < 3:
 		now descr is "[one of]extremely small[or]puny[at random]";
-	else if cunt length of player < 6:
+	else if Cunt Length of Player < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
-	else if cunt length of player < 8:
+	else if Cunt Length of Player < 8:
 		now descr is "[one of]average[or]normal-sized[at random]";
-	else if cunt length of player < 12:
+	else if Cunt Length of Player < 12:
 		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
-	else if cunt length of player < 18:
+	else if Cunt Length of Player < 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
-	else if cunt length of player < 25:
+	else if Cunt Length of Player < 25:
 		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	else:
 		now descr is "[one of]cavernous[or]seemingly bottomless[or]canyonlike[at random]";
-	now cunt size desc of player is descr;
+	now cunt size desc of Player is descr;
 	rule succeeds;
-
-to say body size of ( x - a person ):
-	if scalevalue of x is 1: [~3 ft in height or less]
-		say "tiny";
-	else if scalevalue of x is 2: [4-5 ft in height]
-		say "small";
-	else if scalevalue of x is 3: [5-7 ft in height]
-		say "average";
-	else if scalevalue of x is 4: [8-12 ft in height]
-		say "large";
-	else: [12+ ft in height]
-		say "huge";
 
 looknow is a number that varies.
 
@@ -3862,7 +4479,7 @@ carry out linkactioning:
 	linkaction noun;
 
 linkcheck is a person that varies.[@Tag:NotSaved]
-The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
+The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of Player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
 
 to linkaction (x - Person):
 	now linkcheck is x;
@@ -3883,10 +4500,10 @@ carry out showstatting:
 	showstats player;
 
 To showstats (x - Person):
-	sort Feats of player;
-	sort Traits of player;
+	sort Feats of Player;
+	sort Traits of Player;
 	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Intelligence: [intelligence of the x], Perception: [perception of the x].";
-	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
+	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [Libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
 		now z is ( level of x plus one) times 8;
@@ -3901,29 +4518,54 @@ To showstats (x - Person):
 This is the self examine rule:
 	now looknow is 1;
 	showstats player;
-	if name of player is not "Player":
-		say "Your name is [name of player].";
+	if name of Player is not "Player":
+		say "Your name is [name of Player].";
 	[ Infection Descriptions Below   ]
-	say "Looking at yourself, your body is covered in [skin of player] skin. Your face is [face of player]. ";
-	say "Your body is [body of player]. ";
-	if tail of player is empty:
-		say "";
-	else:
-		say " [tail of player] ";
-	follow the breast descr rule;
-	if breasts of player > 0:
-		if breast size of player is 0:
-			say "You have [breasts of player] nipples on your [bodydesc of player] chest. ";
-		else:
-			if breasts of player > 2:
-				say "You have [breasts of player] breasts on your [bodydesc of player] chest. The first pair looks [descr] and curves out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. The second pair curves out [(breast size of player times three) divided by five] inch[if ( breast size of player times three ) divided by 5 is not 1]es[end if] from your chest. ";
-				if breasts of player > 4, say "The rest jostle for space [breast size of player divided by three] inch[if breast size of player divided by 3 is not 1]es[end if] from your belly. ";
+	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+		say "Pulling out a small mirror you check yourself over from head to toe, attempting to make sense of your current form. Your face and head resemble that of [Head Description of Player] with [Eye Color of Player] [Eye Adjective of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair that has been styled into a [Hair Style of Player]. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
+	else: [old infection]
+		say "Your face is [Face of Player]. ";
+	if TorsoName of Player is "": [old infection]
+		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
+	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+		say "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]. [if Player is HasBackAdornments]Your back tickles with the feeling of movement caused by [Back Adornments of Player]. [end if]";
+		follow the breast descr rule;
+		if Nipple Count of Player > 0:
+			if Breast Size of Player is 0:
+				say "Finally your attention is brought to your pecs. You have [Nipple Count of Player] [Nipple Color of Player], [Nipple Shape of Player] nipples on your [Body Adjective of Player], [Torso Adjective of Player] chest. ";
 			else:
-				say "You have two [descr] breasts on your [bodydesc of player] chest, curving out [breast size of player] inch[if breast size of player is not 1]es[end if] from your chest. ";
+				if Nipple Count of Player > 2:
+					say "Finally your attention is brought to your cleavage. You have [Nipple Count of Player] breasts on your [Body Adjective of Player], [Torso Adjective of Player] chest. Each one has [Nipple Color of Player], [Nipple Shape of Player] nipples resting at their center. The first pair looks [Breast Adjective of Player] and curves out, making it so you could easily fill a [Breast Size Description of Player]. The second pair is slightly smaller, going down a cup size. ";
+				if Nipple Count of Player > 4, say "The rest of your breasts keep going down by around a cup size at least the lower they go. ";
+		else:
+			say "You have two breasts on your [Torso adjective of Player] chest, curving out making it so you could easily fill a [Breast Size Description of Player]. Each one with a [Nipple Color of Player] [Nipple Shape of Player] resting at their center. ";
+		say "[if Player is HasTorsoAdornments]As you continue to inspect yourself, your [Arms Skin Adjective of Player] hand rubs across your lower stomach. You take a moment to feel your [Torso Adornments of Player]. [end if]";
+	else: [old infection]
+		say "Your body is [Body of Player]. ";
+		follow the breast descr rule;
+		if Nipple Count of Player > 0:
+			if Breast Size of Player is 0:
+				say "You have [Nipple Count of Player] nipples on your [Bodydesc of Player] chest. ";
+			else:
+				if Nipple Count of Player > 2:
+					say "You have [Nipple Count of Player] breasts on your [Bodydesc of Player] chest. The first pair looks [descr] and curves out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. The second pair curves out [(Breast Size of Player times three) divided by five] inch[if ( Breast Size of Player times three ) divided by 5 is not 1]es[end if] from your chest. ";
+					if Nipple Count of Player > 4, say "The rest jostle for space [Breast Size of Player divided by three] inch[if Breast Size of Player divided by 3 is not 1]es[end if] from your belly. ";
+				else:
+					say "You have two [descr] breasts on your [Bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. ";
+	if AssName of Player is not "" and TailName of Player is not "" and LegsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]. With a single finger you check out your [Asshole Color of Player] hole finding it to be [Asshole Tightness Adjective of Player]. ";
+		say "[if Player is HasTail]Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee. [end if]";
+		say "As your inspection goes even lower, you come to the [if Player is bipedal]two [Limbs Adjective of Player] legs supporting you. They are [else if Player is quadrupedal]four [Limbs Adjective of Player] legs supporting you. They are [else if Player is serpentine]long slithering tail supporting you. It is [else if Player is sliding]gelatinous mass supporting you. It is [end if][Legs Description of Player].";
+	else: [old infection]
+		if tail of Player is empty:
+			say "";
+		else:
+			say " [tail of Player] ";
+	[Pregnancy Descriptions below]
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
 			now looknow is 0;
-			say "Your [skin of player] swollen belly looks ready to spill forth life at any moment. ";
+			say "Your [Torso Adjective of Player] swollen belly looks ready to spill forth life at any moment. ";
 			now looknow is 1;
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child. ";
@@ -3932,41 +4574,58 @@ This is the self examine rule:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "Human":
+		else if heatlevel is 1 and player is impreg_able and cockname of Player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat. ";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "Human":
+		else if heatlevel is 3 and player is impreg_able and cockname of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you. ";
-	if "Angie's Mate" is listed in feats of player:
+	if "Angie's Mate" is listed in feats of Player:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
-	if "Boghrim's Mark" is listed in feats of player:
+	if "Boghrim's Mark" is listed in feats of Player:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
-	if "Top Dog" is listed in feats of player:
+	if "Top Dog" is listed in feats of Player:
 		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
 	[ ^^ Infection Descriptions Done ]
-	[ Genital Descriptions Below     ]
 	let cocktext be "";
-	follow the cock descr rule;
-	if player is male:
-		if cocks of player > 1:
-			now cocktext is "have [cocks of player] [cock size desc of player] [cock length of player]-inch-long [cock of player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
-		else:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+	if Cock Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated] [new parts]
+		follow the cock descr rule;
+		if Player is male:
+			if Cock Count of Player > 1:
+				now cocktext is "have [Cock Count of Player] [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cocks[or]penises[or]shafts[or]manhoods[at random] that [cock description of Player]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [if ball count of Player is 1]a single[else if ball count of Player is 2][one of]a pair of[or]a set of[at random][else if ball count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internal and ball count of Player > 1]internal balls. [else if Player is internal]internal ball. [else][ball description of Player]. [end if]";
+			else:
+				now cocktext is "have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [if Ball Count of Player is 1]a single[else if Ball Count of Player is 2][one of]a pair of[or]a set of[at random][else if Ball Count of Player is 4]a grouping of four[end if] [Ball Size Adjective of Player] [if Player is internal and ball count of Player > 1]internal balls. [else if Player is internal]internal ball. [else][ball description of Player]. [end if]";
+	else: [old style]
+		follow the cock descr rule;
+		if player is male:
+			if Cock Count of Player > 1:
+				now cocktext is "have [Cock Count of Player] [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
+			else:
+				now cocktext is "have a [Cock Size Desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size]. ";
 	let cunttext be "";
-	follow the cunt descr rule;
-	if player is female:
-		if cunts of player > 1:
-			now cunttext is " have [cunts of player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-		else:
-			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
-	if cocktext is not empty:
-		if cunttext is empty:
+	if Cunt Description of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
+		follow the cunt descr rule;
+		if Player is female:
+			if Cunt Count of Player > 1:
+				now cunttext is "have [Cunt Count of Player] [Cunt Tightness Adjective of Player] [one of]cunts[or]pussies[or]vaginas[at random] that are [Cunt Description of Player]. Further probing shows them to be [Cunt Length of Player] inches deep and [Cunt Tightness Adjective of Player]. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
+			else:
+				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [Cunt Description of Player]. Further probing shows it to be [Cunt Length of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
+	else: [old style]
+		let cunttext be "";
+		follow the cunt descr rule;
+		if player is female:
+			if Cunt Count of Player > 1:
+				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Length of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+			else:
+				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Length of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+	[displaying the texts]
+	if cocktext is not "":
+		if cunttext is "":
 			say "A private peek shows that you [cocktext]";
 		else:
 			say "A private peek shows that you [cocktext]";
-			say "Also, you[cunttext]";
+			say "Also, you [cunttext]";
 	else if cunttext is not "":
-		say " You[cunttext]";
-	[ ^^ Genital Descriptions Done ]
+		say " You [cunttext]";
+[ ^^ Genital Descriptions Done ]
 	[ Equipment Descriptions Below ]
 	LineBreak;
 	LineBreak;
@@ -4011,7 +4670,7 @@ This is the self examine rule:
 					say "[descmod of x] ";
 					now CrotchVisible is false;
 	if CrotchVisible is true: [no undies, so the actual crotch is visible]
-		say "Your [bodyname of player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
+		say "Your [bodyname of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:
 		if placement of x is "feet":
@@ -4023,10 +4682,10 @@ This is the self examine rule:
 	if Barefoot is true:
 		say "You are barefoot right now. ";
 	LineBreak;
-	if weapon object of player is not journal:
-		say "You are carrying a/an [weapon object of player] just in case of trouble";
-		if weapon object of player is unwieldy:
-			say ". Due to its comparatively [if scalevalue of player > objsize of weapon object of player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of player - objsize of weapon object of player ) > 3]very unwieldy[else if absolute value of ( scalevalue of player - objsize of weapon object of player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
+	if weapon object of Player is not journal:
+		say "You are carrying a/an [weapon object of Player] just in case of trouble";
+		if weapon object of Player is unwieldy:
+			say ". Due to its comparatively [if scalevalue of Player > objsize of weapon object of Player]small[else]big[end if] size, it is [if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) > 3]very unwieldy[else if absolute value of ( scalevalue of Player - objsize of weapon object of Player ) is 3]rather unwieldy[else]somewhat unwieldy[end if] for you to use at the moment";
 		say ". ";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
@@ -4034,23 +4693,69 @@ This is the self examine rule:
 			say " [descmod of x]";
 	[ ^^ Eqipment Descriptions Done ]
 	[ Children Descriptions Below   ]
+	[old style children, imported]
+	LineBreak;
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+		say "Trailing behind come your children:[line break]";
+	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+		say "Trailing behind comes your child:[line break]";
 	if the number of entries in childrenfaces > 0:
 		if the number of entries in childrenfaces is 1:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
-				say "Trailing behind you, your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
+				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			else:
-				say "Trailing behind you, your child is a pure blood [entry 1 of childrenfaces].";
+				say "Your child is a pure blood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		else:
-			say "Trailing behind you come your children.";
 			repeat with x running from 1 to number of entries in childrenfaces:
 				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
 					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				else:
 					say "One is a pure blood [entry x of childrenfaces].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+	[new style children]
+	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
+		if number of filled rows in Table of PlayerChildren is 1:
+			choose row 1 in Table of PlayerChildren;
+			let Childage be ((Birthturn entry - turns ) divided by 8);
+			if Pureblood entry is false:
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+				if Name entry is "":
+					say "child";
+				else:
+					say "child [Name entry]";
+				say " has a [Head entry] head, [Torso entry] front and [Back entry] back. They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if].";
+			else:
+				say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+				if Name entry is "":
+					say "child";
+				else:
+					say "child '[Name entry]'";
+				say " is a pure blood [Head entry].";
+		else:
+			repeat with x running from 1 to number of filled rows in Table of PlayerChildren:
+				choose row x in the Table of PlayerChildren;
+				let Childage be ((Birthturn entry - turns ) divided by 8);
+				if Pureblood entry is false:
+					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+					if Name entry is "":
+						say "child";
+					else:
+						say "child '[Name entry]'";
+					say " has a [Head entry] head, [Torso entry] front and [Back entry] back. They have [Arms entry] arms, [Legs entry] legs[if ShowTail entry is false] and a [Ass entry] behind[else], a [Ass entry] behind and a [Tail entry] tail[end if].";
+				else:
+					say "Your [if Childage is 0]less than a day[else if Childage is 1]one day[else][Childage] days[end if] old ";
+					if Name entry is "":
+						say "child";
+					else:
+						say "child [Name entry]";
+					say " is a pure blood [Head entry].";
+	if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) > 1: [more than one child of both types combined]
+		say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
+	else if (number of filled rows in Table of PlayerChildren + number of entries in childrenfaces) is 1: [exactly one child]
+		say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	if the player is not lonely:
-		say "Accompanying you, you have a level [level of companion of player] [link][companion of player][as]look [companion of player][end link]. [initial appearance of companion of player]";
+		say "Accompanying you, you have a level [level of companion of Player] [link][companion of Player][as]look [companion of Player][end link]. [initial appearance of companion of Player]";
 	now looknow is 0;
 	rule succeeds;
 
@@ -4069,14 +4774,14 @@ This is the location choice rule:
 	else if title entry is "Researcher":
 		say "You are not stranded at all. You came to explore, catalog, and interact with this absolutely fascinating outbreak. You've been given immunizations to casual infection (you won't transform from losing battles) and have specialized equipment that allows you to collect the infection vials of those you defeat.[line break]";
 	say "Continue?";
-	if player consents:
+	if Player consents:
 		now looknow is 0;
 	else:
 		the rule fails;
 	if title entry is not "Bunker":
 		say "What luck. After looking around desperately, you come across a library with a mostly intact bunker in it. This will serve well as a refuge while you wait for rescue.";
 		if title entry is "Caught Outside":
-			add "Spartan Diet" to feats of player;
+			add "Spartan Diet" to feats of Player;
 			[belongs in 'when play begins' block, as waiting prevents banned infections from being placed upon a player]
 			[also lets feat choices like the gender preference ones be in effect]
 			[ process dirty water;
@@ -4098,7 +4803,7 @@ This is the location choice rule:
 			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Deer":
+				if Name entry is "Deer":
 					now area entry is "Park";
 					break;
 			increase score by 600;
@@ -4114,7 +4819,7 @@ This is the location choice rule:
 			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Deer":
+				if Name entry is "Deer":
 					now area entry is "Park";
 					break;
 			increase score by 900;
@@ -4122,7 +4827,7 @@ This is the location choice rule:
 			now hardmode is true;
 		if hardmode is false:
 			say "Would you like to play hard mode?";
-			if player consents:
+			if Player consents:
 				now hardmode is true;
 				say "Hardmode activated!";
 	now scenario is title entry;
@@ -4135,7 +4840,7 @@ This is the final stats rule:
 	now the HP of the player is the stamina of the player times two;
 	increase the HP of the player by 5;
 	now the maxHP of the player is the HP of the player;
-	now the humanity of player is 100;
+	now the humanity of Player is 100;
 	now the capacity of the player is five times the strength of the player;
 	now the menu depth is 0;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
@@ -4156,11 +4861,11 @@ This is the final stats rule:
 	rule succeeds;
 
 This is the male choice rule:
-	now cocks of player is 1;
-	now cock length of player is 6;
-	now the cock width of the player is 4;
-	now breasts of player is 2;
-	now breast size of player is 0;
+	now Cock Count of Player is 1;
+	now Cock Length of Player is 6;
+	now the Ball Size of the player is 4;
+	now Nipple Count of Player is 2;
+	now Breast Size of Player is 0;
 	now the current menu is table of Basic Actions;
 	say "You are a man.";
 	wait for any key;
@@ -4168,11 +4873,11 @@ This is the male choice rule:
 	rule succeeds;
 
 This is the female choice rule:
-	now cunts of player is 1;
-	now cunt length of player is 6;
-	now cunt width of player is 4;
-	now breasts of player is 2;
-	now breast size of player is 2;
+	now Cunt Count of Player is 1;
+	now Cunt Length of Player is 6;
+	now Cunt Tightness of Player is 4;
+	now Nipple Count of Player is 2;
+	now Breast Size of Player is 2;
 	now the current menu is table of Basic Actions;
 	say "You are a woman.";
 	wait for any key;
@@ -4228,7 +4933,7 @@ Instead of examining the infection terminal:
 		choose row X from the Table of Random Critters;
 		if there is a lev entry:
 			increase z by 1;
-			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
+			say "[Name entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
 			if z is 15:
 				[say "Press any key to continue.";] [unneeded with 'more' link]
 				WaitLineBreak;
@@ -4255,66 +4960,66 @@ After going:
 This is the finish stats rule:
 	if started is 1:
 		if Current menu selection is 1:
-			increase strength of player by 1;
-			increase capacity of player by 5;
+			increase strength of Player by 1;
+			increase capacity of Player by 5;
 			say "Your strength grows.";
 		if Current menu selection is 2:
-			increase dexterity of player by 1;
+			increase dexterity of Player by 1;
 			say "Your dexterity grows.";
 		if Current menu selection is 3:
-			increase Stamina of player by 1;
+			increase Stamina of Player by 1;
 			say "Your Stamina grows.";
 		if Current menu selection is 4:
-			increase charisma of player by 1;
+			increase charisma of Player by 1;
 			say "Your charisma grows.";
 		if Current menu selection is 5:
-			increase intelligence of player by 1;
+			increase intelligence of Player by 1;
 			say "Your intelligence grows.";
 		if Current menu selection is 6:
-			increase perception of player by 1;
+			increase perception of Player by 1;
 			say "Your perception grows.";
 		decrease menu depth by 1;
 		rule succeeds;
 	if Current menu selection is 1:
 		say "Your strength is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase strength of player by 5;
+		if Player consents:
+			increase strength of Player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 2:
 		say "Your dexterity is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase dexterity of player by 5;
+		if Player consents:
+			increase dexterity of Player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 3:
 		say "Your stamina is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase stamina of player by 5;
+		if Player consents:
+			increase stamina of Player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 4:
 		say "Your charisma is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase charisma of player by 5;
+		if Player consents:
+			increase charisma of Player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 5:
 		say "Your intelligence is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase intelligence of player by 5;
+		if Player consents:
+			increase intelligence of Player by 5;
 		else:
 			rule fails;
 	if Current menu selection is 6:
 		say "Your perception is your specialty.";
 		say "Are you sure?";
-		if player consents:
-			increase perception of player by 5;
+		if Player consents:
+			increase perception of Player by 5;
 		else:
 			rule fails;
 	now started is 1;
@@ -4323,10 +5028,10 @@ This is the finish stats rule:
 	now tempnum is 0;
 	while tempnum is 0:
 		get typed command as playerinput;
-		if playerinput matches "m" or playerinput matches "1":
+		if Playerinput matches "m" or playerinput matches "1":
 			now tempnum is 1;
 			follow male choice rule;
-		else if playerinput matches "f" or playerinput matches "2":
+		else if Playerinput matches "f" or playerinput matches "2":
 			now tempnum is 1;
 			follow female choice rule;
 		else:
@@ -4348,7 +5053,7 @@ understand "Scav [text]" as ScavengingAction.
 ]
 
 check tscavenging:
-	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
+	if location of Player is not fasttravel, say "You can only scavenge from quick travel points." instead;
 	if blindmode is true, say "You're playing in blind-mode, so hunting is not allowed - even scavenge-hunting. You'll have to try scavenging normally to find what you seek." instead;
 
 Carry out tscavenging:
@@ -4357,7 +5062,7 @@ Carry out tscavenging:
 	now scavengetarget is "";
 
 check ScavengingAction:
-	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
+	if location of Player is not fasttravel, say "You can only scavenge from quick travel points." instead;
 
 carry out ScavengingAction:
 	let x be a random visible dangerous door;
@@ -4367,8 +5072,8 @@ carry out ScavengingAction:
 		now battleground is "Outside";
 	say "You set out in the desperate search of food and water.";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Survivalist" is listed in feats of player, increase bonus by 4;
-	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+	if "Survivalist" is listed in feats of Player, increase bonus by 4;
+	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus > 9:
@@ -4390,8 +5095,8 @@ carry out ScavengingAction:
 	now inasituation is false;
 	if battleground is "", now battleground is "Outside";
 	let z be 7;
-	if "Stealthy" is listed in feats of player, decrease z by 2;
-	if "Bad Luck" is listed in feats of player, increase z by 1;
+	if "Stealthy" is listed in feats of Player, decrease z by 2;
+	if "Bad Luck" is listed in feats of Player, increase z by 1;
 	randomfightchance;
 	follow turnpass rule;
 
@@ -4401,13 +5106,13 @@ To Infect (x - text):
 		continue the action;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry exactly matches the text x, case insensitively:
+		if Name entry exactly matches the text x, case insensitively:
 			if BannedStatus entry is true: [banned creatures can't infect]
 				if debugactive is 1:
-					say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+					say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 				break;
 			else:
-				now monster is y;
+				now MonsterID is y;
 				let reset be 0;
 				if researchbypass is 1 and non-infectious entry is true:
 					now reset is 1;
@@ -4425,36 +5130,36 @@ to randominfect: [bypasses researcher protection]
 
 to weakrandominfect: [does not bypass researcher protection]
 	sort Table of Random Critters in random order;
-	now monster is 1;
-	choose row monster from Table of Random Critters;
+	now MonsterID is 1;
+	choose row MonsterID from Table of Random Critters;
 	if BannedStatus entry is true: [banned creatures can't be challenged]
 		if debugactive is 1:
-			say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+			say "DEBUG -> Can't infect with creature [Name entry] because it has Banned: [BannedStatus entry][line break]";
 	else:
-		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
-			increase monster by 1;
-			choose row monster from Table of Random Critters;
-			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
+		while there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
+			increase MonsterID by 1;
+			choose row MonsterID from Table of Random Critters;
+			if there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
 				next;
 			break;
 		infect;
 
 to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
-	choose row monster in the Table of Random Critters;
-	if name entry exactly matches the text x, case insensitively:
+	choose row MonsterID in the Table of Random Critters;
+	if Name entry exactly matches the text x, case insensitively:
 		now found is 1;
 	else:
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry exactly matches the text x, case insensitively:
+			if Name entry exactly matches the text x, case insensitively:
 				now found is 1;
-				now monster is y;
+				now MonsterID is y;
 				break;
 	if found is 0:
 		say "ERROR - Creature '[x]' not found. (setmonster)[line break]";
 	else if debugactive is 1:
-		say "DEBUG: Current [']monster['] set to: [monster] = [name entry][line break]";
+		say "DEBUG: Current [']monster['] set to: [MonsterID] = [Name entry][line break]";
 
 Section x - Debug Commands - Not for release
 
@@ -4467,8 +5172,8 @@ understand "spawn [text]" as spawnmonster.
 carry out spawnmonster:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
-		if name entry exactly matches the text topic understood, case insensitively:
-			now monster is X;
+		if Name entry exactly matches the text topic understood, case insensitively:
+			now MonsterID is X;
 			now monsterHP is HP entry;
 			challenge;
 			break;
@@ -4478,9 +5183,9 @@ levelcheat is an action applying to nothing.
 understand "givelevel" as levelcheat.
 
 carry out levelcheat:
-	now XP of the player is (10 + (level of player times 10));
-	if "Fast Learner" is listed in feats of player:
-		decrease XP of player by ( level of player times 2 );
+	now XP of the player is (10 + (level of Player times 10));
+	if "Fast Learner" is listed in feats of Player:
+		decrease XP of Player by ( level of Player times 2 );
 	level up;
 	decrease score by level of the player times level of the player;
 
@@ -4497,8 +5202,8 @@ Carry out tablelisting:
 		sort table of game objects in object order;
 		repeat with X running from 1 to number of filled rows in table of game objects:
 			choose row X from the table of game objects;
-			if there is a name entry:
-				say "[name Entry],[weight entry][line break]";
+			if there is a Name entry:
+				say "[Name entry],[weight entry][line break]";
 		say "End of list of objects.";
 		stop the action;
 	else if t in lower case is "creature":
@@ -4507,7 +5212,7 @@ Carry out tablelisting:
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:
 			choose row X from the Table of Random Critters;
 			if there is a lev entry:
-				say "[name entry],[lev entry],[area entry][line break]";
+				say "[Name entry],[lev entry],[area entry][line break]";
 		say "End of list of random critters.";
 		stop the action;
 	else if t in lower case is "critcombat":
@@ -4515,8 +5220,8 @@ Carry out tablelisting:
 		sort Table of Critter Combat in combat order;
 		repeat with X running from 1 to number of filled rows in Table of Critter Combat:
 			choose row X from the Table of Critter Combat;
-			if there is a name entry:
-				say "[name entry][line break]";
+			if there is a Name entry:
+				say "[Name entry][line break]";
 		say "End of list of critter combats.";
 		stop the action;
 	else if t in lower case is "room":
@@ -4554,11 +5259,11 @@ Carry out tablelisting:
 		sort Table of infection heat in infect name order;
 		repeat with X running from 1 to number of filled rows in Table of infection heat:
 			choose row X from the Table of infection heat;
-			if there is a infect name entry:
+			if there is a infect Name entry:
 				if there is a fheat entry and there is a mpregheat entry:
-					say "[infect name entry]: [heat cycle entry],[heat duration entry], F: [if there is a fheat entry and fheat entry is true]Yes[else]No[end if], MPreg: [if there is a mpregheat entry and mpregheat entry is true]Yes[else]No[end if][line break]";
+					say "[infect Name entry]: [heat cycle entry],[heat duration entry], F: [if there is a fheat entry and fheat entry is true]Yes[else]No[end if], MPreg: [if there is a mpregheat entry and mpregheat entry is true]Yes[else]No[end if][line break]";
 				else:
-					say "[infect name entry]: [heat cycle entry],[heat duration entry] - not updated to F/MPreg[line break]";
+					say "[infect Name entry]: [heat cycle entry],[heat duration entry] - not updated to F/MPreg[line break]";
 		say "End of list of heat.";
 		stop the action;
 	else if t in lower case is "zephyr":
@@ -4567,7 +5272,7 @@ Carry out tablelisting:
 		repeat with X running from 1 to number of filled rows in Table of Zephyr Goods:
 			choose row X from the Table of Zephyr Goods;
 			if there is a price entry:
-				say "[name entry],[price entry][line break]";
+				say "[Name entry],[price entry][line break]";
 		say "End of list of Zephyr Goods.";
 		stop the action;
 	else if t in lower case is "biker":
@@ -4585,7 +5290,7 @@ Carry out tablelisting:
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:
 			choose row X from the Table of Random Critters;
 			if there is a loot entry:
-				say "[name Entry],[loot entry],[lootchance entry][line break]";
+				say "[Name entry],[loot entry],[lootchance entry][line break]";
 		say "End of list of loot.";
 		stop the action;
 	else if t in lower case is "situation":
@@ -5410,7 +6115,7 @@ to genderlockmenu:
 			now gsexit is 1;
 			if gsgl > 1 and glshiftstart is 0:
 				say "Would you like to start as your chosen gender lock?";
-				if player consents:
+				if Player consents:
 					now glstart is 1;
 				else:
 					now glstart is 2;
@@ -5426,41 +6131,41 @@ to startgenderlockget:
 	if gsgl > 1:
 		if gsgl is 3:
 			say "Locked to male gender.";
-			add "Male Preferred" to feats of player;
+			add "Male Preferred" to feats of Player;
 		else if gsgl is 4:
 			say "Locked to female gender.";
-			add "Female Preferred" to feats of player;
+			add "Female Preferred" to feats of Player;
 		else if gsgl is 5:
 			say "Locked to shemale configuration.";
-			add "Male Preferred" to feats of player;
-			add "Breasts" to feats of player;
+			add "Male Preferred" to feats of Player;
+			add "Breasts" to feats of Player;
 		else if gsgl is 6:
 			say "Locked to cuntboy configuration.";
-			add "Female Preferred" to feats of player;
-			add "Flat Chested" to feats of player;
+			add "Female Preferred" to feats of Player;
+			add "Flat Chested" to feats of Player;
 		else if gsgl is 7:
 			say "Locked to male herm configuration.";
-			add "Herm Preferred" to feats of player;
-			add "Flat Chested" to feats of player;
+			add "Herm Preferred" to feats of Player;
+			add "Flat Chested" to feats of Player;
 		else if gsgl is 8:
 			say "Locked to herm configuration.";
-			add "Herm Preferred" to feats of player;
+			add "Herm Preferred" to feats of Player;
 		else if gsgl is 9:
 			say "Male anatomy locked in.";
-			add "Always Cocky" to feats of player;
+			add "Always Cocky" to feats of Player;
 		else if gsgl is 10:
 			say "Female anatomy locked in.";
-			add "Always A Pussy" to feats of player;
+			add "Always A Pussy" to feats of Player;
 		else if gsgl is 11:
 			say "Locked to a singular gender at a time.";
-			add "Single Sexed" to feats of player;
+			add "Single Sexed" to feats of Player;
 		else if gsgl is 12:
 			say "Locked to be flat chested.";
-			add "Flat Chested" to feats of player;
+			add "Flat Chested" to feats of Player;
 		else if gsgl is 13:
 			say "Locked to male or cuntboy.";
-			add "Single Sexed" to feats of player;
-			add "Flat Chested" to feats of player;
+			add "Single Sexed" to feats of Player;
+			add "Flat Chested" to feats of Player;
 
 To startgenderlockshift:
 	now glshiftstart is 1;
@@ -5469,65 +6174,65 @@ To startgenderlockshift:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
 		say "     ([link]N[as]n[end link]) - Start game without lock.";
-		if player consents:
+		if Player consents:
 			genderlockmenu;
 	if gsgl is:
 		-- 3:	[male]
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now the cock width of the player is 4;
-			now breast size of player is 0;
-			now cunts of player is 0;
-			now cunt length of player is 0;
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 6;
+			now the Ball Size of the player is 4;
+			now Breast Size of Player is 0;
+			now Cunt Count of Player is 0;
+			now Cunt Length of Player is 0;
 		-- 4:		[female]
-			now cunts of player is 1;
-			now cunt length of player is 6;
-			now cunt width of player is 4;
-			now breast size of player is 2;
-			now cocks of player is 0;
-			now cock length of player is 0;
+			now Cunt Count of Player is 1;
+			now Cunt Length of Player is 6;
+			now Cunt Tightness of Player is 4;
+			now Breast Size of Player is 2;
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
 		-- 5:		[shemale]
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now the cock width of the player is 4;
-			now breast size of player is 2;
-			now cunts of player is 0;
-			now cunt length of player is 0;
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 6;
+			now the Ball Size of the player is 4;
+			now Breast Size of Player is 2;
+			now Cunt Count of Player is 0;
+			now Cunt Length of Player is 0;
 		-- 6: [cuntboy]
-			now cunts of player is 1;
-			now cunt length of player is 6;
-			now cunt width of player is 4;
-			now breast size of player is 0;
-			now cocks of player is 0;
-			now cock length of player is 0;
+			now Cunt Count of Player is 1;
+			now Cunt Length of Player is 6;
+			now Cunt Tightness of Player is 4;
+			now Breast Size of Player is 0;
+			now Cock Count of Player is 0;
+			now Cock Length of Player is 0;
 		-- 7: [male herm]
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now the cock width of the player is 4;
-			now cunts of player is 1;
-			now cunt length of player is 6;
-			now cunt width of player is 4;
-			now breast size of player is 0;
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 6;
+			now the Ball Size of the player is 4;
+			now Cunt Count of Player is 1;
+			now Cunt Length of Player is 6;
+			now Cunt Tightness of Player is 4;
+			now Breast Size of Player is 0;
 		-- 8: [herm]
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now the cock width of the player is 4;
-			now cunts of player is 1;
-			now cunt length of player is 6;
-			now cunt width of player is 4;
-			now breast size of player is 2;
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 6;
+			now the Ball Size of the player is 4;
+			now Cunt Count of Player is 1;
+			now Cunt Length of Player is 6;
+			now Cunt Tightness of Player is 4;
+			now Breast Size of Player is 2;
 		-- 9: [always cocky]
-			now cocks of player is 1;
-			now cock length of player is 6;
-			now the cock width of the player is 4;
+			now Cock Count of Player is 1;
+			now Cock Length of Player is 6;
+			now the Ball Size of the player is 4;
 		-- 10: [always a pussy]
-			now cunts of player is 1;
-			now cunt length of player is 6;
-			now cunt width of player is 4;
+			now Cunt Count of Player is 1;
+			now Cunt Length of Player is 6;
+			now Cunt Tightness of Player is 4;
 		-- 12: [flat chested]
-			now breast size of player is 0;
+			now Breast Size of Player is 0;
 		-- 13: [simplified masculine]
-			now breast size of player is 0;
+			now Breast Size of Player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
 	say "Select a basic feat. This represents a skill or innate ability you have.";
@@ -5550,11 +6255,11 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				choose row current menu selection from the table of gainable feats;
 				say "[title entry]: [description entry][line break]";
 				say "Is this what you want?";
-				if player consents:
+				if Player consents:
 					now freefeatgeneral is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
 				break; [if featqualified is 0, ]
-			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
 			else:
@@ -5581,11 +6286,11 @@ To startFunFeatget: [alternate funfeatget used for start]
 				choose row current menu selection from the table of gainable feats;
 				say "[title entry]: [description entry][line break]";
 				say "Is this what you want?";
-				if player consents:
+				if Player consents:
 					now freefeatfun is the title in row calcnumber of table of gainable feats; [important change from regular featget]
 					now featqualified is 0;
 				break; [if featqualified is 0, ]
-			else if playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
+			else if Playerinput matches "0":	[do not use calcnumber, as non-numbers will return 0]
 				say "Selection aborted.";
 				continue the action;
 			else:
@@ -5601,63 +6306,63 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	[Boost two stats for increased spread in results]
 	let T be a random number between 1 and 6;
 	if T is 1:
-		increase strength of player by 3;
+		increase strength of Player by 3;
 	if T is 2:
-		increase dexterity of player by 3;
+		increase dexterity of Player by 3;
 	if T is 3:
-		increase stamina of player by 3;
+		increase stamina of Player by 3;
 	if T is 4:
-		increase charisma of player by 3;
+		increase charisma of Player by 3;
 	if T is 5:
-		increase intelligence of player by 3;
+		increase intelligence of Player by 3;
 	if T is 6:
-		increase perception of player by 3;
+		increase perception of Player by 3;
 	now T is a random number between 1 and 6;
 	if T is 1:
-		increase strength of player by 2;
+		increase strength of Player by 2;
 	if T is 2:
-		increase dexterity of player by 2;
+		increase dexterity of Player by 2;
 	if T is 3:
-		increase stamina of player by 2;
+		increase stamina of Player by 2;
 	if T is 4:
-		increase charisma of player by 2;
+		increase charisma of Player by 2;
 	if T is 5:
-		increase intelligence of player by 2;
+		increase intelligence of Player by 2;
 	if T is 6:
-		increase perception of player by 2;
+		increase perception of Player by 2;
 	now tempnum is 12; [remaining 12 points applied randomly one at a time]
 	while tempnum is not 0:
 		now T is a random number between 1 and 6;
 		decrease tempnum by 1;
 		if T is 1:
-			increase strength of player by 1;
-			if strength of player > 18:
-				now strength of player is 18;
+			increase strength of Player by 1;
+			if strength of Player > 18:
+				now strength of Player is 18;
 				increase tempnum by 1;
 		if T is 2:
-			increase dexterity of player by 1;
-			if dexterity of player > 18:
-				now dexterity of player is 18;
+			increase dexterity of Player by 1;
+			if dexterity of Player > 18:
+				now dexterity of Player is 18;
 				increase tempnum by 1;
 		if T is 3:
-			increase stamina of player by 1;
-			if stamina of player > 18:
-				now stamina of player is 18;
+			increase stamina of Player by 1;
+			if stamina of Player > 18:
+				now stamina of Player is 18;
 				increase tempnum by 1;
 		if T is 4:
-			increase charisma of player by 1;
-			if charisma of player > 18:
-				now charisma of player is 18;
+			increase charisma of Player by 1;
+			if charisma of Player > 18:
+				now charisma of Player is 18;
 				increase tempnum by 1;
 		if T is 5:
-			increase intelligence of player by 1;
-			if intelligence of player > 18:
-				now intelligence of player is 18;
+			increase intelligence of Player by 1;
+			if intelligence of Player > 18:
+				now intelligence of Player is 18;
 				increase tempnum by 1;
 		if T is 6:
-			increase perception of player by 1;
-			if perception of player > 18:
-				now perception of player is 18;
+			increase perception of Player by 1;
+			if perception of Player > 18:
+				now perception of Player is 18;
 				increase tempnum by 1;
 
 To startfreefeats: [gives free feats]
@@ -5692,7 +6397,7 @@ To startfreefeats: [gives free feats]
 		if title entry is freefeatfun:
 			now current menu selection is y;
 			follow the gainfeat rule;
-			decrease featgained of player by 1;
+			decrease featgained of Player by 1;
 			break;
 	if current menu selection is 0:
 		say "Invalid Feat: Select a new choice now.";
@@ -5706,7 +6411,7 @@ To startcreatureban: [bans creatures, as requested]
 	repeat through the Table of Random Critters:
 		let bad be 0;
 		repeat with n running through all banned flags:
-			if name entry is listed in infections of n:
+			if Name entry is listed in infections of n:
 				now bad is 1;
 		if bad is 1:
 			now BannedStatus entry is true;
@@ -5743,8 +6448,8 @@ To regularstart: [normal start method]
 		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
 		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
 		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(8) [link]Player Name[as]8[end link] - [bold type][name of player][roman type][line break]";
-		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of player][roman type][line break]";
+		say "(8) [link]Player Name[as]8[end link] - [bold type][name of Player][roman type][line break]";
+		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of Player][roman type][line break]";
 		say "[line break]";
 		say "[bold type]Gameplay Options:[roman type][line break]";
 		say "(10) [link]Banned/Warded Types[as]10[end link] - [menuwardlist] & [menubanlist] [line break]";
@@ -5831,25 +6536,25 @@ To regularstart: [normal start method]
 				say "[set_invcolumns]";
 			-- 99:
 				say "Confirm restore?";
-				if player consents:
+				if Player consents:
 					now RestoreMode is true;
 					say "[silent_start]";
 					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
 						try restoring the game;
-						if maxHP of player is 0:
+						if maxHP of Player is 0:
 							try restarting the game;
 			-- 0:
 				say "Confirm game start?";
-				if player consents:
+				if Player consents:
 					say "[gsopt_start]";
 					now Trixieexit is 1;
 
 to playernaming:
 	say "[bold type]Please enter new name: [roman type]";
 	get typed command as playerinput;
-	now name of player is playerinput;
+	now name of Player is playerinput;
 
 to say menuwardlist:
 	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or mindcontrol is warded or noncon is warded or vore is warded:
@@ -5949,17 +6654,17 @@ to say gsopt_1:
 To gs_stats: [apply stat bonus]
 	follow the starting stats rule; [resets all to 12]
 	if gsms is 1:
-		increase strength of player by 5;
+		increase strength of Player by 5;
 	else if gsms is 2:
-		increase dexterity of player by 5;
+		increase dexterity of Player by 5;
 	else if gsms is 3:
-		increase stamina of player by 5;
+		increase stamina of Player by 5;
 	else if gsms is 4:
-		increase charisma of player by 5;
+		increase charisma of Player by 5;
 	else if gsms is 5:
-		increase intelligence of player by 5;
+		increase intelligence of Player by 5;
 	else if gsms is 6:
-		increase perception of player by 5;
+		increase perception of Player by 5;
 	else if gsms is 7 and started is 1:
 		randomstatstart;
 	else if started is 1:
@@ -6060,17 +6765,17 @@ to say gsopt_4:
 to say gsopt_start:
 	now started is 1;
 	if gspg is 1:	[male]
-		now cocks of player is 1;
-		now cock length of player is 6;
-		now the cock width of the player is 4;
-		now breasts of player is 2;
-		now breast size of player is 0;
+		now Cock Count of Player is 1;
+		now Cock Length of Player is 6;
+		now the Ball Size of the player is 4;
+		now Nipple Count of Player is 2;
+		now Breast Size of Player is 0;
 	else:		[defaults to female]
-		now cunts of player is 1;
-		now cunt length of player is 6;
-		now cunt width of player is 4;
-		now breasts of player is 2;
-		now breast size of player is 2;
+		now Cunt Count of Player is 1;
+		now Cunt Length of Player is 6;
+		now Cunt Tightness of Player is 4;
+		now Nipple Count of Player is 2;
+		now Breast Size of Player is 2;
 	if glstart is 1:
 		startgenderlockshift;
 	gs_stats;
@@ -6079,7 +6784,7 @@ to say gsopt_start:
 	increase the HP of the player by 5;
 	now the maxHP of the player is the HP of the player;
 	now the capacity of the player is five times the strength of the player;
-	now humanity of player is 100;
+	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
 	startfreefeats;
@@ -6150,7 +6855,7 @@ to say gsopt_start:
 		now combat boots is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
-			add "Spartan Diet" to feats of player;
+			add "Spartan Diet" to feats of Player;
 		if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
@@ -6166,7 +6871,7 @@ to say gsopt_start:
 			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Deer":
+				if Name entry is "Deer":
 					now area entry is "Park";
 					break;
 			increase score by 600;
@@ -6210,17 +6915,17 @@ to say silent_start:
 	WaitLineBreak;
 	now started is 1;
 	if gspg is 1: [male]
-		now cocks of player is 1;
-		now cock length of player is 6;
-		now the cock width of the player is 4;
-		now breasts of player is 2;
-		now breast size of player is 0;
+		now Cock Count of Player is 1;
+		now Cock Length of Player is 6;
+		now the Ball Size of the player is 4;
+		now Nipple Count of Player is 2;
+		now Breast Size of Player is 0;
 	else: [defaults to female]
-		now cunts of player is 1;
-		now cunt length of player is 6;
-		now cunt width of player is 4;
-		now breasts of player is 2;
-		now breast size of player is 2;
+		now Cunt Count of Player is 1;
+		now Cunt Length of Player is 6;
+		now Cunt Tightness of Player is 4;
+		now Nipple Count of Player is 2;
+		now Breast Size of Player is 2;
 	if glstart is 1:
 		startgenderlockshift;
 	gs_stats;
@@ -6229,7 +6934,7 @@ to say silent_start:
 	increase the HP of the player by 5;
 	now the maxHP of the player is the HP of the player;
 	now the capacity of the player is five times the strength of the player;
-	now humanity of player is 100;
+	now humanity of Player is 100;
 	if gsgl > 1, startgenderlockget;
 	follow the SetPlayerPronouns rule;
 	startfreefeats;
@@ -6315,7 +7020,7 @@ to say silent_start:
 		now camo shirt is equipped;
 	if scenario is not "Bunker":
 		if scenario is "Caught Outside":
-			add "Spartan Diet" to feats of player;
+			add "Spartan Diet" to feats of Player;
 		if scenario is "Rescuer Stranded":
 			now invent of bunker is { };
 			add "cot" to invent of bunker;
@@ -6331,7 +7036,7 @@ to say silent_start:
 			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Deer":
+				if Name entry is "Deer":
 					now area entry is "Park";
 					break;
 			increase score by 600;
@@ -6377,11 +7082,11 @@ to say promptsay:
 		say " [link]get everything[as]get all[end link]";
 		say "[line break]";
 	say "Status: ";
-	if hunger of player > 30:
+	if hunger of Player > 30:
 		say "[link][bracket]HUNGRY[close bracket][as]eat food[end link] ";
-	if thirst of player > 30:
+	if thirst of Player > 30:
 		say "[link][bracket]THIRSTY[close bracket][as]drink water[end link] ";
-	if humanity of player < 50:
+	if humanity of Player < 50:
 		say "[link][bracket]UNHINGED[close bracket][as]use journal[end link] ";
 	say "[link][bracket]Inv[close bracket][as]inventory[end link] ";
 	if scenario is "Researcher" or nanitemeter > 0:
@@ -6391,17 +7096,17 @@ to say promptsay:
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
 	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
 	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
-	if "Unerring Hunter" is listed in feats of player and (there is a visible dangerous door or earea of location of player is not "void"):
+	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";
 	say "Exits: ";
 	repeat with nam running through valid directions:
 		say "[link][printed name of nam][end link] ";
-	if location of player is fasttravel and earea of location of player is "void":
+	if location of Player is fasttravel and earea of location of Player is "void":
 		say "[bracket][link]nav[end link][close bracket]";
-	else if location of player is fasttravel:
+	else if location of Player is fasttravel:
 		say "[bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
-	else if earea of location of player is not "void":
+	else if earea of location of Player is not "void":
 		say "[bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
@@ -6426,13 +7131,13 @@ When play begins:
 	repeat with q running from 1 to the number of rows in the table of game objects:
 		add name in row Q of table of game objects to allobjs;
 		choose row q in the table of game objects;
-		now tempname is name entry in lower case;
-		now sortname entry is tempname;
+		now tempname is Name entry in lower case;
+		now sortName entry is tempname;
 	sort the table of game objects in sortname order;
 	now the right hand status line is "[list of valid directions]";
 	say "Before the game begins..."; [warn the player what to expect next]
 	say "Do you want hyperlinks? (Y/N)[line break]";
-	if player consents:
+	if Player consents:
 		now hypernull is hypernull;
 	else:
 		now hypernull is 1;
@@ -6456,8 +7161,8 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	let pointlessbump be 0;
-	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
-	choose row monster in Table of Random Critters;
+	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row MonsterID in Table of Random Critters;
 	regularstart; [original start method. easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):
