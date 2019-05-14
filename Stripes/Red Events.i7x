@@ -178,7 +178,7 @@ to say stripbarsearch:
 		challenge "Tigress Hooker";
 	if T is 4:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' Shi grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before shi catches up with you, pulling you into a fight.";
-		challenge "Shemale Smooth Collie";
+		challenge "Smooth Collie Shemale";
 	if T is 5:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. It seems that this place was struck rather hard when the infection took hold. Despite outer appearances, the inside has been quite devastated. You decide to head back out, but not in time. A large glob of cum which was stuck to the ceiling comes down right on top of you. You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
 		weakrandominfect;
@@ -192,7 +192,7 @@ to say stripbarsearch:
 		weakrandominfect;
 		randominfect; [researcher still gets one]
 		decrease score by 5;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 	if T > 7:
 		say "Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. Clearly someone became something large and aggressive. The booze rack has been knocked completely over and the bottles are shattered. There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived. Well, better luck next time.";
 		increase score by 1;
@@ -267,7 +267,7 @@ to say orgyoutcome:
 		say "     As you withdraw, you're pulled into the arms of a lioness. Shoving you down, she wraps her muzzle around your cock while offering her pussy for you to lick. Your tongues please one another until you both reach a powerful climax. Then it's off to have a herm gryphon fill your ass again while sucking off two different strains of horses at once. Things grow hazier as you pass from partner to partner. There is only the lust of so many creatures satisfying one another together.";
 	say "     This wild romp continues for hours, with numerous monsters sharing you or being shared by you. You quickly lose track of all the creatures you mate with and cycle through a myriad of positions and partners before it finally all falls apart from exhaustion. Your grip on your identity has been shaken from the intensity of the orgy, but you are quite sexually sated - for the time being.[randomimpreg][randomimpreg]";
 	LineBreak;
-	decrease humanity of Player by 25;
+	SanLoss 25;
 	decrease Libido of Player by 40;
 	if Libido of Player < 0:
 		now Libido of Player is 0;

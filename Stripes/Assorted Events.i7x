@@ -219,7 +219,7 @@ instead of resolving a Prank Aftermath:
 	say "     Not normally native to this part of the city, you start to wonder how such a large band of the felines got here when you spot one of them eating a large fish from a basket while she waits for her next turn with the new breedtoys. Remembering that you told Diego an idea you had about using fish to lure some of the felines around for a prank, it seems you've run into the aftermath of your idea";
 	if Libido of Player - humanity of Player < -25:
 		say ". Being too far gone into your lustful urges and the infection taking over, you feel some remorse for your actions, but are too aroused by what you see to do anything but watch.";
-		decrease humanity of Player by 10;
+		SanLoss 10;
 		decrease morale of Player by 5;
 		increase Libido of Player by 20;
 		if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 5;
@@ -299,7 +299,7 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of pink raccoon is turns;
 			infect "Raccoon";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
@@ -309,7 +309,7 @@ Instead of resolving a Lovers Bench:
 			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Blue Gryphon":
+				if Name entry is "Blue Gryphon Herm":
 					now MonsterID is y;
 					break;
 			say "     As you're finishing up your scavenging, Denise takes your hand in hers and grins playfully at you. She gives you a tug over to the bench. 'We should... umm... I mean, everyone's using this bench for...' she says softly as she sits back on it, running her paws over her lovely body. Her nipples are quite hard, as is her cock and gryphon juices drip from her aroused pussy. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your pet up on her offer.";
@@ -320,9 +320,9 @@ Instead of resolving a Lovers Bench:
 				say "     You snuggle up beside her on the bench, nuzzling and kissing one another. Her paw soon find its way to your pussy and she fingers and teases your wet folds. With her other arm around you, she moves to sit at one corner of the bench and guides you to sit in her lap. Soon enough, you are lining up her throbbing cock with your wet hole while kissing your loving companion. You moan in pleasure as you sink down on her leonine cock, gripping her shoulders. She nuzzles your bosom, licking and sucking at your nipples before moving her head back up to kiss you. You continue kissing as you ride in her lap, enjoying the feel of her throbbing meat inside your cunt. One paw roams over your body while the other digs into the bench, adding her marks to those of the others who've used it. Your ride her cock lustfully, but loving as well, as something about the bench makes this more like lovemaking than raw sex. With your arms around her, you hold her lovingly while scritching at her wing roots, which makes her sing out her love for you and you respond in kind.";
 				say "     After a powerfully long orgasm that pumps an impressive load of her gryphon seed into your pussy and her own female juices leak onto the bench to join the others, you ease yourself off her spent shaft. Your companion is extra-snugly after the lovemaking, nuzzling and kissing at you and you happily return this affection, feeling closer to her.[ovichance]";
 			now lastfuck of gryphoness is turns;
-			infect "Blue Gryphon";
+			infect "Blue Gryphon Herm";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
@@ -346,7 +346,7 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of felinoid companion is turns;
 			infect "Felinoid";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
@@ -364,7 +364,7 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of bee girl is turns;
 			if HP of bee girl >= 5, infect "Queen Bee";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
@@ -393,9 +393,9 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of bee girl is turns;
 			infect "Mental Mouse";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 20;
+			SanLoss 20;
 			if "Strong Psyche" is listed in feats of Player, SanBoost 5;
-			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 5;
+			if "Weak Psyche" is listed in feats of Player, SanLoss 5;
 			increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
 			now Resolution of Lovers Bench is 7;	[Did Lovers Bench with Rachel]
@@ -420,7 +420,7 @@ Instead of resolving a Lovers Bench:
 			infect "Black Equinoid";
 			now Libido of Player is Libido of Player / 2;
 			now Libido of equinoid warrior is 0;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
@@ -458,7 +458,7 @@ Instead of resolving a Lovers Bench:
 					say "     [BenchDBFemaleSex]";
 			now lastfuck of demon brute is turns;
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			increase XP of demon brute by ( level of demon brute + 1 ) * 3;
@@ -566,7 +566,7 @@ Instead of resolving a PeachTree:
 				infect "Parasitic Plant";
 				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 				now Libido of Player is Libido of Player / 2;
-				decrease humanity of Player by 10;
+				SanLoss 10;
 				now Resolution of PeachTree is 2;	[Lost to plant with Joanna's seed]
 		else:
 			say "     Deciding not to risk it, you cover your nose and head back the way you came.";
@@ -589,7 +589,7 @@ Instead of resolving a PeachTree:
 			infect "Parasitic Plant";
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 			now Libido of Player is Libido of Player / 2;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			now Resolution of PeachTree is 4;	[Lost to plant]
 	now peachtreefight is 0;
 	now PeachTree is resolved;
@@ -841,7 +841,7 @@ Instead of resolving a Beach Party:
 	if dolphinflatablefight is 2:
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [cockname of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		increase morale of Player by 5;
 		[puts Bottlenose Toy as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:

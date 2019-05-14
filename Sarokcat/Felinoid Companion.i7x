@@ -153,7 +153,7 @@ ScaleValue of Klauz is 3. [roughly human sized]
 SleepRhythm of Klauz is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Klauz is 1.
 Cock Length of Klauz is 14.
-Ball Size of Klauz is 10. [lemon sized balls]
+Ball Size of Klauz is 4. [goose egg sized balls]
 Ball Count of Klauz is 2.
 Cunt Count of Klauz is 0.
 Cunt Length of Klauz is 0.
@@ -372,9 +372,9 @@ to say felinoidpet_purem:
 		if Nipple Count of Player > 0 and Breast Size of Player > 0:
 			say "     The feline rears up and nuzzles at your chest, burying snout against your soft [breast size desc of Player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
 			now lastmilking is turns;
-		say "     He pushes you back to a seated position with strong nuzzlings against your groin. He never leaves your crotch. Rough tongue lashes across your thighs, down across your taint and up across your [short ball size] balls before returning to that [cock size desc of Player] feline cock of yours. His tongue curls around it at the base and runs slowly up towards the tip, purrs sending soft bits of pleasure through the delighted flesh.";
+		say "     He pushes you back to a seated position with strong nuzzlings against your groin. He never leaves your crotch. Rough tongue lashes across your thighs, down across your taint and up across your [Ball Size Adjective of Player] balls before returning to that [cock size desc of Player] feline cock of yours. His tongue curls around it at the base and runs slowly up towards the tip, purrs sending soft bits of pleasure through the delighted flesh.";
 		say "     You reach and run your feline claws through his head and across the back of his ears, encouraging him as he works deeper against you[if Cock Length of Player > 6]. Your shaft penetrates straight through his muzzle, being deep throated down his flexing throat and subjected to the delightful sensations of a purry mouth pussy for your aching member[end if].";
-		say "     You can hold back no longer and grab his head, squeezing at his ears as you begin to fill him with your cum. Each twitch is responded to in kind in him, wriggling in pleasure as he suckles up the treat[if ball size of Player > 12]. Your massive balls unload so much seed that he seems to have trouble getting it all down. His belly swells with it and he mewls around the shaft in his mouth, pushing at your balls with a paw as you flex and fire into the captive feline[end if].";
+		say "     You can hold back no longer and grab his head, squeezing at his ears as you begin to fill him with your cum. Each twitch is responded to in kind in him, wriggling in pleasure as he suckles up the treat[if Ball Size of Player > 4]. Your massive balls unload so much seed that he seems to have trouble getting it all down. His belly swells with it and he mewls around the shaft in his mouth, pushing at your balls with a paw as you flex and fire into the captive feline[end if].";
 		say "     When your climax tapers off, he carefully extracts himself from your shaft, licking it clean as he goes. With a last, fond, nuzzle at you, he sits and begins to preen himself. [if Cock Count of Player > 1]This is all the more needed with the seed your extra male meat produced. Streaks of gray fluid against his pelt, being cleaned and swallowed with motions of his cat tongue. [end if]He is soon cleaned and ready to continue, leaving you to straighten yourself up.";
 		now the Libido of Player is Libido of Player / 2;
 	else:

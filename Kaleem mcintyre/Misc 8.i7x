@@ -98,7 +98,7 @@ When play begins:
 
 Instead of resolving a Fantasy:
 	say "     When a large red wolf runs pass you on all fours with a blue furred feline that's carrying a spear across its shoulder right on its trail, you can almost swear that you've seen those two somewhere before. Not really sure where you simply shrug before going about your way. That is, right before you end up coming across a massive beast of a collie standing at about twelve feet in height. The horny shemale growls happily as it looks to you and suddenly you realize what the other pair was running away from.";
-	challenge "Shemale Smooth Collie";
+	challenge "Smooth Collie Shemale";
 	say "     With that problem taken care of, you grunt in annoyance at as you realize that video game characters must seriously have it rough if they have to deal with things like that every day.";
 	now Fantasy is resolved;
 
@@ -219,10 +219,10 @@ Instead of resolving a Dr Feel Good:
 			if Player is not male:
 				increase Cock Count of Player by 1;
 				now Cock Length of Player is 3;
-				now the ball size of Player is 2;
+				now the Ball Size of Player is 2;
 			else:
 				increase Cock Length of Player by 1;
-				increase the ball size of Player by 1;
+				increase the Ball Size of Player by 1;
 			decrease score by 14;
 			now Resolution of Dr Feel Good is 2; [fought & lost/ran]
 			now Dr Feel Good is resolved;

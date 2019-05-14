@@ -126,7 +126,7 @@ when play ends:
 		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of Player] form and [facename of Player] face.";
 		if bodyname is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
-		if Cock Length of Player > 10 or ball size of Player > 6 and player is male:
+		if Cock Length of Player > 10 or Ball Size of Player > 3 and player is male:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
 			if Cock Count of Player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";

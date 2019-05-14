@@ -450,15 +450,15 @@ Angry Snake is inactive.
 
 instead of resolving a Angry Snake:
 	if GertyQuest is 1:
-		say "     As you wander the High Rise District, a sign catches your eyes. It reads 'The Read Scare', and along with the iconography, you can tell that it was clearly a bookstore at one point. Remembering your promise to Kyle, you go to check it out, and go closer. As you near the front door, however, you can hear the sounds of something happening, a disturbance in the otherwise quiet air of the city block. Alarmed, you rush in the door, only to be greeted by a strange sight. Before you are three German Shepherds, standing together and growling menacingly at what seems to be a large fort constructed of books, set up between two of the bookshelves. Periodically one will inch closer, and then you finally see what's been keeping them at bay.";
-		say "     A snake-like head emerges from an opening in the fort, and soon after a mechanical looking claw device reaches out alongside, and hurls what seems to be a large, hardbound copy of War and Peace at the lead canine, shouting all the while. 'Face the wrath of Tolstoy, fiends! Get thee away! To the classics section with you!' The book was thrown expertly, and connects with an audible smack against the muzzle of the targeted feral. The German Shepherd whimpers at the attack, and backs further away, his companions alongside. If your hunch is correct, then it seem Gerty has been holed up here for some time, defending himself in an unconventional manner.";
+		say "     As you wander the High Rise District, a sign catches your eyes. It reads 'The Read Scare', and along with the iconography, you can tell that it was clearly a bookstore at one point. Remembering your promise to Kyle, you go to check it out, and go closer. As you near the front door, however, you can hear the sounds of something happening, a disturbance in the otherwise quiet air of the city block. Alarmed, you rush in the door, only to be greeted by a strange sight. Before you are three German shepherds, standing together and growling menacingly at what seems to be a large fort constructed of books, set up between two of the bookshelves. Periodically one will inch closer, and then you finally see what's been keeping them at bay.";
+		say "     A snake-like head emerges from an opening in the fort, and soon after a mechanical looking claw device reaches out alongside, and hurls what seems to be a large, hardbound copy of War and Peace at the lead canine, shouting all the while. 'Face the wrath of Tolstoy, fiends! Get thee away! To the classics section with you!' The book was thrown expertly, and connects with an audible smack against the muzzle of the targeted feral. The German shepherd whimpers at the attack, and backs further away, his companions alongside. If your hunch is correct, then it seem Gerty has been holed up here for some time, defending himself in an unconventional manner.";
 		WaitLineBreak;
 		say "     However, your observance doesn't go completely unnoticed. Soon enough, one of the canines realizes you're there, and shortly after the entire group is watching you. They look back and forth between you and the entrenched Gerty, and seem to unanimously decide you as the easier target, as they then rush at you.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
 			now inasituation is true;
-			challenge "German Shepherd";
+			challenge "German Shepherd Male";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
 			say "     You stand victorious, the canines cowed before you. With another yell, Gerty throws a large encyclopedia at them from his fort. This proves to be the final straw for the dogs, and they flee, whimpering. You turn towards the fort, and narrowly dodge another tome sent your way. 'Back off, pal! I have dictionary, and I'm not afraid to use it!' You quickly throw your hands up in a gesture of surrender, and explain that Kyle sent you to make sure he was okay. The snake-like head once again pokes out of the fort. 'Bah, clearly I'm fine. And what's more, I had it handled. I had the entire contents of the reference section ready to discipline any more strays with.' The metallic appendage you had noticed before shakes at you like a fist.";
@@ -470,7 +470,7 @@ instead of resolving a Angry Snake:
 			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30:
-			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of German Shepherds prowl[else if GroupFightCounter is 2]remaining pair of German Shepherds prowl[else]final German Shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of German shepherds prowl[else if GroupFightCounter is 2]remaining pair of German shepherds prowl[else]final German shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
 			now Resolution of Angry Snake is 2; [lost the fight]
 			now GertyQuest is 100;
 		else if fightoutcome is 30:
@@ -484,7 +484,7 @@ instead of resolving a Angry Snake:
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 3: [runs three times or until loss/flee]
 			now inasituation is true;
-			challenge "German Shepherd";
+			challenge "German Shepherd Male";
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20:
 			say "     You stand victorious, the canines cowed before you. With another yell, Gerty throws a large encyclopedia at them from his fort. This proves to be the final straw for the dogs, and they flee, whimpering. You turn towards the fort, and narrowly dodge another tome sent your way. 'Back off, pal! I have dictionary, and I'm not afraid to use it!' You quickly throw your hands up in a gesture of surrender, and explain that Kyle sent you to make sure he was okay. The snake-like head once again pokes out of the fort. 'Bah, clearly I'm fine. And what's more, I had it handled. I had the entire contents of the reference section ready to discipline any more strays with.' The metallic appendage you had noticed before shakes at you like a fist.";
@@ -496,7 +496,7 @@ instead of resolving a Angry Snake:
 			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		if fightoutcome > 19 and fightoutcome < 30:
-			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of German Shepherds prowl[else if GroupFightCounter is 2]remaining pair of German Shepherds prowl[else]final German Shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of German shepherds prowl[else if GroupFightCounter is 2]remaining pair of German shepherds prowl[else]final German shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
 			now Resolution of Angry Snake is 2; [lost the fight]
 		if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";

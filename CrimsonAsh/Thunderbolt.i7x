@@ -135,7 +135,7 @@ ScaleValue of Thunderbolt is 4. [horse sized]
 SleepRhythm of Thunderbolt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Thunderbolt is 1. [X cock]
 Cock Length of Thunderbolt is 24. [X Inches]
-Ball Size of Thunderbolt is 18.
+Ball Size of Thunderbolt is 4.
 Ball Count of Thunderbolt is 2. [X balls]
 Cunt Count of Thunderbolt is 0. [X pussy]
 Cunt Length of Thunderbolt is 0. [X Cunt]

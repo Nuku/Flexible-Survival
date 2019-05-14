@@ -1,2 +1,0 @@
-- Gradual Size Change Code
-- 

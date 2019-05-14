@@ -29,7 +29,7 @@ ScaleValue of Sirius is 4. [Larger than human]
 SleepRhythm of Sirius is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Sirius is 1. [no cock]
 Cock Length of Sirius is 12. [12 inches]
-Ball Size of Sirius is 10.
+Ball Size of Sirius is 3.
 Ball Count of Sirius is 2. [Two balls]
 Cunt Count of Sirius is 0. [No pussy]
 Cunt Length of Sirius is 0. [No pussy]

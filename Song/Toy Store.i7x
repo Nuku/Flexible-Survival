@@ -47,7 +47,8 @@ instead of resolving a toy store:
 		say "     You're hesitant to enter given the movement inside and the way the curtains have been suspiciously drawn shut. What if the occupants are just waiting to ambush an unsuspecting visitor? Erring on the side of caution, you decide to leave the store alone - for now.";
 		now toystoreseen is true;
 		now Resolution of Toy Store is 99; [Saw Store, May Return Later]
-	now non-infectious entry is false; [Redundant check to clear prop for players who don't lose/submit]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [Redundant check to clear prop for players who don't lose/submit]
 	WaitLineBreak; [Pause to ensure all content is fully seen before moving back to previous nav point]
 
 
@@ -121,7 +122,8 @@ to say toystoreloss:
 		say "     When you come to, the twisted creatures are gone, leaving you lying alone in a pool of their cum, your stomach still swollen from all the latex seed they pumped into you. You can't help but lick your lips, your body still trembling in the aftershocks of pleasure.";
 	setmonster "Latex Fox"; [Redundant code here because Inform throws a fit otherwise!]
 	choose row MonsterID from the Table of Random Critters;
-	now non-infectious entry is false; [Allows the fox to infect again]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [Allows the fox to infect again]
 	infect "Latex Fox";
 	infect "Latex Fox";
 	infect "Latex Fox";

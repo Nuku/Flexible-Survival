@@ -105,7 +105,7 @@ The purified of earthen seed is "distilled cum".
 The purified of demon seed is "distilled cum".
 The purified of fennec semen is "distilled cum".
 The purified of gecko cum is "distilled cum".
-The purified of hawkman seed is "distilled cum".
+The purified of hawkman male cum is "distilled cum".
 The purified of orc cum is "distilled cum".
 The purified of gryphon cum is "distilled cum".
 The purified of pewter seed is "distilled cum".

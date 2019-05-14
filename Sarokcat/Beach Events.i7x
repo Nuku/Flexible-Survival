@@ -269,8 +269,8 @@ Instead of resolving a Cream stand:
 	if Player consents:
 		say "     Deciding to have some ice cream, you move over to the small ice cream stand, and open up the cooler packed full of vanilla ice cream. Picking up a scooper, you place a hefty scoop on one of the cones and begin to eat the white flavorful treat. The taste of the ice cream makes you wonder for a second, as it doesn't taste quite like normal vanilla ice cream does, but since the taste is absolutely delicious, you eagerly finish off the cone anyways. Thinking about getting seconds, all of a sudden you moan as your stomach churns, and your body starts to writhe and change, before you can do more than wonder just what was in that ice cream, a shadow swoops down and takes advantage of your distraction!";
 		decrease HP of Player by 20;
-		infect "Blue Gryphon";
-		challenge "Blue Gryphon";
+		infect "Blue Gryphon Herm";
+		challenge "Blue Gryphon Herm";
 		say "     The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
 		now Resolution of Cream stand is 1; [got ice cream]

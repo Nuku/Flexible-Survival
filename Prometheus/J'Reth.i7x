@@ -16,7 +16,7 @@ ScaleValue of J'Reth is 3. [human sized]
 SleepRhythm of J'Reth is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
 Cock Count of J'Reth is 1. [cock]
 Cock Length of J'Reth is 11. [cock length]
-Ball Size of J'Reth is 5. [ball size]
+Ball Size of J'Reth is 5. [number of player balls: 1, 2 or 4]
 Ball Count of J'Reth is 2. [no balls]
 Cunt Count of J'Reth is 0. [no pussy]
 Cunt Length of J'Reth is 0. []
@@ -87,7 +87,7 @@ Object	Name
 Mantis Meeting	"Mantis Meeting"
 
 Mantis Meeting is a situation.
-Mantis meeting is inactive.
+Mantis Meeting is inactive.
 The level of Mantis Meeting is 0.
 The sarea of Mantis Meeting is "Nowhere".
 

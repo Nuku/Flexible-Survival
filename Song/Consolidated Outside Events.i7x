@@ -323,14 +323,14 @@ Instead of resolving Ice Cream Truck:
 				say "     By the time your trembling bodies settle down, you feel your stomach bloated outwards in a small, sloshing dome of infected seed. The gryphon's softening knot allows her pry free from your beak without risk, dragging along with her the intense, heady flavor of the lingering cum she just stuffed into your pliable form. 'That was fun,' the sexy herm coos in almost a purr, then giggles sweetly and pulls the rest of the way out. Rich splatters of seed leak from your gaping maw, your vision still blurry from the hormones and adrenaline while your tongue chases after the remnants of her delicious, copious cum.";
 				say "     Stunned as you are, you pose no resistance as she hefts you up to your feet, slipping and stumbling a little in the slime of spent fluids. She then pulls you by the wrist with an infectious sense of excited urgency[if Player is male], your cock[smn] already hard and dribbling by the time you're back outside[end if]. Using the street as her runway, your mate takes off into the sky with powerful flaps her wings, and your broken mind has little trouble following her lead, joining her side in the air. You [if Player is mpreg_ok]fuck and breed[else]embrace each other and fuck[end if] wildly the moment you arrive at her nest, paying no heed to the world around you in the haze of taking her cock[if Player is male] and stuffing her pussy with your own knotted tool[smn][end if].";
 			WaitLineBreak;
-			now bodyname of Player is "Blue Gryphon";
+			now bodyname of Player is "Blue Gryphon Herm";
 			now IceCreamTruckBadEnd is true; [ See - Timothy.i7x in Sarokcat's folder for endings ]
 			now humanity of Player is 0;
 			end the story saying "You spend the rest of your days with your lovely gryphon mate.";
 		else:
 			say "     Carefully digging through the mess returns a few bottles of milk that don't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find that the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 			increase carried of gryphon milk by 2;
-			infect "Blue Gryphon";
+			infect "Blue Gryphon Herm";
 			now Resolution of Ice Cream Truck is 1; [Crawled around in Icecream Van]
 	else:
 		say "     Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";

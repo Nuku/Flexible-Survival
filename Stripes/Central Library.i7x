@@ -314,7 +314,7 @@ to say libguard4:
 		say "     'Oh, I haven't felt this horny in years,' he growls as he drives his throbbing cock into you, making you growl and claw at the stone beneath you. His large cock throbs inside you, pulsing with virility as he thrusts it into you again and again. He fucks you like a wild animal and you revel in it, just what your wolverine body needs. He nips and bites at you, only exciting you further. Bracing yourself, you support his weight atop you while his big paws fondle your breasts[if Player is male] and even make a few strokes at your cock[end if] while his large balls slap against you. He pumps hard and fast into you, driving himself in deep before unleashing his hot load into you with a triumphant roar. You roar as well as you feel his semen pumping into you, flowing into your womb and overflowing around his thick shaft.[impregchance]";
 		say "     But it doesn't stop there, the big wolverine rolls you onto your back and climbs atop you again. After licking and kissing at your breasts for a while and playing with your pussy, he climbs atop you and starts mating again. It is another wild, animalistic romp after another until you both collapse panting on the steps, reeking of sex and thoroughly satisfied. You are so wonderfully full to the point of overflowing with this strong, diligent wolverine's cum and your new instincts love it.[impregchance]";
 		infect "Wolverine Guard";
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		if "Strong Psyche" is listed in feats of Player, SanBoost 5;
 		if humanity of Player < 10:
 			now tailname of Player is "Wolverine Guard";
@@ -457,7 +457,7 @@ to say libraryexplore:
 			if "Male Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "One Way" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player:
 				now Cock Count of Player is 0;
 				now Cock Length of Player is 0;
-				now ball size of Player is 0;
+				now Ball Size of Player is 0;
 			if "Male Preferred" is not listed in feats of Player:
 				if Player is not female, now Cunt Count of Player is 1;
 				if Cunt Length of Player < 6, now Cunt Length of Player is 6;

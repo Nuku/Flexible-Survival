@@ -165,7 +165,7 @@ Thomas is a man.
 ScaleValue of Thomas is 4.
 Cock Count of Thomas is 1.
 Cock Length of Thomas is 28.
-Ball Size of Thomas is 15.
+Ball Size of Thomas is 4.
 Ball Count of Thomas is 2.
 Cunt Count of Thomas is 0.
 Cunt Length of Thomas is 0.

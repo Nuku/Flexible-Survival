@@ -75,7 +75,7 @@ instead of resolving a Gryphon's Plot:
 						else if GroupFightCounter is 2:
 							say "     The second falls, and on queue the last gryphon takes his place, a wary, fearful look in his eyes as if he'd flee at any moment. Readying for this final foe, you catch a glimpse of the soldiers from the side of your eye, to find they stand awe struck in front of their still stuck jeep. You smile. Time to finish this!";
 						now inasituation is true;
-						challenge "Blue Gryphon";
+						challenge "Blue Gryphon Herm";
 						now inasituation is false; [reset]
 						increase GroupFightCounter by 1;
 					if fightoutcome < 20: [player won]
@@ -147,7 +147,7 @@ instead of resolving a Gryphon's Plot:
 			now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
-		if bodyname of Player is "Blue Gryphon" and player is pure:
+		if bodyname of Player is "Blue Gryphon Herm" and player is pure:
 			say "     Being a gryphon yourself, you can't help but feel like the guys might react badly to your presence. Still, do you want to approach them?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, who knows? You may be wrong with your assumption";
@@ -215,7 +215,7 @@ instead of resolving a Gryphon's Plot:
 					else if GroupFightCounter is 1:
 						say "     As the first gryphon soldier falls, the second rushes forth, claws extended. He certainly seems like he has better adapted to his new gryphon shape than his fallen comrade.";
 					now inasituation is true;
-					challenge "Blue Gryphon";
+					challenge "Blue Gryphon Herm";
 					now inasituation is false; [reset]
 					increase GroupFightCounter by 1;
 				if fightoutcome < 20: [player won]
@@ -256,7 +256,7 @@ instead of resolving a Gryphon's Plot:
 			else if GroupFightCounter is 1:
 				say "     As the first gryphon soldier falls, the second rushes forth, claws extended. He certainly seems like he has better adapted to his new gryphon shape than his fallen comrade.";
 			now inasituation is true;
-			challenge "Blue Gryphon";
+			challenge "Blue Gryphon Herm";
 			now inasituation is false; [reset]
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20: [player won]
@@ -308,7 +308,7 @@ to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 	SanBoost 15;
 
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
-	setmonster "Blue Gryphon";
+	setmonster "Blue Gryphon Herm";
 	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if Player is female]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
 	if carried of food > 1:
 		say "     Picking up your pack, you notice that you are two cans of food short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
@@ -335,7 +335,7 @@ to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
 
 
 to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
-	if bodyname of Player is not "Blue Gryphon":
+	if bodyname of Player is not "Blue Gryphon Herm":
 		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. Although the gryphons are wary that you aren't one of their own, they gladly accept your help. Soon, with the combined efforts of you and your unlikely allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, looking your way with contemplating looks on their face. Then they gesture to the newly transformed soldiers, all with cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
 		LineBreak;
 		say "     [bold type]What do you want to do?[roman type][line break]";

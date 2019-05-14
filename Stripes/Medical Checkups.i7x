@@ -503,7 +503,7 @@ to say Medeaadjustments:
 					WaitLineBreak;
 					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it. Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step. Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
 					if girl is not banned:
-						setmonster "Female Husky";
+						setmonster "Husky Bitch";
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a female husky. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these cute girls, there is a certain symmetry to that. She seems pleased to see you as well, smelling your arousal and sniffing her way towards your crotch. Making no effort to dissuade her, you seem like a willing playmate and she approaches with eager caution.";
 						say "     When she brings her muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute husky with new, maternally longing instincts, feeling that she'd be perfect to fill it. Before you can even think about it, you grab the husky by the head and yank it forward, driving her muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull her in, stretching around her canine head with an orgasmic effort that has you moaning. Your juices soak her head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need. Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides. There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -664,7 +664,6 @@ to say Medeaassistance_plot:
 				say "     When you place the requested equipment from the hospital on the counter for Dr. Medea, she is quite pleased. 'Excellent! Give me a few moments to look this over and prepare, but I should be able to allow patients, even males, to become patient through anal insemination.' Just saying it makes the lizard girl obviously excited, her tail swishing and the scent of reptilian arousal growing stronger in the air.";
 				now HP of Doctor Medea is 6;
 
-
 to say Medeamattcomplete:
 	WaitLineBreak;
 	say "     While waiting for Dr. Medea to assemble her notes and add any final details, you take a seat in a small office chair. For a while, you reorganize your gear, packing and repacking your bag. Growing bored with this, you eventually devolve into spinning yourself around in the chair. Mid-spin, there comes a heavy bang outside and a loud growl that shocks you[if dexterity of Player < 16]into tumbling out of the chair[else]to your feet[end if] even as the room continues to spin for a moment.";
@@ -784,7 +783,7 @@ instead of resolving Obstetrics Department:
 				say "     Having defeated the creature, you gather up the rest of the equipment as quickly as you can and head out of there as quickly as you can. You can hear your opponent becoming increasingly lustful inside as the scents filling the area send its arousal skyrocketing. You rush off back to the entrance, trying to get as far from the noisy creature before it draws others for an orgy that will only add their musky juices to the scents pervading the area. As it is, having been in there has left you increasingly aroused and longing to breed.";
 				now HP of doctor Medea is 4;
 				now Obstetrics Department is resolved;
-				decrease humanity of Player by 6;
+				SanLoss 6;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 3;
 				increase Libido of Player by 15;
@@ -793,7 +792,7 @@ instead of resolving Obstetrics Department:
 				now Resolution of Obstetrics Department is 2; [won, got Medea's stuff]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten by the creature, you are forced to leave the room once the creature's satisfied itself. You are forced to leave the equipment you were searching for and will have to try returning at some other point. As it stands, you can still hear the creature inside, growing increasingly loud and lustful as its arousal skyrockets. You rush back to the entrance, trying to get as far from the noisy creature before it draws others for an orgy that will only add their musky juices to the scents pervading the area. As it is, having been in there for so long has left you increasingly aroused and longing to breed.";
-				decrease humanity of Player by 12;
+				SanLoss 12;
 				if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 5;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 2 and 5;
 				increase Libido of Player by 25;
@@ -805,7 +804,7 @@ instead of resolving Obstetrics Department:
 				now Resolution of Obstetrics Department is 4; [fled, not got Medea's stuff]
 	else:
 		say "You attempt to search the ward, but the scents filling the place become too much. You are forced to leave before you can accomplish your goal or risk succumbing to your lusts completely. As it stands, you are left aroused and confused, with thoughts of sex and breeding filling your mind.";
-		decrease humanity of Player by 12;
+		SanLoss 12;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 2 and 5;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 2 and 5;
 		increase Libido of Player by 25;

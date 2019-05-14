@@ -125,7 +125,7 @@ instead of conversing the Fancy:
 					follow the turnpass rule;
 			else:
 				say "Defeated by the horseman, you feel utterly humiliated as he prepares to haul his prize off to the Stablemaster for training, only to be saved at the last minute by the intervention of Fancy and several of the other mares who pile on the victor. Their excited cooing and praise for his prowess distracts the horseman as he quickly becomes lost amidst the sea of female horseflesh, his attention diverted from you long enough for you to crawl away and escape. As you begin to recover for a minute, you sigh sadly as you realize that you are in no shape to fight the Stablemaster now, not with your body as sensitive as it is from the horseman's attentions, and by the time you have recovered the Stablemaster will surely be suspicious and check his returning lieutenant carefully.... Unfortunately this means that you will have to wait and try the trap again once you have properly recovered from the horseman's sexual assault...";
-				decrease humanity of Player by 20;
+				SanLoss 20;
 		else:
 			say "'Well ok then, but don't wait too long, we won't have many opportunities at this,' Fancy says nervously as she glances around the Stables, before sighing and settling back down to wait for you to be ready.";
 	else if fancyquest is 14:

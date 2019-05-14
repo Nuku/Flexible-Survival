@@ -56,6 +56,11 @@ Version 2 of Spike by Wahn begins here.
 [  3: fucked the player's ass                      ]
 [  4: fucked the player's pussy + ass              ]
 
+[ Intelligence - transformation knowledge          ]
+[  0: never discussed anything                     ]
+[  0: never discussed anything                     ]
+[  0: never discussed anything                     ]
+
 thirst of Spike is usually 1. [standard setting change]
 MaxHP of Spike is usually 1. [for now the player is always the father as the default]
 
@@ -136,7 +141,7 @@ doberman companion	"doberman companion"
 
 doberman companion is a pet. doberman companion is a part of the player.
 understand "Spike" as doberman companion.
-understand "doberman" as doberman companion.
+understand "Doberman" as doberman companion.
 The description of doberman companion is "[SpikeDesc]".
 The weapon damage of doberman companion is 7.
 The level of doberman companion is 5.
@@ -175,7 +180,7 @@ Spike is a man.
 ScaleValue of Spike is 3. [human sized]
 Cock Count of Spike is 1.
 Cock Length of Spike is 9.
-Ball Size of Spike is 4.
+Ball Size of Spike is 3.
 Ball Count of Spike is 2.
 Cunt Count of Spike is 0.
 Cunt Length of Spike is 0.
@@ -195,7 +200,7 @@ Virgin of Spike is true.
 AnalVirgin of Spike is true.
 PenileVirgin of Spike is false.
 SexuallyExperienced of Spike is true.
-MainInfection of Spike is "Doberman".
+MainInfection of Spike is "Doberman Male".
 The conversation of Spike is { "<This is nothing but a placeholder!>" }.
 The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
@@ -232,7 +237,7 @@ instead of conversing doberman companion:
 
 to say SpikeTalkMenu:
 	project the figure of Spike_face_icon;
-	say "     What do you want to talk with Spike about?";
+	say "     [bold type]What do you want to talk with Spike about?[roman type]";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -268,6 +273,18 @@ to say SpikeTalkMenu:
 	now sortorder entry is 6;
 	now description entry is "Question Spike about what he eats";
 	[]
+	if Intelligence of Spike is 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Nanite transformations";
+		now sortorder entry is 7;
+		now description entry is "Discuss how to transform with Spike";
+	[]
+	if Intelligence of Spike > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Ask him for some fur";
+		now sortorder entry is 8;
+		now description entry is "Request a tuft of Spike's fur";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -294,6 +311,10 @@ to say SpikeTalkMenu:
 					say "[SpikeTalk5]";
 				else if (nam is "Ask where he gets his food"):
 					say "[SpikeTalk6]";
+				else if (nam is "Nanite transformations"):
+					say "[SpikeTalk7]";
+				else if (nam is "Ask him for some fur"):
+					say "[SpikeTalk8]";
 				wait for any key;
 				say "[SpikeTalkMenu]";
 		else if calcnumber is 0:
@@ -323,6 +344,48 @@ to say SpikeTalk5: [military]
 
 to say SpikeTalk6: [food]
 	say "     Mentioning the topic of food, spike stands up a little straighter and gives you a self-confident look. 'No need to worry about that with me [SpikePlayerAddress]. I know how to take care of myself and won't take up any of your supplies at all. There are lots of places where one can scavenge for good stuff and even if you don't find anything yourself, someone else out on the streets will have. Most of the time you just gotta wait till they start rutting with someone or something, then make off with the food. And if they wise up and try to stop me - I'm plenty tough enough to rough up someone who wants a beating.'";
+
+to say SpikeTalk7: [transformation]
+	say "     Bringing up the topic of transformations with Spike, he looks a bit puzzled at you and scratches the back of his neck. 'Hm, I never really thought about how they really work to be honest. I mean - I've seen that shit go down, mostly after someone got the snot beaten out of them. When they're all beaten down and don't even struggle anymore, see? The winner gets on top, humps the poor bitch or dude and poof, there's two of the critters in the street. But that's not really what you're after, is it? Just giving in, pfft!' Rolling his eyes and making a throwing-away gesture, he discards the idea as ridiculous[if Libido of Spike > 40 and Libido of Spike < 61]which makes you chuckle internally, as that's exactly what you have him doing when you forcefully push him into sex[end if]. Then suddenly, the young doberman taps the side of his muzzle and gets an excited look on his face. 'You know, the way to become something else, on purpose and all, might be to... err, invite it in? Let down your guard and really want it.'";
+	say "     Spike frowns at his last sentence, seemingly thinking it sounded rather lame, so he raises his hands in a 'hold on' gesture and rushes ahead to say, 'Just wait and listen! See, I went and had a bit of fun with this husky bitch a little while ago, and you know, totally got her where she wanted to go. As I pulled out after, I could really see the brown fur spreading through her coat! Shy must have been so happy to get a proper dobie boning that she just wanted to be one herself, eh?' Your young companion chuckles and moves as if to nudge you with an elbow, only to falter as he sees your unconvinced expression. 'Wait, wait, wait! I got another example! There was this dude, a... well, something. Armor plates and a tail, slitted eyes, long trenchcoat. Kinda followed him a bit because he looked like he had some profitable racket going. Knocking on doors, whispering with people inside and trading stuff through the crack. Only it wasn't pills or drugs or anything. Just bits of fur with rubber bands around em!'";
+	WaitLineBreak;
+	say "     Clearing his throat, Spike looks to the ceiling, 'You know, I er - might have waited till that tough lizard dude was gone and gone to the house to grab the goods from the buyer. That's why I know it was just some worthless hair. Bit of a disappointment there, but when I threw it aside, he jumped for it. Thinking back, that guy might have wanted to have a certain shape and wanted the hair for that, eh?' Spike is clearly somewhat embarrassed about his abortive attempt of robbery, but he might have the right idea about the fur and all that. You tell him as much, making him smile about having figured out something. 'So! Uhm, do you want to try, maybe? Since you were asking me all about this and so on,' the doberman offers, then runs a hand along his arms and the very short fur on them. 'Not much to get mostly, but I do have some longer fur here at the neck...'";
+	now Intelligence of Spike is 1;
+
+to say SpikeTalk8: [fur request]
+	if Energy of Spike - turns > 4:
+		say "     As you ask Spike if he could give you some of his hair, the young doberman nods happily enough and raises one hand, feeling around a bit at the back of his neck before pinching his thumb and forefinger around a tuft of hair and giving a sharp tug. 'Ouch, that stings!' he exclaims and rubs the spot with his other hand, then moves to pull a rubber band out of his pocket. 'I thought you might want something like this, so I grabbed some supplies,' your companion explains, as always seeming quite eager to please and gain your approval. Within moments, he holds out his tied-together tuft for you to take.";
+		LineBreak;
+		say "     You gain some doberman male fur!";
+		increase carried of doberman male fur by 1;
+		now Energy of Spike is turns;
+	else:
+		say "     As you ask Spike for more fur, he winces a little and rubs the back of his head. 'I'll give you more, but how about giving it some time to re-grow first? Wanna make sure it does, and I won't have a bald spot or something!' Blowing out your breath, you shrug and nod to him. You'll just have to chat him up another time.";
+
+to say SpikeTalk9: [cum request]
+	if (lastfuck of Spike - turns < 2): [he came in the last 3 hours]
+		say "     Spike looks at you somewhat wide-eyed, then clears his throat. 'Uhm, I - I need a moment to, you know, be ready for another go, [SpikePlayerAddress]. Sorry, but that's just a fact.'";
+	else:
+		if Libido of Spike < 20: [eager for any sex]
+			say "     As you step up and ask Spike straight out to give you some cum, he blushes a little under his fur, then smiles and the tip of his tongue dangles out of his mouth for a second before he catches himself. 'Oh, wait! You aren't suggesting doing something with each other, you're just... wanting my fluids?' Something in his voice tells you that he's disappointed in this realization.";
+			say "[bold type]Do you want to make the cum donation more fun for Spike after all?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Jerk him off yourself and milk your dobie companion.";
+			say "     ([link]N[as]n[end link]) - He can take care of himself.";
+			if Player consents:
+				LineBreak;
+				say "     ...";
+			else:
+				LineBreak;
+				say "     Leaning forward and running your hand up behind Spike's head, you pull him in to kiss his muzzle softly. Caressing his sensitive ears as you explain that there will be other times in which you'll spend some fun moments with each other, the explanation follows that right now, you do actually just need for him to fill one of the empty plastic bottles you collected up as far as he can. 'Okay then, anything for you [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he accepts a bottle from you and vanishes into a quiet corner, tail wagging behind his back. The young dobie gets busy stroking himself right quick, so it doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. He even digs a pen out of his pocket and writes on the label what is in the bottle.";
+		else if Libido of Spike < 40: [pressured into subby sex]
+			say "     As you step up and ask Spike straight out to give you some cum, you notice his Adam's Apple bounce a little as he swallows. 'Er, of course [SpikePlayerAddress]. Just give me a moment alone, alright?' With that said, he quietly takes the empty plastic bottle you dig out of your pack and vanishes into a quiet corner, getting busy stroking himself. It doesn't take all that long before he returns, with the bottle capped and containing his 'donation' as per your request. Pulling out a pen, you scribble on the label of the bottle what is in there, then add it to your pack.";
+		else if Libido of Spike < 60: [forced into subby sex]
+			say "...";
+		LineBreak;
+		say "     You gain some doberman male cum!";
+		increase carried of doberman male cum by 1;
+		now lastfuck of Spike is turns;
 
 to say SpikeRenameMenu:
 	project the figure of Spike_face_icon;
@@ -687,7 +750,7 @@ instead of fucking the Spike:
 	say "[SexWithSpike]";
 
 to say SexWithSpike:
-	if (lastfuck of Spike - turns < 6): [he got fucked in the last 18 hours = 6 turns]
+	if (lastfuck of Spike - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Spike looks at you somewhat wide-eyed, then clears his throat. 'Uhm, I - I'm not ready for another round yet [SpikePlayerAddress]. Guess I need to build up my stamina to keep up with you.";
 	else: [ready for sex]
 		if Libido of Spike < 20 or Libido of Spike is 100: [eager for any sex OR promised that he doesn't have to do gay stuff]

@@ -63,7 +63,7 @@ Instead of resolving a Bacchus Wine:
 			say "     Getting more than a bit drunk and giddy as you drink, you can't bring yourself to stop swallowing more of the amazing dark wine. You guzzle the rest of the delicious liquid gold as fast as possible, and stare blearily at your now empty cup. Looking over the cask once more, you are about to walk up to it and get a refill when the sounds of several carousing satyrs reach your ear. Uh-oh, they're on their way here! Realizing you are poaching their booze, you quickly drop the flagon and stagger back out into the museum halls. Eventually your head clears up enough and you manage to find your way back to the museum foyer, feeling much more like partying and drinking wine then you did before finding the cask.";
 			PlayerDrink 10;
 			say "[bold type]Your sanity has been reduced by 5![roman type][line break]";
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			infect "Satyr";
 			infect "Satyr";
 		else:
@@ -393,7 +393,7 @@ Instead of resolving a Twisted fruit grove:
 					infect "Parasitic Plant";
 					LineBreak;
 					say "[bold type]Your sanity decreases by 25![roman type][line break]";
-					decrease humanity of Player by 25;
+					SanLoss 25;
 					stop the action;
 			else:
 				LineBreak;
@@ -417,7 +417,7 @@ Instead of resolving a Twisted fruit grove:
 			infect "Parasitic Plant";
 			LineBreak;
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";
-			decrease humanity of Player by 25;
+			SanLoss 25;
 			now inasituation is false;
 			stop the action;
 	if RareQuesting is 1:
@@ -458,7 +458,7 @@ Instead of resolving a Twisted fruit grove:
 			infect "Felinoid";
 			LineBreak;
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";
-			decrease humanity of Player by 25;
+			SanLoss 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
 			stop the action;
 		else if fightoutcome is 30: [fled]
@@ -468,7 +468,7 @@ Instead of resolving a Twisted fruit grove:
 			infect "Parasitic Plant";
 			LineBreak;
 			say "[bold type]Your sanity decreases by 25![roman type][line break]";
-			decrease humanity of Player by 25;
+			SanLoss 25;
 			now FelinoidRescued is 1; [player lost the fight to save the Felinoid]
 			stop the action;
 	else: [the rare item quest is not active and neither is the captured felinoid available]

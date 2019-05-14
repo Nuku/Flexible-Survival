@@ -187,7 +187,7 @@ Darius is in Darius's Crib.
 ScaleValue of Darius is 3. [human sized]
 Cock Count of Darius is 1. [1 cock]
 Cock Length of Darius is 11. [11 incher]
-Ball Size of Darius is 4. [ball size]
+Ball Size of Darius is 4. [number of player balls: 1, 2 or 4]
 Ball Count of Darius is 2. [2 balls]
 Cunt Count of Darius is 0. [no pussy]
 Cunt Length of Darius is 0. [no pussy]

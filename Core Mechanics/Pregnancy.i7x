@@ -168,13 +168,13 @@ to pregprotocol:
 					if "Fang's Mate" is listed in feats of Player and hunger of Fang is 0:
 						now z is 2;
 					if z is 2:
-						say "Twins![line break]";
+						say "[line break][Bold Type]It's twins![Roman Type][line break][line break]";
 						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
 					else if z is 3:
-						say "Triplets![line break]";
+						say "[line break][Bold Type]It's triplets![Roman Type][line break][line break]";
 						if pregtype is 2, increase mpregcount by 2; [more mpreg practice]
 					else if z is 4:
-						say "Quadruplets![line break]";
+						say "[line break][Bold Type]It's quadruplets![Roman Type][line break][line break]";
 						if pregtype is 2, increase mpregcount by 3; [more mpreg practice]
 					repeat with y running from 1 to z:
 						now child is born;
@@ -335,12 +335,7 @@ To Birth:
 				now LegsName of Child is LegsName of Player;
 				now AssName of Child is AssName of Player;
 				now TailName of Child is TailName of Player;
-	[Checking for visible tails]
-	let ShowTail be false;
-	if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
-		choose a row with name of TailName of Child in the Table of New Infection Parts;
-		if Tail Description entry is not "":
-			now ShowTail is true;
+	[Pureblood check]
 	let IsPureblood be false;
 	if HeadName of Child is TorsoName of Child:
 		if HeadName of Child is BackName of Child:
@@ -349,45 +344,130 @@ To Birth:
 					if HeadName of Child is AssName of Child:
 						if HeadName of Child is TailName of Child:
 							now IsPureblood is true;
+	[gender]
+	let ChildGender be "male";
+	let ChildGenderRoll be a random number from 1 to 10;
+	if ChildGenderRoll is:
+		-- 1:
+			now ChildGender is "male";
+		-- 2:
+			now ChildGender is "male";
+		-- 3:
+			now ChildGender is "male";
+		-- 4:
+			now ChildGender is "female";
+		-- 5:
+			now ChildGender is "female";
+		-- 6:
+			now ChildGender is "female";
+		-- 7:
+			now ChildGender is "herm";
+		-- 8:
+			now ChildGender is "herm";
+		-- 9:
+			now ChildGender is "trans male";
+		-- 10:
+			now ChildGender is "trans female";
+	[Checking for visible tails]
+	let ShowTail be false;
+	if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]
+		choose a row with Name of TailName of Child in the Table of New Infection Parts;
+		if Tail Description entry is not "":
+			now ShowTail is true;
+	[Checking for visible legs]
+	let ShowLegs be true;
+	if there is a name of LegsName of Child in the Table of New Infection Parts: [creature already in the new table]
+		choose a row with Name of LegsName of Child in the Table of New Infection Parts;
+		if Locomotion entry is "serpentine" or Locomotion entry is "sliding":
+			now ShowLegs is false;
+	[personality]
+	let IsFeral be false;
+	if "Wild Womb" is listed in feats of Player:
+		now IsFeral is true;
+	let ChildPersonality be "";
+	let ChildPersonalityRoll be a random number from 1 to 12;
+	if ChildPersonalityRoll is:
+		-- 1:
+			now ChildPersonality is "friendly";
+		-- 2:
+			now ChildPersonality is "playful";
+		-- 3:
+			now ChildPersonality is "mean";
+		-- 4:
+			now ChildPersonality is "curious";
+		-- 5:
+			now ChildPersonality is "stubborn";
+		-- 6:
+			now ChildPersonality is "independent";
+		-- 7:
+			now ChildPersonality is "sassy";
+		-- 8:
+			now ChildPersonality is "assertive";
+		-- 9:
+			now ChildPersonality is "meek";
+		-- 10:
+			now ChildPersonality is "extroverted";
+		-- 11:
+			now ChildPersonality is "introverted";
+		-- 12:
+			now ChildPersonality is "mischievious";
+	let PlayerRelationship be "indifferent";
+	if IsFeral is true:
+		if a random chance of 1 in 2 succeeds:
+			now PlayerRelationship is "indifferent";
+		else:
+			now PlayerRelationship is "wary";
+	else:
+		if a random chance of 1 in 2 succeeds:
+			now PlayerRelationship is "loving";
+		else:
+			now PlayerRelationship is "affectionate";
+	[genetic abnormalities]
+	let IsAlbino be false;
+	let HasMelanism be false;
+	if a random chance of 3 in 100 succeeds:
+		now IsAlbino is true;
+	else if a random chance of 2 in 100 succeeds:
+		now HasMelanism is true;
 	[On to the birthing]
+	LineBreak;
 	if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
-		let wwvar be 0;
-		if "Wild Womb" is listed in feats of Player, let wwvar be 1;
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
-				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
+				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of Player] breast. Strange sensations sweep over your [bodytype of Player] body as it drinks down its new mother's milk. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if IsFeral is true], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
 			else:
-				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms. It [end if]nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
+				say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms. It [end if]nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if IsFeral is true], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
 		else if Nipple Count of Player > 0:
-			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of Player] body. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if wwvar is 1], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
+			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms, drinking down its new mother's milk as strange sensations sweep over your [bodytype of Player] body. Having regressed partially during their time in your womb, they grow back to maturity while suckling[if IsFeral is true], giving you a dark sense of fulfillment[else], further strengthening their bond to you[end if]. They have not been left unchanged by their incubation within you";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. Having regressed partially during their time in your womb, they grow back to maturity while suckling";
-		if wwvar is 1:
-			say ". They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch [ArmsName of Child] arms and [LegsName of Child] legs. ";
+		if IsFeral is true:
+			say ". They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch [if ShowLegs is true][ArmsName of Child] arms and [LegsName of Child] legs. [else]their [ArmsName of Child] arms. [end if]";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood [HeadName of Child].";
+				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain.";
 			else:
-				say "You see that your child has a [TorsoName of Child] front and [BackName of Child] back[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind[end if][if ShowTail is true] and a [TailName of Child] tail[end if].";
+				say "You see that your child has a [TorsoName of Child] front and [BackName of Child] back[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if].";
 		else:
 			say ". They pop free and stand, smiling. With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. ";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood [HeadName of Child].";
+				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain.";
 			else:
-				say "Your child has [ArmsName of Child] arms, [LegsName of Child] legs[if ShowTail is true] and a [TailName of Child] tail[end if].";
+				if Showlegs is true:
+					say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if].";
+				else:
+					say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if].";
 		if snakehijack > 0 and "They Have Your Eyes" is listed in feats of Player:
 			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		else if snakehijack > 0:
 			say ". It's apparent that its prior act has caused the serpent to assume itself as one of your legitimate offspring, a twisted fate for such a creature.";
 		else:
 			say ".";
-		if wwvar is 1:
-			if snakehijack > 0:
-				say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
-			else:
-				say "     As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth. A part of you worries about what your offspring may do";
-			say "... And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
-		else:
-			say "     As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth. Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
+		if IsAlbino is true:
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
+		else if HasMelanism is true:
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
+		LineBreak;
+		say "As you spend a little time with your 'offspring', you get the feeling that they have a [ChildPersonality] personality.";
 	else if "Chase's Breeder" is listed in feats of Player: [special NPC impregnation]
 		if Player is female and pregtype < 2:
 			say "     Vagina birth of the chosen one.";
@@ -414,7 +494,7 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [Headname of Child] form.";
+			say "With a slow turn, they show off their pureblood form of the [Headname of Child] strain.";
 		else:
 			say "With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. Your child has [ArmsName of Child] arms, [LegsName of Child] legs[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if].";
 		if Player is in Sitting Area and Chris is in Sitting Area:
@@ -457,10 +537,15 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. ";
 		say "A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. ";
 		if IsPureblood is true:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadName of Child].";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood of the [HeadName of Child] strain.";
 		else:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] head as they stretch [ArmsName of Child] arms and [LegsName of Child] legs. You see that your child has a [TorsoName of Child] front and [BackName of Child] back, with a [AssName of Child] behind[if ShowTail is true] and a [TailName of Child] tail[end if].";
-		say "     As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] head as they stretch [if ShowLegs is true][ArmsName of Child] arms and [LegsName of Child] legs. [else]their [ArmsName of Child] arms. [end if]You see that your child has a [TorsoName of Child] front and [BackName of Child] back, with a [AssName of Child] behind[if ShowTail is true] and a [TailName of Child] tail[end if].";
+		if IsAlbino is true:
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
+		else if HasMelanism is true:
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
+		LineBreak;
+		say "In the little time you spend with your offspring, you get the feeling that they have a [ChildPersonality] personality.";
 	else: ["normal pregnancies"]
 		if Player is female and pregtype < 2:
 			if Nipple Count of Player > 0:
@@ -473,20 +558,53 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood [Headname of Child] form.";
+			say "With a slow turn, they show off their pureblood form of the [Headname of Child] strain.";
 		else:
-			say "With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. Your child has [ArmsName of Child] arms, [LegsName of Child] legs[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if].";
+			say "With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. ";
+			if Showlegs is true:
+				say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if].";
+			else:
+				say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if].";
+		if IsAlbino is true:
+			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
+		else if HasMelanism is true:
+			say "Their pigmentation is almost pure black. [bold type]They've got melanism![roman type]";
+		LineBreak;
+		say "As you spend a little time with your offspring, you get the feeling that they have a [ChildPersonality] personality.";
 		increase hunger of Player by 3;
 		increase thirst of Player by 3;
-	if "Wild Womb" is not listed in feats of Player:
+	if IsFeral is false:
 		if ("Chase's Breeder" is not listed in feats of Player) and ("Fang's Mate" is not listed in feats of Player) and ("Chris's Breeder Slut" is not listed in feats of Player): [kids that run off to their fathers]
 			LineBreak;
-			say "[bold type]Please name your child: [roman type]";
+			say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
 			get typed command as playerinput;
 			now Name of Child is playerinput;
-			choose a blank row in the Table of PlayerChildren;
+			LineBreak;
+			say "     [bold type]Do you want to keep your child with you as you roam the streets?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Yes, strength in numbers!";
+			say "     [link](2)[as]2[end link] - Send them to safety in the bunker.";
+			say "     [link](3)[as]3[end link] - They need to make their own way.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
+				else:
+					say "Invalid choice. Type [link]1[end link] to take them along, [link]2[end link] to send them into the bunker or [link]3[end link] to send them away.";
+			if calcnumber is 1: [coming along]
+				say "     With a hug and a kiss on your child's forehead, you tell them to stay with you, for all of your safety.";
+				choose a blank row in the Table of PlayerChildren;
+			else if calcnumber is 2: [bunker]
+				say "     With a hug and a kiss on your child's forehead, you tell them to go to the bunker under the Grey Abbey Library. There, they'll be safe.";
+				choose a blank row in the Table of PlayerBunkerChildren;
+			else if calcnumber is 3: [send away]
+				say "     After a long hug and with a heavy heart, you send your child to fend for themselves out on the streets.";
+				choose a blank row in the Table of PlayerRoamingChildren;
+				now PlayerRelationship is "indifferent";
 			now Name entry is Name of Child;
 			now BirthTurn entry is turns;
+			now Gender entry is ChildGender;
 			now Head entry is Headname of Child;
 			now Torso entry is TorsoName of Child;
 			now Back entry is BackName of Child;
@@ -494,12 +612,54 @@ To Birth:
 			now Legs entry is LegsName of Child;
 			now Ass entry is AssName of Child;
 			now Tail entry is TailName of Child;
-			now Showtail entry is ShowTail;
+			now ShowTail entry is ShowTail;
+			now ShowLegs entry is ShowLegs;
 			now Pureblood entry is IsPureblood;
+			now Albino entry is IsAlbino;
+			now Melanism entry is HasMelanism;
+			now Personality entry is ChildPersonality;
+			now PlayerRelationship entry is PlayerRelationship;
+			now Feral entry is IsFeral;
+			if number of filled rows in the Table of PlayerBunkerChildren > 0:
+				move Offspring to Bunker;
+			LineBreak;
 		if perception of Player < 24, increase perception of Player by 1;
-	else:
+	else: [feral child]
+		LineBreak;
+		say "[bold type]Please name your ([ChildPersonality], [ChildGender]) child: [roman type]";
+		get typed command as playerinput;
+		now Name of Child is playerinput;
+		if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
+			if IsFeral is true:
+				if snakehijack > 0:
+					say "     Retaining its feral nature, it departs to stalk the city once more, leaving you to recover from the ordeal of childbirth. At the very least, its regression doesn't necessarily raise the number of creatures in the city, but you worry over who might end up a victim to that creature next";
+				else:
+					say "     As your rebirthed offspring stalks off into the city, returning to its feral ways, you are left to recover from the ordeal of childbirth. A part of you worries about what your offspring may do";
+				say "... And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
+			else:
+				say "     As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth. Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
+		else:
+			say "     As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
+		choose a blank row in the Table of PlayerRoamingChildren;
+		now Name entry is Name of Child;
+		now BirthTurn entry is turns;
+		now Gender entry is ChildGender;
+		now Head entry is Headname of Child;
+		now Torso entry is TorsoName of Child;
+		now Back entry is BackName of Child;
+		now Arms entry is ArmsName of Child;
+		now Legs entry is LegsName of Child;
+		now Ass entry is AssName of Child;
+		now Tail entry is TailName of Child;
+		now ShowTail entry is ShowTail;
+		now ShowLegs entry is ShowLegs;
+		now Pureblood entry is IsPureblood;
+		now Albino entry is IsAlbino;
+		now Melanism entry is HasMelanism;
+		now Personality entry is ChildPersonality;
+		now Feral entry is IsFeral;
 		increase FeralBirths by 1;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 	increase score by 5; [15 base +5/child]
 	now child is not born;
 	now gestation of child is 0;
@@ -579,7 +739,7 @@ To impregnate with (x - text):
 		now ArmsName of child is "Orc Warrior";
 		now LegsName of child is "Orc Warrior";
 		now AssName of child is "Orc Warrior";
-		now TailName of child is "";
+		now TailName of child is "Orc Warrior";
 	else if "Human Carrier" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a human child?";
@@ -596,8 +756,8 @@ To impregnate with (x - text):
 		now ArmsName of child is "Human";
 		now LegsName of child is "Human";
 		now AssName of child is "Human";
-		now TailName of child is "";
-	else:
+		now TailName of child is "Human";
+	else: [normal pregnancy]
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a/an [x] child?";
 			if Player consents:

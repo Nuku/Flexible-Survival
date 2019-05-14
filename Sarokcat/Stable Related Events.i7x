@@ -134,7 +134,7 @@ Instead of Resolving a Soldierstabling:
 		increase Libido of Player by 25;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 	else if Soldierhorsetf is 2:
 		say "     Returning to the area where the soldiers were being trained, you find that you can't help but go investigate the training room again yourself, your body growing aroused again in anticipation as you creep up to where you can look inside of the room again. Peeking inside, you find yourself moaning softly with arousal as you look upon the sexy scene inside, the numerous horse creatures making more than enough noise to cover your own soft noises of arousal, as they move against each other in a large orgy. The smell of horsey sex fills the air as the now fully transformed new recruits demonstrate their skills as slutty little maresluts underneath the large stallions in the room, the sight of all of the naked sexy horseflesh making you pant with need as you watch the orgy.";
 		say "     You can't even see any signs of humanity left in the transformed soldiers as they perform with the stallions eagerly, and somehow knowing that they were formerly proud and independent men only makes their final submissive transformation even more erotic as you watch the show. Finally, you catch yourself about to enter the room to join in the fun, and manage to shake yourself out of the lust-filled trance the sexy sights and scents of the training room had inspired. You drag yourself reluctantly away down the hall as the sounds of horses having fun slowly fades behind you. You still find yourself idly wondering when the next 'training class' starts, and if they are accepting applicants...";
@@ -142,14 +142,14 @@ Instead of Resolving a Soldierstabling:
 		increase Libido of Player by 25;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 	else if Soldierhorsetf is 3:
 		say "     Your feet guide you through the halls once more to the strange training room that you have encountered several times now, and unable to resist your burning curiosity, you once more creep forth to peer into the room. Looking around, you see to your surprise a number of partially clothed humans hitched up in the room, their slight equine features showing through their tattered military clothing as they look around nervously. You can feel a strange grin of amusement crossing your face as you realize that this new batch of recruits has no idea what kind of sexy fate lies in store for them.";
 		say "     Recalling your glimpses of the training of the last group, you nearly run into the room to join them in being trained into a proper little mareslut. Only the sight of the sexy stallions entering to start the day's training reminds you of where you are, and you shudder as you turn and run down the hall in the opposite direction. Thinking about what a close call you had there, you resolve not to come down this way again, lest you end up losing control of yourself completely, at least until you are ready to be trained into a proper little mare slut that is...";
 		increase Libido of Player by 25;
 		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of Player by 10;
+		SanLoss 10;
 		now Soldierstabling is resolved;
 		increase score by 5;
 
@@ -166,7 +166,7 @@ when play begins:
 	add Satisfied customer to badspots of furry;
 
 Instead of Resolving a Satisfied customer:
-	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those German Shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";
+	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those German shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";
 	say "     The strong scent of sex wafts up from the obviously well-fucked beast, leaving you no doubt as to what they have been doing to end up this way. The creature seems to notice you after a minute, and focuses their eyes on you for a second, before smiling again and saying, 'That was the best night ever...' before they pass out at your feet. You shake your head at the obviously satisfied customer, as you cautiously step around their unconscious form, and carefully continue along your way, wondering idly how much longer the part canine is going to be a customer of the whorehouse, instead of an employee... Either way, they certainly seem happy about it.";
 	increase score by 1;
 	now Satisfied customer is resolved;
@@ -270,7 +270,7 @@ The sarea of Transformationledger is "Stable".
 
 Instead of Resolving a Transformationledger:
 	say "     While looking through the Stables['] halls, you find yourself at a room with a large desk and a large leather bound book sitting open atop it. Out of curiosity, you move into the room and start to thumb through the pages of the strange book, only to discover that it's a record of the once human names and their new whorse names of many of the Stables['] occupants, along with the transformations of the whorses working there. The descriptions that stand out are the ones that seem to be special orders, like the horse-hyena hybrid slut ordered by the hyena gang or the hawk-horse hybrid. Shuddering at some of the descriptions and finding yourself aroused at others, you flip to the last page before putting the book away, and you find your name listed in the last entry, and next to it is the name Obsidian. Following that, you see the words 'new fetishes,' followed by leather, rubber, bondage... and an invoice that describes an outfit being made for you. With shaking hands, you put the book down, feeling slightly less human.";
-	decrease humanity of Player by 15;
+	SanLoss 15;
 	now Transformationledger is resolved;
 
 

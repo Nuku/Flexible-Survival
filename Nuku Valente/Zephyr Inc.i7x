@@ -304,7 +304,7 @@ Instead of resolving a Red Light Detector Site:
 		say ". There is clearly a lot of activity still going on in this club, with rampant sex from a myriad of creatures both inside and out. Going in from the front is simply out of the question.";
 		say "     It takes some effort to work your way around to the back of the building, this area much denser in creature activity, probably due to the highly sexual nature of the place, but you eventually find a way around back and scale the fire escape. On your way up, you spy several ongoing orgies inside the building, including one group which seems to be on display for the others, though there is little difference between the audience and the show save for the audience members paying a little more attention to the show than the other way around. You find yourself briefly captivated by the display, watching [one of]a male lizard plowing into a smaller dog girl[or]twin cats sucking on a wolf's cock[or]a female hyena sandwiched between a cheetah stuffing her ass and a horse filling her cunt, their combined seed bloating her belly[or]a small, male tiger getting buggered by a tigress herm[or]a chimp in a suit getting sucked off by a bear[at random] and growing quite aroused. You feel a strong compulsion to open the window and join them, which you have to struggle to fight down.";
 		increase Libido of Player by 15;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		WaitLineBreak;
 		say "     Reaching the building's roof, you find that you are not alone. There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below. You try to slip around her quietly, but her eyes lock on you and she grins.";
 		challenge "Hermaphrodite Latex Vixen";

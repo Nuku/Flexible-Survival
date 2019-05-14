@@ -89,7 +89,7 @@ to say Hitching Scene Start:
 	say "     Removing all garments, you place your feet in the spaces indicated in front of the manacles about a shoulder length apart. Bending over the padded beam you are grateful for the soft, if slightly damp wool cushioning your pelvis, and you rest your head and wrists in the spaces provided. You watch as the wooden block descends automatically to close tightly around your neck and wrists. There is an ominous 'click' as the device locks and you feel the manacles snap shut around your ankles. Completely immobilized, you feel incredibly exposed with your ass raised just slightly above head height thanks to the beam at your waist.";
 
 to say Shemale Collie Event:
-	setmonster "Shemale Smooth Collie";
+	setmonster "Smooth Collie Shemale";
 	say "[Hitching Scene Start]";
 	say "     After about ten minutes of waiting in the stocks your muscles are getting stiff, and you start to second-guess your decision. However, your thoughts are soon interrupted by the sound of paws scratching over cement - from somewhere behind you. The noise slows down as the scrabbling draws nearer and you hear a feminine snigger. You can't turn around to see what beast has approached you, but fortunately there is no need as a shemale smooth collie comes around the front to leer at you. 'Aren't you just a dear, putting yourself on offer like this, and me thinking it's been far too long since I mounted a bitch!' The doggy anthro's voice has an animalistic growl to it as she sizes you up.";
 	if Player is female: [female + herm]
@@ -120,7 +120,7 @@ to say Shemale Collie Event:
 		say "     She slides the softening length of dog-cock from your abused hole with a slurp, followed closely by only a trickle of semen. The rest of it must be firmly inside you by now. 'Thanks bitch!' She barks, and with a slap of your ass, runs off to find some other unsuspecting victim to breed.[mimpregchance]";
 
 to say Blue Gryphon Event:
-	setmonster "Blue Gryphon";
+	setmonster "Blue Gryphon Herm";
 	say "[Hitching Scene Start]";
 	say "     You are not kept waiting long before you hear a screech overhead. Unable to look up from your prone position, you can only assume it is coming from a blue gryphon or a hawkman. A clatter of talons on the concrete somewhere behind you lets you know that the beast has landed. There is a short silence but your partner-to-be soon moves up front to greet you. A tall, virile looking blue gryphon stands before you. Her black knotted cock is already growing hard and dripping with pre. Licking your lips in eagerness you smile up at the bird herm. Grinning back the blue gryphon says, 'Hey there good looking, you eager for a good hard fucking hmmm?' Blushing somewhat at your obvious sluttery (having just incapacitated yourself for the pleasure of others), you nod at the lusty gryphoness.";
 	if Player is female: [female + herm]

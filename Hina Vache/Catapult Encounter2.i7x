@@ -97,7 +97,7 @@ instead of resolving a loaded catapult:
 		if Player consents:
 			say "Overcoming your disgust, you dip your [face of Player] head into the mess, slurping it up.";
 			decrease thirst of Player by 25;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			if "Iron Stomach" is not listed in feats of Player:
 				weakrandominfect;
 				weakrandominfect;

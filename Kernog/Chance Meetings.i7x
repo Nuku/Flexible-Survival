@@ -29,7 +29,7 @@ Instead of resolving Chance Meeting:
 				challenge "Latex Fox";
 			else:
 				say "     You explore the place, only to get jumped by a husky girl.";
-				challenge "Female Husky";
+				challenge "Husky Bitch";
 	else:
 		LineBreak;
 		say "     Favoring caution, you quietly slip away and continue your patrol.";

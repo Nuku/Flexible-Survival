@@ -217,7 +217,7 @@ to say BirdExposureChance:
 	if a random chance of one in three succeeds:
 		if a random chance of 1 in 2 succeeds and inafight is not 1:
 			say "     A blue bird with a white belly comes swooping down and pecks you on the head. You have no idea what you did to annoy it, but the spot it hit hurts!";
-			infect "Blue Gryphon";
+			infect "Blue Gryphon Herm";
 		else:
 			say "A light brown bird more commonly known as a wren flies over and pulls up, headed to the ceiling in from of you. As it does this, it lets loose and hits you full in the chest with a big splatter of bird poop.[line break]Disgusting!";
 			infect "Harpy";

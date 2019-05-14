@@ -76,7 +76,7 @@ to say leodenscene1:
 		felinebodyshift;
 	increase morale of Player by 1;
 	increase Libido of Player by 5;
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	if Libido of Player > 100, now Libido of Player is 100;
 	now HP of Leonard is 17;
 	now lastdenevent is turns;
@@ -109,7 +109,7 @@ to say leodenscene2:
 	infect "Feline";
 	increase morale of Player by 3;
 	decrease Libido of Player by 10;
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	if Libido of Player < 0, now Libido of Player is 0;
 	now HP of Leonard is 18;
 	now lastdenevent is turns;
@@ -184,7 +184,7 @@ to say leodenscene4:
 		felinebodyshift;
 	infect "Feline";
 	decrease Libido of Player by 10;
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	if Libido of Player < 0, now Libido of Player is 0;
 	now HP of Leonard is 20;
 	now lastdenevent is turns;
@@ -196,7 +196,7 @@ Part 5 - Unexpected Recruit
 
 to say leodenscene5:
 	say "     Your trip to the den this time was interrupted when a soldier came running out of the woods. A little wild-eyed from whatever he's fleeing, he ";
-	if the player is bodily human and the player is facially human and the player is skintone human and tail of Player is "" and ( Breast Size of Player < 10 and Cock Length of Player < 16 and ball size of Player < 16 ) and Nipple Count of Player <= 2 and ( Breast Size of Player < 2 or ( Cock Length of Player < 7 and ball size of Player < 7 ) ):
+	if the player is bodily human and the player is facially human and the player is skintone human and tail of Player is "" and ( Breast Size of Player < 10 and Cock Length of Player < 16 and Ball Size of Player < 16 ) and Nipple Count of Player <= 2 and ( Breast Size of Player < 2 or ( Cock Length of Player < 7 and Ball Size of Player < 7 ) ):
 		say "failed to notice you until he almost the last second. Swerving to avoid you, he ended up running into a tree and knocked himself senseless";
 	else:
 		say "screamed in shock as he noticed you in front of him. Turning to get away from this new mutated creature, he ended up running right into a tree and knocked himself senseless";
@@ -223,7 +223,7 @@ to say leodenscene5:
 	else:
 		felinebodyshift;
 	decrease Libido of Player by 10;
-	decrease humanity of Player by 20;
+	SanLoss 20;
 	if Libido of Player < 0, now Libido of Player is 0;
 	now HP of Leonard is 21;
 	now lastdenevent is turns;
@@ -404,7 +404,7 @@ to say leopracticesession:
 			infect "Feline";
 		else:
 			felinebodyshift;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		increase feline_meow by 1;
 	else:
 		let T be a random number between 1 and 6;
@@ -426,7 +426,7 @@ to say leopracticesession:
 			increase feline_meow by 1;
 		else if T is 4:
 			say "closer to your loving pride and longing to stay with them. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
-			decrease humanity of Player by 5;
+			SanLoss 5;
 		else:
 			say "relaxed and content. The four of you clap politely for the musical lion, who smiles and bows before instructing the maids to put his instrument and stand away.";
 	now lastdenevent is turns;
@@ -561,7 +561,7 @@ Instead of resolving PridePark:
 				say ", kneading her paws over your [bodytype of Player] body until your matronly figure is restored and she can begin nursing from your milk. She nurses only briefly, moving her head lower to nuzzle between your legs.";
 				felinebodyshift;
 			if Player is male:
-				say "     Finding your stiffening member, she wraps her warm lips around it and starts sucking on your [cock of Player] shaft, working to get you fully hard[if Cock Length of Player > 20]. Your massive cock stuffs her muzzle and throat fully, the small kitty mewling in pleasure around it as she somehow copes with it[else if Cock Length of Player > 12]. Your big cock stuffs her muzzle fully, the small kitty mewling in pleasure around it as she purrs happily[else]. Your stiff cock throbs in her muzzle as she licks and sucks at it hungrily[end if]. You moan and rub her ears, telling her [one of]what a good and loyal kitty she is[or]what a sexy kitty she is[or]how nice that feels[or]to be sure to do this for Loenard soon[in random order]. Her paws knead at your [ball size] while she works your maleness with her muzzle eagerly. When you finally blow, you shoot your load down her throat, leaving her [if ball size of Player > 15]hugely bloated as your ample cum stuffs her small body, leaving her full and purring happily as she curls up for a nap[else if ball size of Player > 8]tummy a little plump after you pull out. She snuggles her loving matron tight, licks her lips and heads on her way[else]licking her lips as she releases your spent shaft. She snuggles her loving matron tight and heads on her way, pleased to have run into you[end if].";
+				say "     Finding your stiffening member, she wraps her warm lips around it and starts sucking on your [cock of Player] shaft, working to get you fully hard[if Cock Length of Player > 20]. Your massive cock stuffs her muzzle and throat fully, the small kitty mewling in pleasure around it as she somehow copes with it[else if Cock Length of Player > 12]. Your big cock stuffs her muzzle fully, the small kitty mewling in pleasure around it as she purrs happily[else]. Your stiff cock throbs in her muzzle as she licks and sucks at it hungrily[end if]. You moan and rub her ears, telling her [one of]what a good and loyal kitty she is[or]what a sexy kitty she is[or]how nice that feels[or]to be sure to do this for Loenard soon[in random order]. Her paws knead at your [Ball Size Adjective of Player] [Balls] while she works your maleness with her muzzle eagerly. When you finally blow, you shoot your load down her throat, leaving her [if Ball Size of Player > 4]hugely bloated as your ample cum stuffs her small body, leaving her full and purring happily as she curls up for a nap[else if Ball Size of Player > 3] tummy a little plump after you pull out. She snuggles her loving matron tight, licks her lips and heads on her way[else]licking her lips as she releases your spent shaft. She snuggles her loving matron tight and heads on her way, pleased to have run into you[end if].";
 			else if Player is female:
 				say "     Finding her way to your juicy pussy, she presses her muzzle to it and starts licking. Her raspy tongue plays slowly over your wet folds, lapping up your juices. You moan and rub her ears, telling her [one of]what a good and loyal kitty she is[or]what a pretty kitty she is[or]how nice that feels[or]to keep licking like a good girl[in random order]. Her paws knead at your thighs, occasionally moving to rub at your clit as she smiles up at you with a wet grin on her muzzle before diving back in. Her tongue delves into you, lapping until you cum with a rumbling moan of ecstasy. She snuggles with you, nursing now as you enjoy the afterglow, before giving you a parting kiss and heading off with a girlish giggle.";
 			else:
@@ -577,9 +577,9 @@ Instead of resolving PridePark:
 				say "She nuzzles at your chest and kneads her paws over your [bodytype of Player] torso until your matronly figure is restored and she can begin nursing upon your breast. You hold her close as her cute muzzle plays with your nipple while her paw slides down between your legs.";
 				felinebodyshift;
 			if Player is male and a random chance of 2 in 5 succeeds:
-				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, continuing to nurse even as you bring her hips over your cock and lower her down onto your [cock size desc of Player] [cock of Player] penis[if Cock Length of Player > 20]. She gives a soft mewl of discomfort initially as you work to press your impressive manhood into the little feline, but her cunt and belly stretch to accommodate you. From the way she's squirming in delight upon your shaft and purring up a storm, it's clear that the extra effort is well worth it to her[else if Cock Length of Player > 12]. She gives a soft mewl as you work to press your enlarged manhood into the little feline, but her cunt stretched to accommodate you. From the way she's squeezing down around you and purring loudly, it's clear she's enjoying herself as well[else]. She mewls in pleasure as you slide your manhood into the little feline, stuffing that cute cunt of hers. From the way she's squeezing down around you and purring, it's clear she's enjoying herself as well[end if]. Keeping hold of her hips, you gently thrust into the cute kitty, fucking her even as she nurses from you. After she's been well fed and well fucked, you drive your cock deep inside her and cum hard, adding your semen to her already full belly[if ball size of Player > 15] until she's so full she's sloshing with fluid[else if ball size of Player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, letting her head on her way with another hug and a reminder to visit the den again soon.";
+				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, continuing to nurse even as you bring her hips over your cock and lower her down onto your [cock size desc of Player] [cock of Player] penis[if Cock Length of Player > 20]. She gives a soft mewl of discomfort initially as you work to press your impressive manhood into the little feline, but her cunt and belly stretch to accommodate you. From the way she's squirming in delight upon your shaft and purring up a storm, it's clear that the extra effort is well worth it to her[else if Cock Length of Player > 12]. She gives a soft mewl as you work to press your enlarged manhood into the little feline, but her cunt stretched to accommodate you. From the way she's squeezing down around you and purring loudly, it's clear she's enjoying herself as well[else]. She mewls in pleasure as you slide your manhood into the little feline, stuffing that cute cunt of hers. From the way she's squeezing down around you and purring, it's clear she's enjoying herself as well[end if]. Keeping hold of her hips, you gently thrust into the cute kitty, fucking her even as she nurses from you. After she's been well fed and well fucked, you drive your cock deep inside her and cum hard, adding your semen to her already full belly[if Ball Size of Player > 4] until she's so full she's sloshing with fluid[else if Ball Size of Player > 3]  to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, letting her head on her way with another hug and a reminder to visit the den again soon.";
 			else if Player is male and anallevel is 3 and a random chance of 3 in 5 succeeds:
-				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, pausing only briefly in her nursing to shift her hips after you move her into position atop your cock so you end up thrusting into her back door, much to your surprise. She moans loudly as your [cock size desc of Player] [cock of Player] cock pushes its way into her rectum, a smile of delight upon her little face[if Cock Length of Player > 20] despite the effort involved in taking your impressive manhood into her tight hole[else if Cock Length of Player > 12] despite the effort to taking your enlarged manhood into her tight hole[end if]. Rumbling that she's a dirty little kitty, she only grins and latches back onto your nipple, suckling with added zeal. Knowing Leonard's lust for breeding his girls, you expect she hasn't gotten to satisfy that kinky itch of hers for a while. Keeping hold of her hips, you gently thrust into the cute kitty, fucking that tight ass of hers while she nurses while purring happily. After she's been well fed and well fucked, you drive your cock deep inside her bottom and cum hard, adding your semen to her already full belly[if ball size of Player > 15] until she's so full she's sloshing with fluid[else if ball size of Player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, giving her messy asshole a teasing fingering as you give her another hug and a reminder to visit the den again soon.";
+				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, pausing only briefly in her nursing to shift her hips after you move her into position atop your cock so you end up thrusting into her back door, much to your surprise. She moans loudly as your [cock size desc of Player] [cock of Player] cock pushes its way into her rectum, a smile of delight upon her little face[if Cock Length of Player > 20] despite the effort involved in taking your impressive manhood into her tight hole[else if Cock Length of Player > 12] despite the effort to taking your enlarged manhood into her tight hole[end if]. Rumbling that she's a dirty little kitty, she only grins and latches back onto your nipple, suckling with added zeal. Knowing Leonard's lust for breeding his girls, you expect she hasn't gotten to satisfy that kinky itch of hers for a while. Keeping hold of her hips, you gently thrust into the cute kitty, fucking that tight ass of hers while she nurses while purring happily. After she's been well fed and well fucked, you drive your cock deep inside her bottom and cum hard, adding your semen to her already full belly[if Ball Size of Player > 4] until she's so full she's sloshing with fluid[else if Ball Size of Player > 3]  to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, giving her messy asshole a teasing fingering as you give her another hug and a reminder to visit the den again soon.";
 			else if Player is male:
 				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, working to stroke you off even as she drinks down your milk. Her soft paw works up and down your [cock size desc of Player] [cock of Player] cock to please you while she feeds. You stroke and caress the cute kitty, rumbling happily as she jerks you off. And from the soft purring and the way she grinds her pussy against your thigh, you can tell she's enjoying herself as well. After getting well fed on your milk, she speeds up her stroking and gets you to cum, splattering your seed all over her cute body. Rubbing her milk-filled tummy (and working your semen into her fur), you give her another hug and a reminder to visit the den again soon.";
 			else if Player is female:

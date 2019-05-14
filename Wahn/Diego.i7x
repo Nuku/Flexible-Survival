@@ -158,7 +158,7 @@ to say DiegoTalkMenu:
 to say DiegoTalk1:
 	if DiegoChanged is 2: [female]
 		project the figure of DiegoFem_face_icon;
-		say "     [one of]'I think I'm in heat!'[or]'God what I wouldn't give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I'm almost too horny to think about tricking anyone... almost.'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as she rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' she asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won't be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as she rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn't that sound fun?'[or]'The skunk girls are all pets of the larger skunk-beasts. Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beast's pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I'm so glad this happened!'[or]'I wonder if any of those nice German Shepherds in town would like to play with a coyote,' she says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch. I can kind of envy her now,' she says with a smile.[at random]";
+		say "     [one of]'I think I'm in heat!'[or]'God what I wouldn't give for a nice, thick, coyote cock right about now... to fill my empty pussy...'[or]'Hell I'm almost too horny to think about tricking anyone... almost.'[or]'This was the best trick I ever had played on me!' Diego says with a happy grin on her muzzle as she rubs her new body.[or]'You know, I hear there is an alpha wolf out there in the city looking for bitches... maybe we should go check it out together?' she asks with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways? Not that I won't be making some milk of my own as soon as I can find a nice stud to knock me up...' Diego says with a smile as she rubs her breasts eagerly.[or]'I wonder if there is any nice canine studs around who want to play hide the knot?'[or]'If you play with the felinoids in the park, you could end up a slutty little pussy for their amusement, doesn't that sound fun?'[or]'The skunk girls are all pets of the larger skunk-beasts. Nice little submissive pets for the strong skunks to fill up with their fertile seed... mmm' Diego moans and rubs herself, obviously aroused by the thought of being a beast's pet.[or]The coyote bitch pants and yips softly, obviously too busy masturbating to bother talking to a boring person like yourself.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse would be the one doing the riding eventually though, if you know what I mean.'[or]'God I never knew being a bitch was so much fun, I'm so glad this happened!'[or]'I wonder if any of those nice German shepherds in town would like to play with a coyote,' she says with a speculative look on her face.[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch. I can kind of envy her now,' she says with a smile.[at random]";
 	else if DiegoChanged is 1: [herm]
 		project the figure of DiegoFem_face_icon;
 		say "     [one of]'Damn fine trick you pulled there!'[or]'Thank God I still have my nice thick coyote cock' Diego says with a grin as he rubs said cock suggestively.[or]'Hell I can't decide whether I should pull a trick on you, or thank you for this,' she says as she gestures at her changed body.[or]'You know, I hear there is an alpha wolf out there in the city looking for pack-members, maybe you should go see if he has room for you?' She suggests with a twinkle in her eye.[or]'Where did you get that wonderful milk from anyways?' Diego says with a grin as she licks her lips.[or]'I saw a woman riding a horse go by here a while back, I'm pretty sure though the horse was the one doing the riding eventually though if you know what I mean.'[or]'There was a deer around here recently at some point, she looked kinda lonely if you know what I mean...'[or]'I wonder what's bigger...' Diego muses with a thoughtful expression on her muzzle, 'The horse cocks here in the park, or the zebra cocks in the zoo...'[or]'Careful around the cute chinchilla in the park, they are almost as tricky sometimes as I am.'[or]'I wonder how much those strange cock plants are going to keep spreading.'[or]'Cock and pussy, best of both worlds!'[or]'I heard there was a woman caught by some huskies recently to be turned into a nice little submissive husky bitch,' she says with a smile.[at random]";
@@ -332,7 +332,7 @@ carry out Diegotricking:
 			now PrankEvent is 1;
 	else:
 		say "     As you lay out the (admittedly pretty lame) plan you've come up with, Diego says derisively, 'You call that a trick?' Snickering at your pathetic attempt, the coyote waves you closer in a conspiratory way and adds, 'Now listen well - THIS is how a master trickster does things!' [if DiegoChanged is 0]He[else]She[end if] whips out a trick that almost makes you stagger back in shock from the sheer nerve and lewdness that Diego possesses in spades. Even just imagining the chaos he'll create makes you feel a bit less human and more used to the new reality of this city...";
-		decrease humanity of Player by 10;
+		SanLoss 10;
 
 Section 4 - Sex
 
@@ -857,13 +857,13 @@ Instead of resolving a Hunting down Hunter:
 to say DiegoCollarQuestGotCollar:
 	say "     After quickly shoving the collar into your backpack to make sure you don't lose it, you make your way back to the wall. With the ladder, it's easy to get up and over it, and you take care to hide it under the branches once more, just in case Diego might need it again somewhere hereabouts. Then you hurry off down the street, making a successful getaway.";
 	increase carried of diego's heirloom collar by 1;
-	say "     [bold type]You gain Diego's heirloom collar![roman type][line break]";
+	say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
 	now XP of Diego is 3; [got the collar sneakily]
 
 to SetHunterHuskyStats:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Alpha Husky":
+		if Name entry is "Husky Alpha":
 			now MonsterID is y;
 			break;
 	choose row MonsterID from the Table of Random Critters;
@@ -875,7 +875,7 @@ to SetHunterHuskyStats:
 to ResetAlphaHuskyStats:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Alpha Husky":
+		if Name entry is "Husky Alpha":
 			now MonsterID is y;
 			break;
 	choose row MonsterID from the Table of Random Critters;
@@ -887,7 +887,7 @@ to ResetAlphaHuskyStats:
 to say VillaFightVsHunter:
 	now inasituation is true;
 	SetHunterHuskyStats;
-	challenge "Alpha Husky";
+	challenge "Husky Alpha";
 	ResetAlphaHuskyStats;
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
@@ -920,11 +920,11 @@ to say VillaFightVsHunter:
 			WaitLineBreak;
 			say "     As luck would have it, a big clump of bushes breaks your fall, meaning that you're still able to walk (and run), putting as much distance as possible between yourself and the angry alpha husky. You don't stop fleeing until you're halfway back to where you started from, then start to wind down a little and pack away the collar you had been tightly clutching all this time.";
 		increase carried of diego's heirloom collar by 1;
-		say "     [bold type]You gain Diego's heirloom collar![roman type][line break]";
+		say "[bold type]You gain Diego's heirloom collar![roman type][line break]";
 		now Resolution of Hunting down Hunter is 1; [fought, won]
 		now XP of Diego is 4; [got the collar after fight]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
-		setmonster "Alpha Husky";
+		setmonster "Husky Alpha";
 		say "     Another punch from the alpha husky makes you sway on your feet, and you can see a grin spreading on the muscular male as he watches you crumple to the ground when the exhaustion of the fight catches up with you. Things go black for a little while, and by the time you manage to blink away the stars dancing before your eyes, you find yourself staring at some gray fur, just an inch in front of your face. You're on your back on a soft surface, the sofa if you're not mistaken, and apparently someone is kneeling over your head, their legs pushing down on your raised arms. Movement of the husky on top of you reveals more fur, matted around a wet pussy, telling you that it is Garnet who is straddling you. Which means that the hands on your legs that are pulling them apart right now are Hunter's. 'Someone came to again, eh? Just in time for the fun!' Something firm and warm smacks against the skin of your crotch, and it's not hard to guess that it is Hunter's erection.";
 		if Player is female: [pussy available]
 			say "     You can feel the husky rub his dickhead up and down over your nether lips, then pushing in between them with a smooth thrust, sinking himself deep into your body. A helpless moan escapes your lips as you buck up under him, reflex driving you to raise your hips to allow the man to enter you fully. 'Yeah, that's a nice little bitch. Take it!' Hunter grunts roughly as he begins to fuck you in earnest. Meanwhile, Garnet spreads her knees a little bit further, lowering her crotch the rest of the way to literally cover your face. Her heat-scent is thick in your nose and you can't help but start breathing in more and more as Hunter's movements drive your arousal higher with every new thrust. Soon, you're panting like a bitch in heat, which doesn't remain unnoticed by the alpha husky on top of you. He pulls out of your pussy and hammers back into it all the way in a single hard thrust, then barks out, 'Like that, little bitch? Why don't you share some of that pleasure with Garnet. Lick her!'";

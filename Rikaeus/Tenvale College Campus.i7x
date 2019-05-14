@@ -38,7 +38,7 @@ Instead of Resolving a Reaching the College:
 		say "[bold type]Your score decreases by 10![roman type][line break]";
 		decrease score by 10;
 		say "[bold type]Your sanity decreases by 5![roman type][line break]";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		say "[bold type]You are reduced to 1 HP![roman type][line break]";
 		now HP of Player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again.";

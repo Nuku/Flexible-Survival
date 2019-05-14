@@ -281,6 +281,7 @@ to unicornify:
 	else:
 		now sex entry is "Female";
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect;
 	now non-infectious entry is true;
 
@@ -320,7 +321,7 @@ carry out Aledrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar and mixing your drink with an expert's touch. It isn't long before he sets a glass of dark black ale in front of you. Raising your glass to Harold, you take a long drink, the smooth ale going down easily as its rich taste fills your mouth. Draining the glass, you smack your lips in appreciation of the fine brew. Setting the glass back down on the bar, you grin with amusement as you note that the canny bartender already has another glass set out on the bar for you. Saluting him again with your glass, you drink some more of the rich, dark ale as you enjoy the sights of the busy club. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		infect "Black Equinoid";
 		infect "Black Equinoid";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -339,7 +340,7 @@ carry out Beerdrinking:
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a frothing mug of dark, spicy smelling beer in front of you. Raising your mug to Harold, you take a long drink, the rich, flavorful beer going down easily. Its smooth taste evokes images of wolves partying and hunting in packs. Draining the mug, you nod with appreciation as you set it back down on the bar. You find yourself grinning with amusement as you note that the canny bartender already has another mug of the frothy beer set out on the bar for you. Saluting him again with your glass, you drink some more of the amazingly smooth beer as you enjoy the sights of the busy club. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		andrewinfect;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -360,7 +361,7 @@ carry out Chaserdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets out several small glasses full of a nice, golden liquid. Raising one of the chasers to Harold, you toss it back quickly. The amber liquid explodes with flavor in your mouth, even as it works its way down your throat. A pleasant warmth spreading throughout your body as you eye the rest of the chasers set out before you with happy anticipation of a long and enjoyable time. After several more of the increasingly delicious drinks, a pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		infect "cheetah woman";
 		infect "cheetah woman";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -383,7 +384,7 @@ carry out Delightdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a large martini glass in front of you, filled with a fruity smelling, pink liquid and a small straw. Lifting the glass up carefully, you take a sip of the drink and nod in appreciation as the flavorful liquid fills your mouth. Grinning, you turn to take in the room as you continue to sip your large drink, enjoying its complex combination of fruit and alcohol flavors, and trying to figure out just what is actually in this wonderful drink. Almost before you know it, you have managed to drink the whole thing. You sigh as you set the glass back down on the bar, only to blink as you realize your body has been changing without your realizing it as you drank.";
 		infect "Succubus";
 		infect "Succubus";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -402,9 +403,9 @@ carry out Gryphondrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a tall glass of some sort of milky white liquid in front of you. Raising your glass to Harold, you take a curious drink, the smooth, creamy flavor of some sort of spiced milk drink filling your mouth. The unusual, yet delightful, taste of the drink has you quickly draining the glass, enjoying the way the rum and vanilla spiced milk goes down easily, yet still leaves you thirsty for more. Setting your glass back down on the bar, you grin with amusement as you note that the canny bartender has anticipated your request, and another glass full of the creamy liquid has already been set out on the bar for you. Saluting him again with your glass, you drink some more of the strangely flavored milk as you enjoy the sights of the busy club. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		infect "Blue Gryphon";
-		infect "Blue Gryphon";
-		decrease humanity of Player by 5;
+		infect "Blue Gryphon Herm";
+		infect "Blue Gryphon Herm";
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -424,7 +425,7 @@ carry out Heavendrinking:
 		say "     Harold nods at you as you place your order, before pulling out a small energy drink bottle and placing it in front of you. You raise your eyebrows at him, but he only grins as he nudges the small bottle towards you. Shrugging, you toss back the small bottle of liquid, gasping as the strangely bitter tasting liquid sears its way down your throat. Blinking in surprise as you set the bottle down, you realize that you strangely feel increasingly light and energized, though your body feels oddly tingly.";
 		infect "Harpy";
 		infect "Harpy";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -445,7 +446,7 @@ carry out Specialdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a glass of some dark liquid in front of you, the powerful smell wafting off the glass telling you that the satyr special is, unsurprisingly, some kind of powerful wine. Taking a sip, you find yourself quickly gulping the rest as a taste of the amazingly full-bodied wine goes straight to your head. You quickly shove your empty glass back towards the bartender, who only chuckles as the unicorn refills your glass for you. After several more refills, you are pleasantly buzzed, and definitely looking forward to a good party. As you set your glass down and wander out to the dance floor, you hardly even notice or care as your body starts to change to a more suitable form for a long party.";
 		infect "Satyr";
 		infect "Satyr";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -467,7 +468,7 @@ carry out pintdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a pint down on the bar next to you. Raising your pint to Harold, you take a nice drink, enjoying the way the liquor slides down your throat and the warm buzz accompanying it. Saluting your unicorn bartender again with your pint glass, you continue to enjoy your drink, getting several refills from the bartender. As the pleasant buzz you feel grows even more powerful, you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		infect "Panda";
 		infect "Panda";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -489,7 +490,7 @@ carry out Lagerdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a glass of lager in front of you. Raising your glass to Harold, you take a nice long drink. The crisp taste of a good lager fills your mouth, and you drink it down eagerly, smacking your lips as you try to place the strangely arousing aftertaste the liquid has. Deciding to try another, you smile as you realize that the canny unicorn already has another lager set out on the bar for you. Saluting him again with your new glass, you continue to try to work out just what makes this lager so good. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		infect "Jaguar";
 		infect "Jaguar";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -511,7 +512,7 @@ carry out Sabredrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a tall pitcher full of a variety of different liquors up on the bar. He drops what appears to be part of a big tooth in the pitcher before shaking the alcoholic mix up and pouring you a glass. Feeling somewhat adventurous, you take a big drink. The combined flavors of several different types of drink blend pleasantly on your tongue, before the sheer sledgehammer of the powerful alcoholic mix hits your brain, and makes you gasp. Blinking and trying to recover, you find you feel positively primal as you pour yourself another drink from the pitcher. A savage grin crosses your face as you look around the room with a new, more predatory outlook, wondering just who you feel like playing with tonight. You hardly even notice the small changes in your body as you continue to enjoy your drink, other than to note how much easier they will make stalking a partner to play with later on...";
 		infect "Sabretooth";
 		infect "Sabretooth";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -532,7 +533,7 @@ carry out Rumdrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a glass full of dark rum in front of you. Raising your glass to Harold, you take in the pleasantly sweet and smoky odor of the slightly viscous liquid, and smile with anticipation as you take a long drink. Despite its somewhat smoky appearance, the caramel and chocolate flavored rum goes down nice and smooth, and you feel increasingly happy and relaxed as Harold fills your glass up again. You smile at the handsome unicorn and take another nice long drink, feeling delightfully euphoric as you look around the room. Harold keeps your glass topped up even as your body starts to change and shift slightly. Though, in your happy and inebriated state, it is hard to think how anything that feels as good as your body changing like this could be a problem.";
 		infect "Chocolate Lab";
 		infect "Chocolate Lab";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -553,7 +554,7 @@ carry out Vodkadrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a small shot glass full of a layered liquid in front of you. The drink is mostly clear, with several thin, stripe-like layers of darker liquid, which makes you grin at the slight resemblance to zebra striping the bartender obviously went to some effort to emulate. Raising your glass to Harold, you toss back the shot, gasping slightly as the liquid burns its way down your throat. A warm, happy sensation spreads outward from your chest as you slam the shot down and smile at Harold. Your smile only grows larger as you note that the canny bartender already has another shot set out on the bar for you. Saluting him again with your glass, you drink several more shots. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
 		infect "Zebra";
 		infect "Zebra";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 
@@ -574,7 +575,7 @@ carry out Tequiladrinking:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a small glass of orange tequila in front of you. 'That will put whiskers on ya,' he says with a broad grin. 'Might loosen ya up some, too,' Harold adds with amusement as he goes back to tending the bar, shooting you an occasional amused glance as you raise your glass. Eyeing the tequila suspiciously, you shrug as you pick up the glass and take a big drink. The tequila burns harshly as it goes down, the liquor carrying an even stronger bite then regular tequila, but with a strangely pleasant aftertaste. Realizing you have drained your glass, you set it back down on the bar, gasping slightly as the liquor hits your system, making you feel nice and warm as it loosens you up. Grinning happily, you note that the canny bartender already has another glass set out on the bar for you. Snagging the fresh glass, you quickly drink some more of the powerful liquor, feeling it loosen you right up as it makes your body tingle with excitement. The drink makes you feel nice and sexy, and perhaps even a little bit slutty, as you grin longingly as you look around the room. You enjoy the sights of so many different, horny beasts having fun. You find yourself wondering just what some of the horny dancers would give to have fun with you as well. The thought of selling your body for the night seeming strangely alluring even as your body shifts and changes on the outside to match your new, sexy and slutty inside.";
 		infect "Tigress Hooker";
 		infect "Tigress Hooker";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
 

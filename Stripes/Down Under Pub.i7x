@@ -145,11 +145,11 @@ to say downunderpubvisit:
 		now lastpubvisit is turns - 8; [wait extra day after a tf show]
 		increase rooness by 1;
 		increase score by 10;
-	decrease humanity of Player by 10;
+	SanLoss 10;
 	infect "Red Kangaroo";
 	if rooness > 1:
 		infect "Red Kangaroo";
-		decrease humanity of Player by 8;
+		SanLoss 8;
 		increase morale of Player by 3;
 		now Libido of Player is ( Libido of Player * 4 ) / 5;
 	PlayerDrink 15;
@@ -188,7 +188,7 @@ to say gillianpubfun:
 					if cockname of Player is listed in infections of internallist:
 						say ". Your having internal balls leaves her with free access to your juicy pussy, letting her plunge her fingers into your cunny as well";
 					else:
-						say ". After giving your [ball size] a grope, she shifts her paw's focus to your juicy pussy and plunges her fingers into your cunny";
+						say ". After giving your [Ball Size Adjective of Player] [Balls] a grope, she shifts her paw's focus to your juicy pussy and plunges her fingers into your cunny";
 				else if cockname of Player is not listed in infections of internallist:
 					say ". As she sucks your throbbing rod, she gropes your balls, eager for the tasty treat inside them";
 				say ".";

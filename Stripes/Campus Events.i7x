@@ -197,7 +197,7 @@ to say animeclublost:
 	else:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and shoves his large cock into your ass alongside the tentacle already filling you. His hands and tentacles grope you, one of those tendrils stuffing your mouth and going down your throat. As he has his way with you, you can see the two anime babes making out beside you. You only notice this out of the corner of your eye, your focus still locked on the animation on the screen, much of which is being duplicated upon your person at this very moment. He fucks you thoroughly with those two throbbing rods up your ass at once until he groans and cums in a steady flow filling you from both ends with his tainted seed.[mimpregchance][mimpregchance]";
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
-	decrease humanity of Player by 25;
+	SanLoss 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;

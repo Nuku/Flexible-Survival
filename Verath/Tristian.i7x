@@ -153,6 +153,7 @@ to palominoinfect:
 	choose row MonsterID from the Table of Random Critters;
 	setmonster "Palomino";
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect;
 	now non-infectious entry is true;
 

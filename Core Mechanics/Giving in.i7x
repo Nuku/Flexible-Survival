@@ -34,7 +34,7 @@ carry out givingup:
 
 an everyturn rule:
 	if givingupton is 1:
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		say "The nanites work inside your partially willing brain, making you more feral. ([humanity of Player]/100)";
 		decrease score by 200;
 		if humanity of Player < 0:

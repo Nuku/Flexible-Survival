@@ -6,8 +6,8 @@ Version 2 of Hermaphrodite Gryphon by Nuku Valente begins here.
 Section 1 - Creature Responses
 
 when play begins:
-	add { "Blue Gryphon" } to infections of hermaphrodite;
-	add { "Blue Gryphon" } to infections of furry;
+	add { "Blue Gryphon Herm" } to infections of hermaphrodite;
+	add { "Blue Gryphon Herm" } to infections of furry;
 
 nohgryphonsex is a number that varies.
 hgryphonwin is a number that varies.
@@ -113,40 +113,53 @@ To say beatthehgryphon:
 			say "     [if a random chance of 1 in 2 succeeds]Your opponent hits the ground with a loud *thud* and a squawk. Lying defeated and on her back, the gryphon awaits her fate with more than a little anticipation[else]Driven back by you, the herm gryphon whimpers with unsatisfied need. She crawls over to a [one of]wall[or]pile of rubble[or]crashed car[at random] and sits against it while masturbating furiously in an attempt to sate her lust[end if]. The sight of her like this is quite a tempting one. Perhaps you might have some fun now that you've taken the fight out of her[if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false]. You're also reminded that you have a bottle of Garrett's special gryphon cum milk. It probably wouldn't take much coaxing to tempt her into drinking some[end if].";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
+			[]
+			choose a blank row in table of fucking options;
+			now title entry is "Milk her";
+			now sortorder entry is 2;
+			now description entry is "Fill a bottle with some tasty gryphon milk";
+			[]
 			if Player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Fuck her";
 				now sortorder entry is 1;
-				now description entry is "screw the defeated gryphon";
+				now description entry is "Screw the defeated gryphon";
+			[]
 			if Player is female:
 				choose a blank row in table of fucking options;
 				now title entry is "Ride her";
 				now sortorder entry is 2;
-				now description entry is "get that knotted cock in your pussy";
+				now description entry is "Get that knotted cock in your pussy";
+			[]
 	[		if Player is not female:
 				choose a blank row in table of fucking options;
 				now title entry is "Anal ride";
 				now sortorder entry is 3;
-				now description entry is "get that knotted cock in your ass"; ]
+				now description entry is "Get that knotted cock in your ass"; ]
+			[]
 			if Player is male and Cock Length of Player > 7 and player is female and Cunt Length of Player > 5:
 				choose a blank row in table of fucking options;
 				now title entry is "Titty fuck + ride";
 				now sortorder entry is 4;
-				now description entry is "get a titty fuck while riding her cock";
+				now description entry is "Get a titty fuck while riding her cock";
+			[]
 	[		if Player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Blow job";
 				now sortorder entry is 5;
-				now description entry is "get her to suck you off"; ]
+				now description entry is "Get her to suck you off"; ]
+			[]
 	[		choose a blank row in table of fucking options;
 			now title entry is "Blow her";
 			now sortorder entry is 6;
-			now description entry is "suck her off"; ]
+			now description entry is "Suck her off"; ]
+			[]
 			if carried of gryphon cum > 0 and HP of Garrett >= 5 and inasituation is false:
 				choose a blank row in table of fucking options;
 				now title entry is "Garrett's special milk";
 				now sortorder entry is 99;
-				now description entry is "tempt her into consuming the manly drink";
+				now description entry is "Tempt her into consuming the manly drink";
+			[]
 			repeat with y running from 1 to number of filled rows in table of fucking options:
 				choose row y from the table of fucking options;
 				say "[link][y] - [title entry][as][y][end link][line break]";
@@ -162,7 +175,9 @@ To say beatthehgryphon:
 					if Player consents:
 						let nam be title entry;
 						now sextablerun is 1;
-						if nam is "Fuck her":
+						if nam is "Milk her":
+							say "[hgryphon_pw_00]";
+						else if nam is "Fuck her":
 							say "[hgryphon_pw_01]";
 						else if nam is "Ride her":
 							say "[hgryphon_pw_02]";
@@ -183,6 +198,13 @@ To say beatthehgryphon:
 				else:
 					say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 
+to say hgryphon_pw_00: [milking]
+	say "     Approaching the defeated gryphon with confidence, you reach out and place your hands on her full breasts, giving them a squeeze. 'Mmmh! That feels nice,' she murrs in pleasure, leaning into your touch. Several small drops of milk already start leaking from her nipples just from the first caress, and you can see that she's obviously more than ready to give some milk. The gryphoness gives a surprised chuckle as you dig an empty plastic bottle from your pack, then press its open neck against one of her nipples, squeezing the boob around it with your other hand. A first squirt of rich gryphon milk shoots into the bottle followed by another and another. The air fills with the strangely arousing scent of the hybrid creature's milk while you switch back and forth between her breasts, milking both of them equally. Your former opponent clearly doesn't mind at all that you're taking what you want from her, letting out sighs of pleasure and arousal throughout the process.";
+	say "     By the time you've filled up your bottle, the gryphoness is putty in your hands, plyable and oh so very horny. If you hadn't already proven that you can take her in a fight, you think she'd just jump you right away and want have sex. As things stand, the blue-feathered avian just lies back as you take your hands off her, stroking her own breasts, as well as the erect shaft between her legs. Packing away your fresh milk, you step back from the gryphoness as she begins to masturbate, leaving her behind to take care of herself.";
+	LineBreak;
+	say "[bold type]You gain a bottle of gryphon milk![roman type][line break]";
+	increase carried of gryphon milk by 1;
+
 to say hgryphon_pw_01:
 	say "     Approaching the defeated gryphon with confidence, you nudge her legs apart with your feet to get a better look at that moist slit she has tucked under those balls of hers. Seeing your interest, she raises her hips and holds her scrotum out of the way. You move to your knees, positioning your [cock size desc of Player] member at your victim's quivering slit.";
 	if Cock Length of Player < 6:
@@ -191,7 +213,6 @@ to say hgryphon_pw_01:
 		say "     With what almost sounds like a combination of a squawk and purring the gryphon spreads her legs further apart, her blue lips trembling against your [cock of Player] manhood. She stares up at you expectantly as you slowly enter her accommodating tunnel. A look of absolute pleasure crosses the gryphon's face as you start to slide in and out. You pick up speed, your balls slapping against her on every thrust.";
 	WaitLineBreak;
 	say "     As your rhythmic fucking continues, your victim starts to squeeze her gigantic blue breasts. You see a small dribble of milk escape both of her nipples as she roughly fondles herself. Continuing with your assault, you start to get annoyed by her massive erection. It's so big that it manages to slap your chin on each thrust. On one thrust a bit of precum escapes the gryphon's cock and hits your tongue; the taste is magical, and you need more. Shifting a bit, you manage to take the tip of the gryphon's knotted black cock into your mouth, and you start wildly pumping away at it with both hands while still fucking her abused hole furiously.";
-	WaitLineBreak;
 	say "     The combined stimulation is too much for the gryphon as her body is wracked with orgasm. Gob after gob of the most delicious cum starts pouring down your throat, while at the same time milk gushes from the gryphon's massive breasts, soaking the both of you. Your blue partner's orgasm causes her muscles to involuntarily clamp down on your throbbing cock, this increased friction is all it takes as you start to pump her full of your seed.";
 	say "     Spent and exhausted you get dressed and walk away, leaving the Hermaphrodite Gryphon to lie in a pool of her own milk.";
 	decrease Libido of Player by 30;
@@ -199,17 +220,12 @@ to say hgryphon_pw_01:
 	if Libido of Player < 0, now Libido of Player is 0;
 
 to say hgryphon_pw_02:
-	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
-	WaitLineBreak;
-	say "     As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. While you greedily consume all the milk these wonderful teats will produce, a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and slide that bulb past your slick labial lips. You feel climax approaching, so you thrust down as hard as you can to force that wonderful bulge inside.";
+	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk. As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. While you greedily consume all the milk these wonderful teats will produce, a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and slide that bulb past your slick labial lips. You feel climax approaching, so you thrust down as hard as you can to force that wonderful bulge inside.";
 	if Cunt Length of Player < 6:
-		say "     It's no use, you are just too small to take it all in. The gryphon chirps soothingly understanding your frustration. Suddenly, you let out a startled yelp as you feel an electrifying tickling sensation on your clit and look down to see the puffed end of a blue tail to be the cause.";
-		WaitLineBreak;
-		say "     'Perhaps this will help ease your suffering,' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on her tasty, milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
+		say "     It's no use, you are just too small to take it all in. The gryphon chirps soothingly understanding your frustration. Suddenly, you let out a startled yelp as you feel an electrifying tickling sensation on your clit and look down to see the puffed end of a blue tail to be the cause. 'Perhaps this will help ease your suffering,' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on her tasty, milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 	else:
-		say "     Seeing what you are trying to do, your blue lover waits for the right moment, and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you; your knees buckle and you collapse into the soft furry warmth of the gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride.";
-		WaitLineBreak;
-		say "     'It's alright baby, mama's here,' the gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling, the gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely register achieving orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour), the gryphon herm lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
+		say "     Seeing what you are trying to do, your blue lover waits for the right moment, and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you; your knees buckle and you collapse into the soft furry warmth of the gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride. 'It's alright baby, mama's here,' the gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling, the gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely register achieving orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour), the gryphon herm lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
+	WaitLineBreak;
 	say "     You lie there for a few minutes, not wanting to move after that marathon fucking, and also enjoying the softness of your partner's massive furry blue breasts. Eventually, the gryphon's swollen knot shrinks down and she finishes filling you with seed. You slowly get to your feet, still impaled on gryphon cock. You start gingerly sliding the bulbous black shaft out, and as it passes your abused nether lips, a torrent of cum spills out, drenching the almost unconscious gryphon below. You get dressed and leave, the gryphon still on the ground, eyes closed, moaning, and idly fondling her ample breasts.";
 	PlayerDrink 5;
 	decrease Libido of Player by 30;
@@ -223,7 +239,7 @@ to say hgryphon_pw_04:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk.";
 	say "     Realizing that knot is not going in without a bit more force than gravity can provide, you get an idea. Taking your large [cock of Player] rod, you push it down between your lover's massive blue furred tits. You take the gryphon's arms and have her cross her chest, under her breasts but over your cock, effectively locking you in place. 'Hold on tight!' you say as you lean back, using the leverage your giant cock provides to force the knot inside. You both moan loudly as the pain quickly transforms to intense pleasure, the gryphon starting to rock back and forth as you become accustomed to her size.";
 	WaitLineBreak;
-	say "     Enjoying the sensation, you join in, rocking your hips back and forth, causing your cock to start fucking the gryphon's ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft and look down to see the gryphon's beak encasing the head of your cock. Worrying that the gryphon's impressive beak is about to take a bite our of your favorite organ, you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel your [short ball size] balls start to contract as you near orgasm. Sensing you're near, the gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
+	say "     Enjoying the sensation, you join in, rocking your hips back and forth, causing your cock to start fucking the gryphon's ample cleavage. You feel something moist start rubbing the tip of your rock hard shaft and look down to see the gryphon's beak encasing the head of your cock. Worrying that the gryphon's impressive beak is about to take a bite our of your favorite organ, you start to withdraw, but you quickly realize there is nothing to worry about as her tongue starts to dance across the head of your engorged member. You feel your [Ball Size Adjective of Player] balls start to contract as you near orgasm. Sensing you're near, the gryphon pick up the pace of her fucking, pounding your abused pussy mercilessly.";
 	say "     'HARDER, FASTER!' you scream as you feel your orgasm approaching. With a guttural yell you climax, releasing gob after gob of hot thick cum straight down the gryphon's throat. Not to be left out, the gryphon gives one last hard thrust and starts dumping what feels like gallons of hot seed into your belly. Knowing that you are tied on that knot and not going anywhere until the gryphon is done cumming, you ease yourself forward and rest your head on one of her bountiful blue breasts.";
 	WaitLineBreak;
 	say "     You absentmindedly start sucking on one of your lover's dark blue nipples and your tongue is greeted with the sweetest, most delicious milk you have ever tasted. You start suckling greedily, taking your fill of the gryphon's magnificent nectar. Once your thirst has been quenched, you notice that the gryphon's cock has shrunk down and can now be easily removed. As you rise to your feet, the gryphon's cock pops out of you like the cork on a champagne bottle, your gaping pussy spraying gryphon seed everywhere.[ovichance]";
@@ -241,9 +257,7 @@ to say hgryphon_TG:
 	increase hgryphon_TGcount by 1;
 	now lasthgryphon_TG is turns;
 	increase XP of Garrett by 1;
-	say "     Approaching the gryphon, you take her cock in hand and start stroking it. She gives a satisfied moan and relinquishes it to you. Stroking the dark-skinned meat gets the creature all the more aroused and compliant. Taking out the bottle of gryphon cum, you let her have a tantalizing sniff of it. She moans and asks what that [one of]great[or]rich[or]yummy[at random] stuff is. You wave it under her beak and say that it's pure, he-gryphon milk, rich and potent.";
-	say "     'It's from a buff, sexy gryphon - all male and all stud. Firm chest, strong shoulders and hard, hard cock. His virile spunk refined and purified into a potent milk. Doesn't that just sound simply delicious?' you whisper sensually to her, stroking her pulsing rod all the while. It leaks increasingly the further you go on. 'Have some and you'll be a he-gryphon stud just like that.'";
-	WaitLineBreak;
+	say "     Approaching the gryphon, you take her cock in hand and start stroking it. She gives a satisfied moan and relinquishes it to you. Stroking the dark-skinned meat gets the creature all the more aroused and compliant. Taking out the bottle of gryphon cum, you let her have a tantalizing sniff of it. She moans and asks what that [one of]great[or]rich[or]yummy[at random] stuff is. You wave it under her beak and say that it's pure, he-gryphon milk, rich and potent. 'It's from a buff, sexy gryphon - all male and all stud. Firm chest, strong shoulders and hard, hard cock. His virile spunk refined and purified into a potent milk. Doesn't that just sound simply delicious?' you whisper sensually to her, stroking her pulsing rod all the while. It leaks increasingly the further you go on. 'Have some and you'll be a he-gryphon stud just like that.'";
 	say "     Between your stroking keeping her aroused and the drink's alluring scent, she moans that she wants it so bad. Grinning, you pass her the bottle and watch eagerly as she downs it without hesitation. The man-milk's effects are quick, causing a rapid shift in the herm's body. Her shoulders broaden and chest flattens as her boobs recede. The wet sounds of her frantically fingering her pussy end with a final wet slurp and an orgasmic cry as the new he-gryphon's digits are pushed out of the closing hole. Despite the blasts of fresh semen shooting forth, the horny creature's balls and cock plump up a little further.";
 	WaitLineBreak;
 	say "     By the time it's over, the hybrid is now fully male, a cute and sexy [if the remainder after dividing hgryphon_TGcount by 4 is 1]twink[else if the remainder after dividing hgryphon_TGcount by 4 is 2]stud[else if the remainder after dividing hgryphon_TGcount by 4 is 3]girly-boy[else]dude[end if]. He sags back against their resting spot, panting to catch his breath while running his paws over his gender-shifted body. Whether it is an effect of the semen milk, the powerful orgasm or the delicious afterglow, the creature seems quite pleased with his present state.";
@@ -255,18 +269,18 @@ to say HermGryphonDesc:
 	if inasituation is true:
 		say ""; [taken care of at the event source]
 	else:
-		say "     She is a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces.";
+		say "     You encounter a tall and striking blue gryphon. She has wide hips and huge blue breasts, implying she leans more on her mammal half than her avian, though her large blue wings are quite a sight to behold. Between her white-furred thighs is a huge, knotted black cock and tightly drawn balls. From behind, the pinkened folds of her female gender are visible under the lion-like tail she sports. Her feet are digitigrade and sport huge, wicked claws that clack on hard surfaces.";
 
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is true;
-	now Name entry is "Blue Gryphon"; [ Infection/Creature name. Capitalized. ]
+	now Name entry is "Blue Gryphon Herm"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
@@ -297,7 +311,7 @@ When Play begins:
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 13; [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 4; [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 2; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -312,23 +326,24 @@ When Play begins:
 	now type entry is "[one of]gryphon[or]feline[or]hybrid[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Name entry is "Blue Gryphon"; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 6; [scale of 1-9 for body weight]
-	now Body Definition entry is 6; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 8; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Name entry is "Blue Gryphon Herm"; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 6; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 6; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 8; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is "your ears are drawn upwards to the top of your head and a wicked beak pushes forward to give you the head of a bird of prey"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is "a sharp-beaked bird of prey"; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is "avian"; [one word descriptive adjective (avian/canine/...)]
@@ -365,7 +380,7 @@ When Play begins:
 	now Back Skin Adjective entry is "feathered"; [one word adjective (feathered/furred/scaly/...)]
 	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
 	now Arms Change entry is "your fingernails grow into sharp claws and yellow-orange scales spread over your hands and lower arms"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is "covered in blue feathers up to the elbow, with small, yellow-orange scales from there, down to your clawed hands"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Description entry is "covered in blue feathers down to the elbow, with small, yellow-orange scales from there to your clawed hands"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is "scaled"; [one word adjective (feathered/furred/scaly/...)]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
 	now Legs Change entry is "they shift into the digitigrade stance of an anthro lion with blue fur, complete with clawed paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
@@ -375,37 +390,38 @@ When Play begins:
 	now Ass Description entry is "ass, covered short blue fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
 	now Ass Skin Adjective entry is "furry";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 4; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is "a long tail sprouts from your tailbone, soon covered in blue fur and with an azure tuft at the end"; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is "a long tail sprouts from your tailbone, soon covered in blue fur and with an azure tuft at the end"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is "long, blue-furred tail with an azure tuft of fur at the end"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 10; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 10; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is "blue"; [one word color descriptor]
 	now Cock Count entry is 1;
-	now Cock Girth entry is 6;
+	now Cock Girth entry is 4; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 13; [length in inches]
-	now Cock Change entry is "it takes on a fairly human-like appearance, complete with an uncut foreskin - and all of it in azure blue"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is "it takes on a fairly human-like appearance, complete with an uncut foreskin - and all of it in azure blue"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is "looks fairly human in shape, complete with an uncut foreskin"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Adjective entry is "human"; [one word adjective: avian/canine/...]
 	now Cock Color entry is "azure"; [one word color descriptor]
 	now Ball Count entry is 2;
-	now Ball Size entry is 4; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Size entry is 2; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 1;
 	now Cunt Length entry is 14;
 	now Cunt Tightness entry is 6;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Change entry is "it takes on a fairly human-like appearance, complete with a clit at the top - and all of it in azure blue"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cunt Change entry is "it takes on a fairly human-like appearance, complete with a clit at the top - and all of it in azure blue"; [partial sentence that fits in: "Your cunt [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
 	now Cunt Description entry is "fairly human in shape, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Adjective entry is "human"; [one word adjective: avian/canine/...]
 	now Cunt Color entry is "azure"; [one word color descriptor]
-	now Clit Size entry is 3;
+	now Clit Size entry is 3; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 Section 3 - Endings
 

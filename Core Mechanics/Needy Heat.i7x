@@ -19,7 +19,7 @@ heatdrive is a number that varies. heatdrive is usually 0. [heatdrive controls h
 Table of infection heat
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
 "Default"	7	1	"You shift uncomfortably, a warmth spreading between your legs, seeming to build rapidly. It's not until you feel the warm trickle down your leg that you realize with a start what's happening. Glancing down to see your sex become swollen and red as your body advertises its fertility and readiness. [line break][line break]You are in heat."	--	--	--	"[defaultheat]"	true	true	"Your lower belly quivers as some hidden part of you wakens to a heated need. Your bowels squeeze and throb, feeling empty and needing to be filled, preferably by something large and virile.[line break]Your altered body is in heat."
-"Female Husky"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs. Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass. Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if Player is male]male [end if]heat overtakes you."
+"Husky Bitch"	400	400	"A sharp strike of pain in your lower belly makes you clutch at it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a hot trickle from between your legs. Looking down you watch in horrified fascination as your sex twists and warps into that of a bitch's, then begins to swell and puff up rapidly. Your dripping nethers now exactly the same as the wanton husky bitch that infected you, dripping lewdly and throbbing with the fertility and lust of canine heat."	"swollen and dripping husky bitch twat "	"[huskyheatstart]"	"[huskyheatend]"	"[huskyheat]"	true	true	"A sharp strike of pain in your lower belly makes you clutch it and drop to your knees with a gasp. As you struggle for breath through the fading pain, you can feel a pulsing emptiness in your ass. Your anus quivers and darkens, relaxing as it becomes more accommodating in its need to be filled as a strange [if Player is male]male [end if]heat overtakes you."
 
 [  note -
 fheat entry - truth state states if there is a female heat
@@ -68,7 +68,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 			if there is no area entry, next;
 			if area entry is heatzone:
 				add X to hmonlist;
-				if Name entry is "Alpha Husky" or Name entry is "Female Husky":		[Huskies are more likely]
+				if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
 					add X to hmonlist;
 		if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[Loop through and select all monsters that appear nearby (Outside by default)]
@@ -76,7 +76,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 				if there is no area entry, next;
 				if area entry is "Outside":
 					add X to hmonlist;
-					if Name entry is "Alpha Husky" or Name entry is "Female Husky":		[Huskies are more likely]
+					if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
 						add X to hmonlist;
 		sort hmonlist in random order;
 		now MonsterID is entry 1 of hmonlist;

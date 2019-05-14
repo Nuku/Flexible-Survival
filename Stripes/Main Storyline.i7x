@@ -186,7 +186,7 @@ to DrMattSampleQuestStart:
 	say "     Raising one hand as if to nervously brush over his graying hair, Matt stops himself before he hits the helmet, letting his gloved fingers drop with a frown. 'Anyways, since we only have this limited amount of time, I would suggest you move quickly. I have been trying to delay convince the military to delay its [']surge['], but without data to support my warnings, they're easily ignored. Please come over here for a moment with me,' he says, then walks to a nearby terminal and sits down in front of it. He opens up a folder named 'observed specimens', which contains a whole row of still images from surveillance cams. 'Thankfully the exterior security system's cameras do have battery backup, so they've captured footage of some interesting creatures since the outbreak. Here, this is something that I earmarked being of special interest.'";
 	WaitLineBreak;
 	if hermaphrodite is not banned and furry is not banned:
-		if bodyname of Player is "Blue Gryphon":
+		if bodyname of Player is "Blue Gryphon Herm":
 			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. You know the shape well, as it is what your body currently looks like. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
 			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor.";
 			DrMattGryphonExam;
@@ -260,7 +260,7 @@ to DrMattSampleDelivery:
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [not enough milk, but enough goo]
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -269,7 +269,7 @@ to DrMattSampleDelivery:
 				now Strength of Doctor Matt is 2; [goo delivered]
 			DrMattGooDelivery;
 		else if carried of gryphon milk is 0 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [no milk, but enough goo]
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have any gryphon samples for analysis. But then, since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -292,7 +292,7 @@ to DrMattSampleDelivery:
 				decrease carried of gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [milk delivered]
@@ -305,7 +305,7 @@ to DrMattSampleDelivery:
 				else:
 					say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0 and (carried of glob of goo is 0 and carried of blue gel is 0 and carried of pink gel is 0 and carried of purple gel is 0): [neither enough milk nor goo]
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of the hybrid gryphon infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
 				say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
@@ -336,14 +336,14 @@ to DrMattSampleDelivery:
 			decrease carried of gryphon milk by 2;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1: [not enough milk]
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then says, 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
 			else:
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0:
-			if bodyname of Player is "Blue Gryphon":
+			if bodyname of Player is "Blue Gryphon Herm":
 				say "gives a slight frown, then says, 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]

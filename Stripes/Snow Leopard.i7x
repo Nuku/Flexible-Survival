@@ -27,8 +27,8 @@ to say losetosnowmeow:
 	say "     The snow leopard gives a throaty purr as your struggles cease. He presses you down to the ground and runs his eyes over you while a paw strokes his stiff shaft. The fight over, you can see it is steely gray with a slightly feline-shaped glans and a pair of ample balls below it. Between the feel of the snowmeow's lovely fur and the heavy scent of his arousal, you find yourself subconsciously licking your lips as a few beads of precum leak down that hard meat.";
 	if Player is male:
 		say "     The snow leopard licks his lips lustfully as he eyes your cock. Turning around, he brings his stiff shaft to your face while his soft paws work your shaft to full erection. His precum drips down onto your lips and your remaining self-control breaks. You open your mouth and guide that tasty meat into your waiting mouth. You lick and suck at it hungrily, moaning with increasing desire as his own lips close around your cock and he starts licking and sucking your throbbing shaft.";
-		say "     His paw plays with your balls and cock incessantly while he licks and sucks your meat, thirsting for your cum[if ball size of Player > 10]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. Your loads are quite fulfilling and you are rewarded by a hefty blast of snow leopard cum as well, enough to overflow your mouth briefly. You swallow it down with delight in your lustful haze[else if ball size of Player > 5]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. You give him several sizeable loads before running empty and you are rewarded with an impressive serving of snowmeow cum, which you swallow down with delight in your lustful haze[else]. And you spray it out onto his tongue in one, strong series of spurts, giving as much as your balls can. Your small load barely satisfies him and you are rewarded with only a few small spurts of snowmeow cum in return. You swallow this down with delight in your lustful haze, eager for as much or as little as you can get[end if]. Done with you, he pads off to look for others to help slake his lustful thirst.";
-		if ball size of Player > 9:
+		say "     His paw plays with your balls and cock incessantly while he licks and sucks your meat, thirsting for your cum[if Ball Size of Player > 3]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. Your loads are quite fulfilling and you are rewarded by a hefty blast of snow leopard cum as well, enough to overflow your mouth briefly. You swallow it down with delight in your lustful haze[else if Ball Size of Player > 3]. And you spray it out onto his tongue again and again as he works to drain your balls for as much of the thick, tasty fluid he can get. You give him several sizeable loads before running empty and you are rewarded with an impressive serving of snowmeow cum, which you swallow down with delight in your lustful haze[else]. And you spray it out onto his tongue in one, strong series of spurts, giving as much as your balls can. Your small load barely satisfies him and you are rewarded with only a few small spurts of snowmeow cum in return. You swallow this down with delight in your lustful haze, eager for as much or as little as you can get[end if]. Done with you, he pads off to look for others to help slake his lustful thirst.";
+		if Ball Size of Player > 9:
 			infect "Snow Leopard"; [additional infection from large load]
 			decrease hunger of Player by a random number between 2 and 5;
 	else if ( bodyname of Player is "Snow Leopard" or bodyname of Player is "Panther Taur" ):
@@ -123,8 +123,8 @@ to say snowmeow_vsex01:
 	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down. He mewls softly as you pin him down and wrap your fingers around his cock. His shaft is a steely gray and has a slightly pointed, feline-shaped glans. Beneath his above-average length are an impressive pair of balls. As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further. You lick your lips and stroke your throbbing shaft as your eyes are drawn to the fluffy kitty's shapely ass.";
 	say "     Having come to your decision, you roll the weakened feline over onto all fours. He whimpers sweetly, but flags his tail and grinds his ass back against your cock. You grin at this and tease him briefly, pressing lightly against his tailhole and letting your pre wet it, but not mounting him yet. He starts to mewl and moan with increasing need until you finally relent, mostly from your own lustful desires, and sink your cock slowly into the tight hole.";
 	say "     The tight, warm ass feels wonderful around your cock, and the thick padding of his fur lets you pound away at him good and hard. You reach around to play with his cock and balls, rolling the heavy orbs around in your palm as feline pre dribbles onto the ground. His ass, apparently well practiced, squeezes and pulls at your cock each time you thrust into him.";
-	say "     Finding him such an enjoyable fuck, you try to hold back and savor it as long as you can. But eventually all good things must come to an end and when the end does come, it is wonderful. You drive yourself deep inside him [if Cock Length of Player > 24]enough to make his belly bulge from your giant cock [else if Cock Length of Player > 12]stuffing your big cock fully into him [end if]and unleash your hot load into his bowels. He murrrowls in lustful satisfaction as you pump your semen into him[if ball size of Player > 10], bloating his tummy as you drain your large balls into that tight ass[end if]. His own, heavy balls unleash a sizable load of thick seed onto the ground beneath him as you pump him dry.";
-	say "     Done with him, you withdraw and wipe your cock with his fluffy tail before pushing him over into the sticky puddle he's made. He [if ball size of Player > 10]rubs his swollen tummy and [end if]laps at the pool of semen, slaking his growing thirst a little with his own cum.";
+	say "     Finding him such an enjoyable fuck, you try to hold back and savor it as long as you can. But eventually all good things must come to an end and when the end does come, it is wonderful. You drive yourself deep inside him [if Cock Length of Player > 24]enough to make his belly bulge from your giant cock [else if Cock Length of Player > 12]stuffing your big cock fully into him [end if]and unleash your hot load into his bowels. He murrrowls in lustful satisfaction as you pump your semen into him[if Ball Size of Player > 3], bloating his tummy as you drain your large balls into that tight ass[end if]. His own, heavy balls unleash a sizable load of thick seed onto the ground beneath him as you pump him dry.";
+	say "     Done with him, you withdraw and wipe your cock with his fluffy tail before pushing him over into the sticky puddle he's made. He [if Ball Size of Player > 3]rubs his swollen tummy and [end if]laps at the pool of semen, slaking his growing thirst a little with his own cum.";
 
 to say snowmeow_vsex02:
 	say "     Eager to take advantage of the sexy kitty now that the tables have turned, you grab him from behind and press him down. He mewls softly as you pin him down and wrap your fingers around his cock. His shaft is a steely gray and has a slightly pointed, feline-shaped glans. Beneath his above-average length are an impressive pair of balls. As more pre dribbles down his throbbing cock, the scent of feline arousal builds, exciting you further. You lick your lips and decide you're thirsting for the snow leopard's rich load. You fondle his balls and start sucking at his throbbing member. He moans and thrusts gently into your mouth. Your tongue plays over his long, thick meat as you tease and taste the feline. You work him up slowly, easing back from his peak again and again to ensure you can get all you can from the thirsty kitty.";
@@ -157,7 +157,7 @@ to say snowmeow_vsex04:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -194,7 +194,7 @@ When Play begins:
 	now area entry is "Red"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 11; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 11; [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 6; [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 7; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -210,22 +210,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -272,37 +273,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 

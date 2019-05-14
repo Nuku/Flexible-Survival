@@ -101,7 +101,7 @@ to say sexwithRod:
 		else:
 			say "     With the foreplay done, you press Rod onto her back and grab her throbbing cock. Lining it up with your [if Player is female]pussy[else]asshole[end if], you sink yourself down onto it, eliciting a long moan from Rod. Her large shaft and hefty balls throb, clearly those having gotten less attention as she's the den's favorite bottom. She moans loudly and writhes in pleasure on the cushions as you ride her, making a big show of it for those watching around you both. She's better hung than the average slut rat despite her [']lowly['] position, giving you a greatly satisfying fuck out of it as well. When she finally cums, you both cry out loudly as her hot seed floods into your [if Player is female]womb[else]ass[end if].[impregchance]";
 		infect "Slut Rat";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		decrease Libido of Player by 25;
 		if Libido of Player < 50, now Libido of Player is 50;
 		now lastfuck of Rod is turns;
@@ -287,7 +287,7 @@ Instead of resolving a Art Collector:
 		increase hunger of Player by 5;
 		increase thirst of Player by 5;
 		decrease morale of Player by 20;
-		decrease humanity of Player by 8;
+		SanLoss 8;
 		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection. You slowly struggle to rise, the healing process having taken much out of you. You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain. Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now. Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman. After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
 		now Resolution of Art Collector is 2; [lost]
 	else if artleopardfight is 1:	[victory]
@@ -383,7 +383,7 @@ to say helpingronda:
 	WaitLineBreak;
 	say "     When you head back up to the Mall, you tell everyone that Rod dragged you both down under the Mall after he'd decided to finally go searching for Ronda. You tell them that you tried to help him, but that the big rats down there got him and that you barely got away yourself. Still high on the excitement of what happened below, you feel no guilt about your duplicitous actions, feeling much closer to your slut rat sisters now.";
 	say "     Nermine gives you an inscrutable look as you're explaining what happened to the sad mall rats around you, but she says nothing. She was asked to help reunite Rod and Ronda, and that's happened... after a fashion. Pretty much Nermine's usual stock and trade.";
-	decrease humanity of Player by 20;
+	SanLoss 20;
 	increase score by 100;
 	now HP of Ronda is 100;
 	move Rod to Slut Rat Den;

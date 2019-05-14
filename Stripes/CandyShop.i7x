@@ -68,7 +68,7 @@ Instead of resolving a CandyShop:
 				now tailname of Player is Name entry;
 				now tail of Player is tail entry;
 			now Libido of Player is ( Libido of Player + 50 ) / 2;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
 		now Sweet Tooth is known;
 		increase ferretvisit by 1;
@@ -340,7 +340,7 @@ to sfcaffeine:
 	increase Libido of Player by 15;
 	if Libido of Player < 66, now Libido of Player is 66;
 	if Libido of Player > 100, now Libido of Player is 100;
-	decrease humanity of Player by 15;
+	SanLoss 15;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 3;
 	increase morale of Player by 5;
@@ -349,7 +349,7 @@ to sfcaffeine:
 
 to sfcaffeineboost:
 	increase caffeinehigh of Player by a random number between 3 and 5;
-	decrease humanity of Player by 8;
+	SanLoss 8;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 1 and 3;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 	increase Libido of Player by 8;

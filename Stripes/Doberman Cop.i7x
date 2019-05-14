@@ -11,9 +11,9 @@ dobieresist is a number that varies.
 dobielibido is a number that varies.
 
 when play begins:
-	add { "Doberman" } to infections of furry;
-	add { "Doberman" } to infections of girl;
-	add { "Doberman" } to infections of Caninelist;
+	add { "Doberman Bitch" } to infections of furry;
+	add { "Doberman Bitch" } to infections of girl;
+	add { "Doberman Bitch" } to infections of Caninelist;
 
 to say Dobermandesc:
 	setmongender 4; [creature is female]
@@ -502,13 +502,13 @@ to say beatthedobie3:			[high-lust cop player victory]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is false;
-	now Name entry is "Doberman";
+	now NewTypeInfection entry is true;
+	now Name entry is "Doberman Bitch";
 	now enemy title entry is "Doberman Cop";
 	now enemy Name entry is "Alexandra";
 	now enemy type entry is 1; [non-unique enemy]
@@ -519,7 +519,7 @@ When Play begins:
 	now face entry is "that of a cunningly handsome looking Dobie"; [ Face. Format as Your face is [face of Player]. ]
 	now body entry is "fit and toned without a trace of fat anywhere in sight, not to mention pecs that bulge out almost half an inch from your chest and torso with, count [']em, eight hard and cut abs. You are definitely a stud of a dog"; [ Body. Format as "Your body is [body of Player]." ]
 	now skin entry is "[one of]brown and black fur[or]a dense and dark pelt[or]a heavy cropping of water resistant fur[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of Player] skin." ]
-	now tail entry is "Your tail is long and thin, like a Dalmatian's, but pitch black in color and curved upwards."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now tail entry is "Your tail is moderately long and thin, like a Dalmatian's, but pitch black in color and curved upwards."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]knotted[or]tapered canine[or]dark crimson colored[at random]"; [ Cock. Format as "You have a 'size' [cock of Player] cock." ]
 	now face change entry is "your head shifts and then pops and then finally melts down into a point giving you a Doberman-like face while your ears push straight up onto your head and your eyes turn chocolate brown in color"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your muscles suddenly balloon outwards while your bones and muscles pop and contort inside of your body starting from your neck going all the way down to your thighs, calves and feet. Back arching, spine tingling you have just enough time to appreciate the fact that the heels of your feet are pulling back to give you a digitigrade stance before you sigh as your body finishes its transmogrification"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
@@ -532,124 +532,140 @@ When Play begins:
 	now per entry is 15;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 60; [ The monster's starting HP. ]
 	now lev entry is 7; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 10; [ Monster's average damage when attacking. ]
 	now area entry is "Outside"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 6; [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 0; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 0; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 0; [ Depth of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 0; [ Width of female sex the infection will try to give a player. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Length entry is 10; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 2; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
-	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscular[or]unrepentantly strong[or]dashing[or]sexy[at random]";
+	now loot entry is "doberman bitch fur"; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 50; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lithe[or]unrepentantly strong[or]dashing[or]sexy[at random]";
 	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is "Doberman Male"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "dobermancop"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Name entry is "Doberman Bitch"; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 3; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 8; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 7; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is "your ears are drawn upwards to the top of your head, forming sharp wedges standing upright. A long and narrow muzzle pushes forward to give you the head of a sleek doberman"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is "a sleek doberman"; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
 	now Head Adornments entry is ""; [partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	now Hair Length entry is 5; [hair length in inches]
+	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is "auburn"; [one word color descriptor]
+	now Hair Style entry is "fauxhawk"; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Eye Color entry is "amber"; [one word color descriptor]
+	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 12; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 7;
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Tongue Adjective entry is "long"; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is "pink"; [one word color descriptor]
+	now Tongue Length entry is 7; [length in inches]
+	now Torso Change entry is "dark brown and black hair sprouts all over it, giving you a shiny coat of short but dense fur"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is "covered in a short coat of dark brown and black fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [torso description of Player]."]
+	now Torso Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word descriptive adjective (furry/scaled/...)]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Skin Adjective entry is "furred"; [one word descriptive adjective (furry/scaled/...)]
+	now Torso Color entry is "dark brown and black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Breast Adjective entry is "bouncy"; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 3; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Nipple Color entry is "brown"; [one word color descriptor]
+	now Nipple Shape entry is "oval"; [shape example: any shape will do as long as it has a baseline with a current infection or item]
 	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
 	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
+	now Back Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...)]
 	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	now Arms Change entry is "your fingernails grow into blunt claws and brown fur spreads over your paw-hands. As it moves further up towards your shoulder, darker tones of black dominate in the fur"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is "covered in dark brown and black fur, ending in paw-hands with blunt claws"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...)]
+	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is "they shift into the digitigrade stance of an anthro doberman with short fur in dark brown and black, ending in a pair of paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is "that of an anthro doberman, with short fur in dark brown and black covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...)]
+	now Ass Change entry is "it becomes fairly narrow and small, with dark brown and black fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is "ass, covered short dark brown and black fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
+	now Ass Skin Adjective entry is "furry";  [one word adjective (feathered/furred/scaly/...)]
+	now Ass Width entry is 2; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
+	now Tail Change entry is "a mid-length canine tail sprouts from your tailbone, soon covered in short dark brown and black fur"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is "mid-length tail with short dark brown and black fur"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...)]
+	now Asshole Depth entry is 8; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 2;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
+	now Asshole Color entry is "brown"; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 2; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
+	now Cock Change entry is "it takes on a reddish color and canine shape, complete with a pointy tip, knot at the base and a sheath to protect it"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is "has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Adjective entry is "canine"; [one word adjective: avian/canine/...]
+	now Cock Color entry is "red"; [one word color descriptor]
 	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Ball Description entry is "balls in a furry, snug sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 1;
+	now Cunt Length entry is 10;
+	now Cunt Tightness entry is 2;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Cunt Change entry is "it takes on a canine appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Description entry is "shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Adjective entry is "canine"; [one word adjective: avian/canine/...]
+	now Cunt Color entry is "brown"; [one word color descriptor]
+	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
+Table of Game Objects (continued)
+name	desc	weight	object
+"doberman bitch fur"	"A tuft of dark brown fur that looks like it has been pulled out of the coat of a doberman. It's nicely soft."	0	doberman bitch fur
 
+doberman bitch fur is a grab object.
+the usedesc of doberman bitch fur is "[DobermanBitchFurUse]".
+it is part of the player.
+It is temporary.
+
+to say DobermanBitchFurUse:
+	say "Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
+	infect "Doberman Bitch";
+
+instead of sniffing doberman bitch fur:
+	say "The fur has a pleasing, not too strong, animal-like scent.";
 
 Section 3 - Alt Combat Rules
 
@@ -675,31 +691,32 @@ this is the dobercoppost rule:		[postattack rule]
 Section 4 - Endings	[This portion deals with the Doberman infection for Kaleem's Firehouse content]
 
 when play ends:
-	if bodyname of Player is "Doberman":
-		if humanity of Player < 10:
-			if Player is female and Cock Count of Player < 0:
-				say "     Falling prey to your feral instincts you find yourself sniffing around town to find Tyr to thank him for the sexy body he helped to give you. Your mind may have succumb to the madness that is the feral need to fuck and breed, but the face of that sexy and charming Doberman stands out like the sun against lustful fog covering your thoughts. Locating the other back at his pad you throw yourself at the Doberman to lavish him in warm and tender licks across the face just as soon as he opens his door to let you in. Seeing you the way you are now Tyr doesn't waste time in trying to regret what's happened to you as the buff and commanding canine tosses you down onto his floor, strips himself out of his jeans, and then proceeds to work his fat piece of Doberman meat into the depths of your leaking snatch.";
-				say "     Rubbing your cleft up and down the growling and grunting Doberman you're happy to find that he accepts your submission to him as he spears you hard and then deep as he goes to work filling you up with pups. Somewhere in the back of your mind you hope that maybe later on, after the first of what you can only hope will be several long and forceful fucks, Tyr will let you help him out with his workload around the city. But that's for later on...";
-			else if Player is male and Cunt Count of Player < 0:
-				say "     Sniffing out the Doberman that had given you your sexy new body you find your way to Tyr's house to properly [']thank['] the other male. When the larger Doberman finds you at his door you don't waste any time as you tackle him to the ground, strip the both of you out the clothes you have on, and then proceed to lube up your cock with your precum in order to use your rod on the buff Dobie's tender tailhole. Of course, your little surprise attack doesn't stun Tyr for long as the Doberman is quick to show you who's the alpha around here.";
-				say "     Grappling at your heavy form the other Dobie wrestles you to the ground, grabs your long tail to painfully snatch it upwards and then buries his long rod inside of you in one single, painful thrust. No lube, no grace, no consideration is given for your audacity at trying to mount him as Try takes you hard and fast across the floor of his home. Bucking and snarling while shoving your ass back against him you growl in want for the dominant male to take you like his beta. Finding your wish granted as the larger Doberman hilts into you, you have just enough time to think on how perfect your submission to this greater canine is, right before Tyr pulls his hips back in order to pound inside of your now loosened tailhole with almost bruising force.";
-				say "     Somewhere in your dimming thoughts you hope that the other male will keep you around as you can happily see yourself becoming both his shadow and bodyguard, if need be, as the two of you go out into the world to do... whatever it is that Tyr actually does.";
-		else:
-			say "     Having survived the trails set forth by the out of control city you don't think to resist when the military comes in to try and clean up the place - taking you in for inspection and quarantine as they do. Scrubbed down, [italic type]bathed[roman type] and then given both a physical and mental examination the scientist at work find you to be in perfect health. Grateful to have one less burden to deal with the military types try and strike up a deal with you to get you to be a part of their team, something about needing strong and confident canines to work for the [']good guys[']";
-			say "     At first you have half the mind to tell them where to go, but when you see a familiar face smiling at you while within the quarantine bunker you hastily nod to the military in acceptance of their offer. It doesn't take long before you are trained, fitted and then sent out with a special team designed to handle out of control mutants. The work proves to be grueling and thankless most days, however, it's worth it at the end when you collect your paycheck. And yet, the real bonus comes during the weeks you are off duty when you settle down for the evening in the little house you bought. A knock at your door some nights has your lips lifting into a smile, especially since you know who will be on the other end.";
-			if Player is male:							[MALE/HERM]
-				say "     Tyr doesn't try to hide it as he knows what you want and how you want it. Being that he's overseen both your training and the unit you're working for you feel almost indebted to the other man during the times when he lays you down on top of your bed and then gently strips you out of your evening attire. Of course, the other always reminds you that you owe him nothing, but you still feel that you do, especially when he lifts up your legs, rubs his meaty hands across your cock and balls, and then buries his face in between your legs to give you the most mind blowing blowjob in the world.";
-				say "     The fact that he makes sure that you don't cum in his muzzle makes things all the more exciting as the bigger Doberman leaves you right on the edge before making his next move. Holding your hips up for him you watch and wait as Tyr prepares himself to take your tight tailhole, forever using his precum instead of lube, before wincing and hissing in slight pain as the Dobie takes you hard. Never like a bitch though, both you and he know that your [']relationship['] with each other is worth more than that. However, that does not stop him from hammering into your ass, driving across your prostate like mad, which then leaves you babbling and begging for more, as the bigger Dobie drives you to the edge of orgasm while knotting you good and tight.";
-				say "     He finishes fast on the first of your trysts, he always does, but during the second, third, fourth and fifth, Tyr makes sure to make long and passionate love with you as he fills you to the brim with his canine spunk. By the time he's through and his knot finally pops out of you, your ass is leaking so much that the other [']generously['] offers to lick you clean in order not to make a mess on your bed. As of to date, you've never told him no before.";
-			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
-				say "     Having Tyr as your secret lover becomes less of a secret when your stomach swells with his brood. You never complain though when you mysteriously find yourself on desk duty instead of working out in the field. Your teammates, many of them mutants, some of them even females like yourself, are happy to congratulate you on your luck at finding companionship given these weird times. None of them ask who the father is. All of them know by both the scent that always travels along your fur when you return from your time off and by the fact that an unfamiliar Doberman is constantly seen hanging around the places where you are working who the lucky male is.";
-				say "     One day during your pregnancy you find yourself scared out of your wits when someone comes up from behind you while you are in the break room to force you down onto a nearby table with your rump pushed high up into the air. Growling and cursing that someone could be strong enough to hold you down against your will you find yourself all but melting when a familiar voice chuckles inside of your cropped ear. Freezing when a hole is torn into your cargo pants by wickedly sharp claws, you spread your legs wide and hunch upwards as a thick Dobie shaft is stuffed up into your cunt with gentle, but forceful thrusts.";
-				say "     Not knowing that your lover would be so kinky, as he never touched you in this manner before, at least, not while you're on the job surrounded by the others, you don't try to stop Tyr as he mounts you inside of the break room as though he owns you. Partially you realize that he does own you. Both body and heart. Grunting and growling as your pussy is forced wide on the other Doberman's dick neither you nor Tyr care when your coworkers come into the room to watch you get stuffed full. Many of them go about their business getting tea and coffee as though nothing weird is happening, but others, like Stu and Stacey, the hyena herm pair, let you know that you are doing a good thing as Stacey mounts Stu up against the wall to have at her husband.";
-				say "     Rocking into you with careful force Tyr snarls his pleasure out into the room when his knot locks him into place against you. It doesn't take long for you to fell a familiar fullness rushing inside of your already packed womb, and idly you wonder if your pups will be just as randy and horny as their father. You can only hope so as your cunt flutters around your Dobie's cock, dripping rich honey onto the pristine floor beneath you and Tyr.";
-			else:									[F-STERILE]
-				say "     Because you are infertile Tyr has no problem fucking you anyway, everyway, and everywhere he desires. Being the leader of your elite group, though sadly a shadow leader who is most often never seen or heard from, the Doberman commander makes a special play out of forcing your into slightly embarrassing scenarios while you are on the job. That one time in Moscow when you and your unit were looking to take down the Siberian tiger outfit you remember how Tyr grabbed you out of the blue and then forced you to suck his cock while kneeling down against the cold street of the city. Your unit still wonders if you really found a Siberian hooker to get your rocks off with or if something else was going on.";
-				say "     Then there was that time in Egypt, when you were looking for that king Cobra mutant that was terrorizing the people of Cairo, that Tyr decided to be cute and sneak into your hotel room to bind you to the bed with silk ties only to then pound you into the mattress while you were half asleep. Your muffled screams had almost alerted Stu, the hyena herm that you had been sharing a room with, into waking up, but thankfully the other sleeps like a rock. Next it was back in the states with you pushing through a forest only to suddenly get kidnapped for an hour by Tyr to have hot and wild sex up along the branches of a tree. Then there was that time in South America where Tyr mounted you underneath that waterfall while you had been on the lookout for the twin headed jaguar creature.";
-				say "     The there was the time in Japan when Tyr had wanted to see how drunk you could get before deciding that having sex with you in one of the local shrines while you were sloshed out of your mind would be kinky. The kitsunes that had found you both were amicable enough to let you leave without being cursed, or fined, after agreeing to be able to watch. Then there was that time...";
+	if bodyname of Player is "Doberman Bitch":
+		if Stamina of Tyr > 3: [Player had sex with him more than 3 times]
+			if humanity of Player < 10:
+				if Player is female and Cock Count of Player < 0:
+					say "     Falling prey to your feral instincts you find yourself sniffing around town to find Tyr to thank him for the sexy body he helped to give you. Your mind may have succumb to the madness that is the feral need to fuck and breed, but the face of that sexy and charming Doberman stands out like the sun against lustful fog covering your thoughts. Locating the other back at his pad you throw yourself at the Doberman to lavish him in warm and tender licks across the face just as soon as he opens his door to let you in. Seeing you the way you are now Tyr doesn't waste time in trying to regret what's happened to you as the buff and commanding canine tosses you down onto his floor, strips himself out of his jeans, and then proceeds to work his fat piece of Doberman meat into the depths of your leaking snatch.";
+					say "     Rubbing your cleft up and down the growling and grunting Doberman you're happy to find that he accepts your submission to him as he spears you hard and then deep as he goes to work filling you up with pups. Somewhere in the back of your mind you hope that maybe later on, after the first of what you can only hope will be several long and forceful fucks, Tyr will let you help him out with his workload around the city. But that's for later on...";
+				else if Player is male and Cunt Count of Player < 0:
+					say "     Sniffing out the Doberman that had given you your sexy new body you find your way to Tyr's house to properly [']thank['] the other male. When the larger Doberman finds you at his door you don't waste any time as you tackle him to the ground, strip the both of you out the clothes you have on, and then proceed to lube up your cock with your precum in order to use your rod on the buff Dobie's tender tailhole. Of course, your little surprise attack doesn't stun Tyr for long as the Doberman is quick to show you who's the alpha around here.";
+					say "     Grappling at your heavy form the other Dobie wrestles you to the ground, grabs your long tail to painfully snatch it upwards and then buries his long rod inside of you in one single, painful thrust. No lube, no grace, no consideration is given for your audacity at trying to mount him as Try takes you hard and fast across the floor of his home. Bucking and snarling while shoving your ass back against him you growl in want for the dominant male to take you like his beta. Finding your wish granted as the larger Doberman hilts into you, you have just enough time to think on how perfect your submission to this greater canine is, right before Tyr pulls his hips back in order to pound inside of your now loosened tailhole with almost bruising force.";
+					say "     Somewhere in your dimming thoughts you hope that the other male will keep you around as you can happily see yourself becoming both his shadow and bodyguard, if need be, as the two of you go out into the world to do... whatever it is that Tyr actually does.";
+			else:
+				say "     Having survived the trails set forth by the out of control city you don't think to resist when the military comes in to try and clean up the place - taking you in for inspection and quarantine as they do. Scrubbed down, [italic type]bathed[roman type] and then given both a physical and mental examination the scientist at work find you to be in perfect health. Grateful to have one less burden to deal with the military types try and strike up a deal with you to get you to be a part of their team, something about needing strong and confident canines to work for the [']good guys[']";
+				say "     At first you have half the mind to tell them where to go, but when you see a familiar face smiling at you while within the quarantine bunker you hastily nod to the military in acceptance of their offer. It doesn't take long before you are trained, fitted and then sent out with a special team designed to handle out of control mutants. The work proves to be grueling and thankless most days, however, it's worth it at the end when you collect your paycheck. And yet, the real bonus comes during the weeks you are off duty when you settle down for the evening in the little house you bought. A knock at your door some nights has your lips lifting into a smile, especially since you know who will be on the other end.";
+				if Player is male:							[MALE/HERM]
+					say "     Tyr doesn't try to hide it as he knows what you want and how you want it. Being that he's overseen both your training and the unit you're working for you feel almost indebted to the other man during the times when he lays you down on top of your bed and then gently strips you out of your evening attire. Of course, the other always reminds you that you owe him nothing, but you still feel that you do, especially when he lifts up your legs, rubs his meaty hands across your cock and balls, and then buries his face in between your legs to give you the most mind blowing blowjob in the world.";
+					say "     The fact that he makes sure that you don't cum in his muzzle makes things all the more exciting as the bigger Doberman leaves you right on the edge before making his next move. Holding your hips up for him you watch and wait as Tyr prepares himself to take your tight tailhole, forever using his precum instead of lube, before wincing and hissing in slight pain as the Dobie takes you hard. Never like a bitch though, both you and he know that your [']relationship['] with each other is worth more than that. However, that does not stop him from hammering into your ass, driving across your prostate like mad, which then leaves you babbling and begging for more, as the bigger Dobie drives you to the edge of orgasm while knotting you good and tight.";
+					say "     He finishes fast on the first of your trysts, he always does, but during the second, third, fourth and fifth, Tyr makes sure to make long and passionate love with you as he fills you to the brim with his canine spunk. By the time he's through and his knot finally pops out of you, your ass is leaking so much that the other [']generously['] offers to lick you clean in order not to make a mess on your bed. As of to date, you've never told him no before.";
+				else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
+					say "     Having Tyr as your secret lover becomes less of a secret when your stomach swells with his brood. You never complain though when you mysteriously find yourself on desk duty instead of working out in the field. Your teammates, many of them mutants, some of them even females like yourself, are happy to congratulate you on your luck at finding companionship given these weird times. None of them ask who the father is. All of them know by both the scent that always travels along your fur when you return from your time off and by the fact that an unfamiliar Doberman is constantly seen hanging around the places where you are working who the lucky male is.";
+					say "     One day during your pregnancy you find yourself scared out of your wits when someone comes up from behind you while you are in the break room to force you down onto a nearby table with your rump pushed high up into the air. Growling and cursing that someone could be strong enough to hold you down against your will you find yourself all but melting when a familiar voice chuckles inside of your cropped ear. Freezing when a hole is torn into your cargo pants by wickedly sharp claws, you spread your legs wide and hunch upwards as a thick Dobie shaft is stuffed up into your cunt with gentle, but forceful thrusts.";
+					say "     Not knowing that your lover would be so kinky, as he never touched you in this manner before, at least, not while you're on the job surrounded by the others, you don't try to stop Tyr as he mounts you inside of the break room as though he owns you. Partially you realize that he does own you. Both body and heart. Grunting and growling as your pussy is forced wide on the other Doberman's dick neither you nor Tyr care when your coworkers come into the room to watch you get stuffed full. Many of them go about their business getting tea and coffee as though nothing weird is happening, but others, like Stu and Stacey, the hyena herm pair, let you know that you are doing a good thing as Stacey mounts Stu up against the wall to have at her husband.";
+					say "     Rocking into you with careful force Tyr snarls his pleasure out into the room when his knot locks him into place against you. It doesn't take long for you to fell a familiar fullness rushing inside of your already packed womb, and idly you wonder if your pups will be just as randy and horny as their father. You can only hope so as your cunt flutters around your Dobie's cock, dripping rich honey onto the pristine floor beneath you and Tyr.";
+				else:									[F-STERILE]
+					say "     Because you are infertile Tyr has no problem fucking you anyway, everyway, and everywhere he desires. Being the leader of your elite group, though sadly a shadow leader who is most often never seen or heard from, the Doberman commander makes a special play out of forcing your into slightly embarrassing scenarios while you are on the job. That one time in Moscow when you and your unit were looking to take down the Siberian tiger outfit you remember how Tyr grabbed you out of the blue and then forced you to suck his cock while kneeling down against the cold street of the city. Your unit still wonders if you really found a Siberian hooker to get your rocks off with or if something else was going on.";
+					say "     Then there was that time in Egypt, when you were looking for that king Cobra mutant that was terrorizing the people of Cairo, that Tyr decided to be cute and sneak into your hotel room to bind you to the bed with silk ties only to then pound you into the mattress while you were half asleep. Your muffled screams had almost alerted Stu, the hyena herm that you had been sharing a room with, into waking up, but thankfully the other sleeps like a rock. Next it was back in the states with you pushing through a forest only to suddenly get kidnapped for an hour by Tyr to have hot and wild sex up along the branches of a tree. Then there was that time in South America where Tyr mounted you underneath that waterfall while you had been on the lookout for the twin headed jaguar creature.";
+					say "     The there was the time in Japan when Tyr had wanted to see how drunk you could get before deciding that having sex with you in one of the local shrines while you were sloshed out of your mind would be kinky. The kitsunes that had found you both were amicable enough to let you leave without being cursed, or fined, after agreeing to be able to watch. Then there was that time...";
 
 
 Doberman Cop ends here.

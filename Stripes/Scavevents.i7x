@@ -244,7 +244,7 @@ Instead of resolving a Dropped Handbag:
 					break;
 			choose row MonsterID from the Table of Random Critters;
 			infect;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 	else:
 		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
@@ -605,7 +605,7 @@ Instead of resolving a Free Drink:
 		LineBreak;
 		decrease thirst of Player by 10;
 		if thirst of Player < 0, now thirst of Player is 0;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		infect "Satyr";
 		infect "Satyr";
 		if winefound is 1:
@@ -634,7 +634,7 @@ Instead of resolving a Free Drink:
 				say "     Nah, that'll just be the wine talking. Shaking the idea off, you look around and turn to other matters.";
 			decrease thirst of Player by 10;
 			if thirst of Player < 0, now thirst of Player is 0;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			infect "Satyr";
 			infect "Satyr";
 			if winefound is 1:

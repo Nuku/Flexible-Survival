@@ -481,13 +481,13 @@ This is the player attack rule:
 			else:
 				say "[line break]You give [one of]your opponent[or]your enemy[or]the [Name entry in lower case][purely at random] a [one of]hard swat[or]fleshy smack[or]wet slap[or]firm jab[purely at random] with your [cock size desc of Player] [one of]wang[or]cock[or]prick[purely at random][smn] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and ball size of Player >= 16 and bonusattacks < 2 and player is not internal:
+		if a random chance of specattchance in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5 and bonusattacks < 2 and player is not internal:
 			increase bonusattack by 1;
 			let dammy be 0;
-			now dammy is ( square root of ( 2 * ( ball size of Player - 13 ) ) ) + 1;
+			now dammy is ( square root of ( 2 * ( Ball Size of Player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [ball size] onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [Ball Size Adjective of Player] [Balls] onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of specattchance in 20 succeeds and "Boob Smother" is listed in feats of Player and Breast Size of Player > 2 and ( Breast Size of Player + ( Nipple Count of Player / 2 ) ) >= 7 and bonusattacks < 2:
 			increase bonusattack by 1;
@@ -1352,7 +1352,16 @@ To lose:
 	if scenario is "Researcher" and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
 		say "";
 	else:
-		infect;
+		if there is no Cross-Infection in row MonsterID of Table of Random Critters or Cross-Infection entry is "": [cross-infection does not exist or empty]
+			infect; [regular infect]
+		else: [Cross-Infection found]
+			if there is a name of Cross-Infection entry in the Table of Random Critters:
+				if the BannedStatus corresponding to the name of Cross-Infection entry in the Table of Random Critters is true:
+					infect; [cross-infection banned -> defaulting back to regular infect]
+				else:
+					infect Cross-Infection entry; [monster's sexually transmitted infection is not the monster's own - for example Husky Bitch <-> Husky Alpha]
+			else: [cross infection not found]
+				say "ERROR! Cross-Infection [Cross-Infection entry] for the infection [name entry] not found! Please report how you saw this on the FS Discord and quote this message!";
 	choose row MonsterID from the Table of Random Critters;
 	if Libido of Player < libido entry and non-infectious entry is false:
 		increase Libido of Player by 4;

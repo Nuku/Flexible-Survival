@@ -216,12 +216,12 @@ to say enhancedattack:
 			if Cock Count of Player >= 3, increase dammy by a random number between 0 and 1;
 			say "[line break]You give your opponent a hard swat with your [cock size desc of Player] wang for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
-		if a random chance of 5 in 20 succeeds and "Ball Crush" is listed in feats of Player and ball size of Player >= 16:
+		if a random chance of 5 in 20 succeeds and "Ball Crush" is listed in feats of Player and Ball Size of Player >= 5:
 			let dammy be 0;
-			now dammy is ( square root of ( 2 * ( ball size of Player - 13 ) ) ) + 1;
+			now dammy is ( square root of ( 2 * ( Ball Size of Player - 13 ) ) ) + 1;
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
-			say "[line break]You tackle your opponent, slamming your [short ball size] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
+			say "[line break]You tackle your opponent, slamming your [Ball Size Adjective of Player] orbs onto their [one of]head[or]body[or]face[or]crotch[in random order] for [special-style-2][dammy][roman type] additional damage!";
 			increase dam by dammy;
 		if a random chance of 5 in 20 succeeds and "Boob Smother" is listed in feats of Player and Breast Size of Player > 2 and ( Breast Size of Player + ( Nipple Count of Player / 2 ) ) >= 7:
 			let dammy be 0;

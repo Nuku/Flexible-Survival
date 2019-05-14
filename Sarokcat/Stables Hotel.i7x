@@ -171,7 +171,7 @@ Carry out Marefeeding:
 		infect "Mareslut";
 		increase Libido of Player by 20;
 		if Libido of Player > 100, now Libido of Player is 100;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 
 
 Table of GameRoomIDs (continued)

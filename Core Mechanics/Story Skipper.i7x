@@ -8,7 +8,9 @@ The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
-The File of ChildrenSave (owned by another project) is called "FSPlayerChildrenSave".
+The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
+The File of ChildrenBunkerSave (owned by another project) is called "FSChildrenBunkerSave".
+The File of ChildrenRoamingSave (owned by another project) is called "FSChildrenRoamingSave".
 The File of TraitSave (owned by another project) is called "FSTraitSave".
 The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
@@ -591,17 +593,35 @@ to PlayerRestore:
 to ChildrenSave:
 	say "Saving Children...";
 	write File of ChildrenSave from the Table of PlayerChildren;
+	write File of ChildrenBunkerSave from the Table of PlayerBunkerChildren;
+	write File of ChildrenRoamingSave from the Table of PlayerRoamingChildren;
 	if debugactive is 1:
 		say "DEBUG -> File of ChildrenSave written.[line break]";
+		say "DEBUG -> File of ChildrenBunkerSave written.[line break]";
+		say "DEBUG -> File of ChildrenRoamingSave written.[line break]";
 
 to ChildrenRestore:
 	if the File of ChildrenSave exists:
 		say "Restoring Children...";
 		read File of ChildrenSave into the Table of PlayerChildren;
 		if debugactive is 1:
-			say "DEBUG -> CHildren restored from FSPlayerChildrenSave.[line break]";
+			say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";
 	else:
 		say "No Children Save File Found!";
+	if the File of ChildrenBunkerSave exists:
+		say "Restoring Children (Bunker)...";
+		read File of ChildrenBunkerSave into the Table of PlayerBunkerChildren;
+		if debugactive is 1:
+			say "DEBUG -> Children restored from FSPlayerChildrenBunkerSave.[line break]";
+	else:
+		say "No Children (Bunker) Save File Found!";
+	if the File of ChildrenRoamingSave exists:
+		say "Restoring Children (Roaming)...";
+		read File of ChildrenRoamingSave into the Table of PlayerRoamingChildren;
+		if debugactive is 1:
+			say "DEBUG -> Children restored from FSPlayerChildrenRoamingSave.[line break]";
+	else:
+		say "No Children (Roaming) Save File Found!";
 
 to BeastSave:
 	say "Saving Beasts...";

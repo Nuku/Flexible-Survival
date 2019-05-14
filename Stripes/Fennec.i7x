@@ -68,7 +68,7 @@ to say fennecvag:
 
 
 to say fennec69:
-	say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves himself atop you, bringing his throbbing cock to your face. Feeling the fox's tongue slide across your glans, you moan and respond by guiding his cock into your mouth before you can consider doing otherwise. His vulpine shaft throbs in your mouth, leaking precum onto your tongue. The exciting, exotic taste gets you thirsty for more and you suckle eagerly. His muzzle and tongue tend to you in return, setting you to thrusting gently [if Cock Length of Player < 24]into your impromptu lover's mouth[else]as the smaller fennec tries his best to lick over the entirety of your massive [cock of Player] erection[end if]. You do your best to please one another until finally you cannot hold back and you blast your hot load into the fennec's open muzzle[if ball size of Player > 40]. Your excessive output is too much for the thirsty fox, eventually overflowing from his mouth after bloating his belly[else if ball size of Player > 20]. The thirsty fox gulps down all he can get, accepting it all even to the point that it causes his belly to swell[else]. The thirsty fox gulps down all he can get, eagerly lapping your cock for all the cum you'll give[end if]. After getting his delicious drink, he resumes thrusting into your mouth, returning the favor with a creamy load of fennec cum. Savoring its exotic taste, you swallow it down without thinking. The cute fox, feeling much better after his refreshing drink, heads off with a happy bounce in his step.";
+	say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves himself atop you, bringing his throbbing cock to your face. Feeling the fox's tongue slide across your glans, you moan and respond by guiding his cock into your mouth before you can consider doing otherwise. His vulpine shaft throbs in your mouth, leaking precum onto your tongue. The exciting, exotic taste gets you thirsty for more and you suckle eagerly. His muzzle and tongue tend to you in return, setting you to thrusting gently [if Cock Length of Player < 24]into your impromptu lover's mouth[else]as the smaller fennec tries his best to lick over the entirety of your massive [cock of Player] erection[end if]. You do your best to please one another until finally you cannot hold back and you blast your hot load into the fennec's open muzzle[if Ball Size of Player > 6]. Your excessive output is too much for the thirsty fox, eventually overflowing from his mouth after bloating his belly[else if Ball Size of Player > 5]. The thirsty fox gulps down all he can get, accepting it all even to the point that it causes his belly to swell[else]. The thirsty fox gulps down all he can get, eagerly lapping your cock for all the cum you'll give[end if]. After getting his delicious drink, he resumes thrusting into your mouth, returning the favor with a creamy load of fennec cum. Savoring its exotic taste, you swallow it down without thinking. The cute fox, feeling much better after his refreshing drink, heads off with a happy bounce in his step.";
 
 
 to say fennecoral:
@@ -124,13 +124,13 @@ to say fennecvicsex1:
 to say fennecvicsex2:
 	say "     With the cute fennec beaten and at your mercy, you decide to take advantage of the opportunity and push him over onto all fours. He gives a fearful yip at your rough treatment, but murrs as you reach back and lift his tail. Stroking your stiffening rod against his rear, you move it into position, tapping at the fox's back door.";
 	if Cock Length of Player < 8:
-		say "     The fennec's tailstar is easily spread open by your hard shaft as the little guy starts pushing himself eagerly onto it. Clearly this little guy's been topped by others before and is more than willing to do it again. Having found an eager playmate, you run your hands over his softly-furred back and rock your hips, thrusting into him as he yips happily. As your excitement grows, you lean over the fox and reach around to stroke his pulsing, dripping cock while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if ball size of Player > 40]. Your [short ball size] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if ball size of Player > 20]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
+		say "     The fennec's tailstar is easily spread open by your hard shaft as the little guy starts pushing himself eagerly onto it. Clearly this little guy's been topped by others before and is more than willing to do it again. Having found an eager playmate, you run your hands over his softly-furred back and rock your hips, thrusting into him as he yips happily. As your excitement grows, you lean over the fox and reach around to stroke his pulsing, dripping cock while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if Ball Size of Player > 6]. Your [Ball Size Adjective of Player] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if Ball Size of Player > 5]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
 	else if Cock Length of Player < 16:
 		say "     The fennec whimpers and drops his ears as he spots the size of your shaft, but remains in position, letting you thrust into him. It takes a little effort at first to push into the little guy's backside, but it's not too terribly difficult. Clearly this little guy's been topped by others before and is more than willing to do it again, starting to push himself back onto your thrusts. You grip his shoulders for support to better push your large member into the small vulpine's ass. He releases a mix of moans, murrs, yips and whimpers, but always keeps pushing back into your thrusts, enjoying it far more than any minor discomfort your [cock size desc of Player] cock may provide his sore ass.";
-		say "     Beneath him, his smaller cock pulses and drips with pre while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if ball size of Player > 40]. Your [short ball size] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if ball size of Player > 20]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
+		say "     Beneath him, his smaller cock pulses and drips with pre while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if Ball Size of Player > 6]. Your [Ball Size Adjective of Player] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if Ball Size of Player > 5]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
 	else:
 		say "     The fennec squirms and tries to get away when he realizes the [cock size desc of Player] size of your shaft, but you keep a tight grip on his ass and push it into him. It takes some effort to pry open that tight little bottom, but it is worth the effort. Deliciously tight yet stretching to somehow accommodate your girth, the fennec releases a whimpering yip as you penetrate him. You pound away at the small fox's ass, your huge cock causing a visible bulge in the fennec's tummy with each thrust you make. You have to keep a tight grip on him and pull hard to push into him with every deep thrust into your impromptu playtoy. Despite the discomfort he may be feeling, his much smaller cock throbs and pulses, dribbling precum onto the ground.";
-		say "     Beneath him, his smaller cock pulses and drips with pre while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if ball size of Player > 40]. Your [short ball size] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if ball size of Player > 20]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
+		say "     Beneath him, his smaller cock pulses and drips with pre while you fuck his ass. When he cums, splattering his seed across the ground, his tailhole clamps down around you with each shot. A few of this squeezes are enough to send you over the edge and empty your load into the fox's ass[if Ball Size of Player > 6]. Your [Ball Size Adjective of Player] orbs drain completely into the little fox, leaving him so bloated with cum he cannot move. Despite this, he seems very pleased with the outcome, only able to release a wet, gurgling yip that overflows with some of your semen[else if Ball Size of Player > 5]. Your hefty load is pumped into him, leaving him plump and bloated with your cum. He seems quite pleased at this and releases a happy yip as he rubs his rounded tummy[else]. You pound into him, releasing shot after shot until your balls are drained[end if]. Finished, you withdraw and give the fox's ears a scritch, leaving him to lie there and recover.";
 
 
 to say fennecattack:
@@ -140,7 +140,7 @@ to say fennecattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -177,7 +177,7 @@ When Play begins:
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 6; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 4; [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 2; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -193,22 +193,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -255,37 +256,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 

@@ -27,7 +27,7 @@ Urik is a man.
 ScaleValue of Urik is 4.
 Cock Count of Urik is 1.
 Cock Length of Urik is 15.
-Ball Size of Urik is 11.
+Ball Size of Urik is 4.
 Ball Count of Urik is 2.
 Cunt Count of Urik is 0.
 Cunt Length of Urik is 0.

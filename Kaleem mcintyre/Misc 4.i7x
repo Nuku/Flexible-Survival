@@ -62,9 +62,9 @@ Instead of resolving Girl Time:
 	if T is 1:
 		challenge "Alpha Wolf";
 	if T is 2:
-		challenge "Alpha Husky";
+		challenge "Husky Alpha";
 	if T is 3:
-		challenge "Shemale Smooth Collie";
+		challenge "Smooth Collie Shemale";
 	say "     Your unexpected fight with the rogue mutant has brought you a lot more trouble than this little outing has been worth, and soon you can both hear and smell several of the females from inside racing towards the front of the store to see what the noise has been about. Not wanting to face an entire group of angry, or worse, lustful women having their [italic type]girl time[roman type] being interrupted so soon, you book it down the street as fast as your feet can carry you. Thankfully you just miss the oncoming charge of half-naked women looking around wildly for the unknown disruption.";
 	now Girl Time is resolved;
 

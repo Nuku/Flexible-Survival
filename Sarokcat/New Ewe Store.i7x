@@ -367,7 +367,7 @@ to say sexwithLeon:
 						say "     Even as he thrusts into your restrained mouth, he continues to flog you. Each blow across your sides, back or ass cause your [bodytype of Player] body to stiffen, though it is your [cock of Player] cock that stiffens most of all. Your manhood throbs and pulses with every lashing, precum dribbling from your unattended erection. You release moaning bleats around his pulsing rod as you're made to suck off the dominant ram, your lust-addled mind loving your deserved punishment. 'That's right, you're going to be my ewe, one way or another,' he groans lustfully as he pounds away at you.";
 						say "     As the powerful ram drives his cock into your mouth again and again, he's constantly reminding you that your place is here as one of his ewes. And you respond to your punishment like a good ewe by sucking at his cock all the harder, eventually earning your reward as he cums with a loud bleat, blasting shot after shot of hot, musky semen into your mouth and down your throat. As you swallow it all down, the excitement of it all sends you over the edge as well, your [cock of Player] penis releasing your load even as Leon lashes your ass all the harder for it.";
 						say "     After he's drained and pulled out, he removes the ring gag while grinding his cock against your ass meaningfully while calling you a good ewe. Only then does he untie you and allow you to return to the store, sore and reeking of sex.";
-					decrease humanity of Player by 10;
+					SanLoss 10;
 					if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
 					if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
 					if girl is not banned and "Male Preferred" is not listed in feats of Player:
@@ -379,7 +379,7 @@ to say sexwithLeon:
 					say "     With you bound beneath him, you can do nothing but moan in pleasure as your inner walls squeeze and grip his cock tightly while he fucks you with rough zeal[if skinname of Player is ram or skinname of Player is ewe]. He buries his rough hands in your soft wool, gripping you tightly by the coat[else]. He grips your shoulders, pressing you down hard onto the bench[end if] as he rams you like the rutting male he is[if facename of Player is ram or facename of Player is ewe]. With his strong musk filling your sheep-like nose, you can't help yourself from responding, you quickly find yourself making soft baaing and bleating noises with each and every one of his thrusts. Leon only thrusts harder with each noise, seeming encouraged and turned on by your obvious sign of submission[else]. Leon's strong musk fills the air around you, arousing you further and clouding your senses[end if]. As Leon pounds his cock into your yielding asshole even faster, a growing feeling of submissive bliss fills you, your mind losing itself in the scent of the rutting male atop you. Your mind loses the threads of thought you try to hold onto until only your need for a strong ram inside you is all you can think about. At this moment, you are nothing more than another submissive member of his flock, another needy ewe for him to fuck and breed, even if but a male one.";
 					say "     Between his bleating grunts as he pounds into you like the virile ram he is, he echoes your own woolly thoughts, reinforcing them further. 'Mmm... that's how you like it, isn't it? Being fucked like an ewe all the time is what you really want. Deep down, all you are is a weak male who'd much rather be my ewe,' he pants in your ear. You nod eagerly and moan over and over that you're a horny ewe, your lust-addled mind wanting nothing more than to be a sheep in this big stud's flock. Satisfied with your response, he thrusts forward one last time with a loud bleat and cums hard. His balls unleash their heavy payload, sending thick ram semen into your bowels. You are filled with pleasure as he coats your insides with his fertile, dominant seed and cum yourself soon after. Your lesser seed sprays out onto the floor, unworthy of claiming ewes like yourself or the other girls.[mimpregchance]";
 					say "     After pulling out, he struts around to your front and wipes his messy cock across your cheeks, leaving smears of his musky semen on your cheeks. With the scent of it right there, you are left in a lustful daze of submissive urges long after he's untied you and left you alone in the room. It is much later before you've regained enough of your senses to stagger out and join the other ewes in the store.";
-					decrease humanity of Player by 6;
+					SanLoss 6;
 					if "Strong Psyche" is listed in feats of Player, increase Humanity of Player by 1;
 					if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
 			else:
@@ -393,7 +393,7 @@ to say sexwithLeon:
 				WaitLineBreak;
 				decrease humanity of Player by 18;
 				if ( bodyname of Player is "Ram" or bodyname of Player is "Ewe" ) and the player is pure:
-					decrease humanity of Player by 6;
+					SanLoss 6;
 				if "Strong Psyche" is listed in feats of Player, SanBoost 3;
 				if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 3;
 				if ( bodyname of Player is "Ram" or bodyname of Player is "Ewe" ) and the player is pure and humanity of Player < 10:

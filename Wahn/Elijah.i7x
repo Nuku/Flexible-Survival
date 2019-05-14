@@ -1333,7 +1333,7 @@ Instead of fucking the Elijah:
 						say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now HP of Elijah is 99;
-						decrease humanity of Player by 25;
+						SanLoss 25;
 						now lastfuck of Elijah is turns;
 						now HP of Gabriel is 1;
 						now Angel vs Demons is unresolved;
@@ -1346,7 +1346,7 @@ Instead of fucking the Elijah:
 						say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now HP of Elijah is 99;
-						decrease humanity of Player by 25;
+						SanLoss 25;
 						now lastfuck of Elijah is turns;
 						now HP of Gabriel is 1;
 						now Angel vs Demons is unresolved;
@@ -1359,7 +1359,7 @@ Instead of fucking the Elijah:
 					say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now HP of Elijah is 99;
-					decrease humanity of Player by 25;
+					SanLoss 25;
 					now lastfuck of Elijah is turns;
 					now HP of Gabriel is 1;
 					now Angel vs Demons is unresolved;
@@ -1372,7 +1372,7 @@ Instead of fucking the Elijah:
 					say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now HP of Elijah is 99;
-					decrease humanity of Player by 25;
+					SanLoss 25;
 					now lastfuck of Elijah is turns;
 					now HP of Gabriel is 1;
 					now Angel vs Demons is unresolved;
@@ -1903,7 +1903,7 @@ to say ElijahSex11: [Get fucked by both Elijah and Fang at once]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
 			say "     After Fang and Elijah have pulled out, the wolf raises his hind leg with his dangling cock pointed at you. You moan softly as your alpha's hot urine starts to spray down onto you. His piss sprays across your [bodytype of Player] body and across your face. You open your mouth to catch some, enjoying being covered in your alpha's scent. Hearing Elijah chuckle, you look up see him start to piss over you as well. 'You are such a dirty slut sometimes,' he laughs as he sprays you down. Once they've drained their bladders over you, Elijah gives Fang's ears a scritch, telling the wolf that he's got a fine bitch there. Awash in the strong scent of the two males who just fucked you, you are pleased by he words, loving your place as a submissive slut.";
 			increase Libido of Player by 16; [This will be 8 once halved below]
-			decrease humanity of Player by 5;
+			SanLoss 5;
 	infect "Feral Wolf";
 	now Libido of Player is ( Libido of Player / 2 );
 	decrease humanity of Player by 3;
@@ -1926,7 +1926,7 @@ to say ElijahSex12:[Double-penetration by Elijah and Fang]
 		if FangWS is 1 and a random chance of 3 in 5 succeeds:
 			say "     After Fang and Elijah have pulled out, the wolf raises his hind leg with his dangling cock pointed at you. You moan softly as your alpha's hot urine starts to spray down onto you. His piss sprays across your [bodytype of Player] body and across your face. You open your mouth to catch some, enjoying being covered in your alpha's scent. Hearing Elijah chuckle, you look up see him start to piss over you as well. 'You are such a dirty slut sometimes,' he laughs as he sprays you down. Once they've drained their bladders over you, Elijah gives Fang's ears a scritch, telling the wolf that he's got a fine bitch there. Awash in the strong scent of the two males who just fucked you, you are pleased by he words, loving your place as a submissive slut.";
 			increase Libido of Player by 16; [This will be 8 once halved below]
-			decrease humanity of Player by 5;
+			SanLoss 5;
 	infect "Feral Wolf";
 	now Libido of Player is ( Libido of Player / 2 );
 	decrease humanity of Player by 3;

@@ -216,11 +216,11 @@ to hardwarefortphase4:
 		hardwarefortphase4-basic;
 
 to hardwarefortphase4-basic:
-	challenge "Blue Gryphon";
+	challenge "Blue Gryphon Herm";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "Wyvern";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			challenge "Blue Gryphon";
+			challenge "Blue Gryphon Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if recoveredhardware < 3:
 					challenge "Wyvern";  [one less fight on re-tries]
@@ -249,16 +249,16 @@ to hardwarefortphase4-basic:
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4-10plus:
-	challenge "Blue Gryphon";
+	challenge "Blue Gryphon Herm";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			if recoveredhardware < 3:
-				challenge "Hawkman";  [one less fight on re-tries]
+				challenge "Hawkman Male";  [one less fight on re-tries]
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				challenge "Wyvern";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					challenge "Hawkman";
+					challenge "Hawkman Male";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						if recoveredhardware > 2:
 							say "     The lead horseman nods at you in grudging thanks as he leads the horsemen out of the lot before more of the infected creatures can show up and interfere. And you feel a bit better as you head back to the library again, feeling rather hopefully that you might have earned at least a bit of grudging respect for all your efforts, though it took several attempts to actually do so.";
@@ -283,11 +283,11 @@ to hardwarefortphase4-10plus:
 		now Hardware Fort is resolved;
 
 to hardwarefortphase4-20plus:
-	challenge "Hawkman";
+	challenge "Hawkman Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		challenge "Harpy";
 		if fightoutcome >= 10 and fightoutcome <= 19:
-			challenge "Hawkman";
+			challenge "Hawkman Male";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				if recoveredhardware < 3:
 					challenge "Wyvern";  [one less fight on re-tries]
@@ -322,7 +322,7 @@ to hardwarefortphase4fail:
 	decrease HP of Player by 20;
 	if HP of Player > 0:
 		now HP of Player is HP of Player / 2;
-	challenge "Hawkman";
+	challenge "Hawkman Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the lustful hawkman, you make a break for it while you still can. You can see that many of the horsemen have already made their escape while others are still struggling to get away and others still probably never will, claimed as prey, playthings or mates for the assaulting flyers.";
 	else if fightoutcome >= 20 and fightoutcome <= 29:

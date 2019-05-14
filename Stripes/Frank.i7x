@@ -500,7 +500,7 @@ to say maleskunkinfect:
 		now sex entry is "Male"; [temporarily make target gender male]
 		now Cock Count entry is 1;
 		now Cock Length entry is 9;
-		now Ball Size entry is 5;
+		now Ball Size entry is 2;
 		infect;
 		now sex entry is "Female"; [now back to female]
 		now Cock Count entry is 0;

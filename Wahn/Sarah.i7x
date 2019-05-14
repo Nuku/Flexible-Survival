@@ -137,11 +137,11 @@ to say SarahRescue:
 	while fightoutcome < 20 and GroupFightCounter < 4: [runs for 4 times (for example) or until the player loses or flees]
 		now inasituation is true;
 		if GroupFightCounter < 3:
-			challenge "Female Husky";
+			challenge "Husky Bitch";
 		else if guy is not banned:
-			challenge "Alpha Husky";
+			challenge "Husky Alpha";
 		else:
-			challenge "Female Husky";
+			challenge "Husky Bitch";
 		increase GroupFightCounter by 1;
 	if fightoutcome < 20: [player won]
 		say "     Standing victorious over a pile of groaning huskies as they gingerly touch their bruises and try to get up again, you quickly step over a sprawled out bitch and grab Sarah, lifting her up in your arms and running away from the scene of the fight as quickly as you can. You do stop once or twice to look back and see if you are being followed by the huskies - or attracted any other creature's attention - but thankfully, it looks like you're in the clear. Carrying the wounded woman back to the library, you gently lay her on the reception desk and ";

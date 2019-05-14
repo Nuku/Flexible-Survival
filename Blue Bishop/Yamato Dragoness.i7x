@@ -468,7 +468,7 @@ to say YamatF_1: [cunt pitching]
 			else if (tempnum2 > 0 and Cock Count of Player > 2) or tempnum2 is 0:
 				say " while [if tempnum2 > 0]their[else]its[end if] exposed brothers stain her coarse undercarriage";
 		say ". her tight grip seems to squeeze every last drop out of you[if tempnum is 1], your orgasm more than enough to set off her own[end if], until you're completely spent and catching your breath.";
-		say "     '[one of]Hmm[or]Well[or]Yes[at random], [one of]I hope you got what you wanted[or]I've satisfied my task[or]It seems you have no more need of me[at random]...' Allowing you to get off her before she takes to the air, flying off into the distance. She'd look more majestic if not for her[if ball size of Player > 24] considerably[end if] leaking hole. You take a moment to catch your breath before you gather your things and go back to where you started.";
+		say "     '[one of]Hmm[or]Well[or]Yes[at random], [one of]I hope you got what you wanted[or]I've satisfied my task[or]It seems you have no more need of me[at random]...' Allowing you to get off her before she takes to the air, flying off into the distance. She'd look more majestic if not for her[if Ball Size of Player > 5] considerably[end if] leaking hole. You take a moment to catch your breath before you gather your things and go back to where you started.";
 
 to say YamatF_2: [anal pitching]
 	say "     You decide upon taking the massive serpent for a ride, a request she doesn't seem to mind obliging. Her form slowly descends to meet you more closely.";
@@ -514,7 +514,7 @@ to say YamatF_2: [anal pitching]
 			else if (tempnum2 > 0 and Cock Count of Player > 2) or tempnum2 is 0:
 				say " while [if tempnum2 > 0]their[else]its[end if] exposed brothers stain her coarse undercarriage";
 		say ". her tight grip seems to squeeze every last drop out of you[if tempnum is 1], your orgasm more than enough to set off her own[end if], until you're completely spent and catching your breath.";
-		say "     '[one of]Hmm[or]Well[or]Yes[at random], [one of]I hope you got what you wanted[or]I've satisfied my task[or]It seems you have no more need of me[at random]...' Allowing you to get off her before she takes to the air, flying off into the distance. She'd look more majestic if not for her[if ball size of Player > 24] considerably[end if] leaking hole. You take a moment to catch your breath before you gather your things and go back to where you started.";
+		say "     '[one of]Hmm[or]Well[or]Yes[at random], [one of]I hope you got what you wanted[or]I've satisfied my task[or]It seems you have no more need of me[at random]...' Allowing you to get off her before she takes to the air, flying off into the distance. She'd look more majestic if not for her[if Ball Size of Player > 5] considerably[end if] leaking hole. You take a moment to catch your breath before you gather your things and go back to where you started.";
 
 to say YamatF_3: [oral receiving cock]
 	say "     Making your decision, the dragoness looms closely over your [if scalevalue of Player < 5]significantly[else]slightly[end if] smaller, [bodytype of Player] form, carefully helping you to expose your assets before her until your [cock size desc of Player], partially aroused dick[if Cock Count of Player > 1]s lay[else] lays[end if] before her piercing gaze.";
@@ -522,10 +522,10 @@ to say YamatF_3: [oral receiving cock]
 	say "     Her constant, unblinking gaze fixated on you, your [if scalevalue of Player < 4]entire body[else]torso[end if] is bathed in her steamy breath, lower half disappearing under her scaled snout as her lips hilt against your crotch[if Cock Length of Player > 19], utterly unphased by your size[end if]. As large as the serpent is, she seems extraordinarily dexterous with her tongue, able to squeeze and writhe against[if Cock Count of Player > 1] and between[end if] your rod[smn] with considerable ease.";
 	say "     Her skillful work filling the air with the wet sounds of her tongue's efforts, it doesn't need long before you're brought to your very limit! Shall you pull out at the last second and shame her? Otherwise, you'll reward the creature's diligence.";
 	if Player consents:
-		say "     Her grip on you is fairly tight, practically pinning you to a tree, but you manage to order her off just before you cry out, aiming your now free, saliva-slicked dick[smn] at the dragoness as you fire off your [Cum Load Size of Player] load, [if ball size of Player > 24]utterly soaking[else]painting[end if] her snout with your thick cum. Her brief confusion allows you to spend your entire load on her.";
+		say "     Her grip on you is fairly tight, practically pinning you to a tree, but you manage to order her off just before you cry out, aiming your now free, saliva-slicked dick[smn] at the dragoness as you fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 5]utterly soaking[else]painting[end if] her snout with your thick cum. Her brief confusion allows you to spend your entire load on her.";
 		say "     '[one of]Hmpf[or]Well[at random], [one of]I think you have had your fun[or]I hope you are sufficiently amused[or]I suppose whatever suits your need[at random]...' Thick tongue licking clean her snout, she's clearly trying to hide her embarrassment behind a terse expression. Once the both of you are clean, the serpent flies off into the distance, leaving you to go about your business once more.";
 	else:
-		say "     Practically pinning you to a tree with her snout, she appears fully prepared for when you finally cry out, methodical tongue squeezing you with every gout of your [Cum Load Size of Player] load[if ball size of Player > 24], seemingly unphased by its sheer volume[end if]. She makes every effort to prolong your orgasm as much as possible before finally pulling free.";
+		say "     Practically pinning you to a tree with her snout, she appears fully prepared for when you finally cry out, methodical tongue squeezing you with every gout of your [Cum Load Size of Player] load[if Ball Size of Player > 5], seemingly unphased by its sheer volume[end if]. She makes every effort to prolong your orgasm as much as possible before finally pulling free.";
 		say "     '[one of]Hmm[or]There[or]It is done[at random], [one of]I am sure you are satisfied[or]there is nothing more I can do for you[or]and now I depart[at random].' Thick tongue licking and remaining trace of your bliss clean of you, the serpent eventually turns to fly off into the distance, leaving you to catch your breath and go about your business once more.";
 
 to say YamatF_4: [oral receiving cunt]
@@ -535,7 +535,7 @@ to say YamatF_4: [oral receiving cunt]
 	if Player is male:
 		say "     Her skillful work filling the air with the wet sounds of her tongue's efforts, it doesn't need long before you're brought to your very limit! Shall you pull out at the last second and shame her? Otherwise, you'll reward the creature's diligence.";
 		if Player consents:
-			say "     Her grip on you is fairly tight, practically pinning you to a tree, but you manage to order her off just before you cry out, aiming your previously unattended, saliva-slicked dick[smn] at the dragoness as you fire off your [Cum Load Size of Player] load, [if ball size of Player > 24]utterly soaking[else]painting[end if] her snout with your thick cum. Her brief confusion allows you to spend your entire load on her.";
+			say "     Her grip on you is fairly tight, practically pinning you to a tree, but you manage to order her off just before you cry out, aiming your previously unattended, saliva-slicked dick[smn] at the dragoness as you fire off your [Cum Load Size of Player] load, [if Ball Size of Player > 5]utterly soaking[else]painting[end if] her snout with your thick cum. Her brief confusion allows you to spend your entire load on her.";
 			say "     '[one of]Hmpf[or]Well[at random], [one of]I think you have had your fun[or]I hope you are sufficiently amused[or]I suppose whatever suits your need[at random]...' Thick tongue licking clean her snout, she's clearly trying to hide her embarrassment behind a terse expression. Once the both of you are clean, the serpent flies off into the distance, leaving you to go about your business once more.";
 		else:
 			say "     Practically pinning you to a tree with her snout, she appears fully prepared for when you finally cry out, methodical tongue writhing against you an extending your bliss for as long as she's able, unattended dick[smn] firing off their [Cum Load Size of Player] load against the open air. She makes every effort to prolong your orgasm as much as possible before finally pulling free.";
@@ -576,7 +576,7 @@ to say YamatF_5: [Oral Giving Cunt]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -613,7 +613,7 @@ When Play begins:
 	now area entry is "Park";
 	now Cock Count entry is 1;
 	now Cock Length entry is 24;
-	now Ball Size entry is 15;
+	now Ball Size entry is 4;
 	now Nipple Count entry is 0;
 	now Breast Size entry is 0;
 	now Male Breast Size entry is 0;
@@ -629,22 +629,23 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;
 	now altcombat entry is "firebreath";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -691,37 +692,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 Section 3 - Vore Bound State
@@ -736,7 +738,7 @@ to YamatFvore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the supple flesh[else if Player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and ball size of Player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
+			say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if Player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these dark, damp confines until you finally find reprieve, [if Player is male]unloading your [Cum Load Size of Player] load against the supple flesh[else if Player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if Player is male and Ball Size of Player > 5]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			decrease Libido of Player by (Libido of Player / 10) + 1;
 			if Libido of Player < 0, now Libido of Player is 0;
 			now lustatt is Libido of Player;

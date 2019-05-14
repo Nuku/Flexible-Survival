@@ -120,11 +120,11 @@ Instead of Resolving a Felinoid lair:
 			say "     Eventually you come back to yourself somewhat, your body still tingling with the aftereffects of your multiple strong orgasms, you take stock of your newest changes, almost purring subconsciously as you realize how much more like the owner of the lair you have become. Suddenly a new strong waft of scent enters the hollow, and you realize the owner of the cave has just returned, and you suddenly have a decision to make, do you fight to get out? Or submit to his tender ministrations? Even as you try to puzzle it out in your sex fogged mind, the decision is thrust upon you as the lion like beast enters the lair.";
 			challenge "Felinoid";
 			say "     Sighing, you crawl out of the lair, exhausted from the ordeal, and feeling even less like yourself and more like a beast than ever before, you slowly pad away from the feline creatures lair, though with the temptation to return this strong, you feel like you might not be able to stay gone for long...";
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			now Resolution of Felinoid Lair is 5; [major infection]
 		else:
 			say "     You realize that you can't stay here any longer, even as you can feel your body changing from the musk, changing you to be a better mate for the strong masculine beast whose lair this is, you find yourself moaning at that thought before you manage to snap yourself out of it. You crawl outside desperately gasping for some air not scented by his powerful and dominating scent, that makes you want to moan and lift your body up for his strong touch. Groaning you realize your mind was once more back on being nothing more than the fucktoy of the lair's owner, submitting to him again and again in a wonderfully pleasurable night of bestial sex. Yowling out with need, you manage to drag yourself further away, until you can start to think somewhat clearly again, you know you need to get out of here quickly before the caves owner returns. Even as you leave you find your mind returning to the thought of waiting helplessly for the caves owner having him take you again and again, and know that you can't afford to come back here again, not unless you want to be reduced to just another animal. Still you realize that deep down the experience has changed you already, made you less human and more bestial on some level, and you really aren't sure if you regret the change either.";
-			decrease humanity of Player by 20;
+			SanLoss 20;
 			infect "Felinoid";
 			infect "Felinoid";
 			now Resolution of Felinoid Lair is 6; [escaped]

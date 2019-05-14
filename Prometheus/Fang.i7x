@@ -417,7 +417,7 @@ to say fangsandramount2:
 
 to say fangsandrasuck2:
 	say "     Moving over beside Sandra, you bring your throbbing cock to the bunny's muzzle. Eyes closed as she enjoys the lustful licking, she doesn't notice you there until you let your erection brush across her muzzle. Seeing it there, the takes it quickly in her paw and starts licking and sucking at it, moaning around your meaty shaft as the wolf's tongue keeps going at her. Whining a little at the lack of attention to his over-aroused cock, Sandra manages to reach out with one of her long bunny feet and starts caressing it against the wolf's throbbing shaft. Clearly pleased by the renewed attention to his erection, he licks at her with added vigor, making her squirm all the more in her seat, cumming repeatedly. You rub your hands over her long ears and cute muzzle.";
-	say "     By the time you cum as well, she's had another orgasm from the wolf's lapping tongue. She guzzles down your [if ball size of Player > 9]ample [end if]load, then quickly pushes you away. Startled a little by her suddenness, you stumble back a couple of steps. But this gives you a clear view as Sandra dives under the Fang, grabbing his cock and pulling it to her muzzle, sucking him as she squeezes his knot and balls. The big wolf howls, draining his balls into the cum-hungry bunny as he pounds it into her smiling muzzle, leaving her nice and full with two loads of semen.";
+	say "     By the time you cum as well, she's had another orgasm from the wolf's lapping tongue. She guzzles down your [if Ball Size of Player > 3]ample [end if]load, then quickly pushes you away. Startled a little by her suddenness, you stumble back a couple of steps. But this gives you a clear view as Sandra dives under the Fang, grabbing his cock and pulling it to her muzzle, sucking him as she squeezes his knot and balls. The big wolf howls, draining his balls into the cum-hungry bunny as he pounds it into her smiling muzzle, leaving her nice and full with two loads of semen.";
 	NPCSexAftermath Fang receives "OralPussy" from Sandra;
 	NPCSexAftermath Sandra receives "OralCock" from Player;
 	wait for any key;
@@ -703,7 +703,7 @@ to say fangalphafuckedSBL:
 	say "     The feral wolf fucks you with considerable zeal, enjoying dominating the master of the forest skunks. The thought of the skunk girls seeing you like this, submissive plaything to one of their territorial rivals makes you blush beneath your fur[if skrp is 1]. Your mephit co-inhabitor teases you about it between her lustful moans[end if]. The wolf's lupine rod drives into you again and again as he continues to nip and play-bite you, reinforcing his dominance. Your [if Player is female]juicy cunt[else]tight hole[end if] grips and squeezes around that lupine cock every time it's pushed into you. Your virile alpha slams his swollen knot against your sore [if Player is female]pussy[else]anus[end if] until it stretches open enough to let that oversized knot pop in and tie with you. Fang howls triumphantly when this happens, unleashing a hot rush of semen into you, filling your [if Player is female]womb[else]tummy[end if] with his ample load as he drains his large, plump balls into you. You [if skrp is 1]and your lower skunk head [end if]release a chirring moan as you feel your lupine master filling you with his gooey seed.";
 	say "     When his knot goes down, he pops his cock from you only to drive it back into you and start fucking you again. He ends up taking you several times, relishing asserting his dominance over you. By the time he's finally done, your [if Player is female]womb is completely stuffed[else]belly is heavy[end if] with his lupine cum[if Player is male] and you've drained your own balls uselessly across the floor beneath you[else if Player is female] and your crotchfur is soaked and sticky with his semen and your female juices[end if]. When he does dismount, you can barely stagger a few steps before collapsing onto your side to recover. You release a sated moan while his excess semen flows out of your stretched and gaping hole. Its scent lingers upon you for some time, overpowering even that of your mighty skunkbeast form.";
 	now Libido of Player is ( ( Libido of Player * 2 ) / 3 );
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	if Player is female:
 		NPCSexAftermath Player receives "PussyFuck" from Fang;
 	else:
@@ -720,7 +720,7 @@ to say fangwscontent:
 		if Player consents:
 			now FangWS is 1;
 			say "     You stretch out on your back and whine softly to the wolf. You rub your hands over your body, putting yourself on display for him. Getting the picture, the wolf seems to grin and pads back to you and, standing beside you, cocks one leg. His stiff, red cock twitches before spraying out his acrid urine, soaking your body and face, marking you as his territory. You moan as the hot fluid flows over you, even catching some on your tongue as you wallow in your submission to the beast. Once he's done marking you, he pads off, leaving you soaked and reeking of the wolf's strong scent.";
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			increase Libido of Player by 10;
 		else:
 			now FangWS is 2;

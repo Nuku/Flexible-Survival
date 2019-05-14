@@ -143,7 +143,7 @@ Instead of resolving a Rundown Boutique:
 	increase carried of chips by 1;
 	increase carried of soda by 1;
 	increase carried of water bottle by 1;
-	say "     [bold type]You gained a bag of chips, one soda, and a bottle of water[roman type]";
+	say "[bold type]You gained a bag of chips, one soda, and a bottle of water[roman type]";
 	WaitLineBreak;
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of Player < 3], given how you're too small for it[else if scalevalue of Player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
 	now hunger of Ranae is 5;		[Found black dress]

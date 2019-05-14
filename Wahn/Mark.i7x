@@ -301,7 +301,7 @@ to say MarkScavengingTarget2: [hawkman nest]
 	WaitLineBreak;
 	say "     Mark says, 'We're in luck. There are a bunch of hawkmen who live here, but they seem to be out right now. Only those two are standing in our way right now. One each, eh?' As you don't think it matters much whatever you may say, you simply nod to the polar bear and run after him as he kicks open the door to run towards the hawkmen. Shrieking loudly, the avians drop what they were fighting over and jump into the air, ready to repel the invasion of their nest.";
 	now inasituation is true;
-	challenge "Hawkman";
+	challenge "Hawkman Male";
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
 		say "     Knocking down the hawkman that attacked you personally, you glance over at your companion and see him snatch his own opponent out of the air by a clawed foot, then swing him in an arc to smash into the ground with a thud and the crunch of breaking bones. With a last shriek, Mark's hawkman falls unconscious, breathing shallow as his body starts to mend. 'Don't waste a second thinking about this asshole. He'll be up again before you know it,' the polar bear tells you in a gruff tone, then starts to dig around in the piles of loot, stuffing choice pieces that he finds into his backpack. Quickly doing the same, you manage to snag a medkit, some food and two bottles of pure water before a furious screech makes you look up. Four more hawkmen are approaching quickly, gliding through the air on spread wings.";

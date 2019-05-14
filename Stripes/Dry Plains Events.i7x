@@ -173,7 +173,7 @@ Instead of resolving a Pit Trap:
 			increase carried of medkit by 1;
 			increase carried of food by 1;
 			increase score by 5;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now Resolution of Pit Trap is 1; [Stole bag, Bunker or Caught Outside Scenario]
 		else:
 			say "Pocketknife, medkit and food obtained.";
@@ -181,7 +181,7 @@ Instead of resolving a Pit Trap:
 			increase carried of medkit by 1;
 			increase carried of food by 1;
 			increase score by 10;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now Resolution of Pit Trap is 2; [Stole bag, Other Scenarios]
 	else:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
@@ -237,7 +237,7 @@ to say prairiedogsex:
 	say "     You play with and tease him, mostly watching as the others share him around until they're all satisfied. Lost in a lustful haze, the new prairie dog herm is easily led underground where you're sure her induction into the warren will continue. You feel a strong longing to join them, but manage to resist it, at least for the moment.";
 	infect "Prairie Dog";
 	now Libido of Player is Libido of Player / 2;
-	decrease humanity of Player by 20;
+	SanLoss 20;
 	increase score by 25;
 	now Resolution of Pit Trap is 1; [Had sex with Soldier]
 
@@ -272,12 +272,12 @@ Instead of resolving a Watering Hole:
 				say "     Finished with his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak. As you prepare to go, he flies off. Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot. Both covered in and filled with eagle-tainted fluids, ";
 				if bodyname of Player is "Bald Eagle" and player is pure:
 					say "the infection soaks deeper into you, further corrupting your body and mind. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
-					decrease humanity of Player by 5;
+					SanLoss 5;
 				else:
 					say "you quickly start to change, fully changing into an eagle creature like your lover. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
 				say "[eaglefulltf]";
 				increase morale of Player by 3;
-				decrease humanity of Player by 15;
+				SanLoss 15;
 				now thirst of Player is 0;
 				increase score by 25;
 				now Resolution of Watering Hole is 1; [Had sex with eagle, no bad end]

@@ -173,7 +173,7 @@ to say ShengPotionBuy:
 	now description entry is "Transform into a Sea Otter";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Alpha Husky";
+	now title entry is "Husky Alpha";
 	now sortorder entry is 2;
 	now description entry is "Transform into an Alpha Husky";
 	[]
@@ -200,7 +200,7 @@ to say ShengPotionBuy:
 				if nam is:
 				-- "Sea Otter":
 					say "[ShengOtterPotionSale]";
-				-- "Alpha Husky":
+				-- "Husky Alpha":
 					say "[ShengHuskyPotionSale]";
 				-- "Stag":
 					say "[ShengStagPotionSale]";
@@ -254,15 +254,15 @@ to say ShengHuskyPotionSale:
 					say "Invalid choice. Type [link]1[end link] to A or [link]2[end link] to B.";
 			if calcnumber is 1:
 				say "     You point at the Alpha Husky vial, causing Sheng to nod and slide it over to you, after which you chug the potion, feeling the effects kick in. As you turn to thank the alchemist he's sadly already back at work, so instead you return to the middle of the store.";
-				infect "Alpha Husky";
-				infect "Alpha Husky";
-				infect "Alpha Husky";
+				infect "Husky Alpha";
+				infect "Husky Alpha";
+				infect "Husky Alpha";
 				decrease carried of demon seed by 2;
 			else if calcnumber is 2:
 				say "     You point at the Female Husky vial, causing Sheng to nod and slide it over to you, after which you chug the potion, feeling the effects kick in. As you turn to thank the alchemist he's sadly already back at work, so instead you return to the middle of the store.";
-				infect "Female Husky";
-				infect "Female Husky";
-				infect "Female Husky";
+				infect "Husky Bitch";
+				infect "Husky Bitch";
+				infect "Husky Bitch";
 				decrease carried of demon seed by 2;
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";

@@ -1836,7 +1836,7 @@ to say dolcheckA:		[empty]
 		say ". After several orgasms, the suit begins to open up again, releasing you back onto the floor of the bouncy castle. You lay there panting for a while, aroused by the strange experience.";
 		infect "Bottlenose Toy";
 		increase Libido of Player by 8;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		increase dolphinbundle by 1; [A combo variable]
 		follow the turnpass rule;
 	else if dolphinbundle is 2 and dolescape is 0: [After third attempt, player succumbs]

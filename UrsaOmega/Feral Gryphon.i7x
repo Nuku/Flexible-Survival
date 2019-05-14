@@ -126,7 +126,7 @@ to say feralgryph_milk01:
 	let gryphtype be 0;
 	if bodyname of Player is "Feral Gryphon" or facename of Player is "Feral Gryphon":
 		now gryphtype is 2;
-	else if bodyname of Player is "Blue Gryphon" or facename of Player is "Blue Gryphon":
+	else if bodyname of Player is "Blue Gryphon Herm" or facename of Player is "Blue Gryphon Herm":
 		now gryphtype is 1;
 	say "     The feral gryphon, though weakened, remains aggressive and eyes you with its eagle stare. Bringing out the bottle of milk you have, you pop the top[if gryphtype > 0]. Its musky gryphon scent is enticing and you have to resist drinking it before you can even offer it to the creature[else if Player is male]. Its musky scent is enticing, making you hard[end if]. He is suspicious at first, but the alluring scent of gryphon sex draws him in. After getting a sample taste, he eagerly accepts the rest.";
 	say "     Once finished his drink, the gryphon sniffs the air around you. Catching the scent of your aroused manhood, he nuzzles at your crotch. His erection, which had been waning after his loss, returns in force. Giving him some head scritches, you smile at how eager the cum-filled milk is making him. He's soon wiggling his rear with his tail raised, ready and eager to be mounted, which is exactly what you want.";
@@ -135,7 +135,7 @@ to say feralgryph_milk01:
 	say "     Rather than wait any longer, you get you erection lined up and swap your fingers for it in the slick embrace of the gryphon's ass. It is hot and tight, squeezing firmly around the welcome intruder [if Cock Length of Player > 40]forcing it open incredibly wide[else if Cock Length of Player > 20]forcing it open much wider[else]now buried inside it[end if]. You lustfully fuck the feral creature, pounding away at the hybrid's [if Cock Length of Player > 20]overstuffed [end if]ass with considerable zeal, much to his delight. The gryphon is clearly enjoying his newfound lust for gay sex, riding back on your cock as you fuck him.";
 	WaitLineBreak;
 	say "     As you pound into him, you reach around to take hold of his throbbing manhood. At this point, it's rock hard and dribbling precum steadily. Running your fingers along it, you can feel its leonine form, but further enhanced with a swollen knot just above its fuzzy sheath. Stroking its erection causes the gryphon to coo softly in pleasure and makes his penis throb in your hand. The foot-long cock pulses between your fingers and the lustful gay gryphon cries out in orgasmic release. Hot blasts of his sticky load splatter onto the ground in a growing puddle of musky white goo.";
-	say "     Feeling his asshole squeezing and milking around you as he climaxes has you groan and pound him all the harder. You make several powerful thrusts into his rear before finally crying out in lustful release. Your balls empty their [Cum Load Size of Player] load into the gryphon's bowels, painting them with your semen. Feeling your semen inside him, his shaft throbs in your grip and his waning orgasm surges with a few final large blasts as the beast pants heavily. Only once you're fully drained do you withdraw from that well-fucked hole, smiling at the [if ball size of Player > 20]gooey mess[else if ball size of Player > 10]gooey flow[else]slick dribble[end if] of white that leaks out of it. The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks, stud.' [or]asking 'Is there more?' while licking his beak. [or]moaning 'So hot!' [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.";
+	say "     Feeling his asshole squeezing and milking around you as he climaxes has you groan and pound him all the harder. You make several powerful thrusts into his rear before finally crying out in lustful release. Your balls empty their [Cum Load Size of Player] load into the gryphon's bowels, painting them with your semen. Feeling your semen inside him, his shaft throbs in your grip and his waning orgasm surges with a few final large blasts as the beast pants heavily. Only once you're fully drained do you withdraw from that well-fucked hole, smiling at the [if Ball Size of Player > 5]gooey mess[else if Ball Size of Player > 3]gooey flow[else]slick dribble[end if] of white that leaks out of it. The gryphon turns around to nuzzle you with a chirping purr and [one of]panting a soft 'Thanks, stud.' [or]asking 'Is there more?' while licking his beak. [or]moaning 'So hot!' [at random]A little shocked to hear the creature speak, you direct it to Qytat and Garrett for more hot gryphon stud action before it departs in that direction.";
 
 to say feralgryph_milk02:
 	decrease carried of gryphon cum by 1;
@@ -145,7 +145,7 @@ to say feralgryph_milk02:
 	let gryphtype be 0;
 	if bodyname of Player is "Feral Gryphon" or facename of Player is "Feral Gryphon":
 		now gryphtype is 2;
-	else if bodyname of Player is "Blue Gryphon" or facename of Player is "Blue Gryphon":
+	else if bodyname of Player is "Blue Gryphon Herm" or facename of Player is "Blue Gryphon Herm":
 		now gryphtype is 1;
 	say "     The feral gryphon, though weakened, remains aggressive and eyes you with its eagle stare. Bringing out the bottle of milk you have, you pop the top[if gryphtype > 0]. Its musky gryphon scent is enticing and you have to resist drinking it before you can even offer it to the creature[else if Player is male]. Its musky scent is enticing, making you hard[end if]. He is suspicious at first, but the alluring scent of gryphon sex draws him in. After getting a sample taste, he eagerly accepts the rest.";
 	say "     Once finished his drink, the gryphon [if Player is male]sniffs the air around you. Catching the scent of your aroused manhood, he nuzzles at your crotch[else]seems more relaxed and nuzzles against your rear[end if]. His erection, which had been waning after his loss, returns in force. Giving him some head scritches, you smile at how eager the cum-filled milk is making him. Feeling eager as well, you toss aside your gear and get onto all fours, offering up your ass to him.";
@@ -165,7 +165,7 @@ to say feralgryph_milk02:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -202,13 +202,13 @@ When Play begins:
 	now area entry is "Museum";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 8;         [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 3;         [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2;            [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]        [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 40;            [ Target libido the infection will rise towards. ]
 	now loot entry is "";              [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
@@ -218,22 +218,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -280,37 +281,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 Section 3 - Endings

@@ -485,7 +485,7 @@ to MoreauFaceSelection:
 	now description entry is "Buy yourself a satyr head, complete with goatee";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd's muzzle";
+	now title entry is "A German shepherd's muzzle";
 	now sortorder entry is 4;
 	now description entry is "Buy yourself a canine head";
 	[]
@@ -517,11 +517,11 @@ to MoreauFaceSelection:
 				-- "An equine muzzle":
 					setmonster "Horseman";
 				-- "A gryphon's beak":
-					setmonster "Blue Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's face":
 					setmonster "Satyr";
-				-- "German Shepherd":
-					setmonster "German Shepherd";
+				-- "German Shepherd Male":
+					setmonster "German Shepherd Male";
 				-- "A succubus's face":
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
@@ -597,7 +597,7 @@ to MoreauBodySelection:
 	now description entry is "Get a satyr body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro German Shepherd";
+	now title entry is "Anthro German shepherd";
 	now sortorder entry is 4;
 	now description entry is "Get an anthro canine body";
 	[]
@@ -629,11 +629,11 @@ to MoreauBodySelection:
 				-- "Anthro equine":
 					setmonster "Horseman";
 				-- "Anthro gryphon":
-					setmonster "Blue Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "Satyr":
 					setmonster "Satyr";
-				-- "Anthro German Shepherd":
-					setmonster "German Shepherd";
+				-- "Anthro German shepherd":
+					setmonster "German Shepherd Male";
 				-- "Succubus":
 					setmonster "Succubus";
 				-- "Anthro snow leopard":
@@ -712,7 +712,7 @@ to MoreauSkinSelection:
 	choose a blank row in table of fucking options;
 	now title entry is "German Shepherd fur";
 	now sortorder entry is 4;
-	now description entry is "Get German Shepherd fur";
+	now description entry is "Get German shepherd fur";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Succubus skin";
@@ -742,11 +742,11 @@ to MoreauSkinSelection:
 				-- "An equine coat":
 					setmonster "Horseman";
 				-- "A gryphon's feathers":
-					setmonster "Blue Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "Satyr's skin and fur":
 					setmonster "Satyr";
 				-- "German Shepherd fur":
-					setmonster "German Shepherd";
+					setmonster "German Shepherd Male";
 				-- "Succubus skin":
 					setmonster "Succubus";
 				-- "Snow leopard fur":
@@ -822,9 +822,9 @@ to MoreauTailSelection:
 	now description entry is "Get a satyr tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd tail";
+	now title entry is "A German shepherd tail";
 	now sortorder entry is 4;
-	now description entry is "Get a German Shepherd tail";
+	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus ass";
@@ -854,11 +854,11 @@ to MoreauTailSelection:
 				-- "An equine tail":
 					setmonster "Horseman";
 				-- "A gryphon's tail":
-					setmonster "Blue Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's tail":
 					setmonster "Satyr";
-				-- "A German Shepherd tail":
-					setmonster "German Shepherd";
+				-- "A German shepherd tail":
+					setmonster "German Shepherd Male";
 				-- "A succubus ass":
 					setmonster "Succubus";
 				-- "A snow leopard tail":
@@ -934,9 +934,9 @@ to MoreauCockSelection:
 	now description entry is "Get a satyr crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd groin";
+	now title entry is "A German shepherd groin";
 	now sortorder entry is 4;
-	now description entry is "Get a German Shepherd crotch";
+	now description entry is "Get a German shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus's groin";
@@ -966,11 +966,11 @@ to MoreauCockSelection:
 				-- "An equine groin":
 					setmonster "Horseman";
 				-- "A gryphon's groin":
-					setmonster "Blue Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's groin":
 					setmonster "Satyr";
-				-- "A German Shepherd groin":
-					setmonster "German Shepherd";
+				-- "A German shepherd groin":
+					setmonster "German Shepherd Male";
 				-- "A succubus's groin":
 					setmonster "Succubus";
 				-- "A snow leopard groin":

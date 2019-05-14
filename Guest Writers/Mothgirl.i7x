@@ -26,7 +26,7 @@ to say Moth attack:
 		else if Player is male and a random chance of 2 in 3 succeeds:
 			say "     She quickly bears down on you, biting your neck, the effect of which paralyzes your entire body. Catching you on your way down she gently lays you on your back, pulling any articles of attire you might have on you and positioning herself over your vulnerable form. Gently, her wings lightly douse you with gout of yellow dust, the effects of which becoming immediately apparent as your cock goes rock hard before her. She is initially giddy with her new toy, though tempering her demeanor as she coos you, urging you to merely relax and enjoy - not that you have any say in the matter.";
 			say "     [if Cock Length of Player > 20]At first she ponders how such a [cock size desc of Player] rod of flesh is going to fit, exactly, but it's clear that she isn't lacking in tenacity as she ultimately positions herself over the organ and makes for slow descent on it. She manages surprisingly well, her infection accommodating the circumstances, and you can clearly see your meat protrude from the confines of her body[else if Cock Length of Player > 10]. She skips ceremony and bears down on your [cock size desc of Player] rod, managing your considerable girth with surprising ease[else]. She skips ceremony and bears her cunt down on your rod, quickly engulfing its length in the folds of her soft flesh[end if]. Soon, she starts slowly rocking against you with slow deliberation, but that quickly accelerates to a fever pitch. However, you soon realize that the creature's paralyzing poison also has the effect of denying your orgasm, forcing you into an overly prolonged state of heightened bliss as this mothgirl hammers herself against you, observing her orgasm again and again while you feel like you could pass out at any moment. She occasionally teases you for your inability to find release, amused by her victim's perverted sufferings.";
-			say "     Eventually, the sensation is too much for you - that or it's been so long that the effects of the poison are starting to wear off - and you finally climax[if ball size of Player > 20]. No doubt she's unprepared for the sizeable measure of jizz you unload into her womb, visibly bloating with you with your seed until she can carry no more at it starts spurting you from her - admittedly willingly - beleaguered hole[else]. You are lost in the throes of your orgasm, unloading heartily into the mothgirl's greedy cunt, to which she's taken a bit by surprise[end if]. Overwhelmed by such forcibly belated release, you end up falling out of consciousness. Upon your sense's return the mothgirl is nowhere to be seen, and you gather your things before setting back out once again.";
+			say "     Eventually, the sensation is too much for you - that or it's been so long that the effects of the poison are starting to wear off - and you finally climax[if Ball Size of Player > 5]. No doubt she's unprepared for the sizeable measure of jizz you unload into her womb, visibly bloating with you with your seed until she can carry no more at it starts spurting you from her - admittedly willingly - beleaguered hole[else]. You are lost in the throes of your orgasm, unloading heartily into the mothgirl's greedy cunt, to which she's taken a bit by surprise[end if]. Overwhelmed by such forcibly belated release, you end up falling out of consciousness. Upon your sense's return the mothgirl is nowhere to be seen, and you gather your things before setting back out once again.";
 		else if anallevel is 3 and a random chance of 1 in 3 succeeds:
 			say "     Tenderly forcing you to the ground, she climbs on top of you before relinquishing you of any attire you might have[if Nipple Count of Player > 0], teasing your nipples with gentle fingers until they are made erect by her influence[else]. Gentle fingers running along your exposed, [bodydesc of Player] form, she would offer this teasing affection before commencing[end if]. Now at her mercy, she slowly flaps her wings to send sparkling yellow dust raining down upon your vulnerable form. You can't help but find yourself aroused by the dust's perverse influence[if Player is male]. You feel your [cock size desc of Player] cock grow hard, pleading for the mothgirl's attention, though she looks like she intends to have fun with you another way[else if Player is female], feeling your cunt moisten with anticipation for her affections to follow[else], though you are frustrated by the lack of a sexual outlet to satisfy your sudden urges[end if].";
 			say "     Before you she conjures a small sphere, no larger than a pea, before she consumes it. While she waits for the effects to set in, she moves around to offer you some more irreverent affections. Unable to see from your current position you feel, at first, a saliva-slicked finger assault fleshy ring, no doubt to test your tight hole before the digit is replaced with her tongue. You writhe weakly in protest, but you can only hear her amused giggling in response.";
@@ -51,10 +51,10 @@ to say mothgirl defeat:
 			now mothgirlnosex is 0;
 			if Player is male and a random chance of 3 in 5 succeeds:
 				say "     You push the mothgirl onto all fours, compliant to your will as you move behind her[if Cock Length of Player > 20]. She looks back at you, not exactly sure how you intend to fit that thing in a little lady such as herself, but matters of practicality haven't stopped you yet, and you thrust heartily into her vulnerable cunt. It takes a little work, but eventually the influence of your infection forces the hole to accommodate your oversized organ, her belly visibly bulging with it once it's prominently engulfed within these considerably beleaguered confines[else if Cock Length of Player > 8]. You briefly taunt her as you rub your gradually hardening cock between her legs, before thrusting the [cock size desc of Player] meat into her hole. The diminutive portal is a little reluctant to accommodate your sizeable girth, but it only requires a bit of effort for it to eventually comply[else]. You briefly tease her as you rub your hardening cock between her legs, your victim moaning as you only briefly deny her. Promptly, you thrust your rod into her eager hole, your initial efforts slow and drawn out to better elicit the creature's inevitable arousal[end if].";
-				say "     You waste no time as you begin to ride the mothgirl with an ever increasing pace, her initial protests drowned out by her own lusts as things progress, and in no time you're hit with the throes of your own orgasm[if ball size of Player > 20]. The poor girl is nearly rocketed off your member from the sheer scale of your load, but you know well enough to hold her in place, her belly visibly inflated with your cum until the rest is force to spurt from her stuffed cunt[else]. She moans loudly as she feels your [bodytype of Player] load flood her womb, writhing in her own orgasm against your throbbing cock[end if][if ball size of Player > 20]. Eventually, you pull your [cock size desc of Player] rod from her hole, a flood of your copious ejaculate spewing from the abused hole. She's completely knocked out by this point, and you decide to leave her as is[else]. Eventually, you pull your [cock size desc of Player] rod from her hole, the fluttering about in dismay as she dizzly falls over. It'll be awhile before she gathers her proper senses, and you decide to leave her in this state[end if].";
+				say "     You waste no time as you begin to ride the mothgirl with an ever increasing pace, her initial protests drowned out by her own lusts as things progress, and in no time you're hit with the throes of your own orgasm[if Ball Size of Player > 5]. The poor girl is nearly rocketed off your member from the sheer scale of your load, but you know well enough to hold her in place, her belly visibly inflated with your cum until the rest is force to spurt from her stuffed cunt[else]. She moans loudly as she feels your [bodytype of Player] load flood her womb, writhing in her own orgasm against your throbbing cock[end if][if Ball Size of Player > 5]. Eventually, you pull your [cock size desc of Player] rod from her hole, a flood of your copious ejaculate spewing from the abused hole. She's completely knocked out by this point, and you decide to leave her as is[else]. Eventually, you pull your [cock size desc of Player] rod from her hole, the fluttering about in dismay as she dizzly falls over. It'll be awhile before she gathers her proper senses, and you decide to leave her in this state[end if].";
 			else if Player is not neuter and a random chance of 3 in 5 succeeds:
 				if Player is male:
-					say "     On her knees, you pull the mothgirl to your crotch, forcing her to suck on your [cock size desc of Player] cock, [if Cock Length of Player > 9]the thing's much too big for her delicate mouth to contain, but she makes every effort she can to please you regardless[else]gradually engulfing it within the confines of her delicate mouth[end if]. Eventually, her involuntary affections bring you to blissful release, [if ball size of Player > 20]the subsequent torrent of cum more than she can handle, and subsequently her subtly [']dusty['] aura is doused by your excessive fluids[else]the creature struggling only briefly to swallow your cum as it explodes from your rod[end if]. Sated, you pull yourself free of the creature, [if ball size of Player > 20]who has succumbed to an obsession over consuming your excessive release[else]no doubt dazed by the whole affair[end if]. You decide to leave her as-is and go on your way.";
+					say "     On her knees, you pull the mothgirl to your crotch, forcing her to suck on your [cock size desc of Player] cock, [if Cock Length of Player > 9]the thing's much too big for her delicate mouth to contain, but she makes every effort she can to please you regardless[else]gradually engulfing it within the confines of her delicate mouth[end if]. Eventually, her involuntary affections bring you to blissful release, [if Ball Size of Player > 5]the subsequent torrent of cum more than she can handle, and subsequently her subtly [']dusty['] aura is doused by your excessive fluids[else]the creature struggling only briefly to swallow your cum as it explodes from your rod[end if]. Sated, you pull yourself free of the creature, [if Ball Size of Player > 5]who has succumbed to an obsession over consuming your excessive release[else]no doubt dazed by the whole affair[end if]. You decide to leave her as-is and go on your way.";
 				else:
 					say "     On her knees, you grip the mothgirl by the tuft of fur on her chest and pull her to your crotch, pressing her face against your [cunt size desc of Player] cunt. Inevitably obliging, you begin to feel her tongue caress your supple surface. You coax her to make a greater effort in pleasuring you, and her pace hastens, soon feeling that slick organ explore your depths.";
 					say "     Eventually, her involuntary affections are rewarded with your blissful release, dousing the beleaguered creature with your sexual fluids. Obsessed with her own lust, the mothgirl licks up these fluids even from her own face after you inevitably part from her. You decide to leave her to her own devices and depart.";
@@ -68,7 +68,7 @@ to say mothgirl defeat:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -105,8 +105,8 @@ When Play begins:
 	now area entry is "Beach"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 9; [ Size of balls apparently ;) sneaky Nuku]
-	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 3; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
@@ -120,23 +120,24 @@ When Play begins:
 	now type entry is "[one of]insectile[or]lepidopterous[or]moth-like[at random]";
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -183,37 +184,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 when play ends:
@@ -239,8 +241,8 @@ to say cock pill use:
 	if Player is not male:
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 7;
-		now ball size of Player is 10;
-		say "With a rush of euphoria, your groin practically explodes as a new [cock of Player] cock bursts free of you, twitching readily, fueled by [short ball size] orbs dangling underneath.";
+		now Ball Size of Player is 2;
+		say "With a rush of euphoria, your groin practically explodes as a new [cock of Player] cock bursts free of you, twitching readily, fueled by [Ball Size Adjective of Player] orbs dangling underneath.";
 	else if a random chance of 1 in 5 succeeds:
 		say "You feel dizzy, leaning against the nearest support as your [cock of Player] shaft[smn] engorge painfully, growing larger before splitting, revealing a new shaft.";
 		increase Cock Count of Player by 1;

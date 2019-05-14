@@ -92,7 +92,7 @@ to say sexwithLindsey:
 					infect "Wolftaur";
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
-					decrease humanity of Player by 6;
+					SanLoss 6;
 			else if Player is male:
 				if Player is female:
 					say "     'Well well, what have we here?' Lindsey says with an amused look on his canine muzzle as he examines your own wolftaur-like body. 'A bit of a gender-confused wolftaur I see,' the strong male wolftaur says with a chuckle. 'I see your body can't decide if it should be male or female there or a bit of both. Maybe I can help you out there by showing you what it's like to be a proper little bitch,' he says in a low, teasing tone, his dominant words making your body shudder and grow hot with arousal. At the same time, his powerful alpha musk surrounds you, making your body respond instinctively, your pussy dampening while your rear legs shift further apart and your tail lifts up in anticipation. You only have a moment for your lust-fogged mind to realize the implications of your body's new stance before the strong male beast is climbing atop you, his forepaws gripping your canine sides while his arms reach around your humanoid torso to clutch you close against his own upper body. His canine chin comes to rest against your shoulder as a moan of pleasure slips through your lips.";
@@ -107,7 +107,7 @@ to say sexwithLindsey:
 					infect "Wolftaur";
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
-					decrease humanity of Player by 5;
+					SanLoss 5;
 				else if Player is mpreg_ok:
 					if LindseyMPregDetected is false:
 						say "     'Another male wolftaur?' Lindsay says with an amused look on his canine face as he examines your own wolftaur body. 'Well, since you obviously want to be my bitch so badly even as a male, who am I to say no?' the strong wolftaur says as he stalks around you in a predatory manner. His hands slowly stroke across your skin as his powerful dominant musk fills the small space and makes your head swim. 'And I can tell you're proper bitch deep down, like you should be, so I can still enjoy using you like one,' the dominant beast says, rubbing a paw over your lower belly in a way that fills it with a warm, aching need.";
@@ -125,7 +125,7 @@ to say sexwithLindsey:
 					infect "Wolftaur";
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
-					decrease humanity of Player by 5;
+					SanLoss 5;
 				else:
 					say "     'Another male wolftaur?' Lindsey says with an amused look on his canine face as he examines your own wolftaur body. 'Well, since you obviously want to be my bitch so badly even as a male, who am I to say no?' the strong wolftaur says as he stalks around you in a predatory manner. His hands slowly stroke your [skin of Player] skin as his powerful dominant musk fills the small space and makes your head swim. 'Even though you aren't a proper bitch like you should be, I can still enjoy using you like one,' the dominant beast says, your head spinning with lust as you try to grasp his meaning, only to feel his weight settle onto your back. You gasp as you brace your lower legs to support the larger wolf's weight as he positions himself on you, his powerful arms wrapping around your upper body as his cock begins to rub up against your own canine rear. You moan as your head begins to cloud over with pleasure, and he settles his canine chin on your shoulder, unable to even think about resistance with his powerful male body on top of your own.";
 					say "     You find yourself panting in need as his canine member rubs up against your hole, the tip pushing in slightly as he shifts his hips to get the best position before thrusting himself into you in one swift, sure movement. You shudder underneath him as you feel his cock filling your ass, a strong wave of submissive pleasure coming over you as his knot rubs against the base of your tail hole. Lindsey groans in pleasure as he whispers into your ear, 'Just let go of all that male aggression.' He traces his tongue along your ear as he begins to move his hips, driving his amazing cock into you further with each thrust. 'You can't handle being a dominant male wolf now, and you know it, so just let it all go and embrace those submissive, bitch-like tendencies we both know you love so much,' the male pants into your ears, his words filling your lust-fogged mind with an increasing sense of their rightness. 'Just submit and let your alpha take care of you now...' he says as he grunts, his knot pressing up against your rear as it seeks to lock the two of you together.";
@@ -136,7 +136,7 @@ to say sexwithLindsey:
 					infect "Wolftaur";
 					now lastfuck of Lindsey is turns;
 					increase level of Lindsey by 1;
-					decrease humanity of Player by 5;
+					SanLoss 5;
 			else:
 				say "     'Well well, what have we here?' Lindsey says with an amused look on his canine muzzle as he examines your own wolftaur-like body. 'A nice proper little wolftaur bitch for me to enjoy,' the strong male wolftaur says with a chuckle, 'and obviously ready and eager for a real wolftaur to take you into his pack and show you just what life is like for needy little wolftaur bitches,' he says in a low, teasing tone, his dominant words making your body shudder and grow hot with arousal, even as his powerful alpha musk surrounds you, making your body respond instinctively, your pussy dampening while your rear legs shift further apart and your tail lifts up in anticipation. You only have a moment for your lust-fogged mind to realize the implications of your body's new stance before the strong male beast is climbing atop you, his forepaws gripping your canine sides even as his arms reach around your humanoid torso to clutch you close against his own upper body, his canine chin coming to rest against your shoulder as a moan of pleasure slips through your lips.";
 				WaitLineBreak;
@@ -150,7 +150,7 @@ to say sexwithLindsey:
 				infect "Wolftaur";
 				now lastfuck of Lindsey is turns;
 				increase level of Lindsey by 1;
-				decrease humanity of Player by 5;
+				SanLoss 5;
 		else if bodyname of Player is listed in infections of taurlist:
 			if Player is herm:
 				say "     'Well, look at you?' Lindsey says with an amused look on his canine muzzle as he examines your [bodytype of Player] body. 'A bit of a gender-confused taur. But just as needy, I can tell,' he adds with a chuckle while running a paw across your rear. 'I see your body can't decide if it should be male or female there or a bit of both. Maybe I can help you out there by showing you what it's like to be a proper little bitch,' he says in a low, teasing tone. His dominant words make your body shudder and grow hot with arousal, even as his powerful alpha musk surrounds you. Your body starts to respond instinctively, your pussy dampening while your rear legs shift further apart in anticipation. You only have a moment for your lust-fogged mind to realize the implications of your body's new stance before the strong male beast is climbing atop you. His forepaws grip your tauric sides even as his arms reach around your humanoid torso to clutch you close against his own upper body, his canine chin coming to rest against your shoulder as a moan of pleasure slips through your lips.";

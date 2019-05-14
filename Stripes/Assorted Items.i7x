@@ -6,68 +6,7 @@ Version 1 of Assorted Items by Stripes begins here.
 
 Section 1 - Nullo Wafers
 
-[ - Project discarded for now, replaced by BlueBishop's nullification powder - ]
-[
-Table of Game Objects (continued)
-name	desc	weight	object
-"nullo wafers"	"A box of bland, dry cookies. Its packaging proclaims [']Now with less flavor![']"	1	nullo wafers
-
-nullo wafers is a grab object. It is temporary. It is a part of the player.
-
-the usedesc of nullo wafers is "[nullo wafers use]";
-
-
-to say nullo wafers use:
-	say "     Pulling out the box of cookies, you start by planning on having just a few, but something about their bland crunchiness has you keep eating until you end up polishing off the whole box. Maybe you were hungrier than you thought. Your tummy gives a bit of an upset rumble and a wave of cool tingles wash through you that flows down to your loins.";
-	if Player is herm:		[HERM]
-		let cockgone be false;
-		let cuntgone be false;
-		let cockcountdown be false;
-		let cuntcountdown be false;
-		decrease Cock Length of Player by 2;
-		decrease ball size of Player by 1;
-		decrease Cunt Length of Player by 2;
-		decrease Cunt Tightness of Player by 1;
-		if Cock Length of Player >= 10:
-			decrease cock length by cock length / 8;
-		if ball size of Player >= 10:
-			decrease cock width by cock width / 8;
-		if Cunt Length of Player >= 10:
-			decrease Cunt Length by Cunt Length / 8;
-		if Cunt Tightness of Player >= 10:
-			decrease cunt width by cunt width / 8;
-		if Cock Length of Player <= 0 or ball size of Player <= 0:
-			now Cock Count of Player is 0;
-			now Cock Length of Player is 0;
-			now ball size of Player is 0;
-			now cockgone is true;
-		if Cunt Length of Player <= 0 or Cunt Tightness of Player <= 0:
-			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
-			now Cunt Tightness of Player is 0;
-			now cuntgone is true;
-		if Cock Count of Player > 1 and a random chance of Cock Count of Player in 5 succeeds:
-			decrease Cock Count of Player by 1;
-			now cockcountdown is true;
-		if Cunt Count of Player > 1 and a random chance of Cunt Count of Player in 5 succeeds:
-			decrease Cunt Count of Player by 1;
-			now cuntcountdown is true;
-		say "     Checking on your crotch, you watch as your dual-gendered genitals start to shrink. It is somehow a strangely arousing thing to experience and to watch";
-		if cockgone is true and cuntgone is true:
-			say ". Your tiny cock and cunt shrink and shrink until, with a wet quiver, they both disappear entirely. This leaves you completely genderless, your crotch bare but still strangely sensitive. After a few minutes, your arousal from the unusually erotic change fades, leaving you calmer... though you now lack an outlet for release should you become sexually excited again.";
-			now Libido of Player is Libido of Player / 3;
-			say "[bracket]Note: A lot of game content lacks material for neuter players or will mistake them for one gender or the other. - The Mgmt[close bracket][line break]";
-		else if cockgone is true and cuntcountdown is true:
-			say "cock gone, lost a cunt and cunt shrunk";
-		else if cockgone is true:
-			say "cock gone, cunt shrunk";
-		else if cuntgone is true and cockcountdown is true:
-			say "cunt gone, lost a cock and cock shrunk";
-		else if cuntgone is true:
-			say "cunt gone, cock shrunk";
-		else:
-			say "cock shrunk and cunt shrunk";
-]
+[ - Project discarded, replaced by BlueBishop's nullification powder - ]
 
 Section 2 - Libido Pill
 

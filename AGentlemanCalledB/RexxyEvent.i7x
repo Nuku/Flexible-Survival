@@ -107,7 +107,7 @@ To say DogBoneUse:
 		else:
 			say "[DogBoneScene3m]";
 		say "[fullRetrieverTF]";
-		decrease humanity of Player by 6;
+		SanLoss 6;
 		now HP of Rex is 4;
 		now bonelust is 1;
 	else if HP of Rex is 4:
@@ -124,17 +124,17 @@ An everyturn rule:
 		if bonelust > 10:
 			say "     The instincts caused by the retriever infection and the burning need caused by the canine sex toy dominate your mind almost completely. You struggle to maintain some small part of yourself as the thoughts of the retriever bitch you're becoming begin to be indistinguishable from your own. You need to find some way to sate this burning need now, else you will surely lose yourself completely to these desires.";
 			increase bonelust by 1;
-			decrease humanity of Player by 15;
+			SanLoss 15;
 		else if bonelust > 6:
 			if a random chance of 1 in 2 succeeds:
 				say "     You struggle to resist the urges of the retriever bitch which the infection is trying to make of you, but its grip on your mind tightens. Your body burns with desire as the lewd daydreams of doggy sex dominate your thoughts. Perhaps you could relieve some of this lust with some playtime with [if HP of Rex > 6]Rex[else]your beloved dog bone sex toy[end if]?";
 				increase bonelust by 1;
-				decrease humanity of Player by 9;
+				SanLoss 9;
 		else if bonelust > 3:
 			if a random chance of 1 in 3 succeeds:
 				say "The Retriever urges and desires continue clawing at your mind, growing more powerful. You catch yourself panting occasionally as the canine sex dreams invade your thoughts more frequently.";
 				increase bonelust by 1;
-				decrease humanity of Player by 6;
+				SanLoss 6;
 		else if HP of Rex > 3:
 			if a random chance of 1 in 4 succeeds:
 				say "You feel the retriever infection pawing at the back of your mind and a warm tingling deep within you as your mind drifts to thoughts of large male canines and their rigid knotted cocks.";
@@ -194,7 +194,7 @@ ScaleValue of Rex is 3. [human sized]
 SleepRhythm of Rex is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Rex is 1. [One cock]
 Cock Length of Rex is 7. [Seven Inches]
-Ball Size of Rex is 10.
+Ball Size of Rex is 3.
 Ball Count of Rex is 2. [Two balls]
 Cunt Count of Rex is 0. [No pussy]
 Cunt Length of Rex is 0. [No Cunt]
@@ -339,7 +339,7 @@ Instead of fucking the Rex:
 			say "[RexTrainLowLustScene]";
 		infect "Retriever";
 		now bonelust is 1;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		now lastfuck of Rex is turns;
 		if humanity of Player < 10:
 			WaitLineBreak;
@@ -377,7 +377,7 @@ Every turn when the player is in Rex's Place and Rex is visible:
 			say "[RexPetLongWait]";
 			infect "Retriever";
 			now bonelust is 1;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now lastfuck of Rex is turns;
 		else if lastfuck of Rex - turns > 10 and a random chance of 1 in 5 succeeds:
 			if a random chance of 1 in 2 succeeds:
@@ -386,7 +386,7 @@ Every turn when the player is in Rex's Place and Rex is visible:
 				say "[RexPetMedWait2]";
 			infect "Retriever";
 			decrease bonelust by 4;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			decrease lastfuck of Rex by 4;
 		else if a random chance of 1 in 5 succeeds:
 			let T be a random number between 1 and 5;

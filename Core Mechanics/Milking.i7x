@@ -28,7 +28,7 @@ check milking:
 		say "Your breasts have been drained recently. You'll need to wait before another worthwhile milking." instead;
 
 Carry out milking:
-	if bodyname of Player is "Blue Gryphon":
+	if bodyname of Player is "Blue Gryphon Herm":
 		say "Using both hands, you cup the curves of your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] [breast size desc of Player] blue-furred tits, reveling in the pleasant sensations. Caressing their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the rich gryphon milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own gryphlets to suckle on your breasts.";
 		repeat with T running from one to Nipple Count of Player:
 			increase carried of gryphon milk by 1;
@@ -36,7 +36,7 @@ Carry out milking:
 			repeat with T running from one to ( ( Nipple Count of Player ) / 2 ):
 				increase carried of gryphon milk by 1;
 		now lastmilking is turns;
-	else if bodyname of Player is "Shemale Smooth Collie":
+	else if bodyname of Player is "Smooth Collie Shemale":
 		say "Moving your hands to touch and caress your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] [breast size desc of Player] furred breasts, you wake deep maternal urges in your canine body. Images of a whole litter of your own puppies nuzzling your breasts fill your mind while you touch yourself, panting in arousal and need. It doesn't take long till small beads of milk form at the nipples as your breasts get ready to feed your imaginary brood. You're lost in the pleasurable dream for a moment before you remember what you wanted to do and quickly grab an empty bottle from your pack to fill it, gently milking yourself into it.";
 		repeat with T running from one to Nipple Count of Player:
 			increase carried of dog milk by 1;

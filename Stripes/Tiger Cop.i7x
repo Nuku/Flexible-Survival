@@ -365,8 +365,8 @@ to say totalTH:
 			now Cock Count of Player is 1;
 		if Cock Length of Player < 9:
 			now Cock Length of Player is 9;
-		if ball size of Player < 5:
-			now ball size of Player is 5;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
 	else if "Female Preferred" is listed in feats of Player:
 [		say "(Female Preferred, locked results)";]
 		if Player is not female:
@@ -384,8 +384,8 @@ to say totalTH:
 			now Cock Count of Player is 1;
 		if Cock Length of Player < 9:
 			now Cock Length of Player is 9;
-		if ball size of Player < 5:
-			now ball size of Player is 5;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
 		if Player is not female:
 			now Cunt Count of Player is 1;
 		if Cunt Length of Player < 12:
@@ -402,8 +402,8 @@ to say totalTH:
 		now Nipple Count of Player is 2;
 		if Cock Length of Player < 9:			[Minimum of TH standard or greater]
 			now Cock Length of Player is 9;
-		if ball size of Player < 5:
-			now ball size of Player is 5;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
 		if Cunt Length of Player < 12:
 			now Cunt Length of Player is 12;
 		if Cunt Length of Player < 4:
@@ -468,16 +468,16 @@ to say BTchangeover:
 			now Cock Count of Player is 1;
 		if Cock Length of Player < 12:
 			now Cock Length of Player is 12;
-		if ball size of Player < 6:
-			now ball size of Player is 6;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
 	else if "Male Preferred" is listed in feats of Player:
 		[Player can't diminish in maleness. Pussy, if any is eliminated]
 		if Player is not male:
 			now Cock Count of Player is 1;
 		if Cock Length of Player < 12:
 			now Cock Length of Player is 12;
-		if ball size of Player < 6:
-			now ball size of Player is 6;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
 		if Player is female:
 			now Cunt Count of Player is 0;
 			now Cunt Length of Player is 0;
@@ -489,8 +489,8 @@ to say BTchangeover:
 		now Cock Count of Player is 1;
 		if Cock Length of Player < 12:
 			now Cock Length of Player is 12;
-		if ball size of Player < 6:
-			now ball size of Player is 6;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
 		if Player is female:
 			now Cunt Count of Player is 0;
 			now Cunt Length of Player is 0;
@@ -585,14 +585,14 @@ instead of going to Abandoned Storefront:
 
 to say turning tricks:
 	if pquest is 1:
-		say "     When you arrive in the back room, you can clearly tell this is where you'll be working. The entire thing is set up like a scene from a love hotel, something that you realize is more accurate than not. The room seems well prepared for the task of a whore servicing their clients, with an oversized bed, shelves that are clearly packed with various sexual aids, and more besides. You briefly wonder how Sergeant Marks was able to set up this entire thing, but are interrupted by who you assume is going to be your first client. A German Shepherd, though one with an ornate leather jacket, is sitting on the edge of the bed. He seems to perk up as the cop leads you into the room.";
+		say "     When you arrive in the back room, you can clearly tell this is where you'll be working. The entire thing is set up like a scene from a love hotel, something that you realize is more accurate than not. The room seems well prepared for the task of a whore servicing their clients, with an oversized bed, shelves that are clearly packed with various sexual aids, and more besides. You briefly wonder how Sergeant Marks was able to set up this entire thing, but are interrupted by who you assume is going to be your first client. A German shepherd, though one with an ornate leather jacket, is sitting on the edge of the bed. He seems to perk up as the cop leads you into the room.";
 		say "     Before the canine has a chance to speak, Sergeant Marks interjects. 'Here's the whore I was telling you about, pal. They're still a bit new at this, but no need for you to go easy on them just because of that. They're the one who signed up to get fucked, after all.' The tiger cop gives an exaggerated wink to the seated gang member, who responds with a broad grin. His approval is clear by the sight of his shaft starting to harden as he leers at you. 'Now, you two have fun. We can talk after you're finished.' Marks turns to leave the room, quickly swats you on the ass, and then steps out. With him gone, it's now just you and the gang member you're supposed to be a whore for. Steeling yourself for the act, you hope that it'll all be worth it when the cop takes them down.";
 		WaitLineBreak;
 		say "     You try your hardest to suppress your nerves, and to do your best impression of a prostitute. You know that it isn't true, but you have to make sure that this client believes it is. Mentally, you brace yourself, before attempting your best seductive voice, and asking him how he wants to do this. 'I don't have too much time, so we'll keep it simple. Get on your knees and suck my cock, whore.' He leans back a bit further, leaving his almost-hard member easily accessible. You get on your knees in front of him, and prepare to swallow both your pride and his dick. Slowly, you get to work, taking a hold of his shaft in one hand, slowly stroking it to full hardness. Soon enough the canine cock is standing at the ready, mere inches before you. Rather than hesitate any longer, you lean forward and let the tip enter your mouth.";
 		say "     Without prompting, you start to sink deeper onto the canine hardness, slowly starting to bob up and down. Your efforts get results quickly, as the gangster starts very quickly panting and moaning. Emboldened by his pleasure, you start increasing your speed, attempting to add more variety to your technique. His reactions show that your attempts to bring him to a climax are rapidly approaching completion. Finally he gives in, and just as his cock starts throbbing in your mouth, he pulls you off, causing the jets of seed to cover your face instead of fill your mouth. Before you can completely process the change, the criminal lets out a sigh of relief, before standing up, and grinning at you. 'That wasn't half bad, for a fresh whore.' He starts to walk towards the door, his shaft softening, but he pauses right before he leaves. 'By the way, that's a good look for you. You should keep it - consider it a tip.' After everything that happened, it takes you a while to collect yourself, as well as what remains of your dignity.";
 		increase pquest by 1;
 	else if pquest is 2:
-		say "     This time when you are led into the back room, instead of the German Shepherd gang member, there are two new faces. Despite how degrading you know this is going to be, you're feeling distinctly less nervous about acting the part of a whore in the back room. You know it's for a good cause, and even more than that, you have a bit of practice under your belt. Shaking yourself from your thoughts, you look more closely at the new clients you'll be servicing. The first thing you notice is that both of them are wearing ornate jackets, much like that of your previous client, likely some sort of uniform. The first of the two is a bear-man, larger than average, with thick brown fur covering his entire frame. Apart from the jacket, he wears a simple pair of torn shorts, a poorly concealed bulge in the front. The second is much smaller, and seems to be a mall rat, though he looks somehow shiftier than any of the others you've seen. The jacket is his only clothing, leaving his partially hard member visible.";
+		say "     This time when you are led into the back room, instead of the German shepherd gang member, there are two new faces. Despite how degrading you know this is going to be, you're feeling distinctly less nervous about acting the part of a whore in the back room. You know it's for a good cause, and even more than that, you have a bit of practice under your belt. Shaking yourself from your thoughts, you look more closely at the new clients you'll be servicing. The first thing you notice is that both of them are wearing ornate jackets, much like that of your previous client, likely some sort of uniform. The first of the two is a bear-man, larger than average, with thick brown fur covering his entire frame. Apart from the jacket, he wears a simple pair of torn shorts, a poorly concealed bulge in the front. The second is much smaller, and seems to be a mall rat, though he looks somehow shiftier than any of the others you've seen. The jacket is his only clothing, leaving his partially hard member visible.";
 		say "     This time, Sergeant Marks has nothing to say, and simply nods and grins to the two, before leaving you alone with your newest clients. The mall rat smiles wickedly at you, and then gestures to his much larger friend. 'How about you start by taking care of Bruce with your mouth, why don't you? He could really use the relief.' The recently introduced Bruce unzips his strained shorts, revealing that the mall rat is very correct, as below his hardening endowment are a pair of excessively full-looking balls. Despite your reluctance, you get in front of the bear before then getting on your knees, knowing you have to do this job, so that Marks can do his. You glance up and see an expectant look on his face, reminding you of the task at hand.";
 		WaitLineBreak;
 		say "     Wasting no time, you lower your head down to his shaft and begin bobbing up and down, putting your ever-growing oral skills to use. You stay that way for a while, simply working on the ursine member, occasionally using a free hand to massage his large balls as well. However, before you make too much progress on pleasing Bruce, he speaks up. 'Hey, Mikey, no need for you to wait around like that, join in! I don't think this slut minds, do you?' You pull back off his dick, and shake your head. 'See? Now get back there, buddy. And you, maybe focus on my balls a little more, eh?' You do your duty and comply, moving down the shaft, and burying your face in his sack. You lick and suck at them as the mall rat, Mikey, moves around behind you. You feel the tip of his shaft lay across your ass, for a moment, before it slides closer to your entrance. Knowing what's coming, you brace yourself.";
@@ -753,7 +753,7 @@ To say beattigercop:
 Section 9 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -790,8 +790,8 @@ When Play begins:
 	now area entry is "Nowhere"; [ Location of monster, start nowhere, High if active]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Ball Size entry is 2; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
@@ -806,22 +806,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -868,37 +869,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 

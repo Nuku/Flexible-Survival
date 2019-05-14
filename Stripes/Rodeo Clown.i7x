@@ -23,7 +23,7 @@ to say losetorodeoclown:
 		say "     With your drink in you, you feel rather muddleheaded and horny, submitting to the strange creature as she runs her hands over you, sliding off your clothes and pack. ";
 		if (player is puremale) or (player is herm and a random chance of 1 in 2 succeeds):
 			say "She runs her hand down to your hard cock and takes a hold of it, guiding you further into her arms with the other. Glancing down, you can see that under her above average cock is a huge pussy, wide, wet and waiting. With one hand on your cock and the other pulling at your ass, she gets you into position and takes your penis into her with one easy thrust.";
-			say "     You moan and rock your hips, having trouble focusing your milk-addled mind on anything more than thrusting into that smooth, slick hole. Her pussy, clearly wide enough to take in even the largest steer to calm it, somehow still manages to grip your shaft nicely[if Cock Length of Player > 18 or ball size of Player > 12]. Even your huge meat is able to fully fit in her, simply stretching out her cartoony, rubbery body, to her great delight[end if]. Being so very horny despite your calmness, you fuck her at hard, like a wild bull or angry bronco, much to her delight. She is moaning and pushing into your thrusts with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you drive your cock fully into her and unleash your hot seed[if ball size of Player > 12]. Your huge balls pump their supply of semen into her, bloating her tummy delightfully full and plump[end if]. When your hips finally come to rest with your balls empty, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off, stroking her cum-filled tummy.";
+			say "     You moan and rock your hips, having trouble focusing your milk-addled mind on anything more than thrusting into that smooth, slick hole. Her pussy, clearly wide enough to take in even the largest steer to calm it, somehow still manages to grip your shaft nicely[if Cock Length of Player > 18 or Ball Size of Player > 4]. Even your huge meat is able to fully fit in her, simply stretching out her cartoony, rubbery body, to her great delight[end if]. Being so very horny despite your calmness, you fuck her at hard, like a wild bull or angry bronco, much to her delight. She is moaning and pushing into your thrusts with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you drive your cock fully into her and unleash your hot seed[if Ball Size of Player > 4]. Your huge balls pump their supply of semen into her, bloating her tummy delightfully full and plump[end if]. When your hips finally come to rest with your balls empty, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off, stroking her cum-filled tummy.";
 		else:
 			say "She runs her hand down between your legs and teases your pussy, guiding you into her lap with the other. Glancing down, you can see that above her greatly oversized pussy is a throbbing hard cock, a sizeable eight inches of smooth, pink meat. With one hand spreading your pussy open and the other pulling at your ass, she gets you into position atop her hard cock and guides you down onto it.";
 			say "     You moan and wriggle your hips, having trouble focusing your milk-addled mind on anything more than riding on that smooth, hard pole. Her cock, a little bigger than that of an average man[if Cunt Length of Player < 6], sinks fully into you after a few thrusts to stretch you out[else], goes in quite easily, taking you in one smooth thrust that fills you with pleasure[end if]. Being so very horny despite your calmness, you ride her hard and fast, and she bucks you hard in her lap as well. She is moaning and driving up into you with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you soak her crotch in your juices and she pushes into you one last time before unleashing her hot cum into you[if Cunt Length of Player < 6]. With her cock stuffed fully inside your small pussy, she's pumping her cum directly into your womb[end if]. When your hips finally come to rest with you well-seeded, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off with a bow-legged swagger.[impregchance]";
@@ -39,8 +39,8 @@ to say beattherodeoclown:
 	if Player is male:
 		say "     Having beaten the strange person, she moans and drops to the ground, making a show of having lost. 'Oh no! The wild bull will gore me now with its horn! Mah poor, vulnerable body!' Her clothes become undone in her squirming, exposing her large breasts, above average and fully hard cock and her very large and dripping pussy. She fingers the last almost eagerly as if trying to entice you to take advantage of her after beating her. It's almost as if she wanted to lose.";
 		if Libido of Player > 25:
-			say "     Feeling rather horny at this wanton display from a (mostly) human creature, you find yourself compelled to sate your lusts upon her body as she so clearly desires. Pushing her down, she giggles a little and moans about her terrible fate. Getting into it, you pin her down, mostly for show, and drive your hard cock fully into her in one hard thrust. Her wide, ample pussy, able take the biggest and wildest of bulls to satisfy them, spreads easily for you[if Cock Length of Player > 18 or ball size of Player > 12]. Your huge cock stuffs her nice and full, stretching her flexible flesh around it and being so full only seems to make her more excited and horny[end if]. You bang away at her hard and fast as her stretchy cunt grips around your penis, squeezing around it as she moans at each thrust. As you fuck her, she wriggles under you, telling you to 'Fuck me hard, you big bull' and 'Mmm... mah wild steer!'";
-			say "     Your hands move from her shoulders to her tits, stroking and teasing her large nipples. You play with them lightly at first, but after she squeezes her hands over yours, you play roughly with breasts, squeezing them hard and pinching her nipples firmly. The rough treatment excites her all the more and soon milk's squirting from her nipples as if you were milking a cow. As streams of her milk sprays onto you both, her cock throbs and starts spurting its thicker, white fluid across her body. The sight of all this, after the hard pounding you've been giving her wet pussy pushes you over the edge and you unleash your hot cum into her a few thrusts later with a groan of ecstasy[if ball size of Player > 12]. Your oversized balls pump their hot load into her, bloating her tummy delightfully full and plump with your semen[end if]. When you finally come down from your powerful orgasm, you release her and get up, leaving the exhausted herm in a messy puddle of fluids.";
+			say "     Feeling rather horny at this wanton display from a (mostly) human creature, you find yourself compelled to sate your lusts upon her body as she so clearly desires. Pushing her down, she giggles a little and moans about her terrible fate. Getting into it, you pin her down, mostly for show, and drive your hard cock fully into her in one hard thrust. Her wide, ample pussy, able take the biggest and wildest of bulls to satisfy them, spreads easily for you[if Cock Length of Player > 18 or Ball Size of Player > 4]. Your huge cock stuffs her nice and full, stretching her flexible flesh around it and being so full only seems to make her more excited and horny[end if]. You bang away at her hard and fast as her stretchy cunt grips around your penis, squeezing around it as she moans at each thrust. As you fuck her, she wriggles under you, telling you to 'Fuck me hard, you big bull' and 'Mmm... mah wild steer!'";
+			say "     Your hands move from her shoulders to her tits, stroking and teasing her large nipples. You play with them lightly at first, but after she squeezes her hands over yours, you play roughly with breasts, squeezing them hard and pinching her nipples firmly. The rough treatment excites her all the more and soon milk's squirting from her nipples as if you were milking a cow. As streams of her milk sprays onto you both, her cock throbs and starts spurting its thicker, white fluid across her body. The sight of all this, after the hard pounding you've been giving her wet pussy pushes you over the edge and you unleash your hot cum into her a few thrusts later with a groan of ecstasy[if Ball Size of Player > 4]. Your oversized balls pump their hot load into her, bloating her tummy delightfully full and plump with your semen[end if]. When you finally come down from your powerful orgasm, you release her and get up, leaving the exhausted herm in a messy puddle of fluids.";
 		else:
 			say "     Tired from the conflict and only mildly aroused by her display, you manage to turn away and head off, leaving the frustrated herm behind. Perhaps she'll have better luck with the next creature she finds.";
 			increase Libido of Player by a random number between 3 and 8;
@@ -63,7 +63,7 @@ to say beattherodeoclown:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -100,7 +100,7 @@ When Play begins:
 	now area entry is "Fair"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 8; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 5; [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 2; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 6; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -116,22 +116,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -178,37 +179,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 Section 3 - Endings

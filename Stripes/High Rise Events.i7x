@@ -184,14 +184,14 @@ to say dogparksearch:
 		increase carried of pepperspray by 1;
 		increase score by 5;
 	if T is 3:
-		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here. Having failed to sneak up on you, the male German Shepherd approached swiftly.";
-		challenge "German Shepherd";
+		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you are inspecting one pile with a stick for added safety, hear the crack of a branch behind you, seeing one of the canine creatures who probably originated here. Having failed to sneak up on you, the male German shepherd approached swiftly.";
+		challenge "German Shepherd Male";
 	if T is 4:
 		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. Your search turns up nothing of value, but you are getting ready to leave, you spot a large collie-like creature charging into the park. It sniffs around eagerly, clearly drawn by the scent of so many canines. Finding the park empty, it is clearly disappointed. That is, until it finds you.";
-		challenge "Shemale Smooth Collie";
+		challenge "Smooth Collie Shemale";
 	if T is 5:
 		say "     You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. As you approach the far corner of the park, you are spotted by a husky female with the last tatters of her expensive dress still on her and a pearl necklace. As she bounds towards you, you note that the scent of sex is thick around her. She was likely very recently transformed and is lost in her new animalistic needs.";
-		challenge "Female Husky";
+		challenge "Husky Bitch";
 	if T is 6:
 		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While flipping through a pile of clothes and items, you spot a dog collar. Making the mistake of picking it up, you find it sticky with something that runs down your arm. You toss down the cum-slick collar, but it is too late.";
 		[random canine infection]
@@ -219,7 +219,7 @@ to say dogparksearch:
 			increase Libido of Player by 10;
 			if Libido of Player > 100:
 				now Libido of Player is 100;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			decrease score by 10;
 		else:
 			say "     You resist the urge to give in to those cloying scents and move away. You try to continue searching, but find yourself drift back to the tree several times and finally decide to abandon the dog park entirely.";
@@ -238,11 +238,11 @@ to say dogparksearch:
 to say doggyinfect:
 	let tempnum be a random number between 1 and 11; [adjust this for new dogs]
 	if tempnum is 1:
-		infect "Female Husky";
+		infect "Husky Bitch";
 	else if tempnum is 2:
-		infect "German Shepherd";
+		infect "German Shepherd Male";
 	else if tempnum is 3:
-		infect "Shemale Smooth Collie";
+		infect "Smooth Collie Shemale";
 	else if tempnum is 4:
 		infect "Pit bull";
 	else if tempnum is 5:
@@ -250,7 +250,7 @@ to say doggyinfect:
 	else if tempnum is 6:
 		infect "Chocolate Lab";
 	else if tempnum is 7:
-		infect "Alpha Husky";
+		infect "Husky Alpha";
 	else if tempnum is 8:
 		infect "Retriever";
 	else if tempnum is 9:
@@ -304,7 +304,7 @@ Instead of resolving a Veterinary Hospital:
 			say ".";
 			say "     And that's when you turn around to find your path back to the lobby barred by one of those large panther taurs. She's wearing the remains of a doctor's coat over her upper body. She moves in on you, growling lustfully as she advances.";
 			now Libido of Player is ( 100 + Libido of Player + Libido of Player ) / 3;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			challenge "Panther Taur";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm. Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests. It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger. Once outside, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
@@ -340,7 +340,7 @@ Instead of resolving a Veterinary Hospital:
 		else:
 			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Finding a sexy beast to fuck you remains high on your list.";
 			now Libido of Player is ( 100 + Libido of Player + Libido of Player ) / 3;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now Resolution of Veterinary Hospital is 4; [fight banned, so the player just ran out with the supplies]
 		now lust of Medea is 2;
 	else:
@@ -400,7 +400,7 @@ to say vetsearch:
 		say "     After having lost time dealing with the creature, you can feel the scents suffusing the vet's office are getting to you and you leave before you succumb entirely.";
 	if T is 8:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you move quickly through the examination rooms. In them you find more signs of rapid transformation and sex. Perhaps an owner had brought in their pet when it started to show [']symptoms[']. You open up the medical cabinet to look through it, but accidentally place your hand in a sticky puddle of something. Your hand starts to tingle and you can feel the infection trying to take hold. The scents all around you become more attractive. You feel a strong urge to give in and roll around in them, and even lap them up. You manage to suppress it long enough to run out of the place, panting in the fresh air to clear your head.";
-		infect "Female Husky";
+		infect "Husky Bitch";
 	if T is 9:
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, move quickly through the examination rooms. In them you find more signs of rapid transformation and sex. Perhaps an owner had brought in their pet when it started to show [']symptoms['].";
 		say "     As you start to open up the medical cabinet to look for supplies, you feel a cold, sticky splash against your back. Splatters of thick, cool cum splash past you and onto cabinet's contents. You turn around quickly to see one of the large panther taurs in the doorway behind you, wearing the remains of a doctor's coat over her upper body. In her paw she has another large, clear balloon filled with what must be her cum. And that's when you realize it's not a balloon, but an overinflated condom. As the tingles of transformation run through you, you have to dodge to the side to avoid the second one before closing in to fight her.";
@@ -432,21 +432,21 @@ to say kittycheck:
 to say randomvetfight:				[more suitable pets can be added]
 	let tempnum be a random number between 1 and 11;
 	if tempnum is 1:
-		challenge "Female Husky";
+		challenge "Husky Bitch";
 	if tempnum is 2:
-		challenge "Shemale Smooth Collie";
+		challenge "Smooth Collie Shemale";
 	if tempnum is 3:
 		challenge "Pit bull";
 	if tempnum is 4:
 		challenge "Cute Chinchilla Woman";
 	if tempnum is 5:
-		challenge "German Shepherd";
+		challenge "German Shepherd Male";
 	if tempnum is 6:
 		challenge "Anthro Rabbit";
 	if tempnum is 7:
 		challenge "Feline";
 	if tempnum is 7:
-		challenge "Alpha Husky";
+		challenge "Husky Alpha";
 	if tempnum is 8:
 		challenge "Ninja Cat";
 	if tempnum is 9:

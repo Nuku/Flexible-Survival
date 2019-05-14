@@ -204,7 +204,7 @@ to say mrevent05:
 to say mre05_prey:
 	say "     The group is quite excited at their doubly successful hunt this day and carry you both back to their home in the display showing caveman life. The poles holding you up are placed on forked rods, leaving you suspended in the air while they start grope and fondle their prizes. While one starts to manhandle your ass, you see another putting his misshapen mouth around the sabretooth's cock. After some rough groping of your [if Player is female]pussy[else]ass[end if] and a thick finger spreading you open, you feel the caveman's big club of cock flesh pressed at your [if Player is female]wet lips[else]back entrance[end if]. Your loud groan get muffled when another grabs your face and pushes his cock into your open mouth.";
 	say "     You end up used like this for quite some time, spitroasted by a pair of cromagnon brutes and pumped full of load after load of their semen as the hunters swap in and out between you and the steadily changing feline. Given your situation, it is difficult for you to watch the progress, only getting glimpses when your view is unblocked by one caveman making room for the next at your mouth. Much of his russet-brown fur disappears and over time his body becomes more humanoid, though of a more brutish and devolved form. You can feel yourself similarly changing, becoming more like your captors as the long fuck session turns you into a slouching, muscular caveman. At some point, you both are released though the orgy only continues with new sexual positions being possible. No thought of escape or resisting enter either of your minds, too lost in the lustful excitement of sex. Eventually the celebration winds down as all involved as sated to the point of passing out.";
-	decrease humanity of Player by 25;
+	SanLoss 25;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
@@ -250,7 +250,7 @@ to say mre05_hunter:
 	else:
 		say "to your cream-filled asshole. With your tight ring pressed to his changing lips, he starts to lap at your puckered ring, his feline tongue becoming more human-like as he licks away the infected semen from your well-fucked hole. As he's eating your ass out while being buggered by the ass again by another lustful caveman, you reach back to rub your hand over his changing head, feeling his skull reshaping itself and his ears shifting position and becoming human-like. Watching over your shoulder, his tail seems to shrink away more with every thrust that cromagnon cock makes into him. It is the sight of his feline erection changing, becoming more humanoid, but enlarged and throbbing, that really captivates your attention. In the end, he's cleaned your hole thoroughly by the time your counterpart stuffs the increasingly humanoid creature with another ass-filling rush of caveman cum.";
 	say "     You end up playing around with the others like this for quite some time, sucking or riding their cocks[if Player is male] and sometimes having the favor returned[end if], or having another go at the rapidly changing feline[if y is 0]. You are not left unchanged by this either, steadily transformed to become more and more like the lustful cavemen around you. Eventually the long fuck session turns you both into slouching, muscular cavemen[else]. Eventually the long fuck session transforms the sabretooth tiger into another slouching, muscular caveman like the rest of you[end if]. At some point well into his transformation, he is released though the orgy only continues with new sexual positions being possible. No thought of taking a break or leaving enters either of your minds, too lost in the lustful excitement of sex. Eventually the celebration winds down as all involved as sated to the point of passing out";
-	decrease humanity of Player by 25;
+	SanLoss 25;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 5;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
@@ -304,12 +304,6 @@ Chapter 7 - Tea with Ninjas
 
 to say mrevent07:
 	say "***tea with ninjas";
-[	- if Player ninja, watchful, express eagerness to welcome into clan.
-	- otherwise, friendly tea, but...
-	-- if level of Player > 6:
-	--- will warn others to be wary, but warns player that some may still seek to prove their skills against him
-	-- else:
-	--- warns player to be wary, ninjas seek to add to clan	]
 	remove 7 from mrevents;
 
 

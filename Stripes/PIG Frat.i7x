@@ -152,7 +152,7 @@ to say pig_fratinitiation:
 		say "     When he's done, Philip pulls his sticky cock from your creamy [if Player is not female]rear[else]pussy[end if] and rises slowly. With a push from him, you're rolled over onto your back. Looking up, you see the whole of the frat surrounding you - big, sexy piggies all. And with big, thick cocks all in hand and being pumped quickly.";
 		say "     'Time for you to be anointed as one of our brotherhood, piglet. All hail the mighty Phi Iota Gamma!' Philip oinks, once again in the ceremonial bathrobe. As they all start oinking and grunting, they start to cum, splatters of greasy cum raining down onto your already messy body. Their semen coats you all over as they mark you as one of their own. When the big gatekeeper grunts and sprays at your face, you make a show of opening your mouth wide, welcoming his thick, gooey cum into your mouth. The perverseness of all this has you [if Player is male]jerking yourself off wildly until your seed's mingling with the rest of their, symbolizing your unity as members of this messy fraternity of dirty pigs[else]spread your legs and hold your pussy lips wide, giving the boars a succulent target to shoot at. When anyone manages a hit, you pump your plump fingers into your cunny, working their cum deep inside you[end if]. When they're all done, you're pulled from the mud, the scent of your whole frat clinging to you.";
 	WaitLineBreak;
-	decrease humanity of Player by 30;
+	SanLoss 30;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 4 and 8;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 4 and 8;
 	setmonster "Piggy";

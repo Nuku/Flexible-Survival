@@ -40,7 +40,7 @@ instead of conversing the gang members:
 	else if matriarchdefeated is 2:
 		say "     The other hyenas grin as you try to talk to them, seemingly amused at your attempt to talk to them. One of them grabs you and forces you down onto your hands and knees. 'Good little breeding hyenas should know better than to walk around like the rest of us and try to talk to their betters without being asked,' he tells you as the rest laugh at your situation. 'Good little breeders go around on all fours with their ass up in the air just in case someone wants to fill them up.' The rest of the gang nod in agreement. You blush and find yourself nodding along as well, feeling vaguely guilty and embarrassed for having made such a basic mistake. You quickly trot away before you can make any more mistakes and embarrass yourself further. You only realize several minutes later that you have been walking around on all fours ever since you talked to them, your ass sticking up in the air eagerly, attracting approving looks from the nearby gang members. Blushing, you manage to force yourself to stand upright again, although it actually takes a surprising amount of effort to make yourself do so, the encounter reinforcing your hyena-like tendencies.";
 		hyenaify;
-		decrease humanity of Player by 10;
+		SanLoss 10;
 	else:
 		say "     [one of]The gang members stare at you for a minute before going back to what they were doing.[or]'You sure you're hyena enough for this place?'[or]'Welcome to the den, newbie,' one of the gang members calls out.[or]'This is the best gang I've ever been in.'[or]One of the hyenas nods and smiles at you, obviously eyeing your attributes lewdly.[or]'Personally I think becoming a hyena is the best thing that ever happened to me,' one of the gang members says, while several other nearby ones nod in agreement.[or]'What do you think is eventually going to happen to the city?'[or]You come across a spirited conversation on whether or not the military is going to come to the rescue, or is actually behind the infection somehow. After listening for a while, you eventually move on.[or]Several hyenas are talking about seeing some sheep wandering around and wondering if they can be domesticated, or at least dominated into usefulness.[or]Several of the gang members are talking about their lives before the gang. To your surprise, you find that the gang has a lawyer, several cops, and an engineer among its many other recruits.[or]'Have you seen those moving giant trees out there? Creepy, that's all I have to say about it.'[or]Seeing several of the hyena scouts in deep conversation, you go over to listen. Noticing your interest, however, they all stop the discussion and stare at you until you leave, wondering what was so important.[at random]";
 
@@ -280,8 +280,8 @@ to say hyenamat_victorytf:
 	now cock of Player is cock entry;
 	attributeinfect;
 	now Cock Length entry is 15; [ Length infection will make cock grow to if cocks]
-	now Ball Size entry is 8; [ Size of balls apparently ;) sneaky Nuku]
-	now Nipple Count entry is 2; [ Number of Breasts infection will give you. ]
+	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 5; [Size of breasts infection will try to attain ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Length entry is 15;

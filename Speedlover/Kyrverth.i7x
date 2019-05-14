@@ -191,7 +191,7 @@ to say KyrverthTalk: [Quest turnin check]
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap, apparently worn out by his growth. You pick up your things and quietly leave, treading carefully so you don't wake him up.";
 			LineBreak;
-			say "     [bold type]You gain 5 food![roman type][line break]";
+			say "[bold type]You gain 5 food![roman type][line break]";
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
@@ -207,7 +207,7 @@ to say KyrverthTalk: [Quest turnin check]
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]procure[at random] it.'";
 		WaitLineBreak;
-		say "     [bold type]You gain 10 food![roman type][Line Break]";
+		say "[bold type]You gain 10 food![roman type][Line Break]";
 		increase carried of food by 10;
 		if carried of dragon scale >= 3:
 			decrease carried of dragon scale by 3;
@@ -1059,10 +1059,10 @@ to say goldensculptureuse:
 				say "     You bring it down to your waist and on a random whim you start pushing [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] of your [one of]cocks[or]dicks[at random] in, and to your surprise they [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] fit inside without issues. Quickly reaching your hilt, it fits like a glove.";
 			else if Cock Length of Player >= 17: [too big and multicock]
 				say "     It doesn't look the right size, but you figure you might as well give it a go. Slowly pushing your [one of]cock[or]penis[or]dick[at random] inside, you push down and as inch after inch enters, you expect to reach the limit but to your surprise your entire cock fits in! Is the inside like a black hole? You pull it off but your cock is intact. You place [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] in the entrance and slide it back on, once again you hilt within it even though it is smaller than your [one of]cock[or]dick[at random].";
-		if ball size of Player >= 9: [balls too big]
+		if Ball Size of Player >= 4: [balls too big]
 			say "     Next you try to fit your balls into the balls of the dildo, [if Cock Length of Player >= 16] just like earlier[end if] your balls are too big to fit, but you give it a go anyway. Placing one ball inside then the other, the [one of]cock[or]dildo[at random] doesn't seem to care about your size, they fit in and the outside gives no indication that it shouldn't fit.";
-		else if ball size of Player <= 8: [right size or smaller than required]
-			say "     Next you place your balls inside the balls of the dildo, one at a time it takes them comfortably[if ball size of Player <= 6] and even though your balls are nowhere near the size of the dildo, you don't feel any empty space[end if].";
+		else if Ball Size of Player <= 3: [right size or smaller than required]
+			say "     Next you place your balls inside the balls of the dildo, one at a time it takes them comfortably[if Ball Size of Player <= 2] and even though your balls are nowhere near the size of the dildo, you don't feel any empty space[end if].";
 		[BACK TO NORMAL USE]
 		LineBreak;
 		say "     All in, you [one of]pull[or]tug[or]slide[at random] it back and flush against your[one of] body[or] groin[or]self[at random] and find a nearby reflective surface to look at. Against your [bodytype of Player] body it [one of]glints[or]shines[at random] to make itself the one standout feature that draws your eye. The exotic cock looks (in your opinion) [one of]amazing[or]great[or]awesome[at random]. You run your hand down it and are [one of]amazed[or]astounded[or]astonished[or]staggered[at random] when it feels exactly like your own [one of]cock[or]dick[at random][if Cock Length of Player <= 14] - even in the areas where it is longer than your own! [else]. [end if]It's weird how it can do that, but it feels so good...";

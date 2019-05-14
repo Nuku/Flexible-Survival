@@ -360,13 +360,13 @@ CreatureSexAftermathAction is an action applying to nothing.
 
 carry out CreatureSexAftermathAction:
 	say "Testing: Alpha Husky fucks player:";
-	CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
+	CreatureSexAftermath "Player" receives "AssFuck" from "Husky Alpha";
 	say "Testing: Player fucks Alpha Husky:";
-	CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
+	CreatureSexAftermath "Husky Alpha" receives "AssFuck" from "Player";
 	say "Testing: Chris fucks Alpha Husky:";
-	CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Chris";
+	CreatureSexAftermath "Husky Alpha" receives "AssFuck" from "Chris";
 	say "Testing: Alpha Husky fucks Chris:";
-	CreatureSexAftermath "Chris" receives "AssFuck" from "Alpha Husky";
+	CreatureSexAftermath "Chris" receives "AssFuck" from "Husky Alpha";
 	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
 
 to CreatureSexAftermath (TakingCharName - a text) receives (SexAct - a text) from (GivingCharName - a text):

@@ -223,7 +223,7 @@ to say vetsup_fshots:
 		decrease HP of Player by 20;
 	else:
 		say "     You can feel the female hormones rushing through your body, and they surprisingly feel amazing as they rush through your body, your body surges with the primal need to breed and formerly neglected maternal instincts are enhanced and strengthened. You feel downright slutty as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a male anymore!";
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		add "Female Preferred" to feats of Player;
 
 to say vetsup_mshots:
@@ -242,7 +242,7 @@ to say vetsup_mshots:
 		decrease HP of Player by 20;
 	else:
 		say "     You can feel the male hormones rushing through your body, and they surprisingly feel damn good as your more aggressive male tendencies are enhanced and strengthened. You feel downright predatory as the chemicals react with and alter your body, and you feel very sure that you won't have to worry about becoming a female anymore!";
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		add "Male Preferred" to feats of Player;
 
 to say vetsup_hshots:
@@ -262,7 +262,7 @@ to say vetsup_hshots:
 		decrease humanity of Player by 40;
 	else:
 		say "     You can feel the medley of hormones rushing through your body, and they surprisingly feel damn good as your lustful tendencies are enhanced and strengthened. You feel both eager to breed and be bred as the chemicals react with and alter your body. These changes shift you towards a dual-biased direction. You feel very sure that you will be able to maintain a state of both male and female at once!";
-		decrease humanity of Player by 20;
+		SanLoss 20;
 		add "Herm Preferred" to feats of Player;
 
 
@@ -317,7 +317,7 @@ when play begins:
 Instead of Resolving a Security Station:
 	say "     Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop. Moving into the small security area, you note that it smells like bestial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can't stay in here for long without becoming even more aroused than usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over. Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you... Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
 	now Libido of Player is 100;
-	decrease humanity of Player by 10;
+	SanLoss 10;
 	now Security Station is resolved;
 
 

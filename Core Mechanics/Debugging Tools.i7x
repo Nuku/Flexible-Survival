@@ -6,19 +6,6 @@ Version 2 of Debugging Tools by Core Mechanics begins here.
 [ Activating the debug mode show the NPC's variables in their description and show when a walk-in event fires]
 [ Either turn it on and off here by setting the variable, or use the "npcdebug" command in the game ]
 
-
-ActivateNewInfections is an action applying to nothing.
-understand "activate new infections" as ActivateNewInfections.
-
-carry out ActivateNewInfections:
-	if NewTypeInfectionActive is false:
-		now NewTypeInfectionActive is true;
-		say "New Infections are ACTIVE";
-	else:
-		now NewTypeInfectionActive is false;
-		say "New Infections are INACTIVE";
-
-
 [ debugactive 0 = Debug off]
 [ debugactive 1 = Debug on]
 
@@ -388,9 +375,9 @@ to DescriptionDisplay:
 	follow the cock descr rule;
 	if Player is male:
 		if Cock Count of Player > 1:
-			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 		else:
-			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Player is female:

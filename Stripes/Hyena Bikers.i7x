@@ -294,7 +294,7 @@ to say beatenbyhb:
 	say "     That pair done with you, you are pushed roughly into the hands of others. You are bent over one of their bikes and another pair take you again. Other stroke their cocks and cum all over your face. You lick up as much of it as you can get, much to their amusement.";
 	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.' With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]"; [another chance for impregnation]
 	infect "Herm Hyena"; [second dose of infection]
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	increase Libido of Player by 12;
 	if Libido of Player > 100:
 		now Libido of Player is 100;
@@ -374,7 +374,7 @@ to say bikersubsex:
 	say "     Eventually, the orgy winds down, everyone feeling quite sated and you quite full of hyena cum in every available hole. The hyenas mount up once again and ride off, leaving you to your own devices, but longing to be used again.[impregchance]";
 	infect "Herm Hyena";
 	infect "Herm Hyena";
-	decrease humanity of Player by 6;
+	SanLoss 6;
 	increase Libido of Player by 12;
 	if Libido of Player > 100:
 		now Libido of Player is 100;
@@ -401,7 +401,7 @@ to say bikerbitchsex:
 		say "     Eventually, the orgy winds down, everyone feeling quite sated and your ass full to overflowing with hyena cum. The hyena leader steps up to you and drags you over to his bike. He tosses you onto it like another prize and mounts it. You ride back to the hideout on his motorcycle, with him playing with your well-used asshole from time to time. The ride over, he tosses you off and tells you to be a good bitch and come back for more later.";
 	infect "Herm Hyena";
 	infect "Herm Hyena";
-	decrease humanity of Player by 8;
+	SanLoss 8;
 	increase Libido of Player by 15;
 	if Libido of Player > 100:
 		now Libido of Player is 100;

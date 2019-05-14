@@ -39,15 +39,15 @@ the usedesc of breeder serum is "[breeder serum use]".
 
 to say breeder serum use:
 	if debugactive is 1:
-		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player]; ball size of Player: [ball size of Player][line break]";
+		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	if Player is male:
 		say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight bitter taste to it, but you forget that as it quickly gets to work. Soon, you're feeling hot and aroused, your libido climbing rapidly. ";
-		increase ball size of Player by a random number from 1 to 3;
+		increase Ball Size of Player by 1;
 		Follow the cock descr rule;
-		say "You groan as your testicles increase in size, leaving you with [short ball size] balls.";
+		say "You groan as your testicles increase in size, leaving you with [Ball Size Adjective of Player] balls.";
 		LibidoBoost 10;
 		if debugactive is 1:
-			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; ball size of Player: [ball size of Player][line break]";
+			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	else:
 		say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight bitter taste to it, and unfortunately, things start to get much worse. You end up almost falling to your knees due to agonizing pain radiating out from your stomach. It almost feels like your[if Player is female] ovaries are imploding[else] insides are imploding[end if]! Eventually, the sensations begin to ease a bit, and after catching your breath you are able to continue on.";
 		LibidoLoss 20;
@@ -118,22 +118,22 @@ the usedesc of trap serum is "[trap serum use]".
 
 to say trap serum use:
 	if debugactive is 1:
-		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player]; ball size of Player: [ball size of Player][line break]";
+		say "DEBUG -> Pre-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	say "     You pop open the lid of the energy style drink and begin to chug it. There's a slight sweet taste to it, but you forget that as it quickly gets to work. Soon, you're feeling hot and aroused, your libido climbing rapidly. ";
 	if Player is male:
-		if ball size of Player > 2:
-			decrease ball size of Player by 2;
+		if Ball Size of Player > 2:
+			decrease Ball Size of Player by 2;
 			Follow the cock descr rule;
-			say "You groan as your testicles decrease in size, leaving you with [short ball size] balls.";
-		else if ball size of Player is 2:
-			decrease ball size of Player by 1;
+			say "You groan as your testicles decrease in size, leaving you with [Ball Size Adjective of Player] balls.";
+		else if Ball Size of Player is 2:
+			decrease Ball Size of Player by 1;
 			Follow the cock descr rule;
-			say "You groan as your testicles decrease in size, leaving you with [short ball size] balls.";
+			say "You groan as your testicles decrease in size, leaving you with [Ball Size Adjective of Player] balls.";
 		else:
 			say "Weirdly enough, nothing else seems to happen. Apparently, the drink can't make your balls any smaller.";
 		LibidoBoost 10;
 		if debugactive is 1:
-			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; ball size of Player: [ball size of Player][line break]";
+			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Ball Size of Player: [Ball Size of Player][line break]";
 	else:
 		say "     At first, you don't feel any different, that is until you start to cramp up. The shooting pain in your abdomen is almost crippling, but thankfully, after a few moments, it passes.";
 		LibidoLoss 20;

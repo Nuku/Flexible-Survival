@@ -88,7 +88,7 @@ carry out bargainhunting:
 					say "     Sorting through the strange bin, you feel a small static shock from one of the items buried in it. Curiosity makes you grasp whatever that was and pull it out. You find yourself holding a [bold type]metal pendant of some kind[roman type], an unusual occult design stamped on one side, while on the other is the image of some undetermined beast. While the amulet is actually kind of eerie, you did just buy it so you slip it over your head as you look around the shop, somehow seeming almost instantly in tune with your inner instincts.";
 					LineBreak;
 					say "[bold type]Your sanity has decreased by 25![roman type][line break]";
-					decrease humanity of Player by 25;
+					SanLoss 25;
 				else:
 					say "     Rummaging around in the strange bin, you find your hands rustling up against several small folded pieces of paper. Curious you pull the sheaf of paper out and unfold it so you can get a better look at what is written on it. Much to your surprise, you see the papers are filled with [bold type]detailed stories and images of beasts and humans copulating[roman type] in all sorts of strange and twisted manners. As you slowly look through the papers, you find yourself growing increasingly more and more aroused by the strange scenes you find depicted there, wondering just how it would feel to take part in some of those actions. Hearing movement behind you, you quickly fold the papers up and stick them in your pack with a blush as you notice Nermine leaning over curiously to see what you are staring at so intently. Perhaps you should study your purchase later and in private. Strange, before now, you never realized just how kinky you really are...";
 					LineBreak;

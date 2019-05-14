@@ -32,7 +32,7 @@ Instead of Resolving a Reaching the College:
 	else:
 		say "You don't react in time and the football strikes you rather hard in the head, then bounces off. 'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering. As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball. Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play. By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
 		decrease score by 10;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		now HP of Player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again.";
 		now Resolution of Reaching the College is 3; [Did not catch ball]

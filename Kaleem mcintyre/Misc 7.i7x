@@ -25,7 +25,7 @@ Instead of Resolving a Horse Sense:
 		infect "Black Equinoid";
 		infect "Black Equinoid";
 		now Resolution of Horse Sense is 2; [got infected]
-		decrease humanity of Player by 10;
+		SanLoss 10;
 	increase score by 1;
 	now Horse Sense is resolved;
 
@@ -111,9 +111,9 @@ when play begins:
 Instead of Resolving a Portrait:
 	say "     Making your way through the somewhat desolate streets of the infected city you find yourself stopping dead in your tracks as you notice someone with latex fox ears waving up on their head sitting in front of a large canvas and painting something or the other with their back turned towards you. Feeling particularly nosy at the moment you make you ease on over to the other to see what's going on here. When you do you find your eyes widening in surprise when you see the other person, who happens to be a foxy - in the literal sense of the word - female with a humam-like face wearing thin rimmed glasses, quickly swiping her brush over and along her slowly darkening canvas in an attempt to paint the city around her. From what you can see, despite the ruination that metropolis is in right now, the foxwoman is recreating a beautiful scene in front of her that speaks nothing of the debauchery and depravity that the city has fallen into.";
 	say "     Not seeing a reason to disturb the other you back away from the woman to leave her to her work, only to curse quietly when you spot several mutants coming your way. Looking to the woman and seeing that she's too focused to notice the oncoming danger, you grunt quietly and prepare to fight off the coming group of mutants.";
-	challenge "Alpha Husky";
+	challenge "Husky Alpha";
 	challenge "Alpha Wolf";
-	challenge "Shemale Smooth Collie";
+	challenge "Smooth Collie Shemale";
 	LineBreak;
 	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry.";
 	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [facename of Player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";

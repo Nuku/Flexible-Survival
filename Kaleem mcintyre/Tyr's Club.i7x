@@ -1,6 +1,8 @@
 Version 2 of Tyr's Club by Kaleem mcintyre begins here.
 [ Version 2 - Upgrade to link menu system ]
 
+[ Stamina of Tyr - times he's fucked the player and possibly infected them     ]
+
 Section 1 - Tyr's Club
 
 Table of GameRoomIDs (continued)
@@ -31,6 +33,29 @@ object	name
 Tyr	"Tyr"
 
 Tyr is a man.
+ScaleValue of Tyr is 3. [human sized]
+Cock Count of Tyr is 1.
+Cock Length of Tyr is 12.
+Ball Size of Tyr is 4.
+Ball Count of Tyr is 2.
+Cunt Count of Tyr is 0.
+Cunt Length of Tyr is 0.
+Cunt Tightness of Tyr is 0.
+Nipple Count of Tyr is 2.
+Breast Size of Tyr is 0.
+TwistedCapacity of Tyr is false.
+Sterile of Tyr is false.
+PlayerMet of Tyr is false.
+PlayerRomanced of Tyr is false.
+PlayerFriended of Tyr is false.
+PlayerControlled of Tyr is false.
+PlayerFucked of Tyr is false.
+OralVirgin of Tyr is false.
+Virgin of Tyr is true.
+AnalVirgin of Tyr is false.
+PenileVirgin of Tyr is false.
+SexuallyExperienced of Tyr is true.
+MainInfection of Tyr is "Doberman Male".
 The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 The conversation of Tyr is { "Battle is the Key to Success!" }.
 Tyr is in Tyr's Club.
@@ -61,7 +86,7 @@ Instead of conversing the Tyr:
 Part 2 - Sex Match with Tyr
 
 Instead of fucking the Tyr:
-	setmonster "Doberman";
+	setmonster "Doberman Bitch";
 	choose row MonsterID from the Table of Random Critters;
 	If lastfuck of Tyr - turns < 6:
 		say "     'Sorry, I'm not ready to go another round with you yet. Maybe come back in a little while?' Tyr rolls his shoulders and you can hear his spine pop slightly.";
@@ -108,8 +133,9 @@ Instead of fucking the Tyr:
 			else:
 				say "[TyrWon_NoSex]";
 	now non-infectious entry is false;
-	infect "Doberman";
-	infect "Doberman";
+	infect "Doberman Bitch";
+	infect "Doberman Bitch";
+	increase Stamina of Tyr by 1;
 	now non-infectious entry is true;
 	now lastfuck of Tyr is turns;
 
@@ -567,7 +593,7 @@ to say ArenaFightCheck:
 		now sortorder entry is 2;
 		now description entry is "dominant wolf";
 		choose a blank row in table of fucking options;
-		now title entry is "Alpha Husky";
+		now title entry is "Husky Alpha";
 		now sortorder entry is 5;
 		now description entry is "dominant canine";
 	if guy is not banned:
@@ -613,9 +639,9 @@ to say ArenaFightCheck:
 				else if nam is "Great Dane":
 					say "The unfamiliar Dane mutant growls at you while popping her neck from side to side. When she lifts up her lips to show you an impressive display of canines, you gulp as you wonder what the hell have you gotten yourself into.";
 					challenge "Great Dane";
-				else if nam is "Alpha Husky":
+				else if nam is "Husky Alpha":
 					say "The alpha husky growls playfully as he looks over you with expectant eyes. He seems to think you're going to outright submit to him... but he's about to be proven wrong.";
-					challenge "Alpha Husky";
+					challenge "Husky Alpha";
 				else if nam is "Wildcat":
 					say "The wildcat seems to be living up to its name as the feline jumps around inside of the cage arena before coming to a land onto her twin feet right in front of you. Seems she really wants to fight by the feral smirk lining across her face.";
 					challenge "Wildcat";

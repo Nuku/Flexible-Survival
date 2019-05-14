@@ -133,7 +133,7 @@ Instead of conversing the Leonard:
 		rest;
 		now feline_meow is feline_meow / 2;
 		now Libido of Player is ( Libido of Player + Libido of Player + 30 ) / 3;
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		follow the turnpass rule;
 	else if HP of Leonard is 6 and ( Leonardtimer - turns ) < 16:
 		if a random chance of 3 in 5 succeeds:
@@ -165,7 +165,7 @@ Instead of conversing the Leonard:
 		rest;
 		now feline_meow is feline_meow / 2;
 		now Libido of Player is ( Libido of Player + Libido of Player + 60 ) / 3;
-		decrease humanity of Player by 25;
+		SanLoss 25;
 		if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
 		if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 		now HP of Leonard is 9;
@@ -234,7 +234,7 @@ to say sexwithLeonard:
 		say "[Leonardsex_newkitty]";
 		now feline_status is 2;
 		rest;
-		decrease humanity of Player by 8;
+		SanLoss 8;
 		follow the turnpass rule;
 		if HP of Leonard is 7:
 			increase Libido of Leonard by 1;
@@ -247,7 +247,7 @@ to say sexwithLeonard:
 		rest;
 		now feline_meow is feline_meow / 2;
 		decrease Libido of Player by Libido of Player / 3;
-		decrease humanity of Player by 8;
+		SanLoss 8;
 		follow the turnpass rule;
 	else if bodyname of Player is "Feline" and player is pure and ( HP of Leonard is 3 or ( HP of Leonard > 3 and a random chance of 1 in 2 succeeds ) ):
 		now lastfuck of Leonard is turns;
@@ -257,7 +257,7 @@ to say sexwithLeonard:
 		rest;
 		now feline_meow is feline_meow / 2;
 		decrease Libido of Player by Libido of Player / 4;
-		decrease humanity of Player by 8;
+		SanLoss 8;
 		follow the turnpass rule;
 	else:
 		now lastfuck of Leonard is turns;
@@ -485,7 +485,7 @@ to say Leonardmate_newkitty:
 		if Libido of Player > 100, now Libido of Player is 100;
 	rest;
 	now feline_status is 2;
-	decrease humanity of Player by 5;
+	SanLoss 5;
 	follow the turnpass rule;
 
 
@@ -496,13 +496,13 @@ to say Leonardmatesex_lc:		[Leonard's choice]
 		say "     Your aroused and needy body grips and squeezes at his cock as he mates you, longing for your mate to claim your [if gestation of child is 0 and larvaegg is not 2]womb[else]body[end if] once again with his seed[if Nipple Count of Player > 0 and Breast Size of Player > 0]. His paw rubs at your chest, stroking your breasts and teasing your nipples[else]. His paw rubs at your chest and teases your nipples[end if]. The lion's steady thrusts as he pounds his throbbing rod into you make you more and more excited and you push back into his powerful thrusts. You reach back and grab his hefty balls, which have been slapping warmly against your [if Player is male]own[else]thighs[end if] and fondle them, longing to feel their thick, creamy product within you and knowing that time's coming soon.";
 		say "     His pace accelerates and his breathing grows heavier as his arousal builds. As he pumps into your squeezing, quivering pussy, your hot juices run down your thighs, your arousal climbing. Leonard takes your nape in his muzzle and holds it gently while driving into you hard and fast, his shaft throbbing inside you with every heavy thud of his heart. After a few of these pounding thrusts, you feel his hot seed blasting into you in thick spurts that are wonderfully fulfilling. His ample load fills you with warmth and satisfaction, getting you to cum powerfully as well with a feline yowl of ecstasy as his virile semen splashes against your cervix and flows into your womb[if gestation of child is 0 and larvaegg is not 2] in an attempt to breed you[end if]. By the time his large balls are drained, you've got a pleasant, warm, full feeling in your belly that leaves you purring happily.[impregchance]";
 		say "     Remaining sheathed inside you, he rolls onto his side with you in his arms, spooning with you even as his cock gives its last twitches. 'Mmm... my beautiful, strong mate. We were meant to be together like this,' he rumbles, running his paw over your well-seeded tummy. 'You should stay so I might breed you with litter after litter of cubs.' You snuggle yourself back against him and you long to agree, but tell him that you feel there's more you must do out in the city as well for now. He nuzzles you and licks your ear, letting you know he hopes the day will come soon when you're done with the city and can be his alone. You drift off to rest for a bit with his half-hard cock still buried inside you, purring happily together.";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 	else:
 		say "     As you give Leonard a sexy look and start to stride over to him, he rumbles lustfully and wraps his arms around you. He pulls you in close and kisses you passionately, his paws running over your body. 'Mmm... come, my lovely mate,' he rumbles as he kneads your bottom and runs his tongue along your neck. 'I wish to show the passion of my love to you.' You rumble softly in response, any sexy plans of your own thrown out as your body responds to the lion's advances. Smiling up at him, you accompany him to the bed where, after divesting you both of your clothing and gear, he lays you back across the sheets and moves atop you.";
 		say "     Eager to have the handsome lion mate you, you mrowl softly and wrap your arms around him. Rumbling at your eagerness to mate, he nuzzles across your chest, licking your nipples in passing and soon has his cock pressing against your thigh. He strokes it across your wet, sensitive folds slowly before lining it up for entry and kissing him passionately. As you kiss, he pushes his hips forward and thrusts into you.";
 		say "     You mrowl and purr beneath your leonine lover as he thrusts into you steadily, taking a slower approach than his usual animal mating. With your arms around him, you stroke his softly-furred back and rear, giving those strong muscles the occasional squeeze as tremors of delight run through you. [if Nipple Count of Player > 0 and Breast Size of Player > 0]. He slides a paw across your breasts, caressing them before teasing your nipples. He licks his lips as dribbles of milk leak from them and leans forward to wrap his lips around your nipple, nursing some of your feline milk from it. 'Mmm... delicious. It will feed our cubs well,' he purrs before kissing you, sliding his tongue into your mouth. You can taste traces of your milk on his tongue as you kiss[else]. He moves a paw to rub over your flat chest and tweaks your nipples. He leans down and licks slowly across one of them with his raspy tongue before nuzzling back up to kiss you again[end if]. As you kiss, you slide a hand around to fondle the lion's hefty ballsack, enjoying the thought of soon obtaining their contents within your womb[if gestation of child is 0 and larvaegg is not 2] to breed you[end if].";
 		say "     As Leonard licks and nips along your neck and shoulders, his panting grows heavier and his thrusts harder as his excitement builds. You grip his muscled shoulders with your hands and squeeze them with every thrust he makes into you, digging your claws in as you yowl in ecstasy. With the pain of your claws and the pleasure of your cunt spasming around his shaft, he roars loudly and drives himself hard into you, blasting his hot seed into your womb as he seeks to breed you. After several firm thrusts and their accompanying blasts of lion cum, his balls are drained and your womb is full of his thick seed, leaving you with a pleasant bump from his considerable output[if gestation of child is 0 and larvaegg is not 2] which you hope will soon grow even larger[end if]. He eases himself from you slowly and snuggles up beside you, purring happily as his fingers run over your body, working steadily to bring you to another climax as fingers pump into your cream-filled pussy and teeth nibble your [if Breast Size of Player > 0]milky [end if]nipple. Once he's sure that you're quite satisfied, he snuggles you in his arms and purrs softly to you about how the pride treasures you and how much he and all the pride long for you to stay so you might enjoy such pleasures always. Even as you drift off, the desire to stay is very tempting.[impregchance]";
-		decrease humanity of Player by 8;
+		SanLoss 8;
 	infect "Feline";
 	rest;
 	now feline_meow is feline_meow / 2;
@@ -607,7 +607,7 @@ to say Leonardmaidsex2:
 	rest;
 	now feline_meow is feline_meow / 2;
 	decrease Libido of Player by Libido of Player / 4;
-	decrease humanity of Player by 8;
+	SanLoss 8;
 	follow the turnpass rule;
 
 
@@ -853,7 +853,7 @@ Instead of resolving Hunting Prides:
 		if "Male Preferred" is listed in feats of Player:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
-			if ball size of Player < 3, now ball size of Player is 3;
+			if Ball Size of Player < 3, now Ball Size of Player is 3;
 			now Cunt Count of Player is 0;
 			now Cunt Length of Player is 0;
 			now Cunt Tightness of Player is 0;
@@ -873,7 +873,7 @@ Instead of resolving Hunting Prides:
 			if Breast Size of Player < 3, now Breast Size of Player is 3;
 			now Cock Count of Player is 0;
 			now Cock Length of Player is 0;
-			now ball size of Player is 0;
+			now Ball Size of Player is 0;
 		if Libido of Player < 30, now Libido of Player is 30;
 		wait for any key;
 		end the story saying "Having been defeated by the hunting pride of feline girls, you are made to join their pride.";
@@ -914,7 +914,7 @@ to say Leonardrivalfight:
 		say "     Passing the well-seeded girl back to the other three felines, you join Leonard in taking the fallen and transforming lions (now well on their way to becoming lioness girls) into the tunnel cave to finish claiming them on the plush bed. As you stretch yourself out on the soft bed, you take the opportunity to look over your altered feline body. While not as tall as your handsome mate, you are of normal height and have a more mature and womanly build than the girly felines. You are a lovely lioness with wide hips, a sexy bottom and luscious rack for the hungry girls of the pride. And your mate certainly seems to appreciate your new form as well, moving to mount you as he kisses you. He rumbles happily, telling you what a lovely woman you've become and what a wonderful mate you are. He's very proud of you - strong, beautiful and willing to help protect and grow the pride like a proper lioness mate should. As you listen to his fine words and feel his delightful paws roam all over your new body, you could not agree more, feeling that your place is with him here as his mate. And when he talks of breeding you full of more girls, that prospect delights you even more.";
 		say "     After getting filled by his hot semen, you pull the three girls into your arms, pressing two to nurse milk from your breasts while pressing the muzzle of the last between your legs. As the dark-haired one laps Leonard's cum as it leaks from your pussy, your handsome mate mounts her, working to give her another fresh load in her needy pussy. As you and your mate play with the girls, you both purr to them about what good, submissive girls they are and how they belong in your pride. With a playful grin to Leonard, you add that the handsome lion could make a special place for them as his houseservants to tend to his needs and keep his exquisite home clean, but only if they're obedient enough to want such a special duty. Soon enough, they're all mewling and begging to be maids and servants to their refined master, eager to do have some special way to please him, begging him to fuck them all again to prove it.";
 		say "     You and Leonard have a delightful time making increasingly subservient kitties out of the once strong and virile males. This orgy and training session doesn't end until you and they have all been filled until bloated with the handsome lion's semen and he's fully spent in a way he hasn't been since the recital. The nine of you, your trio of girls and their new dark-haired member having joined you at some point later on, curl up to rest together on and beside the large bed in a warm bundle of feline happiness and briefly sated lust.[impregchance][impregchance]";
-		decrease humanity of Player by 25;
+		SanLoss 25;
 		[puts Feline as lead monster for infection and impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
@@ -942,15 +942,15 @@ to say Leonardrivalfight:
 		if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
-			if ball size of Player < 6, now ball size of Player is 6;
+			if Ball Size of Player < 6, now Ball Size of Player is 6;
 			now sex entry is "Both";
 			now Cock Count entry is 1;
 			now Cock Length entry is 9;
-			now Ball Size entry is 6;
+			now Ball Size entry is 3;
 		else:
 			now Cock Count of Player is 0;
 			now Cock Length of Player is 0;
-			now ball size of Player is 0;
+			now Ball Size of Player is 0;
 		if Libido of Player < 30, now Libido of Player is 30;
 		WaitLineBreak;
 		if humanity of Player < 10:
@@ -995,7 +995,7 @@ to say Leonardrivalfight:
 		if "Male Preferred" is listed in feats of Player:
 			now Cock Count of Player is 1;
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
-			if ball size of Player < 3, now ball size of Player is 3;
+			if Ball Size of Player < 3, now Ball Size of Player is 3;
 			now Cunt Count of Player is 0;
 			now Cunt Length of Player is 0;
 			now Cunt Tightness of Player is 0;
@@ -1015,7 +1015,7 @@ to say Leonardrivalfight:
 			if Breast Size of Player < 3, now Breast Size of Player is 3;
 			now Cock Count of Player is 0;
 			now Cock Length of Player is 0;
-			now ball size of Player is 0;
+			now Ball Size of Player is 0;
 		if Libido of Player < 30, now Libido of Player is 30;
 		WaitLineBreak;
 		end the story saying "Having been defeated and captured by the alpha lion and his dark-haired lioness, you are made to join his pride.";

@@ -19,11 +19,11 @@ ubpreg is a text that varies. ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
 
 HardVoreExclusion is a marker. [list of infections to not be hard vored - similar to above list, but also includes non-flesh monsters]
 when play begins:
-	add { "Shemale Smooth Collie", "Raccoon", "Doberman", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
 Section 1 - Event
 
@@ -72,9 +72,9 @@ Instead of resolving a Inner Predator:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
 			decrease hunger of Player by a random number between 20 and 28;
 			if hunger of Player < 0, now hunger of Player is 0;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			now researchbypass is 1;
-			infect "Female Husky";
+			infect "Husky Bitch";
 			now researchbypass is 0;
 			increase score by 20;
 		else:
@@ -97,7 +97,7 @@ Instead of resolving a Inner Predator:
 				say "     [special-style-1]NOTE:[roman type] [bold type]Automatic Survival detected:[roman type] Your hunger will not increase and you'll instead be given a base chance of 25% for vore before other factors.";
 			decrease hunger of Player by a random number between 20 and 28;
 			if hunger of Player < 0, now hunger of Player is 0;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			now researchbypass is 1;
 			infect "Latex Fox";
 			now researchbypass is 0;
@@ -177,9 +177,9 @@ to say vorebyplayer00:	[master list to decide scenes]
 		say "[hvorebyplayer00]"; [one-time check for hard vore]
 	else if Name entry is "Bald Eagle" and a random chance of 3 in 5 succeeds:
 		say "[vbp_baldeagle]";
-	else if Name entry is "Hawkman" and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Hawkman Male" and a random chance of 3 in 5 succeeds:
 		say "[vbp_hawkman]";
-	else if Name entry is "Blue Gryphon" and player is not neuter and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Blue Gryphon Herm" and player is not neuter and a random chance of 3 in 5 succeeds:
 		say "[vbp_hermgryph]";
 	else if vorecount > 4 and Name entry is "Leopardman" and a random chance of 3 in 5 succeeds:
 		say "[vbp_leopardman]";

@@ -24,7 +24,7 @@ to say LoseToBehemoth:
 		if a random chance of 1 in 2 succeeds:
 			say "     Falling as you are you can only scream as you watch the Behemoth below you flip itself onto its backside and then spread its legs wide in preparation of something. You are not ready to see it lift its massive balls out of the way to present to you a gaping and oozing black cunt, looking like some kind of bizarre Venus flytrap. The fleshy lips part slightly right as you are about to enter into them, and then quickly move to swallow you whole once your [facename of Player in lower case] head comes into contact with the feminine folds. Hot, wet, dark, and slightly uncomfortable you find yourself struggling on instinct as you realize that you are actually trapped into the cunt of the mutant you had fought and lost against. The situation only gets worse at that point as you are then treated to a very...unusual...happening when one of the Behemoth's paws force the lower part of your body further into itself.";
 			say "     When the paw-like hand is removed you aren't ready for the creature to rub at the outer edge of its pussy, forcing the tight nethers to seal perfectly around you when your feet slip into its bestial depths. Now fully trapped inside of the darkened snatch of the Behemoth you can barely even struggle as the warm dampness of the mutant's fleshy walls melds themselves into your skin, causing your form to change and your mind to shift respective gears alter as the creature's infectious honeyed fluids seep on down into the core of your being. Yelling for help doesn't do you much good as you can barely even get a word in around from the tight folds suffocating the air out from your lungs. However, rationality has little precedence over being asphyxiated and sadly when you try to do so you end up swallowing much of the Behemoth's juices in the process which consequently sends your head reeling as the infectious strain within the creature overwhelms your senses.";
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			if a random chance of 1 in 2 succeeds:
 				say "     You're not sure how much time passes as you slip in and out of consciousness after the overload your mind has gone through. However, you are roused from your somewhat restless haze when something hard and steady pushes at your body forcing you deeper into your living prison. Not sure what's going on you quickly come to put two and two together when the thing that had knocked itself into you smacks itself up against you once again, this time just a bit harder than before. Because of your current placement, the scent surrounding you, the fluttering folds gripping and massaging at your body like mad, you realize that the object hitting you can only be a cock. Thinking on the beast you've fought and lost against, you can take a guess that the maleness rubbing and grinding against your prone body must belong to another Behemoth.";
 				say "     Struggling as much as you can against the invasive phallus stroking itself across your body while soaking pre into your chest you find yourself trying to pull back as far as you can to get away from the unrelenting organ. However, being as you are, where you are, you only end up being jammed packed against the cock fucking the pussy housing you as your movements open the cervix of the Behemoth your inside more. This, consequently, give the second Behemoth more room and leverage to fuck the other with.";
@@ -33,12 +33,12 @@ to say LoseToBehemoth:
 				say "     The moment when everything comes to an end though comes when the Behemoth dominating the one imprisoning you hilts within the submissive beast and then freezes into place before roaring loud enough for you to hear it from inside of the cunt your stuffed up into. When a small flood of warm male nectar floods over you, you have to hold your breath to keep from drowning as you are literally washed in the mutant's cum. To make matters even more complicated you find the vaginal walls of Behemoth holding you flexing around your body and then contracting, hugging you almost impossibly tight. When another bellowing roar sounds off around you, you only have a minute to curse you luck before you find a deluge of feminine honey mixing in with the male seed pooled all around you.";
 				WaitLineBreak;
 				say "     If you weren't holding your breath you might have been slightly taken aback by the scent of both male and female musk cloying at your nose. You probably would have even passed out from the almost suffocating mix of sexual odors wafting around you, however, because you are trying to stop yourself from breathing you miss out on this little wonder of wonders. Yet you cannot miss out on the dominant Behemoth pulling itself out of your submissive captor, thereby opening a small passageway for you slip free through. Flowing out of your subjugator and onto hard earth you find yourself getting drenched in the twin juices of the two Behemoths as the cum from the dominant mutant and the fluids from the other rain down over you from where you are laid flat out across the earth. Neither mutant seems to notice you presence, both are currently nuzzling and purring at one another while their respective sexes drip their sexual liquids onto the ground, and because of this - just as soon as you regain your breath and see around the milky film covering your eyes - you shakily crawl your way out of the large cavern area you have been brought into and then out into the world.";
-				decrease humanity of Player by 10;
+				SanLoss 10;
 			else:
 				say "     Trapped inside of the hot folds of the Behemoth you don't know how long you are kept prisoner inside of the lustful mutant, however, what you do know is that the other has no problems using you for its pleasure as its nethers flutter around your [bodyname of Player in lower case] body while its cervix draws you deeper into itself. When two clawed [']fingers['] make their way inside of the heated cunt of the beast you don't try to fight as you are rolled around side to side and then pushed back and forth inside of the Behemoth as it incessantly rubs your form across its vaginal walls. Thick honeyed fluid leaks out over you, but you can do nothing to enjoy this as the beast maneuvers you harder and faster inside of itself as it works its hardest at trying to get off. The heavy scent of female musk makes you feel somewhat dizzy as your grow lightheaded from the smell, but again, there isn't much you can do about this situation.";
 				say "     Minutes of using your smaller form as a sex toy finally ends when the Behemoth's cunt squeezes vice tight around you signaling the beast's oncoming climax. The bellowing roar of the other sounds off the Behemoth's orgasm and soon you are a washed in the feminine juices of the mutant. The molten hot liquid feels as though it could almost scald, but not quite as the Behemoth cums and cums, leaking enough juice out of itself that you can actually swim in it. Forcing your way up the creature's pussy, once those annoying fingers remove themselves from the only opening leading out, you aren't ready for the Behemoth to suddenly turn itself over and then dump you out onto the ground when it stands itself up.";
 				say "     Getting discarded out onto the hard ground is not anything like what you would call pleasant, but it pales in comparison to the Behemoth spreading itself legs wide and then letting itself go right on top of your head with a savage grunt of pleasure. The sticky shower that covers you is just degrading enough for you to find erotic as you stick your tongue out while rolling around in the slime now covering your body. It doesn't take long for the Behemoth to finish its orgasm and once it is done it lumbers away from you off to someplace else, leaving you to deal with the mess it just made. Strangely enough you find yourself okay with this.";
-				decrease humanity of Player by 10;
+				SanLoss 10;
 		else:
 			say "     Batted into the air like a toy you are not ready for the Behemoth to flip itself over and then raise its four foot long cock directly up at you. When the split at the head of black monolith of flesh gapes open slightly you find yourself yelling out loud as your [facename of Player in lower case] face meets the fleshy hole of the Behemoth's dick. Half of you is instantly drawn into the mutant's cock and just when you think that the situation can't get anymore degrading you find yourself being proven wrong when a firm and unyielding set of fingers grabs you by the legs and then forcibly stuffs you into the Behemoth's urethra. With the pulsing tunnel constricting around your body and literally pulling you into the beast, you can do little to calm your racing mind as you find yourself being drawn deeper and deeper into the Behemoth's cock.";
 			say "     When the slimy constrictor holding you begins to move up and down you take a guess that the Behemoth is pumping at itself as the rocking motions going on around you pull you further into your new prison. Not helping any are the fingers that are stuffing you on down into the head of the creature's cock. When the digits working at your lower half pull back you have only a second or two to wonder why before you come to realize that you are now fully inside of the beast's cock. Pinned down as you are from all sides things only get worse for you as the slime of the Behemoth's precum well up around you, slicking your [bodyname of Player in lower case] body enough so that your transition into the mutant's long fleshy length become smoother as you slip deeper down into the tight tunnel. So much so that when your head presses up next to something firm and unforgiving, yet fleshy and smooth you find yourself not ready to be sucked into a whole other dimension of the Behemoth.";
@@ -50,12 +50,12 @@ to say LoseToBehemoth:
 				say "     As an upward series of movements begin, you're not sure what is happening until you are suddenly pulled from where you are, through the seminal track of the Behemoth, and then shot out of its cock into the other Behemoth. Going from one place to another is a somewhat surreal trip for you, but not as surreal as finding yourself stuck inside of the anus of another Behemoth. Hot, musky, and uncomfortably tight you find yourself trapped inside of the cum soaked depths of the other beast as the one who had been holding you continues to flood its companion with several long and creamy blasts of hot seed. Everything stops almost three minutes later, though by this time you are so unaware of what's happening that you feel as though you have been lost in a daze.";
 				say "     When the two beasts finish their mutual sexual tangent you end up spending another couple of minutes being painfully squeezed by the thoroughly used anal muscles of the submissive Behemoth as the creature shivers in delight from its sexual high. You can only guess that the other has cum as well. Once the moment is over though the new Behemoth you are trapped in relaxes its muscles allowing you to drip out of its used tailhole down onto the hard ground beneath the mutant's muscular body. Falling with a slight splatter you don't take mind to the cum flowing out of the beast raining over you as your thoughts are too far gone in twisted sexual bliss to notice anything happening around you.";
 				say "     The two Behemoths pay little mind to you either as the one who had just been fucking the other leans down to clean its seed out from the tailhole of its receptive partner. Your eyes faintly notice how the large and prehensile tongue of the dominant male licks the other clean, but you pass out before you can get a good look at what's happening above you. FYI - it takes your body almost an hour to regenerate itself back into full solidity after having gone through such an experience.";
-				decrease humanity of Player by 20;
+				SanLoss 20;
 			else:
 				say "     Inside of the darkened sphere of flesh you find yourself becoming somewhat stickier as the gooey cum of the Behemoth works to break you down against your will. Fearing that you may indeed become nothing more than mutant cum you struggle to try and get out of your prison by kicking and punching at the walls of the pitch ball orb. Your efforts only serves to make the Behemoth thrust its hips up into its paw-like hand as the sensations of you going crazy inside of its sensitive testicle sends the beast's mind into a lustful haze. Stroking and pumping at its cock with hard and fast strokes the Behemoth's balls clench up towards its body, thereby revealing itself feminine sex to the world, taking you with it by proxy. The heat and scent and feel of yourself becoming more and more like cum has your mind losing focus of its original goal and soon you are simply struggling just from the heat stifling your breath as the musky scent air cloys inside of your lungs making your head feel very light all of a sudden.";
 				say "     It takes another minute before things come to an end, but thankfully when it does the Behemoth roars and then pump its hands down onto its long length once more before driving its hips upwards into the air and then cumming hard. With you as somewhat viscous and slimy as you are now you easily slip up through the beast's seminal duct out of its urethra and then over the top of the Behemoth's head. Several sloping arches of cum follow after you and thankfully help to cushion your fall onto the ground as you end up slamming into the grass just hard enough that the wind is knocked out of your lungs. Thankfully enough these important organs, as well any of the other integral parts of your inner system that you would need later, have yet to jellify.";
 				say "     Having gone through such a massive ordeal you find yourself collapsing just as the Behemoth in front of you finishes with its orgasm. The beast takes only a few minutes to shiver and then purr in pleasure from the intense orgasm you just helped it out with, but once the beast has gotten control over itself again it pulls its paw-like hands away from its still spurting cock, rolls itself over onto its hands and feet and then gets up to go about its way as if nothing had happened. The Behemoth takes very little interest in you as it pads off about its business, and a good thing to because it takes an hour before your body can solidify itself back together again.";
-				decrease humanity of Player by 10;
+				SanLoss 10;
 
 to say BeatTheBehemoth:
 	if inasituation is true:
@@ -89,7 +89,7 @@ to say BeatTheBehemoth:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -126,7 +126,7 @@ When Play begins:
 	now area entry is "Plains"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now Cock Length entry is 18; [ Length infection will make cock grow to if cocks. ]
-	now Ball Size entry is 10; [ Cock width, more commonly used for ball size. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 0; [ Number of nipples the infection will give a player. ]
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -142,22 +142,23 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Length	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
 	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight]
-	now Body Definition entry is 5; [scale of 1-9 for body definition]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective: skinny/slender/lithe/average/fit/muscled/pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of male to female]
-	[Gender Adjective is generated out of androginity]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
 	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
@@ -204,37 +205,38 @@ When Play begins:
 	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...)]
 	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...)]
-	now Asshole Length entry is 7; [inches deep for anal fucking;]
-	[Asshole Length Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
 	now Asshole Tightness entry is 3;
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
-	now Cock Girth entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0;
-	now Ball Size entry is 0; [size of balls 1-5: "acorn-sized", "coin-sized", "egg-sized" "goose-egg sized", "ostrich-egg sized"]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
-	now Cunt Tightness entry is 0;
+	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [Size of Clit (1-5); very small/small/average/large/very large]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 [A sample structure for succumbing/surviving messages at the end of the game.]

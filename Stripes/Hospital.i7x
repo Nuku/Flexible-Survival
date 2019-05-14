@@ -837,7 +837,7 @@ to say hospquestpt9:
 		say "     ([link]N[as]n[end link]) - Take him as-is.";
 		if Player consents:
 			increase score by 10;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now coonstatus is 101;
 			LineBreak;
 			say "     With a nod to Dr Mouse, he injects the raccoon, who releases one last whimper before growing quiet. After a few moments, he looks up at you, eyes filled with adoration, but little intelligence. He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
@@ -1076,7 +1076,7 @@ to say hosploss:
 		now skinname of Player is "Tigress Hooker";
 	if cockname of Player is "Tiger Cop":
 		now cockname of Player is "Tigress Hooker";
-	decrease humanity of Player by 20;
+	SanLoss 20;
 	increase Libido of Player by 20;
 	decrease score by 50;
 	if Libido of Player > 100:
@@ -1348,7 +1348,7 @@ to say tlvictory:
 			now HP of Doctor Matt is 104; [Claimed Dr Matt as pet]
 			move Sally to bunker;
 			now lust of Sally is a random number between 0 and 4;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			increase score by 50;
 			say "     You grab battered dragoness and drag her out into the hall, wondering what you can do with her. A quick glance at the other labs shows their doors to be just as flimsy as the one she already broke through, so that's no good. You glance at the stairwell back to the main floor and that is when it hits you. There is that sealed basement beneath the lab. The heavy door should keep her contained for a while and the creature down below would certainly keep her occupied until you're done. Following through on this plan, you toss her down into the sealed basement and call out to draw the monster's attention to the dazed dragoness before fleeing upstairs and barring the door.";
 			waitlinebreak;
@@ -1547,7 +1547,7 @@ to say smellingthelavalamp:
 			increase Libido of Player by 10;
 			if Libido of Player > 100:
 				now Libido of Player is 100;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			infect "Triceratops";
 		else:
 			say "[line break]     Probably for the best that you don't do anything so foolish. You'd best be careful if you're starting to get ideas like that.";
@@ -1567,7 +1567,7 @@ instead of using lava lamp:
 			increase Libido of Player by 10;
 			if Libido of Player > 100:
 				now Libido of Player is 100;
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			infect "Triceratops";
 		else:
 			say "[line break]     Probably for the best that you don't do anything so foolish. You'd best be careful if you're starting to get ideas like that.";
@@ -1733,6 +1733,7 @@ to say hospquestpt12:
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Hospital";
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	setmonster "Mismatched Chimera";
 	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";
@@ -1756,7 +1757,7 @@ to say ec_activation:
 	choose row MonsterID from the Table of Random Critters;
 	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you. It's as if you can feel the excitement of the dormant infection inside you rushing into action. An aching warmth spreads across your body, making you tingle from head to food. Your head throbs and your vision goes blurry as the process goes on. You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time. It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
 	if the remainder after dividing ec_fullcount by 4 is 0 and player is male:
-		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if Cock Count of Player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if Cock Length of Player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if ball size of Player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if ball size of Player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
+		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if Cock Count of Player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if Cock Length of Player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if Ball Size of Player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if Ball Size of Player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
 	else if the remainder after dividing ec_fullcount by 4 is 2:
 		say "     Placing your hands on your head this time, you can feel it transform several times. It is difficult to monitor its transformation as your hands are also changing even as you try to use them. The first change has your head shift to that of a proud stag with a solid square jaw. The start of a pointed horn on your nose and the nubs of your new antlers grow in shortly afterwards. Even as they're growing, your muzzle shifts, adding some sharper teeth to your ruminant dentition. Touching your ears, you feel them first shift to those of a deer before later becoming more pointed at the tip, having adding a bit of wolf to them. You can feel increased fur at the back of your head and neck, soon filling out into a blend of flowing hair and a leonine mane.";
 	else if the remainder after dividing ec_fullcount by 4 is 3:
@@ -1779,10 +1780,10 @@ to say ec_activation:
 			increase Cock Length of Player by 3;
 			if Cock Length of Player > 16:
 				now Cock Length of Player is 16;
-		if ball size of Player < 10:
-			increase ball size of Player by 2;
-			if ball size of Player > 10:
-				now ball size of Player is 10;
+		if Ball Size of Player < 3:
+			increase Ball Size of Player by 1;
+			if Ball Size of Player > 3:
+				now Ball Size of Player is 3;
 	if Player is female:
 		if Cunt Length of Player < 16:
 			increase Cunt Length of Player by 3;

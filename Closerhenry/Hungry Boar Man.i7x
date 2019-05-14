@@ -67,7 +67,7 @@ ScaleValue of Philip is 3. [human sized]
 SleepRhythm of Philip is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cock Count of Philip is 1. [X cock]
 Cock Length of Philip is 10. [X Inches]
-Ball Size of Philip is 17.
+Ball Size of Philip is 4.
 Ball Count of Philip is 2. [X balls]
 Cunt Count of Philip is 0. [X pussy]
 Cunt Length of Philip is 0. [X Cunt]

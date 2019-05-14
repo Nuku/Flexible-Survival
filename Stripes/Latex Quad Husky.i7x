@@ -43,7 +43,7 @@ Instead of resolving a Shipping Container:
 				[puts Female Husky as lead monster for infection and impregnation]
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is "Female Husky":
+					if Name entry is "Husky Bitch":
 						now MonsterID is y;
 						break;
 				now Nipple Count entry is 6;
@@ -55,11 +55,11 @@ Instead of resolving a Shipping Container:
 				[puts Alpha Husky as lead monster for infection and impregnation]
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is "Alpha Husky":
+					if Name entry is "Husky Alpha":
 						now MonsterID is y;
 						break;
 				now Cock Length entry is 12;
-				now Ball Size entry is 8;
+				now Ball Size entry is 3;
 				now Nipple Count entry is 6;
 				now Breast Size entry is 3;
 				now Cunt Length entry is 12;
@@ -68,11 +68,11 @@ Instead of resolving a Shipping Container:
 				now monm is MonsterID;
 			if ( "Female Preferred" is listed in feats of Player and girl is not banned ) or guy is banned:
 				choose row monf from Table of Random Critters;
-				now tailname of Player is "Female Husky";
-				now facename of Player is "Female Husky";
-				now skinname of Player is "Female Husky";
-				now bodyname of Player is "Female Husky";
-				now cockname of Player is "Female Husky";
+				now tailname of Player is "Husky Bitch";
+				now facename of Player is "Husky Bitch";
+				now skinname of Player is "Husky Bitch";
+				now bodyname of Player is "Husky Bitch";
+				now cockname of Player is "Husky Bitch";
 				attributeinfect;
 				now tail of Player is tail entry;
 				now face of Player is face entry;
@@ -85,11 +85,11 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 			else:
 				choose row monm from Table of Random Critters;
-				now tailname of Player is "Alpha Husky";
-				now facename of Player is "Alpha Husky";
-				now skinname of Player is "Alpha Husky";
-				now bodyname of Player is "Alpha Husky";
-				now cockname of Player is "Alpha Husky";
+				now tailname of Player is "Husky Alpha";
+				now facename of Player is "Husky Alpha";
+				now skinname of Player is "Husky Alpha";
+				now bodyname of Player is "Husky Alpha";
+				now cockname of Player is "Husky Alpha";
 				attributeinfect;
 				now tail of Player is tail entry;
 				now face of Player is face entry;
@@ -101,7 +101,7 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 					follow the sex change rule;
 			say "     But that is not all that has changed. Rolling onto your side, your latex tongue hangs from your muzzle as you look between your hind legs, examining your altered groin[if Cock Count of Player > 1]. Your cocks are delicious looking rods of canine meat formed from latex-like flesh. It makes your mouth water just to look at them as thick pre dribbles from them[else if Cock Count of Player is 1]. Your cock is a delicious looking rod of canine meat formed from latex-like flesh. It makes your mouth water just to look at it as pre dribbles from it[end if][if Cunt Count of Player > 1]. Your pussies are puffy, rubbery mounds made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue in them[else if Cunt Count of Player is 1]. Your pussy is a puffy, rubbery mound made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue into it[end if]. You can feel that the latex has bonded to you deep inside, ensuring you'll stay a sexy latex husky trotting around on all fours if you are any kind of husky at all. Deeply aroused by the changes and the new instincts trying to take hold, you can't but be pleased by this new development.";
-			add { "Female Husky", "Alpha Husky" } to infections of Latexlist;
+			add { "Husky Bitch", "Husky Alpha" } to infections of Latexlist;
 			now Resolution of Shipping Container is 1; [latex huskies freed]
 	else:
 		now Resolution of Shipping Container is 99; [disinterest]

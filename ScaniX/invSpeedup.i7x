@@ -27,31 +27,31 @@ carry out OldInventorying:
 		repeat with x running from 1 to the number of rows in the table of game objects:
 			choose row x in the table of game objects;
 			if object entry is owned:
-				say "[variable letter spacing][link][bracket][bold type]U[roman type][close bracket][as]use [Name entry][end link]";
-				say " [link][bracket][bold type]L[roman type][close bracket][as]look [Name entry][end link]";
-				say " [link][bracket][bold type]S[roman type][close bracket][as]smell [Name entry][end link]";
-				say " [link][bracket][bold type]D[roman type][close bracket][as]drop [Name entry][end link]";
-				say " [link][bracket][bold type]J[roman type][close bracket][as]junk [Name entry][end link]";
-				say " [link][bracket][bold type]X[roman type][close bracket][as]junkall [Name entry][end link]";
+				say "[variable letter spacing][link][bold type]U[roman type][as]use [Name entry][end link]";
+				say "|[link][bold type]L[roman type][as]look [Name entry][end link]";
+				say "|[link][bold type]S[roman type][as]smell [Name entry][end link]";
+				say "|[link][bold type]D[roman type][as]drop [Name entry][end link]";
+				say "|[link][bold type]J[roman type][as]junk [Name entry][end link]";
+				say "|[link][bold type]X[roman type][as]junkall [Name entry][end link]";
 				if trade of object entry is empty:
 					let notval be 0;
 					if Ronda is visible and HP of Ronda is 0 and Name entry is "demon seed":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to Ronda[end link]";
+						say "|[link][bold type]T[roman type][as]give [Name entry] to Ronda[end link]";
 					if Xerxes is visible and lust of Xerxes is 2 and Name entry is "awesome fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to Xerxes[end link]";
+						say "|[link][bold type]T[roman type][as]give [Name entry] to Xerxes[end link]";
 					if Helen is visible and lust of Helen is 2 and Name entry is "awesomer fruit":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to Helen[end link]";
+						say "|[link][bold type]T[roman type][as]give [Name entry] to Helen[end link]";
 					if Kristen is visible and HP of Kristen is 10 and Name entry is "Janice's blouse":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to Kristen[end link]";
+						say "|[link][bold type]T[roman type][as]give [Name entry] to Kristen[end link]";
 					if Christy is visible and HP of Christy > 1 and HP of Christy < 50 and Name entry is "super spicy sausage":
-						say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to Christy[end link]";
+						say "|[link][bold type]T[roman type][as]give [Name entry] to Christy[end link]";
 				else if the number of trader in the location of the player > 0:
 					let tradeguy be a random trader in the location of the player;
-					say " [link][bracket][bold type]T[roman type][close bracket][as]give [Name entry] to [tradeguy][end link]";
+					say "|[link][bracket]T[roman type][as]give [Name entry] to [tradeguy][end link]";
 				if ( ( ( object entry is armament or ( object entry is equipment and AC of object entry > 0 and effectiveness of object entry > 0 ) ) and object entry is not improved ) or the Name entry is "nanite collector" ) and the number of smither in the location of the player > 0:
-					say " [link][bracket][bold type]I[roman type][close bracket][as]upgrade [Name entry][end link]";
+					say "|[link][bracket]I[roman type][as]upgrade [Name entry][end link]";
 				if invcolumns > 1:
-					say " [fixed letter spacing][Name entry formatted to 15 characters]";
+					say " [fixed letter spacing][Name entry formatted to 24 characters]";
 				else:
 					say " [fixed letter spacing][Name entry formatted to 24 characters]";
 				if object entry is wielded and object entry is armament:

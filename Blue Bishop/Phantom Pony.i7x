@@ -91,7 +91,7 @@ to say blotfuck:
 						say "     Eventually managing to pull yourself free";
 					else:
 						say "     Moving on";
-					say ", you [if scalevalue of Player < 4]climb onto the pony's back[else]crawl on top of the pony[end if], carefully aiming[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] for the entrance before forcing its way in. The toy trembles under your weight, [if Cock Length of Player > 11]easily stretching to accommodate the girth of your impressive[else]easily taking your[end if] cock as a latex-like substance begins to engulf it[if cockname of Player is not listed in infections of internallist] and your [ball size][end if][if Player is female and Cock Count of Player > 2], as well as your cunt[sfn] and other rods[else if Player is female and Cock Count of Player > 1], as well as your cunt[sfn] and other rod[else if Cock Count of Player > 2], as well as your other rods[else if Cock Count of Player is 2], as well as your other rod[end if].";
+					say ", you [if scalevalue of Player < 4]climb onto the pony's back[else]crawl on top of the pony[end if], carefully aiming[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] for the entrance before forcing its way in. The toy trembles under your weight, [if Cock Length of Player > 11]easily stretching to accommodate the girth of your impressive[else]easily taking your[end if] cock as a latex-like substance begins to engulf it[if cockname of Player is not listed in infections of internallist] and your [Ball Size Adjective of Player] [Balls][end if][if Player is female and Cock Count of Player > 2], as well as your cunt[sfn] and other rods[else if Player is female and Cock Count of Player > 1], as well as your cunt[sfn] and other rod[else if Cock Count of Player > 2], as well as your other rods[else if Cock Count of Player is 2], as well as your other rod[end if].";
 				else:
 					say "     Its smooth, near-featureless behind eagerly invites you to ride upon it. Gently running your hand across its surface, the object trembles under your touch, almost immediately trying to bind your digits to it before you pull yourself free once more.";
 					say "     Briefly preparing yourself, [if scalevalue of Player < 4]you climb onto the pony's back[else]you crawl on top of the pony[end if], grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's hindquarters. Almost immediately, you feel something wet flood your crotch, engulfing your [cunt size desc of Player] cunt[sfn], and caressing you as you writhe.";
@@ -121,7 +121,7 @@ to say blotfuck:
 				say "     Forcibly, you're dragged [if scalevalue of Player < 4]on top of the pony's back[else]over of the pony[end if], ";
 				if Player is male:
 					say "eagerly encasing[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn][if Cock Count of Player > 2] before taking the rest as well[else if Cock Count of Player is 2] before taking the other as well[end if].";
-					say "     The toy trembles under your weight, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if cockname of Player is not listed in infections of internallist] your [ball size][else]the rest of your crotch[end if] as well";
+					say "     The toy trembles under your weight, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if cockname of Player is not listed in infections of internallist] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
 					if anallevel > 1:
 						say ". Soon, you feel the tainted material flood your [if Player is female]cunt[sfn] and ass, pounding your holes with a quickly-expanding, quickly-hardening series of distinctly ribbed implements[else]your ass, pounding your hole with a quickly expanding, quickly-hardening series of distinctly ribbed implements[end if]";
 					else if Player is female:
@@ -292,7 +292,7 @@ to blotprogress:
 	if blotintense is 3:
 		say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable pony, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance ";
 		if Player is male:
-			say "encase your dick[smn], [if cockname of Player is not listed in infections of internallist]your [ball size], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
+			say "encase your dick[smn], [if cockname of Player is not listed in infections of internallist]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
 		else:
 			say "coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...";
@@ -342,21 +342,21 @@ to blotbindorgasm:
 	if blotintense < 3:
 		say "     Finally overtaken by bliss, your ";
 		if Player is male:
-			say "cock pumps your [Cum Load Size of Player] load into the toy[if Cock Count of Player > 2], its brothers staining its hind legs[else if Cock Count of Player is 2], its brother staining its hind legs[end if]. [if ball size of Player > 23]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "cock pumps your [Cum Load Size of Player] load into the toy[if Cock Count of Player > 2], its brothers staining its hind legs[else if Cock Count of Player is 2], its brother staining its hind legs[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
 		else:
 			say "cunt[sfn] ache[sfv] against the toy, staining it with your juices";
 		say ". Trembling subtly in the wake of this, it seems to feed off your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 2]gradually changing[else]close to changing[end if] as you're compelled to continue riding it.";
 	else if blotintense < 5:
 		say "     Finally overtaken by bliss, your ";
 		if Player is male:
-			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can. [if ball size of Player > 23]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to recede and acclimate to the torrent[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
 		else:
 			say "cunt[sfn] ache[sfv] against the toy, engulfing vinyl prolonging your bliss for as long as it can";
 		say ". Trembling further in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 4]gradually changing[else]close to changing[end if] as you're driven to continue riding it.";
 	else if blotintense < 8:
 		say "     Finally overtaken by bliss, your ";
 		if Player is male:
-			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if ball size of Player > 23]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
+			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]. [if Ball Size of Player > 5]Briefly bulging to contain your impressive release, it seems to revel in the torrential flood[else]Eagerly, it seems to consume your release, motion further slicked by it[end if]";
 		else:
 			say "cunt[sfn] ache[sfv] against the toy, pounding vinyl milking you for as long as it can";
 		say ". Groaning under you in the wake of this, it's further empowered by your [if Player is male]cum[else]ecstasy[end if], [if blotintense < 7]gradually changing[else]close to changing[end if] as you're forced to continue riding it...";
@@ -364,7 +364,7 @@ to blotbindorgasm:
 		say "     Overtaken by bliss, your ";
 		if Player is male:
 			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into the toy, engulfing vinyl milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]";
-			if ball size of Player > 23:
+			if Ball Size of Player > 5:
 				say ". Very quickly, you feel your hot release flood your maw through the rubbery tube, pumping you full with what excess it's ill-equipped to contain itself";
 			else:
 				say ". Starting to develop an excess of your release, you feel the hot fluid flood your maw through the rubbery tube, pumping you with what it can no longer contain";
@@ -375,7 +375,7 @@ to blotbindorgasm:
 		say "     Sent crashing into bliss, your ";
 		if Player is male:
 			say "cock[smn] pump[smv] your [Cum Load Size of Player] load into your prison, vinyl material milking it for as long as it can[if Player is female and anallevel > 1] while pounding your holes[else if Player is female] while pounding your hole[sfn][else if anallevel > 1] while pounding your hole[end if]";
-			if ball size of Player > 23:
+			if Ball Size of Player > 5:
 				say ". Body awash in your hot release, you very quickly, you feel it flood your maw through the rubbery tube, pumping its occupant with the excess";
 			else:
 				say ". Warmth of your hot release awash against you, you feel it gradually flow into your maw through the rubbery tube, pumping its occupant with the slight excess";

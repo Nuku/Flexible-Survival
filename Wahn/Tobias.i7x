@@ -196,7 +196,7 @@ Virgin of Tobias is true.
 AnalVirgin of Tobias is true.
 PenileVirgin of Tobias is false.
 SexuallyExperienced of Tobias is true.
-MainInfection of Tobias is "Doberman".
+MainInfection of Tobias is "Doberman Male".
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".

@@ -99,7 +99,7 @@ to say HyenaMatSexScenes:
 			else if T is 3:
 				say "     The large hyena grins and gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face. 'Get licking, little bitch.'";
 				say "[hyenamatnosex3]";
-			decrease humanity of Player by 5;
+			SanLoss 5;
 			now lastfuck of Matriarch is turns;
 		else if Z < 105:	[sex variations]
 			let T be a random number between 1 and 3;
@@ -110,7 +110,7 @@ to say HyenaMatSexScenes:
 			else if T is 3:
 				say "[hyenamatsex3]";
 			if HP of Matriarch is 0, now HP of Matriarch is 1;
-			decrease humanity of Player by 10;
+			SanLoss 10;
 			if Cunt Length of Player < 10, increase Cunt Length of Player by 1;
 			if Cunt Tightness of Player < 4, increase Cunt Tightness of Player by 1;
 			now lastfuck of Matriarch is turns;
@@ -123,7 +123,7 @@ to say HyenaMatSexScenes:
 				say "[hyenamatspecial2]";
 				now lastfuck of Matriarch is turns - 2;
 			if HP of Matriarch is 1, now HP of Matriarch is 2;
-			decrease humanity of Player by 12;
+			SanLoss 12;
 	else:
 		if Player is male:		[MALE/HERM]
 			say "     Your matriarch reaches down and grabs your twitching cock, growling a little. '[one of]And what does a little bitch like you think she's going to do with this?' she rumbles[or]A submissive bitch like you doesn't need something like this,' she growls[or]And why do you have a useless toy like this?' she laughs[or]You don't need this useless thing any more, you submissive bitch,' she teases[at random]. She swats your shaft away, slapping it against your thigh with disdain. ";
@@ -142,7 +142,7 @@ to say HyenaMatSexScenes:
 			say "She gives her cock a few strokes, dripping precum onto you, then points her hard rod towards your face. 'Get licking, little bitch. Maybe we can make a proper breeding girl out of you yet.'";
 			WaitLineBreak;
 			say "[hyenamatnosex3]";
-		decrease humanity of Player by 5;
+		SanLoss 5;
 		now lastfuck of Matriarch is turns;
 
 

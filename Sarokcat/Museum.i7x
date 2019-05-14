@@ -113,7 +113,7 @@ carry out riddlesphinxing:
 		infect "Sphinx";
 	else:
 		say "'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
-		decrease humanity of Player by 10;
+		SanLoss 10;
 		infect "Sphinx";
 
 instead of fucking Valerie:
