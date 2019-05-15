@@ -347,6 +347,10 @@ To Birth:
 	[gender]
 	let ChildGender be "male";
 	let ChildGenderRoll be a random number from 1 to 10;
+	if Hermaphrodite is warded or Hermaphrodite is banned and (ChildGenderRoll is 7 or ChildGenderRoll is 8):
+		now ChildGenderRoll is a random number from 1 to 6;
+	if Transgender is warded or Transgender is banned and (ChildGenderRoll is 9 or ChildGenderRoll is 10):
+		now ChildGenderRoll is a random number from 1 to 6;
 	if ChildGenderRoll is:
 		-- 1:
 			now ChildGender is "male";
@@ -368,6 +372,13 @@ To Birth:
 			now ChildGender is "trans male";
 		-- 10:
 			now ChildGender is "trans female";
+	[override for special species with gender bias - expand HERE for new species]
+	if BodyName of Child is "Orc Warrior" or BodyName of Child is "Orc Breeder" and a random chance of 9 in 10 succeeds:
+		now ChildGender is "male";
+	else if BodyName of Child is "Harpy" and a random chance of 15 in 20 succeeds:
+		now ChildGender is "female";
+	else if BodyName of Child is "Blue Gryphon Herm" and a random chance of 15 in 20 succeeds:
+		now ChildGender is "herm";
 	[Checking for visible tails]
 	let ShowTail be false;
 	if there is a name of TailName of Child in the Table of New Infection Parts: [creature already in the new table]

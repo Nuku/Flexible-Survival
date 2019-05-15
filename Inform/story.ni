@@ -186,12 +186,15 @@ The player has a text called tailname. Tailname is usually "Human".
 The player has a text called HeadName. HeadName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
 The player has a text called Head Adjective. Head Adjective is usually "human".
-The player has a text called Head Skin Adjective. Head Skin Adjective is usually "smooth".
+The player has a text called Head Skin Adjective. Head Skin Adjective is usually "".
+The player has a text called Head Color. Head Color is usually "fair".
 The player has a text called Head Adornments. Head Adornments is usually "".
 The player has a number called Hair Length. Hair Length is usually 2.
+The player has a number called Body Hair Length. Body Hair Length is usually 2.
 The player has a text called Hair Shape. Hair Shape is usually "straight".
 The player has a text called Hair Color. Hair Color is usually "red".
 The player has a text called Hair Style. Hair Style is usually "buzzcut".
+The player has a text called Beard Style. Beard Style is usually "".
 The player has a text called Eye Color. Eye Color is usually "green".
 The player has a text called Eye Adjective. Eye Adjective is usually "round".
 The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
@@ -199,8 +202,8 @@ The player has a text called Tongue Color. Tongue Color is usually "pink".
 The player has a text called TorsoName. TorsoName is usually "Human".
 The player has a text called Torso Description. Torso Description is usually "that of a regular human".
 The player has a text called Torso Adjective. Torso Adjective is usually "human".
-The player has a text called Torso Skin Adjective. Torso Skin Adjective is usually "smooth".
-The player has a text called Torso Color. Torso Color is usually "tanned".
+The player has a text called Torso Skin Adjective. Torso Skin Adjective is usually "".
+The player has a text called Torso Color. Torso Color is usually "fair".
 The player has a text called Torso Pattern. Torso Pattern is usually "".
 The player has a text called Breast Adjective. Breast Adjective is usually "perky".
 The player has a text called Torso Adornments. Torso Adornments is usually "".
@@ -208,21 +211,26 @@ The player has a text called Nipple Color. Nipple Color is usually "light brown"
 The player has a text called Nipple Shape. Nipple Shape is usually "oval".
 The player has a text called BackName. BackName is usually "Human".
 The player has a text called Back Adornments. Back Adornments is usually "".
-The player has a text called Back Skin Adjective. Back Skin Adjective is usually "smooth".
+The player has a text called Back Skin Adjective. Back Skin Adjective is usually "".
+The player has a text called Back Color. Back Color is usually "fair".
 The player has a text called ArmsName. ArmsName is usually "Human".
 The player has a text called Arms Description. Arms Description is usually "those of a regular human".
-The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "smooth".
+The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "".
+The player has a text called Arms Color. Arms Color is usually "fair".
 The player has a text called Locomotion. Locomotion is usually "bipedal".
 The player has a text called LegsName. LegsName is usually "Human".
 The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
-The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "smooth".
+The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "".
+The player has a text called Legs Color. Legs Color is usually "fair".
 The player has a text called AssName. AssName is usually "Human".
 The player has a text called Ass Description. Ass Description is usually "ass".
-The player has a text called Ass Skin Adjective. Ass Skin Adjective is usually "smooth".
+The player has a text called Ass Skin Adjective. Ass Skin Adjective is usually "".
+The player has a text called Ass Color. Ass Color is usually "fair".
 The player has a number called Ass Width. Ass Width is usually 3.
 The player has a text called TailName. TailName is usually "Human".
 The player has a text called Tail Description. Tail Description is usually "".
-The player has a text called Tail Skin Adjective. Tail Skin Adjective is usually "smooth".
+The player has a text called Tail Skin Adjective. Tail Skin Adjective is usually "".
+The player has a text called Tail Color. Tail Color is usually "fair".
 The player has a text called Asshole Color. Asshole Color is usually "pink".
 The player has a text called CockName. CockName is usually "Human".
 The player has a text called Cock Description. Cock Description is usually "is that of a regular human, complete with an uncut foreskin".
@@ -785,6 +793,53 @@ Definition: A person (called x) is pansexual:
 	else:
 		no;
 
+A person can be HasHumanHead. A person is usually not HasHumanHead.
+
+Definition: A person (called x) is HasHumanHead:
+	if Head Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanTorso. A person is usually not HasHumanTorso.
+
+Definition: A person (called x) is HasHumanTorso:
+	if Torso Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanBack. A person is usually not HasHumanBack.
+
+Definition: A person (called x) is HasHumanBack:
+	if Back Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanArms. A person is usually not HasHumanArms.
+
+Definition: A person (called x) is HasHumanArms:
+	if Arms Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanLegs. A person is usually not HasHumanLegs.
+
+Definition: A person (called x) is HasHumanLegs:
+	if Legs Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanAss. A person is usually not HasHumanAss.
+
+Definition: A person (called x) is HasHumanAss:
+	if Ass Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasHumanTail. A person is usually not HasHumanTail.
+
+Definition: A person (called x) is HasHumanTail:
+	if Tail Skin Adjective of x is not "", no;
+	yes;
+
+A person can be HasBeard. A person is usually not HasBeard.
+
+Definition: A person (called x) is HasBeard:
+	if Beard Style of x is not "", yes;
+	no;
 
 A person can be HasHeadHair. A person is usually not HasHeadHair.
 
@@ -875,6 +930,52 @@ to say Body Adjective of ( x - a person ):
 		else: [high muscle group]
 			say "jacked";
 
+to say Pecs Firmness Adjective of ( x - a person ):
+	if Body Weight of x < 4: [low weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "bony";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "soft";
+		else: [high muscle group]
+			say "firm";
+	else if Body Weight of x < 7: [mid weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "soft";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "firm";
+		else: [high muscle group]
+			say "hard";
+	else: [high weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "squishy";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "plyable";
+		else: [high muscle group]
+			say "rock-hard";
+
+to say Pecs Size Adjective of ( x - a person ):
+	if Body Weight of x < 4: [low weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "totally flat";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "flat";
+		else: [high muscle group]
+			say "flat";
+	else if Body Weight of x < 7: [mid weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "flat";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "flat";
+		else: [high muscle group]
+			say "protruding";
+	else: [high weight group]
+		if Body Definition of x < 4: [low muscle group]
+			say "breast-like";
+		else if Body Definition of x < 7: [mid muscle group]
+			say "protruding";
+		else: [high muscle group]
+			say "bulging";
+
 to say Ass Shape Adjective of ( x - a person ):
 	if Ass Width of x is 1: [dainty ass]
 		if Body Definition of x < 4: [low muscle group]
@@ -946,6 +1047,36 @@ to say Gender Adjective of ( x - a person ):
 		-- 9:
 			say "hyperfeminine";
 
+to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body Hair Adjective of Player] chest."]
+	if Body Hair Length of x is:
+		-- 0:
+			say "nonexistant";
+		-- 1:
+			say "smooth";
+		-- 2:
+			say "slightly hairy";
+		-- 3:
+			say "somewhat hairy";
+		-- 4:
+			say "hairy";
+		-- 5:
+			say "very hairy";
+
+to say Body Hair Description of ( x - a person ): [used in "You have a broad, [Torso Color of Player] chest with [Body Hair Description]."]
+	if Body Hair Length of x is:
+		-- 0:
+			say "ERROR: This infection should not show a body hair description! Please report how you saw this on the FS Discord.";
+		-- 1:
+			say "smooth skin";
+		-- 2:
+			say "light body hair";
+		-- 3:
+			say "moderate body hair";
+		-- 4:
+			say "heavy body hair";
+		-- 5:
+			say "furry body hair";
+
 to say Limbs Adjective of ( x - a person ):
 	if Body Weight of x < 4: [low weight group]
 		if body definition of x < 4: [low muscle group]
@@ -1002,7 +1133,7 @@ to say Breast Size Description of ( x - a person ):
 		say "A cup";
 	else if Breast Size of x < 5:
 		say "B cup";
-	[...more cups to be added...]
+	[...more cups to be added BY LUNETH...]
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]
@@ -1395,8 +1526,8 @@ NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Def
 false	"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Arms Change	Arms Description	Arms Skin Adjective	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Ass Change	Ass Description	Ass Skin Adjective	Ass Width	Tail Change	Tail Description	tail skin adjective	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
-"Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+"Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
 
 understand the command "feed" as something new.
 
@@ -3509,6 +3640,7 @@ to NewInfectionRoll:
 				now Hair Length of Player is Hair Length entry;
 				now Hair Shape of Player is Hair Shape entry;
 				now Hair Style of Player is Hair Style entry;
+				now Beard Style of Player is Beard Style entry;
 				now Hair Color of Player is Hair Color entry;
 		[setting the old parts too, as old infections will compare to these]
 		if FaceName of Player is not Name entry:
@@ -3526,6 +3658,7 @@ to NewInfectionRoll:
 			now Torso Skin Adjective of Player is Torso Skin Adjective entry;
 			now Torso Color of Player is Torso Color entry;
 			now Torso Pattern of Player is Torso Pattern entry;
+			now Body Hair Length of Player is Body Hair Length entry;
 			now Breast Adjective of Player is Breast Adjective entry;
 			now Nipple Color of Player is Nipple Color entry;
 			now Nipple Shape of Player is Nipple Shape entry;
@@ -4560,17 +4693,20 @@ This is the self examine rule:
 		say "Your name is [name of Player].";
 	[ Infection Descriptions Below   ]
 	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your face and head resemble that of [Head Description of Player] with [Eye Color of Player] [Eye Adjective of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
+		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your [if Player is HasHumanHead][Head Color of Player]-skinned[else][Head Skin Adjective of Player][end if] face and head resemble that of [Head Description of Player] with [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
 	if TorsoName of Player is "": [old infection]
 		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
 	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]. [if Player is HasBackAdornments]Your back tickles with the feeling of movement caused by [Back Adornments of Player]. [end if]";
+		say "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]";
+		if Arms Skin Adjective of Player is "":
+			say "[if Body Hair Length of Player > 1], covered in [Arms Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Arms Color of Player] skin[end if]";
+		say ". [if Player is HasBackAdornments]Your back tickles with the feeling of movement caused by [Back Adornments of Player]. [end if]";
 		follow the breast descr rule;
 		if Nipple Count of Player > 0:
 			if Breast Size of Player is 0:
-				say "Finally your attention is brought to your pecs. You have [Nipple Count of Player] [Nipple Color of Player], [Nipple Shape of Player] nipples on your [Body Adjective of Player], [Torso Adjective of Player] chest. ";
+				say "Finally your attention is brought to your [Pecs Firmness Adjective of Player], [Pecs Size Adjective of Player] pecs. You have [Nipple Count of Player] [Nipple Color of Player], [Nipple Shape of Player] nipples on your [Body Adjective of Player], [Torso Adjective of Player] chest. ";
 			else:
 				if Nipple Count of Player > 2:
 					say "Finally your attention is brought to your cleavage. You have [Nipple Count of Player] breasts on your [Body Adjective of Player], [Torso Adjective of Player] chest. Each one has [Nipple Color of Player], [Nipple Shape of Player] nipples resting at their center. The first pair looks [Breast Adjective of Player] and curves out, making it so you could easily fill a [Breast Size Description of Player]. The second pair is slightly smaller, going down a cup size. ";
@@ -4591,9 +4727,15 @@ This is the self examine rule:
 				else:
 					say "You have two [descr] breasts on your [Bodydesc of Player] chest, curving out [Breast Size of Player] inch[if Breast Size of Player is not 1]es[end if] from your chest. ";
 	if AssName of Player is not "" and TailName of Player is not "" and LegsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]. With a single finger you check out your [Asshole Color of Player] hole finding it to be [Asshole Tightness Adjective of Player]. ";
+		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]";
+		if Ass Skin Adjective of Player is "":
+			say "[if Body Hair Length of Player > 1], covered in [Ass Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Ass Color of Player] skin[end if]";
+		say ". With a single finger you check out your [Asshole Color of Player] hole finding it to be [Asshole Tightness Adjective of Player]. ";
 		say "[if Player is HasTail]Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee. [end if]";
-		say "As your inspection goes even lower, you come to the [if Player is bipedal]two [Limbs Adjective of Player] legs supporting you. They are [else if Player is quadrupedal]four [Limbs Adjective of Player] legs supporting you. They are [else if Player is serpentine]long slithering tail supporting you. It is [else if Player is sliding]gelatinous mass supporting you. It is [end if][Legs Description of Player].";
+		say "As your inspection goes even lower, you come to the [if Player is bipedal]two [Limbs Adjective of Player] legs supporting you. They are [else if Player is quadrupedal]four [Limbs Adjective of Player] legs supporting you. They are [else if Player is serpentine]long slithering tail supporting you. It is [else if Player is sliding]gelatinous mass supporting you. It is [end if][Legs Description of Player]";
+		if Legs Skin Adjective of Player is "":
+			say "[if Body Hair Length of Player > 1], covered in [Legs Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Legs Color of Player] skin[end if]";
+		say ".";
 	else: [old infection]
 		if tail of Player is empty:
 			say "";
@@ -6414,6 +6556,7 @@ To startgenderlockshift:
 			now Breast Size of Player is 0;
 
 To startFeatget: [alternate featget used for start] [Checkpoint-]
+	clear the screen;
 	say "Select a basic feat. This represents a skill or innate ability you have.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through functional featsets:
@@ -6445,6 +6588,7 @@ To startFeatget: [alternate featget used for start] [Checkpoint-]
 				say "Invalid Feat.";
 
 To startFunFeatget: [alternate funfeatget used for start]
+	clear the screen;
 	say "Select a fun feat. This represents some strange quirk or effect induced by the nanites.";
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
@@ -6841,14 +6985,43 @@ to newplayercustomizationmenu:
 	now calcnumber is -1;
 	let charactermenuexit be 0;
 	while charactermenuexit is 0:
+		clear the screen;
 		say "[line break][bold type]Character Customization:[roman type][line break]";
 		say "(1) [link]Player Gender[as]1[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
 		say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-		say "(3) [link]Player Hair[as]3[end link]: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player][line break]";
+		say "(3) [link]Gender Lock[as]3[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+		say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-4)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 4:
+				break;
+			else:
+				say "Invalid Entry";
+		LineBreak;
+		if calcnumber is 1:
+			say "[gsopt_2]";
+		else if calcnumber is 2:
+			playersexsetting;
+		else if calcnumber is 3:
+			genderlockmenu;
+		else if calcnumber is 4:
+			try pronounsetting;
+		else:
+			now charactermenuexit is 1;
+[ Disabled till the new infection system goes live
+	while charactermenuexit is 0:
+		clear the screen;
+		say "[line break][bold type]Character Customization:[roman type][line break]";
+		say "(1) [link]Player Gender[as]1[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
+		say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
+		say "(3) [link]Player Hair[as]3[end link]: Head Hair: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player]; [if Player is Hasbeard]Beard: [Beard Style of Player];[end if] Body Hair: [Body Hair Adjective of Player][line break]";
 		say "(4) [link]Eye Color[as]4[end link]: [Eye Color of Player][line break]";
 		say "(5) [link]Skin Color[as]5[end link]: [Torso Color of Player][line break]";
 		say "(6) [link]Body Type[as]6[end link]: [Body Adjective of Player][line break]";
-		say "(7) [link]Gender Identity & Orientation[as]7[end link][line break]";
+		say "(7) [link]Gender Appearance & Orientation[as]7[end link][line break]";
 		say "(8) [link]Gender Lock[as]8[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
 		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of Player][roman type][line break]";
 		say "[line break]";
@@ -6881,11 +7054,13 @@ to newplayercustomizationmenu:
 			try pronounsetting;
 		else:
 			now charactermenuexit is 1;
+]
 
 to contentrestrictionmenu:
 	now calcnumber is -1;
 	let contentrestrictionmenuexit be 0;
 	while contentrestrictionmenuexit is 0:
+		clear the screen;
 		say "(1) [link]Banned/Warded Types[as]1[end link] - [menuwardlist] & [menubanlist] [line break]";
 		say "(2) [link]Anal Content[as]2[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
 		say "(3) [link]WS Content[as]3[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
@@ -6919,8 +7094,9 @@ to genderidentitysetting:
 	now calcnumber is -1;
 	let gendermenuexit be 0;
 	while gendermenuexit is 0:
+		clear the screen;
 		say "[bold type]Gender Settings:[roman type][line break]";
-		say "(1) [link]Gender Identity[as]1[end link]: [Gender Adjective of Player][line break]";
+		say "(1) [link]Gender Appearance[as]1[end link]: [Gender Adjective of Player][line break]";
 		say "(2) [link]Sexual Orientation[as]2[end link] [line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
@@ -6935,6 +7111,7 @@ to genderidentitysetting:
 			now calcnumber is -1;
 			while calcnumber <= 0:
 				say "Please enter a number from 1-9. 1 being hypermasculine, 5 adrogynous, and 9 hyperfeminine:[line break]";
+				say "Note: This refers to the overall physical appearance and behaviour of the player, not their actual genitals.";
 				get a number; [returns as calcnumber]
 				if calcnumber >= 1 and calcnumber <= 9: [Valid choice, else repeat]
 					break;
@@ -6951,6 +7128,7 @@ to PlayerSexualOrientationMenu:
 	now calcnumber is -1;
 	let OrientationMenuExit be 0;
 	while OrientationMenuExit is 0:
+		clear the screen;
 		say "[bold type]Interested in: (select Yes for all that apply)[roman type][line break]";
 		say "[if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Males (penis)[as]1[end link][line break]";
 		say "[if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Trans Males (male with vagina)[as]2[end link][line break]";
@@ -7010,11 +7188,11 @@ to bodytypesetting:
 		say "(2) [link]Body Definition[as]2[end link]: [Body Definition of Player] - [if Body Definition of Player >= 1 and Body Definition of Player <= 3]Low Muscle[else if Body Definition of Player >= 4 and Body Definition of Player <= 6]Medium Muscle[else if Body Definition of Player >= 7 and Body Definition of Player <= 9]High Muscle[end if][line break]";
 		say "(3) [if player is not conformist]Non-[end if][link]Conformist[as]3[end link]: ";
 		if "Conformist" is listed in Feats of Player:
-			say "Your body type, overall gender appearance, eye color and head hair will [bold type]change depending on your infection[roman type].";
+			say "Your body type, overall gender appearance, eye color, head hair and beard style will [bold type]change depending on your infection[roman type].";
 			say "Note: This allows for drastic changes in body mass and appearance.";
 			say "Example: A lightweight and medium muscle (slender) female human with tomboyish looks and mannerisms catches the German Shepherd Male infection. She will become a middleweight and high muscle (muscular) male German shepherd with masculine looks and mannerisms, complete with fur, tail, cock, etc.";
 		else:
-			say "Your body type, overall gender appearance, eye color and head hair will [bold type]stay constant despite infections[roman type].";
+			say "Your body type, overall gender appearance, eye color, head hair and beard style will [bold type]stay constant despite infections[roman type].";
 			say "Note: This just retains the overall recognizability of a person and does not make you immune to transformation. Everything else will still shift easily.";
 			say "Example: A lightweight and medium muscle (slender) female human with tomboyish looks and mannerisms catches the German Shepherd Male infection. She will become a lightweight and medium muscle (slender) male German shepherd with tomboyish looks and mannerisms, complete with fur, tail, cock, etc.";
 		say "[line break][line break]";
@@ -7056,8 +7234,9 @@ to bodytypesetting:
 		else:
 			now bodymenuexit is 1;
 	]
-	[version without the conformist feat until the actiavation of the new infections]
+	[version without the conformist feat until the activation of the new infections]
 	while bodymenuexit is 0:
+		clear the screen;
 		say "[bold type]Body Type: [Body Adjective of Player][roman type][line break]";
 		say "(1) [link]Body Weight[as]1[end link]: [Body Weight of Player] - [if Body Weight of Player >= 1 and Body Weight of Player <= 3]Lightweight[else if Body Weight of Player >= 4 and Body Weight of Player <= 6]Middleweight[else if Body Weight of Player >= 7 and Body Weight of Player <= 9]Heavyweight[end if][line break]";
 		say "(2) [link]Body Definition[as]2[end link]: [Body Definition of Player] - [if Body Definition of Player >= 1 and Body Definition of Player <= 3]Low Muscle[else if Body Definition of Player >= 4 and Body Definition of Player <= 6]Medium Muscle[else if Body Definition of Player >= 7 and Body Definition of Player <= 9]High Muscle[end if][line break]";
@@ -7099,6 +7278,7 @@ to skincolorsetting:
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Skin Color:[roman type][line break]";
 		say "(1) [link]Very Fair[as]1[end link] ";
 		if Torso Color of Player is "very fair":
@@ -7175,16 +7355,19 @@ to hairsetting:
 	now calcnumber is -1;
 	let mainmenuexit be 0;
 	while mainmenuexit is 0:
+		clear the screen;
 		say "[bold type]Hair Settings:[roman type][line break]";
 		say "(1) [link]Hair Color[as]1[end link]: [Hair Color of Player][line break]";
 		say "(2) [link]Hair Style[as]2[end link]: [Hair Style of Player][line break]";
 		say "(3) [link]Hair Shape[as]3[end link]: [Hair Shape of Player][line break]";
+		say "(4) [link]Beard Style[as]4[end link]: [Beard Style of Player][line break]";
+		say "(5) [link]Body Hair Length[as]5[end link]: [Body Hair Adjective of Player][line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-3)>[run paragraph on]";
+			say "Choice? (0-5)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 3:
+			if calcnumber >= 0 and calcnumber <= 5:
 				break;
 			else:
 				say "Invalid Entry";
@@ -7194,6 +7377,10 @@ to hairsetting:
 			HairStyleSetting;
 		else if calcnumber is 3:
 			HairShapeSetting;
+		else if calcnumber is 4:
+			BeardStyleSetting;
+		else if calcnumber is 5:
+			BodyHairLengthSetting;
 		else:
 			now mainmenuexit is 1;
 
@@ -7201,6 +7388,7 @@ to HairShapeSetting:
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Hair Shape:[roman type][line break]";
 		say "(1) [link]Straight[as]1[end link] ";
 		if Hair Shape of Player is "straight":
@@ -7210,8 +7398,8 @@ to HairShapeSetting:
 		if Hair Shape of Player is "curly":
 			say ": Current";
 		LineBreak;
-		say "(3) [link]Wavey[as]3[end link] ";
-		if Hair Shape of Player is "wavey":
+		say "(3) [link]Wavy[as]3[end link] ";
+		if Hair Shape of Player is "wavy":
 			say ": Current";
 		LineBreak;
 		say "[line break]";
@@ -7237,6 +7425,7 @@ to HairStyleSetting: [Afro, Bangs, Bob Cut, Bowl Cut, Braid, Bun, Buzzcut, Combo
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Hair Style:[roman type][line break]";
 		say "(1) [link]Afro[as]1[end link] ";
 		if Hair Style of Player is "afro":
@@ -7436,6 +7625,7 @@ to HairColorSetting: [brown, blond, black, auburn, red, gray, white]
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Current Hair Color: [Hair Color of Player][roman type][line break]";
 		say "(1) [link]Brown[as]1[end link][line break]";
 		say "(2) [link]Blond[as]2[end link][line break]";
@@ -7469,10 +7659,179 @@ to HairColorSetting: [brown, blond, black, auburn, red, gray, white]
 			now Hair Color of Player is "white";
 		now menuexit is 1;
 
+to BeardStyleSetting:
+	now calcnumber is -1;
+	let menuexit be 0;
+	while menuexit is 0:
+		clear the screen;
+		say "[bold type]Beard Style:[roman type][line break]";
+		say "(1) [link]3-Day Stubble Beard[as]1[end link] ";
+		if Beard Style of Player is "3-day stubble beard":
+			say ": Current";
+		LineBreak;
+		say "(2) [link]Anchor Beard[as]2[end link] ";
+		if Beard Style of Player is "anchor beard":
+			say ": Current";
+		LineBreak;
+		say "(3) [link]Balbo Beard[as]3[end link] ";
+		if Beard Style of Player is "balbo beard":
+			say ": Current";
+		LineBreak;
+		say "(4) [link]Chevron Stache[as]4[end link] ";
+		if Beard Style of Player is "chevron stache":
+			say ": Current";
+		LineBreak;
+		say "(5) [link]Chin Strap Beard[as]5[end link] ";
+		if Beard Style of Player is "chin strap beard":
+			say ": Current";
+		LineBreak;
+		say "(6) [link]Chin Strip[as]6[end link] ";
+		if Beard Style of Player is "chin strip":
+			say ": Current";
+		LineBreak;
+		say "(7) [link]Circle Beard[as]7[end link] ";
+		if Beard Style of Player is "circle beard":
+			say ": Current";
+		LineBreak;
+		say "(8) [link]Fu Manchu Beard[as]8[end link] ";
+		if Beard Style of Player is "fu manchu beard":
+			say ": Current";
+		LineBreak;
+		say "(9) [link]Goatee[as]9[end link] ";
+		if Beard Style of Player is "goatee":
+			say ": Current";
+		LineBreak;
+		say "(10) [link]Gunslinger Beard[as]10[end link] ";
+		if Beard Style of Player is "gunslinger beard":
+			say ": Current";
+		LineBreak;
+		say "(11) [link]Horseshoe Mustache[as]11[end link] ";
+		if Beard Style of Player is "horseshoe mustache":
+			say ": Current";
+		LineBreak;
+		say "(12) [link]Mutton Chops Beard[as]12[end link] ";
+		if Beard Style of Player is "mutton chops beard":
+			say ": Current";
+		LineBreak;
+		say "(13) [link]Petite Goatee[as]13[end link] ";
+		if Beard Style of Player is "petite goatee":
+			say ": Current";
+		LineBreak;
+		say "(14) [link]Porn Stache[as]14[end link] ";
+		if Beard Style of Player is "porn stache":
+			say ": Current";
+		LineBreak;
+		say "(15) [link]Royale Beard[as]15[end link] ";
+		if Beard Style of Player is "royale beard":
+			say ": Current";
+		LineBreak;
+		say "(16) [link]Short Boxed Beard[as]16[end link] ";
+		if Beard Style of Player is "short boxed beard":
+			say ": Current";
+		LineBreak;
+		say "(17) [link]Van Dyke Beard[as]17[end link] ";
+		if Beard Style of Player is "van dyke beard":
+			say ": Current";
+		LineBreak;
+		say "[line break]";
+		say "(0) [link]Return to previous menu[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-17)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 17:
+				break;
+			else:
+				say "Invalid Entry";
+		if calcnumber is:
+			-- 1:
+				now Beard Style of Player is "3-day stubble beard";
+			-- 2:
+				now Beard Style of Player is "anchor beard";
+			-- 3:
+				now Beard Style of Player is "balbo beard";
+			-- 4:
+				now Beard Style of Player is "chevron stache";
+			-- 5:
+				now Beard Style of Player is "chin strap beard";
+			-- 6:
+				now Beard Style of Player is "chin strip";
+			-- 7:
+				now Beard Style of Player is "circle beard";
+			-- 8:
+				now Beard Style of Player is "fu manchu beard";
+			-- 9:
+				now Beard Style of Player is "goatee";
+			-- 10:
+				now Beard Style of Player is "gunslinger beard";
+			-- 11:
+				now Beard Style of Player is "horseshoe mustache";
+			-- 12:
+				now Beard Style of Player is "mutton chops beard";
+			-- 13:
+				now Beard Style of Player is "petite goatee";
+			-- 14:
+				now Beard Style of Player is "porn stache";
+			-- 15:
+				now Beard Style of Player is "royale beard";
+			-- 16:
+				now Beard Style of Player is "short boxed beard";
+			-- 17:
+				now Beard Style of Player is "van dyke beard";
+		now menuexit is 1;
+
+to BodyHairLengthSetting:
+	now calcnumber is -1;
+	let menuexit be 0;
+	while menuexit is 0:
+		clear the screen;
+		say "[bold type]Body Hair Length:[roman type][line break]";
+		say "(1) [link]Smooth[as]1[end link] ";
+		if Body Hair Length of Player is 1:
+			say ": Current";
+		LineBreak;
+		say "(2) [link]Slightly Hairy[as]2[end link] ";
+		if Body Hair Length of Player is 2:
+			say ": Current";
+		LineBreak;
+		say "(3) [link]Somewhat Hairy[as]3[end link] ";
+		if Body Hair Length of Player is 3:
+			say ": Current";
+		LineBreak;
+		say "(4) [link]Hairy[as]4[end link] ";
+		if Body Hair Length of Player is 4:
+			say ": Current";
+		LineBreak;
+		say "(5) [link]Very Hairy[as]5[end link] ";
+		if Body Hair Length of Player is 5:
+			say ": Current";
+		LineBreak;
+		say "[line break]";
+		say "(0) [link]Return to main menu[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (1-5)>[run paragraph on]";
+			get a number;
+			if calcnumber >= 1 and calcnumber <= 5:
+				break;
+			else:
+				say "Invalid Entry";
+		if calcnumber is:
+			-- 1:
+				now Hair Shape of Player is "smooth";
+			-- 2:
+				now Hair Shape of Player is "slightly hairy";
+			-- 3:
+				now Hair Shape of Player is "somewhat hairy";
+			-- 4:
+				now Hair Shape of Player is "hairy";
+			-- 5:
+				now Hair Shape of Player is "very hairy";
+		now menuexit is 1;
+
 to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Player, PenileVirgin of Player, SexuallyExperienced of Player]
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Sexual Experience[roman type][line break]";
 		say "    Sexual Experience: [if SexuallyExperienced of Player is true]Yes[else]No[end if][line break]";
 		say "(1) [link]Oral Virgin[as]1[end link]: [if OralVirgin of Player is true]Yes[else]No[end if][line break]";
@@ -7510,10 +7869,10 @@ to playersexsetting: [OralVirgin of Player, Virgin of Player, AnalVirgin of Play
 				now AnalVirgin of player is true;
 		else:
 			now menuexit is 1;
-		if (OralVirgin of player is true or Virgin of player is true or PenileVirgin of player is true or AnalVirgin of player is true) and SexuallyExperienced of player is false:
-			now SexuallyExperienced of player is true;
-		else if (OralVirgin of player is false and Virgin of player is false and PenileVirgin of player is false and AnalVirgin of player is false) and SexuallyExperienced of player is true:
+		if (OralVirgin of player is true and Virgin of player is true and PenileVirgin of player is true and AnalVirgin of player is true):
 			now SexuallyExperienced of player is false;
+		else if (OralVirgin of player is false or Virgin of player is false or PenileVirgin of player is false or AnalVirgin of player is false):
+			now SexuallyExperienced of player is true;
 		now calcnumber is -1;
 
 to say playervirginsay:
@@ -7529,6 +7888,7 @@ to eyecolorsetting: [ Green, Blue, Gray, Brown, Hazel, Amber, Red]
 	now calcnumber is -1;
 	let menuexit be 0;
 	while menuexit is 0:
+		clear the screen;
 		say "[bold type]Current Eye Color: [Eye Color of Player][roman type][line break]";
 		say "(1) [link]Brown[as]1[end link][line break]";
 		say "(2) [link]Green[as]2[end link][line break]";
@@ -7637,6 +7997,7 @@ to say gsopt_1:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
+		clear the screen;
 		say "[bold type]Select your main stat (+5 bonus):[roman type][line break]";
 		say "(1) [link]Strength[as]1[end link] = [if gsms is 1][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Represents your raw physical might and your ability to deal damage.";
 		say "(2) [link]Dexterity[as]2[end link] = [if gsms is 2][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Affects your likelihood to hit and dodge.";
@@ -7694,7 +8055,8 @@ to say gsopt_3:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
-		say "[bold type]Game Type:[roman type][line break]";
+		clear the screen;
+		say "[bold type]Game Scenario:[roman type][line break]";
 		say "(1) [link]Bunker[as]1[end link]: You managed to find your way to a bunker, where you hid away for some time. No special perks, default start.[bold type][if gsgt is 1]-Set[end if][roman type][line break]";
 		say "(2) [link]Caught Outside[as]2[end link]: You were forced to survive outside. You have already been mutated a bit, though your practice has hardened you (Gain Spartan Diet, slowing gain of hunger and thirst).[bold type][if gsgt is 2]-Set[end if][roman type][line break]";
 		say "(3) [link]Rescuer Stranded[as]3[end link]: You arrived late, looking for survivors, when you got cut off from your teammates. Now you just want to survive! (Start with no supplies)[bold type][if gsgt is 3]-Set[end if][roman type][line break]";
@@ -7736,6 +8098,7 @@ to say gsopt_4:
 	now calcnumber is -1;
 	let gsexit be 0;
 	while gsexit is 0:
+		clear the screen;
 		say "[bold type]Difficulty Modes:[roman type][line break]";
 		say "(1) [link]Hard Mode[as]1[end link]: [bold type][if gshm is true]On[else]Off[end if][roman type][line break]     Hard Mode causes the powerful monsters to be randomly roaming, levels the monsters up alongside you, limits your use of the journal and adds other difficulties to further challenge you.";
 		say "(2) [link]No-Heal Mode[as]2[end link]: [bold type][if gsnhm is true]On[else]Off[end if][roman type][line break]     No-Heal Mode turns off the accelerated healing at the end of the turn. Medkits and healing boosters heal more though.";
