@@ -34,7 +34,6 @@ to say DireWolfLoss:
 	say "     Seemingly done with you, the massive wolf pulls away from you, turns around, and stalks back out into the wilderness, ready to pounce on whatever prey it finds next.";
 
 to say DireWolfVictory:
-	now wolffight is 1; [victory]
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else:
