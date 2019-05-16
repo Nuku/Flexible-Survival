@@ -619,7 +619,7 @@ to say GildwingClanAccept:
 		[Body]
 		say "     Your legs suddenly collapse underneath you, causing you to fall to your knees. Your legs and feet quiver as they bend and reconfigure into a more draconic digitigrade shape with a three-toed, raptor-like foot. Your hands clench involuntarily as your fingers merge in such a way that you are left with only four fingers instead of five, each tipped with a small claw. Feeling stable again, you push yourself to your feet and try to get used to your new stance.";
 		now bodyname of player is "Avalon Kobold";
-		now body of player is "lithe but surprisingly strong. It looks and feels perfect for a cave dwelling Kobold. [if player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider for egg laying. [end if]Your legs are digitigrade and end in three-toed feet, while your arms sport four fingered hands, each tipped with a small claw";
+		now body of player is "lithe but surprisingly strong. It looks and feels perfect for a cave dwelling Kobold. [if player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider for egg laying. [end if]Your legs are digitigrade and end in three-toed feet, while your arms sport four fingered hands, each tipped with a small claw.";
 		now TorsoName of Player is ""; [wiping out the new style parts]
 		now BackName of Player is ""; [wiping out the new style parts]
 		now LegsName of Player is ""; [wiping out the new style parts]
@@ -647,6 +647,12 @@ to say GildwingClanAccept:
 			now cockname of player is "Avalon Kobold";
 			now cock of player is "[one of]reptilian[or]draconic[or]taperd[or]kobold[at random]";
 			WaitLineBreak;
+		[Womb]
+		if (Player is female or Player is mpreg_ok) and ovipregalways is false:
+			say "     You feel a shift in your belly as your insides adjusts to your new form. Instinctually, you know you now are an egg layer, ready to breed the next generation of kobolds.";
+			WaitLineBreak;
+			now ovipregalways is true;
+			now ovipreglevel is 3;
 		[]
 		say "     Gildwing looks over your new kobold form with a pleased expression. 'This suits you well,' he says before calling out, 'Tyrin!' The red kobold quickly enters the cavern room, stopping for a moment as soon as he sees you. 'Oh! Our friend decided to join us? Tani will be happy about that.' The dragon gesture towards you. 'Please show [ObjectPro of player] around and explain how [ObjectPro of player] may help.' Tyrin nods and looks towards you. 'Follow me please,' he asks before leading you out into the main passageway.";
 		now Resolution of GildwingKoboldTest is 3;

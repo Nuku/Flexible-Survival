@@ -347,7 +347,7 @@ Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
 
-Your Offspring is a person. [bunker children]
+Offspring is a person. [bunker children]
 
 Table of PlayerChildren
 Name (text)	BirthTurn (number)	Gender (text)	Head (text)	Torso (text)	Back (text)	Arms (text)	Legs (text)	Ass (text)	Tail (text)	ShowTail (truth state)	ShowLegs (truth state)	Pureblood (truth state)	Albino (truth state)	Melanism (truth state)	Feral (truth state)	Personality (text)	PlayerRelationship (text)
@@ -420,6 +420,7 @@ Table of GameCharacterIDs
 object	name
 child	"child"
 yourself	"yourself"
+Offspring	"offspring"
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -1129,11 +1130,51 @@ to say Mouth Circumference Adjective of ( x - a person ):
 		say "gaping";
 
 to say Breast Size Description of ( x - a person ):
-	if Breast Size of x < 3:
-		say "A cup";
-	else if Breast Size of x < 5:
-		say "B cup";
-	[...more cups to be added BY LUNETH...]
+	if Breast Size of x is:
+		-- 0:
+			say "flat";
+		-- 1:
+			say "A cup";
+		-- 2:
+			say "B cup";
+		-- 3:
+			say "C cup";
+		-- 4:
+			say "D cup";
+		-- 5:
+			say "DD cup";
+		-- 6:
+			say "E cup";
+		-- 7:
+			say "DDD cup";
+		-- 8:
+			say "F cup";
+		-- 9:
+			say "DDDD cup";
+		-- 10:
+			say "G cup";
+		-- 11:
+			say "H cup";
+		-- 12:
+			say "I cup";
+		-- 13:
+			say "J cup";
+		-- 14:
+			say "K cup";
+		-- 15:
+			say "L cup";
+		-- 16:
+			say "M cup";
+		-- 17:
+			say "N cup";
+		-- 18:
+			say "O cup";
+		-- 19:
+			say "P cup";
+		-- 20:
+			say "Q cup";
+		-- 21:
+			say "R cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
 	if Asshole Depth of x < 3: [inches deep]
@@ -1160,16 +1201,17 @@ to say Asshole Tightness Adjective of ( x - a person ):
 		say "gaping";
 
 to say Cock Girth Adjective of ( x - a person ):
-	if Cock Girth of x < 4: [inches circumference]
-		say "thin";
-	else if Cock Girth of x < 6: [inches circumference]
-		say "slender";
-	else if Cock Girth of x < 8: [inches circumference]
-		say "average";
-	else if Cock Girth of x < 11: [inches circumference]
-		say "thick";
-	else: [inches deep]
-		say "monstrous";
+	if Cock Girth of x is:
+		-- 1:
+			say "thin";
+		-- 2:
+			say "slender";
+		-- 3:
+			say "average";
+		-- 4:
+			say "thick";
+		-- 5:
+			say "monstrous";
 
 to say Ball Size Adjective of ( x - a person ):
 	if Ball Size of x is:
@@ -1687,9 +1729,9 @@ Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
 	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of Swimlist;
 
-OviImpregnatorList is a marker. [list of infections capable of ovi impregnation]
+OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
 when play begins:
-	add { "Frost Drake" } to infections of OviImpregnatorList;
+	add { "Frost Drake", "Avalon Kobold" } to infections of OviImpregnatorList;
 
 
 Part 2 - Rules
@@ -2182,7 +2224,7 @@ an everyturn rule:
 	if daytimer is day: [currently day]
 		if LastTurnDay is false: [last turn was night]
 			say "[bold type]The sun rises over the city.[roman type][line break]";
-			if Your Offspring is in bunker and number of filled rows in the Table of PlayerBunkerChildren > 0: [chance for presents!]
+			if Offspring is in bunker and number of filled rows in the Table of PlayerBunkerChildren > 0: [chance for presents!]
 				let PresentChance be 1;
 				if number of filled rows in the Table of PlayerBunkerChildren > 10:
 					increase PresentChance by 5;
@@ -4740,7 +4782,7 @@ This is the self examine rule:
 		if tail of Player is empty:
 			say "";
 		else:
-			say " [tail of Player] ";
+			say "[tail of Player]";
 	[Pregnancy Descriptions below]
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
@@ -4957,16 +4999,16 @@ This is the self examine rule:
 	now looknow is 0;
 	rule succeeds;
 
-The description of Your Offspring is "[OffspringDesc]".
+The description of Offspring is "[OffspringDesc]".
 
-instead of conversing the Your Offspring:
+instead of conversing the Offspring:
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "     You have a nice little talk with your children. Knowing that they're safe here while you're roaming the city makes you feel better about the grim reality of life in the city.";
 	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
 		say "     You have a nice little talk with your child. Knowing that they're safe here while you're roaming the city makes you feel better about the grim reality of life in the city.";
 	SanBoost 5;
 
-instead of fucking the Your Offspring:
+instead of fucking the Offspring:
 	if (number of filled rows in Table of PlayerBunkerChildren) > 1:
 		say "     For a second, lewd thoughts flare up in your mind and you almost open your mouth to say something to one of your children, but then you manage to control yourself and suppress the urge.";
 	else if (number of filled rows in Table of PlayerBunkerChildren) is 1: [exactly one child]
@@ -5224,6 +5266,7 @@ This is the random stats rule:
 	rule succeeds.
 
 This is the starting stats rule:
+	[default stats]
 	now the strength of the player is 12;
 	now the Dexterity of the player is 12;
 	now the Stamina of the player is 12;
@@ -5231,6 +5274,16 @@ This is the starting stats rule:
 	now the Intelligence of the player is 12;
 	now the Perception of the player is 12;
 	decrease the score by 0;
+	rule succeeds.
+
+This is the starting gender rule:
+	[default male gender]
+	now Cock Count of Player is 1;
+	now Cock Girth of Player is 3;
+	now Cock Length of Player is 6;
+	now Ball Size of the player is 3;
+	now Nipple Count of Player is 2;
+	now Breast Size of Player is 0;
 	rule succeeds.
 
 This is the Menu Exit Rule:
@@ -6434,6 +6487,9 @@ to genderlockmenu:
 		if calcnumber is not 0:
 			now gsgl is calcnumber;
 			now gsexit is 1;
+		else:
+			now gsexit is 1;
+[ no longer used since the player can set their detailed gender now
 			if gsgl > 1 and glshiftstart is 0:
 				say "Would you like to start as your chosen gender lock?";
 				if Player consents:
@@ -6444,6 +6500,8 @@ to genderlockmenu:
 				now glstart is 2;
 		else:
 			now gsexit is 1;
+]
+
 
 to startgenderlockget:
 	say "Locking Gender...";
@@ -6758,132 +6816,7 @@ Section Story Start Text
 To regularstart: [normal start method]
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	follow the starting stats rule;
-
-To oldregularstart: [normal start method]
-	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
-	follow the starting stats rule;
-	now calcnumber is -1;
-	let Trixieexit be 0;
-	while Trixieexit is 0:
-		clear the screen;
-		say "[bold type]Character Creation:[roman type][line break]";
-		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[else if gsms is 2]Dexterity[else if gsms is 3]Stamina[else if gsms is 4]Charisma[else if gsms is 5]Intelligence[else if gsms is 6]Perception[else]Random[end if][roman type][line break]";
-		say "(2) [link]Player Gender[as]2[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
-		say "(3) [link]Game Scenario[as]3[end link] - [bold type][scenario][roman type][line break]";
-		say "(4) [link]Difficulty Modes[as]4[end link] - [if gshm is false and gsnhm is false and gsbm is false][bold type]Normal[roman type][else if gshm is true][bold type]Hard[roman type][end if][if gshm is true and ( gsnhm is true or gsbm is true )] | [end if][if gsnhm is true][bold type]No-Heal[roman type][end if][if gsnhm is true and gsbm is true] | [end if][if gsbm is true][bold type]Blind[roman type][end if][line break]";
-[		say "(4) [link]Hard Mode[as]4[end link] - [bold type][if gshm is true]On[else]Off[end if][roman type][line break]"; ]
-		say "(5) [link]Main Feat[as]5[end link] - [bold type][freefeatgeneral][roman type][line break]";
-		say "(6) [link]Fun Feat[as]6[end link] - [bold type][freefeatfun][roman type][line break]";
-		say "(7) [link]Gender Lock[as]7[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(8) [link]Player Name[as]8[end link] - [bold type][name of Player][roman type][line break]";
-		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of Player][roman type][line break]";
-		say "(10) [link]Character Customization[as]10[end link][line break]";
-		say "[line break]";
-		say "[bold type]Gameplay Options:[roman type][line break]";
-		say "(11) [link]Banned/Warded Types[as]11[end link] - [menuwardlist] & [menubanlist] [line break]";
-		say "(12) [link]Anal Content[as]12[end link] - [bold type][if anallevel is 1]Less[else if anallevel is 2]Normal[else if anallevel is 3]More[end if][roman type][line break]";
-		say "(13) [link]WS Content[as]13[end link] - [bold type][if wslevel is 1]None[else if wslevel is 2]Normal[else if wslevel is 3]Full[end if][roman type][line break]";
-		say "(14) [link]Vore/UB Content[as]14[end link] - Vore: [bold type][if vorelevel is 1]None[else if vorelevel is 2]Normal[else if vorelevel is 3]Full[end if][roman type] - Unbirth: [bold type][if ublevel is 1]None[else if ublevel is 2]Normal[else if ublevel is 3]Full[end if][roman type][line break]";
-		say "(15) [link]Ovi Pregnancy[as]15[end link] - [bold type][if ovipreglevel is 1]Never[else]Normal[end if][roman type][line break]";
-		say "[line break]";
-		say "[bold type]Display Options:[roman type][line break]";
-		say "(16) [link]Hyperlinks[as]16[end link] - [bold type][if hypernull is 0]On[else if hypernull is 1]Off[end if][roman type][line break]";
-		say "(17) [link]Waiting for Input[as]17[end link] - [bold type][if waiterhater is 0]On[else if waiterhater is 1]Off[end if][roman type][line break]";
-		say "(18) [link]Screen Clearing[as]18[end link] - [bold type][if clearnomore is 0]On[else if clearnomore is 1]Off[end if][roman type][line break]";
-		say "(19) [link]Graphics[as]19[end link] - [bold type][if NewGraphicsInteger is 1]Inline[else if NewGraphicsInteger is 2]Side-Window[else if NewGraphicsInteger is 0]DISABLED[end if][roman type][line break]";
-		say "(20) [link]Inventory Columns[as]20[end link] - [bold type][invcolumns][roman type][line break]";
-		say "[line break]";
-		say "(99) [link]Restore a save[as]99[end link][line break]";
-		say "(0) [link]Start Game[as]0[end link][line break]";
-		while 1 is 1:
-			say "(0-20)>[run paragraph on]";
-			get a number;
-			if ( calcnumber >= 0 and calcnumber <= 20 ) or calcnumber is 99:
-				break;
-			else:
-				say "Invalid Entry";
-		if calcnumber is:
-			-- 1:
-				say "[gsopt_1]";
-			-- 2:
-				say "[gsopt_2]";
-			-- 3:
-				say "[gsopt_3]";
-			-- 4:
-				say "[gsopt_4]";
-			-- 5:
-				startFeatget;
-			-- 6:
-				startFunFeatget;
-			-- 7:
-				genderlockmenu;
-			-- 8:
-				playernaming;
-			-- 9:
-				try pronounsetting;
-			-- 10:
-				newplayercustomizationmenu;
-			-- 11:
-				if clearnomore is 0, clear the screen;
-				new ban menu;
-			-- 12:
-				try analadjusting;
-			-- 13:
-				try WSadjusting;
-			-- 14:
-				try voremenuing;
-			-- 15:
-				try oviadjusting;
-			-- 16:
-				if hypernull is 0:
-					now hypernull is 1;
-				else:
-					now hypernull is 0;
-			-- 17:
-				if waiterhater is 0:
-					now waiterhater is 1;
-				else:
-					now waiterhater is 0;
-			-- 18:
-				if clearnomore is 0:
-					now clearnomore is 1;
-				else:
-					now clearnomore is 0;
-			-- 19:
-				if NewGraphicsInteger is 1:
-					now graphics is true; [technically not necessary, but nice to have for edge cases]
-					now NewGraphics is true;
-					now NewGraphicsInteger is 2;
-				else if NewGraphicsInteger is 2:
-					now graphics is false;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 0;
-				else if NewGraphicsInteger is 0:
-					now graphics is true;
-					now NewGraphics is false;
-					now NewGraphicsInteger is 1;
-			-- 20:
-				say "[set_invcolumns]";
-			-- 99:
-				say "Confirm restore?";
-				if Player consents:
-					now RestoreMode is true;
-					say "[silent_start]";
-					now Trixieexit is 1;
-					if RestoreMode is true:
-						now RestoreMode is false;
-						try restoring the game;
-						if maxHP of Player is 0:
-							try restarting the game;
-			-- 0:
-				say "Confirm game start?";
-				if Player consents:
-					say "[gsopt_start]";
-					now Trixieexit is 1;
-
-To regularstart: [normal start method]
-	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
-	follow the starting stats rule;
+	follow the starting gender rule;
 	now calcnumber is -1;
 	let Trixieexit be 0;
 	while Trixieexit is 0:
@@ -6977,84 +6910,89 @@ To regularstart: [normal start method]
 			-- 0:
 				say "Confirm game start?";
 				if Player consents:
+					if Name of Player is not "DebugTesting": [nullifies Human new infection parts until the new system goes live]
+						now HeadName of Player is "";
+						now TorsoName of Player is "";
+						now BackName of Player is "";
+						now ArmsName of Player is "";
+						now LegsName of Player is "";
+						now CuntName of Player is "";
 					say "[gsopt_start]";
 					now Trixieexit is 1;
 
-
 to newplayercustomizationmenu:
-	now calcnumber is -1;
-	let charactermenuexit be 0;
-	while charactermenuexit is 0:
-		clear the screen;
-		say "[line break][bold type]Character Customization:[roman type][line break]";
-		say "(1) [link]Player Gender[as]1[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
-		say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-		say "(3) [link]Gender Lock[as]3[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
-		say "[line break]";
-		say "(0) [link]Return to main menu[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-4)>[run paragraph on]";
-			get a number;
-			if calcnumber >= 0 and calcnumber <= 4:
-				break;
+	if Name of Player is not "DebugTesting": [reduced menu until the new system goes live]
+		now calcnumber is -1;
+		let charactermenuexit be 0;
+		while charactermenuexit is 0:
+			clear the screen;
+			say "[line break][bold type]Character Customization:[roman type][line break]";
+			say "(1) [link]Player Gender[as]1[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
+			say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
+			say "(3) [link]Gender Lock[as]3[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(4) [link]Player Pronouns[as]4[end link] - [bold type][PronounChoice of Player][roman type][line break]";
+			say "[line break]";
+			say "(0) [link]Return to main menu[as]0[end link][line break]";
+			while 1 is 1:
+				say "Choice? (0-4)>[run paragraph on]";
+				get a number;
+				if calcnumber >= 0 and calcnumber <= 4:
+					break;
+				else:
+					say "Invalid Entry";
+			LineBreak;
+			if calcnumber is 1:
+				say "[gsopt_2]";
+			else if calcnumber is 2:
+				playersexsetting;
+			else if calcnumber is 3:
+				genderlockmenu;
+			else if calcnumber is 4:
+				try pronounsetting;
 			else:
-				say "Invalid Entry";
-		LineBreak;
-		if calcnumber is 1:
-			say "[gsopt_2]";
-		else if calcnumber is 2:
-			playersexsetting;
-		else if calcnumber is 3:
-			genderlockmenu;
-		else if calcnumber is 4:
-			try pronounsetting;
-		else:
-			now charactermenuexit is 1;
-[ Disabled till the new infection system goes live
-	while charactermenuexit is 0:
-		clear the screen;
-		say "[line break][bold type]Character Customization:[roman type][line break]";
-		say "(1) [link]Player Gender[as]1[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
-		say "(2) [link]Player Sexual Experience[as]2[end link]: [playervirginsay][line break]";
-		say "(3) [link]Player Hair[as]3[end link]: Head Hair: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player]; [if Player is Hasbeard]Beard: [Beard Style of Player];[end if] Body Hair: [Body Hair Adjective of Player][line break]";
-		say "(4) [link]Eye Color[as]4[end link]: [Eye Color of Player][line break]";
-		say "(5) [link]Skin Color[as]5[end link]: [Torso Color of Player][line break]";
-		say "(6) [link]Body Type[as]6[end link]: [Body Adjective of Player][line break]";
-		say "(7) [link]Gender Appearance & Orientation[as]7[end link][line break]";
-		say "(8) [link]Gender Lock[as]8[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
-		say "(9) [link]Player Pronouns[as]9[end link] - [bold type][PronounChoice of Player][roman type][line break]";
-		say "[line break]";
-		say "(0) [link]Return to main menu[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-9)>[run paragraph on]";
-			get a number;
-			if calcnumber >= 0 and calcnumber <= 9:
-				break;
+				now charactermenuexit is 1;
+	else: [just for testing till the new system goes live]
+		now calcnumber is -1;
+		let charactermenuexit be 0;
+		while charactermenuexit is 0:
+			clear the screen;
+			say "[line break][bold type]Character Customization:[roman type][line break]";
+			say "(1) [link]Gender Settings & Orientation[as]1[end link][line break]";
+			say "(2) [link]Gender Lock[as]2[end link] - [bold type][if gsgl is 1]None[else if gsgl is 2]Random[else if gsgl is 3]Male[else if gsgl is 4]Female[else if gsgl is 5]Shemale[else if gsgl is 6]Cuntboy[else if gsgl is 7]Male Herm[else if gsgl is 8]Herm[else if gsgl is 9]Always Cocky[else if gsgl is 10]Always a Pussy[else if gsgl is 11]Single Sexed[else if gsgl is 12]Flat Chested[else if gsgl is 13]Simplified Masculine[else]ERROR[end if][roman type][line break]";
+			say "(3) [link]Player Sexual Experience[as]3[end link]: [playervirginsay][line break]";
+			say "(4) [link]Player Hair[as]4[end link]: Head Hair: [Hair Shape of Player] [Hair Color of Player] [Hair Style of Player]; [if Player is Hasbeard]Beard: [Beard Style of Player];[end if] Body Hair: [Body Hair Adjective of Player][line break]";
+			say "(5) [link]Eye Color[as]5[end link]: [Eye Color of Player][line break]";
+			say "(6) [link]Skin Color[as]6[end link]: [Torso Color of Player][line break]";
+			say "(7) [link]Body Type[as]7[end link]: [Body Adjective of Player][line break]";
+			say "(8) [link]Player Pronouns[as]8[end link] - [bold type][PronounChoice of Player][roman type][line break]";
+			say "[line break]";
+			say "(0) [link]Return to main menu[as]0[end link][line break]";
+			while 1 is 1:
+				say "Choice? (0-9)>[run paragraph on]";
+				get a number;
+				if calcnumber >= 0 and calcnumber <= 9:
+					break;
+				else:
+					say "Invalid Entry";
+			LineBreak;
+			if calcnumber is 1:
+				gendersetting;
+			else if calcnumber is 2:
+				genderlockmenu;
+			else if calcnumber is 3:
+				playersexsetting;
+			else if calcnumber is 4:
+				hairsetting;
+			else if calcnumber is 5:
+				eyecolorsetting;
+			else if calcnumber is 6:
+				skincolorsetting;
+			else if calcnumber is 7:
+				bodytypesetting;
+			else if calcnumber is 8:
+				try pronounsetting;
 			else:
-				say "Invalid Entry";
-		LineBreak;
-		if calcnumber is 1:
-			say "[gsopt_2]";
-		else if calcnumber is 2:
-			playersexsetting;
-		else if calcnumber is 3:
-			hairsetting;
-		else if calcnumber is 4:
-			eyecolorsetting;
-		else if calcnumber is 5:
-			skincolorsetting;
-		else if calcnumber is 6:
-			bodytypesetting;
-		else if calcnumber is 7:
-			genderidentitysetting;
-		else if calcnumber is 8:
-			genderlockmenu;
-		else if calcnumber is 9:
-			try pronounsetting;
-		else:
-			now charactermenuexit is 1;
-]
+				now charactermenuexit is 1;
 
 to contentrestrictionmenu:
 	now calcnumber is -1;
@@ -7090,24 +7028,176 @@ to contentrestrictionmenu:
 			now contentrestrictionmenuexit is 1
 
 
-to genderidentitysetting:
+to gendersetting:
 	now calcnumber is -1;
 	let gendermenuexit be 0;
 	while gendermenuexit is 0:
 		clear the screen;
 		say "[bold type]Gender Settings:[roman type][line break]";
-		say "(1) [link]Gender Appearance[as]1[end link]: [Gender Adjective of Player][line break]";
-		say "(2) [link]Sexual Orientation[as]2[end link] [line break]";
+		say "(1) [link]Cock Length[as]1[end link]: [if Cock Count of Player > 0][Cock Length of Player] inches long[else]none[end if][line break]";
+		say "(2) [link]Cock Girth[as]2[end link]: [if Cock Count of Player > 0][Cock Girth Adjective of Player][else]none[end if][line break]";
+		say "(3) [link]Ball Size[as]3[end link]: [if Cock Count of Player > 0][Ball Size Adjective of Player][else]none[end if][line break]";
+		say "(4) [link]Cunt Depth[as]4[end link]: [if Cunt Count of Player > 0][Cunt Depth of Player] inches deep[else]none[end if][line break]";
+		say "(5) [link]Cunt Tightness[as]5[end link]: [if Cunt Count of Player > 0][Cunt Tightness Adjective of Player][else]none[end if][line break]";
+		say "(6) [link]Clit Size[as]6[end link]: [if Cunt Count of Player > 0][Clit Size Adjective of Player][else]none[end if][line break]";
+		say "(7) [link]Breast Size[as]7[end link]: [if Breast Size of Player > 0][Breast Size Description of Player] breasts[else][Pecs Firmness Adjective of Player], [Pecs Size Adjective of Player] pecs (depends on body type)[end if][line break]";
+		say "(8) [link]Breast Shape[as]8[end link]: [if Breast Size of Player > 0][Breast Adjective of Player][else]none[end if][line break]";
+		say "--------------------------------------------------------------------------------[line break]";
+		say "(9) [link]Gender Appearance & Behavior[as]9[end link]: [Gender Adjective of Player][line break]";
+		say "(10) [link]Sexual Orientation[as]10[end link] [line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-2)>[run paragraph on]";
+			say "Choice? (0-10)>[run paragraph on]";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 2:
+			if calcnumber >= 0 and calcnumber <= 10:
 				break;
 			else:
-				say "Invalid Entry";
-		if calcnumber is 1:
+				say "Invalid Entry.";
+				wait for any key;
+		if calcnumber is 1: [cock length]
+			now calcnumber is -1;
+			while calcnumber <= 0:
+				say "Please enter a number from 0-13 for your penis length in inches.";
+				get a number; [returns as calcnumber]
+				if calcnumber >= 0 and calcnumber <= 13: [Valid choice, else repeat]
+					break;
+				else:
+					say "Invalid Entry.";
+					wait for any key;
+			now Cock Length of Player is calcnumber;
+			if Cock Length of Player is 0: [no cock at all!]
+				now Cock Count of Player is 0;
+			else: [cock present]
+				now Cock Count of Player is 1;
+				now Cock Girth of Player is 3; [average thickness]
+				now Ball Size of Player is 2; [dove-egg]
+				now Cunt Count of Player is 0; [no pre-infection herms]
+				now Cunt Depth of Player is 0;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 2: [cock girth]
+			now calcnumber is -1;
+			if Cock Count of Player is 0:
+				say "Invalid Option. No cock detected.";
+				wait for any key;
+			else:
+				while calcnumber <= 0:
+					say "Please enter a number from 1-5 for your penis girth on a scale of thin/slender/average/thick/monstrous.";
+					get a number; [returns as calcnumber]
+					if calcnumber >= 1 and calcnumber <= 5: [Valid choice, else repeat]
+						break;
+					else:
+						say "Invalid Entry.";
+						wait for any key;
+				now Cock Girth of Player is calcnumber;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 3: [ball size]
+			now calcnumber is -1;
+			if Cock Count of Player is 0:
+				say "Invalid Option. No cock detected.";
+				wait for any key;
+			else:
+				while calcnumber <= 0:
+					say "Please choose 1 (acorn sized), 2 (dove-egg sized) or 3 (chicken egg sized).";
+					get a number; [returns as calcnumber]
+					if calcnumber >= 1 and calcnumber <= 3: [Valid choice, else repeat]
+						break;
+					else:
+						say "Invalid Entry.";
+						wait for any key;
+				now Ball Size of Player is calcnumber;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 4: [Cunt Depth]
+			now calcnumber is -1;
+			while calcnumber <= 0:
+				say "Please enter a number from 0-13 for your pussy depth in inches.";
+				get a number; [returns as calcnumber]
+				if calcnumber >= 0 and calcnumber <= 13: [Valid choice, else repeat]
+					break;
+				else:
+					say "Invalid Entry.";
+					wait for any key;
+			now Cunt Depth of Player is calcnumber;
+			if Cunt Depth of Player is 0: [no Cunt at all!]
+				now Cunt Count of Player is 0;
+			else: [Cunt present]
+				now Cunt Count of Player is 1;
+				now Cunt Tightness of Player is 5; [tight]
+				now Clit Size of Player is 3; [average]
+				now Cock Count of Player is 0; [no pre-infection herms]
+				now Cock Length of Player is 0;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 5: [Cunt Tightness]
+			now calcnumber is -1;
+			if Cunt Count of Player is 0:
+				say "Invalid Option. No pussy detected.";
+				wait for any key;
+			else:
+				while calcnumber <= 0:
+					say "Please enter a number (1-15) for the circumference of your pussy in inches.";
+					get a number; [returns as calcnumber]
+					if calcnumber >= 1 and calcnumber <= 15: [Valid choice, else repeat]
+						break;
+					else:
+						say "Invalid Entry.";
+						wait for any key;
+				now Cunt Tightness of Player is calcnumber;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 6: [clit size]
+			now calcnumber is -1;
+			if Cunt Count of Player is 0:
+				say "Invalid Option. No pussy detected.";
+				wait for any key;
+			else:
+				while calcnumber <= 0:
+					say "Please enter a number from 1-5 for your clit size on a scale of very small/small/average/large/very large.";
+					get a number; [returns as calcnumber]
+					if calcnumber >= 1 and calcnumber <= 5: [Valid choice, else repeat]
+						break;
+					else:
+						say "Invalid Entry.";
+						wait for any key;
+				now Clit Size of Player is calcnumber;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 7: [breast size]
+			now calcnumber is -1;
+			while calcnumber <= 0:
+				say "Please enter a number from 0-7 for your breast size on a scale of flat/A cup/B cup/C cup/D Cup/DD cup/E cup/F cup.";
+				get a number; [returns as calcnumber]
+				if calcnumber >= 0 and calcnumber <= 7: [Valid choice, else repeat]
+					now Breast Size of Player is calcnumber;
+					break;
+				else:
+					say "Invalid Entry.";
+					wait for any key;
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 8: [breast type]
+			now calcnumber is -1;
+			if Breast Size of Player is 0:
+				say "Invalid Option. No breasts detected.";
+				wait for any key;
+			else:
+				while calcnumber <= 0:
+					say "Please enter a number from 1-5 for your breast type on a scale of round/pointy/perky/saggy/bouncy.";
+					get a number; [returns as calcnumber]
+					if calcnumber >= 1 and calcnumber <= 5: [Valid choice, else repeat]
+						break;
+					else:
+						say "Invalid Entry.";
+						wait for any key;
+				if calcnumber is:
+					-- 1:
+						now Breast Adjective of Player is "round";
+					-- 2:
+						now Breast Adjective of Player is "pointy";
+					-- 3:
+						now Breast Adjective of Player is "perky";
+					-- 4:
+						now Breast Adjective of Player is "saggy";
+					-- 5:
+						now Breast Adjective of Player is "bouncy";
+			now calcnumber is -1; [resetting calcnumber for the main menu]
+		else if calcnumber is 9:
 			now calcnumber is -1;
 			while calcnumber <= 0:
 				say "Please enter a number from 1-9. 1 being hypermasculine, 5 adrogynous, and 9 hyperfeminine:[line break]";
@@ -7116,10 +7206,11 @@ to genderidentitysetting:
 				if calcnumber >= 1 and calcnumber <= 9: [Valid choice, else repeat]
 					break;
 				else:
-					say "Invalid Entry";
+					say "Invalid Entry.";
+					wait for any key;
 			now Androginity of Player is calcnumber;
 			now calcnumber is -1; [resetting calcnumber for the main menu]
-		else if calcnumber is 2:
+		else if calcnumber is 10:
 			PlayerSexualOrientationMenu;
 		else:
 			now gendermenuexit is 1;
@@ -7130,11 +7221,11 @@ to PlayerSexualOrientationMenu:
 	while OrientationMenuExit is 0:
 		clear the screen;
 		say "[bold type]Interested in: (select Yes for all that apply)[roman type][line break]";
-		say "[if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Males (penis)[as]1[end link][line break]";
-		say "[if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Trans Males (male with vagina)[as]2[end link][line break]";
-		say "[if FemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Females (pussy)[as]3[end link][line break]";
-		say "[if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Trans Females (female with penis)[as]4[end link][line break]";
-		say "[if HermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type] - [link]Herms (both vagina + penis)[as]5[end link][line break]";
+		say "(1) [link]Males (penis)[as]1[end link] - [if MaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(2) [link]Trans Males (male with vagina)[as]2[end link] - [if TransMaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(3) [link]Females (pussy)[as]3[end link] - [if FemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(4) [link]Trans Females (female with penis)[as]4[end link] - [if TransFemaleInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
+		say "(5) [link]Herms (both vagina + penis)[as]5[end link] - [if HermInterest of Player is true][special-style-1]Yes[else][special-style-2]No[end if][roman type][line break]";
 		say "[line break]";
 		say "(0) [link]Return to previous menu[as]0[end link][line break]";
 		while 2 is 2:
@@ -7181,8 +7272,8 @@ carry out UsePlayerSexualOrientationMenu:
 to bodytypesetting:
 	now calcnumber is -1;
 	let bodymenuexit be 0;
-	[
 	while bodymenuexit is 0:
+		clear the screen;
 		say "[bold type]Body Type: [Body Adjective of Player][roman type][line break]";
 		say "(1) [link]Body Weight[as]1[end link]: [Body Weight of Player] - [if Body Weight of Player >= 1 and Body Weight of Player <= 3]Lightweight[else if Body Weight of Player >= 4 and Body Weight of Player <= 6]Middleweight[else if Body Weight of Player >= 7 and Body Weight of Player <= 9]Heavyweight[end if][line break]";
 		say "(2) [link]Body Definition[as]2[end link]: [Body Definition of Player] - [if Body Definition of Player >= 1 and Body Definition of Player <= 3]Low Muscle[else if Body Definition of Player >= 4 and Body Definition of Player <= 6]Medium Muscle[else if Body Definition of Player >= 7 and Body Definition of Player <= 9]High Muscle[end if][line break]";
@@ -7231,46 +7322,6 @@ to bodytypesetting:
 				remove "Conformist" from Feats of Player;
 			else:
 				add "Conformist" to Feats of Player;
-		else:
-			now bodymenuexit is 1;
-	]
-	[version without the conformist feat until the activation of the new infections]
-	while bodymenuexit is 0:
-		clear the screen;
-		say "[bold type]Body Type: [Body Adjective of Player][roman type][line break]";
-		say "(1) [link]Body Weight[as]1[end link]: [Body Weight of Player] - [if Body Weight of Player >= 1 and Body Weight of Player <= 3]Lightweight[else if Body Weight of Player >= 4 and Body Weight of Player <= 6]Middleweight[else if Body Weight of Player >= 7 and Body Weight of Player <= 9]Heavyweight[end if][line break]";
-		say "(2) [link]Body Definition[as]2[end link]: [Body Definition of Player] - [if Body Definition of Player >= 1 and Body Definition of Player <= 3]Low Muscle[else if Body Definition of Player >= 4 and Body Definition of Player <= 6]Medium Muscle[else if Body Definition of Player >= 7 and Body Definition of Player <= 9]High Muscle[end if][line break]";
-		say "[line break][line break]";
-		say "(0) [link]Return to previous menu[as]0[end link][line break]";
-		while 1 is 1:
-			say "Choice? (0-2)>[run paragraph on]";
-			get a number;
-			if calcnumber >= 0 and calcnumber <= 2:
-				break;
-			else:
-				say "Invalid Entry";
-		if calcnumber is 1:
-			now calcnumber is -1;
-			while calcnumber <= 0:
-				say "Please enter a number from 1-9. 1 being a very light build and 9 being a very heavy build:[line break]";
-				get a number; [returns as calcnumber]
-				if calcnumber >= 1 and calcnumber <= 9: [Valid choice, else repeat]
-					break;
-				else:
-					say "Invalid Entry";
-			now Body Weight of Player is calcnumber;
-			now calcnumber is -1; [resetting calcnumber for the main menu]
-		else if calcnumber is 2:
-			now calcnumber is -1;
-			while calcnumber <= 0:
-				say "Please enter a number from 1-9. 1 being a barely defined body and 9 being a very highly defined body:[line break]";
-				get a number; [returns as calcnumber]
-				if calcnumber >= 1 and calcnumber <= 9: [Valid choice, else repeat]
-					break;
-				else:
-					say "Invalid Entry";
-			now Body Definition of Player is calcnumber;
-			now calcnumber is -1; [resetting calcnumber for the main menu]
 		else:
 			now bodymenuexit is 1;
 
@@ -8138,6 +8189,7 @@ to say gsopt_4:
 
 to say gsopt_start:
 	now started is 1;
+	[
 	if gspg is 1:	[male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
@@ -8152,6 +8204,7 @@ to say gsopt_start:
 		now Breast Size of Player is 2;
 	if glstart is 1:
 		startgenderlockshift;
+	]
 	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
@@ -8285,9 +8338,10 @@ to say gsopt_start:
 
 [Silent starting protocol that launches restore game. Included as part of restore on the main menu because of issues with the graphical window creation.]
 to say silent_start:
-	say "	Please wait while we complete some background work prior to restoring.";
+	say "Please wait while we complete some background work prior to restoring.";
 	WaitLineBreak;
 	now started is 1;
+	[
 	if gspg is 1: [male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
@@ -8302,6 +8356,7 @@ to say silent_start:
 		now Breast Size of Player is 2;
 	if glstart is 1:
 		startgenderlockshift;
+	]
 	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;
@@ -8473,15 +8528,15 @@ to say promptsay:
 	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";
-	say "Exits: ";
+	say "Exits:";
 	repeat with nam running through valid directions:
-		say "[link][printed name of nam][end link] ";
+		say " [link][printed name of nam][end link]";
 	if location of Player is fasttravel and earea of location of Player is "void":
-		say "[bracket][link]nav[end link][close bracket]";
+		say " [bracket][link]nav[end link][close bracket]";
 	else if location of Player is fasttravel:
-		say "[bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
+		say " [bracket][link]nav[end link], [link]scavenge[end link], [link]explore[end link][close bracket]";
 	else if earea of location of Player is not "void":
-		say "[bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
+		say " [bracket][link]scavenge[end link], [link]explore[end link][close bracket]";
 	say ", Visible Things: ";
 	repeat with y running through the things in the location of the player:
 		if y is a door, next;
