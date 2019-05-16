@@ -10,13 +10,6 @@ NPC Nexus	"nowhere"
 NPC Nexus is a room.
 The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord.".
 
-Table of GameRoomIDs (continued)
-Object	Name
-Grey Abbey Library	"Grey Abbey Library"
-
-Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Library is sleepsafe.
-The description of Grey Abbey Library is "[abbey desc]".
-The earea of Grey Abbey Library is "Outside".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -31,12 +24,14 @@ Grey Abbey Library is east of Library Door.
 Bunker is below Grey Abbey Library.
 The player is in Bunker.
 
+after looking while player is in Bunker:
+	project the Figure of Map_Bunker_Main_icon;
+
 to say bunker desc:
-	project the figure of Bunker_icon;
 	say "     Sparsely appointed, this bunker was built as a fallout shelter back during the Cold War, then abandoned to become a forgotten curiosity at best. You are standing in the main bunker room, a rectangular chamber measuring about sixty feet in length and thirty feet in width. Its walls are solid concrete, and long rows of shelves are built into the back wall. There are several large storage lockers in the bunker as well. They look like a good place to store all your extra stuff. Several long rows of simple metal beds are bolted to the floor and walls for those taking shelter here to [bold type]rest[roman type] upon";
 	if "cot" is listed in invent of Bunker:
 		say ". One of the cots apparently was poorly installed, and the bolts attaching it to the floor have come loose. You could take it along if you'd like";
-	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a large maintenance closet, but at least it's private.";
+	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a maintenance storeroom, but at least it's private.";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner, where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. Regardless of the source of its power, the boombox provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials results in different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
 	if debugactive is 1:
@@ -50,8 +45,10 @@ Communal Shower is north of Bunker.
 Communal Shower is a room. The description of Communal Shower is "[bshower desc]".
 lastShowerUse is a number that varies. lastShowerUse is usually 10000.
 
+after looking while player is in Communal Shower:
+	project the Figure of Map_Bunker_Shower_icon;
+
 to say bshower desc:
-	project the figure of Bunker_icon;
 	say "     The bunker has a small communal shower with a pretty simple setup. The first thing one sees when entering is that everything is covered in smooth, checkered tile. There's a short bench near the entrance for people to sit on as they undress. This is separated from the shower area proper by a concrete dividing wall, serving as a privacy screen for those entering and drying off. Turning the corner, you see that five showerheads have been affixed to the back wall for several people to wash themselves at once. There's a subtle depression in the floor - enough to direct water to a central drain, but not enough to feel unsteady when standing on it. Around the shower is a raised border that serves as an additional safeguard from flooding the surrounding area.";
 	if library computer is powered:
 		say "     Experimentally turning the knobs under one of the showerheads, a light spray of water comes out of it. Seems like you can at least wash here now. Drinking the water wouldn't be advisable though, as you vaguely remember mentions of the use of lead piping from the tour you once took through the place. As corroded as that has to be by now, you decide not to risk lead poisoning on top of all your other problems.";
@@ -65,23 +62,40 @@ Underground Restroom	"Underground Restroom"
 Underground Restroom is northeast of Bunker.
 Underground Restroom is a room. The description of Underground Restroom is "[brestroom desc]".
 
+after looking while player is in Underground Restroom:
+	project the Figure of Map_Bunker_Restroom_icon;
+
 to say brestroom desc:
-	project the figure of Bunker_icon;
+	project the Figure of Map_Bunker_Restroom_icon;
 	say "     This room is very barebones - a small chamber with several stalls containing toilets. Checking one out, you realize that it isn't a typical piece of bathroom installation. There is no water (or anything, really) under the tightly closing lid, only what seems like a long drop into darkness. You try not to imagine how the lower end of the shaft might look like - or smell.";
 
 Table of GameRoomIDs (continued)
 Object	Name
-Maintenance Closet	"Maintenance Closet"
+Maintenance Storeroom	"Maintenance Storeroom"
 
-Maintenance Closet is southwest of Bunker.
-Maintenance Closet is a room. The description of Maintenance Closet is "[bmaintenance desc]".
+Maintenance Storeroom is southwest of Bunker.
+Maintenance Storeroom is a room. The description of Maintenance Storeroom is "[bmaintenance desc]".
+
+after looking while player is in Maintenance Storeroom:
+	project the Figure of Map_Bunker_Storeroom_icon;
 
 to say bmaintenance desc:
-	project the figure of Bunker_icon;
+	project the Figure of Map_Bunker_Storeroom_icon;
 	say "     The maintenance room you have turned into your own private lodgings. Looking around, it isn't very large by any standards, and much of that is filled with cluttered shelving. Along the back wall is a twin size bed that the old janitor probably used to nap during breaks. The walls on the left and right are haphazardly lined with shelves and filing cabinets. There's nothing of any real interest inside of or on top of them, but you may find a use for the extra storage space in time.";
 
+
+Table of GameRoomIDs (continued)
+Object	Name
+Grey Abbey Library	"Grey Abbey Library"
+
+Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Library is sleepsafe.
+The description of Grey Abbey Library is "[abbey desc]".
+The earea of Grey Abbey Library is "Outside".
+
+after looking while player is in Grey Abbey Library:
+	project the Figure of Map_Library_Front_icon;
+
 to say abbey desc:
-	project the figure of Library1stfloor_icon;
 	say "     This former abbey has been rebuilt to become a mid-sized library. The architecture and design shows its origins despite the renovations made. A number of simple yet elegant columns, wall sconces, and several other of the original features have been left untouched to give the library some [']character[']. The central room has a reception desk at the front, with long rows of bookshelves stretching out behind it and to the sides. [if library computer is powered]Now that the building has power, the overhead lights glow, although they sometimes flicker and dim when whatever is going on in the rest of the city causes fluctuations. The computer on the front desk has power now as well and might be of some use[else]A computer sits on the front desk, although without power, it isn't of any help right now[end if]. Small seating groups of chairs and sofas make the library quite a nice place to hang out in and read.";
 	say "     There is an upper story to the library overhanging the ground floor, accessible through two stairways to the left and right, not too far from where you are standing. A third of the space has been left open in the middle, allowing people to look down into the main stacks over the wooden railings. High above, thick wooden beams form the rafters of the building's roof. To the north is a room with some white sheets covering assorted furniture. To the south is a glass window through which you are able to make out a dilapidated computer lab. Heading east will lead further into the library.";
 	if Fang is booked and Alexandra is booked:
@@ -110,6 +124,9 @@ Main & 7th Street	"Main & 7th Street"
 
 The description of Main & 7th Street is "[7thMainDesc]".
 The earea of Main & 7th Street is "Outside".
+
+after looking while player is in Main & 7th Street:
+	project the Figure of Map_Library_Street_icon;
 
 to say 7thMainDesc:
 	say "     You're at the corner of 7th Street and Main, the latter of which extends further towards the north and south, while 7th Street starts right in front of the entrance of the Grey Abbey Library and runs into the distance westwards. Glancing at the historic structure of the library, you remember hearing somewhere that the old city center was actually fairly close by in the past. But then modern developments shifted the focus on the downtown area, where enough free room was available to put up high rises and new construction. As a historical section of the city, the area encompasses both residential buildings, a few shops and public buildings, having been built long before the introduction of zoning laws.";
@@ -159,13 +176,15 @@ The description of Library Microwave is "[LibraryMicrowaveDesc]".
 
 to say LibraryMicrowaveDesc:
 	say "     A black, mid-sized microwave stands on one of the countertops in the breakroom. ";
-	if findwires is not 2 and fixedgens is not 2:
+	if findwires < 2 and fixedgens < 3:
 		say "Sadly, without power it doesn't work.";
 	else:
 		say "Now that you have restored power to the library, you can make use of it. All you need to do is put stuff in and [bold type]microwave[roman type] whatever you want!";
 
+after looking while player is in Breakroom:
+	project the Figure of Map_Library_North2_icon;
+
 to say gbreakroom desc:
-	project the figure of Library1stfloor_icon;
 	say "     The library staff breakroom is nothing more than a remodeled version of the abbey's old kitchen. The walls are still made with the original stone blocks, while the two windows in the room have thankfully been updated. Both are simple horizontal sliders, bathing the room in a simple glow from the natural lighting outside. [if Sidney is booked]Sidney apparently decided that the breakroom needed to be put into proper order. She's pushed the furniture around in an effort to organize the space[else]The tables have been pushed around, leaving no semblance of order to them, while the countertops at least are reasonably clean[end if]. [if Macadamia is booked]On one of the counters are a ton of Mack's jars, each filled with his own special blend of salted nuts. Just looking at the cartoonish labels with Mack on the cover makes you wonder if he's thinking of starting his own side business. [end if]To the west is the old kitchen's walk-in pantry.";
 	if library computer is powered:
 		say "     The only modern day conveniences in the breakroom are a microwave and a small fridge, both of which are ready to be used now that you have restored power to the library.";
@@ -181,8 +200,10 @@ Half-Renovated Room is north of Grey Abbey Library.
 Half-Renovated Room is sleepsafe.
 The description of Half-Renovated Room is "[LibrarySideRoomDesc]";
 
+after looking while player is in Half-Renovated Room:
+	project the Figure of Map_Library_North3_icon;
+
 to say LibrarySideRoomDesc:
-	project the figure of Library1stfloor_icon;
 	say "     This large room seems to be where most of the furniture of the old abbey ended up when the building was converted to its new purpose. With its high ceiling, ample floor-space, and even a big fireplace, it may have served as a dining hall in the past. Now it is mostly filled with numerous pieces of furniture, some stacked quite high and partially covered in white sheets. The two still accessible walls are covered in scaffolding and show signs of recent work on them, as if renovations were in progress when the nanite outbreak began. Due west you can make out a room with tables strewn about and plenty of counter space. Back south it the main area of the library.";
 	if Skarnoth is in Half-Renovated Room:
 		say "     Since you brought the demon prince Skarnoth here and securely attached the long chain on his collar to the scaffolding, the imprisoned predator has done his best to improve the comfort of his prison. A soft (if somewhat threadbare and stained) couch has been dragged to stand against the back wall and shows signs of being used as a bed. He even found a high-backed armchair somewhere, which is now set up next to the fireplace. Sitting in it, the demon awaits you, wearing an arrogant expression as if he was a king awaiting supplicants.";
@@ -194,8 +215,10 @@ Pantry	"Pantry"
 Pantry is west of Breakroom.
 Pantry is a room. The description of Pantry is "[gpantry desc]".
 
+after looking while player is in Pantry:
+	project the Figure of Map_Library_North1_icon;
+
 to say gpantry desc:
-	project the figure of Library1stfloor_icon;
 	say "     The pantry is about the size of a walk-in closet. Inspecting the shelves on all three walls, hoping to find some extra food perhaps, you sadly only find a few leftover folders. After the building became a library, this pantry apparently ended up being turned into a simple storage room. Heading east from here will lead you back into the breakroom.";
 
 Table of GameRoomIDs (continued)
@@ -206,8 +229,11 @@ Computer Lab is south of Grey Abbey Library.
 Computer Lab is a room. The description of Computer Lab is "[gcomputerlab desc]".
 The invent of Computer Lab is { "soda" }.
 
+after looking while player is in Computer Lab:
+	project the Figure of Map_Library_South2_icon;
+
 to say gcomputerlab desc:
-	project the figure of Library1stfloor_icon;
+	project the Figure of Map_Library_South2_icon;
 	say "     Stepping into the old computer lab, it appears that someone had some anger management issues judging by all of the smashed monitors and towers. Every computer used to have its own cubicle, each one about four feet wide by three feet long. While not a room you would particularly enjoy staying in, you're sure you can find some use for it. To the west is a locked door. Heading north will take you back to the library entrance.";
 
 Table of GameRoomIDs (continued)
@@ -217,8 +243,10 @@ Back Of The Library	"Back Of The Library"
 Back Of The Library is east of Grey Abbey Library.
 Back Of The Library is a room. The description of Back Of The Library is "[gbackofthelibrary desc]".
 
+after looking while player is in Back Of The Library:
+	project the Figure of Map_Library_Back_icon;
+
 to say gbackofthelibrary desc:
-	project the figure of Library1stfloor_icon;
 	say "     The back of the library has less bookshelves, with tables taking up the majority of the space. Glancing around the area, you can make out three tables that haven't been destroyed yet and a single sofa. The walls have the same tacky pictures that most libraries have, one of them featuring an ice skating polar bear with the caption 'Chill Out And Read'. There are also copies of famous paintings littering the walls. To the south is a locked door. Heading north you can see a sign that reads 'Kidz Zone' hanging over the open doorway. Due east is a double glass door leading out into the back courtyard. Heading west will take you back to the entrance to the library.";
 
 Table of GameRoomIDs (continued)
@@ -228,8 +256,10 @@ Makeshift Rec Room	"Makeshift Rec Room"
 Makeshift Rec Room is north of Back Of The Library.
 Makeshift Rec Room is a room. The description of Makeshift Rec Room is "[grecroom desc]".
 
+after looking while player is in Makeshift Rec Room:
+	project the Figure of Map_Library_North4_icon;
+
 to say grecroom desc:
-	project the figure of Library1stfloor_icon;
 	say "     The Kidz Zone was at one point the place where parents would dump their kids when they needed a break. Most of the brightly colored decorations have been torn down, leaving the area with a twisted, festive feel to it. A single table is set up in the back corner of the room, while the bookshelves have all been destroyed. [if Korvin is booked or Alexandra is booked]Recently, someone found an old pool table and dragged it all the way into the rec-room, and a deck of cards has been placed on a side table. While some may prefer reading to pass the time, others apparently find that far too dull for their tastes. The idea of hustling someone at pool or poker does have its appeal. [end if][if Nala is booked]Having set up a balcony-like seat out of a broken air vent, Nala can now watch and heckle to her heart's content. [end if][if Zoe is booked]Zoe reorganized one side of the room as her workshop. The entire wall has been painted into a large fresque depicting the city and many of the creatures who dwell in it. Carboxes worth of spray cans supply sits neatly in a corner. Zoe arranged a private space, hidden behind a screen, which she took the opportunity to spray-paint as well. [end if]Heading south leads back to the library.";
 
 Table of GameRoomIDs (continued)
@@ -240,8 +270,10 @@ Courtyard is east of Back Of The Library.
 Courtyard is a room. The description of Courtyard is "[gcourtyard desc]".
 The invent of Courtyard is { "dirty water" }.
 
+after looking while player is in Courtyard:
+	project the Figure of Map_Library_Fountain_icon;
+
 to say gcourtyard desc:
-	project the figure of Library1stfloor_icon;
 	say "     The courtyard has an almost peaceful aura about it, which is shocking considering the state of the rest of the city. A few trees have been sporadically planted around a large fountain in the center of the courtyard. While there is no water coming out of the fountain, it is still a nice area to sit and relax. To the north is a large shed, more than likely filled with gardening tools used for the courtyard. To the south is the remnants of what was once a garden. Heading west will take you back into the library.";
 
 Table of GameRoomIDs (continued)
@@ -254,8 +286,10 @@ Large Shed is a room. The description of Large Shed is "[glargeshed desc]".
 when play begins:
 	add "Broke-Ass Hoe" to invent of Large Shed;
 
+after looking while player is in Large Shed:
+	project the Figure of Map_Library_Shack_icon;
+
 to say glargeshed desc:
-	project the figure of Library1stfloor_icon;
 	say "     Stepping into the shed, it's a little disconcerting how much bigger it is compared to its outward appearance. Inspecting the interior, the walls are made from basic cement, no drywall or anything, which makes sense since given that this was just a place to stow gardening equipment. Most of the floor is smooth cement as well[if Philip is booked]. Philip has turned the ruined back corner into a muddy wrestling ring to roll around in, the pig prepared for any challengers[else], except for a back corner where the cement has been broken up into jagged balls of rock[end if]. Counters and cabinets line the wall on the right hand side of the shed. To the south is the door leading back out to the courtyard.";
 
 Table of GameRoomIDs (continued)
@@ -265,8 +299,10 @@ Grey Abbey Garden	"Grey Abbey Garden"
 Grey Abbey Garden is south of Courtyard.
 Grey Abbey Garden is a room. The description of Grey Abbey Garden is "[ggarden desc]".
 
+after looking while player is in Grey Abbey Garden:
+	project the Figure of Map_Library_Garden_icon;
+
 to say ggarden desc:
-	project the figure of Library1stfloor_icon;
 	say "     Walking into the garden [if Honey is booked]shocks you at first. While most of the plant life around this part of the city is dead, the library's garden is thriving. Flowers of many different colors have begun to sprout up quickly, their speed of growth most likely linked to the nanites. Honey is buzzing back and forth between her plants, humming a cheery little melody as she works. She seems totally in her element, which shouldn't be all that surprising seeing that she is a bee now. The loving way the tiny insect girl cares for each individual plant shows that this is about more than instinct; she truly loves working with the flowers, and the small garden has grown into a sea of colors under her careful watch. You can't help but notice that the most prominent color is yellow, making honey almost appear to fade away at times[else]is slightly disheartening. Any flowers or vegetables that once grew here are long dead. When this was just an abbey, the garden must have served as the place where they would grow their food. Looking up, you are able to see the huge open window on the second floor. Who knows, maybe if it had someone to take care of it, perhaps the garden could return to its past glory? Going to the north will take you back to the courtyard[end if].";
 
 Table of GameRoomIDs (continued)
@@ -277,8 +313,10 @@ Grey Abbey 2F is above Grey Abbey Library.
 Grey Abbey 2F is a room. The description of Grey Abbey 2F is "[abbey 2F desc]".
 the scent of Grey Abbey 2F is "The smell of books permeates the air in the library, the musty odor is slightly more noticeable up here on the second floor thanks to the older, less frequently used tomes.".
 
+after looking while player is in Grey Abbey 2F:
+	project the figure of Map_Library_2F_West_icon;
+
 to say abbey 2F desc:
-	project the figure of Library2ndfloor_icon;
 	say "     The spacious second story of the library opens up in the middle, with the floor of about a third of the width of the building missing and surrounded by well-crafted wooden railings. They clearly are a part of the old abbey's features that were kept in the renovation, giving the place quite a nice atmosphere. From what therefore is basically a huge balcony, you can overlook the main stacks below. As in the rest of the building, rows of bookshelves take up most of the space, though small seating groups with sofas and cushioned chairs promise comfortable places to rest, too. There are a few secluded desks here and there, serving as quiet study places. To the northeast is a shabby sitting area, while to the southeast you can make out a darker spot that does not receive much light.";
 
 Table of GameRoomIDs (continued)
@@ -289,8 +327,10 @@ Sitting Area is northeast of Grey Abbey 2F.
 Sitting Area is a room. The description of Sitting Area is "[usittingarea desc]".
 The invent of Sitting Area is { "chips" }.
 
+after looking while player is in Sitting Area:
+	project the figure of Map_Library_2F_North_icon;
+
 to say usittingarea desc:
-	project the figure of Library2ndfloor_icon;
 	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading southwest will take you back to the second floor landing, and a huge window overlooks the back of the library to the southeast.";
 	if doberman companion is tamed:
 		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women";
@@ -305,8 +345,10 @@ Garden View	"Garden View"
 Garden View is southeast of Sitting Area.
 Garden View is a room. The description of Garden View is "[ugardenview desc]".
 
+after looking while player is in Garden View:
+	project the figure of Map_Library_2F_East_icon;
+
 to say ugardenview desc:
-	project the figure of Library2ndfloor_icon;
 	say "     The huge windows at the back of the second floor allow sunlight to flood the area. Unfortunately, one of the large windows has been completely shattered. On the bright side, this allows a light breeze to flow through the rest of the library, airing out its musty scent. Looking out the window, you can see the garden and courtyard below. The sprawling city beyond it would make for a fantastic view if it wasn't in a state of ruin. There's a sitting area to the northwest, whereas going southwest will lead you towards a dark alcove.";
 
 Table of GameRoomIDs (continued)
@@ -317,8 +359,10 @@ Darkened Alcove is southwest of Garden View.
 Darkened Alcove is southeast of Grey Abbey 2F.
 Darkened Alcove is a room. The description of Darkened Alcove is "[udarkenedalcove desc]".
 
+after looking while player is in Darkened Alcove:
+	project the figure of Map_Library_2F_South_icon;
+
 to say udarkenedalcove desc:
-	project the figure of Library2ndfloor_icon;
 	say "     This area goes a bit further away from the railing than the rest of the second floor. Under closer inspection, you find the reason why. What was at one point an office had its flimsy walls collapse, but there's no hint as to what caused it. The light from the windows in the back of library don't reach this room due to the walled-off features that were part of the original design. While still light enough to see your surroundings, it does feel gloomier and slightly creepy. From here, you can head northeast towards the garden view windows or northwest to return to the second floor landing. There is also a hatch in the ceiling leading up into the attic.";
 
 Table of GameRoomIDs (continued)
@@ -439,7 +483,9 @@ Dry Plains	"Dry Plains"
 
 understand "plains" as Dry Plains.
 
-Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Their lines are probably further back. Some hoof prints you spot in a sandy patch nearby furthers this assumption. As for the open grasslands, it looks like the some kind of storm or quake leveled all the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
+LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
+
+Dry Plains is a room. It is fasttravel. "     At this edge of the city, the thinning buildings have collapsed before opening up to the great plain stretching away from you, all the way to the harsh and insurmountable cliff-faces of Mount Shirley, the northern barrier of the wide river valley the city was originally founded in. You don't see any kind of military cordon here, making you suspect those already infected have spread out here before the military was mobilized to close it off. Smoke rising far in the northwest makes you guess that their lines are probably there, at the chokepoint between the mountain and the expansive Pacifica Nature Preserve. Some hoof prints you spot in a sandy patch nearby furthers the assumption that it is no longer human civilization that rules here. As for the open grasslands, it looks like the something leveled just about all of the scattered buildings further out. Now all that is left of them among the dirt and grassland are mounds of rubble. The plains are dry and brown with only a few trees or bushes scattered across the rolling plains before you.".
 The earea of Dry Plains is "Plains".
 Plains Door is a door. The marea of plains door is "Plains". "The plains stretch out before you, with slight rolls in the landscape and dotted with fallen buildings and other rare features.". Plains Door is dangerous. Plains door is east of dry plains.
 Plains door is west of wandering the plains.

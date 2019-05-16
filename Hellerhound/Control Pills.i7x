@@ -32,17 +32,17 @@ to say fertilepilluse:
 	if inheat is true:[extend heat]
 		decrease turns in heat by 8;
 		say "Your cunt seems to be getting even wetter, and the heat more intense. Looks like it'll last a bit longer now.";
-	if "Fertile" is listed in the feats of player:
+	if "Fertile" is listed in the feats of Player:
 		now wasfertile is 1;
-		remove "Fertile" from the feats of player;
+		remove "Fertile" from the feats of Player;
 	else:
 		now wasfertile is 0;
-	if "Sterile" is listed in the feats of player:
+	if "Sterile" is listed in the feats of Player:
 		now wassterile is 1;
-		remove "Sterile" from the feats of player;
+		remove "Sterile" from the feats of Player;
 	else:
 		now wassterile is 0;
-	add "Fertile" to the feats of player;
+	add "Fertile" to the feats of Player;
 
 
 steriletime is a number that varies.
@@ -58,17 +58,17 @@ to say controlpilluse:
 	if inheat is True:
 		now inheat is false;
 		say "Your heat ends abruptly.";
-	if "Fertile" is listed in the feats of player:
+	if "Fertile" is listed in the feats of Player:
 		now wasfertile is 1;
-		remove "Fertile" from the feats of player;
+		remove "Fertile" from the feats of Player;
 	else:
 		now wasfertile is 0;
-	if "Sterile" is listed in the feats of player:
+	if "Sterile" is listed in the feats of Player:
 		now wassterile is 1;
-		remove "Sterile" from the feats of player;
+		remove "Sterile" from the feats of Player;
 	else:
 		now wassterile is 0;
-	add "Sterile" to the feats of player;
+	add "Sterile" to the feats of Player;
 
 an everyturn rule:
 	if steriletime > 0:
@@ -78,21 +78,21 @@ an everyturn rule:
 		else:
 			say "Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
 			if wassterile is 0:
-				remove "Sterile" from the feats of player;
+				remove "Sterile" from the feats of Player;
 			if wasfertile is 1:
-				add "Fertile" to the feats of player;
+				add "Fertile" to the feats of Player;
 	if fertiletime > 0:
 		decrease fertiletime by 3;
 		if fertiletime > 0:
 			say "You feel ready for a mate, and a mental pressure urging for sex distracts you.";
-			if libido of player < 96:
-				increase libido of player by 5;
+			if Libido of Player < 96:
+				increase Libido of Player by 5;
 		else:
 			say "Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wassterile is 1:
-				add "Sterile" to the feats of player;
+				add "Sterile" to the feats of Player;
 			if wasfertile is 0:
-				remove "Fertile" from the feats of player;
+				remove "Fertile" from the feats of Player;
 
 
 

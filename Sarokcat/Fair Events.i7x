@@ -86,7 +86,7 @@ Instead of Resolving a Salty taffy:
 	PlayerEat 6;
 	LineBreak;
 	say "[bold type]Your thirst has increased by 20![roman type][line break]";
-	increase thirst of player by 20;
+	increase thirst of Player by 20;
 	now Salty taffy is resolved;
 
 Section 7 - Prize winning toss
@@ -157,10 +157,10 @@ when play begins:
 
 Instead of Resolving a Rubber tigerchase:
 	say "     Wandering through the cheerful midway of the fair, you spot one of those rubber tigresses hanging around doing something at one of the prize booths, unfortunately it seems to spot you at the same time. Somewhat unusually for one of the rubber beasts, it squeaks and flees down towards one of the nearby buildings, do you give chase?";
-	if player consents:
+	if Player consents:
 		say "     Chasing the rubber tigress down the narrow paths between booths, you follow the flickering glimpses of that black and orange tail until you lose sight of it behind one of the employee buildings, you are about to turn away when you notice one of the doors leading into the building is slightly ajar. Smiling at the discovery, you quickly barge into the building ready to fight, only to find yourself drenched in some kind of sticky stuff. Trying to claw the stuff out of your eyes as it coats you, you realize you fell for one of the oldest tricks in the book, and are now covered in some kind of orange and black tinted paint that someone balanced above the door you barged through. You groan as you can feel the stuff sinking into your skin and changing you, and then your eyes go wide as the tigress you were chasing appears before you with a grin and attacks!";
 		infect "Rubber tigress";
-		decrease HP of player by 10;
+		decrease HP of Player by 10;
 		challenge "Rubber tigress";
 		say "     The rough encounter over, you drag yourself away, still spitting out tiger-striped paint and feeling rather strange due to being coated in the stuff. You resolve to be more careful in the future.";
 		now Rubber tigerchase is resolved;
@@ -200,7 +200,7 @@ Instead of conversing the Lisa while borisquest is 3:
 	say "     'You're looking for a what?' Lisa says in surprise, 'Um I don't think we have that brand of condom right now, would another brand suffice?'";
 	say "     You explain that you aren't sure if another brand would work the same way, since you aren't sure why or how this brand seems to work to begin with. 'That's a strange comment,' Lisa says, the mousetaur obviously puzzled. 'Work for what? No look why don't you explain exactly what you need to happen, and I'll see what I can do to help.'";
 	say "     You take time to explain Boris the lions predicament, and when she stops laughing you explain what you saw with the plush lions and the changes that you and Boris hope can be duplicated for him as well. 'That poor... well lion,' Lisa says, still snickering slightly at the situation, 'Well now that I know what the problem is, how could I not try to help out?' Lisa asks you rhetorically, as she moves her long mouselike form out from behind the counter and starts searching through the back of the store. 'I think I might have something here even better than what you were thinking about using, if it is still here anyways... Ah here we go!' she exclaims triumphantly, a large grin crossing her face as she returns carrying something rather large and pointed. As she sets it down on the counter, you get a closer look at the item, and find yourself grinning in amusement as well.";
-	say "     Looking at the item Lisa set out on the counter, you are amused to find it appears to be a rather large novelty dildo, made of some kind of red substance. The dildo is both slightly pointed and barbed, and in all ways other than its sheer size appears to resemble the cock of a cat. Wondering who would purchase such a thing, you send Lisa a questioning glance. The mousetaur shrugs, seeming to have anticipated your reaction, 'You would be surprised at the kind of stuff some people buy here, to be honest you are just lucky we still had that one around, that and the canine variety were hard to keep on the shelves,' Lisa says, causing you both to chuckle slightly as you stare at the barbed dildo. Shaking your head sadly, you start to ask her how much this is going to cost, but she waves her paw and cuts you off before you can finish asking. 'Just take it, it's the least I can do to help this poor lion friend of yours out,' she says with a buck toothed grin at the situation. 'Besides,' she continues, 'it isn't like accounting for all the stock is going to be a major priority for me anytime soon. If the store owner is even around afterwards, he can bitch at me about it then, possibly literally if he ran into one of those German Shepherds out there,' she says with a smile as she hands you the feline dildo. 'Better you find a use for it with your friend out there. Hopefully it will work as well or better than those condos. If it doesn't, though, come on back and see me and we will find something else for the poor lion, and if it does work... well, you and the lion can come on back and see me and maybe we can stress test it for him,' Lisa says with a smile and a wink.";
+	say "     Looking at the item Lisa set out on the counter, you are amused to find it appears to be a rather large novelty dildo, made of some kind of red substance. The dildo is both slightly pointed and barbed, and in all ways other than its sheer size appears to resemble the cock of a cat. Wondering who would purchase such a thing, you send Lisa a questioning glance. The mousetaur shrugs, seeming to have anticipated your reaction, 'You would be surprised at the kind of stuff some people buy here, to be honest you are just lucky we still had that one around, that and the canine variety were hard to keep on the shelves,' Lisa says, causing you both to chuckle slightly as you stare at the barbed dildo. Shaking your head sadly, you start to ask her how much this is going to cost, but she waves her paw and cuts you off before you can finish asking. 'Just take it, it's the least I can do to help this poor lion friend of yours out,' she says with a buck toothed grin at the situation. 'Besides,' she continues, 'it isn't like accounting for all the stock is going to be a major priority for me anytime soon. If the store owner is even around afterwards, he can bitch at me about it then, possibly literally if he ran into one of those German shepherds out there,' she says with a smile as she hands you the feline dildo. 'Better you find a use for it with your friend out there. Hopefully it will work as well or better than those condos. If it doesn't, though, come on back and see me and we will find something else for the poor lion, and if it does work... well, you and the lion can come on back and see me and maybe we can stress test it for him,' Lisa says with a smile and a wink.";
 	increase borisquest by 1;
 
 
@@ -219,15 +219,15 @@ when play begins:
 	add Locked Lockers to badspots of furry;
 
 Instead of Resolving a Locked Lockers:
-	if christyquest is 0:
+	if Christyquest is 0:
 		say "     Traveling through the fair, you note a sign up on a half hidden door. The sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, and you can't seem to find any other way into the area. Sighing, you move back off into the fairgrounds.";
-	else if christyquest is 1:
+	else if Christyquest is 1:
 		say "     Traveling through the fair, you note a sign up on a half hidden door. The sign says 'Employee lockerups, authoritised personnel only.' Grinning a little at the amusing misspelling, you wander over and try the door, figuring if there is anything of use to be found, it might be in an employee locker room. Unfortunately the door is locked, causing you to sigh and turn to leave, only to remember the key Boris gave you earlier! Turning back to the door, you try out the key, and success! The door opens into a rather nice, well-lit locker room, though the room appears to be in a bit of disarray, since it looks like several people tried to make a stand in here. Indeed as you move inside the room you find some of them are still here! Or what is they have become anyways!";
 		challenge "Rubber tigress";
 		challenge "Rubber tigress";
 		say "     Recovering from the unexpected assault, you take another look around the room, from the looks of the room and the smell of sex in the air, somehow you doubt those were all the participants in whatever happened here, making you eye the two other doors leading out of the room with some trepidation. Deciding it might be best just to be about your business as quickly as possible, you search the room for the box Boris asked you for. You find several strange items, and even a couple of cans of soda someone had stuck in their locker, but are about to give up on the package, when you notice a rather unwieldy box stuck back on top of some of the lockers. Hauling the box down, you note it has the letters 'Christy' scrawled on the top in black marker, you wonder what this Christy could have had that Boris thinks will be so helpful. Sadly the box is tied up tight with several bits of twine, and you don't want to annoy Boris if he needs the box unopened, you decide just to take it back to him to find out. Besides, you think as you hurry out of the room, you thought you heard something coming from one of the other doors.";
 		increase carried of soda by 2;
-		now christyquest is 2;
+		now Christyquest is 2;
 		now Resolution of Locked lockers is 1;
 		now Locked lockers is resolved;
 

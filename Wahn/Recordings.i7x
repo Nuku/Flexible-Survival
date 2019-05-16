@@ -22,7 +22,7 @@ Instead of resolving a Demon Chase:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take that demon down a peg!";
 	say "     ([link]N[as]n[end link]) - Duck behind the car. Maybe he'll be too focused on the Labrador to care about you.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     As you step from behind the car, the demon turns his attention to you and gives a malevolent smile. 'Fresh meat!' he growls amusedly, then throws the backpack straight at your head! You barely have time to duck, letting it sail past and smack against the wall of a building, landing in a crash afterwards. The demon moves in right behind his improvised projectile, ready to claw you to pieces.";
 		challenge "Demon Brute";
@@ -33,7 +33,7 @@ Instead of resolving a Demon Chase:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Keep a hold of it all.";
 			say "     ([link]N[as]n[end link]) - Discard this stuff.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     With a small nod to yourself, you transfer the intact items to your own pack, sliding the photograph into a pocket, together with the wallet, keys, and the tapes. Who knows, maybe it'd be interesting to find out what is on them. You just need a working camera to play them. For now, you're happy with the free bottle of clean water - that should serve as payment for saving Luther's stuff, if you run into him again.";
 				LineBreak;
@@ -41,10 +41,10 @@ Instead of resolving a Demon Chase:
 				increase carried of water bottle by 1;
 				LineBreak;
 				say "[bold type]Wayne's Tape 1 has been added to your tape inventory![roman type][line break]";
-				add "Wayne's Tape 1" to tapes of player;
+				add "Wayne's Tape 1" to tapes of Player;
 				LineBreak;
 				say "[bold type]Wayne's Tape 2 has been added to your tape inventory![roman type][line break]";
-				add "Wayne's Tape 2" to tapes of player;
+				add "Wayne's Tape 2" to tapes of Player;
 				now Resolution of Demon Chase is 1; [took Wayne's stuff]
 			else:
 				LineBreak;
@@ -125,13 +125,13 @@ instead of resolving a Intercepted Bike Courier:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure! Who doesn't like to inspect a mystery package...";
 	say "     ([link]N[as]n[end link]) - Just toss it.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Curiosity is stronger than any hesitation at opening other person's private mail, so you rip open the envelope with little further delay, shaking out a small video cassette and a folded piece of paper. The contents of the letter are:";
-		say "     'Dear Ms. Koenig, as instructed I have followed your husband on his 'suspiciously long' trips to walk your dog. After two weeks of observation, I can honestly tell you that your fear that he might have an affair with another woman seems to be unfounded and he actually did spend all of the time hiking with the German Shepherd. Clearly, Mr. Koenig is exceptionally fond of the animal, up to and including some unexpected acts performed between the two of them. I included the relevant tape in the envelope. Please do let me know how you want to proceed in this matter. Sincerely, R. Timmons, PI.'";
+		say "     'Dear Ms. Koenig, as instructed I have followed your husband on his 'suspiciously long' trips to walk your dog. After two weeks of observation, I can honestly tell you that your fear that he might have an affair with another woman seems to be unfounded and he actually did spend all of the time hiking with the German shepherd. Clearly, Mr. Koenig is exceptionally fond of the animal, up to and including some unexpected acts performed between the two of them. I included the relevant tape in the envelope. Please do let me know how you want to proceed in this matter. Sincerely, R. Timmons, PI.'";
 		LineBreak;
 		say "[bold type]Francis Koenig Observation Video has been added to your tape inventory![roman type][line break]";
-		add "Francis Koenig Observation Video" to tapes of player;
+		add "Francis Koenig Observation Video" to tapes of Player;
 		now Resolution of Intercepted Bike Courier is 1; [opened the package]
 	else:
 		LineBreak;
@@ -140,11 +140,11 @@ instead of resolving a Intercepted Bike Courier:
 	now Intercepted Bike Courier is resolved;
 
 to say HikingObservationVid:
-	say "     You quickly slide the tape into the camera, pushing down on the side panel till it locks into place with a *Click*. Then you fold out the small screen of the device, looking at it expectantly as you press 'Play' next. The bright green of growing leaves on a warm sunny day greets you on the display, showing a scene that seems to belong on one of the hiking trails through the city's hinterland. Then a tanned hand reaches out into the frame, bending a branch aside to free the view, and the camera zooms at a location in the intermediate distance. A grassy meadow off-track from any trail comes into focus, and in it a fit twenty-something man, together with a pure-bred German Shepherd dog excitedly fetching a tennis ball as it gets thrown several times. Fairly soon, this play-time leads over to the man pulling his backpack off his shoulders, removing a large picnic blanket from it and spreading it on the ground, with the dog barking happily and beating his tail wildly as he sees that happen.";
-	say "     The next thing that happens is that the man pulls off his t-shirt, followed by the hiking boots, pants and then his underwear, leaving him fully nude next to the eager canine. He is smiling happily at his feral companion, crouching down to stroke the dog's shining fur and pulls his furry head close to kiss his muzzle. After making out with the animal for a little while, the man gets on all fours and applies lube to his ass, drawing a whisper of 'That's one kinky fucker' from the cameraman. Smiling over his shoulder, the man calls out a command to his German Shepherd, which has the animal move in and start to lick his ass, soon followed by jumping up to mount his human master. You catch a flash of his bright red canine shaft as it spears into the man, being received with an ecstatic groan from the dog's owner.";
+	say "     You quickly slide the tape into the camera, pushing down on the side panel till it locks into place with a *Click*. Then you fold out the small screen of the device, looking at it expectantly as you press 'Play' next. The bright green of growing leaves on a warm sunny day greets you on the display, showing a scene that seems to belong on one of the hiking trails through the city's hinterland. Then a tanned hand reaches out into the frame, bending a branch aside to free the view, and the camera zooms at a location in the intermediate distance. A grassy meadow off-track from any trail comes into focus, and in it a fit twenty-something man, together with a pure-bred German shepherd dog excitedly fetching a tennis ball as it gets thrown several times. Fairly soon, this play-time leads over to the man pulling his backpack off his shoulders, removing a large picnic blanket from it and spreading it on the ground, with the dog barking happily and beating his tail wildly as he sees that happen.";
+	say "     The next thing that happens is that the man pulls off his t-shirt, followed by the hiking boots, pants and then his underwear, leaving him fully nude next to the eager canine. He is smiling happily at his feral companion, crouching down to stroke the dog's shining fur and pulls his furry head close to kiss his muzzle. After making out with the animal for a little while, the man gets on all fours and applies lube to his ass, drawing a whisper of 'That's one kinky fucker' from the cameraman. Smiling over his shoulder, the man calls out a command to his German shepherd, which has the animal move in and start to lick his ass, soon followed by jumping up to mount his human master. You catch a flash of his bright red canine shaft as it spears into the man, being received with an ecstatic groan from the dog's owner.";
 	WaitLineBreak;
-	say "     Observing the pairing of man and beast in the meadow, you can easily tell that those two have a lot of experience doing this. It is obvious in the sure aim of the dog, the ecstatic expression of his owner and the way the animal keeps obeying commands even while having his dick sheathed in the human, lapping his master's sweaty back as he is told to pause once or twice. The man jerks himself off while letting his canine companion fuck him, then eventually calls out a command that seems to release all bounds from the furry beast. With a loud bark, the proud German Shepherd just goes wild humping his mate, even clamping his teeth lightly on the back of the man's neck as he starts to buck against his ass, apparently breeding the man's clenching hole with his canine seed. The human isn't far behind either, jerking off frantically to join his feral mate in climax until he sprays his cum all over the blanket under them.";
-	say "     The next fifteen minutes or so on the tape are filled with the man and animal entwined in the doggy style pose, with the German Shepherd's side being petted and stroked by the knotted man, and the two of them sharing some licks. The fact that the animal doesn't try at all to dismount and go ass to ass with his partner is an additional indicator that this dog is well-trained in coupling with his human master. Only after some more time, apparently enough for the knot to go down, does the dog eventually pull out, immediately pushing his muzzle between the man's buttocks to lap up what cum leaks out of him. Then he is embraced by the man and drawn into another bout of making out with his human mate, followed by the two of them lying on the blanket and cuddling. The tape ends a little while later.";
+	say "     Observing the pairing of man and beast in the meadow, you can easily tell that those two have a lot of experience doing this. It is obvious in the sure aim of the dog, the ecstatic expression of his owner and the way the animal keeps obeying commands even while having his dick sheathed in the human, lapping his master's sweaty back as he is told to pause once or twice. The man jerks himself off while letting his canine companion fuck him, then eventually calls out a command that seems to release all bounds from the furry beast. With a loud bark, the proud German shepherd just goes wild humping his mate, even clamping his teeth lightly on the back of the man's neck as he starts to buck against his ass, apparently breeding the man's clenching hole with his canine seed. The human isn't far behind either, jerking off frantically to join his feral mate in climax until he sprays his cum all over the blanket under them.";
+	say "     The next fifteen minutes or so on the tape are filled with the man and animal entwined in the doggy style pose, with the German shepherd's side being petted and stroked by the knotted man, and the two of them sharing some licks. The fact that the animal doesn't try at all to dismount and go ass to ass with his partner is an additional indicator that this dog is well-trained in coupling with his human master. Only after some more time, apparently enough for the knot to go down, does the dog eventually pull out, immediately pushing his muzzle between the man's buttocks to lap up what cum leaks out of him. Then he is embraced by the man and drawn into another bout of making out with his human mate, followed by the two of them lying on the blanket and cuddling. The tape ends a little while later.";
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -158,7 +158,7 @@ instead of resolving a Abandoned Uniform:
 	say "     A dried puddle of cum on the ground allows a guess of a fairly typical sex-driven transformation, though who or what might have gotten the man is still a mystery. Or maybe not - as poking around a little reveals the shattered pieces of a bodycam. Looks like someone stepped on it, breaking the little device, but the little box its cables lead to is still clipped to the torn belt, holding a video tape, most likely filled with evidence of the last moments the cop spent as a human. Maybe it'll be an interesting thing to watch sometime, so you push the eject button and stuff the tape into your pocket.";
 	LineBreak;
 	say "[bold type]'Bodycam Tape - L. Nielson' has been added to your tape inventory![roman type][line break]";
-	add "Bodycam Tape - L. Nielson" to tapes of player;
+	add "Bodycam Tape - L. Nielson" to tapes of Player;
 	now Abandoned Uniform is resolved;
 
 to say BodycamTape_Nielson:
@@ -190,7 +190,7 @@ instead of resolving a Pizza Delivery Car:
 	say "     Exploring the city, you come upon an abandoned pizza delivery car. The small red machine bears the logo of 'Tony's Pizza Shop' and is just large enough to hold one person, with a small heated compartment behind the driver for the food to be delivered. On the odd chance that there might be anything left inside, you search the vehicle, but sadly do not come across any food or drink items. What you find instead is a small dash-cam set up under the windshield, complete with a tape inside that seems to have run till its end. Curiosity demands that you take the video tape out and put it into your pack. Maybe there'll be something interesting to see on it?";
 	LineBreak;
 	say "[bold type]'Pizza Delivery Dash Cam Vid' has been added to your tape inventory![roman type][line break]";
-	add "Pizza Delivery Dash Cam Vid" to tapes of player;
+	add "Pizza Delivery Dash Cam Vid" to tapes of Player;
 	now Abandoned Pizza Delivery Car is resolved;
 
 to say PizzaCarDashcamVid:
@@ -221,7 +221,7 @@ instead of resolving a Dressing Room Spycam:
 	say "     Looking up at the device, you see a fiber-optics attachment to its lens, suggesting that it was supposed to be hidden from sight - and likely would have remained that way if the panel to obscure it had been replaced. Curiosity pushes you to collect a few of the ruined garments from the rest of the store and throw them down on the sticky mess inside of the dressing room, allowing you to enter and climb up to reach the camera. Checking the small device out, you find that it doesn't respond to your inputs as you press the buttons on the sides. Only the spring-loaded eject button for the tape works, at least giving you access to what the camera recorded last. Apparently, it ran out of power after being left on for too long. Since there's no sign at any kind of loading cable, and electricity is hard to come by these days anyways, you discard the camera and just keep hold of the tape. Who knows, it might contain some explanation what happened here.";
 	LineBreak;
 	say "[bold type]'Dressing Room Spycam Vid' has been added to your tape inventory![roman type][line break]";
-	add "Dressing Room Spycam Vid" to tapes of player;
+	add "Dressing Room Spycam Vid" to tapes of Player;
 	now Dressing Room Spycam is resolved;
 
 to say DressingRoomSpycamVid:
@@ -255,7 +255,7 @@ instead of resolving a Drone Wreckage:
 	say "     Left behind in the alley, you check out the device that the latex fox was feeding on. It has a lightweight frame and a white, plastic casing that has been mostly gnawed off, and after a little puzzling around, you realize just what you are looking at. It is a traffic observation drone, part of a prestige project that City Hall rolled out some months ago. This particular example has suffered quite a bit, even before being chewed upon. You can see one of the struts that originally held its plastic propellers bent almost at a right angle. Checking over the wreckage, you manage to salvage a tape marked with the identification number of the drone (#006) and a date that is right around the start of the nanite outbreak. Unable to find any other identifying information, you put the tape in your pocket and make a mental note to watch it later. Maybe there's something that could be of use to you on it?";
 	LineBreak;
 	say "[bold type]'Traffic Drone #006 Footage' has been added to your tape inventory![roman type][line break]";
-	add "Traffic Drone #006 Footage" to tapes of player;
+	add "Traffic Drone #006 Footage" to tapes of Player;
 	now Drone Wreckage is resolved;
 
 to say TrafficDrone#006Vid:
@@ -319,16 +319,16 @@ instead of resolving a Lost Explorer:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Investigate the scene in detail.";
 	say "     ([link]N[as]n[end link]) - Better get out of here. Whatever did this might still be around.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		say "     Walking towards the remains of clothing, you realize they're almost directly beneath where the helmet is dangling. If you had to guess, you'd say that the person they belonged to was on the upper floor of the abandoned factory, then seems to have jumped down from there, losing the helmet in the process. It didn't do [ObjectPro of player] much good though, since they were caught shortly after judging by the large patch of dried cum. Glancing up at the helmet swinging back and forth in the wind, you see that the camera on it should have captured what went on. Curiosity drives you to find a bare concrete set of stairs a little deeper in the building and take it up to the second floor, then move towards the drop that the other explorer tumbled down. On the way there, you notice some bootprints that [SubjectPro of player] left in the dust, as well as the unmistakable impression of paws.";
+		say "     Walking towards the remains of clothing, you realize they're almost directly beneath where the helmet is dangling. If you had to guess, you'd say that the person they belonged to was on the upper floor of the abandoned factory, then seems to have jumped down from there, losing the helmet in the process. It didn't do [ObjectPro of Player] much good though, since they were caught shortly after judging by the large patch of dried cum. Glancing up at the helmet swinging back and forth in the wind, you see that the camera on it should have captured what went on. Curiosity drives you to find a bare concrete set of stairs a little deeper in the building and take it up to the second floor, then move towards the drop that the other explorer tumbled down. On the way there, you notice some bootprints that [SubjectPro of Player] left in the dust, as well as the unmistakable impression of paws.";
 		say "     The helmet actually isn't all that easy to get to, dangling from the end of a two foot protrusion of steel rebar, so you have to lean out over the drop to reach it. As you try to reach it, the strap snagged on the rod slips a little away from you, threatening to make the whole thing fall down onto the ground below. Snatching at it desperately, you barely manage to catch one of the straps and avoid your prize smashing on the concrete, then pull back to sit down for a second at the edge of the platform. The helmet you rescued from its precarious position is indeed fairly new, with a tag on the inside declaring its owner to be 'Mason Reed'. It looks nice and sturdy and should be useful as head protection. As for the camera at its front end, that doesn't seem to react to any of the buttons on it you push, except for the spring-loaded eject of its tape. Hm, must have run out of power.";
 		LineBreak;
 		say "     Pocketing the tape for good measure and with the helmet under one arm, you leave the abandoned factory after a little while longer, during which you find numerous additional tracks of paws crisscrossing the interior of the building. Clearly, this is the territory of some sort of predator, so you deem it best not to stay too long. As you go, you can't help but wonder who the owner of this helmet was and when it was left there. Might have been since before the infection, since clearly not many people come here who could have found it. The contents of the tape might reveal some information about that, if you find a way to play it.";
 		say "[bold type]You gain an urban explorer helmet![roman type][line break]";
 		increase carried of urban explorer helmet by 1;
 		say "[bold type]'Urban Explorer Helmet Cam Vid #1' has been added to your tape inventory![roman type][line break]";
-		add "Urban Explorer Helmet Cam Vid #1" to tapes of player;
+		add "Urban Explorer Helmet Cam Vid #1" to tapes of Player;
 		now Resolution of Lost Explorer is 1; [found the vid]
 	else:
 		LineBreak;
@@ -374,7 +374,7 @@ instead of resolving a Abandoned Fitness Dojo:
 	say "     Checking over the further rooms of the building, you find that they are less damaged, though that doesn't mean that others haven't been here before you either. All of the lockers have been rifled through by scavengers, who already made off with everything of value. Well, except possibly what you find in one of the staff only side rooms. Looks like the place had a security camera setup and there still is a tape in the recorder. With any luck, that might contain some explanation what happened here. It is a little bit of a task to pry the tape out of the recorder without power, but you eventually manage it and pocket the thing.";
 	LineBreak;
 	say "[bold type]'Fitness Studio Security Vid' has been added to your tape inventory![roman type][line break]";
-	add "Fitness Studio Security Vid" to tapes of player;
+	add "Fitness Studio Security Vid" to tapes of Player;
 	now Abandoned Fitness Dojo is resolved;
 
 to say FitnessStudioVid:

@@ -11,7 +11,7 @@ The sarea of Hidden Grate is "Park".
 instead of resolving a Hidden Grate:
 	say "As you wander through the bushes in the park, seeking after an old park zone you remember fondly from childhood, you trip, landing face down on a metal grate.";
 	say "The grate doesn't seem to be too heavy. Maybe you could lift it?";
-	if player consents:
+	if Player consents:
 		say "You give the sewer grate a solid heave, ";
 		let the bonus be (( the strength of the player minus 10 ) divided by 2);
 		let the dice be a random number from 1 to 20;
@@ -73,8 +73,8 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 		now battleground is "Mall";
 	say "You wade into the shallower region of the river in search of food and water.";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
-	if "Survivalist" is listed in feats of player, increase bonus by 4;
-	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+	if "Survivalist" is listed in feats of Player, increase bonus by 4;
+	if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 	let the dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 10: ";
 	if dice plus bonus > 7:
@@ -83,12 +83,12 @@ to searching the sewers: [this is copied from the scavenge function, with minor 
 		say "Your search turns up empty.";
 	if battleground is "", now battleground is "Mall";
 	let z be 7;
-	if "Stealthy" is listed in feats of player, decrease z by 2;
-	if "Bad Luck" is listed in feats of player, increase z by 1;
+	if "Stealthy" is listed in feats of Player, decrease z by 2;
+	if "Bad Luck" is listed in feats of Player, increase z by 1;
 	if a random number from 1 to 20 < z:
 		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
-			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 12 succeeds ):
+			if ( hardmode is true and a random chance of 1 in 10 succeeds ) or ( "Bad Luck" is listed in feats of Player and a random chance of 1 in 12 succeeds ):
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
 				Fight;
 	follow turnpass rule;

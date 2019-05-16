@@ -111,7 +111,7 @@ carry out graphicmoding:
 						now NewGraphics is true;
 				-- 2:
 					say "Exit graphics menu?";
-					if player consents:
+					if Player consents:
 						now Trixieexit is 1;
 	else:
 		now calcnumber is -1;
@@ -141,7 +141,7 @@ carry out graphicmoding:
 						now NewGraphicsInteger is 1;
 				-- 2:
 					say "Exit graphics menu?";
-					if player consents:
+					if Player consents:
 						now Trixieexit is 1;
 
 Section 5 - Debug Commands

@@ -23,14 +23,14 @@ Val	"Val"
 
 Val is a man.
 ScaleValue of Val is 3.
-Cocks of Val is 1.
+Cock Count of Val is 1.
 Cock Length of Val is 8.
-Cock Width of Val is 4.
-Testes of Val is 2.
-Cunts of Val is 0.
-Cunt Length of Val is 0.
-Cunt Width of Val is 0.
-Breasts of Val is 2. [2 nipples]
+Ball Size of Val is 4.
+Ball Count of Val is 2.
+Cunt Count of Val is 0.
+Cunt Depth of Val is 0.
+Cunt Tightness of Val is 0.
+Nipple Count of Val is 2. [2 nipples]
 Breast Size of Val is 0.
 TwistedCapacity of Val is true.
 Sterile of Val is false.
@@ -61,17 +61,23 @@ to say ValDesc:
 	say "     Val is a very handsome orc breeder, with a muscled physique that lacks the sheer bulk and mass of the orc warriors. Being completely naked, you can see that his cock is a bit smaller than those of the bigger orcs, though still respectably sized. His features are almost pretty but still masculine, with a somewhat pronounced brow, a square jaw and yellow eyes. Two small tusks protrude from his lower mandible, looking rather cute, compared to a real orc's. Long, silky black hair hanging down over his shoulders underlines his good looks";
 	if ValPregnancy is 1:
 		say ". There is a kind of special glow about him";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	else if ValPregnancy is 2:
 		say ". A slight bulge of his stomach shows the first visible proof of his pregnancy";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	else if ValPregnancy is 3:
 		say ". He is quite obviously pregnant, with a bulging belly showing proof of [if thirst of Val is 1]his masters['][else]your sperm's[end if] virility";
+		if HP of Val < 2:
+			now HP of Val is 2;
 	say ".";
 	say "     As Val notices your intense gaze upon him, he presents himself for your viewing pleasure, stretching and slowly turning to show off his well-rounded ass. He's certainly become a well-trained slave in the short time since his capture.";
 
 instead of conversing the Val:
-	if facename of player is "Orc Warrior" and player is pure:
+	if facename of Player is "Orc Warrior" and player is pure:
 		say "     Seeing an orc warrior approach, Val reflexively licks his lips and one of his hands moves down to rub his quickly hardening cock. He waits for you to speak.";
-	else if facename of player is "Orc Breeder" and player is pure:
+	else if facename of Player is "Orc Breeder" and player is pure:
 		say "     Seeing you approach, Val lets an appreciative gaze wander up and down your body, then asks 'Yes, brother?'";
 	else:
 		say "     Seeing a non-orc approach, Val looks a bit curious at you, then asks 'Yes?'";
@@ -110,7 +116,7 @@ This is the ValTalk rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Talk about him"):
@@ -129,12 +135,14 @@ to say ValTalk2:
 
 to say ValTalk3:
 	say "     Putting a hand on the bulge in his stomach, Val says, 'Vincent would never have dreamed of how amazing this is. To feel a new life growing inside you, knowing that you'll be a parent soon.' His expression takes on a thoughtful cast for a moment. 'I worry a bit about what will become of my child, though. I love my masters, but... I want him to be more than just another brute or breeder. And that's the choices to be had here in the lair.'";
+	if HP of Val < 2:
+		now HP of Val is 2;
 
 An everyturn rule:
 	if ValPregCounter is 1:
 		if thirst of Val is 2:
 			increase score by a random number between 5 and 10;
-		if player is in Slave Cell 1:
+		if Player is in Slave Cell 1:
 			say "     Suddenly, Val calls, 'It's time!' and starts panting loudly, holding his bulging stomach with both hands. You rush over to him and help him to sit on the bed. A tremble goes through Val's lower belly as his special incubation chamber opens, releasing an egg-sack with the child inside into his bowels. With the completion of his male pregnancy fast approaching, Val lies back on the bed, breathing quickly as his body spasms in readiness. With nothing else you can do to help, you just sit beside him, holding his hand and wiping sweat of his brow.";
 			say "     As Val struggles with his unusual birthing, he huffs and pushes as best he can, working to nudge the large egg onwards, working to expel it from his anus. It is not nearly as uncomfortable or painful as one might think, his orc breeder body clearly being meant to serve in this way. After about twenty minutes of pushing and grunting, the fleshy egg is pushed free with a little discomfort and even some pleasure as Val shudders from the rush at having created a new life. Moments after leaving his body, the flexible sack around the green-skinned child tears open in a gush of fluids, allowing Val to cradle his clean, if pretty wet, offspring to his breast.";
 			WaitLineBreak;
@@ -145,7 +153,7 @@ An everyturn rule:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Take Chris with you to the library.";
 			say "     ([link]N[as]n[end link]) - Refuse to take Chris.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     A look of incredible relief on his face, Val hugs you, saying, 'Thank you, thank you, thank you,' while he does so. A moment later, he steps back from you again and takes Chris to the side, talking to him in quiet tones for a while, then embraces his son and says a bit louder, 'My friend here will take you to a safer place. And remember - don't ever drink an orc brew or let an orc cum in your ass or mouth. Orc cum is... delicious, but you'll never want to stop afterwards. Now go, while there's still time.'";
 				if CellDoorStatus is 0 or CellDoorStatus is 2:
@@ -175,6 +183,10 @@ An everyturn rule:
 		say "     [bold type]You remember that the time for the birth of Val's child should be soon. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
 	else if ValPregCounter is 12:
 		now ValPregnancy is 3;   [very visible pregnancy]
+		if Player is in Slave Cell 1:
+			say "     [bold type]Seeing Val's belly bulge larger and larger, you start wondering what will happen once his time to give birth comes.[roman type]";
+		else if HP of Val is 2: [player knows he is pregnant]
+			say "     [bold type]You remember that the time for the birth of Val's child should be sometime during the next day or two. Maybe you should visit the orc breeder in his cell to be at his side when that happens...[roman type]";
 	else if ValPregCounter is 24:
 		now ValPregnancy is 2;   [visible pregnancy]
 	if ValPregCounter > 1:
@@ -193,7 +205,7 @@ to say ValSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 1;
@@ -216,7 +228,7 @@ to say ValSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Fuck his ass"):
@@ -244,7 +256,7 @@ to say ValSex1: [fucking him]
 	now lastfuck of Val is turns;
 
 to say ValSex2: [riding him]
-	if player is female:
+	if Player is female:
 		say "     Stepping up to Val, you put your arms around him and grope the firm, round cheeks of his butt. The orc breeder moans deeply as you touch him, leaning in against you with the eagerness of a true submissive, his own cock quickly hardening to press against your stomach. Pulling his cheeks apart, you rub a finger up and down the orc's crack, teasingly stroking over his pucker before pushing in. Val's muscle yields readily to your invasion, well-used to such treatment by now - as becomes apparent when you feel the wetness of cum around your probing digit. Seems like the panting breeder already got fucked by his masters today, and likely more than once. You continue to finger him for a moment longer, delighting in the little gasps and groans you can make him do, then switch over to his front and take hold of the orc's hard cock. After stroking the thick piece of man-meat a few times and cupping Val's full balls, you tell him to get on the cot at the back of the cell.";
 		say "     Giving a reflexive 'Yes [master],' Val immediately obeys, quickly walking over to his bed and lying down on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savor the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. But after the last piece of cloth falls to the ground, you surprise Val by ordering him to lower his legs and climbing on the bed to kneel over his body, your legs left and right of his hips. The orc breeder's eyes go wide as you reach down to find his cock, holding it straight up as you lower your hips bit by bit. Val pants in need as his erection presses against your nether lips, then sinks inside between them. He gasps 'Yeah, feels so good. Thank you!' as you impale yourself fully on his shaft, gripping it tightly with your inner muscles.";
 		WaitLineBreak;
@@ -257,7 +269,7 @@ to say ValSex2: [riding him]
 		say "     Giving a reflexive 'Yes [master],' Val immediately obeys, quickly walking over to his bed and lying down on his back. Then he raises and spreads his legs, holding them open so you have full access to his oh so fuck-able butt. You take a moment to savor the sight of this strong and muscular yet totally submissive orc presenting himself to you, idly dropping your gear and clothes as you do so. But after the last piece of cloth falls to the ground, you surprise Val by ordering him to lower his legs and climbing on the bed to kneel over his body, your legs left and right of his hips. The orc breeder's eyes go wide as you reach down to find his cock, holding it straight up as you lower your hips bit by bit. Val pants in need as his erection presses against your waiting hole, then sinks inside as your pucker yields to his member. He gasps 'Yeah, feels so good. Thank you!' as you impale yourself fully on his shaft, gripping it tightly with your inner muscles.";
 		WaitLineBreak;
 		say "     It's amazing how quickly the usually so submissive orc breeder starts to get into thrusting up against you hard and deep. Might be that it's all his pent-up urges from just bottoming all the time or maybe there's a bit of orc warrior sexual dominance even in the most docile breeder - not that you care that much about which it is currently, riding Val's shaft and gasping as he hammers into you from below. You just lean back, enjoying the thorough fucking you're getting while supporting yourself with both hands gripping Val's legs.";
-		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your prostate. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later[if player is male]. Your [cock of player] cock twitches and jerks as your body trembles in pleasure, spraying your own creamy load all over Val and the bed[end if].[mimpregchance]";
+		say "     The lithe orc breeder really knows what he's doing, rotating his hips a bit to give you all kinds of great sensations and often hitting your prostate. Well, as often as he gets fucked, he almost has to know all the tricks by now. Val keeps fucking you with admirable stamina for quite a while, then finally his moans rise in volume and urgency and his thrusts get faster and faster. Not much later, he almost shouts 'Yeah, YEAH - aahhh - I'm coming!' as his cock blasts a hefty load of cum deep into you. Getting bred by the green-skinned slave and feeling his cock pulse inside you was the last little push you yourself needed to get off, so you join him in orgasm only a second later[if Player is male]. Your [cock of Player] cock twitches and jerks as your body trembles in pleasure, spraying your own creamy load all over Val and the bed[end if].[mimpregchance]";
 		WaitLineBreak;
 		say "     Sinking down to sit on Val's hips with his cock still inside you, you lean forward and kiss him, then just lie on the bed for a while, basking in your orgasms afterglow together. You wish you could stay like this for some more time, but eventually you have to get back to the tricky business of surviving in this chaotic city...";
 	infect "Orc Breeder";

@@ -1,20 +1,21 @@
 Misc 6 by Kaleem mcintyre begins here.
 [Several events transferred to Consolidated Outside Events in Song's folder]
+[Renamed 'Pegasus' event due to clashing with the 'Pegasus' enemy - Kurainyx]
 
 "Miscellaneous events to be added to Flexible survival."
 
-Section 1 - Pegasus
+Section 1 - Winged Horse
 
 Table of GameEventIDs (continued)
 Object	Name
-Pegasus	"Pegasus"
+Winged Horse	"Winged Horse"
 
-Pegasus is a situation.
-The sarea of Pegasus is "Plains".
+Winged Horse is a situation.
+The sarea of Winged Horse is "Plains".
 
-Instead of resolving a Pegasus:
+Instead of resolving a Winged Horse:
 	say "     Walking along the dry plains, you find yourself watching as a large shadow hovers over the ground above you. Not really sure what's going on, you tip your head up, only to find a large winged horse looking down at you. White as snow with a wingspan of about twenty feet, you marvel in awe at the majestic creature as it glides above your head once and then twice in a large circle before flying off on about its way. The last you see of the mutated creature is its long, azure colored tail end whipping freely behind its wide backside.";
-	now Pegasus is resolved;
+	now Winged Horse is resolved;
 
 Section 2 - Guess that Character One
 
@@ -119,7 +120,7 @@ Instead of resolving a Scopaesthesia:
 		say "     Not knowing what to think or say or feel, you look at the undeniably [']human['] form of yourself before this all began. You gasp when this person reach out a hand for you. Not sure about what to do, you find yourself walking forward to take the other's hand without thought. Yet just before you can reach your doppelganger, you find that your feet have frozen solid into place and your body has become almost like lead. Both fear and uncertainty grab at your heart as you continue to try and pick your feet up, but every time you try nothing happens. When the other you finally sees that you aren't coming, you can only stare in painful silence as you watch your other self slowly back away from where they had been standing into the waters of the ocean. As the other you continues to move back you find that the human you is slowly starting to ripple and then fade away into nothing.";
 		WaitLineBreak;
 		say "     A gasps tears you from the scene as you find yourself coming awake on the beach. Sand on your face and wild eyes blinking rapidly in confusion as you pull yourself up from off the ground you're not sure when you fell asleep but you do know that you must have been out a while because your body feels really stiff. Shaking like a dog you pat yourself down to remove much of the grit from off of your body before turning away to go about your business. The sudden feeling as though something is not quite right though makes you roll your head around the side of your shoulder to have a look at the rippling seashore. A faint sense of longing makes you confused for several minutes but you shrug the feeling away before it can become too strong for you to take. The dream you just had is already becoming a faded memory.";
-		decrease humanity of player by 5;
+		SanLoss 5;
 		increase score by 25;
 		now Scopaesthesia is resolved;
 

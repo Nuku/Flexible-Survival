@@ -5,11 +5,11 @@ Version 7 of Awesome Tree by Damaged begins here.
 "Adds a Awesome Tree to Flexible Survival's Wandering Monsters table"
 [Description text for this Extension.]
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Awesome_sex is a number that varies.
 Awesome_boredom is a number that varies.
@@ -33,8 +33,8 @@ to say Give Awesome:
 to say awesome attack:
 	if Awesome_boredom is 4:
 		say "The tree seems to vibrate. Whether your fervent attacks or the breeze caused it, a branch falls and thumps you on the arm. You notice some fruit on the branch, and without hesitation you put one in your pocket. As you look at the remaining two, you feel a sudden hunger and eat them uncontrollably. [infect]The world seems to go dark as you finish the second. Waking up, you can't see any trace of the tree, but you feel pretty awesome nonetheless. You pat your bag where you put the fruit, and smile at the thought that you still have some awesomeness in store.";
-		now hunger of player is 0;
-		now thirst of player is 0;
+		now hunger of Player is 0;
+		now thirst of Player is 0;
 		if a random number between 1 and 100 > 90:
 			if awesome bat is not owned:
 				now carried of awesome bat is 1;
@@ -50,7 +50,7 @@ to say awesome defeat:
 	if Awesome_noreward > 3:
 		say "You know you hesitated, you could not bring yourself to strike down another of the trees.";
 		if awesome bat is owned:
-			if awesome bat is weapon object of player:
+			if awesome bat is weapon object of Player:
 				try using awesome bat;
 			delete awesome bat;
 			say "Walking away, you get a sudden urge and dig a hole in some soft ground, pushing your bat in deeply. You can sense, with your most awesome senses, the wood taking root and beginning to grow.";
@@ -75,12 +75,12 @@ to say awesome vict:
 to say awesome desc:
 	setmongender 0; [creature is neuter-X]
 	now Awesome_boredom is 0;
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if Awesome_forcesex is 0:
-		if "Male Preferred" is listed in feats of player:
+		if "Male Preferred" is listed in feats of Player:
 			now Awesome_sex is 2;
 			now sex entry is "Male";
-		else if "Female Preferred" is listed in feats of player:
+		else if "Female Preferred" is listed in feats of Player:
 			now Awesome_sex is 1;
 			now sex entry is "Female";
 		else:
@@ -89,15 +89,16 @@ to say awesome desc:
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Awesome tree"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Awesome tree"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[awesome attack]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[awesome defeat]"; [ Text or say command used when Monster is defeated.]
@@ -124,27 +125,128 @@ When Play begins:
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
 	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 2; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 3; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 10; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 2; [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 1; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 3; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 2; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [ Amount player Libido will go up if defeated ]
-	now loot entry is "awesomest fruit"; [ Loot monster drops, ]
+	now loot entry is "awesomest fruit"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 100; [ Chance of loot dropping 0-100 ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]perfect[or][if player is female]lovely[else]handsome[end if][at random]";
+	now body descriptor entry is "[one of]perfect[or][if Player is female]lovely[else]handsome[end if][at random]";
 	now type entry is "human"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Section 3 - Monster Heat
@@ -161,7 +263,7 @@ name	desc	weight	object
 the scent of the awesome fruit is "[awesomefrscent]".
 
 to say awesomefrscent:
-	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+	if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a strong, manly scent that seems mouth-wateringly sweet.";
@@ -169,7 +271,7 @@ to say awesomefrscent:
 the scent of the awesomer fruit is "[AwesomerFrScent]".
 
 to say AwesomerFrScent:
-	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a lovely, feminine scent that seems mouth-wateringly sweet.";
@@ -177,7 +279,7 @@ to say AwesomerFrScent:
 the scent of the awesomest fruit is "[AwesomestFrScent]".
 
 to say AwesomestFrScent:
-	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+	if "Male Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player:
 		say "The strange fruit smells rancid and turns your stomach just to have close.";
 	else:
 		say "The strange fruit has a rich mix of male and female scents that seems mouth-wateringly sweet.";
@@ -185,9 +287,9 @@ to say AwesomestFrScent:
 the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 to say awesome bat proc:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if HP entry is 60:
-		if name entry matches the text "Awesome":
+		if Name entry matches the text "Awesome":
 			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
 			now monsterHP is 0;
 			increase Awesome_noreward by 1;
@@ -202,64 +304,64 @@ awesomest fruit is a grab object.
 awesomest fruit has a usedesc "[awesomest fruit use]".
 
 To say awesomest fruit use:
-	let omonster be monster;
-	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
+	let omonster be MonsterID;
+	if "Male Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
-			if name entry matches the text "Awesome":
-				now monster is z;
+			if Name entry matches the text "Awesome":
+				now MonsterID is z;
 				break;
 		now sex entry is "Both";
-		now breasts entry is 2;
-		now breast size entry is 3;
+		now Nipple Count entry is 2;
+		now Breast Size entry is 3;
 		say "You bite into the awesomest fruit!";
 		now Awesome_forcesex is 1;
 		infect;
-	now monster is omonster;
+	now MonsterID is omonster;
 
 awesomer fruit is a grab object.
 awesomer fruit has a usedesc "[awesomer fruit use]".
 
 To say awesomer fruit use:
-	let omonster be monster;
-	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+	let omonster be MonsterID;
+	if "Male Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
-			if name entry matches the text "Awesome":
-				now monster is z;
+			if Name entry matches the text "Awesome":
+				now MonsterID is z;
 				break;
 		now sex entry is "Female";
-		now breasts entry is 2;
-		now breast size entry is 3;
+		now Nipple Count entry is 2;
+		now Breast Size entry is 3;
 		say "You bite into the awesomer fruit!";
 		now Awesome_forcesex is 1;
 		infect;
-	now monster is omonster;
+	now MonsterID is omonster;
 
 awesome fruit is a grab object.
 awesome fruit has a usedesc "[awesome fruit use]".
 
 To say awesome fruit use:
-	let omonster be monster;
-	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
+	let omonster be MonsterID;
+	if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
 		repeat with Z running from 1 to number of rows in Table of Random Critters:
 			choose row Z from the Table of Random Critters;
-			if name entry matches the text "Awesome":
-				now monster is z;
+			if Name entry matches the text "Awesome":
+				now MonsterID is z;
 				break;
 		now sex entry is "Male";
-		now breasts entry is 0;
-		now breast size entry is 0;
+		now Nipple Count entry is 0;
+		now Breast Size entry is 0;
 		say "You bite into the awesome fruit!";
 		now Awesome_forcesex is 1;
 		infect;
-	now monster is omonster;
+	now MonsterID is omonster;
 
 
 [ +++++ ]

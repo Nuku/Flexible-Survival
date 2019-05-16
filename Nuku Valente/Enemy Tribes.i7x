@@ -7,14 +7,14 @@ When play begins:
 	say "Please pick the species that will be competing with you. Chose as many as you wish. More tribes may prove more of a challenge. Playing alone is easiest.";
 	wait for any key;
 	rival menu;
-	now the tribe of player is inactive;
+	now the tribe of Player is inactive;
 
 to rival menu:
 	blank out the whole of table of combat items;
 	let X be 1;
 	repeat with Q running through species:
 		if the might of q is 0, next;
-		if tribe of player is q, next;
+		if tribe of Player is q, next;
 		choose a blank row in table of combat items;
 		now title entry is printed name of Q;
 		now description entry is printed name of Q;
@@ -163,8 +163,8 @@ An everyturn rule (This is the Enemy Attacking rule):
 				now foragers is ( foragers * 60 ) / 100;
 			if foragers < 1, now foragers is 1;
 			let enum be enemies;
-			now enemies is ( enemies * might of tribe of player ) / stamina of enemy;
-			let backlash be ( foragers * might of enemy ) / stamina of tribe of player;
+			now enemies is ( enemies * might of tribe of Player ) / stamina of enemy;
+			let backlash be ( foragers * might of enemy ) / stamina of tribe of Player;
 			let estimate be ( enemies * a random number from 66 to 150 ) / 100;
 			if enemies is 0:
 				say " They manage to claim land and defeat us without losing a single soul.";
@@ -180,14 +180,14 @@ An everyturn rule (This is the Enemy Attacking rule):
 					if population of enemy < 5, now population of enemy is 5;
 			if backlash > 0:
 				say "We lose [backlash] people.";
-				decrease population of tribe of player by backlash;
+				decrease population of tribe of Player by backlash;
 				decrease workers of warrior by backlash;
 				if workers of warrior < 0:
 					let overflow be 0 - workers of warrior;
 					now workers of warrior is 0;
 					say "[overflow] of them were non combatants!";
 			increase territory of enemy by 1;
-			decrease territory of tribe of player by 1;
+			decrease territory of tribe of Player by 1;
 
 
 

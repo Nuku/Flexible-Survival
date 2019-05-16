@@ -14,7 +14,7 @@ understand "microwave [owned grab object]" as purifying.
 
 Check Purifying:
 	if Lab Microwave is not visible and Brennan's Microwave is not visible and Library Microwave is not visible, say "Now where do you want to microwave that?" instead;
-	if player is in Breakroom and findwires is not 2 and fixedgens is not 2, say "The power isn't on." instead;
+	if Player is in Breakroom and findwires is not 2 and fixedgens is not 2, say "The power isn't on." instead;
 
 Carry out Purifying:
 	if purified of noun is empty:
@@ -40,15 +40,15 @@ the usedesc of distilled booze is "[DistilledBoozeUse]".
 
 to say DistilledCumUse:
 	say "Or not so eagerly, as you don't think eating this powder will be the most pleasant experience... And you're gonna want something to wash it down with. It takes some effort to force the slightly bitter powder down your throat, but once it hits your belly, your body is filled with a sudden warmth that quickly pools and focuses between your legs...";
-	increase thirst of player by 5;
+	increase thirst of Player by 5;
 	grow cock by 3;
 	grow balls by 2;
 
 to say DistilledBoozeUse:
 	say "The liquid burns your throat as you swallow it down, but a very pleasant warmth spreads through your body as it hits your stomach, making you shudder as you grow more aroused and are hit by a small urge to giggle. Strong stuff, this.";
 	PlayerDrink 5;
-	increase libido of player by 10;
-	if libido of player > 100, now libido of player is 100;
+	increase Libido of Player by 10;
+	if Libido of Player > 100, now Libido of Player is 100;
 	SanLoss 5;
 
 instead of sniffing distilled cum:
@@ -105,7 +105,7 @@ The purified of earthen seed is "distilled cum".
 The purified of demon seed is "distilled cum".
 The purified of fennec semen is "distilled cum".
 The purified of gecko cum is "distilled cum".
-The purified of hawkman seed is "distilled cum".
+The purified of hawkman male cum is "distilled cum".
 The purified of orc cum is "distilled cum".
 The purified of gryphon cum is "distilled cum".
 The purified of pewter seed is "distilled cum".

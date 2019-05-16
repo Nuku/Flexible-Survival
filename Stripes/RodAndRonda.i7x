@@ -24,7 +24,7 @@ the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall 
 
 instead of conversing Rod Mallrat:
 	if tmapfound is 1:		[***needs Slut Rat version?]
-		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < 7]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
+		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of Player < 7]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
 		increase tmapfound by 1;
 	else if hospquest is 8 and nerminepackage > 0 and rodhosp is not 0 and HP of Ronda is not 100:
 		say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
@@ -67,8 +67,8 @@ to say sexwithRod:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Slut Rat":
-			now monster is y;
+		if Name entry is "Slut Rat":
+			now MonsterID is y;
 			break;
 	if HP of Ronda is not 100:
 		if Ronda Mallrat is in the Mall Atrium:
@@ -83,27 +83,27 @@ to say sexwithRod:
 	else:
 		let x be 0;
 		say "     Rod smiles happily at your offer and pops the few catches on her outfit, getting nude in record time. The slutty rat moans lustfully and drops to her knees in front of you. With her paws on your groin, she starts licking your crotch. ";
-		if player is male:
+		if Player is male:
 			let x be 1;
 			say "She runs her tongue over your throbbing penis, then sinks her muzzle down over it, licking and sucking hungrily. Her paws tease your nuts and work the shaft as you start fucking the slutty rat's face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
-		else if player is female:
+		else if Player is female:
 			say "She runs her tongue over your wet labia, then dives her tongue into your cunt, licking and lapping zealously. Her paws tease your clit and folds as you grind your pussy against her face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
 		else:
 			say "Saddened to see your bare groin, she nips and licks at it while running her paws along your thighs. She pulls you down to snuggle in her arms, guiding your lips to one of her nipples and coaxing you to nurse milk from her breast. As you drink down the ratty milk, Rod strokes a paw over your head, whispering that she'll help you get better while her other paw plays with your asshole, granting you a little sexual relief even as you start to feel the effects of her milk.";
 			say "[slut rat growth]";
-		if player is male:
+		if Player is male:
 			if x is 1 and a random chance of 1 in 5 succeeds:
 				say "     Really quite enjoying the slutty rat's tonguework, you run your hands over her head and keep thrusting into her mouth. With the prospect of receiving such a tasty treat from you, she starts licking and sucking all the more eagerly, intent on getting you off. You scritch her round ears and thrust into her muzzle, your cock throbbing and spurting precum across her tongue to be slathered across your meat. It's clear that Rod's new instincts (as well as all her recent practice) has made her quite good at sucking cock, and you cum with a loud groan as you feed your hot, thick seed to the horny rat slut.";
 			else if a random chance of 3 in 5 succeeds:
 				say "     With the foreplay done, Rod moves onto all fours and raises her tail, offering her wet pussy to you. Full of lustful excitement after the earlier play, you dive atop her, lining up your cock and sinking into her dripping folds. She moans loudly and starts rocking back onto your shaft, making a big show of it for those watching around you both. You run your hands over her body, tease her nipples and slap her ass a few times during your vigorous mating before finally blasting your hot load into the horny rat slut.";
 			else:
-				say "     With the foreplay done, you sit and pull Rod into your lap so she's facing away from you (and towards the other rats watching the show). Full of lustful excitement after the earlier play, she quickly gets her dripping pussy lined up with your [cock of player] cock and lowers herself down onto it. She moans loudly and starts bouncing eagerly on your [cock size desc of player] erection, making a big show of it for those watching around you both. You run your hands over her body, tease her nipples and slap her ass a few times during your vigorous mating before finally blasting your hot load into the horny rat slut.";
+				say "     With the foreplay done, you sit and pull Rod into your lap so she's facing away from you (and towards the other rats watching the show). Full of lustful excitement after the earlier play, she quickly gets her dripping pussy lined up with your [cock of Player] cock and lowers herself down onto it. She moans loudly and starts bouncing eagerly on your [cock size desc of Player] erection, making a big show of it for those watching around you both. You run your hands over her body, tease her nipples and slap her ass a few times during your vigorous mating before finally blasting your hot load into the horny rat slut.";
 		else:
-			say "     With the foreplay done, you press Rod onto her back and grab her throbbing cock. Lining it up with your [if player is female]pussy[else]asshole[end if], you sink yourself down onto it, eliciting a long moan from Rod. Her large shaft and hefty balls throb, clearly those having gotten less attention as she's the den's favorite bottom. She moans loudly and writhes in pleasure on the cushions as you ride her, making a big show of it for those watching around you both. She's better hung than the average slut rat despite her [']lowly['] position, giving you a greatly satisfying fuck out of it as well. When she finally cums, you both cry out loudly as her hot seed floods into your [if player is female]womb[else]ass[end if].[impregchance]";
+			say "     With the foreplay done, you press Rod onto her back and grab her throbbing cock. Lining it up with your [if Player is female]pussy[else]asshole[end if], you sink yourself down onto it, eliciting a long moan from Rod. Her large shaft and hefty balls throb, clearly those having gotten less attention as she's the den's favorite bottom. She moans loudly and writhes in pleasure on the cushions as you ride her, making a big show of it for those watching around you both. She's better hung than the average slut rat despite her [']lowly['] position, giving you a greatly satisfying fuck out of it as well. When she finally cums, you both cry out loudly as her hot seed floods into your [if Player is female]womb[else]ass[end if].[impregchance]";
 		infect "Slut Rat";
-		decrease humanity of player by 5;
-		decrease libido of player by 25;
-		if libido of player < 50, now libido of player is 50;
+		SanLoss 5;
+		decrease Libido of Player by 25;
+		if Libido of Player < 50, now Libido of Player is 50;
 		now lastfuck of Rod is turns;
 
 
@@ -157,7 +157,7 @@ to say sexwithRonda:
 		if lastfuck of Ronda - turns < 6:
 			say "'I was thinking of having another go at my sexy little fucktoy soon,' she purrs as she looks over at Rod flashing her ass at her. 'Maybe a little later.'";
 		else:
-			say "     Ronda grins as you come up to her, clearly knowing what you have in mind. Before you can even start to ask, she presses her lips to yours, kissing you lustfully, then pushes you down onto the cushions. She leaps atop you, grinding her throbbing cock against you as Rod helps her out of her outfit. 'Mmm... Time to thank you again for helping Rod and I get back together, sweetie.' Rod holds his lover's cock in position as Ronda thrusts eagerly into your [if player is female]pussy[else]ass[end if] and starts pounding away at you. Her large, heavy balls slap against your thighs and you can make out the wet sounds of Rod obediently licking her girlfriend's pussy even as her throbbing penis fucks you. You moan in delight beneath her, thoroughly enjoying the rough fucking the dominant rat gives you. You cry out in delight when Ronda finally jams her large, thick meat as deep as she can into you and unleashes her hot load, flooding your [if player is female]womb[else]bowels[end if] with her thick, virile semen.[impregchance]";
+			say "     Ronda grins as you come up to her, clearly knowing what you have in mind. Before you can even start to ask, she presses her lips to yours, kissing you lustfully, then pushes you down onto the cushions. She leaps atop you, grinding her throbbing cock against you as Rod helps her out of her outfit. 'Mmm... Time to thank you again for helping Rod and I get back together, sweetie.' Rod holds his lover's cock in position as Ronda thrusts eagerly into your [if Player is female]pussy[else]ass[end if] and starts pounding away at you. Her large, heavy balls slap against your thighs and you can make out the wet sounds of Rod obediently licking her girlfriend's pussy even as her throbbing penis fucks you. You moan in delight beneath her, thoroughly enjoying the rough fucking the dominant rat gives you. You cry out in delight when Ronda finally jams her large, thick meat as deep as she can into you and unleashes her hot load, flooding your [if Player is female]womb[else]bowels[end if] with her thick, virile semen.[impregchance]";
 		now lastfuck of Ronda is turns;
 
 
@@ -173,7 +173,7 @@ instead of trading the demon seed when the current action involves the ronda:
 		now HP of ronda is 1;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry is "Slut Rat":
+			if Name entry is "Slut Rat":
 				now area entry is "Mall";
 				break;
 		extend game by 16;
@@ -257,9 +257,9 @@ Instead of resolving a Art Collector:
 	else:
 		say "     Managing to make your way back to the high rise with the art collector's suite atop it, you pause, reluctant to head up and possibly face the powerful leopardman again. Gathering your resolve, you make your way inside and begin your arduous ascent anew. It is long and tiring, but you press on, not wanting to risk being found in such a confined space with the countless creatures which probably inhabit this building. You can see several wet splotches on the stairs, many quite fresh.";
 		say "     After an ascent which leaves you hungry, thirsty and aching, you find yourself in front of the penthouse suite again. Opening the door, you step into the antechamber connecting to the inoperative elevator and the large doors to the suite. Finding them still unlocked, you slip quietly into the spacious foyer and living room, looking at the various pieces on display before heading over to the one containing the veil and simple staff. As you approach it, but are again interrupted by an angry growl from the large leopardman stalking out of the nearby bedroom. The several sexy leopardesses are still spread out on and around the bed waiting for his return after dealing with the would-be thief.";
-	increase thirst of player by 12;
-	increase hunger of player by 6;
-	decrease HP of player by ( HP of player divided by 6 );
+	increase thirst of Player by 12;
+	increase hunger of Player by 6;
+	decrease HP of Player by ( HP of Player divided by 6 );
 	now artleopardfight is 3;
 	challenge "Leopardman";
 	if artleopardfight is 3:		[fled]
@@ -275,19 +275,19 @@ Instead of resolving a Art Collector:
 		wait for any key;
 		now heat enabled is false; [temporarily turning off heat effects]
 		now skipturnblocker is 1; [temporarily turns off several other end of turn effects]
-		if "Rapid Healing" is not listed in feats of player, follow the turnpass rule;
-		if "Regeneration" is not listed in feats of player, follow the turnpass rule;
+		if "Rapid Healing" is not listed in feats of Player, follow the turnpass rule;
+		if "Regeneration" is not listed in feats of Player, follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		follow the turnpass rule;
 		now heat enabled is true; [heat effects turned back on]
 		now skipturnblocker is 0; [restores normal end of turn functions for the final turn skip after the scene]
-		now HP of player is 1;
-		increase hunger of player by 5;
-		increase thirst of player by 5;
-		decrease morale of player by 20;
-		decrease humanity of player by 8;
+		now HP of Player is 1;
+		increase hunger of Player by 5;
+		increase thirst of Player by 5;
+		decrease morale of Player by 20;
+		SanLoss 8;
 		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection. You slowly struggle to rise, the healing process having taken much out of you. You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain. Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now. Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman. After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
 		now Resolution of Art Collector is 2; [lost]
 	else if artleopardfight is 1:	[victory]
@@ -305,8 +305,8 @@ to say rondarescue:
 	[puts Slut Rat as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Slut Rat":
-			now monster is y;
+		if Name entry is "Slut Rat":
+			now MonsterID is y;
 			break;
 	say "     Looking around the room, you spot several of the rats in mid-coitus and try to check them out without looking too interested. Not that the rats would mind, per se, but you might get roped into playing with them and lose track of your actual goal.";
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
@@ -316,10 +316,10 @@ to say rondarescue:
 		increase level of Ronda by 2;
 		say "     Looking around the various rats in the den at the moment, you aren't able to spot one with Ronda's red heart on their fur. You try to keep a mental list of who you've already checked, though it's hard to tell the slutty rats apart at times.";
 	else:
-		say "     You are about to give up when you spot a flash of red on one of the large rats. This well-endowed herm has another rat's muzzle buried under her hefty balls and licking her snatch. You'd almost missed it because her big testes were covering the little red heart. You're tempted to join in right away, but you won't be able to tempt her somewhere secluded until she's done with her current playtoy anyhow. You snuggle back with one of the other rats and sit back to enjoy the show.";
+		say "     You are about to give up when you spot a flash of red on one of the large rats. This well-endowed herm has another rat's muzzle buried under her hefty balls and licking her snatch. You'd almost missed it because her big testicles were covering the little red heart. You're tempted to join in right away, but you won't be able to tempt her somewhere secluded until she's done with her current playtoy anyhow. You snuggle back with one of the other rats and sit back to enjoy the show.";
 		if SlutRatDenPoolTable is 3:
-			if slutratsub > 5 or cocks of player is 0:	[bottom]
-				say "     Finding yourself in Eight-ball's arms, you moan in pleasure as the rat starts playfully teasing you. You giggle happily and wiggle back against her cock, soon rewarded with the pleasant joy of having her cock slide up into your [if player is female]hot pussy[else]tight ass[end if]. You bounce in his lap as you both enjoy the show, watching as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so are you.[impregchance]";
+			if slutratsub > 5 or Cock Count of Player is 0:	[bottom]
+				say "     Finding yourself in Eight-ball's arms, you moan in pleasure as the rat starts playfully teasing you. You giggle happily and wiggle back against her cock, soon rewarded with the pleasant joy of having her cock slide up into your [if Player is female]hot pussy[else]tight ass[end if]. You bounce in his lap as you both enjoy the show, watching as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so are you.[impregchance]";
 			else:			[top]
 				say "     Finding yourself in Skeeball's arms, you moan in pleasure as the rat starts playfully teasing you. You giggle happily and pull her into your lap. The slutty rat grinds herself down onto your cock and moans in pleasure as you drive it into her, bouncing her in your lap as you both enjoy the show. You watch as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so is Skeeball.";
 		else:
@@ -336,7 +336,7 @@ to say rondarescue:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[helpingronda]";
 		else:
@@ -353,7 +353,7 @@ to say helpingronda:
 	WaitLineBreak;
 	say "     Looking Rod over, your eyes slide over his increasingly feminine features, his swelling chest and curvy body to his hips. There you spot his enlarged cock and balls, but also some dampness running down his legs. Knowing Ronda's not cummed yet, holding back to give her boyfriend a thorough fucking for his first time, you drop back to your knees to investigate. Pushing up those bloated balls, you find a wet puss waiting there, growing larger as the new herm continues to transform. You give that virgin cunt a few licks, delighting in Rod's moans at this new pleasure.";
 	now tempnum is 0;
-	if player is not male:		[no option, ride Rod's rod]
+	if Player is not male:		[no option, ride Rod's rod]
 		say "     Rod's body is growing larger as well, though not quite as big as her dominant girlfriend. The newly-minted herm's fur is also becoming darker as the slut rat infection spreads rapidly through her body. Deciding that you want more than a suck on her cock, you coax the lustfully fucking pair to sit back on a nearby crate. With Rod positioned in Ronda's lap, still taking the bigger rat's cock up her ass, the transforming rat's cock is ready and waiting there for you to ride.";
 		now tempnum is 2;
 		WaitLineBreak;
@@ -363,7 +363,7 @@ to say helpingronda:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Take her pussy.";
 		say "     ([link]N[as]n[end link]) - Ride her cock.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			now tempnum is 1;
 		else:
@@ -377,13 +377,13 @@ to say helpingronda:
 	else:
 		increase SlutratSub by 1; [slightly more sub]
 		if SlutratSub > 10, now SlutratSub is 10;
-		say "     With a paw around Rod's enlarged cock, you climb onto her lap and get your [if player is female]pussy[else]asshole[end if] lined up with its dribbling tip. Rod bites her lip before the last of her resistance fails and she moans loudly for you to let her fuck you, which you quite happily do. 'Mmm... that's my good, slutty Rod,' Ronda says, nipping her ear. 'Stuff that [if player is female]cunt[else]ass[end if]. Mmm... I can hardly wait to see you stuffed with your first litter,' she adds while fingering his still-virgin pussy. Rod bounces herself vigorously in Ronda's lap while hugging you close, working her pulsing cock hard into you.";
-		say "     As you fuck, the reunited couple continue to go on about how they've missed each other and how sexy the new Rod looks. By the time you're cumming while Ronda's semen floods her ratty bottom and Rod's blasting her load into your [if player is female]womb[else]bowels[end if], Rod's finished her transformation into a sexy slut rat with curvy hips, a plump bosom, throbbing cock and dark fur. Despite starting out male, she's become a very girly slut rat and smaller than most. She's definitely going to be a popular fucktoy around the den.[impregchance]";
+		say "     With a paw around Rod's enlarged cock, you climb onto her lap and get your [if Player is female]pussy[else]asshole[end if] lined up with its dribbling tip. Rod bites her lip before the last of her resistance fails and she moans loudly for you to let her fuck you, which you quite happily do. 'Mmm... that's my good, slutty Rod,' Ronda says, nipping her ear. 'Stuff that [if Player is female]cunt[else]ass[end if]. Mmm... I can hardly wait to see you stuffed with your first litter,' she adds while fingering his still-virgin pussy. Rod bounces herself vigorously in Ronda's lap while hugging you close, working her pulsing cock hard into you.";
+		say "     As you fuck, the reunited couple continue to go on about how they've missed each other and how sexy the new Rod looks. By the time you're cumming while Ronda's semen floods her ratty bottom and Rod's blasting her load into your [if Player is female]womb[else]bowels[end if], Rod's finished her transformation into a sexy slut rat with curvy hips, a plump bosom, throbbing cock and dark fur. Despite starting out male, she's become a very girly slut rat and smaller than most. She's definitely going to be a popular fucktoy around the den.[impregchance]";
 	say "     You and Ronda fuck Rod a few more times, showing her many of the pleasures her new body has to offer. Ronda eventually decides to take her boyfriend turned fucktoy down to the den to show her off to the others. Rod seems much more coherent than most slut rats after their initiation and Ronda seems to still remember in part. You guess that having each other to support and remind one another of their identities has helped them remember a little better. But that romp you shared certainly proves that they're slut rats through and through now as well.";
 	WaitLineBreak;
 	say "     When you head back up to the Mall, you tell everyone that Rod dragged you both down under the Mall after he'd decided to finally go searching for Ronda. You tell them that you tried to help him, but that the big rats down there got him and that you barely got away yourself. Still high on the excitement of what happened below, you feel no guilt about your duplicitous actions, feeling much closer to your slut rat sisters now.";
 	say "     Nermine gives you an inscrutable look as you're explaining what happened to the sad mall rats around you, but she says nothing. She was asked to help reunite Rod and Ronda, and that's happened... after a fashion. Pretty much Nermine's usual stock and trade.";
-	decrease humanity of player by 20;
+	SanLoss 20;
 	increase score by 100;
 	now HP of Ronda is 100;
 	move Rod to Slut Rat Den;
@@ -430,7 +430,7 @@ to say helpingrod:
 		say "     Ronda gives you a wild kiss, diving her tongue into your mouth. 'Thanks again, sweetie,' she says before turning her attention to Rod. 'Mmmm... and now for my clever man,' she rumbles, pushing her rat body against Rod's and letting the sheet she was wearing like a toga slide down. As his paws roam over her body while kissing, they eventually drift lower and Rod suddenly stops short. With her back to you, it takes you a moment to realize that Ronda's cock hasn't gone away completely, but you catch sight of her plump balls as well as her dripping pussy as her tail flicks with excitement.";
 		say "     'Things are going to be a little different from now on, sweetie,' Ronda rumbles, turning Rod around to press his chest against the fridge. Lining up her cock, she presses it to his back door. 'I've been gone for a while. You haven't been straying, have you? I know that slut Lucy's had her eyes on you.' He stifles a groan and shakes his head vehemently. 'No? That's good. But I still think you need a reminder that you're [bold type]my[roman type] man.' With that, she starts sinking it into the other rat's backside with a moan from both of them.";
 		WaitLineBreak;
-		say "     As Ronda starts pounding away at Rod in earnest, he looks back at you, blushing brightly at his ears. Catching the glance, Ronda looks back at you, her rescuer, and grins. 'Mmm... let [if player is female]her[else]him[end if] watch. That is, unless [if player is female]she[else]he[end if][']d rather join in. What do you say? One time offer,' she adds, flicking up her tail to flash her wet cunt again.";
+		say "     As Ronda starts pounding away at Rod in earnest, he looks back at you, blushing brightly at his ears. Catching the glance, Ronda looks back at you, her rescuer, and grins. 'Mmm... let [if Player is female]her[else]him[end if] watch. That is, unless [if Player is female]she[else]he[end if][']d rather join in. What do you say? One time offer,' she adds, flicking up her tail to flash her wet cunt again.";
 		say "     What will it be? Shall you [link]join in (1)[as]1[end link], [link]stay and watch (2)[as]2[end link] or [link]leave (3)[as]3[end link] the two to get reacquainted?";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 3:
@@ -441,28 +441,28 @@ to say helpingrod:
 			else:
 				say "Invalid choice. Type [link]1[end link] to join in, [link]2[end link] to stay and watch and [link]3[end link] to leave.";
 		if calcnumber is 1:
-			if player is male:
-				say "     Deciding to get in on the action, you move in behind Ronda, getting your [cock of player] cock lined up with her cunt. Rod starts to protest, but Ronda just gives him another hard thrust. 'Oh sweetie. Don't be jealous. You know I love you very much, but our hero here needs to be rewarded. You'll get your turn later. How does that sound?' she adds, reaching around to stroke his throbbing cock while pushing deep into him again. He moans and nods eagerly. 'Mmm... that's why I love my big, hard Rod,' she rumbles. 'He knows his girl's in charge.'";
+			if Player is male:
+				say "     Deciding to get in on the action, you move in behind Ronda, getting your [cock of Player] cock lined up with her cunt. Rod starts to protest, but Ronda just gives him another hard thrust. 'Oh sweetie. Don't be jealous. You know I love you very much, but our hero here needs to be rewarded. You'll get your turn later. How does that sound?' she adds, reaching around to stroke his throbbing cock while pushing deep into him again. He moans and nods eagerly. 'Mmm... that's why I love my big, hard Rod,' she rumbles. 'He knows his girl's in charge.'";
 				say "     That resolved, Ronda grins back at you and flicks her tail up meaningfully. Knowing you've got to the go-ahead, you thrust into her eager cunt, pressing her hard and deep into her boyfriend. It takes a few attempts to set up a steady rhythm, but soon enough you're pounding into Ronda as she drives into Rod. Her cunt squeezes and tugs at your meat, working your cock expertly even with the distraction of fucking Rod at the same time. Between that and her aggressive lust, you suspect that Ronda has more lingering traces of her slut rat condition than just her cock. You decide not to dwell on this, instead wanting to enjoy the rat's hot, wet pussy. As she groans loudly in orgasm, blasting her hot seed into her boyfriend's belly, her vaginal walls clamp down around you and you pump your load into her. Rod cums seconds later, spraying his semen across the steel fridge door as his tummy's plumps up a little from all the cum his girlfriend's pumping into him.";
 				say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him. 'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
-				if libido of player > 50, now libido of player is 50;
-			else if player is female:
+				if Libido of Player > 50, now Libido of Player is 50;
+			else if Player is female:
 				[puts Mall Rat as lead monster in case of impregnation]
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if name entry is "Mall Rat":
-						now monster is y;
+					if Name entry is "Mall Rat":
+						now MonsterID is y;
 						break;
 				say "     Deciding to get in on the action, you move over to Rod and Ronda. You run a hand across her ass and down to finger her pussy, eliciting a moan from her. Grabbing Rod's hips, she pulls him back (all while backing onto your fingers) and tells you to get in front of him. Rod starts to protest, but Ronda just gives him another hard thrust. 'Oh sweetie. I won't be jealous this one time. You know I love you very much, but our hero here needs to be rewarded. Just don't go thinking you can get away with this with anyone else. Understand?' she adds, reaching around to give his hard cock a firm squeeze while pushing deep into him again. He moans and nods eagerly. 'Mmm... that's why I love my big, hard Rod,' she rumbles. 'He knows his girl's in charge.'";
 				say "     That resolved, you move in front of Rod and get your pussy lined up with his cock, letting him thrust into your eager cunt as Ronda pushes behind him. It takes a few attempts to set up a steady rhythm, but soon enough Rod's pounding into you as Ronda drives into him. His large, throbbing cock pulses inside you, fucking you deliciously well, even with the distraction of being fucked by his girlfriend at the same time. From her aggressive lust, you suspect that Ronda has more lingering traces of her slut rat condition than just her cock. You decide not to dwell on this, instead wanting to enjoy the rat's big, hard cock inside you. Seconds after Ronda groans loudly in orgasm, blasting her hot seed into her boyfriend's belly, Rod cums as well, sending his hot seed flowing up into your womb. Your own orgasm soon follows, cumming loudly as you feel the rat's nuts being drained into you even as his own tummy plumps a little from all the cum his girlfriend's pumping into him.[impregchance]";
 				say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him. 'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
-				if libido of player > 50, now libido of player is 50;
+				if Libido of Player > 50, now Libido of Player is 50;
 			else:
 				say "     You consider joining in on the action, but remember that you're ill-equipped for such fun and will have to simply watch instead.";
 				now calcnumber is 2;
 		if calcnumber is 2:
 			say "     Deciding to watch rather than join in, you move to a better vantage point to watch the action. Rod starts to protest, but Ronda just gives him another hard thrust. 'Oh sweetie. You know I love you very much, but our hero here deserves to see what a lovely couple we make. If you put on a good show, you'll get your turn later. How does that sound?' she adds, reaching around to stroke his throbbing cock while pushing deep into him again. He moans and nods eagerly. 'Mmm... that's why I love my big, hard Rod,' she rumbles. 'He knows his girl's in charge.'";
-			say "     That resolved, you settle in to watch as Ronda's large cock thrusts into Rod repeatedly. She strokes his erection and rubs his balls, making his shaft flow with precum. Rod's quite well hung but, while you can't be certain, it seems that Ronda's lingering slut rat cock is still larger than his. As her nimble fingers play over the leaking shaft, she takes her time, clearly drawing out the show for you[if player is male]. You start stroking yourself as you watch, eliciting a grin from her[else if player is female]. You start fingering yourself as you watch, eliciting a grin from her[end if]. Eventually, the herm rat pushes deep into her boyfriend's backside, blasting her hot seed into him and Rod cums a few seconds later, spraying his semen across the steel fridge door as his tummy's plumps up a little from all the cum his girlfriend's pumping into him[if player is not neuter]. You groan in orgasm as well, having thoroughly enjoyed the show[end if].";
+			say "     That resolved, you settle in to watch as Ronda's large cock thrusts into Rod repeatedly. She strokes his erection and rubs his balls, making his shaft flow with precum. Rod's quite well hung but, while you can't be certain, it seems that Ronda's lingering slut rat cock is still larger than his. As her nimble fingers play over the leaking shaft, she takes her time, clearly drawing out the show for you[if Player is male]. You start stroking yourself as you watch, eliciting a grin from her[else if Player is female]. You start fingering yourself as you watch, eliciting a grin from her[end if]. Eventually, the herm rat pushes deep into her boyfriend's backside, blasting her hot seed into him and Rod cums a few seconds later, spraying his semen across the steel fridge door as his tummy's plumps up a little from all the cum his girlfriend's pumping into him[if Player is not neuter]. You groan in orgasm as well, having thoroughly enjoyed the show[end if].";
 			say "     After withdrawing and Rod and Ronda change positions, Ronda sends you on your way, saying she wants more private time with him. 'We have so much to catch up on,' she says with a grin, stroking her cock as it gets hard again.";
 		if calcnumber is 3:
 			say "     You shake your head and tell them that you'd not want to get in the way of their loving reunion and head out, hearing Rod start moaning again as Ronda turns her full attention back on buggering her boyfriend.";

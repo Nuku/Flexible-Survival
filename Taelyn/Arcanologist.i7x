@@ -27,14 +27,14 @@ Arcanologist	"Arcanologist"
 Arcanologist is a man.
 ScaleValue of Arcanologist is 3. [human sized]
 SleepRhythm of Arcanologist is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cocks of Arcanologist is 1. [cock]
+Cock Count of Arcanologist is 1. [cock]
 Cock Length of Arcanologist is 6. [cock length]
-Cock Width of Arcanologist is 2. [ball size]
-Testes of Arcanologist is 2. [no balls]
-Cunts of Arcanologist is 0. [no pussy]
-Cunt Length of Arcanologist is 0. []
-Cunt Width of Arcanologist is 0. []
-Breasts of Arcanologist is 2. [2 nipples]
+Ball Size of Arcanologist is 2. [number of player balls: 1, 2 or 4]
+Ball Count of Arcanologist is 2. [no balls]
+Cunt Count of Arcanologist is 0. [no pussy]
+Cunt Depth of Arcanologist is 0. []
+Cunt Tightness of Arcanologist is 0. []
+Nipple Count of Arcanologist is 2. [2 nipples]
 Breast Size of Arcanologist is 0. [flat]
 Humanity of Arcanologist is 90.
 PlayerMet of Arcanologist is false.
@@ -57,7 +57,7 @@ to say ArcanologistScent:
 
 to say ArcanologistDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP of Arcanologist: [HP of Arcanologist], Dexterity: [Dexterity of Arcanologist], LIBIDO: [libido of Arcanologist], LUST: [lust of Arcanologist], Strength: [Strength of Arcanologist], Stamina: [Stamina of Arcanologist] <- DEBUG[line break]";
+		say "DEBUG -> HP of Arcanologist: [HP of Arcanologist], Dexterity: [Dexterity of Arcanologist], LIBIDO: [Libido of Arcanologist], LUST: [lust of Arcanologist], Strength: [Strength of Arcanologist], Stamina: [Stamina of Arcanologist] <- DEBUG[line break]";
 	if Dexterity of Arcanologist is 0: [regular Arcanologist]
 		say "     a";
 

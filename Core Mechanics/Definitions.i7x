@@ -4,17 +4,17 @@ Version 1 of Definitions by Core Mechanics begins here.
 [Size check functions]
 [Is x smaller than y?]
 Definition: A person (called x) is smaller than player:
-	if scalevalue of x < scalevalue of player, yes;
+	if scalevalue of x < scalevalue of Player, yes;
 	no;
 
 [Is x larger than y?]
 Definition: A person (called x) is larger than player:
-	if scalevalue of x > scalevalue of player, yes;
+	if scalevalue of x > scalevalue of Player, yes;
 	no;
 
 [Are x and y equalsized?]
 Definition: A person (called x) is equalsized with player:
-	if scalevalue of x is scalevalue of player, yes;
+	if scalevalue of x is scalevalue of Player, yes;
 	no;
 
 [State checks]

@@ -20,7 +20,7 @@ instead of resolving Mysterious Briefcase:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take the briefcase. You might be able to find some use for the liquid.";
 	say "     ([link]N[as]n[end link]) - Leave it. Messing around with experimental chemicals is far too dangerous.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Stuffing everything back in the briefcase, you grab your new acquisition and make a beeline for the Grey Abbey Library since it would be a bit much to lug around during further exploration. After arriving at the library, you stash the briefcase in one of the shelves for now, making a mental note to check back on it some other time.";
 		move player to Grey Abbey Library;
@@ -40,7 +40,7 @@ instead of navigating Grey Abbey Library while (Fang is in Grey Abbey Library an
 	say "     Finally taking notice of you, the panting wolf turns to you and howls! You expect to be tackled and roughly bred, but his monstrous cock starts bouncing and twitching as he begins to coat you in thick jets of wolven seed. There's no warning or sign that this had been building, the serum seeming to force the feral to orgasm. His spurting cum manages to cross quite the distance, soaking you thoroughly, and the noise it makes when it splatters over the floor reminds you of someone dumping a bucket of water. That thick, musky jism coats you from head to toe, the horny canine spurting rope after rope of lupine seed for a good minute before it finally stops. You watch as the wolf remains hard, still looking at you as if expecting you to present yourself to let him relieve the rest of the contents of those heavy balls.";
 	say "     ([link]Y[as]y[end link]) - Let your alpha break you in with that upgraded cock.";
 	say "     ([link]N[as]n[end link]) - Get out of there! That thing could seriously mess you up!";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You should resist, of course, but there is no way that you can pass on all of the sights and smells. As you stare at him for moments on end, you realize that a part deep inside of you needs this. There's something so wild about your alpha now, sparking a bestial and carnal need in you to bend over for him and let him have his way with you. Unable to resist for a second longer, you eagerly turn around and present your rear to your alpha, reaching back to spread your cheeks. The altered wolf wastes little time in pouncing you and pushes that three foot pillar of doggy dong inside of your body. As he rushes you, you're overcome with the heady scent of his musk, engulfed in the deep, thick aroma of his arousal. It makes your mouth water, drool leaking down the corners of your mouth as he begins to poke and prod at your hole. You try to relax as much as you can, but that sudden thick intrusion makes you groan out in both pleasure and pain as Fang buries inch after throbbing inch into your ass.";
 		say "     You can't believe that you're doing this - Fang is massive now! That hot, veiny shaft fills you with warm precum as he stretches you further and further, and your hips shift as that dick drives itself deeper inside you. A hot fire courses through your body as you moan out. This is exactly what you need, your belly bulging as he stuffs nearly all of his bone within you. It shouldn't fit, but your body needs it so badly as you whine in desperation, crying out for the rest of that massive cock to plow into you. Your insides clench and tighten around Fang's rod, stimulating the feral as he finally starts to rut you.";

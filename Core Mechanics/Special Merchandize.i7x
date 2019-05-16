@@ -62,8 +62,8 @@ to say PowerUpUse:
 		SanLoss 10;
 	else:
 		increase PowerUpDrugTrip by 8;
-		increase Strength of player by 6;
-		add "Roided Up" to Feats of player;
+		increase Strength of Player by 6;
+		add "Roided Up" to Feats of Player;
 
 instead of sniffing powerup tablet:
 	say "     The tablet smells of sugar.";
@@ -72,8 +72,8 @@ an everyturn rule:
 	if PowerUpDrugTrip is 1:
 		say "     The feeling of unbridled power in you peters out and you suddenly feel weak as a kitten in comparison. You can't help but feel the desire to take another PowerUp tablet and get back to proper fighting form.";
 		now PowerUpDrugTrip is 0;
-		decrease Strength of player by 6;
-		remove "Roided Up" from Feats of player;
+		decrease Strength of Player by 6;
+		remove "Roided Up" from Feats of Player;
 	if PowerUpDrugTrip > 0:
 		decrease PowerUpDrugTrip by 1;
 
@@ -107,34 +107,34 @@ to say pixie dust use:
 	if calcnumber is 1:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a large house cat.";
-		now scalevalue of player is 1;
+		now scalevalue of Player is 1;
 	else if calcnumber is 2:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a half-sized human.";
-		now scalevalue of player is 2;
+		now scalevalue of Player is 2;
 	else if calcnumber is 3:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on just about the level of a regular human.";
-		now scalevalue of player is 3;
+		now scalevalue of Player is 3;
 	else if calcnumber is 4:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you above the level of even the tallest basketball player.";
-		now scalevalue of player is 4;
+		now scalevalue of Player is 4;
 	else:
 		LineBreak;
 		say "     You sprinkle the dust over yourself and before you know, your body takes on a scale that puts you on the level of a small delivery van.";
-		now scalevalue of player is 5;
+		now scalevalue of Player is 5;
 	repeat with z running through equipped equipment:
 		if size of z > 0: [size restricted equipment]
-			if (scalevalue of player - size of z > 1):
+			if (scalevalue of Player - size of z > 1):
 				say "     [bold type]You quickly rip your [z] off your body before [if plural of z is true]they are destroyed when you grow larger than they could support[else]it is destroyed when you grow larger than it could support[end if] .[roman type][line break]";
 				now z is not equipped;
-			else if (scalevalue of player - size of z is 1):
+			else if (scalevalue of Player - size of z is 1):
 				say "     [bold type]Your [z] stretches a bit as it is forced to conform to a larger body.[roman type][line break]";
-			else if (scalevalue of player - size of z < -1):
+			else if (scalevalue of Player - size of z < -1):
 				say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 				now z is not equipped;
-			else if (scalevalue of player - size of z is -1):
+			else if (scalevalue of Player - size of z is -1):
 				say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
 
 Special Merchandize ends here.

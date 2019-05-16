@@ -87,6 +87,8 @@ to say ControlPanelDesc:
 		say "The panels are glowing softly, every light red. A small schematic shows that the intact generator is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
 	else if fixedgens is 2:
 		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, but the controls seem to be in emergency shutdown mode. Maybe you can [bold type]reactivate[roman type] them?";
+	else if fixedgens is 3:
+		say "The panels are glowing softly, all but a small portion of the lights red. A small schematic shows that the generator you repaired is connected to power lines that supply the city area with the library and mall, with at least those few lights now shining green. You doubt you'll have as much luck with getting the rest of the city supplied with power again.";
 
 catwalk door is a door.
 catwalk door is lockable and locked.
@@ -159,7 +161,7 @@ to say catwalkstuff:
 			increase score by 200;
 		else:
 			say "The generator is not running, so maybe there is nothing for it to power? Maybe you should check the control panels.";
-	else if fixedgens is 2:
+	else if fixedgens > 1:
 		say "The hum of the fixed generator sounds like music to your ears.";
 	else:
 		say "The intact generator is missing some key parts. The claw marks on the generator make it look like something stole them, so maybe they are out in the city?";
@@ -181,9 +183,12 @@ carry out activating:
 			now findwires is 1;
 	else if findwires is 1:
 		say "The power light for the city blocks holding the library and mall is still off.";
-	else if findwires is 2 and fixedgens is 2:
+	else if findwires is 2 and fixedgens is 3:
+		say "The power for the library and mall is already on and that pulls most of the power of the damaged power plant. Also, there seems to be a lot more damage in the lines leading elsewhere, so this is as good as it is gonna get for now.";
+	else If findwires is 2 and fixedgens is 2: [turning the power on]
 		say "Flipping several switches on the control panel, you manage to get the power light for the part of the city with the library to turn on! Yay! Maybe now the computers there will work again?";
 		activatecomputers;
+		now fixedgens is 3;
 	else if fixedgens is 0:
 		say "The power light is still off, and a malfunction light for the generator is on. Looks like you will have to fix it.";
 	else if fixedgens is 1:
@@ -218,7 +223,7 @@ carry out towerfixing:
 		say "The tower top slips, and falls. Maybe you could try to fix it again?";
 	else:
 		say "The tower top slides into place, and the stress on the wires is released.";
-		if fixedgens is 2:
+		if fixedgens > 1:
 			say "A red light on the uppermost tip of the tower blinks a few times, then stays on continuously, indicating power is up and running. Hooray!";
 			increase score by 200;
 			now findwires is 2;
@@ -228,6 +233,10 @@ Section X - Library Computer
 
 library computer is a thing.
 library computer is in Grey Abbey Library. "[if library computer is off]A computer rests nearby, powerless. You can try to [bold type]turn on the computer[roman type][else]One of the nearby computers is on, but unused. Its screen shows a somewhat garbled screen saver[end if].";
+
+an everyturn rule:
+	if library computer is unpowered and findwires is 2 and fixedgens > 2:
+		now library computer is powered;
 
 the library computer can be on or off. the library computer is off.
 the library computer can be powered or unpowered. the library computer is unpowered.
@@ -250,7 +259,6 @@ understand "power on the computer" as computerpowering.
 understand "power on computer" as computerpowering.
 understand "power on library computer" as computerpowering.
 understand "power on the library computer" as computerpowering.
-
 
 check computerpowering:
 	if library computer is not visible, say "Turn on what?" instead;

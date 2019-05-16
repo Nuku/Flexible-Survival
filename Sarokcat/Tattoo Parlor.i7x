@@ -52,7 +52,7 @@ The sarea of findingkara is "Red".
 Instead of resolving findingkara:
 	if tattoohunter is 3:
 		say "     Wandering absently through the red light district again, you hear a small commotion from a nearby alleyway. Glancing over, you spot one of those hermaphrodite hyenas as she staggers out of it, obviously exhausted. Spotting you, the hyena moves your way, and as you brace yourself for a fight, you note that she looks a little different from most of the other hyenas you have seen so far. You blink as you take in the large number of piercings along the sides of the hyena's muzzle and the rings hanging from her ears, and you find your eyes drawn to the strangely colored patterns of fire and dragons that seem to shine as part of the beast's fur. 'Please, I need help. There are just too many of them for me...' she says as she stops just out of reach of your upraised weapon, the obviously exhausted hyena easy prey for the creatures you can already hear heading this way in pursuit. Do you try to help the strange hyena, or do you get out of here before the creatures can catch you as well?";
-		if player consents:
+		if Player consents:
 			Challenge "Leopardman";
 			Challenge "Leopardman";
 			Challenge "Leopardman";

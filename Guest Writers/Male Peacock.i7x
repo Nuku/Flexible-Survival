@@ -11,7 +11,7 @@ Version 2 of Male Peacock by Guest Writers begins here.
 "Adds a Male Peacock to Flexible Survival's Wandering Monsters table."
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 peacockcontrol is a number that varies.
 
@@ -22,19 +22,19 @@ to say peacockdesc:
 	now peacockcontrol is 0;
 
 to say peacockskin:
-	if cock length of player > cunt length of player:
+	if Cock Length of Player > Cunt Depth of Player:
 		say "blue and green feathers covering your";
 	else:
 		say "brown-hued feathers covering your";
 
 to say peacocktail:
-	if cock length of player > cunt length of player:
+	if Cock Length of Player > Cunt Depth of Player:
 		say "You have a beautiful fan of feathers for a tail. The feathers are decorated with hypnotic eyes";
 	else:
 		say "A feathered tail decorates your rear, like half of a long skirt";
 
 to say peacockasschange:
-	if cock length of player > cunt length of player:
+	if Cock Length of Player > Cunt Depth of Player:
 		say "feathers emerge from it. They form a peacock tail that you are able to fan with ease";
 	else:
 		say "brown feathers emerge from it. They form a tail that comes down to your knees";
@@ -43,16 +43,16 @@ to say peacockattack:
 	say "[one of]While you are trying to hit the feathered enemy, he trips you! You fall flat to the ground.[or]He pushes you and flees back out of range, laughing.[or]He jumps on your shoulders as you try to grab him, then hops back to the ground. Is he mocking you?[or]The bird flaps a few feet back and fans his tail wide, waving his colorful plumage.[at random]";
 	say "You take no damage, but feel your thoughts grow hazier.";
 	increase peacockcontrol by a random number between 1 and 5;
-	if peacockcontrol > intelligence of player:
+	if peacockcontrol > intelligence of Player:
 		now fightoutcome is 22;
 		lose;
 
 to say peacockvictory:
 	now peacockcontrol is 0;
-	choose row monster from the Table of Random Critters;
-	if player is female:
+	choose row MonsterID from the Table of Random Critters;
+	if Player is female:
 		say "     You are unable to think clearly anymore. You find yourself standing up and facing the avian, your thoughts mixed in a blur. He beckons you to follow him, and you have no choice but to walk with him until you arrive at what seems to be a well-maintained apartment. You can think more clearly by now, as if the leash in your brain has been loosened. However, you doubt that you could actually oppose whatever the bird has in mind for you.";
-		say "     He motions you towards the bed in the middle of the room. You obediently lie on the mattress while he looks over your [bodydesc of player] body with unmistakable lust, his tapered cock already poking out of his slit. He slides over your [skin of player] body... it feels like a light, warm blanket. His hands explore your every curve, stroking and groping you teasingly. Your thoughts start to drift and grow dull, and when his long, sleek cock sinks into your yearning petals, any will to resist melts away in shuddering waves of pleasure. You give in completely to the alluring peafowl...[fimpregchance]";
+		say "     He motions you towards the bed in the middle of the room. You obediently lie on the mattress while he looks over your [bodydesc of Player] body with unmistakable lust, his tapered cock already poking out of his slit. He slides over your [skin of Player] body... it feels like a light, warm blanket. His hands explore your every curve, stroking and groping you teasingly. Your thoughts start to drift and grow dull, and when his long, sleek cock sinks into your yearning petals, any will to resist melts away in shuddering waves of pleasure. You give in completely to the alluring peafowl...[fimpregchance]";
 		WaitLineBreak;
 		say "     After an indeterminate period of time, you find yourself back in the city, no idea how or when. The time you shared with the strange bird is a hazy, yet blissful, blur. You quickly realize that finding him will be practically impossible by now, and you reminiscence about the encounter in an idle daydream. Before you can grow aroused all over again, you shake your head of these lurid thoughts and inspect your body for any changes, a part of you yearning to more closely resemble the sexy peacock who drew you under his spell.";
 	else:
@@ -64,32 +64,33 @@ to say peacockvictory:
 			say "     A moan spills past your lips as the handsome male begins to undress you, pulling down any clothes or equipment obscuring your lower half. You bury your face against the dirty red brick, your eyes fluttering closed. His talon-tipped hands glide over the curve of your rear, taking a moment to admire what's rightfully his. 'Such a fine piece of ass,' the fowl whispers into your ear, curling his thumbs to pry the dark cleft apart. The cool air of your exposure draws a shiver of delight, and you push your rear back with mounting excitement, steeling yourself for the mind-melting pleasure your experienced partner is sure to provide.";
 			WaitLineBreak;
 			say "     You feel the warm, stiff contact of his shaft against your bottom, the long and tapered organ smearing his fluids over your yearning flesh. You sigh out with pleasure as his tip teases your star, gently encircling it and lubricating your rim. By the time he pushes his wonderful rod inside of your rear, you can think of nothing but the immense pleasure of giving yourself over to this sexy, assertive bird and the bestial length spearing you open, pushing all the way to the hilt inside of your gripping asshole. Your entire body grows tense with arousal as you're enveloped in his lustrous feathers, metallic hues cradling your back and sides as he begins to pound into you.";
-			say "     The peafowl takes several slow, deep strokes to ensure his spoils['] comfort, allowing your rear to grow accustomed to the long, hard presence spreading and dragging through your bowels. The heat of his body against you and the scent of your mutual arousal further mires your thoughts in the simple bliss of submission, your moans growing ragged as he rams himself within you. As his pace increases, [if player is male]your length[smn] begin[smv] to bob and twitch, milking strained spurts of pre each time his pulsing spire grinds against your prostate[else]so does your sexless pleasure of being dominated by such a powerful male, the heat of friction leaving every nerve in your sensitive lining alight[end if]. Without thinking, you begin to join in his rising song of courtship, announcing your bliss with animalistic cries of pleasure as he pistons his length into your well-stretched hole.";
+			say "     The peafowl takes several slow, deep strokes to ensure his spoils['] comfort, allowing your rear to grow accustomed to the long, hard presence spreading and dragging through your bowels. The heat of his body against you and the scent of your mutual arousal further mires your thoughts in the simple bliss of submission, your moans growing ragged as he rams himself within you. As his pace increases, [if Player is male]your length[smn] begin[smv] to bob and twitch, milking strained spurts of pre each time his pulsing spire grinds against your prostate[else]so does your sexless pleasure of being dominated by such a powerful male, the heat of friction leaving every nerve in your sensitive lining alight[end if]. Without thinking, you begin to join in his rising song of courtship, announcing your bliss with animalistic cries of pleasure as he pistons his length into your well-stretched hole.";
 			WaitLineBreak;
-			say "     After what feels like hours of being fucked by the tireless peacock, he finally hilts himself inside of you one last time and goes rigid in the throes of a powerful climax. Spurt after spurt of his hot, sticky seed paint your bowels in his essence, the tainted fluid splattering across your lining and filling you with a strange, intoxicating warmth. You feel yourself sagging weakly[if player is male], even as you reach your own shuddering climax that wastes your lesser cum across the coarse brick before you[else] against the wall, savoring the feeling of his cum deep inside of you[end if]. Exhausted but awash in blissful tingles, you turn your neck to kiss your feathery stud, parting his beak to play with his tongue while you bask in his confident presence.[mimpregchance]";
+			say "     After what feels like hours of being fucked by the tireless peacock, he finally hilts himself inside of you one last time and goes rigid in the throes of a powerful climax. Spurt after spurt of his hot, sticky seed paint your bowels in his essence, the tainted fluid splattering across your lining and filling you with a strange, intoxicating warmth. You feel yourself sagging weakly[if Player is male], even as you reach your own shuddering climax that wastes your lesser cum across the coarse brick before you[else] against the wall, savoring the feeling of his cum deep inside of you[end if]. Exhausted but awash in blissful tingles, you turn your neck to kiss your feathery stud, parting his beak to play with his tongue while you bask in his confident presence.[mimpregchance]";
 			say "     Spent and satisfied, you feel any remaining tension in your body drain from you in time with the fowl's withdrawal, a cascade of warm cream flowing from your thighs and marring your legs in his essence. You cherish the feeling of what does stay within, pursing your slightly gaping rim to seal in your lover's thick, musky tribute. But as you turn back to face him, the peacock's feathers begin to shift and sway, drawing your gaze back to those mesmerizing eyes. In a matter of moments, the sweet embrace of sleep envelops your conscious mind, and just like that, you lapse into a deep and satisfying slumber.";
 			WaitLineBreak;
 			say "     When you awaken, you find yourself in the same alleyway, retaining no memories of how you got there, nor the encounter itself. All you can feel is the by-now diffused warmth of his avian seed inside of you, infecting your form from within. You shudder with a mix of revulsion and lingering arousal, somehow wishing that you could remember the details of your ravishing.";
 		else: [STANDARD]
 			say "     Once drained, the peacock's shaft withdraws, and he gently tilts your head up to look at him and his colorful tail. He gives it a mesmerizing wave, and your mind rapidly drifts away. 'It will be better for both of us if you don't remember this... Forget... Forget...' he says softly. You start to feel sleepy as you stare into the swaying spots, and you soon slump over, passing out. When you awaken, you find yourself in an alleyway with no memories of how you got there, the encounter completely forgotten.";
-		decrease XP of player by lev entry / 2; [no XP from forgotten encounter]
+		decrease XP of Player by lev entry / 2; [no XP from forgotten encounter]
 		if ktspeciesbonus > 0, decrease the XP of the player by 1;
-		if player is submissive and HP of player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
+		if Player is submissive and HP of Player > 0, decrease the XP of the player by ( ( 2 + lev entry ) / 5 );
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Peacock" to infections of guy;
 	add "Peacock" to infections of furry;
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Peacock";
+	now NewTypeInfection entry is false;
+	now Name entry is "Peacock";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[peacockattack]";
 	now defeated entry is "The last hit knocks the blue bird on the ground. He stands up quickly and flees in a panic, his pride completely shattered."; [ Text or say command used when Monster is defeated.]
@@ -116,15 +117,15 @@ When Play begins:
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 0; [Amount of Damage monster Does when attacking.]
 	now area entry is "High"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 0; [ Number of Breasts infection will give you. ]
-	now breast size entry is 0; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 0; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 0; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 0; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 7; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
 	now loot entry is "peacock feather";
 	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
@@ -133,10 +134,111 @@ When Play begins:
 	now type entry is "avian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "pchypno"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Section 3 - Alt Combat
@@ -146,7 +248,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "pchypno"	peacockhypno rule	--	--	--	--	--	--	--	--	intstrike rule
 
 this is the peacockhypno rule:
-	choose row monster from Table of Random Critters;
+	choose row MonsterID from Table of Random Critters;
 	now monsterhit is false;
 	follow the intstrike rule;
 	if monsterhit is true:
@@ -154,11 +256,11 @@ this is the peacockhypno rule:
 	else:
 		say "The peacock tries to distract you with his plumage, but is forced to dodge away!";
 	now peppereyes is 0;
-	if HP of the player > 0 and libido of player < 110:
+	if HP of the player > 0 and Libido of Player < 110:
 		wait for any key;
 	else:
-		if HP of player <= 0, now fightoutcome is 20;
-		if libido of player >= 110, now fightoutcome is 21;
+		if HP of Player <= 0, now fightoutcome is 20;
+		if Libido of Player >= 110, now fightoutcome is 21;
 		Lose;
 	rule succeeds;
 
@@ -171,7 +273,7 @@ infect name	heat cycle	heat duration	trigger text	description text	heat start	he
 
 When Play begins:
 	Choose a blank row from Table of infection heat;
-	now infect name entry is "Peacock"; [ This should be exactly the same as your monster name in the main table]
+	now infect Name entry is "Peacock"; [ This should be exactly the same as your monster name in the main table]
 	now heat cycle entry is 5; [ This is the number of days a heat "cycle" lasts, usually 7 ]
 	now heat duration entry is 2; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
 	now trigger text entry is "[peacockheattrigger]"; 	[ This is the text that is written to the screen when the player comes into heat]
@@ -204,15 +306,15 @@ to say peacockinheat:
 		else:
 			if a random chance of 3 in 5 succeeds:
 				say "[one of]You moan as a wave of need quivers through your loins, your body needing to be filled to satisfy your heat... but not here...[or]A fresh flow of juices trickles down your thighs as your pussy leaks with need. A corner of your mind keeps calling you to satisfy those urges... but not here.[or]You are forced to pause and finger yourself as your dripping cunt demands satisfaction. The idea of heading back to the high rise district of town to satisfy your need pops into your head.[or]You moan and squeeze your thighs together as the heat in your loins makes you hornier and hornier. Thoughts of finding a sexy peacock to fill you sound very satisfying.[or]The waves of hot lust filling your cunt make you moan as you try to focus, but your thoughts keep wandering back to the high rise district of town.[or]You start to whistle a soft, bird-like call, echoing a song you can hear in the back of your mind, but can't quite remember from where. You grow tired of being here, wanting to go somewhere else now.[purely at random]";
-	increase libido of player by 3;
+	increase Libido of Player by 3;
 
 to say peacockheatstart:
-	increase libido of player by 8;
+	increase Libido of Player by 8;
 
 to say peacockheatend:
-	if libido of player > 20:
-		now libido of player is ( libido of player * 3 ) / 4;
-		if libido of player < 20, now libido of player is 20;
+	if Libido of Player > 20:
+		now Libido of Player is ( Libido of Player * 3 ) / 4;
+		if Libido of Player < 20, now Libido of Player is 20;
 
 
 Section 5 - Peacock Feather
@@ -235,16 +337,16 @@ instead of sniffing peacock feather:
 Section 6 - Endings
 
 when play ends:
-	if bodyname of player is "Peacock":
-		if humanity of player < 10:
-			if cock length of player > cunt length of player:
+	if bodyname of Player is "Peacock":
+		if humanity of Player < 10:
+			if Cock Length of Player > Cunt Depth of Player:
 				say "You decide to remain in the quarantined city. With your wits and abilities, you will surely find many different... ahem... [']fruits['] to taste.";
 			else:
 				say "You decide to remain in the quarantined city. You become the mate of a male peacock, or rather, his favorite mate. Neither of you wants to sacrifice his fun, after all...";
 		else:
 			say "You decide to leave and join civilization. Your pretty look and overall self-controlled behavior lands you a job in what is considered high society. You still have your... [']teeny sins['], you could say.";
-			if cunt length of player > cock length of player:
-				if intelligence of player > 18:
+			if Cunt Depth of Player > Cock Length of Player:
+				if intelligence of Player > 18:
 					say "One day, however, your mind clicks. You manage to recall everything that the hypnosis altered or blocked completely, and the memory of the event causes a stirring in your loins. You make bag and baggage and set off immediately to the quarantined city, determined to find him and make clear that YOU are going to be in charge now...";
 
 Male Peacock ends here.

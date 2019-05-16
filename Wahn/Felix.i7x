@@ -23,14 +23,14 @@ Version 1 of Felix by Wahn begins here.
 
 Section 1 - Walk-in Event to put him into the dry plains room
 
-instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and HP of Felix is 0):
+instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and Libido of Thomas > 9 and Libido of Thomas < 20 and (FelixSaved - turns > 8) and HP of Felix is 0):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	project the Figure of Felix_icon;
-	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[else if libido of Thomas is 11]Thomas and Sandy are[else if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
+	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if Libido of Thomas is 10]Thomas is[else if Libido of Thomas is 11]Thomas and Sandy are[else if Libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	LineBreak;
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
-	if player consents:
+	if Player consents:
 		say "     You ask Felix where he thought to last have noticed something, then make your way out into the high grass.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
@@ -52,7 +52,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 	move Felix to Dry Plains;
 	move player to Dry Plains;
 
-instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 3 and a random chance of 1 in 2 succeeds):
+instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 3 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
@@ -62,11 +62,11 @@ instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 
 
 to say Stalker1:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
-	if player consents:
+	if Player consents:
 		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise whatever is watching you...";
 		LineBreak;
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the watcher by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
-		if player consents:
+		if Player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
@@ -91,7 +91,7 @@ to say Stalker1:
 		say "     Not in the mood to go trekking through the high grass, you do your best to calm Felix down and tell him you'll look into it another time. He looks a rather disappointed, but gives you a curt nod and says he understands.";
 	move player to Dry Plains;
 
-instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Dry Plains while (HP of Felix is 1 and Libido of Felix is 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
@@ -100,10 +100,10 @@ instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 
 
 to say Stalker2:
 	say "     What do you do? Leave the meeting spot again and circle around in hope of catching the stalker ([link]Y[as]y[end link]), or tell him you don't have time right now ([link]N[as]n[end link]) ?";
-	if player consents:
+	if Player consents:
 		say "     You clap Felix on the shoulder and give him a hug, whispering, 'Ok, you stay calm and act normally. I'll circle around and come up from behind the rubble. Hopefully I can surprise your lizard stalker this time...";
 		say "     With that, you wave goodbye to Felix and Thomas and make your way out into the plain in a wholly different direction. Trekking around the camp site in a wide arch, ducking into the grass as good as you can, you find yourself with the rubble mound between you and the centaurs. What next - do you want to climb over the rubble to surprise the stalker by coming from behind ([link]Y[as]y[end link]), or walk around it ([link]N[as]n[end link]) (with a higher chance of being seen)?";
-		if player consents:
+		if Player consents:
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)[line break]";
@@ -139,7 +139,7 @@ to say AndreEscapedAgain:
 to say AndreMeeting:
 	LineBreak;
 	say "     So, what now? Jump him from behind to drive him off ([link]Y[as]y[end link]) (with surprise on your side), or try talking to the big lizard guy ([link]N[as]n[end link])?";
-	if player consents:
+	if Player consents:
 		say "     As you attack the lizard guy from behind, he gives a surprised shout and hisses, 'What - who?' Then the pain of your first blow registers and instincts drive him to claw and bite back.";
 		challenge "Plains Lizard";
 		now Libido of Felix is 99;
@@ -149,7 +149,7 @@ to say AndreMeeting:
 		say "     'I'm Andre. I was on a break from college when I changed, and everything around changed.' *he indicates the grassland around you* 'And I was doing my best to survive and I - I saw... Him' *he nods towards the distant centaurs* '...a while ago, and he looked so cute, and I wanted to talk to him - but - but then that behemoth found him and he had to run and I couldn't help against something like that and he lost this.' He shows you a leather pouch with a long carrying leather strap and takes another deep breath. 'I kept it to give it back to him, but then I didn't know if he'd like me and if I should just go to him and...'";
 		LineBreak;
 		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])?";
-		if player consents:
+		if Player consents:
 			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue, 'Give me that and go,' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
 		else:
@@ -173,7 +173,7 @@ instead of sniffing Felix:
 
 to say FelixDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Felix], LIBIDO: [libido of Felix] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Felix], LIBIDO: [Libido of Felix] <- DEBUG[line break]";
 	if (HP of Felix is 0): [starting state]
 		say "ERROR-Felix-001A: He should not be around yet anywhere where players can see him.";
 	else if (HP of Felix is 100):
@@ -227,7 +227,7 @@ to say FelixTalkMenu:
 		now sortorder entry is 5;
 		now description entry is "Explain that you took care of things.";
 		now toggle entry is FelixTalk rule;
-	if (libido of Thomas > 0):
+	if (Libido of Thomas > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the herd";
 		now sortorder entry is 6;
@@ -248,7 +248,7 @@ This is the FelixTalk rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Just chat a bit"):
@@ -321,18 +321,18 @@ to say FelixTalk5:
 
 to say FelixTalk6:
 	if HP of Thomas is 100: [lost in the fight with Jill's followers]
-		if libido of Thomas is 10:
+		if Libido of Thomas is 10:
 			say "     Felix looks rather grim as he says, 'Which herd? Thomas is gone - something terrible must have happened to him when he went to help that centaur mare Jill. I wish he had allowed me to come with him and help, maybe that'd have changed something.'";
-		else if libido of Thomas is 11:
+		else if Libido of Thomas is 11:
 			say "     Felix looks rather grim as he says, 'Which herd? Thomas is gone - something terrible must have happened to him when he went to help that centaur mare Jill. I wish he had allowed me to come with him and help, maybe that'd have changed something. At least Sandy is safe - I brought her to hidden place. With state she's in after everything that happened, having her out here in the open plains was too dangerous.'";
 		if Libido of Felix is 6:
 			say "     Silent for a moment, Felix eyes wander around and fall upon his reptilian boyfriend, whom he gives a little wave. 'At least Andre is still here with me. I wouldn't know what to do without him.'";
 	else:
-		if libido of Thomas is 10:
+		if Libido of Thomas is 10:
 			say "     Felix looks over to Thomas then back at you. 'Well, with only Thomas and me, it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd.'";
-		else if libido of Thomas is 11:
+		else if Libido of Thomas is 11:
 			say "     Thomas looks out towards the other two centaurs. 'Well, there's only three of us, so it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd. I only hope we can get Sandy to open up a bit. She keeps offering herself to me, as she was trained to do - but I don't want to be my father, just mounting anyone and anything. Even if it's hard to resist, especially when her heat almost wafts though the air.'";
-		else if libido of Thomas is 12:
+		else if Libido of Thomas is 12:
 			say "     Thomas looks out towards the other three centaurs. 'Well, there's only four of us, so it's a pretty small herd. But the quality counts more than the quantity. Thomas is a great guy and a good friend. I love being in his herd. And Jill is nice - I never was allowed to talk to my sisters at all at my father's herd. With her to keep Sandy company, Sandy's gotten a lot better too.'";
 		if Libido of Felix is 6:
 			say "     Giving a smile and a small wave to Andre, Felix shares a longing look with his friend, then shakes it off not to be rude to you. 'And then there's of course our honorary herd member, even though he's not a centaur. I can't thank you enough for bringing Andre to me.'";
@@ -346,8 +346,8 @@ Instead of fucking the Felix:
 	[puts Centaur Stallion as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Centaur Stallion":
-			now monster is y;
+		if Name entry is "Centaur Stallion":
+			now MonsterID is y;
 			break;
 	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Felix-001C: He should not be around yet anywhere where players can see him.";
@@ -364,7 +364,7 @@ Instead of fucking the Felix:
 to say FelixSexMenu:
 	project the Figure of Felix_icon;
 	blank out the whole of table of fucking options;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -375,7 +375,7 @@ to say FelixSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Felix long horsecock in your mouth.";
 	now toggle entry is FelixSex rule;
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -406,7 +406,7 @@ This is the FelixSex rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Have him blow your cock"):
@@ -425,7 +425,7 @@ This is the FelixSex rule:
 	now lastfuck of Felix is turns;
 
 to say FelixSex1: [cock sucked by Felix]
-	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek and lean close to him. You whisper, 'You know what would be hot?' and pull Felix hands down to your crotch. 'You sucking off my cock.' Smiling, Felix pulls out your hard [cock of player] cock, pumping it in his hand. 'Anything for you, man. You saved me and brought Andre and me together.'";
+	say "     Walking up to Felix, you run your hands over his muscular chest, then stroke his cheek and lean close to him. You whisper, 'You know what would be hot?' and pull Felix hands down to your crotch. 'You sucking off my cock.' Smiling, Felix pulls out your hard [cock of Player] cock, pumping it in his hand. 'Anything for you, man. You saved me and brought Andre and me together.'";
 	LineBreak;
 	say "     With that, he leans over and takes your shaft in his mouth, bobbing up and down on it. Being a man, he knows how to handle a cock and what you need, so the blowjob that follows is pretty amazing. Bringing you to the edge of cumming several times, then allowing you to catch your breath to prolong the experience, he has you highly wound up and aching to cum when he finally goes all out. You're deep in Felix throat with his nose pressed against your crotch when you finally cum, squirting cum right into his stomach. The young centaur pulls back a bit before you're completely done so he can taste your seed, then shows it to you on his tongue and swallows it too.";
 	infect "Centaur Stallion";
@@ -508,7 +508,7 @@ to say AndreTalkMenu:
 	now toggle entry is AndreTalk rule;
 [
 	choose a blank row in table of fucking options;
-	if (libido of Thomas > 0):
+	if (Libido of Thomas > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the herd";
 		now sortorder entry is 5;
@@ -530,7 +530,7 @@ This is the AndreTalk rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Just chat a bit"):
@@ -561,14 +561,15 @@ to say Plains Lizard loses:
 	say "     After having taken quite a few of your blows, the big lizard turns and flees, dashing off quickly through the high grass. With the beating you've given him, you don't think he'll be back anytime soon. Oh, and seems like he dropped something - a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Plains Lizard";
+	now NewTypeInfection entry is false;
+	now Name entry is "Plains Lizard";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He attacks you with a slash of his claws.[or]Ouch - you manage to pull away from a bite, but still lose some skin to sharp teeth scraping over your skin.[at random]";
 	now defeated entry is "[Plains Lizard loses]";
@@ -595,15 +596,15 @@ When Play begins:
 	now lev entry is 6;
 	now wdam entry is 8;
 	now area entry is "Nowhere";        [ Case sensitive]
-	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 16;
-	now cock width entry is 5;          [ Size of balls ]
-	now breasts entry is 0;             [ Number of nipples. ]
-	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 16;
+	now Ball Size entry is 2;          [ Size of balls ]
+	now Nipple Count entry is 0;             [ Number of nipples. ]
+	now Breast Size entry is 0;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
@@ -613,9 +614,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Section 5 - Fucking Andre
 
@@ -623,8 +725,8 @@ Instead of fucking the Andre:
 	[puts Plains Lizard as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Plains Lizard":
-			now monster is y;
+		if Name entry is "Plains Lizard":
+			now MonsterID is y;
 			break;
 	if (HP of Felix is 0): [not yet met]
 		say "ERROR-Andre-001C: He should not be around yet anywhere where players can see him.";
@@ -639,7 +741,7 @@ Instead of fucking the Andre:
 to say AndreSexMenu:
 	project the Figure of Andre_icon;
 	blank out the whole of table of fucking options;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -650,7 +752,7 @@ to say AndreSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Put Andre's cock in your mouth.";
 	now toggle entry is AndreSex rule;
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him lick your pussy";
 		now sortorder entry is 3;
@@ -683,7 +785,7 @@ This is the AndreSex rule:
 	let nam be title entry;
 	say "[title entry]: [description entry][line break]";
 	say "Is this what you want?";
-	if player consents:
+	if Player consents:
 		decrease menu depth by 1;
 		clear the screen;
 		if (nam is "Have him blow your cock"):

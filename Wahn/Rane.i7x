@@ -31,7 +31,7 @@ Instead of resolving a Rooftop Rumble:
 		say "     Apprehensive of getting crushed under the next thing that might be falling down from above, you quickly duck into the nearest door and slam it shut behind you. Thankfully, even though the building looks inhabited there is no one in right now, though the sounds of fighting coming from above tell you that there's clearly more going on up there... albeit the frequency of sounds is becoming less and less. Against all good judgment, you feel the curious urge to find the source of this situation and begin to, as silently as possible, search for a way up. Finding a stairwell you slowly make your way up floor by floor, listening intently for where the sounds are coming from. Time seems to come to a standstill as you reach the top of the stairwell and are facing the rooftop door access. Seeing that the door is slightly ajar, hold your breath and take a quick peek.";
 		WaitLineBreak;
 		say "     A number of furred bodies are strewn about the rooftop, some splayed around each other and others lying on top of one another. From your hiding spot it is difficult to ascertain further detail than that, and you would have to step out into the open to figure out more. Though it's debatable if that would be such a good idea - considering the violent display before you and the sneaking feeling of being watched that you can't quite shake off. [bold type]Will you examine the scene anyways ([link]Y[as]y[end link]), or would you rather high-tail it out of there ([link]N[as]n[end link])?[roman type][line break]";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You slowly open the rooftop door and make your way through, being careful not to step on any of the bodies or bloodstains. A more thorough examination of the bodies shows many different kinds of species in various states of trauma, though most do still seem to still be alive. Several of the bodies seem to be wearing some kind of unique clothing or uniforms as well, one or two of them look to be dressed in soldier fatigues as well, and there are a number of weapons strewn about or still in the hands of the victims.";
 			say "     The unsettling feeling of being watched intensifies inside you, making your eyes dart around looking for any signs of movement. In an instant, a lumbering movement catches the corner of your eye and whirling around, you see one of the people that you thought were unconscious is very much awake! The leopardman regards you with a look of pure hatred, his somewhat cross-eyed gaze and jerky movements making it obvious to you that this one is not quite all there and is running on nothing but adrenaline. Spitting the slurred words '...this time I'm gonna get you!', he charges forward!";
@@ -91,7 +91,7 @@ Instead of resolving a Rooftop Rumble:
 		say "     Following the noise you wind up in an alleyway, with whatever is happening just around the next corner. But as you slowly and stealthily move forward to peek around it, everything falls silent again. Arriving at the corner, you have a look and see an undeveloped area between buildings - bearing a similar scene like on the rooftop. Wounded people lying on the ground all over the place, thankfully unconscious while the nanites slowly rectify the wounds all over their mangled forms. The scents and images of all the carnage give you a slightly nauseous feeling and again you feel a strong sensation of being watched.";
 		LineBreak;
 		say "     [bold type]Maybe getting involved in this is a mistake... it clearly is quite dangerous. Do you want to stay and look around anyways ([link]Y[as]y[end link]), or get some distance between yourself and this grisly scene, avoiding the area in the future ([link]N[as]n[end link])?[roman type][line break]";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Deciding to take a leap of faith, you resolve yourself to stay and examine the scene. A more detailed look shows similar patterns to the rooftop battle - widely spaced slashes from claws or sharp fingernails on all the downed fighters, combined with nasty bruises and torn flesh. Whoever that blue guy is, he certainly fights well... there's just a few drops of blue blood scattered here and there. Deep in thought about the events that must have occurred here just a short while ago, you casually nudge over a severed forearm to its owner and see it start to grow back on when the ends meet. Then suddenly, you become aware of the sound of footsteps on gravelly asphalt - a number of people seem to be coming down one of the nearby alleys.";
 			WaitLineBreak;
@@ -106,7 +106,7 @@ Instead of resolving a Rooftop Rumble:
 			LineBreak;
 			challenge "Human Gangmember";
 			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if player is purefemale]her[else]him[end if] down good!'";
+				say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if Player is purefemale]her[else]him[end if] down good!'";
 				say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 				WaitLineBreak;
 				say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -124,7 +124,7 @@ Instead of resolving a Rooftop Rumble:
 				say "     One attacker falls before you, only to be instantly replaced by another.";
 				challenge "Human Gangmember";
 				if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if player is purefemale]her[else]him[end if] down good!'";
+					say "     Unable to hold off the thugs, you collapse on the ground in pain and are quickly set upon by the whole group. 'Hmph, what a pathetic show,' the leader jeers as he walks forward, brandishing a wicked knife. 'I'm tempted to just carve this one up into little pieces - but no, that'd be a waste. Might get us a good deal from that nut-job at the Hospital who's always looking for some new subjects. And he doesn't care if we have some fun beforehand either, as long as the bastard stays alive - hold [if Player is purefemale]her[else]him[end if] down good!'";
 					say "     With all your effort you lash out kicking, squirming and even trying to bite your holders, but to no avail. As the blade draws down, you close your eyes to spare yourself the final sight of being cut open. You feel a pool of blood splash on your skin...";
 					WaitLineBreak;
 					say "     ...wait, that didn't hurt. You suddenly become aware of many different sounds, in addition to the restraining weights being lifted off of your body. Opening your eyes you try and stand up, but disorientation keeps you down and out of it. Man, that last blow to the head at the end of the fight really left an expression - your eyes cross and you have trouble focusing on anything. In the blurry haze before your eyes, you vaguely make out several of the goons moving about chaotically, while at the same time you clearly see a streak of blue bouncing about from one to another.";
@@ -168,7 +168,7 @@ to say MeetRane:
 	say "     You're about to ask Rane more about those guys who are after him, but he interrupts you, 'It's good to find someone who knows how to fight! I like seeing that.' He licks his lips, showing a row of sharp teeth in the progress, then says 'It really gets me hard.' Your eyes are reflexively drawn to his crotch and notice a very prominent bulge on display there, showing this demon is not all talk. Before anything else can happen, Rane suddenly raises a finger to his lips, making a 'shhh' sound and turns his head a bit, listening intently with pointy ears. You don't hear anything, but he says, 'What fucking timing. Several large groups of more shitheads are on the way. As much as I love a good fight, I'm 'distracted' with something better.' You jump a bit as you again feel Rane give your ass another quick squeeze. 'Let's continue this somewhere more 'private'...' With an inviting wave of his hand, Rane takes off, bounding over the asphalt with large steps.";
 	LineBreak;
 	say "     [bold type]Do you follow the blue oni?[roman type][line break]";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Despite the creeping thought that you're going with someone you only just met in this lawless city, you decide to follow Rane. That turns out to be a much more difficult task than expected given the devil's unbelievable speed and the fact that he doesn't look back to check on you. Even going as fast as you can, you're steadily losing ground, but at least you manage to keep him in sight until he enters the City Park. Following into the overgrown park you quickly realize that you lost track of him and before you know it are stumbling aimlessly through the vegetation, almost positive now that you're lost. It takes some time for you to find your way back out again, but you do manage it by climbing trees from time to time to aim your path towards one of the burned-out husks of distant high-rises. Well, at least now you know that Rane lives somewhere in the [bold type]park[roman type], so you can explore it sometime and hunt for the [bold type]wandering blue oni[roman type].";
 		move player to Park Entrance;
@@ -219,14 +219,15 @@ Instead of resolving a Wandering Blue Oni:
 	now Wandering Blue Oni is resolved;
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Human Gangmember"; [ Infection/Creature name. Capitalized. ]
+	now NewTypeInfection entry is false;
+	now Name entry is "Human Gangmember"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The young man gives you a kick.[or]He smacks his baton into your side.[or]You get hit in the face by the human's elbow.[or]He tries to knee you in the groin - even though you manage to turn in the last moment, it still smarts as his knee hits your leg.[at random]";
 	now defeated entry is " ";
@@ -252,15 +253,15 @@ When Play begins:
 	now lev entry is 7;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 6;               [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 8;        [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 4;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;            [ Number of nipples the infection will give a player. ]
-	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
+	now Cock Count entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 8;        [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 2;         [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 0;            [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 50;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
@@ -270,20 +271,122 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;           [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
+
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Blue Oni"; [ Infection/Creature name. Capitalized. ]
+	now NewTypeInfection entry is false;
+	now Name entry is "Blue Oni"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
-	now enemy name entry is "Rane";
+	now enemy Name entry is "Rane";
 	now enemy type entry is 1; [unique enemy]
 	now attack entry is "<should not fight>";
 	now defeated entry is "<should not fight>";
@@ -309,15 +412,15 @@ When Play begins:
 	now lev entry is 12;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 13;              [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 5;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 0;            [ Number of nipples the infection will give a player. ]
-	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;         [ Width in inches of female sex the infection will try to give a player. ]
+	now Cock Count entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12;       [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 2;         [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 0;            [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 70;
 	now loot entry is "";                             [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;                   [ Percentage chance of dropping loot, from 0-100. ]
@@ -327,9 +430,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;           [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Section 2 - NPC
@@ -400,7 +604,7 @@ instead of conversing the Rane:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Him"):
@@ -458,7 +662,7 @@ to say RaneTalk5: [talk about Eric]
 	say "     Shaking your head, you inform the oni that Eric left - packed his bag and set out into the city. Eyebrows drawing together in puzzlement, the blue oni gapes at you. 'What?! It's dangerous out there, for a small guy like him! I mean, he sure can run, but there are times when that's not enough and you got to smack a few heads together.' Making a fist and hitting his open palm demonstratively, the blue oni asks, 'Now why the hell would he do that?' It's clear from his voice that Rane is truly baffled by this, still not being aware that his actions drove Eric out.";
 	LineBreak;
 	say "     [bold type]Will you lay the facts out for the oni, as bluntly as he seems to require ([link]Y[as]y[end link])? Or do you want to leave him blissfully unaware about it all ([link]N[as]n[end link])?[roman type][line break]";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Not holding back at all, you flat-out tell Rane it's his fault. Eyebrows drawing together, the blue demon looks at you with arms crossed and replies, 'You're kidding me?! That's not a thing to joke about. Eric could be getting raped in some alley and you're making silly...' Further words fail to come as he sees the unchangingly serious expression in your face. Rane's eyes widen as he realizes you were entirely serious. 'What?! No! Eric's my buddy. The sweet cuntboy I've...' You interrupt at that point, continuing with the words that he's been making use of Eric whenever he wanted - pushing the young man to have sex, overwhelming his will to refuse before he could even get a word out. All of which frightened Eric deeply - as he still is dealing with all the changes going through him. Bodily and mentally, he's still adjusting to the reality of his new self. And Rane just used him as his slut - not exactly gently either.";
 		say "     '...Fuck. Fuck, fuck, FUCK!' the oni swears after gaping at you for several seconds, then grips the railing in front of him hard enough to leave gouges with his claws. He... he was into it so much! You don't know how strongly his need to be bred hang in the air! And I did - Damn! NO!' Rane utters the final word in a bestial howl, taking a few deep breaths afterwards to try and compose himself, his words now full of remorse. 'I really have no excuse to have acted like I did. Getting carried away that much, letting my true demon beast out fully. And you're sure he...' Rane's eyes search yours out almost pleadingly, but you can offer him no redemption, only nodding and recounting how scared and vulnerable Eric is. His self-doubts about the change, and the very real possibility that nanites are still slowly tinkering with his mind, pushing whatever agenda their scrambled programming demands.";
@@ -466,7 +670,7 @@ to say RaneTalk5: [talk about Eric]
 		say "     Looking down at his large clawed hands, Rane grumbles, 'Guess I really should have been a red one. You know, red onis are supposed to be the wicked, stupid oafs. Using people, eating people, driving them away. Bah! So much for thinking I was being the blue charmer who can make anyone fall for him. Time to open my eyes and fix this!' Pushing away from the railing, Rane starts to walk towards the stairs leading down. You follow his brisk steps and ask what he wants to do - as the chance of finding Eric in a city this big and chaotic is minuscule. Looking to the side, he replies in a curt tone, 'I told you his scent has faded - and that's just it. It's not gone completely yet, I can follow him. So keep up, if you wanna help!' With that said, Rane wrenches open the front doors of the library and rushes out, sniffing the air and then taking off at a sprint.";
 		LineBreak;
 		say "     [bold type]Will you follow Rane?[roman type][line break]";
-		if player consents:
+		if Player consents:
 			say "     You're barely able to keep up as Rane prowls the streets with furious intensity, scattering more than a few groups of creatures crossing his path as they see his expression. No one wants to get on the bad side of a large oni, not when he's quite obviously angry - at himself, but still. Driving away anyone and anything that might impede your progress, even kicking aside several the burned-out wrecks of cars standing in the way, Rane leads you through the urban wasteland with record speed, until he eventually jerks to a stop at the entrance of an alley. You're able to catch up with him, still breathing hard, and see what the big oni is looking at a moment later. It's Eric, almost at the other end of the alley, the strap of his heavy sports bag over one shoulder and loosely clutching a baseball bat in one hand. He still hasn't noticed you, most of his attention being on the way ahead and what danger might be lurking in the trash container just a few steps in front of him.";
 			LineBreak;
 			say "     Several seconds tick by as Rane takes a deep breath, then another one before he eventually starts forward in a jog, calling out for Eric. Jerking himself around and seeing who it is, fear overshadows Eric's face and he shouts back, 'S-Stay away from me! I don't w-want to be your fucktoy!' Then he glimpses you past the blue oni, and his expression flashes over into anger, 'You! You promised I'd be safe with you. After Rane took advantage of me, I thought it was not your fault for having a demon as a friend. For letting this beast stay with you too, but now you're HELPING him get me!' Tears of betrayal run down the young man's face as he screams, 'I never wanna see either of you again!' After a swing of the baseball bat in your direction, he turns and runs, stumbling a little in his haste to get away.";
@@ -478,7 +682,7 @@ to say RaneTalk5: [talk about Eric]
 			project the figure of RaneDefendingEric_icon;
 			WaitLineBreak;
 			say "     Bones are broken, one hellhound's neck snapped and the carcass thrown against a wall, the second quite literally gutted as Rane's clawed hand opens its belly in a long rip. Number three tries to flee, bowling you over as it dashes into the alley - only to have Rane go after it in a running jump, allowing him to catch the edge of a metal fire escape, swing off it and land on top of the creature, ramming its bleeding muzzle into the ground under one foot. The sound that follows reminds you of a melon being thrown out of a window - and even without looking closely at the gory mess, you're fairly sure that this demon won't be getting up again, ever.";
-			say "     Huffing and growling, the blue oni turns from his last opponent, his now faintly glowing eyes searching for something else to kill. This is as demonic as you've ever seen him, and for a second you wonder if he'll go for you next - but then the large man blinks and the murderous intent leaves his face, to be replaced by boundless worry. Rushing forward, Rane scoops up Eric's limp form, cradling him to his chest and parting his hair as gently as possible to check for injuries. [if perception of player > 10]You hear him murmur, 'I'm sorry. I'm sorry. I won't make you do anything ever again,' to the young man in his arms[else]You hear him murmur something to the young man in his arms, too low to make out quite what it was[end if]. A moment later, the oni gives a sigh in relief and calls to you, 'He's pretty groggy, but he opened his eyes and focused on me for a second before passing out again. No serious harm done, I think. Just needs some rest.'";
+			say "     Huffing and growling, the blue oni turns from his last opponent, his now faintly glowing eyes searching for something else to kill. This is as demonic as you've ever seen him, and for a second you wonder if he'll go for you next - but then the large man blinks and the murderous intent leaves his face, to be replaced by boundless worry. Rushing forward, Rane scoops up Eric's limp form, cradling him to his chest and parting his hair as gently as possible to check for injuries. [if perception of Player > 10]You hear him murmur, 'I'm sorry. I'm sorry. I won't make you do anything ever again,' to the young man in his arms[else]You hear him murmur something to the young man in his arms, too low to make out quite what it was[end if]. A moment later, the oni gives a sigh in relief and calls to you, 'He's pretty groggy, but he opened his eyes and focused on me for a second before passing out again. No serious harm done, I think. Just needs some rest.'";
 			WaitLineBreak;
 			project the figure of RaneSavingEric_icon;
 			WaitLineBreak;
@@ -497,7 +701,7 @@ to say RaneTalk5: [talk about Eric]
 
 Instead of fucking Rane:
 	setmonster "Blue Oni";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if HP of Rane < 7:
 		say "     [RaneFirstFuck]";
 	else if (lastfuck of Rane - turns < 5):
@@ -511,19 +715,19 @@ Instead of fucking Rane:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
 		[]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
 		[]
-		if player is female:
+		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Rane eat out your pussy";
 			now sortorder entry is 3;
 			now description entry is "Let the Oni orally please you";
 		[]
-		if player is female:
+		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Rane fuck your pussy";
 			now sortorder entry is 4;
@@ -534,7 +738,7 @@ Instead of fucking Rane:
 		now sortorder entry is 5;
 		now description entry is "Let the Oni fill your ass with his seed";
 		[]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Rane's ass";
 			now sortorder entry is 6;
@@ -552,7 +756,7 @@ Instead of fucking Rane:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
 					now sextablerun is 1;
@@ -600,7 +804,7 @@ to say RaneFirstFuck:
 	say "     Giving you an appreciative look as you pull on the last parts of your clothes and gear, Rane says 'Damn. You're an awesome fuck, best I've had in a while. Tightest ass I've had in a while too.' He gives your rear a nice smack of appreciation. 'I also admire your tenacity in being able to survive out here on the streets without falling prey to anyone yet. I really wouldn't mind having some more fun with you, so how about it? We could shack up together somewhere for a while? Or this could be a one-time deal, though I'd hope we'll run into each other sometime...' His hand wanders down to his crotch, rubbing it through his loincloth as he no doubt imagines fucking you again.";
 	LineBreak;
 	say "     [bold type]What do you tell him? Invite him to the library with you ([link]Y[as]y[end link]), or say your goodbyes ([link]N[as]n[end link])?[roman type][line break]";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     As you make your way towards the library in the company of Rane, you silently wonder what you've just gotten yourself into. Granted, he's a great fighter, and certainly not a bad lay, if a bit - a strong bit - rough around the edges. He's obviously strong enough to do whatever he wants, but then again, he left the choice of undoing his belt to you. You wonder if he'll behave, given his demonic nature, though he's certainly proven to be very unexpected in most aspects - capable of great violence, but also relatively nice if just talked to. He certainly didn't harm you, maybe startled you a bit a few times, not counting the bruises and scratches from the rough sex and the soreness you're starting to feel. Only time will tell what comes next...";
 		move Rane to Sitting Area;
@@ -634,7 +838,7 @@ to say RaneSex2: [he sucks the player]
 	say "     Hm, so you can't win a 'regular' fight against him. Why not make it an irregular one... you do what Rane himself did - you strip, giving the oni a really nice show as piece by piece, your clothing gets removed and thrown aside. Your blue-skinned opponent pays close attention as you do so, vocally encouraging you to drop the next and the next piece and even making suggestions like 'Why don't you just stop fighting and let me fuck you - right here, right now? I'll make you scream my name as you come.'";
 	say "     Not letting yourself get deterred that easily, you finally step forward again when you're as naked as Rane is. He may be an amazing fighter, but... he's also an incorrigible horn-dog who gives you salacious looks and gets distracted, so you do actually have a chance now. A bit of back-and-forth follows, one of you getting a grip on the other till he winds out of it, but finally, you're able to hook a foot behind Rane's leg and pull it out from under him, bringing the blue oni down on his back. Immediately following up, you straddle his chest, pinning him and bringing your by now fully hard cock just inches from your opponent's face.";
 	WaitLineBreak;
-	say "     'I yield! You've shown me that I just can't stand against your power,' Rane says with a chuckle, then continues, 'Now I can't do anything but lie helpless under you and wait for the victor to ravish me.' Something tells you that he let you win, but then... who cares. On to the spoils. Holding out your hard [cock of player] cock, you grip one of the oni's long horns and pull his head up by it, allowing him to lick your shaft, then take the cockhead in his mouth. The oni is very eager and willing to please you orally, bobbing his head on your shaft and teasing it with his tongue. Hearing fapping noises, you look over your shoulder and see that he's jerking himself off at the same time.";
+	say "     'I yield! You've shown me that I just can't stand against your power,' Rane says with a chuckle, then continues, 'Now I can't do anything but lie helpless under you and wait for the victor to ravish me.' Something tells you that he let you win, but then... who cares. On to the spoils. Holding out your hard [cock of Player] cock, you grip one of the oni's long horns and pull his head up by it, allowing him to lick your shaft, then take the cockhead in his mouth. The oni is very eager and willing to please you orally, bobbing his head on your shaft and teasing it with his tongue. Hearing fapping noises, you look over your shoulder and see that he's jerking himself off at the same time.";
 	say "     It doesn't take long till you find out how... useful Rane's horns are - as handholds for face-fucking him. When your arousal builds more and more, really pound into him, your balls slapping against his chin and your manhood thrusting deep in his throat every time. Rane doesn't mind at all and even likes it quite a bit, judging from the satisfied mumbles around your cock in his mouth and the flashes of lust in his eyes. Before much longer, the wild face-fuck culminates in you reaching a mind-blowing orgasm and blowing your load directly into Rane's stomach. While he continues to suckle on your pulsing member, the movements of Rane's arm seem to increase, until you suddenly feel him bucking under you and the first spurts of the oni's cum hit you in the back. He's a real shooter, your blue friend, as blast after blast of cum hits and leaves you pretty well-creamed.";
 	WaitLineBreak;
 	say "     As you pull your softening dick out of Rane's mouth a short while later, the oni gives a satisfied smile and licks his lips. 'We should wrestle more often...' he pants, lazily rubbing in the part of his cum that didn't land on you but rather on his chest.";
@@ -691,7 +895,7 @@ to say RaneSex6: [take Rane's ass]
 	say "     Hm, so you can't win a 'regular' fight against him. Why not make it an irregular one... you do what Rane himself did - you strip, giving the oni a really nice show as piece by piece, your clothing gets removed and thrown aside. Your blue-skinned opponent pays close attention as you do so, vocally encouraging you to drop the next and the next article of clothing and even making suggestions like 'Why don't you just stop fighting and let me fuck you - right here, right now? I'll make you scream my name as you come.'";
 	WaitLineBreak;
 	say "     Not letting yourself get deterred that easily, you finally step forward again when you're as naked as Rane is. He may be an amazing fighter, but... he's also an incorrigible horn-dog who gives you salacious looks and gets distracted, so you do actually have a chance now. A bit of back-and-forth follows, one of you getting a grip on the other till he winds out of it, but finally, you're able to hook a foot behind Rane's leg and pull it out from under him, bringing the blue oni down on his back. Immediately following up, you get down on the carpet with him, taking hold of his legs and lifting them, pushing up towards his chest. In the process of doing so, your by now fully hard cock rubs against Rane's butt, poking at his pucker as it is in just the right position now.";
-	say "     'I yield! You've shown me that I just can't stand against your power,' Rane says with a chuckle, then continues, 'Now I can't do anything but lie helpless under you and wait for the victor to ravish me.' Something tells you that he let you win, but then... who cares. On to the spoils. Letting Rane take and hold up his own legs, you put a hand on your hard [cock of player] cock, then push its head against the oni's rear entrance. As before with your tongue, his opening easily allows you entrance and you sink right in, plunging deep into Rane's body and making him pant in lust. 'Yeah, deeper! Fuck me hard!' he shouts, and you're of course more than willing to comply...";
+	say "     'I yield! You've shown me that I just can't stand against your power,' Rane says with a chuckle, then continues, 'Now I can't do anything but lie helpless under you and wait for the victor to ravish me.' Something tells you that he let you win, but then... who cares. On to the spoils. Letting Rane take and hold up his own legs, you put a hand on your hard [cock of Player] cock, then push its head against the oni's rear entrance. As before with your tongue, his opening easily allows you entrance and you sink right in, plunging deep into Rane's body and making him pant in lust. 'Yeah, deeper! Fuck me hard!' he shouts, and you're of course more than willing to comply...";
 	WaitLineBreak;
 	say "     It's an empowering experience to see this blue man lying on his back before you, panting and moaning as you take his ass. That toned, powerful body, his strong arms holding both legs up and his horned head resting on the soft carpet, rearing up and gasping each time you do an especially deep thrust. Thinking back to your first sexual encounter, the time he bent you over and fucked you at the shrine like a wild beast, you find yourself amazed how versatile the oni is, giving himself so fully to the pleasures of getting fucked by you. Though his usual domineering behavior still shines through even now - as he gasps out 'Jerk my cock as you fuck me!' in a throaty, deep voice.";
 	say "     Putting a hand on Rane's thick shaft and cupping his large balls with the other, you stroke and fondle the oni while still grinding your hips against his butt. His large cock lies warm and heavy in your hand, twitching a bit in reaction to you pounding the blue oni's butt. Putting both hands on it to handle the big organ, you jerk him off, driving his arousal higher and higher. It's only a question of time before the big oni suddenly shouts 'I'm gonnna cummmmmMMM!' You can feel his manhood pulse in your hand as burst after burst of cum blasts from its tip to splatter all over Rane's chest. At the same time his hole rhythmically constricts and flexes around your thrusting cock - which pushes you over the edge right along with the oni only moments later. You've just enough time to bottom out inside him, then your own load gushes forth, filling Rane's tight hole to the brim.";

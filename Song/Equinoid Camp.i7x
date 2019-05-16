@@ -12,16 +12,16 @@ to say equinoidcampinvite:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go along with the equinoid.";
 	say "     ([link]N[as]n[end link]) - Decline.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Deciding this might at least be worth looking into, you help the fallen equinoid to her feet. You order her to lead the way, telling her that you'll at least go to meet with them. She smiles and nods, confident in her tribe's greatness to convince you. She takes you deeper into the park along a path you'd not noticed before. In time, you reach a barricade of wooden stakes with a stern looking horse herm guarding the gate.";
 		WaitLineBreak;
 		say "     'Halt, Amaryllis! Who is this outsider you bring to the herd? You were warned, Amaryllis. No more strays.' The large equine plants the base of her spear firmly in the ground and glares at the equinoid with you.";
-		say "     Amaryllis snarls indignantly. 'This is no stray, Bryony. This is the warrior who has been defeating our patrols. [SubjectProCap of player] is interested in joining the herd,' she says, running a hand almost possessively over you while glaring at the larger herm.";
+		say "     Amaryllis snarls indignantly. 'This is no stray, Bryony. This is the warrior who has been defeating our patrols. [SubjectProCap of Player] is interested in joining the herd,' she says, running a hand almost possessively over you while glaring at the larger herm.";
 		say "     Bryony just snorts in response and reiterates that only members of the herd may enter the camp. As the two equinoids start to argue, it draws the attention of others. When one strides up wearing an ornate headdress made from carved wood and colorful wire, the others grow silent. This one, clearly someone in authority, looks you over.";
 		WaitLineBreak;
-		say "     'So, Amaryllis, you have found another? Your eagerness to grow the pride is commendable, but is this one truly worthy? Many of the herd are not happy to see [ObjPro of player] here after entering our territory and fighting with your herd sisters.'";
-		say "     Glancing around, you do see that the crowd has grown and not all of them are looking at you with the usual sexual interest you've come to expect from the infected, but instead with a sterner look. Perhaps this wasn't such a good idea, but you can't really back down now either, at least not to their faces. You decide the best course of action is to be strong, as they seem to respect that. You [if player is not defaultnamed]introduce yourself as [name of player], then [end if]tell their leader that you've seen their strength and that you've proven your own to them. You add that Amaryllis has spoken of the herd and has convinced you that you would be stronger together.";
+		say "     'So, Amaryllis, you have found another? Your eagerness to grow the pride is commendable, but is this one truly worthy? Many of the herd are not happy to see [ObjPro of Player] here after entering our territory and fighting with your herd sisters.'";
+		say "     Glancing around, you do see that the crowd has grown and not all of them are looking at you with the usual sexual interest you've come to expect from the infected, but instead with a sterner look. Perhaps this wasn't such a good idea, but you can't really back down now either, at least not to their faces. You decide the best course of action is to be strong, as they seem to respect that. You [if Player is not defaultnamed]introduce yourself as [name of Player], then [end if]tell their leader that you've seen their strength and that you've proven your own to them. You add that Amaryllis has spoken of the herd and has convinced you that you would be stronger together.";
 		say "     Their leader scrutinizes you with a keen eye while you talk. 'Perhaps you might convince us of your good intentions towards the herd. We are in a dispute with the Painted Wolves. Confront and defeat them on our behalf and perhaps you might be found worthy.' There is considerable whispering among the equines and Amaryllis blanches a little.";
 		say "     Seeing a way out, you agree to her terms. You are ordered to defeat at least three of them before you'll be welcome again at their gates. While you're uncertain how they could know if you are actually successful, there's no need for you to come back if you don't want to, either.";
 		now equinoidstatus is 6;
@@ -38,12 +38,12 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 	[puts Black Equinoid as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Black Equinoid":
-			now monster is y;
+		if Name entry is "Black Equinoid":
+			now MonsterID is y;
 			break;
 	say "     Following the path you were shown, you head towards the equinoid camp, but are stopped at the outer barricade. Bryony is there again and she glares at you angrily and readies her spear. You stand your ground and tell her that you want to speak with their leader, as you've passed her test. Others have begun to approach, drawn by the noise.";
 	say "     Amaryllis is among them and she runs into your arms, clearly elated at your success, but many of the others still seem skeptical of you. Before she and Amaryllis have a chance to start arguing again, their leader appears and separates the pair. She then turns to you.";
-	if player is perminfected:
+	if Player is perminfected:
 		say "     Their leader looks you over for a while, but then frowns and motions for several of the warriors. 'This one is tainted and unable to become one of us. To welcome one in such a state into our midst would lead to our destruction. The traveler may take this as reward for their help against the wolves, but that is all.' A basket of fruit is tossed at your feet while the warriors step forward, ushering you to leave after claiming your reward.";
 		increase carried of food by 2;
 		now equinoidstatus is 100;
@@ -57,37 +57,37 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Accept. You could use some respite from the chaos of the city, and the equinoids might prove useful allies.";
 		say "     ([link]N[as]n[end link]) - Decline. You have your suspicions about this ritual, and the equinoids may prove hostile if you sever your allegiance later.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Speaking aloud for the others to hear, you tell her that you are ready to join the tribe and become one of them. The reaction among the group is mixed, but it seems most are willing to accept this. Some though, as you were warned, seem displeased but hold their tongues. Amaryllis, for her part, is elated and grabs your hand, leading you through the gate as Bryony grudgingly opens it. Amaryllis sticks her tongue out while the other black equinoid glares at her.";
 			say "     You are followed by several others through the trees and into the camp of the equinoids. It's a rather primitive community, with wooden huts and barns that make little use of scavenged materials. They clearly expect you to seem impressed by it, so you do your best to appear that way. Amaryllis leads you to one of the larger halls and you enter with the others. There, a scented bath is prepared as well as several of the equinoids.";
-			if player is male:
-				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she strokes your cock to erection, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
-				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure. She's straddled your hips facing you and begins riding your [cock of player] cock while running her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight. You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
+			if Player is male:
+				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of Player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she strokes your cock to erection, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
+				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure. She's straddled your hips facing you and begins riding your [cock of Player] cock while running her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight. You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
-			else if player is female:
-				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she fingers your pussy, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
+			else if Player is female:
+				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of Player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she fingers your pussy, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight as your lover pumps her hot seed into you. You can feel the equinoid seed soaking into you even as you're being bred by the lovely one you're riding.[impregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			else:
-				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of player] body, groping you as they wash you while Amaryllis kisses you and runs her hands around your waist. As she fingers your asshole, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
-				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon she's cumming hard with a loud neigh of delight, pumping her hot seed into you. You can feel the equinoid seed soaking into you [if player is mpreg_ok]even as you're being bred by the lovely one you're riding[else]and give a hazy sigh, your sexless body left to stew in pent-up pleasure[end if].[mimpregchance]";
+				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of Player] body, groping you as they wash you while Amaryllis kisses you and runs her hands around your waist. As she fingers your asshole, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
+				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon she's cumming hard with a loud neigh of delight, pumping her hot seed into you. You can feel the equinoid seed soaking into you [if Player is mpreg_ok]even as you're being bred by the lovely one you're riding[else]and give a hazy sigh, your sexless body left to stew in pent-up pleasure[end if].[mimpregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			SanLoss 20;
-			now tailname of player is "Black Equinoid";
-			now facename of player is "Black Equinoid";
-			now skinname of player is "Black Equinoid";
-			now bodyname of player is "Black Equinoid";
-			now cockname of player is "Black Equinoid";
+			now tailname of Player is "Black Equinoid";
+			now facename of Player is "Black Equinoid";
+			now skinname of Player is "Black Equinoid";
+			now bodyname of Player is "Black Equinoid";
+			now cockname of Player is "Black Equinoid";
 			attributeinfect;
-			now tail of player is tail entry;
-			now face of player is face entry;
-			now skin of player is skin entry;
-			now body of player is body entry;
-			now cock of player is cock entry;
+			now tail of Player is tail entry;
+			now face of Player is face entry;
+			now skin of Player is skin entry;
+			now body of Player is body entry;
+			now cock of Player is cock entry;
 			WaitLineBreak;
-			if libido of player < 30, now libido of player is 30;
-			if humanity of player < 21:
+			if Libido of Player < 30, now Libido of Player is 30;
+			if humanity of Player < 21:
 				say "     Overwhelmed by your transition, thoughts of your old life fade away. You choose to accept living in the peaceful village with the equinoids. In time, you and the others seem to forget that you were ever unwelcome, and you live a simple life with the strong and beautiful equinoids.";
 				wait for any key;
 				now equinoidstatus is 11;
@@ -98,8 +98,8 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				stop the action;
 			else:
 				now equinoidstatus is 12;
-				say "     You are brought in front of the tribal leaders, with the one you've met before sitting with a youthful looking equinoid beside her. '[if player is defaultnamed]Newcomer[else][name of player][end if], we welcome you into the tribe and the herd. You are now one with us and welcome among us. As you have voiced intentions of continuing to travel and explore the fallen city for the time being, it has been decided that this cannot be permitted alone. Those who have been recently welcomed are still weak and vulnerable to the outside influences of the creatures of the city.'";
-				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if player is not lonely], forcing your [companion of player] to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
+				say "     You are brought in front of the tribal leaders, with the one you've met before sitting with a youthful looking equinoid beside her. '[if Player is defaultnamed]Newcomer[else][name of Player][end if], we welcome you into the tribe and the herd. You are now one with us and welcome among us. As you have voiced intentions of continuing to travel and explore the fallen city for the time being, it has been decided that this cannot be permitted alone. Those who have been recently welcomed are still weak and vulnerable to the outside influences of the creatures of the city.'";
+				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if Player is not lonely], forcing your [companion of Player] to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
 				add "Tamed" to Traits of equinoid warrior;
 				now the companion of the player is equinoid warrior;
@@ -150,7 +150,7 @@ instead of sniffing Nakoma's Tent:
 	say "Nakoma's tent smells of herbs, scented oil, fur and a hint of equine arousal.";
 
 Definition: a person is blequinoidbodied: [Determines if the player is fully black equinoid]
-	if bodyname of player is "Black Equinoid" and player is pure, yes;
+	if bodyname of Player is "Black Equinoid" and player is pure, yes;
 	no;
 
 Equinoid Camp ends here.

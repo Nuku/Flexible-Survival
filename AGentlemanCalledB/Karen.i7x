@@ -43,14 +43,14 @@ understand "Karen" as Retriever Girl.
 [Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]
 SleepRhythm of Retriever Girl is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Retriever Girl is 0. [No cock]
+Cock Count of Retriever Girl is 0. [No cock]
 Cock Length of Retriever Girl is 0. [ ]
-Cock Width of Retriever Girl is 0. [  ]
-Testes of Retriever Girl is 0. [No balls]
-Cunts of Retriever Girl is 1. [No pussy]
-Cunt Length of Retriever Girl is 10. [No Cunt]
-Cunt Width of Retriever Girl is 2. [No Cunt]
-Breasts of Retriever Girl is 4. [4 nipples]
+Ball Size of Retriever Girl is 0. [  ]
+Ball Count of Retriever Girl is 0. [No balls]
+Cunt Count of Retriever Girl is 1. [No pussy]
+Cunt Depth of Retriever Girl is 10. [No Cunt]
+Cunt Tightness of Retriever Girl is 2. [No Cunt]
+Nipple Count of Retriever Girl is 4. [4 nipples]
 Breast Size of Retriever Girl is 2. [B Cup at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Retriever Girl is false. [can not take oversized members without pain]
@@ -77,14 +77,14 @@ the fuckscene of Retriever Girl is "[SexWithKaren]".
 
 to say SummonKaren:
 	now Karen is nowhere;
-	if player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
+	if Player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
 		say "     Karen smiles happily as you wave her over, hiking her bag up over her shoulder as she jogs forward.";
 
 to say DismissKaren:
 	move Karen to Breakroom;
-	if player is not in Breakroom: [regular dismiss]
+	if Player is not in Breakroom: [regular dismiss]
 		say "     Telling Karen that you're going to go forward solo she quickly nods and starts to run back towards the library on all fours.";
 	else: [dismissing her in the abbey]
 		say "     ...";
@@ -120,7 +120,7 @@ to say KarenScent:
 instead of conversing the Karen:
 	if Karen is visible:
 		say "[KarenTalkMenu]";
-	else if companion of player is Retriever Girl:
+	else if companion of Player is Retriever Girl:
 		say "[KarenTalkMenu]";
 	else:
 		say "     Karen isn't here.";
@@ -129,9 +129,9 @@ instead of conversing Retriever Girl:
 	if Retriever Girl is not tamed:
 		say "     Who?";
 	else:
-		if player is in Breakroom and Karen is in Breakroom:
+		if Player is in Breakroom and Karen is in Breakroom:
 			say "[KarenTalkMenu]";
-		else if companion of player is Retriever Girl:
+		else if companion of Player is Retriever Girl:
 			say "[KarenTalkMenu]";
 		else:
 			say "     Karen isn't here.";
@@ -157,7 +157,7 @@ to say KarenTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Chit Chat"):
@@ -180,7 +180,7 @@ to say KarenTalk1:
 			say "     [one of]I'm so glad you decided to stay with us; I'm sure you'll love it.[or]Karen takes a moment to admire the collar Rex has given you to wear, comparing it to her own for a moment before complimenting you on how nice it looks.[or]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head. Clearly she's far too focused on Rex and the cookie to talk right now.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 		else:
 			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and you're pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
-	else if companion of player is Retriever Girl or Karen is in Breakroom:
+	else if companion of Player is Retriever Girl or Karen is in Breakroom:
 		if HP of Karen is 5 and ( Libido of Karen - turns > 8 ):
 			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that Francois seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
@@ -196,7 +196,7 @@ to say SexWithKaren:
 	if HP of Karen < 5:
 		say "     When you begin to approach Karen, wondering if she might be interested in having some fun with you, you hear a low growl behind you.";
 		say "     You turn around to see Rex, an uncharacteristic scowl across his muzzle, apparently aware of your intentions. Glancing back at Karen for a moment, you decide it's best to stay on Rex's good side and leave his pet be.";
-	else if companion of player is Retriever Girl or Karen is in Breakroom:
+	else if companion of Player is Retriever Girl or Karen is in Breakroom:
 		if HP of Karen is 8:
 			say "     Karen bites her lip and stares at you longingly for a moment before refusing. 'I don't think I should be doing anything like that... yet.'";
 			say "     (Sorry - This quest/character is still a work in progress, this is where it ends for now. -The author)";
@@ -223,9 +223,9 @@ an everyturn rule:
 		now Forgotten Past is active;
 
 Instead of resolving a Forgotten Past:
-	if HP of Karen is 7 and companion of player is Retriever Girl:
+	if HP of Karen is 7 and companion of Player is Retriever Girl:
 		say "     While exploring a secluded hall of the campus, Karen suddenly stops. You look back at her as her ears perk up. 'I know this place,' she says, lifting her nose to the air and taking a few sniffs. 'I can smell... me.' Striding purposefully down the hall, Karen continues following her nose, pausing briefly at each locker she passes. Finally she stops, several meters down the hall in front of a still-sealed locker. 'This one, it's this one. This was my locker,' she says softly, taking hold of the small pink padlock. 'Can you help me get it open?'";
-		say "     A short while later you finally manage to [if intelligence of player > strength of player]open the lock with a makeshift shim[else]break the door off its hinges with a liberal application of brute force[end if]. Stepping aside, you let Karen open the door and peer inside. The locker is filled mostly with textbooks pertaining primarily to animal medicine. It seems she was studying for a veterinary degree at the campus. 'I was going to be a vet... and now here I am, a dog,' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker. While most of the locker's contents prove unhelpful, she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized-sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom,' she says, looking the timetable over. 'Maybe we could stop by there next?'";
+		say "     A short while later you finally manage to [if intelligence of Player > strength of Player]open the lock with a makeshift shim[else]break the door off its hinges with a liberal application of brute force[end if]. Stepping aside, you let Karen open the door and peer inside. The locker is filled mostly with textbooks pertaining primarily to animal medicine. It seems she was studying for a veterinary degree at the campus. 'I was going to be a vet... and now here I am, a dog,' she says, running a paw along the neatly stacked books. With a sigh she continues her search of the locker. While most of the locker's contents prove unhelpful, she does find a large book bag, which will hold significantly more than the small sack she's been carrying around, and a couple bottles of water which she shares with you. After picking out a few of the generalized-sounding textbooks and slipping them into her new bag along with the contents of her old bag, she peels the timetable off the locker door and pushes it shut. 'It looks like all my courses took place in one classroom,' she says, looking the timetable over. 'Maybe we could stop by there next?'";
 		say "     As you leave the row of lockers and head back towards safer grounds, you can't help but notice Karen's head held a little higher and an ever-so-slight spring in her step.";
 		say "     (Note - This quest/character is still a work in progress, this is where it ends for now. Sorry! -The author)";
 		now HP of Karen is 8;

@@ -118,7 +118,7 @@ Instead of resolving a Ambulance Dock:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		if a random chance of 2 in 3 succeeds:
 			LineBreak;
 			say "     You have a little luck while searching, managing to find a partially salvageable medkit from the mess. It's only partially complete and will need some more parts to be usable. Maybe someone could put them together? Your search did unfortunately get quite a bit of that cum on you though.";
@@ -349,7 +349,7 @@ Instead of resolving a Cafeteria:
 	say "     As you are passing through the dark halls of the hospital, you can hear quite a bit of noise from down one hall. Approaching cautiously, you glance down and see leads to a pair of doors marked 'Cafeteria'. You approach cautiously, glancing between the doors and the hall behind you. At the doors, you peek through the window and see quite a few of the hospital's animal staff inside.";
 	say "     Behind the food counter, an obviously herm raccoon lunchlady is fucking one of her assistants, a breasty cowgirl. Some of the cowgirl's milk leaks from her teat-like nipples onto the food spread out, not that the creatures in line seem to mind. If anything, they only end up taking more from that pile of glop.";
 	say "     At the tables are several others, mainly vixen nurses and jaguar orderlies, though there are a few other creatures mixed in as well. Some of the patrons are eating their food peaceably while others are slaking their appetite for sex. Several of the vixens are being boned roughly by the jaguars. At one table, one vixen is spread out while several furs lick, kiss or suck at her erogenous zones, much to her delight. Another table has a rare female jaguar sitting on the table while two of the males nurse from her breasts and play with her pussy.";
-	if humanity of player < 30 or libido of player > 50:
+	if humanity of Player < 30 or Libido of Player > 50:
 		say "     The sight of this decadent meal is quite alluring, but you do manage to draw yourself away before giving in. With so many in there, you doubt you would emerge with your identity intact.";
 	else:
 		say "     You turn away from the decadent meal and move back down the hall quietly, eager to get some distance between you and such a large group of creatures.";
@@ -668,7 +668,7 @@ instead of going to Primary Lab while hospquest is 2:			[Searching the main lab]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     As you explain to Dr Matt about the strange state of the hospital and the mouse doctor working away deep inside, Dr Matt listens with increasing attention and some concern. 'This is quite unexpected. You have found another person in the city searching into the mysteries of the nanite infection, but through a different avenue of research. And using the infected as test subjected is...' he coughs as he notices the stern look you [if susan is visible]and Susan [end if]give him. 'That is, possibly using them as unwilling test subjects in such surgical experiments. Most disturbing and unethical, even in such a crisis.'";
 			say "     'I suggest you take that device to this Dr Mouse individual. It will further ingratiate you to him and allow you to find out more about what's going on at the hospital. Hopefully, I am wrong about my concerns and this doctor may be of help to us. As well, we do need to know if his concerns about the nanites are valid.";
@@ -745,8 +745,8 @@ to say hospquestpt5:
 	else:
 		say "     'I have been able to perform some research on the sample you brought back. While some of the test results are inconclusive, I have been able to rule out several of my earlier hypotheses on its nature. This knowledge will help me advance several of my other projects and better focus my research into ones which will yield results. And I do believe I said I'd have a reward for you.'";
 		say "     'From my research into the factors activated in the collie's physiology by the nanites, I have been able to create a stamina booster, which will increase one's physical endurance.' He smiles as he takes a syringe from a refrigerated storage case. 'As you are acting as my agent in the field, it is important that you be hardy enough to deal with the creatures out there. And so, this is for you,' he says as he merrily injects you with it.";
-		increase stamina of player by 2;
-		increase maxHP of player by level of player plus 1;
+		increase stamina of Player by 2;
+		increase maxHP of Player by level of Player plus 1;
 		say "     [bold type]Your stamina has been increased by 2.[roman type][line break]";
 		increase score by 10;
 		say "     'I do have another task for you, my helpful assistant,' the albino mouse continues. 'At the state fair across the city, there is a strange, rubber-like creature. While I have obtained samples from the latex foxes and wolves running around, I wish to see how this feline's unusual body composition differs from theirs. You should get three samples, as I know from experience working with the fox and wolf samples that it may require several to get any worthwhile data. Being felines, these creatures seem able to entice the orderlies into becoming their mates and the vixens are not strong enough to deal with them on their own. And when several vixens go together, these felines band together and repel them. I'm hoping, as a lone individual, you will be successful where they have not.'";
@@ -805,7 +805,7 @@ to say hospquestpt8:
 		say "     Coming back to you, Dr Mouse smiles and opens a sample fridge, taking out another injection. 'As I promised, I have something special for you. I have made progress in analyzing the nanites['] method of healing and have a formula which will increase your healing rate.' As he starts to prepare your arm for the injection, he continues, 'It will increase your recovery over time. It will also give you a little more effectiveness from any field medicine you practice. It won't measure up to proper medical training,' the white mouse doctor says, 'but it's still an improvement.'";
 		say "     Before you let the mouse inject you, you ask about the jaguars and if you should expect anything like that to happen. Dr Mouse is briefly puzzled by your question. 'Oh, you mean the fangs? Those are just the result of a test I did on them. I needed to see how adjustments to the nanites would propagate through the population. This one was more effective than the first attempt with the vixens. Besides, the creatures out in the city are starting to form into factions and they need to be able to keep the hospital secure. But don't worry. This is just an increase to their healing protocols.' Feeling reassured about the injection if not the jaguars, you allow him to inject you.";
 		say "     You have gained the [']Rapid Healing['] feat.";
-		add "Rapid Healing" to the feats of player;
+		add "Rapid Healing" to the feats of Player;
 		waitlinebreak;
 		say "     As the nanite update runs through your system, you ask what the jaguar wanted that was so upsetting. 'Oh, I wasn't too upset about the news. It's just harder to understand them now that they've got those big teeth. There's a little pest running around the hospital, distracting the other staff at times. Nothing you need concern yourself with, though. They'll catch the pink perv sooner or later.'";
 		say "     Dr Mouse heads back to his worktable. 'I have to get back to things now. I don't think I'll have anything for you for at least a few days. Please give me some time to process all of these results.'";
@@ -820,8 +820,8 @@ to say hospquestpt9:
 		now Staff Lounge is resolved;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:	[removes Raccoon monster from Hospital]
 			choose row y in Table of Random Critters;
-			if name entry is "Raccoon":
-				now monster is y;
+			if Name entry is "Raccoon":
+				now MonsterID is y;
 				break;
 		now area entry is "Nowhere";
 		say "     'I do not have any tasks for...' the white mouse starts to reply when there is a commotion outside the door. He hops off the stool and heads to the door. Reflexively, you ready yourself for combat. The door leading to the depths of the hospital opens and in come a pair of orderlies with a cross-dressing raccoon held firmly in their paws. His gray fur has pink highlights and pink rings around his tail and his candy striper dress has gotten torn. The coon is thrashing and struggling, spewing a mix of insults, pleas and offers of sex to let him go.";
@@ -835,21 +835,21 @@ to say hospquestpt9:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject him.";
 		say "     ([link]N[as]n[end link]) - Take him as-is.";
-		if player consents:
+		if Player consents:
 			increase score by 10;
-			decrease humanity of player by 5;
+			SanLoss 5;
 			now coonstatus is 101;
 			LineBreak;
 			say "     With a nod to Dr Mouse, he injects the raccoon, who releases one last whimper before growing quiet. After a few moments, he looks up at you, eyes filled with adoration, but little intelligence. He moans softly and nuzzles your chest as his paws run along your sides and down to your hips.";
-			if player is herm:
+			if Player is herm:
 				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He gives the briefest of shivers, so faint you barely notice it, before he nuzzles down to start licking your pussy as well. He makes sure to lick you all over before bringing his muzzle up and happily taking your cock into his mouth. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blow job. And though the fingers that have moved to your pussy fumble around a little, it is clear that he is eager to please his new master.";
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it while his fingers caress your pussy. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle while your pussy soaks his paw in your juices. He swallows it all down and licks you clean like a good little pet, churring happily.";
-			else if player is female:
+			else if Player is female:
 				say "     The raccoon slides a paw between your legs to play with your pussy. His fingers stroke and tease you as he lowers himself to his knees. He gives the briefest of shivers, so faint you barely notice it, before he buries his muzzle between your thighs and starts licking you. You moan softly and stroke his ears. He may lack in experience, but there is no lack of zeal in the coon, eager to please his new mistress.";
 				say "     His playful tongue teases your labia, lapping up your juices obediently. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your pussy quivers and your hot juices flow, soaking his muzzle. He laps them up from you like a good little pet, churring happily.";
-			else if player is male:
+			else if Player is male:
 				say "     The raccoon slides his paw between your legs to play with your cock. His fingers stroke and tease your shaft as he lowers himself to his knees. He opens his muzzle and takes your cock in happily. You moan softly and stroke his ears. He certainly doesn't lack experience, giving you a wonderful blow job and is eager to please his new master.";
 				say "     His talented tongue teases your shaft, playing along your penis as he sucks it. His pink cock is quite hard, leaking pre onto the floor. Dr Mouse watches quietly, having slipped a paw into his lab coat and between his legs.";
 				say "     Seeing the raccoon boy becoming such a willing plaything is quite arousing and soon you can hold back no longer. Your cock throbs and your hot seed shoots into his waiting muzzle. He swallows it all down and licks you clean like a good little pet, churring happily.";
@@ -875,7 +875,7 @@ to say hospquestpt10:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     'Excellent! I knew I could rely on you,' the mouse says. 'I shall provide you with a radio to signal the helicopter once you have located it, so it can be transported here.' The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work. The orderlies grunt and motion for you to get on your way[if coonstatus is 1]. You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
 			now hospquest is 11;
@@ -891,7 +891,7 @@ to say hospquestpt10:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     'Excellent! I knew I could rely on you,' the mouse says as he passes you the syringe. 'I shall provide you with a radio to signal the helicopter once you have secured the device, so it can be transported here.' The mouse gives you a pat on the back and drags his stool back over to his worktable, intent on resuming his work. The orderlies grunt and motion for you to get on your way[if coonstatus is 1]. You take the coon's paw in yours, leading him out of the room and giving him directions back to the bunker, where he'll be safe until you return[end if].";
 			now hospquest is 11;
@@ -911,7 +911,7 @@ instead of going to Hidden Lab while hospquest > 10:
 		say "     Entering the lab, you find Dr Mouse taking a rare break to have some food. He's got a plate of food, probably sent up from the cafeteria, that looks like a colorful selection of warm mushes. The doctor looks up from his meal at the sound of your arrival.";
 		say "     'I did not expect you back. You did not call for the helicopter. What has happened? My orders were for you to only return when you had finished with the scientist.' Noticing your expression, he stiffens and glares at you angrily with his blood red eyes. 'Unless you have no intention of doing so. You dare betray me?'";
 		say "     He hops off his stool and rushes towards the intercom button at one corner of the room. You, already taking advantage of his brief confusion, were already moving in that direction to cut him off.";
-		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		let bonus be ( dexterity of Player minus 10 ) divided by 2;
 		if bonus > 8, now bonus is 8;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus]: [dice + bonus]:[line break]";
@@ -938,7 +938,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		say "     You hear the countdown inside reach zero and several blasts inside the building go off ten seconds later. You are running down the handicap access ramp with the cart as the windows blow out. Glass and rubble bloody your back, but thankfully the equipment was mostly shielded by you and seems undamaged.";
 		say "     You take 15 damage![line break]";
 		say "     Fighting back against the pain, you contact the helicopter for extraction. Having once been a trained rescue team, they are there swiftly. Under your supervision, two of the brutish orderlies move the large machine and the terminal into the helicopter. Loaded up, you climb into the helicopter and ride back with them to the hospital.";
-		decrease HP of player by 15;
+		decrease HP of Player by 15;
 		increase score by 20;
 		now infection terminal is in Hidden Lab;
 		now HP of Doctor Matt is 103;
@@ -951,7 +951,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject.";
 		say "     ([link]N[as]n[end link]) - Talk.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[tlabsbigfight]";
 		else:
@@ -1066,28 +1066,28 @@ to say hosploss:
 	say "[hosptfscene]";
 	say "     Dr Mouse motions to the orderly attending to his procedure. 'Dump that trash on the steps along with its gear. It is of no further use to me.' With those coldly spoken words, the mouse turns his back on you entirely and walks out of the operating theater. The orderly calls forth several of his companions and they drag you, beaten and mutated, to the hospital steps. They toss you and your gear down onto them without a word and head back inside.";
 	waitlinebreak;
-	if bodyname of player is "Tiger Cop":
-		now bodyname of player is "Tigress Hooker";
-	if tailname of player is "Tiger Cop":
-		now tailname of player is "Tigress Hooker";
-	if facename of player is "Tiger Cop":
-		now facename of player is "Tigress Hooker";
-	if skinname of player is "Tiger Cop":
-		now skinname of player is "Tigress Hooker";
-	if cockname of player is "Tiger Cop":
-		now cockname of player is "Tigress Hooker";
-	decrease humanity of player by 20;
-	increase libido of player by 20;
+	if bodyname of Player is "Tiger Cop":
+		now bodyname of Player is "Tigress Hooker";
+	if tailname of Player is "Tiger Cop":
+		now tailname of Player is "Tigress Hooker";
+	if facename of Player is "Tiger Cop":
+		now facename of Player is "Tigress Hooker";
+	if skinname of Player is "Tiger Cop":
+		now skinname of Player is "Tigress Hooker";
+	if cockname of Player is "Tiger Cop":
+		now cockname of Player is "Tigress Hooker";
+	SanLoss 20;
+	increase Libido of Player by 20;
 	decrease score by 50;
-	if libido of player > 100:
-		now libido of player is 100;
+	if Libido of Player > 100:
+		now Libido of Player is 100;
 	now the player is in City Hospital;
-	if humanity of player < 1:		[Succumbing then and there]
+	if humanity of Player < 1:		[Succumbing then and there]
 		if hospquest is 10:		[Refused upon offer]
 			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. Finding you radically transformed and succumbing, he helps take you to a nearby, unoccupied building. There, he beds down with you, having sex with you again and again, turning you into another cute, girly raccoon like him, as it is the only thing he can do for you.";
 			say "[totalcoonification]";
 		else:
-			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [bodyname of player] body, asserts its dominance over the new you.";
+			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [bodyname of Player] body, asserts its dominance over the new you.";
 	else if hospquest is 10:		[Refused upon offer]
 		say "     You groan, still in some pain from the rough handling as you try to get up. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. He wraps his arm around you and helps you stand, leading you away from this blighted place.";
 		if pink raccoon is tamed:
@@ -1104,29 +1104,29 @@ to say hosploss:
 
 to say hosptfscene:
 	sort Table of Random Critters in random order;
-	now monster is 1;
-	choose row monster from the Table of Random Critters;
-	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player:
+	now MonsterID is 1;
+	choose row MonsterID from the Table of Random Critters;
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player:
 		sort Table of Random Critters in random order;
-		now monster is 1;
-		choose row monster from the Table of Random Critters;
-	now tailname of player is name entry;
-	now tail of player is tail entry;
+		now MonsterID is 1;
+		choose row MonsterID from the Table of Random Critters;
+	now tailname of Player is Name entry;
+	now tail of Player is tail entry;
 	say "     'The first injection will adjust the volunteer's lower spine. We shall begin there, as the changes may be the least visible, depending on the outcome.' The mouse the jabs a second needle, quite painfully, into your ass. As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
-	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player:
 		sort Table of Random Critters in random order;
-		now monster is 1;
-		choose row monster from the Table of Random Critters;
-	now facename of player is name entry;
-	now face of player is face entry;
+		now MonsterID is 1;
+		choose row MonsterID from the Table of Random Critters;
+	now facename of Player is Name entry;
+	now face of Player is face entry;
 	waitlinebreak;
 	say "     'We shall now move on to the head,' he states, motioning for the orderly to step up. He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head. As a burning sensation courses through your head, the doctor discusses how [face change entry]. As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
-	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player:
 		sort Table of Random Critters in random order;
-		now monster is 1;
-		choose row monster from the Table of Random Critters;
-	now skinname of player is name entry;
-	now skin of player is skin entry;
+		now MonsterID is 1;
+		choose row MonsterID from the Table of Random Critters;
+	now skinname of Player is Name entry;
+	now skin of Player is skin entry;
 	waitlinebreak;
 	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest. 'Before we continue with the patient's body, we shall deal with his epidermal layer.' The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is. Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body. You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you. Shivers of pleasure run all over your skin as [skin change entry].";
 	waitlinebreak;
@@ -1137,12 +1137,12 @@ to say hosptfscene:
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. Another of the vixen nurses is on her knees, licking and kissing the large cock. Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl. She takes it in eagerly, playing with his heavy balls until he cums down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	else:		[Dr Mouse is mouse]
 		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. His cock is small, perhaps about four inches to match his small height. But his balls are quite large, perhaps each the size of a peach. One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle. She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
-	while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player or Name entry is bodyname of Player:
 		sort Table of Random Critters in random order;
-		now monster is 1;
-		choose row monster from the Table of Random Critters;
-	now bodyname of player is name entry;
-	now body of player is body entry;
+		now MonsterID is 1;
+		choose row MonsterID from the Table of Random Critters;
+	now bodyname of Player is Name entry;
+	now body of Player is body entry;
 	attributeinfect;
 	waitlinebreak;
 	say "     Satiated, the mouse straightens up and regains his composure. 'Ahem! Now that the... intermission is over, let us proceed to the final stages.' He grabs another syringe, the largest yet by far. His paw feels along your body, finding a sensitive spot before jabbing the needle into it, making you wince in pain before the warm tingles of pleasant change flow through you. The jaguar orderly adjusts the various straps as your body alters itself. Continuing to comment, Dr Mouse observes your body as [body change entry].";
@@ -1151,18 +1151,18 @@ to say hosptfscene:
 	follow the sex change rule;
 	LineBreak;
 	waitlinebreak;
-	if player is male:
-		while ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true ) or there is no name entry or name entry is tailname of player or name entry is facename of player or name entry is skinname of player or name entry is bodyname of player or name entry is cockname of player:
+	if Player is male:
+		while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player or Name entry is bodyname of Player or Name entry is cockname of Player:
 			sort Table of Random Critters in random order;
-			now monster is 1;
-			choose row monster from the Table of Random Critters;
+			now MonsterID is 1;
+			choose row MonsterID from the Table of Random Critters;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience. 'There is one final injection to make, my colleagues. And I'm sure this is the one you've all been anxiously awaiting. He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze. Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper. You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin. As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
-		now cockname of player is name entry;
-		now cock of player is cock entry;
+		now cockname of Player is Name entry;
+		now cock of Player is cock entry;
 		follow the sex change rule;
 		waitlinebreak;
-		if player is not male:	[now female]
+		if Player is not male:	[now female]
 			say "     The mouse doctor smiles as your final changes set in and you are left with only a wet pussy between your legs. He teases your wet folds and turns to the audience. 'It seems I was mistaken. There is one more injection to make,' he announces, slipping a pair of fingers into your vagina, making you moan in response despite yourself. His other paw is at his groin, stroking his stiffening cock back to erection. Many in the audience cheer or laugh at that.";
 			wait for any key;
 			say "[drmousesex]";
@@ -1178,8 +1178,8 @@ to say drmousesex:
 	[puts Albino Mouse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Albino Mouse":
-			now monster is y;
+		if Name entry is "Albino Mouse":
+			now MonsterID is y;
 			break;
 	if hospfight is 1:	[normal mouse]
 		say "     The small mouse motions for the orderly, who gently lifts him up onto the operating table with you. The white furred mouse grins down at you, lining up his cock with your pussy, making it clear what final injection he has in mind. You struggle and try to shake your head, but the restraints keep you locked in place. He grins and thrusts his cock hard into you. Thankfully, due to his small size, there is little discomfort and it soon becomes quite pleasurable as mad mouse fucks you zealously.";
@@ -1292,7 +1292,7 @@ to say tlloss:
 
 
 to say tlvictory:
-	if player is male:
+	if Player is male:
 		say "     Dr Matt moans as she is clearly torn between the struggles to get to the microwave neutralizer and to enjoy the newly sexualized body. 'No, I need... mustn't give... but so good. Why did I ever... ngg... but my work...' Deciding to make the decision for her, you push the horny hybrid onto one of the tables and tease her six breasts. The transformed doctor releases a soft yip and pants, reaching for your stiff penis despite the conflict in her failing mind.";
 		say "     Happy to oblige, you line up your cock her pussy, then slowly slide it into her. Dr Matt arches her back and moans loudly, spraying cum from her canine cock across her ample bosom as her virginity is taken. 'Oh my god, yes!' she cries in ecstasy. The lustful huskybunny's pussy squeezes and tugs at your cock eagerly, the slutty body responding automatically to a hard shaft filling it. You grunt as the herm's vagina works you over so eagerly, starting to thrust hard and fast into her.";
 		WaitLineBreak;
@@ -1307,7 +1307,7 @@ to say tlvictory:
 		say "     Hearing some soft moans behind you, you glance over to find Susan has gotten in on the action and is driving her cock into Orthas. The black dragoness moans weakly, still largely incapacitated from her fight with you. The smaller doe pounds away at the dragon's cunt aggressively. 'I've seen you eyeing my mate. He's mine, you slut. Take my fucking cum instead, you black bitch.'";
 		say "     You have never known Susan to show any interest in using her cock before, so the sight of her pounding away at the dragon is quite surprising and arousing. She pinches and squeezes the dragoness's huge breasts, teasing her nipples. Orthas moans and starts rocking her hips up to meet each thrust, responding to the aggressive mating she's getting from the smaller doe herm.";
 		WaitLineBreak;
-	if player is male:
+	if Player is male:
 		say "     Your groin is thoroughly soaked with the huskybunny's feminine juices, as she's already cum several times. You wrap a hand around her large, throbbing cock and focus on seeding her properly. The feel of the new hybrid's pussy around you is so good. Dr Mouse's formula has worked wonders on the scientist, making a wonderful fucktoy that is certainly one of the best fucks you've ever had.";
 		WaitLineBreak;
 		say "     With a final, hard thrust into her, you push your cock as deep as you can and unleash your hot load. Your cum spurts deep inside her and her body responds instantly, tugging and milking at your shaft for all you'll give and pulling it up into her womb. Pulling your spent shaft free, you wipe it clean on one of her big, fuzzy rabbit feet.";
@@ -1336,7 +1336,7 @@ to say tlvictory:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Use Dr. Matt.";
 		say "     ([link]N[as]n[end link]) - Lock her up.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You glance over at Orthas and decide not to leave her out of the action. Grabbing the little slut, you pull her off the table and over to the dragoness. Tossing her down onto her black body, you watch as the creature that was once Dr Matt starts to grind her cock against those smooth, hard scales.";
 			say "     'No, doctor. Don't,' Orthas moans, but cannot help herself as the huskybunny's cock is lined up with her pussy, then drives into her. She whimpers a little, but arches her hips up into the thrusts, starting to rut the mindless sextoy whom she's failed to protect.";
@@ -1348,7 +1348,7 @@ to say tlvictory:
 			now HP of Doctor Matt is 104; [Claimed Dr Matt as pet]
 			move Sally to bunker;
 			now lust of Sally is a random number between 0 and 4;
-			decrease humanity of player by 5;
+			SanLoss 5;
 			increase score by 50;
 			say "     You grab battered dragoness and drag her out into the hall, wondering what you can do with her. A quick glance at the other labs shows their doors to be just as flimsy as the one she already broke through, so that's no good. You glance at the stairwell back to the main floor and that is when it hits you. There is that sealed basement beneath the lab. The heavy door should keep her contained for a while and the creature down below would certainly keep her occupied until you're done. Following through on this plan, you toss her down into the sealed basement and call out to draw the monster's attention to the dazed dragoness before fleeing upstairs and barring the door.";
 			waitlinebreak;
@@ -1364,7 +1364,7 @@ to say tlvictory:
 		extend game by 56;
 		say "     With Dr Matt in good hands, you [if Susan is visible]and Susan [end if]bring your haul down the stairs in stages and then take it out the door. Having called for the helicopter pickup earlier, it arrives and you instruct the orderlies to load up the equipment before you all return to the hospital and the laboratory hidden within.";
 		say "     As the lab fades into the distance you can see the faint sign of incoming choppers coming to land there. It seems that Orthas called in the military to take the transformed doctor and any remaining research material. They've been dealt a sizeable setback to their plans.";
-	decrease the humanity of player by 5;
+	decrease the humanity of Player by 5;
 	increase score by 50;
 	LineBreak;
 	wait for any key;
@@ -1457,12 +1457,12 @@ to say posttlscene:
 	now hospquest is 14;
 	say "     'Now, as a reward for your continued service,' he says, turning back to you. 'I have prepared an injection to boost your physical abilities. It should result in increased physical strength, agility and endurance, as well as a more athletic body. It will also work to keep you physically fit against weaker infections. This should further obscure your identity should you not change species before being found.'";
 	say "     With the promise of being stronger and better able to deal with the hardships of the infected city, you hold out your arm for the injection. There is a shiver of activity inside you as the nanites go to work, bulking up your muscles and improving your physique as a whole. You become a more rugged version of yourself[if susan is visible]. Susan seems quite impressed by this improved version of you[end if].";
-	add "Physical Booster" to the feats of player;
-	increase strength of player by 2;
-	increase dexterity of player by 2;
-	increase stamina of player by 2;
-	increase maxHP of player by ( level of player + 1 );
-	increase HP of player by (level of player + 1);
+	add "Physical Booster" to the feats of Player;
+	increase strength of Player by 2;
+	increase dexterity of Player by 2;
+	increase stamina of Player by 2;
+	increase maxHP of Player by ( level of Player + 1 );
+	increase HP of Player by (level of Player + 1);
 	now hospcountdown is turns;
 	now DoctorMouseProgress is turns;
 	say "[bold type]Your Strength, Dexterity and Stamina are all increased by 2.[roman type][line break]";
@@ -1498,13 +1498,13 @@ Instead of resolving a Dinosaur Nest:
 	if nesteddino is 0:
 		now nesteddino is 1;
 		say "     Your search of the museum brings you to the dinosaur wing. There the great thunderlizards are on display. You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting. You move around, eventually find a large pile of junk in one corner that may be what you're looking for. A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest. You head over to it and start poking through it in the hopes of finding something.";
-		let bonus be ( perception of player minus 10 ) divided by 2;
+		let bonus be ( perception of Player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 11:
 			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly. You jump aside just in time to avoid a swing from the angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 		else:
-			decrease HP of player by 15;
+			decrease HP of Player by 15;
 			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg! As you pull yourself up, you find yourself looking at a large, angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
@@ -1541,13 +1541,13 @@ to say smellingthelavalamp:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing. For a moment there, it's almost as if you can hear music.";
 			now lavalamplick is 1;
-			increase libido of player by 10;
-			if libido of player > 100:
-				now libido of player is 100;
-			decrease humanity of player by 5;
+			increase Libido of Player by 10;
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			SanLoss 5;
 			infect "Triceratops";
 		else:
 			say "[line break]     Probably for the best that you don't do anything so foolish. You'd best be careful if you're starting to get ideas like that.";
@@ -1561,13 +1561,13 @@ instead of using lava lamp:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[line break]     Following the strange compulsion, you lick the lava lamp a few times, tasting the saurian's female juices on it, finding them quite arousing. For a moment there, it's almost as if you can hear music.";
 			now lavalamplick is 1;
-			increase libido of player by 10;
-			if libido of player > 100:
-				now libido of player is 100;
-			decrease humanity of player by 5;
+			increase Libido of Player by 10;
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			SanLoss 5;
 			infect "Triceratops";
 		else:
 			say "[line break]     Probably for the best that you don't do anything so foolish. You'd best be careful if you're starting to get ideas like that.";
@@ -1624,7 +1624,7 @@ Instead of resolving a Viking Longboat:
 	if wolvfightresult is 1:		[win]
 		say "     Having bested the wolverine guard, you leave it passed out and quickly put the ladder alongside the huge ship. You climb up and head to the masthead across the old, creaking ship. The wood is incredibly old and you grit your teeth with every soft step you make, worried you'll break through the deck and fall.";
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
-		let bonus be ( dexterity of player minus 10 ) divided by 2;
+		let bonus be ( dexterity of Player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
 		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 18:
@@ -1636,7 +1636,7 @@ Instead of resolving a Viking Longboat:
 		else:
 			say "You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
 			now Resolution of Viking Longboat is 2; [crashed the ship]
-			decrease HP of player by 20;
+			decrease HP of Player by 20;
 			increase score by 10;
 		now nerminepackage is 3;
 		now Viking Longboat is resolved;
@@ -1717,24 +1717,25 @@ to say hospquestpt12:
 	say "     Taking a file folder[if Susan is visible] from Susan[end if], he passes it to you. You find it contains several series of photos of before and after images of a few [']volunteer['] test subjects. 'As you can see, the form is quite powerful and very hardy, though your version has been slightly tweaked. I think it will prove very useful to you while out in the city, granting extra durability and combat aptitude - maximized when you are fully in your chimeric form. I may be able to provide it with further tweaks and improvements in the future to further fortify my top agent,' he adds with a grin and a pat on the back. 'In addition, you'll find that the chimeras of the hospital will also leave you alone while you bear this infection.'";
 	WaitLineBreak;
 	say "     You flip through the images quickly, obviously taken from a few test subjects over a couple of iterations, but there's several overall similarities to the large hybrids they've become. Somewhere between eight and nine feet tall, they have a powerfully muscled body with a broad chest and strong limbs. The face and muzzle generally vary between canines and felines mostly (depending on the initial subject), but with a leonine mane that cascades over their broad shoulders. Most have grown a set of horns of some kind, be they bull, ram or other. Their chests are armored with heavy scales which, on the females and herms, follow the curves of their breasts to preserve their shapely form and perky nipples intact. Except for armored plates on the exterior or the arms and legs, the remainder of the body is covered in dark yellow fur, with thicker tufts of it at the wrists and ankles. Hands have become paw-like, with plated digits ending in claws that are still nimble enough for fine use. Growing from the base of the spine is a thick tail, commonly with scale and spiny ridges or spikes. The males and herms among them possess a plump sheath and sac covered in the same fur. Their cock structure vary somewhat as well, though most are a hybrid mix of pointed glans, equine length and canine knot at the base.";
-	say "     Overall, their forms are large and imposing, projecting strength and toughness. It's clear they'd be quite formidable in either a fight or a fuck[if player is submissive]. The idea of being a big submissive chimera like these is quite alluring to you[else if the player is dominant]. The idea of being a big chimera like these excites your dominant urges[else]. The possibility of being such a powerful creature is quite enticing[end if]. You find yourself eager to try it out[if Susan is visible] and Susan seems excited by the prospect as well for some reason[end if].";
+	say "     Overall, their forms are large and imposing, projecting strength and toughness. It's clear they'd be quite formidable in either a fight or a fuck[if Player is submissive]. The idea of being a big submissive chimera like these is quite alluring to you[else if the player is dominant]. The idea of being a big chimera like these excites your dominant urges[else]. The possibility of being such a powerful creature is quite enticing[end if]. You find yourself eager to try it out[if Susan is visible] and Susan seems excited by the prospect as well for some reason[end if].";
 	say "((You've received a boost to your natural armor. You'll also get other combat bonuses and your natural armor boost will be greater while in Enhanced Chimera form, especially while pure.))[line break]";
 	say "     [bold type]Shall you ask the murine doctor's to activate the form?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "[ec_activation]";
 	else:
 		LineBreak;
 		say "     Resisting the impulse, you thank the doctor for the offer, but tell him you're happy as you are for the moment. He nods and puts the [bold type]activator[roman type] away, reminding you that you can ask him for it at any time.";
 	setmonster "Enhanced Chimera";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Hospital";
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	setmonster "Mismatched Chimera";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now area entry is "Nowhere";
 	now hospquest is 19;
 	now DoctorMouseProgress is turns;
@@ -1745,7 +1746,7 @@ understand "activator" as ec_activating.
 check ec_activating:
 	if hospquest < 19, say "I don't know what you're talking about." instead;
 	if Doctor Mouse is not visible, say "You need to go see Doctor Mouse about that." instead;
-	if bodyname of player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
+	if bodyname of Player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
 
 carry out ec_activating:
 	say "[ec_activation]";
@@ -1753,48 +1754,48 @@ carry out ec_activating:
 to say ec_activation:
 	increase ec_fullcount by 1;
 	setmonster "Enhanced Chimera";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	say "     Receiving a dose of the activator from Doctor Mouse, you feel a rush of energy run through you. It's as if you can feel the excitement of the dormant infection inside you rushing into action. An aching warmth spreads across your body, making you tingle from head to food. Your head throbs and your vision goes blurry as the process goes on. You can feel a myriad of shifts and changes going on all over you, so many it's hard to focus on any one of them at a time. It's almost as if several different transformations are all taking place together or in sequence, building you up through several successive infections.";
 	if the remainder after dividing ec_fullcount by 4 is 0 and player is male:
-		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if cocks of player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if cock length of player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if cock width of player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if cock width of player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
+		say "     Turning your attention to your groin, you watch your cock go through several stages of transformation. First comes the furry sheath and ballsack over your junk. Your manhood[smn] poke[smv] from the former, first becoming mostly human-like, though having an unnaturally black color. As you watch, [ittheym] change[smv] further, the glans growing more pointed and forward-facing. Unable to resist, you take [if Cock Count of Player > 1]one of them[else]it[end if] in your changing hands and stroke yourself. It grows thicker and becomes more equine in shape[if Cock Length of Player < 16] and growing longer as well[end if]. As you continue stroking, you feel ridges being added to your length to further stimulate and (if need be) subdue your lovers. The base of your cock starts to swell as a knot forms, so you can finish by tying with them to ensure they're properly filled with the hot load your churning balls are producing[if Ball Size of Player < 10]. Speaking of which, these swell up further as they become more productive[end if]. As your transformation is completing, you release a pleasured growl and blast [if Ball Size of Player < 20]several gooey ropes of seed across the floor[else]a sticky stream of thick seed onto the floor[end if].";
 	else if the remainder after dividing ec_fullcount by 4 is 2:
 		say "     Placing your hands on your head this time, you can feel it transform several times. It is difficult to monitor its transformation as your hands are also changing even as you try to use them. The first change has your head shift to that of a proud stag with a solid square jaw. The start of a pointed horn on your nose and the nubs of your new antlers grow in shortly afterwards. Even as they're growing, your muzzle shifts, adding some sharper teeth to your ruminant dentition. Touching your ears, you feel them first shift to those of a deer before later becoming more pointed at the tip, having adding a bit of wolf to them. You can feel increased fur at the back of your head and neck, soon filling out into a blend of flowing hair and a leonine mane.";
 	else if the remainder after dividing ec_fullcount by 4 is 3:
 		say "     Having a tougher time focusing this time around, you keep your attention on your hands. Holding them up in front of your face, you watch as they go through a succession of transformations. They start out turning into hoof-like hands, but they don't stay like this for long. The hard hoof portion starts to recede the moment it's finished forming, reshaping itself into dark claws that eventually sink into sheathes like a cat's. As this is happening, your hands are also getting larger and stronger, with both a strong grip and fine control. Your fingers become plated across the top and over the back of your hand. You ball your hand into an impressive armored fist, confident it'll pack quite the wallop.";
 	else:
-		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if breasts of player > 0 and breast size of player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else if breast size of player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
-	now tailname of player is "Enhanced Chimera";
-	now facename of player is "Enhanced Chimera";
-	now skinname of player is "Enhanced Chimera";
-	now bodyname of player is "Enhanced Chimera";
-	now cockname of player is "Enhanced Chimera";
+		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if Nipple Count of Player > 0 and Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else if Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
+	now tailname of Player is "Enhanced Chimera";
+	now facename of Player is "Enhanced Chimera";
+	now skinname of Player is "Enhanced Chimera";
+	now bodyname of Player is "Enhanced Chimera";
+	now cockname of Player is "Enhanced Chimera";
 	attributeinfect;
-	now tail of player is tail entry;
-	now face of player is face entry;
-	now skin of player is skin entry;
-	now body of player is body entry;
-	now cock of player is cock entry;
-	if player is male:
-		if cock length of player < 16:
-			increase cock length of player by 3;
-			if cock length of player > 16:
-				now cock length of player is 16;
-		if cock width of player < 10:
-			increase cock width of player by 2;
-			if cock width of player > 10:
-				now cock width of player is 10;
-	if player is female:
-		if cunt length of player < 16:
-			increase cunt length of player by 3;
-			if cunt length of player > 16:
-				now cunt length of player is 16;
-		if cunt width of player < 10:
-			increase cunt width of player by 2;
-			if cunt width of player > 10:
-				now cunt width of player is 10;
-	if breast size of player > 0:
-		if breast size of player < 6:
-			increase breast size of player by 1;
+	now tail of Player is tail entry;
+	now face of Player is face entry;
+	now skin of Player is skin entry;
+	now body of Player is body entry;
+	now cock of Player is cock entry;
+	if Player is male:
+		if Cock Length of Player < 16:
+			increase Cock Length of Player by 3;
+			if Cock Length of Player > 16:
+				now Cock Length of Player is 16;
+		if Ball Size of Player < 3:
+			increase Ball Size of Player by 1;
+			if Ball Size of Player > 3:
+				now Ball Size of Player is 3;
+	if Player is female:
+		if Cunt Depth of Player < 16:
+			increase Cunt Depth of Player by 3;
+			if Cunt Depth of Player > 16:
+				now Cunt Depth of Player is 16;
+		if Cunt Tightness of Player < 10:
+			increase Cunt Tightness of Player by 2;
+			if Cunt Tightness of Player > 10:
+				now Cunt Tightness of Player is 10;
+	if Breast Size of Player > 0:
+		if Breast Size of Player < 6:
+			increase Breast Size of Player by 1;
 
 
 to say hospquestpt13:
@@ -1815,7 +1816,7 @@ to say hospquestpt13:
 to say hospquestpt14:
 	say "     Announcing that you've got Dr. Medea's collected data, Dr. Mouse barely looks up from reviewing the material from Zephyr. He starts to tell you to shove it under one of the work tables before changing his mind. 'Well, I should at least see what we've got.' He hops down off his stool and motions for you to put it down on the floor. Opening the box, he starts flipping though the notes. At first, he's just quickly scanning over the material, but soon he's reading in detail. 'There's quite the wide array of material here. And it's good to read something that's properly written and uses all the proper medical terminology. They go into very rich detail, sometimes explicitly so in several cases. I believe I'll be reviewing this material in full much sooner than expected.'";
 	say "     He digs through the various files, pulling out several folders and spreading them out on the desk before him. 'Before obtaining the data from Zephyr, I'd reviewed some of the schematics and notes on your PISM device. If you'll hook it up there,' he says, pointing to the infection terminal, 'I should be able to use the data from these reports to complete some half-finished features. This device shows more promise than I'd initially anticipated.' While the terminal downloads the logs from the device, Dr. Mouse goes over the files, jotting down several notes before eventually entering his findings into the terminal.";
-	say "     'I've upgraded your PISM, unlocking some features that lacked specifications and values I was able to determine from the these reports. This will be about as much this prototype will be able to accomplish. For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if player is not female]. And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if]. I have more experiments to do, so please leave me for now. I suggest you go about the city and amuse yourself. But while you do, please continue to test this device and let me know if there are any issues. Being able to produce even better versions of these would be very... profitable.";
+	say "     'I've upgraded your PISM, unlocking some features that lacked specifications and values I was able to determine from the these reports. This will be about as much this prototype will be able to accomplish. For the moment though, this upgrade should provide some information on any pregnancy and estrus cycles you may be experiencing[if Player is not female]. And while that likely won't be the case given your current gender, you know as well as I that might end up changing unexpectedly[end if]. I have more experiments to do, so please leave me for now. I suggest you go about the city and amuse yourself. But while you do, please continue to test this device and let me know if there are any issues. Being able to produce even better versions of these would be very... profitable.";
 	say "     With that, Dr. Mouse gets back to reviewing the material from Zephyr. Soon he's caught up in this, waving you off for now. It seems like he's got nothing more for you to do at the moment.";
 	say "[bracket]PISM upgraded to display pregnancy/heat status and approximate duration.[close bracket][line break]";
 	say "((Hosp Quest 2 ends here for now.))[line break]";
@@ -1824,13 +1825,13 @@ to say hospquestpt14:
 Section 9 - Endings
 
 when play ends:
-	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
+	if hospquest is 13 and humanity of Player > 9:			[helped Dr Matt]
 		if HP of Doctor Mouse is 1:					[Dr Mouse not defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. Over the years, you do hear rumors of a bizarre mouse scientist working in distant countries, selling nanite-based technology and weapons to foreign governments or guerrilla factions of the infected.";
 		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
-	else if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
-		if bodyname of player is not "Wolverine Guard":
+	else if hospquest > 13 and humanity of Player > 9:	[helped Dr Mouse]
+		if bodyname of Player is not "Wolverine Guard":
 			if HP of Doctor Matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army. In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned. You discreetly ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them. After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed. He continues his research, selling his enhancements and customized strains to the highest bidder. Occasionally, he has a new one for you. It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab]. Susan continues to accompany him as an assistant and a lover for you[end if].";
 			else if HP of Doctor Matt is 102 or HP of Doctor Matt is 104:		[Dr Matt defeated]

@@ -27,7 +27,7 @@ when play begins:
 	add { "Demon Fox" } to infections of Vulpinelist;
 	add { "Demon Fox" } to infections of hellspawn;
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 to say DemonFoxDefeat:
 	if inasituation is true:
@@ -48,17 +48,18 @@ to say DemonFoxDesc:
 		say "     You shouldn't be able to encounter the demon fox out of a situation. If you are, please let @Dys know on the FS Discord.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 when play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Demon Fox";
+	now NewTypeInfection entry is false;
+	now Name entry is "Demon Fox";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 1; [non-unique enemy]
 	now attack entry is "[one of]The massive demonic vulpine leaps at you, sinking his talon-like claws into you![or]The demon head butts you roughly, knocking the air out of your lungs![or]The fox swipes at you, tearing through your flesh![or]The demon fox jumps at you, sinking his teeth into your form![at random]";
 	now defeated entry is "[DemonFoxVictory]";
@@ -85,15 +86,15 @@ when play begins:
 	now lev entry is 15;
 	now wdam entry is 60;
 	now area entry is "Nowhere";
-	now cocks entry is 1;
-	now cock length entry is 32;
-	now cock width entry is 24;
-	now breasts entry is 0;
-	now breast size entry is 0;
-	now male breast size entry is 0;
-	now cunts entry is 0;
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;
+	now Cock Length entry is 32;
+	now Ball Size entry is 5;
+	now Nipple Count entry is 0;
+	now Breast Size entry is 0;
+	now Male Breast Size entry is 0;
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 45;
 	now loot entry is "demon fox fur";
 	now lootchance entry is 50;
@@ -103,9 +104,110 @@ when play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Section 3 - Item
@@ -164,13 +266,13 @@ to say DemonFoxMenu:
 
 to say DemonFoxFirstEncounter:
 	say "     Out of nowhere, you're tackled to the ground! A large weight is pressing down upon your back and feel the hot breath of something along the back of your neck. Pinned as you are, you're unable to get a good look at your assailant, even as you feel sharp claws rip through your clothing, leaving you fully exposed to whatever it is that's attacking you. Suddenly, you feel a long, fluffy object wrapping around your midsection before it hoists you into the air, tossing you back onto the ground on your back. You're eyes widen and you let out a gasp as you see the huge demonic fox you read about earlier standing over you.";
-	say "     Before you get a chance to react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if player is submissive]are[else]should be[end if].'";
+	say "     Before you get a chance to react, the fox has you pinned once more, its massive forepaws pinning you to the ground as it snarls in your face. 'Seems like I've finally got something to play with,' he says, surprising you slightly. 'I'm going to enjoy [if Player is mpreg_ok]breeding[else]fucking[end if] you like the bitch you [if Player is submissive]are[else]should be[end if].'";
 	WaitLineBreak;
 	say "     Mustering your strength, you manage to throw the beast off of you, causing him to let out a surprised grunt. You quickly scramble to your feet and ready yourself for a fight. 'Oh, so you're a feisty one, eh?' he asks, licking his chops and narrowing his eyes at you. 'I like that...'";
 	now inasituation is true;
 	challenge "Demon Fox";
 	if fightoutcome >= 20 and fightoutcome <= 30: [lost or submitted]
-		if HP of player > 0: [submitted]
+		if HP of Player > 0: [submitted]
 			say "[DemonFoxFirstSubmit]";
 		else: [lost]
 			say "[DemonFoxFirstLoss]";
@@ -188,8 +290,8 @@ to say DemonFoxFirstLoss:
 	say "     You're not given any time prepare for what comes next. The demonic vulpine roughly shoves his length into your hole, stretching you painfully wide around the head alone. He doesn't stop there, however. Instead, he pushes even further into you. You feel your hole yawning open wider and wider as the first ridge of his cock slips into you. Soon enough, the next ridge is sliding in as well, then the next, and the next. You can feel his massive knot up against your hips, and you can see your stomach stretching out almost comically in the shape of his cock. Soon enough, he pulls back, each ridge leaving you with a wet squelch. Eventually, only the tip of his shaft remains inside you.";
 	WaitLineBreak;
 	say "     You're only given a moment of relief, however, before he begins pushing the massive tool back into you. He manages to push in to the knot a little more quickly this time, your passage slowly loosening enough to make it slightly less painful. Soon enough, the fox has built up a rhythm of thrusting in and out of you. His knot starts to bash against your entrance as he becomes increasingly determined to impale you with it, and the thing is wider than your hips! He lets out a grunt with each and every thrust, pushing harder and harder into you.";
-	if player is twistcapped:
-		say "     Somehow, you can feel the knot slip further and further in, your twisted body somehow able to accept the impossibly wide mass. Soon enough, the knot has passed its widest point, and the rest is pulled into you with a loud squelch. The demon on top of you lets out a loud howl of pleasure before his knot swells even wider, locking your already tied hole even more. [if player is male]Your own cock[smn] throb[smv] as you release your [cum load size of player] load onto the ground, the pressure on your prostate driving you over the edge. [end if]He leans down and bites into your shoulder roughly as he climaxes, rope after rope of molten cum rushes into you, quickly rounding you out. His orgasm doesn't seem like it's going to abate any time soon, however, as more and more cum spills into you. Looking down at your bloated belly, you swear you can see a faint glow through your skin, even! By the time his climax comes to an end, he lets go of your shoulder, a trickle of blood dripping from his maw before he harshly yanks his tool out of you, the knot popping out loudly.";
+	if Player is twistcapped:
+		say "     Somehow, you can feel the knot slip further and further in, your twisted body somehow able to accept the impossibly wide mass. Soon enough, the knot has passed its widest point, and the rest is pulled into you with a loud squelch. The demon on top of you lets out a loud howl of pleasure before his knot swells even wider, locking your already tied hole even more. [if Player is male]Your own cock[smn] throb[smv] as you release your [Cum Load Size of Player] load onto the ground, the pressure on your prostate driving you over the edge. [end if]He leans down and bites into your shoulder roughly as he climaxes, rope after rope of molten cum rushes into you, quickly rounding you out. His orgasm doesn't seem like it's going to abate any time soon, however, as more and more cum spills into you. Looking down at your bloated belly, you swear you can see a faint glow through your skin, even! By the time his climax comes to an end, he lets go of your shoulder, a trickle of blood dripping from his maw before he harshly yanks his tool out of you, the knot popping out loudly.";
 	else:
 		say "     Despite his best efforts, the knot is just too big to fit. This doesn't seem to bother the fox too much, however, as he simply thrusts against you once more before howling as he reaches his climax, rope after rope of molten, glowing cum spilling into your bowels. There's so much of the stuff that your belly starts to bulge from the sheer amount of fluid filling it. Eventually, the cum has nowhere left to go, managing to find its way out of your ass around his massive shaft. By the time his climax has ended, you're thoroughly drenched in fox cum, the hot ejaculate forming a pool around the two of you.";
 	say "[mimpregchance]";
@@ -207,11 +309,11 @@ to say DemonFoxFirstLoss:
 
 to say DemonFoxFirstSubmit:
 	setmonster "Demon Fox";
-	say "     You raise your hands in defeat, signaling to the fox that you want no trouble. He leers at you, baring his maw full of razor sharp teeth at you. 'I knew you'd submit to your new master...' he says before advancing on you. He pounces, pinning you under his massive weight once more, but this time he doesn't stop there. Before you know what's happening, he's forced his muzzle up against your mouth, his tapered tongue slipping in between your lips with ease. [if player is submissive]You can't help but let out a moan as his ridiculously long organ explores your mouth[else]You have to resist the urge to gag as his ridiculously long organ ravages your mouth[end if]. His tongue flicks around the inside of your mouth a few more times before he pulls back, a string of saliva connecting the two of you. 'See?' he pants. 'That wasn't so bad, now was it?'";
-	say "     You're not given a chance to reply as you feel that tongue moving across your neck and down your torso, leaving behind a trail of slick saliva. [if player is male]Eventually, it finds its way to your cock[smn] and balls, caressing them. [end if]You have to stifle a gasp as the slimy organ slips between your ass cheeks. He laps against your hole a few times, coating you in his saliva before he [if anallevel is 3]plunges his tongue inside you, slipping past your tight ring. He gives you a few licks there as well before he [end if]moves on. He raises his head to meet your gaze before he lets out a possessive growl.";
+	say "     You raise your hands in defeat, signaling to the fox that you want no trouble. He leers at you, baring his maw full of razor sharp teeth at you. 'I knew you'd submit to your new master...' he says before advancing on you. He pounces, pinning you under his massive weight once more, but this time he doesn't stop there. Before you know what's happening, he's forced his muzzle up against your mouth, his tapered tongue slipping in between your lips with ease. [if Player is submissive]You can't help but let out a moan as his ridiculously long organ explores your mouth[else]You have to resist the urge to gag as his ridiculously long organ ravages your mouth[end if]. His tongue flicks around the inside of your mouth a few more times before he pulls back, a string of saliva connecting the two of you. 'See?' he pants. 'That wasn't so bad, now was it?'";
+	say "     You're not given a chance to reply as you feel that tongue moving across your neck and down your torso, leaving behind a trail of slick saliva. [if Player is male]Eventually, it finds its way to your cock[smn] and balls, caressing them. [end if]You have to stifle a gasp as the slimy organ slips between your ass cheeks. He laps against your hole a few times, coating you in his saliva before he [if anallevel is 3]plunges his tongue inside you, slipping past your tight ring. He gives you a few licks there as well before he [end if]moves on. He raises his head to meet your gaze before he lets out a possessive growl.";
 	WaitLineBreak;
-	say "     'Get on all fours,' he commands. You hastily obey, presenting your hindquarters to him, and he rumbles in approval of what he sees. [if player is mpreg_ok]'I'm gonna enjoy putting my pups in you,'[else]'I'm gonna enjoy taking you,'[end if] he growls. You feel his weight upon you once more as he mounts you, lining his massive cock up with your hole before thrusting nearly all the way in with one harsh movement. You gasp in pain from the sudden intrusion, but that doesn't discourage him. He pulls out of you just as roughly as he entered, the ridges along the underside of his cock wracking you with both pain and pleasure. He thrust back in once more, this time with a little less resistance. This cycle keeps repeating, growing in speed until he's rutting against you, his massive knot slapping against your ring loudly.";
-	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if player is male]The pressure on your prostate is enough to set you off, spilling your load onto the ground beneath you. [end if]He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing its burning semen inside you, rope after rope of glowing cum erupting into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
+	say "     'Get on all fours,' he commands. You hastily obey, presenting your hindquarters to him, and he rumbles in approval of what he sees. [if Player is mpreg_ok]'I'm gonna enjoy putting my pups in you,'[else]'I'm gonna enjoy taking you,'[end if] he growls. You feel his weight upon you once more as he mounts you, lining his massive cock up with your hole before thrusting nearly all the way in with one harsh movement. You gasp in pain from the sudden intrusion, but that doesn't discourage him. He pulls out of you just as roughly as he entered, the ridges along the underside of his cock wracking you with both pain and pleasure. He thrust back in once more, this time with a little less resistance. This cycle keeps repeating, growing in speed until he's rutting against you, his massive knot slapping against your ring loudly.";
+	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if Player is male]The pressure on your prostate is enough to set you off, spilling your load onto the ground beneath you. [end if]He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing its burning semen inside you, rope after rope of glowing cum erupting into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
 	say "[mimpregchance]";
 	say "[mimpregchance]";
 	say "[mimpregchance]";
@@ -235,11 +337,11 @@ to say DemonFoxFirstVictory:
 	say "     [bold type]Well, considering the offer, what do you do?[roman type][line break]";
 	say "     [link]Let the fox mount you[as]y[end link] - (Y)[line break]";
 	say "     [link]Decline his offer[as]n[end link] - (N)[line break]";
-	if player consents:
+	if Player consents:
 		say "     You tell the fox that you'd like him to fuck you, and he seems to get an excited gleam in his vulpine eyes. 'Glad to hear it. I'll be gentle,' he purrs out, and you can't help but shudder in anticipation. 'Now why don't you get into position for me?' You quickly comply, presenting your ass to him, waggling it back and forth teasingly. He lets out a chuckle before he sniffs the air a few times. Pressing his snout into your crack, the fox gives a few sniffs there as well before his tapered tongue darts out of his mouth, giving you a few licks. 'You mortals have always tasted good...'";
 		WaitLineBreak;
 		say "     You can't help but whine in disappointment as his muzzle departs from your rear. That disappointment only lasts for a moment, however, as you soon feel him wrapping his forepaws around your was, mounting you. He gives you a few gentle prods with his massive cock before he pushes his head into you slowly. You can't help but let out a moan as he gently pushes more of his shaft into you, until his first ridge begins to push in. 'This might hurt a bit,' he warns you as he pushes a little harder. The ridge eventually manages to go in, albeit with a little bit of pain. Soon enough the next ridge is pressing into you. That one goes in a little easier than the first. The next two are even easier than the previous. With his knot resting against your entrance, the fox grunts before pulling back out. Each ridge leaves you with a soft squelch.";
-		say "     Now that only his tip remains inside you, he pushes back in. This thrust goes by faster, your hole getting used to his size. Pretty soon, he's built up a decent rhythm, and you can't help but push your own body back, meeting his thrusts. 'I'm going to speed up now,' he warns you. His next thrust is much more aggressive and primal, his knot bashing against your entrance. Your own thrust grow in fervor, determined to get the demon's massive knot in you. With each thrust, more and more of the knot slips inside you, until it finally passes its widest point and your own body pulls it in the rest of the way. His knot firmly buried inside you, it swells to its full size, ensuring the two of you won't be moving anytime soon. He lets out a howl of pleasure as his cock throbs and erupts inside you, rope after rope of molten, glowing cum spilling into you. [if player is male]You own orgasm follows shortly after, your cock[smn] shooting your [cum load size of player] load onto the ground below you. [end if]More and more of his molten seed fills you, and your belly swells with its weight. By the time his orgasm abates and his knot has shrunken down, your belly is rather swollen and decently rounded out from the load. 'That was fun, kit,' he pants in your ear. 'I think you'd enjoy being my pet, if you liked that...'";
+		say "     Now that only his tip remains inside you, he pushes back in. This thrust goes by faster, your hole getting used to his size. Pretty soon, he's built up a decent rhythm, and you can't help but push your own body back, meeting his thrusts. 'I'm going to speed up now,' he warns you. His next thrust is much more aggressive and primal, his knot bashing against your entrance. Your own thrust grow in fervor, determined to get the demon's massive knot in you. With each thrust, more and more of the knot slips inside you, until it finally passes its widest point and your own body pulls it in the rest of the way. His knot firmly buried inside you, it swells to its full size, ensuring the two of you won't be moving anytime soon. He lets out a howl of pleasure as his cock throbs and erupts inside you, rope after rope of molten, glowing cum spilling into you. [if Player is male]You own orgasm follows shortly after, your cock[smn] shooting your [Cum Load Size of Player] load onto the ground below you. [end if]More and more of his molten seed fills you, and your belly swells with its weight. By the time his orgasm abates and his knot has shrunken down, your belly is rather swollen and decently rounded out from the load. 'That was fun, kit,' he pants in your ear. 'I think you'd enjoy being my pet, if you liked that...'";
 		say "[mimpregchance]";
 		say "[mimpregchance]";
 		WaitLineBreak;
@@ -251,7 +353,7 @@ to say DemonFoxFirstVictory:
 	WaitLineBreak;
 
 to say DemonFoxFirstRead:
-	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possessive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact. [if player is puremale]Interestingly[else]Thankfully[end if], it only seem to be attracted to [italic type]males[roman type].";
+	say "     Looking over the page about the fox, you manage to learn a few things. The demon fox is apparently able to change its size to whatever it desires. In addition, its cum is said to glow a bright orange, almost like lava. The fox is also supposedly very possessive and domineering, desiring to have others submitting to it. Anyone who has encountered the beast has reaffirmed that fact. [if Player is puremale]Interestingly[else]Thankfully[end if], it only seem to be attracted to [italic type]males[roman type].";
 	now DemonFoxRead is true;
 	now TomeInteractions is 2;
 	now TomeEventPending is true;

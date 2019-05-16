@@ -37,8 +37,9 @@ tsw_relationship is a number that varies.	[The standing of the shark warrior tow
 
 to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
 	Setmonster "Tiger Shark";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect "Tiger Shark";
 	now non-infectious entry is true;
 
@@ -59,18 +60,18 @@ Instead of resolving Shark Warrior:
 	project the Figure of TSW_icon;
 	say "     You can briefly spot an ochre humanoid on the creature's belly, wrestling with the angry monster. After a while of staring at the spot where both of them submerged into the water, a tiger shark surfaces. His naked body is pretty built and shows some scars along his hide, proof of his constant strife in this world. He's also adorned with a couple of trinkets; a selection of teeth, presumably some of the dragons['] he beat, are braided together into a ligature around his neck, and there's also a rope tied around his hips. The rope is equipped with a couple of small bags and has a bit of kelp hanging from it. He turns towards you in the banks, appraising the witness of his battle.";
 	WaitLineBreak;
-	if (bodyname of player is "Feral Sea Dragon" and player is pure) or (bodyname of player is "Feral Sea Dragoness" and player is pure):	[Check if the player is a pure feral sea dragon/ess]
+	if (bodyname of Player is "Feral Sea Dragon" and player is pure) or (bodyname of Player is "Feral Sea Dragoness" and player is pure):	[Check if the player is a pure feral sea dragon/ess]
 		say "     The shark stands on the shore for a bit, judging your form. 'Well, look at that. You dragons don't seem to understand your place in this world. It's in the sea, with me!' With that, the scarred one starts running towards you.";
 		now ts_warrior is true;
 		challenge "Tiger Shark"; [Fight the Tiger Shark variant]
 		if tsw_victory is true:
 			LineBreak;
 			say "     You are interrupted in your afterglow, the tiger shark ";
-			if (tail of player is not "") or (tail of player is not " "):
+			if (tail of Player is not "") or (tail of Player is not " "):
 				say "dragging you by your tail";
 			else:
 				say "dragging you by your legs";
-			say " towards the sea. 'Go back your place, dragon! If you behave well, we can play around some more there,' the warrior says. The shark doesn't even give you a second glance as he spots the same feral sea dragon from before, moving towards another spot on the beach. He dives head first into the water, trying to make his way quickly. When he is somewhat far from shore, you walk back in a not so conspicuous manner[if player is submissive], although your submissive nature can't help but hope that he catches you again soon[end if].";
+			say " towards the sea. 'Go back your place, dragon! If you behave well, we can play around some more there,' the warrior says. The shark doesn't even give you a second glance as he spots the same feral sea dragon from before, moving towards another spot on the beach. He dives head first into the water, trying to make his way quickly. When he is somewhat far from shore, you walk back in a not so conspicuous manner[if Player is submissive], although your submissive nature can't help but hope that he catches you again soon[end if].";
 		else:
 			LineBreak;
 			say "     The warrior slowly gets up again. 'You win for now, dragon. But I promise you, I'll get back at you for this!' With that, he dives back into the sea.";
@@ -78,10 +79,10 @@ Instead of resolving Shark Warrior:
 		say "     He starts flexing his upper body, grinning all the while at you with his menacing teeth. He certainly takes his sweet time making sure you gaze upon his arms and pectorals, giving you a good idea of how a dragon might struggle against him. The shark struts towards you confidently, his clawed feet sinking slightly into the sand with each step. His slickened body glistens in the [if daytimer is day]sunlight[else]moonlight[end if], accentuating his sharp and bulging muscles. A pleasantly deep voice greets you, 'You seem like a swell guy. Keeping the area safe is a thankless job, as most of the others are more concerned with getting their rocks off. How about you show me some appreciation for my hard work? You can also consider it a reward in itself to get your hands on me!'";
 		say "     [bold type]Do you want to reward the shark warrior?[roman type][line break]";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			say "     The fish-guy lets out a vocal 'Yes!' before he practically jumps atop you, pressing his hard body against yours. His skin gets your clothes wet, making them stick a bit to his body, but you can also feel his hard pecs and abs through the fabric. His elongated muzzle finds your own, tilting to adjust for its altered shape as he catches your mouth in a lustful kiss. Surprisingly enough, his teeth aren't as prominent as you expected, and you even end up seeking them out with your tongue to convince yourself that they are truly there. All the while, the eager fish-man begins to peel off your clothes, tugging off each layer with increasing impatience as you kiss. 'Alright, pal. How about we skip to the good stuff? I've got some nice cocks that need some attention, too.' You sneak a peek towards his uncovered groin. He's sporting two pointed, glistening erections, each throbbing hard against your thighs.";
 			[say "     How would you like to pleasure the big guy?";]
-			if player is male:
+			if Player is male:
 				say "     Do you want to [link]suck him off (0)[as]0[end link], [link]fuck him (1)[as]1[end link] or [link]ride him (2)[as]2[end link]?";
 				now calcnumber is -1;
 				while calcnumber < 0 or calcnumber > 2:
@@ -109,13 +110,13 @@ Instead of resolving Shark Warrior:
 			say "     The shark warrior lets out a shocked gasp, his shoulders slumping a bit as his mouth hangs wide open. His bestial face makes it a bit hard to read his expression, resembling that of a shark, moments before they devour something, although you're pretty sure that he's just feeling rejected instead. Regaining his composure, he grins again and he tells you, 'Alright, bud. That means that I have to work harder to impress the likes of you!' With that, the shark runs back towards the open ocean and dives right in. You should get going, as you're probably not going to get another moment of peace with this guy around.";
 		now tsw_relationship is 1;
 
-Section 2 - Monster Responses
+Section 2 - Creature Responses
 
 to say TigerSharkDesc:
 	setmongender 3; [male]
-	choose row monster in Table of Random Critters;
+	choose row MonsterID in Table of Random Critters;
 	if ts_warrior is true:
-		if bodyname of player is "Feral Sea Dragon":	[Check body of player]
+		if bodyname of Player is "Feral Sea Dragon":	[Check body of Player]
 			now tsw_fsd is 1;
 		else:
 			now tsw_fsd is 2;
@@ -135,13 +136,13 @@ to say TigerSharkDesc:
 to say Tiger Shark wins:
 	if ts_warrior is true:
 		now tsw_victory is true;
-		if hp of player > 0:
+		if hp of Player > 0:
 			now tsw_relationship is 51;
 			say "     You cower and sink your head submissively to the sand. The shark seems stumped, as he just stares at you quizzingly. Wanting to give him the right idea, you even turn around to show him your backside. 'That is unusual. But okay. Fine by me!' The dragon-wrestler gets back to his old self in a heartbeat, showing you his toothy grin again. 'Don't worry, I'll still take good care of you!'";
 		else:
 			now tsw_relationship is 50;
-			say "     You are knocked to your back[if scalevalue of player > 3] despite your considerable size[end if]. 'Hah!' the victor exclaims, ";
-			if tsw_fsd is 1:	[if player is FSD]
+			say "     You are knocked to your back[if scalevalue of Player > 3] despite your considerable size[end if]. 'Hah!' the victor exclaims, ";
+			if tsw_fsd is 1:	[if Player is FSD]
 				say "'You dragons walk around here and think you can conquer everyone";
 			else:	[Player is FSDess]
 				say "'You are pathetic! You walk around the beach and probably hope to find another one of these dragons, hunting for prey";
@@ -154,31 +155,31 @@ to say Tiger Shark wins:
 			else:
 				say "Raising your head you see ";
 			say "that he sports two erections that poke out of his genital slit. The muscular fish jerks one of his girthy cocks, making you gulp, all the while his other hand is kept on your anus. When the tiger shark feels satisfied with the preparations, he aligns his twin dicks and ";
-			if player is female: [female and herm]
+			if Player is female: [female and herm]
 				say "pushes them into your pussy and asshole at the same time.";
-				say "     The sensation of both of your openings being distended by these thick cocks causes you to claw at the sand. Your invaded holes clench down on his cocks, your inner walls trying to embrace and explore them. These sensations within make you content to just lie there with these twin dicks resting inside you; their pulsing making you practically feel his heartbeat inside you. In your idle state you take note that the shark sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly grazes your scales when he shifts around. Thankfully, he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else]chest[end if]. Convinced that you are ready, the tiger shark moves his hands to your hips and withdraws, making his cocks retreat from your cunt and asshole. Before you could beg him not to stop, he lunges at your holes with his cocks again, his intention clear; he wants to hump you in earnest.";
+				say "     The sensation of both of your openings being distended by these thick cocks causes you to claw at the sand. Your invaded holes clench down on his cocks, your inner walls trying to embrace and explore them. These sensations within make you content to just lie there with these twin dicks resting inside you; their pulsing making you practically feel his heartbeat inside you. In your idle state you take note that the shark sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly grazes your scales when he shifts around. Thankfully, he mostly stays in place, supporting himself with his hands on your [if scalevalue of Player > 3]midriff[else]chest[end if]. Convinced that you are ready, the tiger shark moves his hands to your hips and withdraws, making his cocks retreat from your cunt and asshole. Before you could beg him not to stop, he lunges at your holes with his cocks again, his intention clear; he wants to hump you in earnest.";
 				say "     Looking over your belly, you take a look at your conqueror who's focused on fucking you. The victor's chest heaves from arousal and previous exertion; making you feel a tinge of pride that you have been deemed worthy enough to be under this mountain of a man. With several grunts, the shark starts a routine of pistoning his twin shafts in and out of you, making you loll out your tongue. Basking in the [if daytimer is day]warm sun rays[else]cool night air[end if], you enjoy all of your insides being rubbed by the warm and slimy cocks. With every shove of his twin dicks, you sink a bit further into the [if daytimer is day]dry[else]wet[end if] sand. It doesn't take long for you to reach your climax, roaring and bucking your hips. Satisfied with driving his partner towards a climax, the tiger shark picks up his pace. You gasp when you feel his dicks twitching inside you, delivering throb after heavy throb of fertile seed to fill both your anus and your pussy.";
 				impregchance;
-			else if player is male: [male]
-				say "pushes one of them into your asshole. The tiger shark waits a moment for you to adjust. Your tailhole feels stuffed with his thick length pulsing inside you. Not sure whether it's voluntary or not, you find yourself clenching down on that cock, your walls eager to get to know the intruder. In your idle state, you take note that the fish-man sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly graze your scales when he shifts around. Thankfully he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else]chest[end if]. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk.";
-				say "     The fish-man has your legs locked around his shoulders, your toes curling up in your pleasured state. Your unattended cock bobs up and down as the warrior is driving his shaft in and out of you. Precum keeps drooling out of your cock liberally, getting fucked out of your prostate. The continuous prodding inside eventually sends you over the edge, making your [cockname of player in lower case] cock shoot your load at your chest and face. Satisfied with driving his partner towards a climax, the shark picks up his pace. You gasp when you feel his dick twitching inside you, delivering throb after heavy throb of fertile seed to fill your ass, at the same time as creaming your body from the outside with his other cock.";
+			else if Player is male: [male]
+				say "pushes one of them into your asshole. The tiger shark waits a moment for you to adjust. Your tailhole feels stuffed with his thick length pulsing inside you. Not sure whether it's voluntary or not, you find yourself clenching down on that cock, your walls eager to get to know the intruder. In your idle state, you take note that the fish-man sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly graze your scales when he shifts around. Thankfully he mostly stays in place, supporting himself with his hands on your [if scalevalue of Player > 3]midriff[else]chest[end if]. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk.";
+				say "     The fish-man has your legs locked around his shoulders, your toes curling up in your pleasured state. Your unattended cock bobs up and down as the warrior is driving his shaft in and out of you. Precum keeps drooling out of your cock liberally, getting fucked out of your prostate. The continuous prodding inside eventually sends you over the edge, making your [cockname of Player in lower case] cock shoot your load at your chest and face. Satisfied with driving his partner towards a climax, the shark picks up his pace. You gasp when you feel his dick twitching inside you, delivering throb after heavy throb of fertile seed to fill your ass, at the same time as creaming your body from the outside with his other cock.";
 			else: [neuter]
 				say "pushes one of them into your asshole.";
 				say "     Your tailhole feels stuffed with his thick length pulsing inside you. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk. The aquatic warrior has your legs locked around his shoulders, your toes curling up in your pleasured state. His length continuously prodding your anal walls eventually does send you over the edge, making you claw at the sand. Satisfied with driving his partner towards a climax, the shark picks up his pace. You gasp when you feel his dick twitching inside you, delivering throb after heavy throb of fertile seed to fill your ass, at the same time as also creaming your body from the outside with his other cock.";
 			mimpregchance;
 		else: ["less anal" players]
 			say "You meekly let out a protesting squeal as he pushes your legs apart. When he probes your asshole, you growl angrily at the shark, not wanting him to touch you there. With a little shrug of his muscular shoulders, your victor moves on to knead your inner thighs in response, a little further away from where you didn't want him to go. 'Don't worry, I won't hurt you. I think you'll enjoy this.'";
-			if player is male:
-				say "     The shark moves on to grab your [cockname of player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip. ";
-				if cockname of player is "Feral Sea Dragon" or cockname of player is "Feral Sea Dragoness":
+			if Player is male:
+				say "     The shark moves on to grab your [cockname of Player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip. ";
+				if cockname of Player is "Feral Sea Dragon" or cockname of Player is "Feral Sea Dragoness":
 					say "Your captor almost seems obsessed with your length, as he keeps worshipping it. He then encases your spade-like tip within his maw, ";
 				else:
 					say "He then encases your tip within his maw, ";
 				say "licking your erection some more. The brawler drives the tip of his tongue into your urethra, wanting to get more of your precum. You claw at the sand at this intrusion. While it doesn't feel entirely unpleasant, the stretching sensation makes you a bit strained. Thankfully, the shark slips the agile organ from your insides soon after, moving on to engulf your entire cock within his maw. His tongue now rests on the underside of your dick, as he drives his head back and forth, fucking his own mouth on your cock. You shift, and move your hands to hold his head. He doesn't seem to like that, ever so slightly nipping your cock. This warning is enough to make you take your hands away and instead you just use them to keep yourself upright.";
-				say "     You hear the beat of the waves on the shore, almost drowning out the slurps of your aquatic partner as he sucks you off, and a small gust of wind carries the smell of the sea to your nose. What a place to be sucked off by a man-like shark! Not being able to hold back much longer, you groan out to signal that you are getting really close. Your captor just continues to suck, hard and fast - but as you buck your hips forward and cry out in your imminent orgasm, the muscular brawler pulls your cock out of his large mouth and directs the twitching length up, aiming right for your face. Gasping out loud at the first heavy throb of cum being sent flying, you actually hit yourself in the open mouth thanks to his intervention, followed by further splashes of cum over your chin, neck and chest. Soon you are dripping with creamy cum, a shameful display of being covered in your [cum load size of player] load.";
+				say "     You hear the beat of the waves on the shore, almost drowning out the slurps of your aquatic partner as he sucks you off, and a small gust of wind carries the smell of the sea to your nose. What a place to be sucked off by a man-like shark! Not being able to hold back much longer, you groan out to signal that you are getting really close. Your captor just continues to suck, hard and fast - but as you buck your hips forward and cry out in your imminent orgasm, the muscular brawler pulls your cock out of his large mouth and directs the twitching length up, aiming right for your face. Gasping out loud at the first heavy throb of cum being sent flying, you actually hit yourself in the open mouth thanks to his intervention, followed by further splashes of cum over your chin, neck and chest. Soon you are dripping with creamy cum, a shameful display of being covered in your [Cum Load Size of Player] load.";
 				WaitLineBreak;
 				say "     The brawler gets back up and takes in the aftermath. You are a panting mess with cum slowly dripping from your snout, joining the rest of it on your upper body. 'Now, that's a good look for you.' His humiliating words don't seem to bother you much, as you just lie there, content with having been used like this.";
-			else if player is female:
+			else if Player is female:
 				say "     The tiger shark moves down on you. Suddenly you feel a wet sensation against your nether lips. Glancing up at you, the scaly hunk grins broadly, then starts to eat out you out. His pointed tongue is driven into your depths, tasting your insides. Your vaginal walls quiver at this attention, making you groan in pleasure. His tongue retreats, but before you can protest, he traces it along your labia seeking your clitoris. Alternating between having your insides licked and him tongue-fucking your pussy, you can't help but pant in helpless arousal. When you are getting close, the warrior keeps tongue-fucking your pussy until you fill his mouth with your juices.";
 			else:
 				say "     The tiger shark keeps feeling around your groin and eventually stops to take a closer look. When he realizes that your crotch is indeed featureless, he goes back to massaging your thighs. He touches you in many spots, trying to relieve you of your stress. After a drawn-out massage, the shark seems satisfied enough with your relaxation and lets go of you.";
@@ -206,7 +207,7 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 	now sortorder entry is 1;
 	now description entry is "Go down on the brawler's twin dicks";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Bend him over";
 		now sortorder entry is 2;
@@ -229,7 +230,7 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck on his cocks"):
@@ -268,58 +269,59 @@ To say tsw_oral:
 To say tsw_fuck:
 	if tsw_fsd is 0:
 		say "     Making out with this beach stud turns you on, making you claw at his ass. You break the kiss to whisper into one of his ear holes that you'd like to fuck him. 'Alright, but you'd better be good at it.' He gets down on all fours and presents his toned butt in all its glory to you. Kneeling, you grab his tail and move it over your shoulder, to gain easier access to his ass. As you spread his cheeks apart, you realize that he is leaking some cum from an earlier encounter. Kinky, so this guy hunts dragons to take them for a ride. He turns around and gives you an anticipating look, ready to be railed by you. But you want to enjoy this moment for a bit longer, aligning your length and only prodding lightly at his pucker with your cockhead. 'Come on, just push in already, or do you want me to do the work?' Obliging, you push in, your dick disappearing within his anal ring. Surprisingly your cock meets little resistance as you almost hilt with the first push.";
-		say "     The dragon cum lubricating your dick definitely helps. Despite that, he still feels tight enough on your cock. Seeing that he seems to be quite experienced with taking it from behind, you start humping in earnest straight away. Your partner sneaks one of his arm down to stimulate his twin shafts. You're sinking a bit into the sand together with the promiscuous dragon-hunter, as he isn't able to keep himself up in his lust-addled form. Suddenly, you cry out and hilt one last time within the brawler, unloading your [cum load size of player] load inside him. This is enough to also set the shark off, whose shafts unload into the sand. You feel that it's a shame that this virile load just goes to waste. As you push out, a bit of your added load flows out of his tailhole, mixed with the dragon cum. The fluids seemed to seep into your dick's skin quickly, trying to work its way into your system.";
+		say "     The dragon cum lubricating your dick definitely helps. Despite that, he still feels tight enough on your cock. Seeing that he seems to be quite experienced with taking it from behind, you start humping in earnest straight away. Your partner sneaks one of his arm down to stimulate his twin shafts. You're sinking a bit into the sand together with the promiscuous dragon-hunter, as he isn't able to keep himself up in his lust-addled form. Suddenly, you cry out and hilt one last time within the brawler, unloading your [Cum Load Size of Player] load inside him. This is enough to also set the shark off, whose shafts unload into the sand. You feel that it's a shame that this virile load just goes to waste. As you push out, a bit of your added load flows out of his tailhole, mixed with the dragon cum. The fluids seemed to seep into your dick's skin quickly, trying to work its way into your system.";
 		infect "Feral Sea Dragon";
 		LineBreak;
 	else:
-		say "     You reach down with your long neck and give his tailhole experimental lick. To your surprise, a bit of cum seeps out of his pucker. The taste permeates your taste buds, but remind you of those wonderful sea dragons. The strong taste driving you almost mad, compels you to push your tongue into him, lapping up the cum of your predecessors. This brawler is just a slut after all, hungry for dragon cock. This thought seems to drive a bit of your feral side out of you, as you pull your mouth away and roughly prod your [Cock Size Desc of player] cock against his opening. The warrior groans in discomfort, while you try to force your shaft into him. Eventually your shaft slips into the sharks anus, and you keep pressing forward. Finally your hips meet his and you rest on him for a brief period. Then you pick up your pace and fuck him roughly.";
-		say "     The shark keeps panting, trying to adjust to your pace. As you're humping him, you take note that the once confident and cocky shark is now grabbing onto you, even begging you to fuck him harder. Seeing the shark to be reduced to a common whore, along with your rough fucking, eventually sets you off. Hilting inside him one last time, you unload your [cum load size of player] load into him, adding your cum to the deposits of the other dragons. You pull out of him and glance over the aftermath. The shark doesn't seem to have reached his climax yet, which leaves him begging you on his knees for more. You just push him back, content in having used him solely for your need. Another part of you is worried that this shark was somehow able to bring the worst out of you.";
+		say "     You reach down with your long neck and give his tailhole experimental lick. To your surprise, a bit of cum seeps out of his pucker. The taste permeates your taste buds, but remind you of those wonderful sea dragons. The strong taste driving you almost mad, compels you to push your tongue into him, lapping up the cum of your predecessors. This brawler is just a slut after all, hungry for dragon cock. This thought seems to drive a bit of your feral side out of you, as you pull your mouth away and roughly prod your [Cock Size Desc of Player] cock against his opening. The warrior groans in discomfort, while you try to force your shaft into him. Eventually your shaft slips into the sharks anus, and you keep pressing forward. Finally your hips meet his and you rest on him for a brief period. Then you pick up your pace and fuck him roughly.";
+		say "     The shark keeps panting, trying to adjust to your pace. As you're humping him, you take note that the once confident and cocky shark is now grabbing onto you, even begging you to fuck him harder. Seeing the shark to be reduced to a common whore, along with your rough fucking, eventually sets you off. Hilting inside him one last time, you unload your [Cum Load Size of Player] load into him, adding your cum to the deposits of the other dragons. You pull out of him and glance over the aftermath. The shark doesn't seem to have reached his climax yet, which leaves him begging you on his knees for more. You just push him back, content in having used him solely for your need. Another part of you is worried that this shark was somehow able to bring the worst out of you.";
 		infect "Feral Sea Dragon";
 
 To say tsw_ride:
 	if tsw_fsd is 0:
-		say "     Biting your lower lip, you look at these wonderful cocks. You need them inside you. 'Sure dude,' the scaly hunk chimes, laying down on the sand. Not bothering with much more foreplay, you take a seat on his lap, feeling the skin slightly graze your behind. Convinced that his slippery dicks are lubricated enough, you rise and slowly grab one of his dicks and align your [if player is female]cunt[else]own pucker[end if] slowly sitting down on it. You gasp as the tip of his length slowly enters you. Taking your time to get used to his girth, you let gravity do its work and keep sinking down on his tapering cock. The cock really is slippery, maybe he had fucked somebody else just before he engaged you. As you hilt on the shark's dick, you slowly rise again, dictating the pace of the ride. The muscular fish puts his hands on your hips, his claws teasing the skin on your ass. The aquatic warrior helps you rise and sink on his cock, but over time he's getting carried away and ends up bucking his hips and holding you in place instead. Too lost in pleasure, you don't stop him and instead take the firm fucking.";
+		say "     Biting your lower lip, you look at these wonderful cocks. You need them inside you. 'Sure dude,' the scaly hunk chimes, laying down on the sand. Not bothering with much more foreplay, you take a seat on his lap, feeling the skin slightly graze your behind. Convinced that his slippery dicks are lubricated enough, you rise and slowly grab one of his dicks and align your [if Player is female]cunt[else]own pucker[end if] slowly sitting down on it. You gasp as the tip of his length slowly enters you. Taking your time to get used to his girth, you let gravity do its work and keep sinking down on his tapering cock. The cock really is slippery, maybe he had fucked somebody else just before he engaged you. As you hilt on the shark's dick, you slowly rise again, dictating the pace of the ride. The muscular fish puts his hands on your hips, his claws teasing the skin on your ass. The aquatic warrior helps you rise and sink on his cock, but over time he's getting carried away and ends up bucking his hips and holding you in place instead. Too lost in pleasure, you don't stop him and instead take the firm fucking.";
 		say "     You gasp and moan as ";
-		if player is female:
+		if Player is female:
 			say "your pussy gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your cunt being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your vaginal walls contracting on your partner's cock. ";
-		else if player is male:
+		else if Player is male:
 			say "your prostate gets battered by the shark-like dick. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you cry out in pleasure as your cock pushes string after string of cum onto the shark, tainting his chest and also face. He doesn't seem too bothered by that, more keen on finishing himself. ";
 		else:
 			say "your anal walls get pounded on. This heavenly fuck goes on long enough that you lose track of time, your world being reduced to your anus being distended over and over again by the slimy manhood. Eventually you hit the point of no return, making you quiver and grab onto him in your orgasm; your anal walls contracting on your partner's cock. ";
-		say "The tiger shark is determined, driving his length into you in earnest with his other dick reaching up to your groin. You grab his second leaking dick and stroke along it, feeling the blood pumping through its veins. With your added help, he cries out in climax, driving his claws into your ass. His dicks squirt their voluminous load into you[if player is female]; squirt after squirt was slowly forced into your womb, flooding it[else], filling your anal cavity to the brim, making you feel stuffed[end if]. Meanwhile, the other cock is unloading onto you, painting your chest and belly with its fertile batter.";
-		if player is female:
+		say "The tiger shark is determined, driving his length into you in earnest with his other dick reaching up to your groin. You grab his second leaking dick and stroke along it, feeling the blood pumping through its veins. With your added help, he cries out in climax, driving his claws into your ass. His dicks squirt their voluminous load into you[if Player is female]; squirt after squirt was slowly forced into your womb, flooding it[else], filling your anal cavity to the brim, making you feel stuffed[end if]. Meanwhile, the other cock is unloading onto you, painting your chest and belly with its fertile batter.";
+		if Player is female:
 			impregchance;
 		else:
 			mimpregchance;
 	else:
-		say "     Reaching down with your long neck, you give the lengths poking out of his slit an experimental lick. The tips are slimy and leak precum already. His smell permeates your taste buds, but reminds you of those wonderful sea dragons. Driving you almost mad, you keep licking and sucking on his slit, coaxing out his hidden dicks. You need them inside you. Darting forward, you don't want to waste more time and align your behind with his crotch. Letting out a frustrated growl, you crouch down, trying to get his cock into your [if player is female]pussy[else]tailhole[end if]. Lost in your instincts, you keep squatting down several times, trying to drive one of his erection into you. Unfortunately all that ends up happening is his lengths slapping against your butt, dampening it with its sticky gunk. Realizing that dry humping him with your ass won't do anything, you do overcome yourself to muster up some patience. Swiftly you grab one of his dicks and push their tip into your [if player is female]lips[else]pucker[end if].";
+		say "     Reaching down with your long neck, you give the lengths poking out of his slit an experimental lick. The tips are slimy and leak precum already. His smell permeates your taste buds, but reminds you of those wonderful sea dragons. Driving you almost mad, you keep licking and sucking on his slit, coaxing out his hidden dicks. You need them inside you. Darting forward, you don't want to waste more time and align your behind with his crotch. Letting out a frustrated growl, you crouch down, trying to get his cock into your [if Player is female]pussy[else]tailhole[end if]. Lost in your instincts, you keep squatting down several times, trying to drive one of his erection into you. Unfortunately all that ends up happening is his lengths slapping against your butt, dampening it with its sticky gunk. Realizing that dry humping him with your ass won't do anything, you do overcome yourself to muster up some patience. Swiftly you grab one of his dicks and push their tip into your [if Player is female]lips[else]pucker[end if].";
 		say "     While his cocks are lubricated, you still need some time to push the length into you the first time. Gritting your teeth, you keep pushing downwards, groaning at the swift intrusion. Forcing your tight hole on his girthy dick also seems to cause some discomfort to your shark-toy. At some point your legs give and you end up dropping, causing both of you yell out in pleasure. You pick yourself up, causing the shark to exhale. Again you dropped your hips, impaling yourself on his dick. With a rough pace, you keep fucking yourself on this marvelous rod, poking you in all the right spots. At some point, the shark tries to grab your hips but you react in time, pinning his arms to his sides. This is your moment and you want him to know that he isn't in control, affirming your position with an angry growl. You keep fucking him for quite some time, causing him to climax several times but you don't care, you are doing this for your own pleasure.";
 		WaitLineBreak;
-		say "     Thankfully his refractory period seems to be short enough that his dick doesn't go entirely limp. Using that to your advantage, you just keep fucking him after each climax. The aquatic hunk still writhes in painful pleasure from all of this overstimulation. His torture ends as with quivering legs you drop one final time, roaring out in your own orgasm. Your [if player is female]cunt squeezes him tightly, soaking his groin with your juices[else if player is male]anal walls squeeze his dick tightly as you shoot your load and aim for his face[else]anal walls squeeze his dick tightly while you drive your claws into the shark[end if]. Being finished, you pull yourself off him and glance over the aftermath. The former cocky warrior is now just a mess, overwhelmed by all the orgasms he's had.";
+		say "     Thankfully his refractory period seems to be short enough that his dick doesn't go entirely limp. Using that to your advantage, you just keep fucking him after each climax. The aquatic hunk still writhes in painful pleasure from all of this overstimulation. His torture ends as with quivering legs you drop one final time, roaring out in your own orgasm. Your [if Player is female]cunt squeezes him tightly, soaking his groin with your juices[else if Player is male]anal walls squeeze his dick tightly as you shoot your load and aim for his face[else]anal walls squeeze his dick tightly while you drive your claws into the shark[end if]. Being finished, you pull yourself off him and glance over the aftermath. The former cocky warrior is now just a mess, overwhelmed by all the orgasms he's had.";
 		say "     Licking your lips at the smell of sex, you reach down with your long neck again to lap at his dicks, wanting more of his salty, sticky cum. The aquatic hunk, feeling sensitive because of your abundant attention, can only whimper in response. Knowing that you can't go on forever, you overcome yourself again to let go. Despite how you treated him before, you wait until the brawler recovers. As you are watching over the tiger shark you are concerned about how he was able to bring the worst out of you.";
-		if player is female:
+		if Player is female:
 			impregchance;
 		else:
 			mimpregchance;
 
-Section 4 - Monster Insertion
+Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Tiger Shark";
+	now NewTypeInfection entry is false;
+	now Name entry is "Tiger Shark";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]He drives his elbow forcefully into your chest.[or]You are hit by the tiger shark spinning around, smacking you with his heavy tail.[or]You don't react quickly enough and see an ochre fist punching you across the face.[or]The tiger shark grapples you from behind and sends you face forward into the sand.[or]The fish-man catches you and bites down on your shoulder. While his teeth don't penetrate your skin it is enough to make you groan in pain.[at random]";
 	now defeated entry is "[Tiger Shark loses]";
 	now victory entry is "[Tiger Shark wins]";
 	now desc entry is "[TigerSharkDesc]";
 	now face entry is "triangular, streamlined face. You still breathe normally in and out of your nostrils that happen to be at the end of your snout. When you open your mouth you show several rows of razor sharp teeth, fit to bite off anything"; [ Face description, format as "You have a (your text) face."]
-	now body entry is "bulky, but still flexible enough to maneuver well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if breast size of player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
+	now body entry is "bulky, but still flexible enough to maneuver well in the water. Your form is a sight to behold with its chiseled and well-toned form, adorned with a large fin on your back and anal fins on your crotch. Like everything else your arms are bulging with muscles and they end in clawed hands. [if Breast Size of Player > 0]Your femininity is still accentuated with your hourglass-shape and your breasts. [end if]All is held up by two equally strong legs in a digitigrade stance. Your legs ends in elongated feet that are equipped with three clawed toes";
 	now skin entry is "[one of]striped[or]ochre[or]smooth[or]tough[or]slippery[at random]"; [ format as "You have (your text) skin"]
 	now tail entry is "From behind a large and finned tail is dragging along. It feels a little unnatural to not be using the tail to maneuver around."; [ write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]tapering[or]slick[or]pointed[or]shark[at random]"; [ format as "You have a 'size' (your text) cock ]
@@ -339,17 +341,17 @@ When Play begins:
 	now lev entry is 15;                   [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 27;                  [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";          [ Case sensitive]
-	now cocks entry is 2;                 [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 14;
-	now cock width entry is 6;            [ Size of balls ]
-	now breasts entry is 2;               [ Number of nipples. ]
-	now breast size entry is 0;           [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;                 [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 10;
-	now cunt width entry is 7;
+	now Cock Count entry is 2;                 [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 14;
+	now Ball Size entry is 3;            [ Size of balls ]
+	now Nipple Count entry is 2;               [ Number of nipples. ]
+	now Breast Size entry is 0;           [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;                 [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 10;
+	now Cunt Tightness entry is 7;
 	now libido entry is 30;               [ Amount player Libido will go up if defeated ]
-	now loot entry is "Devil's Purse";    [ Loot monster drops, ]
+	now loot entry is "Devil's Purse";    [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;           [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscled[or]firm[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
@@ -357,13 +359,114 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
+
 when play ends:
-	if bodyname of player is "Tiger Shark":
-		if humanity of player < 10:
+	if bodyname of Player is "Tiger Shark":
+		if humanity of Player < 10:
 			say "     REMOVE ME";
 		else:
 			say "     REMOVE ME";

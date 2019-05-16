@@ -20,7 +20,7 @@ instead of resolving a Secure Area:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
 	say "[line break][line break]";
 	say "Do you wish to get to the door?";
-	if player consents:
+	if Player consents:
 		let dragatorwon be 0;
 		let dragatordefeated be 0;
 		say "     You run towards the barriers, determined to get inside.";
@@ -31,7 +31,7 @@ instead of resolving a Secure Area:
 				say "     You slam the halo with all your might and feel it crumble beneath you, revealing the rest of the way.";
 				WaitLineBreak;
 				say "     The shimmering dissipated, you look towards the guards at the door, and with a shock realize they are of the Gargoyle infection. You could turn back now, or maybe you want to challenge them?";
-				if player consents:
+				if Player consents:
 					say "You march froward, and they attack.";
 					now dragatorwon is 0;
 					challenge "Gargoyle";
@@ -84,11 +84,11 @@ carry out shifting:
 	if shiftable is 0 or shiftable is 1:
 		say "You do not know how to do that!";
 		stop the action;
-	if the humanity of player < 50:
+	if the humanity of Player < 50:
 		say "Your feral impulses prevent you from concentrating hard enough to change.";
 		stop the action;
 	[say "You sense becoming human would be nearly impossible after doing this. Do you wish to continue anyway?";
-	if player consents:
+	if Player consents:
 		say "";
 	else:
 		stop the action;]
@@ -96,28 +96,28 @@ carry out shifting:
 	let critter list be a list of text;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
-		add name entry to critter list;
-		if name entry matches the regular expression "^[critter]$", case insensitively:
-			now monster is X;
+		add Name entry to critter list;
+		if Name entry matches the regular expression "^[critter]$", case insensitively:
+			now MonsterID is X;
 			now ttransform is 1;
-			now tmonster is monster;
+			now tmonster is MonsterID;
 			break;
 	if ttransform is 0:
 		now critter list is {};
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:
 			choose row X from the Table of Random Critters;
-			add name entry to critter list;
-			if name entry matches the regular expression ".*[critter].*", case insensitively:
-				now monster is X;
+			add Name entry to critter list;
+			if Name entry matches the regular expression ".*[critter].*", case insensitively:
+				now MonsterID is X;
 				now ttransform is 1;
-				now tmonster is monster;
+				now tmonster is MonsterID;
 				break;
 	[say "You shift through all the infections you have seen, searching for the one you want.";
 	repeat with x running through critter list:
 		say "[x]";]
 	if ttransform is 1:
-		choose row monster from the Table of Random Critters;
-		say "[line break]You concentrate on becoming one with the [name entry]s.";
+		choose row MonsterID from the Table of Random Critters;
+		say "[line break]You concentrate on becoming one with the [Name entry]s.";
 	if ttransform is 0:
 		say "You don't know any such beast.";
 
@@ -132,85 +132,85 @@ Section 3 -transform
 
 To transform:
 	choose row tmonster from the Table of Random Critters;
-	if skinname of player is not name entry:
+	if skinname of Player is not Name entry:
 		say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-		now skinname of player is name entry;
-		now skin of player is skin entry;
-	if facename of player is not name entry:
+		now skinname of Player is Name entry;
+		now skin of Player is skin entry;
+	if facename of Player is not Name entry:
 		say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-		now facename of player is name entry;
-		now face of player is face entry;
-	if tailname of player is not name entry:
+		now facename of Player is Name entry;
+		now face of Player is face entry;
+	if tailname of Player is not Name entry:
 		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-		now tailname of player is name entry;
-		now tail of player is tail entry;
+		now tailname of Player is Name entry;
+		now tail of Player is tail entry;
 	follow the breast change rule;
-	if bodyname of player is not name entry:
+	if bodyname of Player is not Name entry:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-		now bodyname of player is name entry;
-		now body of player is body entry;
-		if there is a scale in row monster of the Table of Random Critters:
-			now scalevalue of player is scale entry;
+		now bodyname of Player is Name entry;
+		now body of Player is body entry;
+		if there is a scale in row MonsterID of the Table of Random Critters:
+			now scalevalue of Player is scale entry;
 		else:
-			now scalevalue of player is 3;
-		if there is a body descriptor in row monster of the Table of Random Critters:
-			now bodydesc of player is body descriptor entry;
+			now scalevalue of Player is 3;
+		if there is a body descriptor in row MonsterID of the Table of Random Critters:
+			now bodydesc of Player is body descriptor entry;
 		else:
-			now bodydesc of player is name entry;
-		if there is a type in row monster of the Table of Random Critters:
-			now bodytype of player is type entry;
+			now bodydesc of Player is Name entry;
+		if there is a type in row MonsterID of the Table of Random Critters:
+			now bodytype of Player is type entry;
 		else:
-			now bodytype of player is name entry;
+			now bodytype of Player is Name entry;
 		if DayCycle entry is 2:
-			now SleepRhythm of player is 2; [night-preferred]
+			now SleepRhythm of Player is 2; [night-preferred]
 		if DayCycle entry is 1:
-			now SleepRhythm of player is 1; [day-preferred]
+			now SleepRhythm of Player is 1; [day-preferred]
 		else:
-			now SleepRhythm of player is 0; [standard]
+			now SleepRhythm of Player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
-	if cockname of player is not name entry:
-		if player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-		now cockname of player is name entry;
-		now cock of player is cock entry;
-	if strength of player < str entry:
-		say "You feel your muscles swelling with [name entry] [one of]strength[or]physique[or]power[at random].";
-		increase strength of player by 1;
-		increase capacity of player by 5;
-	if Intelligence of player < Int entry:
-		say "You feel your mind swelling with [name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
-		increase Intelligence of player by 1;
-	if Dexterity of player < Dex entry:
-		say "You feel your hand eye coordination swelling with [name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
-		increase Dexterity of player by 1;
-	if Stamina of player < Sta entry:
-		say "You feel your body toughening with [name entry] [one of]Stamina[or]physique[or]power[at random].";
-		increase Stamina of player by 1;
-		if remainder after dividing stamina of player by 2 is 0:
-			increase maxHP of player by level of player plus 1;
-	if Perception of player < Per entry:
-		say "You feel your senses swelling with [name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
-		increase Perception of player by 1;
-	if Charisma of player < Cha entry:
-		say "You feel your social sense swelling with [name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
-		increase Charisma of player by 1;
-	if libido of player < libido entry:
-		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
-		now libido of player is the libido entry;
+	if cockname of Player is not Name entry:
+		if Player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
+		now cockname of Player is Name entry;
+		now cock of Player is cock entry;
+	if strength of Player < str entry:
+		say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
+		increase strength of Player by 1;
+		increase capacity of Player by 5;
+	if Intelligence of Player < Int entry:
+		say "You feel your mind swelling with [Name entry] [one of]Intelligence[or]wit[or]complexity[at random].";
+		increase Intelligence of Player by 1;
+	if Dexterity of Player < Dex entry:
+		say "You feel your hand eye coordination swelling with [Name entry] [one of]Dexterity[or]physique[or]accuracy[at random].";
+		increase Dexterity of Player by 1;
+	if Stamina of Player < Sta entry:
+		say "You feel your body toughening with [Name entry] [one of]Stamina[or]physique[or]power[at random].";
+		increase Stamina of Player by 1;
+		if remainder after dividing stamina of Player by 2 is 0:
+			increase maxHP of Player by level of Player plus 1;
+	if Perception of Player < Per entry:
+		say "You feel your senses swelling with [Name entry] [one of]Perception[or]aptitude[or]feral attention[at random].";
+		increase Perception of Player by 1;
+	if Charisma of Player < Cha entry:
+		say "You feel your social sense swelling with [Name entry] [one of]Charisma[or]natural charm[or]pheromones[at random].";
+		increase Charisma of Player by 1;
+	if Libido of Player < libido entry:
+		say "You can't help but [one of]feel your thoughts drifting towards sex[or]notice that the attributes of [Name entry] were very appealing[or]wonder if getting to know these creatures in the biblical sense would be all that bad[at random].";
+		now Libido of Player is the libido entry;
 
 when play ends:
 	if shiftable is 2:
-		if the humanity of player > 50:
+		if the humanity of Player > 50:
 			say "Your knowledge of how to shift aids you when you decide to help the rescue, and as a reward for your help, the army decides to replace the nanites you had with a new kind that do not spread.";
 		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work and give such bonuses and pay that you can't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
-		now body of player is "nothing";
-		now bodyname of player is "nothing";
-		now scalevalue of player is 3;
-		now bodydesc of player is "shapeshifting";
-		now bodytype of player is "shapeshifter";
-		now SleepRhythm of player is 0;
+		now body of Player is "nothing";
+		now bodyname of Player is "nothing";
+		now scalevalue of Player is 3;
+		now bodydesc of Player is "shapeshifting";
+		now bodytype of Player is "shapeshifter";
+		now SleepRhythm of Player is 0;
 		say "((Being a shapeshifter, your normal ending for your body type is suppressed))";
 
 Shifting ends here.

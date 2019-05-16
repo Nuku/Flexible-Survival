@@ -11,7 +11,7 @@ Version 1 of Branson & Partner by Wahn begins here.
 [   5: player met the office girls                                ]
 [ 100: refused to join Branson                                    ]
 
-[ libido of Melanie - player behavior towards the office girls    ]
+[ Libido of Melanie - player behavior towards the office girls    ]
 [   0: starting state                                             ]
 [   1: grope-y                                                    ]
 [   2: businesslike                                               ]
@@ -45,13 +45,13 @@ the scent of Melanie is "The young woman smells pretty nice - a fresh furry scen
 
 To say MelanieDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP of Melanie: [HP of Melanie], libido of Melanie: [libido of Melanie] <- DEBUG[line break]";
+		say "DEBUG -> HP of Melanie: [HP of Melanie], Libido of Melanie: [Libido of Melanie] <- DEBUG[line break]";
 	say "     Melanie is a young anthro deer-woman, dressed in a short skirt and pristine white shirt with her name on a little tag - the very image of a receptionist or executive assistant. She is pretty, with a well-sized pair of assets bulging out the top of her shirt. Two interesting little bumps in the white fabric tell you that she isn't wearing a bra either. While the fur on her body is a mixture of light brown and cream at the front (down from her muzzle over her neck and you assume all the way to her hooves), the anthro furry has shoulder-length black hair, pulled into a ponytail behind her head.";
 
 instead of going north from Smith Haven Mall Lot North while HP of Melanie is 0:
 	move player to Branson & Partner Reception;
 	try looking;
-	say "     'Welcome to the offices of Branson & Partner, [if player is female]Ma'am[else]Sir[end if]. I'm Melanie,' the beautiful doe tells you with a friendly smile. 'Please feel free to rest in the waiting area and study the brochures. We have lots of interesting offers. You don't have to worry about the... wild inhabitants of the city here. The guards at the mall keep most of those away anyways, and after my boss Mr. B took care of a few hard-headed cases, they avoid this building at any cost.' An undertone of worshipful admiration fills her voice as she talks of this 'Mr. B' and thanks to the mostly see-through glass front of the reception desk you can see her hand stroke the inside of her crossed legs. Seems like meeting this man might prove interesting...";
+	say "     'Welcome to the offices of Branson & Partner, [if Player is female]Ma'am[else]Sir[end if]. I'm Melanie,' the beautiful doe tells you with a friendly smile. 'Please feel free to rest in the waiting area and study the brochures. We have lots of interesting offers. You don't have to worry about the... wild inhabitants of the city here. The guards at the mall keep most of those away anyways, and after my boss Mr. B took care of a few hard-headed cases, they avoid this building at any cost.' An undertone of worshipful admiration fills her voice as she talks of this 'Mr. B' and thanks to the mostly see-through glass front of the reception desk you can see her hand stroke the inside of her crossed legs. Seems like meeting this man might prove interesting...";
 	increase HP of Melanie by 1; [got her initial spiel]
 
 Instead of conversing the Melanie:
@@ -90,7 +90,7 @@ to say MelanieTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Just chat a bit"):
@@ -116,24 +116,24 @@ to say MelanieTalk2: [ask about Mr. B]
 
 to say MelanieTalk3: [ask to meet Mr. B]
 	if HP of Melanie is 100:
-		say "     She shakes her head as you bring up talking to her boss. 'I'm sorry [if player is female]Ma'am[else]Sir[end if], but I was told not to allow you up. Trust me, it's better to hear this from me than from Mr. B directly.'";
+		say "     She shakes her head as you bring up talking to her boss. 'I'm sorry [if Player is female]Ma'am[else]Sir[end if], but I was told not to allow you up. Trust me, it's better to hear this from me than from Mr. B directly.'";
 	else if HP of Melanie is 1:
 		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 15:
-			say "     Doing your best to charm the pretty receptionist, you pull out all the stops to convince her that you're expected and should go up right away. Her eyebrows rise at your confidently delivered request and it becomes clear that you just elevated yourself to a person of interest in her eyes. Melanie smoothly replies with, 'Oh, I'm sorry... [if player is female]Ma'am[else]Sir[end if]. Of course - please go on up. [if findwires is 2 and fixedgens is 2]You can take the elevator up to the fourth floor.' Following her instructions, soon you are smoothly gliding to a halt three floors up, then step out into[else]The elevator is sadly out of order, but you can use the stairs. Third door on the right, and Mr. B's office is in the fourth floor.' Thanking her, you make your way past the useless elevator and start climbing the stairs. By the time you arrive on the fourth floor landing, you're just a little out of breath and wait for a few moments, then step through the door into[end if] a short corridor decorated with potted plants and modern art. A set of double doors at the end of it promises to lead to the firm's owner.";
+			say "     Doing your best to charm the pretty receptionist, you pull out all the stops to convince her that you're expected and should go up right away. Her eyebrows rise at your confidently delivered request and it becomes clear that you just elevated yourself to a person of interest in her eyes. Melanie smoothly replies with, 'Oh, I'm sorry... [if Player is female]Ma'am[else]Sir[end if]. Of course - please go on up. [if findwires is 2 and fixedgens > 2]You can take the elevator up to the fourth floor.' Following her instructions, soon you are smoothly gliding to a halt three floors up, then step out into[else]The elevator is sadly out of order, but you can use the stairs. Third door on the right, and Mr. B's office is in the fourth floor.' Thanking her, you make your way past the useless elevator and start climbing the stairs. By the time you arrive on the fourth floor landing, you're just a little out of breath and wait for a few moments, then step through the door into[end if] a short corridor decorated with potted plants and modern art. A set of double doors at the end of it promises to lead to the firm's owner.";
 			say "     Stepping up to the office doors, you knock and hear a deep voice say the words, 'Come in.' Beyond lies a spacious office, as well-appointed as the rest of the place you've seen so far - granite-tiled floor and light gray walls framing a glass and steel desk in front of an all-glass back wall, a giant window overlooking the city. Behind the desk is a quite large executive chair - clearly custom-made to fit its occupant, as Mr. Branson is both an anthro crocodile and at least eight feet tall, with a muscle-packed physique to match his size. What makes him stand out from being 'merely' as physically imposing as any number of sex-hungry infected out on the streets is the fact that he is calmly having a look at you while wearing a dark blue shirt tailored to his broad frame, as well as a blood-red tie.";
 			WaitLineBreak;
 			say "     The croc indicates one of the two chairs set up in front of his desk and says in a quite dominant tone, 'Sit.' You can feel his gaze rest upon you, yellow slitted eyes full of cunning evaluating every movement as you ";
-			if player is submissive: [sub players]
+			if Player is submissive: [sub players]
 				say "scurry forward quickly, planting your ass on one of the visitor's chairs. A grin spreads along the tooth-filled maw of the businessman. ";
-			else if "Dominant" is listed in feats of player: [dom players]
+			else if "Dominant" is listed in feats of Player: [dom players]
 				say "calmly walk towards him, then come to stand in front of his desk, implicitly ignoring the offered chairs. The businessman raises one eyebrow a little at this, and you can see the end of his tail twitching slightly. ";
 			else: [regular players]
 				say "walk towards him in a fast yet unhurried pace, then sit down in one of the offered chairs. A small up-tick of the corners of his tooth-filled maw is visible as you study him in turn. ";
-			if findwires is 2 and fixedgens is 2: [power is on]
+			If findwires is 2 and fixedgens > 2: [power on] [power is on]
 				say "'Melanie tells me you've impressed her and might be just the person we need. More than just another refugee that is flocking to the mall,' ";
 			else: [else]
 				say "'You must have impressed Melanie for her to send you upstairs. I told her to get rid of any of the rabble and refugees who stumble in. Those can try their luck at the mall,' ";
@@ -142,19 +142,19 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - The setup here is pretty nice and he has a plan. Sure, you'll join up.";
 			say "     ([link]N[as]n[end link]) - Profit from the chaos and suffering brought on by the nanite infection? Never!";
-			if player consents: [listen to his offer]
+			if Player consents: [listen to his offer]
 				LineBreak;
 				say "     'Good choice,' the croc businessman tells you with a smile. 'You see, this whole city is dangerously infested with nanites, so much so that the politicians won't have a choice but to declare all of it condemned and keep it quarantined even after the city is pacified again. Can't have anyone moving in here without lots of cleanup first. The brave souls who do all the hard work of course need to be compensated, which is why any place that doesn't have an owner anymore will fall to the state as it is reclaimed. And that's where we come in.'";
 				say "     'With my connections, it won't be hard to blackmail the right politicians into compensating us with holdings. A smear campaign blaming them for [']wasting['] their precious base's taxes would be ease to arrange and devastating for their reelection campaigns. Besides, the property values will be historically low, so it's not like any regulatory body would raise their brows if a generous entrepreneur took ownership of the entire city.' Branson's smile expands into a toothy grin as he lays out what will happen with absolute confidence.";
 				say "     'Now wouldn't it just be... convenient, if someone had all the paperwork done already when such declarations came to pass? Someone with an office building full of lovely ladies as his employees, for example, ready to get to work as soon as possible?' he says, chuckling loudly. ";
-				if findwires is 2 and fixedgens is 2: [power on]
+				If findwires is 2 and fixedgens > 2: [power on] [power on]
 					say "'We need one thing to make this work. Thankfully the power came back on a while ago, but what's still missing is information - specifically the city's property registry. Before, one could just get the info through automatic requests from city hall, but with the state of the city right now... someone needs to go there and grab the data store in person. I have to ride herd on my girls here - otherwise those bastards out in the streets would storm the building and have an orgy - but you can do it instead. I'll cut you in for part of the profits, and you'll get a share of the amenities we have here. A safe place to rest, some food and water - and your pick from the girls, too.";
 				else: [no power]
 					say "'We need two things to make this work. Power for this building, and the city's property registry. Before, one could just get the info through automatic requests from city hall, but with the state of the city right now... someone needs to go there and grab the data store in person. I have to ride herd on my girls here - otherwise those bastards out in the streets would storm the building and have an orgy - but you can do it instead. I'll cut you in for part of the profits, and you'll get a share of the amenities we have here. A safe place to rest, some food and water - and your pick from the girls, too.";
 				WaitLineBreak;
 				say "     The croc waits for his offer to sink in, then raises a hand as you start to say something. 'No need to reply right now - just remember the offer. And if you have doubts... well, those people out there who do nothing but fuck in the street... what do they care about their old houses? They don't, that's what. And if anyone is sane enough to step forward after all - good for them. Just a little payment to the official decontamination manager and it'll all be sorted out right quick.' He gives a shrug and brushes the matter aside - though you'd bet that the [']little['] payment will be anything but that. After a few more words exchanged with the large reptile, you get the impression that your audience is over and leave his office. A short while later, you're back in the reception area.";
 				LineBreak;
-				if findwires is 2 and fixedgens is 2: [power on]
+				If findwires is 2 and fixedgens > 2: [power on] [power on]
 					say "     To get the power back to work, it might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				else:
 					say "     Thinking about what to do next, a quick stop at the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] might be a good idea. Surely that shouldn't be that dangerous.";
@@ -167,9 +167,9 @@ to say MelanieTalk3: [ask to meet Mr. B]
 		else:
 			say "     You try to convince the receptionist that you should meet with her boss right now, but she isn't quite convinced. With a friendly but firm smile, she replies that he is busy right now and you should please wait a little until Mr. B is available. You're halfway to the armchairs before you remember that it's the nanite apocalypse right now and she didn't even check the appointment book or anything. Melanie clearly has some skills in getting rid of [']unwanted['] guests and stringing them along. Looks like you'll have to lay on a lot more charm to get a word with her boss.";
 	else if HP of Melanie is 2 or HP of Melanie is 3: [repeat visit]
-		say "     'Of course - please go on up. [if findwires is 2 and fixedgens is 2]You can take the elevator up to the fourth floor.' Following her instructions, soon you are smoothly gliding to a halt three floors up, then step out into[else]The elevator is sadly out of order, but you can use the stairs. Third door on the right, and Mr. B's office is in the fourth floor.' Thanking her, you make your way past the useless elevator and start climbing the stairs. By the time you arrive on the fourth floor landing, you're just a little out of breath and wait for a few moments, then step through the door into[end if] a short corridor decorated with potted plants and modern art. A set of double doors at the end of it allows you into Mr. Branson's office.";
+		say "     'Of course - please go on up. [if findwires is 2 and fixedgens > 2]You can take the elevator up to the fourth floor.' Following her instructions, soon you are smoothly gliding to a halt three floors up, then step out into[else]The elevator is sadly out of order, but you can use the stairs. Third door on the right, and Mr. B's office is in the fourth floor.' Thanking her, you make your way past the useless elevator and start climbing the stairs. By the time you arrive on the fourth floor landing, you're just a little out of breath and wait for a few moments, then step through the door into[end if] a short corridor decorated with potted plants and modern art. A set of double doors at the end of it allows you into Mr. Branson's office.";
 		say "     The well-dressed anthro croc greets you and waves you over to one of the chairs in front of his desk. Chatting a bit about the progress of his plan, ";
-		if findwires is 2 and fixedgens is 2: [power on]
+		If findwires is 2 and fixedgens > 2: [power on] [power on]
 			say "he congratulates you for getting the power running again. ";
 		else:
 			say "he mentions that as a start, you should work on getting the power running again. It might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overlook[roman type] isn't too far from the library. ";
@@ -182,22 +182,22 @@ to say MelanieTalk3: [ask to meet Mr. B]
 			now HP of Melanie is 3; [delivered the data]
 		else:
 			say "you really should swing by the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] sometime soon. The businessman tells you openly that you're not the only interested party in becoming his business partner, and it'd be a shame if someone else snagged the prize before you.";
-		if HP of Melanie is 3 and findwires is 2 and fixedgens is 2:
+		if HP of Melanie is 3 and findwires is 2 and fixedgens > 2:
 			say "     With everything taken care of for implementing his plans, Branson gives you a companionable smack on the shoulder. 'Well done, my friend. I knew we could count on you. This will be a very lucrative operation. I'll tell Melanie that you have the run of the building now - including the offices in the first floor. The entrance is just past her desk. Of course, my office girls still have some work to do, so don't overdo it, alright?'";
 			change the north exit of Branson & Partner Reception to B&P Company Offices;
 			change the south exit of B&P Company Offices to Branson & Partner Reception;
 			now HP of Melanie is 4; [player got free reign in the building now]
 	else if HP of Melanie is 4: [post quest visits to the boss]
 		say "     'Of course - please go on up,' the receptionist tells you with a smile, and you ride the elevator up to Mr. Branson's office. Strolling along the short corridor decorated with potted plants and modern art, you enter his office shortly after. The large crocodile is amiable enough towards his business partner, chatting a bit and offering you a drink, too. After a little while, he throws back the last of his glass of whiskey, then ";
-		if player is male:
+		if Player is male:
 			say "bids you farewell. You leave and soon arrive back down at the reception desk.";
-		else if player is female:
+		else if Player is female:
 			say "lets his gaze wander over your body for a moment. 'Was there anything else you wanted from me?' he asks in a charming tone, his hand straying down to his crotch.";
 			say "     [bold type]Do you want to be fucked by the large and powerful crocodile?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You could use some relief after your time in the city.";
 			say "     ([link]N[as]n[end link]) - Thanks, but no.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     With an aroused grunt, the large and muscular crocodile stands up from his executive chair, revealing that it actually has a hole in the back for his long tail. He walks around his desk in a few steps and sweeps you up in his arms to sit you down on the edge of his desk. Pulling your clothes and gear off one by one, the strong reptile gropes and touches your body in eager appreciation. He then loosens the tie around his neck and undoes the top two buttons of his shirt before leaning forward to lick you, his broad tongue traveling from the base of your pussy over your belly and chest all the way to your neck. His breath is hot against your skin as he big man says, 'I'll show you a really good time.'";
 				say "     Then Branson steps back a little and stretches up to his full nine feet in height, putting a hand on his crotch and wrapping it around the thick shaft of his erection - darker green than the scales on the rest of his body. He pumps the big piece of man-meat a few times with his hand wrapped around it, then guides it to your pussy. Brushing over the slit of your sex and making it go wetter by the second as your arousal builds in leaps and bounds, the crocodile grins down at you, then slowly pushes forward. You can't help but gasp as the girth of his manhood stretches your opening around his cock, followed by inch after inch of it sliding into your body.";
@@ -266,18 +266,18 @@ instead of going north from Branson & Partner Reception while (HP of Melanie is 
 			say "Invalid choice. Type [link]1[end link] to get groping, [link]2[end link] to be all business or [link]3[end link] to be friendly.";
 	if calcnumber is 1: [grope]
 		LineBreak;
-		say "     Putting on a serious expression, you introduce yourself[if player is not defaultnamed] as [name of player][end if], then stride along the line of the young women, inspecting each one in turn. As expected, they take it in stride as your hand strays forward several times to stroke along their curves and give a grope or two. The smiles on their faces never go away, but you can't help but think that they seem a little bit less genuine as you get handsy. Eventually, your inspection tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr. Branson is expecting those documents by tomorrow.' She then gives you a respectful nod and walks back out to the reception.";
-		now libido of Melanie is 1;
+		say "     Putting on a serious expression, you introduce yourself[if Player is not defaultnamed] as [name of Player][end if], then stride along the line of the young women, inspecting each one in turn. As expected, they take it in stride as your hand strays forward several times to stroke along their curves and give a grope or two. The smiles on their faces never go away, but you can't help but think that they seem a little bit less genuine as you get handsy. Eventually, your inspection tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr. Branson is expecting those documents by tomorrow.' She then gives you a respectful nod and walks back out to the reception.";
+		now Libido of Melanie is 1;
 	else if calcnumber is 2: [business]
 		LineBreak;
-		say "     Putting on a serious expression, you introduce yourself[if player is not defaultnamed] as [name of player][end if], then stride along the line of the young women. Giving each one a handshake in turn, you say that you look forward to working with them now that you've become a silent partner of their boss. They react with genuine smiles and friendly comments, seeming surprised at the everyday, business-like tone you're maintaining right now. After you shake her hand, you notice Lola glancing at something on one of the desks, a spot where someone apparently didn't fully clean up a splash of cum earlier. Seems like the young woman are quite familiar with a different kind of treatment.";
+		say "     Putting on a serious expression, you introduce yourself[if Player is not defaultnamed] as [name of Player][end if], then stride along the line of the young women. Giving each one a handshake in turn, you say that you look forward to working with them now that you've become a silent partner of their boss. They react with genuine smiles and friendly comments, seeming surprised at the everyday, business-like tone you're maintaining right now. After you shake her hand, you notice Lola glancing at something on one of the desks, a spot where someone apparently didn't fully clean up a splash of cum earlier. Seems like the young woman are quite familiar with a different kind of treatment.";
 		say "     Eventually, your introduction tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr. Branson is expecting those documents by tomorrow.' She then gives you a respectful nod and walks back out to the reception.";
-		now libido of Melanie is 2;
+		now Libido of Melanie is 2;
 	else: [friendly]
 		LineBreak;
 		say "     Getting past the slight tension of introductions by making a joke that seems to inspire genuine chuckles from the pretty young women, you step forward with a friendly expression on your face and move to shake each of the office girl's hands in turn. They react with beaming smiles and come together to chat with you as a group after introductions, everyone being curious about what is going on outside of their workplace refuge. As you tell some stories and learn that neither of them had any family or close friends in the city (somehow all having been hired some distance away and moved here for their jobs), you notice Lola glancing at a white streak on one of the desks thoughtfully before she joins back in on the conversation. Seems like the young woman are quite familiar with a different kind of treatment.";
 		say "     Eventually, your introduction tour is complete, by which time Melissa clears her throat and says, 'Okay everyone, let's get back to work. Mr. Branson is expecting those documents by tomorrow.' She then gives you a respectful nod and walks back out to the reception.";
-		now libido of Melanie is 3;
+		now Libido of Melanie is 3;
 	wait for any key;
 	move player to B&P Company Offices;
 	now HP of Melanie is 5;

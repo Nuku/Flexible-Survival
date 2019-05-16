@@ -5,7 +5,7 @@ Section 1 - Events
 
 after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random chance of 1 in 3 succeeds:
 	say "     Walking over the expansive parking lot of the Smith Haven Mall, you let your gaze wander over the countless parked cars: many stand neatly aligned in their squares, most likely belonging to people that never left the safe confines of the mall, or possibly those that never made it back here at all. Others are more scattered, often in clumps around the entrances and exits of the lot, from when people started to panic and got involved in all sorts of collisions and accidents. The crunching noise of glass shards under your feet makes you stop and look at the nearest damaged car, half-hidden behind the delivery truck its front is crumpled against. You can't help but idly wonder what may have happened to the driver on the fateful day that the nanite apocalypse came into full swing.";
-	say "     As you stand there, movement on the far side of the car catches your eye. An anthro doberman dressed in jeans and an open vest, as well as black leather gloves, steps into view from the other side of the truck, holding the leashes for two other dobermans, one male one female. They are anthro canines, just like him, but in sharp contrast, they are naked and on all fours with collars and muzzles on them. The leashed bitch looks back at you and gives a whine, trying to move back behind the truck, but her owner(?) is having none of it, looking impatiently at the other dobie and keeping her on a tight leash. 'What is it now?' the standing man barks out, then follows her gaze to you and scoffs at her. 'Oh? Being watched by [ObjectPro of player] has your panties in a twist? Let me remind you - animals don't wear any of those. You're a pet, bitch, and not an obedient one right now. I told you to do your business [italic type]now[roman type]!'";
+	say "     As you stand there, movement on the far side of the car catches your eye. An anthro doberman dressed in jeans and an open vest, as well as black leather gloves, steps into view from the other side of the truck, holding the leashes for two other dobermans, one male one female. They are anthro canines, just like him, but in sharp contrast, they are naked and on all fours with collars and muzzles on them. The leashed bitch looks back at you and gives a whine, trying to move back behind the truck, but her owner(?) is having none of it, looking impatiently at the other dobie and keeping her on a tight leash. 'What is it now?' the standing man barks out, then follows her gaze to you and scoffs at her. 'Oh? Being watched by [ObjectPro of Player] has your panties in a twist? Let me remind you - animals don't wear any of those. You're a pet, bitch, and not an obedient one right now. I told you to do your business [italic type]now[roman type]!'";
 	WaitLineBreak;
 	say "     Cowering before the sharp and commanding tone of her master, the female canine pushes past her hesitation and pushes her hips down with spread legs, releasing a small trickle of urine onto the asphalt. 'Wasn't so hard after all, eh?' the standing doberman comments in a biting tone, then gives both of the leashes a short dug. 'Now that that's done for, let's go meet our new acquaintance,' he says next, then guides his pets around the car to come to stand before you. The male collared dobie sits on his haunches after a second, looking up with interest, while the female hangs her head in obvious shame and remains standing. Ignoring the reactions of his submissive companions, the clothed doberman steps forward and offers you a hand in greeting.";
 	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behavior towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
@@ -91,7 +91,7 @@ to say TobiasTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Ask him about himself"):
@@ -174,14 +174,14 @@ Tobias	"Tobias"
 
 Tobias is a man.
 ScaleValue of Tobias is 3.
-Cocks of Tobias is 1.
+Cock Count of Tobias is 1.
 Cock Length of Tobias is 12.
-Cock Width of Tobias is 5.
-Testes of Tobias is 2.
-Cunts of Tobias is 0.
-Cunt Length of Tobias is 0.
-Cunt Width of Tobias is 0.
-Breasts of Tobias is 2. [2 nipples]
+Ball Size of Tobias is 5.
+Ball Count of Tobias is 2.
+Cunt Count of Tobias is 0.
+Cunt Depth of Tobias is 0.
+Cunt Tightness of Tobias is 0.
+Nipple Count of Tobias is 2. [2 nipples]
 Breast Size of Tobias is 0.
 TwistedCapacity of Tobias is false.
 Sterile of Tobias is false.
@@ -196,7 +196,7 @@ Virgin of Tobias is true.
 AnalVirgin of Tobias is true.
 PenileVirgin of Tobias is false.
 SexuallyExperienced of Tobias is true.
-MainInfection of Tobias is "Doberman".
+MainInfection of Tobias is "Doberman Male".
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
@@ -217,7 +217,7 @@ to say TobiasSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -228,7 +228,7 @@ to say TobiasSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the dobie's canine shaft";
 	[]
-	if player is female: [only females and herms can take him in the pussy]
+	if Player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Tobias's shaft in your pussy";
 		now sortorder entry is 5;
@@ -251,7 +251,7 @@ to say TobiasSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get a blowjob"):

@@ -3,13 +3,13 @@ Version 1 of Homo Sapiens by Wahn begins here.
 
 "Adds a primitive Homo Sapiens to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Homo Sapiens" } to infections of guy;
 
 to say losetoHomoSapiens:
-	if HP of player > 0: [player submits]
+	if HP of Player > 0: [player submits]
 		say "     As you stop fighting and lower your hands, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you really have given in, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
 	else: [player beaten]
 		say "     As you collapse at his feet, the young tribesman gives you a suspicious look, still holding his spear tightly as his eyes wander up and down over you, then look into yours. A moment later, he murmurs something in his own language, followed by the word 'Stay' in English - something he must have picked up, or be remembering from his old life before the nanites. Finally convinced that you're not just trying to trick him, the athletic man leans his spear against a wall where it'll be ready for him to snatch up in a moment's notice, then steps up to inspect you closely.";
@@ -24,7 +24,7 @@ to say losetoHomoSapiens:
 			say "     He grumbles a little as you neither have clean water or food on you, then drops your backpack on the ground. ";
 	say "After finishing to search for spoils, the primitive tribesman turns his attention to you yourself, and the feeling of being undressed with his eyes quickly leads over to you being undressed by his hands, as the man decides he wants a closer look. Piece by piece, your clothing is pulled off and casually dropped, with his hands feeling you up, stroking your body and curves. Your captor's breathing starts to come a bit quicker as he likes what he sees, until eventually the last covering of your crotch falls away, leaving you completely naked before him.";
 	WaitLineBreak;
-	if player is male:
+	if Player is male:
 		say "     Eying your crotch with interest, the young man reaches down to cup your balls, gently rolling them between his fingers for a moment, then sliding his hand up and down over your cock. He gives an appreciative comment in a husky voice and pinches one of your nipples, then gestures at the pile of your clothing on the floor. You're not quite sure what he wants for a moment, then he reaches around and gives your ass a tight squeeze before starting to undo his own clothes. There is a visible bulge in his pants that tells you this prehistoric stud wants to take your butt for a ride. Well, 'to the victor the spoils' - comes the old saying into your head seemingly all of its own, and you kneel down then get on all fours, ass raised for your captor.";
 		say "     From your position on the ground, you look over your shoulder to watch the young tribesman strip, revealing his sun-bronzed skin and an athletic, lithely muscled body. Not as 'showy' as a bodybuilder, but there's definitively something to be said about his naturally fit look. An aroused expression comes over his face as he looks down at you and one hand quickly moves to his crotch to stroke a well-sized, uncut cock. A moment later, the handsome guy steps up behind you and crouches down, putting both hands on your buttcheeks. You feel your buttocks being spread, followed by the tribesman's warm breath against your skin. Then he can be heard gathering spit and lets it drip on your hole, to be rubbed in by his questing fingers - relaxing you a little before he pushes one of them inside. His digit slides deeper and deeper, probing around a bit before honing in on your prostate and rubbing against it.";
 		WaitLineBreak;
@@ -35,7 +35,7 @@ to say losetoHomoSapiens:
 		say "     Lust rises, then soars as the two of you grind against each other, and after you don't know how long of sexual bliss, the point of no return is finally reached. You gasp, then grunt deeply as your balls tingle and send forth their stored load in a frenzied rush, a first blast splashing over your cast-off clothes to soak into them, then another and another. As your asshole twitches and trembles around the invading cock balls-deep inside, it's no wonder that your partner is very close behind, shouting something unintelligible as he grinds against you and his manhood pulses, painting your insides white with his seed. You stay in that position as cum continues to spurt and flow, totally creaming your clothes and insides.[mimpregchance]";
 		WaitLineBreak;
 		say "     When things eventually wind down, you spend some more moments just like that, panting and leaning against each other, then the man pulls out of you and stands up. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language while picking up his clothes and getting dressed. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-	else if player is female:
+	else if Player is female:
 		say "     Eying your crotch with interest, the young man reaches down to gently stroke over your slightly swollen nether lips, then pushes them apart a little and puts a finger at your opening. Sliding it inside, the tribesman rubs and fondles your pussy, searching out the most sensitive spots and lavishing them special attention. He gives an appreciative comment in a husky voice and pinches one of your nipples, then gestures at the pile of your clothing on the floor. It is not a big stretch to guess what he wants, especially as he pushes a second finger into you and uses them to stretch you a little, as if trying to prepare for pushing his hard cock into you. The visible bulge in his pants isn't a small one either, which tells you this prehistoric stud will likely be one hell of a ride. Well, 'to the victor the spoils' - comes the old saying into your head seemingly all of its own, and you crouch down, then lay back on the pile of clothes, legs spread for your captor.";
 		say "     From your position on the ground, you watch the young tribesman strip, revealing his sun-bronzed skin and an athletic, lithely muscled body. Not as 'showy' as a bodybuilder, but there's definitively something to be said about his naturally fit look. An aroused expression comes over his face as he looks down at you and one hand quickly moves to his crotch to stroke a well-sized, uncut cock. A moment later, the handsome guy steps up to you and crouches down, reaching out with one hand to brush over your clit, the other slowly jerking his erection. You feel your pussy lips being spread as he then leans forward, getting down on all fours, followed by the tribesman's warm breath against your skin. He brings his head right between your legs and starts nibbling at your sensitive little clit while at the same time finger-fucking you, first with two, then three digits. Sliding deeper and deeper, he probes around in your love tunnel, then hones in to one especially sensitive spot and rubs against it.";
 		WaitLineBreak;
@@ -53,7 +53,7 @@ to say beatHomoSapiens:
 	say "     You hit the primitive tribesman once more and he half-collapses to the ground, having to cling to his spear to catch himself. Breathing hard, the human male murmurs something and looks up at you, raising a hand as if in a plea to stop. Bracing himself on the ground with one hand, he shifts into kneeling, then sets down the spear while taking great care not to damage the obsidian tip. Sliding the weapon to the side with a definitive finality, making sure it is off the table, he starts saying some more words and opens the pouch he carries for you. Looks like he recognized defeat and feels that you are owed something by him - maybe compensation, or its him buying his freedom back. The pouch only contains some shaped rocks and primitive wooden tools, nothing all that interesting, though there are some strips of dried meat in there too.";
 	LineBreak;
 	say "     Do you take the (mammoth?) jerky ([link]Y[as]y[end link]), or do you demand a far more physical prize from the defeated young man ([link]N[as]n[end link])?";
-	if player consents:
+	if Player consents:
 		increase carried of mammoth jerky by 1;
 		LineBreak;
 		say "     The man nods as you relieve him of his food, then says a sentence or two before picking up his spear and getting up. Before you can say anything or intervene, he jogs off into the depth of the museum.";
@@ -63,15 +63,15 @@ to say beatHomoSapiens:
 		LineBreak;
 [
 		say "     Will you make use of his mouth ([link]Y[as]y[end link]), or should someone get fucked here and now ([link]N[as]n[end link])?";
-		if player consents:
+		if Player consents:
 ]
-		if player is male:
+		if Player is male:
 			say "     Quickly getting rid of your own clothes, you step closer to the kneeling guy and grab a handful of his dreadlocks, pulling his head to your crotch. His nose pressing against your balls, the tribesman instantly recognizes what you want and gets to work, lapping over the rounded orbs and moving his hands up to stroke your cock. Lapping and jerking you off, the kneeling human really gets you going, and you moan loudly while standing there with your hands on his head. Soon, he proceeds to pull back a little, pushing your hard cock down, then you feel the warm wetness of his mouth around your shaft. Lips stretching into a tight ring around your manhood, your former opponent plays his tongue over every sensitive bit of your cockhead, poking the cum-slit with its tip.";
 			say "     After some quite nice moments of just having your cock played with, the man starts going down on you in earnest, bobbing up and down on your shaft while eagerly suckling on it. It is more than a little obvious that this isn't his first time in pleasing a man, as he proves quite adept at giving you the most pleasure he can. There might be something said about people just putting more effort into things in the time before the invention of television - or even writing - but given the fact that you're just getting an excellent blowjob, all that comes from your mouth is grunts and moans. Might also just be the case that you got into a fight with a happily gay or bisexual tribesmember - it doesn't really matter which, not for your rising libido and the urgent need to cum building in your balls.";
 			WaitLineBreak;
 			say "     Nose pressed into your pubes and your hard shaft tickling his tonsils, your partner soon also cups your balls and rolls them around teasingly. With a little squeeze that feels just right, he drives you over the edge completely and you give an explosive grunt as your whole body shudders and trembles, sending forth an eruption of cum into the primitive man's mouth. His lips clamp down tightly on your shaft and the muscled guy sucks you off with real dedication, making sure that not a drop is lost, swallowing it all. Man that feels great!";
 			say "     Your partner keeps going, almost slurping each new spurt out of your cock as it comes. One might think that it is just his determination not to waste anything at all that is edible - but the content gleam in his eyes and the fact that the corners of his mouth are raised in a grin tell you that he also just really likes eating cum. Eventually when your orgasm finally subsides and you start feeling pretty sensitive, you push on his shoulders to get him off, and the young man removes his talented mouth after a last sharp suck. Still panting somewhat from the orgasm, you stumble back a few steps and brace yourself on a nearby wall while your cocksucker quickly gets dressed. He says 'good' - seemingly one of the few English words he knows, then adds a few sentences in his own language. With a grin on his face, he waves goodbye to you, then stalks off deeper into the museum.";
-		else if player is female:
+		else if Player is female:
 			say "     Quickly getting rid of your own clothes, you step closer to the kneeling guy and grab a handful of his dreadlocks, pulling his head to your crotch. His nose pressing against your nether lips, the tribesman instantly recognizes what you want and gets to work, lapping over the slightly swollen folds of your sex. Searching out the sensitive little clit under its hood and licking it, the kneeling human really gets you going, and you moan loudly while standing there with your hands on his head. Soon, he proceeds to pull back a little, slipping his fingers in between your pussy lips and feeling around for sensitive spots. Two fingers soon become three, only increasing the pleasure as you are stretched and fondled.";
 			say "     After some quite nice moments of just having your pussy explored and played with, the man starts going down on you in earnest, bobbing his head up and down as he gives long licks over your pussy and extra tongue-wiggles at the end each time. With the special care he heaps on your clit, it is more than a little obvious that this isn't his first time in pleasing a woman, as he proves quite adept at giving you the most pleasure he can. There might be something said about people just putting more effort into things in the time before the invention of television - or even writing - but given the fact that you're just getting excellent oral sex, all that comes from your mouth is grunts and moans. It doesn't really matter, not for your rising libido and the urgent need to get off building inside you.";
 			WaitLineBreak;
@@ -82,9 +82,9 @@ to say beatHomoSapiens:
 [
 		else:
 			LineBreak;
-			if player is male:
+			if Player is male:
 				say "     Do you want to fuck him ([link]Y[as]y[end link]), or will you mount the hunky guy's hard shaft ([link]N[as]n[end link])?";
-				if player consents:
+				if Player consents:
 					LineBreak;
 					say "     Quickly getting rid of your own clothes, you step closer to the kneeling guy and grab a handful of his dreadlocks, pulling his head to your crotch. His nose pressing against your balls, the tribesman instantly recognizes what you want and gets to work, lapping over the rounded orbs and moving his hands up to stroke your cock. Lapping and jerking you off, the kneeling human really gets you going, and you moan loudly while standing there with your hands on his head. Soon, he proceeds to pull back a little, pushing your hard cock down, then you feel the warm wetness of his mouth around your shaft. Lips stretching into a tight ring around your manhood, your former opponent plays his tongue over every sensitive bit of your cockhead, poking the cum-slit with its tip.";
 					say "     After some quite nice moments of just having your cock played with and getting it good and wet, you pull out of his mouth with a loud plop. As the young man looks up with a curious expression, you mime for him to turn around and reach down, squeezing his ass. There is a short chuckle from him and he gives your shaft an appreciative, slow jerk, then the primitive tribesman assumes a new position on all fours - or rather leaning forward on his knees, his chest on the ground while both arms reach to his well-rounded rear, pulling the tight buttcheeks of his ass apart. With a nice pink rosebud between his cheeks giving a very inviting wink at you, you're kneeling behind him in moments and slap your wet and shiny cock against his crack. The man says some words in a breathless moan as your cockhead starts to press in, followed by a lusty gasp when you penetrate, sinking into his welcoming depths.";
@@ -106,17 +106,18 @@ to say HomoSapiensDesc:
 	say "     A muscular man steps into your sight, dressed in rough clothes created from tanned hides and furs while his feet are bare. The clothes are relatively simple, with pretty crude stitching and oblong pieces of bone threaded through loops as fasteners, but it nevertheless is clear that some effort went into making them. He's got a short beard on his face, as well as long hair hanging down his back, somewhat shaggy and forming natural dreadlocks. A spear tipped in a shiny splinter of obsidian rests in the man's hand, held with practiced ease. All in all, the perfect picture of a primitive tribesman from the early days of homo sapiens.";
 	say "     While looking pretty much like a regular human, maybe a student playing LARP or historical reenactor, something screams at you to take him very seriously. There is a dangerous air around the young man, as if he's used to a hard life and making tough decisions. Like just right now, as he eyes you suspiciously and tries to gauge if he can take you. Calling out something in a long forgotten language, he charges you with his spear a second later.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Homo Sapiens";
+	now NewTypeInfection entry is false;
+	now Name entry is "Homo Sapiens";
 	now enemy title entry is "Caveman";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The primitive tribesman feints with his spear, then kicks you as you dodge.[or]He whirls the spear around, using its end to whack you in the side.[or]Closing up with you, the man throws a punch that has you seeing stars for a moment.[at random]";
 	now defeated entry is "[beatHomoSapiens]";
@@ -143,15 +144,15 @@ When Play begins:
 	now lev entry is 8;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;             [ Monster's average damage when attacking. ]
 	now area entry is "Museum";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 9;       [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 4;        [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;           [ Number of nipples the infection will give a player. ]
-	now breast size entry is 0;       [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 0;       [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 0;        [ Width in inches of female sex the infection will try to give a player. ]
+	now Cock Count entry is 1;             [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 9;       [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 2;        [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2;           [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0;       [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;             [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 0;       [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]        [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 45;
 	now loot entry is "mammoth jerky"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;        [ Percentage chance of dropping loot, from 0-100. ]
@@ -161,9 +162,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;    [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Section 3 - Drop Item
 
@@ -185,8 +287,8 @@ to say mammoth jerky use:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of player is "Homo Sapiens":
-		if humanity of player < 10:
+	if bodyname of Player is "Homo Sapiens":
+		if humanity of Player < 10:
 			say "     As you succumb fully to the nanites and the way you think is re-adjusted to what their jumbled programming deems right, you fall back into a more primitive mindset, befitting the early human tribes. Survival comes first - yours, then the tribe's - and if there is a need, you fight and take what is necessary to survive. Albeit a rather cut-throat outlook, it works - and you do survive the following days and weeks as part of the primitive tribe carving out a part of the museum as their territory. Things are... simpler, since your mind has no room for any second thoughts about something like cooking gryphon eggs or wearing the tanned fur of a jaguarman.";
 			say "     When the military finally comes to evacuate your group of seemingly 'normal human survivors', there is a brutal clash as you wipe the floor with the soldiers, taking the women as spoils and initiating the bravest of them into the tribe, all of them quickly transformed to fit in. The rest is left naked at the entrance of the museum, to live or die as they will. When you turn to walk back down the corridor to tribal land, your thoughts are on enjoying yourself with the new members. You barely register the shouts and gasps from behind you as the other museum inhabitants and creatures coming by on the street pick off the defenseless naked men.";
 		else:

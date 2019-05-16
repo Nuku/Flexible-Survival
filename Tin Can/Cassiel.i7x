@@ -31,14 +31,14 @@ Cassiel is a woman. The HP of Cassiel is usually 0.
 [physical details as of game start]
 ScaleValue of Cassiel is 3. [human sized]
 SleepRhythm of Cassiel is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cocks of Cassiel is 0. [no cock]
+Cock Count of Cassiel is 0. [no cock]
 Cock Length of Cassiel is 0. [no cock length]
-Cock Width of Cassiel is 0. [no ball size]
-Testes of Cassiel is 0. [no balls]
-Cunts of Cassiel is 1. [1 pussy]
-Cunt Length of Cassiel is 7.
-Cunt Width of Cassiel is 2.
-Breasts of Cassiel is 2. [2 nipples]
+Ball Size of Cassiel is 0. [no ball size]
+Ball Count of Cassiel is 0. [no balls]
+Cunt Count of Cassiel is 1. [1 pussy]
+Cunt Depth of Cassiel is 7.
+Cunt Tightness of Cassiel is 2.
+Nipple Count of Cassiel is 2. [2 nipples]
 Breast Size of Cassiel is 4.
 [Basic Interaction states as of game start]
 Humanity of Cassiel is 90.
@@ -63,7 +63,7 @@ to say CassielScent:
 
 to say CassielDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP of Cassiel: [HP of Cassiel], Dexterity: [Dexterity of Cassiel], LIBIDO: [libido of Cassiel], LUST: [lust of Cassiel], Strength: [Strength of Cassiel], Stamina: [Stamina of Cassiel] <- DEBUG[line break]";
+		say "DEBUG -> HP of Cassiel: [HP of Cassiel], Dexterity: [Dexterity of Cassiel], LIBIDO: [Libido of Cassiel], LUST: [lust of Cassiel], Strength: [Strength of Cassiel], Stamina: [Stamina of Cassiel] <- DEBUG[line break]";
 	say "     Standing at a height of five feet, Cassiel is a chimera of species and though they range widely from reptile to mammal, they all somehow mix together well enough to give her an almost dignified look. The priestess has a slender build with a moderadte bust that is covered by her loose-fiiting white robes. Her face is human with a fair-skinned complection and bright blue eyes. Instead of human ears soft and floppy golden rabbit ears sit atop her head covered by a mane of long hair of the same color.";
 	say "     From what you can see under her robes starting below the neck her skin is covered in almost glowing silvery scales. Her scaled arms end in taloned hands that are surpisingly dextrous despite their look. Peeking out behind her robes in a golden feline tail that sways back and forth on its own accord, as well as a set of angelic wings that hang from her back. To finish off the golden theme she stands upon a pair of fluffy golden rabbit feet.";
 
@@ -103,7 +103,7 @@ to say CassielTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Chit-chat"):
