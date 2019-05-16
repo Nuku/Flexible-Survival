@@ -9,11 +9,11 @@ The validation of Entertainer is the entertainvailable rule.
 The maximum of Entertainer is maxentertainer rule.
 
 This is the maxentertainer rule:
-	now max of entertainer is population of tribe of player / 10;
+	now max of entertainer is population of tribe of Player / 10;
 	let x be 100;
-	if "Charming" is listed in perks of tribe of player:
+	if "Charming" is listed in perks of tribe of Player:
 		increase x by 25;
-	if "Fun Loving" is listed in perks of tribe of player:
+	if "Fun Loving" is listed in perks of tribe of Player:
 		increase x by 25;
 	now max of entertainer is ( max of entertainer * x ) / 100;
 
@@ -30,14 +30,14 @@ An everyturn rule (this is the entertainer rule):
 	let x be a random number from 80 to 120;
 	if Novelstudies is 2:
 		increase x by 20;
-	if "theater" is listed in perks of tribe of player:
+	if "theater" is listed in perks of tribe of Player:
 		increase x by 20; [Not yet implemented]
 	now x is foragers * 20 * x;
-	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max. If 5% of population is entertainment, +1 moral.]
+	now x is x divided by (population of tribe of Player); [Keeps it at a fraction of a whole number, so 1-20 would be max. If 5% of population is entertainment, +1 moral.]
 	if x > 0: [Public Relations Success]
 		if x < 1, now x is 1;
 		say "[if x < 5]Your entertainers yield a bonus of +[x] morale for your tribe.[else]With an excellent team of entertainers working alongside each other, your people have gained an outstanding +[x] morale![end if]";
-		increase morale of tribe of player by x;
+		increase morale of tribe of Player by x;
 
 
 Entertainers ends here.

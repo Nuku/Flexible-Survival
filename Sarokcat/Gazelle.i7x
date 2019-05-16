@@ -4,7 +4,7 @@ Version 2 of Gazelle by Sarokcat begins here.
 "Adds a gazelle to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 gazellesbeaten is a number that varies.
 
@@ -16,7 +16,7 @@ when play begins:
 to say gazelle attack:
 	say "     The gazelle-like human knocks you to the ground, and then stares down at your defeated form, almost seeming surprised at their victory. 'Well you aren't so dangerous after all,' the beast says, and you can see its cock growing erect and its pussy moistening as it savors its victory. 'Maybe we didn't have to panic after all... then again,' the gazelle says with a speculative look at your prone form. 'Just maybe deep down you wanted me to win after all, hmm.' She considers you for a minute as she tries to catch her breath before deciding something. 'I think I see something I like in you,' she says with a sharp nod, her horns bobbing as she lowers herself over you. 'Maybe we should have some fun...'";
 	WaitLineBreak;
-	if player is female:
+	if Player is female:
 		say "     Reaching down, she spreads your legs further apart as she takes a good long look at your body, before running her hoof-like fingers along the outside of your soft cunt. 'Yes I definitely see something I like,' she says with a grin as she pumps her cock with her other hand. Not waiting for your reaction, she quickly grabs your legs in her hands and spreads them wide as she moves between them, her cock probing at your feminine passage. Finding the right angle she wastes no time thrusting herself into you fully, making you cry out at the sudden invasion, soon though you find the feeling of being penetrated by her hard maleness becomes completely pleasurable. Her animalistic member spearing into you again and again as she leans over you, her hoof-like hands on her hips as she thrusts in, you find your own hands gripping her horns as she hovers over you, gripping her in an effort to get her to thrust harder, and faster. She soon complies to your demands, and you buck and writhe underneath her as your orgasm shoots through you, causing her to orgasm as well, her strong member filling you up to the brink. Slowly she withdraws as you collapse bonelessly, a mixture of your juices leaking out of your passage as she sets you down, causing you to moan at the erotic feeling. 'Yes I definitely see something here I like,' she says with a grin as she brushes herself off. 'Hopefully you will come by soon so I can see it again,' she says before bounding off down the zoo pathways to rejoin her herd, leaving you lying there helplessly, her warm seed still leaking out of you.[impregchance]";
 		infect "Gazelle";
 	else:
@@ -28,16 +28,16 @@ To say gazelle loss:
 	increase gazellesbeaten by 1;
 	if the remainder after dividing gazellesbeaten by 3 is 0:
 		say "     As the gazelle cries out in pain from your last blow, you manage to knock her down. As she starts to scramble away, having bought time for the rest of the herd to flee, you grab this one before she can get away. Feeling a predatory rush of excitement, you look her over, trying to decide what you'd like to do with this gazelle person";
-		if libido of player > 75:		[no choice]
-			if player is male:
+		if Libido of Player > 75:		[no choice]
+			if Player is male:
 				say ". In your highly aroused state, you decide right away to give her a good, hard fucking.";
 				say "[gazellefuck]";
 			else:
 				say ". In your highly aroused state, you decide right away to get her cock inside you.";
 				say "[gazelleride]";
-			now libido of player is ( libido of player + libido of player + 30 ) / 3;
+			now Libido of Player is ( Libido of Player + Libido of Player + 30 ) / 3;
 		else:
-			if player is male:
+			if Player is male:
 				say ". Drawn to her dual-gendered groin, you wonder if you should fuck her [link](1)[as]1[end link], get her cock inside you [link](2)[as]2[end link] or just let her go [link](3)[as]3[end link].";
 				now calcnumber is 0;
 				while calcnumber < 1 or calcnumber > 3:
@@ -55,7 +55,7 @@ To say gazelle loss:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
 			else:
 				say ". You consider getting a ride on that cock of hers (Y) or just letting her go (N).";
-				if player consents:
+				if Player consents:
 					say "[gazelleride]";
 				else:
 					say "     Still upset with the gazelle person for attacking you, you give her a hard smack on her rear, making her tail twitch, as you send her on her way.";
@@ -64,23 +64,24 @@ To say gazelle loss:
 
 
 to say gazellefuck:
-	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto all fours. Freeing your cock, you bring it into position under her flagging tail, making her release a moaning bleat as you brush it against her wet pussy. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to fuck her, driving your cock into her again and again. Pretty confident that she's not going to make a run for it now, you move your hands to her chest, fondling her cute breasts and teasing her nipples. When you feel your orgasm approaching, you move your hands up to her horns and grip them tightly as you slam into her quickly as you drain your balls into the creature. [if cock width of player > 20]Your massive load leaves the poor creature full and bloated with your seed as she weakly staggers away[else if cock width of player > 10]Your large load leaves a noticeable bump in her tummy as she heads off[else]Some of your cum leaks from the creature's pussy as she heads off[end if] in search of the rest of her herd.";
+	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto all fours. Freeing your cock, you bring it into position under her flagging tail, making her release a moaning bleat as you brush it against her wet pussy. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to fuck her, driving your cock into her again and again. Pretty confident that she's not going to make a run for it now, you move your hands to her chest, fondling her cute breasts and teasing her nipples. When you feel your orgasm approaching, you move your hands up to her horns and grip them tightly as you slam into her quickly as you drain your balls into the creature. [if Ball Size of Player > 5]Your massive load leaves the poor creature full and bloated with your seed as she weakly staggers away[else if Ball Size of Player > 3]Your large load leaves a noticeable bump in her tummy as she heads off[else]Some of your cum leaks from the creature's pussy as she heads off[end if] in search of the rest of her herd.";
 
 to say gazelleride:
-	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto her back. Slipping off your pack and any obstructing clothes, you grind your [if player is female]wet pussy[else]ass[end if] onto her crotch, making her release a moaning bleat as you brush it against her stiffening cock. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to ride her erection, driving her cock into you again and again. Pretty confident that she's not going to struggle to get away now that she's bucking into you, you move your hands to her chest, fondling her cute breasts and teasing her nipples. Feeling your climax approaching, you ride her harder, squeezing your [if player is female]cunt[else]asshole[end if] down around her cock until you get her to drain her balls into you. [if player is female and cunt length of player < 5]You weren't able to get much of her elongated, animalistic penis into you, but you still cum hard as her seed fills your womb[else if player is female and cunt length of player > 15]Even though her elongated, animalistic penis was not enough to fill your deep pussy, you still cum hard as her seed fills the depths of your vagina[else if player is female]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your womb[else if player is male]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[else]You moan in satisfaction as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[end if]. After she'd been drained of her seed[if player is not neuter] and your orgasm subsides[end if], you release her and watch her rush off in search of the rest of her herd.[impregchance]";
+	say "     Moving atop the strange person, you grab the weakened gazelle's arms and push her onto her back. Slipping off your pack and any obstructing clothes, you grind your [if Player is female]wet pussy[else]ass[end if] onto her crotch, making her release a moaning bleat as you brush it against her stiffening cock. She starts to calm down a little, perhaps realizing you're not going to eat her. Her fearful panting is replaced by lustful moaning as you continue to ride her erection, driving her cock into you again and again. Pretty confident that she's not going to struggle to get away now that she's bucking into you, you move your hands to her chest, fondling her cute breasts and teasing her nipples. Feeling your climax approaching, you ride her harder, squeezing your [if Player is female]cunt[else]asshole[end if] down around her cock until you get her to drain her balls into you. [if Player is female and Cunt Depth of Player < 5]You weren't able to get much of her elongated, animalistic penis into you, but you still cum hard as her seed fills your womb[else if Player is female and Cunt Depth of Player > 15]Even though her elongated, animalistic penis was not enough to fill your deep pussy, you still cum hard as her seed fills the depths of your vagina[else if Player is female]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your womb[else if Player is male]You cum hard as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[else]You moan in satisfaction as you ride up and down as her elongated, animalistic penis pulses inside you, sending her hot seed into your bowels[end if]. After she'd been drained of her seed[if Player is not neuter] and your orgasm subsides[end if], you release her and watch her rush off in search of the rest of her herd.[impregchance]";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Gazelle";
+	now NewTypeInfection entry is false;
+	now Name entry is "Gazelle";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She leaps forward, slamming into you roughly[or]Lowering her head, she points her sharp horns at you as she charges.[or]Leaping up she lashes out at you with her hoof-like feet![or]Dancing forward she lashes out with her hoof like hand.[or]Springing forward, she slams her body into you, knocking you down.[at random]";
 	now defeated entry is "[gazelle loss]";
@@ -107,17 +108,17 @@ When Play begins:
 	now lev entry is 3;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5;  [ Amount of Damage monster Does when attacking. ]
 	now area entry is "Zoo";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9;  [ Length infection will make cock grow to if cocks]
-	now cock width entry is 4;  [ Size of balls ]
-	now breasts entry is 2;  [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 9;
-	now cunt width entry is 4;
+	now Cock Count entry is 1;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9;  [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 2;  [ Size of balls ]
+	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 4;  [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 9;
+	now Cunt Tightness entry is 4;
 	now libido entry is 30;  [ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";  [ Loot monster drops, ]
+	now loot entry is "lucky horseshoe";  [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;  [ Chance of loot dropping 0-100 ]
 	now scale entry is 3;  [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lithe[or]lean[or]slender[at random]";
@@ -125,15 +126,116 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
+
 when play ends:
-	if bodyname of player is "Gazelle":
-		if humanity of player < 10:
-			if player is female:
-				if player is male:
+	if bodyname of Player is "Gazelle":
+		if humanity of Player < 10:
+			if Player is female:
+				if Player is male:
 					say "Unable to fight your need to belong any longer, you quickly search out the gazelle herd, you encountered several times before. Unlike before though, this time instead of scattering at your approach, they open ranks and are completely accepting of your presence here, making you feel as if you belong as they close ranks around you to keep an eye out for dangers. You soon find yourself being greeted by a familiar looking gazelle as shi nuzzles you happily. 'I knew I saw something I liked in you,' shi mutters as shi runs her hands along your sides. 'I'd be happy to welcome you to the herd properly...' shi says with a grin. You shudder and find yourself nodding, happy to belong and happy to have found your place as she slowly runs her stiff cock along your thighs, before thrusting into you. You enjoy the mating, while several other gazelles watch both you and for any threats, their presences seeming almost comforting as the two of you put on a show for them, soon shi cums into you, making you happy, and pulling out she turns and presents herself for your stiff cock. You happily find yourself returning the favor, thrusting into her eager body as she welcomes you fully into the herd.";
 					say "Finally feeling like a true part of the herd, you help focus on surviving in a rough and changed city, the challenges of daily life are both exciting and dangerous, yet easily met with a group by your side. Eventually though the military moves to retake the city, and things get even more dangerous, as the groups within the city fight it out with the military, your small herd and several other herds take advantage of the confusion to flee, slipping out into the countryside while everyone else's attention is focused elsewhere. Feeling totally free finally of the constant fighting, you still don't relax your vigilance, as the world is still a dangerous place for a group of gazelles. Your herd moves south while others take other paths, eventually finding some nice mostly unoccupied plains in which to settle and build up your numbers, in several years people will start hearing reports of large groups of wild gazelle wandering the area again, and several nearby towns will mysteriously be missing all their people...";
 				else:

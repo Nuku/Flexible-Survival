@@ -37,14 +37,14 @@ The fuckscene of little fox is "The little fox kit is both too small and too you
 
 to say SummonDash:
 	now Dash is nowhere;
-	if player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
+	if Player is in Computer Lab and Dash is in Computer Lab: [summoning while standing next to him]
 		say "     Going up to Dash, you crouch down and gently rub his ears. After showing your little fox kit some love, he gets super excited and begins to jump all over the place. Once he has calmed down a bit, he scrambles into your pack ready for a brand new journey!";
 	else: [regular summoning]
 		say "     Wriggling his way out of your pack, Dash looks around the area before sitting down and staring at you with its bright shining eyes, eager to explore.";
 
 to say DismissDash:
 	move Dash to Computer Lab;
-	if player is not in Computer Lab: [regular dismiss]
+	if Player is not in Computer Lab: [regular dismiss]
 		say "     Opening your bag, Dash makes a beeline for it, only to trip over his paws and tumbling inside. You quickly check over him afterwards, only to find he decided it was nap time.";
 	else: [dismissing him in the Computer Lab]
 		say "     Opening your bag, you notice Dash is fast asleep. Trying your best to be gentle, you reach inside and take him out and him in his little box bed. Reaching over you give him a soft little kiss on the head, gaining you a happy little purr from the tiny vulpine.";
@@ -57,14 +57,14 @@ Dash is a man.
 [Physical details as of game start]
 ScaleValue of Dash is 1. [puppy sized]
 SleepRhythm of Dash is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Dash is 1. [X cock]
+Cock Count of Dash is 1. [X cock]
 Cock Length of Dash is 3. [X Inches]
-Cock Width of Dash is 2.
-Testes of Dash is 2. [X balls]
-Cunts of Dash is 0. [X pussy]
-Cunt Length of Dash is 0. [X Cunt]
-Cunt Width of Dash is 0. [X Cunt]
-Breasts of Dash is 6. [X nipples]
+Ball Size of Dash is 2.
+Ball Count of Dash is 2. [X balls]
+Cunt Count of Dash is 0. [X pussy]
+Cunt Depth of Dash is 0. [X Cunt]
+Cunt Tightness of Dash is 0. [X Cunt]
+Nipple Count of Dash is 6. [X nipples]
 Breast Size of Dash is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Dash is false. [can not take oversized members without pain]
@@ -97,9 +97,9 @@ to say DashDesc:
 	say "     Dash is so cute and friendly! He has a cute little fox face with eyes that shine with love as they stare up at you. His lithe and quick body is almost constantly in motion as it explores the world around you. The little fox's coloring was a bit of shock at first, with it being more brown and gray than you would have figured. Then again, maybe that is just the normal coloring for fox's when they are young like yours.";
 
 instead of conversing the Dash:
-	if player is in Computer Lab and Dash is in Computer Lab:
+	if Player is in Computer Lab and Dash is in Computer Lab:
 		say "[DashTalkMenu]";
-	else if companion of player is little fox:
+	else if companion of Player is little fox:
 		say "[DashTalkMenu]";
 	else:
 		say "     Dash isn't here.";
@@ -108,9 +108,9 @@ instead of conversing little fox:
 	if little fox is not tamed:
 		say "     Who?";
 	else:
-		if player is in Computer Lab and Dash is in Computer Lab:
+		if Player is in Computer Lab and Dash is in Computer Lab:
 			say "[DashTalkMenu]";
-		else if companion of player is little fox:
+		else if companion of Player is little fox:
 			say "[DashTalkMenu]";
 		else:
 			say "     Dash isn't here.";
@@ -138,7 +138,7 @@ to say DashTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Watch Dash"):
@@ -166,7 +166,7 @@ The sarea of Abandoned Fox is "Park".
 
 Instead of resolving Abandoned Fox:
 	say "     Traveling through the park, you hear a strange soft noise coming from one of the nearby bushes. It sounds almost like something small calling out. Do you investigate?";
-	If player consents:
+	if Player consents:
 		say "     Pushing the screening bushes aside you find a hole in the ground, and sprawled outside the whole is a skinny looking young fox kit making pathetic noises. Staring at the young fox and the area around the den, you realize it must have been abandoned for a while at this point. Its mother hasn't been back to feed it, and has likely become another victim of the changes sweeping the city at this point. Leaving the little kit here all alone crying for help. Sighing at life's unfairness you begin to turn away only to hear the soft yipping noises take on a more plaintive note as it notices you and starts pleading for food and attention.";
 		if food is owned:
 			say "     Do you help it?";
@@ -199,7 +199,7 @@ after going to Computer Lab while (HP of Fang is 2 and Dash is booked):
 	LineBreak;
 	say "     [bold type]Do you want to try and get the fox kit to become more social ([link]Y[as]y[end link])? Or do you want to keep Fang away from Dash. ([link]N[as]n[end link])";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     While looking down at Dash you hold your hands up in the universal expression of [italic type]don't look at me[roman type]! The small fox glares up at you with a look that reminds you of a toddler about to throw a serious tantrum, Fang however takes advantage of the opportune moment and gently grabs Dash's fluffy tail in his muzzle. The fox lets out a very dramatic high-pitched scream, quickly leaning down to check on the little guy you find that he is perfectly fine and that you were right about that tantrum. While the sound Dash is making is enough to make you cringe Fang has either decided to ignore it or he is simply not bothered by it. Dash is shocked into silence as your beta begins to lick him all over, obviously Fang feels the young fox was in desperate need of a bath. Unfortunately the silence doesn't last very long as the fox decides he doesn't want a bath and begins to try to run away.";
 		say "     Every time it looks like he will finally be able to break free Fang just pulls him in closer and resumes the impromptu cleaning. Still a bit worried about the little fox you sit down next to both him and your beta. Eventually Dash gives up on his escape and decides to simply endure his bath. You begin to gently stroke your hand over Fang's head and down his strong back, much to the large canines pleasure. Finally bath time comes to an end which thrills Dash causing him to end up jumping into your lap and cuddling up close to you, Fang decides to join in laying his large head across your lap. You relax for a few moments taking in all the warmth and fluffiness, however you know that you should be getting back into the city. You gently pick Dash up and place him inside his fox den, leaning down you place a soft kiss to Fang's head telling him to watch over Dash for you. With a quick nod Fang goes back to napping, all the while staying close to his new little kit.";
@@ -213,11 +213,11 @@ Section 1.4.2 - Dash/Alpha Fang
 
 after going to Computer Lab while ((HP of Fang is 3 or HP of Fang is 4 ) and Dash is booked):
 	say "     Walking into the computer lab you're shocked to see Fang inside instead of guarding the entrance like usual. At the moment the huge alpha wolf seems to be standing guard in front of the small cubicle that Dash has claimed for himself. After a few moments Fang lets out a firm bark at the little fox's den, eventually Dash decides to poke his head out to see what all the noise is about. Unfortunately the wolf was fully expecting this and before anyone can react he strikes, picking up the little fox with his teeth. Dash lets out a shrieking sound while in Fang's mouth, surprising even yourself you launch yourself at the large wolf making every attempt to get the kit away from what appears to be a very hungry alpha!";
-	say "     With what was more than likely meant to be a gentle push, Fang sends you flying to the ground. The great wolf then places the yipping fox kit down, but before he fully relaxes his jaws a single massive paw is settled down over Dash's tail to keep him from running away. Fang's luminescent eyes seem to smolder as he looks deep inside your own. 'The brat needs to learn to be strong!' The alphas words come out gravelly, more than likely from the fact that he only speaks so rarely. You open your mouth to respond with a comeback on your tongue only to be silenced quickly by the beast speaking to you. 'You have been a good mother for the pup... but he needs a man to make him a warrior!' [if player is male]You can't help the confused look that passes over your face, obviously Fang picks up on it though. 'Yeah, you're male... but you coddle him like a baby that's sucking from your tits! He needs an alpha... to show him how to become a warrior in his own right one day.'[end if]";
+	say "     With what was more than likely meant to be a gentle push, Fang sends you flying to the ground. The great wolf then places the yipping fox kit down, but before he fully relaxes his jaws a single massive paw is settled down over Dash's tail to keep him from running away. Fang's luminescent eyes seem to smolder as he looks deep inside your own. 'The brat needs to learn to be strong!' The alphas words come out gravelly, more than likely from the fact that he only speaks so rarely. You open your mouth to respond with a comeback on your tongue only to be silenced quickly by the beast speaking to you. 'You have been a good mother for the pup... but he needs a man to make him a warrior!' [if Player is male]You can't help the confused look that passes over your face, obviously Fang picks up on it though. 'Yeah, you're male... but you coddle him like a baby that's sucking from your tits! He needs an alpha... to show him how to become a warrior in his own right one day.'[end if]";
 	LineBreak;
 	say "     [bold type]Do you want to allow Fang to work with Dash ([link]Y[as]y[end link])? Or do you want to keep Fang away from Dash. ([link]N[as]n[end link])";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Walking up to Fang slowly with your head bowed and arms outstretched, you softly get close to the ground and check on Dash. With what your alpha had said going through your mind you glance up at the huge wolf. Without much thought your mouth starts to work on autopilot, you explain to Fang how you understand that Dash need to become stronger but there is another way. Fang looks down at you with an arrogant smirk on his muzzle as his eyes almost seem to bore inside of you. 'What are you saying? You agree that he needs to become stronger... but then act like you don't want me to train him, make up your mind!' Well aware that you are on thin ice with your alpha you continue with your opinion. You ask Fang if he was ever around children before the nanites, a look of confusion passes over his muzzle, until while mentioning the different sorts of children he could have been exposed to you ask if he ever had kids of his own.";
 		say "     The wolves eyes widen for a moment, although he still says nothing to affirm or deny it. But you decide to hope for the best and grab onto the reaction that you saw, slowly moving your hand closer to Dash you ask the canine if he can tell how small the fox kit is? How afraid he must be of the monsters that roam the city? You follow that up with mentioning that Dash is a child, that he doesn't need an alpha who views him as a tool he deserves more, he deserves a family. The look on the wolves face almost looks like one of betrayal, 'What about you bitch!? You take him out into the city... you expose him to all of those monsters yourself!' Almost like an opening floodgate, he yells back at Fang, telling him that the reason you take Dash with you is so he can more about the city and if something ever happens to you, you want him to be able to know how to survive and where to hide and survive!";
@@ -235,7 +235,7 @@ Section 1.5 - Fox Kit Ending
 
 when play ends:
 	if little fox is tamed:
-		if humanity of player < 10:
+		if humanity of Player < 10:
 			say "     When you give in to your feral instincts, the little fox you rescued stays with you, traveling with you and helping as best he can, trying to help you hunt and teasing at you to play with him. Finally though he grows large enough that one day he leaves on his own, fully able to forage for himself now, and leaving you to your fate. You miss the little creature occasionally... when you can remember him anyways.";
 		else:
 			say "     After your rescue, you manage to convince the distracted military that Dash isn't a threat, and he comes with you out into your new life. Being a mostly wild creature, he doesn't really fit in anywhere that you take him however, and so eventually you decide to find a wilderness preservation to release him into, where you hear there are several other foxes for the little fellow to play with. Several years later though, you are surprised to find someone has left another little baby fox at your door while you slept, a roughly scrawled note just says 'thanks mom,' with a little paw mark in the corner.";
@@ -259,14 +259,14 @@ the fuckscene of skunk kit is "The little skunk kit you've rescued is too young 
 
 to say SummonPeppy:
 	now Peppy is nowhere;
-	if player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
+	if Player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
 		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";
 
 to say DismissPeppy:
 	move Peppy to Computer Lab;
-	if player is not in Computer Lab: [regular dismiss]
+	if Player is not in Computer Lab: [regular dismiss]
 		say "     You crouch down and attempt to explain to Peppy that he needs to stick close, but that he doesn't have to fight anymore, leaving him free to explore. Churring happily, the young mephit decides to check out everything he can.";
 	else: [dismissing him in the Computer Lab]
 		say "     Explaining to Peppy that he has had enough adventures for now, the little skunk rolls up into a ball, covering his face with his tail. He has apparently decided that a nap sounds great right about now.";
@@ -279,14 +279,14 @@ Peppy is a man.
 [Physical details as of game start]
 ScaleValue of Peppy is 2. [dog sized]
 SleepRhythm of Peppy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Peppy is 1. [X cock]
+Cock Count of Peppy is 1. [X cock]
 Cock Length of Peppy is 4. [X Inches]
-Cock Width of Peppy is 2.
-Testes of Peppy is 2. [X balls]
-Cunts of Peppy is 0. [X pussy]
-Cunt Length of Peppy is 0. [X Cunt]
-Cunt Width of Peppy is 0. [X Cunt]
-Breasts of Peppy is 2. [X nipples]
+Ball Size of Peppy is 2.
+Ball Count of Peppy is 2. [X balls]
+Cunt Count of Peppy is 0. [X pussy]
+Cunt Depth of Peppy is 0. [X Cunt]
+Cunt Tightness of Peppy is 0. [X Cunt]
+Nipple Count of Peppy is 2. [X nipples]
 Breast Size of Peppy is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Peppy is false. [can not take oversized members without pain]
@@ -317,7 +317,7 @@ to say Peppydesc:
 	say "     The skunk kit you rescued is obviously the offspring of one of the larger skunk beasts roaming the forest, as even as young as it obviously is, it's already the size of an average dog or perhaps even slightly larger. Peppy stares up at you adoringly however, with love in his eyes for his savior, exploring the world around it with the innocence of youth. How long that innocence will last though as he grows is anyone's guess, but for now its happy skunk-like antics bring a smile to your face.";
 
 An everyturn rule:
-	if companion of player is skunk kit:
+	if companion of Player is skunk kit:
 		if a random number between one and 20 < 4:
 			say "[one of]The scent from Peppy wafts over you strongly, causing your body to change![or]Peppy comes up to you and nuzzles you, and you find yourself changing.[or]Peppy calls out for his mother, and you find yourself filling in for her.[or]Peppy rubs up against you, his skunky smell teasing your nose with images of mature skunk beasts.[or]Peppy is startled by something and sprays the area, hitting you as well![at random]";
 			if skunkbeaststatus is 1:
@@ -326,9 +326,9 @@ An everyturn rule:
 				infect "Skunk";
 
 instead of conversing the Peppy:
-	if player is in Computer Lab and Peppy is in Computer Lab:
+	if Player is in Computer Lab and Peppy is in Computer Lab:
 		say "[PeppyTalkMenu]";
-	else if companion of player is skunk kit:
+	else if companion of Player is skunk kit:
 		say "[PeppyTalkMenu]";
 	else:
 		say "     Peppy isn't here.";
@@ -337,9 +337,9 @@ instead of conversing skunk kit:
 	if skunk kit is not tamed:
 		say "     Who?";
 	else:
-		if player is in Computer Lab and Peppy is in Computer Lab:
+		if Player is in Computer Lab and Peppy is in Computer Lab:
 			say "[PeppyTalkMenu]";
-		else if companion of player is skunk kit:
+		else if companion of Player is skunk kit:
 			say "[PeppyTalkMenu]";
 		else:
 			say "     Peppy isn't here.";
@@ -367,7 +367,7 @@ to say PeppyTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Watch Peppy"):
@@ -403,11 +403,11 @@ littlelostskunk is a number that varies.
 Instead of resolving Lost skunk kit:
 	if littlelostskunk is 0:
 		say "     Wandering through the woods, you come across what was obviously the remains of a recent combat, the ground torn and savaged, and spots of blood staining the ground, looking around you find it hard to tell exactly what happened here, but you know it was violent. You glance around to see if there is anything of use in the area, or if you can determine what the combatants were and why they fought, finding several strange boot prints and what you think might be a bullet casing, but that makes no sense... Sighing you prepare to go on about your business, when you hear a small whimpering noise from under a nearby bush. Considering the state of the area investigating could be dangerous, do you look anyways?";
-		If player consents:
+		if Player consents:
 			say "     Looking under the thorny bushy you note a small hollow dug out underneath, far too small for anyone your size to fit in, but just the right size for the shaking little skunk kit that is currently occupying it, quite possibly the offspring of one of those large skunk beasts in the area as even though it is obviously just a child, it is still almost the size of a full grown dog. Seeing you the little thing whimpers and shudders some more, and you can smell a soft whiff of skunk smell from the area, you quickly back off so as not to panic the little creature. Taking a new look at the site of the battle now that you know what to look for, you imagine something was after the skunk beasts young and it objected, somehow this one managed to hide from whatever or whoever took the rest though. You feel a bit sorry for the little skunk kit, as it obviously is all alone now, but as it seems terrified of your looks and your smell, you aren't sure what you can do to help.";
-			if bodyname of player is "Skunk" or bodyname of player is "Skunk Taur" or bodyname of player is "Skunkbeast Lord":
+			if bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" or bodyname of Player is "Skunkbeast Lord":
 				say "Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
-				if player consents:
+				if Player consents:
 					say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.";
 					say "     Petting and soothing the little beast feels almost natural to you, something about taking care of him speaking to the skunk-like part of yourself, and you lose track of how long you sit there petting his soft fur. Eventually the little skunk stirs; its happy churring noises as it rubs its head against you playfully make you smile fondly at him. Realizing you should probably move away from the site of the battle, you stand up and easily coax the little creature to a safer location a little distance away. You laugh at its innocent frolicking and skunk-like antics as it tries to impress you with its fierceness and convince you to play with it and pet it. After a bit you realize the slight skunk-like smell in the clearing seems to be even more comforting to you than normal, smelling a bit like home and other skunks.";
 					WaitLineBreak;
@@ -457,9 +457,9 @@ Instead of resolving Lost skunk kit:
 			now Lost skunk kit is resolved;
 	else if littlelostskunk is 1:
 		say "     Traveling through the forest again, you realize that you are near the site of the skunks battle from earlier, curiosity getting the better of you, you decide to go see if that little skunk kit is still ok. Returning to the battle site easily enough, you note that other creatures have passed this way recently, probably looking to scavenge something as well, so you probably shouldn't stay too long. Still as you approach the little skunks hiding spot, you hear the telltale whimpering that tells you the little creature is still hanging in there. Feeling even sorrier for having left the little creature alone, you quickly check to see if you might have any way to get it to trust you better this time.";
-		if bodyname of player is "Skunk" or bodyname of player is "Skunk Taur" or bodyname of player is "Skunkbeast Lord":
+		if bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" or bodyname of Player is "Skunkbeast Lord":
 			say "     Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
-			if player consents:
+			if Player consents:
 				say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.[line break]";
 				say "     Petting and soothing the little beast feels almost natural to you, something about taking care of him speaking to the skunk-like part of yourself, and you lose track of how long you sit there petting his soft fur. Eventually the little skunk stirs; its happy churring noises as it rubs its head against you playfully make you smile fondly at him. Realizing you should probably move away from the site of the battle, you stand up and easily coax the little creature to a safer location a little distance away. You laugh at its innocent frolicking and skunk-like antics as it tries to impress you with its fierceness and convince you to play with it and pet it. After a bit you realize the slight skunk-like smell in the clearing seems to be even more comforting to you than normal, smelling a bit like home and other skunks.";
 				WaitLineBreak;

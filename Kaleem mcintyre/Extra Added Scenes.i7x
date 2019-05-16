@@ -57,14 +57,14 @@ Instead of resolving a Challenge of the Alphas:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Run.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Something inside of you makes you stay right where you are. This... this savagery can't continue. But what should you do? Getting in between one another might get you torn limb from limb.";
 		say "     [bold type]Should you pick sides?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Alpha Wolf.";
 		say "     ([link]N[as]n[end link]) - Alpha Husky.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     After rushing to tackle the Alpha Husky for the Alpha Wolf you find that the lupine is somewhat confused about your interference between their inopportune, yet destined, brawl. Having caught the Alpha Husky off guard you manage to deal with the other in a somewhat sophisticatedly violent manner with some well-placed punches and kicks to the gut and then watch as it rushes off, the other Alpha hadn't been expecting the extra added help from an outsider. Breathing slowly at being able to stop the two from possibly killing one another you wipe your forehead just in time to feel the breath of the Alpha Wolf behind you come up to sniff at your rump. Freezing slightly, you hope you haven't made a big mistake by aiding this shaggy furred mutt. Of course, luck seems to be with you as the big Alpha Wolf simply nods at you in a sign of respect and then trots his way off down the road, thankfully opposite of where the Alpha Wolf had gone. As the wolf pads off, you feel as though you've done a good thing today. Looking down at the ground, you see a small mound of food place at your feet. Tilting your head slightly to the left you wonder if the Alpha wolf left that for you. Maybe? But if that's true then just how intelligent are these so-called aberrations of nature?";
 			increase carried of food by 1;
@@ -74,7 +74,7 @@ Instead of resolving a Challenge of the Alphas:
 			say "     Looking for an opportunity you take the Alpha wolf by surprise and tackle the other to the ground. Before the disheveled lupine can so much as mutter a whine you're laying into the other with punches and kicks to the chest and torso. The Alpha Husky is somewhat confused by what in the world is going on but is soon lolling out his tongue as he watches his rival scurry away... for now. You have a little time to brush off the side of your face where the wolf managed to scrape at your face with his claws before a large figure is looming over you. Eyes snapping up to look into the Alpha Husky's slightly drooling face, you wonder if you've made a mistake in coming to the other's aid. When the slightly dirty looking canine manages haul you up onto your feet by the shoulder you're not prepared to receive wet doggy kisses of affection. Sputtering and trying to not get any in your mouth, you find everything coming to a sudden halt as something is pushed into your hands right before the Alpha Husky pulls away from you and then takes his leave of your presence. Blinking and then looking down you find a medkit placed firmly into your hold. It takes you a second to connect the dots but when you do you realize that the mutant must have been holding onto this in case his fight went against his favor. Maybe these creatures are much smarter than you and everyone else thinks?";
 			increase carried of medkit by 1;
 			now Resolution of Challenge of the Alphas is 2; [helped Alpha Husky]
-		increase charisma of player by 1;
+		increase charisma of Player by 1;
 		say "[bold type]Your charisma has increased by 1![roman type][line break]";
 		increase score by 5;
 	else:

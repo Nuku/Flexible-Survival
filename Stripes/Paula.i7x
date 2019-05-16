@@ -39,7 +39,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - The doctor.";
 	say "     ([link]N[as]n[end link]) - The nurses.";
-	if player consents:
+	if Player consents:
 		say "     Moving past the doberwoman, you charge at the doctor while telling her to help the prisoner. You can see her heading towards the vixens, one of them leaving the patient to deal with the interruption while the other continues to ride her face. But you've got your own problems to deal with in the form of the horny doctor.";
 		now hdmode is 3;
 		challenge "Horny Doctor";
@@ -163,7 +163,7 @@ to say PaulaTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "About Her":
@@ -187,7 +187,7 @@ to say sexwithPaula:
 		say "ERROR-Paula-[HP of Paula]L: You should not be able to find her yet.";
 	else if HP of Paula is 3:
 		say "     You haven't really had a chance to talk to Paula yet since she got here. You should probably start with that.";
-	else if player is neuter:
+	else if Player is neuter:
 		say "     Lacking a proper gender of your own right now, perhaps you should deal with that before seeking sex from others.";
 	else if lastfuck of Paula - turns < 6:
 		say "     'You're back pretty quickly for more, don't you think? Probably means you're losing it, if you're back asking for sex again so soon. Try holding out a little longer before we knock boots again,' she adds, running her paws along her sides in a sultry manner in a clear invitation that you are indeed welcome back for more soon.";
@@ -204,12 +204,12 @@ to say sexwithPaula:
 to say Paulasexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 1;
 		now description entry is "have her suck you off";
-		if cock length of player >= 12:
+		if Cock Length of Player >= 12:
 			choose a blank row in table of fucking options;
 			now title entry is "Double-titty-fuck";
 			now sortorder entry is 2;
@@ -226,7 +226,7 @@ to say Paulasexmenu:
 		now title entry is "***TBD***";
 		now sortorder entry is 5;
 		now description entry is "another sex position";]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
@@ -253,7 +253,7 @@ to say Paulasexmenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: Shall you [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Fellatio":
@@ -282,19 +282,19 @@ to say Paulasexmenu:
 
 
 to say paulasex01:
-	say "     Deciding to put that muzzle of hers to better use than her typical cynical remarks, you offer up your cock to her instead. 'Oh my! Look at this swelling,' she says with exaggerated concern. 'You should have said it was a medical issue. This. needs. immediate. treatment,' she says, each pause a lick from her tongue[if cockname of player is not listed in infections of internallist]. Her focus drifts down to your [ball size], which she licks and kisses while caressing them with her paw. 'These definitely need to be drained,' she purrs sexily[else]. Giving your full length a long, slow lick, she strokes your engorged member. 'This definitely needs to be drained,' she purrs sexily[end if].";
-	say "     Opening her muzzle, she takes your [cock size desc of player] cock past her lips[if cock length of player > 36] with some effort[else if cock length of player > 24] with some effort at first[end if]. Working her tongue and palate, she's quite enthusiastic about blowing you, working her muzzle over your [cock of player] manhood while her paws stroke the base of your shaft[if cockname of player is not listed in infections of internallist], your balls[end if] and your hips. Your breathing gets heavy and your penis pulses and throbs in her mouth as your excitement builds under her tender care. Eventually you can no longer hold back and, with a moan of 'Oh nurse!' you unload your [cum load size of player] load into her sucking maw[if cock width of player < 30]. She swallows it all down eagerly, licking away the last drops before releasing your spent shaft[else]. She swallows as much of it as she can, but it's too much and some ends up overflowing from her pretty muzzle and dripping down onto her bosom before you're finally spent[end if].";
+	say "     Deciding to put that muzzle of hers to better use than her typical cynical remarks, you offer up your cock to her instead. 'Oh my! Look at this swelling,' she says with exaggerated concern. 'You should have said it was a medical issue. This. needs. immediate. treatment,' she says, each pause a lick from her tongue[if cockname of Player is not listed in infections of internallist]. Her focus drifts down to your [Ball Size Adjective of Player] [Balls], which she licks and kisses while caressing them with her paw. 'These definitely need to be drained,' she purrs sexily[else]. Giving your full length a long, slow lick, she strokes your engorged member. 'This definitely needs to be drained,' she purrs sexily[end if].";
+	say "     Opening her muzzle, she takes your [cock size desc of Player] cock past her lips[if Cock Length of Player > 36] with some effort[else if Cock Length of Player > 24] with some effort at first[end if]. Working her tongue and palate, she's quite enthusiastic about blowing you, working her muzzle over your [cock of Player] manhood while her paws stroke the base of your shaft[if cockname of Player is not listed in infections of internallist], your balls[end if] and your hips. Your breathing gets heavy and your penis pulses and throbs in her mouth as your excitement builds under her tender care. Eventually you can no longer hold back and, with a moan of 'Oh nurse!' you unload your [Cum Load Size of Player] load into her sucking maw[if Ball Size of Player < 30]. She swallows it all down eagerly, licking away the last drops before releasing your spent shaft[else]. She swallows as much of it as she can, but it's too much and some ends up overflowing from her pretty muzzle and dripping down onto her bosom before you're finally spent[end if].";
 
 to say paulasex02:
 	say "     'Well, I guess I'll just have to let you get it out, else you could end up snapping and running wild.' Stretching her arms up above her head, she gives an exaggerated sigh, giving you a clear view of her twin pairs of breasts. The soft, silvery fur of her chest does not hide the shapely nature of her double-bosom and their perky nipples.";
-	say "     Dropping to her knees, she takes hold of your erection and, after giving it a few playful strokes, nestles it in her warm bosom. Her twin racks cradle your [cock size desc of player] member in their soft embrace. Pointing her muzzle down, she kisses your glans before slipping her lips around it. She grinds her chest against your shaft in this delightful manner. You put a hand on the vixen's head and caress her ears.";
-	say "     She works your arousal between her tits, gently pressing them around it with her paws. Soon this treatment has you panting and rocking your hips into her motion. Sensing you getting close, she lowers her muzzle further and sucks on you harder. A few final licks finishes the job, causing you to groan in lustful release, pumping your [cum load size of player] load into her warm, sucking muzzle. She licks your shaft clean with a self-satisfied sigh before getting back up and closing up her shirt with a professional air.";
+	say "     Dropping to her knees, she takes hold of your erection and, after giving it a few playful strokes, nestles it in her warm bosom. Her twin racks cradle your [cock size desc of Player] member in their soft embrace. Pointing her muzzle down, she kisses your glans before slipping her lips around it. She grinds her chest against your shaft in this delightful manner. You put a hand on the vixen's head and caress her ears.";
+	say "     She works your arousal between her tits, gently pressing them around it with her paws. Soon this treatment has you panting and rocking your hips into her motion. Sensing you getting close, she lowers her muzzle further and sucks on you harder. A few final licks finishes the job, causing you to groan in lustful release, pumping your [Cum Load Size of Player] load into her warm, sucking muzzle. She licks your shaft clean with a self-satisfied sigh before getting back up and closing up her shirt with a professional air.";
 	say "     'Be sure to come see me again if you need another treatment. And I hope you appreciate it; not all of my patients receive this level of service.";
 
 to say paulasex03:
-	say "     Rather than answer with words, you move atop her on the cot, placing your hands beside her. She smiles up at you and takes hold of your [cock of player] cock, stroking it meaningfully. 'Looking to pound the naughty nurse, are you?' she says sensually, shifting her position to leave herself open and ready for just that. With the lovely vixen holding you lined up with her wet pussy, you ease forward and sink your [cock size desc of player] manhood into her[if cock length of player > 36] with some effort[else if cock length of player > 24] with some effort at first[end if]. And once you're in, her paws move to your ass and grip it firmly, pulling you forward to thrust into her heated cunny.";
+	say "     Rather than answer with words, you move atop her on the cot, placing your hands beside her. She smiles up at you and takes hold of your [cock of Player] cock, stroking it meaningfully. 'Looking to pound the naughty nurse, are you?' she says sensually, shifting her position to leave herself open and ready for just that. With the lovely vixen holding you lined up with her wet pussy, you ease forward and sink your [cock size desc of Player] manhood into her[if Cock Length of Player > 36] with some effort[else if Cock Length of Player > 24] with some effort at first[end if]. And once you're in, her paws move to your ass and grip it firmly, pulling you forward to thrust into her heated cunny.";
 	say "     After exchanging some kisses and setting up a good rhythm for both of you, you bring your hands to her upper pair of breasts to fondle them while she gropes her lower pair. Seeing you both enjoying her furry mounds while you fuck her is quite the arousing sight and your cock throbs and pulses inside her, precum leaking with every thrust you make. And from the way she's panting and moaning, she's really enjoying it as well. The sexy vixen wraps a leg around behind you and raises her hips up into each thrust you make.";
-	say "     The scent of sex and vulpine arousal is heavy in the air as you feel a pressure building in your balls. With your hot cum primed for release, you grab her hips and drive yourself into her for a few last thrusts. And when you finally pop and start unloading your [cum load size of player] load into her quivering cunny, she arches her back and cries out, her orgasm set off by your release. Panting, moaning and yipping come from you both as you paint the sultry nurse's vagina and womb with your seed[if cock width of player > 30] until it overflows from her[end if] in a sticky mess. After taking a few minutes to recover, you pull out and are treated to the vixen sucking your cock clean before she'll give you a clean bill of health and send you on your way.";
+	say "     The scent of sex and vulpine arousal is heavy in the air as you feel a pressure building in your balls. With your hot cum primed for release, you grab her hips and drive yourself into her for a few last thrusts. And when you finally pop and start unloading your [Cum Load Size of Player] load into her quivering cunny, she arches her back and cries out, her orgasm set off by your release. Panting, moaning and yipping come from you both as you paint the sultry nurse's vagina and womb with your seed[if Ball Size of Player > 6] until it overflows from her[end if] in a sticky mess. After taking a few minutes to recover, you pull out and are treated to the vixen sucking your cock clean before she'll give you a clean bill of health and send you on your way.";
 
 to say paulasex04:
 	say "***TBD***";
@@ -333,18 +333,18 @@ check paulahealing:
 	If Paula is not visible, say "[if HP of Paula < 3]You're on your own for that unless you go see Paula for assistance[else]Try using a medkit or another means of healing[end if]." instead;
 
 carry out paulahealing:
-	if ( 100 * HP of player ) / maxHP of player >= 90:
+	if ( 100 * HP of Player ) / maxHP of Player >= 90:
 		say "     You're not really hurt enough to require using the shelter's limited medical supplies. You should probably just cope.";
 	else if lastPaulahealing - turns < 8:
 		say "     'We've got to ration our medical supplies. I know you're kind of a big help to Alexandra, but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
-		let healed be ( maxHP of player - HP of player ) / 2;
-		if "Rapid Healing" is listed in the feats of player:
+		let healed be ( maxHP of Player - HP of Player ) / 2;
+		if "Rapid Healing" is listed in the feats of Player:
 			now healed is ( healed times 110 ) divided by 100;
-		if "Regeneration" is listed in the feats of player:
+		if "Regeneration" is listed in the feats of Player:
 			now healed is ( healed times 110 ) divided by 100;
-		if ( healed + HP of player ) > maxHP of player, now healed is ( maxHP of player - HP of player );
-		increase HP of player by healed;
+		if ( healed + HP of Player ) > maxHP of Player, now healed is ( maxHP of Player - HP of Player );
+		increase HP of Player by healed;
 		say "     'Alright, what seems to be the problem?' she asks. As you point out your injuries to her, she looks them over. 'You know, you'd not be in such rough shape if you chose to stick around here with us. It's not like you're doing any good gallivanting around out there,' she says cynically. 'Much better to just stay here and keep out of trouble,' she adds, groping you with a passing paw even as she grumbles teasingly. After her quick examination, she digs out the necessary supplies from her bag, all while making a show of waving her rear in the air. 'You're probably just out there to chase some tail. Typical.'";
 		say "     Despite her cynical edge and teasing mannerisms, she takes proper care of you, treating your wounds and ensuring you're properly patched up before letting you off the examination table with another sharp retort and a swat on your rear. You feel considerably better, having recovered [special-style-1][healed][roman type] HP.";
 		now lastPaulahealing is turns;

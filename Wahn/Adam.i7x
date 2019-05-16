@@ -45,14 +45,14 @@ Adam	"Adam"
 
 Adam is a man.
 ScaleValue of Adam is 3. [human sized]
-Cocks of Adam is 1.
+Cock Count of Adam is 1.
 Cock Length of Adam is 10.
-Cock Width of Adam is 8.
-Testes of Adam is 2.
-Cunts of Adam is 0.
-Cunt Length of Adam is 0.
-Cunt Width of Adam is 0.
-Breasts of Adam is 2. [2 nipples]
+Ball Size of Adam is 8.
+Ball Count of Adam is 2.
+Cunt Count of Adam is 0.
+Cunt Depth of Adam is 0.
+Cunt Tightness of Adam is 0.
+Nipple Count of Adam is 2. [2 nipples]
 Breast Size of Adam is 0.
 TwistedCapacity of Adam is false.
 Sterile of Adam is false.
@@ -142,7 +142,7 @@ to say AdamTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -250,13 +250,13 @@ to say AdamSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Step up behind Adam and guide him to touch his dick";
 	else:
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Jerk off together with Adam";
 			now sortorder entry is 1;
 			now description entry is "Invite him for some shared stroking";
 		[]
-		if player is female:
+		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Stroke yourself while Adam jerks off";
 			now sortorder entry is 2;
@@ -352,7 +352,7 @@ to say AdamSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Introduce him to jerking off"):
@@ -406,7 +406,7 @@ to say AdamJerkoff_Virgin: [introduce him to jerking]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Rub his chest."; [have the player play with his nipples]
 	say "     ([link]N[as]n[end link]) - Fondle his balls."; [have the playey rubbing his ballsac]
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Deciding that Adam will eventually figure out his way around his own dick, you move your hands back to his chest, feeling the voluminous pecs under your palms again. He keeps moaning as you caress him, causing him to hasten his stroking. You follow up by moving your fingers around his nipples, carefully running the tip of your index and thumb around them, rubbing and squeezing. Adam lets out a loud groan, which he abruptly interrupts once he realizes his tone, as his breathing quickens. 'Oh... I'm starting to feel...' you immediately understand what he's saying, so you just tell him to keep going... and don't stop. Following your instructions, he accelerates the pace, rubbing his entire length even faster while you caress his nipples. The half-minotaur's breathing shortens, getting unstable amidst his moaning voice. 'I'm gonna...' he goes on, as you continue to squeeze his nips.";
 		say "     Not long after, you feel his hips thrusting back and forth as Adam lets out a loud grunt. You see his dick throbbing, harder than ever, as he shoots his load with incredible force. The thick, white stream of cum only lands several meters further ahead, as the shots keep coming out stronger than the previous. He's literally fucking his hand as he orgasms, leaving a large trail of cum on the ground.";
@@ -430,7 +430,7 @@ to say AdamJerkoff_Male:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Kiss him."; [Kiss Adam and stroke closer]
 	say "     ([link]N[as]n[end link]) - Give him a handjob."; [stroke him]
-	if player consents:
+	if Player consents:
 		say "     You slowly approach Adam with your cock still in one hand, as you move the other onto the back of his head, feeling his shoulder length hair between your fingers. You pull him to you and give him a deep kiss, playfully exploring his mouth with your tongue. You hear and feel him moaning as he jerks his erection even faster while both your cocks rub against eachother. He turns to you, moaning 'I'm pretty close...' as you keep up with him, stroking your length as fast as you can. Eventually, you both reach your climaxes, standing as you are, shooting cum all over yourselves. Spurt after spurt, Adam coats your own manhood with his warm seed, some hitting you in the navel and below. You don't last much longer before a mind-blowing orgasm shakes your body, spurting your load on him as he did to you.";
 		say "     With both of you drenched in eachother's loads, you kiss him again, tongue-wrestling him playfully as you give him a gentle tap on his waist. Takes you a while to realize you need to clean yourselves up before returning to your affairs.";
 		now lastfuck of Adam is turns;
@@ -446,7 +446,7 @@ to say AdamJerkoff_Female:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Kiss him."; [Kiss Adam and stroke closer]
 	say "     ([link]N[as]n[end link]) - Give him a handjob."; [stroke him]
-	if player consents:
+	if Player consents:
 		say "     You slowly approach Adam with one hand still caressing your parts, as you move the other onto the back of his head, feeling his shoulder length hair between your fingers. You pull him to you and give him a deep kiss, playfully exploring his mouth with your tongue. You hear and feel him moaning as he jerks his erection even faster. He turns to you, moaning 'I'm pretty close...' as you move some of your fingers inside your by now soaked pussy, while rubbing your clit at the same time. Eventually, you both reach your climaxes, standing as you are. Spurt after spurt, Adam coats you with his warm seed, hitting you in the navel and below. You don't last much longer before a mind-blowing orgasm shakes your body. You continue to finger your pussy as you lose yourself in amazing sensations, soaking them with your vaginal fluids.";
 		say "     With both of you drenched in eachother's loads, you kiss him again, tongue-wrestling him playfully as you give him a gentle tap on his waist. Takes you a while to realize you need to clean yourselves up before returning to your affairs.";
 		now lastfuck of Adam is turns;
@@ -493,7 +493,7 @@ to say AdamPussyFuck_Virgin:
 
 to say AdamPussyFuck: [pussy-fucked by Adam]
 	say "     You pull Adam aside and lead him behind one of the long storage shelves in the tent. Giving him a deep kiss, you put your arms around him and slide your hands into his shorts at the back, feeling and softly squeezing his furred buns. Then you move on to his t-shirt, grabbing it and pulling it up and over his head, revealing Adam's fit and human upper body. Leaning down a bit, you suck on first one, then the other of his nipples, followed by licking over his chest and neck until you reach the chin and kiss him again. You lean over his ear, and whispering, you tell the half-minotaur you want him inside you. Stroking his cock through the shorts, you then move back a step and quickly slide off your clothes. Adam watches you undress with a smile on his face and eagerly replies 'My pleasure, [sir]!' before grabbing a pile of blankets out of the shelf and spreading them on the floor.";
-	say "     Lying down on the improvised bedding, you have a nice view as Adam pulls down his shorts to stand naked before you. His long cock stands proudly erect in your direction, showing an interesting contrast of white skin against the black fur of his legs. Liking what you see, you spread your legs invitingly and stroke the lips of your pussy, inviting him to take you. Adam is very eager to follow, kneeling down and putting his head between your legs to lick your pussy. And what a long and talented tongue he has - after running it over your sensitive lips and clit, he sticks it inside your vagina, wiggling around and poking your inner walls with the tip. Next, he [if player is male]runs his tongue up the underside of your cock[else]puts a line of small kisses up to your belly button[end if], then moves up to lie on top of you and gives you a hungry kiss.";
+	say "     Lying down on the improvised bedding, you have a nice view as Adam pulls down his shorts to stand naked before you. His long cock stands proudly erect in your direction, showing an interesting contrast of white skin against the black fur of his legs. Liking what you see, you spread your legs invitingly and stroke the lips of your pussy, inviting him to take you. Adam is very eager to follow, kneeling down and putting his head between your legs to lick your pussy. And what a long and talented tongue he has - after running it over your sensitive lips and clit, he sticks it inside your vagina, wiggling around and poking your inner walls with the tip. Next, he [if Player is male]runs his tongue up the underside of your cock[else]puts a line of small kisses up to your belly button[end if], then moves up to lie on top of you and gives you a hungry kiss.";
 	WaitLineBreak;
 	say "     Yearning for his cock inside you, you reach down and guide it to your opening, then scooch down a bit to get the head in. Adam moans in lust, sliding his manhood deeper, spreading your inner walls around his hard shaft. Soon he's all the way in, with his balls and soft furred hips rubbing against your body. For a moment, he just stays still like that, connected to you as intimately as possible, before starting to slide in and out. Moans rise in both your throats as he starts fucking you in earnest, going faster and faster with his deep strokes and rubbing just the right spots inside you. With the noise of your coupling quite loud now, it doesn't surprise you to see Elaine and a male soldier look behind the storage shelf to check out what's going on. You don't care if they watch, your whole mind focused on the virile half-minotaur fucking you.";
 	say "     Wrapping your legs around him, you pull him towards you with each of his thrusts, making him slam into you harder and deeper. You lose track of time for a while as you're so thoroughly fucked, only few things registering through the lust-filled buzz in your head. One thing you do remember is Elaine pulling the soldier with her out of sight and moans starting up from the direction of her bed. As Adam does another deep thrust into your body, he stops for a moment, gasping 'I'm getting pretty close.'";
@@ -501,7 +501,7 @@ to say AdamPussyFuck: [pussy-fucked by Adam]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Your pussy.";
 	say "     ([link]N[as]n[end link]) - Your mouth.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You beckon him to fill you with his beast-boy cum while flexing your inner muscles around his cock. Eager to follow your command, he resumes his deep and hard strokes, only lasting for a few more before his body stiffen in your embrace. Adam holds tight onto you with his arms as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your womb with warm cum.[fimpregchance]";
 		say "     'That was amazing - you are amazing,' he moans in between kisses as you lie there for a while, making out with each other as you come down from the rush of orgasm.";
@@ -527,9 +527,9 @@ to say AdamAssFuck: [ass-fucked by Adam]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Your ass.";
 	say "     ([link]N[as]n[end link]) - Your mouth.";
-	if player consents:
+	if Player consents:
 		LineBreak;
-		say "     You beckon him to fill you with his beast-boy cum while flexing your inner muscles around his cock. Eager to follow your command, he resumes his deep and hard strokes, only lasting for a few more before his orgasm overcomes him. Adam holds on tight with his arms around you as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your asshole with warm cum. [if player is male]Feeling your lover's load inside you, your own arousal mounts quickly, and after a moment of rapid stroking you come all over the blankets below.[end if]";
+		say "     You beckon him to fill you with his beast-boy cum while flexing your inner muscles around his cock. Eager to follow your command, he resumes his deep and hard strokes, only lasting for a few more before his orgasm overcomes him. Adam holds on tight with his arms around you as spurt after spurt of his fertile seed shoots out of his throbbing cock and into you, filling your asshole with warm cum. [if Player is male]Feeling your lover's load inside you, your own arousal mounts quickly, and after a moment of rapid stroking you come all over the blankets below.[end if]";
 		say "     Turning you around, Adam says 'That was amazing - you are amazing.' before pulling you down on the blankets to make out and lie there together as come down from the rush of orgasm.";
 		NPCSexAftermath Player receives "AssFuck" from Adam;
 	else:
@@ -554,7 +554,7 @@ to say AdamAssFucked: [give Adam's tight ass a good fucking]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - In his ass.";
 	say "     ([link]N[as]n[end link]) - In his mouth.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You just keep going, thrusting into Adam several more times hard enough to create loud slapping noises as your hips meet his ass. Then as you feel your balls tightening, you bottom out in him, holding Adam tightly around the chest while spurt after spurt of your seed shoot into him.";
 		say "     When you pull your cock out of his dripping hole a while later, Adam turns around, saying 'That was amazing - you are amazing.' before pulls you into an embrace, making out with you.";
@@ -578,12 +578,12 @@ Section 5 - Ending
 when play ends:
 	if (HP of Adam > 4): [Adam was born]
 		if Adam is in Quartermaster's Tent: [never left the camp]
-			if humanity of player < 10:
+			if humanity of Player < 10:
 				increase score by 0; [do nothing, player succumbed and unaware of Adam's fate.]
 			else:
 				say "     <Meeting Adam outside the city in the ending>";
 		else if (Adam is in Bunker):
-			if (humanity of player < 10):
+			if (humanity of Player < 10):
 				say "     <Player succumbs, usually comes to the bunker and does things to their companions>";
 			else:
 				say "     <Player survives and leaves the city with companions>";

@@ -51,21 +51,21 @@ Kyrverth	"Kyrverth"
 [Declaring a fuckton of variables. Keep scrolling - nothing to see here.					]
 [Compulsory Variables here:														]
 Kyrverth is a man. The hp of Kyrverth is usually 0.
+[Physical details as of game start]
 [ScaleValue of Kyrverth is 2. [4ft tall to start, Starts small and grows with Kyrverthstage, goes from 2->5]]
 [SleepRhythm(0) [0 - awake at all times, 1 - day active, 2 - night active]]
-Cocks of Kyrverth is 1. [One cock]
+Cock Count of Kyrverth is 1. [One cock]
 [Cock Length of Kyrverth is 0. [Starts small and grows with Kyrverthstage]
-Cock Width of Kyrverth is 0. [Starts small and grows with Kyrverthstage] COMMENTED FOR NOW, CHANGES THROUGH THE FILE]
-Testes of Kyrverth is 2. [2 Balls, they change size as you go.]
-Cunts of Kyrverth is 0. [No cunt]
-Cunt Length of Kyrverth is 0. [No cunt]
-Cunt Width of Kyrverth is 0. [No cunt]
-Breasts of Kyrverth is 0. [No Nipples]
+Ball Size of Kyrverth is 0. [Starts small and grows with Kyrverthstage] COMMENTED FOR NOW, CHANGES THROUGH THE FILE]
+Ball Count of Kyrverth is 2. [2 Balls, they change size as you go.]
+Cunt Count of Kyrverth is 0. [No cunt]
+Cunt Depth of Kyrverth is 0. [No cunt]
+Cunt Tightness of Kyrverth is 0. [No cunt]
+Nipple Count of Kyrverth is 0. [No Nipples]
 Breast Size of Kyrverth is 0. [No boobs]
-The description of Kyrverth is "[KyrverthDesc]".
-The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
-The scent of Kyrverth is "[KyrverthSmellDesc]".
-Kyrverth is in Dragons Den.
+[Basic Interaction states as of game start]
+TwistedCapacity of Kyrverth is false. [can not take oversized members without pain]
+Sterile of Kyrverth is true.
 PlayerMet of Kyrverth is false.
 PlayerRomanced of Kyrverth is false.
 PlayerFriended of Kyrverth is false.
@@ -75,6 +75,11 @@ Virgin of Kyrverth is true.
 AnalVirgin of Kyrverth is true.
 PenileVirgin of Kyrverth is true.
 SexuallyExperienced of Kyrverth is false.
+MainInfection of Kyrverth is "".
+The description of Kyrverth is "[KyrverthDesc]".
+The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
+The scent of Kyrverth is "[KyrverthSmellDesc]".
+Kyrverth is in Dragons Den.
 [Normal Variables																]
 KyrverthStage is a number that varies. KyrverthStage is usually 0.
 KyrverthQuestGiven is a number that varies. KyrverthQuestGiven is usually 0.
@@ -132,13 +137,13 @@ to say KyrverthDesc:
 	else if KyrverthStage is 3:
 		say "     No longer a weakling, Kyrverth has become a feral [one of]stud[or]beefcake[at random] of a dragon. Just over seven foot tall and built like an athlete, the dragon seems to have reached his final size. He is twelve feet long from head to backside, and a reddish tail extends another eight feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, won't get away with the treasure. Wide shoulders conceal massive batlike wings that stretch at times to almost 50 feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverth's long, prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You wonder if you could tempt the dragon into playing with you at some point...";
 	else if KyrverthStage is 4:
-		say "     Kyrverth doesn't fit in his building any more, the huge dragon having grown a [one of]bit[or]little[at random] taller than a Wyvern. Curling around the metal bank vault that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, gigantic wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, knotted cock [if scalevalue of player is 1 or scalevalue of player is 2]larger than[else if scalevalue of player is 3]as big as[else if scalevalue of player is 4 or scalevalue of player is 5]almost as big as[end if] you, and two humongous cum factories stretching the dragons sack taut behind it.[line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and cocks of player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
+		say "     Kyrverth doesn't fit in his building any more, the huge dragon having grown a [one of]bit[or]little[at random] taller than a Wyvern. Curling around the metal bank vault that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.[line break]Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, gigantic wings, a long tail, and an incredibly well toned and muscled body. Looking down you see a vent that you know contains a tapered, knotted cock [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than[else if scalevalue of Player is 3]as big as[else if scalevalue of Player is 4 or scalevalue of Player is 5]almost as big as[end if] you, and two humongous cum factories stretching the dragons sack taut behind it.[line break] Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
 	else if KyrverthStage is 5:
 		say "     Back to his previous size, Kyrverth is a still a feral [one of]stud[or]beefcake[at random] of a dragon. Just over seven foot tall and built like an athlete, he is twelve feet long from head to backside and a reddish tail extends another eight feet past that. A blond mane sits above a large muzzle with large, expressive blue eyes, which look around constantly for threats to his hoard. A mouth filled with sharp teeth, ready to tear into anything that tries to steal from the dragons den, ensures that whatever he spots, won't get away with the treasure. Wide shoulders conceal massive, batlike wings that stretch at times to almost fifty feet wide, you know Kyrverth can fly with them and often see him carrying supplies through the air on his way back to the den. As you look at Kyrverth's long, prehensile tail, you notice something interesting - Two [one of]large[or]ponderous[or]bulging[or]vast[or]generous[or]considerable[or]hefty[or]immense[at random] balls sit behind a bulging vent. You think about tempting the dragon into playing with you at some point...";
 	else if KyrverthStage is 6:
 		say "     The huge dragon [one of]has grown back to his previous size and is[or]is once again[at random] a little bit taller than a Wyvern. Curling around his hoard and the rubble that is all that remains of the building, his gigantic form is immoveable to all but the strongest infections in the city. Huge, thick scales protect his body, and when he moves around the city, he shakes the ground with every step. This paragon of dragonhood would be extremely scary if you didn't know him so well. From the massive talons as big as your leg, to the teeth as big as your arm, to the long spiked tail, [if KyrverthSpikeGrowth is 1]to the large horns on his head, [else if KyrverthSpikeGrowth is 2]to the large horns on his head and sharp defensive spikes that protrude through the skin down his spine and from his elbows, [end if]you can't help but feel sorry for anything that tries to steal from Kyrverth's hoard.";
-		say "     Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, [if KyrverthWingType is 0]gigantic scaled[else if KyrverthWingType is 1]gigantic feathered[else if KyrverthWingType is 2]a gigantic pair of scaled[else if KyrverthWingType is 3]a gigantic pair of feathered[end if] wings, a long tail, and an incredibly well-toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of player is 1 or scalevalue of player is 2]larger than you[else if scalevalue of player is 3]as big as you[else if scalevalue of player is 4]almost as big as you[else if scalevalue of player is 5]whose size seems to be almost too large to fit even for your massive form[end if]. [if KyrverthNutGrowth is false]Two humongous cum factories stretch the dragons sack taut behind it[else]His balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing with every step and the red drake seems extremely proud of them[end if].";
-		say "     Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and cocks of player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
+		say "     Once past the powerful offensive and defensive weapons Kyrverth possesses, you see a handsome muzzle, strong neck, [if KyrverthWingType is 0]gigantic scaled[else if KyrverthWingType is 1]gigantic feathered[else if KyrverthWingType is 2]a gigantic pair of scaled[else if KyrverthWingType is 3]a gigantic pair of feathered[end if] wings, a long tail, and an incredibly well-toned and muscled body. Looking down you see a vent that you know contains a [if KyrverthCockType is 1]tapered, ribbed and knotted cock[else if KyrverthCockType is 2]pair of tapered, ribbed and knotted cocks[else if KyrverthCockType is 3]blunt, flared horsecock[else if KyrverthCockType is 4]tapered, barbed and knotted cock[else if KyrverthCockType is 5]long, tapered, prehensile and knotted cock[end if] [if scalevalue of Player is 1 or scalevalue of Player is 2]larger than you[else if scalevalue of Player is 3]as big as you[else if scalevalue of Player is 4]almost as big as you[else if scalevalue of Player is 5]whose size seems to be almost too large to fit even for your massive form[end if]. [if KyrverthNutGrowth is false]Two humongous cum factories stretch the dragons sack taut behind it[else]His balls sit behind it. Their ridiculous size looks out of proportion even on the studly dragon and if that cannon ever blew you know you would be covered from head to toe. Dangling halfway to his knees, they swing with every step and the red drake seems extremely proud of them[end if].";
+		say "     Kyrverth notices your gaze and turns his head, giving you a [if KyrverthMaleBoning is 0 and Cock Count of Player >= 1]smug grin[else]seductive grin, his hand drawing your gaze as it moves backwards and strokes his bulging vent[end if].";
 	else:
 		say "     How did you get here? Please report this to the devs on the FS Discord channel.";
 
@@ -150,7 +155,7 @@ to say KyrverthSmellDesc:
 	else if KyrverthStage is 2:
 		say "     The dragon has a musk to him, it smells nice but there is a tang to the smell and you struggle to place what it is. Something about the smell makes you feel [one of]nice[or]good[at random]...";
 	else if KyrverthStage is 3 or KyrverthStage is 5:
-		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if player is male][cock of player] cock to engorge[else if player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
+		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if Player is male][cock of Player] cock to engorge[else if Player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
 	else if KyrverthStage is 4 or KyrverthStage is 6:
 		say "     The thick smell infiltrates your nose and arouses your loins. If it gets much stronger you aren't sure whether or not Kyrverth might be able to cause an orgasm through smell alone.";
 
@@ -177,7 +182,7 @@ to say KyrverthTalk: [Quest turnin check]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			decrease carried of stray links by 3;
 			increase carried of food by 5;
@@ -186,7 +191,7 @@ to say KyrverthTalk: [Quest turnin check]
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap, apparently worn out by his growth. You pick up your things and quietly leave, treading carefully so you don't wake him up.";
 			LineBreak;
-			say "     [bold type]You gain 5 food![roman type][line break]";
+			say "[bold type]You gain 5 food![roman type][line break]";
 			WaitLineBreak;
 			now KyrverthStage is 2;
 			now KyrverthQuestGiven is 0;
@@ -202,7 +207,7 @@ to say KyrverthTalk: [Quest turnin check]
 		WaitLineBreak;
 		say "     The red dragon stays there for a few seconds, his massive [one of]penis[or]cock[at random] dripping on the floor, panting in exertion, before he finally opens his eyes and carefully [one of]moves[or]walks[or]navigates[at random] his new body over to you. His new voice sends [one of]shivers[or]goosebumps[at random] down your spine, a deep rumble from his [one of]massive[or]muscled[or]expansive[or]huge[at random] chest 'I thank you for your assistance, but I believe I can easily expand my hoard by myself from now on. I owe you a debt of gratitude, just let me know what it is you want and I will do my [one of]best[or]utmost[at random] to [one of]provide[or]give[or]produce[or]procure[at random] it.'";
 		WaitLineBreak;
-		say "     [bold type]You gain 10 food![roman type][Line Break]";
+		say "[bold type]You gain 10 food![roman type][Line Break]";
 		increase carried of food by 10;
 		if carried of dragon scale >= 3:
 			decrease carried of dragon scale by 3;
@@ -220,7 +225,7 @@ to say KyrverthTalk: [Quest turnin check]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "     As you take the [KyrverthItemSay] out of your backpack, Kyrverth's eyes widen. 'Is that...?' You nod and hold it out to him. Kyrverth stands there for a moment, flabbergasted that you have found him an item of such value and given it to him for free. He suddenly realizes he is staring at you and jumps forward 'Thank you so much - this will be the centerpiece of my hoard!'.";
 			say "     Kyrverth doesn't get a chance to put the item anywhere, as the addition to his hoard has suddenly caught up with his physical body. He shakes from head to toe, and shouts at you to [bold type]'GET OUT NOW'[roman type] in a tone of voice you have never heard from him before. You rush outside just in time, turning around to look back through the door. The expanding dragon hits the roof of the vault and begins to push against the metal. You see a [one of]paw[or]claw[or]leg[at random] lift up and come down, steadying the dragon for a better grip, before the muscle tenses and the building begins to collapse. A second later what's happening inside is hidden from view as the building collapses.";
 			LineBreak;
@@ -283,11 +288,11 @@ to say KyrverthMainChat:
 		else if KyrverthStage >= 3:
 			say "     'I love being a proper dragon, look at this!' Kyrverth flexes an arm, showing off the massively powerful muscles and terrifyingly large claws that he possesses.";
 	else if randomnumber <= 40:
-		if ((cocks of player >= 1 and KyrverthMaleBoning is 0) or KyrverthStage is not 3):
+		if ((Cock Count of Player >= 1 and KyrverthMaleBoning is 0) or KyrverthStage is not 3):
 			say "     'Someday I'll find a mate. Hopefully I will have a big enough hoard to draw them in by then...'";
-		else if (cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 0):
+		else if (Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 0):
 			say "     'I've been looking for a mate. Have you seen any dragonesses?'";
-		else if ((cocks of player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or cunts of player >= 1):
+		else if ((Cock Count of Player >= 1 and KyrverthStage is 3 and KyrverthMaleBoning is 1) or Cunt Count of Player >= 1):
 			say "     'How about you and I have some fun?' Kyrverth's hand strays toward his vent and strokes it a few times, showing the tip of his massive cock. 'I've been wanting to make some eggs...'";
 	else if randomnumber <= 45:
 		say "     'All my life I've had four limbs. Now I have four limbs and a tail and wings, it can be strange sometimes. I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
@@ -389,16 +394,16 @@ instead of fucking the Kyrverth:
 			say "     'Sorry, but not right now, maybe later?'";
 		else if KyrverthStage is 5 and (KyrverthTimer - turns < 12): 		[He got fucked in the last 18 hours = 6 turns]
 			say "     'Sorry, but not right now, I need to focus on finding that thief.'";
-		else if player is male: 				[Male player]
+		else if Player is male: 				[Male player]
 			if KyrverthMaleBoning is 0:
 				say "     'Sorry bro, I do owe you one, but I'm really into girls...'";
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
-		else if ((scalevalue of player <= 1 and "Kinky" is not listed in feats of player) or cunt length of player < 10): [Too small for sex]
+		else if ((scalevalue of Player <= 1 and "Kinky" is not listed in feats of Player) or Cunt Depth of Player < 10): [Too small for sex]
 			say "     As you walk up to Kyrverth, he looks at you closely, then says 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
-		else if player is female: [Female player that is large enough]
+		else if Player is female: [Female player that is large enough]
 			say "[KyrverthSex]";
 		else: [Player has no gender, large enough]
 			if KyrverthMaleBoning is 0:
@@ -417,17 +422,17 @@ to say KyrverthMaleCheck:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		Let Randomcharmvar be a random number between 1 and 30;
-		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of player] vs 25: [roman type]";
-		if (Randomcharmvar + charisma of player) < 25:
+		say "     [bold type]Rolling [Randomcharmvar]/30 + Charisma of [charisma of Player] vs 25: [roman type]";
+		if (Randomcharmvar + charisma of Player) < 25:
 			say "You try to convince the dragon that males are ok too, but he shakes his head, firm in the belief that he is into females and females only.";
 		else:
 			now KyrverthMaleBoning is 1;
 			say "'Why not both?' you ask. A big strong dragon like him could have both a dragoness [bold type]and[roman type] a mate. People should be lining up for the honor!";
 			say "     He doesn't stop you, so you keep going. You keep talking, trying to convince him while you slowly take your clothes off in a striptease. A glimpse of his erect cock lets you know you are getting there, so you slowly approach and start to fondle his balls. One hand makes its way to his cock and your rapt dragon finally has enough.";
-			say "     '[if player is dominant]Fuck me. [else if player is submissive]Bend over, slut! [else]Fuck it, lets do this. [end if]Just the once though'. You grin, having finally got to him. You quickly step back and pull your clothes back on, leaving him blue balled. 'Wait, where are you going?' he shouts as you exit the room. Next time you approach him for sex you know he won't hesitate - and it won't just be 'the once'.";
+			say "     '[if Player is dominant]Fuck me. [else if Player is submissive]Bend over, slut! [else]Fuck it, lets do this. [end if]Just the once though'. You grin, having finally got to him. You quickly step back and pull your clothes back on, leaving him blue balled. 'Wait, where are you going?' he shouts as you exit the room. Next time you approach him for sex you know he won't hesitate - and it won't just be 'the once'.";
 			now KyrverthTimer is turns;
 	else:
 		LineBreak;
@@ -435,19 +440,19 @@ to say KyrverthMaleCheck:
 
 to say KyrverthSex:
 	say "Just a placeholder for Kyrverth sex scenes right now, maybe in a future update?";
-	if "Kinky" is listed in feats of player and scalevalue of player is 1:
+	if "Kinky" is listed in feats of Player and scalevalue of Player is 1:
 		say "The rough sex on your small body has taken its toll, and has not done well for your health.";
-		decrease hp of player by (maxhp of player / 4);
-		if hp of player <= 0:
-			now hp of player is 1;
+		decrease hp of Player by (maxhp of Player / 4);
+		if hp of Player <= 0:
+			now hp of Player is 1;
 	WaitLineBreak;
-	[If player has a cunt length between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
-	[If the players cunt length is greater than 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
+	[if Player has a Cunt Depth between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
+	[If the players Cunt Depth is greater than 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
-	if scalevalue of player is:
+	if scalevalue of Player is:
 		-- 1:
-			if "Kinky" is not listed in feats of player:
+			if "Kinky" is not listed in feats of Player:
 				say "     The dragon looks over your tiny form as you make your offer before shaking his head in refusal. 'As much as I'd like to, you're too small. I don't want to hurt you, after all.'";
 			else:
 				say "     The dragon looks over your tiny form as you make your offer, and he hesitates for a moment before shaking his head. 'I don't think that's a very good idea. I could hurt you.'";
@@ -455,7 +460,7 @@ to say KyrverthAnalSex: [For null and male players]
 				LineBreak;
 				say "     [link](Y)[as]y[end link] - Yes.";
 				say "     [link](N)[as]n[end link] - No.";
-				if player consents:
+				if Player consents:
 					say "[KyrverthTinyPlayerAnal]";
 				else:
 					say "     You concede that the dragon has a good point and drop the matter for now.";]
@@ -472,66 +477,66 @@ to say KyrverthAnalSex: [For null and male players]
 
 to say KyrverthTinyPlayerAnal:
 	say "     <Kyrverth uses you like a masturbator>.";
-	now hp of player is (hp of player - (maxhp of player / 4));
-	if hp of player <= 0:
-		now hp of player is 1;
+	now hp of Player is (hp of Player - (maxhp of Player / 4));
+	if hp of Player <= 0:
+		now hp of Player is 1;
 
 to say KyrverthSmallPlayerAnal:
-	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of Player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
 	if anallevel is 3:
-		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
+		say "     You obey, clambering down onto all fours, presenting your [bodydesc of Player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if Player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. ";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly is already distending rather obviously, a testament to the massive tool taking your hole.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching painfully wide as the ridge slips in past your ring[if player is male], pressing against your prostate, causing your [cock size desc of player] [cock of player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pain. You're belly is stretched out in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a fair amount of resistance. Eventually, on his tip remains inside you.";
-	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching painfully wide as the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pain. You're belly is stretched out in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a fair amount of resistance. Eventually, on his tip remains inside you.";
+	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
-	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if player is male] as well[end if]. He let's out a roar, as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
-	say "     At first, you don't think he's going to be able to. You're proven to be incorrect, however, as he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if player is male]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls instantly before it begins to fill up your insides. You quickly feel full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look almost like your nine-months pregnant, so swollen that you might not be able to move for a little while.";
+	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He let's out a roar, as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
+	say "     At first, you don't think he's going to be able to. You're proven to be incorrect, however, as he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if Player is male]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [Cum Load Size of Player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls instantly before it begins to fill up your insides. You quickly feel full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look almost like your nine-months pregnant, so swollen that you might not be able to move for a little while.";
 	WaitLineBreak;
-	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
+	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if Player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
 
 to say KyrverthAveragePlayerAnal:
-	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his massive paw into you, pinning you to the ground as he leans close to your face, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he lifts his paw up to allow you the ability to undress. While you disrobe, the dragon looks over your [bodydesc of Player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
 	if anallevel is 3:
-		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
+		say "     You obey, clambering down onto all fours, presenting your [bodydesc of Player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease despite the size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a foot of it inside of you, stretching you pleasantly and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if Player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of you hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. ";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly is already distending noticeably, a testament to the massive tool taking your hole.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching wider until the ridge slips in past your ring[if player is male], pressing against your prostate, causing your [cock size desc of player] [cock of player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure and a little bit of pain. You're belly is bulging outwards in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a little bit of resistance. Eventually, on his tip remains inside you.";
-	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure and a little bit of pain. You're belly is bulging outwards in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a little bit of resistance. Eventually, on his tip remains inside you.";
+	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
-	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if player is male] as well[end if]. He lets out a roar as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
-	say "     Initially, your hole puts up a fair amount of resistance, however he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if player is male]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. You soon feel rather full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look like you've gained quite a few pounds, swollen enough that movement might be just a little difficult.";
+	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He lets out a roar as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
+	say "     Initially, your hole puts up a fair amount of resistance, however he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if Player is male]With your hole tied and your stomach stretched into the shape of a dragon cock, you cum, spilling your [Cum Load Size of Player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. You soon feel rather full, but it doesn't seem like Kyrverth is anywhere near done, his flood of semen still coming strong. As more of the cum rushes into you, your belly begins to round out more and more. By the time his flow starts to slow, you look like you've gained quite a few pounds, swollen enough that movement might be just a little difficult.";
 	WaitLineBreak;
-	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
+	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if Player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
 
 to say KyrverthLargePlayerAnal:
-	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his paw into you, knocking you to the ground before leering over your prone form, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he moves away slightly, giving you enough room to do so. While you disrobe, the dragon looks over your [bodydesc of player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
+	say "     Kyrverth grins at your suggestion, showing off his maw full of razor sharp teeth. Not giving you near enough time to react, he slams his paw into you, knocking you to the ground before leering over your prone form, growling dominantly at you. 'Strip,' he commands, his deep voice vibrating through your body as you tremble in excitement. You nod and he moves away slightly, giving you enough room to do so. While you disrobe, the dragon looks over your [bodydesc of Player] body, rumbling in approval at what he sees. As your final garment falls to the floor, the giant dragon speaks again. 'Get on all fours.'";
 	if anallevel is 3:
-		say "     You obey, clambering down onto all fours, presenting your [bodydesc of player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease, even with the slight size difference between you two.";
+		say "     You obey, clambering down onto all fours, presenting your [bodydesc of Player] ass to your lover, begging him to take it. 'Oh believe me, I will. But first...' he trails off, leaving you to wonder what he has in store. Of course, you don't have to wonder for long, as you soon feel a warm and moist rush of breath against your backside. He gives you a few sniffs, taking in your scent before his tongue darts out of his mouth and into your crack, his thick saliva letting it slide in with almost no resistance. You let out a gasp as he continues his assault, the tip of his tapered tongue finding your hole and circling around it, quickly coating it in his thick drool. This goes on for only a few seconds before you feel the slimy organ pressing into your hole, the tapered tip allowing it to slip in with ease, even with the slight size difference between you two.";
 		WaitLineBreak;
-		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a two feet of it inside of you, stretching you pleasurably and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
+		say "     He pushes his writhing organ further and further into you, flicking it around to stimulate you further. As more of the tongue is forced into you, you stretch wider and wider. Eventually, he's got nearly a two feet of it inside of you, stretching you pleasurably and slicking your insides. The dragon begins to withdraw his tongue, and for a moment, you think he's done. You're only given a moment to think this before he thrusts his tongue back inside you roughly, reaching the same depth he'd been at before in less than a second. He withdraws again, and repeats the ritual until your hole is loose and wet, ready to receive his throbbing cock[if Player is male]. As he removes his organ for the final time, he presses the tip into your prostate, drawing a moan from your lips[end if].";
 		say "     With your hole dripping drool from his thorough rimming, Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he is now standing over you, nearly eclipsing you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his saliva. ";
 	else:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he is standing over you, his body almost eclipsing you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly has a very slight bulge in it from his shaft already.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with a little more force, your hole stretching wider until the ridge slips in past your ring[if player is male], pressing against your prostate, causing your [cock size desc of player] [cock of player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure. You're belly is bulging outwards more noticeably now, nearly a foot of draconic cock buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you, sending waves of pleasure throughout you. Eventually, on his tip remains inside.";
-	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp at the sudden pleasure[if player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
+	say "     You're given another moment to adjust before he presses in with a little more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure. You're belly is bulging outwards more noticeably now, nearly a foot of draconic cock buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you, sending waves of pleasure throughout you. Eventually, on his tip remains inside.";
+	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp at the sudden pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
-	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust jolts you ever so slightly, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if player is male] as well[end if]. He lets out a roar, as he ruts into you, his knot slamming into your tight hole. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
-	say "     Your hole only puts up a little resistance, before he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if player is male]With your hole tied and your stomach bulging vaguely in the shape of a dragon cock, you cum, spilling your [cum load size of player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. As more of the cum rushes into you, your belly begins to round out a slight bit more. By the time his flow starts to slow, you've swollen enough that movement might present a slight issue.";
+	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust jolts you ever so slightly, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He lets out a roar, as he ruts into you, his knot slamming into your tight hole. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
+	say "     Your hole only puts up a little resistance, before he manages to spread you wider and wider around his knot, until you finally pass the widest point, the rest of it popping into you with a loud, wet squelch. [if Player is male]With your hole tied and your stomach bulging vaguely in the shape of a dragon cock, you cum, spilling your [Cum Load Size of Player] load onto the ground[else]With your hole tied, you let out a loud moan of sheer pleasure[end if]. The dragon continues to fuck you, his movements limited by his own knot, which actually seems to be swelling larger along with his ridges as his climax draws near. He lets loose a mighty roar before he cums inside you, rope after rope of dragon seed filling your bowels. The thick cream coats your inner walls rapidly before it begins to fill up your insides. As more of the cum rushes into you, your belly begins to round out a slight bit more. By the time his flow starts to slow, you've swollen enough that movement might present a slight issue.";
 	WaitLineBreak;
-	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
+	say "     Your lover waits for a few minutes as his shaft softens and his knot deflates before pulling out of you, a rush of his own seed flowing out after him, covering your ass[if Player is male] and balls[end if] in its heady scent. Your arms and legs give out from beneath you, and you flop to the ground. You simply lay there for a moment before you roll over with a groan to look at the massive feral dragon. He gives you a toothy grin. 'That was more fun than I was expecting. Perhaps we should do it again some time?'";
 
 Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
@@ -608,7 +613,7 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go inside and have a look.";
 	say "     ([link]N[as]n[end link]) - Leave, it's none of your business.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You push the door open with one hand and creep in. Through the haze of dust you see what used to be a bar. It looks like people left in a hurry, glasses still on the bar, tables and chairs have been knocked over, and the windows are broken. Mounted above the counter, a carved wooden dragons head with the maw stuck in a roaring snarl grabs your eye, but you realize there is nothing here of use. As you turn to leave you spot the red again. A tiny bit of tail poking out from behind an overturned table. Creeping up on it, you place your feet well, and might as well be silent. Suddenly the floor creaks under your foot. The red tail twitches and you know what is going to happen next. You dive and grab it as a red blur bursts from behind and heads toward the exit.";
 		say "     Though it pulls strongly to get away, you keep your hold of the tail, reel it in and grab its owner's body. As you pin it to the floor you notice you have caught what may well be the smallest dragon in the city. He struggles with you for a second but you hold him easily. Realizing he won't be getting away, he goes limp. A few seconds go by then he says 'Well, that's not the best of introductions is it? Shall we start again? I'm Kyrverth'. The diminutive dragon leads you to his hideout, a large vault in the next door bank. It's empty, but the heavy metal door - currently sitting on the ground, one hinge broken - makes you think of what might have been in here in earlier times, and what broke the door off its hinges...";
@@ -648,14 +653,14 @@ Instead of resolving a Jewel Heist:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		if JewelHeistCaught is 0:
 			say "As you close in, you notice a back alley, do you want to [bold type]continue with your original plan or explore alternative options?[roman type]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fight.";
 			say "     ([link]N[as]n[end link]) - Sneak.";
-			if player consents:
+			if Player consents:
 				LineBreak;
 				say "     Deciding to get it over and done with, you walk up to the wolverine and tell him that you are entering the building, whether he likes it or not. He responds by pulling out hit bat and adopting a fighting stance. Walking up to him, you duck under his first swing and punch him in the gut. Retaliating, he hits your face and as you stumble back, he raises the bat to hit. You manage to get your arm up just in time to block and knock away the bat. He raises his fists but you kick him back before he can strike again. Taking a breath you brace yourself to continue the fight.";
 				say "[JewelHeistFight]";
@@ -668,8 +673,8 @@ Instead of resolving a Jewel Heist:
 		LineBreak;
 		say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 		Let Randomsneakvar be a random number between 1 and 30;
-		if (Randomsneakvar + dexterity of player) < 25:
-			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
+		if (Randomsneakvar + dexterity of Player) < 25:
+			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 			say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 			now JewelHeistCaught is 1;
 			now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
@@ -683,11 +688,11 @@ to say JewelHeistSneak:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		Let Randomsneakvar be a random number between 1 and 30;
-		say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
-		if (Randomsneakvar + dexterity of player) < 25:
+		say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
+		if (Randomsneakvar + dexterity of Player) < 25:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
 			say "[JewelHeistFight]";
 		else:
@@ -702,15 +707,15 @@ to say JewelHeistSneak:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight.";
 		say "     ([link]N[as]n[end link]) - Leave.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "[JewelHeistFight]";
 		else:
 			LineBreak;
 			say "     Deciding that discretion is the better part of valor, you return to the library. Maybe try again later?";
 			Let Randomsneakvar be a random number between 1 and 30;
-			if (Randomsneakvar + dexterity of player) < 25:
-				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
+			if (Randomsneakvar + dexterity of Player) < 25:
+				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of Player] vs 25: [roman type]";
 				say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 				now JewelHeistCaught is 1;
 				now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
@@ -804,7 +809,7 @@ Instead of resolving a Valuable Museum Artifact:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
-		if player consents:
+		if Player consents:
 			say "     You step closer and lift the protective case off the mask. Very, very carefully you grab the mask and wrap it for carriage around the city. You should probably give this to Kyrverth as soon as possible, in case it is broken while you explore the city.";
 			now Kyrverthitemget is 1;
 			increase score by 5;
@@ -830,7 +835,7 @@ Instead of resolving a Valuable Warehouse Artifact:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it as is.";
-		if player consents:
+		if Player consents:
 			say "     You grab one arm, and in surprise the rest of the body. The costume is a lot lighter than you were expecting it to be. You quickly fold it and place it in your backpack, then swiftly leave the building before you are discovered by whoever owns the place.";
 			increase score by 5;
 			now Kyrverthitemget is 4;
@@ -855,7 +860,7 @@ Instead of resolving a Valuable RLD Artifact:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
-		if player consents:
+		if Player consents:
 			say "     You step forward and grab the dildo. It's a lot heavier than you were expecting, but you stash it and get on your way before anything comes down the street and discovers you in the store.";
 			increase score by 5;
 			now Kyrverthitemget is 3;
@@ -879,7 +884,7 @@ Instead of resolving a Valuable Stables Artifact:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Steal it.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
-		if player consents:
+		if Player consents:
 			say "     You creep up to the horseshoe and grab it, stuffing it into your pocket before jogging down the corridor. You run for a good five minutes before you begin to think you are safe again, having put a good amount of distance between you and the trophy room.";
 			increase score by 5;
 			now Kyrverthitemget is 2;
@@ -893,7 +898,7 @@ Instead of resolving a Valuable Stables Artifact:
 understand "KyrverthSecretDebugCheat" as KyrverthSecretDebugCheat.
 
 check KyrverthSecretDebugCheat:
-	if location of player is not Dragons Den, say "Thats not a verb I recognize" instead;
+	if location of Player is not Dragons Den, say "Thats not a verb I recognize" instead;
 
 carry out KyrverthSecretDebugCheat:
 	say "     Kyrverthstage: [Kyrverthstage]";
@@ -913,14 +918,14 @@ understand "rob the bank" as KyrverthStealing.
 understand "rob bank" as KyrverthStealing.
 
 check KyrverthStealing:
-	if KyrverthItemStealable is false or location of player is not Dragons Den, say "That's not a verb I recognize" instead;
+	if KyrverthItemStealable is false or location of Player is not Dragons Den, say "That's not a verb I recognize" instead;
 
 carry out KyrverthStealing:
 	say "     Kyrverth has been a bit of an ass lately, taking this back would definitely shrink him down and help with that ego, but he wouldn't willingly let you take it from him. Are you sure you want to steal it? He might not be very happy if you do.";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Steal it.";
 	say "     ([link]N[as]n[end link]) - Leave it be.";
-	if player consents:
+	if Player consents:
 		say "     This has gone far enough, you want your friend back! You pretend to take a nap in the corner and wait for Kyrverth to head out into the city. It takes him a while, but he soon leaves to find more items for his hoard. You quickly grab the [KyrverthItemSay] and make your way towards the exit with it. As quietly as you can, you push the door open with your foot and look either way. No dragon in sight. It doesn't take you long to get back to the library with your stolen goods, but you know Kyrverth will be pissed off. He would have known the second it was taken due to his shrinking size but not be able to make it back in time. Maybe you should give it a bit of time before you return, lest he accuse you of doing the deed.";
 		now KyrverthLockoutTimer is turns;
 		now KyrverthStage is 5;
@@ -949,7 +954,7 @@ understand "Give artifact" as KyrverthItemReturn.
 understand "Return the artifact" as KyrverthItemReturn.
 
 check KyrverthItemReturn:
-	if KyrverthStage is not 5 or location of player is not Dragons Den, say "That's not a verb I recognize" instead;
+	if KyrverthStage is not 5 or location of Player is not Dragons Den, say "That's not a verb I recognize" instead;
 
 carry out KyrverthItemReturn:
 	if Racing Horseshoe is owned or Racing Horseshoe is present or Anubis Mask is owned or Anubis Mask is present or Golden Sculpture is owned or Golden Sculpture is present or Tiger Suit is owned or Tiger Suit is present or Black Pearl is owned or Black Pearl is present:
@@ -957,7 +962,7 @@ carry out KyrverthItemReturn:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Return the [KyrverthItemSay].";
 		say "     ([link]N[as]n[end link]) - Keep it.";
-		if player consents:
+		if Player consents:
 			say "     'YOU TOOK IT? I thought you were my friend!' He goes as if to hit you, but a quick scream of 'WAIT!' gets you a second's reprieve. You explain that you took it because of his huge ego, and you are returning it in the hope he can keep his instincts more under control this time. You reach into your pack and manage to pull the [KyrverthItemSay] out without being interrupted this time. His eyes wide Kyrverth grabs it. 'Come back in 24 hours. I will do my best to forgive.' Incredulous at your luck you quickly turn around and leave, walking quickly along the street. A loud roar from behind catches you by surprise and you are saddened by not being able to see the growth this time, but you keep walking.";
 			if Kyrverthitemget is 1:
 				decrease carried of Anubis Mask by 1;
@@ -999,11 +1004,11 @@ to say anubismaskuse:
 	LineBreak;
 	say "     Over the next few minutes, you can do nothing but watch as the black fur slowly engulfs and changes your body. At first, you dread the change, but the further the change progresses, the stronger strange, new instincts creep into you. When the fur reaches the middle of your chest, you don't mind the change, and from the knees down, you welcome it. Time passes, and you wonder what will be left when you are completely engulfed. Will you still be yourself? Will these new instincts take over? You have no time to think on the issue, as the change completes at your feet, and everything goes black.";
 	WaitLineBreak;
-	now bodyname of player is "Jackal King"; [optional, custom infection for a loss sequence]
-	now facename of player is "Jackal King";
-	now tailname of player is "Jackal King";
-	now skinname of player is "Jackal King";
-	now cockname of player is "Jackal King";
+	now bodyname of Player is "Jackal King"; [optional, custom infection for a loss sequence]
+	now facename of Player is "Jackal King";
+	now tailname of Player is "Jackal King";
+	now skinname of Player is "Jackal King";
+	now cockname of Player is "Jackal King";
 	end the story saying "You have become the Jackal King.";
 
 instead of sniffing Anubis Mask:
@@ -1022,14 +1027,14 @@ to say racinghorseshoeuse:
 	say "     Slowly, fat [one of]fades[or]melts[at random] away, muscles [one of]get[or]grow[or]become[at random] more toned, and then your legs [one of]expand[or]grow[at random] to almost double their [one of]original[or]previous[at random] size. Though you have no way to be sure, you are pretty sure the changes are finished now. You look at your reflection again. A joke about skipping arm day flits through your head, and you realize that your new body is built almost completely for running. You have two tall, rounded ears, a long, squarish muzzle with a white stripe from nose to mane, a tall, rounded neck with chestnut fur, and a black mane. Your chest and arms are largely unchanged, muscles more toned and covered in chestnut fur, but otherwise about the same as they were. The largest changes are from your waist down. A new tail balances you out, allowing your massively overdeveloped thigh muscles to propel your new hooves to higher speeds. Speaking of your new hooves, they are bordering on disproportionately [one of]large[or]huge[or]massive[at random], to give you as much grip as possible. One leg is barehoof, while the other has the horseshoe that started it all stuck on it. This mismatch of height does make things a bit harder to walk, but you quickly pick it up and begin to make your way through the city.";
 	say "     You take what you remember being the most direct route to the Library, but strangely you end up walking by the Stables Hotel. When the bouncers standing by the door see you walk around the corner at the end of the street, one nudges the other, and something is muttered into a walkie-talkie. Seconds later, a couple of [one of]horses[or]stallions[or]mares[at random] jog outside and come up to you. They invite you inside and offer you a [one of]drink[or]beer[at random]. 'What could be the harm?' you think, and you head inside with them. One of the mares notices your limp, and she gasps before disappearing into a side room. You find yourself in a lounge with food and drink, and a seat in a comfortable chair. The mare from earlier reappears with a matching horseshoe, and you [one of]hesitantly[or]cautiously[at random] let her press it to your other hoof. As soon as it touches it attaches on strongly and new instincts surge to the forefront of your mind. An energy you didn't have before fills you[one of]r legs[or][or]r body[at random], making you feel like you could run a marathon.";
 	WaitLineBreak;
-	say "     The energy fizzles inside of you and suddenly [one of]focuses on[or]moves to[at random] your groin. In the fastest [one of]change[or]transformation[at random] you have had so far, [if player is female]your pussy closes up, [end if]a sheath forms, and [if player is male]your [one of]cock[or]dick[at random] within is suddenly much larger and[else]the large [one of]cock[or]dick[at random] within is[end if] equine-shaped: long and wide, a medial ring halfway up, and a flare at the top throbs before being covered in a mare's mouth as she quickly begins to suck. Her mouth is heaven, and her long head is able to take you down to the hilt. The energy still [one of]fizzing[or]buzzing[at random] inside of you heightens your pleasure, and combined with her masterful [one of]tongue[or]skill[at random] you don't last long. Your body tenses up, and you tell her that you are about to [one of]cum[or]blow[at random]. Pressure mounts up and builds, and just as you are thinking that you can't take anymore, she releases and pulls back, letting an explosion of cum cover her face and chest. It covers her in spurt after spurt, way more than you would normally produce. The reason for that soon becomes obvious - now that her head is out of the way, you can see what the tingling in your groin was for. Your[if player is female] new[end if] sack is stretched tight by your [one of]newly[or]now[at random] [one of]massive[or]huge[at random] balls.";
+	say "     The energy fizzles inside of you and suddenly [one of]focuses on[or]moves to[at random] your groin. In the fastest [one of]change[or]transformation[at random] you have had so far, [if Player is female]your pussy closes up, [end if]a sheath forms, and [if Player is male]your [one of]cock[or]dick[at random] within is suddenly much larger and[else]the large [one of]cock[or]dick[at random] within is[end if] equine-shaped: long and wide, a medial ring halfway up, and a flare at the top throbs before being covered in a mare's mouth as she quickly begins to suck. Her mouth is heaven, and her long head is able to take you down to the hilt. The energy still [one of]fizzing[or]buzzing[at random] inside of you heightens your pleasure, and combined with her masterful [one of]tongue[or]skill[at random] you don't last long. Your body tenses up, and you tell her that you are about to [one of]cum[or]blow[at random]. Pressure mounts up and builds, and just as you are thinking that you can't take anymore, she releases and pulls back, letting an explosion of cum cover her face and chest. It covers her in spurt after spurt, way more than you would normally produce. The reason for that soon becomes obvious - now that her head is out of the way, you can see what the tingling in your groin was for. Your[if Player is female] new[end if] sack is stretched tight by your [one of]newly[or]now[at random] [one of]massive[or]huge[at random] balls.";
 	say "     The mare leans forward, stroking your cock seductively to grab your attention. She puts her mouth to your ear, breathlessly whispering 'So, will you stay?' Your dick is as hard as [one of]a rock[or]diamond[at random] in her hands and you immediately say yes. The energy within you surges a final time and focuses on your shoulders. On each side, a circle of chestnut fur turns white, with a number [one of]69[or]34[at random] forming in black fur to mark you as their racer.";
 	WaitLineBreak;
-	now bodyname of player is "Racehorse"; [optional, custom infection for a loss sequence]
-	now facename of player is "Racehorse";
-	now tailname of player is "Racehorse";
-	now skinname of player is "Racehorse";
-	now cockname of player is "Racehorse";
+	now bodyname of Player is "Racehorse"; [optional, custom infection for a loss sequence]
+	now facename of Player is "Racehorse";
+	now tailname of Player is "Racehorse";
+	now skinname of Player is "Racehorse";
+	now cockname of Player is "Racehorse";
 	end the story saying "You have become a racehorse for the stables."; [one to two sentences in bold]
 
 instead of sniffing Racing Horseshoe:
@@ -1042,51 +1047,51 @@ It is temporary.
 
 to say goldensculptureuse:
 	now KyrverthUsedArtifact is true;
-	if player is male or player is herm: [Player has a cock]
+	if Player is male or player is herm: [Player has a cock]
 		say "     You pull the golden [one of]cock[or]dildo[or]penis[at random] out and inspect it. Just like last time you notice the [one of]exquisite[or]intricate[or]elaborate[or]striking[at random] detail that has been put into the creation of this [one of]exotic[or]weird[at random] [one of]cock[or]dildo[or]penis[at random]. One line stands out and seems a little deep, placed in the back, just under the top and heading down to the balls. You poke it with a finger and are surprised when the 'gold' moves as if it was rubber. Inside it looks as if the [one of]cock[or]dildo[at random] is hollow, and you think you know [bold type]exactly[roman type] what to do.";
-		if cocks of player is 1: [SECTION TO ADDRESS COCK SIZE, BALL SIZE, AND NUMBER OF COCKS]
-			if cock length of player <= 16: [fits]
+		if Cock Count of Player is 1: [SECTION TO ADDRESS COCK SIZE, BALL SIZE, AND NUMBER OF COCKS]
+			if Cock Length of Player <= 16: [fits]
 				say "     You bring it down to your waist and start pushing your [one of]cock[or]penis[or]dick[at random] in, and to your surprise the inside is warm and soft. Quickly reaching your hilt, it fits like a glove.";
-			else if cock length of player >= 17: [too big]
+			else if Cock Length of Player >= 17: [too big]
 				say "     It doesn't look the right size, but you figure you might as well give it a go. Slowly pushing your [one of]cock[or]penis[or]dick[at random] inside, you push down and as inch after inch enters, you expect to reach the limit but to your surprise your entire cock fits in! Is the inside like a black hole? You pull it off but your cock is intact. Sliding it back on, once again you hilt within it even though it is smaller than your [one of]cock[or]dick[at random].";
-		else if cocks of player >= 2:
-			if cock length of player <= 16: [fits but multicock]
-				say "     You bring it down to your waist and on a random whim you start pushing [if cocks of player is 2]both[else if cocks of player is 3]all three[else]all[end if] of your [one of]cocks[or]dicks[at random] in, and to your surprise they [if cocks of player is 2]both[else if cocks of player is 3]all three[else]all[end if] fit inside without issues. Quickly reaching your hilt, it fits like a glove.";
-			else if cock length of player >= 17: [too big and multicock]
-				say "     It doesn't look the right size, but you figure you might as well give it a go. Slowly pushing your [one of]cock[or]penis[or]dick[at random] inside, you push down and as inch after inch enters, you expect to reach the limit but to your surprise your entire cock fits in! Is the inside like a black hole? You pull it off but your cock is intact. You place [if cocks of player is 2]both[else if cocks of player is 3]all three[else]all[end if] in the entrance and slide it back on, once again you hilt within it even though it is smaller than your [one of]cock[or]dick[at random].";
-		if cock width of player >= 9: [balls too big]
-			say "     Next you try to fit your balls into the balls of the dildo, [if cock length of player >= 16] just like earlier[end if] your balls are too big to fit, but you give it a go anyway. Placing one ball inside then the other, the [one of]cock[or]dildo[at random] doesn't seem to care about your size, they fit in and the outside gives no indication that it shouldn't fit.";
-		else if cock width of player <= 8: [right size or smaller than required]
-			say "     Next you place your balls inside the balls of the dildo, one at a time it takes them comfortably[if cock width of player <= 6] and even though your balls are nowhere near the size of the dildo, you don't feel any empty space[end if].";
+		else if Cock Count of Player >= 2:
+			if Cock Length of Player <= 16: [fits but multicock]
+				say "     You bring it down to your waist and on a random whim you start pushing [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] of your [one of]cocks[or]dicks[at random] in, and to your surprise they [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] fit inside without issues. Quickly reaching your hilt, it fits like a glove.";
+			else if Cock Length of Player >= 17: [too big and multicock]
+				say "     It doesn't look the right size, but you figure you might as well give it a go. Slowly pushing your [one of]cock[or]penis[or]dick[at random] inside, you push down and as inch after inch enters, you expect to reach the limit but to your surprise your entire cock fits in! Is the inside like a black hole? You pull it off but your cock is intact. You place [if Cock Count of Player is 2]both[else if Cock Count of Player is 3]all three[else]all[end if] in the entrance and slide it back on, once again you hilt within it even though it is smaller than your [one of]cock[or]dick[at random].";
+		if Ball Size of Player >= 4: [balls too big]
+			say "     Next you try to fit your balls into the balls of the dildo, [if Cock Length of Player >= 16] just like earlier[end if] your balls are too big to fit, but you give it a go anyway. Placing one ball inside then the other, the [one of]cock[or]dildo[at random] doesn't seem to care about your size, they fit in and the outside gives no indication that it shouldn't fit.";
+		else if Ball Size of Player <= 3: [right size or smaller than required]
+			say "     Next you place your balls inside the balls of the dildo, one at a time it takes them comfortably[if Ball Size of Player <= 2] and even though your balls are nowhere near the size of the dildo, you don't feel any empty space[end if].";
 		[BACK TO NORMAL USE]
 		LineBreak;
-		say "     All in, you [one of]pull[or]tug[or]slide[at random] it back and flush against your[one of] body[or] groin[or]self[at random] and find a nearby reflective surface to look at. Against your [bodytype of player] body it [one of]glints[or]shines[at random] to make itself the one standout feature that draws your eye. The exotic cock looks (in your opinion) [one of]amazing[or]great[or]awesome[at random]. You run your hand down it and are [one of]amazed[or]astounded[or]astonished[or]staggered[at random] when it feels exactly like your own [one of]cock[or]dick[at random][if cock length of player <= 14] - even in the areas where it is longer than your own! [else]. [end if]It's weird how it can do that, but it feels so good...";
+		say "     All in, you [one of]pull[or]tug[or]slide[at random] it back and flush against your[one of] body[or] groin[or]self[at random] and find a nearby reflective surface to look at. Against your [bodytype of Player] body it [one of]glints[or]shines[at random] to make itself the one standout feature that draws your eye. The exotic cock looks (in your opinion) [one of]amazing[or]great[or]awesome[at random]. You run your hand down it and are [one of]amazed[or]astounded[or]astonished[or]staggered[at random] when it feels exactly like your own [one of]cock[or]dick[at random][if Cock Length of Player <= 14] - even in the areas where it is longer than your own! [else]. [end if]It's weird how it can do that, but it feels so good...";
 		say "     It doesn't take you long to make up your mind. You [one of]quickly[or]swiftly[at random] decide to throw caution to the wind and go for it, your hand giving it a quick squeeze. A bolt of pleasure shoots through you, It's sensitive! You stroke it up and down, giving the whole length attention. A squeeze on the slowly growing knot really turns up the [one of]heat[or]wick[at random], making your arousal spike sky high. Things begin to [one of]speed up[or]accelerate[or]escalate[at random], your hand stroking the length, gripping the knot, teasing the taut [one of]balls[or]sack[or]ballsack[at random] underneath. [one of]Orgasm[or]Your climax[at random] brings a wave of pleasure that would have knocked you over if you weren't already sitting down, ropes of [one of]cum[or]seed[or]white[at random] [one of]spurt[or]fire[or]spray[at random] onto your surroundings.";
 		LineBreak;
 		say "     Relaxing for a moment, you bask in the afterglow and reach down to remove the golden cover from your [one of]cock[or]dick[at random], the pressure of pulling on it only causes you pain. You try to spread the back open again, but the [one of]dildo[or]cock[at random] has changed while you had it on. It dawns on you that you might not be able to get this thing off, and you cause yourself a good bit of pain trying every way you can think of to remove it, but nothing works - leaving you stuck with this forever. You should be panicking, but something is making you feel calm, and possibly even... pleased? [line break] Reluctantly accepting your fate, you stand up and walk into the city, new addition [one of]glistening[or]glinting[or]shining[at random] in the sunlight.";
 		say "     Over the next few days your new [one of]cock[or]dick[at random] changes you, first you notice golden scales spreading from your groin to eventually cover your body, then your limbs begin to change, gaining muscle but forcing you down onto all fours. A day or two after that your hands and feet become claws, and finally your head becomes a draconic muzzle with two small horns pointing backwards. Unlike most dragons you never get any wings, but you concede to yourself that you don't really need them.";
-	else if player is female:
+	else if Player is female:
 		say "     The [one of]dildo[or]cock[at random] catches your imagination and for a second you imagine what it might feel like. Before you even realize it your hand has moved and the tip is pushing at your [one of]pussy[or]slit[or]cunt[at random]. You reflexively pull it away and look at it for a second, but inhibitions fail you and within seconds you push it into your cunt. Despite its length, the way it slowly tapers helps to overcome the size and lack of lubrication. It heats up quickly and it doesn't take long before you are nicely full and the knot at the base is bumping at your cleft. You pump it in and out, [one of]gasping[or]moaning[at random] in pleasure at being filled with as much cock as your body can possibly [one of]take[or]accommodate[at random].";
 		say "     You are rapidly reaching your peak, adjusting your grip on the dildo you slam it in extra-hard and the knot pops in, [one of]triggering[or]setting off[at random] your orgasm. Your [one of]cries[or]shouts[at random] of pleasure are swiftly cut short when the dildo opens up inside you. Though you can't see it, you can feel that the tip has split open and is pressing against your internal walls. A warm feeling permeates your body, you realize that the dildo has [one of]ejaculated[or]orgasmed[at random] within you. A movement catches your eye, bubbling from the rear of the dildo buried within you. Slowly the back of the dildo expands and grows out from your pussy.";
 		LineBreak;
 		say "     First the mass just grows and pulls down on the [one of]dildo[or]cock[at random] within you, but it accelerates its growth and begins to form into shape. First two buttocks form, then it spreads down to form muscled thighs, shins, then strong taloned feet. The legs begin to move around, continually rubbing the knot against your insides. In the meantime the mass spreads up to form a toned golden chest. Large [one of]prominent[or]obvious[at random] pecs lead to stumps which quickly form into draconic arms. The claws grab your shoulder, pushing its body away from you.";
-		say "     Slightly deflated now, the dragons knot pops out and you feel the cock moving while the body stays still. At first with horror, then with delight, you realize the dildo is prehensile and flexing within you. Twisting, turning, pushing against your walls in ways you have never felt before, it quickly gets you back into the mood and the dragon begins to thrust. It's a good thing you are already on the lying down or this would knock you on your ass, the strong legs pushing in strongly and quickly with every thrust, then pulling out almost completely. Being utterly [if player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] fills your vision as he knots you again and you both [one of]cry out[or]shout[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if player is submissive]master[else]mate[end if] will take care of you.";
+		say "     Slightly deflated now, the dragons knot pops out and you feel the cock moving while the body stays still. At first with horror, then with delight, you realize the dildo is prehensile and flexing within you. Twisting, turning, pushing against your walls in ways you have never felt before, it quickly gets you back into the mood and the dragon begins to thrust. It's a good thing you are already on the lying down or this would knock you on your ass, the strong legs pushing in strongly and quickly with every thrust, then pulling out almost completely. Being utterly [if Player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] fills your vision as he knots you again and you both [one of]cry out[or]shout[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if Player is submissive]master[else]mate[end if] will take care of you.";
 		WaitLineBreak;
-	else if player is neuter:
+	else if Player is neuter:
 		say "     The [one of]dildo[or]cock[at random] catches your imagination and for a second you imagine what it might feel like. Before you even realize it your hand has moved and the tip is pushing at your ass. You reflexively pull it away and look at it for a second, but inhibitions fail you and within seconds you push it in. Despite its length, the way it slowly tapers helps to overcome the size and lack of lubrication. It heats up quickly and it doesn't take long before you are nicely full and the knot at the base is bumping at your donut. You pump it in and out, [one of]gasping[or]moaning[at random] in pleasure at being filled with as much cock as your body can possibly [one of]take[or]accommodate[at random].";
 		say "     You are rapidly reaching your peak, adjusting your grip on the dildo you slam it in extra-hard and the knot pops in, [one of]triggering[or]setting off[at random] your orgasm. Your [one of]cries[or]shouts[at random] of pleasure are swiftly cut short when the dildo opens up inside you. Though you can't see it, you can feel that the tip has split open and is pressing against your internal walls. A warm feeling permeates your body, you realize that the dildo has [one of]ejaculated[or]orgasmed[at random] within you. Suddenly you feel movement against your hand - bubbling from the rear of the dildo buried within you. Slowly the back of the dildo expands and grows out from your ass.";
 		LineBreak;
 		say "     First the mass just grows and pulls down on the dildo within you, but it accelerates its growth and begins to form into shape. First two buttocks form, then it spreads down to form muscled thighs, shins, then strong taloned feet. The legs begin to move around, continually rubbing the knot against your insides. In the meantime the mass spreads up to form a toned golden chest. Large [one of]prominent[or]obvious[at random] pecs lead to stumps which quickly form into draconic arms. The claws grab your shoulder, pushing its body away from you.";
 		say "     Slightly deflated now, the dragons knot pops out and you feel the cock moving while the body stays still. At first with horror, then with delight, you realize the dildo is prehensile and flexing within you. Twisting, turning, pushing against your walls in ways you have never felt before, it quickly gets you back into the mood and the dragon begins to thrust. It's a good thing you are already on the lying down or this would knock you on your face, the strong legs pushing in strongly and quickly with every thrust, then pulling out almost completely.";
 		LineBreak;
-		say "     Being utterly [if player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] appears to the side of your vision as he knots you again and you both [one of]cry out[or]shout[or]scream[or]roar[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if player is submissive]master[else]mate[end if] will take care of you.";
+		say "     Being utterly [if Player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] appears to the side of your vision as he knots you again and you both [one of]cry out[or]shout[or]scream[or]roar[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if Player is submissive]master[else]mate[end if] will take care of you.";
 	WaitLineBreak;
 	[Make ending happen]
-	now bodyname of player is "Golden Dragon"; [optional, custom infection for a loss sequence]
-	now facename of player is "Golden Dragon";
-	now tailname of player is "Golden Dragon";
-	now skinname of player is "Golden Dragon";
-	now cockname of player is "Golden Dragon";
+	now bodyname of Player is "Golden Dragon"; [optional, custom infection for a loss sequence]
+	now facename of Player is "Golden Dragon";
+	now tailname of Player is "Golden Dragon";
+	now skinname of Player is "Golden Dragon";
+	now cockname of Player is "Golden Dragon";
 	end the story saying "You have become a golden dragon."; [one to two sentences in bold]
 
 instead of sniffing Golden Sculpture:
@@ -1100,23 +1105,23 @@ It is temporary.
 to say tigersuituse:
 	now KyrverthUsedArtifact is true;
 	say "     You pull the high tech suit from your backpack, was this worth the trouble? Only one way to find out. You grab the slit in the back and pull to either side, revealing circuits and a blue fleshy material on the inside. Poking your head inside, a slot at the groin makes you realize that it is an 'adult' suit as well as a combat one.";
-	if player is submissive:
+	if Player is submissive:
 		say "     Suddenly the suit starts moving by itself! The arms bend backwards unnaturally and grab you, shoving you inside the suit. You [run paragraph on]";
 	else:
 		say "     You climb inside and you [run paragraph on]";
 	say "feel the slit at the back close behind you. At first you can't move and all you feel is squishy padding around you, [run paragraph on]";
-	if player is submissive:
+	if Player is submissive:
 		say "but slowly [run paragraph on]";
 	else:
 		say "but a strange feeling energy enters the suit and causes it to shiver from its toes to its head. Slowly [run paragraph on]";
 	say "feeling returns to you. Being a massive tiger doesn't feel that good at first, you stumble around trying to get your coordination back for an embarrassingly long time before finally realizing that your tail isn't just for show. Once you have your bearings, you look at yourself from head to toe.";
 	say "     8ft tall, your muscled body is a typical tiger, if a bit big. Your feet and paws seem a little too big for your body, but you can't complain for having better weapons in [bold type]this[roman type] city. Something else that seems slightly big is your sheath. Poking out is an ample cock for your body size, its size and spines at the tip are sure to please any future partner.";
 	WaitLineBreak;
-	now bodyname of player is "Fighting Tiger"; [optional, custom infection for a loss sequence]
-	now facename of player is "Fighting Tiger";
-	now tailname of player is "Fighting Tiger";
-	now skinname of player is "Fighting Tiger";
-	now cockname of player is "Fighting Tiger";
+	now bodyname of Player is "Fighting Tiger"; [optional, custom infection for a loss sequence]
+	now facename of Player is "Fighting Tiger";
+	now tailname of Player is "Fighting Tiger";
+	now skinname of Player is "Fighting Tiger";
+	now cockname of Player is "Fighting Tiger";
 	end the story saying "You have been consumed by the suit, and are now a fighting tiger."; [one to two sentences in bold]
 
 instead of sniffing Tiger Suit:
@@ -1125,20 +1130,20 @@ instead of sniffing Tiger Suit:
 Section 5 - Endings [TO BE COMPLETED 		...At some point.]
 
 when play ends: [Unique TF endings for using the items above]
-	if bodyname of player is "Fighting Tiger": [Tiger Suit endings]
-		if bodyname of player is listed in infections of taurlist: [Taur ending]
+	if bodyname of Player is "Fighting Tiger": [Tiger Suit endings]
+		if bodyname of Player is listed in infections of taurlist: [Taur ending]
 			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
-		else if player is Submissive: [sub ending]
+		else if Player is Submissive: [sub ending]
 			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
 			say "     After a while you don't even need the leash anymore, your body, or maybe your mind get accustomed to obeying such a dominant person and you obey [bold type]any[roman type] command. You didn't even realize it was possible, but an offhand comment has your cock shrinking and chest bulging. You always return to your base form after a few hours, but your body obeys commands to change just as readily as commands to move. Never having to worry about money, food, or other mundane concerns feels freeing, and you find yourself wishing this experience will never end.";
-		else if player is Dominant: [Dominant Ending]
+		else if Player is Dominant: [Dominant Ending]
 			say "     Your new body shivers, apparently not done changing. A black leather harness materializes around your torso. An X across your chest, apparently your form has changed to match your dominant tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people. While the leather harness on your chest isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. The harness gets you some awkward questions when out and about and it's not until a misread map leads you into a gay bar that you find your true calling. Every week you visit a clients house and utterly dominate them for hours on end. This causes both of you great pleasure and at the end of the weekend they always pay handsomely.";
 		else: [Normal Ending]
 			say "     Going back to normal life is almost impossible, your body looks comical when you sit in the tiny chairs found in an office. At first you try to find work with being an escort, but while the ladies love your size compared to the average tiger, they find out it's just [bold type]too[roman type] big. Eventually you stumble into a gym and the friendly owner quickly takes you under his wing. You quickly find the world of fashion needs more underwear models and the world of celebrities needs more bodyguards. Working with your new friend in the gym, your skills in boxing begin to rise and you start taking on amateur bouts as well. Your new work life pays well, but at the end of the day you are now part tiger, and your body has needs. You find yourself trying the other side of the fence and loving it, since your massive penis seems to be a key that actually fits in many a guys backdoor.";
-	else if bodyname of player is "Racehorse": [Racehorse shoe ending]
+	else if bodyname of Player is "Racehorse": [Racehorse shoe ending]
 		say "     After the military comes into the city, you stick with the folks at the Stables. Between regular orgies, you are an athlete of sorts. Representing the stables, you go up against the cheetahs from the Zoo and greyhounds from a gym across the city. You quickly develop a taste for winning, because the best prize isn't the money or mares, but the asses of the losers. Normal sex is sweetened massively by the thrill of victory, and you work hard to win. You put more and more effort into your training, and soon, the Stables is in contention for having the fastest team in the country.";
-	else if bodyname of player is "Jackal King": [Jackal Mask Ending]
-		say "     Upon waking up, you look into the mirror you previously sought out. Looking back at you has [one of]no[or]little[or]barely any[at random] resemblance to what you were before. The mask has changed you completely into a jackal, and considering the markings, probably the jackal king. [if player is female]Wait, the king? You feel your flat chest. Where did they go? You reach down and feel a telltale bulge. Oh... Your instincts distract you from your gender change and point you towards the rest of your body, and you take it all in. [end if]Standing at almost nine feet tall, your athletic body is toned but thin, and short, black hair covers you from your head to your new paws. Tall, pointed ears let you hear all around, and your handsomeness is accentuated by the golden markings painted on your face and body. Something inside of you nudges your brain away from admiring yourself and on to more pressing matters. A king cannot go without subjects!";
+	else if bodyname of Player is "Jackal King": [Jackal Mask Ending]
+		say "     Upon waking up, you look into the mirror you previously sought out. Looking back at you has [one of]no[or]little[or]barely any[at random] resemblance to what you were before. The mask has changed you completely into a jackal, and considering the markings, probably the jackal king. [if Player is female]Wait, the king? You feel your flat chest. Where did they go? You reach down and feel a telltale bulge. Oh... Your instincts distract you from your gender change and point you towards the rest of your body, and you take it all in. [end if]Standing at almost nine feet tall, your athletic body is toned but thin, and short, black hair covers you from your head to your new paws. Tall, pointed ears let you hear all around, and your handsomeness is accentuated by the golden markings painted on your face and body. Something inside of you nudges your brain away from admiring yourself and on to more pressing matters. A king cannot go without subjects!";
 		let randomnumber be a random number from 1 to 2;
 		if randomnumber is 1: [Ending 1]
 			say "     You immediately head to the mall and grab Nermine. One quick bonk to the head and she is out. You barely feel her weight when you put her on your shoulder and walk out. Nobody there tries to stop the kidnapping as they are all too intimidated to take action. You soon find a place to begin your rule. Nermine tries to escape but finds herself unable to resist against your commands. You find her body quick to change at your words, and soon, there is little left of the sassy shopkeep. It is not long until you and your voluptuous new queen begin to expand your domain. You find yourself able to overpower other infections and soon have a small empire at your command.";
@@ -1149,24 +1154,24 @@ when play ends: [Unique TF endings for using the items above]
 				say "     When the army comes in, you welcome them with open arms. Posing yourself as a generous savior, the military doesn't investigate much, preoccupied with more troublesome characters as they are. You set up in a nearby city, and it doesn't take long before you control most of it and get yourself appointed mayor.";
 			else: [Ending 2b]
 				say "     When the army comes in, you and your subjects meet them with force. At first, it is a soldier here and there, but as your 'army' grows, whole squads begin to disappear. By the time the military begins to realize that they are facing an organized enemy, you almost completely control the area. The military has no choice but to negotiate with you, and eventually, you are given the city as yours, as long as you clear out the rest of the infected for the military. The soldiers never notice how a good proportion of infected never make it out; they are just happy they don't have to deal with them any more. As your ranks swell, you have no intention of staying put - already looking towards expanding to other cities.";
-	else if bodyname of player is "Golden Dragon": [Gold Dildo Ending]
-		if player is male or player is herm:
+	else if bodyname of Player is "Golden Dragon": [Gold Dildo Ending]
+		if Player is male or player is herm:
 			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
 			LineBreak;
 			say "     For a while you drift around from place to place, finding it hard to hold a job other than the hardest of manual labor due to walking on all fours, but eventually you end up in the mountains of Japan. You copy some of the scientists, sell your shedded scales for money and use the money to build a sanctuary deep into the mountains - dedicated to infected people like yourself who have trouble fitting into normal society.";
 			say "     Your sanctuary becomes wildly popular, with many infected individuals coming from far and wide to be able to live in peace and not have to worry about making ends meet. Driven by some unknown instinct you have them swear an oath to you before they can enter the sanctuary, making you their lord and protector. At first you do this as a deterrent, to make sure the persons arriving really want to be there, but when the first person makes the oath you find out why the instinct is there - your horns grow! It is an extremely strange sensation to feel them grow out each time someone swears to you, but by the time the arrivals to your sanctuary begin to slow you have a massive pair of what looks like antlers and you are extremely proud of them.";
 			WaitLineBreak;
 			say "     'Normal' human media attempts to do a story on your sanctuary a few times, but each time you stop them at a narrow area of the path and stop them from going any further. Your residents are not to be gawked at, they are there to live their lives in peace. Your majestic figure silhouetted against the sun and the idea of the location slowly become legend for the downtrodden infected of society.";
-		else if player is female:
+		else if Player is female:
 			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He delights in your changes and the love between you only deepens when your belly begins to expand with his child.";
-		else if player is neuter:
+		else if Player is neuter:
 			say "     When the military enters the city, you both greet them with open arms and as soon as you are released you head into distant mountains. Your mate turns out to be able to create gold from thin air, and he uses it to buy a home for you both. The two of you passionately make love regularly and quickly the military determination of 'not infectious' turns out to be a falsehood, first your skin starts to become scales, then you begin to take on more and more draconic traits to match your mate. He loves that your changes make you more like him and the love between you only deepens though the years";
 	[]
 	if KyrverthStage is 0 and (KyrverthEndingTimer - turns < 24): [Met him and never went to the dragons den, saw him in the last 3 days.]
 		say "     In the aftermath of the Military reentering the city you hear rumors of [one of]a little dragon that was found trying to rob a jewelry store and had to be tranquilized to be parted with his 'treasure'. You hope that the little dragon you met is ok[or]a ferocious dragon that had set up shop in an old gold mine that the military had trouble with. You wonder if it was the same dragon that you met and wonder what happened to make him so dangerous[at random].";
 	[Aftermath text for Kyrverth. Needs to cover stages 0-6. Coming Soon(TM)]
 	[if (hp of Kyrverth > 0): [player met him and got as far as seeing him as an NPC]
-		if humanity of player < 10: [player went feral]
+		if humanity of Player < 10: [player went feral]
 			if hp of Kyrverth is 1: [Kyrverth is at the mall when the game ends]
 				if KyrverthRelationship < XXX: [non relationship ending]
 					say "     ...";

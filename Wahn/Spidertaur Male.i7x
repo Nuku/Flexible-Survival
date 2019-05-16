@@ -14,13 +14,13 @@ Version 3 of Spidertaur Male by Wahn begins here.
 
 SpidertaurRelationship is a number that varies.
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Spidertaur" } to infections of guy;
 
 to say Spidertaur_Wins:
-	if HP of player > 0: [player submits]
+	if HP of Player > 0: [player submits]
 		if SpidertaurRelationship is 1:[never submitted]
 			say "     As you lower your hands and stop resisting, the spidertaur gives you an interested glance. 'Well well,' he says, 'what do we have here. You don't even want to struggle? Too weak - or do you maybe even like being tied up?' His large form scuttles closer on surprisingly quick, spidery legs until he's right in front of you. He then reaches out to stroke your chin and runs his hand down your chest. 'Not bad prey,' he says, then adds, 'Now how about you give me a nice little show,' with a small tug on your clothes.";
 			say "     Under the watching eyes of the spidertaur, you slowly start to undress, taking off your clothes bit by bit and doing poses to show off your body. Seems like your striptease is giving the spidertaur quite a bit of arousal, as you can see the chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness. And as horny as you've made him, he isn't in the mood to wait much longer. Before you're even completely naked, he starts spinning long strands of webbing with which he ties you up. You end up standing there in the alley, mostly naked, arms spread out to the sides, they and your body held by soft but surprisingly tough silk threads.";
@@ -57,14 +57,14 @@ to say Spidertaur_Wins:
 
 to say SpidertaurAlleySex:
 	WaitLineBreak;
-	if player is female:
+	if Player is female:
 		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, touching your sensitive pussy lips, then spreading them and pushing two fingers into your body, eliciting an involuntary moan from you. He chuckles, then says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting much longer...' and scuttles around you to get into position before you.";
 		LineBreak;
 		say "     Using his two front legs, he lifts your lower body from the ground, leaving you hanging from the webbing as he proceeds to pull off your last articles of clothing. When you're finally completely naked, he spreads your legs wide, grabbing your buttcheeks as he presses against you. His hard rod pushes hotly against your pussy lips, then in between them, accompanied by the spidertaur's satisfied moan as he pushes forward and enters your body. He slides deeper slowly but surely, grinning at you as the feeling of his shaft rubbing your insides makes you gasp. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Giving your buns a squeeze with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		WaitLineBreak;
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
-		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. [if cock length of player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if cock length of player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if cock length of player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
+	else if Player is male:
+		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. [if Cock Length of Player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if Cock Length of Player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if Cock Length of Player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
 		LineBreak;
 		project the figure of SpidertaurAlleySex_icon;
 		LineBreak;
@@ -86,13 +86,13 @@ to say SpidertaurAlleySex:
 
 to say SpidertaurSlingSex:
 	WaitLineBreak;
-	if player is female:
+	if Player is female:
 		say "     Continuing lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your pussy. Spreading it with his fingers, he sets to work eating you out, his tonguework making you moan in pleasure. Your bound arms tremble with the desire to stroke yourself as he stops from time to time, only running his hands slowly over your legs and chest and reveling in being in control over your pent-up need. Kept hot and bothered for quite a while, you're soon pleading, even begging for him to touch you. The spidertaur lets you continue for a moment longer, then chuckles and presses himself against you, letting his erection rest hotly against your crotch.";
 		LineBreak;
 		say "     'You want this inside you?' he asks, putting the tip of his shaft against your pussy lips and rubbing it up and down over it. His touch against your sensitive folds makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your wet and ready pussy. As he bottoms out, his cock poking the entrance to your womb and the chitinous plates of his lower body touching your crotch, he leans forward and gives you a kiss on the lips. Straightening his humanoid upper body again after that, he gives you a smile and starts to thrust in and out, fucking you with deep strokes.";
 		WaitLineBreak;
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
+	else if Player is male:
 		say "     Continuing lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your crotch. He caresses your cock and balls, then takes hold of your shaft and jerks it, getting you to full hardness quickly. He continues to stroke you, fondling your balls with his other hand and getting you pretty fired up, with precum leaking from the tip of your shaft. Then he slows down, only lazily moving his hand, to keep you going at that level. As this continues for several minutes, your bound arms tremble with the desire to take over and jerk off, much to the amusement of the spidertaur as he revels in being in control over your pent-up need. Soon you're pleading, even begging for him to touch you some more. The spidertaur lets you continue for a moment longer, then chuckles and presses himself against you, letting his erection rest hotly against your crotch.";
 		LineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. As he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
@@ -112,12 +112,12 @@ to say SpidertaurSlingSex:
 	say "     [SpidertaurPostSex]";
 
 to say SpidertaurWinSex:
-	if player is female:
+	if Player is female:
 		say "     Running one of his human hands over your crotch, then pushing two fingers into your pussy, he says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting any more...' and scuttles around you to get into position.";
 		LineBreak;
 		say "     You feel his hard rod against your pussy lips, pushing forward and entering your body. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
+	else if Player is male:
 		say "     Running one of his human hands over your crotch, then taking hold of your cock and stroking it a few times, he says 'It's always fun to see male prey moan and beg before they cream themselves when I fuck their asses. Let's start right now...' and scuttles around you to get into position.";
 		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
@@ -133,14 +133,14 @@ to say SpidertaurWinSex:
 	say "     [SpidertaurPostSex]";
 
 to say SpidertaurPostSex:
-	if HP of player > 0: [player submits]
+	if HP of Player > 0: [player submits]
 		if SpidertaurRelationship is 1:[never submitted]
-			if player is female:
+			if Player is female:
 				say "     Satisfied, the spidertaur pulls out of you, lowering your legs to the ground, though it's debatable if you're really standing on your own or still hanging from the strands, as shaky as they are after that workout. Stalking backwards on eight spindly legs, he lets his gaze wander over you, a grin spreading over his face as he looks at the trickle of cum running out of your pussy and down your leg. 'You're a nice little catch - just right for me to fuck and so accommodating. Which puts me in a good mood right now.' With a sudden flash of movement, he cuts the web strands holding you with the claws at the end of a long spider-leg, making you collapse onto the pile of your clothes on the ground. 'There, you're free to go. And ready yourself for another round when we meet next.' With that, he scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
 			else:
 				say "     Satisfied, the spidertaur pulls out of you, giving your ass a little slap before he moves around to stand in front of you. He lets his gaze wander over you, a grin spreading over his face as he looks at the trickle of cum running down the inside of your right leg and your softening erection. 'You're a nice little catch - just right for me to fuck and so accommodating. Which puts me in a good mood right now.' With a sudden flash of movement, he cuts the web strands holding you with the claws at the end of a long spider-leg, making you collapse onto the pile of your clothes on the ground. 'There, you're free to go. And ready yourself for another round when we meet next.' With that, he scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
 		else if SpidertaurRelationship is 2:[submitted once]
-			if player is female:
+			if Player is female:
 				say "     Satisfied, the spidertaur pulls out of you, lowering your legs to the ground, though it's debatable if you're really standing on your own or still hanging from the strands, as shaky as they are after that workout. Stalking backwards on eight spindly legs, he lets his gaze wander over you, a grin spreading over his face as he looks at the trickle of cum running out of your pussy and down your leg. 'You're a nice little catch - just right for me to fuck and so accommodating. Which puts me in a good mood right now.' With a sudden flash of movement, he cuts the web strands holding you with the claws at the end of a long spider-leg, making you collapse onto the pile of your clothes on the ground. 'There, you're free to go. And ready yourself for another round when we meet next.' With that, he scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
 			else:
 				say "     Satisfied, the spidertaur pulls out of you, giving your ass a little slap before he moves around to stand in front of you. He lets his gaze wander over you, a grin spreading over his face as he looks at the trickle of cum running down the inside of your right leg and your softening erection. 'You're a nice little catch - just right for me to fuck and so accommodating. Which puts me in a good mood right now.' With a sudden flash of movement, he cuts the web strands holding you with the claws at the end of a long spider-leg, making you collapse onto the pile of your clothes on the ground. 'There, you're free to go. And ready yourself for another round when we meet next.' With that, he scuttles up the wall and on top of the nearest building. With a last leering look down at your cum-dripping body, he vanishes over the edge of the roof.";
@@ -199,17 +199,18 @@ to say Spidertaur_Desc:
 	else if SpidertaurRelationship > 3:[submitted 3+ times]
 		say "     A lusty grin comes over Aelias's sharp features as he recognizes you. 'If it isn't my very favorite prey. What will it be this time - will you fight me or skip straight to the good part? Not that I don't love your struggles when I have to catch you...'";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Spidertaur";
+	now NewTypeInfection entry is false;
+	now Name entry is "Spidertaur";
 	now enemy title entry is "";
-	now enemy name entry is "Aelias";
+	now enemy Name entry is "Aelias";
 	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Sweeping one of his front legs, he leaves a long, but surprisingly shallow, slash in your flesh with the underarm-length claw at the end of it.[or]He crawls up the nearest wall, then drops down on you.[or]He leaps to one side and turns his abdomen to face you, and sticky strands spray over your form![or]He suddenly charges and knocks you down with the weight of his body, then stands over you and sprays webbing over your prone form![at random]";
 	now defeated entry is "[Spidertaur_Loses]";
@@ -236,17 +237,17 @@ When Play begins:
 	now lev entry is 12;                [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12;               [ Amount of Damage monster Does when attacking.]
 	now area entry is "Warehouse";      [ Case sensitive]
-	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 16;
-	now cock width entry is 8;          [ Size of balls ]
-	now breasts entry is 2;             [ Number of nipples. ]
-	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 16;
+	now Ball Size entry is 3;          [ Size of balls ]
+	now Nipple Count entry is 2;             [ Number of nipples. ]
+	now Breast Size entry is 0;         [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 25;             [ Amount player Libido will go up if defeated ]
-	now loot entry is "spidertaur hair"; [ Loot monster drops, ]
+	now loot entry is "spidertaur hair"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 75;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strange[or]hybrid[or]mutated[at random]";
@@ -254,9 +255,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Section 3 - Items
 
@@ -278,10 +380,11 @@ to say spidertaur hair use:
 to SpidertaurInfect:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Spidertaur":
-			now monster is y;
+		if Name entry is "Spidertaur":
+			now MonsterID is y;
 			break;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect "Spidertaur";
 	now non-infectious entry is true;
 
@@ -314,14 +417,14 @@ Aelias	"Aelias"
 
 Aelias is a man.
 ScaleValue of Aelias is 4.
-Cocks of Aelias is 1.
+Cock Count of Aelias is 1.
 Cock Length of Aelias is 16.
-Cock Width of Aelias is 8.
-Testes of Aelias is 2.
-Cunts of Aelias is 0.
-Cunt Length of Aelias is 0.
-Cunt Width of Aelias is 0.
-Breasts of Aelias is 2. [2 nipples]
+Ball Size of Aelias is 8.
+Ball Count of Aelias is 2.
+Cunt Count of Aelias is 0.
+Cunt Depth of Aelias is 0.
+Cunt Tightness of Aelias is 0.
+Nipple Count of Aelias is 2. [2 nipples]
 Breast Size of Aelias is 0.
 TwistedCapacity of Aelias is false.
 Sterile of Aelias is false.
@@ -353,7 +456,7 @@ instead of sniffing Aelias:
 
 Instead of fucking Aelias:
 	setmonster "Spidertaur";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if (lastfuck of Aelias - turns < 5):
 		say "     Aelias chuckles and says 'Just give me a moment to catch my breath, little fly...'";
 	else:
@@ -375,13 +478,13 @@ Instead of fucking Aelias:
 		now sortorder entry is 3;
 		now description entry is "Let the spidertaur tie you up and fuck you";
 		[]
-		if player is male:
+		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Turn the tables and fuck him";
 			now sortorder entry is 4;
 			now description entry is "Tie him up and have some fun with Aelias butt";
 		[]
-		if player is female:
+		if Player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Turn the tables and mount his cock";
 			now sortorder entry is 5;
@@ -404,7 +507,7 @@ Instead of fucking Aelias:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
 				say "[title entry]: [description entry]?";
-				if player consents:
+				if Player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;
 					now sextablerun is 1;
@@ -432,12 +535,12 @@ Instead of fucking Aelias:
 
 to say AeliasSex1: [player gets fucked in the sex sling]
 	say "     Deciding to have some fun with your spidertaur lover, you walk towards him, lust gleaming in your eyes. Aelias says 'Wanna play in my net, my lovely little fly?' and scuttles closer on his eight legs to embrace you, his lips finding yours in an eagerly returned kiss while his hands roam over your body. As he comes up for air after a bit of making out, he continues with 'Your silk bedding awaits,' while pointing towards the sex sling you know so well. You let yourself be led towards it, with him pulling off your clothes as you go along, throwing them over nearby strands to keep them off the floor. Finally, when you're standing bare-ass naked in front of the sling, you slide into it, leaning back to lie on the incredibly soft, yet resilient material. Snuggling into the silky web, you let your gaze roam over Aelias's hard cock and muscled upper body, then meet his eyes with a need-filled look. Smiling at your unspoken invitation, the spidertaur takes your arms and binds them with several strands over your head, kissing your lips as he finishes and moves further down your body.";
-	if player is female:
+	if Player is female:
 		say "     Continuing going lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your pussy. Spreading it with his fingers, he sets to work eating you out, his tonguework making you moan in pleasure. Your bound arms tremble with the desire to stroke yourself as he stops from time to time, only running his hands slowly over your legs and chest and reveling in being in control over your pent-up need. Kept hot and bothered for quite a while, you're soon pleading, even begging for him to touch you. The spidertaur lets you continue for a moment longer, then chuckles and presses himself against you, letting his erection rest hotly against your crotch.";
 		WaitLineBreak;
 		say "     'You want this inside you?' he asks, putting the tip of his shaft against your pussy lips and rubbing it up and down over it. His touch against your sensitive folds makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your wet and ready pussy. As he bottoms out, his cock poking the entrance to your womb and the chitinous plates of his lower body touching your crotch, he leans forward and gives you a kiss on the lips. Straightening his humanoid upper body again after that, he gives you a smile and starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
+	else if Player is male:
 		say "     Continuing lower, he teases your nipples with his tongue, then strokes his hands along your sides and arrives at your crotch. Stroking over your cock and balls, then taking hold of your shaft and jerking it, getting you to full hardness quickly. He continues to stroke you, fondling your balls with his other hand and getting you pretty fired up, with precum leaking from the tip of your shaft. Then he slows down, only lazily moving his hand, to keep you going at that level. As this continues for several minutes, your bound arms tremble with the desire to take over and jerk off, much to the amusement of the spidertaur as he revels in being in control over your pent-up need. Soon you're pleading, even begging for him to touch you some more. The spidertaur lets you continue for a moment longer, then chuckles and presses himself against you, letting his erection rest hotly against your crotch.";
 		WaitLineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. As he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
@@ -460,13 +563,13 @@ to say AeliasSex2: [player gets tied/fucked standing]
 	say "     Deciding to have some fun with your spidertaur lover, you walk towards him, lust gleaming in your eyes. Aelias says 'Wanna play in my net, my lovely little fly?' and scuttles closer on his eight legs to embrace you, his lips finding yours in an eagerly returned kiss while his hands roam over your body. As he comes up for air after a bit of making out, he continues with 'You like being tied up, don't you. But how about you give me a nice little strip-show first? Can't let all those clothes get in the way...'";
 	say "     Under Aelias's watching eyes, you slowly start to undress, taking off your clothes bit by bit and doing poses to show off your body. Seems like your striptease is giving the spidertaur quite a bit of arousal, as you can see the chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness. And as horny as you've made him, he isn't in the mood to wait much longer. Before you're even completely naked, he starts spinning long strands of webbing with which he ties you up. You end up standing where you were, mostly naked, arms spread out to the sides, they and your body held by soft but surprisingly tough silk threads.";
 	WaitLineBreak;
-	if player is female:
+	if Player is female:
 		say "     Coming up from behind, Aelias puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, touching your sensitive pussy lips, then spreading them and pushing two fingers into your body, eliciting an involuntary moan from you. He chuckles, then says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting much longer...' and scuttles around you to get into position before you.";
 		say "     Using his two front legs, he lifts your lower body from the ground, leaving you hanging from the webbing as he proceeds to pull off your last articles of clothing. When you're finally completely naked, he spreads your legs wide, grabbing your buttcheeks as he presses against you. His hard rod pushes hotly against your pussy lips, then in between them, accompanied by the spidertaur's satisfied moan as he pushes forward and enters your body. He slides deeper slowly but surely, grinning at you as the feeling of his shaft rubbing your insides makes you gasp. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Giving your buns a squeeze with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		WaitLineBreak;
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
-		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, caresses your cock and balls, then takes hold of your shaft and jerks it, getting you to full hardness quickly. [if cock length of player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if cock length of player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if cock length of player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
+	else if Player is male:
+		say "     Coming up from behind, the spidertaur puts his arms around you, running his hands over your chest and lightly pinching your nipples. You can feel his soft skin against your back and the warm rod of his cock poke your ass. He moves one of his hands down to your crotch, caresses your cock and balls, then takes hold of your shaft and jerks it, getting you to full hardness quickly. [if Cock Length of Player < 5]'A bit small, little man. I'll show you what a real cock feels like...'[else if Cock Length of Player < 12]'Nice equipment, prey. But today, you won't be using it...'[else if Cock Length of Player > 11]'Oh, a big boy indeed. Guys like you always squeal the loudest when I fuck them...'[end if] With that, he gives your balls a squeeze, then moves his hands back to grope your buns and pull them apart to reveal your hole.";
 		LineBreak;
 		project the figure of SpidertaurAlleySex_icon;
 		WaitLineBreak;
@@ -490,12 +593,12 @@ to say AeliasSex3: [player gets tied/fucked on the floor]
 	say "     Seems like your striptease is giving the spidertaur quite a bit of arousal, as you can see the chitinous plates between his legs bulge outward a bit, then get pulled aside as his manhood rises to full hardness. And as horny as you've made him, he isn't in the mood to even wait until you're fully naked. Stepping up to you, Aelias pulls you against his chest, then lowers you to the floor on your back, tying your arms and body to the ground with strong silk bands in just a few moments. He leers down at your body, then leans down to kiss your lips, stroking a hand along your cheek before he continues 'Let's play a game - I'll be the predator and you my weak, helpless, tied-up prey. Seeing someone squirm in their bindings builds up my... appetite.' Trying to act in character, you struggle weakly against your bonds, though your anticipation must be very clear on your face as you look down and see his fully hard erection throb.";
 	WaitLineBreak;
 	say "     The spidertaur lowers his body a bit and rubs his cock against your face. Keeping up the play of being an unwilling participant, you keep your mouth closed for a few moments, then finally slide your lips over his shaft, sucking it and teasing it with the tip of your tongue. 'Not bad, prey. Not bad. But let's see what else you have to offer.' With that, he turns around, first his legs and then the shiny black plates of his abdomen coming into your field of view. You feel him loosen several strands holding your lower body, followed by your underwear being removed and both legs being raised and spread.";
-	if player is female:
+	if Player is female:
 		say "     Running one of his human hands over your crotch, then pushing two fingers into your pussy, he says 'A sweet pussy, just waiting to be filled by me. I won't leave you waiting any more...' and scuttles around you to get into position.";
 		LineBreak;
 		say "     You feel his hard rod against your pussy lips, pushing forward and entering your body. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking the entrance to your womb and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
 		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. After some more hot and hard fucking, he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum directly into your womb.[fimpregchance]";
-	else if player is male:
+	else if Player is male:
 		say "     Running one of his human hands over your crotch, then taking hold of your cock and stroking it a few times, he says 'It's always fun to see male prey moan and beg before they cream themselves when I fuck their asses. Let's start right now...' and scuttles around you to get into position.";
 		LineBreak;
 		say "     You feel his hard rod against your asshole, pushing forward until your pucker yields to the pressure and allows him in. He slides deeper slowly but surely, grinning down at you as the feeling of his shaft rubbing your insides makes you moan. Soon he's all the way in, his cock poking pleasure spots you didn't know you had, and you can feel the chitinous plates of his lower body against your crotch. Stroking your legs with his human hands, he then starts to thrust in and out, fucking you with deep strokes.";
@@ -517,7 +620,7 @@ to say AeliasSex4: [Aelias gets fucked]
 	say "     You go and give Aelias a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the spidertaur's lips. Running your hands down over his muscular human chest, then lower and lower, you cup Aelias's balls and give his hard cock a few slow strokes, then move further back along his body. Smooth skin gives way to even smoother chitin plates, their hard black surfaces shining in the light. Running your hand along his flank, you feel the overlapping plates of his bulging abdomen, moving against each other as he breathes. Finally, you arrive at Aelias's hind end, where you find two soft-looking areas revealing themselves as the protective plates over them are pulled back. The tied-up spidertaur gives you a grin over his shoulder, then theatrically intones in a high-pitched falsetto 'Oh no - someone help me! I'm bound and totally helpless against him! No doubt he'll rub his cock against my spinnerets, knowing how very - very - sensitive they are, then stick his hard cock up my ass! Help!'";
 	say "     Following Aelias's playfully delivered instructions, you take your erection in hand and push it against the lower opening in his armor plates, where six small bumps form the silk-producing organ of the spidertaur. They're very soft and sensitive, feeling quite nice against your cock, and Aelias starts to pant and moan the moment you first touch them. Small drops of clear liquid form at the tops of each bump, creating a slippery film on your shaft as you rub up against him. While you grind your crotch against the spidertaur's abdomen, your hands search out the hole a bit further up and push against his pucker, soon sliding in as he relaxes his muscle a bit. You revel in his initial 'Oh? Oh!' and the gasps that follow as you finger his asshole, rising in pitch and urgency until he groans 'I'm soo horny - please, stick it in already!'";
 	WaitLineBreak;
-	say "     Who could resist such an invitation? Quickly throwing off your clothes, you stand a bit straighter and push down against his abdomen, bringing his opening into perfect alignment for you to enter. With your rock hard [cock of player] in hand, you tease the spidertaur a bit - rubbing the tip up and down over his hole and along the edges where skin meets chitin, then pushing slightly against his opening before going back to more rubbing. Only when you have him so hot and bothered that he literally begs you to fuck him do you plunge in, thrusting deep into his back passage in one go. Due to the large size of his arachnid body, his hole is large too, but Aelias manages to grip your shaft pretty tightly with his anal muscles. All in all, your shaft pushing into his body feels quite nice, and as you start thrusting in and out faster, you evoke a whole new level of moans from Aelias.";
+	say "     Who could resist such an invitation? Quickly throwing off your clothes, you stand a bit straighter and push down against his abdomen, bringing his opening into perfect alignment for you to enter. With your rock hard [cock of Player] in hand, you tease the spidertaur a bit - rubbing the tip up and down over his hole and along the edges where skin meets chitin, then pushing slightly against his opening before going back to more rubbing. Only when you have him so hot and bothered that he literally begs you to fuck him do you plunge in, thrusting deep into his back passage in one go. Due to the large size of his arachnid body, his hole is large too, but Aelias manages to grip your shaft pretty tightly with his anal muscles. All in all, your shaft pushing into his body feels quite nice, and as you start thrusting in and out faster, you evoke a whole new level of moans from Aelias.";
 	say "     Hitting all the sensitive spots deep inside him, the spidertaur gasps, then shouts for you to fuck him harder. Eagerly complying, you fuck Aelias with abandon, your hips slapping loudly against his arachnid body with the force of your thrusts. Soon, the wild ride you're giving him pushes the spidertaur over the edge and he orgasms, his sphincter gripping your shaft like a vise as a huge load of cum spurts from his human cock in high arches, splashing down on the hardwood floor in a soft patter, creating small sticky puddles. With Aelias's hot hole tight around your cock and creating breathtaking sensations as you fuck him, you soon feel a familiar tingle rise in your balls. Plunging in one last time, you grind your hips against his smooth-plated abdomen and hold on tight as you come, shooting burst after burst of cum deep into his asshole.";
 	WaitLineBreak;
 	say "     Panting, you lean against Aelias's bulging abdomen to catch your breath, then slowly pull out and walk around back to his front. As you do so, the spidertaur raises one of his front legs and cuts the strand holding his wrists with one effortless slash, then pulls you against his chest in a tight embrace and starts to make out with you. In between deep kisses, he pants, 'A fun game, my cunning little fly. You're welcome to 'trick' and tie me up again soon...'";
@@ -539,23 +642,23 @@ to say AeliasSex6: [player ties Aelias up and jerks him off]
 	say "     Stepping in front of him, you do a slow and teasing striptease that leaves the spider-hybrid hot and horny, with a small bead of precum forming at the tip of his shaft and then dripping down on the wooden floor. Confident in your nakedness from the feeling of power it gives you to have the big male panting after you and tied up, you walk towards him with a spring in your step. Putting a hand on his balls, you give them a quick fondle, then move on up to his nipples, which you stroke and softly pitch till they're standing out as hard little nibs on his chest. It's fun to be able to play with him like this, seeing the usually dominant man stretch and squirm as you're pulling back from each little teasing touch and caress, needy for more.";
 	say "     As you've tamed yourself a taur (at least in play), you decide to use Aelias as a mount. Grinning widely, you pull yourself up against one of his arachnid legs, then swing up to sit on his back, coming to rest in the natural little dent between his humanoid chest and the bulging abdomen of his rear end. The chitin plates you're sitting on are even relatively comfortable, with a certain flexibility in them, even if they're somewhat cool to the touch. Settling into your position as spidertaur-rider, you stroke your hands down Aelias's muscled back, then slide them around his chest, embracing him from behind.";
 	WaitLineBreak;
-	say "     Getting back to the light, teasing touches, you pinch your arachnid lover's nipples and caress his muscles, then slowly work your way further down his front. His washboard abs feel pretty nice under your fingers, hard and taut, soon followed by the quite hard and warm pole of his erection as you brush against it and wrap your hand around. You can literally feel a tremble go through Aelias's whole body as you start to jerk him off, tense muscles softening a bit as relief from all his pent-up lust comes into sight. 'Get me off, my lovely prey. I need it,' the spidertaur moans, giving you yourself a nice little tingle of arousal at being in control for once. While your hand grips and moves over his erection, [if player is male]you grind your own against his lower back, reveling in the silky smooth feeling of his hairless skin[else if player is female]you start rubbing your pussy with the other hand[else]you grind your genderless crotch against his lower back, reveling in the silky smooth feeling of his hairless skin[end if].";
-	say "     It doesn't take much longer before you drive Aelias over the point of no return, gasping and shaking as his cock starts to blast away with thick spurt after spurt of creamy cum, which land with audible splats on the hardwood floor. Just moments after him, you reach your own climax, [if player is male]your hand gripping your manhood tightly as you spurt your creamy load against Aelias's back, the white cum showing a sexy contrast to his almost black skin[else if player is female]fingers still deep inside you as you spurt and drip femcum all over his armor-plated back[else]trembling in the grip of lust[end if]. While you're still panting, leaning against the spidertaur's human back as you catch your breath, Aelias raises one long arachnid leg and effortlessly slashes the strand holding his arms, freeing himself. Then he turns his upper body to hook and arm around you, pulling you off his back and around, to hold you against his chest for a deep kiss, which escalates into a small make-out session. In between hungry kisses, he pants, 'A fun game, my cunning little fly. You're welcome to 'trick' and tie me up again soon...'";
+	say "     Getting back to the light, teasing touches, you pinch your arachnid lover's nipples and caress his muscles, then slowly work your way further down his front. His washboard abs feel pretty nice under your fingers, hard and taut, soon followed by the quite hard and warm pole of his erection as you brush against it and wrap your hand around. You can literally feel a tremble go through Aelias's whole body as you start to jerk him off, tense muscles softening a bit as relief from all his pent-up lust comes into sight. 'Get me off, my lovely prey. I need it,' the spidertaur moans, giving you yourself a nice little tingle of arousal at being in control for once. While your hand grips and moves over his erection, [if Player is male]you grind your own against his lower back, reveling in the silky smooth feeling of his hairless skin[else if Player is female]you start rubbing your pussy with the other hand[else]you grind your genderless crotch against his lower back, reveling in the silky smooth feeling of his hairless skin[end if].";
+	say "     It doesn't take much longer before you drive Aelias over the point of no return, gasping and shaking as his cock starts to blast away with thick spurt after spurt of creamy cum, which land with audible splats on the hardwood floor. Just moments after him, you reach your own climax, [if Player is male]your hand gripping your manhood tightly as you spurt your creamy load against Aelias's back, the white cum showing a sexy contrast to his almost black skin[else if Player is female]fingers still deep inside you as you spurt and drip femcum all over his armor-plated back[else]trembling in the grip of lust[end if]. While you're still panting, leaning against the spidertaur's human back as you catch your breath, Aelias raises one long arachnid leg and effortlessly slashes the strand holding his arms, freeing himself. Then he turns his upper body to hook and arm around you, pulling you off his back and around, to hold you against his chest for a deep kiss, which escalates into a small make-out session. In between hungry kisses, he pants, 'A fun game, my cunning little fly. You're welcome to 'trick' and tie me up again soon...'";
 
 Section 5 - Endings
 
 when play ends:
-	if bodyname of player is "Spidertaur":
-		if humanity of player < 10:
-			if player is male:
+	if bodyname of Player is "Spidertaur":
+		if humanity of Player < 10:
+			if Player is male:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some females and choice males to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
-			else if player is female and "Sterile" is not listed in feats of player:
+			else if Player is female and "Sterile" is not listed in feats of Player:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choice males to impregnate you and help grow your brood of little spiderlings, the rest just serve as stored food for when you get hungry.";
 			else:
 				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choice males and females to have fun with, the rest just serve as stored food for when you get hungry.";
 		else:
 			say "When the military moves in, you're brought to a holding facility where you get checked out and they give you a shot to make you non-infectious. As your arachnid form's abilities are perfect for exploring ruined buildings and you know your way around, you volunteer to accompany a squad of soldiers back into the city. After several weeks of helping rescue quite a few people and using your webs to subdue others so they can be treated, you're awarded a civilian service medal. Joining a group specialized in disaster rescue afterwards, your heroic deeds all over the world do a lot to improve the reputation of spiders in general, away from the 'creepy-crawly to be squished' image.";
-	if humanity of player > 10:
+	if humanity of Player > 10:
 		if SpidertaurRelationship is 2:
 			say "     Sometimes at night in your dreams, your thoughts stray back to the encounter you had with the spidertaur in the city. Reliving him fucking you in an incredibly erotic dream, you awaken breathless and horny, the memory of his silken strands against your skin fresh in your mind, incredibly soft yet holding you tightly. You almost wish you could meet him again...";
 			say "     Without knowing anything about him, not even his name or if he made it out of the city at all, sadly, it remains a futile thought. The only thing you can do, in the end, is buy some silken sheets for your bed, to meet him again in your dreams.";

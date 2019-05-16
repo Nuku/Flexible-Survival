@@ -18,13 +18,13 @@ when play begins:
 
 Instead of resolving a Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
-	if bodyname of player is "Mental Mouse" and humanity of player <= 75:
+	if bodyname of Player is "Mental Mouse" and humanity of Player <= 75:
 		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";
 		WaitLineBreak;
 		say "[mouseapts]";
 	else:
 		say "The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, so it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors? Shall you follow your hunch and go in to search the place?";
-		if player consents:
+		if Player consents:
 			say "[mouseapts]";
 		else:
 			say "     Deciding against it and suddenly wary of this impulse to enter the building, you back away quickly. You catch sight of some small mice looking from the windows as you back away. Again, you feel that call to go inside and quickly turn and run, wanting to get some distance between you and the strange mice who tried to lure you in.";
@@ -38,19 +38,19 @@ to say mouseapts:
 	say "     You step into the small apartment building and look around, still feeling oddly at ease. The main doors are unlocked and you enter the lobby. There is an apartment door slightly ajar at the back of the hall beside the steps up to the next floor and you head towards it. As you reach out and push it open, you are tackled from behind by someone. No, it's multiple someones. There is a mob of gray mice which slipped quietly from the other rooms to tackle out. More come out from the apartment ahead of you and you are pulled in. You struggle, but there are too many of them on top of you already, weighing you down and overpowering you. While they may only be three feet tall, they are already about a dozen grabbing you and you can sense many more in the hall behind you.";
 	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";
 	WaitLineBreak;
-	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [skinname of player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
-	if player is male:
+	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [skinname of Player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
+	if Player is male:
 		increase rachelfuck by 1;
-		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if cock length of player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if cock length of player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
+		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if Cock Length of Player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if Cock Length of Player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
 		WaitLineBreak;
 		say "     The other mice around you run their paws over your bodies, seeking to share in welcoming you into their group. With so many of the psychic mice around you, you can feel their pleasure as they have sex all around you. You are surrounded in it, faintly sharing in all of it: sucked cocks, licked nipples, fingered pussies, fucked cunts, throbbing cocks and so much more. And most of all, the joy of fucking your beautiful mate, Rachel. Her small, cute form. Her lovely breasts, which you can't help but fondle. Her hot cunt, which you eagerly thrust into again and again.";
 		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate.";
-		if player is female:
+		if Player is female:
 			WaitLineBreak;
 			say "     Shifting onto your side, you rest one leg against the back of the couch and drape the other down, offering up your dripping pussy to her. She smiles as another mouse, sensing your intent, spreads your wet folds for you and third guides Rachel's cock into you. You both squeak in delight as she pumps into you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your womb.[impregchance]";
 		else:
 			say "     Eyeing her eight inch, throbbing manmeat, you can sense her mind, the collective mind, seeking how you'd prefer to enjoy it. Shall you suck her off (Y) or stretch out and let her fill your ass (N)?";
-			if player consents:
+			if Player consents:
 				say "     Sensing your desires, the mouse slides herself back up your body, bringing her throbbing cock to your mouth. You wrap your lips around it and start sucking. She rocks her hips, thrusting into your mouth, already very close. You can feel another mouse at your cock, licking and sucking it clean while a third moves in behind Rachel to lap at the cum leaking from her cunt. Sharing in all this soon gets to be too much and you cum again as Rachel blasts her seed down your throat while you feed another load to that helpful mouse sucking you off.";
 			else:
 				say "     Sensing your desires, the mouse slides back and helps you roll onto your front. Another helpful mouse spreads your ass cheeks for her, Giving her a good view of your tight pucker as another guides her cock into position for a nice, smooth entry into you. You groan softly, but are filled with pleasure at having her cock slowly stuffing your backside. She runs her paws over your back as starts pounding away at you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your bowels.[mimpregchance]";
@@ -65,19 +65,19 @@ to say mouseapts:
 	say "     Left in a haze after the orgy, you can feel the tingles of change coming from all the mousecum you've inundated with, turning you into a mouse like them. As your bond with them grows, you can faintly sense their slumbering minds around you.";
 	now mousecurse is 1;
 	now lastfuck of mouse girl is turns;
-	decrease humanity of player by 20 + a random number between 1 and 10;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 5;
-	if bodyname of player is not "Mental Mouse", now mousecounter is 0;
+	decrease humanity of Player by 20 + a random number between 1 and 10;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 5;
+	if bodyname of Player is not "Mental Mouse", now mousecounter is 0;
 	say "[fullmousification]";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
 	LineBreak;
 	WaitLineBreak;
-	if libido of player < 60, now libido of player is 60;
-	now libido of player is ( libido of player + 1 ) / 3;
-	if humanity of player < 10:
+	if Libido of Player < 60, now Libido of Player is 60;
+	now Libido of Player is ( Libido of Player + 1 ) / 3;
+	if humanity of Player < 10:
 		say "     For a moment you consider trying to leave while the mice are asleep, but your mate shifts a little and squeaks softly, squeezing you tighter. Unwilling to leave her, or them, you rest your head against hers, drifting further from yourself into the mouse collective.";
 		end the story saying "You give yourself up to the mouse collective, joining their united hive-mind in joyous mousedom.";
 		wait for any key;
@@ -91,7 +91,7 @@ to say mouseapts:
 		WaitLineBreak;
 		say "     Before you can ask her why, she senses the question (or perhaps just guesses it), and gives you a peck on the cheek. 'Oh, I'm quite sure I'll be able to convince you on my own. I'll just have to show you how wonderful being a mousey can be. I'd much rather convince you. It'll be more fun this way,' she adds with a soft, squeaking giggle. Lacking any other options, it seems best if you let the mouse girl come with you. Certainly, if you try to leave without her, she'll raise the alarm. It is only by her good graces that you're able to leave at all. Besides, she probably wouldn't have let you exit at all if she'd senses you wouldn't take her along.";
 		if the player is not lonely:
-			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
+			say "     Rachel stares at your [companion of Player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
 		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
@@ -104,20 +104,20 @@ to say fullmousification:
 	[puts Mental Mouse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Mental Mouse":
-			now monster is y;
+		if Name entry is "Mental Mouse":
+			now MonsterID is y;
 			break;
-	now tailname of player is "Mental Mouse";
-	now facename of player is "Mental Mouse";
-	now skinname of player is "Mental Mouse";
-	now bodyname of player is "Mental Mouse";
-	now cockname of player is "Mental Mouse";
+	now tailname of Player is "Mental Mouse";
+	now facename of Player is "Mental Mouse";
+	now skinname of Player is "Mental Mouse";
+	now bodyname of Player is "Mental Mouse";
+	now cockname of Player is "Mental Mouse";
 	attributeinfect;
-	now tail of player is tail entry;
-	now face of player is face entry;
-	now skin of player is skin entry;
-	now body of player is body entry;
-	now cock of player is cock entry;
+	now tail of Player is tail entry;
+	now face of Player is face entry;
+	now skin of Player is skin entry;
+	now body of Player is body entry;
+	now cock of Player is cock entry;
 
 
 Section 2 - Mouse Girl Pet
@@ -146,14 +146,14 @@ The icon of mouse girl is Figure of Rachel_icon.
 
 to say SummonRachel:
 	now Rachel is nowhere;
-	if player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
+	if Player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
 		say "     Rachel stands up from where she was meditating. Without a word, she comes to stand by your side.";
 	else: [regular summoning]
 		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
 
 to say DismissRachel:
 	move Rachel to Pantry;
-	if player is not in Pantry: [regular dismiss]
+	if Player is not in Pantry: [regular dismiss]
 		say "     Before you can say a word, Rachel comes up behind you. 'Alright, I'll head back to the library then. See you soon.' With that, she makes her way back.";
 	else: [dismissing her in the abbey]
 		say "     Rachel goes back to her meditating, saying she will continue to commune with the rest of the collective.";
@@ -173,8 +173,8 @@ instead of fucking Rachel:
 
 
 to say RachelAttack:
-	choose row monster from Table of Random Critters;
-	if name entry is "Mental Mouse":
+	choose row MonsterID from Table of Random Critters;
+	if Name entry is "Mental Mouse":
 		say "[one of]The mouse girl glares angrily at one of the mice facing you, causing her to reel back from your mate's mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, one of the mice is slowed momentarily, allowing you to get in a glancing blow![or]Pressing her fingertips to her temples, Rachel focuses hard, causing one of them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and one of the mice collapses to her knees and cums hard, as if groped from afar![or]Rachel moves up behind one of the mice and pinches her ear. Your enemy becomes glassy-eyed and wobbles as your mate's mind slams into hers![at random]";
 	else:
 		say "[one of]The mouse girl glares angrily at your foe, causing them to reel back from her mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, your enemy is slowed momentarily, allowing you to get in a glancing blow![or]Rachel, putting her fingertips to her temples, focuses hard on your enemy, causing them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and your foe groans softly, as if groped from afar![or]Rachel moves up behind your foe, placing a paw lightly on their back. Your enemy becomes glassy-eyed for a moment as their fighting resolve is weakened![at random]";
@@ -183,19 +183,19 @@ to say RachelDesc:
 	say "     This short, gray mouse is cute and sexy, with an idealized feminine body in miniature. While only three feet tall, the bosom and cock on this rodent herm are above average for a normal human. She has long, gray hair that flows down her back and her round, mouse ears poke out from it. She has found a cute sundress somewhere. It is a light blue that goes well with her fur color, but does little to hide her large tits or erection when aroused. That's probably why she chose it.";
 	say "     Despite her small size, this mouse girl has considerable psychic powers. From what you've seen and sensed, she's probably one of the strongest among them. Having been selected by the mouse collective's hive mind as your intended mate, you sensed her powerful mind and can't help but feel a strong attachment to her. Intent on coaxing you back to them, she has chosen to accompany you to show you the pleasures of mousedom to convince you to return. You'll have to keep her close by if you want to avoid having the mice constantly tracking you down.";
 	say "     As if sensing your mind focused on her, the mouse girl [one of]bends over to pick something up, swishing her tail to lift the back of her dress and flash her pussy at you[or]runs her paws along her feminine body[or]teases her nipples in a little show for you[or]brushes the front of her dress, making the growing erection under it more prominent[or]grins coquettishly[or]sends a fresh wave of her love for you into your mind[or]nibbles at some cheese and crackers she found, somehow making it seem sexy[at random]. You can't help but think as you look at her that joining the mouse collective wouldn't be so bad if it means being with her.";
-	if a random chance of 2 in 5 succeeds, decrease humanity of player by 1;
+	if a random chance of 2 in 5 succeeds, decrease humanity of Player by 1;
 
 instead of sniffing mouse girl:
 	say "[RachelScent]";
 
 to say RachelScent:
 	say "Rachel smells faintly of mice and arousal, and you find yourself thinking back on the wonderful experience you had with them.";
-	if a random chance of 1 in 3 succeeds, decrease humanity of player by 1;
+	if a random chance of 1 in 3 succeeds, decrease humanity of Player by 1;
 
 instead of conversing the Rachel:
-	if player is in Pantry and Rachel is in Pantry:
+	if Player is in Pantry and Rachel is in Pantry:
 		say "[RachelTalkMenu]";
-	else if companion of player is mouse girl:
+	else if companion of Player is mouse girl:
 		say "[RachelTalkMenu]";
 	else:
 		say "     Rachel isn't here.";
@@ -204,9 +204,9 @@ instead of conversing mouse girl:
 	if mouse girl is not tamed:
 		say "     Who?";
 	else:
-		if player is in Pantry and Rachel is in Pantry:
+		if Player is in Pantry and Rachel is in Pantry:
 			say "[RachelTalkMenu]";
-		else if companion of player is mouse girl:
+		else if companion of Player is mouse girl:
 			say "[RachelTalkMenu]";
 		else:
 			say "     Rachel isn't here.";
@@ -232,7 +232,7 @@ to say RachelTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Chit Chat"):
@@ -264,10 +264,10 @@ to say sexwithmousegirl:
 		[puts Mental Mouse as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if name entry is "Mental Mouse":
-				now monster is y;
+			if Name entry is "Mental Mouse":
+				now MonsterID is y;
 				break;
-		if player is herm:
+		if Player is herm:
 			let T be a random number between 1 and 9;
 			if T is 1 or T is 2:
 				say "[rachelsexmale1]";
@@ -279,7 +279,7 @@ to say sexwithmousegirl:
 				say "[rachelsexfemale1]";
 			if T is 8 or T is 9:
 				say "[rachelsexfemale2]";
-		if player is male:
+		if Player is male:
 			let T be a random number between 1 and 5;
 			if T is 1 or T is 2:
 				say "[rachelsexmale1]";
@@ -303,57 +303,57 @@ to say sexwithmousegirl:
 
 
 An everyturn rule:
-	if companion of player is mouse girl and skipturnblocker is 0:
-		increase libido of player by 5;
+	if companion of Player is mouse girl and skipturnblocker is 0:
+		increase Libido of Player by 5;
 		let diceroll be a random number from 40 to 200; [lust check vs 200, player libido 40 or less auto-wins]
-		if diceroll < libido of player and lastfuck of mouse girl - turns >= 4:
+		if diceroll < Libido of Player and lastfuck of mouse girl - turns >= 4:
 			say "[sexwithmousegirl]";
 
 
 to say rachelsexmale1:
-	say "     Sensing your growing arousal, Rachel runs her paws over your body, then down to your cock. Your erection throbs in her paw and is soon in the cute mouse's mouth. She licks and sucks on it briefly before moving onto all fours and raising her tail for you. Seeing those wet folds waiting for you, you move atop her small body, lining up your erection before sinking it into her snug, squeezing grip. She squeaks and moans beneath you as you thrust[if cock length of player > 18]. Your huge penis stretches her out considerably, but she takes it all, happy to share herself with you[else if cock length of player > 12]. Your large penis bulges her slender waist as you fuck her, but she takes it all, happy to share herself with you[else]. Your penis throbs inside her, taking it all and happy to share herself with you[end if]. You pound into your murine mate until you both cum together, sharing in the sensations of your lovemaking as your minds touch.";
+	say "     Sensing your growing arousal, Rachel runs her paws over your body, then down to your cock. Your erection throbs in her paw and is soon in the cute mouse's mouth. She licks and sucks on it briefly before moving onto all fours and raising her tail for you. Seeing those wet folds waiting for you, you move atop her small body, lining up your erection before sinking it into her snug, squeezing grip. She squeaks and moans beneath you as you thrust[if Cock Length of Player > 18]. Your huge penis stretches her out considerably, but she takes it all, happy to share herself with you[else if Cock Length of Player > 12]. Your large penis bulges her slender waist as you fuck her, but she takes it all, happy to share herself with you[else]. Your penis throbs inside her, taking it all and happy to share herself with you[end if]. You pound into your murine mate until you both cum together, sharing in the sensations of your lovemaking as your minds touch.";
 	increase rachelfuck by 1;
-	now libido of player is ( libido of player + 1 ) / 3;
-	decrease humanity of player by a random number between 1 and 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now Libido of Player is ( Libido of Player + 1 ) / 3;
+	decrease humanity of Player by a random number between 1 and 5;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 to say rachelsexmale2:
-	say "     Feeling turned on, your eyes drift over to the mouse girl accompanying you. She grins and slips off her dress as she senses your intent, climbing into your arms. You cuddle the small mouse to you, cuddling her in your arms as she grips her arms and legs around you tightly. You help her settle into position on your throbbing cock, fucking her while standing. [if cock length of player > 18]. Your huge penis stretches her out considerably, but she takes it all for you[else if cock length of player > 12]. Your large penis bulges her slender waist as you fuck her, but she manages to take it all[else]. Your penis throbs inside her, stuffed fully inside her[end if]. Hugging her tightly, you thrust up into her, loving her squeaks of pleasure she gives. As you make love to the beautiful mouse, you share the sensations of sex with her, feeling her pleasure as well. You cum together, filling her with your seed as she sprays her load across your body.";
+	say "     Feeling turned on, your eyes drift over to the mouse girl accompanying you. She grins and slips off her dress as she senses your intent, climbing into your arms. You cuddle the small mouse to you, cuddling her in your arms as she grips her arms and legs around you tightly. You help her settle into position on your throbbing cock, fucking her while standing. [if Cock Length of Player > 18]. Your huge penis stretches her out considerably, but she takes it all for you[else if Cock Length of Player > 12]. Your large penis bulges her slender waist as you fuck her, but she manages to take it all[else]. Your penis throbs inside her, stuffed fully inside her[end if]. Hugging her tightly, you thrust up into her, loving her squeaks of pleasure she gives. As you make love to the beautiful mouse, you share the sensations of sex with her, feeling her pleasure as well. You cum together, filling her with your seed as she sprays her load across your body.";
 	increase rachelfuck by 1;
-	now libido of player is ( libido of player + 1 ) / 3;
-	decrease humanity of player by a random number between 1 and 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now Libido of Player is ( Libido of Player + 1 ) / 3;
+	decrease humanity of Player by a random number between 1 and 5;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 to say rachelsexfemale1:
 	say "     Sensing your arousal, Rachel snuggles up to you and nuzzles your crotch. Her small tongue slides out to tease at your wet pussy. Pressing her lips to your dripping folds, she teases her tongue across your clit and nibbles lightly at your sensitive petals, making you moan in delight. You run your fingers over her head, stroking her sensitive ears and through her soft hair. With her mind touching yours, she is able to sense exactly what brings you the most pleasure and soon brings you to a crashing orgasm that makes you weak in the knees. Kneeling in front of her, the small mouse wraps her arms around you, giving you a kiss wet with your own juices.";
-	now libido of player is ( libido of player + 1 ) / 2;
-	decrease humanity of player by a random number between 1 and 3;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now Libido of Player is ( Libido of Player + 1 ) / 2;
+	decrease humanity of Player by a random number between 1 and 3;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 to say rachelsexfemale2:
 	say "     The cute mouse girl takes your hand in hers and smiles up at you coquettishly. Her free hand moves along your hip, then finds its way between your legs to tease your wet pussy. Moaning softly at her touch, you find yourself unable to resist an urge to mate with this lovely mouse girl. Finding a comfortable spot, you stretch out on your back, legs spread and welcome her into your arms. She lines her cock up with your pussy and sinks slowly into you. You give a squeak of pleasure as she fucks you, pumping her mousemeat into you. Without a word, she adjusts her thrusts to best please you, slow or fast, hard or soft, from moment to moment until finally, minds touching, you both orgasm together. You can't help but think how wonderful it would be like this with her all the time, to be her mousey lover and joined with the rest of those sexy mice.[impregchance]";
-	now libido of player is ( libido of player + 1 ) / 3;
-	decrease humanity of player by a random number between 1 and 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now Libido of Player is ( Libido of Player + 1 ) / 3;
+	decrease humanity of Player by a random number between 1 and 5;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 to say racheloral:
 	say "     The mouse girl's ears twitch as a lustful urge fills you, sensing you a moment before you pounce her into a hug. Squeaking playfully, you roll her onto her back and bury your face between her legs. You lick and kiss at her throbbing cock, running your tongue over its pink flesh. Human in form and sheathless, her erection is about eight inches of throbbing mousehood. She strokes her fingers over your head, moaning in pleasure as you lick and suck at her cock until she cums hard. Sharing in her pleasure, you cum as well, feeling her orgasm as well as your own. You gulp down her creamy cum, then nuzzle up lick her nipples before kissing her.";
-	now libido of player is ( ( libido of player + 1 ) * 2 ) / 3;
-	decrease humanity of player by a random number between 1 and 4;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
+	now Libido of Player is ( ( Libido of Player + 1 ) * 2 ) / 3;
+	decrease humanity of Player by a random number between 1 and 4;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 1;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 1;
 
 
 Section 4 - Endings
 
 when play ends:
 	if mouse girl is tamed:
-		if humanity of player < 10:
-			if bodyname of player is "Albino Mouse" or bodyname of player is "Mental Mouse":
+		if humanity of Player < 10:
+			if bodyname of Player is "Albino Mouse" or bodyname of Player is "Mental Mouse":
 				say "     Giving into your murine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
 		else:
 			say "     When the military comes to rescue you and the other survivors they can find, Rachel seems very nervous and fretful. You don't have to ask, knowing she's aware you'll be leaving the city without becoming a member of the mouse collective - without joining her. With tears in the corner of her eyes, the mouse girl hugs herself to you tightly. You can sense that she longs to overpower your will or to summon the others, to force you to come. From what you've sensed of her power and from the strength of your bond to her, she might even be able to do it, but she loves you too much to bring herself to do so. Hugging the small mouse girl, you give her a parting kiss before she runs off into the city. Your sense of her mind fades as she runs off, filled with a mix of sadness at her loss as well as joy for your success";

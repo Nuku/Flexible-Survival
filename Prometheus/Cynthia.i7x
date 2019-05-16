@@ -34,14 +34,14 @@ Cynthia is a woman. The hp of Cynthia is usually 0.
 [Physical details as of game start]
 ScaleValue of Cynthia is 3. [human sized]
 SleepRhythm of Cynthia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Cynthia is 0. [no cock]
+Cock Count of Cynthia is 0. [no cock]
 Cock Length of Cynthia is 0. [no cock length]
-Cock Width of Cynthia is 0. [no ball size]
-Testes of Cynthia is 0. [no balls]
-Cunts of Cynthia is 1. [1 pussy]
-Cunt Length of Cynthia is 8. [gets stretched a bit by an alpha husky]
-Cunt Width of Cynthia is 3. [gets stretched a bit by an alpha husky]
-Breasts of Cynthia is 2. [2 nipples]
+Ball Size of Cynthia is 0. [no ball size]
+Ball Count of Cynthia is 0. [no balls]
+Cunt Count of Cynthia is 1. [1 pussy]
+Cunt Depth of Cynthia is 8. [gets stretched a bit by an alpha husky]
+Cunt Tightness of Cynthia is 3. [gets stretched a bit by an alpha husky]
+Nipple Count of Cynthia is 2. [2 nipples]
 Breast Size of Cynthia is 2. [B cup at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Cynthia is false. [can not take oversized members without pain]
@@ -96,7 +96,7 @@ Instead of resolving Den of the Pack:
 
 to DenofthePackEvent:
 	say "     As you approach the area known as Bright Alley, you get the sensation of being watched. You rapidly twist your head around, hoping to catch an observer before they can hide, but still don't see anyone. Dismissing the feeling as paranoia, you briskly walk onwards, shaking your head to try and dispel the fear. 'You should have trusted your instincts,' a female voice shouts from above. Snapping your head up, you spy a woman on the rooftops, a rifle held over one shoulder. Her face is completely obscured by an advanced-looking gas mask, so it takes you a few moments to recognize the voice as belonging to Cynthia, the soldier you met while collecting libido suppressants. She waves at you and continues, 'I wondered whether you were going to come, considering when we last met I took a few potshots at some rogue soldiers. But how have you been? I can't stalk you all the time.' She says the last one teasingly, but you are nonetheless left unsure how often she really is watching you.";
-	say "     Cynthia walks towards a ladder at the edge of the building and clambers down while you wait patiently. You take the chance to observe her appearance further as she climbs down the ladder. Her gray uniform is fairly form fitting, not skin tight, but likely tailored for her. She wears a black beret with an insignia that you don't recognize. The straps of her mask press against neck-length blonde hair. 'I can feel your eyes on me. It's rude to stare at a lady without her permission, not that I mind, but you could have waited, couldn't you?' You decide to behave yourself until she has reached the ground. 'Now that we're face to face, you may look freely, though I'll take off my gas mask first.' She does so, revealing pale skin and startlingly deep blue eyes. 'Shall I escort you to the Den, my [if player is male]lord[else]lady[end if]?'";
+	say "     Cynthia walks towards a ladder at the edge of the building and clambers down while you wait patiently. You take the chance to observe her appearance further as she climbs down the ladder. Her gray uniform is fairly form fitting, not skin tight, but likely tailored for her. She wears a black beret with an insignia that you don't recognize. The straps of her mask press against neck-length blonde hair. 'I can feel your eyes on me. It's rude to stare at a lady without her permission, not that I mind, but you could have waited, couldn't you?' You decide to behave yourself until she has reached the ground. 'Now that we're face to face, you may look freely, though I'll take off my gas mask first.' She does so, revealing pale skin and startlingly deep blue eyes. 'Shall I escort you to the Den, my [if Player is male]lord[else]lady[end if]?'";
 	WaitLineBreak;
 	say "     She proffers a gloved hand, which you hesitantly take. 'Ceremony is important to the Den Mother,' she explains, 'and you wouldn't want to disappoint her when you first meet, would you?' Cynthia guides you down a side alley and knocks on a blue door that is covered in the same dirt staining walls that surround you. The door is opened in an instant, and the face that greets you causes you to recoil slightly. The feline guard looks like he lost a fight with a dragon, half his face furless and seemingly melted with three parallel gashes running from forehead to chin. You realize that your reaction might be rude and begin to apologize, but he cuts you off part way by cackling. 'Don't worry. Most people react that way when they see me for the first time, some even continue to do so afterwards. But the Mistress with her obsession with illusions thinks that a fearsome appearance in a doorman may deter casual looters.'";
 	say "     You let out a sigh of relief, asking if that's an illusion, then what does he really look like. You feel Cynthia wince beside you as she quickly replies, 'That [italic type]is[roman type] his face. He was injured near the beginning of the outbreak.' The cat snorts at her response, 'You make it sound so dull, girl. You, newcomer. Do you want to hear how I got this ugly mug? A dragon, one of them bloody huge ones from the stories, thought that he could take the gold in the bank vault. I worked as a security guard, you see, and I had principles even since being turned into a cat, and I, bold as brass, told him to go stuff himself. He didn't take too kindly to this and made the modifications to my face that you see before you, but I got the last laugh. I shut him in the vault, and I doubt that he can eat metal,' he finishes darkly. That sounds terrifying, if a little fictitious, so you look questioningly at the female soldier.";

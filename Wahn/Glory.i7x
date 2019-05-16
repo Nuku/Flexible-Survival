@@ -35,7 +35,7 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, go and talk to her.";
 		say "     ([link]N[as]n[end link]) - Not your problem.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You approach the young woman and try to talk to her, but she clearly isn't in the right headspace to register even the most gently stated words. Instead, the part-equine woman immediately shies away, standing up and running off. Within moments, she is lost in the crowd and out of sight. You can't help but wonder what will become of her. Maybe you should search for her to have a chance to talk once she's calmed down at least a little.";
 			now GloryFate is 1;
@@ -52,7 +52,7 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Walk up to the door and knock.";
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
-		if player consents:
+		if Player consents:
 			say "[GloryDoorApproach]";
 		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
@@ -63,17 +63,17 @@ Instead of resolving a Refugee Mare:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Walk up to the door and knock.";
 		say "     ([link]N[as]n[end link]) - Leave her alone.";
-		if player consents:
+		if Player consents:
 			say "[GloryDoorApproach]";
 		else:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
 
 to say GloryDoorApproach:
-	if bodyname of player is listed in infections of Equinelist or facename of player is listed in infections of Equinelist:
+	if bodyname of Player is listed in infections of Equinelist or facename of Player is listed in infections of Equinelist:
 		say "     Remembering the woman's reaction to just bumping into a horseman before, you look at yourself and decide that you shouldn't try to approach her looking like you currently are. Maybe you should come back when you have a form that is less threatening to her...";
 	else:
 		LineBreak;
-		let bonus be (( charisma of player minus 10 ) divided by 2);
+		let bonus be (( charisma of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 		if diceroll + bonus >= 15:
@@ -129,7 +129,7 @@ to say GloryChoices:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Console her yourself"):
@@ -151,7 +151,7 @@ to say GloryChoices:
 	clear the screen and hyperlink list;
 
 to say GloryChoice1: [player charm]
-	let bonus be (( charisma of player minus 10 ) divided by 2);
+	let bonus be (( charisma of Player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]16[roman type] (Charisma Check):[line break]";
 	if diceroll + bonus >= 15:
@@ -162,12 +162,14 @@ to say GloryChoice1: [player charm]
 		say "     You try your best to cheer Glory up, but she just keeps crying, only stopping when she almost physically can't continue to shed another tear. In the end, even your offer of hope in that the military might yet come and rescue all of you sounds like a weak excuse, and you can see that she doesn't really believe in it. The young woman thanks you for the attempt at cheering her up and then shoos you out of her dark little room, closing the door quickly after you have left. Most likely, she'll now just wallow in her aversion of her partially equine body some more and might very well crack completely before much longer.";
 		now GloryFate is 95; [consolation fail]
 		now Resolution of Refugee Mare is 3; [Glory consolation fail]
+	now Refugee Mare is resolved;
 
 to say GloryChoice2: [Christmas Village]
 	say "     As you tell Glory that you know just the place for her, the young woman is rather suspicious at first, but after a little talking to, she lets you lead her deeper into the mall. Soon arriving in the east wing, the hybrid mare looks up in wonder as you near the wall of falling snowflakes that marks the entrance of the Christmas Village and she literally squeals in joy as she sees what lies beyond. Santa Claws awaits the two of you on his large throne and he gives a friendly 'Ho ho ho' as he waves the two of you closer. Introducing Glory to him and explaining that she needs a place to stay where she can feel safe and protected once more, you earn a knowing nod from Santa, who smiles and then stands up to give his visitor a welcoming hug, saying that she can stay as long as she wants.";
 	say "     With some quickly summoned elves guiding Glory away to her new home in one of the block-houses, the bear clears his throat and watches her go, then turns back to you. 'Thank you for taking care of her and guiding Glory here. She will be safe, that I can promise you. At the same time, those who have been hit as hard as her rarely want to leave the Christmas Village again, instead preferring to stay as new elves in my domain. We will see how things turn out with her, but I wanted to tell you what you can expect.'";
 	now GloryFate is 10; [brought to Christmas Village]
 	now Resolution of Refugee Mare is 4; [Glory brought to Christmas Village]
+	now Refugee Mare is resolved;
 
 to say GloryChoice3:
 	say "     As you tell Glory that you know someone who should be able to help her, the young woman is rather suspicious at first, but after a little talking to, she lets you lead her deeper into the mall. It doesn't take all that long to reach the Body Shop, where Glory stares with wide open eyes at the many shapes of the motionless mannequins in the store. Moreau is quick to greet the two of you in his store, with the naga coiling his tail around himself and watching Glory with interested eyes. You introduce the two of them to one another and explain that Moreau might just help the equine hybrid to bear what happened to her a little easier, by using his hypnotic powers. Glory hesitates as you mention hypnosis, but then looks down at herself and soon says, 'Anything that will make this living nightmare more bearable. Please.' Taking the naga shopkeeper aside, you quietly tell him everything that you learned from Glory, and he gives you a nod in understanding.";
@@ -179,11 +181,13 @@ to say GloryChoice3:
 	say "     Glancing over to Glory, Moreau follows her eager activity for a few seconds, then half-turns his head to you. 'I didn't change too much, if you're worried about that. Just softened the raw and jagged bits to make her whole again. It was good of you to bring the lovely girl to me, you have no idea what she was ready to do if this hadn't worked out. You won't have to worry about that anymore now.' With that said, the naga shopkeeper changes topics and directs your attention to his newer mannequins instead, happily offering you to buy what parts interest you.";
 	now GloryFate is 20; [brought to Moreau]
 	now Resolution of Refugee Mare is 5; [Glory brought to Moreau]
+	now Refugee Mare is resolved;
 
 to say GloryChoice4:
 	say "     As you tell Glory that you know someone who should be able to help her, the young woman is rather suspicious at first, but as you point out that he's quite nearby in the food court, she lets you lead her out of the storeroom and to where Tobias is sitting at a table. As you introduce the two of them to one another, the doberman looks Glory up and down, then nods to you and says, 'So, what brings you to me?' Quietly detailing the things that Glory went through and her desire for protection as well as a way to forget about the living nightmare that her life has become.' Tobias nods and gestures for Glory to come a bit closer, then looks her straight in the eye and says in an earnest tone, 'I can give you what you want. You'll be safe with me, no one's gonna lay a hand on you, including myself. I don't force myself on people. But don't misunderstand - it's not gonna be lazing about either. You've got to obey me, completely, and I'll train you to be a proper companion and pet.'";
 	say "     Glory looks wide-eyed at Tobias and opens her mouth to reply, but he goes on before she can do so, 'I noticed that you seem uncomfortable in that part-equine skin of yours, which is understandable. So this should be a little bonus: If you come with me, you're gonna be a dobie fairly soon. And I'll give you other things to think about than being raped by big bro.' That last sentence makes Glory gasp and close her mouth with a plop. 'The choice is yours. It's a good offer, honest. Security, peace of mind, food, and a new body. Definitively better than the alternative, with the danger of falling prey to some creature out there - or in here.' He gives a nod to the entrance, where the wolverine guard that slapped Glory's ass is leaning against the wall, munching on some fast food. Glory looks to you in indecision, desperation written on her features, and you give a tiny nod. It was your idea to bring her to Tobias after all. Letting out a sigh, she agrees to the doberman's terms, readily accepting a leather collar that he pulls from one of his pockets, then fastens it around her neck.";
 	now GloryFate is 30; [brought to Tobias]
 	now Resolution of Refugee Mare is 6; [Glory brought to Tobias]
+	now Refugee Mare is resolved;
 
 Glory ends here.

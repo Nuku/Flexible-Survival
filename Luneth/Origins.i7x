@@ -35,7 +35,7 @@ instead of resolving a Lost Camera:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure! You're curious about what you may find.";
 	say "     ([link]N[as]n[end link]) - Not right now. You can always watch it later.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     You hit playback so that you can view the last moments that the camera recorded.";
 		LineBreak;
@@ -49,7 +49,7 @@ instead of resolving a Lost Camera:
 	increase carried of video camera by 1;
 	LineBreak;
 	say "[bold type]Carter's Tape has been added to your tape inventory![roman type][line break]";
-	add "Carter's Tape" to tapes of player;
+	add "Carter's Tape" to tapes of Player;
 	ScoreGain 10;
 	now Lost Camera is resolved;
 

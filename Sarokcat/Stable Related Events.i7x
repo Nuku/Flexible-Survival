@@ -22,7 +22,7 @@ Instead of Resolving a Kitchenkegger:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - The drink will help quench your thirst.";
 	say "     ([link]N[as]n[end link]) - Don't drink strange liquids from strangers.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Feeling rather dubious but unable to turn down the strange chefs['] hospitality, you lift your mug, and they cheer and do likewise. Taking a tentative drink, you find that the liquid seems to be a rather finely brewed draft beer, which certainly explains the actions of the drunken chefs. Enjoying the taste and not wanting to annoy your hosts, you drain your drink in several deep swallows before gasping for breath. Your head swims as you feel a pleasant buzz set in, even as your new equine friends clap you on the back companionably and refill your mug. You drink the next mug much more slowly as you look around, though your attention is soon drawn back to the equines in the room, as they begin to kiss and grope each other even as they sing broken snatches of a drunken song.";
 		say "     You chuckle with some amusement, and one of the beasts reaches out to involve you in their impromptu orgy, only to be foiled when another one of them grabs them from behind and shoves their rod into their fellow cook. Feeling rather tipsy and much less inhibited now after a few drinks, you nonetheless decide that you should probably stay out of the orgy for now, unless you want to stay here permanently. You set your mug down and give the distracted chefs a happy wave as you stagger back out into the halls once again...";
@@ -124,32 +124,32 @@ Instead of Resolving a Soldierstabling:
 		say "     Wandering around the large and dimly lit hallways, you think you hear a sound coming from down one of the halls, a low moaning sound, interspersed with several other unidentifiable noises coming from relatively nearby. After pausing for a minute to make sure that nothing is coming, you carefully inch down the hallway until you can see into what appears to have once been a small dining room. Now the room is filled with numerous posts and benches, and you can see a number of rather equine people hitched up to the posts, while a few full horsemen wander around among them, stroking and teasing the tied people with amusement. Blinking, you realize that these transforming people are the former soldiers you saw being escorted into the Stables earlier, their forms having already begun to change enough that they are quite hard to recognize.";
 		say "     As you look at the features of the bound captives, their partially equine faces a mixture of fear and intense arousal, you find yourself growing increasingly aroused as well. Your eyes trace over their half changed forms, finding that the mix of equine and human features to be surprisingly erotic. You shake yourself as you realize that your hands have started to drift down to your privates, and force yourself to move away from the strange sight of the soldiers turning into sexy equines, though you consider stopping by again next time you are in the area... just to see how they have progressed, of course.";
 		now Soldierhorsetf is 1;
-		increase libido of player by 25;
-		if libido of player > 100, now libido of player is 100;
+		increase Libido of Player by 25;
+		if Libido of Player > 100, now Libido of Player is 100;
 		increase score by 1;
 	else if Soldierhorsetf is 1:
 		say "     Wandering through the large old hotel, you find yourself near the room where the soldiers were being trained last time you were down this way, and finding your curiosity to be getting the better of you, you silently slip down the hallway again until you can peek into the room once more. You can see that many of the former soldiers have continued their rapid changes, and now appear to be more equine than anything else, and no longer appear to be bothered at all by their changes. You watch as one of the new mares flicks her tail teasingly at one of the handsome stallions wandering around the room, and the sight of the stallion mounting her fills your mind with a strange lust, as you watch the former soldier moan helplessly under the powerful stallion, as he trains her body to respond like a proper mareslut should.";
 		say "     Trying to distract yourself from the rather kinky sight, you look around, only to groan as all you can see are more sexy transforming mares and the handsome stallions helping them transform. Your own body seems to burn with arousal and change as well as you find yourself imagining one of the handsome male beasts hitching you up and training you to be a proper mare... Pulling yourself away from the strange fantasy, you stagger slightly as you hurry back down towards the entrance, just knowing that if you stay there much longer, you will be begging them to tie you up and transform you as well...";
 		now Soldierhorsetf is 2;
-		increase libido of player by 25;
-		if libido of player > 100, now libido of player is 100;
+		increase Libido of Player by 25;
+		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of player by 5;
+		SanLoss 5;
 	else if Soldierhorsetf is 2:
 		say "     Returning to the area where the soldiers were being trained, you find that you can't help but go investigate the training room again yourself, your body growing aroused again in anticipation as you creep up to where you can look inside of the room again. Peeking inside, you find yourself moaning softly with arousal as you look upon the sexy scene inside, the numerous horse creatures making more than enough noise to cover your own soft noises of arousal, as they move against each other in a large orgy. The smell of horsey sex fills the air as the now fully transformed new recruits demonstrate their skills as slutty little maresluts underneath the large stallions in the room, the sight of all of the naked sexy horseflesh making you pant with need as you watch the orgy.";
 		say "     You can't even see any signs of humanity left in the transformed soldiers as they perform with the stallions eagerly, and somehow knowing that they were formerly proud and independent men only makes their final submissive transformation even more erotic as you watch the show. Finally, you catch yourself about to enter the room to join in the fun, and manage to shake yourself out of the lust-filled trance the sexy sights and scents of the training room had inspired. You drag yourself reluctantly away down the hall as the sounds of horses having fun slowly fades behind you. You still find yourself idly wondering when the next 'training class' starts, and if they are accepting applicants...";
 		now Soldierhorsetf is 3;
-		increase libido of player by 25;
-		if libido of player > 100, now libido of player is 100;
+		increase Libido of Player by 25;
+		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of player by 5;
+		SanLoss 5;
 	else if Soldierhorsetf is 3:
 		say "     Your feet guide you through the halls once more to the strange training room that you have encountered several times now, and unable to resist your burning curiosity, you once more creep forth to peer into the room. Looking around, you see to your surprise a number of partially clothed humans hitched up in the room, their slight equine features showing through their tattered military clothing as they look around nervously. You can feel a strange grin of amusement crossing your face as you realize that this new batch of recruits has no idea what kind of sexy fate lies in store for them.";
 		say "     Recalling your glimpses of the training of the last group, you nearly run into the room to join them in being trained into a proper little mareslut. Only the sight of the sexy stallions entering to start the day's training reminds you of where you are, and you shudder as you turn and run down the hall in the opposite direction. Thinking about what a close call you had there, you resolve not to come down this way again, lest you end up losing control of yourself completely, at least until you are ready to be trained into a proper little mare slut that is...";
-		increase libido of player by 25;
-		if libido of player > 100, now libido of player is 100;
+		increase Libido of Player by 25;
+		if Libido of Player > 100, now Libido of Player is 100;
 		infect "Mareslut";
-		decrease humanity of player by 10;
+		SanLoss 10;
 		now Soldierstabling is resolved;
 		increase score by 5;
 
@@ -166,7 +166,7 @@ when play begins:
 	add Satisfied customer to badspots of furry;
 
 Instead of Resolving a Satisfied customer:
-	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those German Shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";
+	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those German shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";
 	say "     The strong scent of sex wafts up from the obviously well-fucked beast, leaving you no doubt as to what they have been doing to end up this way. The creature seems to notice you after a minute, and focuses their eyes on you for a second, before smiling again and saying, 'That was the best night ever...' before they pass out at your feet. You shake your head at the obviously satisfied customer, as you cautiously step around their unconscious form, and carefully continue along your way, wondering idly how much longer the part canine is going to be a customer of the whorehouse, instead of an employee... Either way, they certainly seem happy about it.";
 	increase score by 1;
 	now Satisfied customer is resolved;
@@ -230,11 +230,11 @@ Instead of Resolving a Videoshow:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - There might be useful information in the video.";
 	say "     ([link]N[as]n[end link]) - Better to play it safe and not make any noise.";
-	if player consents:
+	if Player consents:
 		say "     Starting the video, you settle down to watch the show, and are mildly surprised when you see several horses trot out into a training ring on the film, along with some horsemen trainers. You find yourself watching with idle curiosity as the trainers begin to put the horses through their paces, though your curiosity changes somewhat as after the horses are taught a few tricks, you see several horsemen are led out into the ring and taught the same tricks as well. Soon, you find yourself unable to look away as the increasingly sexual video shows some humans being led out into the ring to be taught tricks as well, and the sight of the men being treated like beasts seems strangely arousing as you continue to watch. The film varies between full horses, horsemen, and still-changing humans rather often, as first one group, and then the others are trained to perform an increasingly sexual variety of tricks for the camera.";
 		say "     Before long, you find yourself panting with arousal as you watch the trainers reduce their charges to the level of properly trained sexual animals, willing to perform any action on command for their masters. The happy submissive looks on their increasingly equine faces help you to understand just how enjoyable it is to be a well-trained beastslut for an owner. Eventually, however, you come to the end of the film, and stare at the blank screen for several minutes, panting eagerly before blinking and shaking yourself, barely able to grasp just how well put together the seductive little video was. You shudder for a minute as you realize that while the video certainly taught you several tricks about how to handle beasts and animals, the one it was really trying to train was actually you, and you already feel less human and more animalistic just from one viewing. Thoughts of being trained and owned like a good little beast fill your mind as you stagger out of the training booth...";
-		decrease humanity of player by a random number between 25 and 50;
-		increase XP of player by a random number between 35 and 75;
+		decrease humanity of Player by a random number between 25 and 50;
+		increase XP of Player by a random number between 35 and 75;
 		now Resolution of Videoshow is 1; [watched the brainwashing video]
 		now Videoshow is resolved;
 		increase score by 10;
@@ -270,7 +270,7 @@ The sarea of Transformationledger is "Stable".
 
 Instead of Resolving a Transformationledger:
 	say "     While looking through the Stables['] halls, you find yourself at a room with a large desk and a large leather bound book sitting open atop it. Out of curiosity, you move into the room and start to thumb through the pages of the strange book, only to discover that it's a record of the once human names and their new whorse names of many of the Stables['] occupants, along with the transformations of the whorses working there. The descriptions that stand out are the ones that seem to be special orders, like the horse-hyena hybrid slut ordered by the hyena gang or the hawk-horse hybrid. Shuddering at some of the descriptions and finding yourself aroused at others, you flip to the last page before putting the book away, and you find your name listed in the last entry, and next to it is the name Obsidian. Following that, you see the words 'new fetishes,' followed by leather, rubber, bondage... and an invoice that describes an outfit being made for you. With shaking hands, you put the book down, feeling slightly less human.";
-	decrease humanity of player by 15;
+	SanLoss 15;
 	now Transformationledger is resolved;
 
 

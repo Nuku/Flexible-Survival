@@ -4,7 +4,7 @@ Version 2 of Tigress Hooker by Stripes begins here.
 "Adds a Tigress Hooker creature to Flexible Survival's Wandering Monsters table, with impreg chance and resource loss"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
@@ -21,11 +21,11 @@ mqfightresult is a number that varies.	[ 1 = win / 2 = lose / 3 = fled (unchange
 
 to say tigress_desc:
 	setmongender 5; [creature is herm]
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
 	if mqstatus is 3:				[fighting tigresses at the motel]
 		say "     The lovely tigress is quite upset at the intruder to hir motel home. Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place. Under hir.";
-		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		if hardmode is true and level of Player > 5, let debit be level of Player - 5;
 		now HP entry is 55 + ( debit * 4 );
 		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
@@ -33,7 +33,7 @@ to say tigress_desc:
 		now libido entry is 100;
 	else if mqstatus is 6:				[fighting the matron]
 		say "     The tigress matron of the motel is a larger and more impressive female. Shi's got an extra foot of height on any of hir girls and a much fuller rack as well. Hir long, flowing orange hair swishes as shi pulls off the bathrobe shi was wearing, baring hir strong and sensual body to you. Shi looks at you with a strange expression, clearly not pleased that you've burst in here after hurting several of hir girls, but eager to put you in your place. Hir dark nipples and cock are hard with hir anticipation of enjoying a new plaything.";
-		if hardmode is true and level of player > 8, let debit be level of player - 8;
+		if hardmode is true and level of Player > 8, let debit be level of Player - 8;
 		now HP entry is 90 + ( debit * 6 );
 		now monsterHP is 90 + ( debit * 6 );
 		now wdam entry is 12 + ( ( 4 * debit ) / 11 );
@@ -42,7 +42,7 @@ to say tigress_desc:
 	else:					[standard tigress]
 		say "     Leaning against a building is a striking female feline. She is wearing a skimpy outfit, a short top and even shorter skirt. This lets you see the soft orange tiger fur that covers her attractive body, rich with black stripes. Her bosom and stomach have snowy, white fur that covers them. Her ears have [one of]large hoop earrings[or]a trio of small studs[or]tattoos of stars on the inside[or]long, dangling earrings[at random]. Her [one of]long black hair is held in a pony tail[or]hair is dyed a bright red[or]orange hair is styled into fiery mane[or]dark hair has been bleached blond, though you can see the darker roots.[or]hair is neon pink and very long, hanging to her waist[or]hair is a deep blue, with green tips[at random].";
 		say "     Spotting you before you can move away, she flicks her cigarette aside and sizes you up quickly. 'So honey, you lookin['] for a little fun? For a little something, I'll show you a good time.' As she steps up, you catch the edge of something extra making a bulge under her skirt. Clearly this tigress hooker is equipped to pleasure any client shi may find. And shi's found you!";
-		if hardmode is true and level of player > 5, let debit be level of player - 5;
+		if hardmode is true and level of Player > 5, let debit be level of Player - 5;
 		now HP entry is 55 + ( debit * 4 );
 		now monsterHP is 55 + ( debit * 4 );
 		now wdam entry is 7 + ( debit / 3 );
@@ -59,7 +59,7 @@ to say losetotigress:
 		say "Oh No! You are beaten up by the tigress matron.";
 		stop the action;
 	now tempnum is 0; [Reset payment flag]
-	if HP of player > 0:									[DID THE PLAYER SUBMIT? - YES]
+	if HP of Player > 0:									[DID THE PLAYER SUBMIT? - YES]
 		if junknum is 0:									[Normal encounter]
 			say "     As you accept hir offer, shi moves up to you with a lustful smile. Rumbling and purring as shi rubs hir body against yours, shi guides you into a shadowy alleyway as shi starts releasing the easy straps on hir street clothes. There's an old mattress in there, and judging from the smell, shi's used it for hir clients before. As shi guides you towards it, shi nuzzles along your neck and slides your backpack's straps off your shoulders. As shi helps you with your remaining clothes with one paw and a smile, hir other dips into your pack, searching for something to take as payment.";
 			say "[paymentcheck][line break]"; [Put forth a payment]
@@ -68,138 +68,138 @@ to say losetotigress:
 		if junknum is 1:									[Special junkyard encounter - freebie]
 			say "     As you agree to hir offer, shi gives you a lustful smile before nuzzling at your neck. Rumbling and purring as shi rubs hir body against yours, shi guides you to the discarded mattress as shi starts releasing the easy straps on hir street clothes. As you move with hir, shi nuzzles along your neck and slides your backpack's straps off your shoulders and sets it aside, not bothering to look for a payment this time. Your help has been payment enough for this romp.";
 			now junknum is 0;
-		if player is herm:				[Yes = HERM Identified!]
-			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble, particularly pleased at the prospects of servicing you, both john and jane in one. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your body, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke your [cockname of player] cock[smn] as shi nibbles and nuzzles hir way down your chest and belly. As shi slides down, hir paw drifts over your balls and to your wet slit, diving into it.";
-			say "     With hir muzzle between your legs, shi starts licking and kissing your cock[smn]. Hir raspy tongue slides along your sensitive [cock of player] penis and lavishes attention on it. [if cocks of player > 1]As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw. [end if]Hir left paw is between your legs, working in and out of your wet [if cunts of player > 1]pussies['] lips[else]pussy's lips[end if]. The herm moans and mewls lustfully as shi lavishes attention upon both your male and female genitals. Hir muzzle moves from time to time to your dripping puss[yfn], but is always drawn back to your cock[if cunts of player > 1]. While hir tongue ends to your upper slit, hir right paw is working away at the other(s), making sure they're not neglected in any way[end if].";
-			increase libido of player by 10; [Oral submission increases Libido]
-			if libido of player > 100:
-				now libido of player is 100;
-			if cock length of player < 5:						[Cock size check begins - small]
-				say "     Your [cock size desc of player] [cock of player] cock easily fills hir muzzle and shi works hir broad tongue all over it at once. Shi licks and sucks on it with as much enthusiasm as shi would any other, if not more to make you still feel strong and virile. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+		if Player is herm:				[Yes = HERM Identified!]
+			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble, particularly pleased at the prospects of servicing you, both john and jane in one. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your body, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke your [cockname of Player] cock[smn] as shi nibbles and nuzzles hir way down your chest and belly. As shi slides down, hir paw drifts over your balls and to your wet slit, diving into it.";
+			say "     With hir muzzle between your legs, shi starts licking and kissing your cock[smn]. Hir raspy tongue slides along your sensitive [cock of Player] penis and lavishes attention on it. [if Cock Count of Player > 1]As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw. [end if]Hir left paw is between your legs, working in and out of your wet [if Cunt Count of Player > 1]pussies['] lips[else]pussy's lips[end if]. The herm moans and mewls lustfully as shi lavishes attention upon both your male and female genitals. Hir muzzle moves from time to time to your dripping puss[yfn], but is always drawn back to your cock[if Cunt Count of Player > 1]. While hir tongue ends to your upper slit, hir right paw is working away at the other(s), making sure they're not neglected in any way[end if].";
+			increase Libido of Player by 10; [Oral submission increases Libido]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			if Cock Length of Player < 5:						[Cock size check begins - small]
+				say "     Your [cock size desc of Player] [cock of Player] cock easily fills hir muzzle and shi works hir broad tongue all over it at once. Shi licks and sucks on it with as much enthusiasm as shi would any other, if not more to make you still feel strong and virile. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does, fingering your pussy hard and fast as well. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
-			else if cock length of player < 9:				[Cock size check - medium]
-				say "     Your [cock size desc of player] [cock of player] cock fills hir muzzle quite nicely, giving hir a pleasant muzzleful to lick and suck lustfully. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+			else if Cock Length of Player < 9:				[Cock size check - medium]
+				say "     Your [cock size desc of Player] [cock of Player] cock fills hir muzzle quite nicely, giving hir a pleasant muzzleful to lick and suck lustfully. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does, fingering your pussy hard and fast as well. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
-			else if cock length of player < 13:				[Cock size check - large]
-				say "     Your [cock size desc of player] [cock of player] fills hir muzzle quite full, but she takes it in with practiced ease, moaning as it slides smoothly down hir throat. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+			else if Cock Length of Player < 13:				[Cock size check - large]
+				say "     Your [cock size desc of Player] [cock of Player] fills hir muzzle quite full, but she takes it in with practiced ease, moaning as it slides smoothly down hir throat. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does, fingering your pussy hard and fast as well. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
 			else:									[Cock size check - fuggin' huge]
-				say "     Finding your [cock size desc of player] [cock of player] too big even for hir practiced muzzle, shi takes to licking and kissing all over it, paying particularly strong attention to the sensitive tip and leaking cumslit. Hir raspy tongue plays all over it as shi presses hir softly furred breasts against your shaft. Clearly having a lot of practice, shi polishes your [cockname of player] rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+				say "     Finding your [cock size desc of Player] [cock of Player] too big even for hir practiced muzzle, shi takes to licking and kissing all over it, paying particularly strong attention to the sensitive tip and leaking cumslit. Hir raspy tongue plays all over it as shi presses hir softly furred breasts against your shaft. Clearly having a lot of practice, shi polishes your [cockname of Player] rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Shi's giving your cock a thorough slathering with hir rough tongue and fingering your pussy hard and fast as well, which all feels so good along your sensitive flesh. Eventually, the tigress's titfuck is too much for you and you cum hard, spraying your hot semen across hir muzzle. After letting you paint hir face with a few shots, shi presses hir muzzle over your cumslit and lets it flow into hir muzzle and down hir throat with a lustful moan.";
-			if cocks of player > 1:							[Yes = multi-cocked player]
-				say "     As you fill hir muzzle from the one, your other [if cocks of player > 2]cocks send[else]cock sends[end if] spurts of hot cum across your body, leaving you with streaks of your own seed over you.";
+			if Cock Count of Player > 1:							[Yes = multi-cocked player]
+				say "     As you fill hir muzzle from the one, your other [if Cock Count of Player > 2]cocks send[else]cock sends[end if] spurts of hot cum across your body, leaving you with streaks of your own seed over you.";
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
+			if diceroll < Libido of Player:
 				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny.";
 				say "     [bold type]Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";
-				if player consents:						[Yes = wants cock, fucked by kitty]
+				if Player consents:						[Yes = wants cock, fucked by kitty]
 					say "[line break]     With a soft moan, you spread your legs and hold your pussy lips open for hir, moaning as you eye hir waiting cock. 'Do me,' you say with a lustful rumble in your voice. 'I want more, kitty.' More than happy to give hir client what shi wants, the tigress smiles lustfully back at you.";
-					say "     Moving atop you, shi lines up hir cock with your wet folds and starts to sink hir barbed shaft into you. After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked [bodyname of player] pussy. Shi plants hir left paw beside you, gripping the mattress firmly in hir claws for support as shi drives hir throbbing member into again and again. Hir right paw strokes your [if cocks of player > 1]cocks, each in turn, [else]cock [end if]as shi pounds you lustfully.";
-					say "     Rubbing hir body against yours, soft striped fur running along your [skin of player] form, shi moves to licking and nibbling along your neck while sandwiching your cock[smn] between you. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you another orgasm that sends your hot seed to soak your chests.[impregchance]";
-					say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number breast size of player in cupsize] cup breasts, smearing hir cum into the sticky mess of your own, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
+					say "     Moving atop you, shi lines up hir cock with your wet folds and starts to sink hir barbed shaft into you. After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked [bodyname of Player] pussy. Shi plants hir left paw beside you, gripping the mattress firmly in hir claws for support as shi drives hir throbbing member into again and again. Hir right paw strokes your [if Cock Count of Player > 1]cocks, each in turn, [else]cock [end if]as shi pounds you lustfully.";
+					say "     Rubbing hir body against yours, soft striped fur running along your [skin of Player] form, shi moves to licking and nibbling along your neck while sandwiching your cock[smn] between you. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you another orgasm that sends your hot seed to soak your chests.[impregchance]";
+					say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number Breast Size of Player in cupsize] cup breasts, smearing hir cum into the sticky mess of your own, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
 				else:								[No = wants pussy, fucks the kitty]
-					say "[line break]     With a soft moan, you rub over your [cockname of player] [if cocks of player > 1]cocks, keeping them[else]cock, keeping it[end if] from growing fully soft and coaxing your erection back. 'Now there, sexy kitty. I'm not done with you yet.' With a lustful smile back down at you, shi licks hir lips and moves to straddle your hips."; [Male sex if fail check]
-					if cock length of player < 16:			[Cock size check - not huge]
-						if cocks of player > 2:
-							say "     Shi takes a hold of two of your cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. Shi takes a hold of your third cock begins stroking alongside hirs. You can feel the tight grip of her inner walls as they squeeze down around your [cock size desc of player] [cock of player] cocks.";
-							say "     Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of player] and feminine folds as hir pussy and anus squeeze and milks at them.";
+					say "[line break]     With a soft moan, you rub over your [cockname of Player] [if Cock Count of Player > 1]cocks, keeping them[else]cock, keeping it[end if] from growing fully soft and coaxing your erection back. 'Now there, sexy kitty. I'm not done with you yet.' With a lustful smile back down at you, shi licks hir lips and moves to straddle your hips."; [Male sex if fail check]
+					if Cock Length of Player < 16:			[Cock size check - not huge]
+						if Cock Count of Player > 2:
+							say "     Shi takes a hold of two of your cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. Shi takes a hold of your third cock begins stroking alongside hirs. You can feel the tight grip of her inner walls as they squeeze down around your [cock size desc of Player] [cock of Player] cocks.";
+							say "     Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of Player] and feminine folds as hir pussy and anus squeeze and milks at them.";
 							say "     Having already blown your load once, you have a good long screw with the eager feline whore. Hir cock blasts hot feline seed across your chest twice to add to the mess of your own seed already there, as if marking you as one of hir clients. The quivering of hir vaginal and anal muscles around you as shi climaxes the second time is enough to finally push you over the edge as your hot cum into hir as well. Shi yowls lustfully as your hot seed flows into hir, filling both hir womb and hir bottom with your warmth. Your third cock shoots fresh cum across your chest, leaving you thoroughly soaked in a mix of the tigress's seed and your own.";
 							say "     Once you both are finally drained, shi eases hirself off your cocks with a soft, satisfied mew and helps you up, quite woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cocks, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back for more soon.";
-						else if cocks of player is 2:
-							say "     Shi takes a hold of your twin cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. You can feel the tight grip of her inner walls as they squeeze down around your [cock size desc of player] [cock of player] cocks.";
-							say "     Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of player] and feminine folds as hir pussy and anus squeeze and milks at them.";
+						else if Cock Count of Player is 2:
+							say "     Shi takes a hold of your twin cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. You can feel the tight grip of her inner walls as they squeeze down around your [cock size desc of Player] [cock of Player] cocks.";
+							say "     Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of Player] and feminine folds as hir pussy and anus squeeze and milks at them.";
 							say "     Having already blown your load once, you have a good long screw with the eager feline whore. Hir cock blasts hot feline seed across your chest twice to add to the mess of your own seed already there, as if marking you as one of hir clients. The quivering of hir vaginal and anal muscles around you as shi climaxes the second time is enough to finally push you over the edge as you shoot your hot cum into hir as well. Shi yowls lustfully as your hot seed flows into hir, filling both hir womb and hir bottom with your warmth.";
 							say "     Once you both are finally drained, shi eases hirself off your cocks with a soft, satisfied mew and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cocks, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
 						else:
-							say "     Shi takes a hold of your cock and lines it up with hir wet pussy, mrrowling in delight as shi sinks down onto it. You can feel the wet grip of her inner walls as they squeeze down around your [cock of player]. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of player] and feminine folds as hir cunt squeezes and milks at it.";
+							say "     Shi takes a hold of your cock and lines it up with hir wet pussy, mrrowling in delight as shi sinks down onto it. You can feel the wet grip of her inner walls as they squeeze down around your [cock of Player]. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir left paw over your chest and rumbles louder and louder as shi rides you hard. Hir right finds it way under hir to stroke your puss[yfn]. You can feel hir hot juices leaking down over your [cock of Player] and feminine folds as hir cunt squeezes and milks at it.";
 							say "     Having already blown your load once, you have a good long screw with the eager, feline whore. Hir cock blasts hot feline seed across your chest twice, as if marking you as one of hir clients. The quivering of hir vaginal muscles around you as shi climaxes the second time is enough to finally push you over the edge as you shoot your hot cum into hir as well.";
 							say "     Once you both are finally drained, shi eases hirself off your cock with a soft, satisfied mew and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cock, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
 					else:							[cock size check - huge -> sneaky get fucked!]
 						say "     The tigress rubs hir pussy against your penis[esmn], mewling in disappointment - shi'd never be able to fit such a monstrous cock into hir, as much as shi'd like to try. Shi grinds hir wet folds and smaller cock against the base of your shaft[smn] and clutches your length[smn] to hir chest, titfucking you once again. Shi licks and kisses at it as hir soft, warm breasts rub against your cockflesh. You can feel the throb of hir hard cock and the wet touch of hir dripping pussy against your balls as shi works you steadily higher.";
 						say "     With a playful grin, shi shifts hir hips a little and you feel hir cock nudge against your wet folds. You moan loudly, then try to tell hir to stop, as you'd not asked for that, but then shi's sinking that barbed, feline cock into you and you find yourself unable to object further. After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked cunny.";
-						say "     Shi grips hir arms around your massive [cockname of player] member[smn] for support and continues the titfuck even as shi fucks you hard and fast. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you another orgasm that sends your hot seed to splashing across hir muzzle.[impregchance]"; [Herm sneaky-sex!]
-						say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number breast size of player in cupsize] cup boobs, smearing hir cum into the sticky mess of your own, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cum-filled belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
-						increase libido of player by 5; [Sneaky sex makes you extra-horny]
-						if libido of player > 100:
-							now libido of player is 100;
-				decrease libido of player by 20; [Somewhat satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
-				decrease humanity of player by 3; [...but give in a little more]
+						say "     Shi grips hir arms around your massive [cockname of Player] member[smn] for support and continues the titfuck even as shi fucks you hard and fast. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you another orgasm that sends your hot seed to splashing across hir muzzle.[impregchance]"; [Herm sneaky-sex!]
+						say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number Breast Size of Player in cupsize] cup boobs, smearing hir cum into the sticky mess of your own, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cum-filled belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
+						increase Libido of Player by 5; [Sneaky sex makes you extra-horny]
+						if Libido of Player > 100:
+							now Libido of Player is 100;
+				decrease Libido of Player by 20; [Somewhat satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
+				decrease humanity of Player by 3; [...but give in a little more]
 			else:
-				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest[if cocks of player > 1] to add to the mess of your own seed already there[end if], as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines.";
-		else if player is female:		[Yes = FEMALE Identified!]
-			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress and bring hir muzzle to your [character number breast size of player in cupsize] cup bosom. Hir raspy tongue plays over your [skinname of player] flesh as shi licks and kisses at your chest. While tending to your hard nipples, shi moves hir paw between your legs to stroke the wet lips of your puss[yfn]. Shi dips them in slowly and starts to stroke your vaginal walls, working to find all the spots that excite you. Quite adept at hir work, you find yourself growing to a quick climax which soaks hir paw in your juices.";
-			say "     As you shiver with the tingles of your orgasm running through you, shi slides down your [bodyname of player] body and buries hir muzzle between your legs, licking at your juicy folds. Hir rough, feline tongue sends new waves of pleasure through you. It dives deep into you, once again finding those pleasure spots and ravaging them, intent on giving hir jane a fine romp[if cunts of player > 1]. While hir tongue ends to your upper slit, hir right paw is working away at the other, making sure it is not neglected in any way[end if].";
+				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest[if Cock Count of Player > 1] to add to the mess of your own seed already there[end if], as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines.";
+		else if Player is female:		[Yes = FEMALE Identified!]
+			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress and bring hir muzzle to your [character number Breast Size of Player in cupsize] cup bosom. Hir raspy tongue plays over your [skinname of Player] flesh as shi licks and kisses at your chest. While tending to your hard nipples, shi moves hir paw between your legs to stroke the wet lips of your puss[yfn]. Shi dips them in slowly and starts to stroke your vaginal walls, working to find all the spots that excite you. Quite adept at hir work, you find yourself growing to a quick climax which soaks hir paw in your juices.";
+			say "     As you shiver with the tingles of your orgasm running through you, shi slides down your [bodyname of Player] body and buries hir muzzle between your legs, licking at your juicy folds. Hir rough, feline tongue sends new waves of pleasure through you. It dives deep into you, once again finding those pleasure spots and ravaging them, intent on giving hir jane a fine romp[if Cunt Count of Player > 1]. While hir tongue ends to your upper slit, hir right paw is working away at the other, making sure it is not neglected in any way[end if].";
 			say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your honeypot with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it. This time, shi eases off repeatedly as you start to build close to orgasm, having roughly gauged the signs from your first and letting you instead build over and over. You are soon moaning and whimpering with need, much to hir satisfaction.";
 			say "     When the climax finally comes, it hits you like a tidal wave, washing through your body even as your hot juices spray across hir muzzle. Hir tail lashes excitedly while hir tongue goes from patiently working your cunny to lapping up your sweet nectar eagerly. Your climax is long and powerful, drawn out by the rough tongue trying to get every drop it can from you.";
-			increase libido of player by 10; [Oral submission increases Libido]
-			if libido of player > 100:
-				now libido of player is 100;
+			increase Libido of Player by 10; [Oral submission increases Libido]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
+			if diceroll < Libido of Player:
 				say "[line break]     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny. With a soft moan, you spread your legs and hold your pussy lips open for hir, moaning as you eye hir waiting cock. 'Do me,' you say with a lustful rumble in your voice. 'I want more, kitty.' More than happy to give hir client what she wants, the tigress smiles lustfully back at you.";
 				say "     Moving atop you, shi lines up hir cock with your wet folds and starts to sink hir barbed shaft into you. After the long session preparing you, shi has little trouble sliding hirself into you and sets to pounding at your already soaked pussy. Shi plants hir paws on either side of you, gripping the mattress firmly in hir claws for support as shi drives hir throbbing member into again and again.";
-				say "     Rubbing hir body against yours, soft striped fur running along your [bodyname of player] body, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you a third orgasm that nearly knocks you out.[impregchance]";
-				say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number breast size of player in cupsize] cup boobs, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
-				decrease libido of player by 20; [Somewhat satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
-				decrease humanity of player by 3; [...but give in a little more]
+				say "     Rubbing hir body against yours, soft striped fur running along your [bodyname of Player] body, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. The barbed cock is in no way painful, only small bumps that tingle along your walls as shi thrusts, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. You can feel it warming you deep inside as shi gives you a third orgasm that nearly knocks you out.[impregchance]";
+				say "     Once shi's finally drained hir balls into you and filled you with tigercum, shi withdraws with a soft, satisfied mew. Shi moves up and rubs hir cum-slick cock against your [character number Breast Size of Player in cupsize] cup boobs, as if marking you as one of hir clients. Shi then rises slowly and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your belly, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
+				decrease Libido of Player by 20; [Somewhat satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
+				decrease humanity of Player by 3; [...but give in a little more]
 			else:
 				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping folds over yours while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest, as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines."; [Female no-sex ending]
-		else if player is male:		[Yes = MALE Identified!]
-			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your [skinname of player] flesh, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke hir john's cock[smn] as shi nibbles and nuzzles hir way down your chest and belly.";
-			say "     With hir muzzle between your legs, shi starts licking and kissing your cock[smn]. Hir raspy tongue slides along your sensitive [cockname of player] penis and lavishes attention on it, eager to please hir john[if cocks of player > 1]. As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw[end if].";
-			increase libido of player by 10; [Oral submission increases Libido]
-			if libido of player > 100:
-				now libido of player is 100;
-			if cock length of player < 5:						[Cock size check begins - small]
-				say "     Your [cock size desc of player] [cock of player] cock easily fills hir muzzle and shi works hir broad tongue all over it at once. Shi licks and sucks on it with as much enthusiasm as shi would any other, if not more to make you still feel strong and virile. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+		else if Player is male:		[Yes = MALE Identified!]
+			say "     Shi presses you down onto the mattress looks hir client over with a predatory rumble. Shi lowers hirself onto the mattress atop you and rubbing hir body against yours. Hir soft striped fur running along your [skinname of Player] flesh, shi moves to licking and nibbling along your neck. You can feel hir sharp, feline fangs along your skin, but shi is very careful and only gives you the lightest nips, which feel exquisite. You can feel the warm bulge of hir sheath and the wet touch of hir emerging cock as it bumps against yours. Shi moves a paw down to stroke hir john's cock[smn] as shi nibbles and nuzzles hir way down your chest and belly.";
+			say "     With hir muzzle between your legs, shi starts licking and kissing your cock[smn]. Hir raspy tongue slides along your sensitive [cockname of Player] penis and lavishes attention on it, eager to please hir john[if Cock Count of Player > 1]. As you have multiple cocks for hir to tend to, shi sets to work on the lower one with hir muzzle and the other(s) with hir right paw[end if].";
+			increase Libido of Player by 10; [Oral submission increases Libido]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			if Cock Length of Player < 5:						[Cock size check begins - small]
+				say "     Your [cock size desc of Player] [cock of Player] cock easily fills hir muzzle and shi works hir broad tongue all over it at once. Shi licks and sucks on it with as much enthusiasm as shi would any other, if not more to make you still feel strong and virile. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your penis with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
-			else if cock length of player < 9:				[Cock size check - medium]
-				say "     Your [cock size desc of player] [cock of player] cock fills hir muzzle quite nicely, giving hir a pleasant muzzleful to lick and suck lustfully. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+			else if Cock Length of Player < 9:				[Cock size check - medium]
+				say "     Your [cock size desc of Player] [cock of Player] cock fills hir muzzle quite nicely, giving hir a pleasant muzzleful to lick and suck lustfully. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your penis with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
-			else if cock length of player < 13:				[Cock size check - large]
-				say "     Your [cock size desc of player] [cock of player] cock fills hir muzzle quite full, but she takes it in with practiced ease, moaning as it slides smoothly down hir throat. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+			else if Cock Length of Player < 13:				[Cock size check - large]
+				say "     Your [cock size desc of Player] [cock of Player] cock fills hir muzzle quite full, but she takes it in with practiced ease, moaning as it slides smoothly down hir throat. Hir tongue plays up and down it, teasing your glans and sliding along your shaft as hir muzzle bobs up and down along your length. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your penis with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it.";
 				say "     Shi sucks firmly at your cock now, tongue not letting up for a moment as shi does. Eventually, you can take no more and cum, pumping your hot load into hir muzzle. Your load coats hir tongue and flows down hir throat as shi drinks it down with a lustful moan.";
 			else:									[Cock size check - fuggin' huge]
-				say "     Finding your [cock size desc of player] [cock of player] cock too big even for hir practiced muzzle, shi takes to licking and kissing all over it, paying particularly strong attention to the sensitive tip and leaking cumslit. Hir raspy tongue plays all over it as shi presses hir softly furred breasts against your shaft. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [ball size] for a while before moving to your shaft once again.";
+				say "     Finding your [cock size desc of Player] [cock of Player] cock too big even for hir practiced muzzle, shi takes to licking and kissing all over it, paying particularly strong attention to the sensitive tip and leaking cumslit. Hir raspy tongue plays all over it as shi presses hir softly furred breasts against your shaft. Clearly having a lot of practice, shi polishes your rod until your throbbing hard, ready to blow. Shi then eases off, pulling hir muzzle back to lick and kiss your [Ball Size Adjective of Player] [Balls] for a while before moving to your shaft once again.";
 				say "     Hir left paw is firmly wrapped around hir cock, stroking and pumping it as shi works your penis with practiced intent. Hir shaft looks to be about nine inches in length and dribbles pre as shi works hir paw along it. It is a dark red with a pointed glans and small bumps along it.";
 				say "     Shi's giving your cock a thorough slathering with hir rough tongue, which feels so good along your sensitive flesh. Eventually, the tigress's titfuck is too much for you and you cum hard, spraying your hot semen across hir muzzle. After letting you paint hir face with a few shots, shi presses hir muzzle over your cumslit and lets it flow into hir muzzle and down hir throat with a lustful moan.";
-			if cocks of player > 1:							[Yes = multi-cocked player]
-				say "     As you fill hir muzzle from the one, your other [if cocks of player > 2]cocks send[else]cock sends[end if] spurts of hot cum across your body, leaving you with streaks of your own seed over you.";
+			if Cock Count of Player > 1:							[Yes = multi-cocked player]
+				say "     As you fill hir muzzle from the one, your other [if Cock Count of Player > 2]cocks send[else]cock sends[end if] spurts of hot cum across your body, leaving you with streaks of your own seed over you.";
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
-				say "[line break]     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny. With a soft moan, you rub over your [cockname of player] [if cocks of player > 1]cocks, keeping them[else]cock, keeping it[end if] from growing fully soft and coaxing it back to erection. 'Now there, sexy kitty. I'm not done with you yet.' With a lustful smile back down at you, shi licks hir lips and moves to straddle your hips.";
-				if cock length of player < 16:				[Yes = not huge cock]
-					if cocks of player is 1:
-						say "     Shi takes a hold of your [cock size desc of player] cock and lines it up with hir wet pussy, mrrowling in delight as shi sinks down onto it. You can feel the wet grip of her inner walls as they squeeze down around your [cockname of player] member. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir paws over your chest and rumbles louder and louder as shi rides you hard. You can feel hir hot juices leaking down over your [cock of player] shaft as hir pussy squeezes and milks at it.";
+			if diceroll < Libido of Player:
+				say "[line break]     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny. With a soft moan, you rub over your [cockname of Player] [if Cock Count of Player > 1]cocks, keeping them[else]cock, keeping it[end if] from growing fully soft and coaxing it back to erection. 'Now there, sexy kitty. I'm not done with you yet.' With a lustful smile back down at you, shi licks hir lips and moves to straddle your hips.";
+				if Cock Length of Player < 16:				[Yes = not huge cock]
+					if Cock Count of Player is 1:
+						say "     Shi takes a hold of your [cock size desc of Player] cock and lines it up with hir wet pussy, mrrowling in delight as shi sinks down onto it. You can feel the wet grip of her inner walls as they squeeze down around your [cockname of Player] member. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir paws over your chest and rumbles louder and louder as shi rides you hard. You can feel hir hot juices leaking down over your [cock of Player] shaft as hir pussy squeezes and milks at it.";
 						say "     Having already blown your load once, you have a good long screw with the eager feline whore. Hir cock blasts hot feline seed across your chest twice, as if marking you as one of hir clients. The quivering of hir vaginal muscles around you as shi climaxes the second time is enough to finally push you over the edge as you shoot your hot cum into hir as well.";
 						say "     Once you both are finally drained, shi eases hirself off your cock with a soft, satisfied mew and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cock, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
-					if cocks of player is 2:
-						say "     Shi takes a hold of your twin [cock size desc of player] cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. You can feel the tight grip of her inner walls as they squeeze down around your [cockname of player] members. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir paws over your chest and rumbles louder and louder as shi rides you hard. You can feel hir hot juices leaking down over your [cock of player] as hir pussy and anus squeeze and milks at them.";
+					if Cock Count of Player is 2:
+						say "     Shi takes a hold of your twin [cock size desc of Player] cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. You can feel the tight grip of her inner walls as they squeeze down around your [cockname of Player] members. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads hir paws over your chest and rumbles louder and louder as shi rides you hard. You can feel hir hot juices leaking down over your [cock of Player] as hir pussy and anus squeeze and milks at them.";
 						say "     Having already blown your load once, you have a good long screw with the eager feline whore. Hir cock blasts hot feline seed across your chest twice to add to the mess of your own seed already there, as if marking you as one of hir clients. The quivering of hir vaginal and anal muscles around you as shi climaxes the second time is enough to finally push you over the edge as you shoot your hot cum into hir as well. Shi yowls lustfully as your hot seed flows into hir, filling both hir womb and hir bottom with your warmth.";
 						say "     Once you both are finally drained, shi eases hirself off your cocks with a soft, satisfied mew and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cocks, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
-					if cocks of player > 2:
-						say "     Shi takes a hold of two of your [cock size desc of player] cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. Shi takes a hold of your third cock begins stroking alongside hirs. You can feel the tight grip of her inner walls as they squeeze down around your [cockname of player] members. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads one paw over your chest and rumbles louder and louder as shi rides you hard while the other strokes over your uppermost cock and hirs. You can feel hir hot juices leaking down over your [cock of player] as hir pussy and anus squeeze and milks at them.";
+					if Cock Count of Player > 2:
+						say "     Shi takes a hold of two of your [cock size desc of Player] cocks and lines them up with hir wet pussy and tailhole, mrrowling in delight as shi sinks down onto them slowly. She whimpurrrs a little as shi pushes you into both hir front and back passage as once, but hir cock rises to full erection almost immediately. Shi takes a hold of your third cock begins stroking alongside hirs. You can feel the tight grip of her inner walls as they squeeze down around your [cockname of Player] members. Hir breasts bounce as shi rides in your lap and hir cock slaps against your belly, drooling precum onto it. Shi kneads one paw over your chest and rumbles louder and louder as shi rides you hard while the other strokes over your uppermost cock and hirs. You can feel hir hot juices leaking down over your [cock of Player] as hir pussy and anus squeeze and milks at them.";
 						say "     Having already blown your load once, you have a good long screw with the eager feline whore. Hir cock blasts hot feline seed across your chest twice to add to the mess of your own seed already there, as if marking you as one of hir clients. The quivering of hir vaginal and anal muscles around you as shi climaxes the second time is enough to finally push you over the edge as your hot cum into hir as well. Shi yowls lustfully as your hot seed flows into hir, filling both hir womb and hir bottom with your warmth. Your third cock shoots fresh cum across your chest, leaving you thoroughly soaked in a mix of the tigress's seed and your own.";
 						say "     Once you both are finally drained, shi eases hirself off your cocks with a soft, satisfied mew and helps you up, quite woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cocks, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, asking you to come back for more soon.";
 				else:								[No = huge cock]
-					say "     The tigress rubs hir pussy against your penis, mewling in disappointment - shi'd never be able to fit such a monstrous [cockname of player] cock into hir, as much as shi'd like to try. Shi grinds hir wet folds and smaller cock against the base of your shaft[smn] and clutches your length[smn] to hir chest, titfucking you once again. Shi licks and kisses at it as hir soft, warm breasts rub against it. You can feel the throb of hir hard cock and the wet touch of hir dripping pussy against your balls as shi works you steadily until you release again. As you leave streaks of white cum across hir striped fur, shi cums as well, spraying hir hot seed across the base of your cock, which drools down to your balls, enveloping them in hir scent.";
+					say "     The tigress rubs hir pussy against your penis, mewling in disappointment - shi'd never be able to fit such a monstrous [cockname of Player] cock into hir, as much as shi'd like to try. Shi grinds hir wet folds and smaller cock against the base of your shaft[smn] and clutches your length[smn] to hir chest, titfucking you once again. Shi licks and kisses at it as hir soft, warm breasts rub against it. You can feel the throb of hir hard cock and the wet touch of hir dripping pussy against your balls as shi works you steadily until you release again. As you leave streaks of white cum across hir striped fur, shi cums as well, spraying hir hot seed across the base of your cock, which drools down to your balls, enveloping them in hir scent.";
 					say "     Once you both are finally drained, shi eases hirself off of you with a soft, satisfied mew and helps you up, a little woozy hirself. Shi gives your rump a firm squeeze with one paw, rubs the other over your cock, and kisses you full on the lips, feline tongue filling your muzzle. After breaking the kiss, shi gives your rear a swat, telling you to come back soon.";
-				decrease libido of player by 20; [Somewhat satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
-				decrease humanity of player by 3; [...but give in a little more]
+				decrease Libido of Player by 20; [Somewhat satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
+				decrease humanity of Player by 3; [...but give in a little more]
 			else:
-				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest[if cocks of player > 1] to add to the mess of your own seed already there[end if], as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines."; [Male no-sex ending]
+				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow. Shi moves to sit atop your waist and grind hir wet, dripping pussy lips along your spent shaft while pumping at hir cock intently. Soon shi's pumping hot tigress cum all over your chest[if Cock Count of Player > 1] to add to the mess of your own seed already there[end if], as if marking you as one of hir clients. Now spent hirself, shi has you up and on your way with a kiss on the cheek and a squeeze on the bottom, asking you to come back again soon. You feel a touch of excitement in your loins, lustfully looking forward to meeting up with another of these sexy felines."; [Male no-sex ending]
 		else:										[No to all = NEUTER Identified!]
 			say "     Woo! Huh! Neuter?";
 		now tigressclient is 1;
@@ -207,71 +207,71 @@ to say losetotigress:
 		now tigresswinner is 0;
 	else:											[PLAYER LOST THE FIGHT!]
 		say "     Physically battered by the tigress's arousing assault, you sway dazedly over the corner of the nearby building, seeking support to stay upright. Before you can try resisting hir assaults further, shi grabs you firmly and shoves you into the alleyway. Stumbling, you fall onto a dirty mattress in the shadows of the buildings. With your face buried in it, you find yourself taking in the scent of sex all over it. It is rich with the aromas of various lovers, but most strongly is the scent of tigress. The musky mixture quickly fills you with arousal and you find yourself rubbing your face across the mattress, taking it all in with soft moans of desire.";
-		increase libido of player by 12; [Default Libido increase of 12...]
-		decrease humanity of player by 6; [...and give in a bit more]
-		if libido of player > 100:
-			now libido of player is 100;
+		increase Libido of Player by 12; [Default Libido increase of 12...]
+		SanLoss 6; [...and give in a bit more]
+		if Libido of Player > 100:
+			now Libido of Player is 100;
 		let diceroll be a random number from 1 to 125; [lust check vs 125]
-		if diceroll < libido of player:						[scored under libido, too horny to wait]
-			say "     This gives the tigress a moment to release the easy straps on hir street clothes before pouncing atop you. Shi pulls your backpack off and tosses it aside, all thoughts of payment lost after watching your lustful writhing on the bed. As shi grinds hirself against your [bodyname of player] body, shi helps you out of your remaining clothes, eager to get right to it. As the firm cheeks of your ass press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it's a larger than average cock, but not massive like many you've seen since the outbreak. You can feel the tigress's pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
+		if diceroll < Libido of Player:						[scored under libido, too horny to wait]
+			say "     This gives the tigress a moment to release the easy straps on hir street clothes before pouncing atop you. Shi pulls your backpack off and tosses it aside, all thoughts of payment lost after watching your lustful writhing on the bed. As shi grinds hirself against your [bodyname of Player] body, shi helps you out of your remaining clothes, eager to get right to it. As the firm cheeks of your ass press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it's a larger than average cock, but not massive like many you've seen since the outbreak. You can feel the tigress's pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
 		else:										[scored over libido, remembers to get paid]
 			say "     Shi grins down at you as you writhe on the mattress, losing yourself in the rich scent of sex pervading it. Shi takes a moment to release the easy straps on hir street clothes before helping you with yours. Shi sets your backpack aside, and then removes your remaining clothes. Once naked, shi runs a paw down your back and between your legs to fondle and tease your equipment while hir other paw rummages through your backpack for something to take as payment.";
 			say "[paymentcheck]";
 			if tempnum is 1:
 				stop the action;
-			say "     After searching through your belongs for a while, shi decides to get to it as your moaning grows louder. Shi pounces atop you and grinds hirself against your [bodyname of player] body, sliding hir leaking cock against your ass. As your firm cheeks press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it's a larger than average cock, but not massive like many you've seen since the outbreak. You can feel the tigress's pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
-		if player is herm:				[Yes = HERM Identified!]
-			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of player] pussy before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Your [cock size desc of player] [cock of player] shaft[smn] dribble[smv] pre onto the mattress as shi mounts you.";
+			say "     After searching through your belongs for a while, shi decides to get to it as your moaning grows louder. Shi pounces atop you and grinds hirself against your [bodyname of Player] body, sliding hir leaking cock against your ass. As your firm cheeks press around it, you can feel its pointed glans and small, stimulating bumps. You can tell it's a larger than average cock, but not massive like many you've seen since the outbreak. You can feel the tigress's pre leaking down between your cheeks and you find yourself longing for hir to take you with it.";
+		if Player is herm:				[Yes = HERM Identified!]
+			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of Player] pussy before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Your [cock size desc of Player] [cock of Player] shaft[smn] dribble[smv] pre onto the mattress as shi mounts you.";
 			say "     Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you, as your own hard cock[smn] and leaking precum show.";
-			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's puts a paw on your [breast size desc of player] tits and fondles them while the other moves to stroke your [cock size desc of player] shaft[smn]. As shi drives hirself into you again and again, shi pumps at your throbbing member.";
+			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's puts a paw on your [breast size desc of Player] tits and fondles them while the other moves to stroke your [cock size desc of Player] shaft[smn]. As shi drives hirself into you again and again, shi pumps at your throbbing member.";
 			say "     One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your womb. This sends you into a powerful climax, hot feminine juices flowing from your pussy and thick cum from your cock[smn] as shi fills you with hir seed. Your hot seed sprays onto the mattress to join the multitude of others.[impregchance]";
-			if cunts of player > 1 and gestation of child is 0:		[Multi-pussy, not preg]
+			if Cunt Count of Player > 1 and gestation of child is 0:		[Multi-pussy, not preg]
 				say "     As shi eases hir cock from your cum-slick slit, shi keeps hir grip on your nape and moves hir cock to your second slit, pushing into you again. Shi starts to pound away at you again, filling your second hole. Shi goes hard and fast from the very beginning this time, eager to fill you with more of hir semen to breed you. You moan lustfully beneath hir, having another powerful orgasm as that barbed shaft throbs inside you and seeds you a second time, though with an albeit smaller load this time after such a fast turnaround.[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [half as likely to impreg on 2nd try]
-				increase libido of player by 6; [2nd hole filled - Libido increase of 6...]
-				decrease humanity of player by 3; [...and give in a little more]
-				if libido of player > 100:
-					now libido of player is 100;
-				if cunts of player > 2 and gestation of child is 0:	[triple-pussy and still not preg]
+				increase Libido of Player by 6; [2nd hole filled - Libido increase of 6...]
+				decrease humanity of Player by 3; [...and give in a little more]
+				if Libido of Player > 100:
+					now Libido of Player is 100;
+				if Cunt Count of Player > 2 and gestation of child is 0:	[triple-pussy and still not preg]
 					say "     With still another pussy to go, shi pushes hir cock into you a third time and pounds you hard, mrrrowling as shi does. Shi takes you very hard and ends up scooting you along the mattress from the force of hir pounding, almost pushing your head off the edge before cumming a third and final time to try and breed you. Hir load this time is quite small, but maybe third time's the charm.[if a random chance of 1 in 3 succeeds][impregchance][end if]"; [third as likely to impreg on 3rd try]
-					increase libido of player by 3; [3nd hole filled - Libido increase of 3...]
-					decrease humanity of player by 2; [...and give in a little more]
-					if libido of player > 100:
-						now libido of player is 100;
-		else if player is female:		[Yes = FEMALE Identified!]
-			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of player] cunt before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you.";
-			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's got hir paws on your [character number breast size of player in cupsize] cup tits and fondles them as shi drives hirself into you again and again. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your womb. This sends you into a powerful climax, hot feminine juices flowing from your pussy as shi fills you with hir seed.[impregchance]";
+					increase Libido of Player by 3; [3nd hole filled - Libido increase of 3...]
+					decrease humanity of Player by 2; [...and give in a little more]
+					if Libido of Player > 100:
+						now Libido of Player is 100;
+		else if Player is female:		[Yes = FEMALE Identified!]
+			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock at your [cunt size desc of Player] cunt before it sinks into you. You moan your pleasure as you feel the firm piece of meat pushing in, teasing you delightfully with those bumps. Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you.";
+			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in her jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir elbows on the mattress, shi's got hir paws on your [character number Breast Size of Player in cupsize] cup tits and fondles them as shi drives hirself into you again and again. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your womb. This sends you into a powerful climax, hot feminine juices flowing from your pussy as shi fills you with hir seed.[impregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
 				follow the sex change rule; [I think this will work]
-				if player is male:						[New cock sex scene]
+				if Player is male:						[New cock sex scene]
 					say "     You groan loudly as a smaller version of the tigress's cock grows in, hard and throbbing with fresh need. Spent, the tigress releases you and you roll onto your back with a soft mewl of need. Looking down, shi sees your new equipment and grins happily. Shi takes your small shaft in hir paw and starts stroking you before leaning down and taking it into hir muzzle. Shi licks and sucks at it, lavishing attention upon your newly-formed penis. Already sensitive after its growth, you quickly blow your load, giving hir a taste of your fresh seed.";
-					increase libido of player by 8; [New cock makes you horny...]
-					decrease humanity of player by 6; [...and give in a bit more]
-					if libido of player > 100:
-						now libido of player is 100;
-			if cunts of player > 1 and gestation of child is 0:		[multi-pussy, not preg]
-				if player is not male:					[Did not do new-cock scene instead]
+					increase Libido of Player by 8; [New cock makes you horny...]
+					SanLoss 6; [...and give in a bit more]
+					if Libido of Player > 100:
+						now Libido of Player is 100;
+			if Cunt Count of Player > 1 and gestation of child is 0:		[multi-pussy, not preg]
+				if Player is not male:					[Did not do new-cock scene instead]
 					say "     As shi eases hir cock from your cum-slick slit, shi keeps hir grip on your nape and moves hir cock to your second slit, pushing into you again. Shi starts to pound away at you again, filling your second hole. Shi goes hard and fast from the very beginning this time, eager to fill you with more of hir semen to breed you. You moan lustfully beneath hir, having another powerful orgasm as that barbed shaft throbs inside you and seeds you a second time, though with an albeit smaller load this time after such a fast turnaround.[if a random chance of 1 in 2 succeeds][impregchance][end if]"; [half as likely to impreg on 2nd try]
-					increase libido of player by 6; [2nd hole filled Libido increase of 6...]
-					decrease humanity of player by 3; [...and give in a little more]
-					if libido of player > 100:
-						now libido of player is 100;
-					if cunts of player > 2 and gestation of child is 0:	[triple-pussy and still not preg]
+					increase Libido of Player by 6; [2nd hole filled Libido increase of 6...]
+					decrease humanity of Player by 3; [...and give in a little more]
+					if Libido of Player > 100:
+						now Libido of Player is 100;
+					if Cunt Count of Player > 2 and gestation of child is 0:	[triple-pussy and still not preg]
 						say "     With still one pussy to go, shi pushes hir cock into you a third time and pounds you hard, mrrrowling as shi does. Shi takes you very hard and ends up scooting you along the mattress from the force of hir pounding, almost pushing your head off the edge before cumming a third and final time to try and breed you. Hir load this time is quite small, but maybe third time's the charm.[if a random chance of 1 in 3 succeeds][impregchance][end if]"; [third as likely to impreg on 3rd try]
-						increase libido of player by 3; [3nd hole filled Libido increase of 3...]
-						decrease humanity of player by 2; [...and give in a little more]
-						if libido of player > 100:
-							now libido of player is 100;
-		else if player is male:		[Yes = MALE Identified!]
+						increase Libido of Player by 3; [3nd hole filled Libido increase of 3...]
+						decrease humanity of Player by 2; [...and give in a little more]
+						if Libido of Player > 100:
+							now Libido of Player is 100;
+		else if Player is male:		[Yes = MALE Identified!]
 			say "     With one paw between your shoulders, shi holds you down as the other grabs your hip firmly. After shifting hir position a little, you can feel the tigress's hard cock nudge at your anal ring before easing slowly into you. You groan softly and try to relax as you feel the firm piece of meat pushing in, its pointed tip and hir flowing pre helping it push into you. As it sinks in further, you are teased by those delightful, soft barbs. Hir hips rock slowly at first, letting hir unusually shaped penis stimulate your sensitive walls. You push your rear back against hir thrusting, matching hir pace. As you moan and press your face into the scent-filled mattress, you lose track of time, only knowing the joy of that softly-barbed cock inside you. Surely it was sculpted to please any lover and you love having it in you.";
 			say "     After a long session of slow, stimulating thrusting, the tigress rumbles deeply as hir cock throbs in you. Shi takes the back of your neck in hir jaws, holding you firmly, but carefully, and starts pounding into you hard and fast. With hir paws around your wrists, holds you pinned down, though by this point you're eager to have hir violate you. One final, hard thrust into you and shi's growling deeply as hir shaft throbs inside you, pumping hir hot, feline seed deep inside you, sending it flowing into your bowels. This sends you into a powerful climax, shooting your cum onto the mattress to join the multitude of others as shi fills you with hir seed.[mimpregchance]";
 			if a random chance of 1 in 3 succeeds:				[One in three chance of gender change now]
 				follow the sex change rule; [I think this will work]
-				if player is female:						[New pussy sex scene]
+				if Player is female:						[New pussy sex scene]
 					say "     You moan softly as a wet little snatch forms between your legs, dripping with fresh need. Even as shi eases hir cock out of your ass, shi spots the new addition and mrrrowls in pleasure. Hir softening shaft grows hard again, eager to be the first to take your new, virgin hole. Shi eases hir cum-slick shaft into your small pussy, finding it a tight fit. Shi takes it slow at first, but soon quickens hir pace and takes you by the nape again, eager to breed you well. The stimulating barbs sliding along your vaginal walls feel so good, different from when shi was in your ass. You're soon pushing back into hir thrusts until finally shi pushes hir glans past your cervix and into your womb to unleash hir hot seed. You climax as well, having your first orgasm from your new pussy as the tigress who just gave it to you cums inside your newly-grown womb.[impregchance]";
-					increase libido of player by 8; [New pussy makes you horny...]
-					decrease humanity of player by 6; [...and give in a bit more]
-					if libido of player > 100:
-						now libido of player is 100;
+					increase Libido of Player by 8; [New pussy makes you horny...]
+					SanLoss 6; [...and give in a bit more]
+					if Libido of Player > 100:
+						now Libido of Player is 100;
 		else:										[No to all = NEUTER Identified!]
 			say "     Uh oh! Huh! Neuter?"; [No cunt & no cock]
 		say "     Finished with you now, shi helps you up, shoves your stuff into your arms and sends you on your way with a firm squeeze of your bottom, digging hir claws into you a little possessively. You feel a tingling in your loins and, while you feel satisfied for the moment, you yearn to meet up with another of these sexy felines soon.";
@@ -295,105 +295,105 @@ to say beattigress:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:									[Decides to fuck tigress]
+	if Player consents:									[Decides to fuck tigress]
 		LineBreak;
-		if player is herm:				[Yes = HERM Identified!]
-			increase libido of player by 10; [Oral submission increases Libido]
-			if libido of player > 100:
-				now libido of player is 100;
-			if cock length of player < 13:					[Cock size check: small-large]
+		if Player is herm:				[Yes = HERM Identified!]
+			increase Libido of Player by 10; [Oral submission increases Libido]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			if Cock Length of Player < 13:					[Cock size check: small-large]
 				say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move overtop of hir. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen member[smn].";
-				say "     Lowering your hips, you push your [cock size desc of player] [cock of player] cock into hir eager muzzle. Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice. You pump your cock into hir muzzle steadily, sliding it along hir palate.";
-				say "     As the tigress works [if cunt length of player < 6]a finger[else]several fingers[end if] inside your vagina[sfn], you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
-				say "     Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast. You blow your load down hir throat and your [if cunts of player > 1]pussies soak hir paws[else]pussy soaks hir paw[end if] in your juices. This is enough to finally set hir off, blasting tigercum down your throat. Shi swallows your cum down happily, even moaning in pleasure as shi does. Clearly, this feline loves hir job[if cocks of player is 2]. With one cock in hir muzzle, the other one ends up blowing its hot seed across hir body, covering hir striped fur in streaks of your white semen[else if cocks of player > 2]. With one cock in hir muzzle, the others end up blowing their hot seed across hir body, covering hir striped fur in streaks of your white semen[end if].";
+				say "     Lowering your hips, you push your [cock size desc of Player] [cock of Player] cock into hir eager muzzle. Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice. You pump your cock into hir muzzle steadily, sliding it along hir palate.";
+				say "     As the tigress works [if Cunt Depth of Player < 6]a finger[else]several fingers[end if] inside your vagina[sfn], you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of Player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
+				say "     Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast. You blow your load down hir throat and your [if Cunt Count of Player > 1]pussies soak hir paws[else]pussy soaks hir paw[end if] in your juices. This is enough to finally set hir off, blasting tigercum down your throat. Shi swallows your cum down happily, even moaning in pleasure as shi does. Clearly, this feline loves hir job[if Cock Count of Player is 2]. With one cock in hir muzzle, the other one ends up blowing its hot seed across hir body, covering hir striped fur in streaks of your white semen[else if Cock Count of Player > 2]. With one cock in hir muzzle, the others end up blowing their hot seed across hir body, covering hir striped fur in streaks of your white semen[end if].";
 			else:									[Cock size check: huge!]
 				say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move to straddle hir chest. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen member[smn].";
-				say "     Given the size of your [cock size desc of player] [cock of player] member[smn], you won't be able to take full advantage of the tigress's muzzle, so you go for something almost as good. Sitting across hir hips, you lay your lengthy cock[smn] across hir chest, nestling [itthemm] between hir breasts. Shi starts rubbing hir body against [itthemm], rumbling with desire. Shi licks and kisses at your tip[smn], lapping up your precum with a hunger for more. Hir raspy, feline tongue is very stimulating, as is the warm, soft feel of hir bosom around your shaft[smn]. Hir well-trained paws stroke over the lower portion of your cock[smn] and fondle your balls, working to attend to as much of your as shi can manage.";
-				if cock length of player > 23:				[Extra-huge for add-on]
+				say "     Given the size of your [cock size desc of Player] [cock of Player] member[smn], you won't be able to take full advantage of the tigress's muzzle, so you go for something almost as good. Sitting across hir hips, you lay your lengthy cock[smn] across hir chest, nestling [itthemm] between hir breasts. Shi starts rubbing hir body against [itthemm], rumbling with desire. Shi licks and kisses at your tip[smn], lapping up your precum with a hunger for more. Hir raspy, feline tongue is very stimulating, as is the warm, soft feel of hir bosom around your shaft[smn]. Hir well-trained paws stroke over the lower portion of your cock[smn] and fondle your balls, working to attend to as much of your as shi can manage.";
+				if Cock Length of Player > 23:				[Extra-huge for add-on]
 					say "     You grind your hips down overtop of hirs, rubbing your wet pussy lips against hirs and pressing hir smaller cock underneath your much more massive meat. Shi mewls and wiggles hir hips, rocking hir softly-barbed cock against the underside of your shaft, further stimulating you.";
 				say "     Eventually, your excitement builds to the breaking point and you unload. Your hot seed shoots across hir face and into hir open muzzle. Shi has it open wide, tongue hanging out to catch as much as shi can. Your seed paints white streaks across hir orange, striped face. As shi runs hir tongue across hir creamy muzzle, you can feel hir shaft throb under you, followed by the hot rush of tigercum spraying onto you.";
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
+			if diceroll < Libido of Player:
 				say "     Having gotten good and wound up after that, you feel you're still ready for more. As you look over the tigress, you try to decide what you want to use hir for next.";
 				say "     [bold type]Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";
-				if player consents:						[Yes = wants cock, get fucked]
+				if Player consents:						[Yes = wants cock, get fucked]
 					LineBreak;
 					say "     Deciding you want to try riding that sexy feline cock, you shift yourself around, straddling the tigress's hips. You rub your puss[yfn] down onto hir cock with a moan of desire. Never having given it a chance to get soft, you coax hir cock back to full hardness quickly and slowly sink yourself down onto it. The tigress mrowls in pleasure as shi feels you taking hir feline member in. As it sinks into you, your cock[smn] throb[smv], rising back to full hardness.";
 					say "     You run your hands over hir body as you start riding up and down. With you on top, you set the pace and ride hir nice and slow to begin, growing faster and faster as you go. Stroking through the soft white fur on hir chest, you knead hir breasts and tease hir nipples. The tigress brings hir paws to your cock[smn], stroking your meat in return.";
-					if cunts of player > 1:					[Extra in middle if multi-pussy]
+					if Cunt Count of Player > 1:					[Extra in middle if multi-pussy]
 						say "     Having more than one hot hole to file, you switch from one pussy to next a few times. Doing this makes the tigress mewl in disappointment, then moan in pleasure as you slide off hir, then take hir back in again. Enjoying hir reaction, you keep doing it to tease hir over and over again much more often than you would otherwise. You find hir to be a delightful feline playtoy.";
-						decrease libido of player by 5; [Extra satisfaction if multi-pussy sex]
-						if libido of player < 0:			[Should never be needed due to earlier increase...]
-							now libido of player is 0; [...but left for completeness.]
+						decrease Libido of Player by 5; [Extra satisfaction if multi-pussy sex]
+						if Libido of Player < 0:			[Should never be needed due to earlier increase...]
+							now Libido of Player is 0; [...but left for completeness.]
 					say "     The barbed cock is in no way painful, only small bumps that tingle along your walls as you ride hir, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. As that warm rush flows into you, you grind down firmly onto hir cock and you orgasm again. Your hot seed sprays across hir striped body, leaving sticky streaks of white on hir snowy tummyfur and breasts.[impregchance]";
 					say "     Once shi's finally drained hir balls into you and filled you with tigercum, you slide yourself off hir. Shi releases a soft, satisfied mew as hir cock pops free with a gush of tigercum and your own juices flowing down onto hir. You lean forward and nuzzle hir, nibbling hir ear before getting up. Having had your fun, you get off the mattress and gather your things. You leave the well-used tigress in hir alley, covered in cum and juices. You smile, feeling quite satisfied for now.";
 				else:								[No = wants pussy, does the fucking]
 					LineBreak;
 					say "     Deciding you want to pound hir dripping puss with your throbbing cock, you feel you're still ready for a second go and nudge the tigress over. Shi rolls onto all fours eagerly, arching up hir tail and wiggling hir rear in anticipation. You eye hir sexy rump, running your hands over it, looking at hir hot, dripping pussy. That's more than enough to get you fully hard again and you move into position atop hir.";
-					if cock length of player < 16:			[Yes = not huge cock]
-						say "     Lining up your [cock size desc of player] [cock of player] shaft with hir pussy, you ease forward, enjoying the feel of hir wet folds wrapping around you. You sink in slowly until you're fully sheathed inside hir. Hir inner walls squeeze down around your cock, urging you to start fucking her - and you do with fast, hard strokes. Having already blown your load once, you have a good, long screw with the eager feline whore. While you pound into hir, shi reaches back with a paw to finger your puss[yfn].";
-						say "     Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir vaginal muscles around your throbbing [cockname of player] cock ensures you have a good, long orgasm, draining your balls for all you'll give[if cocks of player is 2]. With one cock stuffed inside of hir, the other one ends up shooting its hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[else if cocks of player > 2]. With one cock stuffed inside of hir, the others end up shooting their hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[end if].";
+					if Cock Length of Player < 16:			[Yes = not huge cock]
+						say "     Lining up your [cock size desc of Player] [cock of Player] shaft with hir pussy, you ease forward, enjoying the feel of hir wet folds wrapping around you. You sink in slowly until you're fully sheathed inside hir. Hir inner walls squeeze down around your cock, urging you to start fucking her - and you do with fast, hard strokes. Having already blown your load once, you have a good, long screw with the eager feline whore. While you pound into hir, shi reaches back with a paw to finger your puss[yfn].";
+						say "     Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir vaginal muscles around your throbbing [cockname of Player] cock ensures you have a good, long orgasm, draining your balls for all you'll give[if Cock Count of Player is 2]. With one cock stuffed inside of hir, the other one ends up shooting its hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[else if Cock Count of Player > 2]. With one cock stuffed inside of hir, the others end up shooting their hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[end if].";
 					else:							[No = huge cock!]
 						say "     While you're too large for hir to take, you still need some extra relief. You grind your hefty shaft against hir shapely bottom and along hir back, pressing it between you both. Hir fur feels so nice against your sensitive flesh and your balls slap firmly against hir pussy. Shi mewls and pushes back firmly each time you thrust particularly hard and your balls slap hir wet folds. Shi kneads hir paws at the mattress. Having already blown your load once, you stroke yourself against the feline whore's tight rear and strong, flexible back. While you rub your hard meat against hir, shi reaches back with a paw to finger your puss[yfn].";
-						say "     When you finally peak, you blast hot cum across hir body and onto the back of hir head with the first shot. Sitting back up, you shoot a few more onto hir as you move back to spray onto that cute bubble-butt. You line up [if cocks of player > 1]one of [end if]your spurting [cockname of player] penis[esmn] with hir pussy, pushing your glans against those wet folds and spraying your hot seed onto it, forcing as much in as you can. Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir pussy lips around your tip ensures you have a good, long orgasm, draining your balls for all you'll give.";
+						say "     When you finally peak, you blast hot cum across hir body and onto the back of hir head with the first shot. Sitting back up, you shoot a few more onto hir as you move back to spray onto that cute bubble-butt. You line up [if Cock Count of Player > 1]one of [end if]your spurting [cockname of Player] penis[esmn] with hir pussy, pushing your glans against those wet folds and spraying your hot seed onto it, forcing as much in as you can. Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir pussy lips around your tip ensures you have a good, long orgasm, draining your balls for all you'll give.";
 					say "     Having had your fun, you nibble hir ear and fondle hir breast before rising off the mattress. Gathering your things, you leave the well-used tigress in hir alley, covered in cum and juices. You smile, feeling quite satisfied for now.";
-				decrease libido of player by 25; [Satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
+				decrease Libido of Player by 25; [Satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
 			else:									[Herm no-sex ending]
 				say "     Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind. Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit.";
-		else if player is female:		[Yes = FEMALE Identified!]
+		else if Player is female:		[Yes = FEMALE Identified!]
 			LineBreak;
 			say "     As the tigress mewls hir need again, you decide to put that lovely, striped muzzle to use. You sit across hir face, lowering your juicy pussy over hir muzzle. Shi licks hir lips, then runs hir raspy tongue across your wet folds. You moan in pleasure as you feel it glide across you and you grind down firmly onto hir muzzle, encouraging hir to send that talented tongue deep inside you.";
-			say "     As the tigress works hir tongue inside your [cunt size desc of player] vagina, you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
+			say "     As the tigress works hir tongue inside your [cunt size desc of Player] vagina, you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of Player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
 			say "     This is enough to finally set hir off, blasting tigercum down your throat. Even as you gulp it down, your orgasm hits as well, further soaking hir striped muzzle in your hot juices. You moan in ecstasy, grinding down onto hir face as hir well-practiced tongue continues to play inside you, sending you crashing through multiple orgasms until you collapse atop hir, panting for breath for several minutes.";
-			increase libido of player by 10; [Worked up by oral]
-			if libido of player > 100:
-				now libido of player is 100;
+			increase Libido of Player by 10; [Worked up by oral]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
+			if diceroll < Libido of Player:
 				say "[line break]     Having gotten good and wound up after that, you feel you're still ready for more and turn yourself around, straddling the tigress's hips. You rub your puss[yfn] down onto hir cock with a moan of desire. Never having given it a chance to get soft, you coax hir cock back to full hardness quickly and slowly sink yourself down onto it. The tigress mrowls in pleasure as shi feels you taking hir feline member in.";
 				say "     You run your hands over hir body as you start riding up and down. With you on top, you set the pace and ride hir nice and slow to begin, growing faster and faster as you go. Stroking through the soft white fur on hir chest, you knead hir breasts and tease hir nipples. The tigress brings hir paws to your chest, stroking your breasts in return.";
-				if cunts of player > 1:						[Extra in middle if multi-pussy]
+				if Cunt Count of Player > 1:						[Extra in middle if multi-pussy]
 					say "     Having more than one hot hole to file, you switch from one pussy to next a few times. Doing this makes the tigress mewl in disappointment, then moan in pleasure as you slide off hir, then take hir back in again. Enjoying hir reaction, you keep doing it to tease hir over and over again much more often than you would otherwise. You find hir to be a delightful feline playtoy.";
-					decrease libido of player by 5; [Extra satisfaction if multi-pussy sex]
-					if libido of player < 0:				[Should never be needed due to earlier increase...]
-						now libido of player is 0; [...but left for completeness.]
+					decrease Libido of Player by 5; [Extra satisfaction if multi-pussy sex]
+					if Libido of Player < 0:				[Should never be needed due to earlier increase...]
+						now Libido of Player is 0; [...but left for completeness.]
 				say "     The barbed cock is in no way painful, only small bumps that tingle along your walls as you ride hir, building you towards climax again. Hir rumbling and purring grows louder and deeper until shi climaxes, pumping hir hot feline seed into you. As that warm rush flows into you, you grind down firmly onto hir cock and you orgasm again.[impregchance]";
 				say "     Once shi's finally drained hir balls into you and filled you with tigercum, you slide yourself off hir. Shi releases a soft, satisfied mew as hir cock pops free with a gush of tigercum and your own juices flowing down onto hir. You lean forward and nuzzle hir, nibbling hir ear before getting up. Having had your fun, you get off the mattress and gather your things. You leave the well-used tigress in hir alley, covered in cum and juices. You smile, feeling quite satisfied for now.";
-				decrease libido of player by 25; [Satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
+				decrease Libido of Player by 25; [Satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
 			else:
 				say "     Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind. Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit."; [Female no-sex ending]
-		else if player is male:		[Yes = MALE Identified!]
+		else if Player is male:		[Yes = MALE Identified!]
 			say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move to straddle hir chest. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen member[smn].";
-			increase libido of player by 10; [Oral submission increases Libido]
-			if libido of player > 100:
-				now libido of player is 100;
-			if cock length of player < 13:					[Cock size check: small-large]
-				say "     Placing your hands on hir head, you pull hir forward, pushing your [cock size desc of player] [cock of player] cock into hir eager muzzle. Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice. Shi presses hir breasts against your cock and balls while hir mouth bobs over the rest. You pump your [cockname of player] penis into hir muzzle steadily, sliding it along hir palate. Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast, blowing your load down hir throat.";
-				say "     Shi swallows it down happily, even moaning in pleasure as shi does. Clearly, this feline loves hir job[if cocks of player is 2]. With one cock in hir muzzle, the other one ends up blowing its hot seed across hir face, covering hir striped fur in streaks of your white semen[else if cocks of player > 2]. With one cock in hir muzzle, the others end up blowing their hot seed across hir face, covering hir striped fur in streaks of your white semen[end if].";
+			increase Libido of Player by 10; [Oral submission increases Libido]
+			if Libido of Player > 100:
+				now Libido of Player is 100;
+			if Cock Length of Player < 13:					[Cock size check: small-large]
+				say "     Placing your hands on hir head, you pull hir forward, pushing your [cock size desc of Player] [cock of Player] cock into hir eager muzzle. Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice. Shi presses hir breasts against your cock and balls while hir mouth bobs over the rest. You pump your [cockname of Player] penis into hir muzzle steadily, sliding it along hir palate. Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast, blowing your load down hir throat.";
+				say "     Shi swallows it down happily, even moaning in pleasure as shi does. Clearly, this feline loves hir job[if Cock Count of Player is 2]. With one cock in hir muzzle, the other one ends up blowing its hot seed across hir face, covering hir striped fur in streaks of your white semen[else if Cock Count of Player > 2]. With one cock in hir muzzle, the others end up blowing their hot seed across hir face, covering hir striped fur in streaks of your white semen[end if].";
 			else:									[Cock size check: huge!]
 				say "     Given the size of your massive member[smn], you won't be able to take full advantage of the tigress's muzzle, so you go for something almost as good. Sitting across hir hips, you lay your lengthy cock[smn] across hir chest, nestling [itthemm] between hir breasts. Shi starts rubbing hir body against [itthemm], rumbling with desire. Shi licks and kisses at your tip[smn], lapping up your precum with a hunger for more. Hir raspy, feline tongue is very stimulating, as is the warm, soft feel of hir bosom around your meat. Hir paws stroke over the lower portion of your cock[smn] and fondle your balls, working to attend to as much of your as shi can manage.";
-				if cock length of player > 23:				[Extra-huge for add-on]
+				if Cock Length of Player > 23:				[Extra-huge for add-on]
 					say "     You grind your hips down overtop of hirs, rubbing your balls against hir and pressing hir smaller cock underneath your much more massive meat. Shi mewls and wiggles hir hips, rocking hir softly-barbed cock against the underside of your shaft, further stimulating you.";
 				say "     Eventually, your excitement builds to the breaking point and you unload. Your hot seed shoots across hir face and into hir open muzzle. Shi has it open wide, tongue hanging out to catch as much as shi can. Your seed paints white streaks across hir orange, striped face. As shi runs hir tongue across hir creamy muzzle, you can feel hir shaft throb under you, followed by the hot rush of tigercum spraying onto you.";
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
-			if diceroll < libido of player:
+			if diceroll < Libido of Player:
 				say "[line break]     Having gotten good and wound up after that, you feel you're still ready for a second go and nudge the tigress over. Shi rolls onto all fours eagerly, arching up hir tail and wiggling hir rear in anticipation. You eye hir sexy rump, running your hands over it, looking at hir hot, dripping pussy. That's more than enough to get you fully hard again and you move into position atop hir.";
-				if cock length of player < 16:				[Yes = not huge cock]
-					say "     Lining up your [cock size desc of player] [cock of player] shaft with hir pussy, you ease forward, enjoying the feel of hir wet folds wrapping around you. You sink in slowly until you're fully sheathed inside hir. Hir inner walls squeeze down around your cock, urging you to start fucking her - and you do with fast, hard strokes. Having already blown your load once, you have a good, long screw with the eager feline whore.";
-					say "     Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir vaginal muscles around your throbbing [cockname of player] cock ensures you have a good, long orgasm, draining your balls for all you'll give[if cocks of player is 2]. With one cock stuffed inside of hir, the other one ends up shooting its hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[else if cocks of player > 2]. With one cock stuffed inside of hir, the others end up shooting their hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[end if].";
+				if Cock Length of Player < 16:				[Yes = not huge cock]
+					say "     Lining up your [cock size desc of Player] [cock of Player] shaft with hir pussy, you ease forward, enjoying the feel of hir wet folds wrapping around you. You sink in slowly until you're fully sheathed inside hir. Hir inner walls squeeze down around your cock, urging you to start fucking her - and you do with fast, hard strokes. Having already blown your load once, you have a good, long screw with the eager feline whore.";
+					say "     Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir vaginal muscles around your throbbing [cockname of Player] cock ensures you have a good, long orgasm, draining your balls for all you'll give[if Cock Count of Player is 2]. With one cock stuffed inside of hir, the other one ends up shooting its hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[else if Cock Count of Player > 2]. With one cock stuffed inside of hir, the others end up shooting their hot seed across hir shapely body, covering hir striped fur in more streaks of your thick seed[end if].";
 				else:								[No = huge cock]
 					say "     While you're too large for hir to take, you still need some extra relief. You grind your hefty shaft against hir shapely bottom and along hir back, pressing it between you both. Hir fur feels so nice against your sensitive flesh and your balls slap firmly against hir pussy. Shi mewls and pushes back firmly each time you thrust particularly hard and your balls slap hir wet folds. Shi kneads hir paws at the mattress. Having already blown your load once, you stroke yourself against the feline whore's tight rear and strong, flexible back.";
-					say "     When you finally peak, you blast hot cum across hir body and onto the back of hir head with the first shot. Sitting back up, you shoot a few more onto hir as you move back to spray onto that cute bubble-butt. You line up [if cocks of player > 1]one of [end if]your spurting [cockname of player] penis[esmn] with hir pussy, pushing your glans against those wet folds and spraying your hot seed onto it, forcing as much in as you can. Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir pussy lips around your tip ensures you have a good, long orgasm, draining your balls for all you'll give.";
-				decrease libido of player by 25; [Satisfied by sex...]
-				if libido of player < 0:
-					now libido of player is 0;
+					say "     When you finally peak, you blast hot cum across hir body and onto the back of hir head with the first shot. Sitting back up, you shoot a few more onto hir as you move back to spray onto that cute bubble-butt. You line up [if Cock Count of Player > 1]one of [end if]your spurting [cockname of Player] penis[esmn] with hir pussy, pushing your glans against those wet folds and spraying your hot seed onto it, forcing as much in as you can. Hir cock blasts hot feline seed across the mattress when you finally blast your hot load into hir. The quivering of hir pussy lips around your tip ensures you have a good, long orgasm, draining your balls for all you'll give.";
+				decrease Libido of Player by 25; [Satisfied by sex...]
+				if Libido of Player < 0:
+					now Libido of Player is 0;
 				say "     Having had your fun, you nibble hir ear and fondle hir breast before rising off the mattress. Gathering your things, you leave the well-used tigress in hir alley, covered in cum and juices. You smile, feeling quite satisfied for now.";
 			else:
 				say "     Having had your fun, you get up slowly and stroke over hir ears before you get off the mattress and leave the alley behind. Feeling somewhat satisfied for now, your loins warm with the thoughts of finding another of these sexy felines to play with as you see fit."; [Male no-sex ending]
@@ -459,27 +459,28 @@ to say paymentcheck:
 		say "     Before you have a chance to recover, hir teeth are at the back of your neck and hir throbbing cock grinds against your rear. You look for a means to escape, but those sharp teeth keep you in place. Then suddenly it's too late and the tigress's cock is pushing into your back door, spreading your tailhole open painfully fast. Shi gives you no time to adjust to the rapid intrusion, pounding you in quick, hard strokes. Despite yourself, you start to grow aroused from the assfuck you're receiving, but shi holds your arms tightly to the wall, preventing you from tending to your growing arousal.";
 		say "     Eventually, you feel the hot blast of hir cum inside you and you moan in pleasure. You hope shi'll let you get off now, but shi just holds you to the wall, growling softly. Growing fearful, you continue to wait, wiggling your rear over hir cock for what little stimulation you can get without rubbing your tender flesh against the rough brick wall. Suddenly, your bowels are filled with a rush of stinging fluid, painful to your abused hole. As shi withdraws, shi continues to empty hir bladder, pissing across your butt. Shi shoves you to the ground, then finishes draining hirself all over your battered body.";
 		say "     Painfully grabbing you by the neck and ass, claws sinking into your flesh, shi tosses you from the alley. Shi gives you a final kick to send you on your way. You are left a dirty mess, reeking of hir scent and painfully aroused from the rough sex without relief.";
-		decrease HP of player by 20;
-		increase libido of player by 15; [Increase libido because shi doesn't let you get off...]
-		if libido of player > 100:
-			now libido of player is 100;
-		decrease humanity of player by 12; [...and give in a lot more]
+		decrease HP of Player by 20;
+		increase Libido of Player by 15; [Increase libido because shi doesn't let you get off...]
+		if Libido of Player > 100:
+			now Libido of Player is 100;
+		SanLoss 12; [...and give in a lot more]
 		infect; [Added infection as punishment]
 		now tempnum is 1; [Temporarily marks lack of payment for use in losetotigress]
 		now stiffedpayment is 1; [Permanenly marks failure to pay]
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Tigress Hooker"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Tigress Hooker"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]Slamming hir shoulder into you, shi pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing hir to bury your face in hir cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under hir skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress's flexibility before that kick strikes you upside the head! Dazed, you try to get up, only to have hir press your face under hir skirt and against hir pink panties![or]After several quick slashes of hir claws, shi grabs your shoulders and pulls you forward into an equally fierce kiss![or]With a judo throw, shi tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr! As you roll away, shi manages to grab your ass one last time![at random]";
 	now defeated entry is "[beattigress]";
@@ -506,15 +507,15 @@ When Play begins:
 	now lev entry is 5; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking.]
 	now area entry is "Red"; [ Location of monster, in this case Red Light District ]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 4; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;
-	now cunt width entry is 4;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 2; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 12;
+	now Cunt Tightness entry is 4;
 	now libido entry is 0; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "motel key"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 75; [ Chance of loot dropping 0-100 ]
@@ -524,9 +525,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Table of Game Objects (continued)
 name	desc	weight	object

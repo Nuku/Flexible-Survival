@@ -4,7 +4,7 @@ Version 1 of Corota by Stripes begins here.
 
 "Adds Corota to Flexible Survival."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
 
@@ -16,10 +16,10 @@ when play begins:
 
 to say corotadesc:
 	setmongender 4; [creature is female]
-	choose row monster from Table of Random Critters;
-	if "Male Preferred" is listed in feats of player:
+	choose row MonsterID from Table of Random Critters;
+	if "Male Preferred" is listed in feats of Player:
 		now sex entry is "Male";
-	else if "Herm Preferred" is listed in feats of player:
+	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Female";
@@ -28,48 +28,49 @@ to say corotadesc:
 
 
 to say losetocorota:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	if a random chance of 3 in 5 succeeds:
-		if player is male:
+		if Player is male:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue. Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs. Bringing their head up to smile at you, again with that feral look, you can see a venom of a different color than normal dripping from their fangs.";
-			say "     You don't have long to consider what they did before your length explodes to full, veins bulging as it's forced to be ready for the serpent creature. Too weak to crawl away, too tired to push them off, you're forced to watch as they spread their lower lips before spearing themselves on your cock[if cock length of player > 12], your head forced rapidly past their cervix into their waiting womb[end if]. Bouncing up and down on you pole, 'poison' no longer necessary to keep you readied, you are stuck for some time with nothing but the wet squelching noises and the corota's impassioned hisses to distract you.";
+			say "     You don't have long to consider what they did before your length explodes to full, veins bulging as it's forced to be ready for the serpent creature. Too weak to crawl away, too tired to push them off, you're forced to watch as they spread their lower lips before spearing themselves on your cock[if Cock Length of Player > 12], your head forced rapidly past their cervix into their waiting womb[end if]. Bouncing up and down on you pole, 'poison' no longer necessary to keep you readied, you are stuck for some time with nothing but the wet squelching noises and the corota's impassioned hisses to distract you.";
 			say "     Eventually, body's betrayal complete, you give the corota their much desired seed, balls swollen by the venom forcing them into crazed overproduction along with your regular load amount. The milking goes on for almost five minutes, and you don't want to consider how much of your mass was [']recycled['] for their pleasure while you watch their belly slowly bloat wider and wider. When the flow finally comes to a halt, you feel more spent than you have ever felt before. The corota doesn't even seem to give you a cursory look as they waddle off, their footfalls followed by the sound of an occasional wet impact as thick wads of spunk fall between their legs.";
-			increase thirst of player by 5;
+			increase thirst of Player by 5;
 			infect;
-		else if player is female:
+		else if Player is female:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Thirsty from fight,' they hiss, diving between your legs greedily. In seconds, your labia and hips are covered in a mass of nonvenomous bites, the corota's many hands slapping at your hips as they seem to forget that you aren't a giant jug of fluid. Whether they beat you until terrified beyond control, or the rough abuse is one of your special buttons, you eventually give the corota their much desired drink. Not even bothering to give so much as a 'Thanks,' the serpent creature stomps away from you to slake the rest of their thirst elsewhere.";
 		else:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Failing to see anything that catches their interest, the corota gives a snarl and turns around, raising both their tails high to bring down on you. Raising your arms to shield your face, you barely have the time to sigh in relief as each miss your arms and head by scant inches. You were so weak, for it to be seemingly beneath the serpent creature to even bother to make sure they've finished the job. The corota flaps their large wings to take to the skies, leaving you coated in a small layer of their dust.";
 	else if a random chance of 1 in 4 succeeds:
 		say "     Mind muddled trying to stay focused on the battle, you fail to catch the sweep of the tail until almost too late. Only by acting in the last second do you go from taking a scythe in the gut to having yourself smashed to the floor. Seemingly satisfied with 'only' flooring you for the count, the corota stomps off to vent its frustrations on another victim.";
-		decrease HP of player by wdam entry;
+		decrease HP of Player by wdam entry;
 	else if a random chance of 1 in 3 succeeds:
 		say "     Focusing on the tail and great claws of the corota, you forget about the obvious threat until it's already in your face. Literally. Your cheeks explode in pain as two great fangs sink into them, being used to inject a significant amount of poison into your mouth as the serpent-woman kisses you. You barely have the time or desire to consider that a half foot higher or lower, and you might not be in a position to ever complain again. When the fangs finally pull out, the corota smashes you roughly to the ground with a two handed overhead strike, and you're left there sputtering, and spitting blood and toxins from your mouth. While you've heard eating a rattlesnake's toxin is harmless, you aren't in the least bit willing to test that out with infected snake bites.";
-		decrease HP of player by wdam entry;
+		decrease HP of Player by wdam entry;
 		infect;
 	else if a random chance of 1 in 2 succeeds:
 		say "     A low sweep by the corota's tail knocks you to the ground, the chimeric critter quickly leaping upon your prone form and clawing at it with their leonine half. Fortunately, they don't seem to strike anything vital before they get bored with you, crawling off your sore body and giving it a final, hard stomp to the gut before hurrying off.";
-		decrease HP of player by wdam entry;
+		decrease HP of Player by wdam entry;
 	else:
 		say "     Out of breath, and needing a breather, you try to pull back from the fight with the corota to regain your breath. For a moment, it looks like the corota is going to allow you to do so, turning their back on you and beginning to walk away. Then you notice the small cloud of dust forming between their wings, too late to get out of the way or close your mouth before the corota sends the dust cloud straight into your open mouth with a quick flap of their wings. Gasping now in pain as the particles cling to your throat and insides of your breathing organs, you haven't the environmental awareness to notice them repeating the action again and again. Face going blue, you pass out to wake up some time later covered in the ochre dust, throat raw and demanding a drink soon.";
-		increase thirst of player by 5;
+		increase thirst of Player by 5;
 
 
 to say beatthecorota:
 	say "     Your final blow causes the twin-headed creature to stumble back and hiss angrily. It uses its four arms to block further blows as it retreats a few steps. 'Good fight,' it hisses respectfully. 'I give... for now.' With that, it turns and flaps it wings, taking to the air in a burst of dusty air. You cover your mouth and back away, waiting for the air to clear as it flies off in search of sport elsewhere.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Corota"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Corota"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The corota[or]She[or]The serpent-hybrid[or]The bifurcated creature[as decreasingly likely outcomes] [one of]sweeps your feet out from under your with a pass of its powerful tails[or]bashes its thick tails against you[or]moves its head in to bite, splitting them at the last moment to avoid your block and bite you from two sides[or]sinks its fangs into your side[or]slashes at you with its claws, rending at your flesh[at random]";
 	now defeated entry is "[beatthecorota]";
@@ -96,15 +97,15 @@ When Play begins:
 	now lev entry is 11; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 9; [Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Plains"; [ Current options are 'Outside' and 'Mall'. Case sensitive. If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 2; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12;
-	now cunt width entry is 8;
+	now Cock Count entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 3; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 2; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 12;
+	now Cunt Tightness entry is 8;
 	now libido entry is 45; [ Amount player Libido will go up if defeated ]
 	now loot entry is "corota venom";
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
@@ -114,9 +115,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "corota"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Section 3 - Alt Attack - Corota Dust
 
@@ -125,24 +227,24 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "corota"	retaliation rule	--	--	--	--	--	--	--	corotadust rule	--
 
 this is the corotadust rule:		[draining cloud]
-	choose row monster from Table of Random Critters;
+	choose row MonsterID from Table of Random Critters;
 	say "     The corota's dust hangs in the air, a constant irritation. ";
-	let playernum be 12 + ( stamina of player * 2 ) + level of player;
+	let playernum be 12 + ( stamina of Player * 2 ) + level of Player;
 	if face mask is equipped, increase playernum by 12;
 	let corotanum be ( sta entry * 2 ) + lev entry;
 	let playernum be a random number between 1 and playernum;
 	let corotanum be a random number between 1 and corotanum;
-	if playernum > corotanum:
+	if Playernum > corotanum:
 		say "You cough a little, but fight on unhindered for the moment.";
 	else:
 		let dam be ( ( wdam entry times a random number from 80 to 120 ) / 250 ); [40% damage]
 		if face mask is equipped, decrease dam by 1;
 		say "You cough violently as you're forced to breathe in more of the dust. You take [special-style-2][dam][roman type] damage!";
 		LineBreak;
-		decrease HP of player by dam;
-		if HP of player < 1:
-			if HP of player <= 0, now fightoutcome is 20;
-			if libido of player >= 110, now fightoutcome is 21;
+		decrease HP of Player by dam;
+		if HP of Player < 1:
+			if HP of Player <= 0, now fightoutcome is 20;
+			if Libido of Player >= 110, now fightoutcome is 21;
 			lose;
 
 Section 4 - Drop Item - Corota Venom
@@ -156,7 +258,7 @@ the usedesc of corota venom is "[corotavenomuse]".
 
 to say corotavenomuse:
 	say "     Feeling brave or foolish, you try drinking down the snake venom. It stings as it goes down, making you weak in the knees and cough as it starts to burn at your throat and stomach. You curl up in a ball of pain as the heat spreads, setting off something inside you.";
-	decrease HP of player by 10;
+	decrease HP of Player by 10;
 
 the scent of corota venom is "The snake venom has a strong, stinging scent that reminds you slightly of the creature's dusty powder.".
 
@@ -165,14 +267,14 @@ Section 5 - Endings
 
 [
 when play ends:
-	if bodyname of player is "Template":
-		if humanity of player < 10:
+	if bodyname of Player is "Template":
+		if humanity of Player < 10:
 			say "     You succumb to your corota infection.";
 		else:
 			say "     You survive, but were infected by the corota.";
-			if player is male:							[MALE/HERM]
+			if Player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
-			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
+			else if "Sterile" is not listed in feats of Player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
 			else:									[F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";

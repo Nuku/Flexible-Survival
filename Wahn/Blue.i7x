@@ -12,7 +12,7 @@ Version 1 of Blue by Wahn begins here.
 [   1: player asked about the Blue commune                   ]
 [   2: player talked about Blue personally                   ]
 
-[ libido of Blue Speaker                                     ]
+[ Libido of Blue Speaker                                     ]
 [   0: indeterminate gender                                  ]
 [   1: female persona                                        ]
 [   2: male persona                                          ]
@@ -49,14 +49,14 @@ Blue Speaker	"Blue Speaker"
 
 Blue Speaker is a man. Blue Speaker is in Goo Refuge.
 ScaleValue of Blue Speaker is 3. [human sized]
-Cocks of Blue Speaker is 1.
+Cock Count of Blue Speaker is 1.
 Cock Length of Blue Speaker is 8.
-Cock Width of Blue Speaker is 2.
-Testes of Blue Speaker is 2.
-Cunts of Blue Speaker is 0.
-Cunt Length of Blue Speaker is 9.
-Cunt Width of Blue Speaker is 2.
-Breasts of Blue Speaker is 2. [2 nipples]
+Ball Size of Blue Speaker is 2.
+Ball Count of Blue Speaker is 2.
+Cunt Count of Blue Speaker is 0.
+Cunt Depth of Blue Speaker is 9.
+Cunt Tightness of Blue Speaker is 2.
+Nipple Count of Blue Speaker is 2. [2 nipples]
 Breast Size of Blue Speaker is 0.
 [Basic Interaction states as of game start]
 PlayerMet of Blue Speaker is false.
@@ -79,11 +79,11 @@ when play begins:
 to say Blue SpeakerDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Blue Speaker] <- DEBUG[line break]";
-	if libido of Blue Speaker is 0: [neuter]
+	if Libido of Blue Speaker is 0: [neuter]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. It has a totally androgynous appearance, making it impossible to tell if Blue is a male or female - though maybe there isn't really a difference when your body consists of malleable, semi-solid goop. Never really straying far from you, it seems that this being is the designated person to talk to.";
-	else if libido of Blue Speaker is 1: [female]
+	else if Libido of Blue Speaker is 1: [female]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. She has taken on a more feminine appearance, with a pretty face, shoulder-length hair, and nice, perky breasts molded out of the transparent aquamarine goop that forms her body. This being is certainly eager and ready to make her visitors comfortable, up to and including molding her body to match a specific form. Never really straying far from you, it seems that she is the designated person to talk to among her kind.";
-	else if libido of Blue Speaker is 2: [male]
+	else if Libido of Blue Speaker is 2: [male]
 		say "     Blue is a humanoid goo person that usually stands about five feet tall. He has taken on a more masculine appearance, with a handsome face, shoulder-length hair, and actual abs molded out of the transparent aquamarine goop that forms his body. This being is certainly eager and ready to make his visitors comfortable, up to and including molding his body to match a specific form. Never really straying far from you, it seems that he is the designated person to talk to among his kind.";
 
 instead of conversing the Blue Speaker:
@@ -106,19 +106,19 @@ to BlueSpeakerTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Learn what you can about them";
 	[]
-	if HP of Blue Speaker > 1 and libido of Blue Speaker < 2:
+	if HP of Blue Speaker > 1 and Libido of Blue Speaker < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more masculine";
 		now sortorder entry is 3;
 		now description entry is "Let the goo person reshape themself";
 	[]
-	if HP of Blue Speaker > 1 and libido of Blue Speaker is not 1:
+	if HP of Blue Speaker > 1 and Libido of Blue Speaker is not 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more feminine";
 		now sortorder entry is 5;
 		now description entry is "Let the goo person reshape themself";
 	[]
-	if HP of Blue Speaker > 1 and libido of Blue Speaker is not 0:
+	if HP of Blue Speaker > 1 and Libido of Blue Speaker is not 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask Blue to appear more gender-neutral";
 		now sortorder entry is 6;
@@ -148,7 +148,7 @@ to BlueSpeakerTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Ask about the goo people":
@@ -189,19 +189,19 @@ to say BlueTalk_MaleForm:
 	say "     'My pleasure,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear broad-shouldered and muscular, featuring a chiseled face and shoulder-length hair. He checks himself out for a little moment, making sure that he didn't forget anything, then playfully flexes the bulges of his goo biceps.";
 	SetMalePronouns for Blue Speaker;
 	now BlueDesignator is "man";
-	now libido of Blue Speaker is 2;
+	now Libido of Blue Speaker is 2;
 
 to say BlueTalk_FemaleForm:
 	say "     'My pleasure,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear more curvaceous, with a set of perky breasts and shapely buns that form an hourglass figure. She has a rather pretty face and shoulder-length hair, too. Checking herself out for a little moment, Blue makes sure that she didn't forget anything, then smiles at you and wiggles her breasts to jiggle left and right.";
 	SetFemalePronouns for Blue Speaker;
 	now BlueDesignator is "woman";
-	now libido of Blue Speaker is 1;
+	now Libido of Blue Speaker is 1;
 
 to say BlueTalk_NeuterForm:
 	say "     'If that's what you prefer,' Blue replies, instantly reshaping [PosAdj of Blue Speaker] body to appear in a genderless humanoid form. With the arms, legs, and torso appearing relatively undefined, the goo person can barely be differentiated from the various others in the room.";
 	SetNeutralPronouns for Blue Speaker;
 	now BlueDesignator is "being";
-	now libido of Blue Speaker is 0;
+	now Libido of Blue Speaker is 0;
 
 to say BlueTalk_Office:
 	say "     As you ask about the goo-filled office, Blue explains, 'Many of our voices just prefer to stay safe and together, talking things through among the Blue. This is where they stay, and where all of us return from time to time to share ourselves. Others might become like us in body, but to truly be Blue, they would have to enter and share themselves.'";
@@ -217,11 +217,11 @@ Instead of fucking the Blue Speaker:
 
 to say BlueSpeakerSexMenu:
 	say "     What do you want to do with the goo person?";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Donate some cum";
 		now sortorder entry is 1;
@@ -233,25 +233,25 @@ to say BlueSpeakerSexMenu:
 		now sortorder entry is 2;
 		now description entry is "Give the goo person a direct cum injection";
 	[]
-	if (player is male and libido of Blue Speaker is 1): [female shape]
+	if (player is male and Libido of Blue Speaker is 1): [female shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's pussy";
 		now sortorder entry is 3;
 		now description entry is "Pound the goo person's pussy";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Blue's ass";
 		now sortorder entry is 4;
 		now description entry is "Pound the goo person's ass";
 	[]
-	if libido of Blue Speaker is 2 and player is not neuter: [male shape and gendered player]
+	if Libido of Blue Speaker is 2 and player is not neuter: [male shape and gendered player]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Blue fuck your ass";
 		now sortorder entry is 5;
 		now description entry is "Let the goo person fuck your ass";
 	[]
-	if (player is female and libido of Blue Speaker is 2): [male shape]
+	if (player is female and Libido of Blue Speaker is 2): [male shape]
 		choose a blank row in table of fucking options;
 		now title entry is "Let Blue fuck your pussy";
 		now sortorder entry is 6;
@@ -269,7 +269,7 @@ to say BlueSpeakerSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is "Donate some cum":
@@ -308,8 +308,8 @@ to say BlueSex1: [jerk off on Blue]
 		say "Blue thumps his pecs with a fist, then pinches his nipples enticingly while he looks up at you, opening his mouth to show off his dripping blue tongue. ";
 	else: [neuter]
 		say "Blue pinches its protruding nipples enticingly while it looks up at you, opening its mouth to show off its dripping blue tongue. ";
-	say "Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
-	say "     'What a nice piece of meat you have there[if player is not defaultnamed], [name of player][else], my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of the Blue Guardian clearing their throat seems to be the only thing that holds the thirsty goo [BlueDesignator] back, instead making [ObjectPro of Blue Speaker] settle on [PosAdj of Blue Speaker] haunches to wait. Stroking the length of your [cock of player] erection, you step a little closer to Blue and tease [ObjectPro of Blue Speaker] with the sight, enjoying the way that your eager partner follows every little movement of your dickhead with [PosAdj of Blue Speaker] gaze. [SubjectProCap of Blue Speaker] licks [PosAdj of Blue Speaker] lips with anticipation as pre forms at the tip of your cock, the goo's lascivious gaze spurring your arousal to new heights. Over time, the pace of your pumping increases, shocks of pleasure coursing through your loins as the goo's lips part to pant and plead for your essence.";
+	say "Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of Player] shaft.";
+	say "     'What a nice piece of meat you have there[if Player is not defaultnamed], [name of Player][else], my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of the Blue Guardian clearing their throat seems to be the only thing that holds the thirsty goo [BlueDesignator] back, instead making [ObjectPro of Blue Speaker] settle on [PosAdj of Blue Speaker] haunches to wait. Stroking the length of your [cock of Player] erection, you step a little closer to Blue and tease [ObjectPro of Blue Speaker] with the sight, enjoying the way that your eager partner follows every little movement of your dickhead with [PosAdj of Blue Speaker] gaze. [SubjectProCap of Blue Speaker] licks [PosAdj of Blue Speaker] lips with anticipation as pre forms at the tip of your cock, the goo's lascivious gaze spurring your arousal to new heights. Over time, the pace of your pumping increases, shocks of pleasure coursing through your loins as the goo's lips part to pant and plead for your essence.";
 	WaitLineBreak;
 	say "     'Yeah, that's it, baby. You want to - you need to - shoot that load you've got building up. I want you to come all over me!' Blue gasps out in an eager and breathless voice, leaning forward to almost touch you. 'Yes, do it!' the goo [BlueDesignator] calls out, then stretches [PosAdj of Blue Speaker] blue tongue out as far as [SubjectPro of Blue Speaker] can, ready to receive your seed. The lascivious offer drives you right over the edge, and your body tenses up as the first spurt of cum streaks over [PosAdj of Blue Speaker] blue face, spoiling your aim in the moment of passion. Blue reacts right away, getting [PosAdj of Blue Speaker] head properly aligned to catch the next rope in [PosAdj of Blue Speaker] open mouth, humming contently as [SubjectPro of Blue Speaker] swallows each thick, creamy blast in rapid succession.";
 	say "     While you empty your balls into Blue's open mouth, your attention is drawn to the spectacle of your seed spreading through [PosAdj of Blue Speaker] body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your cum brings with it, and [SubjectPro of Blue Speaker] quivers with desire as [SubjectPro of Blue Speaker] swallows more and more of your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, [PosAdj of Blue Speaker] cum-infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' [SubjectPro of Blue Speaker] says with an ecstatic smile on ";
@@ -337,11 +337,11 @@ to say BlueSex2: [mouth fuck for Blue]
 		say "Blue thumps his pecs with a fist, then pinches his nipples enticingly while he looks up at you, opening his mouth to show off his dripping blue tongue. ";
 	else: [neuter]
 		say "Blue pinches its protruding nipples enticingly while it looks up at you, opening its mouth to show off its dripping blue tongue. ";
-	say "Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
-	say "     'What a nice piece of meat you have there[if player is not defaultnamed], [name of player][else], my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of the Blue Guardian clearing their throat seems to be the only thing holding the thirsty goo [BlueDesignator] back, but you're having none of that and quickly grab [ObjectPro of Blue Speaker] by the back of the neck to ram your [cock of player] rod into [PosAdj of Blue Speaker] mouth. Given the suddenness of your thrust, Blue doesn't actually have the time to form a throat within [PosAdj of Blue Speaker] gooey mass, meaning that you're just fucking the wet and squishy innards of [PosAdj of Blue Speaker] head for a couple seconds until [SubjectPro of Blue Speaker] can adjust to give you a more human-like experience.";
+	say "Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of Player] shaft.";
+	say "     'What a nice piece of meat you have there[if Player is not defaultnamed], [name of Player][else], my friend[end if],' Blue says in a yearning tone, seemingly ready to engulf your cock at a moment's notice. The sound of the Blue Guardian clearing their throat seems to be the only thing holding the thirsty goo [BlueDesignator] back, but you're having none of that and quickly grab [ObjectPro of Blue Speaker] by the back of the neck to ram your [cock of Player] rod into [PosAdj of Blue Speaker] mouth. Given the suddenness of your thrust, Blue doesn't actually have the time to form a throat within [PosAdj of Blue Speaker] gooey mass, meaning that you're just fucking the wet and squishy innards of [PosAdj of Blue Speaker] head for a couple seconds until [SubjectPro of Blue Speaker] can adjust to give you a more human-like experience.";
 	WaitLineBreak;
 	say "     The shape of a tight and gripping throat forms around your hard shaft. It looks odd, but also fascinating, to literally see the cavity inside of Blue's body, extending just far enough to take your deepest thrusts. Your partner is definitely quite resourceful with that malleable body of [PosPro of Blue Speaker]. Eager sounds come from Blue as [SubjectPro of Blue Speaker] takes your face-fucking with obvious joy, and [SubjectPro of Blue Speaker] even wraps [PosAdj of Blue Speaker] arms around your hips to pull you in for deeper thrusts. Ramming into [ObjectPro of Blue Speaker] again and again, you are so focused on the pleasure of [PosAdj of Blue Speaker] suckling throat that your mind empties of all but the need to drive yourself as far as you can within that smooth, exotic channel. While most partners would go blue in the face from your fervent pounding, the animate goo has no such worries, gingerly humming around your cock as [PosAdj of Blue Speaker] insides ripple and flow over every sensitive nerve.";
-	say "     The pleasure of having what amounts to a completely insatiable cum-slut as a partner drives you to really make the most of the amazing experience. You slam home into Blue's throat, then rest your hard length inside of the tight confines of [PosAdj of Blue Speaker] neck for longer than any human could withstand. The undulating pressure sliding over every inch of your manhood drives your pleasure to new heights, and it's not long before a familiar tingle builds in your balls. You wrap your hands around Blue's head to ram your whole length into [PosAdj of player] mouth, your orbs slapping against the goo [BlueDesignator]'s chin. Sucking in a sharp breath, you ride the crest of pleasure for a moment before unloading into Blue, spurt after spurt of creamy cum blasting into the aquamarine mass of [PosAdj of Blue Speaker] body.";
+	say "     The pleasure of having what amounts to a completely insatiable cum-slut as a partner drives you to really make the most of the amazing experience. You slam home into Blue's throat, then rest your hard length inside of the tight confines of [PosAdj of Blue Speaker] neck for longer than any human could withstand. The undulating pressure sliding over every inch of your manhood drives your pleasure to new heights, and it's not long before a familiar tingle builds in your balls. You wrap your hands around Blue's head to ram your whole length into [PosAdj of Player] mouth, your orbs slapping against the goo [BlueDesignator]'s chin. Sucking in a sharp breath, you ride the crest of pleasure for a moment before unloading into Blue, spurt after spurt of creamy cum blasting into the aquamarine mass of [PosAdj of Blue Speaker] body.";
 	WaitLineBreak;
 	say "     While you saw back and forth in Blue's welcoming throat, your attention is drawn to the spectacle of your seed spreading through [PosAdj of Blue Speaker] body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your cum brings with it, and [SubjectPro of Blue Speaker] quivers with desire as [SubjectPro of Blue Speaker] swallows more and more of your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, [PosAdj of Blue Speaker] cum-infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' [SubjectPro of Blue Speaker] says with an ecstatic smile on ";
 	if HP of Blue Speaker is 1: [female]
@@ -354,8 +354,8 @@ to say BlueSex2: [mouth fuck for Blue]
 	infect "Blue Goo";
 
 to say BlueSex3: [pussy fuck for Blue]
-	say "     As you tell Blue that you want to [']donate['] some of your cum to sustain her and her people, the aquamarine goo person smiles eagerly at you and raises a hand to her chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the pleasantly round swell of her breasts, making them wiggle just for you. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' The smiling goo woman saunters over to one of the many desks in this room, lifting herself up to sit on it and spreading her legs in a rather enticing display. Using both hands to smoosh her breasts together and play with their nipples, she gives you an inviting smile and then calls out, 'Come and take me!' Enticed by her wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
-	say "     'What a nice piece of meat you have there[if player is not defaultnamed], [name of player][else], my friend[end if],' Blue says in a yearning tone as she watches you walk closer. The Blue Guardian clears their throat, showing some discontent at the thirsty goo woman's slutty behavior, but even though Blue falls silent, you're already in the mood for a nice fuck. After a few quick steps forward, you smack your hard, [cock of player] shaft against the nether lips she starts to mold out of the blue goo of her crotch. Moaning eagerly, Blue moves a hand to the freshly formed clit at the top of her pussy, then spreads her folds, allowing you to see the opening get deeper by the second. But aroused as you are, you just can't hold back for the process to conclude and quickly ram yourself into your partner's body. Given the suddenness of your thrust, Blue hasn't actually made any of the deeper internal structures to take you, meaning that you're just fucking the wet and squishy innards of her middle for a couple seconds until she can adjust to give you a more human-like experience.";
+	say "     As you tell Blue that you want to [']donate['] some of your cum to sustain her and her people, the aquamarine goo person smiles eagerly at you and raises a hand to her chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the pleasantly round swell of her breasts, making them wiggle just for you. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' The smiling goo woman saunters over to one of the many desks in this room, lifting herself up to sit on it and spreading her legs in a rather enticing display. Using both hands to smoosh her breasts together and play with their nipples, she gives you an inviting smile and then calls out, 'Come and take me!' Enticed by her wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of Player] shaft.";
+	say "     'What a nice piece of meat you have there[if Player is not defaultnamed], [name of Player][else], my friend[end if],' Blue says in a yearning tone as she watches you walk closer. The Blue Guardian clears their throat, showing some discontent at the thirsty goo woman's slutty behavior, but even though Blue falls silent, you're already in the mood for a nice fuck. After a few quick steps forward, you smack your hard, [cock of Player] shaft against the nether lips she starts to mold out of the blue goo of her crotch. Moaning eagerly, Blue moves a hand to the freshly formed clit at the top of her pussy, then spreads her folds, allowing you to see the opening get deeper by the second. But aroused as you are, you just can't hold back for the process to conclude and quickly ram yourself into your partner's body. Given the suddenness of your thrust, Blue hasn't actually made any of the deeper internal structures to take you, meaning that you're just fucking the wet and squishy innards of her middle for a couple seconds until she can adjust to give you a more human-like experience.";
 	WaitLineBreak;
 	say "     The shape of a yielding, yet still quite tight and gripping pussy forms around your hard shaft. It looks odd, but also fascinating, to literally see the cavity inside of Blue's body, at first extending just far enough to take your deepest thrusts. She doesn't stop just there though, and before long, you can see the shape of a cervix and a goo 'womb'. Your partner is definitely quite resourceful with that malleable body of hers. Eager sounds come from Blue as she takes your thrusts with obvious joy, and she even wraps her legs around your hips to pull you in for deeper thrusts. Ramming into her again and again, you wrap your arms around Blue to steady yourself, each thrust sending an echo of the impact through Blue's whole body. Your partner releases pleasured moans and gasps throughout, making it clear that she's enjoying being fucked so roughly.";
 	say "     The pleasure of having what amounts to a completely insatiable cum-slut as a partner drives you to really make the most of the amazing experience. Taking a break from your zealous pounding, you rest your hard length inside of the tight confines of her sex, reveling in the fact that you can actually see just how deep you are inside of her: just half an inch from the opening to her womb at the deepest penetration. The undulating pressure sliding over every inch of your manhood drives your pleasure to new heights, and it's not long before a familiar tingle builds in your balls. You move your mouth next to her ear and moan to Blue that you'll breed her now. Balls slapping wetly against the goo woman's crotch, you let out a grunt and start to unload into Blue, spurt after spurt of creamy cum blasting against the cervix that you can so clearly see inside of her, with each spurt increasing the pressure against that chokepoint.";
@@ -372,8 +372,8 @@ to say BlueSex4: [ass fuck for Blue]
 		say "the valleys and bumps of his flawless abs. ";
 	else: [neuter]
 		say "the flat front of its vaguely human torso, creating a streak of ripples through the goo. ";
-	say "'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' The smiling goo [BlueDesignator] saunters over to one of the many desks in this room, bending over it to present [PosAdj of Blue Speaker] ass in a rather enticing display. Reaching back with both hands to grab the rounded curves of [PosAdj of Blue Speaker] behind, Blue spreads them to show off the cleave of [PosAdj of Blue Speaker] ass, then calls out, 'Come and take me!' Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
-	say "     'What a nice piece of meat you have there[if player is not defaultnamed], [name of player][else], my friend[end if],' Blue says in a yearning tone as [SubjectPro of Blue Speaker] looks over [PosAdj of Blue Speaker] shoulder at you. The Blue Guardian clears their throat, showing some discontent at the thirsty goo [BlueDesignator]'s slutty behavior, but even though Blue falls silent, you're already in the mood for a nice fuck. After a few quick steps forward, you smack your hard, [cock of player] shaft against the wet crack so eagerly presented, making Blue's ass wiggle even more. Moaning eagerly, Blue grinds back against your hips. When you see the details of a wrinkled pucker start to take form from the mass of aquamarine goo, nothing can hold you back, and you ram yourself into your partner's body. Given the suddenness of your thrust, Blue doesn't actually have the time to form any kind of internal structure to take you, meaning that you're just fucking the wet and squishy innards of [PosAdj of Blue Speaker] middle for a couple seconds until [SubjectPro of Blue Speaker] can adjust to give you a more human-like experience.";
+	say "'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' The smiling goo [BlueDesignator] saunters over to one of the many desks in this room, bending over it to present [PosAdj of Blue Speaker] ass in a rather enticing display. Reaching back with both hands to grab the rounded curves of [PosAdj of Blue Speaker] behind, Blue spreads them to show off the cleave of [PosAdj of Blue Speaker] ass, then calls out, 'Come and take me!' Enticed by [PosAdj of Blue Speaker] wanton display, you happily [SelfStripCrotch], then wrap your hand around your [cock of Player] shaft.";
+	say "     'What a nice piece of meat you have there[if Player is not defaultnamed], [name of Player][else], my friend[end if],' Blue says in a yearning tone as [SubjectPro of Blue Speaker] looks over [PosAdj of Blue Speaker] shoulder at you. The Blue Guardian clears their throat, showing some discontent at the thirsty goo [BlueDesignator]'s slutty behavior, but even though Blue falls silent, you're already in the mood for a nice fuck. After a few quick steps forward, you smack your hard, [cock of Player] shaft against the wet crack so eagerly presented, making Blue's ass wiggle even more. Moaning eagerly, Blue grinds back against your hips. When you see the details of a wrinkled pucker start to take form from the mass of aquamarine goo, nothing can hold you back, and you ram yourself into your partner's body. Given the suddenness of your thrust, Blue doesn't actually have the time to form any kind of internal structure to take you, meaning that you're just fucking the wet and squishy innards of [PosAdj of Blue Speaker] middle for a couple seconds until [SubjectPro of Blue Speaker] can adjust to give you a more human-like experience.";
 	WaitLineBreak;
 	say "     The shape of a yielding, yet still quite tight and gripping asshole forms around your hard shaft. It looks odd, but also fascinating, to literally see the cavity inside of Blue's body, extending just far enough to take your deepest thrusts. Your partner is definitely quite resourceful with that malleable body of [PosAdj of Blue Speaker]. Eager sounds come from Blue as [SubjectPro of Blue Speaker] takes your thrusts with obvious joy, and [SubjectPro of Blue Speaker] even wraps [PosAdj of Blue Speaker] arms around your hips to pull you in for deeper thrusts. Ramming into [ObjectPro of Blue Speaker] again and again, you wrap your arms around [ObjectPro of Blue Speaker] from behind to steady yourself, each thrust sending an echo of the impact through Blue's whole body. Your partner releases pleasured moans and gasps throughout, making it clear that [SubjectPro of Blue Speaker]'s enjoying being fucked so roughly.";
 	say "     The pleasure of having what amounts to a completely insatiable cum-slut as a partner drives you to really make the most of the amazing experience. Taking a break from your zealous pounding, you rest your hard length inside of the tight confines of [PosAdj of Blue Speaker] asshole, reveling in the fact that you can actually see just how deep you are inside of [ObjectPro of Blue Speaker]. The undulating pressure sliding over every inch of your manhood drives your pleasure to new heights, and it's not long before a familiar tingle builds in your balls. You pull Blue's upper body tight against your chest to moan into [PosAdj of Blue Speaker] ear that you'll breed [ObjectPro of Blue Speaker] now. Balls slapping wetly against the goo [BlueDesignator]'s rear, you let out a grunt and start to unload into Blue, spurt after spurt of creamy cum blasting into the aquamarine mass of [PosAdj of Blue Speaker] body.";
@@ -390,13 +390,13 @@ to say BlueSex4: [ass fuck for Blue]
 
 to say BlueSex5: [ass fucked by Blue]
 	setmonster "Blue Goo";
-	say "     As you tell Blue that you want to [']donate['] some of your [if player is male]cum[else]fluids[end if] to sustain him and his people, the aquamarine goo person smiles eagerly at you and raises a hand to his chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the valleys and bumps of his flawless abs. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo man starts to kneel down in front of you - only to be stopped by your hand on his arm. His transparent brows rise, and an eager grin spreads over his face as you add that you want him to fuck your [']donation['] out of you, then slide a hand down to his crotch and give the slick length of his cock a squeeze. It throbs against your touch and quickly hardens, coming to stand erect and poking you in the stomach. Enticed by his obvious eagerness, you happily [SelfStripCrotch], then saunter over to one of the empty desks and lay back on it, your ass just at the edge of the table.";
-	say "     'You need it bad, don't you [if player is not defaultnamed], [name of player][else], my friend[end if]?' Blue asks in a yearning tone, walking up to you with his hard cock leading the way. The sound of the Blue Guardian clearing their throat does little to distract the horny man from his target, and he crouches down in front of you, extending a moist, aquamarine-blue tongue to lick along your crack and prepare your hole for entry. ";
-	if player is herm:
+	say "     As you tell Blue that you want to [']donate['] some of your [if Player is male]cum[else]fluids[end if] to sustain him and his people, the aquamarine goo person smiles eagerly at you and raises a hand to his chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the valleys and bumps of his flawless abs. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo man starts to kneel down in front of you - only to be stopped by your hand on his arm. His transparent brows rise, and an eager grin spreads over his face as you add that you want him to fuck your [']donation['] out of you, then slide a hand down to his crotch and give the slick length of his cock a squeeze. It throbs against your touch and quickly hardens, coming to stand erect and poking you in the stomach. Enticed by his obvious eagerness, you happily [SelfStripCrotch], then saunter over to one of the empty desks and lay back on it, your ass just at the edge of the table.";
+	say "     'You need it bad, don't you [if Player is not defaultnamed], [name of Player][else], my friend[end if]?' Blue asks in a yearning tone, walking up to you with his hard cock leading the way. The sound of the Blue Guardian clearing their throat does little to distract the horny man from his target, and he crouches down in front of you, extending a moist, aquamarine-blue tongue to lick along your crack and prepare your hole for entry. ";
+	if Player is herm:
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your pussy and teases its sensitive lips. Then the goo man kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
-	else if player is male:
+	else if Player is male:
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your cock and kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
-	else if player is female:
+	else if Player is female:
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your pussy and teases its sensitive lips. Then the goo man proceeds to push in deeper between them, wiggling his tongue inside of your body and going back and forth between that and lapping at your clit for a while. 'I hope that you're a squirter,' he adds with a naughty grin after eventually pulling away, then gets up to stand between your legs. ";
 	say "Looking down, you see him stroking his long shaft, a transparent hand wrapped around as it slides along his length.";
 	WaitLineBreak;
@@ -405,30 +405,30 @@ to say BlueSex5: [ass fucked by Blue]
 	WaitLineBreak;
 	say "     Blue's stroking hands now move to grip you by the hips, followed by him pulling his slick shaft out of your body. Your ass feels strangely empty for a few moments after the sudden exit of his shaft, its pucker squeezing shut and then opening again as if unsure what it should do now. Then just as it starts to pull tighter for another contraction, Blue's cock is back, hammering into you with a vengeance. His rapid thrust only stops when he's balls-deep inside of you again, hips slamming against your ass. Both transparent, blue arms holding you swell, and his hands grip on tight to prevent you from sliding back on the table's surface. Blue looks at you with an impish grin and says, 'Sorry for the delay. I had to have a little discussion with myself, and Clint convinced all of me that this was the way to go. You like a good hard fuck, right?' It is nothing but a rhetorical question, as the next pull back and hard thrust comes right away, never giving you a second to reply before you groan in lust at the next penetration.";
 	say "     The horny goo man saws his shaft in and out of your body, driving you to new heights with his relentless lovemaking and really making good use of those ridges on his cock. The way that they tug at your hole with every retraction of his cock makes you all tingly inside in a very good way, and you can feel yourself getting quite close to orgasm. As you gasp out a warning to tell Blue this, the blue goo reacts by shifting his left hand to your shoulder so that he can keep a hold of you while his other hand ";
-	if player is herm:
+	if Player is herm:
 		say "wraps itself around your erection and strokes along its length. Having run out of hands, Blue forms a third appendage with a little concentration, this one more vague and tentacle-like since it lies outside of the human shapes that he is used to. It moves to stroke over your pussy, then slides its tip into it, exploring your depths.";
-	else if player is male:
+	else if Player is male:
 		say "wraps itself around your erection and strokes along its length. His fingers are slick and warm against your skin, rubbing you in just the right way to drive you crazy.";
-	else if player is female:
+	else if Player is female:
 		say "strokes over your pussy, then slips in two fingers and rubs your clit with the thumb. His touch is slick and warm against your skin, rubbing you in just the right way to drive you crazy.";
 	WaitLineBreak;
-	say "     Having made his preparations for your impending orgasm, Blue breaks out all of the stops and gets back to fucking you with hard thrusts, rubbing you at the same time. With the [if player is herm]triple[else]double[end if] stimulation, you are soon pushed right over the edge. Sucking in a sharp breath and writhing on the desk, you feel the orgasm crashing over you like a wave. Your gooey partner quickly ";
-	if player is herm:
+	say "     Having made his preparations for your impending orgasm, Blue breaks out all of the stops and gets back to fucking you with hard thrusts, rubbing you at the same time. With the [if Player is herm]triple[else]double[end if] stimulation, you are soon pushed right over the edge. Sucking in a sharp breath and writhing on the desk, you feel the orgasm crashing over you like a wave. Your gooey partner quickly ";
+	if Player is herm:
 		say "clamps his hand over the head of your hard cock and bends the tentacle still deep inside of you to cover your clit too. This is just in time for the first spurts of cum and femcum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky-white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body. Your femcum meanwhile has less distance to go, just up a fairly short tentacle, creating a visible but fairly transparent flow there.";
-	else if player is male:
+	else if Player is male:
 		say "clamps his hand over the head of your hard cock, just in time for the first spurt of cum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body.";
-	else if player is female:
+	else if Player is female:
 		say "clamps his hand even tighter to your crotch, its fingers wriggling inside your pussy to prolong your orgasm and milk you of your femcum. Squirts of it suffuse the appendage of your nonhuman partner, then are redirected to flow up along the very center of Blue's forearm, making their way towards the main mass of his body.";
-	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if player is herm]seed and femcum[else if player is male]seed[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
+	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if Player is herm]seed and femcum[else if Player is male]seed[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
 	WaitLineBreak;
-	say "     Between your own climax and the sudden anal invasion of what feels like quite a lot of Blue's goo, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if player is herm]seed and femcum[else if player is male]seed[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face, and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[mimpregchance]";
-	say "     'Thank you, this was even more fun than I had expected, and I almost feel giddy from what you gave me. I really must share this with the rest of the Blue!' With that said, Blue pulls out of your ass [if player is female]and pussy[end if], then thumps his chest in a kind of salute and struts over to the goo-filled office, walking right into the aquamarine mass and merging with it. Satisfied now that you've gotten your rocks off and helped the goo people, you watch Blue join with the collective of his people. Streaks of more vibrant blue start diffusing through the large mass of blue goo in the office, spreading the nourishment of your seed throughout their unity. You can't help but grin as you [SelfDressCrotch], then stroll to the entrance of the goo refuge. The Blue Guardian lets you pass without comment, apparently distracted by his desire to join the others for their communion.";
+	say "     Between your own climax and the sudden anal invasion of what feels like quite a lot of Blue's goo, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if Player is herm]seed and femcum[else if Player is male]seed[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face, and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[mimpregchance]";
+	say "     'Thank you, this was even more fun than I had expected, and I almost feel giddy from what you gave me. I really must share this with the rest of the Blue!' With that said, Blue pulls out of your ass [if Player is female]and pussy[end if], then thumps his chest in a kind of salute and struts over to the goo-filled office, walking right into the aquamarine mass and merging with it. Satisfied now that you've gotten your rocks off and helped the goo people, you watch Blue join with the collective of his people. Streaks of more vibrant blue start diffusing through the large mass of blue goo in the office, spreading the nourishment of your seed throughout their unity. You can't help but grin as you [SelfDressCrotch], then stroll to the entrance of the goo refuge. The Blue Guardian lets you pass without comment, apparently distracted by his desire to join the others for their communion.";
 
 to say BlueSex6: [pussy fucked by Blue]
 	setmonster "Blue Goo";
-	say "     As you tell Blue that you want to [']donate['] some of your [if player is male]cum[else]fluids[end if] to sustain him and his people, the aquamarine goo person smiles eagerly at you and raises a hand to his chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the valleys and bumps of his flawless abs. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo man starts to kneel down in front of you - only to be stopped by your hand on his arm. His transparent brows rise, and an eager grin spreads over his face as you add that you want him to fuck your [']donation['] out of you, then slide a hand down to his crotch and give the slick length of his cock a squeeze. It throbs against your touch and quickly hardens, coming to stand erect and poking you in the stomach. Enticed by his obvious eagerness, you happily [SelfStripCrotch], then saunter over to one of the empty desks and lay back on it, your ass just at the edge of the table.";
-	say "     'You need it bad, don't you [if player is not defaultnamed], [name of player][else], my friend[end if]?' Blue asks in a yearning tone, walking up to you with his hard cock leading the way. The sound of the Blue Guardian clearing their throat does little to distract the horny man from his target, and he crouches down in front of you, extending a moist, aquamarine-blue tongue to lick along the folds of your pussy. ";
-	if player is male: [herm]
+	say "     As you tell Blue that you want to [']donate['] some of your [if Player is male]cum[else]fluids[end if] to sustain him and his people, the aquamarine goo person smiles eagerly at you and raises a hand to his chest. 'I had so hoped that you'd say that. It's so much better fresh from an eager partner,' Blue tells you with a naughty wink, tracing one blue finger over the valleys and bumps of his flawless abs. 'I knew that you didn't just want to cum in a cup and give it to the Blue. You wouldn't have come here just for that.' With that said, the smiling goo man starts to kneel down in front of you - only to be stopped by your hand on his arm. His transparent brows rise, and an eager grin spreads over his face as you add that you want him to fuck your [']donation['] out of you, then slide a hand down to his crotch and give the slick length of his cock a squeeze. It throbs against your touch and quickly hardens, coming to stand erect and poking you in the stomach. Enticed by his obvious eagerness, you happily [SelfStripCrotch], then saunter over to one of the empty desks and lay back on it, your ass just at the edge of the table.";
+	say "     'You need it bad, don't you [if Player is not defaultnamed], [name of Player][else], my friend[end if]?' Blue asks in a yearning tone, walking up to you with his hard cock leading the way. The sound of the Blue Guardian clearing their throat does little to distract the horny man from his target, and he crouches down in front of you, extending a moist, aquamarine-blue tongue to lick along the folds of your pussy. ";
+	if Player is male: [herm]
 		say "Continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your cock and kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
 	else: [female]
 		say "Soon continuing to work his appendage upwards in teasing brushes against your skin, Blue quickly arrives at your cock and kisses his way up along your hard shaft, eventually catching its head between his lips and suckling on it for a little while. 'I can hardly wait to taste your load,' he adds after pulling off of your dick with an intentionally loud pop, then gets up to stand between your legs. ";
@@ -439,35 +439,36 @@ to say BlueSex6: [pussy fucked by Blue]
 	WaitLineBreak;
 	say "     Blue's stroking hands now move to grip you by the hips, followed by him pulling his slick shaft out of your body. Your pussy feels strangely empty for a few moments after the sudden exit of his shaft, gaping open slightly as if to beg him to return. Then just as you start to wonder what is going on, Blue's cock is back, hammering into you with a vengeance. His rapid thrust only stops when he's balls-deep inside of you again, hips slamming against your ass. Both transparent, blue arms holding you swell, and his hands grip on tight to prevent you from sliding back on the table's surface. Blue looks at you with an impish grin and says, 'Sorry for the delay. I had to have a little discussion with myself, and Clint convinced all of me that this was the way to go. You like a good, hard fuck, right?' It is nothing but a rhetorical question, as the next pull back and hard thrust comes right away, never giving you a second to reply before you groan in lust at the next penetration.";
 	say "     The horny goo man saws his shaft in and out of your body, driving you to new heights with his relentless lovemaking and really making good use of those ridges on his cock. The way that they tug at your opening and inner walls with every retraction of his cock makes you all tingly inside in a very good way, and you can feel yourself getting quite close to orgasm. As you gasp out a warning to tell Blue this, the blue goo reacts by shifting his left hand to your shoulder so that he can keep a hold of you while his other hand ";
-	if player is male: [herm]
+	if Player is male: [herm]
 		say "wraps itself around your erection and strokes along its length. His fingers are slick and warm against your skin, rubbing you in just the right way to drive you crazy.";
 	else: [female]
 		say "gets placed on your pussy, rubbing your clit between his fingers. His touch is slick and warm against your skin, stimulating you in just the right way to drive you crazy.";
 	WaitLineBreak;
 	say "     Having made his preparations for your impending orgasm, Blue breaks out all of the stops and gets back to fucking you with hard thrusts, rubbing you at the same time. With the double stimulation, you are soon pushed right over the edge. Sucking in a sharp breath and writhing on the desk, you feel the orgasm crashing over you like a wave. Your gooey partner quickly ";
-	if player is male: [herm]
+	if Player is male: [herm]
 		say "clamps his hand over the head of your hard cock, just in time for the first spurt of cum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky-white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body. Your femcum meanwhile has less distance to go, soaking into his cock and wandering up along its length, creating a visible but fairly transparent flow there.";
 	else: [female]
 		say "clamps his hand even tighter to your crotch, its fingers wriggling against your clit to prolong your orgasm and milk you of your femcum. Squirts of it soak into the length of his cock, then are redirected to flow up along the mid-line of its shaft, making their way towards the main mass of his body.";
-	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if player is herm]seed and femcum[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
+	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if Player is herm]seed and femcum[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
 	WaitLineBreak;
-	say "     Between your own climax and the sudden invasion of what feels like quite a lot of Blue's goo flowing into your womb, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if player is herm]seed and femcum[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[fimpregchance]";
+	say "     Between your own climax and the sudden invasion of what feels like quite a lot of Blue's goo flowing into your womb, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if Player is herm]seed and femcum[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[fimpregchance]";
 	say "     'Thank you, this was even more fun than I had expected, and I almost feel giddy from what you gave me. I really must share this with the rest of the Blue!' With that said, Blue pulls out of your and pussy, then thumps his chest in a kind of salute and struts over to the goo-filled office, walking right into the aquamarine mass and merging with it. Satisfied now that you've gotten your rocks off and helped the goo people, you watch Blue join with the collective of his people. Streaks of more vibrant blue start diffusing through the large mass of blue goo in the office, spreading the nourishment of your seed throughout their unity. You can't help but grin as you [SelfDressCrotch], then stroll to the entrance of the goo refuge. The Blue Guardian lets you pass without comment, apparently distracted by his desire to join the others for their communion.";
 	infect "Blue Goo";
 
 Section 3 - Infection
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Blue Goo";
+	now NewTypeInfection entry is false;
+	now Name entry is "Blue Goo";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "<Noncombat Infection>";
 	now defeated entry is "<Noncombat Infection>";
@@ -482,7 +483,7 @@ When Play begins:
 	now body change entry is "it changes to flow into a humanoid shape. Strangely, the feeling of being 'squishy' inside never really goes away even after your current form stabilizes";
 	now skin change entry is "a ripple of tingles rushes through your entire body as you sink towards the ground, then rise again, wobbling along the way. A glance at a hand shows that you can see right through your now jello-like flesh, aquamarine-blue in color";
 	now ass change entry is "you get an odd feeling, and it takes on normal human shape";
-	now cock change entry is "your [cock size desc of player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done";
+	now cock change entry is "your [cock size desc of Player] dick gives a powerful lurch as strange fluid rushes up into it, making it swell a moment before the former color drains, leaving the new, somewhat flexible, gelatin behind. A squeeze confirms that it is still quite solid enough to get the job done";
 	now str entry is 8;
 	now dex entry is 10; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -494,15 +495,15 @@ When Play begins:
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
-	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now cunt length entry is 20; [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now cunt width entry is 20; [ Width in inches of female sex the infection will try to give a player. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12; [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 20; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 20; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -511,10 +512,111 @@ When Play begins:
 	now type entry is "gelatinous"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own] [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Blue ends here.

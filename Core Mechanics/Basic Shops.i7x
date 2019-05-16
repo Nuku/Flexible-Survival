@@ -20,10 +20,10 @@ Carry out BuyingAction:
 			say "That doesn't seem to be sold here.";
 			continue the action;
 		if price entry > freecred:
-			say "You can't afford the [name entry], it costs [price entry] freecred.";
+			say "You can't afford the [Name entry], it costs [price entry] freecred.";
 			continue the action;
-		say "You purchase [name entry] for [price entry] creds.";
-		add name entry to invent of player;
+		say "You purchase [Name entry] for [price entry] creds.";
+		add Name entry to invent of Player;
 		decrease freecred by price entry;
 	else if price sign is visible: [Zephyr store in Zephyr Lobby; see file Zephyr Inc.i7x]
 		if the noun is an object listed in the table of zephyr goods:
@@ -32,15 +32,15 @@ Carry out BuyingAction:
 			say "That doesn't seem to be sold here.";
 			continue the action;
 		if price entry > freecred:
-			say "You can't afford the [name entry], it costs [price entry] freecred.";
+			say "You can't afford the [Name entry], it costs [price entry] freecred.";
 			continue the action;
-		say "You purchase [name entry] for [price entry] creds.";
-		if name entry is "Zephyr Personal Communicator":
+		say "You purchase [Name entry] for [price entry] creds.";
+		if Name entry is "Zephyr Personal Communicator":
 			now carried of zpc is carried of zpc + 1;
 		else:
-			add name entry to invent of player;
-		if name entry is "nanite collector", now nanitemeter is 2;
-		if name entry is "pepperspray", increase pepped by 1;
+			add Name entry to invent of Player;
+		if Name entry is "nanite collector", now nanitemeter is 2;
+		if Name entry is "pepperspray", increase pepped by 1;
 		decrease freecred by price entry;
 	else if Darius's Inventory is visible and Darius is visible: [Darius illegal trade]
 		if the noun is an object listed in the table of Darius Inventory:
@@ -49,10 +49,10 @@ Carry out BuyingAction:
 			say "That doesn't seem to be sold here.";
 			continue the action;
 		if price entry > carried of food:
-			say "You can't afford the [name entry], it costs [price entry] food.";
+			say "You can't afford the [Name entry], it costs [price entry] food.";
 			continue the action;
-		say "You purchase [name entry] for [price entry] food.";
-		add name entry to invent of player;
+		say "You purchase [Name entry] for [price entry] food.";
+		add Name entry to invent of Player;
 		decrease carried of food by price entry;
 
 Basic Shops ends here.

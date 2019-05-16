@@ -15,7 +15,7 @@ Instead of Resolving a Reaching the College:
 	say "     Your meandering path through the city brings you into some new territory. What was previously blockaded by monster activity and traffic accidents has been circumvented by following a few footpaths you'd missed earlier. Exiting from one of these, you step into an area that's a little less densely packed and has some patches of green between the buildings. Just as you're recogn-[line break]";
 	say "     'Think fast!' comes the yell from one side and you turn to see a brown blur flying at you!";
 	WaitLineBreak;
-	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
+	let bonus be (( perception of Player + dexterity of Player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 20:
@@ -38,9 +38,9 @@ Instead of Resolving a Reaching the College:
 		say "[bold type]Your score decreases by 10![roman type][line break]";
 		decrease score by 10;
 		say "[bold type]Your sanity decreases by 5![roman type][line break]";
-		decrease humanity of player by 5;
+		SanLoss 5;
 		say "[bold type]You are reduced to 1 HP![roman type][line break]";
-		now HP of player is 1;
+		now HP of Player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again.";
 		now Resolution of Reaching the College is 3; [fumble]
 	say "     'Are you alright?' A male voice asks from behind you as you recover from what you've just encountered. Turning around you spot two people of varying heights with one much taller than the other. The first person is a male dressed in only sandals, a red cloak, a red-plumed helmet, and an armored jock-strap. Sheathed on his hip and back is a sword and shield, clearly showing he means business at least in protecting the area. To his right is a very tall woman with light green skin and blonde hair wearing a crop top that showed off her ample breasts in a modest way and a skirt that was slightly raised, hinting at something under it. You nod your head, saying that you're perfectly fine and ask what place you've stumbled upon. With a friendly smile not befitting their physique, the green-skinned one starts speaking.";

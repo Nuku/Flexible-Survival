@@ -66,9 +66,9 @@ Instead of resolving a Policeman:
 		WaitLineBreak;
 		say "     'Well, it sounds like you've been able to take care of yourself fairly well to this point. I've been continuin['] my patrols, but this city's pretty much gone to the dogs. Quite literally with a lot of people. I been tryin['] to keep some order by knockin['] a few heads. Takin['] a few liberties, as well,' he adds with a smug smirk.";
 		if scenario is "Researcher":
-			say "     'Now, since you seem like a competent [if player is female]gal[else]guy[end if], I think I can see myself bein['] able to overlook your...' he taps his nightstick of your backpack, '...sample gatherin[']. That is, providin['] you'd be willin['] to do your civic duty and help a police officer.'";
+			say "     'Now, since you seem like a competent [if Player is female]gal[else]guy[end if], I think I can see myself bein['] able to overlook your...' he taps his nightstick of your backpack, '...sample gatherin[']. That is, providin['] you'd be willin['] to do your civic duty and help a police officer.'";
 		else:
-			say "     'Now, since you seem like a competent [if player is female]gal[else]guy[end if], I think I can see myself bein['] able to overlook your...' he taps his nightstick of your backpack, '...supply gatherin[']. That is, providin['] you'd be willin['] to do your civic duty and help a police officer.'";
+			say "     'Now, since you seem like a competent [if Player is female]gal[else]guy[end if], I think I can see myself bein['] able to overlook your...' he taps his nightstick of your backpack, '...supply gatherin[']. That is, providin['] you'd be willin['] to do your civic duty and help a police officer.'";
 		WaitLineBreak;
 		say "     'There's this small pack of tigresses that have been showing up in the seedy part of town, peddling themselves and infecting others[if stiffedpayment is 1]. I can smell their scent on you. It don't pay to try to stiff a whore on her pay, my friend. Perhaps you'd like a little payback?'[line break][else if tigresswinner is 1]. I can smell some of their scent on you. It seems like you've already put one in hir place.'[else if tigressfucked is 1]. I can smell some of their scent on you. It seems shi's had hir way with you. Perhaps you'd like a little payback?'[line break][else if tigressclient is 1]. I can smell their scent on you. It seems you've already sampled their services. You won't need to worry about [']em taking your stuff if you'd be willin['] to help me out.'[else].'[end if]";
 		say "     'I want to, you know, get [']em under control before things get out of hand. They seem to be based in a cheap motel in that part of town. I could use a bit more muscle to deal with [']em. If I'm goin['] to clear the place out, I need to be able to get in and lay down the law. If you can get some more keys for their motel, I'll be able to deal with [']em properly. I want a handful more so I can access all the rooms and get the whole lot of [']em.'";
@@ -78,7 +78,7 @@ Instead of resolving a Policeman:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:			[quest becomes active]
+		if Player consents:			[quest becomes active]
 			LineBreak;
 			now mqstatus is 1;
 			say "     'Good, I figured you were right for the job. Those damn pussies are on the lookout for me now, so I need someone else to help me get the rest of those keys.' He smacks his broad chest. 'I may be in much better shape now, but they're still faster than me. I want you to bring me about five more, just to make sure we've got all the rooms. You get your ass to the Red Light District, get those keys and then report back to me, good ole Sgt Marks. Then I can lay down the law.'";
@@ -93,17 +93,17 @@ Instead of resolving a Policeman:
 			if dice plus bonus > 16:
 				say "     You narrowly dodge out of the way of the vicious blow.";
 			else:
-				decrease HP of player by 15;
+				decrease HP of Player by 15;
 				say "     You are struck firmly across the jaw by the hard club. (15 dmg)";
 			say "[line break]     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter? I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
 			wait for any key;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Tiger Cop":
-					now monster is y;
+				if Name entry is "Tiger Cop":
+					now MonsterID is y;
 					break;
 			now area entry is "High"; [activates Tiger Cop as a wandering monster]
-			if HP of player < 1:
+			if HP of Player < 1:
 				say "     That blow was too much for you and you are sent sprawling to the ground, unable to retaliate or flee.";
 				say "[losetotigercop]";
 			else:
@@ -130,7 +130,7 @@ to say motelkeycheck:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
+		if Player consents:
 			say "[line break][givekeys]";
 		else:
 			LineBreak;
@@ -156,7 +156,7 @@ to say givekeys:
 	now mqcountdown is 0;
 	now Policeman is resolved;
 	increase score by 40;
-	increase XP of player by 10;
+	increase XP of Player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
 	increase carried of nightstick by 1;
@@ -211,7 +211,7 @@ Instead of conversing the Sgt Marks:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		now mqstatus is 3;
 		now Sgt Marks is nowhere;
 		say "[line break][motelquest]";
@@ -242,10 +242,10 @@ to say motelquest:
 	say "     Coming up to the motel, you can see that it is an old, run down place. Well past its prime and never much of a looker, it clearly got by on business by the hour. Given the madness in the city, you can easily see one of the prostitutes there turning into a tigress and infecting anyone else unfortunate enough to be there.";
 	say "     From your vantage point in a nearby vacant building, the cop goes over his plan. The motel has two stories, with a metal staircase leading up to the second level rooms. There are just 6 rooms to a floor, so you'll both be able to get through them quickly. He tells you that, once you've taken out the first sentry in the parking lot, he'll go through the ground floor rooms and you'll do the upstairs set. That way neither of you will be taken down by the other half banding together.";
 	WaitLineBreak;
-	if "Stealthy" is listed in feats of player:
+	if "Stealthy" is listed in feats of Player:
 		say "     You tell him that you can jump the first guard by surprise if he'll help deal with hir after that. Using your Stealth abilities, you stick to the shadows and go at the building from behind. You slink with your back to the wall until you move around behind the tigress. Pouncing hir, you cover hir muzzle to keep hir quiet while the cop rushes out to help you subdue hir. Once shi's out cold, you stash hir around the corner and he motions for you to head up the stairs.";
 		say "     Bonus: 20 pts and 10 XP awarded.";
-		increase XP of player by 10;
+		increase XP of Player by 10;
 		increase score by 20;
 	else:
 		say "     You head over to the tigress, acting as if you intend to be a client until you get close to hir, then engage hir in combat. While you fight the tigress, you can see Sergeant Marks head to the nearest room on the ground floor.";
@@ -324,97 +324,97 @@ Section 4 - Lost at Motel
 
 to say mqlostfight:
 	now mqstatus is 5;
-	say "     That last blow sends you reeling and, with a call out, you are pounced by a pair of tigresses, who tear off your clothes. You are dragged in front of the large tigress matron in charge of the felines. Shi slams you down onto the bed and immediately starts pounding hir large cock into your [if player is female]pussy[else]ass[end if]. You try to resist, but are too weakened and end up quickly succumbing to your arousal. Your mind starts to give, feeling the lustful urge to enjoy the life of sex these felines live.";
+	say "     That last blow sends you reeling and, with a call out, you are pounced by a pair of tigresses, who tear off your clothes. You are dragged in front of the large tigress matron in charge of the felines. Shi slams you down onto the bed and immediately starts pounding hir large cock into your [if Player is female]pussy[else]ass[end if]. You try to resist, but are too weakened and end up quickly succumbing to your arousal. Your mind starts to give, feeling the lustful urge to enjoy the life of sex these felines live.";
 	WaitLineBreak;
 	say "     There is some commotion at the door which you hardly notice before you feel a painful shock run through you as the matron stiffens atop you. Shi is pushed aside by the cop, who smiles down at you. You start to get up, drawn between thanking him for the rescue and lusting for your hero. His pants are open and his stiff rod is slick with cum and juices, drawing your lustful gaze to it as he holsters his stun gun. From the sticky juices coating his meat, it seems he's already shown a few of them who's in charge.";
 	say "     'I knew you'd make a fine distraction for [']em,' he chuckles. He pushes you down overtop of the stunned matron. Grabbing your ass, he slowly sinks his cock into you, making you moan in satisfaction at being filled once again. He thrusts several times before withdrawing and pushing his thick meat into the tigress below you, who has started to come of out of hir daze. Hir hard shaft is pressed between you both as the cop alternates fucking each of you, turning you both into sexy feline whores.";
-	say "     Around you, the other tigresses fawn over the tiger cop, their new master, while pleasuring themselves. When he's finally cum in the ex-matron, he switches to pounding you exclusively. While that hard, feline meat pounds into you, you lap his seed from the new tigress hooker and suck hir cock, getting a hot load in both your mouth and your [if player is female]pussy[else]ass[end if].";
+	say "     Around you, the other tigresses fawn over the tiger cop, their new master, while pleasuring themselves. When he's finally cum in the ex-matron, he switches to pounding you exclusively. While that hard, feline meat pounds into you, you lap his seed from the new tigress hooker and suck hir cock, getting a hot load in both your mouth and your [if Player is female]pussy[else]ass[end if].";
 	say "     Through the night this orgy continues, always welcoming any returning girls in kind. Your new master fucks the horny felines over and over to assert his dominance while you and the other tigresses play with each other while awaiting your next turn with him. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
 	WaitLineBreak;
 	say "[totalTH]"; [systematically change all body parts and names to Tigress Hooker, with gender exclusions for feats.]
 	say "[THpostchange]";
 	decrease score by 25;
-	now humanity of player is 0;
+	now humanity of Player is 0;
 	follow the turnpass rule;
 	end the story saying "You become another whore for the corrupt cop.";
 	now battleground is "void";
 
 
 to say totalTH:
-	if libido of player < 70:
-		now libido of player is 70;
+	if Libido of Player < 70:
+		now Libido of Player is 70;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
 		choose row y in Table of Random Critters;
-		if name entry is "Tigress Hooker":
-			now monster is y;
+		if Name entry is "Tigress Hooker":
+			now MonsterID is y;
 			break;
-	now tailname of player is "Tigress Hooker";
-	now facename of player is "Tigress Hooker";
-	now skinname of player is "Tigress Hooker";
-	now bodyname of player is "Tigress Hooker";
-	now cockname of player is "Tigress Hooker";
+	now tailname of Player is "Tigress Hooker";
+	now facename of Player is "Tigress Hooker";
+	now skinname of Player is "Tigress Hooker";
+	now bodyname of Player is "Tigress Hooker";
+	now cockname of Player is "Tigress Hooker";
 	attributeinfect;
-	now tail of player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
-	now face of player is face entry;
-	now skin of player is skin entry;
-	now body of player is body entry;
-	now cock of player is cock entry;
-	if "Male Preferred" is listed in feats of player:
+	now tail of Player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
+	now face of Player is face entry;
+	now skin of Player is skin entry;
+	now body of Player is body entry;
+	now cock of Player is cock entry;
+	if "Male Preferred" is listed in feats of Player:
 [		say "(Male Preferred, locked results)";]
-		if player is not male:			[Minimum of TH standard or greater]
-			now cocks of player is 1;
-		if cock length of player < 9:
-			now cock length of player is 9;
-		if cock width of player < 5:
-			now cock width of player is 5;
-	else if "Female Preferred" is listed in feats of player:
+		if Player is not male:			[Minimum of TH standard or greater]
+			now Cock Count of Player is 1;
+		if Cock Length of Player < 9:
+			now Cock Length of Player is 9;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
+	else if "Female Preferred" is listed in feats of Player:
 [		say "(Female Preferred, locked results)";]
-		if player is not female:
-			now cunts of player is 1;
-		if cunt length of player < 12:
-			now cunt length of player is 12;
-		if cunt width of player < 4:
-			now cunt width of player is 4;
-		now breasts of player is 2;
-		if breast size of player < 4:
-			now breast size of player is 4;
-	else if "One Way" is listed in feats of player:
+		if Player is not female:
+			now Cunt Count of Player is 1;
+		if Cunt Depth of Player < 12:
+			now Cunt Depth of Player is 12;
+		if Cunt Tightness of Player < 4:
+			now Cunt Tightness of Player is 4;
+		now Nipple Count of Player is 2;
+		if Breast Size of Player < 4:
+			now Breast Size of Player is 4;
+	else if "One Way" is listed in feats of Player:
 [		say "(One Way, locked results)";]
-		if player is not male:			[Minimum of TH standard or greater]
-			now cocks of player is 1;
-		if cock length of player < 9:
-			now cock length of player is 9;
-		if cock width of player < 5:
-			now cock width of player is 5;
-		if player is not female:
-			now cunts of player is 1;
-		if cunt length of player < 12:
-			now cunt length of player is 12;
-		if cunt length of player < 4:
-			now cunt width of player is 4;
-		if breasts of player < 2:
-			now breasts of player is 2;
-		if breast size of player < 4:
-			now breast size of player is 4;
+		if Player is not male:			[Minimum of TH standard or greater]
+			now Cock Count of Player is 1;
+		if Cock Length of Player < 9:
+			now Cock Length of Player is 9;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
+		if Player is not female:
+			now Cunt Count of Player is 1;
+		if Cunt Depth of Player < 12:
+			now Cunt Depth of Player is 12;
+		if Cunt Depth of Player < 4:
+			now Cunt Tightness of Player is 4;
+		if Nipple Count of Player < 2:
+			now Nipple Count of Player is 2;
+		if Breast Size of Player < 4:
+			now Breast Size of Player is 4;
 	else:
-		now cunts of player is 1;
-		now cocks of player is 1;
-		now breasts of player is 2;
-		if cock length of player < 9:			[Minimum of TH standard or greater]
-			now cock length of player is 9;
-		if cock width of player < 5:
-			now cock width of player is 5;
-		if cunt length of player < 12:
-			now cunt length of player is 12;
-		if cunt length of player < 4:
-			now cunt width of player is 4;
-		if breast size of player < 4:
-			now breast size of player is 4;
+		now Cunt Count of Player is 1;
+		now Cock Count of Player is 1;
+		now Nipple Count of Player is 2;
+		if Cock Length of Player < 9:			[Minimum of TH standard or greater]
+			now Cock Length of Player is 9;
+		if Ball Size of Player < 5:
+			now Ball Size of Player is 5;
+		if Cunt Depth of Player < 12:
+			now Cunt Depth of Player is 12;
+		if Cunt Depth of Player < 4:
+			now Cunt Tightness of Player is 4;
+		if Breast Size of Player < 4:
+			now Breast Size of Player is 4;
 
 to say THpostchange:
-	if player is herm:		[herm]
+	if Player is herm:		[herm]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress herm like the others. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy and throbbing cock ache with a need to be played with, but for a price.";
-	else if player is male:				[male]
+	else if Player is male:				[male]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress femme. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your throbbing cock aches with a need to be played with, but for a price.";
 	else:								[female]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a sexy tigress femme. You are a raven-haired beauty with white fur and dark stripes. Your scent, which started like exotic perfume, fades to the cheap and tawdry one. Your wet pussy aches with a need to be played with, but for a price.";
@@ -425,7 +425,7 @@ Section 5 - Won at Motel
 
 to say mqsuccess:
 	now mqstatus is 50;
-	say "     With their matron beaten, the tigresses all look at you expectantly. The fallen tigress, and soon the others as well, start mewling and displaying themselves for the attention of the strong [if player is herm]herm[else if player is male]male[else]female[end if] who has beaten them.";
+	say "     With their matron beaten, the tigresses all look at you expectantly. The fallen tigress, and soon the others as well, start mewling and displaying themselves for the attention of the strong [if Player is herm]herm[else if Player is male]male[else]female[end if] who has beaten them.";
 	say "     As you eye all the lusty felines before you, the cop comes in, dragging another pair of felines in by the scruff while the others he's brought wait submissively by the door. His pants are open and his stiff rod is slick with cum and juices. It seems he's already shown a few of them who's in charge.";
 	say "     'Good work, deputy,' he chuckles as he pushes the two tigresses onto some of the others. He steps up to the deposed matron, intent on having his way with hir.";
 	WaitLineBreak;
@@ -440,12 +440,12 @@ to say mqsuccess:
 	now battleground is "void";
 
 to say MQvictory:						[Victory]
-	if player is herm:		[herm]
+	if Player is herm:		[herm]
 		say "     You set yourself on a cute pair of tigresses, pounding one while the other fingerfucks your pussy. You motion for another pair to tend to your breasts with those rough tongues of theirs. Eager to please their new masters, they work extra hard, giving you a wonderfully long and pleasurable fuck. While you're pounding away, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press hir to the wall and pound into hir tight cunt. Hir inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let hir take control that way, you pull out of hir and sink into hir tailhole. Shi mrowls in surprise and cums heavily onto the wall before you fill hir butt with your seed and move on to the next one.";
 		say "     You push your next tigress to lie back on the bed and you straddle hir cock, taking it deep inside you. You ride hir hard and fast while stroking both yourself and another feline's cock to cum all over your current playmate. Your fast pace makes hir cum with a loud mrowl of delight, filling you with hir hot cum.";
 		say "     Through the night this orgy continues, always welcoming any returning girls in kind. You and Marks fuck them over and over to assert your dominance. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
-	else if player is male	:			[male]
+	else if Player is male	:			[male]
 		say "     You set yourself on a cute pair of tigresses, pounding one while the other sucks your balls. Eager to please their new masters, they work extra hard, giving you a wonderfully long and pleasurable fuck. While you're pounding away, you're treated to the show of watching the cop screwing the matron hard and fast while several of the other girls fawn over both of them. As you watch, the ex-matron quickly becomes another small, mewling tigress like the others.";
 		say "     When you're done with your first pair, you push them aside and pull another up from the bed. You press hir to the wall and pound into hir tight cunt. Hir inner walls grip and squeeze around you like a pro, building you back to climax quickly. Not wanting to let hir take control that way, you pull out of hir and sink into hir tailhole. Shi mrowls in surprise and cums heavily onto the wall before you fill hir butt with your seed and move on to the next one. Shi is made to mate with another tigress on the bed beneath hir, driving your cock into the middle one and forcing hir to thrust into the one below.";
 		say "     Through the night this orgy continues, always welcoming any returning girls in kind. You and Marks fuck them over and over to assert your dominance. Somehow you both seem to have boundless stamina that night, fueled by your lust and ignited by your infection.";
@@ -456,83 +456,83 @@ to say MQvictory:						[Victory]
 
 to say BTchangeover:
 	[systematically change all body parts and names to Big Tiger / Big Tigress, with gender exclusions for feats.]
-	if libido of player < 50:
-		now libido of player is 50;
-	if "Female Preferred" is listed in feats of player:
+	if Libido of Player < 50:
+		now Libido of Player is 50;
+	if "Female Preferred" is listed in feats of Player:
 		[if multi-cock, reduce to 1. Cannot become less female.]
-		if cocks of player > 1:
-			now cocks of player is 1;
-	else if "One Way" is listed in feats of player:
+		if Cock Count of Player > 1:
+			now Cock Count of Player is 1;
+	else if "One Way" is listed in feats of Player:
 		[player can't become less female, but can increase in maleness]
-		if player is not male:
-			now cocks of player is 1;
-		if cock length of player < 12:
-			now cock length of player is 12;
-		if cock width of player < 6:
-			now cock width of player is 6;
-	else if "Male Preferred" is listed in feats of player:
+		if Player is not male:
+			now Cock Count of Player is 1;
+		if Cock Length of Player < 12:
+			now Cock Length of Player is 12;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
+	else if "Male Preferred" is listed in feats of Player:
 		[Player can't diminish in maleness. Pussy, if any is eliminated]
-		if player is not male:
-			now cocks of player is 1;
-		if cock length of player < 12:
-			now cock length of player is 12;
-		if cock width of player < 6:
-			now cock width of player is 6;
-		if player is female:
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-			now breasts of player is 0;
-			now breast size of player is 0;
+		if Player is not male:
+			now Cock Count of Player is 1;
+		if Cock Length of Player < 12:
+			now Cock Length of Player is 12;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
+		if Player is female:
+			now Cunt Count of Player is 0;
+			now Cunt Depth of Player is 0;
+			now Cunt Tightness of Player is 0;
+			now Nipple Count of Player is 0;
+			now Breast Size of Player is 0;
 	else:
 		[Player freely becomes pure male]
-		now cocks of player is 1;
-		if cock length of player < 12:
-			now cock length of player is 12;
-		if cock width of player < 6:
-			now cock width of player is 6;
-		if player is female:
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-			now breasts of player is 0;
-			now breast size of player is 0;
-	if player is female:
-		now tailname of player is "Big Tigress";
-		now facename of player is "Big Tigress";
-		now skinname of player is "Big Tigress";
-		now bodyname of player is "Big Tigress";
-		now cockname of player is "Big Tigress";
-		now scalevalue of player is 4;
-		now bodydesc of player is "powerful";
-		now bodytype of player is "feline";
-		now SleepRhythm of player is 0;
-		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
-		now face of player is "a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
-		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
-		now body of player is "powerfully built with a feminine flair and feline fluidity of motion. Your body moves sensually with every step, but with hidden power. Your hands are human in shape, but with feline claws, pawpads and fur";
-		now cock of player is "ebon feline";
+		now Cock Count of Player is 1;
+		if Cock Length of Player < 12:
+			now Cock Length of Player is 12;
+		if Ball Size of Player < 6:
+			now Ball Size of Player is 6;
+		if Player is female:
+			now Cunt Count of Player is 0;
+			now Cunt Depth of Player is 0;
+			now Cunt Tightness of Player is 0;
+			now Nipple Count of Player is 0;
+			now Breast Size of Player is 0;
+	if Player is female:
+		now tailname of Player is "Big Tigress";
+		now facename of Player is "Big Tigress";
+		now skinname of Player is "Big Tigress";
+		now bodyname of Player is "Big Tigress";
+		now cockname of Player is "Big Tigress";
+		now scalevalue of Player is 4;
+		now bodydesc of Player is "powerful";
+		now bodytype of Player is "feline";
+		now SleepRhythm of Player is 0;
+		now tail of Player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
+		now face of Player is "a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
+		now skin of Player is "ivory white fur streaked with tiger stripes that covers your";
+		now body of Player is "powerfully built with a feminine flair and feline fluidity of motion. Your body moves sensually with every step, but with hidden power. Your hands are human in shape, but with feline claws, pawpads and fur";
+		now cock of Player is "ebon feline";
 	else:
-		now tailname of player is "Big Tiger";
-		now facename of player is "Big Tiger";
-		now skinname of player is "Big Tiger";
-		now bodyname of player is "Big Tiger";
-		now cockname of player is "Big Tiger";
-		now scalevalue of player is 4;
-		now bodydesc of player is "powerful";
-		now bodytype of player is "feline";
-		now SleepRhythm of player is 0;
-		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
-		now face of player is "a male tiger head with a strong jaw and a predatory gaze. With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
-		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
-		now body of player is "a powerfully built, masculine form. You move with predatory strength and confidence, as well as a feline's smooth grace. Your hands are human in shape, but with feline claws, pawpads and fur";
-		now cock of player is "ebon feline";
+		now tailname of Player is "Big Tiger";
+		now facename of Player is "Big Tiger";
+		now skinname of Player is "Big Tiger";
+		now bodyname of Player is "Big Tiger";
+		now cockname of Player is "Big Tiger";
+		now scalevalue of Player is 4;
+		now bodydesc of Player is "powerful";
+		now bodytype of Player is "feline";
+		now SleepRhythm of Player is 0;
+		now tail of Player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
+		now face of Player is "a male tiger head with a strong jaw and a predatory gaze. With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
+		now skin of Player is "ivory white fur streaked with tiger stripes that covers your";
+		now body of Player is "a powerfully built, masculine form. You move with predatory strength and confidence, as well as a feline's smooth grace. Your hands are human in shape, but with feline claws, pawpads and fur";
+		now cock of Player is "ebon feline";
 
 to say BTpostchange:						[New BT form]
-	if player is herm:		[herm]
+	if Player is herm:		[herm]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a strong, powerful tigress herm. You are muscled, yet voluptuous to keep all these girls in line. With your strength, you can easily pin down any recalcitrant girl and fuck hir or ride hir into lustful obedience as you see fit. Your white fur is like the snow and its stripes like the night. You are much larger now, almost as big as your boss, Marks.";
 		say "     The girls look to you for protection as their guard now while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city.";
-	else if player is male:				[male]
+	else if Player is male:				[male]
 		say "     As the orgy continues, your form changes to best suit your new role with these fine girls and your boss. Your body becomes that of a strong, male tiger. You are muscled and virile to keep all these girls in line. With your strength, you can easily pin down any recalcitrant girl and fuck hir with your hard cock into lustful obedience. Your white fur is like the snow and its stripes like the night. You are much larger now, almost as big as your boss, Marks.";
 		say "     The girls look to you for protection as their guard now while he is out making arrangements for when you will all leave this shabby motel behind and move to greener pastures out of the city.";
 	else:								[female]
@@ -563,7 +563,7 @@ The description of Abandoned Storefront is "     If you're seeing this, somethin
 
 instead of going to Abandoned Storefront:
 	say "     [bold type]Are you ready to go undercover as a whore for Sergeant Marks?[roman type][line break]";
-	if player consents:
+	if Player consents:
 		say "     When you enter the abandoned storefront, the first thing you see is Sergeant Marks leaning back in a chair, his feet propped up on the counter in front of him. He looks up at you, and his bored expression quickly becomes a wild grin. 'If it isn't my favorite whore. Now that you're here, it's time for you to get to work.' He slowly gets to his feet, and takes a few steps closer to you. 'I've got your [if pquest is 1]first[else]next[end if] client in the back. We shouldn't keep [if pquest is 2]them[else]him[end if] waiting. And remember, play along, or it's all for nothing.' He grins, at odds with his words, and [if pquest is 4]looks at you expectantly[else]leads you through a door into another room[end if].";
 		WaitLineBreak;
 		if pquest is 4:
@@ -573,7 +573,7 @@ instead of going to Abandoned Storefront:
 			say "     ([link]Y[as]y[end link]) - Flee";
 			say "     ([link]N[as]n[end link]) - Get to work";
 			LineBreak;
-			if player consents:
+			if Player consents:
 				say "     You turn around and leave the storefront, unwilling to face what lies in the back room, and what would drive you to go back there. Maybe you'll come to terms with this one way or another, but not right now. You ignore Marks calling out to you, and find yourself standing back out in entrance to the Red Light district.";
 			else:
 				say "     You decide that you enjoy being a whore for these gangsters far too much to stop, and head into the back room along with Marks once again, this time with no hesitation.";
@@ -585,14 +585,14 @@ instead of going to Abandoned Storefront:
 
 to say turning tricks:
 	if pquest is 1:
-		say "     When you arrive in the back room, you can clearly tell this is where you'll be working. The entire thing is set up like a scene from a love hotel, something that you realize is more accurate than not. The room seems well prepared for the task of a whore servicing their clients, with an oversized bed, shelves that are clearly packed with various sexual aids, and more besides. You briefly wonder how Sergeant Marks was able to set up this entire thing, but are interrupted by who you assume is going to be your first client. A German Shepherd, though one with an ornate leather jacket, is sitting on the edge of the bed. He seems to perk up as the cop leads you into the room.";
+		say "     When you arrive in the back room, you can clearly tell this is where you'll be working. The entire thing is set up like a scene from a love hotel, something that you realize is more accurate than not. The room seems well prepared for the task of a whore servicing their clients, with an oversized bed, shelves that are clearly packed with various sexual aids, and more besides. You briefly wonder how Sergeant Marks was able to set up this entire thing, but are interrupted by who you assume is going to be your first client. A German shepherd, though one with an ornate leather jacket, is sitting on the edge of the bed. He seems to perk up as the cop leads you into the room.";
 		say "     Before the canine has a chance to speak, Sergeant Marks interjects. 'Here's the whore I was telling you about, pal. They're still a bit new at this, but no need for you to go easy on them just because of that. They're the one who signed up to get fucked, after all.' The tiger cop gives an exaggerated wink to the seated gang member, who responds with a broad grin. His approval is clear by the sight of his shaft starting to harden as he leers at you. 'Now, you two have fun. We can talk after you're finished.' Marks turns to leave the room, quickly swats you on the ass, and then steps out. With him gone, it's now just you and the gang member you're supposed to be a whore for. Steeling yourself for the act, you hope that it'll all be worth it when the cop takes them down.";
 		WaitLineBreak;
 		say "     You try your hardest to suppress your nerves, and to do your best impression of a prostitute. You know that it isn't true, but you have to make sure that this client believes it is. Mentally, you brace yourself, before attempting your best seductive voice, and asking him how he wants to do this. 'I don't have too much time, so we'll keep it simple. Get on your knees and suck my cock, whore.' He leans back a bit further, leaving his almost-hard member easily accessible. You get on your knees in front of him, and prepare to swallow both your pride and his dick. Slowly, you get to work, taking a hold of his shaft in one hand, slowly stroking it to full hardness. Soon enough the canine cock is standing at the ready, mere inches before you. Rather than hesitate any longer, you lean forward and let the tip enter your mouth.";
 		say "     Without prompting, you start to sink deeper onto the canine hardness, slowly starting to bob up and down. Your efforts get results quickly, as the gangster starts very quickly panting and moaning. Emboldened by his pleasure, you start increasing your speed, attempting to add more variety to your technique. His reactions show that your attempts to bring him to a climax are rapidly approaching completion. Finally he gives in, and just as his cock starts throbbing in your mouth, he pulls you off, causing the jets of seed to cover your face instead of fill your mouth. Before you can completely process the change, the criminal lets out a sigh of relief, before standing up, and grinning at you. 'That wasn't half bad, for a fresh whore.' He starts to walk towards the door, his shaft softening, but he pauses right before he leaves. 'By the way, that's a good look for you. You should keep it - consider it a tip.' After everything that happened, it takes you a while to collect yourself, as well as what remains of your dignity.";
 		increase pquest by 1;
 	else if pquest is 2:
-		say "     This time when you are led into the back room, instead of the German Shepherd gang member, there are two new faces. Despite how degrading you know this is going to be, you're feeling distinctly less nervous about acting the part of a whore in the back room. You know it's for a good cause, and even more than that, you have a bit of practice under your belt. Shaking yourself from your thoughts, you look more closely at the new clients you'll be servicing. The first thing you notice is that both of them are wearing ornate jackets, much like that of your previous client, likely some sort of uniform. The first of the two is a bear-man, larger than average, with thick brown fur covering his entire frame. Apart from the jacket, he wears a simple pair of torn shorts, a poorly concealed bulge in the front. The second is much smaller, and seems to be a mall rat, though he looks somehow shiftier than any of the others you've seen. The jacket is his only clothing, leaving his partially hard member visible.";
+		say "     This time when you are led into the back room, instead of the German shepherd gang member, there are two new faces. Despite how degrading you know this is going to be, you're feeling distinctly less nervous about acting the part of a whore in the back room. You know it's for a good cause, and even more than that, you have a bit of practice under your belt. Shaking yourself from your thoughts, you look more closely at the new clients you'll be servicing. The first thing you notice is that both of them are wearing ornate jackets, much like that of your previous client, likely some sort of uniform. The first of the two is a bear-man, larger than average, with thick brown fur covering his entire frame. Apart from the jacket, he wears a simple pair of torn shorts, a poorly concealed bulge in the front. The second is much smaller, and seems to be a mall rat, though he looks somehow shiftier than any of the others you've seen. The jacket is his only clothing, leaving his partially hard member visible.";
 		say "     This time, Sergeant Marks has nothing to say, and simply nods and grins to the two, before leaving you alone with your newest clients. The mall rat smiles wickedly at you, and then gestures to his much larger friend. 'How about you start by taking care of Bruce with your mouth, why don't you? He could really use the relief.' The recently introduced Bruce unzips his strained shorts, revealing that the mall rat is very correct, as below his hardening endowment are a pair of excessively full-looking balls. Despite your reluctance, you get in front of the bear before then getting on your knees, knowing you have to do this job, so that Marks can do his. You glance up and see an expectant look on his face, reminding you of the task at hand.";
 		WaitLineBreak;
 		say "     Wasting no time, you lower your head down to his shaft and begin bobbing up and down, putting your ever-growing oral skills to use. You stay that way for a while, simply working on the ursine member, occasionally using a free hand to massage his large balls as well. However, before you make too much progress on pleasing Bruce, he speaks up. 'Hey, Mikey, no need for you to wait around like that, join in! I don't think this slut minds, do you?' You pull back off his dick, and shake your head. 'See? Now get back there, buddy. And you, maybe focus on my balls a little more, eh?' You do your duty and comply, moving down the shaft, and burying your face in his sack. You lick and suck at them as the mall rat, Mikey, moves around behind you. You feel the tip of his shaft lay across your ass, for a moment, before it slides closer to your entrance. Knowing what's coming, you brace yourself.";
@@ -630,9 +630,9 @@ when play begins:
 
 to say tigercopdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of player > 8, let debit be level of player - 8; [Boss hard mode growth rates]
+	if hardmode is true and level of Player > 8, let debit be level of Player - 8; [Boss hard mode growth rates]
 	now HP entry is 90 + ( debit * 6 );
 	now monsterHP is 90 + ( debit * 6 );
 	now wdam entry is 12 + ( ( 4 * debit ) / 11 );
@@ -646,7 +646,7 @@ to say tigercopdesc:
 to say losetotigercop:
 	if mqstatus is 98:
 		say "     Unable to stand up to the large tiger any longer, he grabs you roughly and shoves you face down onto a mound of rubble. 'You couldn't just do what you were told. The world is filled with punks like you these days. No respect for authority,' he growls as he holds you down with one paw and bares your bottom with the other.";
-		if player is female:
+		if Player is female:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your pussy, making you shiver. He teases you with it briefly, getting you wet despite yourself, before sinking it into you. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching pussy. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
 		else:
 			say "     'Well, I'll teach you a lesson you won't soon forget,' he says as he slides his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of the nightstick at your asshole, making you shiver. He teases you with it briefly and you try your best to relax it before he sinks it into you, using only a little spit for lubrication. He pounds you hard and fast with it, making your body shudder until you finally climax. He sprays his cum across your ass, and then removes the weapon from your aching hole. He picks you up roughly and gives you a hard shove. 'Get your dumb ass out of here. And if I catch you again, you'll get the real thing.'";
@@ -654,15 +654,15 @@ to say losetotigercop:
 		say "     The tiger cop looks like he is about to get rough with you, but seems to get some other idea. 'You know, maybe we got off on the wrong foot here. You may be a disrespectful punk, but I'll give you one more chance to help out an officer of the law, since I have somethin['] that would work a lot better with someone like you. So how about you stay right there and keep your ears open.' Having lost to the cop, you're in no position to do anything but listen to his offer, so you nod as he goes on. 'You see, there's this gang of criminals we've been after for a long time, and it turns out they're still operatin['] out in the city, even after all of this. To make it worse, they're some of the ones who haven't completely lost their minds, so they're as dangerous as ever.'";
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";
-		if player consents:
+		if Player consents:
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
 			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Tiger Cop":
-					now monster is y;
+				if Name entry is "Tiger Cop":
+					now MonsterID is y;
 					break;
 			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
@@ -671,37 +671,37 @@ to say losetotigercop:
 	else:
 		if a random chance of 1 in 3 succeeds and ( player is female or anallevel > 1 ):
 			say "     'It looks like you need another lesson in why you shouldn't mess with me,' he says as he grabs you roughly and shoves you face down onto a mound of rubble. 'Punks like you are nothin['] but trouble. Should've gotten a good, hard spankin['] from your dad to beat some respect into you.' With you pinned down, the tiger holds you down with one paw and bares your ass with the other.";
-			if player is female:
-				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
+			if Player is female:
+				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your pussy, making you shiver. He works it across your folds, sliding it back and forth, getting you wet despite yourself. Shifting its position, he thrusts it into your cunt, making you groan at the sudden, hard intrusion. The tiger cop pounds you hard and fast with it, making your [bodydesc of Player] body shudder until you finally cum. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching pussy.";
 				say "     Wiping the slick rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
 			else:
-				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if player is male and player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of player] body shudder[if player is male and player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
+				say "     He runs his nightstick across your bare bottom and gives a solid slap with it across your rear, making you cry out in surprise and pain. After another stinging slap, he runs his nightstick across your cheek before moving it back. As he grips you tightly, you can feel the cool touch of his nightstick against your asshole, making you shiver. He rubs it against your pucker and you try your best to relax before he drives it into you with only a little spit as lube. You groan at the sudden, hard intrusion as it thrusts into you and starts sliding it back and forth[if Player is male and player is submissive], getting you hard despite yourself[end if]. The tiger cop pounds you hard and fast with it, making your [bodydesc of Player] body shudder[if Player is male and player is submissive] until you finally cum[end if]. Laughing at this, the tiger sprays his seed across your ass before removing the weapon from your aching asshole.";
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
-		if player is female:
+		if Player is female:
 			[puts Tigress Hooker as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Tigress Hooker":
-					now monster is y;
+				if Name entry is "Tigress Hooker":
+					now MonsterID is y;
 					break;
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car. Pressing your face to the dirty hood, he growls in your ear. 'I warned you what would happen if I caught you,' he rumbles. With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
-			say "     You hear him unzip, then there's the feel of a large, hard cock against your bottom. He grinds against you a few times, getting fully hard before sinking it firmly into you. Your [bodydesc of player] body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
+			say "     You hear him unzip, then there's the feel of a large, hard cock against your bottom. He grinds against you a few times, getting fully hard before sinking it firmly into you. Your [bodydesc of Player] body shudders from the sudden intrusion, but he pays your discomfort no mind, only pounding you hard and fast.";
 			say "     You start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your pussy squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your pussy with his sperm.[impregchance]";
 			say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
 		else:
 			let mchance be 4;
-			if player is submissive, increase mchance by 2;
+			if Player is submissive, increase mchance by 2;
 			if anallevel is 3, increase mchance by 2;
-			if player is mpreg_ok, increase mchance by 2;
+			if Player is mpreg_ok, increase mchance by 2;
 			if anallevel is 1, now mchance is 0;
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";
-				if tailname of player is "Tigress Hooker" or tailname of player is "Tiger" or tailname of player is "Tigertaur":
+				if tailname of Player is "Tigress Hooker" or tailname of Player is "Tiger" or tailname of Player is "Tigertaur":
 					say ". He grabs you by your striped tail and raises your rear up. 'Here you've got this sexy tail and no juicy pussy to go with it. It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
 				else:
 					say ". He gives your rear a firm swat and lines up his cock with your rear.";
-				say "     Gripping your cheeks with both paws, claws out and poking into your tender flesh, he drives his feline cock into your [bodydesc of player] body, making you yowl for him. The tiger cop pays your discomfort no mind, only pounding away at you hard and fast. His throbbing member pulses and leaks precum into your abused passage.";
+				say "     Gripping your cheeks with both paws, claws out and poking into your tender flesh, he drives his feline cock into your [bodydesc of Player] body, making you yowl for him. The tiger cop pays your discomfort no mind, only pounding away at you hard and fast. His throbbing member pulses and leaks precum into your abused passage.";
 				say "     As he fucks your ass, you start to moan and grind against him as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you man whore.' Your anus squeezes and clenches around his thick, foot-long member until he finally unleashes his hot seed deep within you, painting your inner walls with his sperm.[mimpregchance]";
 				say "     Finished with you, he pulls his cock from you roughly, wipes it across your rear and shoves you on your way.";
 			else:
@@ -720,15 +720,15 @@ To say beattigercop:
 		say "     With the tiger cop reeling from the fight, you're caught by surprise when he holds his hands out in a gesture of surrender. 'Hey, maybe we got off on the wrong foot here. Maby ewe could still work together, yeah? What do you say about helping out an officer of the law? I have somethin['] that would work a lot better with someone like you.' With you in control of the situation, you see no reason not to at least hear him out. 'You see, there's this gang of criminals we've been after for a long time, and it turns out they're still operatin['] out in the city, even after all of this. To make it worse, they're some of the ones who haven't completely lost their minds, so they're as dangerous as ever.'";
 		say "     'Somebody needs to figure out what they're up to and stop [']em, and that's me. There's no way they'd just let a cop in, so I need to go in undercover, and that means convincin['] them that I'm just their kinda lowlife. They're the kind who deal in everything, drugs, sex, the works, so I'm gonna act like I'm in the same kinds of business. And unlike most of the punks around here, these guys prefer all of their fun to be with willing partners - usually whores, which is where you come in. If you play the part of my whore, we could work our way into their plans, and shut [']em down. You'd be doing a good thing for once, punk. Are you in?'";
 		say "     [bold type]Will you volunteer to go undercover as a whore?[roman type][line break]";
-		if player consents:
+		if Player consents:
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
 			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if name entry is "Tiger Cop":
-					now monster is y;
+				if Name entry is "Tiger Cop":
+					now MonsterID is y;
 					break;
 			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
@@ -750,17 +750,18 @@ To say beattigercop:
 		if tcopfight < 4:
 			increase tcopfight by 1;
 
-Section 9 - Monster Insertion
+Section 9 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Tiger Cop"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Tiger Cop"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
@@ -787,15 +788,15 @@ When Play begins:
 	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere"; [ Location of monster, start nowhere, High if active]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 4; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 4; [ Width of female sex infection will try and give you ]
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 9; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 2; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 12; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 4; [ Width of female sex infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -805,9 +806,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Section 10 - Endings
@@ -815,45 +917,45 @@ Section 10 - Endings
 when play ends:
 	[force auto-change of name. Prevents problems with dirty water, etc... with endings]
 	[Does not resolve issues with children/use of descriptive names during the game, but better than nothing]
-	if bodyname of player is "Tiger Cop":
-		now bodyname of player is "Tigress Hooker";
-	if tailname of player is "Tiger Cop":
-		now tailname of player is "Tigress Hooker";
-	if facename of player is "Tiger Cop":
-		now facename of player is "Tigress Hooker";
-	if skinname of player is "Tiger Cop":
-		now skinname of player is "Tigress Hooker";
-	if cockname of player is "Tiger Cop":
-		now cockname of player is "Tigress Hooker";
+	if bodyname of Player is "Tiger Cop":
+		now bodyname of Player is "Tigress Hooker";
+	if tailname of Player is "Tiger Cop":
+		now tailname of Player is "Tigress Hooker";
+	if facename of Player is "Tiger Cop":
+		now facename of Player is "Tigress Hooker";
+	if skinname of Player is "Tiger Cop":
+		now skinname of Player is "Tigress Hooker";
+	if cockname of Player is "Tiger Cop":
+		now cockname of Player is "Tigress Hooker";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
-		if bodyname of player is "Tigress Hooker":
-			if humanity of player < 10:
+		if bodyname of Player is "Tigress Hooker":
+			if humanity of Player < 10:
 				say "[THendingC]";
 			else:
 				say "[THendingA]";
 	if mqstatus is 99:						[refused the motel key hunt]
-		if humanity of player > 9:				[all survivors get a standard add-on]
+		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
-		if bodyname of player is "Tigress Hooker":
-			if humanity of player < 10:
+		if bodyname of Player is "Tigress Hooker":
+			if humanity of Player < 10:
 				say "[THendingD]";
 			else:
 				say "[THendingA]";
 	if mqstatus is 2:							[gave keys, did not accompany]
-		if humanity of player > 9:				[all survivors get a standard add-on]
+		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
-		if bodyname of player is "Tigress Hooker":
-			if humanity of player < 10:
+		if bodyname of Player is "Tigress Hooker":
+			if humanity of Player < 10:
 				say "[THendingE]";
-			else if tailname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and skinname of player is "Tigress Hooker":			[visibly fully tigress]
+			else if tailname of Player is "Tigress Hooker" and facename of Player is "Tigress Hooker" and skinname of Player is "Tigress Hooker":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
-		if bodyname of player is "Tigress Hooker":
-			if humanity of player < 10:
+		if bodyname of Player is "Tigress Hooker":
+			if humanity of Player < 10:
 				say "[THendingF]";
-			else if tailname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and skinname of player is "Tigress Hooker":			[visibly fully tigress]
+			else if tailname of Player is "Tigress Hooker" and facename of Player is "Tigress Hooker" and skinname of Player is "Tigress Hooker":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";
@@ -868,16 +970,16 @@ to say THending_refusal:
 
 to say THending_helper:
 	say "     Mindful of Sgt Marks['] advise, you have kept your eyes open while searching through the city. You sew a false bottom to your backpack, stowing several thousand dollars in there. You also take a few choice pieces of jewelry, but just what you can wear on your person and could be claimed as being your own. You go for value over volume with them. You add an advanced laptop, finding means to power it long enough to personalize it against a cursory check.";
-	say "     Unable to pass of a pack full of cell phones or other items, you are selective in what you claim as being yours before the military comes through. Even so, you do have to slip a ring here, a few hundred there[if player is female], or shake your caboose[end if] to make sure it goes smoothly. In the end, it certainly doesn't make you rich, but it definitely helps you get your new life on the go.";
+	say "     Unable to pass of a pack full of cell phones or other items, you are selective in what you claim as being yours before the military comes through. Even so, you do have to slip a ring here, a few hundred there[if Player is female], or shake your caboose[end if] to make sure it goes smoothly. In the end, it certainly doesn't make you rich, but it definitely helps you get your new life on the go.";
 	say "     A few weeks after you've cleared from quarantine, you are contacted by Sgt Marks. He lets you know he's got the girls [']well under control['] and invites you to come by in way of thanks for all your help. He has set them up in a private brothel in a new city, protected by some corrupt contacts. You don't ask for details, instead enjoying the company of his girls from time to time, quite discretely.";
 
 to say THendingA:		[standard survive]
 	say "     As the military forces come through, rescuing those they can, they come across you and help you escape the degenerating city. You are very friendly with your rescuers and some soon accept your [']gratitude['] as soon as you are properly treated and declared non-infectious. Enjoying your romp with the soldiers, you flop around with a few of them, repaying them with sex.";
-	say "     Eventually, you grow tired of them and their regimented lifestyles and, after playing with several until you are bored, you move on. You spend your life acting as [if player is female]mistress[else]illicit partner[end if] or paid lover to several wealthy businessmen over the years. It is simply a matter of finding those who are single (or unsatisfied with their wife) and who find your altered looks and ravenous appetite for sex appealing. You seem to have a talent for finding them, spotting the marks as you circulate through society. You entice gifts, clothes, jewelry, even a home and car from them, giving you a life of leisure and sex. Just what a horny feline like you needs.";
+	say "     Eventually, you grow tired of them and their regimented lifestyles and, after playing with several until you are bored, you move on. You spend your life acting as [if Player is female]mistress[else]illicit partner[end if] or paid lover to several wealthy businessmen over the years. It is simply a matter of finding those who are single (or unsatisfied with their wife) and who find your altered looks and ravenous appetite for sex appealing. You seem to have a talent for finding them, spotting the marks as you circulate through society. You entice gifts, clothes, jewelry, even a home and car from them, giving you a life of leisure and sex. Just what a horny feline like you needs.";
 
 to say THendingB:		[visibly pure Tigress Hooker survive w/helper or fled]
-	say "     Once you've cleared the military cordon and are declared non-infectious, you set forth on your plan, inspired to ambition by the tiger you met. You trade on your small fame as the [']bunker survivor['] and carefully embellish your tale to leave out a few [']minor details['] to make you look all the better. Your lovely, pure [if player is female]tigress[else]tiger[end if] form and white fur make you an attractive hero for the media.";
-	say "     You ride the crest of fame well, manipulating it like a lover and use your hyper-sexualized body to start dating a famous [if player is female]actor[else]actress[end if]. You are with them for a time, then move on to others in Hollywood. As a socialite, you are seen with actors, actresses and directors. Your sexy, feline body turns many heads and gets you what you want. You are showered with gifts and fame, along with lots of sex to sate your body's needs. You even get a few small roles in films, which are just another gift to bring you money.";
+	say "     Once you've cleared the military cordon and are declared non-infectious, you set forth on your plan, inspired to ambition by the tiger you met. You trade on your small fame as the [']bunker survivor['] and carefully embellish your tale to leave out a few [']minor details['] to make you look all the better. Your lovely, pure [if Player is female]tigress[else]tiger[end if] form and white fur make you an attractive hero for the media.";
+	say "     You ride the crest of fame well, manipulating it like a lover and use your hyper-sexualized body to start dating a famous [if Player is female]actor[else]actress[end if]. You are with them for a time, then move on to others in Hollywood. As a socialite, you are seen with actors, actresses and directors. Your sexy, feline body turns many heads and gets you what you want. You are showered with gifts and fame, along with lots of sex to sate your body's needs. You even get a few small roles in films, which are just another gift to bring you money.";
 	say "     Later life brings you a quick marriage and a quicker divorce, and long, drawn out alimony. You do a little charity work to advance transformee causes, but only appearances and endorsements to keep your fame up. Certainly your visible presence has made transformees more socially acceptable, though you care little for that, only desiring what it brings to you. You pass from lover to lover, enjoying them for a time until you tire of them and seek a new one to play with.";
 
 to say THendingC:		[standard succumb]
@@ -893,13 +995,13 @@ to say THendingE:		[succumb after helped w/keys]
 	say "     You wander from room to room, as if looking for someone who appears to no longer be there. You drop onto the bed in the deluxe suite at the top, mewling mournfully. Something... someone is missing from your life.";
 	say "     You end up spending your days sleeping at the motel despite how sad it feels, kept there by your instincts and the lingering scents. Your evenings are spent in the fallen city's streets, turning tricks and giving in to your lusts.";
 	say "     One early morning, as you make your way back, you spot a girl duck between two houses. A human girl. Something snaps inside you and you prowl the area, following her in feline silence. When she unlocks the door to the small basement apartment, you are there, pouncing her and bursting in.";
-	say "     You find four largely unchanged women inside. They have small ears or muzzles showing, but little else. Confronted directly by a [if player is male]virile[else]lustful[end if] feline after trying to contain their growing urges for so long, they soon succumb to you. You make fine tigress herms out of all of them and take them back to your motel, finding it a less lonely place now.";
+	say "     You find four largely unchanged women inside. They have small ears or muzzles showing, but little else. Confronted directly by a [if Player is male]virile[else]lustful[end if] feline after trying to contain their growing urges for so long, they soon succumb to you. You make fine tigress herms out of all of them and take them back to your motel, finding it a less lonely place now.";
 	say "     With their help, a few of those soldiers are lured in and soon you have a bustling motel of playful kitties to serve you. As you add to your harem, you grow larger, feeling contented in your new role as their matron. You have filled that empty feeling within yourself by taking the place of the one you longed for.";
 
 to say THendingF:		[succumb after fleeing]
 	say "     Surrendering to your new desires, you are drawn back to familiar streets and come to a motel. You aren't sure why it's familiar, but it feels like you should be here. The scent of other felines, tigresses at that, only reinforce this feeling. Spotted by the herm tigress on watch, shi takes your paw and leads you upstairs to where the matron - your matron - is. Shi has another tigress with hir, who shi's just finished filling.";
-	say "     There is something familiar about hir as well. 'That's [if player is herm]hir[else if player is female]her[else]him[end if], matron Jackie,' shi exclaims ecstatically. 'The one I told you about. Oh, [if player is herm]shi[else if player is female]she[else]he[end if][']s here. I'm so happy.' Shi takes you in hir arms, purring happily as shi nuzzles you. Hir hard cock presses against your body. Shi tells you how happy shi is to see you and how nice it is you've come to join hir. Shi loves it here so much, and so will you.";
-	if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
+	say "     There is something familiar about hir as well. 'That's [if Player is herm]hir[else if Player is female]her[else]him[end if], matron Jackie,' shi exclaims ecstatically. 'The one I told you about. Oh, [if Player is herm]shi[else if Player is female]she[else]he[end if][']s here. I'm so happy.' Shi takes you in hir arms, purring happily as shi nuzzles you. Hir hard cock presses against your body. Shi tells you how happy shi is to see you and how nice it is you've come to join hir. Shi loves it here so much, and so will you.";
+	if Player is female and "Sterile" is not listed in feats of Player:	[BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among hir girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize hir girls, you have both been reduced to hir special slaves, to be fucked whenever shi wants. In time, you both grow heavy with your matron's cubs, breeding more sexy tigresses.";
 	else:											[NON-BREEDABLE]
 		say "     Watching you both snuggle, the matron grows hard again and mounts you, welcoming you among hir girls. You and the lovely Miss Marks remain a couple of playmates, eager to please one another and your matron. Once a pair who tried to seize hir girls, you have both been reduced to hir special slaves, to be fucked whenever shi wants.";
@@ -907,19 +1009,19 @@ to say THendingF:		[succumb after fleeing]
 to say THBadEnd1:		[succumb after failing at motel hunt]
 	say "     When the military starts to move it, your master is ready. You have trouble following everything that is going on, but you are all kept together. You all follow his orders as best you can. He was quite stern about it, so you all obey, restraining your urges when others are examining you. Once you've all been rendered non-infectious, you are all moved again with the help of several of your master's friends.";
 	say "     You are all moved to a lovely new home in another city, where you live and work as whores in his private club. His harem of tigresses tend to his needs and peddle themselves for his benefit. Always grateful for your assistance, you become a favorite of his and it is a happy life for a slut like yourself. His corrupt contacts keep the law off your backs (except when it's as a bribe to keep a corrupt official happy).";
-	if player is herm:					[HERM PART]
+	if Player is herm:					[HERM PART]
 		say "     As the only white tigress sextoy in the brothel, you are a special item and you get a set of regulars who come in looking for time with you. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
-	else if player is female:							[FEMALE PART]
+	else if Player is female:							[FEMALE PART]
 		say "     As the only purely female sextoy in the brothel, as well as the only white tigress, you have a special set of regulars who enjoy partaking in your beautiful body. You bring in a lot for your strong, virile master and you are always happy when he rewards your service by fucking your addled brains out. Being his special plaything, he doesn't allow the other tigresses to fuck you, though they are happy to play with you in other ways.";
 	else:											[MALE PART]
 		say "     As the only male sextoy in the brothel, as well as the only white tiger, you have a special set of regulars who enjoy pounding that sweet ass of yours. The feel of their hot cream in you always feels wonderful and there are always a few who come in looking to be filled by the sexy tiger. Which is good for you as your master doesn't allow you to fuck the other whores, though they will happily suck you off or fuck you. And you know your master has a special place for you any time he pounds you and fills your stripey ass.";
 [Non-sterile female/herm addition]
-	if player is female and "Sterile" is not listed in feats of player:	[BREEDABLE]
+	if Player is female and "Sterile" is not listed in feats of Player:	[BREEDABLE]
 		say "     When your heat comes, he takes you out of trade for a few days, exclusively breeding you over and over again until he's sure his seed has taken and you'll bear his cubs. As you rub your growing belly, you smile contentedly, so happy you decided to help him back in the infected city.";
 	if hellHoundLevel > 0:
 		LineBreak;
 		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
-		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
+		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 
 to say THGoodEnd:		[succumb? after succeeding at motel hunt]
 	say "     When the military starts to move it, your boss is ready. He makes contact with a small scout team he'd met during the scouting missions. Being a police officer, they are inclined to believe him when he says he's been able to protect a motel full of tigresses. He leverages a few of his other shady contacts and he soon has you all discretely moved out of the city. Once the treatment to render you all non-infectious is done, your group is simply lost in the paperwork and no one is the wiser.";
@@ -927,6 +1029,6 @@ to say THGoodEnd:		[succumb? after succeeding at motel hunt]
 	if hellHoundLevel > 0:
 		LineBreak;
 		say "     Lost in the lustful decadence of the whorehouse, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
-		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable. It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires. At times, they take particular sport in mocking you. They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
+		say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave tiger to the countless foul hellhounds who guard the gates of Hell. Your experience at the tiger's whorehouse has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable. It is quite rough at first, a torment to go from the sex master to the sex slave, but your corrupted soul serves them regardless of your desires. At times, they take particular sport in mocking you. They also take twisted joy in reproducing particularly cruel acts you perpetrated at the brothel, casting you in the role of the victim now[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are tiger-striped, but otherwise pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[end if].";
 
 Tiger Cop ends here.

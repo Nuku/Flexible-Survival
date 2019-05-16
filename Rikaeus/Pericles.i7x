@@ -102,7 +102,7 @@ instead of resolving Private Masturbation:
 
 to ThirdPericlesEvent:
 	say "     Upon entering the library it appears like it's not that crowded. There are a few students dotted sparsely all over the place but that's about it. However, what catches your attention is something that occurs when you wander over to the wall containing the doors to the study rooms that are soundproof unless someone's right by the entrances. Behind one of them you hear grunting and moaning, sounds that intrigue you a lot. Out of curiosity, you turn the knob and open it a smidge. To your shock you find Pericles in the room, furiously masturbating. He's running his hand up and down his cock while he's making sounds that show he's clearly enjoying it. However, you stumble a bit and cause some noise, making him hear you and turn towards you.";
-	if player is female:
+	if Player is female:
 		say "     He frowns a bit at you before giving you a hesitant smile. 'Could... you leave me to uh.. take care of this?' he asks kindly and a bit forcefully. From the tone of his voice, it appears that your body isn't something that he likes. Most likely the fact that you have female anatomy as you did see him stare at only men really. You shrug and oblige his desires and leave him be, closing the door behind you. Deciding loitering around wouldn't do well, you decide to go on your way. Maybe you'll get to see him sometime later. Perhaps if you want to sex him, then you may want to lose what makes you female. You could always find his room too.";
 		now Resolution of Private Masturbation is 99; [player pushed out as a female]
 		now Private Masturbation is resolved;
@@ -191,14 +191,14 @@ Pericles is a man.
 [Physical details as of game start]
 ScaleValue of Pericles is 3. [human sized]
 SleepRhythm of Pericles is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Pericles is 1. [X cock]
+Cock Count of Pericles is 1. [X cock]
 Cock Length of Pericles is 8. [X Inches]
-Cock Width of Pericles is 4.
-Testes of Pericles is 2. [X balls]
-Cunts of Pericles is 0. [X pussy]
-Cunt Length of Pericles is 0. [X Cunt]
-Cunt Width of Pericles is 0. [X Cunt]
-Breasts of Pericles is 2. [X nipples]
+Ball Size of Pericles is 4.
+Ball Count of Pericles is 2. [X balls]
+Cunt Count of Pericles is 0. [X pussy]
+Cunt Depth of Pericles is 0. [X Cunt]
+Cunt Tightness of Pericles is 0. [X Cunt]
+Nipple Count of Pericles is 2. [X nipples]
 Breast Size of Pericles is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Pericles is false. [can not take oversized members without pain]
@@ -265,7 +265,7 @@ to say PericlesTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Pre Apocalypse"):
@@ -297,13 +297,13 @@ instead of fucking Pericles:
 		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here,' Pericles says to you, making you rather disappointed.";
 	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
-	else if PericlesRelationship > 7 and cocks of player > 0 and cunts of player < 1:
+	else if PericlesRelationship > 7 and Cock Count of Player > 0 and Cunt Count of Player < 1:
 		say "     Pericles eyes you up and then directs his attention towards Bjorn who's studying in his corner of the room. He gives you a smirk and asks what you had in mind.";
 		wait for any key;
 		say "[PericlesBjornSexMenu]";
-	else if cunts of player > 1: [Player has a vagina]
+	else if Cunt Count of Player > 1: [Player has a vagina]
 		say "     The buff male shakes his head at you and apologizes. 'I'm sorry but womanly parts aren't my thing, sorry.' Pericles then tells you that if you wish to have fun with him then come back as a male.";
-	else if player is neuter: [Player is genderless]
+	else if Player is neuter: [Player is genderless]
 		say "     When you approach him Pericles suddenly blushes and stutters out a response. 'I'm so sorry! I would love to but it's just awkward without a cock there to play with during sex,' he blurts out, looking embarrassed. You get the feeling that he'll only really have fun with you if you have a cock and only that.";
 	else:
 		say "     When Pericles wanders on over to the window to look over the entire campus a thought pops into your head, a rather dirty thought... What do you want to do to the man?";
@@ -315,13 +315,13 @@ to say PericlesSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male and cunts of player < 1:
+	if Player is male and Cunt Count of Player < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride the Spartan cock";
 		now sortorder entry is 1;
 		now description entry is "Take the Spartan-Helot leader for a ride";
 	[]
-	if player is male and cunts of player < 1:
+	if Player is male and Cunt Count of Player < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Pericles off"; [only males can suck him off]
 		now sortorder entry is 2;
@@ -339,7 +339,7 @@ to say PericlesSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Ride the Spartan cock"):
@@ -356,7 +356,7 @@ to say PericlesSexMenu:
 	clear the screen and hyperlink list;
 
 to say PericlesSex1:
-	if bodyname of player is "Helot" and facename of player is "Helot":
+	if bodyname of Player is "Helot" and facename of Player is "Helot":
 		say "     Getting an idea of what you want to do to the Spartan-Helot, you make your way to behind him and wrap one of your arms around the guy to reach for his crotch. However, before you can you're shoved up against the wall by the window. 'It looks like somebody is getting ideas above their station,' Pericles says gruffly, reaching his hand instead to squeeze at your ass. Your face blushes red and you look down submissively, your Helot infection causing you to defer dominance to this male. Though, you know it's because he is the originator of the Helots and Spartans but that information doesn't help you at all mentally. You are quickly snapped out of this thought process when Pericles harshly spanks your ass, causing you to let out a gasp. 'You've been playing around with my soldiers... haven't you?' The question is more of a statement than anything else. Nevertheless you nod your head, confirming it to the alpha male in front of you.";
 		say "     Pericles gives you a calculating look before he nods to himself with a smirk. 'Slave, strip and lay on my bed, back first. That is a direct order,' the Spartan-Helot orders you, sending shivers down your spine as you promptly obey. You quickly deprive yourself of clothing, letting it pool on the floor, moving onto the bed soon after. Once you're in position, you see the buff male looking up and down at your body in desire. A few seconds later he then too drops everything he's wearing, letting you once more look upon his glory. Pericles['] cock is already rock hard but he pays no mind to it as he walks over to the bedside drawer, which he opens and pulls out a bottle of lube. Popping it open the Spartan-Helot moves on over to you and pours some of it onto his hand before reaching for your hole, slipping a finger in right away, making you let out a gasp at the cool sensation.";
 		WaitLineBreak;
@@ -377,7 +377,7 @@ to say PericlesSex1:
 	now lastfuck of Pericles is turns;
 
 to say PericlesSex2:
-	if bodyname of player is "Helot" and facename of player is "Helot":
+	if bodyname of Player is "Helot" and facename of Player is "Helot":
 		say "     Having an idea of what you want to do, you make your way over to Pericles, who appears to sense you coming up behind him. Upon seeing your lust-filled look his facial expression changes into one that you recognize, if only barely, from the Spartan-Helot's drills with his soldiers. 'Ah, the slave seems to want something, don't you?' he asks, the male's eyes filled with a heat that sends shivers down your spine. You nod half-mindedly, a smirk coming to the leader's face as it then turns to a stern look. 'On your knees then, helot!' he orders firmly '. Not even thinking of disobeying, you immediately sink to the floor, now face first with his clothed crotch. 'Is this what you desired, slut?' he questions, pulling your head closer to your prize. You mumble out a sound of agreement as you nuzzle your face closer to the warmth, inhaling the scent from behind his pants, the musk making your head light.";
 		say "     'Now unbutton them, slave,' he orders you firmly, you promptly obeying, reaching up with your hand, something that he saps away. 'With your mouth.' You nod at him before bringing your teeth to the button of his pants. You bite at the cloth and then tug at them, mentally thanking whatever power there is when it comes undone. Moving down you bring your teeth to his zipper which you promptly drag down, revealing his jock strap underneath. You nuzzle the cloth cupping his crotch, licking at it softly, enjoying the taste that you can gather from it. This action appears to make Pericles moan softly, showing that he enjoys what you're doing, though it was already obvious by his hardening cock from behind the underwear. Soon after, without him even saying, you use your teeth to pull down his jock strap, freeing his dick and making it slap you in the face, leaving a bit of precum on your cheek.";
 		WaitLineBreak;

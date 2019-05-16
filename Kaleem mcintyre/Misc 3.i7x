@@ -48,7 +48,7 @@ Instead of resolving Blind Boy's Love:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go over.";
 	say "     ([link]N[as]n[end link]) - Turn tail.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Deciding what the hey you take tentative steps over to the derelict truck and then creep upwards onto the broken and bent hood of the vehicle to get a better looks at what's going on. What you find is a sight that you are all too familiar out here in the middle of the infected city as you watch the form of a massive feral Rottweiler slipping its engorged black cock back and forth inside of the anal vent of a young man on his knees underneath the brown and black furred canine. It's obvious from the looks of the almost miniature horse-sized canine that the feral hound has been corrupted by the strangeness infecting the town, however you find that despite this the young man beneath the beast seems not to mind what his companion is doing to him as he willingly gives himself over to the massive stud dog. The teenager, who couldn't have been more than nineteen years old, looks for all the world as if he's enjoying himself as he lets the larger creature drill him while slapping gargantuan canine nuts into the young man's slowly inflating furry orbs. Everything you've come to expect in this scenario is working itself out perfectly as the human's skin is quickly being replaced by milky chocolate fur while at the same time the skeletal structure of the youth is twisting into that of a canid.";
 		WaitLineBreak;
@@ -86,7 +86,7 @@ Instead of resolving Dragonian Trial:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Run.";
 	say "     ([link]N[as]n[end link]) - Wait.";
-	if player consents:
+	if Player consents:
 		say "     Turning to run you bolt as though the hounds of hell themselves are after you. Damn it being a good idea or not, it's now time to go! You don't think as the need to...escape...flee...run...screams through your veins as your blood rushes rapidly throughout your body. You don't stop to take notice of how the dragon is looking at you with a contemptible look in its golden eyes, or how the creature's clawed hands are slacking open as a sense of ire rises within the beast. The elegantly scaled creature seems to narrow its eyes as it watches your departure before huffing and then flying away, back probably to some place you could only ever dream about.";
 		now Resolution of Dragonian Trial is 1; [ran]
 	else:

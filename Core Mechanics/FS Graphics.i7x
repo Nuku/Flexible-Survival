@@ -31,7 +31,7 @@ Figure of CheetahWoman_icon is the file "CheetahWoman.png".
 Figure of Cougar_icon is the file "Cougar_ig.jpg".
 Figure of DarkElf_icon is the file "Dark Elf.jpg".
 Figure of DemonBrute_icon is the file "Brutus_evil.jpg".
-Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".
+[Figure of DobermanCop_icon is the file "DobermanCop_ig.jpg".]
 Figure of Donkeywoman_icon is the file "FS_DonkeyWoman.jpg".
 Figure of Dracovixentaur_icon is the file "dracovixentaur_ig.jpg".
 Figure of MagicDrake_icon is the file "FS_Dragoness.jpg".
@@ -51,6 +51,8 @@ Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
+Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
+Figure of Herm_Hyena_naked_icon is the file "Hyena_naked.jpg".
 Figure of HomoSapiens_icon is the file "Homo Sapiens.jpg".
 Figure of HornyDoctor_M_icon is the file "HornyDoctor_M_ig.jpg".
 Figure of Hulking_Cheerleader_icon is the file "Hulking_Cheerleader.jpg".
@@ -164,6 +166,7 @@ Figure of Carl_Eric_sofa_fuck_1_icon is the file "Carl_Eric_sofa_fuck_1.jpg".
 Figure of Carl_Eric_sofa_fuck_2_icon is the file "Carl_Eric_sofa_fuck_2.jpg".
 Figure of Carl_Eric_sofa_fuck_3_icon is the file "Carl_Eric_sofa_fuck_3.jpg".
 Figure of Carl_Eric_sofa_fuck_4_icon is the file "Carl_Eric_sofa_fuck_4.jpg".
+Figure of Chase_face_icon is the file "Chase_face.jpg".
 Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_naked_icon is the file "Chris_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
@@ -214,7 +217,9 @@ Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
 Figure of Garth_face_icon is the file "Garth_face.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
+Figure of Gina_face_icon is the file "Gina_face.jpg".
 Figure of Gobby_icon is the file "gobby_ig.jpg".
+Figure of Grant_face_icon is the file "Grant_face.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
 Figure of Grant2_icon is the file "grant_ig2.jpg".
 Figure of Hadiya_0_icon is the file "hadiya_0_ig.jpg".
@@ -323,6 +328,10 @@ Figure of Spike_face_icon is the file "Spike_face.jpg".
 Figure of Spike_naked_icon is the file "Spike_naked.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
+Figure of Sven_naked_icon is the file "Sven_naked.jpg".
+Figure of Sven_tail_icon is the file "Sven_tail.jpg".
+Figure of Tehuantl_Male_Face_icon is the file "Tehuantl_Male_Face.jpg".
+Figure of Tehuantl_Female_Face_icon is the file "Tehuantl_Female_Face.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
@@ -353,7 +362,7 @@ Figure of Zoe_face_icon is the file "Zoe_face.jpg".
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
 Figure of BT_Trapped_icon is the file "Bottlenose_Trapped_ig.jpg". [Encased by Bottlenose Toy]
-Figure of Christyend_icon is the file "christyend_ig.jpg". [for 'Tourist Attraction' ending only.]
+Figure of Christyend_icon is the file "Christyend_ig.jpg". [for 'Tourist Attraction' ending only.]
 Figure of Corbin_Felinoid_icon is the file "Corbin_Felinoid.jpg". [riding the cat]
 Figure of DukeShawnFuck_icon is the file "Duke&Shawn.jpg". [Shawn topping Duke scene.]
 Figure of DUP_FloorShow_icon is the file "DUP_FloorShow_ig.jpg". [The Down Under Pub's floor show.]
@@ -382,11 +391,30 @@ Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg". [after the Hellhound
 
 [maps]
 Figure of Beach_Overlook_icon is the file "Beach_overlook.jpg".
-Figure of Bunker_icon is the file "Bunker.jpg".
-Figure of Library1stfloor_icon is the file "Library1stfloor.jpg".
-Figure of Library2ndfloor_icon is the file "Library2ndfloor.jpg".
 Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
 Figure of Map_Tenvale_College_icon is the file "Campus_Map.jpg".
+Figure of Map_Bunker_Main_icon is the file "Map_Bunker_Main.jpg".
+Figure of Map_Bunker_Restroom_icon is the file "Map_Bunker_Restroom.jpg".
+Figure of Map_Bunker_Shower_icon is the file "Map_Bunker_Shower.jpg".
+Figure of Map_Bunker_Storeroom_icon is the file "Map_Bunker_Storeroom.jpg".
+Figure of Map_Library_Back_icon is the file "Map_Library_Back.jpg".
+Figure of Map_Library_Front_icon is the file "Map_Library_Front.jpg".
+Figure of Map_Library_Fountain_icon is the file "Map_Library_Fountain.jpg".
+Figure of Map_Library_Street_icon is the file "Map_Library_Street.jpg".
+Figure of Map_Library_Garden_icon is the file "Map_Library_Garden.jpg".
+Figure of Map_Library_Shack_icon is the file "Map_Library_Shack.jpg".
+Figure of Map_Library_North1_icon is the file "Map_Library_North1.jpg".
+Figure of Map_Library_North2_icon is the file "Map_Library_North2.jpg".
+Figure of Map_Library_North3_icon is the file "Map_Library_North3.jpg".
+Figure of Map_Library_North4_icon is the file "Map_Library_North4.jpg".
+Figure of Map_Library_South1_icon is the file "Map_Library_South1.jpg".
+Figure of Map_Library_South2_icon is the file "Map_Library_South2.jpg".
+Figure of Map_Library_South3_icon is the file "Map_Library_South3.jpg".
+Figure of Map_Library_2F_West_icon is the file "Map_Library_2F_West.jpg".
+Figure of Map_Library_2F_North_icon is the file "Map_Library_2F_North.jpg".
+Figure of Map_Library_2F_East_icon is the file "Map_Library_2F_East.jpg".
+Figure of Map_Library_2F_South_icon is the file "Map_Library_2F_South.jpg".
+
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -398,7 +426,7 @@ Figure of emap_mall_atrium_icon is the file "emap_mall_atrium.png".
 Figure of emap_mall_bodyshop_icon is the file "emap_mall_bodyshop.png".
 Figure of emap_mall_bransonpartner_icon is the file "emap_mall_bransonpartner.png".
 Figure of emap_mall_brookstonebooks_icon is the file "emap_mall_brookstonebooks.png".
-Figure of emap_mall_christmasvillage_icon is the file "emap_mall_christmasvillage.png".
+Figure of emap_mall_Christmasvillage_icon is the file "emap_mall_Christmasvillage.png".
 Figure of emap_mall_eastwing_icon is the file "emap_mall_eastwing.png".
 Figure of emap_mall_foodcourt_icon is the file "emap_mall_foodcourt.png".
 Figure of emap_mall_foyer_icon is the file "emap_mall_foyer.png".
@@ -430,7 +458,7 @@ before examining a thing (called t):
 	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
 
@@ -439,7 +467,7 @@ to inline_project (x - a figure name):
 	if graphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
@@ -450,7 +478,7 @@ to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				if formatrule entry is "normal":
 					if NewGraphicsDebugMode is true:
 						say "Graphics Debug - Normal Mode";
@@ -479,7 +507,7 @@ to project (x - a figure name):
 	else if graphics is true and NewGraphics is false: [legacy fallback (new disabled)]
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				now ngraphics_currentartist is artist entry; [graphics processing]
 				update the status line;
@@ -489,7 +517,7 @@ to project (x - a figure name):
 			if graphics is true and NewGraphics is true:
 				repeat with y running from 1 to number of filled rows in table of game art:
 					choose row y in table of game art;
-					if icon entry is x and artist entry is not listed in BlockList of player:
+					if icon entry is x and artist entry is not listed in BlockList of Player:
 						[blank window to backgroundcolor entry;]
 						now graphics background color is backgroundcolor entry;
 						if NewGraphicsDebugMode is true: [inline debug report toggled by "graphics_debug"]
@@ -503,7 +531,7 @@ to project (x - a figure name):
 							if graphics is true and NewGraphics is false:
 								repeat with y running from 1 to number of filled rows in table of game art:
 									choose row y in table of game art;
-									if icon entry is x and artist entry is not listed in BlockList of player:
+									if icon entry is x and artist entry is not listed in BlockList of Player:
 										display x;
 										break;]
 
@@ -512,14 +540,14 @@ to project (x - a figure name):
 	if graphics is true and NewGraphics is true:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				follow the ngraphics_open rule;
 				now the currently shown picture is x;
 				follow the current graphics drawing rule;
 	if graphics is true and NewGraphics is false:
 		repeat with y running from 1 to number of filled rows in table of game art:
 			choose row y in table of game art;
-			if icon entry is x and artist entry is not listed in BlockList of player:
+			if icon entry is x and artist entry is not listed in BlockList of Player:
 				display x;
 				break;]
 
@@ -542,7 +570,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_naked_frown"	Figure of Alexandra_naked_frown_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
-"Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
+"Husky Alpha"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
 "Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
@@ -582,7 +610,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Brutus_good_face"	Figure of Brutus_good_face_icon	"Inkydemon"	g-black	"normal"
 "BrutusEvil"	Figure of BrutusEvil_icon	"Inkydemon"	g-black	"normal"
 "Brutus_evil_face"	Figure of Brutus_evil_face_icon	"Inkydemon"	g-black	"normal"
-"Bunker"	Figure of Bunker_icon	"Luneth"	g-white	"inline_only"
 "Bunny Jock"	Figure of BunnyJock_icon	"Darian821"	g-black	"normal"
 "Buster"	Figure of Buster_icon	"Padunk"	g-white	"normal"
 "Campus Map"	Figure of Map_Tenvale_College_icon	"Anonymous"	g-black	"inline_only"
@@ -598,6 +625,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Carl_Eric_sofa_fuck_4"	Figure of Carl_Eric_sofa_fuck_4_icon	"Lyttathebug"	g-black	"normal"
 "Catgirl"	Figure of Fiona_icon	"Valen"	g-white	"normal"
 "Cerberus"	Figure of Cerberus_icon	"Anonymous"	g-white	"normal"
+"Chase_face"	Figure of Chase_face_icon	"SineAlas"	g-black	"normal"
 "Cheetah Woman"	Figure of CheetahWoman_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Chocolate Lab"	Figure of ChocoLab_icon	"SparklePens"	g-white	"normal"
 "Chris_clothed"	Figure of Chris_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -624,7 +652,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Diego_face"	Figure of Diego_face_icon	"valdericblackstag"	g-black	"normal"
 "DiegoFem"	Figure of DiegoFem_icon	"Damdidoo"	g-black	"normal"
 "DiegoFem_face"	Figure of DiegoFem_face_icon	"Damdidoo"	g-black	"normal"
-"Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-white	"normal"	[only shown after defeating her]
+["Doberman_Defeat"	Figure of DobermanCop_icon	"TheRedAngel"	g-white	"normal"]	[old image, disabled]
 "Donkeywoman"	figure of Donkeywoman_icon	"Anymouse1968"	g-white	"normal"
 "Doran"	Figure of Doran_icon	"Anymouse1968"	g-white	"normal"
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
@@ -664,8 +692,10 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
 "Garth_face"	Figure of Garth_face_icon	"SineAlas"	g-white	"normal"
 "Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
+"Gina_face"	Figure of Gina_face_icon	"Vashaa"	g-black	"normal"
 "Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
+"Grant_face"	Figure of Grant_face_icon	"Vashaa"	g-black	"normal"
 "Grant"	Figure of Grant_icon	"uniformvixen"	g-white	"normal"
 "Grant2"	Figure of Grant2_icon	"Familliar"	g-white	"normal"
 "Gunbunny"	Figure of Gunbunny_icon	"HBruton"	g-white	"normal"
@@ -678,9 +708,11 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Helot"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
-"Hermaphrodite Gryphon"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
+"Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
+"Herm Hyena"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
+"Herm Hyena_naked"	Figure of Herm_Hyena_naked_icon	"Vashaa"	g-White	"normal"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
@@ -724,8 +756,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Latex Ermine_Red"	Figure of LatexErmineRed_icon	"Anymouse1968"	g-white	"normal"
 "Latex Ermine_Teal"	Figure of LatexErmineTeal_icon	"Anymouse1968"	g-white	"normal"
 "LeonardViolin"	Figure of LeonardViolin_icon	"SandySchreiber"	g-white	"normal"
-"Library1stfloor"	Figure of Library1stfloor_icon	"Luneth"	g-white	"inline_only"
-"Library2ndfloor"	Figure of Library2ndfloor_icon	"Luneth"	g-white	"inline_only"
 "Lilith_boobs_icon"	Figure of Lilith_boobs_icon	"Kupo Klein"	g-black	"normal"
 "Lilith_clothed"	Figure of Lilith_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Lilith_face"	Figure of Lilith_face_icon	"Kupo Klein"	g-black	"normal"
@@ -819,7 +849,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
 "Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
-"Shemale Smooth Collie"	Figure of SSCollie_icon	"Anymouse1968"	g-white	"normal"
+"Smooth Collie Shemale"	Figure of SSCollie_icon	"Anymouse1968"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
 "Sidney_wusky"	Figure of Sidney_wusky_Icon	"Anymouse1968"	g-white	"normal"
@@ -843,8 +873,12 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Spike_naked"	Figure of Spike_naked_icon	"Lyttathebug"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
+"Sven_naked"	Figure of Sven_naked_icon	"Brun69"	g-black	"normal"
+"Sven_tail"	Figure of Sven_tail_icon	"Brun69"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
+"Tehuantl_Male_face"	Figure of Tehuantl_Male_face_icon	"Vashaa"	g-black	"normal"
+"Tehuantl_Female_face"	Figure of Tehuantl_Female_face_icon	"Vashaa"	g-black	"normal"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"	g-black	"normal"
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"	g-black	"normal"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
@@ -891,7 +925,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - Bodyshop"	Figure of emap_mall_bodyshop_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Branson & Partner"	Figure of emap_mall_bransonpartner_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Brookstone Books"	Figure of emap_mall_brookstonebooks_icon	"executaball"	g-black	"normal"
-"Navigation - Mall - Christmas Village"	Figure of emap_mall_christmasvillage_icon	"executaball"	g-black	"normal"
+"Navigation - Mall - Christmas Village"	Figure of emap_mall_Christmasvillage_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - East Wing"	Figure of emap_mall_eastwing_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - FoodCourt"	Figure of emap_mall_foodcourt_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - Foyer"	Figure of emap_mall_foyer_icon	"executaball"	g-black	"normal"
@@ -908,6 +942,28 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Navigation - Mall - Restrooms"	Figure of emap_mall_restrooms_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - ShagShack"	Figure of emap_mall_shagshack_icon	"executaball"	g-black	"normal"
 "Navigation - Mall - West Wing"	Figure of emap_mall_westwing_icon	"executaball"	g-black	"normal"
+[Library Map]
+"Map Bunker_Main"	Figure of Map_Bunker_Main_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Restroom"	Figure of Map_Bunker_Restroom_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Shower"	Figure of Map_Bunker_Shower_icon	"Goncalo"	g-black	"normal"
+"Map Bunker_Storeroom"	Figure of Map_Bunker_Storeroom_icon	"Goncalo"	g-black	"normal"
+"Map Library_Back"	Figure of Map_Library_Back_icon	"Goncalo"	g-black	"normal"
+"Map Library_Front"	Figure of Map_Library_Front_icon	"Goncalo"	g-black	"normal"
+"Map Library_Fountain"	Figure of Map_Library_Fountain_icon	"Goncalo"	g-black	"normal"
+"Map Library_Street"	Figure of Map_Library_Street_icon	"Goncalo"	g-black	"normal"
+"Map Library_Garden"	Figure of Map_Library_Garden_icon	"Goncalo"	g-black	"normal"
+"Map Library_Shack"	Figure of Map_Library_Shack_icon	"Goncalo"	g-black	"normal"
+"Map Library_North1"	Figure of Map_Library_North1_icon	"Goncalo"	g-black	"normal"
+"Map Library_North2"	Figure of Map_Library_North2_icon	"Goncalo"	g-black	"normal"
+"Map Library_North3"	Figure of Map_Library_North3_icon	"Goncalo"	g-black	"normal"
+"Map Library_North4"	Figure of Map_Library_North4_icon	"Goncalo"	g-black	"normal"
+"Map Library_South1"	Figure of Map_Library_South1_icon	"Goncalo"	g-black	"normal"
+"Map Library_South2"	Figure of Map_Library_South2_icon	"Goncalo"	g-black	"normal"
+"Map Library_South3"	Figure of Map_Library_South3_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_West"	Figure of Map_Library_2F_West_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_North"	Figure of Map_Library_2F_North_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_South"	Figure of Map_Library_2F_South_icon	"Goncalo"	g-black	"normal"
+"Map Library_2F_East"	Figure of Map_Library_2F_East_icon	"Goncalo"	g-black	"normal"
 
 artistcredits is an action applying to nothing.
 
@@ -1036,6 +1092,7 @@ carry out artistcredits:
 	say "     Candy by uniformvixen @ furaffinity.net[line break]";
 	say "     Carl by Hufnaar @ furaffinity.net[line break]";
 	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
+	say "     Chase by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1068,9 +1125,13 @@ carry out artistcredits:
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Garth (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
+	say "     Gina by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Gobby by lionsilverwolf @ furaffinity.net[line break]";
+	say "     Grant by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
+[
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";
 	say "     Grant (color) by Familliar @ furaffinity.net[line break]";
+]
 	say "     Hadiya (solo) by lionsilverwolf @ furaffinity.net[line break]";
 	say "     Hadiya w/Gobby by SandySchreiber @ furaffinity.net[line break]";
 	say "     Helen by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
@@ -1135,6 +1196,8 @@ carry out artistcredits:
 	say "     Spike Body by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Spike Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Susan (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+	say "     Sven by Brun69 @ https://www.furaffinity.net/user/brun69/[line break]";
+	say "     Tehuantl by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Timothy by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
@@ -1172,7 +1235,7 @@ carry out artistcredits:
 	say "     Talov & Kerr by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "Maps:[line break]";
 	say "     Mall Map by Anonymous @ -[line break]";
-	say "     Library Maps by Luneth @ -[line break]";
+	say "     Library Maps by Goncalo @ https://www.artstation.com/beepe/[line break]";
 
 ArtistBanning is an action applying to nothing.
 
@@ -1194,7 +1257,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "Brun69", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "Goncalo", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Vashaa", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;
@@ -1221,17 +1284,17 @@ to artistbanmenu: [more compact version]
 			artistbanswitch entry calcnumber of artistlist;
 
 to BlockCheck (x - text):
-	if x is not listed in BlockList of player:
+	if x is not listed in BlockList of Player:
 		say "[bold type][special-style-1]On  [roman type]";
 	else:
 		say "[bold type][special-style-2]Off  [roman type]";
 
 to artistbanswitch (name - text):
-	if name is not listed in BlockList of player:
-		add name to Blocklist of player;
+	if name is not listed in BlockList of Player:
+		add name to Blocklist of Player;
 		say "[name] Blocked!";
-	else if name is listed in Blocklist of player:
-		remove name from Blocklist of player;
+	else if name is listed in Blocklist of Player:
+		remove name from Blocklist of Player;
 		say "[name] Unblocked!";
 
 

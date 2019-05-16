@@ -4,7 +4,7 @@ Version 2 of Siamese Cats by Stripes begins here.
 "Adds a conjoined pair of Siamese Cats as a creature to Flexible Survival's Wandering Monsters table"
 
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 [ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
@@ -34,30 +34,30 @@ when play begins:
 
 to say siamesecatdesc:
 	setmongender 19; [creatures are mixed/variable]
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	let debit be 0;
-	if hardmode is true and level of player > 5, let debit be level of player - 5;
+	if hardmode is true and level of Player > 5, let debit be level of Player - 5;
 	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
 	now wdam entry is 5 + ( debit / 3 ); [set to midpoint]
 	now malecatHP is HP entry;
 	now femalecatHP is HP entry;
 	say "     As you are moving along, a pair of felines drop down in front of you. They are a duo of slinky Siamese cats, a boy and a girl, identical save for gender. They have cream colored fur with darker fur around their faces and at the ends of their limbs. They are both quite naked, except for the red, belled collars they have around their necks. As you look them over, you notice that they are joined together at the end of their tails.";
-	if "Male Preferred" is listed in feats of player:			[MALE-PREF PLAYER]
+	if "Male Preferred" is listed in feats of Player:			[MALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
 		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
-	else if "Female Preferred" is listed in feats of player:	[FEMALE-PREF PLAYER]
+	else if "Female Preferred" is listed in feats of Player:	[FEMALE-PREF PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
 		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
 		say "[swaptomale]";
-	else if player is puremale:		[MALE PLAYER]
+	else if Player is puremale:		[MALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The female speaks to her twin, 'I think I'll play with this one, if I may.' And with that, she takes the lead and attacks.";
 		decrease dex entry by 2; [as if male before swap]
 		increase wdam entry by 1;
 		say "[swaptofemale]";
-	else if player is purefemale:		[FEMALE PLAYER]
+	else if Player is purefemale:		[FEMALE PLAYER]
 		say "     They stare at you for a moment with their bright, blue eyes and angular features, as if sizing you up like a post they may wish to scratch. The male speaks to his twin, 'I think I'll play with this one, if I may.' And with that, he takes the lead and attacks.";
 		increase dex entry by 2; [as if female before swap]
 		decrease wdam entry by 1;
@@ -77,16 +77,16 @@ to say siamesecatdesc:
 to say siameseattack:
 	if a random chance of 2 in 7 succeeds:
 		[Dmg calc for first blow]
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
 			say "The enemy finds a particular vulnerability in your defense - Critical Hit![line break]";
 		let absorbby be 0; [***to be fixed***]
-		if "Toughened" is listed in feats of player:
+		if "Toughened" is listed in feats of Player:
 			increase absorbby by dammy divided by 5;
 		decrease HP of the player by dammy;
-		increase HP of player by absorbby;
+		increase HP of Player by absorbby;
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say "The [siamesegender] feline in front of you charges in with [if siamgender is male]his[else]her[end if] claws[if siamgender is male]. He[else]. She[end if] growls angrily and slashes at you! You take [special-style-2][dammy][roman type] damage!";
@@ -124,7 +124,7 @@ to say siameseattack:
 
 
 to say swaptomale:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now femalecatHP is monsterHP; [current HP saved as female]
 	now monsterHP is malecatHP; [male HP made current]
 	now siamesegender is "male"; [male now current cat]
@@ -135,7 +135,7 @@ to say swaptomale:
 
 
 to say swaptofemale:
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	now malecatHP is monsterHP; [current HP saved as male]
 	now monsterHP is femalecatHP; [female HP made current]
 	now siamesegender is "female"; [female now current cat]
@@ -148,56 +148,56 @@ to say swaptofemale:
 to say losetosiamesecat:
 	say "     Having bested you, the two cats look you over. 'I beat [']em,' the [siamesegender] purrs to the other, 'so I get to go first.' That said, the [siamesegender] steps forward and grabs you, getting you into position for a little fun while they both remove your remaining clothes.";
 	if siamgender is male:
-		if player is female:
+		if Player is female:
 			say "     The tom gets you onto all fours and lines up his hard cock with your pussy. His russet-brown cock teases at your folds as he purrs in your ear. This quickly gets you excited and soon you're moaning for him to mount you. Grinning, he nibbles your ear and slowly slides himself into you.";
 		else:
 			say "     The tom gets you onto all fours and lines up his hard cock with your ass. He grinds it between your cheeks slowly as he purrs in your ear. You squirm nervously a little, but don't pull away from the exotic feline. He shifts his position, letting the glans of his russet-brown, human-like cock tease at your back entrance. You can feel his precum leaking out, quickly getting it nice and slick. It also has the effect of getting you excited and soon you moan softly for him to mount you. Grinning, he nibbles your ear and slowly slides himself into you.";
-		if player is male:
+		if Player is male:
 			say "     The female takes advantage of your position to move underneath you and start licking and kissing your cock, making you moan. Her raspy tongue plays across your shaft before she wraps her lips around it and takes it into her warm muzzle. She begins to slowly work over it, licking and sucking while you're getting fucked.";
 		else:
 			say "     The female takes advantage of your position to move in front of you. Taking your head in her paws, she presses your face between her legs, pushing it against her wet pussy. The fight clearly got her excited and her scent fills your nose, further arousing you. She moans and purrs loudly as you start to lick her.";
 		WaitLineBreak;
 		say "     The male behind you slides his hard shaft in and out of you. His paws stroke over your hips, sharp claws against your skin as if to keep you in place, but by this point, you are lost to the lust and have no interest in removing that cock that's fucking you so nicely. His pace is measured and disciplined, hitting all your sensitive spots and steadily building your arousal, making you moan and press back into each firm thrust.";
-		if player is male:
+		if Player is male:
 			say "     The female beneath you works at your cock with zeal, giving it almost unending attention. She only slides her muzzle off it occasionally to lick further back over your balls and spread hole as the male fucks you. You can hear him moan softly and poke you with his claws a little harder whenever her tongue is back there and brushes against his cock while licking you.";
 		else:
 			say "     The female in front of you rubs your head and ears while holding you to her pussy, sharp claws also poking free just slightly as they knead your flesh. Her hips quiver a little as you work your tongue over and into that sweet puss of hers. You run over her wet lips and tease her clit again and again, which makes her mewl in delight.";
-		if player is female:
+		if Player is female:
 			say "     You can feel that cock drive into your pussy again and again, making your hips quiver as you get closer to your climax. His paws knead at your ass, claws poking at it as he thrusts. Your vaginal walls squeeze around his hard meat as your juices leak out over his balls and your thighs.";
 		else:
 			say "     You can feel that hard cock drive into your ass again and again, making your hips quiver as you get closer to cumming. His paws knead at your ass, claws poking at it as he thrusts. Your tight ring squeezes around his hard meat as his penis presses against your prostate with each firm push into your rear.";
 		WaitLineBreak;
-		if player is male:
+		if Player is male:
 			say "     The feline's rough tongue continues licking and sucking at your cock, lapping your precum from your tip. Glancing over, you can see her fingering herself as she does so. The sight of her fingers sinking into her wet pussy is enough to push you over the edge and your cock throbs in her muzzle, unleashing shot after shot of your hot seed into her waiting mouth. From the loud moans she's making under you, you suspect that she's quite pleased with her treat and cumming as well.";
 		else:
 			say "     The female grips your head more firmly and starts grinding her wet puss to your face as her moans get louder and louder. Soon enough, your playful tongue pushes her over the edge and she cums hard, further soaking you with her sweet juices. You lick and lap them up eagerly while your pussy clamps down on the cock filling you. You moan and push back against the male as your orgasm hits, spilling your juices over his shaft. Above you, you can feel the female lean a little forward and can hear the soft sounds of her kissing the tom fucking you.";
-		if player is female:
+		if Player is female:
 			say "     With your climax, you squeeze your dripping pussy around the feline's hard cock, inner walls quivering around it. He mewls in pleasure and slams his dick into you again and again until you're moaning and mewling as well. Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed. You can feel his hot cum flowing into you, painting the back of your vagina and flowing up into your womb.[impregchance]";
 		else:
 			say "     With your orgasm, you squeeze your tight ass around the feline's hard cock, inner muscles quivering around it. He mewls in pleasure and slams his dick into you again and again, pounding your prostate until you're moaning and mewling as well. Hearing that, he pushes himself deep inside you and unleashes his hot, feline seed. You can feel his hot cum flowing into you, filling your bowels with his thick load.[impregchance]";
 		say "     The three of you continue to thrust and grind against one another until you are all satisfied and your orgasms wind down. The male slides himself slowly from you, some cum leaking out of your well-used hole before you can squeeze it shut to keep the rest warm and wet inside you. As the female moves back, you sag to the ground, panting softly and enjoying the afterglow while the pair head off, hand in hand.";
 	else:
-		if player is male:
-			say "     She pushes you over onto your back and straddles you. She grinds her wet pussy down onto your [cockname of player] cock. You moan as you feel her wet lips sliding along your stiffening length, getting it nice and slick. After some very pleasant rubbing, she reaches down and guides your hard length into her cunt.";
+		if Player is male:
+			say "     She pushes you over onto your back and straddles you. She grinds her wet pussy down onto your [cockname of Player] cock. You moan as you feel her wet lips sliding along your stiffening length, getting it nice and slick. After some very pleasant rubbing, she reaches down and guides your hard length into her cunt.";
 		else:
 			say "     She pushes you over onto your back and grabs one of your legs. She slides herself between your legs, one dark brown leg under your raised one and the other over on the other side. Scissored with you like this, she grinds her wet folds against yours, making you moan.";
-		if player is female:
+		if Player is female:
 			say "     The tom mewls softly as he eyes your pussy, but cannot have it while his female partner is playing with you. His stiff cock, human-like and a russet brown in color, throbs as he moves to your head. His precum drips down onto your lips as he brings it over your mouth. You lick away the pre from your lips, moaning softly at its enticing flavor. When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		else:
 			say "     The tom mewls softly as he watches his interlinked partner riding your hard cock. Not wanting to be left out, he moves to your head, positioning his stiff cock, human-like and russet brown, over you. His precum drips down onto your lips as he brings it over your mouth. You lick away the pre from your lips, moaning softly at its enticing flavor. When he brings it down to your lips, they part easily, letting him slide it into your mouth.";
 		WaitLineBreak;
-		if player is male:
+		if Player is male:
 			say "     Riding your cock slowly, the female runs her paws over your chest and kneads at it with her paws. You can feel her sharp claws against your skin, making you shiver a little. Her wet puss squeezes firmly around your cock each time she pushes her hips down and takes it into her, your hips thrusting up in response.";
 		else:
 			say "     The feline between your legs moanpurrs softly as she works her pussy against yours. Her paws scritch along your leg, running the tips of her claws over your skin makes a butterfly with you. Her soft folds slide against yours as you both get more and more wet with the mix of your juices. Her muzzle plays against your ankle and she starts nibbling on it.";
 		say "     You lick and suck at the tom's hard cock, moaning softly around it as his female partner plays with you. His paws move to stroke your head and ears as he gently thrusts between your lips. His pre leaks out onto your tongue and you happily lap it up, lost to the lust of the two felines playing with you.";
-		if player is male:
+		if Player is male:
 			say "     The female rides you harder and faster now, picking up the pace as her excitement builds. She wraps her arms around her male partner, partially for support and partially so she can start nibbling at his neck. He purrs softly at that and tilts his head to the side.";
 		else:
 			say "     The female's hips grind against you harder and faster as her excitement builds. You can feel her claws and teeth along your leg as she scritches and nibbles along it. Her wet puss and soft folds feel so nice against you, making you moan all the louder.";
 		WaitLineBreak;
 		say "     The tom's thrusts pick up, pumping himself between your wet lips faster. His paws hold your head steady as he thrusts into you again and again. His precum flows steadily into you until finally he throws his head back and mrowls in ecstasy, shooting thick cum into your mouth and down your throat. You gulp it down greedily, lustfully eager to have this kitty's seed in your tummy, moaning loudly as you cum as well.";
-		if player is male:
+		if Player is male:
 			say "     Watching the male cumming and feeling you set off moments later, shooting your hot seed into her eager pussy. She grinds down onto your firmly and squeezes her pussy around you tightly, climaxing as well. Her inner walls flutter around you, milking your shaft for as much as you'll give. Your hips buck, thrusting into her until you're drained.";
 		else:
 			say "     Watching the male cumming and feeling you set off moments later, she grinds herself against your quivering pussy, moaning happily in response. Your crotch is soaked moments later as she arches her back and cums hard, murrrowling as her orgasm shoots through her. Your hot juices intermingle with hers in an arousing scent of lust hanging around you and the two felines.";
@@ -206,25 +206,25 @@ to say losetosiamesecat:
 
 to say beatthesiamesecat:
 	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.";
-	if (libido of player > 29 or "Dominant" is listed in feats of player) and player is not neuter:
+	if (Libido of Player > 29 or "Dominant" is listed in feats of Player) and player is not neuter:
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
 		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if player consents:
-			decrease libido of player by 10;
+		if Player consents:
+			decrease Libido of Player by 10;
 			LineBreak;
 			say "     Deciding to have some quick fun, you start to pull off your clothes.";
 			say "     [bold type]Now which one would you like, the male or the female?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
-			if player consents:								[CHOSE MALE KITTY]
+			if Player consents:								[CHOSE MALE KITTY]
 				LineBreak;
-				if player is purefemale:		[FEMALE PLAYER]
+				if Player is purefemale:		[FEMALE PLAYER]
 					say "[siamsex1]";
-				else if player is puremale:	[MALE PLAYER]
+				else if Player is puremale:	[MALE PLAYER]
 					say "[siamsex2]";
 				else:	[HERM PLAYER]
 					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
@@ -232,7 +232,7 @@ to say beatthesiamesecat:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get fucked.";
 					say "     ([link]N[as]n[end link]) - Fuck the kitty.";
-					if player consents:
+					if Player consents:
 						LineBreak;
 						say "[siamsex1]";
 					else:
@@ -240,9 +240,9 @@ to say beatthesiamesecat:
 						say "[siamsex2]";
 			else:										[CHOSE FEMALE KITTY]
 				LineBreak;
-				if player is purefemale:		[FEMALE PLAYER]
+				if Player is purefemale:		[FEMALE PLAYER]
 					say "[siamsex3]";
-				else if player is puremale:	[MALE PLAYER]
+				else if Player is puremale:	[MALE PLAYER]
 					say "[siamsex4]";
 				else:	[HERM PLAYER]
 					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
@@ -250,7 +250,7 @@ to say beatthesiamesecat:
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the kitty.";
 					say "     ([link]N[as]n[end link]) - Oral.";
-					if player consents:
+					if Player consents:
 						LineBreak;
 						say "[siamsex4]";
 					else:
@@ -284,7 +284,7 @@ to say siamsex3:	[FF oral]
 	say "     Deciding to put that feline's raspy tongue to good use, you guide her face between your legs and press her muzzle to your pussy. She mewls softly and squirms, but quickly sets her tongue to work. You moan softly as you feel her licking along your wet folds.";
 	say "     You run your fingers through her headfur and scritch her large ears, making her purr all the more. She also gets more and more into the task before her, showing that she's clearly had some practice at this. Her tongue is playful and talented, while her lips kiss and suck at your pussy lips and clit as well.";
 	WaitLineBreak;
-	say "     The male twin has also started to recover and he comes closer. You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other. They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum. Your hot juices flow out over her tongue and across her muzzle[if player is male]. Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
+	say "     The male twin has also started to recover and he comes closer. You reach over and start to play with his cock with one hand while continuing to pet the good kitty femme with the other. They purr happily, the male nuzzling and kissing his partner until you finally reach your peak and press her face to your pussy as you cum. Your hot juices flow out over her tongue and across her muzzle[if Player is male]. Your cock throbs and shoots its hot load across the back of her head and down her body[end if].";
 	say "     As your orgasm rushes through you, you can feel the tom's cock throb in your hand, spraying his seed across the ground while the female's rear trembles. It seems she's been fingering herself while playing with you and the conjoined pair mrowl in delight as they cum.";
 	say "     Once your orgasm passes, you take a moment to rest and recover before pushing the female back. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
@@ -298,17 +298,18 @@ to say siamsex4:	[fuck pussy]
 	say "     Once you are spent, you take a moment to rest and recover before pulling your cock free. You gather up your clothes and gear, leaving the exhausted felines snuggled up against one another.";
 
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Siamese Cat"; [Name of your new Monster]
+	now NewTypeInfection entry is false;
+	now Name entry is "Siamese Cat"; [Name of your new Monster]
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[siameseattack]";
 	now defeated entry is "[beatthesiamesecat]";
@@ -335,15 +336,15 @@ When Play begins:
 	now lev entry is 5; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 6; [Amount of Damage monster Does when attacking.]
 	now area entry is "Hospital"; [ Location of monster, in this case the City Hospital]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 7; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 2; [ Number of Breasts infection will give you. ]
-	now breast size entry is 3; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex=male, usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 7;
-	now cunt width entry is 3;
+	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now Cock Length entry is 7; [ Length infection will make cock grow to if cocks]
+	now Ball Size entry is 1; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
+	now Breast Size entry is 3; [Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex=male, usually zero. ]
+	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 7;
+	now Cunt Tightness entry is 3;
 	now libido entry is 40; [ Will raise the player's libido towards this amount]
 	now loot entry is ""; [ Dropped item, if any ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -353,21 +354,122 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
+
 
 when play ends:
-	if bodyname of player is "Siamese Cat":
-		if humanity of player < 10:
+	if bodyname of Player is "Siamese Cat":
+		if humanity of Player < 10:
 			if HP of Sven > 0 and HP of Sven < 49:
 				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You somehow find your way back to Sven and have a long bout of wild, lustful sex with the feline[if HP of Sven < 8], completing his transformation into a hybrid snow leopard/siamese cat[end if]. Together, you and he set off into the city one cooler evening and come across another pair of felines who seem familiar to you and you are drawn to them. As you get closer, you can see that the conjoined cats are having some playful fun together.";
 				say "     As you approach them, the male finishes up in his conjoined twin. Noticing you, they smile and get up. 'Oh, it looks like you've found a special friend,' they purr as they move to snuggle with you both. They nuzzle and caress your bodies, seeming to know just where to touch to get you excited. Looking into Sven's soft, blue eyes you feel yourself compelled to be with him.";
 			else:
-				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if player is herm]herm[else if player is female]male[else if player is male]female[else]neuter[end if] person under them and are in the midst of transforming them.";
-				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if player is male]. She[else]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
-			if tailname of player is "Siamese Cat":
+				say "     As your mind starts to unravel, you set off across the city, wandering in search of something, though you know not what. You eventually come across a pair of felines who seem familiar to you and are drawn to them. As you get closer, you can see that the conjoined cats have a [if Player is herm]herm[else if Player is female]male[else if Player is male]female[else]neuter[end if] person under them and are in the midst of transforming them.";
+				say "     As you approach, the conjoined pair look up and smile. 'Just in time,' they purr, motioning for you towards the changing individual as they become more like a Siamese cat[if Player is male]. She[else]. He[end if] gets up slowly at first; but, upon noticing you, seems to feel the same compulsion to be close to you as you are feeling.";
+			if tailname of Player is "Siamese Cat":
 				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. Your tails slowly intertwine and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if HP of Sven < 8]the hybrid Sven[else if HP of Sven is 8 or HP of Sven is 9]the sexy snow leopard[else if HP of Sven is 10]the colorful snow leopard[else]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
 			else:
 				say "     Drawn by some strange need, you wrap your arms around one another, licking and kissing. The Siamese felines run their paws over your body and play with themselves, wiping their juices across your rear, coaxing you to grow a Siamese cat tail. Your tail slowly intertwines with [if HP of Sven > 0 and HP of Sven < 49]Sven[else]the single feline[end if] and, as the tips touch, you can feel them start to fuse together. The pleasure of this causes you both to orgasm violently. You can feel yourself becoming linked to [if HP of Sven < 8]the hybrid Sven[else if HP of Sven is 8 or HP of Sven is 9]the sexy snow leopard[else if HP of Sven is 10]the colorful snow leopard[else]the new kitty[end if], sharing some sensation with them, as well as a deep, emotional bonding. You two are individuals, but also one, partners and lovers meant to be together and now inseparable.";
@@ -375,27 +477,27 @@ when play ends:
 		else:
 			if HP of Sven > 7 and HP of Sven < 30:
 				say "     After your rescue, you are eventually cleared by the military and released with many others. Sven, having difficulty with the heat at the compound, is happy to be free of it and clings to you lovingly upon his release. You wander from place to place for a time before settling down to enjoy your life with your lustful snow leopard. Sven becomes a wonderful pet, always eager to satisfy your lusts and any kinky desire you have. The beautiful kitty lounges around your home naked, shyly teasing from behind his tail. His coy playfulness always draws the attention of your friends, making him a wonderful means to coax them into a three-way. When you become acquainted with a zookeeper, Sven has them playing with him after only a few visits, and after that, you're slipping your pet into the zoo to play with the big cats there. You enjoy watching your pet mount the females and be taken by the males. You even paid for using Sven as a stud on their female snow leopards, though the kitty always seems to be looking forward to having a strong male atop him.";
-				if tailname of player is "Siamese Cat":
+				if tailname of Player is "Siamese Cat":
 					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your pet, it clicks. You nuzzle and nibble his ears, whispering that you love him as you bring his tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you. You can feel yourself becoming linked to your pet - no, your lover and mate - sharing some sensation with them, as well as a deep, emotional bonding. You both remain individuals, but are also one. You are partners and lovers meant to be together and now inseparable.";
 					say "     You kiss and nuzzle Sven as you start to change, picking up his snow leopard pattern and he picks up some siamese traits, until eventually you becoming paired twins. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain largely intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Sven is briefly surprised by all this, but the love and adoration he's shared for you that you can now feel tells you how much he loves being one with you. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 					say "     You do end up taking on Sven's pet-like nature, making you become a loving pet, eager to serve your owner as Sven does. When you are found by [if HP of Sven is 10 or coonsex > 0]Candy[else if pigfucked > 3]Philip[else if Sandra is in the bunker]Sandra[else]your zookeeper friend[end if], you are taken to their home to become a pair of lustful, loving pets for them. As lustful pets, you are there to satisfy their sexual desires and you submit to playing with their friends eagerly. As conjoined kitties, there are so many ways to please your new owner and their friends. Soon enough, you and Sven are together at the zoo, sharing in the joy of breeding with the great cats as your own watches with a smile.";
-					if player is female and "Sterile" is not listed in the feats of player:
+					if Player is female and "Sterile" is not listed in the feats of Player:
 						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[else]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do.";
 				else:
 					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your pet and you feel much better. The feeling never quite goes away, but a little romp with him makes everything a little brighter. You know he loves and adores you, and will never leave you, and this soothes the strange longing.";
 [			else if HP of Sven >= 30 and HP of Sven < 50:
 				say "***Ending w/confident Sven.";]
 			else:
-				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if player is herm]herm[else if player is female]male[else if player is male]female[else]neuter[end if] feline that you hit it off with[if player is male]. She[else]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
-				say "     You move in together and have a pleasant life of indolence and sex [if player is male]. She[else]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
-				if tailname of player is "Siamese Cat":
-					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if player is male]her[else]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
+				say "     After your rescue, you are eventually cleared by the military and released with many others. You wander from place to place for a time before settling down when you meet a [if Player is herm]herm[else if Player is female]male[else if Player is male]female[else]neuter[end if] feline that you hit it off with[if Player is male]. She[else]. He[end if] is only partially infected, having gained ears and a tail as their only visible alterations.";
+				say "     You move in together and have a pleasant life of indolence and sex [if Player is male]. She[else]. He[end if] is well-to-do, so you can take it easy. Which suits the feline in you just fine.";
+				if tailname of Player is "Siamese Cat":
+					say "     Over time, you do start to feel like something is missing though and you can't tell what. But one late night, after a particularly energetic romp with your lover and mate, it clicks. You nuzzle and nibble their ears, whispering that you love them as you bring [if Player is male]her[else]his[end if] tailtip to yours. Moments later, they start to fuse together and you are joined at the end of your tails.";
 					say "     You both mrowl loudly in orgasm as the pleasure of this rushes through you. You can feel yourself becoming linked to your mate, sharing some sensation with them, as well as a deep, emotional bonding. You both remain individuals, but are also one. You are partners and lovers meant to be together and now inseparable.";
-					say "     You kiss and nuzzle your lover as [if player is male]she[else]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
+					say "     You kiss and nuzzle your lover as [if Player is male]she[else]he[end if] starts to change, becoming more feline like you and soon becomes your paired twin. Joined together, you are able to enjoy one another's sensations and orgasms, often going off simultaneously. Your minds remain intact and distinct, but you are able to silently share thoughts as you would words.";
 					say "     Your partner is briefly surprised by all this, but the loving bond you share soon overcomes the shock of the unforeseen change. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 				else:
-					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if player is male]her[else]him[end if] makes everything a little brighter.";
+					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your lover and you feel much better. The feeling never quite goes away, but a little kiss or lick from [if Player is male]her[else]him[end if] makes everything a little brighter.";
 
 Siamese Cats ends here.

@@ -21,10 +21,10 @@ carry out supersponsor:
 	let weaponsmaster be "Weaponsmaster";
 	while Trixieexit is 0:
 		let sanitysave be 0;
-		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
+		if "Sanity Saver" is listed in feats of Player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
 		say "- Improvements -[line break]";
-		say "[if level of player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[else](1) Jump to lvl 12 - Inactive[end if][line break]";
+		say "[if level of Player < 12][link](1) Jump to lvl 12[as]1[end link] - Available[else](1) Jump to lvl 12 - Inactive[end if][line break]";
 		say "[if ssmb is true](2) Maintenance boost - Active[else][link](2) Maintenance boost[as]2[end link] - Inactive[end if][line break]";
 		say "[link](3) Pet trainer[as]3[end link] - Reusable[line break]";
 		say "[if ssxpa is true](4) Experience accelerator - Active[else][link](4) Experience accelerator[as]4[end link] - Inactive[end if][line break]";
@@ -56,17 +56,17 @@ carry out supersponsor:
 				now ssmb is false;
 			say "     The maintenance boost improves the effectiveness of medkits and using the journal by 50%. It is now [if ssmb is true]active[else]inactive[end if]";
 		else if calcnumber is 3:
-			if companion of player is nullpet:
+			if companion of Player is nullpet:
 				say "     'How do you expect to train one of your pets if you don't have them here with you?' Trixie asks.";
-			else if level of companion of player >= level of player - 3:
+			else if level of companion of Player >= level of Player - 3:
 				say "     'The pet trainer can only train a pet until they're three levels below your own. This one's already reached that point,' Trixie explains.";
 			else:
-				say "     During your conversation with Trixie, the [companion of player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
-				let nn be ( level of player - level of companion of player ) - 3;
+				say "     During your conversation with Trixie, the [companion of Player] has been confused and concerned as you talk to apparently no one. Trixie waggles here fingers in their direction and they fall into a trance. A set of VR goggles and headphones are magicked onto their head and start to play. They absorb the information from the VR session, auto-magically training them in mere minutes. Once the training session is over, the equipment disappears and your companion comes out of their trance with increased skill.";
+				let nn be ( level of Player - level of companion of Player ) - 3;
 				let XPfactor be 5;
-				if "Good Teacher" is listed in feats of player:
+				if "Good Teacher" is listed in feats of Player:
 					now XPfactor is 3;
-				increase XP of companion of player by ( ( level of companion of player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
+				increase XP of companion of Player by ( ( level of companion of Player * 2 ) + ( nn - 1 ) ) * nn * XPfactor;
 				repeat with x running from 1 to nn:
 					pet level up;
 		else if calcnumber is 4:
@@ -166,12 +166,12 @@ carry out supersponsor:
 			else:
 				say "     You've already received this reward.";
 		else if calcnumber is 11:
-			if "Sanity Saver" is not listed in feats of player:
+			if "Sanity Saver" is not listed in feats of Player:
 				say "     You shield your sanity from all harm.";
-				add "Sanity Saver" to feats of player;
+				add "Sanity Saver" to feats of Player;
 			else:
 				say "     You release the iron clad defense of your mind.";
-				remove "Sanity Saver" from feats of player;
+				remove "Sanity Saver" from feats of Player;
 		else if calcnumber is 12:
 			repeat with petget running through pets:
 				now petget is tamed;
@@ -182,36 +182,36 @@ carry out supersponsor:
 			now carried of Smug Confidence is 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else if calcnumber is 14:
-			Now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
-			Now bodytype of player is "Human";
-			Now skin of player is "smooth";
-			Now cock of player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-			Now face of player is "Human";
-			Now tail of player is "Human";
-			Now body of player is "Human";
-			Now bodyname of player is "Human";
-			Now facename of player is "Human";
-			Now skinname of player is "Human";
-			Now Cockname of player is "Human";
-			Now Tailname of player is "Human";
+			Now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
+			Now bodytype of Player is "Human";
+			Now skin of Player is "smooth";
+			Now cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+			Now face of Player is "Human";
+			Now tail of Player is "Human";
+			Now body of Player is "Human";
+			Now bodyname of Player is "Human";
+			Now facename of Player is "Human";
+			Now skinname of Player is "Human";
+			Now Cockname of Player is "Human";
+			Now Tailname of Player is "Human";
 		else:
 			now Trixieexit is 1;
 		LineBreak;
 
 
 to sslvl12:
-	if level of player >= 12:
+	if level of Player >= 12:
 		say "You've already reached or exceeded this boost.";
 	else:
 		let val be 5;
-		if "Fast Learner" is listed in feats of player:
+		if "Fast Learner" is listed in feats of Player:
 			now val is 4;
 		say "[bold type]You feel empowered by your support of the game.[roman type][line break]";
-		now XP of player is val * 12 * 13;
-		[ say "XP set to [XP of player].";]
-		decrease XP of player by val * ( level of player ) * ( level of player + 1 );
-		[ say "XP decreased to [XP of player].";]
-		now val is 12 - level of player;
+		now XP of Player is val * 12 * 13;
+		[ say "XP set to [XP of Player].";]
+		decrease XP of Player by val * ( level of Player ) * ( level of Player + 1 );
+		[ say "XP decreased to [XP of Player].";]
+		now val is 12 - level of Player;
 		[ say "Levelling up [value] times.";]
 		repeat with x running from 1 to val:
 			level up;

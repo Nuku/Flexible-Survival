@@ -14,13 +14,13 @@ this is the maxresearcher rule:
 	let x be 0;
 	if researchers is complete:
 		increase x by 4;
-	if "Brilliant" is listed in perks of tribe of player:
+	if "Brilliant" is listed in perks of tribe of Player:
 		increase x by 1;
 		now x is ( x * 5 ) / 4;
 	now max of researcher is x;
 
 this is the researchvailable rule:
-	if researchers is complete or "Brilliant" is listed in perks of tribe of player:
+	if researchers is complete or "Brilliant" is listed in perks of tribe of Player:
 		rule succeeds;
 	else:
 		rule fails;

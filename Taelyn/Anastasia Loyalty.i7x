@@ -1,9 +1,9 @@
 [Version 1 of Anastasia Loyalty by Luneth begins here.
 [Version 1: added loyalty variable and Master/Slave route - Luneth]
 
-[ Loyalty of Anastasia                                                     ]
+[ Loyalty of Anastasia                                                    ]
 [   0: No loyalty has been earned                                         ]
-[   1: Recruited Anastasia                                                 ]
+[   1: Recruited Anastasia                                                ]
 [   2: Gained a loyalty point                                             ]
 [   3: Continuation                                                       ]
 [  5+: Unchaining Event can come up                                       ]
@@ -12,7 +12,7 @@
 [  12: Master/Slave event 2 done                                          ]
 [  13: Master/Slave event 3 done                                          ]
 
-[ AnastasiaMasterSlave                                                     ]
+[ AnastasiaMasterSlave                                                    ]
 [  -4: player locked in as sub                                            ]
 [  -3: player has been submissive thrice                                  ]
 [  -2: player has been submissive twice                                   ]
@@ -23,15 +23,15 @@
 [   3: player has been dominant thrice                                    ]
 [   4: player locked in as master                                         ]
 
-[ AnastasiaThongStatus                                                     ]
+[ AnastasiaThongStatus                                                    ]
 [   0: Default                                                            ]
 [   1: Allowed him to keep his underwear                                  ]
 [   2: Destroyed his thong leaving him naked                              ]
 
-[ AnastasiaDrugStatus                                                      ]
+[ AnastasiaDrugStatus                                                     ]
 [   0: Default                                                            ]
-[   1: Anastasia is not an addict                                          ]
-[   2: Anastasia is an addict                                              ]
+[   1: Anastasia is not an addict                                         ]
+[   2: Anastasia is an addict                                             ]
 
 AnastasiaMasterSlave is a number that varies.
 AnastasiaThongStatus is a number that varies.
@@ -65,7 +65,7 @@ to say AnastasiaOfferingMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Demon Seed"):
@@ -93,7 +93,7 @@ after going to Half-Renovated Room while (Anastasia is in Half-Renovated Room an
 	say "     As you make your way through the library, you hear some cackling laughter coming from the direction of the half-renovated dining room. Deciding to check it out, you enter the large doors that lead into the dreary room. Once inside, you notice Anastasia relaxing on his [']throne['], though in all honesty, it's nothing more than a simple comfy chair that he treats like one. What surprises you the most, however, is that the muscular demon isn't alone. You can't tell who exactly is with him, except that the individual is small and zipping through the air quickly, curving past Anastasia in teasing approaches. Curiosity raised about what's going on, you attempt to keep yourself concealed while you listen in on their conversation, hoping to gain some insight into what is going on.";
 	say "     You can of course tell which voice is Anastasia; however, the other voice is quieter and clearly very feminine. 'So, what did you do that got you all tied up? I mean, with your looks and all of the chains, you really are coming across as some super slutty demon slave fantasy come to life!' A soft growl is his only response at first, but eventually, the demon prince composes himself enough to answer. 'Why don't you come a little closer, imp, and I will show you who the true demonic slut is.' A fit of giggles erupts throughout the room. 'Yeah, I think I'll pass. I'm not really in the mood to use a living dildo at the moment.' Judging by the sounds your slave is making, you are going to go out on a limb and say that Anastasia doesn't appreciate being compared to a mindless sex toy.";
 	WaitLineBreak;
-	say "     Deciding that you have done enough snooping, you come out from where you were hiding and make your presence known. A lighting fast blur instantly rushes at you and wraps its small arms around one of yours. '[if player is not defaultnamed][name of player]! [end if]Were you looking for little ol['] me?' Glancing down, you are hardly surprised to see Nala hanging off of you. Without waiting for a response, the little purple imp just continues talking. 'So, is this big lug yours? Hehe, I didn't know you were into tying up helpless li'l demons! You're a kinky one, that's for sure.' Anastasia is obviously tired of listening to what the imp has to say about him and begins to violently pull at the chain holding his collar. 'Helpless?! I am a prince of hell, you worthless little cocksleeve! I hold dominion over you, and I demand that you show proper respect to me!'";
+	say "     Deciding that you have done enough snooping, you come out from where you were hiding and make your presence known. A lighting fast blur instantly rushes at you and wraps its small arms around one of yours. '[if Player is not defaultnamed][name of Player]! [end if]Were you looking for little ol['] me?' Glancing down, you are hardly surprised to see Nala hanging off of you. Without waiting for a response, the little purple imp just continues talking. 'So, is this big lug yours? Hehe, I didn't know you were into tying up helpless li'l demons! You're a kinky one, that's for sure.' Anastasia is obviously tired of listening to what the imp has to say about him and begins to violently pull at the chain holding his collar. 'Helpless?! I am a prince of hell, you worthless little cocksleeve! I hold dominion over you, and I demand that you show proper respect to me!'";
 	say "     Nala looks over at Anastasia while he has his outburst, then rolls her eyes and turns her attention back to you. 'He's a noisy one, isn't he? I'm surprised that you haven't muzzled him by now. Then again, I guess that he does have a pretty mouth. Too bad all that comes out of it is that bile. What's his deal, anyways?' Glancing between the two demons, you can't help but feel a little surprised by Anastasia's response. The usually cool and in control prince apparently has no tolerance for being mocked by other hellspawn. Focusing back on Nala, you begin to explain to her about how Anastasia came into your possession. 'Wait... so Elijah was gonna kill him and then you stopped him, but the only way to do that was by enslaving a demonic prince?' The purple imp lets out a snort of laughter. 'Wow, you sure know how to live a complicated life, don't you? Aren't you worried that our little mister pure of heart might just... I don't know, come in here and decide to go all stabby-stabby when you're not around?'";
 	WaitLineBreak;
 	say "     You are about to defend Elijah when you hear a squeal come from Nala. 'I know exactly what to do!' The little imp ends up flying alongside a slightly pouty Anastasia. Apparently, he doesn't much care for being ignored. 'I learned this trick from this chick I met named Lilith. She was kind of a manipulative bitch, but damn did she have a great pair of tits.' For a moment, Nala's eyes glaze over, almost like she is lost in a memory. You snap your fingers in front of her face to capture her attention and ask her what she's going on about.";
@@ -113,7 +113,7 @@ after going to Grey Abbey Library while (Anastasia is booked and Loyalty of Anas
 	if debugactive is 1:
 		say "     DEBUG: Anastasia WALK-IN - HP OF Anastasia: [HP of Anastasia], Loyalty of Anastasia: [Loyalty of Anastasia][line break]";
 	say "     As you walk into the main lobby of the library, your attention is drawn to the huge demon prince sitting on one of the torn up comfy chairs, his boisterous laughter echoing throughout the building. 'Then there was this one time that my army attacked another hell realm. Of course we won, but the best part was when it came to the spoils! My imps brought in these two captives from the enemy, a guy and a girl who apparently were the prince and princess of their realm. Well, with one look, I knew exactly what needed to be done! So I grabbed the girl and pounded her pussy right there in front of her brother, and pretty soon, the screams turned into moaning, and I shot my load into the bitch haha! Being the nice ruler that I am though, I wasn't about to let her brother feel left out, so while she was passed out, I bent him over my throne. Damn, that slut was a squealer! By the end of the day, I had both of them worshipping my cock like they were born for it.'";
-	say "     Anastasia is apparently sharing his past conquests with your allies, some seem amused while others seem a bit disgusted. You are about to turn and leave when something else catches your ear. 'It's the same way with my new [italic type][master][roman type]. [SubjectProCap of player] may act like [SubjectPro of player] is in charge, but when we are alone, it's a completely different story. I mean, I can't keep the li'l subby slut off of my cock!' While Anastasia sharing his past with the others and attempting to open up about himself isn't necessarily a bad thing, talking about you and what happens between the two of you is a completely different matter.";
+	say "     Anastasia is apparently sharing his past conquests with your allies, some seem amused while others seem a bit disgusted. You are about to turn and leave when something else catches your ear. 'It's the same way with my new [italic type][master][roman type]. [SubjectProCap of Player] may act like [SubjectPro of Player] is in charge, but when we are alone, it's a completely different story. I mean, I can't keep the li'l subby slut off of my cock!' While Anastasia sharing his past with the others and attempting to open up about himself isn't necessarily a bad thing, talking about you and what happens between the two of you is a completely different matter.";
 	LineBreak;
 	say "     [bold type]What should you do about Anastasia?[roman type][line break]";
 	say "     [link](1)[as]1[end link] - Punish the demonic asshole!";

@@ -432,6 +432,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
+"orc loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials."	0	orc loincloth
 "ragged loincloth"	"A ragged piece of brown fabric that one can tie around their hips to cover the bare essentials."	0	ragged loincloth
 "simple loincloth"	"A simple white cotton loincloth. One can tie it around their hips to cover the bare essentials."	0	simple loincloth
 "boxer briefs"	"A pair of black boxer briefs with a gray band of elastic at the top. Simple, yet functional."	0	boxer briefs
@@ -439,6 +440,19 @@ name	desc	weight	object
 "orange jockstrap"	"A jockstrap in bright orange, clearly made for people who do not mind showing off quite a bit."	0	orange jockstrap
 "mesh undies"	"Underwear made of sheer black mesh. You can literally see right through it."	0	mesh undies
 "pink panties"	"A pair of pink panties with frilly edges."	0	pink panties
+
+orc loincloth is a grab object.
+orc loincloth is equipment.
+It is not temporary.
+The plural of orc loincloth is false.
+The taur-compatible of orc loincloth is false.
+The size of orc loincloth is 3.
+The AC of orc loincloth is 0.
+The effectiveness of orc loincloth is 0.
+The placement of orc loincloth is "crotch".
+The descmod of orc loincloth is "An orc loincloth barely covers your crotch. It is fairly easy to expose yourself with the wrong (or right?) move.".
+The slot of orc loincloth is "crotch".
+the scent of orc loincloth is "The cloth has the scent of manly musk clinging to it. Just breathing in with it under your nose makes you think of orcs.".
 
 ragged loincloth is a grab object.
 ragged loincloth is equipment.

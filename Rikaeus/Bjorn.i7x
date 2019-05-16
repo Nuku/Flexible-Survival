@@ -31,7 +31,7 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - He's getting beaten rather badly, why not?";
 	say "     ([link]N[as]n[end link]) - No, it's none of your business getting involved.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     With a shrug of your shoulders you charge and tackle the Spartan leader to the ground. This appears to surprise him, allowing you to successfully knock him to the floor. The male viking takes this opportunity to back away from the Greek warrior. However, you are shoved off him rather quickly but to your shock, the guy isn't angry at all, rather he has an intrigued look on his face as he stands up. 'That... was a maneuver I didn't expect. Viking, your defeat is delayed thanks to your new friend,' Pericles says, brushing the dirt off his clothes. Once again the Spartan directs his attention to you. 'You intrigue me. I'm sure I'll see you around sooner or later,' he says, a tone of interest in his voice before leaving.";
 		say "     Now left alone with the Viking you take a closer look at him. Your early description of him being young was an understatement. He looks no older than nineteen and appears to not have experienced many battles if the lack of scars says anything. He has shoulder length dirty blonde hair that looks rather shaggy as well as having bright blue eyes. Clothing-wise he is wearing what you expect of a Viking, scale-mail armor that appears to fit him rather nicely with a wooden shield in his left hand and a sword in his right. He appears to be embarrassed as he is currently blushing and looking down at the ground. 'I didn't need saving,' he mutters, most likely to himself rather than you. You raise a brow and ask him what a young sea warrior like him is doing so far from the beach. As you say this he looks up at you and speaks. 'I... My name's Bjorn... I came out here to prove myself to my tribe,' he manages to say.";
@@ -68,14 +68,14 @@ Bjorn is a man.
 [Physical details as of game start]
 ScaleValue of Bjorn is 3. [human sized]
 SleepRhythm of Bjorn is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Bjorn is 1. [X cock]
+Cock Count of Bjorn is 1. [X cock]
 Cock Length of Bjorn is 8. [X Inches]
-Cock Width of Bjorn is 4.
-Testes of Bjorn is 2. [X balls]
-Cunts of Bjorn is 0. [X pussy]
-Cunt Length of Bjorn is 0. [X Cunt]
-Cunt Width of Bjorn is 0. [X Cunt]
-Breasts of Bjorn is 2. [X nipples]
+Ball Size of Bjorn is 4.
+Ball Count of Bjorn is 2. [X balls]
+Cunt Count of Bjorn is 0. [X pussy]
+Cunt Depth of Bjorn is 0. [X Cunt]
+Cunt Tightness of Bjorn is 0. [X Cunt]
+Nipple Count of Bjorn is 2. [X nipples]
 Breast Size of Bjorn is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Bjorn is false. [can not take oversized members without pain]
@@ -134,7 +134,7 @@ to say BjornTalkMenu:
 	now sortorder entry is 1;
 	now description entry is "Ask him about his tribe";
 	[]
-	if cocks of player > 0 and Bjorn is in Rocky Cliff:
+	if Cock Count of Player > 0 and Bjorn is in Rocky Cliff:
 		choose a blank row in table of fucking options;
 		now title entry is "Spar";
 		now sortorder entry is 2;
@@ -156,7 +156,7 @@ to say BjornTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Viking"):
@@ -184,7 +184,7 @@ to say BjornSpar:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yeah, I want that dick up my ass.";
 	say "     ([link]N[as]n[end link]) - No, it's my turn to top.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Deciding that you want to take his cock up your ass, you decide to feign fighting him. You jump onto the viking and pin his arms to the ground faking an attempt to win. You end up not putting enough strength into it and Bjorn manages to shove you off him, with him on top of you now. You are unable to get him off you, something that he smirks at and clearly enjoys if the growing bulge in his pants says anything. Fifteen seconds pass by rather quickly and when it does, he gets off and promptly strips, his hard cock jutting out to show how eager he is to fuck your ass. With a fake sigh of defeat you get up as well and strip yourself of your clothing, leaving you naked in front of the buff viking.";
 		say "     Bjorn walks up to you and begins to push a finger into your ass to prepare you for his hard cock. You bite your lip to stifle a moan as he manages to find your prostate. It doesn't take long for him to push another finger in so he could scissor you open, making you wince at the feeling. When you look back at him you see him smirk and wonder what he's about to do. You quickly find out when he begins to thrust his fingers in and out, making sure to press against your prostate. This causes you to writhe on his fingers, thrusting your ass back to have him be deep in your hole. However, when he pulls his fingers out, you whine at the loss which elicits a chuckle from the male.";
@@ -195,7 +195,7 @@ to say BjornSpar:
 		say "     Sure enough it doesn't take long before you let out a loud grunt and shoot your load across both your stomachs. This causes you to clench your hole on the thick cock you're currently riding, driving Bjorn over the edge. With one last groan, the viking lets loose his cum deep into your ass. While riding out the bliss of your orgasms the two of you lazily swap kisses, simply enjoying each other's presence. Once you're out of your post-coitus haze you ease yourself off his softening cock and begin to clean yourself up. Once done you help him up from the sand. 'That was wonderful, maybe we could try sparing again another time?' he asks. You tell Bjorn that you'll let him know if you wish to spar again before wondering what you'll do next.";
 	else:
 		LineBreak;
-		let bonus be (( strength of player minus 10 ) divided by 2);
+		let bonus be (( strength of Player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Strength Check):[line break]";
 		if diceroll + bonus >= 18:
@@ -252,7 +252,7 @@ instead of fucking Bjorn:
 		say "     He chuckles at your eagerness. 'As much as I'd love to have fun with you, I need rest from last time,' he says with a smile.";
 	else if BjornRelationship > 4 and player is neuter:
 		say "     Bjorn gives an apologizing look at you as he stares at you up from his books. 'I'm sorry but I'd rather not exclude Pericles and he... finds it weird when there's not a cock to play with,' the Viking says to you. Perhaps you'd have a better chance with the couple if you were to the dominant's likes?";
-	else if BjornRelationship > 4 and cocks of player > 0 and cunts of player < 1:
+	else if BjornRelationship > 4 and Cock Count of Player > 0 and Cunt Count of Player < 1:
 		say "     He looks up at you from his books and then over at the Spartan-Helot, who is currently working on some paperwork. 'What do you wish to do? I'm sure me and Pericles would love to have fun with you,' he says with a sly smirk.";
 		wait for any key;
 		say "[PericlesBjornSexMenu]";
@@ -288,7 +288,7 @@ to say BjornSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck him off"):
@@ -308,19 +308,19 @@ to say BjornSex1:
 	say "     The viking perks up when you mention that you want to blow him. 'That sounds like a great idea,' he says, a wide smile on his face. Eager to get started the buff male begins to shuck off his scale-mail armor, revealing his muscular body. He tosses it on the sand by the cliff before walking over there and leaning against the rocky wall. He promptly undoes his pants enough to reveal his slowly hardening cock. You walk over to Bjorn and get on your knees making you now face first with the big cock. Just from your position you can easily smell his masculine musk, something that you inhale before moving your face to his dick.";
 	say "     You first focus your attention on his balls, lavishing it with your tongue, taking in the sweaty taste of his sack. Judging by that, you can tell he recently worked out, causing thoughts of the buff viking training with his sword to appear in your head. Spurred on by the sexy images popping up in your mind, you begin to drag your tongue up Bjorn's length, enjoying the moans coming from the male. When you reach the tip of the cock, you swirl your tongue around it, savoring the musky taste. This ends up making him grasp at your head, his fingers gripping not too hard. To tease your friend you begin to lick repeatedly at his cock-head, the viking moaning and groaning at the feeling. While you're doing this, his cock is starting to drip precum, which you eagerly lap up.";
 	WaitLineBreak;
-	say "     Deciding that you've teased him long enough you engulf the cock-head with your mouth and begin to slowly deep-throat him. Bjorn lets out a grunt when you do so, clearly enjoying your efforts. 'Fuck that's great,' he says, clearly resisting the urge to fuck your face. When your face is finally pressed against his crotch, you reach your hand to his balls and start to fondle them, increasing the pleasure that your friend is feeling. From there you start to fuck your own face on his dick, an action that the viking obviously enjoys if his moans and groans tell you anything[if player is female]. You slip your free hand into your clothing and promptly insert a finger into your pussy, fingering yourself so that you can get off with the buff male[else if player is male]. You fish out your own cock from your clothes and begin to masturbate as you suck the buff male's manhood, eager to get off with him[end if].";
-	say "     By now Bjorn is unable to resist and begins to thrust in and out of your mouth at a rapid pace, clearly getting closer and closer to his own orgasm. You ride it out, not minding the face-fucking as your friend thankfully doesn't keep his dick in your throat too long, allowing you to take small breaths in between each push. Soon enough though the viking lets out a loud groan as he pulls back enough so that his tip is resting on your tongue. Immediately after that shot after shot of cum pools in your mouth, Bjorn coating your oral cavity with his seed[if player is female]. You greedily swallow it all as you moan loudly, your juices spilling from your pussy[else if player is male]. You greedily swallow it down as you let out your own grunt of pleasure, your load spilling onto the sand below you[end if].";
+	say "     Deciding that you've teased him long enough you engulf the cock-head with your mouth and begin to slowly deep-throat him. Bjorn lets out a grunt when you do so, clearly enjoying your efforts. 'Fuck that's great,' he says, clearly resisting the urge to fuck your face. When your face is finally pressed against his crotch, you reach your hand to his balls and start to fondle them, increasing the pleasure that your friend is feeling. From there you start to fuck your own face on his dick, an action that the viking obviously enjoys if his moans and groans tell you anything[if Player is female]. You slip your free hand into your clothing and promptly insert a finger into your pussy, fingering yourself so that you can get off with the buff male[else if Player is male]. You fish out your own cock from your clothes and begin to masturbate as you suck the buff male's manhood, eager to get off with him[end if].";
+	say "     By now Bjorn is unable to resist and begins to thrust in and out of your mouth at a rapid pace, clearly getting closer and closer to his own orgasm. You ride it out, not minding the face-fucking as your friend thankfully doesn't keep his dick in your throat too long, allowing you to take small breaths in between each push. Soon enough though the viking lets out a loud groan as he pulls back enough so that his tip is resting on your tongue. Immediately after that shot after shot of cum pools in your mouth, Bjorn coating your oral cavity with his seed[if Player is female]. You greedily swallow it all as you moan loudly, your juices spilling from your pussy[else if Player is male]. You greedily swallow it down as you let out your own grunt of pleasure, your load spilling onto the sand below you[end if].";
 	WaitLineBreak;
-	say "     Bjorn kind of just slumps against the cliff wall, still clearly in post-coital bliss. To your surprise the male helps you up and gives you a kiss on the mouth, taking some of the cum left over into his own oral cavity. When he swallows it, he pulls back and gives you a smile. 'That was a great blowjob,' he remarks happily. Following that the buff viking re-buttons his pants and throws his shirt back on. [if player is not neuter]You do the same, readjusting your clothes so that you look presentable. [end if]Once the two of you are fully dressed, he gives you another kiss and goes back to leaning against the wall. You, however, are left to wonder what you'll do now.";
+	say "     Bjorn kind of just slumps against the cliff wall, still clearly in post-coital bliss. To your surprise the male helps you up and gives you a kiss on the mouth, taking some of the cum left over into his own oral cavity. When he swallows it, he pulls back and gives you a smile. 'That was a great blowjob,' he remarks happily. Following that the buff viking re-buttons his pants and throws his shirt back on. [if Player is not neuter]You do the same, readjusting your clothes so that you look presentable. [end if]Once the two of you are fully dressed, he gives you another kiss and goes back to leaning against the wall. You, however, are left to wonder what you'll do now.";
 	now lastfuck of Bjorn is turns;
 
 to say BjornSex2:
 	setmonster "Viking";
 	say "     As soon as you mention allowing the male to fuck you up the ass, he smiles widely. 'That's a great idea,' he says, clearly eager to get his cock up your hole. Bjorn quickly begins to divest himself of his clothing, starting with his scale-mail chest piece which is promptly tossed onto the ground. Followed by that are his leather pants that join the top on the sand in a pile. His dick is revealed by now, slowly starting to harden, a testament to his horniness. Figuring that you too should strip, you remove your clothing and let it join the Viking's on the floor. The buff male walks up to you and plants a kiss on your neck, something that makes you shiver with pleasure. His hands begin to inch closer and closer to your hole as he switches his attention to your own mouth, starting a rough make-out session.";
-	say "     When his fingers finally reach your pucker he slowly pushes in one digit, making causing you to let out a groan of pleasure and pain. Of course your sounds are muffled when he slips his tongue into your mouth, exploring the insides of your oral cavity. This distracts you from the sensation of him adding another finger and beginning to scissor your hole open. Your friend continues this for a while before switching to thrusting his two digits in and out of your entrance[if player is male], making sure to brush up against your prostate to make you moan wantonly[end if]. Sadly though this comes to an end as Bjorn pulls his fingers out of your entrance.";
+	say "     When his fingers finally reach your pucker he slowly pushes in one digit, making causing you to let out a groan of pleasure and pain. Of course your sounds are muffled when he slips his tongue into your mouth, exploring the insides of your oral cavity. This distracts you from the sensation of him adding another finger and beginning to scissor your hole open. Your friend continues this for a while before switching to thrusting his two digits in and out of your entrance[if Player is male], making sure to brush up against your prostate to make you moan wantonly[end if]. Sadly though this comes to an end as Bjorn pulls his fingers out of your entrance.";
 	WaitLineBreak;
-	say "     Thankfully you aren't empty for too long as Bjorn quickly picks you up and positions himself at your entrance. He then slowly pushes into your hole, allowing you to get used to the penetration. Once he's balls deep into you, your viking friend begins to slowly pull out before thrusting back in roughly. This forces a gasp of pleasure out of you, enjoying the thick dick ramming repeatedly into your ass. The sounds of the buff male's balls slapping wetly against your cheeks fill your surroundings, the lewd noises only turning him on even more[if player is female]. You manage to position your hand at your pussy, promptly pushing a digit in and starting to finger yourself[else if player is male]. By now your own hard manhood is throbbing painfully as you leak precum from the tip and onto Bjorn's chest[end if].";
-	say "     As you and the Viking's coitus goes on, his thrusts get rougher, evidence that the male is getting closer and closer to his own orgasm. On top of that he appears to be muttering swear words as he does get nearer to his climax, some words that would more than likely make a sailor blush. A minute later he lets out a loud 'Fuck!' as he slams into you one last time before he spills his cum deep into you. [if player is female]You let out a loud moan as you thrust your fingers in one last time before your juices spill from your pussy, finally orgasming. [else if player is male]This sets you off, causing you to shoot your seed all over you and Bjorn's chests. [end if]Your viking friend holds you for five more minutes, content to softly kiss you as you two ride out the bliss. Sadly though it must come to an end as he pulls you off him and helps you clean up. 'That was great, maybe have another go sometime later?' he asks. You tell him you'll let him know later before you step back and wonder what you'll do next.[mimpregchance]";
+	say "     Thankfully you aren't empty for too long as Bjorn quickly picks you up and positions himself at your entrance. He then slowly pushes into your hole, allowing you to get used to the penetration. Once he's balls deep into you, your viking friend begins to slowly pull out before thrusting back in roughly. This forces a gasp of pleasure out of you, enjoying the thick dick ramming repeatedly into your ass. The sounds of the buff male's balls slapping wetly against your cheeks fill your surroundings, the lewd noises only turning him on even more[if Player is female]. You manage to position your hand at your pussy, promptly pushing a digit in and starting to finger yourself[else if Player is male]. By now your own hard manhood is throbbing painfully as you leak precum from the tip and onto Bjorn's chest[end if].";
+	say "     As you and the Viking's coitus goes on, his thrusts get rougher, evidence that the male is getting closer and closer to his own orgasm. On top of that he appears to be muttering swear words as he does get nearer to his climax, some words that would more than likely make a sailor blush. A minute later he lets out a loud 'Fuck!' as he slams into you one last time before he spills his cum deep into you. [if Player is female]You let out a loud moan as you thrust your fingers in one last time before your juices spill from your pussy, finally orgasming. [else if Player is male]This sets you off, causing you to shoot your seed all over you and Bjorn's chests. [end if]Your viking friend holds you for five more minutes, content to softly kiss you as you two ride out the bliss. Sadly though it must come to an end as he pulls you off him and helps you clean up. 'That was great, maybe have another go sometime later?' he asks. You tell him you'll let him know later before you step back and wonder what you'll do next.[mimpregchance]";
 	now lastfuck of Bjorn is turns;
 
 Bjorn ends here.

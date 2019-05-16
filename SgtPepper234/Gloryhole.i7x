@@ -78,7 +78,7 @@ to say GholeBJRandomChoice:
 
 
 to say GholeGiverScene1:
-	if player is male: [male + herm]
+	if Player is male: [male + herm]
 		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. Shutting the barely functional latch on the door, you [SelfStripCrotch], then step up to the hole. Pressed against the flimsy wall, you wait with trepidation and increasing arousal for someone to enter the adjacent stall.";
 		say "     .";
 		say "     ..";
@@ -106,7 +106,7 @@ to say GholeGiverScene1:
 		say "     Knees still shaking slightly from the aftershock of your orgasm, you can't help but be a little sad when you feel your partners tongue slide silkily along your sopping wet slit and kiss the twitching tip of your clit before standing to leave the bathroom. You [SelfDressCrotch], then exit the bathroom, wondering what pleasures your next visit may bring.";
 
 to say GholeGiverScene1:
-	if player is male: [male + herm]
+	if Player is male: [male + herm]
 		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. Shutting the barely functional latch on the door, you [SelfStripCrotch], then step up to the hole. Pressed against the flimsy wall, you wait with trepidation and increasing arousal for someone to enter the adjacent stall. The vulnerability of the position excites you, even more so when you hear the adjacent door open, followed by a feminine gasp. For a few strained seconds you wait, holding your breath for what you hope is to come. Suddenly someone's fingers are gingerly stoking your cock, as if to test whether or not it is real. The hands are gentle, almost loving in their exploration of your turgid member. Sounds of breathing reach your ears. Deep breaths. Excited breaths.";
 		say "     Whoever it is lets go of your dick before you hear them getting undressed. Your rock-hard cock is hot with anticipation and must surely be leaking with excitement. Once more you feel the grip on your manhood, and for the first time you notice the hands are furry. So you have a horny anthro on the other side. You hope she's looking for a damn good rutting. Your wish is soon granted when you feel a humid warmth descend on your groaning pole. The velvety sheath of a woman's eager cunt envelops you, and you look down to watch her hips bottom out against your twitching balls. Her fur is white and black, a Husky perhaps? It doesn't really matter anyway, you simply bask in the heat of her loins - a willing female, eager to be bred.";
 		WaitLineBreak;
@@ -119,8 +119,8 @@ to say GholeGiverScene1:
 		say "     You stand around at the hole for some time but sadly no one enters to pleasure you.";
 
 to say GholeFuckCollie:
-	setmonster "Shemale Smooth Collie";
-	if player is female:
+	setmonster "Smooth Collie Shemale";
+	if Player is female:
 		say "     A fat, veiny dog cock slides through the hole, belonging to a shemale collie. A wet slick covers the member, glistening and exuding a strong musk. The desire to taste it is overwhelming. Dropping to you knees you bring your face closer to the twitching hot pole. The cock smells like raw power, and the pair of balls beneath them look fit to burst, hopefully into you. Taking it into your mouth is easy, given your eagerness. The salty tang dominates your taste buds and you suck at it eagerly. A yelp of delight can be heard from the opposing stall as you throat the member, earning you a spray of salty precum that makes you salivate even more on the canine rod. You continue to suck and slobber all over the dog-dick, preparing it for the main course. The fortunate soul next door to you is groaning and yipping in their ecstasy, humping forcefully into your wet mouth and adding to the slick with more precum. The collie groans and becomes erratic in her movements, clearly she is getting close.";
 		say "     Backing off the cock makes your eager shemale whine in frustration. The steel-hard cock twitches and spurts pre at you, dripping wet from your oral attention. You don't want to keep your mate waiting and you turn to present your eager quim to the canine morph. Pressing back into it causes her to moan in appreciation. The heat from the puppy pecker is intense between your labia. The pointed tip presses against your opening, firm and ready to fuck you. You arch your back and press against the stiff pecker, sliding it easily into your slick tunnel. The sounds of panting can be heard from the other stall, mirrored by your own moans of pleasure as she penetrates you deeply. Eager to get her rocks off in your sweet cunt, the collie begins to fuck your hole in earnest, rutting hard against the stall barrier. You in turn press eagerly against her thrusts, relishing the feeling of the dog's hot cock sliding through your tight passage.";
 		WaitLineBreak;
@@ -129,7 +129,7 @@ to say GholeFuckCollie:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
 		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     The thought of having this horny bitch tie with you sends shivers down your spine, and in your eagerness to be taken completely, you push even harder into the shemale's frantic thrusts. Each time you slam your pelvis back against the knot your vaginal opening stretches a little more. Though it's tricky with a barrier between you, you finally manage to slip your tight cock sleeve over the tennis ball-sized knot, giving a satisfied sigh as you do. The excited collie bitch gives exultant yips and you feel the tennis ball knot swell to the size of a grapefruit and anchor itself inside your spasming walls. You spread your legs wide and press back against the gloryhole, along your mate to press in just that little bit deeper, using what little space she has to shift the knot a bit deeper inside you.";
 			say "     As the thick bulb pushes that little bit deeper, it steamrolls your sensitive g-spot, causing you cum suddenly and violently in an explosive orgasm. You howl in pleasure as fountains of girlcum spray out over your legs and feet, your spasming entrance clenching tightly and repeatedly around the base of the huge knot inside you. This repeated clenching sends your mate over the edge who joins you in the howl as the bitches throbbing cock explodes inside you. The force of the breeding is such that you can feel the jets of semen hosing down your womb with an intensely hot ejaculate. The knot anchoring your collie lover to you has created a tight seal, meaning the cum has nowhere to go but in. Your legs are like rubber, but you do all you can to stay upright, though it is made all the more difficult by the river of cum filling you up from below.[fimpregchance]";
@@ -147,7 +147,7 @@ to say GholeFuckCollie:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yeah, take that canine cock to the fullest.";
 		say "     ([link]N[as]n[end link]) - Nah, keep the knot outside.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     The thought of having this horny bitch tie with you sends shivers down your spine, and in your eagerness to be taken completely, you push even harder into the shemale's frantic thrusts. Each time you slam your ass back against the knot your anal ring stretches a little more. Though it's tricky with a barrier between you, you finally manage to slip your clenching sphincter over the tennis ball-sized knot, giving a satisfied sigh as you do. The excited collie bitch gives exultant yips and you feel the tennis ball knot swell to the size of a grapefruit and anchor itself inside your spasming anus. You spread your cheeks wide and press back against the gloryhole, along your mate to press in just that little bit deeper, using what little space she has to shift the knot a bit deeper inside you.";
 			say "     As the thick bulb pushes that little bit deeper, it steamrolls your sensitive prostate causing you cum suddenly and violently in an explosive orgasm. You howl in pleasure as ropes of your semen spray out against the adjacent barrier, your anal sphincter clenching tightly and repeatedly around the base of the huge knot inside you. This repeated clenching sends your mate over the edge who joins you in the howl as the bitches throbbing cock explodes inside you. The force of the breeding is such that you can feel the jets of semen hosing down your colonic walls with an intensely hot ejaculate. The knot anchoring your collie lover to you has created a tight seal, meaning the cum has nowhere to go but in. Your legs are like rubber, but you do all you can to stay upright, though it is made all the more difficult by the river of cum filling you up from behind.[mimpregchance]";
@@ -160,7 +160,7 @@ to say GholeFuckCollie:
 
 to say GholeFuckHorse:
 	setmonster "Horseman";
-	if player is female:
+	if Player is female:
 		say "     A powerful male musk hits you full in the face even before you see what kind of cock you'll be servicing. Following on the heels of its own scent is a horse cock as thick as your arm with a head like a balled fist. The beast twitches and jumps in front of your eyes, and you bend over instinctively to give it a long luxurious lick from the head to the medial ring. The equine cock has a salty tang that makes your head spin, and upon reaching the ring you catch a glimpse of the beast's balls behind the gloryhole opening. Two massive globes as big around as a melon each, sit pendulously waiting to empty themselves inside you.";
 		say "     Excitedly you return to the head of the member and rub the flat face into your lips and open mouth, savoring the heady flavor that overrides all other senses. You want to make sure the cock is good and slippery when you take it inside you, so you use your tongue to explore the wide urethral opening, tasting the horse pre that collects inside it. Pushing forward you manage to get the whole head into your wide-open mouth relatively easily. The powerful stallion in the opposite stall grunts his appreciation, thrusting forward a little into your welcoming cock holster. With effort you straighten your gullet and move forward along the massive pole. The thick horse rod is difficult to swallow, but you muster your strength and successfully take the beast past your esophageal sphincter, allowing him to delve deeper.";
 		WaitLineBreak;
@@ -192,7 +192,7 @@ to say GholeFuckHorse:
 		say "     Too weak to move out of the way, you catch your breath while he finishes over you, actually enjoying the cum bath. Finally, the virile stallion removes his now flaccid cock from the gloryhole and leaves without saying a word to you. Ungrateful bastard you think with a smirk, but still, at least you had fun. You creep out of the stalls to find some old towels to wipe clean with before changing and going about your merry way, your gaping ass still leaking cum into your gear as you walk.";
 
 to say GholeFuckGryphon:
-	if player is female:
+	if Player is female:
 		if anallevel is 3 and a random chance of 1 in 2 succeeds: [more anal active, 50% chance]
 			say "     <Player ass-fucked by Blue Gryphon>";
 		else:
@@ -201,7 +201,7 @@ to say GholeFuckGryphon:
 		say "     <Player ass-fucked by Blue Gryphon>";
 
 to say GholeFuckHyena:
-	if player is female:
+	if Player is female:
 		if anallevel is 3 and a random chance of 1 in 2 succeeds: [more anal active, 50% chance]
 			say "     <Player ass-fucked by Herm Hyena>";
 		else:
@@ -210,7 +210,7 @@ to say GholeFuckHyena:
 		say "     <Player ass-fucked by Herm Hyena>";
 
 to say GholeBJDog:
-	say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. Through the hole comes a glistening canine pecker. Its veined shaft and throbbing girth look so inviting, and you lick your lips in anticipation of what it will taste like. It must belong to a shemale collie, or perhaps one of the German Shepherd or husky morphs, you don't really care either way so long as you get to suck on it. It twitches slightly and seems to throb with excitement as your stare. A small drop of pre leaks from the tip.";
+	say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. Through the hole comes a glistening canine pecker. Its veined shaft and throbbing girth look so inviting, and you lick your lips in anticipation of what it will taste like. It must belong to a shemale collie, or perhaps one of the German shepherd or husky morphs, you don't really care either way so long as you get to suck on it. It twitches slightly and seems to throb with excitement as your stare. A small drop of pre leaks from the tip.";
 	say "     A rumbling growl of frustration comes from your anonymous partner and you realize you've just been staring at the moist doggy pecker in admiration for a number of seconds now. Clearing your throat, you bring your head closer and lick your lips eagerly. You close your eyes to savor the first taste of canine cock as your lips slip over the pointed tip and, with a groan of delight, relish the first squirt of salty precum over your eager tongue. The anthro in the adjacent stall moans in pleasure as your eager, willing lips slide down its shaft and kiss the top of the slowly expanding knot. Another glut of pre squirts down your throat, clearly this is a virile partner. Taking a breath in through your nose, you begin to suck the hot cock in your mouth with gusto, lapping eagerly at the pointed tip as the urethra leeks its excitement into your wet hole. The liquid lust mixes with your saliva to create a slick lube by which you are able to rapidly throat the hot veiny muscle down your gullet and back into your mouth over and over.";
 	WaitLineBreak;
 	say "     No longer able to contain your own excitement at this depraved situation, you shove your hand into your under-clothes and begin to rub yourself, eager to cum when your partner cums. The anthro you are so effectively pleasing is struggling to maintain its composure and has started thrusting vigorously into your wet fuck hole. You continue to pleasure yourself as your mouth pleasures your partner, the familiar sensation at the base of your spine signaling the imminent arrival of a powerful orgasm.";
@@ -250,14 +250,14 @@ to say GholeBJMichael:
 		say "     You realize Michael is shaking as you remove his sloppy rat dick from your mouth, only to get one last shot to the face. 'Gods that w-w-was just as g-g-good as last t-time!' he stammers. Michael continues to thank you multiple times as he gets dressed. Before he leaves he bends down to the hole and whispers, 'I c-c-can't w-wait to d-do that again... s-s-slut!' Michael pauses for a moment before realizing what he's said. 'Eeep!' The nervous rat scurries out of the stalls before you have a chance to say anything back.";
 
 to say GholeBJNaga:
-	if player is male: [male + herm]
+	if Player is male: [male + herm]
 		say "     The bathrooms are quiet at the moment and you're sure no one saw you enter. After shutting the barely functional latch on the door, it isn't long before someone enters. You kneel down on the grimy floor and knock twice at the hole, signaling you willingness to receive. There is some shuffling and moving about as your partner readies themselves. Your heart is beating in your chest, and you are eager to see what kind of dick you'll be sucking today. A musky familiar smell fills your nostrils as you wait eagerly for something to come through the hole. It is one of the bigger gloryholes and you're about to steal a peek at your stall partner when the glistening scaly cloaca of a naga appears pressed against the opening. 'Lick me, pleassse!' comes the eager plea from the adjacent booth. Not one to keep your public waiting, you press your lips eagerly against her wet cloaca.";
 		say "     The naga hisses in pleasured bliss as your tongue slides inside the sweet canal and laps eagerly at her flowing juices. He powerful scaled body presses against the stall walls trying to give you more access to her most tender of places. You in turn try your best to please the scaly woman with your tongue, delving deep in repetitive strokes before lapping gently at her outer opening. Her cloaca has become red and engorged with arousal. 'Pleassse,' you hear her ask, 'let me insssside witttth you.'";
 		say "     [bold type]Do you want to let the lusty reptile join you in your stall?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her join you.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Excitedly you tell her you'd love for her to join you, and you move back to sit on the toilet. With an elated hiss the snake woman presses her beautiful head through the hole and begins to slither into your cramped little bathroom stall. You watch with amazement as her body contracts and shifts to allow her reptilian bulk through such a relatively small opening. It is with some trepidation that watch her uncoil before you, realizing just how built this naga really is. Her tail must be fifteen long alone. She towers over you in this cramped space - hanging onto either side of the stall walls as she brings her dripping cloaca to your face once more.";
 			say "     'Thank you my ssssssweet, now where were weeee?' she says before bearing her sex down upon your face. Once more you are licking at her swollen opening. The reptile tastes sweet, but there is a salty familiarity in her sex too, though you ignore it because you are eager to please. The scaled beastess gyrates powerfully against you, mashing her slick cloaca against your face in her pleasure. The reptilian tail uncoils under and thrashes wildly in the stall, almost uncontrolled. Suddenly she backs off your face, heaving and breathing hard. You can see her cloaca is pulsating, letting off rivulets of snake oil in its eagerness to be pleasured. 'My sssweet playmate,' she hisses, grinning down at you with her beautiful eyes. 'Perhapsssss you would like sssome pleassssure of your own?' It occurs to you that she could hypnotize you if she wanted, but she isn't doing so. Perhaps she prefers a willing partner.";
@@ -303,7 +303,7 @@ to say GholeBJNaga:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her join you.";
 		say "     ([link]N[as]n[end link]) - Refuse.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     Excitedly you tell her you'd love for her to join you, and you move back to sit on the toilet. With an elated hiss the snake woman presses her beautiful head through the hole and begins to slither into your cramped little bathroom stall. You watch with amazement as her body contracts and shifts to allow her reptilian bulk through such a relatively small opening. It is with some trepidation that watch her uncoil before you, realizing just how built this naga really is. Her tail must be fifteen long alone. She towers over you in this cramped space - hanging onto either side of the stall walls as she brings her dripping cloaca to your face once more. 'Thank you my ssssssweet, now where were weeee?' she says before bearing her sex down upon your face. Once more you are licking at her swollen opening.";
 			say "     The reptile tastes sweet, but there is a salty familiarity in her sex too, though you ignore it because you are eager to please. The scaled beastess gyrates powerfully against you, mashing her slick cloaca against your face in her pleasure. The reptilian tail uncoils under and thrashes wildly in the stall, almost uncontrolled. Suddenly she backs off your face, heaving and breathing hard. You can see her cloaca is pulsating, letting off rivulets of snake oil in its eagerness to be pleasured. 'My sssweet playmate,' she hisses, grinning down at you with her beautiful eyes. 'Perhapsssss you would like sssome pleassssure of your own?' It occurs to you that she could hypnotize you if she wanted, but she isn't doing so. Perhaps she prefers a willing partner.";

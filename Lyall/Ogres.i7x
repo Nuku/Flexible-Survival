@@ -24,7 +24,7 @@ when play begins: [flags for blocking this event]
 Instead of resolving a Ogre Encounter:
 	setmonster "Ogre";
 	if OgreMeetings is 1: [FIRST ENCOUNTER]
-		say "     While exploring the city, you turn a corner and bump into a large creature. Startled, you quickly jump back to create some distance between the two of you and [if weapon object of player is journal]ready your fists[else]reach for your weapon[end if]. Your resolve to fight wavers when you realize that it's not just one, but three of these beasts that stand in front of you, all easily seven feet tall and imposingly built. The gray-skinned creatures resemble orcs, but with pudgy faces and large, round bellies. Their faces are covered with wrinkles and sport pointed teeth with what look to be a small set of tusks jutting out unevenly from the bottom row. They have large, round ears and dark, dim eyes. You can see a bush of black hair covering their armpits, a light coating across their arms, and a big patch between each pec. They look to be either oiled up from head to toe or just covered in sweat - you assume the latter.";
+		say "     While exploring the city, you turn a corner and bump into a large creature. Startled, you quickly jump back to create some distance between the two of you and [if weapon object of Player is journal]ready your fists[else]reach for your weapon[end if]. Your resolve to fight wavers when you realize that it's not just one, but three of these beasts that stand in front of you, all easily seven feet tall and imposingly built. The gray-skinned creatures resemble orcs, but with pudgy faces and large, round bellies. Their faces are covered with wrinkles and sport pointed teeth with what look to be a small set of tusks jutting out unevenly from the bottom row. They have large, round ears and dark, dim eyes. You can see a bush of black hair covering their armpits, a light coating across their arms, and a big patch between each pec. They look to be either oiled up from head to toe or just covered in sweat - you assume the latter.";
 		say "     The middle one stands a little taller than the other two. Unlike them, he wears a long, open fur coat that almost reaches to his knees. A long scar runs down his torso, although it's hard to gauge the source of the injury. All of them are wearing what look to be tight, black swimming briefs, though these don't hide much, the bulk of their large orbs and thick lengths leaving a clear impression in the material. 'Look what we ran into, boys,' the middle one shouts. 'A weakling for us to beat the snot out of.' A small sense of fear creeps over you as they step forward, a mismatched collection of baseball bats at their disposal. 'You know, us bounty hunters usually have to fight much tougher enemies than you, weakling. You should be honored that we would waste our time with you.' They inch closer to you, looking for a fight.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
@@ -40,7 +40,7 @@ Instead of resolving a Ogre Encounter:
 			now inasituation is false; [reset]
 			increase GroupFightCounter by 1;
 		if fightoutcome < 20: [player won]
-			if player is male:
+			if Player is male:
 				say "     The last of the three creatures has been bested in combat and falls down flat on his face with a loud thud. You stand there with your hands on your hips and chest puffed out, happy with your work. One of the creatures whimpers on the ground and crawls towards who you assume is the leader of their group, then whispers something into his ear. Your start to wonder what you should do with the helpless creatures. Looking down at the smallest one and see his little, curly tail begin to twitch. At the same time, the other two both roll over and sit up, giving you a concerned glance before quickly looking at each other and whispering amongst themselves. Their leader in the fur coat finally speaks up, 'I am shocked. You have bested my brothers and myself in combat. You do as you please with any one of us. All I ask of you is to leave the most undesirable punishments to me as I have failed to live up to my duties as a leader.' You nod and look over the three creatures and carefully examine both their bulges and their rears.";
 				LineBreak;
 				say "     [bold type]What do you want to do with them now?[roman type][line break]";
@@ -61,7 +61,7 @@ Instead of resolving a Ogre Encounter:
 					say "     The ogre leader grunts in response to your rough treatment, not at all enjoying to be on the receiving end for once. Bringing a finger to your mouth you suck on it for a few seconds before pulling it out and moving towards his pucker. You brush over his wrinkled opening once or twice, then push the wet digit against his hole, not letting up the pressure until it sinks into his body. The large creature doesn't make a sound, instead gritting his teeth and stoically bearing your invasion. You swirl the finger around, noticing that his ass is so tight that it might actually be a virgin. Then you add a second finger, closely followed by a third, all in an effort to help loosen him up before you proceed to fucking the ogre. 'You gonna be done soon? I think you've ridiculed me enough, so why don't you call it quits, eh?' the ogre asks with a grunt. A quick smack on the ass gives him an answer - just not the one he was looking for.";
 					WaitLineBreak;
 					say "     Spitting on his hole and fingering him some more till you think that the defeated ogre is ready, you soon line your dick up to his exposed rear and push yourself in. A slight moan escapes between the creature's clenched teeth as your shaft stretches his inner walls, penetrating deep into the previously unclaimed passage. His inner walls squeeze nicely around your cock, and you are eager to push yourself in all the way, to enjoy the tight confines of his virgin ass. One more hard thrust and you find yourself balls-deep inside the beast. You give him a few seconds to get used to your member, then waste wasting no more time and begin to fuck the ogre leader in earnest, using long and hard thrusts. He grunts and mutters quiet curses in response to you rough treatment. Paying no mind to your defeated enemy's opinion, you just continue the fast-paced fucking, greatly enjoying yourself.";
-					say "     The air is filled with the rhythmic sound of your hips hitting his rear, complete with the wet slurps of your [cock of player] prick sliding in and out of his spit-slickened asshole. Unable to deny that he is getting used to - and into - the feeling of being fucked, your gray-skinned partner soon breaks his quietness by letting out louder and louder moans, then even asks you to go faster. Grinning at pushing him to accept his new role, you grab onto his hips firmly and thrust even harder into him. Due to his tight inner walls clenching and relaxing around your cock, your arousal soars quickly to new heights, and you find yourself approaching an orgasm quickly. With a satisfied grunt, you bury yourself all the way in his gripping ass and unleash a torrent of your seed. As an afterthought, you reach around your sub while still sending more spurts into his ass, taking hold of his thick member and starting to jerk him off.";
+					say "     The air is filled with the rhythmic sound of your hips hitting his rear, complete with the wet slurps of your [cock of Player] prick sliding in and out of his spit-slickened asshole. Unable to deny that he is getting used to - and into - the feeling of being fucked, your gray-skinned partner soon breaks his quietness by letting out louder and louder moans, then even asks you to go faster. Grinning at pushing him to accept his new role, you grab onto his hips firmly and thrust even harder into him. Due to his tight inner walls clenching and relaxing around your cock, your arousal soars quickly to new heights, and you find yourself approaching an orgasm quickly. With a satisfied grunt, you bury yourself all the way in his gripping ass and unleash a torrent of your seed. As an afterthought, you reach around your sub while still sending more spurts into his ass, taking hold of his thick member and starting to jerk him off.";
 					WaitLineBreak;
 					say "     The newly inducted bottom is quite hard from the novel sensations you've been giving him during your fuck, so it doesn't take all that long to rub out his own climax. He lets out a loud grunt as his thick shaft starts to throb, spraying his load onto the ground below. After riding out your own orgasm, you pull out your spent cock and give the ogre's ass a hard smack. No longer held up by your hands on his hips, he sinks down on the ground, panting and trying to reconcile with being made to receive a hard dick, including breeding his ass. You smile as you put your clothes back on, then get going and leave the ogre behind. Time will tell what kind of aftermath comes from this. Maybe they'll be out for revenge?";
 					now OgreMeetings is 6; [player won, dominated the ogre leader]
@@ -90,7 +90,7 @@ Instead of resolving a Ogre Encounter:
 				say "     <WIP: Sorry, we currently do not have scenes for female and herm characters in this event>";
 				now Ogre Encounter is resolved; [for now]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
-			if player is male:
+			if Player is male:
 				say "     You fall to your knees, exhausted from the fight. The large creatures walk up to you, towering over you with smiles plastered across their faces. 'What should we do with them?' one asks. 'We should kill it,' another one says. 'Shit up, both of you!' the leader barks. 'He doesn't have a bounty, so there's no use killing him, and he didn't put up a fight as another bounty hunter would. I say that we have a little fun with him.' The leader licks his lips and stares down at you. The other two laugh and agree with him. Done arguing over what they want to do with you, the leader removes his jacket and sets it on the ground. You can't help but look over in awe at his powerful, gray legs and his cute, little tail. The other two stand there, waiting for their leader. Once his jacket is neatly placed on the ground, he removes his briefs and turns towards you.";
 				say "     His thick, though not long, cock begins to harden, becoming even thicker. He walks up to you, and the closer he gets, the stronger his musk becomes. He stands only inches from you, and you look up to see his now hard eight-inch cock above. The other two walk behind you, having already removed their gear, and rest their cocks upon each of your shoulders. 'I'm Gurke, and these are my partners, Grogs and kKogs,' the leader informs. 'And you are now our pet, you understand?' You nod in agreement with Gurke's statement. 'Good. Now get on all fours,' Gurke commands. Given the situation, you have no choice but to do as they say. You fall forward, bracing yourself with your hands, and raise your ass for your new masters. Gurke steps towards your ass, moving his partners away.";
 				WaitLineBreak;
@@ -116,7 +116,7 @@ Instead of resolving a Ogre Encounter:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Become their plaything.";
 		say "     ([link]N[as]n[end link]) - Disagree with him.";
-		if player consents:
+		if Player consents:
 			say "     You tell them that, yes, you would like to be their new plaything, against your better judgment. They look at you almost shocked with your response and give each other confused looks back and forth. 'Well... Um... That's great,' Gurke says, finally breaking the silence. 'So you want to be our pet?' You tell Gurke that you do wish to be their pet and will do whatever they ask of you. 'Okay,' Gurke replies, still surprised. 'Well, then take that shit off and bend over for me.' Without hesitation, you remove your gear and present yourself to the three, who are removing their clothes as well. Gurke is the first to walk up to you and leads you into a tent with three makeshift beds. He guides you down onto all fours on the bed and sucks on his finger. Getting his finger wet enough, he gently pushes it into your awaiting hole. Your hole, still loosened up from your last coupling, easily yields, letting his finger slide in with ease. He thrusts his finger a few times, just to be safe, before pulling it out and positioning his now hard cock up to your hole. He gently pushes his head against your rear, and with a little effort, manages to pop the tip of his cock in.";
 			say "     This time, you moan during the initial penetration. It no longer hurts, and it just feels great to be stretched out by your new master once again. He doesn't waste time before he starts pushing the rest of his member inside of you. You quickly feel his balls press up against your own, signaling to you that he's balls deep. He slowly starts to slide his cock halfway out before gently pushing it back in. You moan in response to his thrust, urging him to fuck you harder. Acknowledging your demands, he reluctantly starts to thrust faster. He grunts and groans on top of you as he continues to fuck you harder and harder. His thick cock fills you with the feeling of fullness that you long for. He rubs across your prostate, sending shivers up your spine with each pass. You moan louder as he continues to fuck you. Not long after his breaths start to become shallow, he thrusts hard into your ass, unleashing a torrent of his cum that completely paints your insides white. Once his orgasm subsides, he pulls his cock free from your loose hole with a wet slurp, and some of his seed falls onto the bed.";
 			LineBreak;
@@ -136,14 +136,15 @@ Instead of resolving a Ogre Encounter:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Ogre";
+	now NewTypeInfection entry is false;
+	now Name entry is "Ogre";
 	now enemy title entry is "";
-	now enemy name entry is "";
+	now enemy Name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The ogre hits you![or]With a swing of his bat, the ogre smacks you in the stomach, knocking the wind out of you![or]He charges you shoulder-first, slamming his shoulder into your chin.[at random]";
 	now defeated entry is "";
@@ -170,17 +171,17 @@ When Play begins:
 	now lev entry is 10;               [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 15;              [ Amount of Damage monster Does when attacking.]
 	now area entry is "Nowhere";       [ Case sensitive]
-	now cocks entry is 1;              [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 16;
-	now cock width entry is 8;         [ Size of balls ]
-	now breasts entry is 2;            [ Number of nipples. ]
-	now breast size entry is 0;        [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 0;              [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 0;
-	now cunt width entry is 0;
+	now Cock Count entry is 1;              [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 16;
+	now Ball Size entry is 3;         [ Size of balls ]
+	now Nipple Count entry is 2;            [ Number of nipples. ]
+	now Breast Size entry is 0;        [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0;              [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 75;            [ Amount player Libido will go up if defeated ]
-	now loot entry is "";              [ Loot monster drops, ]
+	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "ogre";
@@ -188,9 +189,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 
 Ogres ends here.

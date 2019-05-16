@@ -17,14 +17,14 @@ Zeke is a man. The hp of Zeke is usually 0.
 [Physical details as of game start]
 ScaleValue of Zeke is 3. [human sized]
 SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Zeke is 1. [X cock]
+Cock Count of Zeke is 1. [X cock]
 Cock Length of Zeke is 7. [X Inches]
-Cock Width of Zeke is 5.
-Testes of Zeke is 2. [X balls]
-Cunts of Zeke is 0. [X pussy]
-Cunt Length of Zeke is 0. [X Cunt]
-Cunt Width of Zeke is 0. [X Cunt]
-Breasts of Zeke is 2. [X nipples]
+Ball Size of Zeke is 5.
+Ball Count of Zeke is 2. [X balls]
+Cunt Count of Zeke is 0. [X pussy]
+Cunt Depth of Zeke is 0. [X Cunt]
+Cunt Tightness of Zeke is 0. [X Cunt]
+Nipple Count of Zeke is 2. [X nipples]
 Breast Size of Zeke is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Zeke is false. [can not take oversized members without pain]
@@ -97,7 +97,7 @@ to say ZekeTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -149,14 +149,14 @@ instead of fucking the Zeke:
 		say "     ([link]Y[as]y[end link]) - Get competitive.";
 		say "     ([link]N[as]n[end link]) - Keep it cooperative.";
 		LineBreak;
-		if player consents:
+		if Player consents:
 			say "     'Alright then, time to see who's the better player.' Zeke quickly sets up for your competition, turning on the various parts of his gaming hub, and choosing a game. In no time at all, you're both seated comfortably in front of the television, controllers in hand, ready to go.";
 			say "     [bold type]Do you want to play your hardest, or throw the match?[roman type][line break]";
 			WaitLineBreak;
 			say "     ([link]Y[as]y[end link]) - Do your best.";
 			say "     ([link]N[as]n[end link]) - Lose and get dominated.";
 			LineBreak;
-			if player consents:
+			if Player consents:
 				let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 				let diceroll be a random number from 1 to 20;
 				say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Intelligence Check):[line break]";
@@ -181,7 +181,7 @@ to say ZekeSexMenu1: [Cooperative]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can do this]
+	if Player is male: [only males and herms can do this]
 		choose a blank row in table of fucking options;
 		now title entry is "Frotting";
 		now sortorder entry is 1;
@@ -192,7 +192,7 @@ to say ZekeSexMenu1: [Cooperative]
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the fox's vulpine shaft";
 	[]
-	if player is male: [only males and herms can 69 with him]
+	if Player is male: [only males and herms can 69 with him]
 		choose a blank row in table of fucking options;
 		now title entry is "Sixty-nine";
 		now sortorder entry is 3;
@@ -210,7 +210,7 @@ to say ZekeSexMenu1: [Cooperative]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Frotting"):
@@ -233,7 +233,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if Player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Facefuck Zeke";
 		now sortorder entry is 1;
@@ -244,7 +244,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 	now sortorder entry is 2;
 	now description entry is "Dominantly ride the fox";]
 	[]
-	[if player is male:
+	[if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Pound him";
 		now sortorder entry is 3;
@@ -262,7 +262,7 @@ to say ZekeSexMenu2: [Domming Zeke]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Facefuck Zeke"):
@@ -307,7 +307,7 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Get facefucked"):

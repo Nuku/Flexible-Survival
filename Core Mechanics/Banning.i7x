@@ -32,10 +32,10 @@ The player has a list of text called BanList.
 
 when play begins:
 	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Female Husky", "Black Equinoid", "Ember Breeder", "Lizard Girl", "Skunk", "Shemale Smooth Collie", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "Sewer Gator", "Deer", "Sea Otter", "Ebonflame Drake", "Red Kangaroo", "German Shepherd", "Chinchilla" } to infections of furry;
-	add { "Skunk", "Shemale Smooth Collie", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd", "Feline", "Felinoid" } to infections of guy;
+	add { "Slut Rat", "Husky Bitch", "Black Equinoid", "Ember Breeder", "Lizard Girl", "Skunk", "Smooth Collie Shemale", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "Sewer Gator", "Deer", "Sea Otter", "Ebonflame Drake", "Red Kangaroo", "German Shepherd Male", "Chinchilla" } to infections of furry;
+	add { "Skunk", "Smooth Collie Shemale", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd Male", "Feline", "Felinoid" } to infections of guy;
 	add { "Ember Breeder", "Ebonflame Drake", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "Sewer Gator", "Deer", "Black Equinoid", "Spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Female Husky", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
+	add { "Husky Bitch", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
@@ -75,29 +75,29 @@ to new ban menu:
 		now countnumber is 1; [Must reset to 1 or it wont print the list again]
 
 to bancheck (name - text):
-	if name is listed in BanList of player:
+	if name is listed in BanList of Player:
 		say "[bold type]BANNED[roman type]";
-	else if name is listed in WardList of player:
+	else if name is listed in WardList of Player:
 		say "[bold type]WARDED[roman type]";
 	else:
 		say "[bold type]Normal[roman type]";
 	say "[line break]";
 
 to banchange (name - text):
-	if name is listed in BanList of player:
-		remove name from BanList of player;
+	if name is listed in BanList of Player:
+		remove name from BanList of Player;
 		oldflagunban name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now normal[roman type]";
-	else if name is listed in WardList of player:
-		remove name from WardList of player;
+	else if name is listed in WardList of Player:
+		remove name from WardList of Player;
 		oldflagunward name;
-		add name to BanList of player;
+		add name to BanList of Player;
 		oldflagban name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now banned[roman type]";
 	else:
-		add name to WardList of player;
+		add name to WardList of Player;
 		oldflagward name;
 		if clearnomore is 0, clear the screen;
 		say "[bold type][name] is now warded[roman type]";

@@ -45,7 +45,7 @@ the scent of Moreau is "Moreau has a hot, spicy scent that reminds you of exotic
 
 To say MoreauDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP of Moreau: [HP of Moreau], libido of Moreau: [libido of Moreau] <- DEBUG[line break]";
+		say "DEBUG -> HP of Moreau: [HP of Moreau], Libido of Moreau: [Libido of Moreau] <- DEBUG[line break]";
 	say "     Moreau is a snake... quite literally so, as most of his body is purely ophidian, going on and on as it slowly tapers. But in addition to that, he does have a waist too - you can see the typical little bulges where the hip-bone are right under the skin, and above that a human-like torso, giving him arms and opposable thumbs. A quick glance down to his crotch reveals that it is smooth and relatively bare, with just a narrow slit between the rows of scales - no telling what might or might not be hidden inside that. The naga bears a truly awe-inspiring set of scales, with vibrant shades of red, orange and yellow making him almost appear like a dragon, complete with a little crest of scale-tips standing up on his broad snake-head.";
 	say "     In a sharp contrast to his fiery-colored body, the storekeeper's large eyes are startlingly green, making you freeze where you stand as he notices your attention and focuses his gaze on you in turn. The emerald, slit-pupiled orbs seem like bottomless pools you could stare at forever and lose yourself in... and you almost do, before he turns his head and breaks the stare. Opening his mouth a fraction, the naga tastes the air with his split tongue and then smiles at you, waving you closer with an inviting gesture.";
 
@@ -69,13 +69,13 @@ to say MoreauTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and "Mannequin" is not listed in EncounteredEnemies of player)):
+	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and "Mannequin" is not listed in EncounteredEnemies of Player)):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the mannequins";
 		now sortorder entry is 1;
 		now description entry is "Try to learn about his store";
 	[]
-	if (FirstMannequinTalk is 1 and "Mannequin" is listed in EncounteredEnemies of player):
+	if (FirstMannequinTalk is 1 and "Mannequin" is listed in EncounteredEnemies of Player):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask for the truth about the mannequins";
 		now sortorder entry is 2;
@@ -108,7 +108,7 @@ to say MoreauTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if nam is:
@@ -184,7 +184,7 @@ to say MoreauPartSale:
 	now sortorder entry is 4;
 	now description entry is "Sell him your back end. You barely look at it anyways, right";
 	[]
-	if player is not neuter:
+	if Player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "Your Genitals";
 		now sortorder entry is 5;
@@ -202,7 +202,7 @@ to say MoreauPartSale:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "Your face":
@@ -225,9 +225,9 @@ to say MoreauPartSale:
 	clear the screen and hyperlink list;
 
 to say MoreauFaceSale:
-	if facename of player is "Mannequin": [nothing to sell]
+	if facename of Player is "Mannequin": [nothing to sell]
 		say "     Taking one glance at your mannequin-like face, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
-	else if (facename of player is "Jackalman" or facename of player is "Jackalboy" or facename of player is "Nightmare" or facename of player is "Hellhound"): [perma infections]
+	else if (facename of Player is "Jackalman" or facename of Player is "Jackalboy" or facename of Player is "Nightmare" or facename of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your face, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
@@ -236,20 +236,20 @@ to say MoreauFaceSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a hungry stare. Then it stretches out a hand and touches you, a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the very neutral face of your counterpart start to shift, taking on features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of Random Critters;
-			if facename of player is not name entry:
+			choose row MonsterID from the Table of Random Critters;
+			if facename of Player is not Name entry:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-				now facename of player is name entry;
-				now face of player is face entry;
-			if "Body Shop Guarantee - Face" is listed in feats of player:
-				remove "Body Shop Guarantee - Face" from feats of player;
+				now facename of Player is Name entry;
+				now face of Player is face entry;
+			if "Body Shop Guarantee - Face" is listed in feats of Player:
+				remove "Body Shop Guarantee - Face" from feats of Player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauBodySale:
-	if bodyname of player is "Mannequin":
+	if bodyname of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like body, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
-	else if (bodyname of player is "Jackalman" or bodyname of player is "Jackalboy" or bodyname of player is "Nightmare" or bodyname of player is "Hellhound"):
+	else if (bodyname of Player is "Jackalman" or bodyname of Player is "Jackalboy" or bodyname of Player is "Nightmare" or bodyname of Player is "Hellhound"):
 		say "     Taking a long glance at your body, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
@@ -258,21 +258,21 @@ to say MoreauBodySale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of Random Critters;
-			if bodyname of player is not name entry:
-				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-				now bodyname of player is name entry;
-				now body of player is body entry;
+			choose row MonsterID from the Table of Random Critters;
+			if bodyname of Player is not Name entry:
+				say "     Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
+				now bodyname of Player is Name entry;
+				now body of Player is body entry;
 				attributeinfect; [sets the new attributes]
-			if "Body Shop Guarantee - Body" is listed in feats of player:
-				remove "Body Shop Guarantee - Body" from feats of player;
+			if "Body Shop Guarantee - Body" is listed in feats of Player:
+				remove "Body Shop Guarantee - Body" from feats of Player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauSkinSale:
-	if skinname of player is "Mannequin":
+	if skinname of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like skin, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
-	else if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"):
+	else if (skinname of Player is "Jackalman" or skinname of Player is "Jackalboy" or skinname of Player is "Nightmare" or skinname of Player is "Hellhound"):
 		say "     Taking a long glance at your skin, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
@@ -281,20 +281,20 @@ to say MoreauSkinSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, the parts you see of your counterpart shift, taking on a skin very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of Random Critters;
-			if skinname of player is not name entry:
+			choose row MonsterID from the Table of Random Critters;
+			if skinname of Player is not Name entry:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-				now skinname of player is name entry;
-				now skin of player is skin entry;
-			if "Body Shop Guarantee - Skin" is listed in feats of player:
-				remove "Body Shop Guarantee - Skin" from feats of player;
+				now skinname of Player is Name entry;
+				now skin of Player is skin entry;
+			if "Body Shop Guarantee - Skin" is listed in feats of Player:
+				remove "Body Shop Guarantee - Skin" from feats of Player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauAssSale:
-	if skinname of player is "Mannequin":
+	if skinname of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like ass, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
-	else if (tailname of player is "Jackalman" or tailname of player is "Jackalboy" or tailname of player is "Nightmare" or tailname of player is "Hellhound"):
+	else if (tailname of Player is "Jackalman" or tailname of Player is "Jackalboy" or tailname of Player is "Nightmare" or tailname of Player is "Hellhound"):
 		say "     Taking a long glance at your ass, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
@@ -303,20 +303,20 @@ to say MoreauAssSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance over the shoulder of your counterpart, seeing its rear end taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of Random Critters;
-			if tailname of player is not name entry:
+			choose row MonsterID from the Table of Random Critters;
+			if tailname of Player is not Name entry:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-				now tailname of player is name entry;
-				now tail of player is tail entry;
-			if "Body Shop Guarantee - Tail" is listed in feats of player:
-				remove "Body Shop Guarantee - Tail" from feats of player;
+				now tailname of Player is Name entry;
+				now tail of Player is tail entry;
+			if "Body Shop Guarantee - Tail" is listed in feats of Player:
+				remove "Body Shop Guarantee - Tail" from feats of Player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
 to say MoreauDickSale:
-	if cockname of player is "Mannequin":
+	if cockname of Player is "Mannequin":
 		say "     Taking one glance at your mannequin-like crotch, the naga raises an eyebrow and says, 'You are kidding, right? Come back when you actually have something to sell, okay?'";
-	else if (cockname of player is "Jackalman" or cockname of player is "Jackalboy" or cockname of player is "Nightmare" or cockname of player is "Hellhound"):
+	else if (cockname of Player is "Jackalman" or cockname of Player is "Jackalboy" or cockname of Player is "Nightmare" or cockname of Player is "Hellhound"):
 		say "     Taking a long glance at your crotch, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
@@ -325,17 +325,17 @@ to say MoreauDickSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and lays a hand on your chest, stroking it down your front almost sexually before it comes to cup your genitals. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance down between your bodies, seeing its own crotch taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of Random Critters;
-			if cocks of player > 1:
-				say "     Sudden pleasure runs through your doomed [cock of player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
-			if cunts of player > 1:
+			choose row MonsterID from the Table of Random Critters;
+			if Cock Count of Player > 1:
+				say "     Sudden pleasure runs through your doomed [cock of Player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
+			if Cunt Count of Player > 1:
 				say "     An odd, wet noise has you peeking in time to see your [one of]cunt[sfn][or]puss[yfn][at random] vanish! With a strange slurp of closing flesh, you cease to be female altogether.";
-			now cocks of player is 0;
-			now cunts of player is 0;
-			now cockname of player is name entry;
-			now cock of player is cock entry;
-			if "Body Shop Guarantee - Crotch" is listed in feats of player:
-				remove "Body Shop Guarantee - Crotch" from feats of player;
+			now Cock Count of Player is 0;
+			now Cunt Count of Player is 0;
+			now cockname of Player is Name entry;
+			now cock of Player is cock entry;
+			if "Body Shop Guarantee - Crotch" is listed in feats of Player:
+				remove "Body Shop Guarantee - Crotch" from feats of Player;
 			say "[line break][MoreauSaleSuccessful]";
 			now MoreauPaymentAccepted is false;
 
@@ -425,7 +425,7 @@ to say MoreauPartBuy:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "A new face":
@@ -450,12 +450,12 @@ to say MoreauPartBuy:
 [ Buying a Face]
 
 to say MoreauFaceBuy:
-	if (facename of player is "Jackalman" or facename of player is "Jackalboy" or facename of player is "Nightmare" or facename of player is "Hellhound"): [perma infections]
+	if (facename of Player is "Jackalman" or facename of Player is "Jackalboy" or facename of Player is "Nightmare" or facename of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your face, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
 	else: [Buy going ahead]
-		if facename of player is "Mannequin":
+		if facename of Player is "Mannequin":
 			say "     Taking a short glance at your face, the naga smiles and nods. 'Starting with a blank canvas, eh? Let's get you something nice to upgrade to.'";
 			MoreauFaceSelection;
 		else:
@@ -485,7 +485,7 @@ to MoreauFaceSelection:
 	now description entry is "Buy yourself a satyr head, complete with goatee";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd's muzzle";
+	now title entry is "A German shepherd's muzzle";
 	now sortorder entry is 4;
 	now description entry is "Buy yourself a canine head";
 	[]
@@ -511,22 +511,22 @@ to MoreauFaceSelection:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "An equine muzzle":
 					setmonster "Horseman";
 				-- "A gryphon's beak":
-					setmonster "Hermaphrodite Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's face":
 					setmonster "Satyr";
-				-- "German Shepherd":
-					setmonster "German Shepherd";
+				-- "German Shepherd Male":
+					setmonster "German Shepherd Male";
 				-- "A succubus's face":
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of Random Critters;
+				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -546,28 +546,28 @@ to say MoreauFaceBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
-		if facename of player is not name entry:
+			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
+		if facename of Player is not Name entry:
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-			now facename of player is name entry;
-			now face of player is face entry;
-			now BodyShopGuaranteedFace is name entry;
-			if "Body Shop Guarantee - Face" is not listed in feats of player:
-				add "Body Shop Guarantee - Face" to feats of player;
+			now facename of Player is Name entry;
+			now face of Player is face entry;
+			now BodyShopGuaranteedFace is Name entry;
+			if "Body Shop Guarantee - Face" is not listed in feats of Player:
+				add "Body Shop Guarantee - Face" to feats of Player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
 [ Buying a Body ]
 
 to say MoreauBodyBuy:
-	if (bodyname of player is "Jackalman" or bodyname of player is "Jackalboy" or bodyname of player is "Nightmare" or bodyname of player is "Hellhound"): [perma infections]
+	if (bodyname of Player is "Jackalman" or bodyname of Player is "Jackalboy" or bodyname of Player is "Nightmare" or bodyname of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your body, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
 	else: [Buy going ahead]
-		if bodyname of player is "Mannequin":
+		if bodyname of Player is "Mannequin":
 			say "     Taking a short glance at your body, the naga smiles and nods. 'Starting with a blank canvas, eh? Let's get you something nice to upgrade to.'";
 			MoreauBodySelection;
 		else:
@@ -597,7 +597,7 @@ to MoreauBodySelection:
 	now description entry is "Get a satyr body";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Anthro German Shepherd";
+	now title entry is "Anthro German shepherd";
 	now sortorder entry is 4;
 	now description entry is "Get an anthro canine body";
 	[]
@@ -623,22 +623,22 @@ to MoreauBodySelection:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "Anthro equine":
 					setmonster "Horseman";
 				-- "Anthro gryphon":
-					setmonster "Hermaphrodite Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "Satyr":
 					setmonster "Satyr";
-				-- "Anthro German Shepherd":
-					setmonster "German Shepherd";
+				-- "Anthro German shepherd":
+					setmonster "German Shepherd Male";
 				-- "Succubus":
 					setmonster "Succubus";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of Random Critters;
+				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -658,29 +658,29 @@ to say MoreauBodyBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your body to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
-		if bodyname of player is not name entry:
+			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
+		if bodyname of Player is not Name entry:
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-			now bodyname of player is name entry;
-			now body of player is body entry;
-			now BodyShopGuaranteedBody is name entry;
+			now bodyname of Player is Name entry;
+			now body of Player is body entry;
+			now BodyShopGuaranteedBody is Name entry;
 			attributeinfect; [sets the new attributes]
-			if "Body Shop Guarantee - Body" is not listed in feats of player:
-				add "Body Shop Guarantee - Body" to feats of player;
+			if "Body Shop Guarantee - Body" is not listed in feats of Player:
+				add "Body Shop Guarantee - Body" to feats of Player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
 [ Buying Skin ]
 
 to say MoreauSkinBuy:
-	if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"): [perma infections]
+	if (skinname of Player is "Jackalman" or skinname of Player is "Jackalboy" or skinname of Player is "Nightmare" or skinname of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your skin, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
 	else: [Buy going ahead]
-		if skinname of player is "Mannequin":
+		if skinname of Player is "Mannequin":
 			say "     Taking a short glance at your skin, the naga smiles and nods. 'Starting with a blank canvas, eh? Let's get you something nice to upgrade to.'";
 			MoreauSkinSelection;
 		else:
@@ -712,7 +712,7 @@ to MoreauSkinSelection:
 	choose a blank row in table of fucking options;
 	now title entry is "German Shepherd fur";
 	now sortorder entry is 4;
-	now description entry is "Get German Shepherd fur";
+	now description entry is "Get German shepherd fur";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Succubus skin";
@@ -736,22 +736,22 @@ to MoreauSkinSelection:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "An equine coat":
 					setmonster "Horseman";
 				-- "A gryphon's feathers":
-					setmonster "Hermaphrodite Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "Satyr's skin and fur":
 					setmonster "Satyr";
 				-- "German Shepherd fur":
-					setmonster "German Shepherd";
+					setmonster "German Shepherd Male";
 				-- "Succubus skin":
 					setmonster "Succubus";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of Random Critters;
+				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -771,28 +771,28 @@ to say MoreauSkinBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your skin to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
-		if skinname of player is not name entry:
+			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
+		if skinname of Player is not Name entry:
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-			now skinname of player is name entry;
-			now skin of player is skin entry;
-			now BodyShopGuaranteedSkin is name entry;
-			if "Body Shop Guarantee - Skin" is not listed in feats of player:
-				add "Body Shop Guarantee - Skin" to feats of player;
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+			now BodyShopGuaranteedSkin is Name entry;
+			if "Body Shop Guarantee - Skin" is not listed in feats of Player:
+				add "Body Shop Guarantee - Skin" to feats of Player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
 [ Buying Ass/Tail ]
 
 to say MoreauTailBuy:
-	if (tailname of player is "Jackalman" or tailname of player is "Jackalboy" or tailname of player is "Nightmare" or tailname of player is "Hellhound"): [perma infections]
+	if (tailname of Player is "Jackalman" or tailname of Player is "Jackalboy" or tailname of Player is "Nightmare" or tailname of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your tail, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
 	else: [Buy going ahead]
-		if tailname of player is "Mannequin" or tail of player is "":
+		if tailname of Player is "Mannequin" or tail of Player is "":
 			say "     Taking a short glance at your backside, the naga smiles and nods. 'Starting with a blank canvas, eh? Let's get you something nice to upgrade to.'";
 			MoreauTailSelection;
 		else:
@@ -822,9 +822,9 @@ to MoreauTailSelection:
 	now description entry is "Get a satyr tail";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd tail";
+	now title entry is "A German shepherd tail";
 	now sortorder entry is 4;
-	now description entry is "Get a German Shepherd tail";
+	now description entry is "Get a German shepherd tail";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus ass";
@@ -848,22 +848,22 @@ to MoreauTailSelection:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "An equine tail":
 					setmonster "Horseman";
 				-- "A gryphon's tail":
-					setmonster "Hermaphrodite Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's tail":
 					setmonster "Satyr";
-				-- "A German Shepherd tail":
-					setmonster "German Shepherd";
+				-- "A German shepherd tail":
+					setmonster "German Shepherd Male";
 				-- "A succubus ass":
 					setmonster "Succubus";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of Random Critters;
+				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -883,28 +883,28 @@ to say MoreauTailBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your tail to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
-		if tailname of player is not name entry:
+			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
+		if tailname of Player is not Name entry:
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-			now tailname of player is name entry;
-			now tail of player is tail entry;
-			now BodyShopGuaranteedTail is name entry;
-			if "Body Shop Guarantee - Tail" is not listed in feats of player:
-				add "Body Shop Guarantee - Tail" to feats of player;
+			now tailname of Player is Name entry;
+			now tail of Player is tail entry;
+			now BodyShopGuaranteedTail is Name entry;
+			if "Body Shop Guarantee - Tail" is not listed in feats of Player:
+				add "Body Shop Guarantee - Tail" to feats of Player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
 [ Buying Cock ]
 
 to say MoreauCrotchBuy:
-	if (cockname of player is "Jackalman" or cockname of player is "Jackalboy" or cockname of player is "Nightmare" or cockname of player is "Hellhound"): [perma infections]
+	if (cockname of Player is "Jackalman" or cockname of Player is "Jackalboy" or cockname of Player is "Nightmare" or cockname of Player is "Hellhound"): [perma infections]
 		say "     Taking a long glance at your crotch, the naga hesitates, then shakes his head. 'Sorry, I don't think I can make that transaction. Don't want to let my staff get... uhm - indigestion, you understand?";
 	else if (LastMoreauPartSale - turns < 5): [waiting time]
 		say "[MoreauTradeRefusal]";
 	else: [Buy going ahead]
-		if cockname of player is "Mannequin" or cocks of player is 0:
+		if cockname of Player is "Mannequin" or Cock Count of Player is 0:
 			say "     Taking a short glance at your crotch, the naga smiles and nods. 'Starting with a blank canvas, eh? Let's get you something nice to upgrade to.'";
 			MoreauCockSelection;
 		else:
@@ -934,9 +934,9 @@ to MoreauCockSelection:
 	now description entry is "Get a satyr crotch";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "A German Shepherd groin";
+	now title entry is "A German shepherd groin";
 	now sortorder entry is 4;
-	now description entry is "Get a German Shepherd crotch";
+	now description entry is "Get a German shepherd crotch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A succubus's groin";
@@ -960,22 +960,22 @@ to MoreauCockSelection:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				now sextablerun is 1;
 				if title entry is:
 				-- "An equine groin":
 					setmonster "Horseman";
 				-- "A gryphon's groin":
-					setmonster "Hermaphrodite Gryphon";
+					setmonster "Blue Gryphon Herm";
 				-- "A satyr's groin":
 					setmonster "Satyr";
-				-- "A German Shepherd groin":
-					setmonster "German Shepherd";
+				-- "A German shepherd groin":
+					setmonster "German Shepherd Male";
 				-- "A succubus's groin":
 					setmonster "Succubus";
 				-- "A snow leopard groin":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of Random Critters;
+				choose row MonsterID from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -995,17 +995,17 @@ to say MoreauCrotchBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your cock to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of Random Critters;
+		choose row MonsterID from the Table of Random Critters;
 		if debugactive is 1:
-			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
+			say "DEBUG -> Target Infection Name entry: [Name entry] <- DEBUG[line break]";
 		follow the sex change rule;
-		if cockname of player is not name entry and player is male:
+		if cockname of Player is not Name entry and player is male:
 			say "     Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-			now cockname of player is name entry;
-			now cock of player is cock entry;
-		now BodyShopGuaranteedCrotch is name entry;
-		if "Body Shop Guarantee - Crotch" is not listed in feats of player:
-			add "Body Shop Guarantee - Crotch" to feats of player;
+			now cockname of Player is Name entry;
+			now cock of Player is cock entry;
+		now BodyShopGuaranteedCrotch is Name entry;
+		if "Body Shop Guarantee - Crotch" is not listed in feats of Player:
+			add "Body Shop Guarantee - Crotch" to feats of Player;
 		say "[line break][MoreauBuySuccessful]";
 		now MoreauPaymentAccepted is false;
 
@@ -1050,7 +1050,7 @@ to say MoreauBuyPaymentOptions:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give it to him.";
 		say "     ([link]N[as]n[end link]) - Actually... you want to change your mind about this.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You pull the backpack off your back and hand over the food to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
@@ -1068,7 +1068,7 @@ to say MoreauBuyPaymentOptions:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Give it to him.";
 		say "     ([link]N[as]n[end link]) - Actually... you want to change your mind about this.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     You pull the backpack off your back and hand over the water bottle to a quickly called-over mannequin. ";
 			if MoreauDiscount is true:
@@ -1091,74 +1091,74 @@ to say MoreauBuySuccessful:
 	now LastMoreauPartSale is turns;
 
 An everyturn rule:
-	if "Body Shop Guarantee - Face" is listed in feats of player:
-		if (facename of player is "Jackalman" or facename of player is "Jackalboy" or facename of player is "Nightmare" or facename of player is "Hellhound"):
+	if "Body Shop Guarantee - Face" is listed in feats of Player:
+		if (facename of Player is "Jackalman" or facename of Player is "Jackalboy" or facename of Player is "Nightmare" or facename of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Face" from feats of player;
-		else if "Singular" is listed in feats of player and facename of player is not "Human" and facename of player is not bodyname of player:
+			remove "Body Shop Guarantee - Face" from feats of Player;
+		else if "Singular" is listed in feats of Player and facename of Player is not "Human" and facename of Player is not bodyname of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your face, only to be counteracted at every turn. You fall to your knees and cradle your head in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Face" from feats of player;
-		else if facename of player is not BodyShopGuaranteedFace:
+			remove "Body Shop Guarantee - Face" from feats of Player;
+		else if facename of Player is not BodyShopGuaranteedFace:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your head to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedFace;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-			now facename of player is name entry;
-			now face of player is face entry;
-	if "Body Shop Guarantee - Body" is listed in feats of player:
-		if (bodyname of player is "Jackalman" or bodyname of player is "Jackalboy" or bodyname of player is "Nightmare" or bodyname of player is "Hellhound"):
+			now facename of Player is Name entry;
+			now face of Player is face entry;
+	if "Body Shop Guarantee - Body" is listed in feats of Player:
+		if (bodyname of Player is "Jackalman" or bodyname of Player is "Jackalboy" or bodyname of Player is "Nightmare" or bodyname of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Body" from feats of player;
-		else if bodyname of player is not BodyShopGuaranteedBody:
+			remove "Body Shop Guarantee - Body" from feats of Player;
+		else if bodyname of Player is not BodyShopGuaranteedBody:
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your body to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedBody;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-			now bodyname of player is name entry;
-			now body of player is body entry;
+			now bodyname of Player is Name entry;
+			now body of Player is body entry;
 			attributeinfect; [sets the new attributes]
-	if "Body Shop Guarantee - Skin" is listed in feats of player:
-		if (skinname of player is "Jackalman" or skinname of player is "Jackalboy" or skinname of player is "Nightmare" or skinname of player is "Hellhound"):
+	if "Body Shop Guarantee - Skin" is listed in feats of Player:
+		if (skinname of Player is "Jackalman" or skinname of Player is "Jackalboy" or skinname of Player is "Nightmare" or skinname of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Skin" from feats of player;
-		else if "Singular" is listed in feats of player and facename of player is not "Human" and skinname of player is not bodyname of player:
+			remove "Body Shop Guarantee - Skin" from feats of Player;
+		else if "Singular" is listed in feats of Player and facename of Player is not "Human" and skinname of Player is not bodyname of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your skin in rippling waves, only to be counteracted at every turn. You fall to your knees and cradle your body in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Skin" from feats of player;
-		else if skinname of player is not BodyShopGuaranteedSkin:
+			remove "Body Shop Guarantee - Skin" from feats of Player;
+		else if skinname of Player is not BodyShopGuaranteedSkin:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your skin to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedSkin;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-			now skinname of player is name entry;
-			now skin of player is skin entry;
-	if "Body Shop Guarantee - Tail" is listed in feats of player:
-		if (tailname of player is "Jackalman" or tailname of player is "Jackalboy" or tailname of player is "Nightmare" or tailname of player is "Hellhound"):
+			now skinname of Player is Name entry;
+			now skin of Player is skin entry;
+	if "Body Shop Guarantee - Tail" is listed in feats of Player:
+		if (tailname of Player is "Jackalman" or tailname of Player is "Jackalboy" or tailname of Player is "Nightmare" or tailname of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Tail" from feats of player;
-		else if "Singular" is listed in feats of player and tailname of player is not "Human" and tailname of player is not bodyname of player:
+			remove "Body Shop Guarantee - Tail" from feats of Player;
+		else if "Singular" is listed in feats of Player and tailname of Player is not "Human" and tailname of Player is not bodyname of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your tail, only to be counteracted at every turn. You fall to your knees and cradle the tail in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Tail" from feats of player;
-		else if tailname of player is not BodyShopGuaranteedtail:
+			remove "Body Shop Guarantee - Tail" from feats of Player;
+		else if tailname of Player is not BodyShopGuaranteedtail:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your tail to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedtail;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-			now tailname of player is name entry;
-			now tail of player is tail entry;
-	if "Body Shop Guarantee - Crotch" is listed in feats of player:
-		if (cockname of player is "Jackalman" or cockname of player is "Jackalboy" or cockname of player is "Nightmare" or cockname of player is "Hellhound"):
+			now tailname of Player is Name entry;
+			now tail of Player is tail entry;
+	if "Body Shop Guarantee - Crotch" is listed in feats of Player:
+		if (cockname of Player is "Jackalman" or cockname of Player is "Jackalboy" or cockname of Player is "Nightmare" or cockname of Player is "Hellhound"):
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the magic of your other transformation. A stinging ache builds up in your head as the mystic powers build up higher and higher, pushing in opposing directions - then with an audible crackle, something gives way. Seems like the naga's spell couldn't hold out against what made you as you are.";
-			remove "Body Shop Guarantee - Crotch" from feats of player;
-		else if "Singular" is listed in feats of player and cockname of player is not "Human" and cockname of player is not bodyname of player:
+			remove "Body Shop Guarantee - Crotch" from feats of Player;
+		else if "Singular" is listed in feats of Player and cockname of Player is not "Human" and cockname of Player is not bodyname of Player:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought struggle against the basic nature of your own body, trying its best to enforce its template. A stinging ache builds up in your head as the mystic powers morph your crotch, only to be counteracted at every turn. You fall to your knees and flinch in pain, until eventually something gives way with an audible crackle. Seems like the naga's spell couldn't hold out against the sustained pressure.";
-			remove "Body Shop Guarantee - Crotch" from feats of player;
-		else if cockname of player is not BodyShopGuaranteedCrotch:
+			remove "Body Shop Guarantee - Crotch" from feats of Player;
+		else if cockname of Player is not BodyShopGuaranteedCrotch:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your cock to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedCrotch;
-			choose row monster from the Table of Random Critters;
+			choose row MonsterID from the Table of Random Critters;
 			say "     Your crotch [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-			now cockname of player is name entry;
-			now cock of player is cock entry;
+			now cockname of Player is Name entry;
+			now cock of Player is cock entry;
 
 Section 5 - Events
 
@@ -1173,7 +1173,7 @@ after going to Body Shop while (Body Choice Dilemma is active and Body Choice Di
 	BodyChoiceDilemmaEvent;
 
 to BodyChoiceDilemmaEvent:
-	say "     As you enter Moreau's shop, you are surprised not to be immediately greeted by its serpentine owner. The reason becomes clear after you notice him further in the Body Shop, standing next to a buff, tall, seemingly very pensive horseman. Said horseman is gazing in the direction of two mannequins. The first one is displaying anthro snow leopard parts; not just a crotch or tail, but an entire body, complete with fur, a feline face, and an overall feminine look, although the furry sheath between the mannequin's legs marks this body as male. Next to it is a second mannequin, this one unmistakably female for it has the body parts of a succubus. As you glance over a scene you would qualify as implausible were it not taking place in this strange shop, Moreau finally notices you: 'Welcome, [if player is not defaultnamed][name of player][else]my friend[end if]. I apologize for not greeting you right away, but as you can see I am currently tending to the needs of another customer. Actually...' he adds with a thoughtful look, 'If I was bold enough, I would ask you a little help tending to those needs. Hmm...'";
+	say "     As you enter Moreau's shop, you are surprised not to be immediately greeted by its serpentine owner. The reason becomes clear after you notice him further in the Body Shop, standing next to a buff, tall, seemingly very pensive horseman. Said horseman is gazing in the direction of two mannequins. The first one is displaying anthro snow leopard parts; not just a crotch or tail, but an entire body, complete with fur, a feline face, and an overall feminine look, although the furry sheath between the mannequin's legs marks this body as male. Next to it is a second mannequin, this one unmistakably female for it has the body parts of a succubus. As you glance over a scene you would qualify as implausible were it not taking place in this strange shop, Moreau finally notices you: 'Welcome, [if Player is not defaultnamed][name of Player][else]my friend[end if]. I apologize for not greeting you right away, but as you can see I am currently tending to the needs of another customer. Actually...' he adds with a thoughtful look, 'If I was bold enough, I would ask you a little help tending to those needs. Hmm...'";
 	say "     The naga leaves his words hang in the air, closing his eyes as if he was deeply pondering the question; although your instincts tell you this is at best a facade, and at worst a shameless attempt at manipulation, the uncomfortable silence that follows eventually drives you to ask how you can help him. With an apologetic smile, Moreau explains: 'Well, as most beings who come here, my current client has a desire of change. Although he had a very clear idea what kind of body he wanted for himself, coming down on the specifics has been... complex. I would like you to help the poor man make up his mind. I feel the need to mention that I would be... somewhat discontent to see him leave without making a purchase.' The naga discreetly points at a rather large pile of canned food, no doubt the price one would have to pay for a full new body.";
 	WaitLineBreak;
 	say "     As the shop owner seems intent on letting you learn more from the source, you walk to the large black horse whose gaze just goes on one mannequin and then on the other as he taps a finger against his chin. When you introduce yourself, the stud's low, manly voices betrays his anxiety: 'Oh sorry man, am I holding the alligator guy all to myself?' As you notice the look of surprise and indignation on Moreau's face at being called such a thing, you assure his horse client that it is no problem at all, but that you'd love to know if you could help with whatever decision the equine has to make. 'Oh thanks, that's really nice! See, before the infection-the name's Jaime, by the way-, before the infection I was already super buff and a really big dude, in more ways than one. All the girls and small guys at the gym were into me, and I was into them too, so when I ended up a horse, it didn't feel all that weird, at least compared to how it was to most people.'";

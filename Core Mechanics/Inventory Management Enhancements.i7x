@@ -25,7 +25,7 @@ Carry out masslittering something (called x):
 	else if x is owned:
 		let found be carried of x;
 		repeat with z running from 1 to found:
-			add printed name of x to invent of location of player;
+			add printed name of x to invent of location of Player;
 		now carried of x is 0;
 		if found > 0:
 			say "You set down [found] x [x].";
@@ -42,7 +42,7 @@ Carry out criminallittering:
 		else:
 			let found be carried of x;
 			repeat with z running from 1 to found:
-				add printed name of x to invent of location of player;
+				add printed name of x to invent of location of Player;
 			increase droptotal by carried of x;
 			now carried of x is 0;
 	if droptotal is 0:

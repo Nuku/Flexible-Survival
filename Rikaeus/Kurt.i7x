@@ -79,14 +79,14 @@ Kurt is a man.
 [Physical details as of game start]
 ScaleValue of Kurt is 3. [human sized]
 SleepRhythm of Kurt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
-Cocks of Kurt is 2. [X cock]
+Cock Count of Kurt is 2. [X cock]
 Cock Length of Kurt is 8. [X Inches]
-Cock Width of Kurt is 4.
-Testes of Kurt is 2. [X balls]
-Cunts of Kurt is 0. [X pussy]
-Cunt Length of Kurt is 0. [X Cunt]
-Cunt Width of Kurt is 0. [X Cunt]
-Breasts of Kurt is 2. [X nipples]
+Ball Size of Kurt is 4.
+Ball Count of Kurt is 2. [X balls]
+Cunt Count of Kurt is 0. [X pussy]
+Cunt Depth of Kurt is 0. [X Cunt]
+Cunt Tightness of Kurt is 0. [X Cunt]
+Nipple Count of Kurt is 2. [X nipples]
 Breast Size of Kurt is 0. [X at the start]
 [Basic Interaction states as of game start]
 TwistedCapacity of Kurt is false. [can not take oversized members without pain]
@@ -145,7 +145,7 @@ to say KurtTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Life in Atlantis"):
@@ -201,7 +201,7 @@ to say KurtSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Suck Kurt off"):

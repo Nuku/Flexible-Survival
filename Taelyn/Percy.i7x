@@ -1,5 +1,6 @@
 Version 1 of Percy by Taelyn begins here.
 [Version 1.0 - New Character - Taelyn]
+[Version 1.1 - Updated Polar Directions - Taelyn]
 
 "Adds a Pangolin NPC to Flexible Survival, entering the game as a new event NPC"
 
@@ -24,7 +25,7 @@ Version 1 of Percy by Taelyn begins here.
 [   3: Gambeson                                                                            ]
 
 [Future Content Notes:                                                                     ]
-[Add Entrances to the East(Snowy Forest), West(Kobold Caverns), and Northwest(Avalon Keep)]
+[Add Entrances to the Snowy Forest, Avalon, and the Capitol]
 [Adding mini questlines to unlock more Percy content, relationship, and equipment          ]
 
 an everyturn rule: [bugfix for old exports]
@@ -45,14 +46,14 @@ Percy	"Percy"
 Percy is a man.
 ScaleValue of Percy is 2. [small sized]
 SleepRhythm of Percy is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
-Cocks of Percy is 1. [cock]
+Cock Count of Percy is 1. [cock]
 Cock Length of Percy is 6. [cock length]
-Cock Width of Percy is 2. [ball size]
-Testes of Percy is 0. [no balls]
-Cunts of Percy is 0. [no pussy]
-Cunt Length of Percy is 0. []
-Cunt Width of Percy is 0. []
-Breasts of Percy is 2. [2 nipples]
+Ball Size of Percy is 2. [ball size]
+Ball Count of Percy is 0. [no balls]
+Cunt Count of Percy is 0. [no pussy]
+Cunt Depth of Percy is 0. []
+Cunt Tightness of Percy is 0. []
+Nipple Count of Percy is 2. [2 nipples]
 Breast Size of Percy is 0. [flat]
 Humanity of Percy is 70.
 PlayerMet of Percy is false.
@@ -177,7 +178,7 @@ to say PercyTalk1: [Rumors]
 
 to say PercyTalk2: [Percy History]
 	say "     'You... You want to hear about me[if player is not defaultnamed], [name of player][end if]?' Percy fidgets anxiously, tapping his claws together. 'Well I'm not that interesting. I used to live here as a normal human before the infection. I had a small home business where I made or repaired various things before selling them. I worked on everything from furniture to suits of armor. I didn't make much, but I loved it.' The pangolin's eyes are bright as he talks. You can tell that his craft is something he is comfortable with, something he knows well.'";
-	say "     'When the infection came, I had been working on a piece of antique pangolin scalemail.' You both give each other a knowing look. It's obvious as to where his story is going. 'I don't know how I got infected. Maybe it was just in the air, but either way, I started changing. Scales started sprouting, my head felt like mashed potatoes, claws grew, my tail sprouted, and the whole world spun as I got smaller.' Percy looks off to the side thoughtfully. 'Looking back on it, I was probably one of the lucky ones. Not only am I alive, but I'm strong, fast...' You comment about how his little waddle doesn't seem very fast, at which he blushes. 'I meant rolling! And because of that and my scales, I'm still me, at least mentally.' He gives you a friendly smile. 'Besides, I don't know if it's because of the infection, but I've started to like being a pangolin. After all, it let me meet you, right[if player is not defaultnamed], [name of player][end if]?'";
+	say "     'When the infection came, I had been working on a piece of antique pangolin scalemail.' You both give each other a knowing look. It's obvious as to where his story is going. 'I don't know how I got infected. Maybe it was just in the air, but either way, I started changing. Scales started forming, my head felt like mashed potatoes, claws grew, my tail sprouted, and the whole world spun as I got smaller.' Percy looks off to the side thoughtfully. 'Looking back on it, I was probably one of the lucky ones. Not only am I alive, but I'm strong, fast...' You comment about how his little waddle doesn't seem very fast, at which he blushes. 'I meant rolling! And because of that and my scales, I'm still me, at least mentally.' He gives you a friendly smile. 'Besides, I don't know if it's because of the infection, but I've started to like being a pangolin. After all, it let me meet you, right[if player is not defaultnamed], [name of player][end if]?'";
 	now HP of Percy is 3;
 
 to say PercyTalk18:
@@ -195,7 +196,7 @@ to say PercyTalk19:
 		say "     Percy hands you a spear that feels fairly good in your hands. You can't even tell that the shaft used to be a hoe, but the blade at the end was still recognizable as your old pocket knife. 'I hope this helps. It's not my best work, but it should be reliable.'";
 		increase carried of Makeshift-Spear by 1;
 	else if Stamina of Percy is 2: [Vambrace]
-		say "     Percy hands you a pear of leather vambraces. The design engraved into its surface is elegant and makes Percy's skill as an armorer clear. 'The materials took some working with, but I think they turned out well.'";
+		say "     Percy hands you a pear of leather vambraces. The design engraved into it's surface is elegant and makes Percy's skill as a armor clear. 'The materials took some working with, but I think they turned out well.'";
 		increase carried of leather vambraces by 1;
 	else if Stamina of Percy is 3: [Gambeson]
 		say "     Percy hands you what looks like a coat made out if a quilt. Despite its poofy appearance, the gambeson is surprisingly heavy for cloth armor. 'It takes a while to stitch together that many layers of cloth. You would be surprised how effective it can be though.'";
@@ -276,8 +277,8 @@ Section 5 - Percy Quests And Events
 
 Part 1 - Pangolin Encounter
 
-instead of going northwest from Urban Forest while (HP of Percy < 1):
-	say "     Following a path north, you stumble across what you at first think is a cave, but you quickly realize that it is some kind of tunnel or burrow in the side of a raised mound of earth. Keeping your distance at first, you can see that the passage is round with deep claw marks furrowed into its walls. You begin to wonder what sort of terrible creature would be powerful enough to construct it when you hear the rustle of leaves nearby. Ducking behind a bush, you wait, hiding from or ready to ambush whatever appears.";
+instead of going east from Urban Forest while (HP of Percy < 1):
+	say "     Following a path east, you stumble across what you at first think is a cave, but you quickly realize that it is some kind of tunnel or burrow in the side of a raised mound of earth. Keeping your distance at first, you can see that the passage is round with deep claw marks furrowed into its walls. You begin to wonder what sort of terrible creature would be powerful enough to construct it when you hear the rustle of leaves nearby. Ducking behind a bush, you wait, hiding from or ready to ambush whatever appears.";
 	say "     A small creature, a little over four feet tall, emerges from the forest path. His legs are fairly short, giving him a slight wobble to his step, and a long and broad tail stretches behind him. His back is completely covered in thick scales, and his fingers are tipped with powerful looking claws. Despite the reptilian-like traits though, he doesn't look like any kind of lizard that you have seen before. He looks more like some sort of scaled armadillo, one who apparently is singing to himself.";
 	WaitLineBreak;
 	say "     The creature mumbles and hums something about [']dancing if he wanted to['] while carrying a bundle of wood. He even shuffles his feet a little to the tune in his head until a slight breeze blows from behind you. The singing creatures nose twitches a few times before he turns towards where you are hiding. He squints for a moment, followed by a look of surprise. You quickly stand up out of reflex, ready to fight or run. Your potential attacker, however, drops the bundle of wood, and for a moment, he opens his mouth and looks as if he is going to wave to you in greeting, only to stop and curl up into a tight ball of scales before suddenly rolling away into the burrow!";
@@ -312,17 +313,17 @@ instead of going northwest from Urban Forest while (HP of Percy < 1):
 		else:[Don't Knock]
 			say "     You decide it best just to leave for now. You can always return later if you change your mind.";
 			wait for any key;
-			move player to Southern Burrow Entrance;
+			move player to Forest Burrow Entrance;
 			now HP of Percy is 1;
 	else:[Don't Follow]
 		say "     You aren't quite sure what that was all about, but you have other things to do. You know where the burrow is, and you can always return to look for him if you want.";
 		wait for any key;
-		move player to Southern Burrow Entrance;
+		move player to Forest Burrow Entrance;
 		now HP of Percy is 1;
 
 Part 2 - Pangolin Reencounter
 
-instead of going northwest from Southern Burrow Entrance while (HP of Percy < 2):
+instead of going east from Forest Burrow Entrance while (HP of Percy < 2):
 	say "     You head down into the burrow where you had seen the strange creature from before roll down. The tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there is much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There is even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
 	say "     [bold type]Knock on the door?[roman type]";
 	LineBreak;
@@ -348,24 +349,24 @@ instead of going northwest from Southern Burrow Entrance while (HP of Percy < 2)
 	else:[Don't Knock]
 		say "     You decide it best just to leave for now. You can always return later if you change your mind.";
 		wait for any key;
-		move player to Southern Burrow Entrance;
+		move player to Forest Burrow Entrance;
 
 Section 6 - Rooms
 
-Part 1 - South Entrance
+Part 1 - Forest Entrance
 
-Southern Burrow Entrance is a room. Southern Burrow Entrance is northwest of Urban Forest.
-The description of Southern Burrow Entrance is "[SouthBurrow desc]".
-earea of Southern Burrow Entrance is "Forest".
+Forest Burrow Entrance is a room. Forest Burrow Entrance is east of Urban Forest.
+The description of Forest Burrow Entrance is "[ForestBurrow desc]".
+earea of Forest Burrow Entrance is "Forest".
 
-to say SouthBurrow desc:
+to say ForestBurrow desc:
 	say "     If it wasn't for the degraded fences and crumbling houses, you could almost believe that you are in a natural forest. The birds sing in harmony, and the gentle breeze blowing through the leaves bring with it the herbal scent of the trees and earth around you. You've come to a point where the path splits.";
 	LineBreak;
-	say "To the [bold type]North[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";
+	say "To the [bold type]South[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";
 	LineBreak;
-	say "     To the [bold type]Northeast[roman type] is a large burrow that continues deep into an earthen mound. Fresh tracks cover the ground, both coming to and from the tunnel, as well as passing by.";
+	say "     To the [bold type]East[roman type] is a large burrow that continues deep into an earthen mound. Fresh tracks cover the ground, both coming to and from the tunnel, as well as passing by.";
 	LineBreak;
-	say "     To the [bold type]Southwest[roman type] is the entrance to the Urban Forest. You can still see the edge of the tree line if you look hard enough, and the buildings in the area are more intact than where you currently are.";
+	say "     To the [bold type]West[roman type] is the entrance to the Urban Forest. You can still see the edge of the tree line if you look hard enough, and the buildings in the area are more intact than where you currently are.";
 
 Part 2 - Ironscale Hollow
 
@@ -374,14 +375,14 @@ Object	Name
 Ironscale Hollow	"Ironscale Hollow"
 
 Ironscale Hollow is a room. It is fasttravel. Ironscale Hollow is sleepsafe. It is private.
-Ironscale Hollow is northeast of Southern Burrow Entrance.
+Ironscale Hollow is east of Forest Burrow Entrance.
 The description of Ironscale Hollow is "[IronscaleHollow desc]".
 
 the scent of Ironscale Hollow is "It smells of dirt and iron.".
 
 to say IronscaleHollow desc:
-	say "     All passages in the burrow converge on this one main chamber, each tunnel blocked by a solid wooden door with a hefty iron lock to prevent any would-be raiders or rapists from getting in. You hadn't noticed the first time you were here, but each door also has a small peep-hole to let him see who's knocking. Like the rest of the burrow, the [']Hollow['] is dug into the earth, though it also has stone flooring and [if findwires is 2 and fixedgens is 2]even electric lighting, now that the power has returned[else]oil-lamp lighting. There seem to be some electric lights as well, but the power doesn't seem to be running[end if]. Homely decorations are scattered about, as well as a few chairs and a table for customers to wait at.";
-	say "     Two other rooms can be seen through their respective doorways. One leads to the bedroom, which looks to be fairly well kept, but simple. The other leads to the workshop, complete with racks of tools hanging over a workbench, an anvil, a forge, and a few other things that you aren't even sure what they are. Percy is [if Strength of Percy > 1]hard at work in his workshop crafting the item you commissioned him to make[else]standing at his front desk with shelves of sample ironwork behind him. You suspect that he has some sort of stepstool behind there that lets him see over the table. He fidgets idly with his claws as if unsure what to say[end if].";
+	say "     All passages in the burrow converge on this one main chamber, each tunnel blocked by a solid wooden door with a hefty iron lock to prevent any would-be raiders or rapists from getting in. You hadn't noticed the first time you were here, but each door also has a small peep-hole to let him see who's knocking. Like the rest of the burrow, the [']Hollow['] is dug into the earth, though it also has stone flooring and [if findwires is 2 and fixedgens is 2]even electric lighting, now that the power has returned.[else]oil-lamp lighting. There seem to be some electric lights as well, but the power doesn't seem to be running.[end if] Homely decorations are scattered about, as well as a few chairs and a table for customers to wait at.";
+	say "     Two other rooms can be seen through their respective doorways. One leads to the bedroom, which looks to be fairly well kept, but simple. The other leads to the workshop, complete with racks of tools hanging over a workbench, an anvil, a forge, and a few other things that you aren't even sure what they are. Percy is [if Strength of Percy > 1]hard at work in his workshop crafting the item you commissioned him to make.[else]standing at his front desk with shelves of sample ironwork behind him. You suspect that he has some sort of stepstool behind there that lets him see over the table. He fidgets idly with his claws as if unsure what to say.[end if]";
 
 [Place holder until drops are created]
 when play begins:

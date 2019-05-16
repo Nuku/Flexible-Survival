@@ -28,9 +28,9 @@ Instead of resolving a potential resources:
 	if x is 3 or x is 4:
 		now y is "water bottle";
 	if x is 5:
-		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
+		if "Survivalist" is listed in feats of Player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of Player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -59,7 +59,7 @@ Instead of resolving a potential resources:
 	if guy is banned and girl is banned and x is 5, now x is a random number between 1 and 4;
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
-		add y to invent of player;
+		add y to invent of Player;
 	else if x is 2:
 		say "It is up high, forcing you to climb up after it. It looks ";
 		if difficulty < 8:
@@ -73,31 +73,31 @@ Instead of resolving a potential resources:
 		else:
 			say "extremely difficult";
 		say " to climb.";
-		if companion of player is bee girl:
+		if companion of Player is bee girl:
 			say "As you prepare to make the treacherous climb, Honey grabs your hand and pulls you back. 'Don't risk it. I can get it for you, honeybunch.' And with that, her translucent wings start to buzz, flying her up into the air to grab the [y] and brings it to you with a happy smile.";
-			add y to invent of player;
-		else if companion of player is Exotic Bird:
+			add y to invent of Player;
+		else if companion of Player is Exotic Bird:
 			say "As you prepare to make the dangerous climb, your bird pet calls out and swooping in. Its dive takes it past the [y], which it grabs in its talons and drops into your hands, saving you from having to make the climb yourself.";
-			add y to invent of player;
-		else if companion of player is Gryphoness:
-			let gryphlets be libido of gryphoness / 4;
+			add y to invent of Player;
+		else if companion of Player is Gryphoness:
+			let gryphlets be Libido of gryphoness / 4;
 			say "As you prepare to make the risky climb, Denise pulls you back and flaps her wings. 'I can get that for you easily, sweetie,' she says as she takes to the air. The gryphoness's wings lift her up alongside the [y], letting her take it with ease. She brings it back to you, earning a thank-you hug[if gryphlets is 1] from you and your gryphlet child[else if gryphlets is 2]from you and your gryphlet children[end if].";
-			add y to invent of player;
+			add y to invent of Player;
 		else:
-			let bonus be ( dexterity of player plus level of player minus 10 ) divided by 2;
+			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of player, increase bonus by 1;
-			if "Three Bags Full" is listed in feats of player and bodyname of player is "Ewe", increase bonus by 1;
-			if "Three Bags Full" is listed in feats of player and bodyname of player is "Ram", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ewe", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ram", increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
 			if difficulty > dice:
 				say "You try your best to scale up, but only end up hurting yourself in the process.";
-				decrease HP of player by 10;
+				decrease HP of Player by 10;
 			else:
 				say "Successfully shimmying up, you snag the [y] triumphantly and stuff it into your backpack.";
-				add y to invent of player;
+				add y to invent of Player;
 	else if x is 3:
 		say "It is up stuck under something heavy. It looks ";
 		if difficulty < 8:
@@ -111,9 +111,9 @@ Instead of resolving a potential resources:
 		else:
 			say "extremely difficult";
 		say " to lift.";
-		let bonus be ( strength of player plus level of player minus 10 ) divided by 2;
+		let bonus be ( strength of Player plus level of Player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -121,7 +121,7 @@ Instead of resolving a potential resources:
 			say "You try your best to lift up the barrier, but to no avail, denying you the [y].";
 		else:
 			say "Successfully hoisting the obstacle up, you snag the [y] triumphantly and stuff it into your backpack.";
-			add y to invent of player;
+			add y to invent of Player;
 	else if x is 4:
 		say "It is in the hands of a sentient! Though mutant, perhaps you could convince them to give it up. It looks like they have enough for themselves. They appear ";
 		if difficulty < 8:
@@ -136,12 +136,12 @@ Instead of resolving a potential resources:
 			say "extremely difficult";
 		say " to sway.";
 		let petbonus be false;
-		let bonus be ( charisma of player plus level of player minus 10 ) divided by 2;
-		if companion of player is equinoid warrior or companion of player is felinoid companion or companion of player is demon brute or companion of player is royal tiger:
+		let bonus be ( charisma of Player plus level of Player minus 10 ) divided by 2;
+		if companion of Player is equinoid warrior or companion of Player is felinoid companion or companion of Player is demon brute or companion of Player is royal tiger:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -149,13 +149,13 @@ Instead of resolving a potential resources:
 			say "Your arguments fall on deaf ears. Wait, does this guy even have ears?";
 		else:
 			say "After working out the specifics, you are handed the [y] and stuff it into your backpack";
-			add y to invent of player;
-			if "Haggler" is listed in feats of player:
-				let aa be a random number from 1 to charisma of player;
+			add y to invent of Player;
+			if "Haggler" is listed in feats of Player:
+				let aa be a random number from 1 to charisma of Player;
 				let bb be difficulty * 2;
 				let bb be a random number from 1 to bb;
 				if aa >= bb:
-					add y to invent of player;
+					add y to invent of Player;
 					say ". You even manage to haggle a second one from the mutant";
 			if petbonus is true:
 				say ", though having an intimidating guard by your side may have helped a little";
@@ -163,51 +163,51 @@ Instead of resolving a potential resources:
 	else if x is 5:
 		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]
 			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough. You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward with your tongue. Spreading her legs and lifting the scraps of her clothes, the transformed person bares her pussy to you and tells you to start licking. Shall you whore yourself out for a [y]?";
-			if player consents:
+			if Player consents:
 				say "[scavsex_f01]";
 				say ". You're tossed the [y] by one of her friends";
-				add y to invent of player;
-				if "Haggler" is listed in feats of player:
-					let aa be a random number from 1 to charisma of player;
+				add y to invent of Player;
+				if "Haggler" is listed in feats of Player:
+					let aa be a random number from 1 to charisma of Player;
 					let bb be difficulty * 2;
 					let bb be a random number from 1 to bb;
 					if aa >= bb:
-						add y to invent of player;
+						add y to invent of Player;
 						say " and even manage to haggle a second one from them";
 				say ".";
-				if player is submissive or player is kinky:
+				if Player is submissive or player is kinky:
 					say "     Despite (or perhaps even because of) how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on.";
-					increase libido of player by 10;
-					increase morale of player by 1;
+					increase Libido of Player by 10;
+					increase morale of Player by 1;
 				else:
 					say "     Feeling somewhat dirty for what you've done, you wonder what depths you'll sink to before this is all done. Despite this, you can't help but feel a little turned on as well.";
-					increase libido of player by 5;
-					decrease morale of player by 1;
+					increase Libido of Player by 5;
+					decrease morale of Player by 1;
 				weakrandominfect;
 			else:
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";
 		else:		[male mutant]
 			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince him to part with it since he and his nearby friends seem to have enough. You try to negotiate a trade, but he has no interest in anything you have to offer, instead suggesting you might earn your reward with your mouth. Pushing aside the scraps of his clothes and grabbing his junk, the transformed person strokes his cock to erection and tells you to start sucking. Shall you whore yourself out for a [y]?";
-			if player consents:
+			if Player consents:
 				say "[scavsex_m01]";
 				say ". You're tossed the [y] by one of his friends";
-				add y to invent of player;
-				if "Haggler" is listed in feats of player:
-					let aa be a random number from 1 to charisma of player;
+				add y to invent of Player;
+				if "Haggler" is listed in feats of Player:
+					let aa be a random number from 1 to charisma of Player;
 					let bb be difficulty * 2;
 					let bb be a random number from 1 to bb;
 					if aa >= bb:
-						add y to invent of player;
+						add y to invent of Player;
 						say " and even manage to haggle a second one from them";
 				say ".";
-				if player is submissive or player is kinky:
+				if Player is submissive or player is kinky:
 					say "     Despite (or perhaps even because of) how dirty you feel for what you've done, you can't help but be a little pleased with yourself and quite turned on.";
-					increase libido of player by 10;
-					increase morale of player by 1;
+					increase Libido of Player by 10;
+					increase morale of Player by 1;
 				else:
 					say "     Feeling somewhat dirty for what you've done, you wonder what depths you'll sink to before this is all done. Despite this, you can't help but feel a little turned on as well.";
-					increase libido of player by 5;
-					decrease morale of player by 1;
+					increase Libido of Player by 5;
+					decrease morale of Player by 1;
 				weakrandominfect;
 			else:
 				say "     Deciding it and any possible infection that might come with it aren't worth getting a [y]. You decide to look elsewhere for the supplies you need.";

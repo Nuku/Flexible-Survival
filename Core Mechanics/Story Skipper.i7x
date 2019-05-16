@@ -8,6 +8,9 @@ The File of RoomSave (owned by another project) is called "FSRoomSave".
 The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
 The File of PossessionSave (owned by another project) is called "FSPossessionSave".
 The File of CharacterSave (owned by another project) is called "FSCharacterSave".
+The File of ChildrenSave (owned by another project) is called "FSChildrenSave".
+The File of ChildrenBunkerSave (owned by another project) is called "FSChildrenBunkerSave".
+The File of ChildrenRoamingSave (owned by another project) is called "FSChildrenRoamingSave".
 The File of TraitSave (owned by another project) is called "FSTraitSave".
 The File of PlayerSave (owned by another project) is called "FSPlayerSave".
 The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
@@ -122,7 +125,7 @@ to EventSave:
 		say "Error! Not enough rows to save all events in the table of GameEvents. Please report this on the FS Discord.";
 	repeat with x running through situations: [rebuilds the table of GameEvents with current data]
 		choose a blank row in the table of GameEvents;
-		now name entry is printed name of x;
+		now Name entry is printed name of x;
 		if x is resolved:
 			now ResolveState entry is "Resolved";
 		else:
@@ -144,7 +147,7 @@ to EventRestore:
 		read File of EventSave into the Table of GameEvents;
 		repeat with x running from 1 to the number of filled rows in the Table of GameEvents:
 			choose row x in the Table of GameEvents;
-			let EventIdName be name entry;
+			let EventIdName be Name entry;
 			if there is a name of EventIdName in the Table of GameEventIDs:
 				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
 				if ResolveState entry is "Resolved":
@@ -177,7 +180,7 @@ to RoomSave:
 		say "Error! Not enough rows to save all rooms in the table of GameRooms. Please report this on the FS Discord.";
 	repeat with x running through rooms: [rebuilds the table of GameRooms with current data]
 		choose a blank row in the table of GameRooms;
-		now name entry is printed name of x;
+		now Name entry is printed name of x;
 		if x is private:
 			now Reachability entry is "Private";
 		else:
@@ -208,7 +211,7 @@ to RoomRestore:
 		read File of RoomSave into the Table of GameRooms;
 		repeat with x running from 1 to the number of filled rows in the Table of GameRooms:
 			choose row x in the Table of GameRooms;
-			let RoomIdName be name entry;
+			let RoomIdName be Name entry;
 			if there is a name of RoomIdName in the Table of GameRoomIDs:
 				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
 				if Reachability entry is "Private":
@@ -252,7 +255,7 @@ to PossessionSave:
 	blank out the whole of Table of GamePossessions; [empty out all old data]
 	repeat with x running from 1 to the number of rows in the Table of Game Objects: [rebuilds the table of GamePossessions with current data]
 		choose row x in the Table of Game Objects;
-		let PossessionName be name entry;
+		let PossessionName be Name entry;
 		let PossessionCarriedNumber be 0;
 		let PossessionStoredNumber be 0;
 		let PossessionEquipped be false;
@@ -268,7 +271,7 @@ to PossessionSave:
 				now PossesssionCursed is true;
 		if PossessionCarriedNumber > 0 or PossessionStoredNumber > 0: [if the object is indeed in the players possession, it gets written down]
 			choose a blank row in the table of GamePossessions;
-			now name entry is PossessionName;
+			now Name entry is PossessionName;
 			now CarriedNumber entry is PossessionCarriedNumber;
 			now StoredNumber entry is PossessionStoredNumber;
 			now EquippedStatus entry is PossessionEquipped;
@@ -284,7 +287,7 @@ to PossessionRestore:
 		read File of PossessionSave into the Table of GamePossessions;
 		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
 			choose row x in the Table of GamePossessions;
-			let PossessionIdName be name entry;
+			let PossessionIdName be Name entry;
 			if there is a name of PossessionIdName in the Table of Game Objects:
 				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
 				now carried of PossessionObject is CarriedNumber entry;
@@ -317,7 +320,7 @@ to CharacterSave:
 		choose a blank row in the Table of GameCharacters;
 		if there is a object of X in the Table of GameCharacterIDs:
 			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
-			now name entry is CharacterName;
+			now Name entry is CharacterName;
 			let LocationDesignation be "NPC Nexus"; [standard value = stash room]
 			if location of x is not nothing:
 				let LocationDesignation be printed name of location of x;
@@ -345,14 +348,14 @@ to CharacterSave:
 			now Libido entry is Libido of x;
 			now Loyalty entry is Loyalty of x;
 			now Humanity entry is Humanity of x;
-			now Cocks entry is Cocks of x;
+			now Cocks entry is Cock Count of x;
 			now Cock Length entry is Cock Length of x;
-			now Cock Width entry is Cock Width of x;
-			now Testes entry is Testes of x;
-			now Cunts entry is Cunts of x;
-			now Cunt Length entry is Cunt Length of x;
-			now Cunt Width entry is Cunt Width of x;
-			now Breasts entry is Breasts of x;
+			now Cock Width entry is Ball Size of x;
+			now Testes entry is Ball Count of x;
+			now Cunts entry is Cunt Count of x;
+			now Cunt Depth entry is Cunt Depth of x;
+			now Cunt Width entry is Cunt Tightness of x;
+			now Breasts entry is Nipple Count of x;
 			now Breast Size entry is Breast Size of x;
 			now PlayerMet entry is PlayerMet of x;
 			now PlayerRomanced entry is PlayerRomanced of x;
@@ -381,7 +384,7 @@ to CharacterRestore:
 		read File of CharacterSave into the Table of GameCharacters;
 		repeat with x running from 1 to the number of filled rows in the Table of GameCharacters:
 			choose row x in the Table of GameCharacters;
-			let CharacterIdName be name entry;
+			let CharacterIdName be Name entry;
 			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
 				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
 				if CharacterIdName is listed in PetList:
@@ -422,14 +425,14 @@ to CharacterRestore:
 				now Libido of CharacterObject is Libido entry;
 				now Loyalty of CharacterObject is Loyalty entry;
 				now Humanity of CharacterObject is Humanity entry;
-				now Cocks of CharacterObject is Cocks entry;
+				now Cock Count of CharacterObject is Cocks entry;
 				now Cock Length of CharacterObject is Cock Length entry;
-				now Cock Width of CharacterObject is Cock Width entry;
-				now Testes of CharacterObject is Testes entry;
-				now Cunts of CharacterObject is Cunts entry;
-				now Cunt Length of CharacterObject is Cunt Length entry;
-				now Cunt Width of CharacterObject is Cunt Width entry;
-				now Breasts of CharacterObject is Breasts entry;
+				now Ball Size of CharacterObject is Cock Width entry;
+				now Ball Count of CharacterObject is Testes entry;
+				now Cunt Count of CharacterObject is Cunts entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
+				now Cunt Tightness of CharacterObject is Cunt Width entry;
+				now Nipple Count of CharacterObject is Breasts entry;
 				now Breast Size of CharacterObject is Breast Size entry;
 				now PlayerMet of CharacterObject is PlayerMet entry;
 				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
@@ -451,7 +454,7 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
-		truncate Feats of player to 0 entries;
+		truncate Feats of Player to 0 entries;
 		repeat with y running through persons:[cleaning out the old data]
 			truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
@@ -473,58 +476,58 @@ to PlayerSave:
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	blank out the whole of Table of PlayerLists; [empty out all old data]
 	choose a blank row in the table of PlayerData;
-	now skin entry is skin of player;
-	now skinname entry is skinname of player;
-	now cock entry is cock of player;
-	now cockname entry is cockname of player;
-	now face entry is face of player;
-	now facename entry is facename of player;
-	now tail entry is tail of player;
-	now tailname entry is tailname of player;
-	now body entry is body of player;
-	now bodyname entry is bodyname of player;
-	now scent entry is scent of player;
-	now Cock Size Desc entry is Cock Size Desc of player;
-	now Cunt Size Desc entry is Cunt Size Desc of player;
-	now Breast Size Desc entry is Breast Size Desc of player;
-	now Short Breast Size Desc entry is Short Breast Size Desc of player;
-	now bodydesc entry is bodydesc of player;
-	now bodytype entry is bodytype of player;
-	if the number of entries in Vials of player is not 0:
-		repeat with y running from 1 to the number of entries in Vials of player:
+	now skin entry is skin of Player;
+	now skinName entry is skinname of Player;
+	now cock entry is cock of Player;
+	now cockName entry is cockname of Player;
+	now face entry is face of Player;
+	now faceName entry is facename of Player;
+	now tail entry is tail of Player;
+	now tailName entry is tailname of Player;
+	now body entry is body of Player;
+	now bodyName entry is bodyname of Player;
+	now scent entry is scent of Player;
+	now Cock Size Desc entry is Cock Size Desc of Player;
+	now Cunt Size Desc entry is Cunt Size Desc of Player;
+	now Breast Size Desc entry is Breast Size Desc of Player;
+	now Short Breast Size Desc entry is Short Breast Size Desc of Player;
+	now bodydesc entry is bodydesc of Player;
+	now bodytype entry is bodytype of Player;
+	if the number of entries in Vials of Player is not 0:
+		repeat with y running from 1 to the number of entries in Vials of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "Vial";
-			now EntryText entry is entry y of vials of player;
-	if the number of entries in Tapes of player is not 0:
-		repeat with y running from 1 to the number of entries in Tapes of player:
+			now EntryText entry is entry y of vials of Player;
+	if the number of entries in Tapes of Player is not 0:
+		repeat with y running from 1 to the number of entries in Tapes of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "Tape";
-			now EntryText entry is entry y of Tapes of player;
-	if the number of entries in Feats of player is not 0:
-		repeat with y running from 1 to the number of entries in Feats of player:
+			now EntryText entry is entry y of Tapes of Player;
+	if the number of entries in Feats of Player is not 0:
+		repeat with y running from 1 to the number of entries in Feats of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "Feat";
-			now EntryText entry is entry y of Feats of player;
-	if the number of entries in OpenQuests of player is not 0:
-		repeat with y running from 1 to the number of entries in OpenQuests of player:
+			now EntryText entry is entry y of Feats of Player;
+	if the number of entries in OpenQuests of Player is not 0:
+		repeat with y running from 1 to the number of entries in OpenQuests of Player:
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "OpenQuest";
-			now EntryText entry is entry y of OpenQuests of player;
-	if the number of entries in CompletedQuests of player is not 0:
-		repeat with y running from 1 to the number of entries in CompletedQuests of player: [rebuilds the table of GameTraits with current data]
+			now EntryText entry is entry y of OpenQuests of Player;
+	if the number of entries in CompletedQuests of Player is not 0:
+		repeat with y running from 1 to the number of entries in CompletedQuests of Player: [rebuilds the table of GameTraits with current data]
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "CompletedQuest";
-			now EntryText entry is entry y of CompletedQuests of player;
-	if the number of entries in EncounteredEnemies of player is not 0:
-		repeat with y running from 1 to the number of entries in EncounteredEnemies of player: [rebuilds the table of GameTraits with current data]
+			now EntryText entry is entry y of CompletedQuests of Player;
+	if the number of entries in EncounteredEnemies of Player is not 0:
+		repeat with y running from 1 to the number of entries in EncounteredEnemies of Player: [rebuilds the table of GameTraits with current data]
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "EncounteredEnemy";
-			now EntryText entry is entry y of EncounteredEnemies of player;
-	if the number of entries in BlockList of player is not 0:
-		repeat with y running from 1 to the number of entries in BlockList of player: [rebuilds the table of GameTraits with current data]
+			now EntryText entry is entry y of EncounteredEnemies of Player;
+	if the number of entries in BlockList of Player is not 0:
+		repeat with y running from 1 to the number of entries in BlockList of Player: [rebuilds the table of GameTraits with current data]
 			choose a blank row in the table of PlayerLists;
 			now ListName entry is "BlockList";
-			now EntryText entry is entry y of BlockList of player;
+			now EntryText entry is entry y of BlockList of Player;
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
 	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
 	blank out the whole of Table of PlayerData; [empty after saving]
@@ -537,23 +540,23 @@ to PlayerRestore:
 		say "Restoring Player Data...";
 		read File of PlayerSave into the Table of PlayerData;
 		choose row 1 in the Table of PlayerData;
-		now skin of player is skin entry;
-		now skinname of player is skinname entry;
-		now cock of player is cock entry;
-		now cockname of player is cockname entry;
-		now face of player is face entry;
-		now facename of player is facename entry;
-		now tail of player is tail entry;
-		now tailname of player is tailname entry;
-		now body of player is body entry;
-		now bodyname of player is bodyname entry;
-		now scent of player is scent entry;
-		now Cock Size Desc of player is Cock Size Desc entry;
-		now Cunt Size Desc of player is Cunt Size Desc entry;
-		now Breast Size Desc of player is Breast Size Desc entry;
-		now Short Breast Size Desc of player is Short Breast Size Desc entry;
-		now bodydesc of player is bodydesc entry;
-		now bodytype of player is bodytype entry;
+		now skin of Player is skin entry;
+		now skinname of Player is skinName entry;
+		now cock of Player is cock entry;
+		now cockname of Player is cockName entry;
+		now face of Player is face entry;
+		now facename of Player is faceName entry;
+		now tail of Player is tail entry;
+		now tailname of Player is tailName entry;
+		now body of Player is body entry;
+		now bodyname of Player is bodyName entry;
+		now scent of Player is scent entry;
+		now Cock Size Desc of Player is Cock Size Desc entry;
+		now Cunt Size Desc of Player is Cunt Size Desc entry;
+		now Breast Size Desc of Player is Breast Size Desc entry;
+		now Short Breast Size Desc of Player is Short Breast Size Desc entry;
+		now bodydesc of Player is bodydesc entry;
+		now bodytype of Player is bodytype entry;
 		if debugactive is 1:
 			say "DEBUG -> Player Data restored.";
 	else:
@@ -565,27 +568,60 @@ to PlayerRestore:
 			choose row y in the Table of PlayerLists;
 			if ListName entry is:
 				-- "Vial":
-					add EntryText entry to Vials of player;
+					add EntryText entry to Vials of Player;
 				-- "Tape":
-					if EntryText entry is not listed in Tapes of player:
-						add EntryText entry to Tapes of player;
+					if EntryText entry is not listed in Tapes of Player:
+						add EntryText entry to Tapes of Player;
 				-- "Feat":
-					if EntryText entry is not listed in Feats of player:
-						add EntryText entry to Feats of player;
+					if EntryText entry is not listed in Feats of Player:
+						add EntryText entry to Feats of Player;
 				-- "OpenQuest":
-					if EntryText entry is not listed in OpenQuests of player:
-						add EntryText entry to OpenQuests of player;
+					if EntryText entry is not listed in OpenQuests of Player:
+						add EntryText entry to OpenQuests of Player;
 				-- "CompletedQuest":
-					if EntryText entry is not listed in CompletedQuests of player:
-						add EntryText entry to CompletedQuests of player;
+					if EntryText entry is not listed in CompletedQuests of Player:
+						add EntryText entry to CompletedQuests of Player;
 				-- "EncounteredEnemy":
-					if EntryText entry is not listed in EncounteredEnemies of player:
-						add EntryText entry to EncounteredEnemies of player;
+					if EntryText entry is not listed in EncounteredEnemies of Player:
+						add EntryText entry to EncounteredEnemies of Player;
 				-- "BlockList":
-					if EntryText entry is not listed in BlockList of player:
-						add EntryText entry to BlockList of player;
+					if EntryText entry is not listed in BlockList of Player:
+						add EntryText entry to BlockList of Player;
 	blank out the whole of Table of PlayerData; [empty out all old data]
 	blank out the whole of Table of PlayerLists; [empty out all old data]
+
+to ChildrenSave:
+	say "Saving Children...";
+	write File of ChildrenSave from the Table of PlayerChildren;
+	write File of ChildrenBunkerSave from the Table of PlayerBunkerChildren;
+	write File of ChildrenRoamingSave from the Table of PlayerRoamingChildren;
+	if debugactive is 1:
+		say "DEBUG -> File of ChildrenSave written.[line break]";
+		say "DEBUG -> File of ChildrenBunkerSave written.[line break]";
+		say "DEBUG -> File of ChildrenRoamingSave written.[line break]";
+
+to ChildrenRestore:
+	if the File of ChildrenSave exists:
+		say "Restoring Children...";
+		read File of ChildrenSave into the Table of PlayerChildren;
+		if debugactive is 1:
+			say "DEBUG -> Children restored from FSPlayerChildrenSave.[line break]";
+	else:
+		say "No Children Save File Found!";
+	if the File of ChildrenBunkerSave exists:
+		say "Restoring Children (Bunker)...";
+		read File of ChildrenBunkerSave into the Table of PlayerBunkerChildren;
+		if debugactive is 1:
+			say "DEBUG -> Children restored from FSPlayerChildrenBunkerSave.[line break]";
+	else:
+		say "No Children (Bunker) Save File Found!";
+	if the File of ChildrenRoamingSave exists:
+		say "Restoring Children (Roaming)...";
+		read File of ChildrenRoamingSave into the Table of PlayerRoamingChildren;
+		if debugactive is 1:
+			say "DEBUG -> Children restored from FSPlayerChildrenRoamingSave.[line break]";
+	else:
+		say "No Children (Roaming) Save File Found!";
 
 to BeastSave:
 	say "Saving Beasts...";
@@ -656,6 +692,7 @@ To SaveEverything:
 	RoomSave;
 	PossessionSave;
 	CharacterSave;
+	ChildrenSave;
 	PlayerSave;
 	BeastSave;
 	VariableSave;
@@ -668,7 +705,7 @@ Carry out ProgressImport:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     <Press any key to start import>";
 		wait for any key;
@@ -679,6 +716,7 @@ to say ProgressionImport:
 	RoomRestore;
 	PossessionRestore;
 	CharacterRestore;
+	ChildrenRestore;
 	TraitRestore;
 	PlayerRestore;
 	BeastRestore;

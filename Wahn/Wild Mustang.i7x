@@ -2,27 +2,27 @@ Version 1 of Wild Mustang by Wahn begins here.
 
 "Adds a feral Mustang to Flexible Survival."
 
-Section 1 - Monster Responses
+Section 1 - Creature Responses
 
 when play begins:
 	add { "Feral Mustang" } to infections of girl;
 
 to say WildMustangWins:
-	if HP of player > 0:
+	if HP of Player > 0:
 		say "     As you submit, Lucifer gives a satisfied whinny, then slowly trots forward and shoves you with his side, making you fall down on the short grass. Knowing what will likely come next and not wanting to enrage the feral beast, you quickly strip and take position with your hips raised high.";
 	else:
 		say "     As you finally collapse in exhaustion, Lucifer gives a satisfied whinny, then lowers his head and nips at your clothes, pulling and ripping to get them out of the way. With no chance anymore to get around this, you finally give in and quickly strip to save the rest of your clothes from being destroyed.";
-	if player is female:
-		say "     A moment later, you feel a sudden weight move atop you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. This hugely hung stallion does indeed fully intend to mount you[if cunt width of player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if cunt length of player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He moves in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds your pussy hard and deep.";
+	if Player is female:
+		say "     A moment later, you feel a sudden weight move atop you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. This hugely hung stallion does indeed fully intend to mount you[if Cunt Tightness of Player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if Cunt Depth of Player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He moves in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds your pussy hard and deep.";
 		say "     After being speared on the mustang's shaft again and again for you don't know how long, eventually Lucifer gives a loud and lusty neigh, then drives deep inside you and cums powerfully, filling you with copious amounts of mustang spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.[impregchance]";
 	else if anallevel > 1:
 		say "     The feral mustang snorts in frustration as he sniffs you and doesn't find a pussy for him to fill, but nevertheless moves into position atop of you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. Stomping his hooves on the ground around you, the large horse bucks a few times with his hips, making that big piece of horseflesh rub against your body, then slap against your rear a few times as he lines himself up correctly. Now in the perfect breeding stance, the mustang grinds his cock against your crack for a moment, then thrusts into you with a whinny of pleasure. You groan as the feral beast's horse cock is driven deep, its flat glans spreading you wide as he starts plowing into you.";
 		say "     Gripping handfuls of grass tight enough to rip them out of the ground, you moan loudly beneath Lucifer as he uses you as his mare. He thrusts in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds into you over and over. With a loud and lusty neigh, he eventually drives deep inside you and cums powerfully, filling you with copious amounts of mustang spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws and trots off proudly.[mimpregchance]";
 	else:
 		say "     The feral mustang snorts in frustration as he sniffs you and doesn't find a pussy for him to fill, but nevertheless moves into position atop of you, pinning you to the ground on your hands and knees. Next comes the touch of something long and hard sliding along your back - Lucifer's erect cock, laying hot against your skin. Stomping his hooves on the ground around you, the large horse bucks a few times with his hips, making that big piece of horseflesh rub against your body. You can feel the wetness of his pre-cum dribble down on you, showing you what to expect as he continues to grind against you for some time, then eventually comes with a loud and lusty neigh. His glans flares widely and blast after blast of mustang cum splatters onto you, leaving you soaked in his semen. After the last spurt leaks onto you, he snorts again and trots off, frustrated and only a little satisfied.";
-	decrease humanity of player by 10;
-	if humanity of player < 0:
-		now bodyname of player is "Lucifer's Mare";
+	SanLoss 10;
+	if humanity of Player < 0:
+		now bodyname of Player is "Lucifer's Mare";
 		end the story saying "The black mustang has taken you as his mare!";
 	else:
 		say "     Something inside you calls out for you to just stay, rest on the grass till your stallion comes by again to breed you, become a true mare - but no, you're not that far gone yet. Using the opening Lucifer's overconfidence of not even watching you too closely presents, you quickly snatch up your gear and clothes, then run off to the gate, quickly slipping through and locking back up before the feral mustang can follow.";
@@ -34,7 +34,7 @@ to say WildMustangLoses:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Show the feral mustang some physical affection as a willing partner.";
 	say "     ([link]N[as]n[end link]) - Leave the paddock.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "[LuciferSexMenu]";
 	else:
@@ -45,7 +45,7 @@ to say WildMustangLoses:
 to say LuciferSexMenu:
 	now sextablerun is 0;
 	setmonster "Feral Mustang";
-	choose row monster from the Table of Random Critters;
+	choose row MonsterID from the Table of Random Critters;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -53,13 +53,13 @@ to say LuciferSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Rub Lucifer's prostate to make him cum";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the stallion's ass";
 		now sortorder entry is 2;
 		now description entry is "Pound your dick into Lucifer's hole";
 	[]
-	if player is female:
+	if Player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Take that big horsecock in your pussy";
 		now sortorder entry is 3;
@@ -99,7 +99,7 @@ to say LuciferSexMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				clear the screen and hyperlink list;
 				now sextablerun is 1;
@@ -164,7 +164,7 @@ to say LuciferSex2: [fucking Lucifer's ass]
 
 to say LuciferSex3: [player pussy fucked]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then strip off your clothes and move under the horse, taking position on all fours with your ass raised high.";
-	say "     Reaching back to take hold of his equine cock, you rub it against your body, making the large beast snort in surprise at someone so eager and willing to let him mount them[if HP of Lucifer is 0], especially after a fight[end if]. It doesn't take too long for Lucifer to get over it though - pretty soon, the mustang starts to fidget a bit, making his long and hard cock rub against you[if cunt width of player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if cunt length of player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He moves in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds your pussy hard and deep.";
+	say "     Reaching back to take hold of his equine cock, you rub it against your body, making the large beast snort in surprise at someone so eager and willing to let him mount them[if HP of Lucifer is 0], especially after a fight[end if]. It doesn't take too long for Lucifer to get over it though - pretty soon, the mustang starts to fidget a bit, making his long and hard cock rub against you[if Cunt Tightness of Player < 6]. You can feel his enlarged, flared glans pressing at your pussy, trying to spread open your hole for him until it finally gives and allows him entry, making you moan loudly as it pushes in[end if][if Cunt Depth of Player < 28]. With one thrust that sends shivers of lustful delight, he drives as much of his huge cock inside you as he can[else]. With a single thrust, he buries his huge cock completely inside your enormous pussy, sending shivers of lustful delight through you and making him whinny excitedly at finding a mare big enough to take him[end if]. He moves in and out of you, snorting and grunting in a purely bestial manner as that gigantic rod pounds your pussy hard and deep.";
 	say "     After being speared on the mustang's shaft again and again for you don't know how long and having multiple orgasms from your interspecies dalliance, eventually Lucifer gives a loud and lusty neigh, then drives deep inside you and cums powerfully, filling you with copious amounts of mustang spunk. His huge balls throb and expel cup after cup of virile, equine seed into you until finally you are left bloated and panting on the ground when he finally withdraws, with more cum dripping down on you as the flared shaft slips from your pussy.[impregchance]";
 	if HP of Lucifer is 0: [first time]
 [
@@ -210,8 +210,8 @@ to say LuciferSex5: [suck him off]
 	PlayerEat 3;
 	PlayerDrink 6;
 	SanLoss 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
@@ -221,10 +221,10 @@ to say LuciferSex6: [watch him breed a mare]
 	say "     You slowly step up to the large horse, stroking his long neck and patting his side[if HP of Lucifer is 0] to show that the fight is over[end if]. As he calms down a bit after the initial touch, you start walking around Lucifer's body, stroking along his muscled flank until you reach the rear end and let your hand slide under his furred body. Calmly telling the horse to relax, you take hold of his large balls and gently squeeze them, then move on to his equine cock as it emerges from its sheath. As you start jerking off the long tube of his shaft, the mustang give a curious and at the same time aroused whinny and he turns his head to look back at you. Continuing in the same nonthreatening manner, you let go of his erection a moment later, then pat him affectionately on the neck and tell him that you'd love to... watch his mighty pole in action. Be there when he breeds a mare with it.";
 	say "     The feral mustang turns a little to shake his head towards the mares on the far end of the paddock, then snorts in amusement. You can give a good guess what his whinny right after that means - it's as if he laughs about you distracting him from his mares, only to ask that he gets back to having his way with them. With a step aside on four powerful legs, the large equine bumps you with his shoulder, knocking you to the ground. It doesn't seem an aggressive act though - more a friendly rebuke. Then he starts a quick trot towards his harem, only looking back once and snorting impatiently at you not being quick enough at getting back to your feet and following. By the time you catch up with the large mustang, he's selected one member of his harem and shepherded her to stand alone, a bit distant from the rest of the others. Lucifer awaits you with his head held high, proudly strutting around the mare, as if to invite you to check her out.";
 	WaitLineBreak;
-	if libido of Lucifer is 0: [first time meeting Matteo/Mataya]
+	if Libido of Lucifer is 0: [first time meeting Matteo/Mataya]
 		say "     Walking closer and getting a good look at the feral equine, you see that she's truly a magnificent specimen, with a powerful stature built for speed and strength, if a little bit smaller than her stallion. Getting a consenting snort as you look towards the possessive male nearby, you step right up to the mare, putting a hand on her warm flank and feeling it slightly move under your hands as she breathes deeply, looking at you, then her master and sniffing the air for him. Seems she knows she'll get mounted soon and is getting excited about it. As you stroke the large horse's fur further, you notice something - some darker shapes on the light skin under the fur of her shoulder... it's a tattoo of some sort. Investigating further, you manage to make out the slightly distorted outline of a heart, filled with the names 'CARMEN & MATTEO'. Looks like this horse is one of your predecessors in entering Lucifer's paddock.";
 		say "     You wonder if you should ask Matteo about his new form, then have the thought that name doesn't really fit anymore with him a mare. Maybe... yeah, Mataya - that could be a good female variant. Before you can actually decide to try to talk to Mataya, the mare reacts to her stallion as he trots closer. With a whinny to him, she turns her large body around with almost delicate steps of four strong legs. Flexing the base of her tail to move the long hairs out of the way, she presents her back end and gives you and Lucifer a perfect view of a most and ready equine pussy. A black-skinned slit sits ready between the firm rump of her furry hindquarters, glistening wet in the light, then Mataya's muscles pull her black nether lips apart, giving a short glimpse of her pink insides before closing up again. Then her musky smell reaches your nose, and you realize that the mare is in heat - something that must be the case quite often, with the crazy reproductive cycles the nanites set up.";
-		now libido of Lucifer is 1; [met Mataya]
+		now Libido of Lucifer is 1; [met Mataya]
 	else:
 		say "     Walking closer and getting a good look at the feral equine, you see that it is Mataya, whom you encountered before. She's truly a magnificent specimen, with a powerful stature built for speed and strength, if a little bit smaller than her stallion. Getting a consenting snort as you look towards the possessive male nearby, you step right up to the mare, putting a hand on her warm flank and feeling it slightly move under your hands as she breathes deeply, looking at you, then her master and sniffing the air for him. Seems she knows she'll get mounted soon and is getting excited about it. As you stroke the large horse's fur further, you notice the tattoo under the fur at her shoulder again and check out the names 'CARMEN & MATTEO' and the heart framing them. This horse clearly was one of your predecessors in entering Lucifer's paddock.";
 		say "     Previous experience tells you there isn't much point in talking to Matteo - or Mataya, as you've decided to call this feral, female variant of the person she was before. Without much more ado, the mare reacts to her stallion as he trots closer. With a whinny to him, she turns her large body around with almost delicate steps of four strong legs. Flexing the base of her tail to move the long hairs out of the way, she presents her back end and gives you and Lucifer a perfect view of a most and ready equine pussy. A black-skinned slit sits ready between the firm rump of her furry hindquarters, glistening wet in the light, then Mataya's muscles pull her black nether lips apart, giving a short glimpse of her pink insides before closing up again. Then her musky smell reaches your nose, and you realize that the mare is in heat - something that must be the case quite often, with the crazy reproductive cycles the nanites set up.";
@@ -243,9 +243,9 @@ to say LuciferSex6: [watch him breed a mare]
 	infect "Feral Mustang";
 	PlayerEat 3;
 	PlayerDrink 6;
-	decrease humanity of player by 5;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
-	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
+	SanLoss 5;
+	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 [
 	if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 		now SelenaLucifer is 2; [saw the player and the mustang out of her window]
@@ -261,7 +261,7 @@ to say LuciferSex7: [player strapped under Lucifer with his cock inside them]
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Trade it to Lee?";
 		say "     ([link]N[as]n[end link]) - Change your mind.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     As you pull the bundle of hair from your pack, the farmhand gives you a grin and takes an old snuff-box out of his jeans pocket, opening the tin can and letting you drop your trade into it. Careful not to touch it, he closes the box up and stuffs it into his pocket, then nods to the mounting block not too far away. 'Okay then, let's move over there everyone. We need you two to be in the right positions to set this thing up.'";
 			WaitLineBreak;
@@ -269,16 +269,16 @@ to say LuciferSex7: [player strapped under Lucifer with his cock inside them]
 			say "     Leading the way with the fucking harness under his arm, Lee guides you and Lucifer to the mounting block. Then he sets his load down, arranges the straps the right way and spreads out the central leather pad on the top surface. 'Well then - lie on here when you're ready,' the horseman says with a grin, patting the smooth material and giving Lucifer a glance. 'I know he's ready - just look at that thing!' Following his nod, you look under the feral mustang and see his proud shaft dangle erect like a fifth leg, its flared head already dripping with precum. You feel a shiver of sexual excitement run down your back at having the mighty beast so eager to fuck you, motivating you to set a new record in speed-stripping, just throwing your clothes and gear aside in the rush to take your assigned place.";
 			say "     A moment later, you're lying stretched out on the fuck-pad, spreading your legs wide in anticipation of the stallion and his long cock. And you don't have to wait long, as Lucifer gives a dominant neigh and sets his heavy hooves into motion, coming to stand over you, his barrel-shaped chest barley an inch or two above your body. It is quite an experience to be so very close to the large feral beast, smelling his pleasant scents of clean fur and hay, feeling the warmth that his body radiates. You can't help but want to touch him, stretching our arms up to hug his chest, same as your legs clamp to the sides of his rump. Wow, this is just something else. Something in you says just to keep doing this, rest against the powerful stallion and be with him in peaceful togetherness - but it seems Lucifer has different ideas, as he bucks his hips suddenly, sending his erect cock to nudge your crotch and leaving a wet smear of precum on your naked body.";
 			WaitLineBreak;
-			say "     It's always a good idea not to let a dominant beast wait too long - and you're itching for his prick anyways - so you hastily reach down to grab hold of Lucifer's erection and guide it to your [if player is female]trembling pussy[else]quivering pucker[end if]. After a first gentle brush of his flared head against your hole, you push it harder against yourself, and with a slurp, the horse's cock sinks into you, immediately followed by most of his shaft as he relentlessly bucks forward next. A short gasp in pain at the sudden, deep penetration escapes your lips before you can stifle it, and Lee grabs your shoulder to ask, 'You okay there? I hear the first moment is the worst, then things just get better and better - at least that's what our horse fucker always said.' He grunts in assent as you give a curt nod, still biting your teeth together as your [if player is female]pussy[else]ass[end if] gets used to the equine shaft sunk deep into it.";
-			say "     'Now just a moment longer,' Lee tells you - or maybe rather Lucifer, as he pats the stallion's neck with a careful air. 'Just gotta put on the straps and you can stroll around with this bitch sliding back and forth on that big piece of meat you got. Trust me, your predecessor loved it.' And with that, the farmhand deftly throws several leather straps over Lucifer's back, then steps around to take hold of the matching buckle and straps the harness to the big stallion, hefting you up a little as he pulls it tight. No longer just lying on the mounting block just used in a different kind of mounting than originally intended, you're now dangling freely under the feral mustang, chest pressed against him by the harness and your [if player is female]pussy[else]ass[end if] impaled on his equine shaft. 'Good to go,' Lee calls out with a chuckle, then jogs away to a safe distance before turning around to watch.";
+			say "     It's always a good idea not to let a dominant beast wait too long - and you're itching for his prick anyways - so you hastily reach down to grab hold of Lucifer's erection and guide it to your [if Player is female]trembling pussy[else]quivering pucker[end if]. After a first gentle brush of his flared head against your hole, you push it harder against yourself, and with a slurp, the horse's cock sinks into you, immediately followed by most of his shaft as he relentlessly bucks forward next. A short gasp in pain at the sudden, deep penetration escapes your lips before you can stifle it, and Lee grabs your shoulder to ask, 'You okay there? I hear the first moment is the worst, then things just get better and better - at least that's what our horse fucker always said.' He grunts in assent as you give a curt nod, still biting your teeth together as your [if Player is female]pussy[else]ass[end if] gets used to the equine shaft sunk deep into it.";
+			say "     'Now just a moment longer,' Lee tells you - or maybe rather Lucifer, as he pats the stallion's neck with a careful air. 'Just gotta put on the straps and you can stroll around with this bitch sliding back and forth on that big piece of meat you got. Trust me, your predecessor loved it.' And with that, the farmhand deftly throws several leather straps over Lucifer's back, then steps around to take hold of the matching buckle and straps the harness to the big stallion, hefting you up a little as he pulls it tight. No longer just lying on the mounting block just used in a different kind of mounting than originally intended, you're now dangling freely under the feral mustang, chest pressed against him by the harness and your [if Player is female]pussy[else]ass[end if] impaled on his equine shaft. 'Good to go,' Lee calls out with a chuckle, then jogs away to a safe distance before turning around to watch.";
 			WaitLineBreak;
 			say "     Lucifer turns his head back and snorts in amusement at seeing you strapped in, hugging his chest, then he carefully steps sideways, pulling you off the mounting block. It is somewhat of a strange sensation - despite already having hung suspended from the horse, now there's nothing under you except open air, then eventually the harsh ground. All of which strengthens your bond to the mighty beast, making you feel like you can rely on him to carry you safely and be there if you need his protection as a member of the herd. And - of course - to fuck you hard when you're wound up like a bitch in heat... The first tentative steps that Lucifer takes jostles you back and forth in the harness, making your stretched hole slide up and down on his erection, much to both of your enjoyment.";
-			say "     Each movement, big or small, has your stretched [if player is female]pussy[else]asshole[end if] basically jerking Lucifer off at it slides around his prick, while his flared equine head brushes against very sensitive spots deep inside your hole. The slow trot in which you gasp and moan and he nickers in lust quickly escalates to a fast canter, bouncing you harder against his erection and making the horse's heavy balls swat against your butt with satisfying slaps. Being used like a giant fleshlight turns you on more than a little bit, and [if player is female]your pussy gets soaking wet with femcum just drooling out around his erection[else]your own erection presses against Lucifer's belly hard, rubbing against the horse's soft fur[end if]. Your equine partner does a lap around the whole paddock, moving along the fence as if to show off the living sex-toy strapped to his underside. You can feel the gaze of many eyes rest upon you, both Lucifer's mares as well as other inhabitants of the farm that pass closely and look your way.";
+			say "     Each movement, big or small, has your stretched [if Player is female]pussy[else]asshole[end if] basically jerking Lucifer off at it slides around his prick, while his flared equine head brushes against very sensitive spots deep inside your hole. The slow trot in which you gasp and moan and he nickers in lust quickly escalates to a fast canter, bouncing you harder against his erection and making the horse's heavy balls swat against your butt with satisfying slaps. Being used like a giant fleshlight turns you on more than a little bit, and [if Player is female]your pussy gets soaking wet with femcum just drooling out around his erection[else]your own erection presses against Lucifer's belly hard, rubbing against the horse's soft fur[end if]. Your equine partner does a lap around the whole paddock, moving along the fence as if to show off the living sex-toy strapped to his underside. You can feel the gaze of many eyes rest upon you, both Lucifer's mares as well as other inhabitants of the farm that pass closely and look your way.";
 			WaitLineBreak;
-			say "     After completing a full circuit, the feral mustang stops for a moment and neighs to Lee standing against the fence nearby. There is grudging respect and gratitude in the horse's voice you think - telling you he's grateful for the farmhand having facilitated this way of mating you. While Lee gives a short laugh in reply, you feel the muscles of Lucifer tense and his thick shaft throb in your body, then with a sudden jolt, you're driven all the way down on his erection as the mustang breaks into a full-on gallop down the long side of the paddock. Where his earlier movement was kinda like a rhythmic thrusting and grinding against your stretched [if player is female]pussy[else]asshole[end if], this now is a really heavy pounding that makes you twist and tremble from the sensations it creates. Arms and legs wrapped around the mustang, you pant, moan and scream in lust as the horse rides your body hard - and it doesn't take more than a few moments for you to reach your breaking point and the massive buildup of arousal breaks as a monumental climax.";
-			say "     Lucifer lets out a loud and satisfied nicker as he feels your hole squeeze tight around his shaft. It is clear that the mustang feels on top of the world right now - hooves digging into the soft ground of his domain as he dashes forward at full speed, a sexy 'little' being like you strapped to himself and jostling on his pole, now even [if player is female]screaming in lust and squirting even more femcum[else if player is male]spurting wet streaks of cum against his belly as you inevitably orgasm from taking his manhood[else]screaming in lust as you orgasm[end if]. Yes, the proud stallion is definitively the master of his little realm here, with everyone in the paddock his to fuck - and breed, as he now does you. The large cockhead of Lucifer's equine prick swells and pushes its flared edge out into your already stretched insides, then the first long gush of cum blasts into you, followed by another, and another.[impregchance]";
+			say "     After completing a full circuit, the feral mustang stops for a moment and neighs to Lee standing against the fence nearby. There is grudging respect and gratitude in the horse's voice you think - telling you he's grateful for the farmhand having facilitated this way of mating you. While Lee gives a short laugh in reply, you feel the muscles of Lucifer tense and his thick shaft throb in your body, then with a sudden jolt, you're driven all the way down on his erection as the mustang breaks into a full-on gallop down the long side of the paddock. Where his earlier movement was kinda like a rhythmic thrusting and grinding against your stretched [if Player is female]pussy[else]asshole[end if], this now is a really heavy pounding that makes you twist and tremble from the sensations it creates. Arms and legs wrapped around the mustang, you pant, moan and scream in lust as the horse rides your body hard - and it doesn't take more than a few moments for you to reach your breaking point and the massive buildup of arousal breaks as a monumental climax.";
+			say "     Lucifer lets out a loud and satisfied nicker as he feels your hole squeeze tight around his shaft. It is clear that the mustang feels on top of the world right now - hooves digging into the soft ground of his domain as he dashes forward at full speed, a sexy 'little' being like you strapped to himself and jostling on his pole, now even [if Player is female]screaming in lust and squirting even more femcum[else if Player is male]spurting wet streaks of cum against his belly as you inevitably orgasm from taking his manhood[else]screaming in lust as you orgasm[end if]. Yes, the proud stallion is definitively the master of his little realm here, with everyone in the paddock his to fuck - and breed, as he now does you. The large cockhead of Lucifer's equine prick swells and pushes its flared edge out into your already stretched insides, then the first long gush of cum blasts into you, followed by another, and another.[impregchance]";
 			WaitLineBreak;
-			say "     Throb after throb of his rich seed is deposited deep inside you, making you gasp at the warm and full feeling, as well as the sensations of wetness against your cheeks as cum spills out around the mustang's still thrusting shaft. [if player is male]Between your bodies, there also is a creamy load you yourself blasted into his fur, being rubbed about as you're still jostled with each beat of the horse's hooves. [end if]Now that his lust is satisfied, Lucifer slows down a bit, then proceeds to check on his harem and trots around to show you off - all the while still enjoying having his maleness balls-deep inside you. It is enough of a turn-on that he doesn't even go soft, instead just resting inside you hard and throbbing.";
+			say "     Throb after throb of his rich seed is deposited deep inside you, making you gasp at the warm and full feeling, as well as the sensations of wetness against your cheeks as cum spills out around the mustang's still thrusting shaft. [if Player is male]Between your bodies, there also is a creamy load you yourself blasted into his fur, being rubbed about as you're still jostled with each beat of the horse's hooves. [end if]Now that his lust is satisfied, Lucifer slows down a bit, then proceeds to check on his harem and trots around to show you off - all the while still enjoying having his maleness balls-deep inside you. It is enough of a turn-on that he doesn't even go soft, instead just resting inside you hard and throbbing.";
 			say "     But even so, eventually Lucifer has his fill of carrying you around and the feeling of his cock sliding around in your sloshing hole, so he trots back to the mounting block and carefully steps over it, making sure you're not scraped by the edges as you come to rest with your back on the flat top. He whinnies loudly in a commanding tone, which brings Lee to join you before much longer. 'You okay down there,' the farmhand asks and pats your shoulder, then laughs as you reply with a moan. 'Quite a show you put on, but I guess you're exhausted as hell now. Okay, let me unstrap you.' His trained hands make quick work of undoing the leather straps, freeing Lucifer to slip away from on top of you. The feral mustang nuzzles your shoulder in a mixture of affection and dominance, and you can almost hear the meaning of, 'Good bitch' in his whinny before he trots off.";
 			WaitLineBreak;
 			say "     It takes a minute or three till you're recovered enough from the constant stimulation you just went through, then you slowly stand up on shaky legs. Lee meanwhile uses a rag he had in his back pocket to wipe the equine sex harness down and clean off the cum that leaked on it, then he packs it up and starts walking off. 'I'll be ready when you want another go. Just keep the payment ready and you're up for more equine fun-time,' he calls over his shoulder, then ducks out of the paddock through the holes between the fence boards.";
@@ -290,9 +290,9 @@ to say LuciferSex7: [player strapped under Lucifer with his cock inside them]
 			infect "Feral Mustang";
 			PlayerEat 3;
 			PlayerDrink 6;
-			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 2;
-			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
+			SanLoss 5;
+			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
+			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 1;
 			[
 				if level of Selena > 7 and SelenaLucifer < 2: [teen/adult Selena, hasn't observed the player with the mustang yet]
 					now SelenaLucifer is 2; [saw the player and the mustang out of her window]
@@ -309,17 +309,18 @@ to say WildMustangDesc:
 	setmongender 3;
 	say "     The truly magnificent feral mustang comes to a stand before you, stomping a front hoof on the ground aggressively while giving you a domineering stare. You can see why horse-breeders want to get some of those genes back into the line of more domesticated breeds... and also, why this wild horse earned the name Lucifer for himself. With a patronizing snort from large nostrils, he trots his muscled, equine body around you on its shiny black hooves, cutting off your escape from his domain. Your eyes are inevitably drawn to the back end of his body, where the horse's large shaft starts to push out of its equine sheath. Seems like he's already counting you as one of his mares and is in the mood to breed you. An imperious whinny a moment later seems to ask why you're not already presenting yourself to be mounted, followed a moment later by a snort as he decides to just take you no matter what.";
 
-Section 2 - Monster Insertion
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now name entry is "Feral Mustang";
+	now NewTypeInfection entry is false;
+	now Name entry is "Feral Mustang";
 	now enemy title entry is "Wild Mustang";
-	now enemy name entry is "Lucifer";
+	now enemy Name entry is "Lucifer";
 	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]The feral mustang rushes forward and runs you down, making you fall and tumble into the thankfully cushioning grass.[or]The feral mustang charges at you, knocking you to the ground roughly![or]The mustang rears up and manages to land a heavy hoof on your shoulder![or]The mustang bites you with his blunt, but pretty big teeth![or]The stallion rears up, causing his semi-hard cock to slap against his equine belly and release a spurt of precum onto you and also giving you a good view of his impressive penis and bloated balls![at random]";
 	now defeated entry is "[WildMustangLoses]";
@@ -346,17 +347,17 @@ When Play begins:
 	now lev entry is 14;               [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 18;              [ Amount of Damage monster Does when attacking. Claws and massive strength]
 	now area entry is "Nowhere";       [ Case sensitive. If you go down to the woods today, you're in for a big surprise]
-	now cocks entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
-	now cock length entry is 18;
-	now cock width entry is 15;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
-	now breasts entry is 2;            [ Number of nipples. ]
-	now breast size entry is 0;        [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;              [ number of pussies if sex is 'Female' or 'Both' ]
-	now cunt length entry is 20;
-	now cunt width entry is 12;
+	now Cock Count entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
+	now Cock Length entry is 18;
+	now Ball Size entry is 4;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now Nipple Count entry is 2;            [ Number of nipples. ]
+	now Breast Size entry is 0;        [ Size of breasts infection will try to attain ]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;              [ number of pussies if sex is 'Female' or 'Both' ]
+	now Cunt Depth entry is 20;
+	now Cunt Tightness entry is 12;
 	now libido entry is 40;            [ Amount player Libido will go up if defeated ]
-	now loot entry is "food";          [ Loot monster drops, ]
+	now loot entry is "food";          [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
 	now scale entry is 4;              [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]equine[at random]";
@@ -364,9 +365,110 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
+	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0;
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+
 
 Section 2 - NPC
 
@@ -382,7 +484,7 @@ Section 2 - NPC
 [ 10: Rode on Lucifer                                                 ]
 [ 20: Got fucked by Lucifer                                           ]
 
-[ libido of Lucifer (status with Mataya the mare)                     ]
+[ Libido of Lucifer (status with Mataya the mare)                     ]
 [  0: player doesn't know her                                         ]
 [  1: ran into the mare before                                        ]
 
@@ -397,14 +499,14 @@ Lucifer	"Lucifer"
 
 Lucifer is a man.
 ScaleValue of Lucifer is 4.
-Cocks of Lucifer is 1.
+Cock Count of Lucifer is 1.
 Cock Length of Lucifer is 18.
-Cock Width of Lucifer is 15.
-Testes of Lucifer is 2.
-Cunts of Lucifer is 0.
-Cunt Length of Lucifer is 0.
-Cunt Width of Lucifer is 0.
-Breasts of Lucifer is 0. [2 nipples]
+Ball Size of Lucifer is 4.
+Ball Count of Lucifer is 2.
+Cunt Count of Lucifer is 0.
+Cunt Depth of Lucifer is 0.
+Cunt Tightness of Lucifer is 0.
+Nipple Count of Lucifer is 0. [2 nipples]
 Breast Size of Lucifer is 0.
 TwistedCapacity of Lucifer is false.
 Sterile of Lucifer is false.

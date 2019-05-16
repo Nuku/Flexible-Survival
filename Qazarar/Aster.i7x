@@ -18,14 +18,14 @@ Aster is a man.
 [Physical details as of game start]
 ScaleValue of Aster is 4. [above human sized]
 SleepRhythm of Aster is 1. [day active]
-Cocks of Aster is 1.
+Cock Count of Aster is 1.
 Cock Length of Aster is 14. [check values]
-Cock Width of Aster is 7. [check values]
-Testes of Aster is 2.
-Cunts of Aster is 0.
-Cunt Length of Aster is 0.
-Cunt Width of Aster is 0.
-Breasts of Aster is 2.
+Ball Size of Aster is 7. [check values]
+Ball Count of Aster is 2.
+Cunt Count of Aster is 0.
+Cunt Depth of Aster is 0.
+Cunt Tightness of Aster is 0.
+Nipple Count of Aster is 2.
 Breast Size of Aster is 0.
 [Basic Interaction states as of game start]
 TwistedCapacity of Aster is false. [can not take oversized members without pain]
@@ -53,12 +53,12 @@ to say AsterDesc:
 
 an everyturn rule:
 	if TimekeepingVar is 3 or TimekeepingVar is -5:
-		if player is in Museum Foyer and Aster is in Museum Foyer:
+		if Player is in Museum Foyer and Aster is in Museum Foyer:
 			say "     Aster gets up from his desk and stretches, straining his shirt. 'Well, it's getting a bit late. I'm going to head home for the night, but feel free to come by tomorrow if you like.' With a short wave, he heads out the door.'";
 			wait for any key;
 		now Aster is nowhere;
 	else if TimekeepingVar is 6 or TimekeepingVar is -2:
-		if player is in Museum Foyer and PlayerMet of Aster is true:
+		if Player is in Museum Foyer and PlayerMet of Aster is true:
 			say "     As you stand in the foyer, you notice the door open, and a familiar minotaur comes walking through. He pauses to wave at you as he passes by. 'Good morning! Nice to see you here. If you want to speak with me, I'll be over at my desk, working.'";
 		if PlayerMet of Aster is true:
 			now Aster is in Museum Foyer;
@@ -76,7 +76,7 @@ The sarea of China Shop is "Outside".
 instead of resolving a China Shop: [Meeting Aster]
 	say "     As you wander through the city, you notice a store display teeming with fancy tablewares. Shockingly, they seem to be almost completely intact, with only a few damaged or destroyed. Before you have a chance to investigate further, however, you notice there is a very large figure moving around inside the shop. Do you want to investigate the shop?";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		say "     You're far too curious to simply leave now. Instead, you carefully enter the shop, attempting to stay quiet and unnoticed by whatever the figure was. However, when you step into the main area, you can't see any such creature in the space by the display. For a moment you're confused, wondering where something so large could have hidden, but then you see that there's a small table set up in the corner, almost hidden by shelves, and seated at the table is a large minotaur. Contrary to what you would expect from such a tall and dangerous looking creature, this minotaur is carefully perched in his chair, taking care not to break any of the dishes around him as he slowly turns the pages of a book. Further, he is attired in something one would expect more out of an eccentric uncle or university professor than a savage beast, with a pair of slacks sized for his frame, a collared shirt that seems fit to burst from trying to contain his musculature, and to top it all off, a pair of reading glasses resting on his nose.";
 		say "     Your surprise leaves you waiting for several moments, reeling slightly from the sight before you. The pause is long enough that the minotaur has a chance to look up from his book and notice you. His eyes widen in matching surprise, before he starts to compose himself. 'Oh, I didn't realize anyone else was here.' He fidgets around slightly. 'Normally I'm the only person to come in here, nowadays. There aren't really any sort of supplies, but I think it's very peaceful. Reminds me of simpler times, you know?' He gives a somewhat awkward smile. 'Well, I suppose if I'm going to start giving you my life's story, I should introduce myself. You can call me Aster. And you are?' The well-dressed minotaur extends a hand.";
 		say "     After a moment, you reciprocate, sharing a handshake with him, and give him your name. 'It's nice to meet you.' The two of you spend a brief while idly talking about the area, when he looks down at a watch resting on his arm. 'Unfortunately, I don't think I can stay to chat much longer. But if you'd like to speak more later, get to know each other, I'd be happy to. I always welcome a friendly face, especially since I'm usually much more nervous when talking to people. Come by the [bold type]Museum[roman type] sometime if you'd like, since I'm trying to get a job assisting there.' You shake his hand once more as he gathers a few items from the table, and heads out the door. Maybe you'll see him again.";
@@ -97,7 +97,7 @@ instead of resolving a Trial of Courage: [Finding the amulet in the park]
 	say "     While navigating through the park, you come upon what seems to be a large amphitheater. It looks distinctly Greek, composed of stone in intricate designs, though the details of the works seem to be faded and worn with age. Everything about the structure paints it as something far older than should be in this park. Despite the strangeness of the world, this still stands out as particularly interesting, and the sight of it reminds you of what Aster asked you to look for. After all, there are very few places that look more like they hold forgotten treasures of ancient heroes than this.";
 	say "[bold type]Do you want to investigate?[roman type]";
 	LineBreak;
-	if player consents:
+	if Player consents:
 		say "     You decide it's worth checking out more closely, and you move carefully towards the ancient amphitheater. Soon enough, you find an entrance, and when you enter you can easily see that the interior looks much more well-kept than the outer portions. The first thing to catch your eye when you enter is a tall column, with text inscribed on the front in large lettering. At first, it seems to be in an unknown language, but as you examine it in more detail, it seems to resolve itself into something more familiar. While it seems almost like a riddle, you're reasonably certain that it describes a trial necessary to obtain the 'treasures' within. If you're going to get that amulet, you'll have to play along.";
 		say "     As you step up onto the stage, several other people step out from backstage. They all line up in front of you, except for a single one who steps even closer. 'If you wish to pass the trial of the stage, you must act in our play. A worthy attempt will be rewarded, while poor performance will leave you with nothing.' You nod, prepared to do your best as part of this strange test.";
 		[replace this with a scene that involves selecting lines. Better lines, better score, better result. Total failure gives bad end maybe?]
@@ -165,7 +165,7 @@ to say AsterTalkMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Himself"):
@@ -256,7 +256,7 @@ to say AsterDomMenu:
 	now sortorder entry is 2;
 	now description entry is "Ask him to take you right there on his desk";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;
@@ -274,7 +274,7 @@ to say AsterDomMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Offer a BJ"):
@@ -307,7 +307,7 @@ to say AsterDom2: [ask to be fucked]
 	now lastfuck of Aster is turns;
 
 to say AsterDom3: [ask to fuck him]
-	say "     'Hmm, is that so? Well, I'll let you enjoy my ass, but it will be on my own terms.' He gets up from his desk, and gestures at his chair. 'How about you take a seat and let me work?' With no need to refuse his request, you comply, setting yourself down in his desk chair. In expectation of what is about to happen, your [cockname of player in lower case] member begins to harden. The minotaur grins at the sight, already stripping off his slacks, exposing his own hardening shaft at the same time. For a moment you simple look at his impressive physique, until he steps forward and climbs up onto the seat[if strength of player > 17]. You can comfortably support his weight as he adjusts himself until his rear is hovering just above the tip of your rod[else]. His full weight is more than you can easily handle, leaving you pinned under him as he maneuvers his rear into place above your rod[end if]. Finally, he lowers himself down with much more speed than you were expecting, impaling himself on your cock.";
+	say "     'Hmm, is that so? Well, I'll let you enjoy my ass, but it will be on my own terms.' He gets up from his desk, and gestures at his chair. 'How about you take a seat and let me work?' With no need to refuse his request, you comply, setting yourself down in his desk chair. In expectation of what is about to happen, your [cockname of Player in lower case] member begins to harden. The minotaur grins at the sight, already stripping off his slacks, exposing his own hardening shaft at the same time. For a moment you simple look at his impressive physique, until he steps forward and climbs up onto the seat[if strength of Player > 17]. You can comfortably support his weight as he adjusts himself until his rear is hovering just above the tip of your rod[else]. His full weight is more than you can easily handle, leaving you pinned under him as he maneuvers his rear into place above your rod[end if]. Finally, he lowers himself down with much more speed than you were expecting, impaling himself on your cock.";
 	say "     The minotaur begins to ride you with far more fervor than you expected, and with a skill that can only be born of the amulet you gave him. The up and down motion combined with the way his hole grips your cock bring you incredible pleasure, enough that you can do nothing except wait and allow him to have his way with you. The only thing you can focus on is the feeling on your dick and the sound of his voice. 'Ha, even when I let you use your cock, it's still me in charge, and it always will be. Isn't that right?' You can only nod in response, as your helpless state more than proves him right. 'Well, I only need you to do one more thing. Cum for me, now!' Driven on by his words, you find yourself climaxing, faster than you expected, unloading your cream directly into the bull. As you do so, he comes a stop, allowing it to fill him, before he smiles. 'Well done, just like I asked. Now, I'm going to get up, and then you'll need to get up as well. I still need that chair.' After the experience he just gave you, there's really nothing to do but what he requests.";
 	now lastfuck of Aster is turns;
 
@@ -327,7 +327,7 @@ to say AsterSubMenu:
 	now sortorder entry is 2;
 	now description entry is "Take control and powerbottom Aster";
 	[]
-	if player is male:
+	if Player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Ask to fuck him";
 		now sortorder entry is 3;
@@ -345,7 +345,7 @@ to say AsterSubMenu:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
 			say "[title entry]: [description entry]?";
-			if player consents:
+			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Offer a BJ"):

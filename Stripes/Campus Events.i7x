@@ -109,7 +109,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Painted Wolf Herm";
 		add 4 to campuswander;
 	if T is 5:
-		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer? I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
+		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer? I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if Breast Size of Player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
 		challenge "Snow Leopard";
 		add 5 to campuswander;
 	if T is 6:
@@ -146,9 +146,9 @@ Instead of resolving a Anime Club:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if player consents:
+	if Player consents:
 		now animeclubfight is true;
-		say "     Shoving open the door to the anime club, you find three figures in front of a television in there. On the screen and providing most of the light in the [if daytimer is day]blind-[end if]darkened room is [if player is animebabebodied]an entrancing video of tentacle porn[else]a video of tentacle porn[end if]. But the moans and sticky sounds of sex aren't just coming from the video, but also from those watching. The captured woman is being held in the arms of a young man with several slimy tentacles of his own, helped by the anime babe who grabbed her in the first place. She's struggling a little, but is quickly becoming focused on the video while the pair grope and fuck her, much like is happening on screen.";
+		say "     Shoving open the door to the anime club, you find three figures in front of a television in there. On the screen and providing most of the light in the [if daytimer is day]blind-[end if]darkened room is [if Player is animebabebodied]an entrancing video of tentacle porn[else]a video of tentacle porn[end if]. But the moans and sticky sounds of sex aren't just coming from the video, but also from those watching. The captured woman is being held in the arms of a young man with several slimy tentacles of his own, helped by the anime babe who grabbed her in the first place. She's struggling a little, but is quickly becoming focused on the video while the pair grope and fuck her, much like is happening on screen.";
 		say "     Keeping your eyes averted from the screen, you move in the rescue the young woman before things get out of hand. This prompts the anime babe to get up and come at you, trying to protect their prize.";
 		challenge "Anime Babe";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -184,42 +184,42 @@ Instead of resolving a Anime Club:
 
 to say animeclublost:
 	setmonster "Hentai Fan";
-	if player is male:
-		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock. She works eagerly to suck you off, her tongue playfully sliding over your shaft [if cunts of player > 1]while the hentai fan pushes squirming tentacles into your pussies[else if cunts of player is 1]while the hentai fan pushes a squirming tentacle into your pussy[else if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[else]as she kneads your balls[end if]. The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
-	else if player is female:
+	if Player is male:
+		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock. She works eagerly to suck you off, her tongue playfully sliding over your shaft [if Cunt Count of Player > 1]while the hentai fan pushes squirming tentacles into your pussies[else if Cunt Count of Player is 1]while the hentai fan pushes a squirming tentacle into your pussy[else if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[else]as she kneads your balls[end if]. The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
+	else if Player is female:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty spreads your legs and your pussy's lips. With yourself spread open, the hentai fan shoves a tentacle cock into your cunt[sfn], stuffing your needy hole[sfn] just like you're seeing on the screen. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	else:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty rubs sadly over your bare groin and pushes you into a kneeling position. She keeps your head pointed towards the television as she uses her other hand to guide a tentacle cock to your ass. You groan softly in kinky pleasure as it pushes into your anus and starts to fuck you. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
-	if player is female:
-		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up. Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize[if cunts of player > 1]. He fills your other juicy holes and your mouth with tentacle cocks[else if anallevel > 1]. He crams a tentacle cock into your ass and another down your throat[else]. He gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention. After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.[impregchance][impregchance]";
-	else if player is male:
+	if Player is female:
+		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up. Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize[if Cunt Count of Player > 1]. He fills your other juicy holes and your mouth with tentacle cocks[else if anallevel > 1]. He crams a tentacle cock into your ass and another down your throat[else]. He gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention. After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.[impregchance][impregchance]";
+	else if Player is male:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and has the new anime babe climb into your lap so she can ride your cock while he gropes and fondles you with his tendrils[if anallevel > 1]. As she rides you, he fucks you thoroughly with a tentacle cock up your ass and pushing another down your throat. It squirms and pumps delightfully inside you, fucking deep inside your bowels. When it starts to cum in a steady flow, you cum hard in the new anime babe's cream-filled pussy[else]. As she rides you, he even pushes a tentacle cock up your ass and another down your throat, fucking you with them until you cum hard in her cream-filled pussy[end if]. Being coated inside and out by the hentai creature's tainted seed is incredibly arousing while under the effects of the video that's captivated your attention.[mimpregchance][mimpregchance]";
 	else:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and shoves his large cock into your ass alongside the tentacle already filling you. His hands and tentacles grope you, one of those tendrils stuffing your mouth and going down your throat. As he has his way with you, you can see the two anime babes making out beside you. You only notice this out of the corner of your eye, your focus still locked on the animation on the screen, much of which is being duplicated upon your person at this very moment. He fucks you thoroughly with those two throbbing rods up your ass at once until he groans and cums in a steady flow filling you from both ends with his tainted seed.[mimpregchance][mimpregchance]";
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
-	decrease humanity of player by 25;
+	SanLoss 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if name entry is "Anime Babe":
-			now monster is y;
+		if Name entry is "Anime Babe":
+			now MonsterID is y;
 			break;
-	now tailname of player is "Anime Babe";
-	now facename of player is "Anime Babe";
-	now skinname of player is "Anime Babe";
-	now bodyname of player is "Anime Babe";
-	now cockname of player is "Anime Babe";
+	now tailname of Player is "Anime Babe";
+	now facename of Player is "Anime Babe";
+	now skinname of Player is "Anime Babe";
+	now bodyname of Player is "Anime Babe";
+	now cockname of Player is "Anime Babe";
 	attributeinfect;
-	now tail of player is tail entry;
-	now face of player is face entry;
-	now skin of player is skin entry;
-	now body of player is body entry;
-	now cock of player is cock entry;
+	now tail of Player is tail entry;
+	now face of Player is face entry;
+	now skin of Player is skin entry;
+	now body of Player is body entry;
+	now cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
-	if libido of player < 60, now libido of player is 60;
-	if humanity of player < 10:
+	if Libido of Player < 60, now Libido of Player is 60;
+	if humanity of Player < 10:
 		say ". With your mind fading away, you eventually lose yourself as your mind is overwritten by the content of the videos you've been watching. You're released out onto the campus, heading off in search of others to share your new fandom and lust for tentacles with, willing or not.";
 		WaitLineBreak;
 		end the story saying "Only thoughts of anime and tentacles fill your mind as you succumb to your infection.";
@@ -264,13 +264,13 @@ to AdminIntro:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - At the very least, it'll be relaxing.";
 	say "     ([link]N[as]n[end link]) - Nah, too boring.";
-	if player consents:
+	if Player consents:
 		LineBreak;
 		say "     Sitting down on a seat, you lean back and wait - and before long, you're not the only one to do so. A muscular young horseman comes down the hallway in a proud stride, his rippling abs and good looks for everyone to see, as his only piece of clothing is a pair of black boxer shorts. Fairly tight ones too, highlighting the sizable bulge at his crotch. 'Hey there, been waiting long?' the student asks with a friendly smile, then shrugs as you shake your head. He sits down opposite to you, and for a little while you each wait in silence, with you casually inspecting the well built dude with his golden coat and long brown hair and tail.";
 		say "     Soon, a second student joins you in the waiting area - this one a petite lioness in jeans and a pink shirt that bulges out over a sizable pair of breasts. Like with the horseman, her clothes seem a little tight - a regular sight these days, with all the transformations and changes in asset size going on. 'Hello you two, nice to meet you. I'm Dana.' You introduce yourself in turn and the sexy stud leans back, arms spread and his fingers interlocked behind his head. He clearly loves showing off his muscles.";
 		WaitLineBreak;
 		say "     Then the horseman grins and just says, 'Kyle.' Dana's reaction would have fit him suddenly growing a second head - she gapes in shock, then makes a step back and stares openly at the equine. 'Wait?! Oh god - it IS you! Woooow! I didn't even recognize you until now Kyle,' she gushes, then throws her arms around him as the young man stands up. Exchanging a tight squeeze with the horseman teen, the lioness then turns to look at you a bit closer, as if to check if you're someone she knows too (which you are not).";
-		say "     'You won't believe it [if player is female]ma'am[else]mister[end if], but this guy was, um...' Dana squeezes her friend with one arm and looks up at him while searching for words - only to have him complete the sentence in a fairly amused tone. 'A total wimp. Shorter than her, with flabby arms and incredibly thick glasses. We have physics courses together. Hey Dana - check this out!' With that, the handsome stallion pushes his beautiful mane of brown hair back over his shoulder and raises one arm, flexing awe-inspiring muscles.";
+		say "     'You won't believe it [if Player is female]ma'am[else]mister[end if], but this guy was, um...' Dana squeezes her friend with one arm and looks up at him while searching for words - only to have him complete the sentence in a fairly amused tone. 'A total wimp. Shorter than her, with flabby arms and incredibly thick glasses. We have physics courses together. Hey Dana - check this out!' With that, the handsome stallion pushes his beautiful mane of brown hair back over his shoulder and raises one arm, flexing awe-inspiring muscles.";
 		WaitLineBreak;
 		say "     Dana is very openly enthralled by his display, giving a quiet little moan as she puts one hand on his chest to feel the firmness and warmth of her friend's body. 'I never told you, but I like you Dana. You've been a good friend and are really beautiful, before and now too. So - how about it, do you like the new me too? This new body feels so great! I'm here to adjust my courses a bit to make room for football,' Kyle says in a hopefully optimistic tone.";
 		say "     'Of course I do, silly! You've got the perfect brains and body now! I - um... can I see it?' the slender lioness replies, her hand on his crotch making it obvious what she's referring to. 'You're gonna be amazed!' Kyle says proudly, then pushes his shorts down in a single quick movement, freeing the weighty horsecock and full balls between his legs to dangle freely. Dana is quick to grasp the thick shaft with one hand, stroking its length and panting, 'I can't even get my fingers around it. Just... wow!'";
@@ -278,13 +278,13 @@ to AdminIntro:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure!";
 		say "     ([link]N[as]n[end link]) - Quietly leave.";
-		if player consents:
+		if Player consents:
 			LineBreak;
 			say "     'Sit back, I want to show you something too,' Dana tells Kyle, who readily does so - with wide-spread legs, allowing his balls to rest on the edge of the seat cushion and his cock to freely stand at full mast. Coming to stand before him, the petite lioness grins and pulls her top up over her flat belly, then hooks it over her breasts. 'I didn't just get fur and a tail either - look at these!' Dana happily says, squeezing her ample boobs with both hands.";
 			say "     It takes only a short moment before you hear the sound of a zipper being opened, followed by the lioness pushing her jeans halfway down her thighs. She slides a hand between her legs and rubs it against the folds of her feline sex, then moans, 'I'm so wet right now!' Leaning forward, a grinning Kyle brushes his larger hand along her furry arm, then feels her pussy and slips a finger inside, taking over rubbing her to stimulate his girlfriend.";
 			WaitLineBreak;
 			say "     The rubbing and touching continues for a little while, with Dana getting fingered and her breasts worshipped and licked by the eager young horseman. Then eventually, she puts a hand on his chest and gently pushes him to lean back once more. Herself sinking to her knees, Dana proceeds to take hold of his cock and licks it with obvious pleasure, then slides her mouth over the flared end and starts to suck. 'Nnngh, yeah!' Kyle lets out in a breathless groan, half-reaching out to guide her before changing his mind and putting his hands behind his head instead, leaving Dana to set the pace.";
-			say "     Meanwhile, you're not unaffected by the rising air of lust in this quiet hallway and have slid off those pieces of clothing that hinder you touching yourself. [if player is male]With a hand on your hard shaft, you stroke slowly along its length[else if player is female]With a hand on your crotch, you slide your fingers over the sensitive folds of your pussy and frig your clit in a slow but steady manner[else]With a hand on your crotch, you rub your sexless but nonetheless sensitive area[end if] while watching the two students go at it. Soon, Kyle's large black-skinned horsecock is glistening with Dana's spit and visibly throbbing from his arousal. He puts on a lewd grin and asks his girlfriend, 'Wanna try this bad boy out together with me?'";
+			say "     Meanwhile, you're not unaffected by the rising air of lust in this quiet hallway and have slid off those pieces of clothing that hinder you touching yourself. [if Player is male]With a hand on your hard shaft, you stroke slowly along its length[else if Player is female]With a hand on your crotch, you slide your fingers over the sensitive folds of your pussy and frig your clit in a slow but steady manner[else]With a hand on your crotch, you rub your sexless but nonetheless sensitive area[end if] while watching the two students go at it. Soon, Kyle's large black-skinned horsecock is glistening with Dana's spit and visibly throbbing from his arousal. He puts on a lewd grin and asks his girlfriend, 'Wanna try this bad boy out together with me?'";
 			WaitLineBreak;
 			say "     The pretty lioness pulls her muzzle off his dick, then gives its flared head another slow lick before returning an eager smile. 'You couldn't keep me off it if you tried!' she says with a chuckle, then shimmies out of her jeans and stands before her boyfriend, contemplating his thick shaft. 'I wanna sit on it,' she pants in obvious arousal, then climbs on top of her equine lover. Balancing on the young horseman's thighs with her slender paws, the college student looks behind her at Kyle's eager face and swishes her tail in front of his nose.";
 			say "     'Catch me, okay?' she asks and receives a confirming nod, then lets herself fall back a little - right into his raised hands, which close around the sides of her hips. Now with her paws braced on his knees and leaning into his support, the young woman bends her legs to lower herself and soon brushes against the tip of his shaft. 'Oooh, I can't wait. Gonna put it in now,' she says in a happy pant and reaches down, aligning his manhood with her pussy. Then she pushes down, with his slick rod parting the wet folds of her sex and sinking several inches into her.";
@@ -296,7 +296,7 @@ to AdminIntro:
 			say "     Their pairing escalates into full-on rutting, which is a glorious spectacle as the powerful stallion takes his lioness friend as his mate, pumping into her with hard thrusts and pulling her down into each and every one of them. Their passion burns incredibly hot, which means it can't last forever, and before much longer, Dana throws her head back and roars in orgasm, her inner muscles trembling around Kyle's shaft.";
 			WaitLineBreak;
 			say "     The squeeze on his prick is enough to push Kyle over the edge in a few heartbeats - especially as her cervix contracts into a very snug ring around his dickhead. With an aroused grunt, he grinds his crotch up against her body as his balls give their first hard throb, blasting a thick throb of cum into her womb. It is awe-inspiring to see Kyle's cum-factories pulse and Dana's stomach grow visibly with each cum-shot, soon giving her a faux-pregnant little bump.";
-			say "     In fact, the view of their culmination is enough to move you past the point of no return, and with a wash of pleasure through your whole body, [if player is male]you start to shoot too, splattering the ground before your seat with long splashes of semen. One of them even hits Kyle (barely), leaving a white splash across his gray hoof[else if player is female]your pussy starts to drip with femcum, leaking down to leave a little wet spot on the seat[else]your crotch starts to tingle quite nicely[end if]. For a moment, nothing but heavy breathing fills the hallway as the three of you ride out your orgasms, then slowly come back to your senses.";
+			say "     In fact, the view of their culmination is enough to move you past the point of no return, and with a wash of pleasure through your whole body, [if Player is male]you start to shoot too, splattering the ground before your seat with long splashes of semen. One of them even hits Kyle (barely), leaving a white splash across his gray hoof[else if Player is female]your pussy starts to drip with femcum, leaking down to leave a little wet spot on the seat[else]your crotch starts to tingle quite nicely[end if]. For a moment, nothing but heavy breathing fills the hallway as the three of you ride out your orgasms, then slowly come back to your senses.";
 			WaitLineBreak;
 			say "     Craning her neck a little, Dana shares a kiss with Kyle, who hugs her lovingly from behind and pants, 'I love you Dana.' She sinks back into his embrace and smiles broadly, then gets very round eyes as her gaze falls upon you. Reflexively trying to jump up and cover herself doesn't lead her very far - not while she is still impaled on her boyfriend's cock. 'Umm... I was gonna say sorry for fucking like bunnies in front of you, but... you enjoyed that, didn't you?' she says and winks after a nod at your own state.";
 			say "     With a grin on your face, you wish the two of them well, then stand up. After putting your clothes in order, you then walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
