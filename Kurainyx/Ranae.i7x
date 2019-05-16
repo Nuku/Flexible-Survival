@@ -55,7 +55,7 @@ Cock Length of Ranae is 0. [no cock length]
 Ball Size of Ranae is 0. [no ball size]
 Ball Count of Ranae is 0. [no balls]
 Cunt Count of Ranae is 1. [1 pussy]
-Cunt Length of Ranae is 7.
+Cunt Depth of Ranae is 7.
 Cunt Tightness of Ranae is 2.
 Nipple Count of Ranae is 2. [2 nipples]
 Breast Size of Ranae is 3. [C cup at the start]

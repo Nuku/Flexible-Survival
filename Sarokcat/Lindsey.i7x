@@ -29,7 +29,7 @@ Cock Length of Lindsey is 10. [X Inches]
 Ball Size of Lindsey is 6.
 Ball Count of Lindsey is 2. [X balls]
 Cunt Count of Lindsey is 0. [X pussy]
-Cunt Length of Lindsey is 0. [X Cunt]
+Cunt Depth of Lindsey is 0. [X Cunt]
 Cunt Tightness of Lindsey is 0. [X Cunt]
 Nipple Count of Lindsey is 6. [X nipples]
 Breast Size of Lindsey is 0. [X at the start]

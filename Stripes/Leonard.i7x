@@ -855,19 +855,19 @@ Instead of resolving Hunting Prides:
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
 			now Breast Size of Player is 0;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
-			if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 			now Nipple Count of Player is 2;
 			if Breast Size of Player < 3, now Breast Size of Player is 3;
 		else:
 			now Cunt Count of Player is 1;
-			if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 			now Nipple Count of Player is 2;
 			if Breast Size of Player < 3, now Breast Size of Player is 3;
@@ -934,7 +934,7 @@ to say Leonardrivalfight:
 		now body of Player is body entry;
 		now cock of Player is cock entry;
 		now Cunt Count of Player is 1;
-		if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+		if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 		if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 		now Nipple Count of Player is 2;
 		if Breast Size of Player < 5, now Breast Size of Player is 5;
@@ -997,19 +997,19 @@ to say Leonardrivalfight:
 			if Cock Length of Player < 9, now Cock Length of Player is 9;
 			if Ball Size of Player < 3, now Ball Size of Player is 3;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now Nipple Count of Player is 2;
 			now Breast Size of Player is 0;
 		else if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 			now Cunt Count of Player is 1;
-			if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 			now Nipple Count of Player is 2;
 			if Breast Size of Player < 3, now Breast Size of Player is 3;
 		else:
 			now Cunt Count of Player is 1;
-			if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 			now Nipple Count of Player is 2;
 			if Breast Size of Player < 3, now Breast Size of Player is 3;

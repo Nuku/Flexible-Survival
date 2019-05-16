@@ -461,12 +461,12 @@ To Birth:
 		else:
 			say ". They pop free and stand, smiling. With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. ";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain.";
+				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain";
 			else:
 				if Showlegs is true:
-					say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if].";
+					say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if]";
 				else:
-					say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if].";
+					say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if]";
 		if snakehijack > 0 and "They Have Your Eyes" is listed in feats of Player:
 			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		else if snakehijack > 0:

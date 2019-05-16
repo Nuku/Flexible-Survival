@@ -78,7 +78,7 @@ Cock Length of Colleen is 0. [X Inches]
 Ball Size of Colleen is 0.
 Ball Count of Colleen is 0. [X balls]
 Cunt Count of Colleen is 1. [X pussy]
-Cunt Length of Colleen is 6. [X Cunt]
+Cunt Depth of Colleen is 6. [X Cunt]
 Cunt Tightness of Colleen is 4. [X Cunt]
 Nipple Count of Colleen is 2. [X nipples]
 Breast Size of Colleen is 3. [X at the start]
@@ -637,7 +637,7 @@ to say ColleenSpraySex:
 	else:
 		say "[Colleen_pretfsex02]";
 	if Player is purehuman:
-		if ( Cock Count of Player + Cunt Count of Player > 1 ) or Nipple Count of Player > 2 or Breast Size of Player > 6 or Cock Length of Player > 9 or Ball Size of Player > 3 or Cunt Length of Player > 11 or Cunt Tightness of Player > 9:
+		if ( Cock Count of Player + Cunt Count of Player > 1 ) or Nipple Count of Player > 2 or Breast Size of Player > 6 or Cock Length of Player > 9 or Ball Size of Player > 3 or Cunt Depth of Player > 11 or Cunt Tightness of Player > 9:
 			say "     'I know you still look human, but you've clearly been sexually altered. [one of]Best not to take any chances[or]Better safe than sorry[or]Can't be too careful[at random],' she adds.";
 		else:
 			say "     'I know you still look human, but [one of]it's best not to take any chances[or]better safe than sorry[or]one can't be too careful[at random],' she says.";

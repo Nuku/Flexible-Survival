@@ -42,7 +42,7 @@ Version 1 of Thomas by Wahn begins here.
 an everyturn rule: [fix for old saves]
 	if HP of Thomas > 0 and HP of Thomas < 52 and Cunt Count of Thomas is 0: [herm Thomas, but doesn't have a cunt]
 		now Cunt Count of Thomas is 1;
-		now Cunt Length of Thomas is 28;
+		now Cunt Depth of Thomas is 28;
 		now Cunt Tightness of Thomas is 15;
 
 Section 1 - Meeting Event
@@ -168,7 +168,7 @@ Cock Length of Thomas is 28.
 Ball Size of Thomas is 4.
 Ball Count of Thomas is 2.
 Cunt Count of Thomas is 0.
-Cunt Length of Thomas is 0.
+Cunt Depth of Thomas is 0.
 Cunt Tightness of Thomas is 0.
 Nipple Count of Thomas is 2. [2 nipples]
 Breast Size of Thomas is 0.

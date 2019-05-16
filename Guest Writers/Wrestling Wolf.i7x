@@ -30,17 +30,17 @@ to say wrestlingwolfattack:
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;
-						now Cunt Length of Player is 2;
+						now Cunt Depth of Player is 2;
 					else:
 						say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 				else:
 					say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 					now Cunt Count of Player is 1;
 					now Cunt Tightness of Player is 1;
-					now Cunt Length of Player is 2;
+					now Cunt Depth of Player is 2;
 			else if "Modest Organs" is not listed in feats of Player:
 				if Cunt Tightness of Player < 15, increase Cunt Tightness of Player by 2;
-				if Cunt Length of Player < 20, increase Cunt Length of Player by 2;
+				if Cunt Depth of Player < 20, increase Cunt Depth of Player by 2;
 		now wrestlingwolfdefeat is 1;
 	else if ( wrestlingwolfdefeat is 2 or wrestlingwolfdefeat is 3 ) and Cunt Count of Player is 0:		[now open for M/M]
 		say "     Pinned down by the lupine wrestler, he gives you a growling skronk. 'Another bad showing. Come on, I'm starting tah think that yur losing on purpose or somethin['],' he growls. 'Always losing and not getting no pussy for me. Picked a little pansy tah fight,' he jibes, giving you a poke in the side to show he's just ribbing you. 'Guess I'm gonna have tah treat ya to another dose of deep wolf action,' he rumbles, lining up his big cock with your backside again.";
@@ -50,14 +50,14 @@ to say wrestlingwolfattack:
 	else:
 		if a random chance of 1 in 3 succeeds: 	[impatient - rough fuck]
 			if Player is female:
-				if Cunt Length of Player < 20 or Cunt Tightness of Player < 15:
+				if Cunt Depth of Player < 20 or Cunt Tightness of Player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Tch, I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his wrestling briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.'";
 					say "     'So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' he roars as he stuffs his briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm. 'Just how strong was this guy' you wonder as he begins to finger your [cunt size desc of Player] folds with his free paw. 'You're a tight little bitch, aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met. 'Now this is gonna hurt,' he says, placing both of his pawed hands on your shoulders. 'A lot.' And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream, only to have your shouts muffled by the Wrestling Wolf's balled up briefs that you're still gagging on.";
 					say "     'Oh, I bet that hurt, didn't it? Well, it's only gonna get worse!' he growls as he grabs hold of your waist and slides you up to the tip of his shaft. 'You see, when I get angry I like to get rough,' he says, bringing you down his entire length, slamming you down onto the rim of his gigantic knot once more. He continues this for several minutes, which to you feels like an eternity. Your eyes swell with tears from the sheer pain of the Wrestling Wolf's treatment. He lifts you the very tip of his rod and tightens his hold on your waist. 'And nothing angers me more than when I fight someone not giving it their all,' he roars as he pulls you down, this time with much greater force and thrusting his hips up, ramming you hard against his swollen knot. The feeling of hitting home is too much for the Wolf as he explodes incredible waves of his hot seed into you. Your belly expands even farther to its limits from the Wolf's cum now filling your stomach.[impregchance]";
 					say "     He relaxes his hold on you, which causes you to shoot off his shaft, landing outside of his ring. 'Oops, sorry about that!' he says before falling onto his ass and panting, 'I just couldn't hold it in any longer. Guess you were just too small for me after all,' he says with a goofy smile on his face. 'But as long as you remember to come back stronger, I won't have to be that rough with ya. Oh, and can I have my briefs back? They're kinda the only pair that'll fit me ever since I've changed.' You spit out the Wolf's briefs and toss them at him before leaving the area. 'Thank ya! Come back for another round, ya hear?'";
 					if "Male Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
 						if Cunt Tightness of Player < 15, increase Cunt Tightness of Player by 2;
-						if Cunt Length of Player < 20, increase Cunt Length of Player by 2;
+						if Cunt Depth of Player < 20, increase Cunt Depth of Player by 2;
 				else:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Tch, I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his wrestling briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.'";
 					say "     'So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' he roars as he stuffs his briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm. 'Just how strong is this guy' you wonder as he begins to finger your [cunt size desc of Player] folds with his free paw. 'You're a tight little bitch, aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met. 'Now this is gonna hurt,' he says, placing both of his pawed hands on your shoulders. 'A lot.'";
@@ -71,7 +71,7 @@ to say wrestlingwolfattack:
 				say "     Pulling his spent and sticky shaft from your rear, he wipes it on your ass and tucks it back into his trunks. 'Now I want you to put up a better fight in our next match or you'll get more of the same,' he growls. 'And reconsider getting that pussy too,' he says with a chuckle while you grab your stuff and run off before he decides he wants a rematch or decides to skip it and go right back to pinning you to the mat.";
 		else:
 			if Player is female:
-				if Cunt Length of Player < 20 or Cunt Tightness of Player < 15:
+				if Cunt Depth of Player < 20 or Cunt Tightness of Player < 15:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. Before you, the Wrestling Wolf is covered in sweat and panting quite a bit. 'Not bad! I mean you lost, but at least ya put up more of a fight than last time,' he says as he approaches you. His sweaty masculine scent washes over you, fueling your arousal. The Wolf catches the scent of your arousal and smiles. 'Heh, smells like someone could use a little attention,' he saes as he squats down in front of you. He pushes you onto your back and pulls off your clothes.";
 					say "     'I think I can help ya with that,' he says, burying his wolf-like muzzle between your legs. He pokes around a bit before finding your already wet pussy and sticking his tongue inside, sending waves of pleasure throughout your body. 'This is probably for the best. I don't think you could handle my equipment just yet,' he says before returning to your pussy. He continues to work his tongue inside you. You can hold back no longer as you finally reach your orgasm, covering the Wrestling Wolf's muzzle in you juices. He pulls back his head and helps you up. 'That sure was something, huh!' he says with a smile. 'Now if you'll excuse me, I have ta find a bitch with a big enough pussy for this,' he says, patting the bulge in his tight wrestling briefs. You both leave the ring to go your separate ways. As you walk away, you can't help but wish you had what it takes to sate his needs.";
 				else:
@@ -87,7 +87,7 @@ to say wrestlingwolfattack:
 						say "     As the large wolf's cum seeps into you, you feel a wet heat at your groin. Checking, you discover what you already suspected from the strange new sensations: you have a brand new cunt between your legs.";
 						now Cunt Count of Player is 1;
 						now Cunt Tightness of Player is 1;
-						now Cunt Length of Player is 2;
+						now Cunt Depth of Player is 2;
 
 
 to say beatthewrwolf:
@@ -120,7 +120,7 @@ to say wrwolfdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -162,7 +162,7 @@ When Play begins:
 	now Breast Size entry is 10; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 20; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Depth entry is 20; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 15; [ Width of female sex infection will try and give you ]
 	now libido entry is 35; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
@@ -179,7 +179,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -267,7 +267,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

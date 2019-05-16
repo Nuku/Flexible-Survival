@@ -32,7 +32,7 @@ Cock Length of Gerty is 7. [X Inches]
 Ball Size of Gerty is 5.
 Ball Count of Gerty is 2. [X balls]
 Cunt Count of Gerty is 0. [X pussy]
-Cunt Length of Gerty is 0. [X Cunt]
+Cunt Depth of Gerty is 0. [X Cunt]
 Cunt Tightness of Gerty is 0. [X Cunt]
 Nipple Count of Gerty is 0. [X nipples]
 Breast Size of Gerty is 0. [X at the start]

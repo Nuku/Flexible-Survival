@@ -259,7 +259,7 @@ A person has a number called Cock Length. Cock Length is usually 6.
 A person has a number called Ball Count. Ball Count is usually 2.
 A person has a number called Ball Size. Ball Size is usually 3.
 A person has a number called Cunt Count. Cunt Count is usually 0.
-A person has a number called Cunt Length. Cunt Length is usually 9.
+A person has a number called Cunt Depth. Cunt Depth is usually 9.
 A person has a number called Cunt Tightness. Cunt Tightness is usually 5.
 A person has a number called Clit Size. Clit Size is usually 3.
 A person has a number called Armor.
@@ -679,11 +679,11 @@ Definition: A person (Called x) is bunkered:
 
 Definition: A person (called x) is CockFitsInPlayerPussy:
 	if "Twisted Capacity" is listed in the feats of Player, yes;
-	if Cock Length of x > Cunt Length of Player + 1, no; [some stretching allowed]
+	if Cock Length of x > Cunt Depth of Player + 1, no; [some stretching allowed]
 	yes;
 
 Definition: A person (called x) is CuntFitsForPlayerCock:
-	if Cock Length of Player > Cunt Length of x + 1, no; [some stretching allowed]
+	if Cock Length of Player > Cunt Depth of x + 1, no; [some stretching allowed]
 	yes;
 
 Definition: A person (called x) is PlayerCumLoadInflates: [yes = inflation; can be adapted for any kind of inflation (egg, enema, etc.)]
@@ -1522,11 +1522,11 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of Random Critters
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 false	"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 "Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
 
 understand the command "feed" as something new.
@@ -3064,24 +3064,24 @@ This is the sex change rule:
 	else if Cock Count of Player > Cock Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
 		say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
 		decrease Cock Count of Player by 1;
-	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Length of Player < Cunt Length entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
-		let prevcunt be Cunt Length of Player;
-		increase Cunt Length of Player by 1;
-		increase Cunt Length of Player by ( Cunt Length entry minus Cunt Length of Player ) divided by 3;
-		if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
-			now Cunt Length of Player is 8;
-		if prevcunt < Cunt Length of Player:	[did cunt actually grow?]
+	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Depth of Player < Cunt Depth entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
+		let prevcunt be Cunt Depth of Player;
+		increase Cunt Depth of Player by 1;
+		increase Cunt Depth of Player by ( Cunt Depth entry minus Cunt Depth of Player ) divided by 3;
+		if "Modest Organs" is listed in feats of Player and Cunt Depth of Player > 8:
+			now Cunt Depth of Player is 8;
+		if prevcunt < Cunt Depth of Player:	[did cunt actually grow?]
 			follow the cunt descr rule;
 			say "You can see your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random][else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]pulse[or]quiver[or]throb[at random][end if] as [if Cunt Count of Player is 1]it grows[else]they grow[end if] deeper into your body, becoming [descr]!";
-	else if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Length of Player > ( ( Cunt Length entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
-		let prevcunt be Cunt Length of Player;
-		decrease Cunt Length of Player by 1;
-		decrease Cunt Length of Player by ( Cunt Length of Player - ( ( Cunt Length entry times 150 ) / 100 ) ) divided by 3;
+	else if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Depth of Player > ( ( Cunt Depth entry times 150 ) / 100 ) and "One Way" is not listed in feats of Player:
+		let prevcunt be Cunt Depth of Player;
+		decrease Cunt Depth of Player by 1;
+		decrease Cunt Depth of Player by ( Cunt Depth of Player - ( ( Cunt Depth entry times 150 ) / 100 ) ) divided by 3;
 		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
-			if Cunt Length of Player < 5, now Cunt Length of Player is 5;
-		if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
-			now Cunt Length of Player is 8;
-		if prevcunt > Cunt Length of Player:		[did cunt actually shrink?]
+			if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
+		if "Modest Organs" is listed in feats of Player and Cunt Depth of Player > 8:
+			now Cunt Depth of Player is 8;
+		if prevcunt > Cunt Depth of Player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] flow into your ample [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cunt Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Tightness of Player < Cunt Tightness entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
@@ -3106,43 +3106,43 @@ This is the sex change rule:
 			say "You can feel a [one of]tightening[or]snugness[or]clenching[at random] from your accommodating [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random][else][one of]cunt[or]pussy[or]vagina[or]cleft[at random][end if] as you are hit by an unexpected orgasm. The squeezing does not release fully as your wet hole[sfn] shrink[sfv] somewhat to better suit your new infection by becoming tighter.";
 	if Cunt Count of Player < Cunt Count entry and ( the sex entry is "Female" or the sex entry is "Both" ) and "Male Preferred" is not listed in feats of Player:
 		let prevcunt be Cunt Count of Player;
-		if Player is not female or Cunt Length of Player is 0 or Cunt Tightness of Player is 0:
+		if Player is not female or Cunt Depth of Player is 0 or Cunt Tightness of Player is 0:
 			increase Cunt Count of Player by 1;
-			now Cunt Length of Player is 1;
+			now Cunt Depth of Player is 1;
 			now Cunt Tightness of Player is 1;
-			increase Cunt Length of Player by ( Cunt Length entry ) divided by 3;
+			increase Cunt Depth of Player by ( Cunt Depth entry ) divided by 3;
 			increase Cunt Tightness of Player by ( Cunt Tightness entry ) divided by 3;
-			if "Modest Organs" is listed in feats of Player and Cunt Length of Player > 8:
-				now Cunt Length of Player is 8;
+			if "Modest Organs" is listed in feats of Player and Cunt Depth of Player > 8:
+				now Cunt Depth of Player is 8;
 			if "Modest Organs" is listed in feats of Player and Cunt Tightness of Player > 5:
 				now Cunt Tightness of Player is 5;
 		else if a random chance of 2 in 3 succeeds and "Just One" is not listed in feats of Player:	[2nd+ cunt at 67%]
 			increase Cunt Count of Player by 1;
 		if singlesexadjust is 2 and sex entry is "Both":	[male remains male if herm infection]
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 		if prevcunt < Cunt Count of Player:		[did new cunt appear?]
 			follow the cunt descr rule;
 			say "Your groin throbs with intense sensations as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms, leaking along a thigh as you quiver.";
 	if Cunt Count of Player is not 0 and ( the sex entry is "Male" or the sex entry is "Neuter" ) and "One Way" is not listed in feats of Player:
-		let prevcunt be Cunt Length of Player;
+		let prevcunt be Cunt Depth of Player;
 		let prevcunt2 be Cunt Tightness of Player;
-		decrease Cunt Length of Player by 1;
-		decrease Cunt Length of Player by Cunt Length of Player divided by 3;
+		decrease Cunt Depth of Player by 1;
+		decrease Cunt Depth of Player by Cunt Depth of Player divided by 3;
 		decrease Cunt Tightness of Player by 1;
 		decrease Cunt Tightness of Player by Cunt Tightness of Player divided by 4;
 		if "Female Preferred" is listed in feats of Player or "Herm Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player:
-			if Cunt Length of Player < 5, now Cunt Length of Player is 5;
+			if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
 			if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 		if (singlesexadjust is 1 or singlesexadjust is 3) and sex entry is "Male":	[female/herm becomes male if male infection]
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
-		if prevcunt > Cunt Length of Player or prevcunt2 > Cunt Tightness of Player:		[did cunt actually shrink?]
+		if prevcunt > Cunt Depth of Player or prevcunt2 > Cunt Tightness of Player:		[did cunt actually shrink?]
 			follow the cunt descr rule;
 			say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They dwindle[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It dwindles[end if] in size, becoming [descr]. ";
-			if Cunt Length of Player < 1 or Cunt Tightness of Player < 1:
+			if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 				say "With a sickening noise, you cease to be female all together.";
 				now Cunt Count of Player is 0;
 			else:
@@ -3288,7 +3288,7 @@ to grow cock by (x - a number):
 	else if "Single Sexed" is listed in feats of Player and player is female:
 		say "Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [one of]cunt[sfn][or]puss[yfn][or]vagina[sfn][or]cleft[sfn][at random] as [ittheyf] begin[sfv] to shrink. [ItTheyf] dwindle[sfv] in size before vanishing with a sickening noise as you cease to be female all together.";
 		now Cunt Count of Player is 0;
-		now Cunt Length of Player is 0;
+		now Cunt Depth of Player is 0;
 		now Cunt Tightness of Player is 0;
 	let prevcock be Cock Length of Player;
 	increase Cock Length of Player by a random number from 1 to x;
@@ -4299,7 +4299,7 @@ This is the turnpass rule:
 		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
 	else if "Always A Pussy" is listed in feats of Player and Cunt Count of Player is 0:
 		now Cunt Count of Player is 1;
-		now Cunt Length of Player is 5;
+		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 3;
 		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
@@ -4612,17 +4612,17 @@ to say cum load size of ( x - a person ):
 			say "[one of]overflowing[or]bucket-filling[or]excessive[or]gushing[or]massive[at random]";
 
 This is the cunt descr rule:
-	if Cunt Length of Player < 3:
+	if Cunt Depth of Player < 3:
 		now descr is "[one of]extremely small[or]puny[at random]";
-	else if Cunt Length of Player < 6:
+	else if Cunt Depth of Player < 6:
 		now descr is "[one of]smaller than average[or]small[or]below average[at random]";
-	else if Cunt Length of Player < 8:
+	else if Cunt Depth of Player < 8:
 		now descr is "[one of]average[or]normal-sized[at random]";
-	else if Cunt Length of Player < 12:
+	else if Cunt Depth of Player < 12:
 		now descr is "[one of]large[or]thick-lipped[or]above average[at random]";
-	else if Cunt Length of Player < 18:
+	else if Cunt Depth of Player < 18:
 		now descr is "[one of]belly bulgingly huge[or]inhumanly deep[or]forearm length[at random]";
-	else if Cunt Length of Player < 25:
+	else if Cunt Depth of Player < 25:
 		now descr is "[one of]titanic[or]astonishingly deep[or]elephantine[at random]";
 	else:
 		now descr is "[one of]cavernous[or]seemingly bottomless[or]canyonlike[at random]";
@@ -4785,17 +4785,17 @@ This is the self examine rule:
 		follow the cunt descr rule;
 		if Player is female:
 			if Cunt Count of Player > 1:
-				now cunttext is "have [Cunt Count of Player] [Cunt Tightness Adjective of Player] [one of]cunts[or]pussies[or]vaginas[at random] that are [Cunt Description of Player]. Further probing shows them to be [Cunt Length of Player] inches deep and [Cunt Tightness Adjective of Player]. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
+				now cunttext is "have [Cunt Count of Player] [Cunt Tightness Adjective of Player] [one of]cunts[or]pussies[or]vaginas[at random] that are [Cunt Description of Player]. Further probing shows them to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 			else:
-				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [Cunt Description of Player]. Further probing shows it to be [Cunt Length of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
+				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [Cunt Description of Player]. Further probing shows it to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 	else: [old style]
 		let cunttext be "";
 		follow the cunt descr rule;
 		if player is female:
 			if Cunt Count of Player > 1:
-				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Length of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+				now cunttext is "have [Cunt Count of Player] [Cunt Size Desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] inches in diameter. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 			else:
-				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Length of Player] inches deep and able to stretch to [Cunt Tightness of Player] inches in diameter. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
+				now cunttext is "have a [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that looks [Cunt Size Desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] inches in diameter. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. ";
 	[displaying the texts]
 	if cocktext is not "":
 		if cunttext is "":
@@ -5190,7 +5190,7 @@ This is the male choice rule:
 
 This is the female choice rule:
 	now Cunt Count of Player is 1;
-	now Cunt Length of Player is 6;
+	now Cunt Depth of Player is 6;
 	now Cunt Tightness of Player is 3;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 2;
@@ -6504,10 +6504,10 @@ To startgenderlockshift:
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 0;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 		-- 4:		[female]
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 6;
+			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 2;
 			now Cock Count of Player is 0;
@@ -6518,10 +6518,10 @@ To startgenderlockshift:
 			now the Ball Size of the player is 3;
 			now Breast Size of Player is 2;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 		-- 6: [cuntboy]
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 6;
+			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 0;
 			now Cock Count of Player is 0;
@@ -6531,7 +6531,7 @@ To startgenderlockshift:
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 6;
+			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 0;
 		-- 8: [herm]
@@ -6539,7 +6539,7 @@ To startgenderlockshift:
 			now Cock Length of Player is 6;
 			now the Ball Size of the player is 3;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 6;
+			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 			now Breast Size of Player is 2;
 		-- 9: [always cocky]
@@ -6548,7 +6548,7 @@ To startgenderlockshift:
 			now the Ball Size of the player is 3;
 		-- 10: [always a pussy]
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 6;
+			now Cunt Depth of Player is 6;
 			now Cunt Tightness of Player is 4;
 		-- 12: [flat chested]
 			now Breast Size of Player is 0;
@@ -8146,7 +8146,7 @@ to say gsopt_start:
 		now Breast Size of Player is 0;
 	else:		[defaults to female]
 		now Cunt Count of Player is 1;
-		now Cunt Length of Player is 6;
+		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 2;
@@ -8296,7 +8296,7 @@ to say silent_start:
 		now Breast Size of Player is 0;
 	else: [defaults to female]
 		now Cunt Count of Player is 1;
-		now Cunt Length of Player is 6;
+		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
 		now Breast Size of Player is 2;

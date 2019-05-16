@@ -304,7 +304,7 @@ to say beattigress:
 			if Cock Length of Player < 13:					[Cock size check: small-large]
 				say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move overtop of hir. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen member[smn].";
 				say "     Lowering your hips, you push your [cock size desc of Player] [cock of Player] cock into hir eager muzzle. Shi wraps hir warm lips around it and starts licking and sucking with considerable skill, clearly having had a lot of practice. You pump your cock into hir muzzle steadily, sliding it along hir palate.";
-				say "     As the tigress works [if Cunt Length of Player < 6]a finger[else]several fingers[end if] inside your vagina[sfn], you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of Player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
+				say "     As the tigress works [if Cunt Depth of Player < 6]a finger[else]several fingers[end if] inside your vagina[sfn], you lean overtop hir and start licking and sucking hir dual equipment in return. Hir shaft looks to be about nine inches in length and dribbles pre as you tease it. It is a dark red with a pointed glans and small bumps along it. After sampling it for a while, you move your mouth to hir pussy, licking and kissing it in return. After getting hir pussy quivering and dripping with need, you move back to hir cock again. As you plunge your [facename of Player] mouth down over it, you press two fingers into hir dripping puss and fingerfuck hir hard and fast.";
 				say "     Shi laps up your pre eagerly, working hir tongue over you with skillful intent, having your arousal build and build until you pound into hir muzzle hard and fast. You blow your load down hir throat and your [if Cunt Count of Player > 1]pussies soak hir paws[else]pussy soaks hir paw[end if] in your juices. This is enough to finally set hir off, blasting tigercum down your throat. Shi swallows your cum down happily, even moaning in pleasure as shi does. Clearly, this feline loves hir job[if Cock Count of Player is 2]. With one cock in hir muzzle, the other one ends up blowing its hot seed across hir body, covering hir striped fur in streaks of your white semen[else if Cock Count of Player > 2]. With one cock in hir muzzle, the others end up blowing their hot seed across hir body, covering hir striped fur in streaks of your white semen[end if].";
 			else:									[Cock size check: huge!]
 				say "     As the tigress mewls hir need again, you decide to fill that lovely, striped muzzle and move to straddle hir chest. Shi smiles up at you, licking hir lips even as you move into position. Catching a flash of hir pointed teeth, you momentarily rethink your idea before shi grabs your hips and pulls you closer so hir raspy tongue can glide over your swollen member[smn].";
@@ -472,7 +472,7 @@ to say paymentcheck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -514,7 +514,7 @@ When Play begins:
 	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 12;
+	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 4;
 	now libido entry is 0; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "motel key"; [ Dropped item. Key will be used later ]
@@ -531,7 +531,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -619,7 +619,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

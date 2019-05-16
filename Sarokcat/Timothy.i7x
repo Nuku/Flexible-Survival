@@ -42,7 +42,7 @@ Cock Length of Timothy is 8. [X Inches]
 Ball Size of Timothy is 4.
 Ball Count of Timothy is 2. [X balls]
 Cunt Count of Timothy is 1. [X pussy]
-Cunt Length of Timothy is 16. [X Cunt]
+Cunt Depth of Timothy is 16. [X Cunt]
 Cunt Tightness of Timothy is 6. [X Cunt]
 Nipple Count of Timothy is 2. [X nipples]
 Breast Size of Timothy is 4. [X at the start]

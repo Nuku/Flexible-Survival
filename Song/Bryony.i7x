@@ -14,7 +14,7 @@ Cock Length of Bryony is 14. [X Inches]
 Ball Size of Bryony is 8.
 Ball Count of Bryony is 2. [X balls]
 Cunt Count of Bryony is 1. [X pussy]
-Cunt Length of Bryony is 12. [X Cunt]
+Cunt Depth of Bryony is 12. [X Cunt]
 Cunt Tightness of Bryony is 4. [X Cunt]
 Nipple Count of Bryony is 1. [X nipples]
 Breast Size of Bryony is 4. [X at the start]

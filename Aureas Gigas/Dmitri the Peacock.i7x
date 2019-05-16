@@ -176,7 +176,7 @@ Cock Length of Dmitri is 9. [X Inches]
 Ball Size of Dmitri is 5.
 Ball Count of Dmitri is 2. [X balls]
 Cunt Count of Dmitri is 0. [X pussy]
-Cunt Length of Dmitri is 0. [X Cunt]
+Cunt Depth of Dmitri is 0. [X Cunt]
 Cunt Tightness of Dmitri is 0. [X Cunt]
 Nipple Count of Dmitri is 0. [X nipples]
 Breast Size of Dmitri is 0. [X at the start]

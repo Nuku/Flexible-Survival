@@ -49,7 +49,7 @@ Cock Length of Chris is 9.
 Ball Size of Chris is 6.
 Ball Count of Chris is 2.
 Cunt Count of Chris is 0.
-Cunt Length of Chris is 0.
+Cunt Depth of Chris is 0.
 Cunt Tightness of Chris is 0.
 Nipple Count of Chris is 2. [2 nipples]
 Breast Size of Chris is 0.

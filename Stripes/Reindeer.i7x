@@ -55,7 +55,7 @@ to say losetoreindeer:
 	say "     He strokes your head and pushes his cock to your mouth, telling you to [one of]suck his yule log[or]fondle his sugar plums[or]lick his candy cane[or]drink his tasty egg nog[purely at random]. You groan a little, but take it in happily in your aroused state, licking and sucking it eagerly. It is slender, but long, with ample balls, each the size of large tree ornaments. His pre tastes of delicious egg nog, spiked rather heavily with brandy, making you give in more and more to his merriness. When he spurts a few shots of cum down your throat, you give in entirely and present yourself to him even as you feel your strength returning.";
 	if Player is female:
 		say "     He gives a merry laugh that causes his jingle bells to ring and lines up his cock behind you. With another spurt of pre, he starts to slide his slender cock into you. You moan in pleasure as the joyous male starts to rut you with the loud jingle-jangle of bells. His slender cock is easy to take but fills [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if] nice and deep.";
-		if Cunt Length of Player < 12:
+		if Cunt Depth of Player < 12:
 			say "     Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly and climax as his reindeer cock pushes past your cervix[if Player is male]. Your cocks[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed sprays into you moments later, filling your womb with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
 		else:
 			say "     Your puss[yfn] leak[sfv] juices steadily in your hyper-aroused state, dripping onto the cold ground to make a frozen puddle. But you only feel the heat of your strong buck atop you as he ruts with you. When he gives a few last shoves into you, you groan loudly as he sheathes his cock entirely in your depths and climaxes[if Player is male]. Your cock[smn] throb[smv] beneath you and spill[smv] your semen across the ground[end if]. His thick seed blasts into you moments later, spraying against your cervix and flowing up into your womb to fill you with his holiday cheer. This load is quite substantial, a ball-draining, womb-filling, doe-breeding flow that leaves you panting on the ground but filled with warmth and happiness.[impregchance]";
@@ -78,7 +78,7 @@ to say beatthereindeer:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -120,7 +120,7 @@ When Play begins:
 	now Breast Size entry is 4; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 3; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
 	now loot entry is "egg nog"; [ Dropped item, blank for none. Case sensitive. ]
@@ -137,7 +137,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -225,7 +225,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

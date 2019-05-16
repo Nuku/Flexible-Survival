@@ -21,7 +21,7 @@ Cock Length of Daisy is 0. [X Inches]
 Ball Size of Daisy is 0.
 Ball Count of Daisy is 0. [X balls]
 Cunt Count of Daisy is 1. [X pussy]
-Cunt Length of Daisy is 18. [X Cunt]
+Cunt Depth of Daisy is 18. [X Cunt]
 Cunt Tightness of Daisy is 8. [X Cunt]
 Nipple Count of Daisy is 2. [X nipples]
 Breast Size of Daisy is 4. [X at the start]

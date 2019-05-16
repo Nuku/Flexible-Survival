@@ -49,7 +49,7 @@ Cock Length of gshep is 9.
 Ball Size of gshep is 4.
 Ball Count of gshep is 2.
 Cunt Count of gshep is 0.
-Cunt Length of gshep is 9.
+Cunt Depth of gshep is 9.
 Cunt Tightness of gshep is 2.
 Nipple Count of gshep is 2. [2 nipples]
 Breast Size of gshep is 0.
@@ -440,7 +440,7 @@ to say gsd_collar_scene:
 			say "     You strip down and move onto all fours before giving his leash a casual tug. Being allowed to mount you, he does so without hesitation. After a few grinds of his big doggy cock between your buns and across your folds, he lines up and sinks it into you.";
 			say "     'That's my good boy. You keep obeying your alpha and you'll be rewarded like this. Now show me what you've got.' As he pounds into you with his usual zeal, there is a greater attempt to please and satisfy you as well. One of his paw caresses your side, cups your breast, teases your nipple or rubs your clit at times, rather than the rough groping he's more prone to giving. He is really turning into a better canine companion.";
 			WaitLineBreak;
-			say "     The two of you go at it like this, fucking like horny dogs, until he's about to blow. With an extra[if Cunt Tightness of Player < 6 or Cunt Length of Player < 6]-strong[end if] push, he pops his thick know into you and unloads. You can feel every hot blast of the German shepherd's thick seed, loving how it pools warmly inside you, trapped by his knot. By the time meaty bulb has gone down, much of it has been [if gestation of child > 0]absorbed[else]drawn into your womb[end if], though there's still plenty left to leak out and show what a virile dog you have.[impregchance]";
+			say "     The two of you go at it like this, fucking like horny dogs, until he's about to blow. With an extra[if Cunt Tightness of Player < 6 or Cunt Depth of Player < 6]-strong[end if] push, he pops his thick know into you and unloads. You can feel every hot blast of the German shepherd's thick seed, loving how it pools warmly inside you, trapped by his knot. By the time meaty bulb has gone down, much of it has been [if gestation of child > 0]absorbed[else]drawn into your womb[end if], though there's still plenty left to leak out and show what a virile dog you have.[impregchance]";
 		WaitLineBreak;
 		say "     Noticing the discarded rope, you tie several knots in it, turning it into a rope tug toy. Brushing it past the dog's muzzle entices a playful growl and a few snaps from him. Getting a good grip on it with his muzzle, you end up in a tugging match with him. Since you're both worn from the sex, you don't play long, but he seems to find it quite satisfying. It works quite well and should be a helpful means to let him burn off some of that excess energy and aggression when not going out into the city.";
 		now gsd_pet is 60; [Confident Korvin]
@@ -530,7 +530,7 @@ to say conf_Korvin_sex02:
 to say conf_Korvin_sex04:
 	setmonster "German Shepherd Male";
 	say "     Wanting to feel that big cock of his in your snatch, you tell him to lay down while fingering your pussy. 'Your alpha wants to bury that hard bone of your in her hot cunny, pup,' you say.";
-	say "     'Hot damn!' he exclaims, quickly getting into position. 'But I'm no pup, as your soon-to-be-wrecked pussy is going to find out,' he adds while working a paw over his canine pole. It makes for a very appealing sight and you see no reason in waiting. You straddle him and run your hands over his strong chest while he aims his dick towards your dripping cunt. You [if Cunt Length of Player > 16]slam down onto it, your roomy vagina engulfing it[else if Cunt Length of Player > 8]slam down onto it, pushing it into your hot vagina[else]lower yourself down onto it, working to take the whole of it into your vagina[end if] with an extended moan of ecstasy.";
+	say "     'Hot damn!' he exclaims, quickly getting into position. 'But I'm no pup, as your soon-to-be-wrecked pussy is going to find out,' he adds while working a paw over his canine pole. It makes for a very appealing sight and you see no reason in waiting. You straddle him and run your hands over his strong chest while he aims his dick towards your dripping cunt. You [if Cunt Depth of Player > 16]slam down onto it, your roomy vagina engulfing it[else if Cunt Depth of Player > 8]slam down onto it, pushing it into your hot vagina[else]lower yourself down onto it, working to take the whole of it into your vagina[end if] with an extended moan of ecstasy.";
 	WaitLineBreak;
 	say "     You ride the German shepherd's cock, sliding up and down it while he bucks his hips in counterpoint. This pushes him hard into you each time, often bringing moans or whimpers of sexual delight. His canine penis feels great inside you, rubbing against so many sensitive spots as you wriggle and grind atop it. The two of you go at it hot and heavy until finally he groans loudly and blasts shot after shot of puppy batter into your clenching cunt while you cry out in orgasmic release. You squeeze tightly around that knot of his and milk him for all he'll give before finally stopping. Once that thick bulge has gone down, you pull off his spent shaft and let him go for now.[fimpregchance]";
 

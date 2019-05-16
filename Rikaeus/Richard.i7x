@@ -30,7 +30,7 @@ Cock Length of Richard is 8. [X Inches]
 Ball Size of Richard is 4.
 Ball Count of Richard is 2. [X balls]
 Cunt Count of Richard is 0. [X pussy]
-Cunt Length of Richard is 0. [X Cunt]
+Cunt Depth of Richard is 0. [X Cunt]
 Cunt Tightness of Richard is 0. [X Cunt]
 Nipple Count of Richard is 2. [X nipples]
 Breast Size of Richard is 0. [X at the start]

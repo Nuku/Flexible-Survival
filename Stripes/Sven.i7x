@@ -59,7 +59,7 @@ Cock Length of Sven is 8.
 Ball Size of Sven is 5. [golfball sized balls]
 Ball Count of Sven is 2.
 Cunt Count of Sven is 0.
-Cunt Length of Sven is 0.
+Cunt Depth of Sven is 0.
 Cunt Tightness of Sven is 0.
 Nipple Count of Sven is 2.
 Breast Size of Sven is 0.

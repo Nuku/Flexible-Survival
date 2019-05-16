@@ -353,7 +353,7 @@ to CharacterSave:
 			now Cock Width entry is Ball Size of x;
 			now Testes entry is Ball Count of x;
 			now Cunts entry is Cunt Count of x;
-			now Cunt Length entry is Cunt Length of x;
+			now Cunt Depth entry is Cunt Depth of x;
 			now Cunt Width entry is Cunt Tightness of x;
 			now Breasts entry is Nipple Count of x;
 			now Breast Size entry is Breast Size of x;
@@ -430,7 +430,7 @@ to CharacterRestore:
 				now Ball Size of CharacterObject is Cock Width entry;
 				now Ball Count of CharacterObject is Testes entry;
 				now Cunt Count of CharacterObject is Cunts entry;
-				now Cunt Length of CharacterObject is Cunt Length entry;
+				now Cunt Depth of CharacterObject is Cunt Depth entry;
 				now Cunt Tightness of CharacterObject is Cunt Width entry;
 				now Nipple Count of CharacterObject is Breasts entry;
 				now Breast Size of CharacterObject is Breast Size entry;

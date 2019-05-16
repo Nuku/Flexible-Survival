@@ -56,7 +56,7 @@ to say beattheHermaid:
 to say HermaidFemVic:
 	say "     You move one of your hands around the Hermaid's hips, and swivel yourself around to face her. She leans in to kiss you, and you eagerly return her offer as she draws you into her prodigious bosom. She slowly draws her hands across your skin, holding you in a tight, loving embrace. You both break free of the kiss as you wrap your arms and legs around the beautiful creature, allowing her to support you, which she does easily. You feel something poking at your thighs, and the woman in front of you smiles knowingly as you both get ready for the main course. She runs her hands over your back as she lines her tapered cock up with your [cunt size desc of Player] cunt.";
 	WaitLineBreak;
-	if Cunt Length of Player < 12:
+	if Cunt Depth of Player < 12:
 		say "     She begins to slowly push into your cunt, putting inch by inch of her tapered cock deep into you. You both let out a loud groan as pleasure overwhelms you both, and you can barely hold yourself together as the exquisite sea woman forces you open. You find that you are unable to take her entire length, and you begin to let out an angered grunt, but she silences you with another loving kiss[if Player is dominant]. You forcefully return her kiss, locking her tongue with yours. You eventually break the kiss, causing the Hermaid to pant lustfully as you break away from each other[else]. You lovingly return the kiss, playfully battling her tongue with yours. You break the kiss soon after, a strand of saliva still hanging between the two of you[end if][if Player is dominant]. You bring your hands to the curvy herm's hips, holding her against you as you massage her tapered length with your cunt. She lets out a half-angered moan as you prevent her from thrusting, making sure that the only pleasure she feels is your pussy clenching around her length. She looks at you desperately, pleading with you to let her lustfully slam her length into you over and over. You smile playfully as you tantalizingly let your arms move back, slowly bringing her length out of you. She tries to slam back and forth, but when she's once again fully buried in your cunt, you hold her there, repeating this same process as she groans to the heavens. You slowly let her begin thrusting into you, making sure that she works for every inch of you[else]. She begins to slowly withdraw herself from your folds, enticing harsh gasps from you as she does so, leaving only the first few inches of her cock within you. She slams her length back into you, eliciting a pleasured scream from you, as she begins her thrusting. Her pace increases as time goes on, and you soon devolve into nothing but pleasured gasps and the occasional lustful scream as she slams her wonderful cock into you. The siren rubs your back lovingly, bringing you to her chest and resting you against her as she fucks you relentlessly[end if]. You both eventually begin thrusting against each other as fast as you can, the mashing of your pelvises echoing around the district and churning the waters around you. The overwhelming pleasure finally gets the best of you and you climax, [one of]screaming loudly to the heavens[or]involuntarily spasming your entire body as you clench your teeth[at random]. Your vagina clamps down on the invading member, wringing out whatever it can from the maiden and triggering her own orgasm. The Hermaid screams soundlessly as she orgasms, filling your fertile womb with her generous offering of life. You both come down from your orgasms and slump against each other, exhausted and sated.[impregchance]"; [Add more desc of Herm cunt?]
 		now Libido of Player is 0;
 	else:
@@ -127,7 +127,7 @@ to say Hermaiddesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -169,7 +169,7 @@ When Play begins:
 	now Breast Size entry is 3;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 12;
+	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 6;
 	now libido entry is 40;
 	now loot entry is "hermaid kelp";
@@ -186,7 +186,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -274,7 +274,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

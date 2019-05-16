@@ -43,15 +43,15 @@ to say ebgatorvic:
 	else if Player is female:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against[if Cunt Count of Player > 1] one of[end if] your cunt[sfn]";
 		if ebgatord is 0:
-			say ", you're given a glimpse of the thing even as it's being forced past your[if Cunt Length of Player < 12] tight[end if] lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
+			say ", you're given a glimpse of the thing even as it's being forced past your[if Cunt Depth of Player < 12] tight[end if] lips. The organ looks as though it was supposed to be two dicks instead of one, but it quit about half the way through, giving the tool and overly wide and flat girth, making you groan [if HP of Player > 0]loudly[else]weakly[end if] as it's gradually plunged deeper into you.";
 			now ebgatord is 1;
 		else:
-			say ", groaning [if HP of Player > 0]loudly[else]weakly[end if] as the overly wide organ is squeezed through your[if Cunt Length of Player < 12] tight[end if] lips.";
-		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock is sunk through your[if Cunt Length of Player < 12] meager-fitting[end if] passage until he can't force it in any deeper. The heat of his coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off as you as his motion becomes rougher with each powerful thrust.";
+			say ", groaning [if HP of Player > 0]loudly[else]weakly[end if] as the overly wide organ is squeezed through your[if Cunt Depth of Player < 12] tight[end if] lips.";
+		say "     The monster hisses loudly in rough satisfaction with each successive inch of the throbbing, molten-precum oozing cock is sunk through your[if Cunt Depth of Player < 12] meager-fitting[end if] passage until he can't force it in any deeper. The heat of his coarsely scaled, heaving body like a fire against your [bodytype of Player] form, it's hard to say if you're aroused by the ordeal, given how numb you are from this intense sensation[if HP of Player < 1] and your prior defeat[end if], sweat almost feeling like it's boiling off as you as his motion becomes rougher with each powerful thrust.";
 		say "     After what feels like hours of being pounded into the ground, the dragon-gator finally roars out, sinking its sharp talons into you as it plunges its wide organ deep inside you one last time";
 		if impregnatevalid is true:
 			say ". [if ebgatord < 2]You briefly think the lizard's dick is knotted for how it forces a large bulge at its back past your lips, but it quickly reveals its true purpose as the bulb ascends[else]You're quickly reminded of the intense sensation of being [']tied['] with the lizard's dick, large bulge at its base forced past your lips, ascending[end if] along its shaft, until a large, coarse egg is squeezed from its head and into your womb.";
-			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - he still continues to fuck you senselessly, forcing a weak, [if Cunt Length of Player < 12]slightly[else]substantially[end if] strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Length of Player > 11] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss - and perhaps ensuring the orb is planted deep within you - he still continues to fuck you senselessly, forcing a weak, [if Cunt Depth of Player < 12]slightly[else]substantially[end if] strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal. [italic type]You're somewhat worried about the long-term results of carrying this egg...[roman type]";
 			if ebgatord < 2, now ebgatord is 2;
 			now preghijack is true;
@@ -59,7 +59,7 @@ to say ebgatorvic:
 			now hijackgestation is 8;
 		else:
 			say ". Like a fire hose, the lizard's dick pumps its substantial, molten cum deep into your bowels, making you wince and cry out in the intense, searing sensation.";
-			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Length of Player > 11] slightly[end if] gaping hole.";
+			say "     Still high from the throes of bliss - and its motion further lubricated by its glowing seed - it still continues to fuck you senselessly, forcing a weak, strained orgasm, your [if Player is male]unattended cock[smn] staining the ground with your [Cum Load Size of Player] load[else]pussy weakly throbbing against its oversized invader[end if]. Finally satisfied, the beast wrenches his still-hard rod from your[if Cunt Depth of Player > 11] slightly[end if] gaping hole.";
 			say "     Abandoning your battered, bruised, and bloated form with a low hiss, you're forced to crawl away and recover from the consequences of the ordeal.[impregchance]";
 	else:
 		say "     You soon feel the slightly flat head of the reptile's[if ebgatord is 0][else] peculiar,[end if] oversized dick press against your face";
@@ -105,7 +105,7 @@ to say ebgatordesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -149,7 +149,7 @@ When Play begins:
 	now Breast Size entry is 14;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 16;
+	now Cunt Depth entry is 16;
 	now Cunt Tightness entry is 17;
 	now libido entry is 40;
 	now lootchance entry is 40;
@@ -166,7 +166,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -254,7 +254,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

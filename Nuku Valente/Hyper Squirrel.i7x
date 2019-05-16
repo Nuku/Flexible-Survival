@@ -94,7 +94,7 @@ Cock Length of Snow is 18.
 Ball Size of Snow is 4. [goose egg sized balls]
 Ball Count of Snow is 2.
 Cunt Count of Snow is 0.
-Cunt Length of Snow is 0.
+Cunt Depth of Snow is 0.
 Cunt Tightness of Snow is 0.
 Nipple Count of Snow is 2.
 Breast Size of Snow is 10.
@@ -243,7 +243,7 @@ to say snowsexmenu:
 			now title entry is "Anal on Snow";
 			now sortorder entry is 2;
 			now description entry is "fuck the squirrel's tight hole";
-	if Player is female and Cunt Length of Player >= 10 and Cunt Tightness of Player >= 4:
+	if Player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal on player";
 		now sortorder entry is 3;
@@ -254,7 +254,7 @@ to say snowsexmenu:
 			now title entry is "Anal on player";
 			now sortorder entry is 4;
 			now description entry is "get butt-fucked by the squirrel"; ]
-		if Player is submissive and ( player is female and Cunt Length of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
+		if Player is submissive and ( player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4 ) or anallevel > 1:
 			choose a blank row in table of fucking options;
 			now title entry is "Dommed and fucked";
 			now sortorder entry is 5;
@@ -350,7 +350,7 @@ to say sexwithsnow04:	[Anal on player]
 to say sexwithsnow05:	[Dommed and fucked]
 	setmonster "Hyper Squirrel";
 	say "     Snow grins and moves in on you, grabbing your wrists and pressing you back against one of the stone wooden columns. 'Mmm... now, I can tell you're the kind that likes to let someone else take charge, so I think I'll do just that,' she says with a husky rumble of arousal in her voice. She grinds her throbbing manhood against your hip and looks you over with lustful intent";
-	if Player is female and Cunt Length of Player >= 10 and Cunt Tightness of Player >= 4:
+	if Player is female and Cunt Depth of Player >= 10 and Cunt Tightness of Player >= 4:
 		say ". She presses a paw between your legs, roughly fingering your pussy as she sizes you up. Finding you adequate for her imposing manhood, she grins all the wider and turns you around, pressing you face first against the pillar.";
 		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your juicy cunny. Giving your neck a firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your dripping pussy around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your cunt aches a little from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure.";
 		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you. [one of]'Mmm... how about I knock you up, you horny thing?' [or]'I'm going to enjoy stuffing your slutty hole.' [or]'Time to dump a nice load of my nut butter into you.' [or]'You're mine to fuck and fill now, slut.' [or]'I'm going to enjoy hiding my nutty load inside you.' [at random]That proves to be enough to push you over the edge and you cry out in orgasmic release.";
@@ -377,15 +377,15 @@ to say sexwithsnow07:	[Cunnilingus]
 
 
 to say snowsquirrelgivein:
-	say "     Taking Snow's paw in yours, you rush out with her, leaving the Abbey behind before either of you can think better of it. Whether by some scent on the air of by blind luck, you soon run into the pair of lustful squirrels. Finding you with Snow, they are all the more pleased and chitter happily as they welcome you both into their arms. Soon you are all rolling around in the grass, fucking like wild animals. Snow is made to stuff her cock down your throat while your [if Player is female and Cunt Length of Player > 8]dripping pussy[else]tight rump[end if] is stuffed by one of the wild squirrels while Snow is getting the same treatment from the other. You moan around Snow's throbbing meat, tasting her leaking pre growing more addictive and arousing as you watch the light of intelligence fading from her eyes even as you can feel your own mind fading away. Your last coherent thought is how happy you are that you'll be sharing this new life with the beautiful Snow.";
+	say "     Taking Snow's paw in yours, you rush out with her, leaving the Abbey behind before either of you can think better of it. Whether by some scent on the air of by blind luck, you soon run into the pair of lustful squirrels. Finding you with Snow, they are all the more pleased and chitter happily as they welcome you both into their arms. Soon you are all rolling around in the grass, fucking like wild animals. Snow is made to stuff her cock down your throat while your [if Player is female and Cunt Depth of Player > 8]dripping pussy[else]tight rump[end if] is stuffed by one of the wild squirrels while Snow is getting the same treatment from the other. You moan around Snow's throbbing meat, tasting her leaking pre growing more addictive and arousing as you watch the light of intelligence fading from her eyes even as you can feel your own mind fading away. Your last coherent thought is how happy you are that you'll be sharing this new life with the beautiful Snow.";
 	if "Male Preferred" is not listed in feats of Player:
 		if Nipple Count of Player < 2, now Nipple Count of Player is 2;
 		if Breast Size of Player < 4, now Breast Size of Player is 4;
 		if Player is not female, now Cunt Count of Player is 1;
-		if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+		if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 		if Cunt Tightness of Player < 6, now Cunt Tightness of Player is 6;
 		if "Modest Organs" is listed in feats of Player:
-			now Cunt Length of Player is 8;
+			now Cunt Depth of Player is 8;
 			now Cunt Tightness of Player is 5;
 	if "Female Preferred" is not listed in feats of Player:
 		if Player is not male, now Cock Count of Player is 1;
@@ -457,7 +457,7 @@ Instead of resolving a Wild Squirrels:
 			say "Despite your protests and struggles, you find your mouth being guided to a large, pink dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
 			decrease the humanity of Player by 10 + HP of Snow;
 	if HP of Snow is even:
-		if Player is female and Cunt Length of Player > 8:
+		if Player is female and Cunt Depth of Player > 8:
 			say "     One of the squirrels grabs you at the hips and rubs across your sides and backs with those, oh so soft, paws as she eases up into you. Her thick, pink, shaft buries warmly into your waiting snatch as she pulls you back into her lap, slowly settling to the ground with you, bouncing you up and down in her lap as she grunts and coos with pleasure. Your body tingles with growing delight as her infectious seed already works at your insides, weakening your desire to resist her and filling you with an urge to be filled with her.";
 		else:
 			say "     One of the squirrels makes a sad sort of noise, almost apologetic, before she shoves you forward, grabs your hips, and plunges her thick cock into your back door, rocking easily into your ass as the thick sprays of her pre lubricate you, both in body and mind. Her rough attentions feel better by the moment as you find yourself moaning with desire, pressing back against her as she claims you.";
@@ -465,12 +465,12 @@ Instead of resolving a Wild Squirrels:
 		decrease the humanity of Player by 10 + ( HP of Snow * 3 );
 	else:
 		if Player is male:
-			say "     After thrusting her tasty cock into your mouth a few times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up your cock with the squirrel's pussy even as she lines up her own cock with your [if Player is female and Cunt Length of Player > 8]wet snatch[else]tight asshole[end if]. They chitter softly between themselves for a moment, holding you in place before the one behind you pushes forward, easing her throbbing cock into you and making you moan as you are made to thrust into her partner at the same time. As you are sandwiched between them while they fuck you, your body tingles with growing delight as her infectious pre leaks into you, arousing you further and making you long to be filled by her.";
-			say "     The one beneath you chitters happily at the fucking she's getting and licking and kissing all over your face as her cock leaks precum as its pressed between your bodies. It seems all too soon that you're cumming hard into her even as your [if Player is female and Cunt Length of Player > 8]hot pussy[else]tight ass[end if] is filled by the other herm as she drains her heavy balls into you. As you are stuffed with the warm, intoxicating cum, you can feel a growing longing to stay with them. The same longing that Snow must have felt. Your will to resist them crumbles further as you cum hard again into the squirrel herm before passing into a hazy afterglow.";
-		else if Cunt Count of Player > 1 and Cunt Length of Player > 8:		[2+ adequate cunts]
+			say "     After thrusting her tasty cock into your mouth a few times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up your cock with the squirrel's pussy even as she lines up her own cock with your [if Player is female and Cunt Depth of Player > 8]wet snatch[else]tight asshole[end if]. They chitter softly between themselves for a moment, holding you in place before the one behind you pushes forward, easing her throbbing cock into you and making you moan as you are made to thrust into her partner at the same time. As you are sandwiched between them while they fuck you, your body tingles with growing delight as her infectious pre leaks into you, arousing you further and making you long to be filled by her.";
+			say "     The one beneath you chitters happily at the fucking she's getting and licking and kissing all over your face as her cock leaks precum as its pressed between your bodies. It seems all too soon that you're cumming hard into her even as your [if Player is female and Cunt Depth of Player > 8]hot pussy[else]tight ass[end if] is filled by the other herm as she drains her heavy balls into you. As you are stuffed with the warm, intoxicating cum, you can feel a growing longing to stay with them. The same longing that Snow must have felt. Your will to resist them crumbles further as you cum hard again into the squirrel herm before passing into a hazy afterglow.";
+		else if Cunt Count of Player > 1 and Cunt Depth of Player > 8:		[2+ adequate cunts]
 			say "     After thrusting into your mouth a few more times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up one of your pussies with the cock of the lower squirrel even as she lines up her own cock with another waiting pussy. They chitter softly between themselves for a moment before the one atop you thrusts into your waiting snatch, pushing you down onto her partner's cock at the same time. Having both well-endowed herms filling you at the same time is very arousing, especially as their infectious and arousing precum leaks into you. You are fucked wildly by the both of them, making you moan and climax several times.";
 			say "     Your strongest climax comes of course as the pair orgasm with loud chitters, blasting their seed into you one after the other. You can feel their hot loads shooting into you, filling you with warmth and arousal. With their intoxicating fluids filling you, you can feel a growing longing to stay them. The same longing that Snow must have felt. Your will to resist them crumbles further as you orgasm loudly before passing into a hazy afterglow.";
-		else if Cunt Count of Player is 1 and Cunt Length of Player > 8:		[1 adequate cunt]
+		else if Cunt Count of Player is 1 and Cunt Depth of Player > 8:		[1 adequate cunt]
 			say "     After thrusting into your mouth a few more times to make sure that you're nice and compliant, she withdraws and pulls you into her welcoming arms. Guided onto the ground atop her, she kisses you lustfully while her partner lines up your pussy with the cock of the lower squirrel even as she lines up her own cock with your tight asshole. They chitter softly between themselves for a moment, dripping precum onto your back entrance to prepare you, before the one atop you thrusts into your slick hole, pushing you down onto her partner's cock at the same time. Having both well-endowed herms filling you at the same time is very arousing, especially as their infectious and arousing precum leaks into you. You are fucked wildly by the both of them, making you moan and climax several times.";
 			say "     Your strongest climax comes of course as the pair orgasm with loud chitters, blasting their seed into you one after the other. You can feel their hot loads shooting into you, filling you with warmth and arousal. With their intoxicating fluids filling you, you can feel a growing longing to stay them. The same longing that Snow must have felt. Your will to resist them crumbles further as you orgasm loudly before passing into a hazy afterglow.";
 		else:
@@ -484,10 +484,10 @@ Instead of resolving a Wild Squirrels:
 			if Nipple Count of Player < 2, now Nipple Count of Player is 2;
 			if Breast Size of Player < 4, now Breast Size of Player is 4;
 			if Player is not female, now Cunt Count of Player is 1;
-			if Cunt Length of Player < 9, now Cunt Length of Player is 9;
+			if Cunt Depth of Player < 9, now Cunt Depth of Player is 9;
 			if Cunt Tightness of Player < 6, now Cunt Tightness of Player is 6;
 			if "Modest Organs" is listed in feats of Player:
-				now Cunt Length of Player is 8;
+				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 5;
 		if "Female Preferred" is not listed in feats of Player:
 			if Player is not male, now Cock Count of Player is 1;
@@ -519,7 +519,7 @@ Instead of resolving a Wild Squirrels:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -561,7 +561,7 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
@@ -578,7 +578,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -666,7 +666,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

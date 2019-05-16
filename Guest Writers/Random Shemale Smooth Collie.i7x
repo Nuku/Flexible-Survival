@@ -39,11 +39,11 @@ to say Shemale Smooth Collie attack:
 		decrease thirst of Player by 10;
 		if thirst of Player < 0, now thirst of Player is 0;
 		if hunger of Player < 0, now hunger of Player is 0;
-	else if Player is female and ( Cunt Length of Player < 18 or Cunt Tightness of Player < 6 ):
+	else if Player is female and ( Cunt Depth of Player < 18 or Cunt Tightness of Player < 6 ):
 		say "     'Ohhh, I knew I smelled a fresh bitch in town, and you smell absolutely delicious.' She removes your clothes easily and her tongue flicks out to lick your folds, slipping in after a couple licks to probe and prime your depths, stretching them a bit as her prick engorges and begins to drip thick pre onto the ground. You can feel your walls begin dripping with juices as she stimulates them masterfully, her tongue finding all the right places to almost make you feel like a bitch in heat.";
 		say "     'Mmmm, hope you're ready, because I'm going to leave you walking funny for hours honey.' She immediately mounts you, her odd-shaped prick stretching your walls, but in a way that actually feels good even as her thrusts begin to stretch your tunnel out, making your passage even deeper as her two-foot battering ram tries to breach your inner gate. Within a minute she's unable to last any longer, and you feel a sense of blessed relief as her hot cum begins flooding your passage, her swollen knot presses against your lips because she simply couldn't fit. 'Ooohhh YES! Feel that, bitch? I'm going to give you so many puppies as soon as I can squeeze this thing into you completely.' She pulls out without wasting another second, her cock still gushing out her rich sperm as she turns to walk away. You, your clothes, and much of the local plants end up splashed with her hot seed. Your abused passage throbs from the fierceness of her short pounding.[impregchance]";
 		if Cunt Tightness of Player < 10, increase Cunt Tightness of Player by 1;
-		if Cunt Length of Player < 24, increase Cunt Length of Player by 2;
+		if Cunt Depth of Player < 24, increase Cunt Depth of Player by 2;
 	else if Player is female:
 		say "     'Mmmmm, such a beautiful little bitch, and you smell so nice.' Her tongue lightly caresses your folds before she gives them a gentle nip. Her tone seems almost loving though. The brief nuzzle she gives as she crawls over you and places one hand on your chest to hold you in place while her large prick rubs against your rapidly dampening folds supports this as she's not simply using you like some random fucktoy.";
 		say "     Her hand tightens on your shoulders as she presses in slowly, sucking in a sharp breath as your passage eagerly accepts her stiff rod. Her nipples can be felt against your back, pressing against your skin as she begins to gently rock back and forth, drawing this encounter out as long as she can. For the first time you notice a slightly sweet scent, and feel an odd dampness on your back as the giant shemale begins to leak. Small drops fall from each nipple at random moments in the time she takes, to truly screw you, and you feel your own orgasm hit at least three times in the time it takes for her knot to begin bumping against your soaked lips. She begins growling softly, her thrusts becoming harder and more insistent until she finally manages to sink that thicker bulb within you and tie herself to you. Once more she howls as she cums, her seed gushing out in a constant series of spurts that leaves your womb swollen in no time, but her large size works against both of you as the pressure simply keeps building as her balls continue their twitching and pumping of her thick, fertile seed until you begin to think that you might burst from how much your body is being stretched.[impregchance]";
@@ -90,7 +90,7 @@ to say Shemale Smooth Collie defeat:
 		now sortorder entry is 2;
 		now description entry is "Suck a load of hot cum from her big balls";
 		[]
-		if Player is female and ( Cunt Length of Player >= 18 and Cunt Tightness of Player >= 6 ):
+		if Player is female and ( Cunt Depth of Player >= 18 and Cunt Tightness of Player >= 6 ):
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her (vaginal)";
 			now sortorder entry is 3;
@@ -211,7 +211,7 @@ to say CollieDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -256,7 +256,7 @@ When Play begins:
 	now Breast Size entry is 10; [ Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 8; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping] [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "smooth collie shemale fur";
@@ -273,7 +273,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -361,7 +361,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [length in inches]
+	now Cunt Depth entry is 0; [length in inches]
 	now Cunt Tightness entry is 0;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a canine appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
@@ -427,9 +427,9 @@ to say collieheatstart:
 				now MonsterID is y;
 				break;
 		increase Cunt Tightness of Player by 1;
-		increase Cunt Length of Player by 1;
+		increase Cunt Depth of Player by 1;
 		if Cunt Tightness of Player < Cunt Tightness entry, increase Cunt Tightness of Player by 1;
-		if Cunt Length of Player < Cunt Length entry, increase Cunt Length of Player by 1;
+		if Cunt Depth of Player < Cunt Depth entry, increase Cunt Depth of Player by 1;
 
 
 to say collieheatend:
@@ -442,7 +442,7 @@ to say collieheatend:
 				now MonsterID is y;
 				break;
 		if Cunt Tightness of Player > Cunt Tightness entry, decrease Cunt Tightness of Player by 1;
-		if Cunt Length of Player > Cunt Length entry, decrease Cunt Length of Player by 1;
+		if Cunt Depth of Player > Cunt Depth entry, decrease Cunt Depth of Player by 1;
 	else:
 		say "As your heat passes, your needy asshole becomes less prominent and swollen. There still a craving for something to fill it, but it is manageable now.";
 	decrease slutfucked by 2;

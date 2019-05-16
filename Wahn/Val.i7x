@@ -28,7 +28,7 @@ Cock Length of Val is 8.
 Ball Size of Val is 4.
 Ball Count of Val is 2.
 Cunt Count of Val is 0.
-Cunt Length of Val is 0.
+Cunt Depth of Val is 0.
 Cunt Tightness of Val is 0.
 Nipple Count of Val is 2. [2 nipples]
 Breast Size of Val is 0.

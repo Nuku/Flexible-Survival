@@ -42,7 +42,7 @@ to say snakedesc:
 	[set all size values to match existing so only number of cocks/cunts may change]
 	now Cock Length entry is Cock Length of Player;
 	now Ball Size entry is Ball Size of Player;
-	now Cunt Length entry is Cunt Length of Player;
+	now Cunt Depth entry is Cunt Depth of Player;
 	now Cunt Tightness entry is Cunt Tightness of Player;
 
 
@@ -157,7 +157,7 @@ to snakecoresex:
 			say ". Given the way the creature dizzily departs, substantially bloated, it's clear its hunger will be sated for a good while";
 		say ". Eventually, [if HP of Player > 0]you recover from the whole ordeal[else]the venom wears off[end if], allowing you to get back to your feet and go about your business freely[if HP of Player < 1], no doubt a bit addled by the whole ordeal[end if].";
 	else if Player is female:
-		say "[cunt size desc of Player] cunt[sfn], [if Breast Size of Player > 0]already quite aroused after its prior ritual[else if HP of Player > 0]quickly made dripping and eager by the beast's affection[else]the beast's tainted infection leaving you dripping and eager[end if]. Satisfied, and with almost no restrain, it forces its slender head past the supple folds of [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if][if Cunt Length of Player < 13], its substantial girth stretching you to your limits[end if]. Coiling slightly around you, [if scalevalue of Player < 4]its heavy weight keeps you pinned to prevent you from struggling[else]it ensures that you can't struggle against its endeavor[end if][if HP of Player > 0], not that you have presented yourself in such a manner to give that sort of impression[end if].";
+		say "[cunt size desc of Player] cunt[sfn], [if Breast Size of Player > 0]already quite aroused after its prior ritual[else if HP of Player > 0]quickly made dripping and eager by the beast's affection[else]the beast's tainted infection leaving you dripping and eager[end if]. Satisfied, and with almost no restrain, it forces its slender head past the supple folds of [if Cunt Count of Player > 1]one of your pussies[else]your pussy[end if][if Cunt Depth of Player < 13], its substantial girth stretching you to your limits[end if]. Coiling slightly around you, [if scalevalue of Player < 4]its heavy weight keeps you pinned to prevent you from struggling[else]it ensures that you can't struggle against its endeavor[end if][if HP of Player > 0], not that you have presented yourself in such a manner to give that sort of impression[end if].";
 		say "     Its relentless, writhing endeavor to thrust its thick, scaled body in and out of your depths, the serpent's grip tightens more and more around you, as if to try and squeeze you into bliss. Its prolonged endeavors [if Libido of Player > 20]quickly[else]eventually[end if] forcing you cry out. As your stuffed portal tightens around the creature, its movements become quicker and more erratic, the sensation of its tongue felt flicking along your beleaguered passage as it feeds on your emergent sexual fluids.";
 		if Breast Size of Player is 0:
 			WaitLineBreak;
@@ -217,7 +217,7 @@ to say beatthesnake:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -259,7 +259,7 @@ When Play begins:
 	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
@@ -276,7 +276,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -364,7 +364,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

@@ -49,7 +49,7 @@ Cock Length of Otto is 6. [Six Inches]
 Ball Size of Otto is 4.
 Ball Count of Otto is 2. [Two balls]
 Cunt Count of Otto is 0. [No pussy]
-Cunt Length of Otto is 0. [No Cunt]
+Cunt Depth of Otto is 0. [No Cunt]
 Cunt Tightness of Otto is 0. [No Cunt]
 Nipple Count of Otto is 2. [2 nipples]
 Breast Size of Otto is 0. [Flat at the start]

@@ -14,7 +14,7 @@ Cock Length of Nakoma is 12. [X Inches]
 Ball Size of Nakoma is 8.
 Ball Count of Nakoma is 2. [X balls]
 Cunt Count of Nakoma is 1. [X pussy]
-Cunt Length of Nakoma is 12. [X Cunt]
+Cunt Depth of Nakoma is 12. [X Cunt]
 Cunt Tightness of Nakoma is 4. [X Cunt]
 Nipple Count of Nakoma is 2. [X nipples]
 Breast Size of Nakoma is 4. [X at the start]

@@ -147,7 +147,7 @@ Cock Length of Wendy is 0.
 Ball Size of Wendy is 0.
 Ball Count of Wendy is 0.
 Cunt Count of Wendy is 1.
-Cunt Length of Wendy is 30.
+Cunt Depth of Wendy is 30.
 Cunt Tightness of Wendy is 15.
 Nipple Count of Wendy is 4. [4 nipples]
 Breast Size of Wendy is 0.

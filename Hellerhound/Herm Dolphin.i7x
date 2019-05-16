@@ -77,19 +77,19 @@ to say dolphin fuck:
 			increase Cunt Tightness of Player by 1;
 		else:
 			say "Her cock head slides into your lubricated tunnel with ease, and she prepares to pump the rest into you. ";
-		if Cunt Length of Player < 10:[won't go in far, must extend you]
+		if Cunt Depth of Player < 10:[won't go in far, must extend you]
 			say "She slams her cock into you with a cry of success, but it is cut off as she realizes that she can't go halfway inside. She thinks for a moment, her member stimulating your pussy as it wriggles. 'I am going to have to lengthen your cunt, small one. It may hurt.' She begins to slam her cock into you and grunts when it smashes open your cervix. ";
 			if the humanity of Player < 60:
 				say "You wince and hope that your infected body can repair the damage she, no, it, is doing so that you may have children.";
 			else:
 				say "You wince and hope that the damage can be fixed if you wish not to miscarry.";
-			increase Cunt Length of Player by 3;
-		if Cunt Length of Player < 10:[god, still too small]
+			increase Cunt Depth of Player by 3;
+		if Cunt Depth of Player < 10:[god, still too small]
 			say "She pulls out of you, looking saddened. You are too small still. You will have to come back again later.";
-		else if Cunt Length of Player < 24:[won't go in far enough, will pry open womb for more space]
+		else if Cunt Depth of Player < 24:[won't go in far enough, will pry open womb for more space]
 			say "She then slams her overly long member into the wall of your womb, stretching your womb and pussy as deep as they can go, and further. The pain mixes with the pleasure of her inside of you, bringing you to climax as she keeps fucking. ";
-			increase Cunt Length of Player by 2;
-			if Cunt Length of Player < 14:
+			increase Cunt Depth of Player by 2;
+			if Cunt Depth of Player < 14:
 				say "She then pulls out of you, and you look at her, disappointed. You were halfway to another orgasm. She tells you, 'You are still too small. I will have to 'fix' you later as well. Anymore stretching, and you will rip. Since I need to do more, you can't have my child. She then blows her load all over your front, the thick cum spraying through the water as if in slow motion, landing and sticking to you.";
 			else:
 				say "She then moans and slams extra hard, as she manages to fit the rest of her member inside by doubling back and forming a ring in your womb. Her gargantuan cock seems to be making a huge, ring-shaped bulge in your belly, visible from the outside, as she begins to orgasm. She lets out a chittering scream as she cums hard inside of you, stunning you and leaving you floating in the water. You can only watch, unreasoningly, as your belly gets bigger and bigger until you look positively bloated. A little while and expansion later, she begins to remove her cock with much wriggling and squirming to watch the cum inside of you get forced out into a cloud in the water once your entrance is clear.";
@@ -104,14 +104,14 @@ to say dolphin fuck:
 				say "Ok.";
 				say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 				increase Cunt Count of Player by 1;
-				increase Cunt Length of Player by 6;
+				increase Cunt Depth of Player by 6;
 				increase Cunt Tightness of Player by 4;
 			else:
 				say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 		else:
 			say "Your genitals feel odd as a cunt grows out of the base of your body, growing deeper and wider by the second.";
 			increase Cunt Count of Player by 1;
-			increase Cunt Length of Player by 6;
+			increase Cunt Depth of Player by 6;
 			increase Cunt Tightness of Player by 4;
 	else:
 		say "The dolphin places her large, pink cock at your waiting entrance and rubs it back and forth, without touching it. You are horrified and fascinated by it. ";
@@ -129,7 +129,7 @@ to say dolphin fuck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -171,7 +171,7 @@ When Play begins:
 	now Breast Size entry is 2; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 28; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Depth entry is 28; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 10; [ Width of female sex infection will try and give you ]
 	now libido entry is 40; [ Amount player Libido will go up if defeated ]
 	now loot entry is "dolphin milk";
@@ -188,7 +188,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -276,7 +276,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

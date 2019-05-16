@@ -547,7 +547,6 @@ to ubbyplayer:
 		infect;
 		now researchbypass is 0;
 	increase ubcount by 1;
-	let Impregnator be a person;
 	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
 	now HeadName of child is Name entry;
 	now TorsoName of child is Name entry;

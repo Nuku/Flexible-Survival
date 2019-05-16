@@ -86,7 +86,7 @@ Cock Length of Stewart is 7. [X Inches]
 Ball Size of Stewart is 4.
 Ball Count of Stewart is 2. [X balls]
 Cunt Count of Stewart is 0. [X pussy]
-Cunt Length of Stewart is 0. [X Cunt]
+Cunt Depth of Stewart is 0. [X Cunt]
 Cunt Tightness of Stewart is 0. [X Cunt]
 Nipple Count of Stewart is 2. [X nipples]
 Breast Size of Stewart is 0. [X at the start]

@@ -178,7 +178,7 @@ Cock Length of Vent is 7. [7 Inches]
 Ball Size of Vent is 4.
 Ball Count of Vent is 2. [2 balls]
 Cunt Count of Vent is 0. [X pussy]
-Cunt Length of Vent is 0. [X Cunt]
+Cunt Depth of Vent is 0. [X Cunt]
 Cunt Tightness of Vent is 0. [X Cunt]
 Nipple Count of Vent is 0. [X nipples]
 Breast Size of Vent is 0. [X at the start]

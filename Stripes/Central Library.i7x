@@ -460,7 +460,7 @@ to say libraryexplore:
 				now Ball Size of Player is 0;
 			if "Male Preferred" is not listed in feats of Player:
 				if Player is not female, now Cunt Count of Player is 1;
-				if Cunt Length of Player < 6, now Cunt Length of Player is 6;
+				if Cunt Depth of Player < 6, now Cunt Depth of Player is 6;
 				if Cunt Tightness of Player < 4, now Cunt Tightness of Player is 4;
 				if Nipple Count of Player is 0, now Nipple Count of Player is 2;
 				if Breast Size of Player < 3, now Breast Size of Player is 3;

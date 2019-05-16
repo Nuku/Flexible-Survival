@@ -48,7 +48,7 @@ Instead of resolving a Shipping Container:
 						break;
 				now Nipple Count entry is 6;
 				now Breast Size entry is 3;
-				now Cunt Length entry is 12;
+				now Cunt Depth entry is 12;
 				now Cunt Tightness entry is 6;
 				now monf is MonsterID;
 			if guy is not banned:		[Adjust Alpha Husky]
@@ -62,7 +62,7 @@ Instead of resolving a Shipping Container:
 				now Ball Size entry is 3;
 				now Nipple Count entry is 6;
 				now Breast Size entry is 3;
-				now Cunt Length entry is 12;
+				now Cunt Depth entry is 12;
 				now Cunt Tightness entry is 6;
 				now libido entry is 90;
 				now monm is MonsterID;

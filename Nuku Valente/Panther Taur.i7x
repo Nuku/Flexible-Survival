@@ -126,11 +126,11 @@ to say panthertaur rape: [panthertaur wins or player gets mounted]
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, though she misses her target and instead thrusts against your buttocks. Resigning yourself into being the panther's cocksleeve for a while, you prepare yourself for the inevitable penetration. She thrusts once, missing her target and hot dogging her feline member between your ass cheeks instead, twice, this time grinding between the lips of your [cunt size desc of Player] cunt, and the third time she manages to bury her cock inside your back passage. Once she pierces your pucker, you bite your lip while she yowls loudly. She shuffles her paws before thrusting as deep as she can, her furred balls slapping against your behind.";
 			say "     Once she has manages to embed herself inside your butt there is no stopping her. She keeps pounding your ass like it's her property, which it very much is right now. You whimper as the barbs covering her member keep raking on the inside of your ass. If another survivor came across you two, they wouldn't be able tell you apart from another mutant that has lost their senses, face down ass up while a panther taur fills their ass. With a yowl, she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan from the feeling of her hot feline pudding filling your ass, your pussy leaking but unable to cum without a cock stuffing it. With a soft purr, she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there. You get up quickly and make your way to safer area.";
 	else if Player is female:
-		if Cunt Length of Player < 10 or Cunt Tightness of Player < 8:
+		if Cunt Depth of Player < 10 or Cunt Tightness of Player < 8:
 			say "     She moves up behind you, giving a soft purr of approval as she bowls you over onto your back. She clambers over you easily, many soft breasts along her belly rubbing against your [breast size desc of Player] chest. She thrusts her hips forward, and you can feel her thick, spined member rubbing along your left leg, then your right as she rocks, trying to find the target. Her powerful lower paws pin you in place as she gets the aim right, nudging the massive head to your [cunt size desc of Player] lips and shoving forward.";
 			say "     Pain and pleasure alternate as she tries to wedge herself into your resisting passage. Though you are too small to take her, she gives it her best try despite, stretching you and rubbing your walls with her soft spines, sending flashes before your eyes at the overwhelming sensations radiating from your overfilled pussy. As she finds your bottom, she starts to rock as hard as she can, battering against your cervix, her large balls swaying potently with every thrust, her breasts mashing against you.";
 			say "With a loud howl, she explodes thickly into you, feline cum spraying everywhere, splashing your thighs and messing up the ground as most of it washes back even as your womb swells with what does make it in. Satisfied, the feline uses a paw to gently rub your chest a moment, then slides free, spines tickling faintly along the way. With a happy sigh, she slips away, leaving you in the puddle.[impregchance]";
-			increase Cunt Length of Player by 2;
+			increase Cunt Depth of Player by 2;
 			increase Cunt Tightness of Player by 1;
 		else:
 			say "     The feline brushes her pawlike hands across your [skin of Player] body, pressing to your front with her two heavy milk bags. Her hands reach for your sides, caressing as she bites at your ears gently, whispering, 'You will do just fine.'";
@@ -174,7 +174,7 @@ to say suck panthertaur:
 
 to say panthertaur ride cowgirl:
 	say "     Deciding you want to take the panther's herm cock into your cunt on your own terms you grin at her, ordering her to get down on her backs. She seems slightly reluctant to do so but complies as you insist, settling on her backs and watching you, displaying her many rows of breasts along with that proud spire and orbs of hers. Shedding any clothes in the way, you quickly move to straddle her underbelly, one hand hefting and guiding that tip to your [cunt size desc of Player] lips. Holding it in place, you push yourself back onto it, guiding that tapered tip inside of you with a shiver of excitement from both you and the taur.";
-	if Cunt Length of Player < 10 or Cunt Tightness of Player < 8:
+	if Cunt Depth of Player < 10 or Cunt Tightness of Player < 8:
 		say "     You let out a grunt as that length proves a bit of a challenge to fit inside your [cunt size desc of Player] pussy. Undeterred however, you wiggle and brace yourself, slowly rocking and grinding yourself down on that length bit by bit. Gradually, you do manage to stretch yourself out more around that thick spire, but you're still not able to take it all. Once you've fit as much of that length as it seems you're going to be able to take for now, you grip onto her breasts for support and start riding that cock more properly, though you're forced to keep your riding of her somewhat slow for the time being. She still seems to be enjoying it however, and the soft flesh barbs slowly dragging along your walls are sending thrills of pleasure up your spine.";
 		WaitLineBreak;
 		say "     With the tightness of your [cunt size desc of Player] cunt and the thickness of her cock as well as those barbs teasing your walls and your clit, it doesn't look like either of you are going to be lasting long. So it's not too much longer until she shudders and arches under you, cock throbbing powerfully and blasting thick feline scene into your ready depths. Your belly feels slightly bloated for a second before much of it washes back out along her exposed length, splattering her breasts, balls, and your thighs. The sensations of it all is enough to set you off as well, your walls gripping and squeezing around her shaft while ";
@@ -183,7 +183,7 @@ to say panthertaur ride cowgirl:
 		else:
 			say "you moan and tremble over her";
 		say ". Once you've both recovered enough, you pull off of her with a small gush of those fluids that hadn't already spilled out, then get cleaned up before continuing on your way.[impregchance]";
-		increase Cunt Length of Player by 2;
+		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
 		now Libido of Player is (Libido of Player + Libido of Player + 40) / 3;
 	else:
@@ -202,7 +202,7 @@ to say panthertaur ride cowgirl:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -244,7 +244,7 @@ When Play begins:
 	now Breast Size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 14; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 14; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 8; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
@@ -261,7 +261,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -349,7 +349,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

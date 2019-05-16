@@ -154,7 +154,7 @@ Cock Length of Elijah is 12.
 Ball Size of Elijah is 5. [golfball sized balls]
 Ball Count of Elijah is 2.
 Cunt Count of Elijah is 0.
-Cunt Length of Elijah is 0.
+Cunt Depth of Elijah is 0.
 Cunt Tightness of Elijah is 0.
 Nipple Count of Elijah is 2.
 Breast Size of Elijah is 0.
@@ -1764,7 +1764,7 @@ to say ElijahSex8: [Take Elijah and the Felinoid in your pussy - at the same tim
 		say "     The large feline doesn't hesitate a second, pouncing at an opportunity of fucking your pussy. He rears up, putting his paws and strong legs to either side of Elijah's and your chest on the bunk. You feel the soft fur of his belly rubbing against your back and his tongue licking your neck. Then there's the sensation of his hot, barbed cock brushing against the crack of your ass, sliding up and down in search of your pussy. [if Cunt Tightness of Player < 4]As he finds it and presses in beside Elijah, you don't think it'll fit at first, but then a slight shift goes through your body and your opening stretches to accommodate him - looks like his precum was enough to change that part of you[else]He finds it and presses in beside Elijah, stretching your opening tight around the two cocks[end if]. A deep vibration goes through you and Elijah as the felinoid purrs in satisfaction, sinking his feline member into your body. He's soon joined by Elijah's moaning at the feeling of a cock rubbing against his own - and of course your own, as two virile males fill your pussy with both their shafts.";
 		if Cunt Tightness of Player < 4:
 			increase Cunt Tightness of Player by 4;
-		if Cunt Length of Player < 12:
+		if Cunt Depth of Player < 12:
 			increase Cunt Tightness of Player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch[if Cock Count of Player is 1], and your own cock spasms and shoots long strands of cum all over Elijah's muscular chest[else if Cock Count of Player > 1], and your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest[end if].";
 		[puts Seraphim as lead monster in case of impregnation]
@@ -1790,7 +1790,7 @@ to say ElijahSex8: [Take Elijah and the Felinoid in your pussy - at the same tim
 		say "     The large feline doesn't hesitate a second, pouncing at an opportunity of fucking your pussy. He rears up, putting his paws and strong legs to either side of Elijah's and your chest on the bunk. You feel the soft fur of his belly rubbing against your back and his tongue licking your neck. Then there's the sensation of his hot, barbed cock brushing against the crack of your ass, sliding up and down in search of your pussy. [if Cunt Tightness of Player < 4]As he finds it and presses in beside Elijah, you don't think it'll fit at first, but then a slight shift goes through your body and your opening stretches to accommodate him - looks like his precum was enough to change that part of you[else]He finds it and presses in beside Elijah, stretching your opening tight around the two cocks[end if]. A deep vibration goes through you and Elijah as the felinoid purrs in satisfaction, sinking his feline member into your body. He's soon joined by Elijah's moaning at the feeling of a cock rubbing against his own - and of course your own, as two virile males fill your pussy with both their shafts.";
 		if Cunt Tightness of Player < 4:
 			increase Cunt Tightness of Player by 4;
-		if Cunt Length of Player < 12:
+		if Cunt Depth of Player < 12:
 			increase Cunt Tightness of Player by 6;
 		say "     Roaring in pleasure as he bottoms out inside you, the felinoid then starts to fuck you with deep, forceful thrusts, rocking your whole body back and forth. You have to grab his forelegs to hold on to so he doesn't push you too far up. With two cocks sliding in and out of your pussy and against each other, Elijah moaning below you and the felinoid purring and growling above, your mind gets lost in a lustful haze. You can't say how long this relentless animalistic mating takes, but who cares about such things when two mind-blowing orgasms rock your body in the meantime. Your pussy leaks a copious amount of female juices, lubricating the unending in-out movement of the felinoid's cock and dripping down onto Elijah's balls and crotch[if Cock Count of Player is 1], and your own cock spasms and shoots long strands of cum all over Elijah's muscular chest[else if Cock Count of Player > 1], and your own cocks spasm and shoot long strands of cum all over Elijah's muscular chest[end if].";
 		[puts Seraphim as lead monster in case of impregnation]

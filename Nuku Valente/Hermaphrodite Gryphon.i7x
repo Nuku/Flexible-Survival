@@ -26,7 +26,7 @@ To say losetohgryphon:
 		if anallevel is 1, now analchance is 0;
 		if Player is herm:
 			if a random chance of 2 in 3 succeeds:	[fucking the player]
-				if Cunt Length of Player >= 12:
+				if Cunt Depth of Player >= 12:
 					say "[gryphonfuck1]"; [player herm pussy fuck]
 				else:
 					say "[gryphonfuck4]"; [oversized pussy fuck]
@@ -49,7 +49,7 @@ To say losetohgryphon:
 		else if Player is female:
 			if a random chance of analchance in 20 succeeds:
 				say "[gryphonfuck7]";
-			else if Cunt Length of Player >= 12:
+			else if Cunt Depth of Player >= 12:
 				say "[gryphonfuck5]"; [female player pussy fuck]
 			else:
 				say "[gryphonfuck4]"; [oversized pussy fuck]
@@ -74,7 +74,7 @@ to say gryphonfuck3: [player fucks gryphon pussy]
 
 to say gryphonfuck4: [oversized pussy fuck]
 	say "     The gryphon nudges you over onto your belly with suddenly gentle hands, holding you in place as she scrambles on top of you, pressing her warm furry bulk against your [skin of Player] back. You feel a shaft that's far too large for your [cunt size desc of Player] passageway. Before you can wriggle away, it shoves up into you, pounding deeply and making your entire body shudder and quake. You can feel yourself being stretched painfully by the huge member as it batters against your cervix. The gryphon calls out above you, squeezing you close to her curvy front as hot seed rushes into you, directly injected into your womb with powerful cannon blasts. You can feel the heat washing off her immense balls as she makes your belly swell with potential life. Sated, she gently sets you down, licks your cheek, and moves off, semi stiff member wagging between her thighs.[ovichance]";
-	if "Male Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player, increase Cunt Length of Player by 1;
+	if "Male Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player, increase Cunt Depth of Player by 1;
 
 to say gryphonfuck5: [female player pussy fuck]
 	say "     The gryphon, victorious, pushes you onto your back and buries her face into your crotch. She pulls your clothes free before she starts to lap at your [cunt size desc of Player] lips. Her soft tongue has you squirming in pleasure, growing wet under her skillful ministrations. Detecting you're ready, she slips up over you, pressing her large breasts to your [skin of Player] [breast size desc of Player] chest, smoothly slipping her black shaft into your eager and ready body. She kisses and licks at you, pressing that beak expertly to your lips, managing a fierce and passionate exchange despite it. You find your hands wandering over her sides, then drawing her closer as her love making becomes more and more intense. Your body grows tense before pleasure washes over you, but the gryphon is not yet sated, pistoning smoothly against you and crooning in an ear as she begins to bump you with the thick knot of her shaft. A firm shove, and it pops into place, locking her to you as your belly begins to swell with fertile seed. She shivers and buries her face into your neck as she peaks, remaining on top of you, hugging, for the minute it takes for her huge balls to unload. You are stuck to her, snuggling quietly, for what feels like an hour before she slips from you, kisses one last time, and departs.[ovichance]";
@@ -137,7 +137,7 @@ To say beatthehgryphon:
 				now sortorder entry is 3;
 				now description entry is "Get that knotted cock in your ass"; ]
 			[]
-			if Player is male and Cock Length of Player > 7 and player is female and Cunt Length of Player > 5:
+			if Player is male and Cock Length of Player > 7 and player is female and Cunt Depth of Player > 5:
 				choose a blank row in table of fucking options;
 				now title entry is "Titty fuck + ride";
 				now sortorder entry is 4;
@@ -221,7 +221,7 @@ to say hgryphon_pw_01:
 
 to say hgryphon_pw_02:
 	say "     Approaching the defeated gryphon with confidence, you approach her and eye that stiff cock of hers. You straddle your fallen blue playmate and start to ease the tip of the long black shaft past your moistening lips. You feel every inch as you slide all the way down to the knot. Unable to take the cock in any further, you start to move your hips, grinding against the gryphon's mighty black knot. The gryphon's eyes start to roll back, your opponent lost in bliss from your grinding, occasionally emitting a low, rolling squawk. As you increase your pace, you see what appears to be milk dribbling from the beast's large nipples. You bend down and take one of the nipples into your mouth. While you greedily consume all the milk these wonderful teats will produce, a hot wave of desire floods through you, and you start to really want that knot inside you. Grinding harder and harder, faster and faster, you try and slide that bulb past your slick labial lips. You feel climax approaching, so you thrust down as hard as you can to force that wonderful bulge inside.";
-	if Cunt Length of Player < 6:
+	if Cunt Depth of Player < 6:
 		say "     It's no use, you are just too small to take it all in. The gryphon chirps soothingly understanding your frustration. Suddenly, you let out a startled yelp as you feel an electrifying tickling sensation on your clit and look down to see the puffed end of a blue tail to be the cause. 'Perhaps this will help ease your suffering,' your lover says softly, and help it does! The added sensation of that blue tail proves too much for you. As your body shakes with orgasm, you involuntarily clench your jaw, clamping down on her tasty, milk squirting nipple. The added pain is apparently just what she needed, your azure mate letting out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
 	else:
 		say "     Seeing what you are trying to do, your blue lover waits for the right moment, and with one masterful thrust, she firmly wedges her massive black knot deep inside your trembling pussy. The mixed feelings of pain and pleasure overcome you; your knees buckle and you collapse into the soft furry warmth of the gryphon's bosom. You are still conscious, but you are too overwhelmed to do anything but enjoy the ride. 'It's alright baby, mama's here,' the gryphon coos as she softly wraps her furry blue arms around you, placing her leaking nipple back into your mouth. As you resume suckling, the gryphon starts to rock her hips back and forth, causing her knot to stretch you to your limits. The pleasure is so intense that you barely register achieving orgasm after orgasm thanks to your lover's exceptional skills. After what seems like seconds (although you realize it's more like half an hour), the gryphon herm lets out a loud squawk as she climaxes, filling you with cum from one end and milk from the other.[ovichance]";
@@ -274,7 +274,7 @@ to say HermGryphonDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -316,7 +316,7 @@ When Play begins:
 	now Breast Size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 13; [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 13; [ Depth in inches of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 7; [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is "gryphon milk"; [ Dropped item, blank for none. Case sensitive. ]
@@ -333,7 +333,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -421,7 +421,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is "balls in a furry, low-hanging sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 14;
+	now Cunt Depth entry is 14;
 	now Cunt Tightness entry is 6;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a fairly human-like appearance, complete with a clit at the top - and all of it in azure blue"; [partial sentence that fits in: "Your cunt [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]

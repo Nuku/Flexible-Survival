@@ -45,7 +45,7 @@ Cock Length of Fang is 10. [10 Inches]
 Ball Size of Fang is 10.
 Ball Count of Fang is 2. [Two balls]
 Cunt Count of Fang is 0. [No pussy]
-Cunt Length of Fang is 0. [No Cunt]
+Cunt Depth of Fang is 0. [No Cunt]
 Cunt Tightness of Fang is 0. [No Cunt]
 Nipple Count of Fang is 2. [2 nipples]
 Breast Size of Fang is 0. [Flat at the start]

@@ -59,7 +59,7 @@ Cock Count of Kyrverth is 1. [One cock]
 Ball Size of Kyrverth is 0. [Starts small and grows with Kyrverthstage] COMMENTED FOR NOW, CHANGES THROUGH THE FILE]
 Ball Count of Kyrverth is 2. [2 Balls, they change size as you go.]
 Cunt Count of Kyrverth is 0. [No cunt]
-Cunt Length of Kyrverth is 0. [No cunt]
+Cunt Depth of Kyrverth is 0. [No cunt]
 Cunt Tightness of Kyrverth is 0. [No cunt]
 Nipple Count of Kyrverth is 0. [No Nipples]
 Breast Size of Kyrverth is 0. [No boobs]
@@ -400,7 +400,7 @@ instead of fucking the Kyrverth:
 				say "[KyrverthMaleCheck]";
 			else if KyrverthMaleBoning is 1:
 				say "[KyrverthAnalSex]";
-		else if ((scalevalue of Player <= 1 and "Kinky" is not listed in feats of Player) or Cunt Length of Player < 10): [Too small for sex]
+		else if ((scalevalue of Player <= 1 and "Kinky" is not listed in feats of Player) or Cunt Depth of Player < 10): [Too small for sex]
 			say "     As you walk up to Kyrverth, he looks at you closely, then says 'Sorry, you are nice and all, but I doubt it would fit.'";
 			WaitLineBreak;
 		else if Player is female: [Female player that is large enough]
@@ -446,8 +446,8 @@ to say KyrverthSex:
 		if hp of Player <= 0:
 			now hp of Player is 1;
 	WaitLineBreak;
-	[if Player has a Cunt Length between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
-	[If the players Cunt Length is greater than 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
+	[if Player has a Cunt Depth between 10 and 18 or they are scalevalue 1 with the kinky trait, Kyrverth stuffs their cunt but can't get balls deep. Cum everywhere.]
+	[If the players Cunt Depth is greater than 18, Kyrverth fucks them in the cunt, gets balls deep, fucks them, knots, and cums. High chance of impregnation?]
 
 to say KyrverthAnalSex: [For null and male players]
 	if scalevalue of Player is:

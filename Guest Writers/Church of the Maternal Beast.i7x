@@ -258,7 +258,7 @@ to Hellhound infect female:
 	now bodytype of Player is "human";
 	now SleepRhythm of Player is 0;
 	now Cunt Count of Player is 1;
-	now Cunt Length of Player is 6;
+	now Cunt Depth of Player is 6;
 	now Cunt Tightness of Player is 4;
 	now Nipple Count of Player is 2;
 	now Breast Size of Player is 2;
@@ -396,7 +396,7 @@ every turn (This is the check Hellhound rule):
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
 				now the Ball Size of the player is 4;
-				now Cunt Length of Player is 0;
+				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
 				now Breast Size of Player is 0;
@@ -406,7 +406,7 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to normal.";
 				now Cock Count of Player is 0;
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 6;
+				now Cunt Depth of Player is 6;
 				now Cunt Tightness of Player is 4;
 				now Nipple Count of Player is 2;
 				now Breast Size of Player is 2;
@@ -456,7 +456,7 @@ every turn (This is the check Hellhound rule):
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
 				now the Ball Size of the player is 4;
-				now Cunt Length of Player is 0;
+				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
 				now Breast Size of Player is 0;
@@ -466,7 +466,7 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to your cursed, hellhound state.";
 				now Cock Count of Player is 0;
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 6;
+				now Cunt Depth of Player is 6;
 				now Cunt Tightness of Player is 4;
 				now Nipple Count of Player is 8;
 				now Breast Size of Player is 4;
@@ -514,7 +514,7 @@ every turn (This is the check Hellhound rule):
 				now Cock Count of Player is 1;
 				now Cock Length of Player is 6;
 				now the Ball Size of the player is 4;
-				now Cunt Length of Player is 0;
+				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 				now Nipple Count of Player is 2;
 				now Breast Size of Player is 0;
@@ -524,7 +524,7 @@ every turn (This is the check Hellhound rule):
 					say "     Your newly-formed shaft throbs, then rapidly ceases to be as the Hellhound's [']gift['] restores you to your cursed, hellhound state.";
 				now Cock Count of Player is 0;
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 6;
+				now Cunt Depth of Player is 6;
 				now Cunt Tightness of Player is 4;
 				now Nipple Count of Player is 8;
 				now Breast Size of Player is 4;

@@ -223,7 +223,7 @@ Cock Length of Angie is 8. [X Inches]
 Ball Size of Angie is 4.
 Ball Count of Angie is 2. [X balls]
 Cunt Count of Angie is 1. [X pussy]
-Cunt Length of Angie is 8. [X Cunt]
+Cunt Depth of Angie is 8. [X Cunt]
 Cunt Tightness of Angie is 4. [X Cunt]
 Nipple Count of Angie is 2. [X nipples]
 Breast Size of Angie is 4. [X at the start]
@@ -1076,11 +1076,11 @@ to say AngiePTFun:
 		say "     Angie circles you once more before she rears up and sets her paws on your furry back, pulling your lower body towards herself. 'Mine,' she says, nudging at your bottom with her increasingly firm feline shaft. A soft growl comes from her and, looking over your shoulder, you can see her tail lashing agitatedly with her building lust. ";
 		if Player is female:
 			say "Without hesitation, she sinks her thick shaft into you, testing your ability to contain it as she leans onto your tauric back, sinking that meat into your body in a swift slide. ";
-			if Cunt Length of Player > 15:
+			if Cunt Depth of Player > 15:
 				say "Your large feline cunt accepts the shaft without problem, and though it is a massive pole, it slides wetly along your sensitive, trembling, passage, forcing a cooing purr from deep in your chest.";
 			else:
 				say "You feel your cunt being stretched painfully around the shaft, pain and pleasure mixing in sharp tingly spikes as she works her way to the hilt regardless, stretching you without reservation in her goal to embed herself fully in your sleek panther body.";
-				increase Cunt Length of Player by 3;
+				increase Cunt Depth of Player by 3;
 			say "     As she rocks against you, her barbs tug harshly at you, at first sending shivers of displeasure, but with each tug, the sensation seems to shift subtly, until you are rocking against her, trying to get more of it. Your cunt weeps your fluids with a maddening arousal as you and she rock together intently.";
 			WaitLineBreak;
 			say "     A soft meow distracts you from the pleasure behind, and Midnight rears up, placing his paws on your fore shoulders and leaning up to give you a licking across your black snout and nose. You lick back at him, reaching to hug the beast in close as you rise higher and higher in pleasure. Midnight scooches closer, draping his paws over you as he grinds upwards, driving his erection between your low hanging breasts, starting to tit fuck you eagerly. He leaves drops of pre-cum across your pelt, glittering like pearls on the dark background.";

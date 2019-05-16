@@ -48,7 +48,7 @@ Cock Length of Fancy is 0. [X Inches]
 Ball Size of Fancy is 0.
 Ball Count of Fancy is 0. [X balls]
 Cunt Count of Fancy is 1. [X pussy]
-Cunt Length of Fancy is 24. [X Cunt]
+Cunt Depth of Fancy is 24. [X Cunt]
 Cunt Tightness of Fancy is 12. [X Cunt]
 Nipple Count of Fancy is 2. [X nipples]
 Breast Size of Fancy is 4. [X at the start]

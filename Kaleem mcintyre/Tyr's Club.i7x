@@ -39,7 +39,7 @@ Cock Length of Tyr is 12.
 Ball Size of Tyr is 4.
 Ball Count of Tyr is 2.
 Cunt Count of Tyr is 0.
-Cunt Length of Tyr is 0.
+Cunt Depth of Tyr is 0.
 Cunt Tightness of Tyr is 0.
 Nipple Count of Tyr is 2.
 Breast Size of Tyr is 0.

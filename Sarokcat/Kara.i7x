@@ -21,7 +21,7 @@ Cock Length of Kara is 8. [X Inches]
 Ball Size of Kara is 4.
 Ball Count of Kara is 2. [X balls]
 Cunt Count of Kara is 1. [X pussy]
-Cunt Length of Kara is 8. [X Cunt]
+Cunt Depth of Kara is 8. [X Cunt]
 Cunt Tightness of Kara is 6. [X Cunt]
 Nipple Count of Kara is 2. [X nipples]
 Breast Size of Kara is 2. [X at the start]

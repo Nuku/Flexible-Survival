@@ -180,7 +180,7 @@ to say losetogob_m:
 		else:
 			say "he briefly teases your [cunt size desc of Player] portal[sfn] before [if Cunt Count of Player > 1]their[else]its[end if] appropriate use";
 		say ". Soon thereafter, you feel the head of his eager organ shove its way past the supple folds of your flesh, ";
-		if Cunt Length of Player > 15:
+		if Cunt Depth of Player > 15:
 			say "his prick barely registering against for you and your sizeable hole. He doesn't seem to regard this, though; perhaps all the more excuse to be more reckless in his [if HP of Player > 0]use[else]abuse[end if].";
 		else:
 			say "[if HP of Player > 0]eliciting a moan from you in[else]forcing a moan from your lips in involuntary[end if] response against the irreverent intrusion. He [if HP of Player > 0]at least spares you a moment of gentle reservation before his wanton need takes precedent[else]spares you little reprieve, eager to enforce his wanton dominion[end if].";
@@ -189,7 +189,7 @@ to say losetogob_m:
 				say "[one of][if scalevalue of Player > 3]Ass, big ass, MINE, mine[else]Ass, ass, MINE, ass[end if][or]Mine, MINE, ha ha[or]Fuck, fuck, fuck, ass[at random]";
 			else:
 				say "[if scalevalue of Player > 3][one of]F-fuck, there's so much here[or]I bet you can't feel a thing[or]I could lose myself in a hole this big[at random][else if HP of Player > 0][one of]Oh, a nice fit[or]I bet you want to see me do my magic[or]Oh, this is going to be a fun ride[at random][else][one of]Don't tense up so much, it'll only be harder for you[or]Oh, calm down and let me work my magic[or]Oh, what a squirming ride[at random][end if]";
-			if Cunt Length of Player > 15:
+			if Cunt Depth of Player > 15:
 				say "!' Slowly building up a pace of fucking you proper, his intrusion is not enough to effectively pleasure you[if HP of Player > 0] - not that this is really a pressing issue you for you right now -[else],[end if] ";
 				if Player is male:
 					say "[if Cock Count of Player > 2]a shortcoming he attempts to compensate for by the additional attention he confers to your dicks, freeing both hands to rapidly pump two of them[else if Cock Count of Player > 1]a shortcoming he attempts to compensate for by the additional attention he confers to your dicks, freeing both hands to rapidly pump the two of them[else], a shortcoming he compensates for by the additional attention he confers to your dick, freeing a hand to rapidly pump along its length[end if]. You can imagine the whole affair is a bit awkward for the diminutive goblin, barely able to ride and hold onto you at the same time, though he's certainly not lacking in tenacity.";
@@ -222,7 +222,7 @@ to say losetogob_m:
 					else:
 						say "[if scalevalue of Player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][else][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 					say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[impregchance]";
-				else if (Cunt Length of Player > 15 and (Cunt Count of Player > 1 or Breast Size of Player > 0)) or Cunt Length of Player < 16:
+				else if (Cunt Depth of Player > 15 and (Cunt Count of Player > 1 or Breast Size of Player > 0)) or Cunt Depth of Player < 16:
 					say "     Suddenly, you feel the goblin's load flood your womb, the sensation - coupled with his additional attendance - driving you to ecstasy as well, the diminutive creature panting against your [bodytype of Player] form as your greedy hole milks him of every last drop.";
 					say "     '";
 					if gobdem is true:
@@ -422,7 +422,7 @@ to say fgob_vicsex3_f:
 
 to say mgob_vicsex1:	[m-gob vaginal sex]
 	say "     You push him onto his back, casually parting the creature's raggedy loincloth to expose his cock before you. [if scalevalue of Player > 2]He's not particularly big, but given a creature of his size you suppose it measures up to be quite impressive by standards of proportions[else]You're happy to see he's quite well endowed in spite of being in your general size range[end if], and - thankfully - he doesn't protest when your [if scalevalue of Player > 3]tongue[else]head[end if] moves to lick his rod, eliciting its arousal.";
-	say "     You inevitably move to mount him, your affections sufficient enough to drive the goblin to arousal. [if scalevalue of Player > 3]He'd doubtlessly be more obliging towards these turn of events if you didn't tower over him as much as you do now, perhaps quick to fear you'd crush him under the weight of your [Body Size Adjective of Player], [bodydesc of Player] body[else]He can probably live with his loss if it leads to something like this, encouraging your use of his tool by stroking your [bodydesc of Player] form with his free hands[end if]. You moan in approval as his cock sinks into the depths of [if Cunt Count of Player > 1]one of your [cunt size desc of Player] cunts[else]your [cunt size desc of Player] cunt[end if], [if Cunt Length of Player > 12]and though his tool is too small to easily pleasure yourself, that isn't going to stop you from making full use of him[else]his rod gradually enveloped by the folds of your flesh[end if].";
+	say "     You inevitably move to mount him, your affections sufficient enough to drive the goblin to arousal. [if scalevalue of Player > 3]He'd doubtlessly be more obliging towards these turn of events if you didn't tower over him as much as you do now, perhaps quick to fear you'd crush him under the weight of your [Body Size Adjective of Player], [bodydesc of Player] body[else]He can probably live with his loss if it leads to something like this, encouraging your use of his tool by stroking your [bodydesc of Player] form with his free hands[end if]. You moan in approval as his cock sinks into the depths of [if Cunt Count of Player > 1]one of your [cunt size desc of Player] cunts[else]your [cunt size desc of Player] cunt[end if], [if Cunt Depth of Player > 12]and though his tool is too small to easily pleasure yourself, that isn't going to stop you from making full use of him[else]his rod gradually enveloped by the folds of your flesh[end if].";
 	if Player is male:
 		if scalevalue of Player > 4:
 			say "     The small creature eclipsed under your form, your hands move to stroke your hardening [if Cock Count of Player > 2]cocks. Two of them in your grasp, you're not about to let your beleaguered companion be the sole progenitor of your pleasure[else if Cock Count of Player > 1]cocks. Both of them in your grasp, you're not about to let your beleaguered companion be the sole progenitor of your pleasure[else]cock. With your [cock size desc of Player] tool in your grasp, you're not about to let your beleaguered companion be the sole progenitor of your pleasure[end if]. So small compared to you, he at least gets the small mercy of your organ aimed well over him, [if Ball Size of Player >= 5]though you could only imagine this sentiment as he's buried under your [Ball Size Adjective of Player] [Balls][else]though he is perhaps more distracted by having to contend with your troubling weight[end if].";
@@ -435,7 +435,7 @@ to say mgob_vicsex1:	[m-gob vaginal sex]
 		say ", wracking you with the throes of your own subsequent release. [if Cock Count of Player < 1]Cocks shooting their load[else]cock shooting its load[end if] clear across the open air, you unleash a [Cum Load Size of Player] load as that makes a [if Ball Size of Player >= 6]considerable[else]fair[end if] mess of the surrounding scenery, milking him of every last drop before you finally relent.";
 	else if Player is male:
 		say ", wracking you with the throes of your own subsequent release. [if Cock Count of Player < 1]Cocks firing their load[else]cock firing its load[end if] straight into the goblin's exposed face, you unleash a [Cum Load Size of Player] load as that makes a [if Ball Size of Player >= 6]considerable[else]fair[end if] mess of the [if scalevalue of Player > 2]diminutive[end if] creature's face, milking him of every last drop before you finally relent.";
-	else if Cunt Length of Player > 12:
+	else if Cunt Depth of Player > 12:
 		say "; however, this isn't nearly enough to get yourself off, forcing the [if scalevalue of Player > 2]diminutive[end if] goblin to endure your persistent abuse, forcing him to orgasm a number of additional times before you achieve your bliss, milking the poor creature dry before you finally relent.";
 	else:
 		say ", wracking you with the throes of your own subsequent release. [if scalevalue of Player > 3]Straining the goblin even further as you more firmly pin him down[else]Tightening your grip around the goblin[end if], your greedy hole milks the creature of his seed [']til naught remains before you finally relent.";
@@ -584,7 +584,7 @@ to say goblindesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
@@ -627,7 +627,7 @@ When Play begins:
 	now Breast Size entry is 2; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 3; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 35; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
@@ -644,7 +644,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -732,7 +732,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

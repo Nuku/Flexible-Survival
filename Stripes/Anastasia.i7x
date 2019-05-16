@@ -26,7 +26,7 @@ Cock Length of Anastasia is 0. [cock length]
 Ball Size of Anastasia is 0. [number of player balls: 1, 2 or 4]
 Ball Count of Anastasia is 0. [no balls]
 Cunt Count of Anastasia is 1. [no pussy]
-Cunt Length of Anastasia is 0. []
+Cunt Depth of Anastasia is 0. []
 Cunt Tightness of Anastasia is 0. []
 Nipple Count of Anastasia is 0. [2 nipples]
 Breast Size of Anastasia is 0. [flat]
@@ -592,10 +592,10 @@ to Anastasiasexchange:
 	choose row MonsterID from Table of Random Critters;
 	if "Female Preferred" is listed in feats of Player:
 		now sex entry is "Female";
-		if Cunt Length of Player < Cunt Length entry and scenario is not "Researcher", follow the sex change rule;
+		if Cunt Depth of Player < Cunt Depth entry and scenario is not "Researcher", follow the sex change rule;
 	else if "Herm Preferred" is listed in feats of Player:
 		now sex entry is "Both";
-		if Cunt Length of Player < Cunt Length entry and Cock Length of Player < Cock Length entry and scenario is not "Researcher", follow the sex change rule;
+		if Cunt Depth of Player < Cunt Depth entry and Cock Length of Player < Cock Length entry and scenario is not "Researcher", follow the sex change rule;
 	else:
 		now sex entry is "Male";
 		if Cock Length of Player < Cock Length entry and scenario is not "Researcher", follow the sex change rule;

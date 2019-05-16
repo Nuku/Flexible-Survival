@@ -14,7 +14,7 @@ Cock Length of Amaryllis is 12. [X Inches]
 Ball Size of Amaryllis is 8.
 Ball Count of Amaryllis is 2. [X balls]
 Cunt Count of Amaryllis is 1. [X pussy]
-Cunt Length of Amaryllis is 12. [X Cunt]
+Cunt Depth of Amaryllis is 12. [X Cunt]
 Cunt Tightness of Amaryllis is 4. [X Cunt]
 Nipple Count of Amaryllis is 2. [X nipples]
 Breast Size of Amaryllis is 4. [X at the start]

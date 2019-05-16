@@ -23,7 +23,7 @@ Cock Length of Aster is 14. [check values]
 Ball Size of Aster is 7. [check values]
 Ball Count of Aster is 2.
 Cunt Count of Aster is 0.
-Cunt Length of Aster is 0.
+Cunt Depth of Aster is 0.
 Cunt Tightness of Aster is 0.
 Nipple Count of Aster is 2.
 Breast Size of Aster is 0.

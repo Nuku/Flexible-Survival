@@ -45,7 +45,7 @@ Cock Length of Jenna is 0. [X Inches]
 Ball Size of Jenna is 0.
 Ball Count of Jenna is 0. [X balls]
 Cunt Count of Jenna is 1. [X pussy]
-Cunt Length of Jenna is 8. [X Cunt]
+Cunt Depth of Jenna is 8. [X Cunt]
 Cunt Tightness of Jenna is 4. [X Cunt]
 Nipple Count of Jenna is 2. [X nipples]
 Breast Size of Jenna is 2. [X at the start]

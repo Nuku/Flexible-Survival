@@ -32,7 +32,7 @@ Cock Length of Sirius is 12. [12 inches]
 Ball Size of Sirius is 3.
 Ball Count of Sirius is 2. [Two balls]
 Cunt Count of Sirius is 0. [No pussy]
-Cunt Length of Sirius is 0. [No pussy]
+Cunt Depth of Sirius is 0. [No pussy]
 Cunt Tightness of Sirius is 0. [No pussy]
 Nipple Count of Sirius is 2. [2 nipples]
 Breast Size of Sirius is 0. [Flat at the start]

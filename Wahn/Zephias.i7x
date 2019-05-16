@@ -18,7 +18,7 @@ Cock Length of Zephias is 16.
 Ball Size of Zephias is 8.
 Ball Count of Zephias is 2.
 Cunt Count of Zephias is 0.
-Cunt Length of Zephias is 0.
+Cunt Depth of Zephias is 0.
 Cunt Tightness of Zephias is 0.
 Nipple Count of Zephias is 2. [2 nipples]
 Breast Size of Zephias is 0.

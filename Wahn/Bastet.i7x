@@ -276,7 +276,7 @@ Cock Length of Bastet is 9.
 Ball Size of Bastet is 2.
 Ball Count of Bastet is 0.
 Cunt Count of Bastet is 1.
-Cunt Length of Bastet is 9.
+Cunt Depth of Bastet is 9.
 Cunt Tightness of Bastet is 3.
 Nipple Count of Bastet is 2. [2 nipples]
 Breast Size of Bastet is 3.

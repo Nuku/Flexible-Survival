@@ -170,10 +170,10 @@ to say sexwithHadiya:
 			if Player consents:
 				LineBreak;
 				say "     Hadiya laughs as you admit that getting it in the ass is all you really need and plows into you hard and deep, grinding her knot against your pucker. 'That's my good slut, knows what's best for him - whatever Mistress wants.' You moan and nod, pressing back against her knot as your anus spreads, letting it pop into you, tying you to her. It pulses and throbs inside you as she pumps your cock all the faster. 'Cum for me, you bitch. Show me how much you love it.' You moan happily, finally having her permission to cum and blasting your hot seed across the floor after holding back for so long. With your ass clenching and milking around her cock, she cums soon after, giving you a hot, thick rush of hyena seed that fills your bowels and makes you cum all the more. You are both left panting and leaking as the last of your seed dribbles out. When her knot eventually goes down, she pulls free, pushes you down into the mess of your cum on the floor and flops back into her chair, not bothering to pull up her pants. After such a long, fulfilling, aching pounding, your ass is deliciously sore and you're too weak to get up for some time. Eventually you slink off, making a show of your soreness that has your mistress grinning even as your pussy shrinks down a little.[mimpregchance]";
-				decrease Cunt Length of Player by 2;
+				decrease Cunt Depth of Player by 2;
 				decrease Cunt Tightness of Player by 1;
-				if Cunt Length of Player <= 0 or Cunt Tightness of Player <= 0:
-					now Cunt Length of Player is 0;
+				if Cunt Depth of Player <= 0 or Cunt Tightness of Player <= 0:
+					now Cunt Depth of Player is 0;
 					now Cunt Tightness of Player is 0;
 					now Cunt Count of Player is 0;
 					say "     With a wet slurp that your mistress finds so satisfying, your pussy shrinks away completely and closes up, leaving you the male bitch she so desires.";

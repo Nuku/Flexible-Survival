@@ -358,7 +358,7 @@ carry out InfectionOverview:
 		now Cock Count of Player is 1;
 		now Cunt Count of Player is 1;
 		now Cock Length of Player is 10;
-		now Cunt Length of Player is 8;
+		now Cunt Depth of Player is 8;
 		now tail of Player is the tail entry;
 		now face of Player is the face entry;
 		now skin of Player is the skin entry;
@@ -382,9 +382,9 @@ to DescriptionDisplay:
 	follow the cunt descr rule;
 	if Player is female:
 		if Cunt Count of Player > 1:
-			now cunttext is " have [Cunt Count of Player] [cunt size desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Length of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
+			now cunttext is " have [Cunt Count of Player] [cunt size desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 		else:
-			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of Player], and further probing shows it to be [Cunt Length of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
+			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 	say "Looking over yourself, your body is covered in [skin of Player] skin. Your face is [face of Player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;

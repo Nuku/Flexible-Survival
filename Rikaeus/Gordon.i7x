@@ -31,7 +31,7 @@ Cock Length of Gordon is 6. [X Inches]
 Ball Size of Gordon is 4.
 Ball Count of Gordon is 2. [X balls]
 Cunt Count of Gordon is 0. [X pussy]
-Cunt Length of Gordon is 0. [X Cunt]
+Cunt Depth of Gordon is 0. [X Cunt]
 Cunt Tightness of Gordon is 0. [X Cunt]
 Nipple Count of Gordon is 2. [X nipples]
 Breast Size of Gordon is 0. [X at the start]

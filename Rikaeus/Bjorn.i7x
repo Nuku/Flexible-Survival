@@ -73,7 +73,7 @@ Cock Length of Bjorn is 8. [X Inches]
 Ball Size of Bjorn is 4.
 Ball Count of Bjorn is 2. [X balls]
 Cunt Count of Bjorn is 0. [X pussy]
-Cunt Length of Bjorn is 0. [X Cunt]
+Cunt Depth of Bjorn is 0. [X Cunt]
 Cunt Tightness of Bjorn is 0. [X Cunt]
 Nipple Count of Bjorn is 2. [X nipples]
 Breast Size of Bjorn is 0. [X at the start]

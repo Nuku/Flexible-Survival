@@ -15,7 +15,7 @@ Cock Length of Arthur is 8.
 Ball Size of Arthur is 6.
 Ball Count of Arthur is 2.
 Cunt Count of Arthur is 0.
-Cunt Length of Arthur is 0.
+Cunt Depth of Arthur is 0.
 Cunt Tightness of Arthur is 0.
 Nipple Count of Arthur is 2.
 Breast Size of Arthur is 0.

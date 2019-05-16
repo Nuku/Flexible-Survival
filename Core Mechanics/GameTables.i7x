@@ -22,7 +22,7 @@ Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state
 with 1000 blank rows
 
 Table of GameCharacters
-Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Length(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
+Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)	Level(number)	Armor(number)	Weapon Damage(number)	Capacity(number)	ScaleValue(number)	Strength(number)	Dexterity(number)	Stamina(number)	Charisma(number)	Intelligence(number)	Perception(number)	Hunger(number)	Thirst(number)	SleepRhythm(number)	Morale(number)	Lust(number)	Libido(number)	Loyalty(number)	Humanity(number)	Cocks(number)	Cock Length(number)	Cock Width(number)	Testes(number)	Cunts(number)	Cunt Depth(number)	Cunt Width(number)	Breasts(number)	Breast Size(number)	PlayerMet(truth state)	PlayerRomanced(truth state)	PlayerFucked(truth state)	OralVirgin(truth state)	Virgin(truth state)	AnalVirgin(truth state)
 with 1000 blank rows
 
 Table of PlayerData
@@ -693,6 +693,7 @@ Name(text)	Type(text)
 "KoballoonSexBadEnd"	"number"
 "koboldgangmet"	"number"
 "koboldgangsubs"	"number"
+"KoboldScaleColor"	"number"
 "Koghhstatus"	"number"
 "KorvinSubmitCounter"	"number"
 "kpstatus"	"number"
@@ -1259,6 +1260,8 @@ Name(text)	Type(text)
 "SylviaTrapVar"	"number"
 "SylviaVirginCheck"	"number"
 "taintedwoolfound"	"number"
+"TaniClassMemory"	"number"
+"TaniRecommendation"	"number"
 "Targetturns"	"number"
 "tatsave"	"number"
 "tatstatus"	"number"
@@ -1521,7 +1524,9 @@ Name(text)	Type(text)
 "pfpcock"	"text"
 "pfphair"	"text"
 "pfpskin"	"text"
+"PlayerClass"	"text"
 "ppcolor"	"text"
+"PronounChoice"	"text"
 "sangr"	"text"
 "Scenario"	"text"
 "sh-descr"	"text"

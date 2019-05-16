@@ -183,7 +183,7 @@ Cock Length of Spike is 9.
 Ball Size of Spike is 3.
 Ball Count of Spike is 2.
 Cunt Count of Spike is 0.
-Cunt Length of Spike is 0.
+Cunt Depth of Spike is 0.
 Cunt Tightness of Spike is 0.
 Nipple Count of Spike is 2.
 Breast Size of Spike is 0.

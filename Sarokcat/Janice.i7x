@@ -38,7 +38,7 @@ Cock Length of Janice is 0. [X Inches]
 Ball Size of Janice is 0.
 Ball Count of Janice is 0. [X balls]
 Cunt Count of Janice is 1. [X pussy]
-Cunt Length of Janice is 8. [X Cunt]
+Cunt Depth of Janice is 8. [X Cunt]
 Cunt Tightness of Janice is 4. [X Cunt]
 Nipple Count of Janice is 2. [X nipples]
 Breast Size of Janice is 4. [X at the start]

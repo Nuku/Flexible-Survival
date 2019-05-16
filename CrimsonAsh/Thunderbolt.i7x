@@ -138,7 +138,7 @@ Cock Length of Thunderbolt is 24. [X Inches]
 Ball Size of Thunderbolt is 4.
 Ball Count of Thunderbolt is 2. [X balls]
 Cunt Count of Thunderbolt is 0. [X pussy]
-Cunt Length of Thunderbolt is 0. [X Cunt]
+Cunt Depth of Thunderbolt is 0. [X Cunt]
 Cunt Tightness of Thunderbolt is 0. [X Cunt]
 Nipple Count of Thunderbolt is 2. [X nipples]
 Breast Size of Thunderbolt is 0. [X at the start]

@@ -197,7 +197,7 @@ Cock Length of Rex is 7. [Seven Inches]
 Ball Size of Rex is 3.
 Ball Count of Rex is 2. [Two balls]
 Cunt Count of Rex is 0. [No pussy]
-Cunt Length of Rex is 0. [No Cunt]
+Cunt Depth of Rex is 0. [No Cunt]
 Cunt Tightness of Rex is 0. [No Cunt]
 Nipple Count of Rex is 2. [2 nipples]
 Breast Size of Rex is 0. [Flat at the start]

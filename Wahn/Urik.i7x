@@ -30,7 +30,7 @@ Cock Length of Urik is 15.
 Ball Size of Urik is 4.
 Ball Count of Urik is 2.
 Cunt Count of Urik is 0.
-Cunt Length of Urik is 0.
+Cunt Depth of Urik is 0.
 Cunt Tightness of Urik is 0.
 Nipple Count of Urik is 2. [2 nipples]
 Breast Size of Urik is 0.

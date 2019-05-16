@@ -70,7 +70,7 @@ Cock Length of Philip is 10. [X Inches]
 Ball Size of Philip is 4.
 Ball Count of Philip is 2. [X balls]
 Cunt Count of Philip is 0. [X pussy]
-Cunt Length of Philip is 0. [X Cunt]
+Cunt Depth of Philip is 0. [X Cunt]
 Cunt Tightness of Philip is 0. [X Cunt]
 Nipple Count of Philip is 2. [X nipples]
 Breast Size of Philip is 0. [X at the start]

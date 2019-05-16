@@ -99,7 +99,7 @@ Cock Length of Ammy is 10. [X Inches]
 Ball Size of Ammy is 4.
 Ball Count of Ammy is 2. [X balls]
 Cunt Count of Ammy is 1. [X pussy]
-Cunt Length of Ammy is 10. [X Cunt]
+Cunt Depth of Ammy is 10. [X Cunt]
 Cunt Tightness of Ammy is 4. [X Cunt]
 Nipple Count of Ammy is 2. [X nipples]
 Breast Size of Ammy is 4. [D Cup at the start]

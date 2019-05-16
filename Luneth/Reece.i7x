@@ -13,7 +13,7 @@ Cock Length of Reese is 10.
 Ball Size of Reese is 5.
 Ball Count of Reese is 2.
 Cunt Count of Reese is 0.
-Cunt Length of Reese is 0.
+Cunt Depth of Reese is 0.
 Cunt Tightness of Reese is 0.
 Nipple Count of Reese is 2.
 Breast Size of Reese is 0.

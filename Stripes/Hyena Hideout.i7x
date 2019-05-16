@@ -284,7 +284,7 @@ to say hyenamat_victorytf:
 	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 5; [Size of breasts infection will try to attain ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 15;
+	now Cunt Depth entry is 15;
 	now Cunt Tightness entry is 9;
 	follow the sex change rule;
 	follow the sex change rule;

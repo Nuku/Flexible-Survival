@@ -15,7 +15,7 @@ Cock Length of Mul is 14.
 Ball Size of Mul is 8.
 Ball Count of Mul is 2.
 Cunt Count of Mul is 0.
-Cunt Length of Mul is 9.
+Cunt Depth of Mul is 9.
 Cunt Tightness of Mul is 2.
 Nipple Count of Mul is 2. [2 nipples]
 Breast Size of Mul is 0.

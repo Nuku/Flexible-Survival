@@ -9,7 +9,7 @@ Version 1 of Butterfly by Guest Writers begins here.
 Section 1 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 Section 2 - Variable and constant definitions
@@ -292,16 +292,16 @@ To say butterfly attack:
 		else if Player is female:
 			say "She reaches down and roughly pulls [if Cunt Count of Player > 1]the largest of your cunts[else]your cunt[end if] wide open with her hands. Her proboscis shoots down your passage, quickly bursting into your uterus. It then runs up each of your fallopian tubes in turn. Her long tongue pierces through and begins to suck the eggs right out of your ovaries. You feel your womb contract with the assault as her feeding renders you sterile. As your lower tummy convulses in pain, she recoils her tongue and chides, 'You're not licking.'";
 			if Cunt Count of Player is not 0 and "One Way" is not listed in feats of Player:
-				decrease Cunt Length of Player by 1;
-				decrease Cunt Length of Player by Cunt Length of Player divided by 3;
+				decrease Cunt Depth of Player by 1;
+				decrease Cunt Depth of Player by Cunt Depth of Player divided by 3;
 				decrease Cunt Tightness of Player by 1;
 				decrease Cunt Tightness of Player by Cunt Tightness of Player divided by 4;
 				if "Female Preferred" is listed in feats of Player:
-					if Cunt Length of Player < 5, now Cunt Length of Player is 5;
+					if Cunt Depth of Player < 5, now Cunt Depth of Player is 5;
 					if Cunt Tightness of Player < 3, now Cunt Tightness of Player is 3;
 				follow the cunt descr rule;
 				say " Strange [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your [if Cunt Count of Player > 1][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] as they begin to shrink. They[else][one of]cunt[or]pussy[or]vagina[or]cleft[at random] as it begins to shrink. It[end if] dwindles in size, becoming [descr]. ";
-				if Cunt Length of Player < 1 or Cunt Tightness of Player < 1:
+				if Cunt Depth of Player < 1 or Cunt Tightness of Player < 1:
 					say "With a sickening noise, you cease to be female all together.";
 					now Cunt Count of Player is 0;
 				if Cunt Count of Player > 1 and a random chance of 1 in 3 succeeds:
@@ -455,7 +455,7 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 10; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
 	now loot entry is "testosterone pill";
@@ -472,7 +472,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -560,7 +560,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -805,7 +805,7 @@ to say testosterone pill use:
 	if Player is herm:		[HERM]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
-		now Cunt Length of Player is 0;
+		now Cunt Depth of Player is 0;
 		say "With a burst of intense pain the lips of your cunt[sfn] fuse together and flatten. Within seconds nothing remains of your former femininity. ";
 		increase Cock Length of Player by 2;
 		increase Ball Size of Player by 2;
@@ -815,7 +815,7 @@ to say testosterone pill use:
 	else if Player is female:				[FEMALE]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
-		now Cunt Length of Player is 0;
+		now Cunt Depth of Player is 0;
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
 		now Ball Size of Player is 2;
@@ -824,7 +824,7 @@ to say testosterone pill use:
 	else if Player is male:				[MALE]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
-		now Cunt Length of Player is 0;
+		now Cunt Depth of Player is 0;
 		increase Cock Length of Player by 2;
 		increase Ball Size of Player by 2;
 		follow the cock descr rule;
@@ -833,7 +833,7 @@ to say testosterone pill use:
 	else:								[NEUTER]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
-		now Cunt Length of Player is 0;
+		now Cunt Depth of Player is 0;
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
 		now Ball Size of Player is 4;

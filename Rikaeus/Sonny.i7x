@@ -49,7 +49,7 @@ Cock Length of Sonny is 6. [X Inches]
 Ball Size of Sonny is 4.
 Ball Count of Sonny is 2. [X balls]
 Cunt Count of Sonny is 0. [X pussy]
-Cunt Length of Sonny is 0. [X Cunt]
+Cunt Depth of Sonny is 0. [X Cunt]
 Cunt Tightness of Sonny is 0. [X Cunt]
 Nipple Count of Sonny is 2. [X nipples]
 Breast Size of Sonny is 0. [X at the start]

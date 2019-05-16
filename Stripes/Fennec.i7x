@@ -113,9 +113,9 @@ to say beatthefennec:
 
 to say fennecvicsex1:
 	say "     With the cute fennec beaten and at your mercy, you decide to take advantage of the opportunity and pin him down with one hand. He gives a fearful yip at your rough treatment, but murrs as you reach back and grab his stiff cock in your other hand. Stroking over his throbbing rod, you move yourself into position and lower your hot pussy down onto his shaft.";
-	if Cunt Length of Player < 5:
+	if Cunt Depth of Player < 5:
 		say "     Being roughly a normal person's in size, it is a bit of a snug fit for your [cunt size desc of Player] pussy, but you do manage to work in as much as you can comfortably take (and maybe even a little more in your eagerness). You work yourself slowly over the fox's erection, moving carefully so it doesn't slip out. This makes for a nice, long ride that you find very enjoyable and quite rewarding when your prey finally cums hard, blasting his hot load right against your cervix so it can seep into your womb. Once you're done with him, you give his ears a scritch and get up, leaving him flopped out there to recover.[impregchance]";
-	else if Cunt Length of Player < 12:
+	else if Cunt Depth of Player < 12:
 		say "     Being roughly a normal person's in size, it is a nice fit for your [cunt size desc of Player] pussy. You work yourself eagerly over the fox's erection, moving in steady pushes of your hips down onto it and its growing knot. Having gotten quite excited, you grind down harder and harder, trying to get that thick bulb inside you. When you're finally successful, the fennec gives an excited series of yips and sprays shot after shot of his vulpine seed to fill your womb. Tied to the fox, you have to wait until his knot goes down before you work yourself free. The desert fox takes the opportunity to snuggle with you, running his paws over your body eagerly. Once the tie is released, you give his ears a parting scritch and you both go your separate ways.[impregchance]";
 	else:
 		say "     Being roughly a normal person's in size, it is an easy fit for your [cunt size desc of Player] pussy. You work yourself eagerly over the fox's erection, moving in quick, fast slams to make the most of his less-than-filling size. The fox moans and yips beneath you and you have to place your hands on his shoulders to keep him from squirming around too much. When his knot swells up, it gets somewhat better, but is still not quite enough. Having the knot pop in and out of you is quite enjoyable though and it soon sends the fox over the edge, blasting his hot load into your spacious cunt. Feeling the first quivers of your own orgasm, you slam yourself down onto his knot and clamp down around it as you climax, soaking the fennec's crotch in your juices. Once you're done with him, you pop off his knot, causing him to yip again. You give his ears a scritch and get up, leaving him flopped out there to recover.[impregchance]";
@@ -140,7 +140,7 @@ to say fennecattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -182,7 +182,7 @@ When Play begins:
 	now Breast Size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 6; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 4; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 60; [ Target libido the infection will rise towards. ]
 	now loot entry is "fennec semen"; [ Dropped item, blank for none. Case sensitive. ]
@@ -199,7 +199,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -287,7 +287,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

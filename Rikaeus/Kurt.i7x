@@ -84,7 +84,7 @@ Cock Length of Kurt is 8. [X Inches]
 Ball Size of Kurt is 4.
 Ball Count of Kurt is 2. [X balls]
 Cunt Count of Kurt is 0. [X pussy]
-Cunt Length of Kurt is 0. [X Cunt]
+Cunt Depth of Kurt is 0. [X Cunt]
 Cunt Tightness of Kurt is 0. [X Cunt]
 Nipple Count of Kurt is 2. [X nipples]
 Breast Size of Kurt is 0. [X at the start]

@@ -101,7 +101,7 @@ to say LoseToFeralBull:
 		now antimoo is 1;
 	if CowBully > 0:
 		if Player is female:
-			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Length of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy, unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
+			say "     The big bull grunts fiercely, breathing hard after his maddened fight. He prods you with his sharp horns until you huddle on all fours. He scrabbles at your rear with his hooves and you have a few moments to wrench your clothes out of the way before you feel the animal's huge member thrust into you, [if Cunt Depth of Player < 28]feeling like it will split you in half. Your cries, when you hear them, sound almost as pitiful as the cow you defeated earlier as you try in vain to brace yourself against the crazed beast's rutting[else]filling your cavernous pussy like few can. Your cries of ecstasy, unknowingly echo the pitiful cries of the cow girl you defeated. All of your attention, however, is focused on bracing yourself against the magnificent brute's powerful rutting thrusts[end if]. He bellows as you feel his burning seed pour into you, filling you up, and making you look very pregnant. Finally done with you, calm after his release, he wanders off to graze.";
 			infect "Bovine";
 			now CowBully is 0;
 			if Mooing > 0:
@@ -131,7 +131,7 @@ to say LoseToFeralBull:
 			say "     The bull seems to lose interest in you and wanders off to find some grass to eat.";
 		else:
 			if Player is female:
-				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your pussy to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your cleft. Suddenly nothing seems to matter but having him within you. His bellowing thrusts are [if Cunt Length of Player < 28]softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed snatch to the breaking point[else]countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic cunt feel full[end if], and explodes with his orgasm, painting every inch of your insides white. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
+				say "     Lifting his nose to the air, the bull catches your scent and you know exactly what scent that is, cow in heat. Pacing over to you he sniffs at your rear and you feel yourself rising to all fours and presenting your pussy to the beast. His weight is suddenly upon you, you struggle to hold him for a moment until you feel his huge member press at your cleft. Suddenly nothing seems to matter but having him within you. His bellowing thrusts are [if Cunt Depth of Player < 28]softened by your attempts to buck forward with him, trying to avoid being impaled by his gigantic rod. Suddenly his breeding tool seems to swell even bigger, stretching your already taxed snatch to the breaking point[else]countered by your own as you rock your hips back against his motion, feeling him deep within you. Suddenly his breeding tool seems to swell even larger, somehow making even your gigantic cunt feel full[end if], and explodes with his orgasm, painting every inch of your insides white. Dismounting, he makes a loud whuffing sound and you feel so happy and full of his seed you lay down and rest just a moment, even as you begin to feel thirsty again...";
 				fimpregchance;
 				fimpregchance;
 				fimpregchance;
@@ -344,7 +344,7 @@ to say feral bull attack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -386,7 +386,7 @@ When Play begins:
 	now Breast Size entry is 9; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 28; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Depth entry is 28; [ Length of female sex infection will attempt to give you. ]
 	now Cunt Tightness entry is 8; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [ Amount player Libido will go up if defeated ]
 	now loot entry is "cow milk"; [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
@@ -403,7 +403,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -491,7 +491,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

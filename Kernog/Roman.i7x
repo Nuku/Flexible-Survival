@@ -51,7 +51,7 @@ Cock Length of Team Captain Roman is 0. [X Inches]
 Ball Size of Team Captain Roman is 0.
 Ball Count of Team Captain Roman is 0. [X balls]
 Cunt Count of Team Captain Roman is 1. [X pussy]
-Cunt Length of Team Captain Roman is 8. [X Cunt]
+Cunt Depth of Team Captain Roman is 8. [X Cunt]
 Cunt Tightness of Team Captain Roman is 4. [X Cunt]
 Nipple Count of Team Captain Roman is 2. [X nipples]
 Breast Size of Team Captain Roman is 0. [X at the start]

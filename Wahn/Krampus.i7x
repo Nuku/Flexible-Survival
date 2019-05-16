@@ -377,7 +377,7 @@ to say KrampusPunish2: [flogging + bag bj or punishment fuck]
 		WaitLineBreak;
 		say "     The furious ramming pushes you to the edge of your self-control, and beyond. Without any outside help, [if Player is male]your cock spurts a heavy dose of cum thanks to your battered prostate[else]Your empty pussy quivers from your anal orgasm[end if]. 'It seems that my punishment had quite the effect on you, you naughty slut. Your ass is squeezing my cock like a vise. Let me... Show you... My appreciation!' With a mix of a goat bleat and a roar, Krampus rams his cock as far as he can and pumps his hips several times. He holds you so tightly that you have trouble breathing. Powerless, you feel your stomach fill little by little with Krampus's cum, making it bulge outwards visibly. Only then the big black goat pulls out, letting a torrent of cum follow his cock on the way out.";
 	else:
-		say "     Slowly, agonizingly slowly, Krampus pushes his maleness against your [if Cunt Count of Player > 1]main [end if]cunt. You feel your entrance stretch [if Cunt Length of Player < 12]painfully [end if]wide to accommodate the goat's thick cock. Groaning, you try to escape his hard shaft impaling you, but you have no space to maneuver. Krampus chuckles at your futile resistance. 'What's this, [if Player is not defaultnamed][name of Player][else]fuckpet[end if]? I have not even put all of the head inside yet.' On these words, he pushes further, and you feel his glans being pushing into your pussy[if Player is male]. Your prostate is squished, making you start oozing pre all over the floor[end if]. 'That's better. But that is only one naughty thing. Let us go down the list, shall we?' Grunting, Krampus bear hugs your chest, then pulls out and rams his member in with more power.";
+		say "     Slowly, agonizingly slowly, Krampus pushes his maleness against your [if Cunt Count of Player > 1]main [end if]cunt. You feel your entrance stretch [if Cunt Depth of Player < 12]painfully [end if]wide to accommodate the goat's thick cock. Groaning, you try to escape his hard shaft impaling you, but you have no space to maneuver. Krampus chuckles at your futile resistance. 'What's this, [if Player is not defaultnamed][name of Player][else]fuckpet[end if]? I have not even put all of the head inside yet.' On these words, he pushes further, and you feel his glans being pushing into your pussy[if Player is male]. Your prostate is squished, making you start oozing pre all over the floor[end if]. 'That's better. But that is only one naughty thing. Let us go down the list, shall we?' Grunting, Krampus bear hugs your chest, then pulls out and rams his member in with more power.";
 		say "     Again and again, like a pendulum. Each time, the goat whispers something in your ear, in between two possessive licks. 'And this is for...' 'And this is for...' 'And this is for...' Somehow, the coal-black goat knows it all: Every single enemy you defeated and abused, every survivor you have been rude to or outright attacked, every companion you cheated on. By the time he finishes, Krampus had worked your hole enough to push his entire length into you, crushing your cervix with each go. You can feel it [if scalevalue of Player < 4]make your belly bulge obscenely[else]push against your stomach[end if] each time the muscular man goes all in";
 		if WSlevel is 1:
 			say ".";
@@ -396,7 +396,7 @@ to say KrampusPunish3:
 Section 3 - Infection
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -438,7 +438,7 @@ When Play begins:
 	now Breast Size entry is 0;        [ Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;              [ number of pussies if sex is 'Female' or 'Both' ]
-	now Cunt Length entry is 0;
+	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 95;            [ Amount player Libido will go up if defeated ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
@@ -455,7 +455,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -543,7 +543,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
+	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

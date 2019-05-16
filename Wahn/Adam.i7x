@@ -50,7 +50,7 @@ Cock Length of Adam is 10.
 Ball Size of Adam is 8.
 Ball Count of Adam is 2.
 Cunt Count of Adam is 0.
-Cunt Length of Adam is 0.
+Cunt Depth of Adam is 0.
 Cunt Tightness of Adam is 0.
 Nipple Count of Adam is 2. [2 nipples]
 Breast Size of Adam is 0.

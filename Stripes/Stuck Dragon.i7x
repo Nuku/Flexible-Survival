@@ -406,7 +406,7 @@ to say dragonchange:
 			now Cock Length of Player is 24;
 			now Ball Size of Player is 5;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 20;
+			now Cunt Depth of Player is 20;
 			now Cunt Tightness of Player is 15;
 			now dragontype is 1;
 		else if dragontype is 0:
@@ -415,7 +415,7 @@ to say dragonchange:
 			now Cock Length of Player is 0;
 			now Ball Size of Player is 0;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 20;
+			now Cunt Depth of Player is 20;
 			now Cunt Tightness of Player is 15;
 			now dragontype is 1;
 		else if tempnum is 1:	[re-UB]
@@ -427,7 +427,7 @@ to say dragonchange:
 			if Player is not female:
 				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices.";
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 8;
+				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 4;
 			else:
 				say ".";
@@ -440,7 +440,7 @@ to say dragonchange:
 			if Player is not female:
 				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices";
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 20;
+				now Cunt Depth of Player is 20;
 				now Cunt Tightness of Player is 15;
 			if "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player:
 				now Cock Count of Player is 1;
@@ -457,7 +457,7 @@ to say dragonchange:
 			if Player is not female:
 				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. Wet juices soak your thighs as you feel a fresh pussy grow in and you orgasm hard.";
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 8;
+				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 4;
 			else:
 				say ".";
@@ -482,7 +482,7 @@ to say dragonchange:
 			now Cock Length of Player is 24;
 			now Ball Size of Player is 56;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			now dragontype is 2;
 		else if tempnum is 1:	[re-UB]
@@ -505,7 +505,7 @@ to say dragonchange:
 				now Cock Length of Player is 24;
 				now Ball Size of Player is 56;
 				now Cunt Count of Player is 0;
-				now Cunt Length of Player is 0;
+				now Cunt Depth of Player is 0;
 				now Cunt Tightness of Player is 0;
 			say ". You can see that she's brought you back to her lair, but the dragoness doesn't give you a chance to enjoy your freedom, stuffing you right back into cunt again. You moan and squirm, much to her delight, as she uses you like a toy again.";
 		else:						[reinfection to horny dragon]
@@ -978,7 +978,7 @@ to say dragonchange2:
 			now Cock Length of Player is 24;
 			now Ball Size of Player is 56;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 20;
+			now Cunt Depth of Player is 20;
 			now Cunt Tightness of Player is 15;
 			if dragontype is 1 or dragontype is 2:
 				now dragontype is 5;
@@ -993,7 +993,7 @@ to say dragonchange2:
 			now Cock Length of Player is 0;
 			now Ball Size of Player is 0;
 			now Cunt Count of Player is 1;
-			now Cunt Length of Player is 20;
+			now Cunt Depth of Player is 20;
 			now Cunt Tightness of Player is 15;
 			if dragontype is 1 or dragontype is 2:
 				now dragontype is 5;
@@ -1011,7 +1011,7 @@ to say dragonchange2:
 			if Player is not female:
 				say ". Wet juices soak your thighs as you feel your new pussy dripping with juices.";
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 8;
+				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 4;
 			else:
 				say ".";
@@ -1026,7 +1026,7 @@ to say dragonchange2:
 			if Player is not female:
 				say ". You moan softly and sink to your knees as a hot pleasure fills your groin. Wet juices soak your thighs as you feel a fresh pussy grow in and you orgasm hard.";
 				now Cunt Count of Player is 1;
-				now Cunt Length of Player is 8;
+				now Cunt Depth of Player is 8;
 				now Cunt Tightness of Player is 4;
 			else:
 				say ".";
@@ -1054,7 +1054,7 @@ to say dragonchange2:
 			now Cock Length of Player is 24;
 			now Ball Size of Player is 56;
 			now Cunt Count of Player is 0;
-			now Cunt Length of Player is 0;
+			now Cunt Depth of Player is 0;
 			now Cunt Tightness of Player is 0;
 			if dragontype is 1 or dragontype is 2:
 				now dragontype is 6;
@@ -1231,7 +1231,7 @@ to say mchristy_top0:
 	say "     Wanting more from the dragon this time, you make sure to get him well and truly worked up first. By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against the drooling glans. He looks down at you in surprise, the desire to mount you clearly showing even as he tries to hold back.";
 	say "     'Ohhh, I so want to fill you with eggs[if lust of Christy > 0] for a change[end if],' he rumbles. 'But I'm so big. I guess since I've got this big guy, it'd be a waste to not give it a try at least once, as long as you're sure.' You nod eagerly even as his body's already moving atop you, the dragon's throbbing cock more than ready. 'Well, I'm sure you're going to look so hot when you're filled with my eggs. Eep! I mmmm...' he starts to interject, but gets cut off as his thick manhood pushes its way into you.";
 	say "     Wanting more from the dragon this time, you make sure to get him well and truly worked up first. By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against that drooling glans. He looks down at you in surprise, the desire to mount you clearly showing even as he tries to hold back. 'But I'm so big. I don't want to hurt you. I guess since I've got this big guy, it'd be a waste to not give it a try at least once.' You heartily agree, telling him it'll be fine and that it'll be a chance to see how the other half lives. At this point, even just talking about it has gotten him aroused further the tip of his cock begins to make its way into your heated cunny.";
-	say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of Player] body a chance to adjust[if Cunt Length of Player < 30]. Even with this, it is a little uncomfortable at first before your nanine-infused tissue stretches and accepts it[else]. You hardly need it though, your oversized cunt hungrily welcoming it in[end if]. He is so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
+	say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of Player] body a chance to adjust[if Cunt Depth of Player < 30]. Even with this, it is a little uncomfortable at first before your nanine-infused tissue stretches and accepts it[else]. You hardly need it though, your oversized cunt hungrily welcoming it in[end if]. He is so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
 	say "     His first few thrusts are slow and cautious, too much so for your now overloaded libido and you push back, urging him for more. His excessive restraint begins to waiver and his pace picks up, drawing a long moan from you as those pleasure-giving ridges slide in and out past your sensitive folds and clit. Your cunt clenches and squeezes around his meat each time this happens, bringing greater pleasure to the randy red dragon.";
 	say "     '[if lust of Player > 0 and the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with -ohhh- some eggs for a change[else if lust of Christy > 0 and the player is impreg_able]Oh, I think -mmm- someone's looking forward to being the one filled with -ohhh- some eggs for a change[else if the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with some eggs[else if the player is impreg_able]Oh, I think -mmm- someone's looking forward to being filled with -ohhh- some eggs real soon[else]Oh, I hope you have room for more, because I'm going to fill you with so much cum[end if],' he rumbles lewdly, scarcely able to resist voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those titanic blasts filling your womb and gushing out around your stretched cunny driving you over the edge. After he's done, [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[fimpregchance]";
 	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
@@ -1244,7 +1244,7 @@ to say mchristy_top1:
 		say "Christy rumbles in appreciation at the sight of your draconic body ready and waiting to be mounted. While smaller than him, you know your body's made for his - and that big schlong of his. 'Mmm... I prefer your new look. You make a fine, sexy dragoness,' he rumbles. 'Mmm... I'm going to enjoy taking you like a wild beast and filling you with my eggs over and over again,' he adds, blushing at his own words, but unable to take them back.";
 	else:
 		say "He looks down at you, penis twitching with an eagerness to mount you again.";
-	say "     Bracing yourself, you push back harder against the male's cock, urging him to mount you. With a deep rumble, he moves forward, driving close to a foot of his titanic meat into you in one go and then slowing to just a few inches at a time[if Cunt Length of Player < 30]. The size of it makes for slow going at first, the dragon doing his best to hold back despite his obvious desire to rut you[else]. Your oversized cunt welcomes it in with relative ease, your yawning vagina happy to have a chance to be thoroughly filled[end if]. This does give your [bodytype of Player] body a chance to adjust, him being so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
+	say "     Bracing yourself, you push back harder against the male's cock, urging him to mount you. With a deep rumble, he moves forward, driving close to a foot of his titanic meat into you in one go and then slowing to just a few inches at a time[if Cunt Depth of Player < 30]. The size of it makes for slow going at first, the dragon doing his best to hold back despite his obvious desire to rut you[else]. Your oversized cunt welcomes it in with relative ease, your yawning vagina happy to have a chance to be thoroughly filled[end if]. This does give your [bodytype of Player] body a chance to adjust, him being so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
 	say "     Having fucked you before, his restraint doesn't last long before he's picking up the pace of his thrusts. You release a long, satisfied moan as those pleasure-giving ridges slide in and out past your sensitive folds and clit. The throbbing and thrusting of his mighty rod sends waves of delight through you, urging you to push back into his thrusts as best you can. Your cunt clenches and squeezes around his meat each time this happens, bringing greater pleasure to the randy red dragon.";
 	say "     '[if lust of Player > 0 and the player is impreg_now]Mmm... you've got to come back here next time you're [one of]looking[or]ready[at random] to be knocked up. [one of]I want to fill you up with -mmmm- my eggs[or]I want to fill someone with -nnngg- eggs for a change[or]I want to fill you up with clutch after -oh baby!- clutch[in random order][else if lust of Christy > 0 and the player is impreg_able][one of]Oh, I think -mmm- someone's looking forward to being the one filled with -ohhh- some eggs for a change[or]Mmm... let's get you knocked up with my eggs[or]You're going to look soooo hot with my clutch in your belly[in random order][else if the player is impreg_now][one of]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with some eggs[or]Mmm... you need to come back here next time you're looking to be knocked up so I can -mmmm- fill you up with my eggs[or]Come back here with an empty belly so I can put a nice, big clutch in you[in random order][else if the player is impreg_able][one of]Oh, I think -mmm- someone's looking forward to being filled with -ohhh- some eggs real soon[or]Let's get you nice and -nggg- round with my clutch. Doesn't that sound like -ohhh- fun? I think that's just what you need[or]Mmm... let's get you knocked up with my eggs[or]You're going to look so hot with a clutch in your belly[in random order][else][one of]Oh, I hope you have room for more, because I'm going to fill you with so much cum[or]Oh, this is going to be a big one. I'm going to pump you soooo full[or]I've got a big, hot dragon load for you, hot stuff[in random order][end if],' he rumbles lewdly, scarcely able to resist voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those large wads filling your womb and gushing out around your stretched cunny driving you over the edge. After he's done, [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[fimpregchance]";
 	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
@@ -1324,7 +1324,7 @@ to say mchristy_cv1:
 Section 14 - Placeholder infections
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -1366,7 +1366,7 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
@@ -1383,7 +1383,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -1471,7 +1471,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -1483,7 +1483,7 @@ When Play begins:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -1505,7 +1505,6 @@ When Play begins:
 	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 10;
@@ -1526,7 +1525,7 @@ When Play begins:
 	now Breast Size entry is 0; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Length entry is 20;
+	now Cunt Depth entry is 20;
 	now Cunt Tightness entry is 15;
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
@@ -1543,7 +1542,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -1631,7 +1630,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -1685,15 +1684,15 @@ to say sldrheatstart:
 	if Libido of Player > 99, now Libido of Player is 99;
 	if heatform is 0:
 		increase Cunt Tightness of Player by 1;
-		increase Cunt Length of Player by 1;
+		increase Cunt Depth of Player by 1;
 
 to say sldrheatend:
 	say "You release a soft moan as your heat passes, the worst of your lustful urges fading for now.";
 	if heatform is 0:
 		decrease Cunt Tightness of Player by 1;
 		if Cunt Tightness of Player is 0, now Cunt Tightness of Player is 1;
-		decrease Cunt Length of Player by 1;
-		if Cunt Length of Player is 0, now Cunt Length of Player is 1;
+		decrease Cunt Depth of Player by 1;
+		if Cunt Depth of Player is 0, now Cunt Depth of Player is 1;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 6, now slutfucked is 6;

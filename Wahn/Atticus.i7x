@@ -144,7 +144,7 @@ Cock Length of Atticus is 12.
 Ball Size of Atticus is 8.
 Ball Count of Atticus is 2.
 Cunt Count of Atticus is 0.
-Cunt Length of Atticus is 0.
+Cunt Depth of Atticus is 0.
 Cunt Tightness of Atticus is 0.
 Nipple Count of Atticus is 2. [2 nipples]
 Breast Size of Atticus is 0.

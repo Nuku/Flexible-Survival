@@ -83,7 +83,7 @@ Cock Length of Oliver is 8. [X Inches]
 Ball Size of Oliver is 4.
 Ball Count of Oliver is 2. [X balls]
 Cunt Count of Oliver is 0. [X pussy]
-Cunt Length of Oliver is 0. [X Cunt]
+Cunt Depth of Oliver is 0. [X Cunt]
 Cunt Tightness of Oliver is 0. [X Cunt]
 Nipple Count of Oliver is 2. [X nipples]
 Breast Size of Oliver is 0. [X at the start]

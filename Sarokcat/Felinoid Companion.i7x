@@ -156,7 +156,7 @@ Cock Length of Klauz is 14.
 Ball Size of Klauz is 4. [goose egg sized balls]
 Ball Count of Klauz is 2.
 Cunt Count of Klauz is 0.
-Cunt Length of Klauz is 0.
+Cunt Depth of Klauz is 0.
 Cunt Tightness of Klauz is 0.
 Nipple Count of Klauz is 2.
 Breast Size of Klauz is 0.

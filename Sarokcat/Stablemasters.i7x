@@ -41,7 +41,7 @@ Cock Length of Slutslave is 0. [X Inches]
 Ball Size of Slutslave is 0.
 Ball Count of Slutslave is 0. [X balls]
 Cunt Count of Slutslave is 1. [X pussy]
-Cunt Length of Slutslave is 12. [X Cunt]
+Cunt Depth of Slutslave is 12. [X Cunt]
 Cunt Tightness of Slutslave is 6. [X Cunt]
 Nipple Count of Slutslave is 2. [X nipples]
 Breast Size of Slutslave is 4. [X at the start]

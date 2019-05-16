@@ -57,7 +57,7 @@ to say beattheeagle:
 		if Player consents:
 			now noeaglesex is 0;
 			if Player is female:
-				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground. He is briefly stunned, giving you an opportunity to roll him onto his back and grab onto that foot-long cock of his. You stroke it to full erection and clamber atop him, sinking your juicy pussy down over it with a low moan of satisfaction. As he's starting to come out of it, you keep his shoulders pinned and ride the eagle's cock [if Cunt Length of Player < 8]as hard and as fast as you can given its large size[else]hard and fast[end if]. He makes no attempt to resist or escape, now bucking his hips to thrust up into you until you both reach a loud, crashing orgasm. Once he's spent and you've taken what you've wanted from him, you slide off, moaning softly as you enjoy the warm feeling of his semen inside you.[ovichance]";
+				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground. He is briefly stunned, giving you an opportunity to roll him onto his back and grab onto that foot-long cock of his. You stroke it to full erection and clamber atop him, sinking your juicy pussy down over it with a low moan of satisfaction. As he's starting to come out of it, you keep his shoulders pinned and ride the eagle's cock [if Cunt Depth of Player < 8]as hard and as fast as you can given its large size[else]hard and fast[end if]. He makes no attempt to resist or escape, now bucking his hips to thrust up into you until you both reach a loud, crashing orgasm. Once he's spent and you've taken what you've wanted from him, you slide off, moaning softly as you enjoy the warm feeling of his semen inside you.[ovichance]";
 			else:
 				say "     As the eagle prepares to take off, you pounce upon him, bearing him to the ground. He is briefly stunned, giving you an opportunity to roll him over onto all fours and guide your cock under his feathery tail. With a low moan of satisfaction, you sink your cock into his rear, finding it [if Cock Length of Player > 12]exceptionally[else if Cock Length of Player > 6]very[else]quite[end if] tight around your [cock size desc of Player] [cock of Player] rod. Still dazed, he gives a squawk of discomfort and tries to squirm away at first, but you keep a good grip on him until his cries turn to moans of pleasure as he's pushing back into your thrusts for more. With a final, hard push, you drive your pulsing cock[if Cock Length of Player > 12] deep[end if] inside him and cum hard, stuffing the bird with your creamy load. As you're filling him, you reach around and stroke him off, getting him to splatter his load across the ground as he's buggered.";
 		else:
@@ -68,7 +68,7 @@ to say beattheeagle:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -110,7 +110,7 @@ When Play begins:
 	now Breast Size entry is 3; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 12; [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 50; [ Target libido the infection will rise towards. ]
 	now loot entry is "eagle feather"; [ Dropped item, blank for none. Case sensitive. ]
@@ -127,7 +127,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -215,7 +215,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

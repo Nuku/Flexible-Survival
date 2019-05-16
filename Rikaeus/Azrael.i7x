@@ -51,7 +51,7 @@ Cock Length of Azrael is 8. [X Inches]
 Ball Size of Azrael is 4.
 Ball Count of Azrael is 2. [X balls]
 Cunt Count of Azrael is 0. [X pussy]
-Cunt Length of Azrael is 0. [X Cunt]
+Cunt Depth of Azrael is 0. [X Cunt]
 Cunt Tightness of Azrael is 0. [X Cunt]
 Nipple Count of Azrael is 2. [X nipples]
 Breast Size of Azrael is 0. [X at the start]

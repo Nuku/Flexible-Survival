@@ -29,7 +29,7 @@ Cock Length of Logan is 14.
 Ball Size of Logan is 8.
 Ball Count of Logan is 2.
 Cunt Count of Logan is 0.
-Cunt Length of Logan is 0.
+Cunt Depth of Logan is 0.
 Cunt Tightness of Logan is 0.
 Nipple Count of Logan is 2. [2 nipples]
 Breast Size of Logan is 0.

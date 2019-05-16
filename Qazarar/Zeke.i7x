@@ -22,7 +22,7 @@ Cock Length of Zeke is 7. [X Inches]
 Ball Size of Zeke is 5.
 Ball Count of Zeke is 2. [X balls]
 Cunt Count of Zeke is 0. [X pussy]
-Cunt Length of Zeke is 0. [X Cunt]
+Cunt Depth of Zeke is 0. [X Cunt]
 Cunt Tightness of Zeke is 0. [X Cunt]
 Nipple Count of Zeke is 2. [X nipples]
 Breast Size of Zeke is 0. [X at the start]

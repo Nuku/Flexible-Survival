@@ -38,7 +38,7 @@ to say defaultheat:
 
 to say huskyheatstart:
 	if heatform is 0:	[starting female heat]
-		increase Cunt Length of Player by 2;
+		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
 	else:			[starting mpreg heat]
 		increase Libido of Player by 5;
@@ -47,8 +47,8 @@ to say huskyheatend:
 	if Player is female:
 		decrease Cunt Tightness of Player by 1;
 		if Cunt Tightness of Player < 1, now Cunt Tightness of Player is 1;
-		decrease Cunt Length of Player by 2;
-		if Cunt Length of Player < 1, now Cunt Length of Player is 1;
+		decrease Cunt Depth of Player by 2;
+		if Cunt Depth of Player < 1, now Cunt Depth of Player is 1;
 	decrease slutfucked by 2;
 	if slutfucked < 0, now slutfucked is 0;
 	if slutfucked > 6, now slutfucked is 6;

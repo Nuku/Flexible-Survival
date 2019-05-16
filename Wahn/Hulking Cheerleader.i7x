@@ -24,11 +24,11 @@ to say Cheerleader wins:
 			if (gestation of child > 0): [already pregnant]
 				say "     She rubs her hand over your pussy lips, then sniffs it. With a bit of a disappointed tone she then says, 'Aww, you're already pregnant - oh, I mean... congratulations! Hope all goes well with the birth. And if it's a girl, why don't you come back here once she's grown.' As the hulking cheerleader moves off, you hear her mumbling to herself, [one of]'A virgin and her MILF would be quite a catch and put me in front of even [randomgirlname] on the list...'[or]'At least with a MILF you know she's fertile and worth the seed...'[or]'Haven't managed to snag a virgin in ages.'[at random]";
 			else:
-				if (Cunt Length of Player < 4): [far too small]
+				if (Cunt Depth of Player < 4): [far too small]
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'What's this? I can't even get my finger all the way into you! No way a cock would fit in there.' With a rather disappointed expression she pulls you to your feet, saying 'I'm not a monster and don't want to hurt you. So move along little girl, and come back when you're fully grown.'";
 				else:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of Player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
-					say "     'Nice tight pussy you have there - now let's see how deep it is,' the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if Cunt Length of Player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length. [else]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.' [end if]Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
+					say "     'Nice tight pussy you have there - now let's see how deep it is,' the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if Cunt Depth of Player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length. [else]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.' [end if]Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
 					WaitLineBreak;
 					say "     Over the next twenty minutes or so, you're treated with one hell of a fuck, taking you to levels of pleasure you didn't even know existed and orgasming several times. You wish it'd last forever, but the reproductive imperative of your hulking partner soon gets its due. She gets faster and faster with her thrusts, moaning and grunting, until finally she buries her hard cock as far as it will go inside you and fills you with spurt after spurt of her seed.[fimpregchance]";
 					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, let's do another round soon!'";
@@ -74,7 +74,7 @@ to say cheerleaderDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -116,7 +116,7 @@ When Play begins:
 	now Breast Size entry is 4;             [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 4;        [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;                   [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Length entry is 0;             [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Depth entry is 0;             [ Depth of female sex the infection will attempt to give a player. ]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]              [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80;
 	now loot entry is "";                   [ Dropped item, blank for none. Case sensitive. ]
@@ -133,7 +133,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -221,7 +221,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0;
+	now Cunt Depth entry is 0;
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

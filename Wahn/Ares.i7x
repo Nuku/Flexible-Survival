@@ -27,7 +27,7 @@ Cock Length of Ares is 9.
 Ball Size of Ares is 2.
 Ball Count of Ares is 2.
 Cunt Count of Ares is 0.
-Cunt Length of Ares is 9.
+Cunt Depth of Ares is 9.
 Cunt Tightness of Ares is 2.
 Nipple Count of Ares is 2. [2 nipples]
 Breast Size of Ares is 0.

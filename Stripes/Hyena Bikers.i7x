@@ -549,12 +549,12 @@ instead of fucking the grant:
 
 
 to say grantstretch:
-	if Cunt Length of Player < 6 and "Male Preferred" is not listed in feats of Player:
-		increase Cunt Length of Player by 3;
+	if Cunt Depth of Player < 6 and "Male Preferred" is not listed in feats of Player:
+		increase Cunt Depth of Player by 3;
 		increase Cunt Tightness of Player by 1;
 		say "     The well-endowed hyena's meat is a very tight fit for you, but he manages to stretch you out some to accommodate him. You whimper softly at the initial pain, but he licks your ears and takes it easy for a few minutes, letting you adjust before returning to his vigorous pace.";
-	else if Cunt Length of Player < 11 and "Male Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
-		increase Cunt Length of Player by 2;
+	else if Cunt Depth of Player < 11 and "Male Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
+		increase Cunt Depth of Player by 2;
 		increase Cunt Tightness of Player by 1;
 		say "     The well-endowed hyena's meat is a tight fit for you, but he manages to stretch you out some to accommodate him. He licks your ears and takes it easy briefly, letting you adjust before returning to his vigorous pace.";
 

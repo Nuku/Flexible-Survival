@@ -177,7 +177,7 @@ Cock Length of Francois is 8. [Eight Inches]
 Ball Size of Francois is 5.
 Ball Count of Francois is 2. [Two balls]
 Cunt Count of Francois is 0. [No pussy]
-Cunt Length of Francois is 0. [No Cunt]
+Cunt Depth of Francois is 0. [No Cunt]
 Cunt Tightness of Francois is 0. [No Cunt]
 Nipple Count of Francois is 2. [2 nipples]
 Breast Size of Francois is 0. [Flat at the start]
@@ -981,13 +981,13 @@ to say muffin muffin Use:
 		say ". After finishing the last bite of your snack, a rumbling builds in your belly. Clearly your body doesn't agree with something about the treat, but it sure tasted great.";
 	else if Player is not female:
 		now Cunt Count of Player is 1;
-		now Cunt Length of Player is 5;
+		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 4;
 		follow the cunt descr rule;
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin as a [descr] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] wetly forms.";
 	else:
-		increase Cunt Length of Player by 1;
-		if remainder after dividing Cunt Length of Player by 3 is 0:
+		increase Cunt Depth of Player by 1;
+		if remainder after dividing Cunt Depth of Player by 3 is 0:
 			increase Cunt Tightness of Player by 1;
 		Follow the cunt descr rule;
 		say ". As you swallow the last bite, a warm tingling wells up in your belly, slowly spreading across your body. The sensation focuses on your groin, your [if Cunt Count of Player is 1][one of]cunt[or]pussy[or]vagina[or]cleft[at random] [one of]engorging[or]swelling[or]throbbing[at random] as it grows[else][one of]cunts[or]pussies[or]vaginas[or]clefts[at random] [one of]engorging[or]swelling[or]throbbing[at random] as they grow[end if], becoming [descr].";

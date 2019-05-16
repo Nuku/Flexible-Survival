@@ -1493,6 +1493,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is koboldgangmet;
 		-- "koboldgangsubs":
 			now NumberVarValue entry is koboldgangsubs;
+		-- "KoboldScaleColor":
+			now NumberVarValue entry is KoboldScaleColor;
 		-- "Koghhstatus":
 			now NumberVarValue entry is Koghhstatus;
 		-- "KorvinSubmitCounter":
@@ -2609,6 +2611,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is SylviaTrapVar;
 		-- "SylviaVirginCheck":
 			now NumberVarValue entry is SylviaVirginCheck;
+		-- "TaniClassMemory":
+			now NumberVarValue entry is TaniClassMemory;
+		-- "TaniRecommendation":
+			now NumberVarValue entry is TaniRecommendation;
 		-- "Targetturns":
 			now NumberVarValue entry is Targetturns;
 		-- "tatsave":
@@ -5159,6 +5165,8 @@ to VariableNumberLoad:
 					now koboldgangmet is numberVarValue entry;
 				-- "koboldgangsubs":
 					now koboldgangsubs is numberVarValue entry;
+				-- "KoboldScaleColor":
+					now KoboldScaleColor is numberVarValue entry;
 				-- "Koghhstatus":
 					now Koghhstatus is numberVarValue entry;
 				-- "KorvinSubmitCounter":
@@ -6273,6 +6281,10 @@ to VariableNumberLoad:
 					now SylviaTrapVar is numberVarValue entry;
 				-- "SylviaVirginCheck":
 					now SylviaVirginCheck is numberVarValue entry;
+				-- "TaniClassMemory":
+					now TaniClassMemory is numberVarValue entry;
+				-- "TaniRecommendation":
+					now TaniRecommendation is numberVarValue entry;
 				-- "Targetturns":
 					now Targetturns is numberVarValue entry;
 				-- "tatsave":

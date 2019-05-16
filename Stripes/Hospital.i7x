@@ -1785,10 +1785,10 @@ to say ec_activation:
 			if Ball Size of Player > 3:
 				now Ball Size of Player is 3;
 	if Player is female:
-		if Cunt Length of Player < 16:
-			increase Cunt Length of Player by 3;
-			if Cunt Length of Player > 16:
-				now Cunt Length of Player is 16;
+		if Cunt Depth of Player < 16:
+			increase Cunt Depth of Player by 3;
+			if Cunt Depth of Player > 16:
+				now Cunt Depth of Player is 16;
 		if Cunt Tightness of Player < 10:
 			increase Cunt Tightness of Player by 2;
 			if Cunt Tightness of Player > 10:

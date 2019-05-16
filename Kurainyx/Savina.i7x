@@ -34,7 +34,7 @@ Cock Length of Savina is 0. [X Inches]
 Ball Size of Savina is 0.
 Ball Count of Savina is 0. [X balls]
 Cunt Count of Savina is 0. [X pussy]
-Cunt Length of Savina is 0. [X Cunt]
+Cunt Depth of Savina is 0. [X Cunt]
 Cunt Tightness of Savina is 0. [X Cunt]
 Nipple Count of Savina is 0. [X nipples]
 Breast Size of Savina is 0. [X at the start]

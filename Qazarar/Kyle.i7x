@@ -55,7 +55,7 @@ Cock Length of Kyle is 7. [X Inches]
 Ball Size of Kyle is 5.
 Ball Count of Kyle is 2. [X balls]
 Cunt Count of Kyle is 0. [X pussy]
-Cunt Length of Kyle is 0. [X Cunt]
+Cunt Depth of Kyle is 0. [X Cunt]
 Cunt Tightness of Kyle is 0. [X Cunt]
 Nipple Count of Kyle is 0. [X nipples]
 Breast Size of Kyle is 0. [X at the start]

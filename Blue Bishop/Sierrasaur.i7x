@@ -287,7 +287,7 @@ to sierrasex:
 	if sierramem is 1:
 		say "     Having a clearer view of the reptile's underside, [if sierramale is true]you're exposed to their previously obscured genitalia[else]it appears to be some manner of hermaphrodite[end if]. Large, blunt-headed and fairly rounded cock bobbing subtly before you, you quickly get the impression that this tool is never not hard, even as you don't get the impression it's particularly aroused at this moment. Its base acts as the starting point to a fairly defined, taut cleft, appearing to be a firm and unyielding [if sierramale is true]anal cloaca[else]bestial vent of a cunt[end if].";
 		now sierramem is 2;
-	if Player is female and Cunt Length of Player > 5 and ((boundstate is true and a random chance of 1 in 8 succeeds) or (boundstate is false and a random chance of 1 in 6 succeeds)):
+	if Player is female and Cunt Depth of Player > 5 and ((boundstate is true and a random chance of 1 in 8 succeeds) or (boundstate is false and a random chance of 1 in 6 succeeds)):
 		say "     Not particularly graceful in its motion, it shamelessly prods your exposed cunt with its rock-hard dick. [if HP of Player < 1]Not particularly inclined to be on the receiving end of it, you deliberately make it difficult for the creature to progress, which only forces it to lay on top of you, pinning you down before shoving[else]Once it gets its aim right, it shoves[end if] its tool past your supple folds. [if sierrapure is true]While the organ is fairly rough, your similar strain is resilient enough to only make it more pleasurable for you[else]Considering how rough and unyielding the organ is, this is a fairly uncomfortable ordeal until it's eventually lubricated by its copious precum[end if][if Player is male], cock[smn] soon driven to attention as well[else if Cunt Count of Player > 2], unattended cunts soon aching with need as well[else if Cunt Count of Player is 2], unattended cunt soon aching with need as well[end if], forcing a moan free from your lips.";
 		increase lustatt by 45 + (lustadjust * 10);
 		say "     Its initial thrusts are slow and ponderous, though this is only slightly assuaging since it plows you with its entire length with each motion. As it gradually picks up pace, you visibly begin to rock against the beast's motion, the air filling with the sounds of wet, irreverent slapping as it pounds your hole with a deliberate pace. It clearly finds bliss when that same motion briefly becomes erratic and opts to conclude by hilting the organ one last time";
@@ -399,7 +399,7 @@ to say beathesierra:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -441,7 +441,7 @@ When Play begins:
 	now Breast Size entry is 0;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 12;
+	now Cunt Depth entry is 12;
 	now Cunt Tightness entry is 10;
 	now libido entry is 10;
 	now loot entry is "earthen seed";
@@ -458,7 +458,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -546,7 +546,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

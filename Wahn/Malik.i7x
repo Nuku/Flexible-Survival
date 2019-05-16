@@ -15,7 +15,7 @@ Cock Length of Malik is 13.
 Ball Size of Malik is 8.
 Ball Count of Malik is 2.
 Cunt Count of Malik is 0.
-Cunt Length of Malik is 0.
+Cunt Depth of Malik is 0.
 Cunt Tightness of Malik is 0.
 Nipple Count of Malik is 2. [2 nipples]
 Breast Size of Malik is 0.

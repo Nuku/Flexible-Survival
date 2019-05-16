@@ -50,7 +50,7 @@ Cock Length of Zoe is 0. [X Inches]
 Ball Size of Zoe is 0.
 Ball Count of Zoe is 0. [X balls]
 Cunt Count of Zoe is 1. [X pussy]
-Cunt Length of Zoe is 8. [X Cunt]
+Cunt Depth of Zoe is 8. [X Cunt]
 Cunt Tightness of Zoe is 4. [X Cunt]
 Nipple Count of Zoe is 2. [X nipples]
 Breast Size of Zoe is 2. [X at the start]

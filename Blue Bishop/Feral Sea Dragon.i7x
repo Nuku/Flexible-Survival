@@ -50,7 +50,7 @@ to say fsdm attack:
 		else if FSDOPEN is 0:
 			say "     Seeing an opening, he unloads a deafening roar of dominance and slaps you down with his massive tail, and you're briefly knocked out. When you come to, you can already feel the beast's enquiring tongue over your vulnerable form, your vision clearing to give you a blatant few of his erect cock. There's no question what he has in store for you.";
 		if bodyname of Player is "Feral Sea Dragon" or bodyname of Player is "Feral Sea Dragoness":
-			if Player is female and Cunt Length of Player > 11:
+			if Player is female and Cunt Depth of Player > 11:
 				say "     Circling around to mount you, you soon feel the head of his hard organ press against[if Cunt Count of Player > 1] one of[end if] your [cunt size desc of Player] cunt[sfn]. He makes a soft growling sound as the shaft's flared head sinks slowly inside you, sending waves of intense pleasure before that head is fully engulfed. Quite the tease, he only engulfs the rod half-way before pulling it out almost entirely, the influence of your feral infection driving you to whine out in despair - much to his amusement - before you find solace in its return. The dragon plays this game with you only briefly before he's taken by the imperative of his own bestial need and starts ramming you with his cock proper.";
 				say "     You writhe limply under the beast's girth, mind ahaze in pleasure. It's as though this creature's cock was made just for you, your needy cunt constricting against its rigid mass out of a carnal need to have it in you, its motion no doubt lubricated by your sexual fluids mixed with his own.";
 				say "     Though you would rather he fuck you forever it's inevitable that he concludes with one final thrust, his hilted dick flooding your womb until it's bloated with his seed, triggering your own climax in response[if Cock Count of Player > 1], all the while your own, [cock size desc of Player], and very much neglected members spill their [Cum Load Size of Player] load across the sand before both[else if Player is male], all the while your own, [cock size desc of Player], and very much neglected member spills its [Cum Load Size of Player] load across the sand before both[else]. Both[end if] of you cry out in celebration of this dual orgasm - his a deep, throaty roar, yours a beautiful-sounding song.[impregchance][line break]";
@@ -165,7 +165,7 @@ to say fsdm attack:
 					say "     In due time you come to, greeted by the thick and hard confines of an egg, light from the outside spilling through the translucent surface and compelling you to break yourself free. Exposed to the salty air once more, you were thankfully left on the beach, and you clean yourself off before gathering your belongings as they are, strewn across the beach.";
 					infect;
 					now FSDOPEN is 0;
-			else if Player is female and Cunt Length of Player > 11:
+			else if Player is female and Cunt Depth of Player > 11:
 				say "     Finally, and thankfully, you're relinquished of the monster's mass; however, before you can get up you're pinned by his massive bulk a second time, now completely on top of you. He's shifted his weight enough so not to crush you, but now he's in a much better position to impale you with his massive, throbbing dick.";
 				say "     You twitch with every irreverent and jerking thrust, only teasing tests [if Cunt Count of Player > 1]for one of[else]of[end if] your [cunt size desc of Player] cunt's willingness to accommodate his flared head. Soon your feel him put on the pressure as he slowly squeezes the rigid organ past your entrance, the intense sensation of which grants you inevitable reprieve when you get past its spade-shaped tip. The beast lets out an airy hiss in his own approval, but only lets you adapt to his girth briefly before he begins fucking you in earnest.";
 				say "     His assault quickly becomes relentless in its pace, intent on using you with little regard to your well being. Any protests you might offer up rapidly diminish as you feel his pre incrementally spurt within your depth, what pain and discomfort you might have had driven away in favor of an immense and overwhelming desire to continue to be reamed by this powerful dragon, and soon you are drowning in ecstasy with every forceful thrust.";
@@ -257,7 +257,7 @@ to fsdmvicmenu:
 		say "(1) [if Player is male][link]Mount him[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if Player is male][link]Have him suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(3) [if Player is female][link]Have him eat your cunt[as]3[end link][else][italic type]Female-specific interaction[roman type][end if][line break]";
-		say "(4) [if Player is female][link]Ride his dick[as]4[end link][else][italic type]Female-specific interaction[roman type][end if] [if Player is female and Cunt Length of Player < 12][italic type]- Too small![roman type][end if][line break]";
+		say "(4) [if Player is female][link]Ride his dick[as]4[end link][else][italic type]Female-specific interaction[roman type][end if] [if Player is female and Cunt Depth of Player < 12][italic type]- Too small![roman type][end if][line break]";
 		say "(5) [link]Ride his dick anally[as]5[end link] [if scalevalue of Player is 3 and player is not twistcapped][italic type]- Too small![roman type][else if scalevalue of Player < 4][italic type]- Too small![roman type][end if][line break]";
 		say "(6) [link]Suck him off[as]6[end link][line break]";
 		LineBreak;
@@ -300,7 +300,7 @@ to fsdmvicmenu:
 				now tempnum is 0;
 				now Trixieexit is 1;
 		else if calcnumber is 4:
-			if Player is not female or Cunt Length of Player < 12:
+			if Player is not female or Cunt Depth of Player < 12:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 			else:
 				say "[FSDM_4]"; [Cunt Catching]
@@ -525,7 +525,7 @@ to say FSDM_3: [Oral Receiving Cunt]
 		say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if]";
 	else:
 		say "     [if tempnum is 1]Having warmed up to you slightly[else if tempnum is 2]Having warmed up to you by a bit now[else]With persistent chastising, along with the cock's persistent prodding against his snout[end if]";
-	say ", he obliges your need, scaled lips parting to envelop [if Cock Count of Player > 1]one of your pussies[else]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if Cunt Length of Player > 17]he easily thrusts the slick, writhing organ into your pliable depths[else]he thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of his saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against his snout, the dragon [if boundmod is 1]rumbling in approval[else]snorting in disdain[end if].";
+	say ", he obliges your need, scaled lips parting to envelop [if Cock Count of Player > 1]one of your pussies[else]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if Cunt Depth of Player > 17]he easily thrusts the slick, writhing organ into your pliable depths[else]he thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of his saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against his snout, the dragon [if boundmod is 1]rumbling in approval[else]snorting in disdain[end if].";
 	say "     Writhing against the beast's touch, [if boundmod is 1]happily[else]slowly[end if] making you twitch and writhe with each motion of his worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy";
 	if Player is male:
 		say ". You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragon with your cum? Otherwise, you'll spare him the humiliation.";
@@ -556,10 +556,10 @@ to say FSDM_4: [Cunt Catching]
 		now tempnum is 0;
 	say ". [if scalevalue of Player < 4]Crawling[else]Moving[end if] over the sea dragon's throbbing rod, you carefully position yourself over its tip before you make your slow descent. Shall you pace yourself out? Otherwise, you'll put him through a rough ride.";
 	if Player consents:
-		say "     Slowly forcing the dragon's pointed tip through the folds of[if Cunt Count of Player > 1] one of[end if] your cunt's lips, you're [if Cunt Length of Player < 14]fairly[else if Cunt Length of Player < 18]briefly[else]barely[end if] strained as you engulf the beast's flared head. Descent slicked by [if tempnum is 1]your prior attendance[else]his sexual fluids[end if], the sea dragon groans and writhes as each successive inch in engulfed. Once you manage to take the head, the rest of his shaft seems comparatively easy to tackle, your speed slightly rising as you begin to ride the creature proper.";
+		say "     Slowly forcing the dragon's pointed tip through the folds of[if Cunt Count of Player > 1] one of[end if] your cunt's lips, you're [if Cunt Depth of Player < 14]fairly[else if Cunt Depth of Player < 18]briefly[else]barely[end if] strained as you engulf the beast's flared head. Descent slicked by [if tempnum is 1]your prior attendance[else]his sexual fluids[end if], the sea dragon groans and writhes as each successive inch in engulfed. Once you manage to take the head, the rest of his shaft seems comparatively easy to tackle, your speed slightly rising as you begin to ride the creature proper.";
 		say "     [if Player is male]Dick[smn] waving against the open air, you move to jerk yourself off as[else if Cunt Count of Player > 2]Fondling one of your unattended pussies,[else if Cunt Count of Player is 2]Fondling your unattended pussy[else]Fondling your stuffed pussy,[end if] your motion starts to pick up its pace, motion slicked by sweat as the beast's increasingly shallow breath intensifies your endeavor, each descent coaxing him free of his breath";
 	else:
-		say "     Unceremoniously, you force yourself down on the dragon's point tip, squeezed through the folds of[if Cunt Count of Player > 1] one of[end if] your cunt's lips as it's quickly engulfed, [if Cunt Length of Player < 14]fairly[else if Cunt Length of Player < 18]briefly[else]barely[end if] strained by the beast's flared head. Descent thankfully slicked by [if tempnum is 1]your prior attendance[else]his sexual fluids[end if], the sea dragon grunts and tenses as you rapidly engulf inch after inch of his flesh. Once you've impaled yourself with the head, the rest is much easier to take, plunging yourself down as you begin to ride the creature proper.";
+		say "     Unceremoniously, you force yourself down on the dragon's point tip, squeezed through the folds of[if Cunt Count of Player > 1] one of[end if] your cunt's lips as it's quickly engulfed, [if Cunt Depth of Player < 14]fairly[else if Cunt Depth of Player < 18]briefly[else]barely[end if] strained by the beast's flared head. Descent thankfully slicked by [if tempnum is 1]your prior attendance[else]his sexual fluids[end if], the sea dragon grunts and tenses as you rapidly engulf inch after inch of his flesh. Once you've impaled yourself with the head, the rest is much easier to take, plunging yourself down as you begin to ride the creature proper.";
 		say "     [if Player is male]Dick[smn] quickly bobbing against the open air, you move to furiously jerk yourself off as[else if Cunt Count of Player > 2]Unattended pussies aching against the open air, you move to furiously fondle yourself as[else if Cunt Count of Player is 2]Unattended pussy aching against the open air, you move to furiously fondle yourself as[else]Furiously fondling your stuffed pussy,[end if] your motion reaches a feverish pace, motion slicked by sweat as the beast's increasingly shallow breath seems to exacerbate your endeavor, each descent forcing his breath from him";
 	say ". It's clear neither of you can hold back any longer. Shall you pull out at the last second?";
 	if Player consents:
@@ -705,7 +705,7 @@ to say FSDM_6: [Oral Giving Cock]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -747,7 +747,7 @@ When Play begins:
 	now Breast Size entry is 0;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 21;
+	now Cunt Depth entry is 21;
 	now Cunt Tightness entry is 15;
 	now libido entry is 45;
 	now loot entry is "";
@@ -764,7 +764,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -852,7 +852,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]

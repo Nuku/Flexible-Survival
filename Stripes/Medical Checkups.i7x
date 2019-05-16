@@ -496,10 +496,9 @@ to say Medeaadjustments:
 						say "     'I hope you're enjoying the ability to lay eggs,' the lizard doctor says as she rubs over your tummy with a smile. 'Such a special way to have one's children, I think. Remember, if you want to [if ovipreglevel is 3]curb your egg-laying and revert to live births[else]get yourself laying more eggs[end if], concentrate and you should be able to take control of your change.'";
 						say "     [bracket]Use the [bold type][link]adjust ovi[end link][roman type] command or Trixie's setting menu to adjust your preferences for oviposition.[close bracket]";
 				else if nam is "Gain unbirthing ability":
-					choose row MonsterID from the Table of Random Critters;
 					say "     Dr. Medea gets a perverse grin on her reptilian face, clearly excited to undertake her twisted experiment. She eagerly gets you up onto the examination table and does a cursory exam before getting started. 'I've prepared a dose of the chemicals, which are to be applied to your reproductive system, triggering the alterations in your digestive system to spread there as well. I'm glad you're willing to go through with this procedure. Unfortunately, while I don't believe this alone would be enough to induce the same results in others, it does provide a starting point to understanding this rare ability. Well, enough waiting, let's get to it,' she says with glee.";
 					say "     Rather than provide you with a concoction to drink or an injection, she instead starts to smear some oily cream across your pussy. She starts slow and keeps her touch professional at first, but as you start to feel a warm tingle at the mouth of your vagina and it begins to stretch, her fingers become more playful, teasing you to arousal. She pauses from time to time to scoop up more of the cream and work it deeper into your cunny, getting it to spread further and wider as the lotion is absorbed into your vaginal walls.";
-					say "     Soon she's working her [if Cunt Length of Player < 12]whole hand[else if Cunt Length of Player < 24]forearm[else]whole arm[end if] into your squeezing, tugging cunt and smearing the slick goo at your very depths. As your cervix starts to relax, she pushes another handful of the body-altering cream right into your womb. It takes a lot of effort from her to be able to pull her arm free after that, grunting with the effort to resist the strong inward motion of your vaginal muscles.";
+					say "     Soon she's working her [if Cunt Depth of Player < 12]whole hand[else if Cunt Depth of Player < 24]forearm[else]whole arm[end if] into your squeezing, tugging cunt and smearing the slick goo at your very depths. As your cervix starts to relax, she pushes another handful of the body-altering cream right into your womb. It takes a lot of effort from her to be able to pull her arm free after that, grunting with the effort to resist the strong inward motion of your vaginal muscles.";
 					WaitLineBreak;
 					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it. Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step. Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
 					if girl is not banned:
@@ -511,8 +510,14 @@ to say Medeaadjustments:
 						say "     The canine girl tries to struggle, but she is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making her attempts unfocused and weak. As you grip her arms to her sides to keep her pinned, you drop to your knees, forcing yourself down over her ample bosom and taking in most of her torso. Your belly bulges as more squirming husky is squished into it with a deliciously juicy slurp. With your cervix spread open and her partially inside your womb, your urge to have her inside you only grows rather than feeling sated in any way.";
 						say "     You undergo another moaning orgasm as your vaginal walls tug her even further into you. With so much of her inside you, you can no longer see what's going on, but you can feel every delightful inch of her fluffy body being pulled into yours. Giving another loud moan, you feel her hips making their way along your impossibly stretched vaginal tunnel. With only her legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved. Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it. Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
 						say "     Sitting back, dazed, you feel the form of the husky sliding around inside your womb, your belly now bulging out with your massive pregnancy. There is a brief period where she struggles, paws pressing against your uterine walls as she seeks exit before settling down. With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive. You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[else]a placenta form to connect you to your prey[end if]. Soon enough, she's drifted off into slumber and you are in late-term pregnancy. Crossing the [if ovipreglevel is 3]egg membrane[else]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another. You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body. You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+						now HeadName of child is "Husky Bitch";
+						now TorsoName of child is "Husky Bitch";
+						now BackName of child is "Husky Bitch";
+						now ArmsName of child is "Husky Bitch";
+						now LegsName of child is "Husky Bitch";
+						now AssName of child is "Husky Bitch";
+						now TailName of child is "Husky Bitch";
 					else:
-						setmonster "Latex Fox";
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that. He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch. Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it. Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning. Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
 						say "     Having succumbed to this instinctual drive, you are unable to control yourself, your body acting of its own volition to satisfy that inner need. Even with the foreknowledge of what would happen, what's happening would still be quite disturbing and shocking were it not for the extreme pleasure the act provides. There is considerable effort to doing it, your vaginal muscles having to stretch and pull in unnatural ways to drag your prey deeper and deeper into you.";
@@ -520,6 +525,14 @@ to say Medeaadjustments:
 						say "     The vulpine guy tries to struggle, but he is quite confused and is likely overwhelmed by the taste and scent of your rampant arousal, making his attempts unfocused and weak. As you grip his arms to his sides to keep him pinned, you drop to your knees, forcing yourself down over his chest and taking in most of his torso. Your belly bulges as more squirming fox is squished into it with a deliciously juicy slurp. With your cervix spread open and him partially inside your womb, your urge to have him inside you only grows rather than feeling sated in any way.";
 						say "     You undergo another moaning orgasm as your vaginal walls tug him even further into you. With so much of him inside you, you can no longer see what's going on, but you can feel every delightful inch of his smooth body being pulled into yours. Giving another loud moan, you feel his hips making their way along your impossibly stretched vaginal tunnel. With only his legs and tail left to go, the rest is easier, giving you an opportunity to enjoy the pleasant sensations without the distraction of the effort involved. Glancing over, you see Dr. Medea watching intently, a hand under her skirt, pumping her fingers into her juicy cunt as creamy white goo leaks from it. Any medical ethics forgotten as the transformed obstetrician perversely watches her patient's pussy completely devour a helpless victim.";
 						say "     Sitting back, dazed, you feel the form of the fox sliding around inside your womb, your belly now bulging out with your massive pregnancy. There is a brief period where he struggles, paws pressing against your uterine walls as he seeks exit before settling down. With a quiver of pleasure, the nanites in your body throw your gestation process into overdrive. You can't help but moan in satisfaction as you feel [if ovipreglevel is 3]an eggshell forming around your prey[else]a placenta form to connect you to your prey[end if]. Soon enough, he's drifted off into slumber and you are in late-term pregnancy. Crossing the [if ovipreglevel is 3]egg membrane[else]placental barrier[end if], you share nanites with one another, further bonding you and your new [']child['] with one another. You are filled with contentment as this happens, as if you've fulfilled some deep purpose in your infected body. You are helped back to your feet by Dr. Medea, who eagerly examines you, confirming what your body's already told you.";
+						[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
+						now HeadName of child is "Latex Fox";
+						now TorsoName of child is "Latex Fox";
+						now BackName of child is "Latex Fox";
+						now ArmsName of child is "Latex Fox";
+						now LegsName of child is "Latex Fox";
+						now AssName of child is "Latex Fox";
+						now TailName of child is "Latex Fox";
 					now playercanub is true;
 					add "UB Pred" to feats of Player;
 					now ubcount is 1;
@@ -532,14 +545,6 @@ to say Medeaadjustments:
 						now researchbypass is 1;
 						infect;
 						now researchbypass is 0;
-					[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
-					now HeadName of child is Name entry;
-					now TorsoName of child is Name entry;
-					now BackName of child is Name entry;
-					now ArmsName of child is Name entry;
-					now LegsName of child is Name entry;
-					now AssName of child is Name entry;
-					now TailName of child is Name entry;
 				else if nam is "Pills":		[First time asking about cunt pills]
 					say "     When you inquire Medea about what she meant by her work on pills earlier, the lizard doctor asks, 'Did I accidentally let that slip? Well, that's alright. You did bring me the supplies that I needed, after all. To answer your question, I have been researching the nanites and have developed a concoction that will allow users without the proper anatomy to experience pregnancy without flooding their bodies with estrogen. In layman terms, it will give them a cunt. While the medicine hasn't been fully developed, it is safe enough to consume, and I am willing to share it with you, for a price. They are not exactly easy to produce, and I need medkits and healing boosters to continue my research, as well as using them to treat any patients who come here. Bring me either item, and I will trade you a pill in return.'";
 					now Medeapill is true;
@@ -830,14 +835,14 @@ to say cunt pill use:
 	say "You pop the pill into your mouth and swallow it without any trouble.";
 	if Player is not female:
 		now Cunt Count of Player is 1;
-		now Cunt Length of Player is 5;
+		now Cunt Depth of Player is 5;
 		now Cunt Tightness of Player is 3;
 		say "A wave of pleasure washes over your crotch area as a cunt emerges from the once bare spot, dripping with arousal. The enjoyable sensations continue as your insides churn to make room for a womb, ready to accept a male's seed in the hopes of producing a child.";
 	else if a random chance of 1 in 5 succeeds:
 		say "You are wracked with pleasure when your crotch heats up as your [if Cunt Count of Player > 1]cunts shift[else]cunt shifts[end if] to the side to make room for a new pussy.";
 		increase Cunt Count of Player by 1;
 	else:
-		increase Cunt Length of Player by a random number from 1 to 2;
+		increase Cunt Depth of Player by a random number from 1 to 2;
 		increase Cunt Tightness of Player by a random number from 1 to 2;
 		Follow the cunt descr rule;
 		say "A tingling sensation floods your [if Cunt Count of Player > 1]cunts before they grow[else]cunt before it grows[end if] in size, ready to take in bigger loads to inseminate you.";

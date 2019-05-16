@@ -36,7 +36,7 @@ Cock Length of Cassiel is 0. [no cock length]
 Ball Size of Cassiel is 0. [no ball size]
 Ball Count of Cassiel is 0. [no balls]
 Cunt Count of Cassiel is 1. [1 pussy]
-Cunt Length of Cassiel is 7.
+Cunt Depth of Cassiel is 7.
 Cunt Tightness of Cassiel is 2.
 Nipple Count of Cassiel is 2. [2 nipples]
 Breast Size of Cassiel is 4.

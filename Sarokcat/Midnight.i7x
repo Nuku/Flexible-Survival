@@ -21,7 +21,7 @@ Cock Length of Midnight is 14. [X Inches]
 Ball Size of Midnight is 8.
 Ball Count of Midnight is 2. [X balls]
 Cunt Count of Midnight is 1. [X pussy]
-Cunt Length of Midnight is 8. [X Cunt]
+Cunt Depth of Midnight is 8. [X Cunt]
 Cunt Tightness of Midnight is 4. [X Cunt]
 Nipple Count of Midnight is 6. [X nipples]
 Breast Size of Midnight is 0. [X at the start]

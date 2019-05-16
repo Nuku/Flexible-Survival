@@ -12,7 +12,7 @@ an everyturn rule: [fix for old saves]
 		now Ball Size of Tehuantl is 5;
 		now Ball Count of Tehuantl is 2;
 		now Cunt Count of Tehuantl is 0;
-		now Cunt Length of Tehuantl is 0;
+		now Cunt Depth of Tehuantl is 0;
 		now Cunt Tightness of Tehuantl is 0;
 		now Nipple Count of Tehuantl is 2; [2 nipples]
 		now Breast Size of Tehuantl is 0;
@@ -30,7 +30,7 @@ Cock Length of Tehuantl is 0.
 Ball Size of Tehuantl is 0.
 Ball Count of Tehuantl is 0.
 Cunt Count of Tehuantl is 1.
-Cunt Length of Tehuantl is 12.
+Cunt Depth of Tehuantl is 12.
 Cunt Tightness of Tehuantl is 5.
 Nipple Count of Tehuantl is 2. [2 nipples]
 Breast Size of Tehuantl is 3.

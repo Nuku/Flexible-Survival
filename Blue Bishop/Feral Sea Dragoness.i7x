@@ -179,8 +179,8 @@ to say fsdf attack:
 						say "     The effect of both her carnal affections and infectious influence drive you into a blinding lust frenzy, until you're lost in a furious haze of blissful release, the greedy dragoness eager to drain you of every last drop of your [Cum Load Size of Player] load[if Cock Count of Player > 2], her tongue occasionally moving to lick up what seed might emerge from your neglected members[else if Cock Count of Player is 2], her tongue occasionally moving to lick up what seed might emerge from your neglected member[end if].";
 					say "     Satisfied with milking her victim dry. She sets you off before retreating back into the waters. After all that, you might have figured yourself as coming out on top if it were not at the expense being a saliva-smeared, fish-smelling, and lust-addled mess afterwards.";
 				else if Player is female:
-					say "     She regards you with a soft rumble before you see her tongue move to caress [if Cunt Count of Player > 1]one of your [bodytype of Player] cunts[else]your [bodytype of Player] cunt[end if]. The thick organ sends shivers down your spine as it leaves a trail of saliva across the vulnerable portal. [if Cunt Length of Player < 5]Its initial probing makes it abundantly clear that the oversized appendage isn't going to fit no matter how hard she might try, and you take reprieve in knowing that she isn't going to challenge that fact. She instead opts to stimulate you externally by grinding her tongue's slimy surface against your exposed hole[else]She is at least gentle as the saliva-slicked appendage probes the soft folds of your exposed hole, the dragoness slow and drawn out in its motion as her tongue gradually floods the depths of your vaginal passage. Writhing in uncontrollable pleasure, the beast no doubt finds your display rather amusing to her[end if].";
-					say "     [if scalevalue of Player < 4]Driven to so readily violate you, the massive creature partially engulfs your pelvic region within her moist maw, her heated breath wafting up to wash over you as she makes a complete mess of your lower torso[else]Maintaining her irreverent assault, you frequently feel her draconic snout grind itself against your vulnerable form in the midst of her lewd affections, firmly enough to start pushing you deeper into the sand underneath you[end if]. The touch of her tainted saliva exasperating the sensation of her tongue's continued attendance, it's more than enough to very rapidly bring you to climax against the worming appendage. [if Cunt Length of Player < 5]Greedily, she licks up your sexual fluids, her scaled lips gently sucking against the [bodytype of Player] portal to coax you into offering her more. This voracious attitude, mixed with your heightened libido, is more than enough to cause you to orgasm a second time, and then a third; the dragoness relentless in cleaning you out[else]The taste of your sexual fluids only encourages her to ram you with the slick organ harder, bringing in its wake a chain of orgasms, the next more blindingly intense than the other. You nearly pass out before she finally relents[end if].";
+					say "     She regards you with a soft rumble before you see her tongue move to caress [if Cunt Count of Player > 1]one of your [bodytype of Player] cunts[else]your [bodytype of Player] cunt[end if]. The thick organ sends shivers down your spine as it leaves a trail of saliva across the vulnerable portal. [if Cunt Depth of Player < 5]Its initial probing makes it abundantly clear that the oversized appendage isn't going to fit no matter how hard she might try, and you take reprieve in knowing that she isn't going to challenge that fact. She instead opts to stimulate you externally by grinding her tongue's slimy surface against your exposed hole[else]She is at least gentle as the saliva-slicked appendage probes the soft folds of your exposed hole, the dragoness slow and drawn out in its motion as her tongue gradually floods the depths of your vaginal passage. Writhing in uncontrollable pleasure, the beast no doubt finds your display rather amusing to her[end if].";
+					say "     [if scalevalue of Player < 4]Driven to so readily violate you, the massive creature partially engulfs your pelvic region within her moist maw, her heated breath wafting up to wash over you as she makes a complete mess of your lower torso[else]Maintaining her irreverent assault, you frequently feel her draconic snout grind itself against your vulnerable form in the midst of her lewd affections, firmly enough to start pushing you deeper into the sand underneath you[end if]. The touch of her tainted saliva exasperating the sensation of her tongue's continued attendance, it's more than enough to very rapidly bring you to climax against the worming appendage. [if Cunt Depth of Player < 5]Greedily, she licks up your sexual fluids, her scaled lips gently sucking against the [bodytype of Player] portal to coax you into offering her more. This voracious attitude, mixed with your heightened libido, is more than enough to cause you to orgasm a second time, and then a third; the dragoness relentless in cleaning you out[else]The taste of your sexual fluids only encourages her to ram you with the slick organ harder, bringing in its wake a chain of orgasms, the next more blindingly intense than the other. You nearly pass out before she finally relents[end if].";
 					say "     Satisfied with sucking you dry - stained with the beast's saliva notwithstanding - she pulls herself from you. She noses you off in teasing affection before she crawls back into the ocean's depths from whence she came. You're so disoriented from the occurrence that it takes you awhile to gather your mind and stand back up, running off.";
 				else if anallevel is 3:
 					say "     She regards you with a soft rumble, nuzzling you with slight disconcertion at your lack of equipment for her to have fun with, until she concedes to moving her tongue to caress your ass. The thick organ sends shivers down your spine as it leaves a trail of saliva across the vulnerable anal ring.";
@@ -460,7 +460,7 @@ to say FSDF_4: [Oral Receiving Cunt]
 			say "     Her own slick, writhing appendage invading your maw, [if scalevalue of Player < 4]her size no doubt somewhat overwhelming, though she shows some restraint,[else]you're able to keep up the eager beast with little issue[end if] as your taste is overwhelmed by her overpowering saliva. Eventually, you find yourself satisfied with your bit of fun and you have to get back to the task at hand.";
 	else:
 		now tempnum is 0;
-	say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if], she obliges your need, scaled lips parting to envelop [if Cock Count of Player > 1]one of your pussies[else]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if Cunt Length of Player > 17]she easily thrusts the slick, writhing organ into your pliable depths[else]she thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of her saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against her snout, the dragoness churring in approval.";
+	say "     [if tempnum is 1]Eager to begin[else if tempnum is 2]Eager and drooling to begin[else]With little effort[end if], she obliges your need, scaled lips parting to envelop [if Cock Count of Player > 1]one of your pussies[else]your pussy[end if] within its embrace. Thick tongue slathering along its supple entrance, [if Cunt Depth of Player > 17]she easily thrusts the slick, writhing organ into your pliable depths[else]she thrusts the slick, writhing organ into your depths, quickly straining you with its impressive size[end if]. The touch of her saliva[if tempnum is 2], along with that lingering in your maw,[end if] [one of]seeming to intensify[or]intensifying[stopping] your arousal, you can't help but press against her snout, the dragoness churring in approval.";
 	say "     Writhing against the beast's touch, happily making you twitch and gasp with each motion of her worming appendage, you find it difficult to keep a clear head as you rapidly approach ecstasy";
 	if Player is male:
 		say ". You don't think you'll be able to hold back for any longer, dick[smn] drooling against the open air. Shall you pull out at the last second and shame the sea dragoness with your cum? Otherwise, you'll spare her the humiliation.";
@@ -513,7 +513,7 @@ to say FSDF_5: [Oral Giving Cunt]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Length	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -555,7 +555,7 @@ When Play begins:
 	now Breast Size entry is 0;
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 1;
-	now Cunt Length entry is 21;
+	now Cunt Depth entry is 21;
 	now Cunt Tightness entry is 15;
 	now libido entry is 45;
 	now loot entry is "";
@@ -572,7 +572,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Length	Cunt Tightness	Clit Size
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -660,7 +660,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Length entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -966,9 +966,9 @@ to say fsdheatstart:
 			now MonsterID is y;
 			break;
 	increase Cunt Tightness of Player by 1;
-	increase Cunt Length of Player by 1;
+	increase Cunt Depth of Player by 1;
 	if Cunt Tightness of Player < Cunt Tightness entry, increase Cunt Tightness of Player by 1;
-	if Cunt Length of Player < Cunt Length entry, increase Cunt Length of Player by 1;
+	if Cunt Depth of Player < Cunt Depth entry, increase Cunt Depth of Player by 1;
 	increase Libido of Player by 10;
 	if Libido of Player > 100, now Libido of Player is 100;
 
@@ -982,7 +982,7 @@ to say fsdheatend:
 			now MonsterID is y;
 			break;
 	if Cunt Tightness of Player > Cunt Tightness entry, decrease Cunt Tightness of Player by 1;
-	if Cunt Length of Player > Cunt Length entry, decrease Cunt Length of Player by 1;
+	if Cunt Depth of Player > Cunt Depth entry, decrease Cunt Depth of Player by 1;
 
 to say fsdinheat:
 	increase Libido of Player by 4;

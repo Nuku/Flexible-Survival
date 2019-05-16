@@ -26,7 +26,7 @@ Cock Length of Harold is 18. [X Inches]
 Ball Size of Harold is 9.
 Ball Count of Harold is 2. [X balls]
 Cunt Count of Harold is 0. [X pussy]
-Cunt Length of Harold is 0. [X Cunt]
+Cunt Depth of Harold is 0. [X Cunt]
 Cunt Tightness of Harold is 0. [X Cunt]
 Nipple Count of Harold is 2. [X nipples]
 Breast Size of Harold is 0. [X at the start]

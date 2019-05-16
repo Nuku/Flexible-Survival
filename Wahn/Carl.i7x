@@ -71,7 +71,7 @@ Cock Length of Carl is 9.
 Ball Size of Carl is 4.
 Ball Count of Carl is 2.
 Cunt Count of Carl is 0.
-Cunt Length of Carl is 9.
+Cunt Depth of Carl is 9.
 Cunt Tightness of Carl is 2.
 Nipple Count of Carl is 2. [2 nipples]
 Breast Size of Carl is 0.

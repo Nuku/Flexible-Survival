@@ -65,7 +65,7 @@ Cock Length of Julian is 10. [10 Inches]
 Ball Size of Julian is 6.
 Ball Count of Julian is 2. [Two balls]
 Cunt Count of Julian is 0. [No pussy]
-Cunt Length of Julian is 0. [No Cunt]
+Cunt Depth of Julian is 0. [No Cunt]
 Cunt Tightness of Julian is 0. [No Cunt]
 Nipple Count of Julian is 2. [2 nipples]
 Breast Size of Julian is 0. [Flat at the start]

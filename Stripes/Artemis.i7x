@@ -1271,11 +1271,11 @@ to say artemisengulf_SF_mod:
 to say artemis_set_genitals:
 	if lust of rubber tigress is 1:				[resetting pre-engulf values]
 		now Cunt Count of rubber tigress is 1;
-		now Cunt Length of rubber tigress is 12;
+		now Cunt Depth of rubber tigress is 12;
 		now Cunt Tightness of rubber tigress is 9;
 	else:
 		now Cunt Count of rubber tigress is 0;
-		now Cunt Length of rubber tigress is 0;
+		now Cunt Depth of rubber tigress is 0;
 		now Cunt Tightness of rubber tigress is 0;
 	if thirst of rubber tigress is 1:
 		now Cock Count of rubber tigress is 1;
@@ -1315,7 +1315,7 @@ to say artemisengulf_mod_01:
 		if Cock Length of Player > Cock Length of rubber tigress, now Cock Length of rubber tigress is Cock Length of Player;
 		if Ball Size of Player > Ball Size of rubber tigress, now Ball Size of rubber tigress is Ball Size of Player;
 		if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-		if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+		if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 		if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	else if Player is male:				[male setup]
 		say ". You grind your stiff cock[smn] against her[if lust of rubber tigress is 1 and thirst of rubber tigress is 1] own manhood and pussy, drawing an appreciative mrowl. But rather than penetrate her, you can feel it pressing to your flesh, her dildo shaft melding with yours to become shared cock[smn]. That is then followed by the even stranger and more pleasurable sensation of her cock-sleeve cunny joining with you, giving you a shared pussy that aches to be filled as you become a herm with her[else if lust of rubber tigress is 1] pussy, drawing an appreciative mrowl. But rather than penetrate her, you can feel it pressing to your flesh. Moments after her rubbery hide coats your cock[smn], there comes the even stranger and more pleasurable sensation of her cock-sleeve cunny joining with you, giving you a shared pussy that aches to be filled as you become a herm with her[else if thirst of rubber tigress is 1]s, drawing an appreciative mrowl. Soon the sensation changes, her dildo shaft melding with yours to become shared cock[smn][else] bare crotch, drawing a longing mrowl. Soon enough you feel that familiar touch of her rubber flesh liquefying and coating your own, sliding over your cock[smn]to become shared[end if]";
@@ -1325,7 +1325,7 @@ to say artemisengulf_mod_01:
 	else if Player is female:				[female setup]
 		say ". You grind your juicy cunn[yfn] against her, drawing an appreciative mrowl. Your honeyed juices make her smooth flesh slick even before it starts to flow over and into you[if lust of rubber tigress is 1 and thirst of rubber tigress is 1]. Even as you feel her cock-sleeve cunt flowing and spreading to coat your puss[yfn], you can all feel her throbbing dildo cock taking root as you become a herm with her[else if lust of rubber tigress is 1]. You can feel her cock-sleeve cunt flowing and spreading to coat your puss[yfn] to become a shared source of pleasure and heated need[else if thirst of rubber tigress is 1]. You can feel her dildo shaft rubbing against your cunt, making you moan in return. But rather than penetrate you with it, you feel her flowing latex flesh entering you instead, coating your vaginal walls. Moments afterwards, there comes the even stranger and more pleasurable sensation of her sextoy cock joining with you, giving you a shared manhood that throbs with a desire to be used as you become a herm together[else] bare crotch, drawing a longing mrowl. Soon enough you feel that familiar touch of her rubber flesh liquefying and coating your own, sliding into your cunt[sfn] to become shared[end if]";
 		if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-		if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+		if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 		if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	if thirst of rubber tigress is 3:				[tail-cock add-on]
 		say ". This transition is punctuated by her modified tail joining with you[if anallevel is 3] just as her rubbery goo pushes into your bowels to coat them[end if], making that kinky appendage of hers a part of you as well. You can feel its every throb and moan as it dribbles more of her liquid latex flesh down onto you, speeding your [']capture[']";
@@ -1369,7 +1369,7 @@ to say artemisengulf_mod_ext:		[long delay]
 		if Cock Length of Player > Cock Length of rubber tigress, now Cock Length of rubber tigress is Cock Length of Player;
 		if Ball Size of Player > Ball Size of rubber tigress, now Ball Size of rubber tigress is Ball Size of Player;
 		if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-		if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+		if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 		if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	else if Player is male:				[male setup]
 		say "spreading across your cock[smn] is particularly pleasing, as always. The squeezing around your maleness is such a perverse delight[if lust of rubber tigress is 1]. And the pleasure only heightens as her sextoy genitals start fusing with yours, increasing the intimacy of your union. As her cunt reforms underneath your latex-covered shaft[smn], you are joined together as a herm[else if thirst of rubber tigress is 1]. And the pleasure only heightens as her sextoy genitals start fusing with yours, increasing the intimacy of your union[end if]";
@@ -1379,7 +1379,7 @@ to say artemisengulf_mod_ext:		[long delay]
 	else if Player is female:				[female setup]
 		say "spreading across your puss[yfn] is particularly pleasing, as always. The feel of it flowing past your folds and into you is such a perverse delight[if thirst of rubber tigress is 1]. And the pleasure only heightens as her sextoy genitals start fusing with yours, increasing the intimacy of your union. As her cock reforms above your latex-covered cunn[yfn], you are joined together as a herm[else if lust of rubber tigress is 1]. And the pleasure only heightens as her sextoy genitals start fusing with yours, increasing the intimacy of your union[end if]";
 		if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-		if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+		if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 		if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	if anallevel is 3:
 		say ". And when some of the flowing rubber pushes into your bowels, your excitement builds all the higher";
@@ -1519,7 +1519,7 @@ to say artemisengulf_SF_mod01:
 	if Cock Length of Player > Cock Length of rubber tigress, now Cock Length of rubber tigress is Cock Length of Player;
 	if Ball Size of Player > Ball Size of rubber tigress, now Ball Size of rubber tigress is Ball Size of Player;
 	if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-	if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+	if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 	if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	say "     As your companion is sealing up over your head[if lust of rubber tigress is 2] and her cunt-mouth flows into yours[else if thirst of rubber tigress is 2] and her cocktongue melds into yours[end if], she pulls herself upright in her new, [if bodyname of Player is listed in infections of taurlist]tauric[else]anthropomorphic[end if] form. She gives her [if thirst of rubber tigress is 3]sextoy [end if]tail a swish, making a come hither motion to the other tigress. [one of]Intrigued[or]Nervous[or]Cautious[or]Excited[at random], she steps slowly closer, her eyes running over your combined body and the once neuter feline's new gender. Putting their arms around one another, they purr and run their paws over each other. And what starts initially as stroking and petting soon turns to groping and grinding as the aroused felines kiss.";
 
@@ -1531,7 +1531,7 @@ to say artemisengulf_SF_mod02:
 	if Cock Length of Player > Cock Length of rubber tigress, now Cock Length of rubber tigress is Cock Length of Player;
 	if Ball Size of Player > Ball Size of rubber tigress, now Ball Size of rubber tigress is Ball Size of Player;
 	if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-	if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+	if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 	if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	say "     With you nice and sealed up, she wastes no time quickly goes off in search of some companionship. Knowing full well what she wants, she struts around with confidence in her new [if rubber tigress is herm]herm[else if rubber tigress is male]male[else if rubber tigress is female]female[end if] form, sleepwalking your body with obvious grace after all her practice. And while she draws the attention of a few of the other critters around, she passes them by until she locates one of the feline tigresses. Once found, there is no hesitation before Artemis gives a lustful mrowl and strides towards the other feline. Putting their arms around one another, they purr and run their paws over each other. And what starts initially as stroking and petting soon turns to groping and grinding as the aroused felines kiss.";
 
@@ -1601,7 +1601,7 @@ to say artemisengulf_nap_mod_01:
 	if Cock Length of Player > Cock Length of rubber tigress, now Cock Length of rubber tigress is Cock Length of Player;
 	if Ball Size of Player > Ball Size of rubber tigress, now Ball Size of rubber tigress is Ball Size of Player;
 	if Cunt Count of Player > Cunt Count of rubber tigress, now Cunt Count of rubber tigress is Cunt Count of Player;
-	if Cunt Length of Player > Cunt Length of rubber tigress, now Cunt Length of rubber tigress is Cunt Length of Player;
+	if Cunt Depth of Player > Cunt Depth of rubber tigress, now Cunt Depth of rubber tigress is Cunt Depth of Player;
 	if Cunt Tightness of Player > Cunt Tightness of rubber tigress, now Cunt Tightness of rubber tigress is Cunt Tightness of Player;
 	say "     As you're getting ready to lie down and take a nap, the rubber tigress pads over to you, snuggling up at your feet[if location of Player is State Fair and artemisstatefairrt is false] and seeming more eager than usual about naptime[end if]. Having a pretty good idea what she really has in mind, you pet her head and decide to just go with it. You'll get your rest and even some kinky dreams while she gets her much-needed release. Once again, as you're drifting off into slumber, she starts to spread over you[if scalevalue of Player > 3]. It takes some extra time and stretching to be able to cover your [Body Size Adjective of Player], [bodydesc of Player] body, but the prospect of being bigger as well makes it well worth the effort for her[end if]. By this point, you don't resist, instead letting her flow out and cover you. The feel of her forming tightly around you, even reshaping you a little to make you into a [if Cock Count of rubber tigress > 0 and Cunt Count of rubber tigress is 0]girlish tiger[else]sexy tigress[end if][if bodyname of Player is listed in infections of taurlist] taur[end if] made of rubber.";
 	say "     Adding to this is the increasingly pleasurable sensation of her rubbery goo flowing [if Player is herm]over and into you dual genitals[else if Player is male]over your cock[smn][else if Player is female]into your cunt[sfn][else]into your back passage[end if][if lust of rubber tigress is 1 and Cunt Count of Player is 0] as her dripping pussy takes its place at your crotch[else if thirst of rubber tigress is 1 and Cock Count of Player is 0] as her throbbing shaft takes its place at your crotch[end if][if thirst of rubber tigress is 3]. Added to that comes the addition of the tigress's sextoy tail to your rubberized form[end if]. The final moments with her covering your head and going down your throat is still a little disconcerting, but as that's ending[if lust of rubber tigress is 2] and her pussymouth flows into yours[else if thirst of rubber tigress is 2]cocktongue settles into place[end if], you drift off into a more passive state, sleepwalking along as she uses your body as her own.";

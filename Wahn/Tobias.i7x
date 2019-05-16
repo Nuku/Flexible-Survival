@@ -179,7 +179,7 @@ Cock Length of Tobias is 12.
 Ball Size of Tobias is 5.
 Ball Count of Tobias is 2.
 Cunt Count of Tobias is 0.
-Cunt Length of Tobias is 0.
+Cunt Depth of Tobias is 0.
 Cunt Tightness of Tobias is 0.
 Nipple Count of Tobias is 2. [2 nipples]
 Breast Size of Tobias is 0.
