@@ -249,6 +249,7 @@ When Play begins:
 	now Cunt Tightness entry is 24; [ Width of female sex infection will try and give you ]
 	now libido entry is 0; [done in the loss/win text]		[ Amount player Libido will go up if defeated ]
 	now loot entry is "fresh apple";
+	now lootchance entry is 20;        [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
