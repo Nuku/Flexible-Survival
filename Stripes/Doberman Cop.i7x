@@ -581,7 +581,7 @@ When Play begins:
 	now Hair Length entry is 5; [hair length in inches]
 	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is "auburn"; [one word color descriptor]
-	now Hair Style is "fauxhawk"; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Hair Style entry is "fauxhawk"; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
 	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
 	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is "amber"; [one word color descriptor]
