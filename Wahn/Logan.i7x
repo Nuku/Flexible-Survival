@@ -111,6 +111,9 @@ Section 3 - Conversation
 [***********************************************************]
 
 instead of conversing the Logan:
+	say "[LoganTalkMenu]";
+
+to say LoganTalkMenu:
 	say "     [bold type]What do you want to talk to Logan about?[roman type][line break]";
 	LineBreak;
 	now sextablerun is 0;
@@ -153,6 +156,7 @@ instead of conversing the Logan:
 				else if (nam is "Collect some earnings for Blake"):
 					say "[BlakeShareCollect]";
 				wait for any key;
+				say "[LoganTalkMenu]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the gruff wolverine, shaking your head slightly as he gives a questioning look.";
@@ -162,23 +166,19 @@ instead of conversing the Logan:
 	clear the screen and hyperlink list;
 
 to say LoganTalk1: [talk about him]
-	say "     'Not much to tell,' Logan replies with a shrug. 'Grew up in a shitty neighborhood, wasn't stupid enough to become cannon fodder for one gang or another. Did have things lined up to learn to be a mechanic after high school, but half a year in, the pigs shut the place down. Asshole owner was too cheap with his bribes over the stolen parts.' The last words are said in a growl, with the wolverine baring his teeth, then spitting on the ground in disgust. 'Did all sorts of shit since. Some bouncing, little pimping on the side, odd jobs, then landed the gig as a guard.' He taps his badge with a clawed finger and grumbles, 'Shit, I plans. Was making buds with some of the other dudes on the force to... ah, don't matter anymore, not with this whole mess rolling around now.'";
+	say "     'Not much to tell,' Logan replies with a shrug. 'Grew up in a shitty neighborhood, wasn't stupid enough to become cannon fodder for one gang or another. Did have things lined up to learn to be a mechanic after high school, but half a year in, the pigs shut the place down. Asshole owner was too cheap with his bribes over the stolen parts.' The last words are said in a growl, with the wolverine baring his teeth, then spitting on the ground in disgust. 'Did all sorts of shit since. Some bouncing, little pimping on the side, odd jobs, then landed the gig as a guard.' He taps his badge with a clawed finger and grumbles, 'Shit, I had plans. Was making buds with some of the other dudes on the force to... ah, don't matter anymore, not with this whole mess rolling around now.'";
 
 to say LoganTalk2: [talk about his plans]
 	say "     Letting out an annoyed rumble from the depth of his throat, Logan shrugs. 'Whole world seems to have the idea that it should shit over my plans at the tiniest opportunity. So no thanks, I'll keep those to myself. For now, let's say I'm content with living through this transformation shit, and sinking my dick into however many bitches I can, as often as possible.' He grins as he says this, throwing a glance over to the tied-up rat on his bedding. 'Hey Blake, looking forward to our next round!'";
 
-an everyturn rule:
-	if daytimer is day and LastTurnDay is false and HP of Blake > 50 and HP of Blake < 90: [it is day now, and last turn was night, Blake whoring]
-		increase Energy of Blake by 1; [add on one profit share of whoring him out]
-
 to say BlakeShareCollect:
 	if Energy of Blake is 0: [nothing to dole out]
-		say "     As you ask Logan for your share from whoring out blake, the wolverine gives a gruff snort. 'The little slut may be a nice hole to stuff your dick in, but there are only so many people wanting to pay for it, ya see? Bit of a waste to have a true and proper fuckslave in a situation where most just grab any bitch that wanders past. I can tell ya, in my old neighborhood, before all of this shit, the cash would have been rolling in nonstop.' Thumping the empty collection box behind his chair with a foot-paw, he shrugs. 'Come back tomorrow or so, and we'll see what payments came in!'";
-	else if Energy of Blake is 1:
+		say "     As you ask Logan for your share from whoring out Blake, the wolverine gives a gruff snort. 'The little slut may be a nice hole to stuff your dick in, but there are only so many people wanting to pay for it, ya see? Bit of a waste to have a true and proper fuckslave in a situation where most just grab any bitch that wanders past. I can tell ya, in my old neighborhood, before all of this shit, the cash would have been rolling in nonstop.' Thumping the empty collection box behind his chair with a foot-paw, he shrugs. 'Come back tomorrow or so, and we'll see what payments came in!'";
+	else if Energy of Blake is 1: [one share to collect]
 		say "     As you ask Logan for your share from whoring out Blake, the wolverine gives a gruff snort. 'Got some shit in the box, let me have a look.' Pulling a wooden fruit crate out from behind his chair, the broad-shouldered anthro digs around and soon takes two items out of it, which he hands to you. 'There we go, your share!' he announces with a somewhat greasy grin on his face, showing off his impressive collection of sharp teeth as he does so.";
 		CollectBlakePayout;
-	else:
-		say "     As you ask Logan for your share from whoring out Blake, the wolverine gives a gruff snort. 'Got a bunch of shit in the box, let me have a look.' Pulling a wooden fruit crate out from behind his chair, the broad-shouldered anthro digs around, shoving several items into a flisy plastic shopping bag, which he hands to you. 'There we go, your share!' he announces with a somewhat greasy grin on his face, showing off his impressive collection of sharp teeth as he does so.";
+	else: [more than one share to collect]
+		say "     As you ask Logan for your share from whoring out Blake, the wolverine gives a gruff snort. 'Got a bunch of shit in the box, let me have a look.' Pulling a wooden fruit crate out from behind his chair, the broad-shouldered anthro digs around, shoving several items into a flimsy plastic shopping bag, which he hands to you. 'There we go, your share!' he announces with a somewhat greasy grin on his face, showing off his impressive collection of sharp teeth as he does so.";
 		CollectBlakePayout;
 
 to CollectBlakePayout:
@@ -219,7 +219,7 @@ Section 4 - Sex
 
 instead of fucking the Logan:
 	if (lastfuck of Logan - turns < 2): [he got fucked in the last 6 hours = 2 turns]
-		say "     'Bitch, I like to fuck as much as the next guy, but nonstop is a bit much even for me. Fuck off, you whore. You'll get this dick in time,' Logan replies with a gruff snort.";
+		say "     'Bitch, I like to fuck as much as the next guy, but nonstop is a bit much even for me. Fuck off, [if Strength of Logan > 0]whore. [end if]I'm not in the mood right now. You'll get this dick in time,' Logan replies with a gruff snort.";
 	else: [ready for sex]
 		say "     As you walk up to Logan, he recognizes the lustful gleam in your eyes and lets his gaze wander up and down over your form while a lewd grin spreads over his face. 'So, guess you wanna be more than business partners, eh?' he says in a cocky tone, pulling down the zipper of his uniform jacket and revealing a furry, muscled chest as he does so.";
 		wait for any key;
@@ -244,8 +244,14 @@ to say LoganSexMenu:
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Take Logan's cock in your ass";
-	now sortorder entry is 5;
-	now description entry is "Get fucked in the ass by the incubus";
+	now sortorder entry is 3;
+	now description entry is "Get fucked in the ass by the wolverine";
+	[
+	if Player is male and Strength of Logan < 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Share a fuck of Blake with Logan";
+		now sortorder entry is 4;
+		now description entry is "Spit-roast the rat between you";
 	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -264,10 +270,12 @@ to say LoganSexMenu:
 				now sextablerun is 1;
 				if (nam is "Get on your knees and give him a blowjob"):
 					say "[LoganSex1]";
-				if (nam is "Take Logan's cock in your pussy"):
+				else if (nam is "Take Logan's cock in your pussy"):
 					say "[LoganSex2]";
-				if (nam is "Take Logan's cock in your ass"):
+				else if (nam is "Take Logan's cock in your ass"):
 					say "[LoganSex3]";
+				else if (nam is "Take Logan's cock in your ass"):
+					say "[LoganSex4]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -278,23 +286,61 @@ to say LoganSexMenu:
 	clear the screen and hyperlink list;
 
 to say LoganSex1: [BJ on Logan]
-	say "     Stepping up to Logan, you lean in to kiss him, only to find him clamping a hand on your shoulder and taking control instead. Pressing down, he makes you kneel before him, then cradles your head in a show of dominance. 'I know what you want,' the gruff wolverine says with a broad grin on his face, pushing two of his fingers between your lips. 'Suck on that!' he commands and you do so, slurping on his digits and your tongue playing over the pads of his fingers. His free hand moves to pull down the zipper of his pants, freeing a thick and hard knotted kock from its prison. Wrapping his fingers around the shaft of the large erection, he waves it around and smacks your cheek with it. 'You're just another needy slut, ain't that right?! Your mouth watering when you think about sucking my long, hard cock! Here it is, [if player is female]darling[else]dude[end if]! Go on, worship it!'";
+	say "     Stepping up to Logan, you lean in to kiss him, only to find him clamping a hand on your shoulder and taking control instead. Pressing down, he makes you kneel before him, then cradles your head in a show of dominance. 'I know what you want,' the gruff wolverine says with a broad grin on his face, pushing two of his fingers between your lips. 'Suck on that!' he commands and you do so, slurping on his digits and your tongue playing over the pads of his fingers. His free hand moves to pull down the zipper of his pants, freeing a thick and hard knotted cock from its prison. Wrapping his fingers around the shaft of the large erection, he waves it around and smacks your cheek with it. 'You're just another needy slut, ain't that right?! Your mouth watering when you think about sucking my long, hard cock! Here it is, [if player is female]darling[else]dude[end if]! Go on, worship it!'";
 	say "     With that said, the wolverine wrenches his fingers from your mouth, holding his shaft out for you to suck next. You stretch your neck and accept the pointy head of his shaft, lips closing around it as you suckle the hunky male's dick and then begin to bob on it. 'That's a good slut! Deeper!' Logan demands while undoing the button of his pants and pulling its front open further, chuckling as you take more of his length into your mouth. His paw-hand slides around the back of your head next, getting a good grip and slamming you against his crotch. Nose suddenly buried in the wild nest of his pubic fur and taking huffs of his manly musk, your throat muscles tremble and flex around the invading shaft. 'Yeah, now we're talking!' Logan grunts in pleasure and you can feel a throb go through his shaft as a little spurt of pre-cum is sent to trickle into your stomach.";
 	WaitLineBreak;
-	say "     Your dominant wolverine doesn't waste much more time, clamping your head between both of his hands and starting to face-fuck you in a harsh tempo, his weighty balls smacking against your chin with every stroke. The demanding way in which he fucks leaves little chance for second thoughts, or even breathing, and you do the best you can in relaxing your throat and taking little gasps of air whenever you can.";
-	say "     Sinking down to your knees, you look up to see the smiling face of Logan looking down at you, just past his erect cock. He traces the tip of his index finger over the cum-slit and comes away from it with a sticky string of pre-cum, then smears the fluid over your lips. 'Open wide to receive me!' the young demon commands, proudly holding out his dick and moving to stand over you. He gleefully brushes his cum-slit against your lips even as you open your mouth and try to start sucking, only allowing you to do so once he has spread more of his pre on you. Then finally, he's inside your mouth - his warm length of demonic cock laying on your tongue and pushing further back to bump the back of your throat. Working himself back and forth, the incubus contains his impatience enough so that he can get you used to his girth, tilting back your head as he pushes down your throat eventually.";
-	WaitLineBreak;
-	say "     'You did such a good job in making this cock, daddy! Glad you're taking the chance to savor your handiwork now. How does it feel down your throat, eh? Leaking pre into daddy! Fuck, this is nice!' Logan says in a gleeful tone as he works himself in and out of your mouth, patting your head. He's obviously quite into the fun of using you this way and soon proceeds to take hold of your head with both hands, then starts to face-fuck you in a rapid tempo, chuckling about the slapping noises of his balls against your chin. 'I'm gonna feed you my cum now! Ready to take a load from your own demon boy? Of course you are, daddy. Only a real cum-slut would be on their knees before their son!' With that said, Logan takes out all the stops and really hammers into your throat hard, making it hard to even get a panted breath through your nose as he mostly blocks your airways with his cock.";
-	say "     It doesn't take all that long of such harsh pounding before Logan shouts, 'Fffuuckkkkk! Take it, slut!' His cock throbs heavily against your tongue and you can feel it in your throat as the first splash of cum is pumped into it. More and more follow after that, so many that you actually have to pat urgently against the incubus's hips so he pulls back and allows you a gasp of air. It's not like he doesn't enjoy that part of it either though, as any cum that isn't blown down your throat gets used to paint your face white. As his orgasm slowly ebbs off, Logan looks down at you with a grin, inspecting his handiwork. 'Hmm, that's a great look on you daddy! I might just forgive you for being an absentee dad and missing all the hours of my childhood if you keep this up.'";
+	say "     Your dominant wolverine doesn't waste much more time, clamping your head between both of his hands and starting to face-fuck you in a harsh tempo, his weighty balls smacking against your chin with every stroke. The demanding way in which he fucks leaves little chance for second thoughts, or even breathing, and you do the best you can in relaxing your throat and taking little gasps of air whenever you can. It doesn't take all that long of his full force pounding before Logan shouts, 'Fffuuckkkkk! Take it, slut!' His cock throbs heavily against your tongue and you can feel it in your throat as the first splash of cum is pumped into it. More and more follow after that, so many that you actually have to tap out with your hands on his hips, prompting the wolverine to start pulling back. It's easier said than done, what with his knot starting to swell up rapidly, so your mouth has to open almost painfully wide to allow him to slip his shaft from it.";
+	say "     As you collapse at his feet, gasping for breath, the wolverine stands over you with a grin on his face and casually strokes himself a little while longer, milking out the last spurts of cum from his orgasm to have them land on your head and upper body in dribs and drabs. 'That wasn't half bad,' comes his verdict soon after, and with that said he stuffs his cock back into his pants and saunters over to his chair.";
 	NPCSexAftermath Player receives "OralCock" from Logan;
+	if Strength of Logan < 10: [submission to him]
+		increase Strength of Logan by 1;
 
 to say LoganSex2: [pussy fuck by Logan]
-	say "     ...";
+	say "     Stepping up to Logan, you put your hands on the sides of his broad torso and lean in to kiss him. With a grunt of lust, he replies by clamping his large hand around the curve of your neck, holding you tight as he opens his muzzle and gives your face a possessive lick. Following up with a rather forceful bout of making out, his tongue invading your mouth and attempting to wrestle yours into submission, you find yourself held in his strong arms. 'Another nice little slut, throwing yourself at me,' he comments as he finally relents a little, allowing you to get in a panted breath. 'And I got just what a needy bitch like you needs!' With that said, the anthro male lowers his hands to undo the button and zipper of his pants, allowing a thick and weighty knotted shaft to flop out. He wastes little time with more words, simply hooking a hand behind your neck and bending you forward to end up with his cock at eye level.";
+	say "     'Open up and give it some attention!' Logan tells you in a demanding tone, chuckling as you take his manhood into your mouth right away. The wolverine quickly takes over after that, hand on your head and pumping it up and down on his cock instead of allowing you to do so at your own pace. He clearly has other things in mind than a relaxed blowjob though, and before you know it, your head is pulled away and you feel his hands under your armpits. 'Get up and bend over, bitch!' he barks out, pushing you towards a nearby wall and clamping his hands around your wrists, positioning them on the bricks so you stand in a typical 'police patdown' stance. Logan [StripCrotch], then grunts in your ear, 'You're gonna get it now, slut!' Taking hold of his erection, he strokes it up the inside of your legs, brushing against your clit and making you tremble in pleasure before he nudges it against your nether lips.";
+	WaitLineBreak;
+	say "     The spit- and precum-slick tip of Logan's shaft feels hot against your folds as he pushes in between them, then stretches your insides snugly around his thick cock. Leaning forward against the wall, you let out a loud moan as the strong man takes you from behind, grinding himself against your rear to bury all of his length inside. 'Now that's what I call a sweet and juicy pussy!' he calls out, wrapping one arm around your front as he gives you a sharp thrust that pops his pre-knot bulge past your opening. The next sounds from him are more animalistic in nature, as the wolverine begins to fuck you in a rapid and harsh tempo, really pounding into you and making his heavy balls slap against your crotch again and again. It's a good thing that he made you brace, as such no holds barred hammering would have you face-planted against the wall quickly otherwise.";
+	say "     You're in for a wild ride with the vigorous wolverine that you chose to take on, with Logan pushing you to moan, gasp and scream in lust as he delves into the depths of your pussy and hits spots you didn't even know you had. He laughs at your helpless pleasure and grunts something about, 'Bitches just need to be shown their place,' as he ravages your pussy to his heart's content. You don't quite know how long your coupling takes, losing your sense of time in the blissed-out haze he puts you under, until the ever harder thrusts of the anthro beast fucking you herald his impending orgasm. With a deep growl, Logan hammers forward once more, burying all of his cock just in time to blast the first big splurge of his seed deep inside. Grunting dominantly, the wolverine fills you with a large and virile load, his knot swelling up to ensure that all of it stays inside you for a good long while. Your own pleasure is pushed right along with his, and you orgasm around his throbbing shaft just a few heartbeats later[if player is male], painting the wall in front of you with the splatters of your own cum[end if].";
+	WaitLineBreak;
+	say "     Out of breath and panting, the two of you stand against the wall for some time as you ride out your respective climaxes. 'Sweet little pussy you got there,' Logan finally says in a gruff tone and squeezes your ass. 'Wouldn't mind pounding it again a few times before all of this is over,' the anthro male adds, then starts to pull away from you, making you groan at the sensation of his still quite bulging knot against your inner opening. Your eyes go wide and you gasp as he gives a sharp tug, forcing his way out of your freshly-bred sex. This wolverine definitively isn't one to cuddle after sex it seems. Without a further word, he leaves you standing where you are, hand over your now aching and cum-dripping hole.";
 	NPCSexAftermath Player receives "PussyFuck" from Logan;
+	if Strength of Logan < 10: [submission to him]
+		increase Strength of Logan by 1;
 
 to say LoganSex3: [ass-fucking by Logan]
-	say "     ...";
-	NPCSexAftermath Player receives "PussyFuck" from Logan;
+	say "     Stepping up to Logan, you put your hands on the sides of his broad torso and lean in to kiss him. With a grunt of lust, he replies by clamping his large hand around the curve of your neck, holding you tight as he opens his muzzle and gives your face a possessive lick. Following up with a rather forceful bout of making out, his tongue invading your mouth and attempting to wrestle yours into submission, you find yourself held in his strong arms. 'Another [if player is male]dirty little fag whore[end if], throwing yourself at me,' he comments as he finally relents a little, allowing you to get in a panted breath. 'And I got just what a needy bitch like you needs!' With that said, the anthro male lowers his hands to undo the button and zipper of his pants, allowing a thick and weighty knotted shaft to flop out. He wastes little time with more words, simply hooking a hand behind your neck and bending you forward to end up with his cock at eye level.";
+	say "     'Open up and get it nice and wet, you'll need it!' Logan tells you in a demanding tone, chuckling as you take his manhood into your mouth right away. The wolverine quickly takes over after that, hand on your head and pumping it up and down on his cock instead of allowing you to do so at your own pace. He clearly has other things in mind than a relaxed blowjob though, and before you know it, your head is pulled away and you feel his hands under your armpits. 'Get up and bend over, bitch[if player is male]! Show me that boypussy[end if]!' he barks out, pushing you towards a nearby wall and clamping his hands around your wrists, positioning them on the bricks so you stand in a typical 'police patdown' stance. Logan [StripCrotch], then grunts in your ear, 'You're gonna get it now, slut!' Taking hold of his erection, he strokes it up the inside of your legs, brushing against your [if player is male]balls and dangling erection, [else]clit and[end if] making you tremble in pleasure before he nudges it against your wrinkled pucker.";
+	WaitLineBreak;
+	say "     The spit- and precum-slick tip of Logan's shaft feels hot against your back door as he pushes against it, increasing the pressure until it yields and allows his pointy head to slip inside. He keeps pushing more and more inside right away, stretching your insides snugly around his thick cock. Leaning forward against the wall, you let out a loud moan as the strong man takes you from behind, grinding himself against your rear to bury all of his length inside. '[if player is male]Faggots always have the nicest booty[else]Nice hole on ya[end if],' he calls out, wrapping one arm around your front as he gives you a sharp thrust that pops his pre-knot bulge past your opening. The next sounds from him are more animalistic in nature, as the wolverine begins to fuck you in a rapid and harsh tempo, really pounding into you and making his heavy balls slap against your crotch again and again. It's a good thing that he made you brace, as such no holds barred hammering would have you face-planted against the wall quickly otherwise.";
+	say "     You're in for a wild ride with the vigorous wolverine that you chose to take on, with Logan pushing you to moan, gasp and scream in lust as he delves into the depths of your asshole and hits spots you didn't even know you had. He laughs at your helpless pleasure and grunts something about, 'Bitches just need to be shown their place,' as he ravages your hole to his heart's content. You don't quite know how long your coupling takes, losing your sense of time in the blissed-out haze he puts you under, until the ever harder thrusts of the anthro beast fucking you herald his impending orgasm. With a deep growl, Logan hammers forward once more, burying all of his cock just in time to blast the first big splurge of his seed deep inside. Grunting dominantly, the wolverine fills you with a large and virile load, his knot swelling up to ensure that all of it stays inside you for a good long while. Your own pleasure is pushed right along with his, and you orgasm around his throbbing shaft just a few heartbeats later[if player is male], painting the wall in front of you with the splatters of your own cum[end if].";
+	WaitLineBreak;
+	say "     Out of breath and panting, the two of you stand against the wall for some time as you ride out your respective climaxes. 'Sweet little fuckhole you got there,' Logan finally says in a gruff tone and squeezes your ass. 'Wouldn't mind pounding it again a few times before all of this is over,' the anthro male adds, then starts to pull away from you, making you groan at the sensation of his still quite bulging knot against your pucker from the inside. Your eyes go wide and you gasp as he gives a sharp tug, forcing his way out of your freshly-bred ass. This wolverine definitively isn't one to cuddle after sex it seems. Without a further word, he leaves you standing where you are, hand over your now aching and cum-dripping hole.";
+	NPCSexAftermath Player receives "AssFuck" from Logan;
+	if Strength of Logan < 10: [submission to him]
+		increase Strength of Logan by 1;
 
+to say LoganSex4: [spitroast Blake]
+	say "     Stepping up to the improvised bedding on which Blake is stretched out, you smile down at the rat, already starting to get hard as you imagine what you can do to him. Then you look over your shoulder and [if Androginity of Player < 3]call out to Logan, asking if he wants to share the whore[else if Androginity of Player < 8]ask Logan if he wants to share your plaything[else]invite Logan to join you in enjoying the rat's body[end if]. The wolverine raises an eyebrow in a little bit of a surprised expression, since it is kinda 'your turn' to pound Blake and he didn't quite expect you to be generous about inviting anyone else in. '[if Loyalty of Logan > 0]Sure thing, who wouldn't want to take that slut,' [else]Why? You want me to show you how it's really done?' [end if]he finally says, grinning as he approaches and steps up next to you. Looking down at the tied-up captive, Logan grabs his bulge and gives you a nod. 'I'm gonna take the tighter end.' With that said, the muscular anthro pulls down the zipper of his uniform jacket and shrugs it off, quickly followed by his pants. Proudly showing off his girthy shaft as he lets it swing freely, the wolverine gets on the bedding with Blake, pulling him into a kneeling position with his ass raised high.";
+	if Loyalty of Logan > 4: [DP route]
+		say "     With the fingers of his large paw-hand curled around the base of his shaft, Logan smacks it down into the crack of Blake's ass, rubbing against his pucker. He starts to push into the rat, then suddenly pauses in motion and looks up at you. 'You know what? Wanna share this hole? Little whore has gotten so much big dick, I think he can take us both at the same time by now!' He grins broadly as he ";
+	else:
+		say "     normal route";
+	say "     ...";
+	if Loyalty of Logan is 0: [no Loyalty yet]
+		say "     Offers Fist bump over the back of Blake, both your dicks inside the rat";
+		say "     [bold type]How do you react?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Meet him in the fist bump. You're bro's sharing a slut after all.";
+		say "     ([link]N[as]n[end link]) - Just focus on your ratty slut and pound Blake harder.";
+		if Player consents:
+			LineBreak;
+			say "     ...";
+			if Loyalty of Logan < 10:
+				increase Loyalty of Logan by 1;
+		else:
+			LineBreak;
+			say "     ...";
+			if Loyalty of Logan > 0:
+				decrease Loyalty of Logan by 1;
 
 Logan ends here.

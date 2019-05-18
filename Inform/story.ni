@@ -1118,16 +1118,17 @@ to say Mouth Length Adjective of ( x - a person ):
 		say "bottomless";
 
 to say Mouth Circumference Adjective of ( x - a person ):
-	if Mouth Circumference of x < 4: [inches circumference]
-		say "tiny";
-	else if Mouth Circumference of x < 6: [inches circumference]
-		say "small";
-	else if Mouth Circumference of x < 8: [inches circumference]
-		say "normal";
-	else if Mouth Circumference of x < 11: [inches circumference]
-		say "wide";
-	else: [inches deep]
-		say "gaping";
+	if Mouth Circumference of x is:
+		-- 1:
+			say "thin";
+		-- 2:
+			say "small";
+		-- 3:
+			say "normal";
+		-- 4:
+			say "wide";
+		-- 5:
+			say "gaping";
 
 to say Breast Size Description of ( x - a person ):
 	if Breast Size of x is:
@@ -1189,16 +1190,17 @@ to say Asshole Depth Adjective of ( x - a person ):
 		say "bottomless";
 
 to say Asshole Tightness Adjective of ( x - a person ):
-	if Asshole Tightness of x < 4: [inches circumference]
-		say "extremely tight";
-	else if Asshole Tightness of x < 6: [inches circumference]
-		say "tight";
-	else if Asshole Tightness of x < 8: [inches circumference]
-		say "well-used";
-	else if Asshole Tightness of x < 11: [inches circumference]
-		say "open";
-	else: [inches deep]
-		say "gaping";
+	if Asshole Tightness of x is:
+		-- 1:
+			say "extremely tight";
+		-- 2:
+			say "tight";
+		-- 3:
+			say "well-used";
+		-- 4:
+			say "open";
+		-- 5:
+			say "gaping";
 
 to say Cock Girth Adjective of ( x - a person ):
 	if Cock Girth of x is:
@@ -2238,6 +2240,8 @@ an everyturn rule:
 					increase PresentChance by 1;
 				if a random chance of PresentChance in 10 succeeds: [got a present]
 					add "offspring present" to invent of Bunker;
+			if HP of Blake > 50 and HP of Blake < 90: [Blake whoring]
+				increase Energy of Blake by 1; [add on one profit share of whoring him out]
 		now LastTurnDay is true;
 		if WerewolfWatching is true: [she's only out at night]
 			now WerewolfWatching is false;
@@ -4735,7 +4739,7 @@ This is the self examine rule:
 		say "Your name is [name of Player].";
 	[ Infection Descriptions Below   ]
 	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your [if Player is HasHumanHead][Head Color of Player]-skinned[else][Head Skin Adjective of Player][end if] face and head resemble that of [Head Description of Player] with [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
+		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your [if Player is HasHumanHead][Head Color of Player]-skinned[else][Head Skin Adjective of Player][end if] face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
 	if TorsoName of Player is "": [old infection]
@@ -5948,6 +5952,7 @@ Include Latex Bobcat by Stripes.
 Include Bottlenose Toy by Stripes.
 Include Bovine by Damaged.
 Include Breederslut by Stripes.
+Include Brown Rat by Wahn.
 Include Bunny Jock by Rikaeus.
 Include Butterfly by Guest Writers.
 Include Candy Striper by Stripes.
@@ -6227,7 +6232,7 @@ Include Atticus by Wahn.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
-Include Blake by Ssely.
+Include Blake by Wahn.
 Include Blanche by Stripes.
 Include Blue by Wahn.
 Include Boghrim by Wahn.
@@ -6307,6 +6312,7 @@ Include Joanna by Stripes.
 Include Joey by Qazarar.
 Include Joshiro by Wahn.
 Include J'Reth by Prometheus.
+Include Juergen by Wahn.
 Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
@@ -6321,6 +6327,7 @@ Include Larissa by Stripes.
 Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
+Include Logan by Wahn.
 Include Lucy by Stripes.
 Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
@@ -8189,22 +8196,25 @@ to say gsopt_4:
 
 to say gsopt_start:
 	now started is 1;
-	[
+	[old gender setting start, use until the new system becomes active]
 	if gspg is 1:	[male]
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
 		now the Ball Size of the player is 3;
 		now Nipple Count of Player is 2;
+		now Cunt Count of Player is 0;
 		now Breast Size of Player is 0;
 	else:		[defaults to female]
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 6;
 		now Cunt Tightness of Player is 4;
 		now Nipple Count of Player is 2;
+		now Cock Count of Player is 0;
 		now Breast Size of Player is 2;
+[
 	if glstart is 1:
 		startgenderlockshift;
-	]
+]
 	gs_stats;
 	now the morale of the player is the charisma of the player plus the perception of the player;
 	now the HP of the player is the stamina of the player times two;

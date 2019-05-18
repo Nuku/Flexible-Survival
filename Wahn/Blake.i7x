@@ -6,6 +6,8 @@ Version 1 of Blake by Wahn begins here.
 [   0: never met                                                  ]
 [  50: punched Blake out when he tried to dominate                ]
 [  51: tied up as a whore in the alley                            ]
+[  97: Blake handed over to Logan                                 ]
+[  98: Blake sent stumbling into the city                         ]
 [  99: player got orders to not return to Blake unless male       ]
 [ 100: player forgot about the alley                              ]
 
@@ -33,11 +35,48 @@ object	name
 Blake	"Blake"
 
 Blake is a man.
+Body Weight of Blake is 2. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Blake is 5. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Blake is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Blake is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Blake is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Blake is 4. [length in inches]
+Breast Size of Blake is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Blake is 2. [count of nipples]
+Asshole Depth of Blake is 9. [inches deep for anal fucking]
+Asshole Tightness of Blake is 2. [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
+Cock Count of Blake is 1. [number of cocks]
+Cock Girth of Blake is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Blake is 8. [length in inches]
+Ball Count of Blake is 2. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Blake is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Blake is 0. [number of cunts]
+Cunt Depth of Blake is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Blake is 0. [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+Clit Size of Blake is 0. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Blake is false.
+PlayerRomanced of Blake is false.
+PlayerFriended of Blake is false.
+PlayerControlled of Blake is false.
+PlayerFucked of Blake is false.
+OralVirgin of Blake is false.
+Virgin of Blake is true.
+AnalVirgin of Blake is true.
+PenileVirgin of Blake is false.
+SexuallyExperienced of Blake is true.
+TwistedCapacity of Blake is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Blake is false. [steriles can't knock people up]
+MainInfection of Blake is "Brown Rat".
+
 Blake is in Dirty Alley.
 The description of Blake is "[BlakeDesc]".
 The conversation of Blake is { "Mew!" }.
 
 to say BlakeDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP of Blake: [HP of Blake], Energy of Blake: [Energy of Blake] <- DEBUG[line break]";
 	if HP of Blake < 50:
 		say "     <Placeholder. Players should not be able to stand beside him and look at him. Please report on the FS Discord how you saw this.>";
 	else: [whored out]
@@ -206,7 +245,7 @@ to say BlakeCounterstrike:
 	say "     [link](3)[as]3[end link] - Watch Blake so he doesn't escape while Juergen gets some wolverines to incarcerate him.";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 3:
-		say "Choice? (1-4)>[run paragraph on]";
+		say "Choice? (1-3)>[run paragraph on]";
 		get a number;
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
@@ -257,7 +296,6 @@ to say BlakeCounterstrike:
 				say "     Walking off totally unconcerned about the fact that he's naked right now and still half-hard with his dick swinging freely, the moose leaves in the direction of the mall and returns not quite ten minutes later with a male wolverine following him. [if PlayerMet of Logan is false]The tag 'Logan' on his uniform shirt tells you his name, as the mustelid doesn't bother to do so himself, only acknowledging you with a casual, [else]You recognize him as Logan, the outcast of wolverine security, permanently put on duty outside the Smith Haven Mall building. The mustelid nods to you in recognition and says, [end if]'What's up? This over here your new slut?' As Juergen nods, Logan moves over to Blake and crouches in front of him, then pushes a finger into the rat's abused asshole and starts to finger it. Brushing against his prostate makes the street rat groan into his ball-gag and writhe on the bed a little, which draws a rough chuckle from the wolverine. 'Not bad,' he comments, then wipes his slick finger off in Blake's fur and stands up again. Glancing at Juergen and yourself, Logan clears his throat and then says, 'So, three way split of the profits?'";
 			WaitLineBreak;
 			say "     Being a trader at heart, Juergen meets Logan's gaze for a second before he replies, 'You can have fifteen percent. Don't forget that we're the ones who're contributing the 'talent' and that he's guaranteed to bring quite a few guys coming here to meet him.' Logan grumbles back, 'Twenty! And I want free use of him between clients!' The last brings a grin to your new business partner's face and he offers his hand for Logan to shake. 'Deal. Regular stretching will be good anyways - the fucker had a bit of a type, drawing larger males like myself into his spell. As nice as a tight hole is, not getting your dick pinched off by a too tiny one is better.' There is some more dickering about the exact details of the deal, with Juergen soon grabbing a comfortable chair and box of supplies from his trailer, setting them up a few steps into the alley to serve as Logan's post.";
-			move Logan to Dirty Alley;
 		else:
 			LineBreak;
 			say "     [bold type]What do you reply?[roman type][line break]";
@@ -289,12 +327,16 @@ to say BlakeCounterstrike:
 				say "     Walking off totally unconcerned about the fact that he's naked right now and still half-hard with his dick swinging freely, the moose leaves in the direction of the mall and returns not quite ten minutes later with a male wolverine following him. [if PlayerMet of Logan is false]The tag 'Logan' on his uniform shirt tells you his name, as the mustelid doesn't bother to do so himself, only acknowledging you with a casual, [else]You recognize him as Logan, the outcast of wolverine security, permanently put on duty outside the Smith Haven Mall building. The mustelid nods to you in recognition and says, [end if]'What's up? This over here your new slut?' As Juergen nods, Logan moves over to Blake and crouches in front of him, then pushes a finger into the rat's abused asshole and starts to finger it. Brushing against his prostate makes the street rat groan into his ball-gag and writhe on the bed a little, which draws a rough chuckle from the wolverine. 'Not bad,' he comments, then wipes his slick finger off in Blake's fur and stands up again. Glancing at Juergen and yourself, Logan clears his throat and then says, 'So, three way split of the profits?'";
 			WaitLineBreak;
 			say "     Being a trader at heart, Juergen meets Logan's gaze for a second before he replies, 'You can have fifteen percent. Don't forget that we're the ones who're contributing the 'talent' and that he's guaranteed to bring quite a few guys coming here to meet him.' Logan grumbles back, 'Twenty! And I want free use of him between clients!' The last brings a grin to your new business partner's face and he offers his hand for Logan to shake. 'Deal. Regular stretching will be good anyways - the fucker had a bit of a type, drawing larger males like myself into his spell. As nice as a tight hole is, not getting your dick pinched off by a too tiny one is better.' There is some more dickering about the exact details of the deal, with Juergen soon grabbing a comfortable chair and box of supplies from his trailer, setting them up a few steps into the alley to serve as Logan's post.";
-			move Logan to Dirty Alley;
+		move Logan to Dirty Alley;
+		move Player to Dirty Alley;
+		now HP of Blake is 51; [whored out]
 	else if calcnumber is 2: [getting rid of Blake]
 		LineBreak;
 		say "     Clearing your throat, you tell Juergen that he doesn't need to do anything to Blake and that there are lots of horny beasts out in the city that will be happy to take care of him. The towering moose looks at you with a raised eyebrow, then glances back at the rat and laughs. 'Right you are, that'd fit! But before we do that, can you help me strip him down? That outfit he milked out of me is top quality. I just hope it'll air out and not have any of that frigging musk clinging to it.' Together, the two of you peel the clothing off the tied-up rat, with the moose holding him in the air by his neck when you have to undo the cuffs to get the jacket over Blake's arms. Hooded, gagged, bound and naked, the domineering loudmouth is a pitiful sight indeed. As a finishing touch, Juergen goes back to his trailer and digs around a little, then soon returns with a bottle of flowery perfume that he pours over Blake's head in its totality.";
 		say "     With a little force applied in shoving the rat forward, your little group moves south of the mall, soon getting to one of the larger street crossings there. Grinning, Juergen spins Blake around and around until the rat is literally swaying in disorientation, then gives his ass a hard slap and shouts in Blake's ear to get moving. Standing back, you watch the dirty rat start to walk, chuckling a little as he bumps into a car and soon after almost face-plants at a sidewalk corner. 'Something will snatch him before much longer. I don't even care what. Just want to forget the asshole ever existed. Come on, let's get back to the mall.' Following the large moose, you throw one last glance over your shoulder and look at the naked rat out on the street. You're quite sure that several creatures in the surrounding buildings or maybe up in the sky already have an eye on him. This will surely be the last you see of the guy.";
 		move Blake to NPC Nexus; [stashing him away]
+		move Player to Dirty Alley;
+		now HP of Blake is 98; [Blake sent stumbling into the city]
 	else if calcnumber is 3: [get rid of Blake]
 		LineBreak;
 		say "     Clearing your throat, you tell Juergen that the two of you really don't have to deal with Blake anymore than you already have. Mall security would surely jump at getting rid of a bastard like him hanging out right next to their refuge. The towering moose lets out a grunt and nods to you. 'You've got something there. I for one don't want to see this little shit-hole ever again! Okay then, you watch him while I get the wolverines.' With that said, he stomps off, leaving you alone with the tied-up street rat, still weakly flopping around on the dirty ground. You stand some distance away, watching his pathetic struggles until you eventually hear, 'Over here, he's in this alley, the dirty bastard!' Turning around, you see Juergen leading three wolverines: [if PlayerMet of Jenna is true]Jenna, the leader of wolverine security[else]A female wolverine with BOSS written on the chest of her uniform[end if], a tough-looking male wolverine that moves in step along with her and seems to keep the whole parking lot in sight, and some distance behind [if PlayerMet of Logan is false]Logan, the black sheep of the security company[else]another male, this one with a lot less spit and polish than the first two[end if].";
@@ -305,7 +347,9 @@ to say BlakeCounterstrike:
 		LineBreak;
 		say "[bold type]You gain 4 food![roman type][line break]";
 		increase carried of food by 4;
+		now HP of Blake is 97; [Blake handed over to Logan]
 		move Blake to NPC Nexus; [stashing him away]
+		move Player to Dirty Alley;
 
 to say BlakeWhoreSexMenu:
 	now sextablerun is 0;
@@ -370,14 +414,16 @@ to say BlakeWhoreSexMenu:
 					say "[BlakeSex1]";
 				else if nam is "Milk him for cum":
 					say "[BlakeSex2]";
-				else if nam is "Jerk off on him":
+				else if nam is "Jerk him off":
 					say "[BlakeSex3]";
-				else if nam is "Fuck him":
+				else if nam is "Jerk off on him":
 					say "[BlakeSex4]";
-				else if nam is "Ride his dick (pussy)":
+				else if nam is "Fuck him":
 					say "[BlakeSex5]";
-				else if nam is "Ride his dick (ass)":
+				else if nam is "Ride his dick (pussy)":
 					say "[BlakeSex6]";
+				else if nam is "Ride his dick (ass)":
+					say "[BlakeSex7]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -397,8 +443,8 @@ to say BlakeSex2: [cum milking]
 	say "     After pulling an empty bottle out of your pack and setting it down where you can quickly reach it, you kneel down on the ragged bedding that Blake is stretched out on. After telling him with a smile on your face that it's you who'll make use of him this time, you reach out and cup his furry balls, giving them a relatively gentle squeeze. Blake squirms a bit, mumbling into his ball-gag, but doesn't struggle any more than that as you take hold of his still soft uncut cock. Fingers wrapping around the fairly well-sized member, you start jerking it, with some squeezing and rubbing putting your rodent whore into an aroused state before much longer. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority.";
 	say "     Setting down your other hand on the furry globes of his balls, you stroke and fondle your helpless rat a bit, grinning as you push the unwilling captive closer and closer to orgasm and tell him to be a good little pet and give you a lot of nut milk. When he finally can't hold back any more, you quickly snatch up your prepared bottle and hold it to his cock, successfully catching spurt after spurt of his milky white cum in it. This still leaves a fair bit of the bottle empty though, so you tell Blake that he really has to do better than that and just keep going. Over the next thirty minutes or so, you tease another orgasm out of the tied-up rat, giving the bottle another good load before you cap it. After giving the rat's balls a last quick fondle, you stand up and walk away.";
 	LineBreak;
-	say "     You gain a bottle of rat cum!";
-	increase carried of rat cum by 1;
+	say "     You gain a bottle of brown rat cum!";
+	increase carried of brown rat cum by 1;
 
 to say BlakeSex3: [jerking Blake]
 	say "     You kneel down on the ragged bedding that Blake is stretched out on. After telling him with a smile on your face that it's you who'll make use of him this time, you reach out and cup his furry balls, giving them a relatively gentle squeeze. Blake squirms a bit, mumbling into his ball-gag, but doesn't struggle any more than that as you take hold of his still soft uncut cock. Fingers wrapping around the fairly well-sized member, you start jerking it, with some squeezing and rubbing putting your rodent whore into an aroused state before much longer. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the furry globes of his balls, you stroke and fondle your helpless rat a bit, grinning as you push the unwilling captive closer and closer to orgasm.";
