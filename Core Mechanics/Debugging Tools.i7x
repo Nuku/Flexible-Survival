@@ -113,6 +113,8 @@ carry out TestMode:
 	increase carried of water bottle by 15;
 	increase carried of medkit by 5;
 	increase carried of libido suppressant by 10;
+	increase carried of orc cum by 10;
+	increase carried of orc brew by 10;
 	increase carried of gryphon milk by 10;
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
@@ -342,11 +344,12 @@ ShowEncounteredEnemies is an action applying to nothing.
 understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
 
 carry out ShowEncounteredEnemies:
+	EncounteredEnemiesList;
+
+to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
-	say "     DEBUG: Enemies that the player encountered so far: [EncounteredEnemies of Player]";
-	say "     DEBUG:";
-	let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
-	say " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
+	say "[EncounteredEnemies of Player]";
 
 InfectionOverview is an action applying to nothing.
 
@@ -360,10 +363,10 @@ carry out InfectionOverview:
 		now Cock Length of Player is 10;
 		now Cunt Depth of Player is 8;
 		now tail of Player is the tail entry;
-		now face of Player is the face entry;
-		now skin of Player is the skin entry;
-		now body of Player is the body entry;
-		now cock of Player is the cock entry;
+		now Face of Player is the face entry;
+		now Skin of Player is the skin entry;
+		now Body of Player is the body entry;
+		now Cock of Player is the cock entry;
 		say "[bold type][y] - [Name entry][roman type]:";
 		LineBreak;
 		DescriptionDisplay;
@@ -375,9 +378,9 @@ to DescriptionDisplay:
 	follow the cock descr rule;
 	if Player is male:
 		if Cock Count of Player > 1:
-			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 		else:
-			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Player is female:
@@ -385,12 +388,12 @@ to DescriptionDisplay:
 			now cunttext is " have [Cunt Count of Player] [cunt size desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
-	say "Looking over yourself, your body is covered in [skin of Player] skin. Your face is [face of Player].[run paragraph on]";
+	say "Looking over yourself, your body is covered in [Skin of Player] skin. Your face is [Face of Player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
 			say " [descmod of x][run paragraph on]";
-	say " Your body is [body of Player].[run paragraph on]";
+	say " Your body is [Body of Player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "body":
@@ -438,7 +441,7 @@ to DescriptionDisplay:
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
 			now looknow is 0;
-			say "Your [skin of Player] swollen belly looks ready to spill forth life at any moment.";
+			say "Your [Skin of Player] swollen belly looks ready to spill forth life at any moment.";
 			now looknow is 1;
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
@@ -447,9 +450,9 @@ to DescriptionDisplay:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
-		else if heatlevel is 1 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 1 and player is impreg_able and CockName of Player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
-		else if heatlevel is 3 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 3 and player is impreg_able and CockName of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	now looknow is 0;
 	rule succeeds;
@@ -474,6 +477,9 @@ carry out DebugCritterRow:
 DebugPrintCritterRow is an action applying to one topic.
 
 understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
+
+check DebugPrintCritterRow:
+	if debugactive is 0, say "You aren't currently debugging.";
 
 carry out DebugPrintCritterRow:
 	let NumericalValue be 0;
@@ -546,6 +552,9 @@ carry out RoomEmptying:
 RemoveFeat is an action applying to one topic.
 
 understand "RemoveFeat [text]" as RemoveFeat.
+
+check RemoveFeat:
+	if debugactive is 0, say "You aren't currently debugging.";
 
 carry out RemoveFeat:
 	if topic understood is listed in feats of Player:

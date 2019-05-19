@@ -14,13 +14,13 @@ to say fireelementaldesc:
 	say "     The fiery woman before you has a curvy and decidedly feminine body with wide, child-bearing hips and wiry muscle. She has a pair of average-sized breasts. Her body is covered in supple, orange flesh with the heat and glow of fire shining through a multitude of cracks in it, encasing her in flames. Her head is rather human-like with soft features and deep, black eyes. Her hair has, however, been turned into bright and harmless flame. Her arms are wiry and slim, with the flicker of flame around them. Her legs are long, shapely human legs, flickering with fire and rippling with wiry muscle, and her footsteps singe the ground and leave black soot marks. She has a shapely rump and a wide, warm cunt, both similarly guarded by fire.";
 
 to say losetofireelemental:
-	if bodyname of Player is "Reindeer":
+	if BodyName of Player is "Reindeer":
 		say "     The fiery woman stalks over to you, eyes burning with loathing, flames swirling and snapping around her form. 'Wretched creature! Snow spawner! Bringer of cold and death! There is no True Fire in you,' she hisses, voice sparking and crackling. The ground, scorched in her wake, is a path of black soot. She grabs you painfully by the shoulders, hands burning at your flesh so that her angry, hateful gaze can be fully directed at you. 'Your kind are not welcome here, ice demon.' Her voice resembles the hiss of a doused flame, unlike its normal cheerful crackle, words dripping with napalm. 'So leave this place and never return. When you recover.' She throws you to the ground once more, and beats her flaming fists against your form again and again and again, until you pass out from the pain, battered, burnt and scorched.";
 		now HP of Player is 0;
-	else if bodyname of Player is "Naiad":
+	else if BodyName of Player is "Naiad":
 		say "     The fiery woman grabs you with her flaming hands, great gouts of steam jutting from between her fingers as your flesh around her grip becomes clear and fluid, boiling like water. Surprised by this, she pushes you away and shakes her hands, fanning the flames back to full strength. 'There is more to you than there appears, o watery one. You surprised me. And I do not,' she says with a crackling, sparking hiss to her voice, 'take such surprises well.' With that, she waves her arms towards you, sending a wave of fire across your entire body. Your body bubbles as it all becomes water briefly, boiling and steaming. Severely weakened by this, you drop to your knees, barely becoming flesh again before you are soaked up by the dry ground. With a laugh like merry flames, she turns and leaves.";
 		now HP of Player is HP of Player / 2;
-	else if bodyname of Player is "Fire Elemental" and the player is fireskinned:
+	else if BodyName of Player is "Fire Elemental" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She reaches down, offering you her hand and helping you to your feet. 'Come, [if Player is female]sister[else if Player is male]brother[else]my kin[end if], you are in no danger from me now. We are family for The True Fire is in both of us. Come, let us see you out of here - others make this a dangerous place.' The woman keeps to her word, helping you to the nearest safe spot. She places a loving kiss on your lips once you're there, wrapping her fiery arms around your hot body.";
 		say "     'Yes, isn't it so much better not to fight? Fire is light and warmth, passion and love...' Her lips are deliciously hot as they press themselves to your cheeks and her flames flow and blend with yours. 'Let us enjoy that instead.'";
 		if Player is male and Cock Length of Player > 15:
@@ -31,17 +31,17 @@ to say losetofireelemental:
 			say "     She gently pushes you to the ground and swings her cunt over your face, pressing it against your lips while her own buries itself in your crotch, her hot, deft tongue and supple lips working over your [if Cunt Count of Player is 2]pair of cunts[else if Cunt Count of Player > 2]many cunts[else]cunt[end if] with plenty of zeal, sending hot waves of pleasure through you. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 		else:
 			say "     She gently pushes you to the ground and she lays herself atop you, grinding her cunt against one of your legs while she makes out with you, her warm, dexterous tongue working at yours with a passion. Your flames blend with hers as your passionate heat grows and grows. After a while, she leaves you there in your daze and heads off, continuing her wandering.";
-	else if bodyname of Player is "Flaming Lynx" and the player is fireskinned:
+	else if BodyName of Player is "Flaming Lynx" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She reaches down, running her fiery hands over your flaming body as if petting you. 'Come, fiery beast, let us fight no longer. Instead, seek to satisfy the burning needs inside me,' she adds with a purr as her hand slides down between your legs.";
 		if Player is male and Cock Length of Player > 15:
 			say "     As you grow aroused at her touch, her fingers deftly stroking your cock[if Cock Count of Player > 1]s, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them. She looks a little sad at their size, however. 'It's a pity they[else], her warm, cracked flesh oddly soothing as they work it over, sending hot waves of pleasure through it. She looks a little sad at its size, however. 'It's a pity it[end if] won't fit... But we can make do, my pet.' And no more words pass her lips as she moves under you and brings her mouth to work as well, warm tongue and lips applying themselves wildly and zealously to the task, until your world devolves into a mess of searing pleasure and warm bliss...";
 		else if Player is male:
-			say "     As you grow aroused at her touch, her fingers deftly stroking your [if Cock Count of Player > 2]cocks, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy and another into her tight asshole. She is a delight around your [cock of Player] shafts, the warm, supple folds of her cunt and the warmer, spongier flesh of her ass wrapping your cocks[else if Cock Count of Player is 2]twin cocks, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy and the other into her tight asshole. She is a delight around your [cock of Player] shafts, the warm, supple folds of her cunt and the warmer, spongier flesh of her ass wrapping your cocks[else]cock, her warm, cracked flesh oddly soothing as they work it over, sending hot waves of pleasure through it. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy. She is a delight around your [cock of Player] shaft, the warm, supple folds of her cunt wrapping your cock[end if] in blissful heat. She cries out in ecstasy as you ride her hard, and your world descends into a fiery mess of pleasure...";
+			say "     As you grow aroused at her touch, her fingers deftly stroking your [if Cock Count of Player > 2]cocks, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy and another into her tight asshole. She is a delight around your [Cock of Player] shafts, the warm, supple folds of her cunt and the warmer, spongier flesh of her ass wrapping your cocks[else if Cock Count of Player is 2]twin cocks, her warm, cracked flesh oddly soothing as they work them over, sending hot waves of pleasure through them. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy and the other into her tight asshole. She is a delight around your [Cock of Player] shafts, the warm, supple folds of her cunt and the warmer, spongier flesh of her ass wrapping your cocks[else]cock, her warm, cracked flesh oddly soothing as they work it over, sending hot waves of pleasure through it. After a moment, she gives you a grin and a soft 'Come and mount me, you fiery beast. Come and share in my heat. I know you will enjoy it as much as I,' she says as the fiery woman lowers herself to all fours, waving her ass in the air. Aroused and unable to stop yourself, you mount her, driving a cock into her juicy pussy. She is a delight around your [Cock of Player] shaft, the warm, supple folds of her cunt wrapping your cock[end if] in blissful heat. She cries out in ecstasy as you ride her hard, and your world descends into a fiery mess of pleasure...";
 		else if Player is female:
 			say "     As you grow aroused, she moves beneath you, bringing her cunt beneath your face. Grabbing your head, she pulls your face to her cunt, pressing your lips against it while her own buries itself in your crotch, her hot, deft tongue and supple lips working over your [if Cunt Count of Player is 2]pair of cunts[else if Cunt Count of Player > 2]many cunts[else]cunt[end if] with plenty of zeal, sending hot waves of pleasure through you. 'Come, taste of me, you fiery beast,' she moans. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 		else:
 			say "     A little disappointed to find you bare there, she kneels in front of you and takes a hold of your head. She gently pushes it between her thighs, pressing your lips to her cunt while her hands run over your body, spreading her flames with yours. 'Come, taste of me, you fiery beast,' she moans. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
-	else if bodyname of Player is "Fire Sprite" and the player is fireskinned:
+	else if BodyName of Player is "Fire Sprite" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She kneels beside you, running a flaming hand down your back. 'Come, little spark, let me show you that there is more to the flame then mischief and destruction, let me show you the passion of the true fire.' As you begin to lean against the fiery woman, basking in the warmth of her flame, she scoops your smaller form into her arms, cradling you against her bosom as she carries you to the nearest safe place.";
 		say "     Pressing your lips to her warm nipple, you feel a pleasant liquid heat leaking into your mouth, and she gives a sigh of contentment as you soon begin suckling for more. 'See? Isn't this so much nicer then all that needless destruction? You have the potential to be so much more, my little spark,' she says, idly stroking your head before her hands begin to drift down your body[if Breast Size of Player > 2], pausing to tease your breasts momentarily before moving lower[end if]. Her deft fingers leave a trail of flame across your body which slowly spreads over you, wrapping you in her warmth as [if Player is herm]she begins teasing your stiffing cock[smn] and drooling puss[yfn][else if Player is male]she begins teasing your stiffing cock[smn][else if Player is female]she begins teasing your drooling puss[yfn][else]stroking your barren groin[end if].";
 		if Player is herm:
@@ -52,7 +52,7 @@ to say losetofireelemental:
 			say "     Her warm, deft fingers are soon sinking into your quivering cunt, her fiery, cracked flesh oddly soothing as she gently fingers you, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
 		else:
 			say "     As her warm, deft hands continue to tease your body and her heat continues to engulf you, hot waves of pleasure roll through you and your world descends into a warm, fiery bliss...";
-	else if bodyname of Player is "Fire Elemental" or bodyname of Player is "Flaming Lynx " or skinname of Player is "Fire Sprite":
+	else if BodyName of Player is "Fire Elemental" or BodyName of Player is "Flaming Lynx " or SkinName of Player is "Fire Sprite":
 		say "     The fiery woman moves up to you, smiling tenderly now. She reaches down, offering you her hand and helping you to your feet. 'You poor ember. You are ready to burn, but have not felt the heat of The True Fire that is in both of us. Let me help you,' she says, rubbing her fiery body sensually against yours as she places a loving kiss on your lips once you're there, wrapping her fiery arms around your [bodytype of Player] body.";
 		say "[fireelsex]";
 	else if ( HP of Player > HP of Player / 4):
@@ -82,12 +82,13 @@ to say beatthefireelemental:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Fire Elemental"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -141,11 +142,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -161,9 +163,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -195,13 +197,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -213,8 +215,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -230,7 +232,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -242,7 +244,7 @@ When Play begins:
 
 
 Definition: a person is fireskinned:
-	if skinname of Player is "Fire Elemental" or skinname of Player is "Flaming Lynx" or skinname of Player is "Fire Sprite", yes;
+	if SkinName of Player is "Fire Elemental" or SkinName of Player is "Flaming Lynx" or SkinName of Player is "Fire Sprite", yes;
 	no;
 
 Section 3 - Heat Table
@@ -281,7 +283,7 @@ Section 4 - Endings
 
 [
 when play ends:
-	if bodyname of Player is "Template":
+	if BodyName of Player is "Template":
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

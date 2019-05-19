@@ -272,35 +272,35 @@ to say solsticesex:
 Section 5 - Definitions
 
 Definition: a person is vgfaced:
-	if facename of Player is "Vulpogryph", yes;
+	if FaceName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgskinned:
-	if skinname of Player is "Vulpogryph", yes;
+	if SkinName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgbodied:
-	if bodyname of Player is "Vulpogryph", yes;
+	if BodyName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgcocked:
-	if cockname of Player is "Vulpogryph", yes;
+	if CockName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is vgtailed:
-	if tailname of Player is "Vulpogryph", yes;
+	if TailName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is partvg:
-	if facename of Player is "Vulpogryph", yes;
-	if skinname of Player is "Vulpogryph", yes;
-	if bodyname of Player is "Vulpogryph", yes;
-	if cockname of Player is "Vulpogryph", yes;
-	if tailname of Player is "Vulpogryph", yes;
+	if FaceName of Player is "Vulpogryph", yes;
+	if SkinName of Player is "Vulpogryph", yes;
+	if BodyName of Player is "Vulpogryph", yes;
+	if CockName of Player is "Vulpogryph", yes;
+	if TailName of Player is "Vulpogryph", yes;
 	no;
 
 Definition: a person is fullyvg:
-	if facename of Player is "Vulpogryph" and skinname of Player is "Vulpogryph" and bodyname of Player is "Vulpogryph" and cockname of Player is "Vulpogryph" and tailname of Player is "Vulpogryph", yes;
+	if FaceName of Player is "Vulpogryph" and SkinName of Player is "Vulpogryph" and BodyName of Player is "Vulpogryph" and CockName of Player is "Vulpogryph" and TailName of Player is "Vulpogryph", yes;
 	no;
 
 
@@ -308,7 +308,7 @@ Section 6 - Endings
 
 when play ends:
 	if HP of Solstice >= 5:
-		if bodyname of Player is "Vulpogryph":
+		if BodyName of Player is "Vulpogryph":
 			if humanity of Player < 10:
 				if Player is male:
 					say "     As you give in to your new, vulpogryph instincts, Solstice is there for you. She runs her paws over your body and leads you off with her in search of adventure in the wild, changing world. It all soon becomes clear to you. She is your special mate, the one you were meant to be with. Using her knowledge of ancient ruins, you travel to a Mayan temple and make it your new home, intent on nesting there.";

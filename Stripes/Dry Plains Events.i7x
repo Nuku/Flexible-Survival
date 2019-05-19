@@ -185,7 +185,7 @@ Instead of resolving a Pit Trap:
 			now Resolution of Pit Trap is 2; [Stole bag, Other Scenarios]
 	else:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
-		if bodyname of Player is "Prairie Dog" and facename of Player is "Prairie Dog" and skinname of Player is "Prairie Dog":
+		if BodyName of Player is "Prairie Dog" and FaceName of Player is "Prairie Dog" and SkinName of Player is "Prairie Dog":
 			say "Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?' The soldier, just having finished coming up the rope, whimpers at this suggestion.";
 			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";
 			LineBreak;
@@ -270,7 +270,7 @@ Instead of resolving a Watering Hole:
 				say "     Lowering you onto all fours in the water, he lines up his cock with your waiting pucker and slowly sinks his shaft into you. You moan in pleasure and push into his thrusts, aroused by the idea of fucking in this pond the birds have been using as their bath. And you're quite certain many of them have been cumming in it as well, tasting their semen in the water as you take that drink you wanted while getting fucked. The strong eagle rubs his feathered hands along your back and over your ass as he keep plowing his throbbing, leaking prick into you. 'Isn't that nice, my little chick? A big eagle cock to fuck you right. Stuff that slutty ass of yours.' You moan and nod, lost in the lustful mating. When he finally cums, he blasts his thick load into you and you cum moments later.[movichance]";
 			if humanity of Player > 15:
 				say "     Finished with his bath and his fuck, he helps you out of the water and rubs his feathered hand across your stuffed tummy, nipping at your neck with his beak. As you prepare to go, he flies off. Looking up as he gains altitude, you spot several other eagles soaring over the pond and head on your way, as the others may not be so friendly about an intruder at their bathing spot. Both covered in and filled with eagle-tainted fluids, ";
-				if bodyname of Player is "Bald Eagle" and player is pure:
+				if BodyName of Player is "Bald Eagle" and player is pure:
 					say "the infection soaks deeper into you, further corrupting your body and mind. Still awash in the pleasures of the mating and the overdose on tainted water, you are quite pleased with the feeling of the infection spreading through you.";
 					SanLoss 5;
 				else:
@@ -335,17 +335,17 @@ to say eaglefulltf:
 		if Name entry is "Bald Eagle":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Bald Eagle";
-	now facename of Player is "Bald Eagle";
-	now skinname of Player is "Bald Eagle";
-	now bodyname of Player is "Bald Eagle";
-	now cockname of Player is "Bald Eagle";
+	now TailName of Player is "Bald Eagle";
+	now FaceName of Player is "Bald Eagle";
+	now SkinName of Player is "Bald Eagle";
+	now BodyName of Player is "Bald Eagle";
+	now CockName of Player is "Bald Eagle";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -372,7 +372,7 @@ Instead of resolving a Treasure Hunters:
 	say "     'Huh? Ohhhhhhhh! You,' the other responds, 'are a genius.'";
 	say "     'I know. I know. That's why that dumb coyote sold the map to us. Knew we'd be smart enough to find it.' And with that, she takes the rather new looking [']ancient['] map back.";
 	say "     Their plan decided, they down some water, wipe their brows and get ready to head off and glance back at you.";
-	if hyg is 4 and ( facename of Player is "Herm Hyena" or bodyname of Player is "Herm Hyena" ):
+	if hyg is 4 and ( FaceName of Player is "Herm Hyena" or BodyName of Player is "Herm Hyena" ):
 		if matriarchowned is 1:
 			say "     Only now do they realize who you are and start fumbling around, trying to hide the shovels and map. 'Oh... umm... we... we didn't recognize you there, Matriarch,' the first starts up. 'We didn't mean to call you a loser, [if Player is herm]sir, ma'am, sir,[else if Player is female]sir, uh, ma'am,[else]uh, sir,[end if]' the first one adds in a mumble, which earns her a light smack from the second. 'We... we were trying to get the treasure for the gang, yeah! That's right. For you and for the gang,' she babbles in an attempt to curry favor with you. For a brief moment you consider dressing down these idiots and ordering them off their bogus treasure hunt, but decide you really don't want these half-wits trying to do any legitimate work for your gang. You thank them for their diligence and order them back to work. You add that you're looking forward to seeing them show up with the treasure, and will be very disappointed if they don't come back with it. Nodding and bowing submissively, the hyenas babble some thanks and then hurry off to restart their quest.";
 			increase score by 10;

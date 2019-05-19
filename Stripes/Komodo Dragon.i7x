@@ -72,8 +72,8 @@ to say beatthekomododragon:
 		say "     ([link]N[as]n[end link]) - Let him go.";
 		if Player consents:
 			LineBreak;
-			say "     Feeling the big guy here deserves to be fucked for a change, you grab his thick tail and push it up. Realizing what's coming, he tries to scramble free, but you've worn him down too much and another knee to his side settles him down long enough to get your [cock size desc of Player] [cock of Player] lined up with his dark hole. Grabbing onto some of the loose skin at his sides, you thrust hard into him, spreading his asshole open with your glans as you thrust into the [if scalevalue of Player < 3]much larger[else if scalevalue of Player is 3]larger[else]large[end if] creature.";
-			say "     Not used to this sort of treatment, his hole is delightfully tight around your cock, making for a very pleasant, if slow to start, fuck. But you keep at it, pounding away at the fallen reptile's ass with your [cock of Player] shaft until it slides smoothly in and out of him[if Cock Length of Player > 48]. Your titanic cock stuffs your reluctant lover so full that much of his sagging skin no longer sags and is instead just loose around his bulging body[end if]. As you keep thrusting, his struggles become less frequent and he's eventually pushing back into your thrusts as his lust becomes too much. You can see a growing pool of precum spreading out beneath the lizard, further proof that he's enjoying getting buggered[if scalevalue of Player > 2]. Reaching around him, you take one of his ridged members in each hand and start stroking them, rewarding the creature for no longer resisting you[else]. Unable to reach around him due to your much smaller size, you stroke his leathery hide and keep thrusting[end if].";
+			say "     Feeling the big guy here deserves to be fucked for a change, you grab his thick tail and push it up. Realizing what's coming, he tries to scramble free, but you've worn him down too much and another knee to his side settles him down long enough to get your [cock size desc of Player] [Cock of Player] lined up with his dark hole. Grabbing onto some of the loose skin at his sides, you thrust hard into him, spreading his asshole open with your glans as you thrust into the [if scalevalue of Player < 3]much larger[else if scalevalue of Player is 3]larger[else]large[end if] creature.";
+			say "     Not used to this sort of treatment, his hole is delightfully tight around your cock, making for a very pleasant, if slow to start, fuck. But you keep at it, pounding away at the fallen reptile's ass with your [Cock of Player] shaft until it slides smoothly in and out of him[if Cock Length of Player > 48]. Your titanic cock stuffs your reluctant lover so full that much of his sagging skin no longer sags and is instead just loose around his bulging body[end if]. As you keep thrusting, his struggles become less frequent and he's eventually pushing back into your thrusts as his lust becomes too much. You can see a growing pool of precum spreading out beneath the lizard, further proof that he's enjoying getting buggered[if scalevalue of Player > 2]. Reaching around him, you take one of his ridged members in each hand and start stroking them, rewarding the creature for no longer resisting you[else]. Unable to reach around him due to your much smaller size, you stroke his leathery hide and keep thrusting[end if].";
 			say "     As you feel your peak rapidly approaching, you pound your hips hard and fast against that sexy, muscled ass of his, fucking him wildly. The creature hisses and groans beneath you as you go at him all the harder and then finally cum in him[if Ball Size of Player > 6]. As his belly starts to inflate rapidly with your huge output[else if Ball Size of Player > 5]. As his belly starts to bulge a little with your large output[else]. As you start pumping your semen into him[end if], the large lizard growls and cums, splattering twin sprays of white seed across himself and the ground[if scalevalue of Player > 2] while you help him empty his balls even as you drain your own into him[end if]. When you're finally done and pull out, [if Ball Size of Player > 6]the komodo dragon is left full and bloated with your semen. It is a struggle for the defeated and humiliated lizard - who now looks like he just ate a huge, gooey meal that's left his belly distended - to drag himself slowly back into the dark on all fours[else if Ball Size of Player > 5], the komodo dragon is left with a bulge in his belly like he just ate a large, gooey meal. Defeated and humiliated, he slowly slinks off in the dark on all fours[else]the komodo dragon has to slink off into the dark, defeated and humiliated[end if].";
 		else:
 			LineBreak;
@@ -85,12 +85,13 @@ to say beatthekomododragon:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Komodo Dragon"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -144,11 +145,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -164,9 +166,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -198,13 +200,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -216,8 +218,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -233,7 +235,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -273,7 +275,7 @@ this is the komodotoxic rule:
 		if Playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
 	say "The [one of]Komodo Dragon[or]powerful lizard[or]reptilian horror[as decreasingly likely outcomes] [one of]clamps its jaws onto you[or]bites down onto you[or]grabs you with its powerful jaws[at random], sinking its fangs into you. Venom and toxic saliva flood into your wound, sending burning pain and weakness running through your body as the poison spreads. You'll need to finish this fight quickly so you can treat and clean it properly or hold out until your nanites can purge it from your system. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[bodyabsorbancy]"; [attack directed to body of Player]
+	say "[bodyabsorbancy]"; [attack directed to Body of Player]
 	if absorb > dam:
 		now absorb is dam;
 	if absorb > 0:
@@ -289,7 +291,7 @@ this is the komodotoxic rule:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of Player is "Komodo Dragon":
+	if BodyName of Player is "Komodo Dragon":
 		if humanity of Player < 10:
 			say "     As your human mind falls apart, the nanites rebuild it with primitive instincts for lust and hunger. Becoming a brutish creature, you descend below the surface to live in the sewers and tunnels beneath the city. You roam those depths in search of others creatures who live there or those foolish enough to descend into your domain. There they become your prey, to be used to satisfy one or both of your hungers. On occasion, you encounter another of your kind and, after a vicious battle, a victor is decided and wild sex follows[if Player is impreg_ok]. You are impregnated after several of these territorial battles and later leave a clutch of komodo dragon eggs behind to add to your numbers beneath the city[end if][if Player is male]. You sire clutches of eggs in several of the female prey you capture and choose to release, ensure more of your kind will spread and continue to haunt the dark places of the world[end if].";
 		else:

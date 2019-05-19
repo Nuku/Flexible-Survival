@@ -502,7 +502,7 @@ to say BenchDBFucksPlayer: [Brutus fucks female player]
 	say "     A hand on the demon's horned head as he eats you out, moaning deeply in your mounting arousal, you could almost just let him keep going like this... but no, you want something else right now. A smile on your lips, you tell him he may use that thick cock of his to fuck you. With an eager, lust-filled grunt, the demon is up on his feet, reaching down to lift and spread your legs with amazing gentleness. He is on top of you in a second, his body leaned over yours and hips thrusting forward - only to stop with just the tip of his thick erection nudging your nether lips apart slightly. Brutus's face close to yours, he says, 'With pleasure, my master,' then puts his arms forward to hold you softly as he presses forward, entering your body with his hard shaft.";
 	say "     It's big - very big, spreading your pussy lips around it, then sinking deeper into your body, creating pleasant feelings as the bumps on his shaft rub your inner walls. Even as relaxed as your muscles got during the thorough eating out the demon gave you, it's still quite a lot to take. Thankfully, he seems to know what very well, only slowly moving deeper and often stopping to just hold you so you can get used to it. Finally he bottoms out inside you, hard shaft buried all the way and his two large cum-factories resting against your skin. Panting deeply, you grab his head and pull it close, finding his lips with yours. It's amazing to have this huge, muscular creature on top of you, feeling him deep inside you - and being absolutely sure that you're safe in his arms.";
 	WaitLineBreak;
-	say "     A few minutes of making out with Brutus later, you tell him to continue - slowly. Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Over time, it becomes easier to have him inside you, with the demon leaking more and more precum and your muscles being stretched out and getting used to it. Which allows your companion to speed up his thrusts, going faster and faster, the slapping noises of his balls against your hips now coming in rapid succession. Soon, this drives your arousal over the edge, and with a loud moan, [if Player is male]your [cock of Player] shaft sprays cum all over your chest[else if Player is female]you orgasm, femcum running down from your stretched cunt[else]your body shakes in orgasm[end if].";
+	say "     A few minutes of making out with Brutus later, you tell him to continue - slowly. Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Over time, it becomes easier to have him inside you, with the demon leaking more and more precum and your muscles being stretched out and getting used to it. Which allows your companion to speed up his thrusts, going faster and faster, the slapping noises of his balls against your hips now coming in rapid succession. Soon, this drives your arousal over the edge, and with a loud moan, [if Player is male]your [Cock of Player] shaft sprays cum all over your chest[else if Player is female]you orgasm, femcum running down from your stretched cunt[else]your body shakes in orgasm[end if].";
 	say "     His duty at getting you off fulfilled, the demon gives something like a very deep purr in satisfaction, his pleasure at serving his master quite obvious. He keeps fucking you while you ride out your orgasm, getting a bit faster than before in his urge to join you. Soon, he reaches his own climax - and with a loud grunt, he begins to pump your insides full of his seed. With the head of his shaft pushing open your cervix, he easily fills your womb and vagina, with the remaining cum squirting out around Brutus's thick cock as he thrusts into you a few more times. As he finally removes his cock with a lout *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your stretched hole to run over the wooden bench before dripping to the ground.[fimpregchance]";
 	WaitLineBreak;
 	say "     After catching his breath for a second, Brutus pulls you into a tight embrace against his broad chest, bodily picking you up and then sitting on the bench himself. Just letting yourself be held like that for a while, you bask in the affection the large creature shows towards you, his savior and master, and you can't help to feel closer to him after your lovemaking on this well-used parkbench.";
@@ -700,11 +700,11 @@ Instead of resolving a Concession Stand:
 				wait for any key;
 				now humanity of Player is 9;
 				increase foodvendor by 1;
-				now tailname of Player is "Shifting Pet";
-				now facename of Player is "Shifting Pet";
-				now skinname of Player is "Shifting Pet";
-				now bodyname of Player is "Shifting Pet";
-				now cockname of Player is "Shifting Pet";
+				now TailName of Player is "Shifting Pet";
+				now FaceName of Player is "Shifting Pet";
+				now SkinName of Player is "Shifting Pet";
+				now BodyName of Player is "Shifting Pet";
+				now CockName of Player is "Shifting Pet";
 				now scalevalue of Player is 3;
 				now bodydesc of Player is "malleable";
 				now bodytype of Player is "ever-changing";
@@ -764,11 +764,11 @@ Instead of resolving a Sweet Exchange:
 	say "     'Pay up then, you soda jerks,' one sugar glider responds. 'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that. 'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
 	say "     'Candy ass! The Sweet Tooth is our place. We found the CandyShop first, so the candy's ours too. Find your own!' a pastel green ferret yells up. 'Yeah!' 'We want pop!' 'Hey, I'll fuck you for a can.' 'Sugar snatchers!' the business of colorful ferrets calls up, several of them making rude gestures all the while grinning happily.";
 	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola. One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans. As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
-	if bodyname of Player is "Sugar Ferret" and player is pure:
+	if BodyName of Player is "Sugar Ferret" and player is pure:
 		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange. Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front. With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some. A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away. You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
 		increase carried of soda by 1;
 		now Resolution of Sweet Exchange is 1;	[Got soda as a Sugar Ferret]
-	else if bodyname of Player is "Sugar Glider" and player is pure:
+	else if BodyName of Player is "Sugar Glider" and player is pure:
 		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy. Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials. The giggling girls pass around the collected bags of candy, stuffing them into their pouches. Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your [if Player is female]pouch[else]backpack[end if] before making your escape before they catch on.";
 		increase carried of chips by 1;
 		now Resolution of Sweet Exchange is 2;	[Got chips as a Sugar Glider]
@@ -839,7 +839,7 @@ Instead of resolving a Beach Party:
 					increase score by 10;
 					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
-		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [cockname of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
+		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [CockName of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
 		SanLoss 20;
 		increase morale of Player by 5;
@@ -849,17 +849,17 @@ Instead of resolving a Beach Party:
 			if Name entry is "Bottlenose Toy":
 				now MonsterID is y;
 				break;
-		now tailname of Player is "Bottlenose Toy";
-		now facename of Player is "Bottlenose Toy";
-		now skinname of Player is "Bottlenose Toy";
-		now bodyname of Player is "Bottlenose Toy";
-		now cockname of Player is "Bottlenose Toy";
+		now TailName of Player is "Bottlenose Toy";
+		now FaceName of Player is "Bottlenose Toy";
+		now SkinName of Player is "Bottlenose Toy";
+		now BodyName of Player is "Bottlenose Toy";
+		now CockName of Player is "Bottlenose Toy";
 		attributeinfect;
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

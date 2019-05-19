@@ -159,7 +159,7 @@ to say velosdesc:
 
 
 Instead of conversing the Velos:
-	if facename of Player is "Cerberus" or skrp > 0 and velosheadstalk is false:		[multiple heads]
+	if FaceName of Player is "Cerberus" or skrp > 0 and velosheadstalk is false:		[multiple heads]
 		add -3 to velospostmusings, if absent;
 	else if velospostmusings is not empty:		[remove if unused and doesn't apply]
 		if -3 is listed in velospostmusings, remove -3 from velospostmusings;

@@ -208,17 +208,17 @@ to say animeclublost:
 		if Name entry is "Anime Babe":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Anime Babe";
-	now facename of Player is "Anime Babe";
-	now skinname of Player is "Anime Babe";
-	now bodyname of Player is "Anime Babe";
-	now cockname of Player is "Anime Babe";
+	now TailName of Player is "Anime Babe";
+	now FaceName of Player is "Anime Babe";
+	now SkinName of Player is "Anime Babe";
+	now BodyName of Player is "Anime Babe";
+	now CockName of Player is "Anime Babe";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

@@ -50,21 +50,21 @@ To say ElfLoses:
 			else if ElfEncounters is 4 or ElfEncounters is 5:
 				say "     Frustrated by her earlier escapes, you are ready for her this time and grab her right at the last moment, pulling her dazed body into your arms before she can get away on the wind. Despite her strong blows, she's quite light and easily held now that she's defeated. Having caught her, you smile and push her to the ground on a pile of leaves, then move atop her, always careful to keep a grip on her lest she escape again. Laying back against the foliage, the elf woman is a beautiful, lovely sight and one you'll enjoy despoiling with your lustful intentions for her.";
 				if Player is male:
-					say "     Stroking your cock until it's nice and hard, you move into position at her wet folds. She moans softly as you brush it against her damp lips, then thrust into her lovely pussy, enjoying her moan of pleasure even as she tries to hide it[if Cock Length of Player > 15]. Your penis is quite large for her, and she whimpers a few times as well, though the moans of pleasure far outnumber those until it is all lustful cries as she's fully stuffed to the back of her smaller cunt[else if Cock Length of Player > 7]. With a few pushes that make her moan aloud, you sink your cock into her until she's fully stuffed to the back of her cunt[else]. You manage to slide your full length into the elf's cunt easily enough, drawing more moans of pleasure from her[end if]. Holding her by the wrists, you thrust into your elven prize again and again with your [cockname of Player] cock until finally you groan and cum inside her. She bites her lip and tries to fight it back, but ends up crying out as she climaxes as well, having enjoyed the rough fucking immensely. Grinning, you let her up and watch as she's whisked away by the wind, leaking your cum as she goes.";
+					say "     Stroking your cock until it's nice and hard, you move into position at her wet folds. She moans softly as you brush it against her damp lips, then thrust into her lovely pussy, enjoying her moan of pleasure even as she tries to hide it[if Cock Length of Player > 15]. Your penis is quite large for her, and she whimpers a few times as well, though the moans of pleasure far outnumber those until it is all lustful cries as she's fully stuffed to the back of her smaller cunt[else if Cock Length of Player > 7]. With a few pushes that make her moan aloud, you sink your cock into her until she's fully stuffed to the back of her cunt[else]. You manage to slide your full length into the elf's cunt easily enough, drawing more moans of pleasure from her[end if]. Holding her by the wrists, you thrust into your elven prize again and again with your [CockName of Player] cock until finally you groan and cum inside her. She bites her lip and tries to fight it back, but ends up crying out as she climaxes as well, having enjoyed the rough fucking immensely. Grinning, you let her up and watch as she's whisked away by the wind, leaking your cum as she goes.";
 				else:
 					say "     Bringing a hand between her legs, you get her to spread them and let you at her wet snatch. She moans softly as you brush against it, then slip a pair of fingers into her, enjoying her moan of pleasure even as she tries to hide it. Holding her down by one shoulder, you keep fingering her cunt to watch her squirm and moan beneath you. You pump in and out of her hard and fast, feeling her cunt quiver around your digits. She bites her lip and tries to fight it back, but ends up crying out as she climaxes, having enjoyed the rough fingering immensely. [if Player is female]Greatly aroused, you grab her head and press her face to your puss[yfn], forcing her to lick you until you cum as well, soaking her face in your juices even as you lick hers from your hand. [end if]Grinning, you let her up and watch as she's whisked away by the end, still dripping female juices from her cunt.";
 			else:
 				say "     Grabbing her wrist, she submits to you this time. 'You have bested me, warrior, time and again. I must accept my fate,' she says, head bowed. Grinning and quite pleased, you run your hand through her lovely hair ";
 				if Player is male:
 					say "as you guide her head between your legs. With your growing erection before her, she whimpers softly before giving it a few licks, then kisses and sucks at it more eagerly.";
-					say "     You run your fingers through her hair and stroke her pointed, and very sensitive, ears. She blushes as you tell her how lovely she looks with your penis in her mouth and what a fine cocksucker she is, embarrassed by your words as well as her own eagerness to continue. After you've gotten quite excited and given her a good taste of your [cockname of Player] precum, you let her release it and have her climb into your lap instead. She whimpers a little, in both reluctance and anticipation, but does as ordered. Her cunt [if Cock Length of Player > 15]is a tight fit for your huge cock, so you let her take her time and enjoy watching her moan and struggle to take you in, eventually stuffing as much as she can fit into her much smaller vagina[else if Cock Length of Player > 8]is a little bit small for you, but she eventually ends up stuffing as much as she can fit into her smaller vagina[else]takes your cock's full length in easily enough[end if]. Gripping her ass, you lick and suck at her large, lovely breasts while she rides in your lap, whimpering and moaning in pleasure. You suck and nibble at her big, pink nipples while pumping your [cock size desc of Player], [cock of Player] shaft into her until finally climaxing and sending your hot seed inside her. Not bothering to hold back any more, the lustful elf woman arches her back and cums hard as well. Both spent, you relax your hold on her and lean back, resting on your hands as she's taken up by the wind, lightly easing off your cock as she rises into the air. She drifts off on the breeze, leaking a trail of your cum from her recently filled cunt.";
+					say "     You run your fingers through her hair and stroke her pointed, and very sensitive, ears. She blushes as you tell her how lovely she looks with your penis in her mouth and what a fine cocksucker she is, embarrassed by your words as well as her own eagerness to continue. After you've gotten quite excited and given her a good taste of your [CockName of Player] precum, you let her release it and have her climb into your lap instead. She whimpers a little, in both reluctance and anticipation, but does as ordered. Her cunt [if Cock Length of Player > 15]is a tight fit for your huge cock, so you let her take her time and enjoy watching her moan and struggle to take you in, eventually stuffing as much as she can fit into her much smaller vagina[else if Cock Length of Player > 8]is a little bit small for you, but she eventually ends up stuffing as much as she can fit into her smaller vagina[else]takes your cock's full length in easily enough[end if]. Gripping her ass, you lick and suck at her large, lovely breasts while she rides in your lap, whimpering and moaning in pleasure. You suck and nibble at her big, pink nipples while pumping your [cock size desc of Player], [Cock of Player] shaft into her until finally climaxing and sending your hot seed inside her. Not bothering to hold back any more, the lustful elf woman arches her back and cums hard as well. Both spent, you relax your hold on her and lean back, resting on your hands as she's taken up by the wind, lightly easing off your cock as she rises into the air. She drifts off on the breeze, leaking a trail of your cum from her recently filled cunt.";
 				else if Player is female:
 					say "as you guide her head between your legs. With your damp pussy before her, she slowly slides her tongue over it with a soft moan before diving in eagerly.";
 					say "     You run your fingers through her hair and stroke her pointed, and very sensitive, ears. She blushes as you tell her how lovely she looks between your legs where she belongs and what a fine job she's doing eating you out, embarrassed by your words as well as her own eagerness to continue. And your words are not just to tease her, her tongue is quite artful in its approach, clearly having had considerable practice before. She alternates between licking and nibbling your folds, playing with your clit and diving deep within you to lap up your juices. You grin as you notice her hands drift between her legs to play with herself while she lavishes attention upon you. After a lovely session of her tongue-work, you can take no more and reach a powerful climax, crying out in delight. You grin and cum even harder as you hear the elf woman moan in orgasm as well, unable to contain her pleasure any longer. Both spent, you release her head and stroke your fingers lightly across her cheek she is picked up by the air and drifts away from you. As she rides away on the breeze, she dribbles female juices from her wet cunt.";
 				else:
 					say "before lowering the elf onto her back. Given your lack of a proper outlet, you decide to ";
 					if anallevel is 3 and a random chance of 1 in 2 succeeds: [Rimming]
-						say "walk around her proffered form and kneel atop her head, your [skin of Player] ass perched above her lips.";
+						say "walk around her proffered form and kneel atop her head, your [Skin of Player] ass perched above her lips.";
 						if ElfRimming is 0:
 							say "     The elf hesitates at first, clearly inexperienced with anal play. 'Are you sure about this?' she asks, her nervous breath beating warmly over your rim. When you insist with gentle pressure, she complies to your demands and snakes her smooth, wet tongue through the crack of your ass, leaving a thin film of saliva in that wayward motion's wake. Her first stroke is followed by a pause to bask in your scent, then another testing lick, gauging your rump's flavor with a soft, hazy moan. Every application grows more confident and lustful, her initial trepidation replaced with genuine enjoyment and fingers straying below to stuff her nectar-rich folds. Soon, the elf is feasting on your ass";
 						else:
@@ -79,7 +79,7 @@ To say ElfLoses:
 						say "     Without hesitation, you wrap your arms around her waist and burrow your head between those sumptuous thighs. Your tongue extends to sweep and curl over her lust-slick labia, oh-so-gently parting her flesh with its nimble, flexing tip. Each stroke explores from base to supple clit, at times pausing to curl and suck on her cute pink button. Her back arches stiffly when at first one finger, then a second press into her welcoming depths, sliding all the way to the knuckle in that warm, damp passage. 'Oh, I want more!' your lover pleads, her breath somewhat strained by the time you're pumping back and forth in that slavering vise, seeking out all those special spots where you sense her tense against you. In time, the once-proud elf is reduced to hazy, raspy exultations, her hips rocking in tandem with your digits['] steady pumping. A stream of feminine nectar greets your roving tongue, as nourishing as it is intoxicating, the fluid soaking your palate as you orally pleasure your partner.";
 						WaitLineBreak;
 						say "     It's not long before your service overwhelms the needy elf. Her fluids spill across your face in heady squirts and splatters, making quite the mess with her impressive, sticky output. Her hands slide below to push your head down, keeping your lips locked to her folds as she quivers and moans in the throes of carnal ecstasy. You eagerly works to prolong her peak, slathering over her vaginal walls and swallowing down her nectar. Once her climax tapers down, you pull away from her slavering folds again, licking your lips and looking back at the thoroughly exhausted elf. She meets your gaze with a soft and sultry smile, through her heart still races after your intense stimulation.";
-						say "     'Th-Thank you,' the elf murmurs quietly, slowly pushing herself back to her feet. With a somewhat staggering saunter, she sidles up against you and ropes her arms around our shoulders. 'You would make a wonderful partner. If you only you ceased your aimless wandering and joined us...' Purring gently, a finger traces down your fore in a serpentine slalom, delicately running over your [skin of Player] skin until it stops at your barren groin. She gropes your featureless pelvis, then grins up at you slyly. 'And perhaps grew something fun to play with down here.' Without further word, she steps away and picks up on the forest breeze, leaving only the pleasant taste of her honeys to remember her by.";
+						say "     'Th-Thank you,' the elf murmurs quietly, slowly pushing herself back to her feet. With a somewhat staggering saunter, she sidles up against you and ropes her arms around our shoulders. 'You would make a wonderful partner. If you only you ceased your aimless wandering and joined us...' Purring gently, a finger traces down your fore in a serpentine slalom, delicately running over your [Skin of Player] skin until it stops at your barren groin. She gropes your featureless pelvis, then grins up at you slyly. 'And perhaps grew something fun to play with down here.' Without further word, she steps away and picks up on the forest breeze, leaving only the pleasant taste of her honeys to remember her by.";
 		else:
 			say "     You choose to let her off, a breeze of forest air whisking her away in a blur.";
 	else:
@@ -95,7 +95,7 @@ to say ElfDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -103,6 +103,7 @@ When Play begins:
 	add "Wood Elf" to infections of humanoid;
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Wood Elf"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -156,11 +157,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -176,9 +178,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -210,13 +212,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -228,8 +230,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -245,7 +247,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -256,7 +258,7 @@ When Play begins:
 
 
 when play ends:
-	if bodyname of Player is "Wood Elf":
+	if BodyName of Player is "Wood Elf":
 		if humanity of Player < 10:
 			say "     Your last vestige of humanity lost to the pull of your elven kin's influence, you feel yourself compelled to meet up with them, eventually brought into their tribe. Over time, you learn the purpose of the tribe as some manner of scouting party, checking to see if they should make their move on this realm or not, ";
 			if ElfEncounters > 4:

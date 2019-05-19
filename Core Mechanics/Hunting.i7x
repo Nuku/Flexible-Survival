@@ -54,13 +54,13 @@ carry out HuntAction:
 		say "DEBUG -> Battleground: [battleground]; Target: [HuntId][line break]";
 	[extra encounter chances]
 	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
-		if ( bodyname of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
+		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
 				add "Mental Mouse" to PossibleEncounters;
 				if humanity of Player < 75:
 					repeat with x running from 1 to ( ( 100 - humanity of Player ) / 25 ):
 						add "Mental Mouse" to PossibleEncounters;
-		if insectlarva is true and larvaegg is 1 and gestation of child is 0: [hunted by wasp hive anywhere outdoors]
+		if insectlarva is true and larvaegg is 1 and gestation of Child is 0: [hunted by wasp hive anywhere outdoors]
 			if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 				if there is a name of "Black Wasp" in the Table of Random Critters:
 					add "Black Wasp" to PossibleEncounters;
@@ -296,11 +296,11 @@ carry out HuntAction:
 					if debugactive is 1:
 						say "DEBUG -> Other creature [Name entry] found for the battleground: [battleground].[line break]";
 				if "Like Attracts Like" is listed in the feats of Player and "Unerring Hunter" is not listed in feats of Player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds player fav infection if they're not an unerring hunter]
-					if bodyname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
-					if facename of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
-					if skinname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
-					if tailname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
-					if cockname of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if BodyName of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if FaceName of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if SkinName of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if TailName of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
+					if CockName of Player is Name entry and a random chance of 1 in 2 succeeds, add Name entry to PossibleEncounters;
 		if Found is 0 or (Found > 10 and Found < 20): [no simple room or creature match, moving on to events]
 			if debugactive is 1:
 				say "DEBUG -> Checking [HuntId] against events now. (SIMPLE MATCH)[line break]";

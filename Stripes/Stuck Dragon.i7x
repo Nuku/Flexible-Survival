@@ -182,9 +182,9 @@ to say dragonesssex:
 		say "     With a prize like this, she just looks too tempting to leave alone. You set aside your clothes and gear and move up to her large rump. Holding her large, wet lips against your cock, you grind against them to get yourself slick. The dragoness moans before realizing what's happening and shrieking";
 		if lust of Christy is 0:
 			now dragonessfuck is 2;
-			say ". 'Oh, no! You ARE one of those mindless beasts and you ARE going to violate me! Please don't put your big... throbbing... manhood in my defenseless... and wet... pussy!' she moans as you keep grinding against her wet, sensitive pussy lips. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries over her half-hearted protests. Her cries and her body's reaction clearly tells you she wants and needs this and you shove your [cock size desc of Player] [cock of Player] shaft into her huge pussy with a loud, lustful groan.";
+			say ". 'Oh, no! You ARE one of those mindless beasts and you ARE going to violate me! Please don't put your big... throbbing... manhood in my defenseless... and wet... pussy!' she moans as you keep grinding against her wet, sensitive pussy lips. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries over her half-hearted protests. Her cries and her body's reaction clearly tells you she wants and needs this and you shove your [cock size desc of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan.";
 		else:
-			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [cockname of Player] [cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
+			say ". 'Oh, no! Don't violate me again!' the dragoness shrieks. 'Laying those eggs was an unbelievably pleasurable... I mean uncomfortable experience!' she cries out even as her body grinds back against you. You part those folds and sink your cock into her, licking and kissing at her gigantic ass as you do, listening to her lustful cries and ignoring her clearly false protests. As before, you know what her body wants and you'll make sure to give it to her. You shove your [CockName of Player] [Cock of Player] shaft into her huge pussy with a loud, lustful groan as you start fucking her again.";
 		if Cock Length of Player < 20:
 			say "     'You evil monster! How could you? Oh yeah, that feels great... er... horrible! I said it feels horrible!' she cries out before catching herself. 'Mmm, now pound me harder... I mean, stop you vile creature!' the dragoness roars. She's obviously having trouble controlling the urges of her body as you pump your cock into her again and again. Her wide pussy squeezes around your cock, throbbing around you with the pulse of her blood through her huge body. As you fuck her, you lick and kiss at her huge rear, rubbing your body against her to stimulate your trapped lover further. Her body responds on its own, her large cunt overflowing with juices and her inner walls rippling and tugging at your cock, pulling hard on you to keep fucking her.";
 		else:
@@ -386,20 +386,20 @@ Carry out dragonhatching:
 to say dragonchange:
 	now Libido of Player is 75;
 	if "Male Preferred" is not listed in feats of Player:
-		now tailname of Player is "Slutty Dragoness";
-		now facename of Player is "Slutty Dragoness";
-		now bodyname of Player is "Slutty Dragoness";
-		now cockname of Player is "Slutty Dragoness";
-		now skinname of Player is "Slutty Dragoness";
+		now TailName of Player is "Slutty Dragoness";
+		now FaceName of Player is "Slutty Dragoness";
+		now BodyName of Player is "Slutty Dragoness";
+		now CockName of Player is "Slutty Dragoness";
+		now SkinName of Player is "Slutty Dragoness";
 		now scalevalue of Player is 5;
 		now bodydesc of Player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of Player is "[one of]draconic[or]reptilian[at random]";
 		now SleepRhythm of Player is 0;
 		now tail of Player is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it.";
-		now body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
-		now face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
-		now skin of Player is "blue colored dragon scales covering your";
-		now cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
+		now Body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now Face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
+		now Skin of Player is "blue colored dragon scales covering your";
+		now Cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
 		if ( "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player ) and dragontype is 0:
 			say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as Christy, you have become quite the sexy beast.";
 			now Cock Count of Player is 1;
@@ -462,20 +462,20 @@ to say dragonchange:
 			else:
 				say ".";
 	else:
-		now tailname of Player is "Horny Dragon";
-		now facename of Player is "Horny Dragon";
-		now bodyname of Player is "Horny Dragon";
-		now cockname of Player is "Horny Dragon";
-		now skinname of Player is "Horny Dragon";
+		now TailName of Player is "Horny Dragon";
+		now FaceName of Player is "Horny Dragon";
+		now BodyName of Player is "Horny Dragon";
+		now CockName of Player is "Horny Dragon";
+		now SkinName of Player is "Horny Dragon";
 		now scalevalue of Player is 5;
 		now bodydesc of Player is "bestial";
 		now bodytype of Player is "[one of]draconic[or]reptilian[at random]";
 		now SleepRhythm of Player is 0;
 		now tail of Player is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it.";
-		now body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
-		now face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
-		now skin of Player is "blue colored dragon scales covering your";
-		now cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
+		now Body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now Face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
+		now Skin of Player is "blue colored dragon scales covering your";
+		now Cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
 		if dragontype is 0:
 			say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as Christy, you have become quite the sexy beast.";
 			now Cock Count of Player is 1;
@@ -564,7 +564,7 @@ Instead of fucking the Christy:
 
 to say christysex:
 	if Player is male and Cock Length of Player > 4:		[cock of adequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to mount and fill her needy cunt. Being smaller than her, you partially cover that large backside of hers as she lowers her pussy into position for you to mate her. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you to mate her";
@@ -572,24 +572,24 @@ to say christysex:
 		say "     Placing your hands on her wide, scaly ass, you squeeze it firmly and start pounding away at her, driving your cock into her again and again, listening to her [if HP of Christy < 4]stifled[else]lustful[end if] moans. 'Oh, that feels so good! Take me like a wild animal! Use me like a beast!' she groans in need. 'I... I mean, oh never mind. Just keep fucking me until I'm full[if lust of Christy > 2] again[end if],' she begs.";
 		WaitLineBreak;
 		say "     Eager to please such a request, you pound into her harder and faster. You wrap one arm around her raised tail for support and bring the other to her dripping pussy. You rub over her sensitive folds and at her swollen clit, making her squeeze around you all the tighter[if Cock Length of Player < 20]. Despite her great size, her cunt is able to tighten nicely around your relatively small penis[else]. Having your huge cock in her cunt clearly excites the dragoness greatly and you can feel her inner walls rippling across your entire length[end if]. Her large pussy overflows with her juices, filling the air with the scent of arousal. Her cunt squeezes and tugs at your cock, milking hard at you for [if lust of Christy > 2]another [end if]load[if dragontype > 0]. You know first hand how eager that womb of hers is to be filled and you intend to give her another large clutch to satisfy it[end if]. Eventually, the stimulation gets to be too much for the both of you and you cum hard, pumping [if lust of Christy > 2]another[else]your[end if] hot load into her heated womb as she orgasms with a loud roar.";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase lust of Christy by 1;
 		now lastChristyfucked is turns;
 	else if Player is male:					[cock of inadequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
 		say ". Your cock barely pushes at all into the dragoness's large cunt, providing little stimulation for you both. Moving your hands down, you take her wet, puffy lips and rub them together while grinding your cock against those sensitive folds, getting her to moan in pleasure. Grinning at your solution, you start grinding your cock against her pussy.";
 		WaitLineBreak;
 		say "     You work and tease her pussy lips with your cock, rubbing against them and leaking precum onto them as her wet juices flow out over your shaft. You nuzzle and kiss her large rump, making her moan all the more. 'Mmm... I can't wait until you can properly fuck me,' the dragoness moans. 'You need to find a way to get a bigger cock so you can screw me.' She blushes at her words, burying her head in her dragon paws as she's unable to deny her desires. Her large pussy overflows with her juices, filling the air with the scent of arousal. Her wet folds ripple and slide against your maleness, trying to tug at your cock to milk it for [if lust of Christy > 2]another[else]your[end if] load[if dragontype > 0]. You know first hand how eager that womb of hers is to be filled and you long to have a larger cock to properly experience filling it with a heavy clutch[end if]. Eventually, the stimulation gets to be too much for the both of you and you cum hard, spraying your seed across her wet folds as she orgasms with a muffled roar.";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase Libido of Christy by 1;
 		now lastChristyfucked is turns;
 	else:									[female]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
@@ -597,7 +597,7 @@ to say christysex:
 		WaitLineBreak;
 		say "     You work and tease her pussy lips with your fingers, then move to her throbbing clit. Her juices are warm, spicy and delicious. 'Oh, I shouldn't be enjoying doing this with another woman, but you make me feel so good. Mmm... how I wish you had a cock to fill me though,' she moans. Deciding to fill the dragoness in another way, you slide one of your arms into her slick hole, eliciting a lustful groan of 'Oh, my hero!' from her as you do.";
 		say "     Pounding your arm into her, you fist the dragoness hard and deep. You can feel her inner walls trembling around you with increasing excitement. You kiss and lick at her pussy each time you drive all the way to the shoulder into her. Your fingers stroke and tease inside her, rubbing any sensitive spot or ridge you can find. Your free hand it stuffed between your legs, playing with your own dripping cunt. Her large pussy overflows with her juices, filling the air with the scent of arousal. Her cunt squeezes and tugs at your arm, milking at it as if it were a throbbing penis that could fill her with eggs[if dragontype > 0]. You know first hand how eager that womb of hers is to be filled and the feeling of her inner walls rubbing against you is very pleasurable[end if]. Eventually, the stimulation gets to be too much for the both of you and you cum hard. You soak your hand with your juices while she orgasms with a roar.";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase Libido of Christy by 1;
 		now lastChristyfucked is turns;
@@ -605,32 +605,32 @@ to say christysex:
 
 to say christysex2:		[post-caught variation]
 	if Player is male and Cock Length of Player > 4:		[cock of adequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy moans softly with desire as she feels your draconic body moving against hers and preparing to mount and fill her needy cunt. Being smaller than her, you partially cover that large backside of hers as she lowers her pussy into position for you to mate her. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you to mate her";
-		say ". Having had considerable practice mounting the dragoness, you get yourself lined up with her dripping slit and sink slowly into it[if Cock Length of Player < 20]. She moans in pleasure as she feels your [cock of Player] cock sinking into her needy hole and presses back against your thrusts[else]. She roars in lustful pleasure as your impressively large [cock of Player] shaft is stuffed into her needy hole and she presses back against your thrusts eagerly[end if].";
+		say ". Having had considerable practice mounting the dragoness, you get yourself lined up with her dripping slit and sink slowly into it[if Cock Length of Player < 20]. She moans in pleasure as she feels your [Cock of Player] cock sinking into her needy hole and presses back against your thrusts[else]. She roars in lustful pleasure as your impressively large [Cock of Player] shaft is stuffed into her needy hole and she presses back against your thrusts eagerly[end if].";
 		say "     Gripping her wide, scaly ass, you squeeze it firmly and start pounding away at her, driving your cock into her again and again, enjoying the sounds of her lustful moans. 'Oh, that's just what I need! Pound me hard and take me like a wild animal! Breed me like a beast!' she groans in need. 'I... I mean... oh, just do it! Fuck that hot pussy of mine until I'm full[if lust of Christy > 2] again[end if],' she begs.";
 		WaitLineBreak;
 		say "     Planning to do just that, you pound into her harder and faster. You wrap one arm around her raised tail for support and bring the other to her sopping pussy. You caress her large, sensitive folds and rub at her swollen clit, making her cunt quiver and squeeze around you all the tighter[if Cock Length of Player < 20]. Despite its great size, her cunt is able to tighten nicely around your relatively small penis[else]. Having your [cock size desc of Player] cock in her cunt is clearly very satisfying for the dragoness and you can feel her inner walls rippling across your entire length[end if] as she eagerly grinds herself back against you for more. The air around you is filled with the scent of her arousal from the excessive amounts of her juices overflowing from her dripping pussy. This scent excites you further even as her cunt squeezes and tugs at your cock for [if lust of Christy > 2]another [end if]load[if dragontype > 0]. Having experienced those rippling inner walls of hers first hand, you know how eager that womb of hers is to be filled and you intend to give her another large clutch to satisfy it[end if]. Eventually, you can hold back no longer and you cum hard, shooting [if lust of Christy > 2]another[else]your[end if] hot load into her needy womb as she orgasms with a loud roar. 'Oh yes, give it to me,' she cries out loudly[if lust of Christy > 2]. 'Fill me with eggs.'[else].[end if]";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase lust of Christy by 1;
 		now lastChristyfucked is turns;
 	else if Player is male:					[cock of inadequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy moans softly with desire as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
 		say ". Given your inadequate size, your [cock size desc of Player] cock barely pushes at all into the dragoness's large cunt, providing little stimulation for you both. You slide your hands down and take the wet, puffy lips of her enlarged pussy and rub them together while grinding your cock against those sensitive folds, enjoying the soft sounds of her pleasure as you do this. Pleased with the results of your solution, you start grinding your cock against her pussy.";
 		WaitLineBreak;
 		say "     You work and tease her pussy lips with your cock, rubbing against them and leaking precum onto them as her wet juices flow out over your shaft. As you do this, you nuzzle and kiss her large rump, drawing out more moans of pleasure from her. 'Mmm... I hope you can find a way to get a nice, big cock so you can fuck me properly,' the needy dragoness moans. 'I want to feel your big, hard cock deep inside me, breeding me properly.' She blushes at her words, but is unable to deny her desires, grinding back against you firmly. The air around you is filled with the scent of her arousal from the excessive amounts of her juices overflowing from her dripping pussy. This scent excites you further even as her wet folds ripple and slide against your maleness, trying to tug at your cock to milk it for [if lust of Christy > 2]another[else]your[end if] seed[if dragontype > 0]. Having experienced those rippling inner walls of hers first hand, you know how eager that womb of hers is to be filled and you long to have a bigger cock to properly enjoy filling her with a heavy clutch[end if]. Eventually, you can hold back no longer and you cum hard, shooting [if lust of Christy > 2]another[else]your[end if] hot load across her wet folds as she orgasms with a roar.";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase Libido of Christy by 1;
 		now lastChristyfucked is turns;
 	else:									[female]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy moans softly with desire as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
@@ -638,7 +638,7 @@ to say christysex2:		[post-caught variation]
 		WaitLineBreak;
 		say "     You work and tease her sopping lips with your fingers, then move to her throbbing clit. Her juices are warm, spicy and delicious. 'Oh, I feel so naughty for doing stuff like this with another woman, but you make it feel so goooood,' she rumbles out the last word. 'Mmm... I can't help wishing that you had a cock to fill me though,' she moans. Deciding to satisfy the dragoness's need in another way, you plunge one of your arms into her slick hole, eliciting a lustful groan of 'Oh, you always know what to do to please me!' from her as you do.";
 		say "     As you pound your arm into the dragoness, she presses back into it eagerly. You can feel her inner walls trembling around you with increasing excitement. You kiss and lick at her pussy each time you drive all the way to the shoulder into her. Your hand rubs and caresses at any especially sensitive spot or ridge you can find along her vaginal walls, drawing delightful sounds of pleasure from your large lover. With your free hand stuffed between your legs, you play with your own dripping cunt, plunging fingers into yourself even as you push into her, filling the air with the scent of arousal. Her cunt squeezes and tugs at your arm, milking at it as if it were a throbbing penis that could fill her with eggs[if dragontype > 0]. Having experienced those rippling inner walls of hers first hand, you know how eager that womb of hers is to be filled and the feeling of her inner walls squeezing and sliding along your arm is very enjoyable. You find yourself longing to feel that around a cock as you fill her with a heavy clutch[end if]. Eventually, you can hold back no longer and you both cum hard. You soak your hand with your juices while she orgasms with a roar.";
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 		increase Libido of Christy by 1;
 		now lastChristyfucked is turns;
@@ -657,11 +657,11 @@ to say christyoral:
 			say "     Looking for more dragonloving, you nuzzle and scritch her head, going to those sensitive spots that feel so good and wear down her resistance. She starts to rumble and nuzzles her way down to your crotch, moaning as she takes in your scent. 'Mmm... your [if Player is male]cock[else]cunt[end if] smells so tasty. Eeep! I mean... screw it... I'd really like another taste of my sexy hero,' she moans, taking in another deep breath of your sex, which sets her hips aquiver.";
 		say "     With your agreement to her offer, she rolls onto her side, putting her scaly body on display for you. You can see the juices tricking down her ass and thigh, clearly already quite excited by the prospect. You move your hands to rub along her underbelly scales[if lust of Christy > 2] which had recently been stretched full of eggs[end if]. You move into position to lay beside her, putting your face at her cunt to lick at it. You spread your legs as her long neck bends around to bring her head to your groin. You moan softly as her tongue starts sliding over you, running [if Player is herm]across your cock and balls before teasing your wet pussy as well[else if Player is male]across your cock and balls[else]along your wet pussy[end if]. Putting your hands on her juicy folds, you start rubbing and caressing them as your tongue laps at them.";
 		if Player is male and Cock Length of Player > 7:
-			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her large maw down over your [cock size desc of Player] [cock of Player] [if Cock Count of Player is 1]cock, carefully sucking at it[else if Cock Count of Player > 1]cocks, carefully sucking on them[end if]. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably. Her warm, wet mouth is very pleasurable and you start rocking your hips, thrusting into the dragoness's muzzle while her tongue plays in and out of her mouth, alternating between sliding across your shaft[smn][if Cunt Count of Player > 1], your cunts[else if Cunt Count of Player is 1], your cunt[end if] and your balls.";
+			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her large maw down over your [cock size desc of Player] [Cock of Player] [if Cock Count of Player is 1]cock, carefully sucking at it[else if Cock Count of Player > 1]cocks, carefully sucking on them[end if]. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably. Her warm, wet mouth is very pleasurable and you start rocking your hips, thrusting into the dragoness's muzzle while her tongue plays in and out of her mouth, alternating between sliding across your shaft[smn][if Cunt Count of Player > 1], your cunts[else if Cunt Count of Player is 1], your cunt[end if] and your balls.";
 		else if Player is female:
-			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her long, slender tongue across your wet pussy, lapping up your juices. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably[if Player is male]. She lets her tongue tease across your [cock size desc of Player] [cock of Player] shaft, but its small size compared to her large maw has her focus on your pussy instead[end if]. Her slick tongue starts teasing at the entrance to your vagina, flicking across your clit, then dives into you, making you moan loudly and rock your hips at this sudden and pleasurable intrusion.";
+			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her long, slender tongue across your wet pussy, lapping up your juices. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably[if Player is male]. She lets her tongue tease across your [cock size desc of Player] [Cock of Player] shaft, but its small size compared to her large maw has her focus on your pussy instead[end if]. Her slick tongue starts teasing at the entrance to your vagina, flicking across your clit, then dives into you, making you moan loudly and rock your hips at this sudden and pleasurable intrusion.";
 		else:
-			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her long, slender tongue across your [cock size desc of Player] [cock of Player] cock[smn], enjoying the taste of your maleness. A little too small from her perspective, she doesn't take [itthemm] into her muzzle and instead licks and kisses at [itthemm] and your balls. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably. Her flexible tongue is very pleasurable and you start rocking your hips, thrusting against the playful appendage as it alternates between sliding across your shaft[smn] and your balls.";
+			say "     The dragoness moans in delight at the attention she's receiving and her tonguework becomes more and more eager as well. Christy slides her long, slender tongue across your [cock size desc of Player] [Cock of Player] cock[smn], enjoying the taste of your maleness. A little too small from her perspective, she doesn't take [itthemm] into her muzzle and instead licks and kisses at [itthemm] and your balls. While you can tell she's inexperienced, she does try very eagerly and her body seems to know what to do, helping her along considerably. Her flexible tongue is very pleasurable and you start rocking your hips, thrusting against the playful appendage as it alternates between sliding across your shaft[smn] and your balls.";
 		say "     With all of this, you try your best on staying focused on pleasing the lusty dragoness as well, using your hands, mouth and tongue to lavish attention up her juicy cunt. Her large pussy quivers and her ass and tail twitch as her excitement builds before peaking with the powerful orgasm that sends her pussy juices washing over you as she cums hard. Washed over by this rush of her orgasmic fluids and its rich, arousing scent, you cum as well, [if Player is male and Cock Length of Player > 7]pumping your load into her muzzle[else if Player is male]spraying your load across her muzzle[end if][if Player is herm] and [end if][if Player is female]soaking your crotch and her tongue in your feminine juices[end if].";
 	else:				[Christy punishment time - post-caught only]
 		say "     Looking for more dragonloving, you nuzzle and scritch her head, going to those sensitive spots that feel so good as you attempt to get her lustful and excited again. 'Mmm... I think someone's looking to be naughty again,' she rumbles with a chuckle in her voice. To your surprise, she knocks you down with one of her large talons, pinning you down. She leans her large head in close and licks your cheek. 'And naughty [if Player is female]girls[else]boys[end if] need to be punished,' she adds with a toothy grin before hefting your [bodytype of Player] body [if scalevalue of Player < 4]easily [end if]across some crates so you're lying overtop it with your ass overhanging once again.";
@@ -691,7 +691,7 @@ to say christyoral:
 		follow the turnpass rule;
 	else:
 		if HP of Christy < 6, increase HP of Christy by 1;
-		if ( dragontype is 1 and (bodyname of Player is not "Slutty Dragoness" or facename of Player is not "Slutty Dragoness" or cockname of Player is not "Slutty Dragoness" or skinname of Player is not "Slutty Dragoness" or tailname of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (bodyname of Player is not "Horny Dragon" or facename of Player is not "Horny Dragon" or cockname of Player is not "Horny Dragon" or skinname of Player is not "Horny Dragon" or tailname of Player is not "Horny Dragon") ):
+		if ( dragontype is 1 and (BodyName of Player is not "Slutty Dragoness" or FaceName of Player is not "Slutty Dragoness" or CockName of Player is not "Slutty Dragoness" or SkinName of Player is not "Slutty Dragoness" or TailName of Player is not "Slutty Dragoness") ) or ( dragontype is 2 and (BodyName of Player is not "Horny Dragon" or FaceName of Player is not "Horny Dragon" or CockName of Player is not "Horny Dragon" or SkinName of Player is not "Horny Dragon" or TailName of Player is not "Horny Dragon") ):
 			say "[dragonchange]";
 	increase Libido of Christy by 1;
 	now lastChristyfucked is turns;
@@ -702,20 +702,20 @@ Section 8 - Christy Uh-Oh
 to say christyuhoh:
 	let scenerun be 0;
 	if Player is male and Cock Length of Player > 4:		[cock of adequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to mount and fill her needy cunt. Being smaller than her, you partially cover that large backside of hers as she lowers her pussy into position for you to mate her. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you to mate her";
 		say ". Taking your cock in hand, you get yourself lined up with her dripping slit and sink slowly into it[if Cock Length of Player < 20]. She moans in pleasure as she feels your cock sinking into her needy hole and presses back against your thrusts[else]. She roars in lustful pleasure at the size of the meat filling her needy hole and presses back against your thrusts eagerly[end if].";
 		say "     Placing your hands on her wide, scaly ass, you squeeze it firmly and start pounding away at her, driving your cock into her again and again, listening to her lustful moans. 'Oh, that feels so good! Take me like a wild animal! Use me like a beast!' she groans in need. 'I... I mean, oh never mind. Just keep fucking me until I'm full[if lust of Christy > 2] again[end if],' she begs.";
 	else if Player is male:					[cock of inadequate size]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
 		say ". Your cock barely pushes at all into the dragoness's large cunt, providing little stimulation for you both. Moving your hands down, you take her wet, puffy lips and rub them together while grinding your cock against those sensitive folds, getting her to moan in pleasure. Grinning at your solution, you start grinding your cock against her pussy.";
 	else:									[female]
-		if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+		if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 			say "     Christy rumbles in appreciation as she feels your draconic body moving against hers and preparing to satisfy her needy cunt. She lowers that large backside of hers, bringing her pussy into position for you. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' she rumbles. 'Mmm... take me like the wild beast you are,' she adds, blushing at her own words, but unable to take them back";
 		else:
 			say "     Christy moans softly and lowers her large hips, bringing her pussy into position for you";
@@ -940,7 +940,7 @@ instead of trading the super spicy sausage when the current action involves the 
 		else:
 			LineBreak;
 			say "     Christy rolls onto his side, examining his new organ. 'That was intense. Is it always like that?' he asks, panting[if lust of Christy > 0]. 'I guess this means no more eggs for me. Maybe it can be your turn to have some eggs instead[else]. 'Well, at least I won't be having that nagging need to be filled all the time. Maybe I can take a go at filling you instead[end if],' he rumbles with a lustful eagerness before realizing what he's said and covering his mouth in shock. 'They're definitely not going to let me back into the nunnery now.'";
-			if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+			if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 				say "[dragonchange2]";
 		if Libido of Christy is odd, increase Libido of Christy by 1;
 		now lastfuck of Christy is turns + 24;
@@ -955,20 +955,20 @@ Section 12 - CV Dragon Change
 to say dragonchange2:
 	now Libido of Player is 75;
 	if "Male Preferred" is not listed in feats of Player:
-		now tailname of Player is "Slutty Dragoness";
-		now facename of Player is "Slutty Dragoness";
-		now bodyname of Player is "Slutty Dragoness";
-		now cockname of Player is "Slutty Dragoness";
-		now skinname of Player is "Slutty Dragoness";
+		now TailName of Player is "Slutty Dragoness";
+		now FaceName of Player is "Slutty Dragoness";
+		now BodyName of Player is "Slutty Dragoness";
+		now CockName of Player is "Slutty Dragoness";
+		now SkinName of Player is "Slutty Dragoness";
 		now scalevalue of Player is 5;
 		now bodydesc of Player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of Player is "[one of]draconic[or]reptilian[at random]";
 		now SleepRhythm of Player is 0;
 		now tail of Player is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it.";
-		now body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
-		now face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
-		now skin of Player is "blue colored dragon scales covering your";
-		now cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
+		now Body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now Face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
+		now Skin of Player is "blue colored dragon scales covering your";
+		now Cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
 		if ( "Herm Preferred" is listed in feats of Player or "Always Cocky" is listed in feats of Player ) and ( dragontype < 3 ) and tempnum is 3:
 			if dragontype is 0:		[ not previously UB'd - new to form ]
 				say "     You look down at your body and discover that you've been completely transformed into a Slutty Dragoness! While not as big as Christy, you have become quite the sexy beast.";
@@ -1031,20 +1031,20 @@ to say dragonchange2:
 			else:
 				say ".";
 	else:
-		now tailname of Player is "Horny Dragon";
-		now facename of Player is "Horny Dragon";
-		now bodyname of Player is "Horny Dragon";
-		now cockname of Player is "Horny Dragon";
-		now skinname of Player is "Horny Dragon";
+		now TailName of Player is "Horny Dragon";
+		now FaceName of Player is "Horny Dragon";
+		now BodyName of Player is "Horny Dragon";
+		now CockName of Player is "Horny Dragon";
+		now SkinName of Player is "Horny Dragon";
 		now scalevalue of Player is 5;
 		now bodydesc of Player is "bestial";
 		now bodytype of Player is "[one of]draconic[or]reptilian[at random]";
 		now SleepRhythm of Player is 0;
 		now tail of Player is "You have a long, thick, and scaly dragon tail with your ass[if Player is herm], gaping pussy lips and pendulous balls[else if Player is female] and gaping pussy lips[else if Player is male] and pendulous balls[end if] beneath it.";
-		now body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
-		now face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
-		now skin of Player is "blue colored dragon scales covering your";
-		now cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
+		now Body of Player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
+		now Face of Player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
+		now Skin of Player is "blue colored dragon scales covering your";
+		now Cock of Player is "[one of]draconic[or]azure[or]blue dragon[at random]";
 		if dragontype < 3 and tempnum is 3:
 			if dragontype is 0:		[ not previously UB'd - new to form ]
 				say "     You look down at your body and discover that you've been completely transformed into a Horny Dragon! While not as big as Christy, you have become quite the sexy beast.";
@@ -1224,7 +1224,7 @@ to say mchristysexmenu:
 to say mchristy_oral0:
 	say "     Hungry for another meal of the dragon's thick, spicy cum, you start rubbing your [bodydesc of Player] body against that mighty shaft. The feel of those ridges across your chest[if Nipple Count of Player > 0 and Breast Size of Player > 4] and between your boobs[end if] excites you all the more. Your hands reach further back, rubbing over the smooth scales of Christy's ballsack. It may just be your excitement, but those orbs feel large, heavy and hot with the semen you crave.";
 	say "     All of this has poor Christy rumbling and panting, the flow of pre steadily increasing. You work your tongue and lips across his glans and into his cum slit, enjoying the dragon's moans as you tease him. His cock throbs with the slow, strong beat of the dragon's big heart and his meaty hips rock as he resists thrusting that giant pillar of flesh into you. With him so worked up and you driving him wild, you build him up to a big blast of dragon seed that floods your mouth to the point of overflowing and splatters your face and upper body with the rest of it. It fills your senses of taste and smell with its spicy flavor, rich with virility. You gulp down as much as you can, your belly left rounded with your sticky meal.";
-	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+	if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 		say "[dragonchange2]";
 
 to say mchristy_top0:
@@ -1234,20 +1234,20 @@ to say mchristy_top0:
 	say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of Player] body a chance to adjust[if Cunt Depth of Player < 30]. Even with this, it is a little uncomfortable at first before your nanine-infused tissue stretches and accepts it[else]. You hardly need it though, your oversized cunt hungrily welcoming it in[end if]. He is so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
 	say "     His first few thrusts are slow and cautious, too much so for your now overloaded libido and you push back, urging him for more. His excessive restraint begins to waiver and his pace picks up, drawing a long moan from you as those pleasure-giving ridges slide in and out past your sensitive folds and clit. Your cunt clenches and squeezes around his meat each time this happens, bringing greater pleasure to the randy red dragon.";
 	say "     '[if lust of Player > 0 and the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with -ohhh- some eggs for a change[else if lust of Christy > 0 and the player is impreg_able]Oh, I think -mmm- someone's looking forward to being the one filled with -ohhh- some eggs for a change[else if the player is impreg_now]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with some eggs[else if the player is impreg_able]Oh, I think -mmm- someone's looking forward to being filled with -ohhh- some eggs real soon[else]Oh, I hope you have room for more, because I'm going to fill you with so much cum[end if],' he rumbles lewdly, scarcely able to resist voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those titanic blasts filling your womb and gushing out around your stretched cunny driving you over the edge. After he's done, [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[fimpregchance]";
-	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+	if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 		say "[dragonchange2]";
 	now mchristytop is true;
 
 to say mchristy_top1:
 	say "     Wanting the dragon inside you again, you tease him a little longer to get him good and ready as well as to spread a slick coating of precum for the fucking to come. By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against the drooling glans. ";
-	if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+	if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 		say "Christy rumbles in appreciation at the sight of your draconic body ready and waiting to be mounted. While smaller than him, you know your body's made for his - and that big schlong of his. 'Mmm... I prefer your new look. You make a fine, sexy dragoness,' he rumbles. 'Mmm... I'm going to enjoy taking you like a wild beast and filling you with my eggs over and over again,' he adds, blushing at his own words, but unable to take them back.";
 	else:
 		say "He looks down at you, penis twitching with an eagerness to mount you again.";
 	say "     Bracing yourself, you push back harder against the male's cock, urging him to mount you. With a deep rumble, he moves forward, driving close to a foot of his titanic meat into you in one go and then slowing to just a few inches at a time[if Cunt Depth of Player < 30]. The size of it makes for slow going at first, the dragon doing his best to hold back despite his obvious desire to rut you[else]. Your oversized cunt welcomes it in with relative ease, your yawning vagina happy to have a chance to be thoroughly filled[end if]. This does give your [bodytype of Player] body a chance to adjust, him being so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
 	say "     Having fucked you before, his restraint doesn't last long before he's picking up the pace of his thrusts. You release a long, satisfied moan as those pleasure-giving ridges slide in and out past your sensitive folds and clit. The throbbing and thrusting of his mighty rod sends waves of delight through you, urging you to push back into his thrusts as best you can. Your cunt clenches and squeezes around his meat each time this happens, bringing greater pleasure to the randy red dragon.";
 	say "     '[if lust of Player > 0 and the player is impreg_now]Mmm... you've got to come back here next time you're [one of]looking[or]ready[at random] to be knocked up. [one of]I want to fill you up with -mmmm- my eggs[or]I want to fill someone with -nnngg- eggs for a change[or]I want to fill you up with clutch after -oh baby!- clutch[in random order][else if lust of Christy > 0 and the player is impreg_able][one of]Oh, I think -mmm- someone's looking forward to being the one filled with -ohhh- some eggs for a change[or]Mmm... let's get you knocked up with my eggs[or]You're going to look soooo hot with my clutch in your belly[in random order][else if the player is impreg_now][one of]Oh, if you weren't already -mmm- knocked up, I'd be filling you nice and full with some eggs[or]Mmm... you need to come back here next time you're looking to be knocked up so I can -mmmm- fill you up with my eggs[or]Come back here with an empty belly so I can put a nice, big clutch in you[in random order][else if the player is impreg_able][one of]Oh, I think -mmm- someone's looking forward to being filled with -ohhh- some eggs real soon[or]Let's get you nice and -nggg- round with my clutch. Doesn't that sound like -ohhh- fun? I think that's just what you need[or]Mmm... let's get you knocked up with my eggs[or]You're going to look so hot with a clutch in your belly[in random order][else][one of]Oh, I hope you have room for more, because I'm going to fill you with so much cum[or]Oh, this is going to be a big one. I'm going to pump you soooo full[or]I've got a big, hot dragon load for you, hot stuff[in random order][end if],' he rumbles lewdly, scarcely able to resist voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those large wads filling your womb and gushing out around your stretched cunny driving you over the edge. After he's done, [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[fimpregchance]";
-	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+	if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 		say "[dragonchange2]";
 
 
@@ -1257,39 +1257,39 @@ to say mchristy_anal0:
 	say "     Christy, taking concern for his lover, eases himself slowly into you, giving your [bodytype of Player] body a chance to adjust[if the player is not twistcapped]. Even with this, it is quite uncomfortable at first before your nanine-infused tissue stretches and accepts it[else]. You hardly need it though, your well-stretched asshole hungrily welcoming it in[end if]. He is so large that [if scalevalue of Player < 3]your torso is eventually stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]your torso is stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]your torso bulges prominently thanks to the phallic intruder[else]your belly has a marked, phallic bulge showing[end if]. By the time he's fully inside you, you can feel every throb of his strong heartbeat pulsing through his shaft and into you.";
 	say "     His first few thrusts are slow and cautious, too much so for your now overloaded libido and you push back, urging him for more. His excessive restraint begins to waiver as the sinful delight of anal sex tempts him and his pace picks up, drawing a whimpering moan from you as those pleasure-giving ridges slip past your anus and rub against your prostate with every slide in and out. Your rectal walls squeeze and milk at his meat each time this happens, exciting the randy red dragon all the more.";
 	say "     'Ohhh, you're so nice and tight. Who wouldn't want to fuck a hot ass like yours? I can tell I'm going to be filling you up so nice and full reeeeal soon,' he rumbles lewdly, no longer willing or able to stop himself from voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those titanic blasts filling your belly and gushing out around your stretched asshole driving you over the edge. After he's done, he pants and stays buried inside you for a while, too drained to pull out. Eventually though [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[mimpregchance]";
-	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+	if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 		say "[dragonchange2]";
 	now mchristyanal is true;
 	now mchristytop is true;
 
 to say mchristy_anal1:
 	say "     Wanting the dragon inside you again, you [if Player is female]tease him a little longer to get him good and ready[else]tease him a little longer to get him good and lubed up. You also sneak a few gobs of pre and smear it between your buns and lube up your asshole[end if]. By the time he's panting and rumbling with a steady stream of pre coming from his giant cock, you move onto all fours and grind your backside against the drooling glans. ";
-	if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+	if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 		say "Christy rumbles in appreciation at the sight of your draconic body ready and waiting to be mounted. While smaller than him, you know your body's made for his - and that big schlong of his. 'Mmm... I prefer your new look. You make a fine, sexy dragon,' he rumbles. 'Mmm... I'm going to enjoy taking you like a wild beast,' he adds, blushing at his own words, but unable to take them back.";
 	else:
 		say "He looks down at you, penis twitching with an eagerness to mount you again. 'In the... ahh... ass again? I... well, if you're sure... [one of]you want to be stuffed full of dragon meat[or]Let's get you stuffed full of dragon seed[or]Let's see if I can fill you even more than last time[in random order],' he starts to say before his perverse desires spill out, causing him to eep and blush at his lustful admission.";
 	say "     Bracing yourself, you push back harder against the male's cock, urging him to mount you. With a deep rumble, he moves forward slowly, spreading your crinkled hole open with his titanic meat. As his pointed tip sinks into you, his gooey precum leaks into your rectum, getting your passage more lubed up for its eventual stuffing. He goes only a few inches at a time to start, giving your [bodytype of Player] body a little time to adjust at first, though his huge rod causes your [if scalevalue of Player < 3]torso to eventually be stretched completely around it, bulging overfull of dragon meat. You are so filled that your [Body Size Adjective of Player] limbs can barely reach the ground to steady yourself for the epic fucking that is to come and he instead has to grip you with one forepaw to be able to fully penetrate you[else if scalevalue of Player is 3]torso to be stretched prominently by it, making a massive cock-shaped bulge through your body[else if scalevalue of Player is 4]torso to bulge prominently thanks to the phallic intruder[else]belly to show a marked, phallic bulge[end if].";
 	say "     Having taken you in the ass before, his restraint in mounting you doesn't last too long before he's pushing into you with rocking thrusts. You release a long, satisfied moan as those pleasure-giving ridges slide pop past your anal ring and rub along your prostate as they move in and out of you. The throbbing and thrusting of his mighty rod sends waves of delight through you, urging you to push back into his thrusts as best you can. Your rectal walls squeeze and milk at his meat each time this happens, bringing greater pleasure to the randy red dragon as he enjoys the sinful delight that is anal sex.";
 	say "     '[one of]Ohhh, you're so nice and tight. Who wouldn't want to fuck a hot ass like yours? I can tell I'm going to be filling you up so nice and full reeeeal soon[or]Mmmm... You've got such a hot ass. I'm going to fill it soooo full of dragon cum[or]Oh, I hope you have room for more, because I'm going to fill that sexy ass of yours with so much cum[or]Oh, this is going to be a big one. I'm going to pump you soooo full[or]You love being stuffed full of my dragon meat, don't you? Well, it's got a big, hot load for you coming, hon[or]Oh, I feel so dirty for loving this. Your sexy ass is just what my dragon meat needs[or]You're quite the slut for my dragon meat, aren't you? Well, I'm going to give that sexy ass the fucking it wants so bad and I'll leave you stuffed and rounded with my cum[in random order],' he rumbles lewdly, no longer willing or able to stop himself from voicing his dirty thoughts by this point. And true to his word, the dragon's climax comes with a roar of release soon after. Blast after blast of thick, hot dragoncum flows into you, filling you [if scalevalue of Player < 4]so much that you bloat and swell from his prodigious output[else]so much that your belly plumps considerably from the addition his prodigious output[end if]. You cry out in climactic release as well, those titanic blasts filling your belly and gushing out around your stretched asshole driving you over the edge. After he's done, he pants and stays buried inside you for a while, too drained to pull out. Eventually though [if scalevalue of Player < 4]he has to use one forepaw to pull your overstuffed body off of his spent shaft[else]your overstuffed body slips a few inches in the slick mess leaking out as he steps back before he slips free[end if], giving you a final taste of those delightful ridges sliding out of you.[mimpregchance]";
-	if dragontype > 0 and ( ( dragontype is odd and (bodyname of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (bodyname of Player is not "Horny Dragon" or the player is not pure) ) ):
+	if dragontype > 0 and ( ( dragontype is odd and (BodyName of Player is not "Slutty Dragoness" or the player is not pure ) ) or ( dragontype is even and (BodyName of Player is not "Horny Dragon" or the player is not pure) ) ):
 		say "[dragonchange2]";
 
 
 to say mchristy_bottom0:
-	say "     Having reached your decision, you know you'll need to work the dragon up to the point he can no longer resist your advances if you want to enact your plans of mounting him. To this end, you continue groping and licking his large shaft, all the while letting his pre drool down onto your [cock of Player] cock in preparation[if lust of christy > 0 or Libido of christy > 0]. Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but the thought of reminding Christy that he was once a submissive dragoness bottom urges you on[else]. Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but remembering how eager he was to be mounted as a dragoness urges you on[end if]. Soon his cock is pulsing all the harder and his rumbling is deep and heavy with lust.";
+	say "     Having reached your decision, you know you'll need to work the dragon up to the point he can no longer resist your advances if you want to enact your plans of mounting him. To this end, you continue groping and licking his large shaft, all the while letting his pre drool down onto your [Cock of Player] cock in preparation[if lust of christy > 0 or Libido of christy > 0]. Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but the thought of reminding Christy that he was once a submissive dragoness bottom urges you on[else]. Fondling his enticing manhood like this has you considering forgoing your plan so you might enjoy that mighty rod more fully, but remembering how eager he was to be mounted as a dragoness urges you on[end if]. Soon his cock is pulsing all the harder and his rumbling is deep and heavy with lust.";
 	say "     Once you've got him in this state, you move back behind him. Still rubbing those hefty balls of his with one hand, you bring the other to his crinkled hole[if anallevel is 3], rubbing its warm flesh as you give it a slow lick[end if]. He starts with surprise at this unexpected shift in focus, though his rear grinds back against your touch. 'Wha- what are you -ohh- doing back there? It feels good though and soooo naughty,' he rumbles. As anticipated, the randy red dragon is too worked up at this point to object and you start working your [if anallevel is 3]tongue and [end if]fingers into his relaxing back door.";
-	say "     Once you've gotten his hole sufficiently prepared, you bring your [cock size desc of Player] cock into position[if scalevalue of Player < 3], having to partially climb atop him and cling to his raised tail to do so[else if scalevalue of Player is 3], having to subtly guide his hips lower so you can get lined up[else], leaning your [Body Size Adjective of Player] chest across his back as get lined up[end if]. If Christy has anything to say about this, it gets lost in the long, rumbly moan of pleasure as you slide your pre-slickened member into his meaty rump. Though from the way his ass presses back into your thrust, it's clear the dragon's body is more than happy to have you pushing deep into him[if Libido of christy > 0] once again[end if]. Gripping his wide bottom, you start thrusting, pumping your [cock of Player] rod into him slowly at first[if Cock Length of Player < 20], not that there's much need given the size of his red tailstar[else], his large red tailstar rapidly adjusting[end if].";
+	say "     Once you've gotten his hole sufficiently prepared, you bring your [cock size desc of Player] cock into position[if scalevalue of Player < 3], having to partially climb atop him and cling to his raised tail to do so[else if scalevalue of Player is 3], having to subtly guide his hips lower so you can get lined up[else], leaning your [Body Size Adjective of Player] chest across his back as get lined up[end if]. If Christy has anything to say about this, it gets lost in the long, rumbly moan of pleasure as you slide your pre-slickened member into his meaty rump. Though from the way his ass presses back into your thrust, it's clear the dragon's body is more than happy to have you pushing deep into him[if Libido of christy > 0] once again[end if]. Gripping his wide bottom, you start thrusting, pumping your [Cock of Player] rod into him slowly at first[if Cock Length of Player < 20], not that there's much need given the size of his red tailstar[else], his large red tailstar rapidly adjusting[end if].";
 	say "     The hot flesh of the red dragon's anus squeezes and tugs at your meat, encouraging you on in its demands for a thorough fucking. Not one to disappoint, you pound away at him, enjoying the soft, slutty moans and rumbles of pleasure coming from the horny male. The former dragoness, clearly still longing to be fucked and filled as much as before, is lost in lustful ecstasy. You can hear the wet slap of his erect member against his underbelly with each rock of his hips. 'Give it to me. Oh, I'm such a bad nun, but fuck my ass hard and deep,' he pants. His rectal walls clench down around you harder, pulling at your pounding member until you can take no more and provide him with the hot creamy blasts of your seed. You pump your [Cum Load Size of Player] load into him, painting the dragon's bowels with your semen. Christy roars partway through your orgasm as he cums hard, anus gripping your cock and pumping it for even more. His own balls throb and pulse, draining themselves into a messy pool beneath the well-fucked dragon.";
 	say "     It takes you a while to recover from the powerful orgasm and slip your spent shaft free of the dragon's creamy bottom[if Ball Size of Player < 20]. A trickle of your gooey load leaks from his messy hole and you can't resist giving him a brief fingering to hear him moan[else]. A rivulet of your gooey load flows gradually from his messy hole and you can't resist giving him a brief fingering to hear him moan[end if]. 'Oh, that feels so nice. Such a delightfully naughty surprise. I'm such a bad nun though,' he sighs even as he wiggles his ass to better enjoy the feel of your seed pooled inside his ass.";
 	now mchristybottom is true;
 
 to say mchristy_bottom1:
 	say "     Eager to make the big dragon your bottom again, you start by getting him a little more worked up and ready to go. Soaking your hand with his precum, you spread it over and then into his crimson pucker. He moans and wiggles his rear at your touch. ";
-	if bodyname of Player is "Horny Dragon" or bodyname of Player is "Slutty Dragoness":
+	if BodyName of Player is "Horny Dragon" or BodyName of Player is "Slutty Dragoness":
 		say "'Oh my! Someone's a naughty dragon[if Player is not male]ess[end if]. Alright, you fine, sexy stud - fuck my ass. Take me like the wild beast you are,' he adds as you continue to pump a few fingers into his accommodating anus, blushing at his own words but unable to take them back.";
 	else:
 		say "'Mmm... seems someone's in the mood to be naughty. Alright, let's be naughty together,' he relents quickly as you pump a few fingers into his accommodating anus.";
-	say "     Christy moans and lowers his large hips, bringing his ass into position for you to mount him. Taking your cock in hand, you get yourself lined up with his slickened hole and sink slowly into it[if Cock Length of Player < 20]. He moans in pleasure as he feels your cock sinking into his needy backside and presses back against your thrusts[else]. He roars in lustful pleasure at the size of the meat filling his needy backside and presses back against your thrusts eagerly[end if]. His back passage is hot and squeezes firmly around your [cock of Player] shaft, his body responding with tantalizing motions despite the dragon's relative inexperience.";
+	say "     Christy moans and lowers his large hips, bringing his ass into position for you to mount him. Taking your cock in hand, you get yourself lined up with his slickened hole and sink slowly into it[if Cock Length of Player < 20]. He moans in pleasure as he feels your cock sinking into his needy backside and presses back against your thrusts[else]. He roars in lustful pleasure at the size of the meat filling his needy backside and presses back against your thrusts eagerly[end if]. His back passage is hot and squeezes firmly around your [Cock of Player] shaft, his body responding with tantalizing motions despite the dragon's relative inexperience.";
 	say "     Placing your hands on his firm, scaly ass, you squeeze it as you pound away at him, driving your cock into him again and again while listening to his [if HP of Christy < 54]stifled[else]lustful[end if] moans. '[one of][if mchristyanal is true]Mmm... That feels so good. And maybe next time you can be under me again[else if Player is female]Mmm... that feels so good. Maybe I should try mounting you next time[else]Mmm... that feels so good. Maybe I can try mounting your ass next time[end if][or][if Cock Length of Player < 20]Do it! Do me harder! Faster! I want to really feel it[else]Oh, you feel so nice and big inside me. Come on, do me hard and bury your cock deep in your dragon slut[end if][or]It's no wonder this is forbidden. It feels so dirty and sinful that I can't help loving it[or]Come on, do me harder. I need to get fucked so bad[or]Oh man, even though I'm a big, studly male now, I can't help but love getting fucked[or]My balls feel so full, but my ass is so empty. Come on, fill me up while you drain me[or]I've got this massive cock, but my body still wants to get fucked. Oh, I'm such a slutty dragon[or]Oh, that feels so good! Take me like a wild animal! Fuck me and use me like a beast[or]Oh, I feel so dirty for loving this, but your sexy cock is just what my ass needs[at random],' he pants. 'I... I mean, oh never mind. Just keep fucking me until I'm stuffed full,' he begs.";
 	say "     Eager to please such a request, you pound into him harder and faster. You wrap one arm around his raised tail for support and bring the other to his heavy balls. You rub over his sensitive orbs and your kneading them makes him squeeze around you all the tighter[if Cock Length of Player < 20]. Despite his great size, his rectum is able to tighten nicely around your relatively small penis[else]. Having your huge cock in his anus clearly excites the dragon greatly and you can feel his rectal walls rippling across your entire length[end if]. His enlarged manhood drips with precum, filling the air with the spicy scent of his arousal. His asshole squeezes and tugs at your cock, milking hard at you for another load. Eventually, the stimulation gets to be too much for the both of you and you cum hard, pumping another hot load into his squeezing bowels as he orgasms with a loud roar. His release paints the floor with large splatters of dragoncum, the thought of having ass-fucked such a big, strong male to orgasm making your own climax all the more powerful.";
 	say "     It takes you a while to recover from the powerful orgasm and slip your spent shaft free of the dragon's creamy bottom[if Ball Size of Player < 20]. A trickle of your gooey load leaks from his messy hole and you can't resist giving him a brief fingering to hear him moan[else]. A rivulet of your gooey load flows gradually from his messy hole and you can't resist giving him a brief fingering to hear him moan[end if]. 'I still can't get over how good that feels. Oh, I feel so naughty for loving it,' he says with a bright blush even as he wiggles his ass to better enjoy the feel of your seed pooled inside his well-fucked hole.";
@@ -1324,12 +1324,13 @@ to say mchristy_cv1:
 Section 14 - Placeholder infections
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Horny Dragon"; [Name of your new Monster]
 	now enemy title entry is "Horny Dragon";
 	now enemy Name entry is "";
@@ -1367,7 +1368,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is ""; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -1383,11 +1384,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1403,9 +1405,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -1437,13 +1439,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -1455,8 +1457,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -1472,7 +1474,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -1483,12 +1485,13 @@ When Play begins:
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Slutty Dragoness"; [Name of your new Monster]
 	now enemy title entry is "Slutty Dragoness";
 	now enemy Name entry is "";
@@ -1542,11 +1545,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -1562,9 +1566,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -1596,13 +1600,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -1614,8 +1618,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -1631,7 +1635,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -1817,12 +1821,12 @@ When play ends:
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]
 	if HP of Christy < 50:
 		if NoIntroduction is 1:
-			if bodyname of Player is "Slutty Dragoness":
+			if BodyName of Player is "Slutty Dragoness":
 				if humanity of Player < 10:
 					say "     With your humanity gone, you aimlessly wander the city streets until the military arrives and captures you. They examine you until they discover that you're no longer infectious, then they sell you to a zoo. Since they feed you well and provide you with a nice, warm cave to be your home, you decide to stay there for a time. But when an anthro dragon comes to the zoo one day and catches your eye, you decide it's time to move on. With a hop and a flap, you leap onto the bars of the cage over your enclosure and bend them apart easily. As the other patrons scream and run, the dragon remains, locked in your gaze. You scoop him up in your large paw and, after a few false starts, fly off with him to set up a love nest of your own.";
 				else:
 					say "     Although you survived with your humanity intact, you still have trouble controlling the lust of your slutty dragoness body. Over time, you learn to control the lust with meditation... and orgies, lots and lots of orgies. With that under at least partial control, you are able to focus on making a living in this changed world with your changed body. Succeeding at learning to fly, you take up a job as a courier. With your strong dragon body, you are able to transport large packages, often bringing them into infected areas. And once there, there are always plenty of excited people to satisfy your lusts by fucking your needy body.";
-			else if bodyname of Player is "Horny Dragon":
+			else if BodyName of Player is "Horny Dragon":
 				if humanity of Player < 10:
 					say "     Following a compulsion, you spread your wings and fly away from the city. You find a nice cave to live in, then you set about fulfilling your instinctive urge to kidnap princesses and accumulate a horde of treasure. The occasional hero who comes wanting to play the brave knight to slay the dragon and save the princess make for an enjoyable divertissement as well. These princesses are eventually returned full of eggs and, after a few times, start looking forward to their next kidnapping.";
 				else:

@@ -32,7 +32,7 @@ sblzephyr is a truth state that varies. sblzephyr is usually false.
 
 to say zephyrlobbydesc:
 	say "     This is a small Zephyr Inc branch. Their power is hard to argue with, as they actually have power, with bright, fluorescent lights shining down from above. The floor is clean and swept. To the left are some chairs next to a table with old magazines on it. A few people loiter around, eating doughnuts and chatting, all in various stages of mutation. Your eyes are drawn to a [link]price sign[as]look price sign[end link] that hangs above the counter.";
-	if sblzephyr is false and bodyname of Player is "Skunkbeast Lord" and player is pure:
+	if sblzephyr is false and BodyName of Player is "Skunkbeast Lord" and player is pure:
 		WaitLineBreak;
 		if HP of Larissa is 0:		[not familiar w/Larissa]
 			say "     There is a soft chime as you enter the branch office, causing the woman behind the counter to glance up at you sharply. Her eyes then dart quickly between watching you, her terminal and some lights on her desk. She does her best to compose herself and presses a few buttons to stop the lights. You notice that the place's discreet guards are no longer quite so discreet, having moved up beside your large, mephit form even as another pair enter from the back.";

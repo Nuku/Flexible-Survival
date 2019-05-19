@@ -63,7 +63,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 			say "     You are followed by several others through the trees and into the camp of the equinoids. It's a rather primitive community, with wooden huts and barns that make little use of scavenged materials. They clearly expect you to seem impressed by it, so you do your best to appear that way. Amaryllis leads you to one of the larger halls and you enter with the others. There, a scented bath is prepared as well as several of the equinoids.";
 			if Player is male:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of Player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she strokes your cock to erection, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
-				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure. She's straddled your hips facing you and begins riding your [cock of Player] cock while running her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight. You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
+				say "     But you are given little opportunity to notice that, as Amaryllis is now moving atop your erect shaft and sinking down onto it with a soft nicker of pleasure. She's straddled your hips facing you and begins riding your [Cock of Player] cock while running her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon you're cumming hard with a loud neigh of delight. You can feel the equinoid seed soaking into you even as you seek to breed the lovely one riding you.";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			else if Player is female:
 				say "     You bathe in the warm waters with Amaryllis, the rich scents filling your head and arousing you. The equinoids around the bath run their hands over your [bodydesc of Player] body, groping you as they wash you while Amaryllis kisses you and runs her hands down between your legs. As she fingers your pussy, you can see her equine cock at the ready. At this time, several more equinoids enter, strong warriors these. They stand at the edge of the bath and are stroked by the bath servants, their cocks all pointed at you.";
@@ -74,17 +74,17 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     But you are given little opportunity to notice that, as Amaryllis is now pulling you into her lap and atop her erect shaft and sinking it into you with a soft nicker of pleasure. Straddling her hips, you begin riding her throbbing cock while she runs her hands over your chest. As the first splatters of equinoid cum start spraying onto you both, you're already fucking wildly and soon she's cumming hard with a loud neigh of delight, pumping her hot seed into you. You can feel the equinoid seed soaking into you [if Player is mpreg_ok]even as you're being bred by the lovely one you're riding[else]and give a hazy sigh, your sexless body left to stew in pent-up pleasure[end if].[mimpregchance]";
 				say "     Bathed, anointed and having consummated with the equinoids, you rise from the musky waters as one of them. You feel much closer to this strong people. Exiting the large hall, you go out into the compound with a greater appreciation for the simple life they live with nature. While a few of them move away, many greet you as one of them now that you've been properly welcomed into the herd.";
 			SanLoss 20;
-			now tailname of Player is "Black Equinoid";
-			now facename of Player is "Black Equinoid";
-			now skinname of Player is "Black Equinoid";
-			now bodyname of Player is "Black Equinoid";
-			now cockname of Player is "Black Equinoid";
+			now TailName of Player is "Black Equinoid";
+			now FaceName of Player is "Black Equinoid";
+			now SkinName of Player is "Black Equinoid";
+			now BodyName of Player is "Black Equinoid";
+			now CockName of Player is "Black Equinoid";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			WaitLineBreak;
 			if Libido of Player < 30, now Libido of Player is 30;
 			if humanity of Player < 21:
@@ -150,7 +150,7 @@ instead of sniffing Nakoma's Tent:
 	say "Nakoma's tent smells of herbs, scented oil, fur and a hint of equine arousal.";
 
 Definition: a person is blequinoidbodied: [Determines if the player is fully black equinoid]
-	if bodyname of Player is "Black Equinoid" and player is pure, yes;
+	if BodyName of Player is "Black Equinoid" and player is pure, yes;
 	no;
 
 Equinoid Camp ends here.

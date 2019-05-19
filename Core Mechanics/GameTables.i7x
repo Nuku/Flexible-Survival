@@ -26,7 +26,7 @@ Name(text)	LocationName(text)	Energy(number)	HP(number)	MaxHP(number)	XP(number)
 with 1000 blank rows
 
 Table of PlayerData
-skin(text)	skinname(text)	cock(text)	cockname(text)	face(text)	facename(text)	tail(text)	tailname(text)	body(text)	bodyname(text)	scent(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	bodydesc(text)	bodytype(text)
+skin(text)	SkinName(text)	cock(text)	CockName(text)	face(text)	FaceName(text)	tail(text)	TailName(text)	body(text)	BodyName(text)	scent(text)	Cock Size Desc(text)	Cunt Size Desc(text)	Breast Size Desc(text)	Short Breast Size Desc(text)	bodydesc(text)	bodytype(text)
 with 1 blank row
 
 Table of PlayerLists
@@ -1539,16 +1539,16 @@ Name(text)	Type(text)
 "wolvloc"	"text"
 "wrbody"	"text"
 "wrbodydesc"	"text"
-"wrbodyname"	"text"
+"wrBodyName"	"text"
 "wrbodytype"	"text"
 "wrcock"	"text"
-"wrcockname"	"text"
+"wrCockName"	"text"
 "wrface"	"text"
-"wrfacename"	"text"
+"wrFaceName"	"text"
 "wrskin"	"text"
-"wrskinname"	"text"
+"wrSkinName"	"text"
 "wrtail"	"text"
-"wrtailname"	"text"
+"wrTailName"	"text"
 "A_Candy"	"truth state"
 "A_Colleen"	"truth state"
 "A_David"	"truth state"

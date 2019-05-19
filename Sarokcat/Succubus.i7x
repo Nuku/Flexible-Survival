@@ -7,17 +7,17 @@ Section 1 - Creature Responses
 
 to say Succubus attack:
 	if Player is male:
-		if bodyname of Player is "Incubus":
+		if BodyName of Player is "Incubus":
 			say "     'Ah! I can see that you've already met some of my male brethren out there and are already on your way to joining us,' the succubus says with a grin as she stalks forward again. 'And now that you have stopped that silly pretense of wanting to resist, it's time for me to enjoy that lovely cock you've brought for me to play with,' she teases with a grin as she reaches out and pushes you back and down. Your overly-aroused body is forced to stumble and lie back on the ground, while the succubus eagerly moves over you, her hands tracing down your chest until she can wrap one of them around your cock, stroking it several times and making you moan.";
-			say "     'What a nice lovely [cock of Player] cock you have here for me, why it's just what I wanted!' she says teasingly as she straddles your helpless form, her perfect breasts bouncing teasingly above you as her wings lower down and rub up against your sides. The feel of her hand guiding your cock into her damp moist pussy is amazing, her other hand resting on your chest as she lowers herself onto you, her body engulfing your thick rod easily as she slides it all the way into he. She moans in pleasure above you as she begins to rock up and down on your body, both her hands rubbing up against your [skin of Player] chest even as she presses your back into the ground, her pussy seeming to vibrate and massage your cock as she pistons it into her amazing female body.";
+			say "     'What a nice lovely [Cock of Player] cock you have here for me, why it's just what I wanted!' she says teasingly as she straddles your helpless form, her perfect breasts bouncing teasingly above you as her wings lower down and rub up against your sides. The feel of her hand guiding your cock into her damp moist pussy is amazing, her other hand resting on your chest as she lowers herself onto you, her body engulfing your thick rod easily as she slides it all the way into he. She moans in pleasure above you as she begins to rock up and down on your body, both her hands rubbing up against your [Skin of Player] chest even as she presses your back into the ground, her pussy seeming to vibrate and massage your cock as she pistons it into her amazing female body.";
 		else:
 			say "     'Ah! A lovely cock for me to play with, just what I needed,' the succubus says with a grin as she stalks forward again. 'And now that you have stopped that silly pretense of wanting to resist,' she says with a teasing grin as she reaches out and pushes you back and down. Your overly-aroused body is forced to stumble and lie back on the ground, while the succubus eagerly moves over you, her hands tracing down your chest until she can wrap one of them around your cock, stroking it several times and making you moan.";
-			say "     'What a nice, lovely, [cock of Player] cock you have here for me. Why, it's just what I wanted!' she says teasingly as she straddles your helpless form, her perfect breasts bouncing teasingly above you as her wings lower down and rub up against your sides. The feel of her hand guiding your cock into her damp moist pussy is amazing, her other hand resting on your chest as she lowers herself onto you, her body engulfing your thick rod easily as she slides it all the way into he. She moans in pleasure above you as she begins to rock up and down on your body, both her hands rubbing up against your [skin of Player] chest even as she presses your back into the ground, her pussy seeming to vibrate and massage your cock as she pistons it into her amazing female body.";
+			say "     'What a nice, lovely, [Cock of Player] cock you have here for me. Why, it's just what I wanted!' she says teasingly as she straddles your helpless form, her perfect breasts bouncing teasingly above you as her wings lower down and rub up against your sides. The feel of her hand guiding your cock into her damp moist pussy is amazing, her other hand resting on your chest as she lowers herself onto you, her body engulfing your thick rod easily as she slides it all the way into he. She moans in pleasure above you as she begins to rock up and down on your body, both her hands rubbing up against your [Skin of Player] chest even as she presses your back into the ground, her pussy seeming to vibrate and massage your cock as she pistons it into her amazing female body.";
 		WaitLineBreak;
 		say "     You groan as you feel your orgasm building, unable to resist her body's teasing of your manhood, your cock seeming to become even more sensitive as you spill your seed into her, your body shuddering with pleasure even as her pussy milks your cock of every drop of seed. She chuckles down at you as you lie there gasping with pleasure underneath her, her breasts shaking in front of you as evidence of her own female orgasm, 'That was a good start,' she says teasingly as she begins to rub up against your hypersensitive body all over again, 'But surely you don't think we are done quite yet?' The succubus purrs out, and you moan as you can feel your cock growing hard again under the ministrations of her amazingly enticing pussy. You lose track of anything but the pleasure as she begins to fuck you again, only able to catch small flashes of her body moving against yours, as you cry out several times over the next hour.";
 		say "     Eventually when even her talents are unable to coax your cock into life for another round, she grins as she finally gets off of you, leaving you lying there on the ground panting desperately as you try to think. 'You were fun, I bet you would make a good little pet...' She purrs as she looks down at you appraisingly, and you blink up at her, barely having the energy to muster a reaction as she reaches down and pets your head affectionately. 'If you ever get bored of just wandering around out here, and want to be a nice well-fucked sexy little pet, just hunt me down again sometime... I'm looking forward to it already,' the succubus says with a smile, before turning and stalking off down the streets of the red light district, her hips swaying seductively with each step.";
 	else:
-		if bodyname of Player is "Succubus":
+		if BodyName of Player is "Succubus":
 			say "     'Ah looking good there, very good,' the succubus says teasingly as she rubs her naked body up against your own unprotesting form, the fight having gone out of you at some point as you stare at your fellow succubus happily. 'Almost a proper succubus already, I bet you just can't wait,' she says as she hugs you to her, her lips meeting your own as she kisses you enthusiastically your own mouth parting almost automatically as you find your tongue meeting hers in a deep teasing kiss. You groan into her mouth as her hands roam your body, seeming to know exactly where to touch and tease you to bring you the most pleasure, your own hands soon rubbing over the succubus's body just as eagerly as the amazing pleasure fills your mind.";
 			say "     'Isn't this wonderful,' the succubus breathes out as she breaks the kiss, and you can only moan in response, your reaction causing her to chuckle as she grinds her naked body up against your own soft female form. 'You aren't quite a full succubus yet, but you are almost there, soon very soon,' she says with amusement as her wings fold around you and rub your sides teasingly, their soft leathery feel on your hypersensitive skin makes you cry out with pleasure even as you bring your own new wings down to rub up against your fellow succubus's. 'That's it, just forget that silly humanity of yours and embrace the pleasure,' she whispers to you, her words sinking into your mind and sounding increasingly tempting and reasonable with each whispered syllable.";
 			WaitLineBreak;
@@ -37,7 +37,7 @@ To say Succubus loss:
 	if lisaartemiscount1 > 0 and lisaartemiscount1 < 5, increase lisaartemiscount1 by 1;
 	if companion of Player is demon brute and HP of Lilith is 0 and inasituation is false:
 		if Player is male:
-			if bodyname of Player is "Incubus":
+			if BodyName of Player is "Incubus":
 				say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
 				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
 				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
@@ -47,7 +47,7 @@ To say Succubus loss:
 				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Just think about how much fun you could have with this big boy if he had a pussy too. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
 				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
 		else:
-			if bodyname of Player is "Succubus":
+			if BodyName of Player is "Succubus":
 				say "     'Good fight, dark sister,' the succubus says with a smile as she raises her hands in surrender and you order your companion to stop fighting and stand still. 'You are definitely the more powerful succubus,' she acknowledges with a smile as you grin back at her, 'and you do have a most interesting pet... how did you get him so - tame?'";
 				say "     She saunters over to your captured demon brute, stroking her hand over his muscled form and grabbing his balls. He snarls, clearly aching to rape her, you, anyone - then starts to whimper as the succubus squeezes tightly. She gives a somewhat cruel chuckle as she turns to you, her eyes searching out the amulet around your neck. 'Magic, hm? That opens some possibilities... I could change your pet a bit, if you're interested. Show this big brute how it is to have a pussy. Look me up in the [bold type]Burned-Out Chapel[roman type] in Flint street, if you're interested. For now, I've got to go - mortals to corrupt, you know...'";
 				say "     The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
@@ -60,13 +60,13 @@ To say Succubus loss:
 		now HP of Lilith is 2;
 	else:
 		if Player is male:
-			if bodyname of Player is "Incubus":
+			if BodyName of Player is "Incubus":
 				say "     'Good fight, dark brother,' the succubus says with a smile as she raises her hands in surrender. 'You are definitely the more powerful seducer,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be.' The defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flown off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
 				infect "Incubus";
 			else:
 				say "     'Well that's just too bad,' the succubus says as she staggers back under your assault, 'I could have shown you such an amazing time,' she sighs, as she turns and leaps into the sky, sending you a teasing wink over her shoulder as she vanishes.";
 		else:
-			if bodyname of Player is "Succubus":
+			if BodyName of Player is "Succubus":
 				say "     'Good fight, dark sister,' the succubus says with a smile as she raises her hands in surrender. 'You are definitely the more powerful succubus,' she acknowledges with a smile as you grin back at her, feeling strangely at ease now that the combat is over. 'I really look forward to you joining our ranks fully and showing us just how amazing you can be,' the defeated succubus purrs as she slips forward to give you a hug, her lips meeting your own in a surprisingly intimate kiss, your body reacting instinctively as you melt into her kiss. Before you can bring yourself to protest, the tricky succubi has already broken the kiss and flies off into the [if daytimer is day]shadows[else]night[end if], leaving you standing there with the feel of her lips pressed up against your own, as your body tingles with arousal.";
 				infect "Succubus";
 			else:
@@ -75,7 +75,7 @@ To say Succubus loss:
 to say succubus fight:
 	say "[one of]The succubus strikes out at you with her surprisingly sharp nails.[or]The succubus's strange amber eyes seem to glow a little brighter, and you find yourself staring into their depths, wondering whether it wouldn't be a better idea just to submit to her desires.[or]She pauses to pose in front of you, and you find yourself unable to attack such a perfectly beautiful creature...[or]Darting forward, you are surprised when she presses her lips to your face and gives you a kiss, the feel of her soft lips rubbing up against you making you moan with increasing desire.[or]Slipping to the side as you try to strike at her, the succubus lashes out at you with one of her wings![or]The succubus sways her hips seductively as she stalks forward, distracting you enough that her fist connecting with your face comes as a complete surprise![at random]";
 	increase Libido of Player by a random number from 3 to 8;
-	if bodyname of Player is "Succubus" or bodyname of Player is "Incubus", increase Libido of Player by a random number between 1 and 2;
+	if BodyName of Player is "Succubus" or BodyName of Player is "Incubus", increase Libido of Player by a random number between 1 and 2;
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 	if Libido of Player >= 110:
@@ -89,7 +89,7 @@ to say SuccubusDesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
@@ -97,6 +97,7 @@ When Play begins:
 	add {"Succubus"} to infections of hellspawn;
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Succubus";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -130,7 +131,7 @@ When Play begins:
 	now Cock Length entry is 0;      [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 0;       [ Size of balls ]
 	now Nipple Count entry is 2;          [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;      [ Size of breasts infection will try to attain ]
+	now Breast Size entry is 5;      [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1;            [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 12;
@@ -150,11 +151,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -170,9 +172,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -204,13 +206,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -222,8 +224,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -239,7 +241,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -250,7 +252,7 @@ When Play begins:
 
 
 when play ends:
-	if bodyname of Player is "Succubus":
+	if BodyName of Player is "Succubus":
 		if Player is pure and graphics is true, project the figure of Succubus_clothed_icon;
 		if humanity of Player < 10: [succumb]
 			if Player is female: [female + herm]

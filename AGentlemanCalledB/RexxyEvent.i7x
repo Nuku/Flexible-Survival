@@ -239,7 +239,7 @@ instead of conversing the Rex:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Looking over Rex's beaten form, you feel a familiar need welling up inside you, but this time there's something different. Deep inside you a new desire is rapidly growing, a need to take what you want from the beaten canine, rather than the submissive desire to have it given to you.";
 				if Player is male:
-					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, propping his furred ass in the air as best as you can before moving into position behind him. Softly stroking your would-be master's furred ass with one hand, you stroke your [cock size desc of Player] [cock of Player] shaft to full attention with the other before driving it into the canine below you. Rex whimpers beneath you at your sudden entrance. However, despite his clear displeasure at the situation, you notice Rex bracing himself against the floor as you pull back and prepare to sink into his pucker again, some small part of him apparently accepting this outcome. Before long Rex has all four paws firmly planted on the floor, pushing his arse backwards to meet each of your thrusts while groaning wantonly beneath you. Your fucking grows increasingly powerful with each push, being fueled by the swelling dominant desires washing through you. You howl in pleasure as you reach climax, driving yourself into Rex one last time as you drain your balls into his bowels. Rex groans in frustration beneath you, clearly on the verge of his own orgasm as your fucking comes to a stop, denying him of the release. Collapsing on top of Rex, your body is filled with a pleasant cooling sensation, soothing the overwhelming lust and clearing your mind of his taint. Even as your twitching member gives its last few spurts of cum, you begin to drift from consciousness as the squirming canine beneath you tries to pull himself free with a weak whine.";
+					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, propping his furred ass in the air as best as you can before moving into position behind him. Softly stroking your would-be master's furred ass with one hand, you stroke your [cock size desc of Player] [Cock of Player] shaft to full attention with the other before driving it into the canine below you. Rex whimpers beneath you at your sudden entrance. However, despite his clear displeasure at the situation, you notice Rex bracing himself against the floor as you pull back and prepare to sink into his pucker again, some small part of him apparently accepting this outcome. Before long Rex has all four paws firmly planted on the floor, pushing his arse backwards to meet each of your thrusts while groaning wantonly beneath you. Your fucking grows increasingly powerful with each push, being fueled by the swelling dominant desires washing through you. You howl in pleasure as you reach climax, driving yourself into Rex one last time as you drain your balls into his bowels. Rex groans in frustration beneath you, clearly on the verge of his own orgasm as your fucking comes to a stop, denying him of the release. Collapsing on top of Rex, your body is filled with a pleasant cooling sensation, soothing the overwhelming lust and clearing your mind of his taint. Even as your twitching member gives its last few spurts of cum, you begin to drift from consciousness as the squirming canine beneath you tries to pull himself free with a weak whine.";
 				else:
 					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, and after rolling him onto his back you reach for his thick member, stroking it to full attention as he whimpers at your touch. Stepping over the beaten canine, you begin lowering yourself onto his pointed cock, reaching behind yourself to ensure it's properly aligned with your [if Player is female]dripping cunt[else]ass[end if]. With a sigh of relief, you slowly lower yourself onto his firm rod, [if Player is female]your cunt quivering with pleasure as the pointed member spreads you open[else]your cheeks spreading easily for the pointed member[end if]. Rex groans beneath you, clearly beginning to enjoy the feeling despite his displeasure at the situation. When you finally feel the swelling canine knot pressing at your [if Player is female]pussy lips[else]ass[end if], you pause for a moment, staring into the eyes of the canine below you with a smirk until he looks away. With your dominant position asserted, you eagerly begin riding the thick shaft buried within you, rocking back and forth as you slide up and down the engorged member. Riding him faster and harder, you soon feel Rex's swollen knot pressing deeper into your wanton entrance, and with a howl of ecstasy you throw all your weight into one final thrust, driving the knot into your body as [if Player is female]you both reach[else]Rex reaches[end if] a powerful climax[impregchance].";
 					say "     You brace yourself on Rex's shoulders as [if Player is female]orgasm wracks your body, delighting in the sensation of Rex's warm seed, trapped by his knot, flowing into your womb while you bask in the afterglow of your own climax[else]you enjoy the sensation of Rex's warm seed surging into your body, trapped deep within you by his knot[end if]";
@@ -410,16 +410,16 @@ to say fullRetrieverTF:
 		if Name entry is "Retriever":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Retriever";
-	now facename of Player is "Retriever";
-	now skinname of Player is "Retriever";
-	now bodyname of Player is "Retriever";
-	now cockname of Player is "Retriever";
+	now TailName of Player is "Retriever";
+	now FaceName of Player is "Retriever";
+	now SkinName of Player is "Retriever";
+	now BodyName of Player is "Retriever";
+	now CockName of Player is "Retriever";
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

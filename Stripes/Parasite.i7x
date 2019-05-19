@@ -35,7 +35,7 @@ Instead of resolving a Insect Hive:
 		say "     You step cautiously inside, drawn by the alluring scent you can't quite place, and approach one of these clusters. You can see them unbroken and quickly realize they are some kind of egg. The gooey contents are translucent, but too opaque to quite make out what these are. While you examine them more closely, your senses are further dulled by the scent in the air and you are too focused on the strange eggs to notice the growing buzz around you. Until it is too late, that is.";
 		say "     Once you do take notice, you look up and see large insects clambering from those holes. These are large and wasp-like, slightly larger than a human being in length. They are a glossy black and fully insectile in form, unlike the rare insect humanoids you've spotted. They have large, oval eyes, twitching antennae and six insectile feet that carry them out of the hive before they take flight on their translucent wings.";
 		say "     You turn to run, but find more of them have already moved to block the alleyway. Trapped here with them, they buzz around you and do not approach further. As if they were waiting for it, the scent grows stronger in the air and you take conscious notice of it, breathing it in deeply and becoming aroused by it. Your mind grows hazy and your arms drop to their sides, losing the will to resist the bugs. There are simply too many to fight, you tell yourself.";
-		say "     As if sensing your acquiescence, several fly over and surround you. Your clothes and pack are pulled from your [bodytype of Player] body by their agile little claws, largely undamaged by this as they take care not to harm their prize. As they do so, their insectile legs run over your [bodydesc of Player] body, touching you in ways you find increasingly arousing. Turned on despite yourself, the attention gets you quite [if Player is male]hard[else if Player is female]aroused[else]hot[end if] as their mandibles part and long, wet tongues start sliding over your face and body. As one of these passes across your lips, you moan and suck it in, soon deep throating the slick proboscis. Another of these passes across your [if Player is female]pussy[else]asshole[end if] and pushes its way in[if Player is male] while another plays over your [cock size desc of Player] [cock of Player] cock[end if], making you moan around your sweet mouthful.";
+		say "     As if sensing your acquiescence, several fly over and surround you. Your clothes and pack are pulled from your [bodytype of Player] body by their agile little claws, largely undamaged by this as they take care not to harm their prize. As they do so, their insectile legs run over your [bodydesc of Player] body, touching you in ways you find increasingly arousing. Turned on despite yourself, the attention gets you quite [if Player is male]hard[else if Player is female]aroused[else]hot[end if] as their mandibles part and long, wet tongues start sliding over your face and body. As one of these passes across your lips, you moan and suck it in, soon deep throating the slick proboscis. Another of these passes across your [if Player is female]pussy[else]asshole[end if] and pushes its way in[if Player is male] while another plays over your [cock size desc of Player] [Cock of Player] cock[end if], making you moan around your sweet mouthful.";
 		say "     But just before you can find release, the wasps withdraw their tongues, making you moan in disappointment[if scalevalue of Player is 1]. One of the insects grabs you in its small, clawed feet and lifts your tiny body easily by your limbs, flying you into the open loading dock[else if scalevalue of Player < 5]. Several of the insects grab you in their small, clawed feet and lift you by your limbs and fly you into the open loading dock[else]. Several of the insects grab you in their tiny, clawed feet and try to lift you, flapping their wings as hard as they can. Your huge body is difficult for them to move until more of them grab you all over and they manage to half-carry, half-drag you up into the open loading dock[end if]. Deposited inside the hive, several things are noticeable at once. First and foremost is the large queen insect inside. While the rest of her body is only somewhat larger than the others, her abdomen is huge, many times the size of her followers. It is white and fleshy, undulating with the promise of life for the hive. The arousing scent is much stronger here and appears to be coming from her, her pheromones to control her hive also a mind-numbing aphrodisiac.";
 		say "     Past her you can see several creatures, many of them humanoid and partially recognizable as having strains you've seen out in the city. They are partially insectile now, with chitinous skin, additional insect legs growing from their segmented bodies, partially insectile heads or other such features. They have more of the gray material trapping them into becoming part of the hive. Some are suspended from the ceiling by their arms and with their legs spread. Others are held on all fours and some are even built into the wall, facing it. All have expressions of mindless lust and have their bloated bellies and hips free of the binding mass. Beneath them are sticky piles of eggs with more of the slime coating their thighs.";
 		say "     As you are taking this all in, the wasps pull you towards the queen and you try to struggle briefly, but can't seem to find the strength to fight them for long. Grabbed by the queen, she turns onto her side and holds you with four legs while the middle pair tease over your [bodytype of Player] body. Your arousal from earlier returns stronger than ever in the presence of her pheromones and soon she no longer has to restrain you, leaving all her limbs free to pleasure you.";
@@ -68,7 +68,7 @@ an everyturn rule:
 			if Player is female and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
 			if "Fertile" is listed in feats of Player and a random chance of 1 in 2 succeeds, increase larvacounter by 1;
 			if "Maternal" is listed in feats of Player and a random chance of 1 in 3 succeeds, increase larvacounter by 1;
-			if larvacounter >= 12 and gestation of child is 0:
+			if larvacounter >= 12 and gestation of Child is 0:
 				say "     You can feel some activity inside your belly as the parasite inside you squirms about. You would be disturbed by this were it not strangely arousing. Your [if Player is female]womb[else]bowels[end if] feel warm as something rubs and pulses against your inner walls, spraying thick goo inside you. You find yourself longing to see those black wasps again. Noticing their enticing scent in the air, you soon realize that the smell is coming from you[if larvalaid > 2]. You realize that more unfertilized eggs have been laid inside you and the wasps will come looking to breed you again[else if larvalaid is 1 or larvalaid is 2] and realize the scent will draw the wasps again[end if].";
 				increase Libido of Player by 10;
 				now larvacounter is 0;
@@ -76,11 +76,11 @@ an everyturn rule:
 			else if larvacounter is odd and a random chance of 3 in 5 succeeds:
 				say "[one of]You stifle a moan of pleasure as you feel the insect creature inside you move about.[or]Your insides churn as you feel the larva inside you squirm around and reposition itself.[or]There is a bulge that moves across your belly momentarily.[or]You feel the parasite inside you rubbing against your inner walls in a strangely pleasurable manner.[or]You feel a stinging sensation of painful pleasure as the parasite inside you stabs something into you. You feel a rush of arousal a few moments later.[or]The larva shifts around again, showing briefly as a bulge across your belly before settling down again.[or]You continue to feel activity from the creature inside you from time to time, but have begun to grow used to its activity.[stopping]";
 				increase Libido of Player by 4;
-		else if larvaegg is 1 and gestation of child is 0:
+		else if larvaegg is 1 and gestation of Child is 0:
 			increase Libido of Player by 3;
 			if a random chance of 1 in 3 succeeds, decrease humanity of Player by 1;
 			increase larvacounter by 1;
-			if larvacounter >= ( 12 + larvalaid ) and gestation of child is 0:
+			if larvacounter >= ( 12 + larvalaid ) and gestation of Child is 0:
 				if humanity of Player - Libido of Player > 30:
 					increase larvaexpel by 1;
 					if larvaexpel < 3:
@@ -123,7 +123,7 @@ an everyturn rule:
 				now larvacounter is 0;
 				now larvaexpel is 0;
 				now larvaegg is 1;
-				if bodyname of Player is "Black Wasp":
+				if BodyName of Player is "Black Wasp":
 					SanLoss 5;
 				else:
 					decrease humanity of Player by 2;
@@ -138,7 +138,7 @@ an everyturn rule:
 			if a random chance of 1 in 4 succeeds:
 				say "The larva inside you shifts about inside your occupied womb as if impatient for its current occupant to leave so it may resume its life cycle.";
 				decrease gestation of child by 2;
-				if gestation of child < 1, now gestation of child is 1;
+				if gestation of child < 1, now gestation of Child is 1;
 	if Libido of Player < 0, now Libido of Player is 0;
 	if Libido of Player > 100, now Libido of Player is 100;
 
@@ -155,7 +155,7 @@ when play begins:
 
 to say blackwaspdesc:
 	setmongender 3; [creature is male]
-	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
+	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of Child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
 	now libidomemory is Libido of Player;
 
 
@@ -165,7 +165,7 @@ to say losetoblackwasp:
 	else:
 		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of Player] form, pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if Player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
 	say "As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lovers strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
-	if larvaegg is 1 and gestation of child is 0:
+	if larvaegg is 1 and gestation of Child is 0:
 		say "Your [if Player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
 		say "     Its pleasurable duty done once the flow of semen has ended and its knot has gone down, the insect gently releases you and buzzes off into the air. You get up slowly and head off with a strange sense of contentment welling up inside you, centered somewhere in your tummy.";
 		now Libido of Player is Libido of Player / 2;
@@ -184,12 +184,13 @@ to say beattheblackwasp:
 Chapter 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -243,11 +244,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -263,9 +265,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -297,13 +299,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -315,8 +317,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -332,7 +334,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -347,16 +349,16 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "blackwasp"	retaliation rule	--	--	--	--	--	--	--	waspparasite rule	--
 
 this is the waspparasite rule:
-	say "The parasite inside you, as if sensing the wasp nearby, [one of]squirms excitedly inside you[or]injects more mind-numbing chemicals into you[or]shifts in strangely pleasant ways inside you[or]rubs itself against your inner walls[at random]. This activity seems to excite you further, increasing your arousal and making you consider just accepting your fate[if larvaegg is 1 and gestation of child is 0]. The idea of simply submitting to the creature is quite compelling, making the idea of giving yourself to the wasp strangely attractive[end if], almost making you falter as it moves in.";
+	say "The parasite inside you, as if sensing the wasp nearby, [one of]squirms excitedly inside you[or]injects more mind-numbing chemicals into you[or]shifts in strangely pleasant ways inside you[or]rubs itself against your inner walls[at random]. This activity seems to excite you further, increasing your arousal and making you consider just accepting your fate[if larvaegg is 1 and gestation of Child is 0]. The idea of simply submitting to the creature is quite compelling, making the idea of giving yourself to the wasp strangely attractive[end if], almost making you falter as it moves in.";
 	increase Libido of Player by a random number between 2 and 4;
-	if larvaegg is 1 and gestation of child is 0, increase Libido of Player by 2;
+	if larvaegg is 1 and gestation of Child is 0, increase Libido of Player by 2;
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 
 
 when play ends:
 	if insectlarva is true:
-		if bodyname of Player is "Black Wasp":
+		if BodyName of Player is "Black Wasp":
 			if humanity of Player < 10:
 				say "     Driven mad by the effects of the infection and the parasite inside you, you lose yourself to the lustful urges it is imposing upon you. You wander your way back to the hive, rejoining the wasps there. Pleased to see the return of another of their parasitic breeders, they welcome you lustfully by running their proboscis tongues over you and fucking you repeatedly. During this orgy of welcome, your hands and feet are encased in the gray material, making you a part of the hive like the other breeders. Your infected mind is pleased by this prospect and you happily let yourself be [one of]fixed into position on all fours[or]suspended spread eagle[or]trapped as part of a wall[at random] and be bred full of gooey eggs over and over again.";
 				say "     It is a pleasant, mindless life that fills you with a drug-filled joy from the wonderful symbiosis you have with the hive's larva inside you. The queen is generous as well, sometimes releasing those with fertilized eggs already in them to enjoy a mindless, lustful orgy together while the insects watch their breeders amuse themselves before being reattached to the hive in new positions.";

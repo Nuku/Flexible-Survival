@@ -559,16 +559,16 @@ to say plrtcl:
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Plush Lion";
-			now cockname of Player is "Plush Lion";
-			now bodyname of Player is "Plush Lion";
-			now facename of Player is "Plush Lion";
-			now tailname of Player is "Plush Lion";
+			now SkinName of Player is "Plush Lion";
+			now CockName of Player is "Plush Lion";
+			now BodyName of Player is "Plush Lion";
+			now FaceName of Player is "Plush Lion";
+			now TailName of Player is "Plush Lion";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Plush Lion";
 		else if tempnum is 2:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across an [bold type]inflatable tiger[roman type]. Pulling out the small rubber toy, you grin in bemusement at what a silly little thing like this is doing in such a strange place. Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured. You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise. The popped balloon toy hangs limply in your hands... which start to tingle. Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail. As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.";
@@ -576,16 +576,16 @@ to say plrtcl:
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Rubber tigress";
-			now cockname of Player is "Rubber tigress";
-			now bodyname of Player is "Rubber tigress";
-			now facename of Player is "Rubber tigress";
-			now tailname of Player is "Rubber tigress";
+			now SkinName of Player is "Rubber tigress";
+			now CockName of Player is "Rubber tigress";
+			now BodyName of Player is "Rubber tigress";
+			now FaceName of Player is "Rubber tigress";
+			now TailName of Player is "Rubber tigress";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Rubber tigress";
 		else:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange chocolate treat. Held in a rather plain box, this two-pound [bold type]chocolate hound[roman type] is small, but solid. You presume it must be a leftover from Easter and pop the top to take a better look. Certainly, you feel, this would make a tastier treat than some of your recent meals. Your mouth waters as the scent of delicious, quality milk chocolate fills the air. You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry. The canine confectionary seems well molded, with considerable attention to detail, further instilling the idea that it's a quality product in your mind. But then, you start to notice flaws and few details being slightly off... and more and more after that.";
@@ -594,16 +594,16 @@ to say plrtcl:
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Chocolate Lab";
-			now cockname of Player is "Chocolate Lab";
-			now bodyname of Player is "Chocolate Lab";
-			now facename of Player is "Chocolate Lab";
-			now tailname of Player is "Chocolate Lab";
+			now SkinName of Player is "Chocolate Lab";
+			now CockName of Player is "Chocolate Lab";
+			now BodyName of Player is "Chocolate Lab";
+			now FaceName of Player is "Chocolate Lab";
+			now TailName of Player is "Chocolate Lab";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Chocolate Lab";
 
 Table of Game Objects (continued)
@@ -653,7 +653,7 @@ the scent of strange doll is "The strange doll smells strangely like you.".
 when play ends:
 	if strange doll is tamed:
 		if humanity of Player < 10:
-			if bodyname of Player is "Plush Lion":
+			if BodyName of Player is "Plush Lion":
 				say "     The little plush doll you got at the shop seems as happy to be a plush lion creature as you are now, and you find your muzzle pulling back in a grin full of amusement as you look down at your little companion, an idea striking you. Soon with a little work and some extra stuffing your plush doll is of a much more appropriate size to be a proper companion to you, and you can't help but admire your handiwork as you stare at the newest lovely plush little lioness for the pride. Your former doll seems to approve of her newly altered body, purring and rubbing herself up against you, eager and happy to be a proper little member of your plush pride.";
 			else:
 				say "     The strange doll from the shop stays with you, even as you surrender fully to the infection, following you around through the city and mimicking your actions as you settle into your new life. Eventually your lust clouded mind will begin to recognize that the strange doll you found is becoming more and just like you, as it grows in size daily, and seems to take on a more realistic appearance. You aren't able to figure out just when the little toy finishes changing, but before you know it, instead of being kept company by an animate toy, you have a perfect twin of your new self keeping you company instead. The two of you sharing your new life and fate together eagerly.";

@@ -105,7 +105,7 @@ Instead of resolving a Smashed Hive:
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     The bear gives another sad moan of 'Oh bother' as she staggers back. She trips over a log and ends up tumbling end over end and around, coming to a crashing halt as she falls face first between the rocks. Her pudgy body gets stuck in the rocks and, despite her struggles, she cannot pull herself free. Honey laughs and gives the bear's furry brown bottom a hard smack. 'That'll teach you to steal from bees,' she yells at the bear. While this is going on, your eyes are drawn to the bear's big backside and her honeyed slit.";
 						if Player is male:
-							say "     In the mood to celebrate, you take hold of your [cock size desc of Player] [cock of Player] cock and line it up with her pussy. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. With a firm grip on her rear, you thrust into the bad bruin, pounding away at her juicy cunt. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. You both cry out loudly as you cum, pumping your hot seed into her[if Ball Size of Player >= 5]. Your excessive load only plumps her up further, ensuring she'll be stuck there even longer[end if].";
+							say "     In the mood to celebrate, you take hold of your [cock size desc of Player] [Cock of Player] cock and line it up with her pussy. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. With a firm grip on her rear, you thrust into the bad bruin, pounding away at her juicy cunt. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. You both cry out loudly as you cum, pumping your hot seed into her[if Ball Size of Player >= 5]. Your excessive load only plumps her up further, ensuring she'll be stuck there even longer[end if].";
 						else:
 							say "     In the mood to celebrate, you give her ass a firm push, making sure she's good and stuck before burying your face between her legs. Feeling you there, she moans and tries to squirm her way free, but she's thoroughly stuck and at your mercy. You bring your mouth to her juicy cunt and start eating out the bad bruin, lapping up her hot juices and thrusting a few fingers into her pussy. She moans and groans in pleasure as you have your way with her, unable to stop you. Though from the sounds of it, she probably wouldn't want you to, instead crying for more. Your rough attention soon drives her to a loud orgasm that delivers more of her delicious juices onto your tongue.";
 						WaitLineBreak;
@@ -122,17 +122,17 @@ Instead of resolving a Smashed Hive:
 						setmonster "Queen Bee";
 						choose row MonsterID from the Table of Random Critters;
 						now non-infectious entry is false;
-						now tailname of Player is "Queen Bee";
-						now facename of Player is "Queen Bee";
-						now skinname of Player is "Queen Bee";
-						now bodyname of Player is "Queen Bee";
-						now cockname of Player is "Queen Bee";
+						now TailName of Player is "Queen Bee";
+						now FaceName of Player is "Queen Bee";
+						now SkinName of Player is "Queen Bee";
+						now BodyName of Player is "Queen Bee";
+						now CockName of Player is "Queen Bee";
 						attributeinfect;
 						now tail of Player is tail entry;
-						now face of Player is face entry;
-						now skin of Player is skin entry;
-						now body of Player is body entry;
-						now cock of Player is cock entry;
+						now Face of Player is face entry;
+						now Skin of Player is skin entry;
+						now Body of Player is body entry;
+						now Cock of Player is cock entry;
 						if Libido of Player < libido entry, now Libido of Player is libido entry;
 						PlayerEat 25;
 						increase thirst of Player by 4;
@@ -348,7 +348,7 @@ to say HoneySexMenu:
 		now sortorder entry is 5;
 		now description entry is "Penetrate Honey with your cock";
 	[]
-	if HP of bee girl is 5 and bodyname of Player is "Queen Bee":
+	if HP of bee girl is 5 and BodyName of Player is "Queen Bee":
 		choose a blank row in table of fucking options;
 		now title entry is "Queen bee fun";
 		now sortorder entry is 6;
@@ -406,13 +406,13 @@ to say HoneySex4: [player gets fingered by Honey]
 	if HP of bee girl >= 5, infect "Queen Bee";
 
 to say HoneySex5: [player fucks Honey]
-	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of Player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
+	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [Cock of Player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
 	if HP of bee girl >= 5, infect "Queen Bee";
 
 to say HoneySex6: [Queen bee fun with Honey]
 	if Player is male:
-		say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [cock of Player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [Ball Size Adjective of Player] [Balls] as she pushes you closer to orgasm.";
-		say "     Some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [cock of Player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [Cum Load Size of Player] load into her, you pull out and share several kisses with her before continuing on your way.";
+		say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [Cock of Player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [Ball Size Adjective of Player] [Balls] as she pushes you closer to orgasm.";
+		say "     Some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [Cock of Player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [Cum Load Size of Player] load into her, you pull out and share several kisses with her before continuing on your way.";
 		infect "Queen Bee";
 	else if Player is female:
 		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds. Taking a seat, you spread your legs invitingly and have her move between them. She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if Player is queenbeecocked]honeyed [end if]juices like delicious nectar. As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly. Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
@@ -439,7 +439,7 @@ to say SexWithHoney:
 		now lastfuck of bee girl is turns;
 	else:
 		let T be a random number between 1 and 5;
-		if HP of bee girl >= 5 and bodyname of Player is "Queen Bee" and a random chance of 1 in 3 succeeds:
+		if HP of bee girl >= 5 and BodyName of Player is "Queen Bee" and a random chance of 1 in 3 succeeds:
 			say "[beesexqueen]";
 		else if Player is male:
 			if T is 1 or T is 2:
@@ -460,7 +460,7 @@ to say SexWithHoney:
 
 
 to say beesexmale1:
-	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [cock of Player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
+	say "     Drawn to her by her sweet scent, you take Honey into your arms and run your hands over her body. She buzzes happily and hugs [if HP of bee girl >= 5]her queen[else]you[end if] tightly. Lifting her small body up into your arms, you slide your cock into her warm pussy. Normally hidden under a puff of soft, golden hair, her honeypot is tight and wet around your [Cock of Player] cock. Her wings buzz excitedly as she bounces in your arms, riding your cock until you finally pump your thick[if HP of bee girl >= 5 and player is queenbeecocked], honeyed[end if] seed into her.";
 	now Libido of Player is ( Libido of Player + 1 ) / 3;
 
 to say beesexmale2:
@@ -484,10 +484,10 @@ to say beesexhoneypot:
 to say beesexqueen:
 	if Player is not female or a random chance of 2 in 3 succeeds:
 		if a random chance of 2 in 5 succeeds:
-			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [cock of Player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [Ball Size Adjective of Player] [Balls] as she pushes you to orgasm. You drain your [Cum Load Size of Player] load down the horny girl's throat with thoughts of a hive full of such talented servants to tend to your needs. Honey buzzes happily as she enjoys the tasty reward for her duty fulfilled.";
+			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she takes hold of your stiff cock. She slides her long, thin tongue over your [Cock of Player] manhood before taking it into her mouth and sucking at it hungrily. You rub her head and moan about what a [one of]loyal[or]pretty[or]sexy[or]cute[or]eager[at random] drone she is as that delightful tongue of hers works you over. Her hands caress your sexy body and rub your [Ball Size Adjective of Player] [Balls] as she pushes you to orgasm. You drain your [Cum Load Size of Player] load down the horny girl's throat with thoughts of a hive full of such talented servants to tend to your needs. Honey buzzes happily as she enjoys the tasty reward for her duty fulfilled.";
 			now Libido of Player is ( Libido of Player + 1 ) / 2;
 		else:
-			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [cock of Player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [Cum Load Size of Player] load into her, you pull out and share several kisses with her before continuing on your way.";
+			say "     Finding your attention drawn to the cute little bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and stretches out, putting her juicy little muff on wanton display for you, cutely holding her folds open to bare her honeyed lovehole. 'I am yours to claim, my queen,' she says with a playful smile. Unable to turn down such an offer, you move atop her, lining up your cock with her lovely pussy and thrust it into her youthful body. Her upper hands run over your body while the smaller pair pull on your hips, urging you to fuck her ever harder. The feel of that honeyed hole around your [Cock of Player] penis is great. As you cum, thoughts of having a hive full of such sexy girls to breed and to serve you fill your mind. After pumping your [Cum Load Size of Player] load into her, you pull out and share several kisses with her before continuing on your way.";
 			now Libido of Player is ( Libido of Player + 1 ) / 3;
 	else:
 		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds. Taking a seat, you spread your legs invitingly and have her move between them. She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if Player is queenbeecocked]honeyed [end if]juices like delicious nectar. As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly. Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
@@ -502,11 +502,11 @@ Section 4 - Endings
 
 when play ends:
 	if bee girl is tamed:
-		if bodyname of Player is "Queen Bee":
+		if BodyName of Player is "Queen Bee":
 			now tempnum is 0; [content in Queen Bee]
-		else if humanity of Player < 10 and bodyname of Player is "Black Equinoid":
+		else if humanity of Player < 10 and BodyName of Player is "Black Equinoid":
 			now tempnum is 0; [succumb content in black equinoid]
-		else if humanity of Player < 10 and bodyname of Player is "Drone Wasp":
+		else if humanity of Player < 10 and BodyName of Player is "Drone Wasp":
 			now tempnum is 0; [succumb content in Drone Wasp]
 		else if humanity of Player < 10:
 			say "     When you succumb and end up giving in to your instincts, Honey ends up leaving you. She buzzes off sadly into the city to find a new hive[if HP of bee girl >= 5] on her own[end if].";

@@ -101,17 +101,17 @@ to say losejoannafight:
 		if Name entry is "Parasitic Plant":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Parasitic Plant";
-	now facename of Player is "Parasitic Plant";
-	now skinname of Player is "Parasitic Plant";
-	now bodyname of Player is "Parasitic Plant";
-	now cockname of Player is "Parasitic Plant";
+	now TailName of Player is "Parasitic Plant";
+	now FaceName of Player is "Parasitic Plant";
+	now SkinName of Player is "Parasitic Plant";
+	now BodyName of Player is "Parasitic Plant";
+	now CockName of Player is "Parasitic Plant";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -219,7 +219,7 @@ Instead of conversing the Joanna:
 		say "     [one of]'I should be safe enough here. The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'It's... really strange being a plant,' she says, running her paws over her altered body.[or]'You should remember to take a moment to smell my lovely flowers,' she says. While she probably means her garden, there's the possibility she could mean her own flowers as well.[or]'I'm glad you stopped by.'[or]'Thanks for the help. I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I have so many beautiful flowers to tend to in my new garden.'[or]'I think I like these ones best,' she says, walking over to one flowering bush. She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[else]'Oh, I get so sleepy when the sun's down. I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'I guess there won't be any all-night dancing anymore at the Palomino,' she says, motioning to her root-like feet digging into the soil.[or]'Be sure to let my friends at the Palomino know that I'm okay. The bartender was kind of nice to me.'[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy. It's a little confusing,' she confesses.[at random]";
 	else if HP of joanna is 2:
 		say "     [one of]'I should be safe enough here. The trimmer should scare off anyone who comes looking for trouble,' she says, patting the gas-powered tool.[or]'Don't you love my beautiful garden?'[or]'I'm starting to like the new me,' she says, running her paws over her verdant body.[or]'You should remember to take a moment to smell my lovely flowers,' she says. While she probably means her garden, there's the possibility she could mean her own flowers as well.[or]'Life is so peaceful here.'[or]'I'm glad you stopped by.'[or]'Thanks for the help. I don't think there'd have been anything left of me if you hadn't come to my rescue.'[or]'I have so many beautiful flowers to tend to in my garden.'[or]'I think I like these ones best,' she says, walking over to one flowering bush. She brings one of the large, vaginal flowers to her muzzle and dives her long, red tongue into it, licking slowly as she grins at you.[or][if daytimer is day]'Doesn't the warm sun feel so good?' she asks, spreading her arms to take in the light[else]'Oh, I get so sleepy when the sun's down. I can hardly wait for morning,' she says[end if].[or]'Be sure to come back and visit my garden again.'[or]Joanna tills the soil, mixing in some more fertilizer from the shed before setting down her roots with a soft sigh of satisfaction.[or]'I'm still kinkajou enough to want to be active at night, but I just don't have the energy.'[or]'I guess there won't be any all-night dancing anymore at the Palomino,' she says, motioning to her root-like feet digging into the soil.[or]'Be sure to let my friends at the Palomino know that I'm okay. The bartender was kind of nice to me.'[or]'This plant body of mine has such... strange urges,' she whispers, her tendrils stirring a little.[at random]";
-	else if HP of joanna > 2 and ( facename of Player is "Parasitic Plant" or bodyname of Player is "Parasitic Plant" or skinname of Player is "Parasitic Plant" or cockname of Player is "Parasitic Plant" or tailname of Player is "Parasitic Plant" ) and lust of Joanna is 0:
+	else if HP of joanna > 2 and ( FaceName of Player is "Parasitic Plant" or BodyName of Player is "Parasitic Plant" or SkinName of Player is "Parasitic Plant" or CockName of Player is "Parasitic Plant" or TailName of Player is "Parasitic Plant" ) and lust of Joanna is 0:
 		say "[plantexam]";
 		say "     After examining you, Joanna releases you and takes a step back. She's blushing a little, but grinning coyly as well. 'You make a lovely plant, my dear,' she chirrs as her own tendrils rustle with obvious excitement[if daytimer is day], quite aroused and ready for fun now[else], gradually settling back down as they return to their dormant, nighttime state[end if]. Meanwhile, you have become quite aroused by the plant kinkajou's playful examination of your plant features.";
 		if Libido of Player > 100, now Libido of Player is 100;
@@ -333,7 +333,7 @@ to say sexwithJoanna:
 		say "     Joanna smiles a little at your sensual touch and blushes a bit, but leans into your arms. Her arms drift down to her groin, as if trying to cover up her excited body. But as you run your hands across her breasts and caress her petaled nipples, her paws begin to touch herself instead. Nuzzling you, she whispers softly that she'd like to try more this time, stroking her cocks and fingering her pussies as she asks to have sex with you this time. Tilting her head to yours, she presses her muzzle to your lips. As you kiss, her tendril tongue slips into your mouth to slide around. As you taste the sweet nectar leaking from it, it is clearly an aphrodisiac meant to arouse her lovers and it makes you quite aroused to consider what you want.";
 		wait for any key;
 		say "[joannaselection]";
-	else if HP of joanna > 2 and ( facename of Player is "Parasitic Plant" or bodyname of Player is "Parasitic Plant" or skinname of Player is "Parasitic Plant" or cockname of Player is "Parasitic Plant" or tailname of Player is "Parasitic Plant" ) and lust of Joanna is 0:
+	else if HP of joanna > 2 and ( FaceName of Player is "Parasitic Plant" or BodyName of Player is "Parasitic Plant" or SkinName of Player is "Parasitic Plant" or CockName of Player is "Parasitic Plant" or TailName of Player is "Parasitic Plant" ) and lust of Joanna is 0:
 		say "[plantexam]";
 		wait for any key;
 		say "     After examining you, the green kinkajou grins happily and wraps her arms around you, pulling you into another passionate kiss, diving her long tongue into your [if Player is plantfaced]pussy-like [end if]mouth. It tastes sweet and slides around in your mouth before diving deeper and going down your throat. As it starts leaking more of that sweetly arousing fluid[if Player is plantfaced] as your vaginal orifice milks and sucks at it[end if], you try to decide exactly what you'd like to do to enjoy your time with your flowery lover, already quite aroused by her playful touching.";
@@ -507,7 +507,7 @@ to say joannasex1:
 
 
 to say joannasex2:
-	say "     Reaching down, you stroke your throbbing [cockname of Player] cock[smn] and slowly break the deep-throating kiss. You stroke her softly furred muzzle and ask her if she's like a taste of it. Grinning, she's on her knees right away. Her long, agile tongue slides over your glans and then wraps completely around your [if Player is plantcocked and lust of joanna > 0]green, tentacle [end if]penis, stroking and squeezing as she starts sucking hungrily. You moan in pleasure and run your fingers through her green hair, being careful not to pluck her flowers, then move to scritch her round ears. Rumbling and chirring in pleasure, rubbing your [Ball Size Adjective of Player] orbs, eager for the thick nectar within[if Cunt Count of Player > 1]. Her paws run along your legs and then move to start stroking and teasing your pussies, slipping a few fingers into them to further excite you and get more of your juices[else if Cunt Count of Player is 1]. Her paws run along your legs and then move to start stroking and teasing your pussy, slipping a few fingers into your cunt to further excite you and get more of your juices[end if][if Cock Count of Player > 1]. Having several cocks to pick from, she swaps between them from time to time, doing her best to get you worked up for a big blast[end if]. When your climax finally hits, she gulps down your seed hungrily, moaning around her muzzleful of throbbing cock[if Cock Count of Player > 2] while your other cocks spurt your semen onto her face. She swaps quickly from one to the other[else if Cock Count of Player is 2] while your other cock spurts your semen onto her face. She swaps quickly between them[end if], trying to get as much as she can to satisfy her body's cravings. Once your balls are drained, she gets up, running her foot long tongue over her face and paws, licking away every drop of your juices.";
+	say "     Reaching down, you stroke your throbbing [CockName of Player] cock[smn] and slowly break the deep-throating kiss. You stroke her softly furred muzzle and ask her if she's like a taste of it. Grinning, she's on her knees right away. Her long, agile tongue slides over your glans and then wraps completely around your [if Player is plantcocked and lust of joanna > 0]green, tentacle [end if]penis, stroking and squeezing as she starts sucking hungrily. You moan in pleasure and run your fingers through her green hair, being careful not to pluck her flowers, then move to scritch her round ears. Rumbling and chirring in pleasure, rubbing your [Ball Size Adjective of Player] orbs, eager for the thick nectar within[if Cunt Count of Player > 1]. Her paws run along your legs and then move to start stroking and teasing your pussies, slipping a few fingers into them to further excite you and get more of your juices[else if Cunt Count of Player is 1]. Her paws run along your legs and then move to start stroking and teasing your pussy, slipping a few fingers into your cunt to further excite you and get more of your juices[end if][if Cock Count of Player > 1]. Having several cocks to pick from, she swaps between them from time to time, doing her best to get you worked up for a big blast[end if]. When your climax finally hits, she gulps down your seed hungrily, moaning around her muzzleful of throbbing cock[if Cock Count of Player > 2] while your other cocks spurt your semen onto her face. She swaps quickly from one to the other[else if Cock Count of Player is 2] while your other cock spurts your semen onto her face. She swaps quickly between them[end if], trying to get as much as she can to satisfy her body's cravings. Once your balls are drained, she gets up, running her foot long tongue over her face and paws, licking away every drop of your juices.";
 	LibidoBoost 10;
 
 
@@ -529,7 +529,7 @@ to say joannasex5:
 	if Cunt Count of Player > 2:
 		say "     Having a hole for each of her four cocks, she moans loudly in appreciation as each one of the sinks into your waiting vaginas in turn[if Cunt Count of Player is 3 and player is planttailed], pushing the final one into your vaginal-like anal passage[else if Cunt Count of Player is 3], pushing the final one into your tight pucker to plow your ass[end if]. The feeling of having four cocks in you at once is grand, making your body shiver and writhe in waves of delight. Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavor once again. You run your hands through her soft fur and stroke her breasts, your motions a little ragged and uncoordinated from the overwhelming stimuli, but Joanna is doing little better, clearly enjoying filling you so much she hardly notices your fumbling hands. She keeps her own locked at your hips, gripping you firmly.";
 	else:
-		say "     With [if Cunt Count of Player is 1]some[else]one[end if] of her cocks left out, she slides her cocks into your [if Cunt Count of Player is 1]cunt[else]cunts[end if] and [if Player is planttailed]vagina-like anus[else]tight pucker[end if] each in turn. The remaining [if Cunt Count of Player is 1]cock tendrils slide[else]cock tendril slides[end if] around on your body, stroking against your [skinname of Player] flesh[if Cock Count of Player > 1] and entwining with your cocks[else if Cock Count of Player is 1] and entwining around your cock, squeezing and pumping over your throbbing flesh[end if]. Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavor once again. You run your hands through her soft fur and stroke her breasts, playing with her nipples and the soft petals which surround them. Joanna keeps her paws locked your hips, gripping you firmly.";
+		say "     With [if Cunt Count of Player is 1]some[else]one[end if] of her cocks left out, she slides her cocks into your [if Cunt Count of Player is 1]cunt[else]cunts[end if] and [if Player is planttailed]vagina-like anus[else]tight pucker[end if] each in turn. The remaining [if Cunt Count of Player is 1]cock tendrils slide[else]cock tendril slides[end if] around on your body, stroking against your [SkinName of Player] flesh[if Cock Count of Player > 1] and entwining with your cocks[else if Cock Count of Player is 1] and entwining around your cock, squeezing and pumping over your throbbing flesh[end if]. Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavor once again. You run your hands through her soft fur and stroke her breasts, playing with her nipples and the soft petals which surround them. Joanna keeps her paws locked your hips, gripping you firmly.";
 	Waitlinebreak;
 	say "     Her various cocks move independently, each pumping into you [if Cunt Count of Player < 3]and sliding over body [end if]at their own pace. But there is a harmonious rhythm to their motion as well, with larger overall patterns, like a beautiful concert for the body from her separate instruments. And like a concert, the rhythm and patterns build and swell until finally reaching their peak and she sends her cocks as deep into you as they'll go, blasting his thick, gooey cum deep inside you. You arch your back and cum hard at the sudden influx[if Player is male], spraying your own seed across you both[end if]. You become aware that more of her sweet juices flow from her tongue as well, leaving you in a haze of pleasure as she slowly withdraws from you[if Cunt Count of Player > 2]. You are left quite full and bloated from the flow from having so many cocks all cumming inside you at once, but wonderfully so[end if]. Spent and satisfied, Joanna lays atop you with the warm sun on her back and her penises still inside you.[ovichance]";
 	now Libido of Player is ( 3 * Libido of Player ) / 5;
@@ -635,7 +635,7 @@ instead of conversing the Harold while level of Player >= 9 and HP of Joanna is 
 to say joannaclubsex:
 	say "     You wait for a moment when the kinkajou's not dancing to approach her. Joanna blushes a little at your offer, but grins and takes your hand in hers. 'Sure, let's have a little fun.' She guides you to one of the back rooms and kisses you as she closes the door. You run your hands over her body, helping her out of her clothes while she strips you.";
 	if lust of Joanna is even:		[used temporarily to alternate scenes]
-		say "     After breaking the kiss, Joanna moves down onto her knees. Taking your [cock of Player] cock in hand, she runs her paws over it, then gives it a slow lick with her long tongue. Quite agile, the slick tongue slides over your manmeat before she leans forward and starts sucking you off. Her paws stroke and caress your thighs, then move to knead your balls. Moaning softly, you run your fingers through her long hair and rub her ears.";
+		say "     After breaking the kiss, Joanna moves down onto her knees. Taking your [Cock of Player] cock in hand, she runs her paws over it, then gives it a slow lick with her long tongue. Quite agile, the slick tongue slides over your manmeat before she leans forward and starts sucking you off. Her paws stroke and caress your thighs, then move to knead your balls. Moaning softly, you run your fingers through her long hair and rub her ears.";
 		say "     Her tongue and muzzle work you eagerly, licking and sucking you until finally you can't hold back any longer. With a groan of pleasure, you cum hard, blasting your thick seed into her mouth and down her throat. As she licks it all up with her long tongue, she pumps her fingers into her snatch, soaking it in her feminine juices. Once you've both recovered from your climax, she wipes her paws and gives you another kiss before heading back onto the dance floor.";
 	else:
 		say "     After breaking the kiss, Joanna tugs you over to the nearby couch and pulls you down overtop her. Moving your hands to her breasts, you caress them. They are dainty B-cups, small compared to most of those you see around now, but she clearly enjoys the attention you give them. Leaning down, you nibble and suck her nipples while fingering her pussy. She chirrs with delight, spreading her legs and tugging at your cock, clearly tired of waiting and eager for some action.";
@@ -647,23 +647,23 @@ to say joannaclubsex:
 Section 9 - Definitions
 
 Definition: a person is plantfaced:
-	if facename of Player is "Parasitic Plant", yes;
+	if FaceName of Player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantskinned:
-	if skinname of Player is "Parasitic Plant", yes;
+	if SkinName of Player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantbodied:
-	if bodyname of Player is "Parasitic Plant", yes;
+	if BodyName of Player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is plantcocked:
-	if cockname of Player is "Parasitic Plant", yes;
+	if CockName of Player is "Parasitic Plant", yes;
 	no;
 
 Definition: a person is planttailed:
-	if tailname of Player is "Parasitic Plant", yes;
+	if TailName of Player is "Parasitic Plant", yes;
 	no;
 
 

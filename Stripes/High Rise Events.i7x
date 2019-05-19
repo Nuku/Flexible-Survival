@@ -124,13 +124,13 @@ Instead of resolving a Pigging Out:
 
 to say piggycheck:	[to check if Player has a pig-like head or body]
 	now tempnum is 0;
-	if the bodyname of Player is "Messy Pig":
+	if the BodyName of Player is "Messy Pig":
 		now tempnum is 1;
-	if the facename of Player is "Messy Pig":
+	if the FaceName of Player is "Messy Pig":
 		now tempnum is 1;
-	if the bodyname of Player is "Piggy":
+	if the BodyName of Player is "Piggy":
 		now tempnum is 1;
-	if the facename of Player is "Piggy":
+	if the FaceName of Player is "Piggy":
 		now tempnum is 1;
 
 Table of Game Objects (continued)
@@ -316,16 +316,16 @@ Instead of resolving a Veterinary Hospital:
 				choose row MonsterID from the Table of Random Critters;
 				now humanity of Player is 0;
 				if Libido of Player < 90, now Libido of Player is 90;
-				now tailname of Player is "Panther Taur";
-				now facename of Player is "Panther Taur";
-				now skinname of Player is "Panther Taur";
-				now bodyname of Player is "Panther Taur";
-				now cockname of Player is "Panther Taur";
-				now body of Player is body entry;
-				now face of Player is face entry;
+				now TailName of Player is "Panther Taur";
+				now FaceName of Player is "Panther Taur";
+				now SkinName of Player is "Panther Taur";
+				now BodyName of Player is "Panther Taur";
+				now CockName of Player is "Panther Taur";
+				now Body of Player is body entry;
+				now Face of Player is face entry;
 				now tail of Player is tail entry;
-				now skin of Player is skin entry;
-				now cock of Player is cock entry;
+				now Skin of Player is skin entry;
+				now Cock of Player is cock entry;
 				attributeinfect;
 				follow the sex change rule;
 				follow the sex change rule;
@@ -420,12 +420,12 @@ to say vetsearch:
 
 to say doggycheck:		[See the Flags section of story.ni file for Caninelist/Felinelist]
 	now doggyness is 0;
-	if bodyname of Player is listed in the infections of Caninelist or facename of Player is listed in infections of Caninelist:
+	if BodyName of Player is listed in the infections of Caninelist or FaceName of Player is listed in infections of Caninelist:
 		now doggyness is 1;
 
 to say kittycheck:
 	now kittyness is 0;
-	if bodyname of Player is listed in the infections of Felinelist or facename of Player is listed in infections of Felinelist:
+	if BodyName of Player is listed in the infections of Felinelist or FaceName of Player is listed in infections of Felinelist:
 		now kittyness is 1;
 
 
@@ -568,7 +568,7 @@ Instead of resolving a Cameo:
 		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if Cunt Count of Player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if Cunt Count of Player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if Cock Count of Player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if Cock Count of Player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
 		WaitLineBreak;
 		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if Player is male] while you pump your own cum out for them to enjoy[end if]";
-		if bodyname of Player is "Chocolate Lab" or facename of Player is "Chocolate Lab":
+		if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
 			say ".";
 			WaitLineBreak;
 			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors. It feels like you are simultaneously filled and drained over and over again as your lovers mate you. You seem to flow into them as they flow into you in an orgasmic melding of pleasure. You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
@@ -588,17 +588,17 @@ Instead of resolving a Cameo:
 			if Name entry is "Chocolate Lab":
 				now MonsterID is y;
 				break;
-		now tailname of Player is "Chocolate Lab";
-		now facename of Player is "Chocolate Lab";
-		now skinname of Player is "Chocolate Lab";
-		now bodyname of Player is "Chocolate Lab";
-		now cockname of Player is "Chocolate Lab";
+		now TailName of Player is "Chocolate Lab";
+		now FaceName of Player is "Chocolate Lab";
+		now SkinName of Player is "Chocolate Lab";
+		now BodyName of Player is "Chocolate Lab";
+		now CockName of Player is "Chocolate Lab";
 		attributeinfect;
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -630,9 +630,9 @@ The sarea of Wild Kingdom is "High".
 Instead of resolving a Wild Kingdom:
 	say "     Hearing some activity coming from a small third-floor apartment, you cautiously check it out. Inside you find the small place crammed full of animal people or all kinds. A lamp by the door has 'Raul's Wild Kingdom' stuck onto its shade. In charge and probably the aforementioned Raul is an energetic and enthusiastic capybara with a fuzzy mustache of whiskers off in the back.";
 	say "     Looking around, you are struck by several oddities. Looking up, you see a turtle-man with his chest stuck to the ceiling. He cranes his neck back lazily and waves down at you with a smile. There's also a bulletin board in the foyer that includes a sign-up sheet for [']Poodle Flying Lessons['], but it's all filled up.";
-	if bodyname of Player is "Badger" or facename of Player is "Badger":
+	if BodyName of Player is "Badger" or FaceName of Player is "Badger":
 		say "     When Raul notices you, he gets quite upset, pushing his way over to you. 'Badgers? Badgers? We don't need not steenkin['] badgers!' He quickly shuffles you out the door and slams it in your face.";
-	else if bodyname of Player is "Pink Poodle" or facename of Player is "Pink Poodle":
+	else if BodyName of Player is "Pink Poodle" or FaceName of Player is "Pink Poodle":
 		say "     When Raul notices you, he smiles excitedly and comes over to you. 'You must be here for the flying lessons. Unfortunately, we're all filled up right now, but you can try back in a few days. Just be sure to bring your insurance information; you know, sometimes it takes you a little longer to learn how to do it right.";
 		say "     You mill around briefly with the others there, but things are quite hectic. They're certainly friendly enough, if rather odd. Still, it turns out to be a pleasant break from being attacked or hit on.";
 		increase morale of Player by 1;

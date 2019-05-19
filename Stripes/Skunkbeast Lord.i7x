@@ -41,17 +41,17 @@ Instead of resolving a Skunkbeast Battle:
 				if Name entry is "Skunk":
 					now MonsterID is y;
 					break;
-			now tailname of Player is "Skunk";
-			now facename of Player is "Skunk";
-			now skinname of Player is "Skunk";
-			now bodyname of Player is "Skunk";
-			now cockname of Player is "Skunk";
+			now TailName of Player is "Skunk";
+			now FaceName of Player is "Skunk";
+			now SkinName of Player is "Skunk";
+			now BodyName of Player is "Skunk";
+			now CockName of Player is "Skunk";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			if hellHoundLevel is 0:
 				follow the sex change rule;
 				follow the sex change rule;
@@ -91,17 +91,17 @@ Instead of resolving a Skunkbeast Battle:
 			SanLoss 25;
 			if "Strong Psyche" is listed in feats of Player, SanBoost 5;
 			if "Weak Psyche" is listed in feats of Player, SanLoss 5;
-			now tailname of Player is "Skunkbeast Lord";
-			now facename of Player is "Skunkbeast Lord";
-			now skinname of Player is "Skunkbeast Lord";
-			now bodyname of Player is "Skunkbeast Lord";
-			now cockname of Player is "Skunkbeast Lord";
+			now TailName of Player is "Skunkbeast Lord";
+			now FaceName of Player is "Skunkbeast Lord";
+			now SkinName of Player is "Skunkbeast Lord";
+			now BodyName of Player is "Skunkbeast Lord";
+			now CockName of Player is "Skunkbeast Lord";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			if "Herm Preferred" is listed in feats of Player or "Female Preferred" is listed in feats of Player or "Always A Pussy" is listed in feats of Player or (isHellhound is true and maleHound is false):	[Forced female]
 				if Player is not female, now Cunt Count of Player is 1;
 				if Cunt Depth of Player < Cunt Depth entry, now Cunt Depth of Player is Cunt Depth entry;
@@ -191,12 +191,13 @@ to say losetosbl:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Skunkbeast Lord"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -250,11 +251,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -270,9 +272,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -304,13 +306,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -322,8 +324,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -339,7 +341,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -377,7 +379,7 @@ when play ends:
 			say "     Lost in the lustful decadence of being the skunkbeast lord's mindless fucktoy, you forget about your deal with the hellhound, troubled only be the occasional, unremembered dream. But he does not forget. Having given in to a life of debauchery and sin, your foul contract was only delayed to better prepare you for your coming, unending fate.";
 			say "     When that times comes, you are pulled into the pits of Hades and given a life of eternal servitude as a sexual slave skunk to the countless foul hellhounds who guard the gates of Hell. Your experience as a fucktoy has served you well in preparing you for this unending task as the lustful slave to the demonic hounds. Your body is used in every foul, deviant act imaginable and responds lustfully to their every dark need or twisted whim[if Player is female]. The fel beasts breed you incessantly, filling your womb with litters of their spawn. Your pups are skunk-striped and capable of blasting noxious, sulfurous clouds, but otherwise pure hellspawn like their brethren in Hell's dark forces. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time[else if Player is male]. You are made to breed with many of the females, filling them with litters of tainted pups. These are skunk-striped and capable of blasting noxious, sulfurous clouds, but are otherwise pure hellspawn like their brethren in Hell's dark forces[end if].";
 		stop the action;
-	else if skunkbeaststatus is 1 and bodyname of Player is "Skunkbeast Lord":
+	else if skunkbeaststatus is 1 and BodyName of Player is "Skunkbeast Lord":
 		if humanity of Player < 10:		[SUCCUMB]
 			say "     As your identity fades away as your skunkbeast instincts start to take over, you start to become the new lord over the skunks of the forest. As their powerful master, attention is lavished upon you by the numerous skunk girls and the other, subservient skunkbeasts. Over time you grow larger, eventually becoming even bigger than the one you deposed. You hardly remember such times, simply envisioning your new self in a bestial battle with it.";
 			if skrp is 1:
@@ -434,22 +436,22 @@ when play ends:
 						say "     Over the course of the next few days of breeding, Frank gains a more feral skunk form. While not fully a skunkbeast, he does pick up several of their traits and becomes a rather pudgy skunkbeast man. Being a genderless skunkbeast lord, you have Frank breed the next wave of skunkbeasts in them. Frank stays by your side, becoming a much desired lover for the skunk girls who come visit. These girls soon learn to bring gifts of comics for the plump skunkbeast to earn his affections and Frank's new comic collect swells.";
 					if skunk kit is tamed:
 						say "     As Peppy matures into a skunkbeast, you make sure it has plenty of girls to mount and fill with kits. The skunk girls adore it as well and he is among the most desirable of the skunkbeasts to be had.";
-	else if Player is female and ( franksex > 2 or frankmalesex > 2 ) and ( bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" ):
+	else if Player is female and ( franksex > 2 or frankmalesex > 2 ) and ( BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" ):
 		let skunknumber be 1; [Skunk]
-		if bodyname of Player is "Skunk Taur", now skunknumber is 2;
+		if BodyName of Player is "Skunk Taur", now skunknumber is 2;
 		if humanity of Player < 10:
 			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk girl[else if skunknumber is 2]skunktaur[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father[end if].";
 			say "     As a [if skunknumber is 1]lusty skunk girl, you tantalize your big lover often into pouncing and mating you, soon filling you with a litter of kits[end if][if skunknumber is 2]skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are soon rewarded with a litter of kits. Some are anthro skunks like their father and others are conjoined skunk taurs like their mother[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Frank is very proud of them and reads to them constantly, making sure they are properly versed in all the classics - from the Golden Age to modern works, from Superman to Fables and everything in between.";
 			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
 		else:
 			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If bodyname of Player is "Skunk Taur":
+			If BodyName of Player is "Skunk Taur":
 				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
 			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
 			say "     [if skunk kit is tamed]Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. [end if]Frank sires several litters of skunk kits with you[if skunknumber is 2]. Some are anthro skunks like their father and others are conjoined skunk taurs like yourself[end if]. The girls are sexy and beautiful like their mother while the boys are strong and hefty like their father. Growing up on comics, they all become avid comic and sci-fi fans, many of them taking their passion into their adulthood and having successful careers in the comic, movie and television industries.";
-	else if Player is not female and frankmalesex > 2 and ( bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" ):
+	else if Player is not female and frankmalesex > 2 and ( BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" ):
 		let skunknumber be 1; [Skunk]
-		if bodyname of Player is "Skunk Taur", now skunknumber is 2;
+		if BodyName of Player is "Skunk Taur", now skunknumber is 2;
 		if humanity of Player < 10:
 			say "     Surrendering to your infection, your skunk instincts lead you back to that talkative skunk you met in the city. Drawn back to his comic shop, you are let in when you call up. Noticing the change in you, he cuddles you close and strokes your skunk body, chirring happily that you've still come back to him. Soon, you grow excited and are soon frolicking with the large male. You moan and giggle underneath him as he mates with you. You move in with him, having become an affectionate and lusty [if skunknumber is 1]skunk boytoy[else if skunknumber is 2]skunktaur lover[end if][if skunk kit is tamed]. He cares for you and Peppy. As your little kit matures, he grows and changes, gradually becoming a hefty anthro skunk like his adoptive father and they both take turns pounding you[end if].";
 			say "     As a [if skunknumber is 1]girly skunk boytoy, you tantalize your big lover often into pouncing and mating you, soon filling you with creamy seed often[end if][if skunknumber is 2]submissive skunk taur, your conjoined partner is a wonderful font of kinky ideas, which you always agree to, as they are so much fun. You spend a lot of time under your big lover and are filled with his creamy seed often[end if]. His initial reluctance long gone, he'll have a gay, wild romp with you whenever you desire it, even managing to pull his nose from his precious comics some times for a good, hard fuck.";
@@ -457,13 +459,13 @@ when play ends:
 			say "     As they grow up, he leads them on searches through the city, scavenging stores and homes for more comics to add to the store's collection. Mostly passed over by the hordes of lustful creatures, there are plenty to find and the young ones seem to have a talent for sniffing them out. Particular effort is made to find more adult comics, increasing the stock of those shelves greatly, as they are in high demand by the city's new inhabitants. A few, brave explorers of the city act as couriers, bringing outside comics and new releases in trade for the other goods found during these searches.";
 		else:
 			say "     When the military comes through to rescue you, you provide them with information on Frank's hideout in the comic store. He is reluctant to leave his comic store behind, but comes along to be with you. He is not kept with your group at the military facility, so you don't get to see much of him until your release. Once out, you both meet up and celebrate your reunion long into the night.";
-			If bodyname of Player is "Skunk Taur":
+			If BodyName of Player is "Skunk Taur":
 				say "     At the military base, there was much interest in you and your conjoined partner among the military scientists. Your lower half was quite playful with them, often making teasing remarks or lewd suggestions. You found yourself always having to act cool and stay collected to try and keep them from thinking you'd succumb and were a threat somehow. Your unusual body prompted them to keep you longer than usual, but eventually they had to release you to deal with more pressing problems. After all that, it is refreshing to be back together with Frank, who lovingly cares for you and your special body-partner. Your conjoined partner is a wonderful font of kinky ideas, often adding to the excitement of your lovemaking with your sexy lover.";
 			say "     You move into a place together with the hefty skunk and enjoy a lustful relationship with the talkative skunk. His passions for comics and roleplaying grow on you over time and you learn enough to join into his conversations and give opinions of your own. When he starts to make forays back into the city to retrieve the contents of his store, you support his decision, knowing the depths of his passion. While sometimes it is hard waiting and worrying for him, he always manages to make it back home safely with another load of backpacks full of books. The celebratory sex after having built up his arousal in the lustful city is always the best: rambunctious, loud and oh so satisfying. These trips also provide the big male with lots of exercise, and while he never loses his cute, pudgy body, he becomes much stronger and a more vigorous lover.";
 			If skunk kit is tamed:
 				say "     Peppy grows and matures as you care for him, changing as he grows until he becomes a young anthro skunk like his adopted father. Taking after Frank, he'll happily pound your sexy ass while your mate is off on his collection runs. He keeps you filled and satisfied until then, making the time apart more bearable for you. But the times they share you back and forth are the best, taking turns fucking and filling you over and over again until you're so sore and stuffed that you can hardly move for hours, lost in a haze of blissful afterglow.";
 	else if skunk kit is tamed:
-		if bodyname of Player is "Skunk":
+		if BodyName of Player is "Skunk":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, you make an even better mother to Peppy, as you soon give your first little skunk child several siblings to play with. Still, the first little skunk you rescued always has a special place in your skunky heart. And once he has grown up enough, he also proves to be a fine skunk mate for you in your new life, and you bear him even more wonderful skunk kits for you to raise.";
@@ -474,7 +476,7 @@ when play ends:
 					say "     After your rescue, you manage to smuggle Peppy out of the city with you. His presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, he grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when his size is close to that of the skunk beasts in the city, you realize his presence seems to be triggering something within you. Where before his presence triggered strong protective impulses, now his presence only serves to excite your body, a fact that seems to interest him more and more, until one day you find yourself panting in need when you catch his scent, and realize his presence has triggered your body to go into heat. Seeing the skunk you raised in an entirely new manner, you crawl before him, and he sates himself on your eager body, instinct guiding him in how best to dominate you. As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status, and begin to plan ways to help your new master acquire more pets. You just know they will love bearing skunk kittens just like you will...";
 				else:
 					say "     After your rescue, you manage to smuggle Peppy out of the city with you. His presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, he grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Eventually though, when his size is close to that of the skunk beasts in the city, you realize his presence seems to be triggering something within you. Where before his presence triggered strong protective impulses, now his presence serves to excite your body with dark urges. This is a fact that seems to interest him more and more, until one day you find yourself panting in need when you catch his scent and you get onto your knees beneath him, licking and sucking his impressive cock. Seeing the skunk you raised in an entirely new manner, you crawl before him and he sates himself on your eager body, instinct guiding him in how best to dominate you. As you moan underneath the new skunkbeast, you know the roles have changed in your life for good now, and you are now the pet, while he is the master. You are his special male skunk bitch. While at first no one can tell the difference, you soon buy yourself a proper collar to show your new status and begin to plan ways to help your new master acquire more pets. Your strangely enticing scent lures in others who you bring home for him to mount and change into sexy skunk femmes to breed. He occasionally even rewards your success by letting you mount one of them.";
-		else if bodyname of Player is "Skunk Taur":
+		else if BodyName of Player is "Skunk Taur":
 			if humanity of Player < 10:
 				if Player is female:
 					say "     Surrendering to the infection, your conjoined partner urges you to nurse feed Peppy and you give in to her suggestion. You do whatever she wants actually, as she always has such wonderfully kinky ideas. Feeding your little one, he grows and matures quickly, becoming a skunkbeast like those in the forest. You are soon raising your tail and letting your beastly new master mount your skunktaur body and mate you, filling you with new kits.";
@@ -494,7 +496,7 @@ when play ends:
 				say "     Peppy whines at you pathetically as you surrender to the infection fully, still obviously attached to you even now. You manage to bring yourself to care for it for a bit longer, but as it grows larger and stronger and more like a regular skunkbeast, you find yourself less and less able to tolerate his presence. Eventually you drive the skunkbeast out into the wild on its own, the beast more than able to take care of itself now, and let you get back to your own cares.";
 			else:
 				say "     After your rescue, you manage to smuggle Peppy out of the city with you. Its presence a constant comfort to you as you settle into your new life outside the city. Eventually though like all kits will, it grows larger and stronger, and you have to work harder to hide it as you try to live life in the outside world. Soon the skunk kit has grown almost as large as those you fought in the city, this doesn't cause any problems until at one point he tries to mount you in your sleep. While you wake up in time to stop the action, his scent filling the room makes you almost want to let him continue. Unable to ignore the problem you try to make the skunk understand it has to be careful, only to have the now instinct driven beast set out on its own to find mates to fill in this new area. You try to find him for quite a while, and turn up no clues at all, although you hear later about a new explosion of skunkmorphs in the region...";
-	else if bodyname of Player is "Skunk":		[Skunk player w/o kit]
+	else if BodyName of Player is "Skunk":		[Skunk player w/o kit]
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Finding one, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits[if Player is male]. You do occasionally sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";
@@ -510,7 +512,7 @@ when play ends:
 			else:
 				say "     You are rescued from the infected city by the military forces as they move through. At the base, you are subject to a series of tests. Your nature as a male skunk arouses some scientific interest, but you are a skunk like so many others they've rescued and there are much higher priorities than an anomaly like you. Eventually they must be satisfied that you haven't given into your infection, for you are released. You live a quiet life for a while, needing a break after the excitement of the city. But you wake up one morning with an erection that won't go away. You feel the urge, no, the need to mate.";
 				say "     Drawn by a strange impulse, you go to a couple of clubs and bars until you find one with a skunk girl among the clientele. You buy the lovely femme some drinks before inviting her back to your place. There you pounce her and rut her like an animal, much to her delight. You satisfy her instinctual needs as well as your own as you breed her while becoming more and more like the feral skunkbeasts of the woods. She becomes the first of your new mates and lures in others for you to fuck and transform.";
-	else if bodyname of Player is "Skunk Taur":
+	else if BodyName of Player is "Skunk Taur":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Surrendering to the infection, you are drawn back to the forest by the alluring scent of the skunkbeasts on the wind. Your lower half urges you on incessantly as you find yourself in a lustful heat. Finding one of the big males, you are rutted repeatedly and made into one of his many mates, bred full of beautiful skunk kits. Being such a large mate, you are his favorite, best able to take his massive cock and bear him large litters[if Player is male]. Your skunk partner coaxes you often to sneak off to grab one of the busty females and slake your male needs on them, siring a few kits of your own behind your master's back[end if].";

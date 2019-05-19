@@ -53,7 +53,7 @@ to say controlpilluse:
 	increase steriletime by 24;
 	if child is not born and gestation of child > 0:
 		now child is born;
-		now gestation of child is 0;
+		now gestation of Child is 0;
 		say "Your pregnant belly feels odd, and something slushes out of your hole, melting into mush. Looks like the pill aborted you. You feel lighter as your belly shrinks back to its original size.";
 	if inheat is True:
 		now inheat is false;

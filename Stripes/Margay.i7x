@@ -35,7 +35,7 @@ to say losetomargay:
 	else if margayubed is not 0 and margayubed is even:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if Player is female]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of Player] body.";
-		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan. This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips. Her wet folds ripple over your [if Cock Count of Player > 1]throbbing [cock size desc of Player] [cock of Player] cocks[else if Cock Count of Player is 1]throbbing [cock size desc of Player] [cock of Player] cock[else if Player is female]juicy [cunt size desc of Player] petals[else]bare groin[end if].";
+		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan. This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips. Her wet folds ripple over your [if Cock Count of Player > 1]throbbing [cock size desc of Player] [Cock of Player] cocks[else if Cock Count of Player is 1]throbbing [cock size desc of Player] [Cock of Player] cock[else if Player is female]juicy [cunt size desc of Player] petals[else]bare groin[end if].";
 		say "     Holding your arms to your sides, she takes your hands in as well. But it's only when you're pulled away from that dribbling nipple by the constant peristaltic motion of her vaginal walls that you realize what's happening. Though your main reaction to this is to mewl in disappointment and smack your lips for more of that tasty milk. The Rubenesque feline only chuckles at this and rubs her paws over your head, pushing you further into her swollen body.";
 		if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 			let tempmon be MonsterID;
@@ -61,7 +61,7 @@ to say losetomargay:
 
 
 to say beatthemargay:
-	if ( bodyname of Player is "Margay" or facename of Player is "Margay" ) and ( Libido of Player > 25 or humanity of Player < 67 ):
+	if ( BodyName of Player is "Margay" or FaceName of Player is "Margay" ) and ( Libido of Player > 25 or humanity of Player < 67 ):
 		say "     As you look down at your defeated foe, you eye those large, wet slits of hers, feeling drawn to them. You lick your lips and, seeing your interest, she mewls softly and spreads her legs further, showing off her gaping, twitching pussies to you. The full-figured female runs her furry hands over her large belly, then down to her thighs to spread her wet holes open, releasing another mewl of need. 'Mmm... dive in, kitty. I know you want to.' Your new instincts are telling you to dive on in and eat out those delicious cunts.";
 		say "     [bold type]Shall you do so?[roman type][line break]";
 		LineBreak;
@@ -107,12 +107,13 @@ to say margayoral:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Margay"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -166,11 +167,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -186,9 +188,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -220,13 +222,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -238,8 +240,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -255,7 +257,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -279,13 +281,13 @@ this is the margaydance rule:
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances. She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
 		let playernum be 150 + humanity of Player + ( level of Player * 2 ) + charisma of Player + ( plmindbonus * 3 ) - Libido of Player;
 		let margaynum be 200 + ( lev entry * 2 ) + cha entry + ( monmindbonus * 3 );
-		if bodyname of Player is "Margay":
+		if BodyName of Player is "Margay":
 			decrease playernum by 12;
-		else if bodyname of Player is listed in infections of Felinelist:
+		else if BodyName of Player is listed in infections of Felinelist:
 			decrease playernum by 6;
-		if facename of Player is "Margay":
+		if FaceName of Player is "Margay":
 			decrease playernum by 12;
-		else if facename of Player is listed in Infections of Felinelist:
+		else if FaceName of Player is listed in Infections of Felinelist:
 			decrease playernum by 6;
 [		say "TEST: [playernum] vs [margaynum]:[line break]";]
 		now playernum is a random number between 1 and playernum;
@@ -298,15 +300,15 @@ this is the margaydance rule:
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 			increase Libido of Player by a random number between 5 and 10;
-			if bodyname of Player is "Margay":						[Margays take more dmg]
+			if BodyName of Player is "Margay":						[Margays take more dmg]
 				increase dam by a random number between 0 and xx;
-			if facename of Player is "Margay":
+			if FaceName of Player is "Margay":
 				increase dam by a random number between 0 and xx;
-			if bodyname of Player is listed in infections of Felinelist:	[all felines more aroused]
+			if BodyName of Player is listed in infections of Felinelist:	[all felines more aroused]
 				increase Libido of Player by a random number between 0 and 2;
-			if facename of Player is listed in Infections of Felinelist:
+			if FaceName of Player is listed in Infections of Felinelist:
 				increase Libido of Player by a random number between 0 and 2;
-			say "[if bodyname of Player is listed in infections of Felinelist or facename of Player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
+			say "[if BodyName of Player is listed in infections of Felinelist or FaceName of Player is listed in infections of Felinelist]Your feline nature is particularly captivated by the suddenly alluring cat before you and you mrowl longingly as you watch her move. [end if]Unable to look away from the [one of]feline[or]margay[purely at random]'s sensual and erotic motions, your feel an increasing need to [one of]be with her[or]snuggle up against that plump body of hers[or]bury your face in her wet crotch[or]curl up in her motherly arms[purely at random]. The entire display drains some of your resistance, arousing you further and tempting you to give in and play with the plump feline! You take [special-style-2][dam][roman type] damage!";
 			decrease HP of the player by dam;
 			follow the player injury rule;
 			say "You are [descr].";
@@ -339,7 +341,7 @@ to say drinkmargaymilk:
 Section 5 - Endings
 
 when play ends:
-	if bodyname of Player is "Margay":
+	if BodyName of Player is "Margay":
 		if humanity of Player < 10:
 			if Player is female:							[FEMALE/HERM]
 				say "     As your mind collapses, you succumb to the strange, feline urges that fill you. Or more accurately, that demand that you be filled. You strike out into the city. As you travel, you can feel your infection spreading and reaching completion, growing something deep inside you. Coupled with your new instincts, you make your way to the park, drawn by the scent of felines there. You are soon confronted by one of the many small feline girls that inhabit this territory. She seeks to latch onto your bosom and nurse from you as if you were her mother, but your instincts urge you to make her your child in a different manner. One much more fulfilling. Wrapping your motherly arms around the youthful kitty, you hug her tenderly before pressing her muzzle to your wet, gaping pussy. You give the struggling feline a little push and your cunt stretches with ease to take her in, drawing her head into your vagina. Your inner muscles, designed for just such an act, stroke and pull at the cute kitty, pulling her further and further into your large body, drawing her up into your [if Cunt Count of Player > 1]second[else]special[end if] womb. You can feel her curling up inside you and drifting into a soft slumber.";

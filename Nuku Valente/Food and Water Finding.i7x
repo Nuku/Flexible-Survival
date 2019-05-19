@@ -87,8 +87,8 @@ Instead of resolving a potential resources:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ewe", increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ram", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ewe", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ram", increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;

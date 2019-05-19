@@ -23,12 +23,12 @@ to say choclabdesc:
 to say losetolab:
 	choose row MonsterID from the Table of Random Critters;
 	let labnum be 0;
-	if facename of Player is "Chocolate Lab", increase labnum by 1;
-	if bodyname of Player is "Chocolate Lab", increase labnum by 1;
-	if skinname of Player is "Chocolate Lab", increase labnum by 1;
-	if tailname of Player is "Chocolate Lab", increase labnum by 1;
-	if cockname of Player is "Chocolate Lab", increase labnum by 1;
-	if inasituation is false and bodyname of Player is "Chocolate Lab" and a random chance of ( ( labnum * 10 ) + ( labhost * 15 ) ) in 100 succeeds:
+	if FaceName of Player is "Chocolate Lab", increase labnum by 1;
+	if BodyName of Player is "Chocolate Lab", increase labnum by 1;
+	if SkinName of Player is "Chocolate Lab", increase labnum by 1;
+	if TailName of Player is "Chocolate Lab", increase labnum by 1;
+	if CockName of Player is "Chocolate Lab", increase labnum by 1;
+	if inasituation is false and BodyName of Player is "Chocolate Lab" and a random chance of ( ( labnum * 10 ) + ( labhost * 15 ) ) in 100 succeeds:
 		if labhost is 2:
 			if a random chance of 1 in 5 succeeds:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside you, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your mind, however, does not give way as easily. Focusing entirely on what remains of yourself, you manage to block out most of the dogs['] influence, locking the war for your mind in a stalemate.";
@@ -36,18 +36,18 @@ to say losetolab:
 				say "     However, their attacks are undaunted by your resistance. They continue putting everything they have against you, focusing all their thoughts on the singular goal of breaking you. Before long it no longer feels like three individuals pushing against you, but a single combined force as if their thoughts have begun to flow together in a single collective consciousness. Suddenly, fear. Panic. Terror. You feel the emotions of the labs rolling though you as they come to the same realization as you do. In their combined effort their own minds have begun to merge together under the immense pressure. Caught in the turmoil of the panicking labs your concentration begins slipping, and you find yourself being dragged down with the labs, all four of you melting away into each other as you become one.";
 				WaitLineBreak;
 				say "     You awaken sometime later, pulling your chocolate body together as you rise to all fours. You flow into the shape of a giant chocolate dog, easily over six feet tall. With a wet bark you set out into the city, eager to sate your powerful canine appetite for chocolate and sex.";
-				now tailname of Player is "Chocolate Lab";
-				now facename of Player is "Chocolate Lab";
-				now skinname of Player is "Chocolate Lab";
-				now bodyname of Player is "Chocolate Lab";
-				now cockname of Player is "Chocolate Lab";
+				now TailName of Player is "Chocolate Lab";
+				now FaceName of Player is "Chocolate Lab";
+				now SkinName of Player is "Chocolate Lab";
+				now BodyName of Player is "Chocolate Lab";
+				now CockName of Player is "Chocolate Lab";
 				attributeinfect;
 				now scalevalue of Player is 4;
 				now tail of Player is tail entry;
-				now face of Player is face entry;
-				now skin of Player is skin entry;
-				now body of Player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo-sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry an overwhelming but alluring scent of cocoa.";
-				now cock of Player is cock entry;
+				now Face of Player is face entry;
+				now Skin of Player is skin entry;
+				now Body of Player is "that of a large quadrupedal canine. Standing over six feet tall, you are a jumbo-sized chocolate lab, with a flowing, shifting chocolate body. Your skin flows and runs like melting chocolate and you carry an overwhelming but alluring scent of cocoa.";
+				now Cock of Player is cock entry;
 				now labhost is 4;
 				now humanity of Player is 0;
 				now battleground is "void";
@@ -58,18 +58,18 @@ to say losetolab:
 				say "     Bested by yet another lab, all you can do is groan weakly as the confectionary canine pushes you to the ground. With two labs already inside you working excitedly, the third is already sinking into your softening body by the time you're on the ground. Once the third lab has disappeared inside your body, you feel their chocolate forms churning throughout your body. You are helpless to resist with the three labs now making up the majority of your chocolaty body as they begin reshaping your entire form. Your features melt away, replaced by the visage of a flowing chocolate dog. Your struggle to hold onto yourself against the will of the three labs is a short one, their combined consciousness quickly overwhelming you, leaving the labs to reshape your mind just as easily as they did your body. You feel the last of your human thoughts and desires melt away, quickly replaced by the simple needs of your benefactors.";
 				WaitLineBreak;
 				say "     With your mind and body fully reshaped into that of a chocolate lab, you bark with excitement as the others separate themselves from your new body, leaving you panting happily as they grin and give you slobbery, chocolaty licks and nuzzles, welcoming you into the pack.";
-				now tailname of Player is "Chocolate Lab";
-				now facename of Player is "Chocolate Lab";
-				now skinname of Player is "Chocolate Lab";
-				now bodyname of Player is "Chocolate Lab";
-				now cockname of Player is "Chocolate Lab";
+				now TailName of Player is "Chocolate Lab";
+				now FaceName of Player is "Chocolate Lab";
+				now SkinName of Player is "Chocolate Lab";
+				now BodyName of Player is "Chocolate Lab";
+				now CockName of Player is "Chocolate Lab";
 				attributeinfect;
 				now scalevalue of Player is 4;
 				now tail of Player is tail entry;
-				now face of Player is face entry;
-				now skin of Player is skin entry;
-				now body of Player is body entry;
-				now cock of Player is cock entry;
+				now Face of Player is face entry;
+				now Skin of Player is skin entry;
+				now Body of Player is body entry;
+				now Cock of Player is cock entry;
 				now labhost is 3;
 				now humanity of Player is 0;
 				now battleground is "void";
@@ -114,7 +114,7 @@ to say beatthelab:
 		say "     Will you accept that offer? ([link]y[as]y[end link]/[link]n[as]n[end link])";
 		if Player consents:
 			if Player is male:		[m/h - fuck the Lab]
-				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of Player] [cock of Player] cock into its malleable body. It reforms its pussy around you, [if Cock Count of Player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [itthemm] to continually stimulate you.";
+				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of Player] [Cock of Player] cock into its malleable body. It reforms its pussy around you, [if Cock Count of Player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [itthemm] to continually stimulate you.";
 				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you fuck it. White, chocolate cream leaks from its cock and from its nipples as your thrusts send ripples through its gooey body. As you shoot your hot seed inside it, splatters of thick cream blast from its cock and make a mess of the ground below. Finished, the chocolate Lab sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
 			else:					[f - ride the Lab]
 				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. Taking hold of the brown, canine cock, you point it upwards as you move your pussy into position overtop of it. As you ride that chocolate rod, it shifts and changes, [if Cunt Count of Player > 1]forming one for each of your holes and each [end if]becoming the perfect fit for your vagina. You moan in delight at the clever dog's trick and start to play with its nipples, coaxing more of its white, creamy chocolate to flow from them.";
@@ -125,7 +125,7 @@ to say beatthelab:
 				now Libido of Player is 0;
 		else if labhost > 0 and a random chance of 1 in 3 succeeds:
 			say "     As you look over the fallen lab, you feel a familiar churning build up inside you. You fall to your knees and clutch your belly with a groan as your canine passenger twists around in your stomach. ";
-			if bodyname of Player is "Chocolate Lab":
+			if BodyName of Player is "Chocolate Lab":
 				say "You feel the lab's movement begin to focus at a single point in your chest, and watch as a canine muzzle slowly pushes through your chocolate flesh. Slowly but surely the lab drags itself out of your body in much the same way as it forced itself in.";
 			else:
 				say "The rumbling only gets worse and you begin to feel sick, gagging slightly as a thick, warm mass begins moving up your throat. Your mouth is forced open as the mass of chocolate spills out of you, slowly taking the shape of a chocolate canine as more of it emerges from your body. It is a bizarre sight, the head and torso of the lab emerging from your mouth, bracing its front paws on your shoulders as it drags the rest of its body out with a wet slurp.";
@@ -138,7 +138,7 @@ to say beatthelab:
 
 
 to say chococheck:
-	if bodyname of Player is "Chocolate Lab" or facename of Player is "Chocolate Lab":
+	if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
 		say "     During the course of the sex with the fluidic dog, you could feel some of your chocolate being intermingle with that of the dog. You feel a little more canine and a hunger for more chocolate. Or more sex. Or better yet, more chocolate sex.";
 		SanLoss 8;
 		increase hunger of Player by 5;
@@ -148,12 +148,13 @@ to say chococheck:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Chocolate Lab"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -163,7 +164,7 @@ When Play begins:
 	now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[choclabdesc]"; [ Description of the creature when you encounter it.]
 	now face entry is "dog's head, a smooth, rich brown and somehow made of chocolate. You have a long, slobbery tongue and drool chocolate syrup. Your eyes are a solid, dark black, as if made of dark chocolate, but still able to see. As if being constantly remolded instead of moving flesh and bone, your expression seems to shift the shape of your face"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [skinname of Player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
+	now body entry is "that of an anthropomorphic canine, strangely somehow chocolate in color and composition. Your body is covered in a confectionary imitation of [SkinName of Player] flesh. Your body has become like soft chocolate, bending and reshaping itself to move instead of having any actual bones or muscles[if labhost > 0]. Occasionally, an extra chocolaty tail, or the head of another chocolate lab pushes out of your chocolate form, barking or drooling its thick chocolate saliva as it pants happily, making the presence of your unwanted passenger clear[end if]. The scent of cocoa lingers pleasantly around you. When teased, you leak white chocolate syrup from your nipples"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "a soft layer of milk-chocolate in the place of regular"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "You have a slender, canine tail made of chocolate that wags happily."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "chocolate-brown, canine"; [ Cock Description, format as you have a 'size' (your text) cock]
@@ -207,11 +208,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -227,9 +229,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -261,13 +263,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -279,8 +281,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -296,7 +298,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -316,23 +318,23 @@ an everyturn rule:
 this is the Choclab piggyback rule:
 	let playernum be a random number between 1 and 12;
 	let labnum be 0;
-	if facename of Player is "Chocolate Lab", increase labnum by 1;
-	if bodyname of Player is "Chocolate Lab", increase labnum by 1;
-	if skinname of Player is "Chocolate Lab", increase labnum by 1;
-	if tailname of Player is "Chocolate Lab", increase labnum by 1;
-	if cockname of Player is "Chocolate Lab", increase labnum by 1;
+	if FaceName of Player is "Chocolate Lab", increase labnum by 1;
+	if BodyName of Player is "Chocolate Lab", increase labnum by 1;
+	if SkinName of Player is "Chocolate Lab", increase labnum by 1;
+	if TailName of Player is "Chocolate Lab", increase labnum by 1;
+	if CockName of Player is "Chocolate Lab", increase labnum by 1;
 	if labhost is 2, now labnum is labnum * labhost;
 	if Playernum is 12 or labnum is 0:
 		say "     You pause for a moment as you feel a rather powerful rumbling in your belly. Slowly but surely the churning feeling begins to intensify as the lab[if labhost is 2]s continue their efforts[else] continues its effort[end if] to infect you further. You groan as the rolling in your stomach reaches a new peak, but strangely enough you don't feel the familiar tingling sensation of the infection taking root. As if just as confused by this development as you are, you feel the lab's activity slowly begin to calm until it's almost completely dormant again. Then there is another sudden audible rumbling from your belly, but this time it feels quite different and you realize it's you, not the unwanted passenger.";
 		if a random chance of 1 in 4 succeeds:
-			if bodyname of Player is "Chocolate Lab":
+			if BodyName of Player is "Chocolate Lab":
 				say "     You feel your body rolling and churning around the trapped lab, turning the tables on the intruder. Realizing this the lab suddenly begins to struggle, pushing and flailing against your body, but unprepared for your body's sudden counterattack, the lab is unable to push through your chocolate form to escape. Slowly but surely the struggles begin to diminish as the movement of the lab's form begin to synchronize with the movement of your own chocolate body until you can no longer feel the lab's presence within you.";
 			else:
 				say "     As the rumbling continues to intensify you realize your body is turning the tables on the intruder, and apparently the lab realizes the same thing as it begins violently pushing and flailing inside you. Unfortunately for the lab, it is no longer able to escape the same way it entered your body, and it quickly tires itself out fruitlessly trying to escape. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
 			say "     [if labhost is 2]You feel a wave of emotion roll through your mind from the other lab, mostly sadness, but there's a hint of fear as well. [end if]As the action inside you finally settles down you find yourself feeling quite full, releasing a loud belch as you continue on your way you feel somewhat at ease, taking solace in the knowledge that the lab's strange attempt to convert you has failed.";
 			PlayerEat 15;
 		else:
-			if bodyname of Player is "Chocolate Lab":
+			if BodyName of Player is "Chocolate Lab":
 				say "     You feel your body rolling and churning around the trapped lab, turning the tables on the unwanted intruder. Realizing this, the lab suddenly begins to struggle, pushing and flailing against your body. You feel the lab's movement begin to focus at a single point in your chest, and watch as a canine muzzle slowly pushes through your chocolate flesh. Slowly but surely the lab drags itself out of your body in much the same way as it forced itself in. Landing on the ground with a wet smack the lab pulls itself together into a familiar canine shape before turning to face you. The lab's dark chocolate orbs stare into your eyes for a few moments before it releases several wet barks and licks your cheek. Soon after the lab turns away and begins happily padding down the street, leaving you alone to gather your wits and continue on your way.";
 			else:
 				say "     As the rumbling continues to intensify you realize your body is turning the tables on the intruder, and apparently the lab realizes the same thing as it begins violently pushing and flailing inside you. Despite not being able to escape the same way it got in, the lab finds a new way out of your body. You drop to your hands and knees, gagging a little as you feel the thick, warm mass pushing up your throat. Your mouth is forced open as the mass of chocolate spills out of you, slowly taking the shape of a chocolate canine as more of it emerges from your body. It is a bizarre sight, the head and torso of the lab emerging from your mouth, bracing its front paws on your shoulders as it drags the rest of its body out with a wet slurp. Landing on the ground with a wet smack, the lab pulls itself together into a familiar canine shape before turning to face you. The lab's dark chocolate orbs stare into your eyes for a few moments before it releases several wet barks and licks your cheek. Soon after, the lab turns away and begins happily padding down the street, leaving you panting heavily on the ground to recover from your strange ordeal.";
@@ -341,7 +343,7 @@ this is the Choclab piggyback rule:
 		now labtimerA is labtimerB;
 		now labtimerB is 0;
 	else if labnum > playernum:
-		if bodyname of Player is "Chocolate Lab":
+		if BodyName of Player is "Chocolate Lab":
 			say "     While traveling, you find your body filling with a warm tingling sensation. Your [one of]body begins losing cohesion[or]form starts drooping slightly[or]body begins to shift slightly[at random] and you [one of]have a sudden craving for chocolate[or]find yourself becoming quite aroused[or]have a sudden hunger for chocolate... and sex[at random][if humanity of Player > 4]. You quickly lose track of time as your mind continues to wander, but a [one of]sudden sound[or]loud bang[or]scream[or]cry of ecstasy[at random] in the distance breaks the haze, snapping your attention back to reality[one of] just before your increasingly paw-like hand touches the ground[or]. You quickly pull yourself back together, both mentally and physically[or] and you feel the lab's disappointment roll through you[at random]. Realizing just how close you came to losing yourself to the influence of your canine piggybacker, you resolve to stay much more focused, but fear how much of yourself you've already lost in this lapse[end if].";
 		else:
 			say "     While traveling, you find your body filling with a warm tingling sensation. [one of]You begin panting heavily[or]Your tummy begins rumbling[or]You begin licking your lips[at random] and you [one of]have a sudden craving for chocolate[or]find yourself becoming quite aroused[or]have a sudden hunger for chocolate... and sex[at random].";
@@ -354,7 +356,7 @@ this is the Choclab piggyback rule:
 		decrease humanity of Player by 4;
 		increase hunger of Player by 2;
 		if Libido of Player < 70, increase Libido of Player by 5;
-		if humanity of Player < 1 and bodyname of Player is "Chocolate Lab":
+		if humanity of Player < 1 and BodyName of Player is "Chocolate Lab":
 			say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. The last of your resistance fades and you slowly sink to the ground, melting into a gooey chocolate mess. You feel the [if labhost is 2]labs rejoice as they set about finishing their[else]lab rejoice as it sets about finishing its[end if] work. Sometime later your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly. With a wet bark they bound off into the city, and you follow behind eagerly, marking the beginning of your simple new life as a chocolate lab.";
 			[puts Chocolate Lab as lead monster for infection and impregnation]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -362,17 +364,17 @@ this is the Choclab piggyback rule:
 				if Name entry is "Chocolate Lab":
 					now MonsterID is y;
 					break;
-			now tailname of Player is "Chocolate Lab";
-			now facename of Player is "Chocolate Lab";
-			now skinname of Player is "Chocolate Lab";
-			now bodyname of Player is "Chocolate Lab";
-			now cockname of Player is "Chocolate Lab";
+			now TailName of Player is "Chocolate Lab";
+			now FaceName of Player is "Chocolate Lab";
+			now SkinName of Player is "Chocolate Lab";
+			now BodyName of Player is "Chocolate Lab";
+			now CockName of Player is "Chocolate Lab";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			now humanity of Player is 0;
 			now battleground is "void";
 			now labhost is 3;
@@ -382,7 +384,7 @@ this is the Choclab piggyback rule:
 	if labtimerB > 0:
 		decrease labtimerB by 1;
 	if labtimerB is 1:
-		if bodyname of Player is "Chocolate Lab":
+		if BodyName of Player is "Chocolate Lab":
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the lab[if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms[else]the dog's liquid chocolate form[end if] pushing against your body as if trying to escape. There's even a noticeable bulge in your [one of]torso[or]stomach[or]side[at random] where the lab is pushing against you. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to separate itself from your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength fades and with a final muffled whimper from deep inside you, you feel the lab's presence slowly disappear as it is absorbed entirely into you.";
 		else:
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the [if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms[else]the dog's liquid chocolate form[end if] churning inside your body and hear a weak, muffled whimper from inside your belly. You feel the dog pushing weakly against the inside of your body, as if trying to escape. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to escape your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
@@ -393,7 +395,7 @@ this is the Choclab piggyback rule:
 	if labtimerA > 0:
 		decrease labtimerA by 1;
 	if labtimerA is 1:
-		if bodyname of Player is "Chocolate Lab":
+		if BodyName of Player is "Chocolate Lab":
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the [if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms pushing against your body[else]the dog's liquid chocolate form pushing against your body[end if] as if trying to escape. There's even a noticeable bulge in your [one of]torso[or]stomach[or]side[at random] where the lab is pushing against you. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to separate itself from your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength fades and with a final muffled whimper from deep inside you, you feel the lab's presence slowly disappear as it is absorbed entirely into you.";
 		else:
 			say "     A sudden rumbling in your stomach draws your attention to the fact that the [if labhost is 2]s stowed away in your body have[else] stowed away in your body has[end if] been less active recently. You feel [if labhost is 2]one of the dogs['] liquid chocolate forms[else]the dog's liquid chocolate form[end if] churning inside your body and hear a weak, muffled whimper from inside your belly. You feel the dog pushing weakly against the inside of your body, as if trying to escape. Unfortunately for the lab, weakened by its ongoing effort to convert you, it no longer has the strength to escape your body. You feel the pressure and movement slowly dissipate as the last of the lab's strength wanes and with a final muffled whine from deep inside you the movement stops.";
@@ -406,7 +408,7 @@ this is the Choclab piggyback rule:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of Player is "Chocolate Lab":
+	if BodyName of Player is "Chocolate Lab":
 		if humanity of Player < 10:
 			if labhost is 4: [lost to three labs; big dog ending]
 				say "     You wander the streets, drawn by your nose to seek out chocolate, which you ingest ravenously wherever found, and eventually your nose has you cross paths with another of those confectionary canines. Your mouth fills with thick, chocolaty saliva as you eye the smaller dog hungrily, but before you can make your move, the smaller lab spots you and makes a run for it.";
@@ -452,7 +454,7 @@ when play ends:
 					say "     A few days later, you head back to the kitchen to help your assistants create mates of their own. Meanwhile, your mate is in your office, vigorously screwing your distributor. She had come by to talk to you about wasting time on projects instead of sales. When you left, the canine was well on his way to making her into chocolate Lab like you, giving her a much greater appreciation for the creative vision you would soon share with the world.";
 	else:
 		if labhost > 0:
-			say "     Trapped inside your new [bodyname of Player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[else]its[end if] presence has disappeared entirely. While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
+			say "     Trapped inside your new [BodyName of Player] form, the chocolate lab[if labhost is 2]s[end if] infesting your body are eventually overwhelmed by your own body, slowly absorbed into your form until one day you realize [if labhost is 2]their[else]its[end if] presence has disappeared entirely. While you show no outward signs of the labs influence, you find you have a powerful craving for chocolate from that day onward.";
 
 
 Chocolate Lab ends here.

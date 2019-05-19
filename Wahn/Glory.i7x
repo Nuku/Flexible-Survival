@@ -69,7 +69,7 @@ Instead of resolving a Refugee Mare:
 			say "     With a shrug, you walk out of the store, leaving the frightened refugee behind.";
 
 to say GloryDoorApproach:
-	if bodyname of Player is listed in infections of Equinelist or facename of Player is listed in infections of Equinelist:
+	if BodyName of Player is listed in infections of Equinelist or FaceName of Player is listed in infections of Equinelist:
 		say "     Remembering the woman's reaction to just bumping into a horseman before, you look at yourself and decide that you shouldn't try to approach her looking like you currently are. Maybe you should come back when you have a form that is less threatening to her...";
 	else:
 		LineBreak;

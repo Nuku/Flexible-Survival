@@ -145,18 +145,18 @@ Carry out pigfeeding:
 To pigfeed:
 	setmonster "Piggy";
 	choose row MonsterID from the Table of Random Critters;
-	if pigfed > 0 and tailname of Player is not "Piggy":
+	if pigfed > 0 and TailName of Player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!' You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";
-		now tailname of Player is "Piggy";
+		now TailName of Player is "Piggy";
 		now tail of Player is tail entry;
-	if pigfed > 1 and facename of Player is not "Piggy":
+	if pigfed > 1 and FaceName of Player is not "Piggy":
 		say "     'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'";
-		now facename of Player is "Piggy";
-		now face of Player is face entry;
-	if pigfed > 2 and bodyname of Player is not "Piggy":
+		now FaceName of Player is "Piggy";
+		now Face of Player is face entry;
+	if pigfed > 2 and BodyName of Player is not "Piggy":
 		say "     As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.";
-		now bodyname of Player is "Piggy";
-		now body of Player is "quite big, plump and fat with pig hooves instead of feet";
+		now BodyName of Player is "Piggy";
+		now Body of Player is "quite big, plump and fat with pig hooves instead of feet";
 		attributeinfect;
 	if lastpigfed - turns < 8:
 		if pigfed is 3:
@@ -169,7 +169,7 @@ To pigfeed:
 			delete food;
 			now pigfed is 1;
 			say "     'Thank you!' he shouts as he snatches the food from you and starts to gobble it down. The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and splash on you. Your body immediately begins to feel strange. A loud ripping sound comes from the seat of your pants as a curly pig tail grows out above your butt.";
-			now tailname of Player is "Piggy";
+			now TailName of Player is "Piggy";
 			now tail of Player is tail entry;
 			increase score by 5;
 		else:
@@ -186,8 +186,8 @@ To pigfeed:
 		if Player consents:
 			say "     'Here you go,' he oinks as he hands you the box, then he rolls over and promptly falls asleep in the mud.";
 			say "     You open the box and start chowing down on the food inside. As soon as you finish eating, you notice that the food didn't dull your hunger at all. That's when your entire head begins to feel strange. All the hair on your head falls out as your ears stretch out then flop downwards. Your nose aches for a second as the tip bends upwards until you're left with the nose of a pig. Your cheeks and face plump up with fat, making you look like you have beady little eyes and making it a little harder for you to see.";
-			now face of Player is face entry;
-			now facename of Player is "Piggy";
+			now Face of Player is face entry;
+			now FaceName of Player is "Piggy";
 			increase score by 5;
 			now pigfed is 2;
 		else:
@@ -205,8 +205,8 @@ To pigfeed:
 				say "     Thank you,' he shouts as he snatches the food from you and starts to gobble it down.";
 				say "     The boar man goes into a feeding frenzy. He barely chews as he stuffs the food into his mouth and swallows it down. He almost seems to get a little bit fatter before your eyes as he eats. Stray flecks of saliva fly from his mouth and once again splash on you. Your body immediately begins to feel strange. Your body plumps up and your feet ache for a moment as they harden into pig hooves.";
 				say "     When he finishes eating, he eyes you appreciatively, then says, 'You seem to know how to find food. Can I come with you?'";
-				now bodyname of Player is "Piggy";
-				now body of Player is body entry;
+				now BodyName of Player is "Piggy";
+				now Body of Player is body entry;
 				attributeinfect;
 				say "     Do you let him?";
 				if Player consents:
@@ -255,7 +255,7 @@ Carry out Mudwrestling:
 To Mudwrestle:
 	setmonster "Piggy";
 	choose row MonsterID from the Table of Random Critters;
-	if bodyname of Player is "Piggy":
+	if BodyName of Player is "Piggy":
 		now PlayerPigBodied is true;
 	else:
 		now PlayerPigBodied is false;
@@ -392,8 +392,8 @@ To Mudwrestle:
 							else:
 								say "Invalid choice. Type [link]1[end link] to fuck Philip from behind, [link]2[end link] to ride him or [link]3[end link] to throat-fuck him.";
 						if calcnumber is 1:
-							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
-							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
+							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [Cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
+							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [Cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
 							say "     You move your hands up and down Philip's chest while fucking him, appreciating how soft his body is. When your hands reach his moobs, you give them a quick squeeze which causes Philip to grunt. As your thrusts increase in speed, you can feel yourself coming closer to climax. Just as your begin to cum, you stuff yourself fully into your sow's hungry hole. You yell out in pleasure, which sets the boar off. He squeals shrilly, as he himself cums below you. Inside of him, his ass contracts around your cock, milking it for every last drop of your seed. The two of you remain that way for a minute, both locked together in pleasure, until you slowly pull your dick out of the pig's fat ass. You fall on your back and lay there, panting, while Philip lays on his side. Eventually, you get up, clean yourself off as well as you can, and retrieve your gear.";
 							now lastfuck of Philip is turns;
 						else if calcnumber is 2:
@@ -403,7 +403,7 @@ To Mudwrestle:
 							say "     Your ride on Philip's shaft is quickly coming to an end, as you can feel your climax coming. You can tell your partner is also getting close to cumming, as he's digging his hoof-like hands into the mud. He grits his teeth and after a couple of snorts, he lets out a high-pitched squeal as he begins cumming inside of you! You can feel his hot spunk washing into your ass, painting your insides white. The feeling sets you off, as your own member starts shooting off ropes of seed. Your prostate is driven over the edge as your ass begins clenching with pleasure, milking the boar's cock for everything it has. Slowly, the pleasure tapers off as both of your orgasms come to an end. You fall forward onto Philip's chest, his cock still inside of you. [if PlayerPigBodied is true]Your fat stomach collides with his, and the two of you begin groping each other, playing with each other's fat. You squeeze each other's moobs and twist their nipples, basking the afterglow[else]You both make out passionately, with you groping the fat boar's fat[end if]. Eventually, you pull yourself off his cock, much of his seed still leaking out. You clean up, grab your gear, and get ready to set out.";
 							now lastfuck of Philip is turns;
 						else:
-							say "     You stand above Philip, who looks up at you. He begins to speak, 'Well, are you gonna do something or-' before he is interrupted by you squatting down and sticking your [cock of Player] cock down his throat, muffling him. Getting the idea, Philip begins to begrudgingly run his tongue along your shaft, softly sucking on it. You begin to softly thrust, fucking his throat at a steady pace. The sound of your dick thrusting in and out of his mouth echoes throughout the room. The feeling of Philip's hot breath coming from his nose brushing against the base of your shaft pushes you further, as you let out a soft groan. You look down, and Philip is greedily slurping on your rod, his eyes half-closed in pleasure. He lifts his arms up, and wraps them around your back, assisting you in your thrusts. The cushion of Philips chest serves to increase your pleasure, feeling like you're on a soft chair. The boar beneath you begins to stroke his cock, as you move closer to the edge. Your thrusts grow quicker in number, as you let out a loan as you slam your cock into the pig's mouth, unloading your seed into his hungry jaw. Behind you, Philip's cock begins spurting ropes of his ivory seed.";
+							say "     You stand above Philip, who looks up at you. He begins to speak, 'Well, are you gonna do something or-' before he is interrupted by you squatting down and sticking your [Cock of Player] cock down his throat, muffling him. Getting the idea, Philip begins to begrudgingly run his tongue along your shaft, softly sucking on it. You begin to softly thrust, fucking his throat at a steady pace. The sound of your dick thrusting in and out of his mouth echoes throughout the room. The feeling of Philip's hot breath coming from his nose brushing against the base of your shaft pushes you further, as you let out a soft groan. You look down, and Philip is greedily slurping on your rod, his eyes half-closed in pleasure. He lifts his arms up, and wraps them around your back, assisting you in your thrusts. The cushion of Philips chest serves to increase your pleasure, feeling like you're on a soft chair. The boar beneath you begins to stroke his cock, as you move closer to the edge. Your thrusts grow quicker in number, as you let out a loan as you slam your cock into the pig's mouth, unloading your seed into his hungry jaw. Behind you, Philip's cock begins spurting ropes of his ivory seed.";
 							say "     You pull out of Philip's mouth, and lie beside him. You two writhe in the mud, before embracing each other. You grope Philip's soft, pudgy body, squeezing every part of him. His hands roam your body as well, as you two lock your mouths into a kiss. The two of you just lay there for a minute, basking in the after-glow, until you rise up. You leave the mud, quickly clean up, and gather your belongings. Philip retakes his spot in the mud, lounging about in the mud.";
 							now lastfuck of Philip is turns;
 					else if Player is female:
@@ -454,8 +454,8 @@ To Mudwrestle:
 							else:
 								say "Invalid choice. Type [link]1[end link] to fuck Philip from behind, [link]2[end link] to ride him or [link]3[end link] to throat-fuck him.";
 						if calcnumber is 1:
-							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
-							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
+							say "     Deciding to take the sexy boar from behind, you tell him to get up and get on his knees. Philip complies, but not without complaining. 'Riding me just isn't good enough, I guess?' he grumbles. As he gets on his knees and presents his chubby ass to you, your [Cock of Player] dick already twitching in anticipation. You scoop your hand down into the mud, grabbing a nice, cool, handful, and smear the slick substance on your cock as a makeshift lube. You take one of your fingers, similarly covered in mud, and slowly caress Philip's tight tailhole, causing it clench. You slowly insert your finger, preparing the pig to be stuffed, and feel the insides of the boar. He quakes in pleasure, and you can hear his breathing quicken. 'J-just... get going already...' he breathes. More than happy to comply, you remove your finger and move closer.";
+							say "     [if PlayerPigBodied is true]You lift your hefty stomach onto Philip's back, enjoy the feeling of your soft, doughy stomach resting on his cushiony fat. [end if]You rest your chest on his lower back, mounting him like the sow he is. You align your [Cock of Player] cock with the entrance of his hole, and slowly push yourself in. The pigman gasps softly as you enter him, and judging from how tight his hole is, he must not be used to being on bottom. As you push all the way in, your pelvic area is cushioned by his plump ass, nearly as soft as pillows. You wrap your arms around the pig's torso, barely able to get around his large stomach. You hold tight, squeezing his soft folds as you slowly pull out, then push back in. You slowly build a rhythm as you fuck the pig morph[if PlayerPigBodied is true]. Every thrust shakes your fat body, and it slaps against Philip over and over again, only serving to turn you on more[end if].";
 							WaitLineBreak;
 							say "     You move your hands up and down Philip's chest while fucking him, appreciating how soft his body is. When your hands reach his moobs, you give them a quick squeeze which causes Philip to grunt. As your thrusts increase in speed, you can feel yourself coming closer to climax. Just as your begin to cum, you stuff yourself fully into your sow's hungry hole. You yell out in pleasure, which sets the boar off. He squeals shrilly, as he himself cums below you. Inside of him, his ass contracts around your cock, milking it for every last drop of your seed. The two of you remain that way for a minute, both locked together in pleasure, until you slowly pull your dick out of the pig's fat ass. You fall on your back and lay there, panting, while Philip lays on his side. Eventually, you get up, clean yourself off as well as you can, and retrieve your gear.";
 							now lastfuck of Philip is turns;
@@ -466,7 +466,7 @@ To Mudwrestle:
 							say "     Your ride on Philip's shaft is quickly coming to an end, as you can feel your climax coming. You can tell your partner is also getting close to cumming, as he's digging his hoof-like hands into the mud. He grits his teeth and after a couple of snorts, he lets out a high-pitched squeal as he begins cumming inside of you! You can feel his hot spunk washing into your ass, painting your insides white. The feeling sets you off, as your own member starts shooting off ropes of seed. Your prostate is driven over the edge as your ass begins clenching with pleasure, milking the boar's cock for everything it has. Slowly, the pleasure tapers off as both of your orgasms come to an end. You fall forward onto Philip's chest, his cock still inside of you. [if PlayerPigBodied is true]Your fat stomach collides with his, and the two of you begin groping each other, playing with each other's fat. You squeeze each other's moobs and twist their nipples, basking the afterglow[else]You both make out passionately, with you groping the fat boar's fat[end if]. Eventually, you pull yourself off his cock, much of his seed still leaking out. You clean up, grab your gear, and get ready to set out.";
 							now lastfuck of Philip is turns;
 						else:
-							say "     You stand above Philip, who looks up at you. He begins to speak, 'Well, are you gonna do something or-' before he is interrupted by you squatting down and sticking your [cock of Player] cock down his throat, muffling him. Getting the idea, Philip begins to begrudgingly run his tongue along your shaft, softly sucking on it. You begin to softly thrust, fucking his throat at a steady pace. The sound of your dick thrusting in and out of his mouth echoes throughout the room. The feeling of Philip's hot breath coming from his nose brushing against the base of your shaft pushes you further, as you let out a soft groan. You look down, and Philip is greedily slurping on your rod, his eyes half-closed in pleasure. He lifts his arms up, and wraps them around your back, assisting you in your thrusts. The cushion of Philips chest serves to increase your pleasure, feeling like you're on a soft chair. The boar beneath you begins to stroke his cock, as you move closer to the edge. Your thrusts grow quicker in number, as you let out a loan as you slam your cock into the pig's mouth, unloading your seed into his hungry jaw. Behind you, Philip's cock begins spurting ropes of his ivory seed as his dick shoots off ropes of alabaster white seed.";
+							say "     You stand above Philip, who looks up at you. He begins to speak, 'Well, are you gonna do something or-' before he is interrupted by you squatting down and sticking your [Cock of Player] cock down his throat, muffling him. Getting the idea, Philip begins to begrudgingly run his tongue along your shaft, softly sucking on it. You begin to softly thrust, fucking his throat at a steady pace. The sound of your dick thrusting in and out of his mouth echoes throughout the room. The feeling of Philip's hot breath coming from his nose brushing against the base of your shaft pushes you further, as you let out a soft groan. You look down, and Philip is greedily slurping on your rod, his eyes half-closed in pleasure. He lifts his arms up, and wraps them around your back, assisting you in your thrusts. The cushion of Philips chest serves to increase your pleasure, feeling like you're on a soft chair. The boar beneath you begins to stroke his cock, as you move closer to the edge. Your thrusts grow quicker in number, as you let out a loan as you slam your cock into the pig's mouth, unloading your seed into his hungry jaw. Behind you, Philip's cock begins spurting ropes of his ivory seed as his dick shoots off ropes of alabaster white seed.";
 							say "     You pull out of Philip's mouth, and lie beside him. You two writhe in the mud, before embracing each other. You grope Philip's soft, pudgy body, squeezing every part of him. His hands roam your body as well, as you two lock your mouths into a kiss. The two of you just lay there for a minute, basking in the after-glow, until you rise up. You leave the mud, quickly clean up, and gather your belongings. Philip retakes his spot in the mud, lounging about in the mud.";
 							now lastfuck of Philip is turns;
 					else if Player is female:
@@ -540,7 +540,7 @@ to say sexwithphilip:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two lovers out for his meat before choosing which will get it this time. Sandra's a little disappointed when he ends up moving in behind you, but happily spreads your ass cheeks for the big boar as he thrusts into you. As Philip grunts and oinks atop you, rutting you like a hog, the bunny girl's beneath you[if Player is male], sucking at your cock while kneading the boar's balls. And when the boar cums and you climax, she's right there to suck down your [Cum Load Size of Player] load and then lick the greasy excess leaking from your stuffed pucker[else], kneading Philip's balls while she watches his meaty log drive into your ass again and again. And when the boar cums and fills you with his hot cum, she's right there to lick the greasy excess from your stuffed pucker[end if]. When Philip pulls out, you all collapse into a sticky, sweaty heap in the mud.[mimpregchance]";
 		else:
 			say "     As much as the pig's enjoying the foreplay, he oinks that it's time to get porking. Moving it back, he gives it a few quick strokes, spurting some precum onto the two sexy lovers out for his meat before choosing which will get it this time. Sandra giggles happily as the big boar ends up moving behind her. She wiggles her cute bunny tail and reaches between her legs, spreading her pussy lips in a wanton display as Philip mounts her with a belching oink. As Philip grunts and oinks atop her, rutting her like a hog, you move underneath them to lick at that stuffed cunt of hers.";
-			say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod. The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can[if Player is male]. With your [cock of Player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax. Even as she's gulping down your load[else if Player is female]. With your [cunt size desc of Player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[else]. With only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you. As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed. You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
+			say "     Playing your tongue across those wide folds, you lick at both the bunny's juicy pussy and the boar's musky rod. The scent and taste of them both as they rut is very exciting and you lap up as much of it as you can[if Player is male]. With your [Cock of Player] cock beneath the bunny's muzzle, she latches onto it and suckles you to climax. Even as she's gulping down your load[else if Player is female]. With your [cunt size desc of Player] cunt beneath the bunny's muzzle, she stuffs a few fingers into you while working her tongue over your clit, driving you to climax[else]. With only your bare crotch beneath her muzzle, the muzzle licks and few fingers and stuffs them into your asshole instead to tease you. As she fingerfucks you[end if], Philip cums with a squeal and starts filling the horny bunny with his greasy seed. You lap up the excess leaking around his shaft along with the bunny's juices until you all collapse in a sticky, sweaty heap in the mud.";
 		now lastfuck of Philip is turns;
 		now lastfuck of Sandra is turns;
 		continue the action;
@@ -550,18 +550,18 @@ to say sexwithphilip:
 	if Player is submissive, increase piggymalefun by 2;
 	if Player is mpreg_ok, increase piggymalefun by 2;
 	increase piggymalefun by anallevel;
-	if pigfed > 0 and tailname of Player is not "Piggy":
+	if pigfed > 0 and TailName of Player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!' You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";
-		now tailname of Player is "Piggy";
+		now TailName of Player is "Piggy";
 		now tail of Player is tail entry;
-	if pigfed > 1 and facename of Player is not "Piggy":
+	if pigfed > 1 and FaceName of Player is not "Piggy":
 		say "     'Oh no, your face has been hideously mutated! Don't worry, I'll fix it!' Philip exclaims, as he approaches you and quickly licks his thick pig tongue across your face before you can react. Brief pain flares as his infection spreads to you rapidly, regaining your bald head, floppy pig ears, and upturned pig nose. Philip admires his work for a moment, then says, 'Much better.'";
-		now face of Player is face entry;
-		now facename of Player is "Piggy";
-	if pigfed > 2 and bodyname of Player is not "Piggy":
+		now Face of Player is face entry;
+		now FaceName of Player is "Piggy";
+	if pigfed > 2 and BodyName of Player is not "Piggy":
 		say "     As you approach Philip, you accidentally step in some mud. Your feet begin to itch as they once more transform into pig hooves while your body plumps back up to piggy proportions.";
-		now bodyname of Player is "Piggy";
-		now body of Player is body entry;
+		now BodyName of Player is "Piggy";
+		now Body of Player is body entry;
 		attributeinfect;
 	if Player is female:
 		say "     Philip takes you by the hand and gently lays you down on the ground. He massages your tits as he positions his bulk on top of you. His huge gut rests on top of you, pinning you down. When he finally has his huge boar cock in position, he takes a moment to rub the tip against the puffy and moist lips of your pussy. Then, without warning, he thrusts his tool past your [cunt size desc of Player] nether lips and deep into your pussy. You gasp in surprise and pleasure as he begins to gyrate his chubby hips, sending his cock in and out of you. You can feel his huge balls slapping against your inner thighs with each thrust. Philip oinks and squeals as he ruts you and soon you join in. Finally you experience a thundering orgasm and Philip lets out one loud, long squeal then thrusts his cock as far into you as he can, as he spews his hot pig seed into you.[impregchance]";
@@ -600,15 +600,15 @@ to say sexwithphilip:
 			if "Male Preferred" is not listed in feats of Player and "One Pair" is not listed in feats of Player:
 				say "     As you pull your body from the mud, you find that you've once again gained a full set of eight piggish nipples down your front.";
 				now Nipple Count of Player is 8;
-	if pigfucked > 0 and player is male and cockname of Player is not "Piggy":
+	if pigfucked > 0 and player is male and CockName of Player is not "Piggy":
 		say "     As the heat of Philip's strong cum warms your insides, you feel a tingle in your cock as it throbs and spurts its seed onto the messy floor. Your shaft changes, becoming humanlike, but pinker. It is musky and has a thick scent, much like your piggy lover's.";
-	now cock of Player is cock entry;
-	now cockname of Player is "Piggy";
+	now Cock of Player is cock entry;
+	now CockName of Player is "Piggy";
 	if pigfucked > 1:
 		say "     After finishing his fun with you, Philip rolls in the mud with you, snuggling and snuffling at your ears. His piggish hands fondle your nipples, making you squeal like a pig, much to his delight";
-		if skinname of Player is not "Piggy":
-			now skinname of Player is "Piggy";
-			now skin of Player is skin entry;
+		if SkinName of Player is not "Piggy":
+			now SkinName of Player is "Piggy";
+			now Skin of Player is skin entry;
 			say ". The roll in the mud after sex seems to change you further as your skin changes and becomes a bright, fleshy pink with short, pale hairs. The cool mud feels increasingly good against your skin as you pick up Philip's scent from it";
 		say ".";
 	increase pigfucked by 1;
@@ -618,7 +618,7 @@ to say sexwithphilip:
 Section 6 - Ending the Piggy
 
 When play ends:
-	if bodyname of Player is not "Messy Pig" and bodyname of Player is not "Piggy":
+	if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy":
 		if Philip is in the Large Shed:
 			if humanity of Player < 10:
 				say "     Despite your loss of humanity, Philip vows to care for you. But one day, he gets hungry and wanders off. Leaving you free to rape any unfortunate human that crosses your path.";
@@ -641,7 +641,7 @@ When play ends:
 					say "     Philip remains a loyal... if somewhat gluttonous, friend and lover for the rest of your days.";
 			else:
 				say "     Philip remains a loyal... if somewhat gluttonous, friend for the rest of your days.";
-	else if bodyname of Player is "Messy Pig" or bodyname of Player is "Piggy":
+	else if BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy":
 		if humanity of Player < 10:
 			if voreloss is true:
 				say "     The piggy rumbles happily, your last bit of resistance having fade away some time ago, as you add to her ample amounts of fat. Thanks to your contribution, her stomach bulges out even more, as well as her rear, allowing her to subdue her prey more easily. Despite giving her a bountiful meal, it doesn't take long for the female swine to get hungry again. Trundling off with her increased girth, the gluttonous pig goes off to sate her hunger and her lust.";

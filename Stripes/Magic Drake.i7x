@@ -43,17 +43,17 @@ to say magicdrakedesc:
 
 to say losetomagicdrake:
 	choose row MonsterID from the Table of Random Critters;
-	if tailname of Player is not "Magic Drake":
+	if TailName of Player is not "Magic Drake":
 		if mdasslevel < 2:	[first loss]
 			say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. Her clawed hands squeeze, pinch and fondle you all over, inspecting your [bodydesc of Player] body, especially your ass. While this is going on, she is also grinding her throbbing cock over you, a five foot pillar of green flesh that drools thick precum. 'Mmm... yes... I can work with this.'";
 			say "     Having reached some kind of decision, she takes her staff and slaps its headpiece against your ass repeatedly. 'Gj v fem yenf wef bmjl jbrab Ahrtob's sab-n-datbjl,' she chants incomprehensibly. Tingles run through your flesh beyond just the sting of the spanking. Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus. It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded. As the dragoness cums, veritably soaking you in her excessive spooge, there comes an orgasmically pleasurable surge through you and a long, reptilian tail forms at your rear.";
-			now tailname of Player is "Magic Drake";
+			now TailName of Player is "Magic Drake";
 			now tail of Player is tail entry;
 			now mdasslevel is 2;
 		else:
 			say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. She eyes your altered ass and gives it a hard swat. 'Oh, this will not do at all. Where's the fine booty we were working on? You're a naughty familiar and deserve to be punished,' she says with a teasing growl. She grinds her throbbing cock against you, that five foot pillar of green flesh drooling precum onto you.";
 			say "     Drawing upon her magical powers, she takes her staff and slaps its headpiece against your ass repeatedly. 'Gj v fem yenf wef bmjl jbrab Ahrtob's sab-n-datbjl,' she chants incomprehensibly. Tingles run through your flesh beyond just the sting of the spanking. Looking back, you can see a glowing aura around the end of the staff that seems to spew forth from the golden phallus. It clings to you and seeps into your ass, inducing a transformation to make it fuller and rounded. As the dragoness cums, veritably soaking you in her excessive spooge, there comes an orgasmically pleasurable surge through you and a long, reptilian tail forms at your rear[if mdasslevel is 3]. By the time her spell's completed, that plump, rounded booty from before has returned[else if mdasslevel is 4]. By the time her spell's completed, that impressively large booty from before has returned[else if mdasslevel is 5]. By the time her spell's completed, that huge booty from before has returned[else if mdasslevel is 6]. By the time her spell's completed, that titanic mega-booty from before has returned[end if].";
-			now tailname of Player is "Magic Drake";
+			now TailName of Player is "Magic Drake";
 			now tail of Player is tail entry;
 	else if mdasslevel < 2:		[first loss, but already infected]
 		say "     [if HP of Player > 0]Submitting yourself to the dragoness's whims rather than fight further, you[else]Resisting as best you can, you can eventually fight no longer and[end if] are groped and manhandled by your assailant. Her clawed hands squeeze, pinch and fondle you all over, inspecting your [bodydesc of Player] body, especially your ass. While this is going on, she is also grinding her throbbing cock over you, a five foot pillar of green flesh that drools thick precum. 'Mmm... yes... Already started, I see. All the better; I can certainly work with this.'";
@@ -108,7 +108,7 @@ to say losetomagicdrake:
 					decrease humanity of Player by 1;
 					increase Libido of Player by 5;
 				else if Player is male and Ball Size of Player < Ball Size entry and "Female Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
-					say "     While cumming, the draconic sorceress reaches around to [if cockname of Player is listed in infections of internallist]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testicles to grow further. When she's done both her climax and her spell, she [if scalevalue of Player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
+					say "     While cumming, the draconic sorceress reaches around to [if CockName of Player is listed in infections of internallist]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testicles to grow further. When she's done both her climax and her spell, she [if scalevalue of Player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
 					increase Ball Size of Player by 1;
 					now Ball Size of Player is ( ( Ball Size of Player * 3 ) + Ball Size entry ) / 4;
 					decrease humanity of Player by 1;
@@ -254,7 +254,7 @@ to say beatthemagicdrake:
 			now title entry is "Ride that cock - Vaginal";
 			now sortorder entry is 4;
 			now description entry is "stuff that meaty rocket of hers in your cunt";
-		if ( mdasslevel is 6 and tailname of Player is "Magic Drake" ) or the player is twistcapped:
+		if ( mdasslevel is 6 and TailName of Player is "Magic Drake" ) or the player is twistcapped:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride that cock - Anal";
 			now sortorder entry is 5;
@@ -263,7 +263,7 @@ to say beatthemagicdrake:
 		now title entry is "Force self-oral";
 		now sortorder entry is 8;
 		now description entry is "make her suck herself";
-		if mdasslevel is 6 and tailname of Player is "Magic Drake":
+		if mdasslevel is 6 and TailName of Player is "Magic Drake":
 			choose a blank row in table of fucking options;
 			now title entry is "Taunt her";
 			now sortorder entry is 9;
@@ -311,7 +311,7 @@ to say beatthemagicdrake:
 		if mdasslevel > 1:
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
-			if tailname of Player is "Magic Drake":
+			if TailName of Player is "Magic Drake":
 				say "     Before you depart, you look over the drake's strange staff. The headpiece is still aglow with eldritch energy that's leaking from its phallic end. You might be able to use to adjust the size of that [if mdasslevel is 2]bubble-butt[else if mdasslevel is 3]plump[else if mdasslevel is 4]large[else if mdasslevel is 5]huge[else]mega-booty[end if] ass she's given you";
 				if mdasslevel < 6:
 					choose a blank row in table of fucking options;
@@ -428,7 +428,7 @@ to say beatthemagicdrake:
 							now x is a random number between 2 and 5;
 						if x is 1:
 							say "lick the tip of the golden phallus, taking the blast in the face instead";
-							if facename of Player is "Magic Drake":
+							if FaceName of Player is "Magic Drake":
 								say ". The tingly energy floods your senses and dazes you, leaving you somewhat disoriented";
 								decrease humanity of Player by a random number between 4 and 6;
 								if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 0 and 2;
@@ -436,8 +436,8 @@ to say beatthemagicdrake:
 							else:
 								say ". The tingly energy floods your senses and flows into you, causing your head to transform. You can feel your cranium pulse and throb, building up until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 								choose row MonsterID from the Table of Random Critters;
-								now facename of Player is "Magic Drake";
-								now face of Player is face entry;
+								now FaceName of Player is "Magic Drake";
+								now Face of Player is face entry;
 							say ". The dragoness laughs at your feeble attempt to use her magic.";
 							now mdstaffface is true;
 						else:
@@ -471,11 +471,11 @@ to say beatthemagicdrake:
 								else:
 									say "[mdstaff_overgrown]";
 							else if mdstaffaction <= 10:		[sexual growth/reduction]
-								if cockname of Player is not "Magic Drake":
+								if CockName of Player is not "Magic Drake":
 									say "     The magic doesn't quite end up working as expected though, spraying all across your groin. It seeps into your crotch with a pleasant tingle that suffuses your [if Player is herm]cock[smn] and cunt[sfn][else if Player is male]cock[smn][else]cunt[sfn][end if]. The magical energy clings to your sensitive loins and sinks right into them, causing them to shift and change[if Player is herm]. The flesh of your loins changes and your manhood and your pussy lips are transformed[else if Player is male]. The flesh of your loins changes and your manhood is transformed[else]. The flesh of your loins changes and your pussy lips are transformed[end if], taking on a rich, green hue as you become infected, much to the dragoness's amused delight.";
 									choose row MonsterID from the Table of Random Critters;
-									now cockname of Player is "Magic Drake";
-									now cock of Player is cock entry;
+									now CockName of Player is "Magic Drake";
+									now Cock of Player is cock entry;
 									increase Libido of Player by 5;
 								else if mdstaffaction is 5:		[cock growth]
 									increase Cock Length of Player by 2;
@@ -519,17 +519,17 @@ to say beatthemagicdrake:
 	increase mdrakebeaten by 1;
 
 to say mdrake_pvictory_01:		[Fuck her]
-	say "     Deciding that the sorceress deserves to be on the receiving end of what she planned for you, you stride over to her and, as she struggles to push herself over so she can get back up, you give her a firm shove. This sudden added momentum rolls her rounded bottom over, exposing that super-wide ass of hers. Running your hands across her plush rear causes her tail to arch up, exposing her fleshy pucker and allowing you to finger it. She moans and squirms a little as this stalls her attempts to get back up long enough for you to replace your digits with your [cock size desc of Player] [cock of Player] cock. Gripping those massively wide hips of hers, you squeeze yourself between her meaty buns and fuck the horny shemale.";
+	say "     Deciding that the sorceress deserves to be on the receiving end of what she planned for you, you stride over to her and, as she struggles to push herself over so she can get back up, you give her a firm shove. This sudden added momentum rolls her rounded bottom over, exposing that super-wide ass of hers. Running your hands across her plush rear causes her tail to arch up, exposing her fleshy pucker and allowing you to finger it. She moans and squirms a little as this stalls her attempts to get back up long enough for you to replace your digits with your [cock size desc of Player] [Cock of Player] cock. Gripping those massively wide hips of hers, you squeeze yourself between her meaty buns and fuck the horny shemale.";
 	say "     Her struggles to stand are temporarily forgotten as you drive your manhood into her over and over again. Her tail wraps behind you in a soft hug and even pulls you to her with every thrust you make, urging you on. 'Mmm... yeah... that's good. I'll definitely have to let you do this to me some more once you're my familiar. Nothing like a good fucking to get the magical juices flowing,' she moans. And indeed there's a considerable amount of flowing going on from her titanic cock, precum forming a messy pool between those plump melons of hers. Stuffing that enormous ass of hers is very enjoyable for you as well, despite its excessive size, her back door adjusts to be a nice, snug fit for your [cock size desc of Player] rod readily enough.";
 	say "     You pound away at the dragoness's hole, enjoying the warm grip of her cheeks against your hips as you drill into her again and again. Eventually though, you're ready to blow and plough into her hard, burying your full length in her bottom and release your hot cum with a cry of ecstasy. The dragoness gives a throaty roar and climaxes as well, blasting a flood of semen across her tits and the ground. Once you've drained your balls, you pull out and roll the dragoness right back over, leaving her in the same predicament as before, but this time sitting in a sticky mess of semen as your load leaks out of her well-fucked hole.";
 
 to say mdrake_pvictory_02:
-	say "     Deciding to have some fun of your own, you stride over to the struggling dragoness and move overtop her. She releases a muffled moan as you grab her gigantic breasts, your added weight atop her making sure she cannot rise. Pushing open her sheer dress, you press your [cock size desc of Player] [cock of Player] cock between those giant globes and bask in the biggest of tit-fucks ever. Her scaly flesh is smooth and soft, cradling your pulsing rod in their warmth as you thrust away.";
+	say "     Deciding to have some fun of your own, you stride over to the struggling dragoness and move overtop her. She releases a muffled moan as you grab her gigantic breasts, your added weight atop her making sure she cannot rise. Pushing open her sheer dress, you press your [cock size desc of Player] [Cock of Player] cock between those giant globes and bask in the biggest of tit-fucks ever. Her scaly flesh is smooth and soft, cradling your pulsing rod in their warmth as you thrust away.";
 	say "     'Such a naughty familiar, doing this to your poor, stranded mistress,' she says with a moan, making it hard to tell if she's truly upset or playfully teasing. Regardless, you forge on, pounding your [cock size desc of Player] penis into the warm embrace of her bosom. Placing your hands on her massive nipples, you grab them and start pinching and rubbing them, making the dragoness moan all the more. Each are a handful on their own, full, plump and sensitive. Her mighty cock is hard and slaps along your back as it twitches and throbs with excitement as if goading you on. With all this sexy flesh around you, it doesn't take you long before you're ready to blow and paint a sticky white picture of semen across and between her green tits. Having had your fun, you get up, leaving her to crane her muzzle to try and lick up the tasty treat you've left her.";
 
 to say mdrake_pvictory_03:
 	choose row MonsterID from the Table of Random Critters;
-	say "     Deciding you need some relief after your vigorous battle, your eyes fall to her massive manhood and its drooling slit. The sight of that large, slick and juicy opening has a kinky idea pop into your mind. You stride over to her and, as she struggles to get back up, you grab her cock stroke it firmly. This causes her to moan and distracts her in part from her attempts to rise. Her titanic penis throbs as you run your hands over it, coaxing more precum from its tip. Angling her meaty rod into position, you get your [cock of Player] shaft lined up and thrust right into its leaking urethra, causing the dragoness to moan in lustful surprise.";
+	say "     Deciding you need some relief after your vigorous battle, your eyes fall to her massive manhood and its drooling slit. The sight of that large, slick and juicy opening has a kinky idea pop into your mind. You stride over to her and, as she struggles to get back up, you grab her cock stroke it firmly. This causes her to moan and distracts her in part from her attempts to rise. Her titanic penis throbs as you run your hands over it, coaxing more precum from its tip. Angling her meaty rod into position, you get your [Cock of Player] shaft lined up and thrust right into its leaking urethra, causing the dragoness to moan in lustful surprise.";
 	say "     With your hands gripping the rim of her glans, you pound into her juicy cock. Her cum slit is hot and wet with draconic pre, making your [cock size desc of Player] shaft's passage smooth and slick. The feel of this penile penetration is delightfully different from other sex you've had, this kinky violation very arousing. And it seems to be having a similar effect on your foe as well, the sorceress moaning and panting as her manhood is stuffed with yours. The flow of precum increases as you continue, soaking your crotch as you plough into that virile pillar.";
 	WaitLineBreak;
 	let x be a random number between 0 and Libido of Player;
@@ -537,10 +537,10 @@ to say mdrake_pvictory_03:
 	if x > y:
 		say "     Eventually this perverse penetration becomes too much for the dragoness and she roars in climax. You can feel her cock throb with imminent release, but you're too busy thrusting to have the strength to resist the tug of her spasming cum slit. A torrent of draconic semen is pumped through her stuffed slit. And while much of it gushes out around your penis, plenty more is pushed into it by fluid pressure. You can feel her gooey sperm being forced into you, flowing back through your pipes. Your balls bloat with draconic cum being force-fed into them. As they get overloaded and struggle to keep taking more, your bladder and prostate are also stuffed with the invading rush of semen. And only when there's no more room for more inside you is your bloated penis finally forced free from her urethra.";
 		say "     Filled to the point of overflowing, you ache for release like you never have before and grab your cock in both hands, pumping it until and rubbing your balls in an attempt to drain out all that excess dragon sperm. Your climax is powerful and launches your first few sprays well over ten feet. You aim the rest of your powerful blasts down onto the dragoness, who moans and rubs the sticky mess into her scales[if wslevel is 3]. With a groan, you release the mix of urine and semen filling your bladder, pissing it out over her[end if]. By the point you're eventually drained, you are weak and woozy, stumbling back several feet as you try to retain your balance. You're sexually sated by this kinky experience[if Ball Size of Player < 36], though your balls have been left larger than before[end if].";
-		if cockname of Player is not "Magic Drake":
+		if CockName of Player is not "Magic Drake":
 			say "     Having your genitals overloaded with the dragoness's semen has left your penis transformed. While human-like in shape, it is now made of green flesh and your pubic hair has been replaced by a patch of green scales. You can feel a warmth in your balls as your semen is corrupted and transformed by the lingering dragon cum still in there, making it draconic as well.";
-			now cockname of Player is "Magic Drake";
-			now cock of Player is cock entry;
+			now CockName of Player is "Magic Drake";
+			now Cock of Player is cock entry;
 			if Ball Size of Player < 36:
 				increase Ball Size of Player by ( 50 - Ball Size of Player ) / 10;
 			follow the sex change rule;
@@ -568,8 +568,8 @@ to say mdrake_pvictory_05:
 		add "Twisted Capacity" to feats of Player;
 
 to say mdrake_pvictory_06:		[Receive fellatio]
-	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of Player] cock and stroke it to erection. The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise. As you approach her draconic muzzle, she licks her lips and releases a needy moan. And when you bring your [cock of Player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
-	say "     'Come on. Give it to me, my sweet,' she moans with an obvious need that brings a grin to your lips. While a little tempted to tease her longer, you want to get it on and so move forward, plunging your [cock of Player] cock into her warm muzzle. Rocking your hips, you plunge into her sucking maw. Her tongue plays over your meat and her hands [if cockname of Player is listed in infections of Internallist]fondle your [Ball Size Adjective of Player] [Balls] with an obvious hunger[else]grab your hips to urge you onwards[end if].";
+	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of Player] cock and stroke it to erection. The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise. As you approach her draconic muzzle, she licks her lips and releases a needy moan. And when you bring your [Cock of Player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
+	say "     'Come on. Give it to me, my sweet,' she moans with an obvious need that brings a grin to your lips. While a little tempted to tease her longer, you want to get it on and so move forward, plunging your [Cock of Player] cock into her warm muzzle. Rocking your hips, you plunge into her sucking maw. Her tongue plays over your meat and her hands [if CockName of Player is listed in infections of Internallist]fondle your [Ball Size Adjective of Player] [Balls] with an obvious hunger[else]grab your hips to urge you onwards[end if].";
 	say "     Seeing her meaty pillar bobbing in front of you, you grab it and start stroking it as further encouragement for the slutty sorceress. The titanic manhood is shaped like a normal cock, but taken to enormous size. Its smooth flesh, phallic shape and throbbing veins would have it seem human in form were it not for its green hue. This examination is a casual one, undertaken while enjoying the blow job and giving a hand job (as best you can give its size) in return.";
 	say "     As your climax hits you, you thrust deeply into the buxom beauty's maw. Cumming hard, you blast your [Cum Load Size of Player] load across her tongue and down her throat[if Ball Size of Player >= 6]. Your voluminous output is enough to plump the dragoness's belly with her feast of hot semen[end if]. With your orgasm waning, you shift your focus to her cock, rubbing and stroking it just right to finish her off. Angling it away, you delight in watching the high arcs and messy splatters her blasts of cum make until finally her spent shaft flops down onto the ground, temporarily sated.";
 
@@ -633,17 +633,17 @@ to say mdstaff_overgrown:
 		now mdrakeoversized is 100;
 		choose row MonsterID from the Table of Random Critters;
 		now humanity of Player is 0;
-		now tailname of Player is "Magic Drake";
-		now facename of Player is "Magic Drake";
-		now skinname of Player is "Magic Drake";
-		now bodyname of Player is "Magic Drake";
-		now cockname of Player is "Magic Drake";
+		now TailName of Player is "Magic Drake";
+		now FaceName of Player is "Magic Drake";
+		now SkinName of Player is "Magic Drake";
+		now BodyName of Player is "Magic Drake";
+		now CockName of Player is "Magic Drake";
 		attributeinfect;
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -659,12 +659,13 @@ to say mdstaff_overgrown:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -677,7 +678,7 @@ When Play begins:
 	now body entry is "a little on the pudgy side with a little extra fat to round out your somewhat girlish, 5['] 6' figure. Your hands and feet are changed as well, having been exchanged for reptilian talons. Upon your back is a pair of dragon wings";
 	now skin entry is "[one of]scaley green[or]green-scaled[at random]";
 	now tail entry is "[mdtaildesc]."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "green"; [ Cock. Format as "You have a 'size' [cock of Player] cock." ]
+	now cock entry is "green"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "it tingles with a strange energy. This builds until there comes a loud snap. More pops and snaps follow as your head shifts and reshapes itself. A draconic muzzle pushes forth and a pair of small horns grow on the top of your head";
 	now body change entry is "an unusual sensation spreads through you. Starting off as a tingle of strange energy, it builds until your body starts reshaping itself. Your figure changes, becoming roughly five and a half feet tall, with a somewhat feminine figure and a few added pounds to round out your curves. The energy surges at your back, forming draconic wings[mdscaletweak]";
 	now skin change entry is "it starts to flake and itch. The itching grows into tingles as a green tinge starts seeping into your skin. Soon it hardens into reptilian scales that are smooth and sensitive";
@@ -702,7 +703,7 @@ When Play begins:
 	now Male Breast Size entry is 10; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -718,11 +719,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -738,9 +740,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -772,13 +774,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -790,8 +792,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -807,7 +809,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -822,20 +824,20 @@ to say mdtaildesc:
 
 to say mdtailtf:
 	say "[if mdasslevel < 3]your ass reforms into a cute, fuckable bubble butt with a long, reptilian tail above it[else if mdasslevel is 3]your ass reforms into a plump and rounded booty. Above your meaty backside is a long, reptilian tail[else if mdasslevel is 4]your hips widen as your ass reforms into an impressively large booty. Above your hefty backside is a long, reptilian tail[else if mdasslevel is 5]your hips widen markedly to deal with your growing ass. It swells up and out, becoming huge and heavy. Above your super-meaty backside is a long, reptilian tail[else]your hips widen greatly to deal with your swelling ass. It grows and grows comically large, passing the point you'd be able to putting your arms fully around it. Above your mega-booty is a long, reptilian tail that swishes excitedly with every swaying step you take[end if]";
-	if mdasslevel > 4 and bodyname of Player is "Magic Drake":
+	if mdasslevel > 4 and BodyName of Player is "Magic Drake":
 		choose row MonsterID from the Table of Random Critters;
 		now scale entry is 4;
 		now scalevalue of Player is 4;
-	else if bodyname of Player is not "Magic Drake":
+	else if BodyName of Player is not "Magic Drake":
 		choose row MonsterID from the Table of Random Critters;
 		now scale entry is 3;
 
 to say mdscaletweak:
 	choose row MonsterID from the Table of Random Critters;
-	if bodyname of Player is not "Magic Drake":
+	if BodyName of Player is not "Magic Drake":
 		now scale entry is 3;
 		now scalevalue of Player is 3;
-	else if mdasslevel > 4 and tailname of Player is "Magic Drake":
+	else if mdasslevel > 4 and TailName of Player is "Magic Drake":
 		now scale entry is 4;
 		now scalevalue of Player is 4;
 	else:
@@ -845,7 +847,7 @@ Section 3 - Endings
 
 [
 when play ends:
-	if bodyname of Player is "Magic Drake":
+	if BodyName of Player is "Magic Drake":
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

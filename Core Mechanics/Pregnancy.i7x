@@ -203,7 +203,7 @@ to pregprotocol:
 					now snakeocc is 0;
 					now snakehijacktimer is turns;
 			else:
-				if gestation of child < 0, now gestation of child is 1;
+				if gestation of child < 0, now gestation of Child is 1;
 
 to say detailpregnancy:
 	detailpregnancy;
@@ -257,7 +257,7 @@ to detailbirth:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the large egg that had been inside of you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
 			else if mpregcount < 3:			[First few times, painful]
-				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat, and your [facename of Player] face grimaces in pain with each painful shift. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of an egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat, and your [FaceName of Player] face grimaces in pain with each painful shift. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of an egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 				increase mpregcount by 1;
@@ -299,7 +299,7 @@ to detailbirth:
 				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
 				increase mpregcount by 1;
 			else if mpregcount < 3:			[First few times, painful]
-				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [facename of Player] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of Player] body is covered in sweat and you have a grimace of pain on your [FaceName of Player] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
 				now HP of Player is 1;
 				decrease morale of Player by 10;
 				increase mpregcount by 1;
@@ -327,6 +327,13 @@ To Birth:
 				now LegsName of Child is BodyName of Player;
 				now AssName of Child is TailName of Player;
 				now TailName of Child is TailName of Player;
+				now HeadSpeciesName of Child is FaceSpeciesName of Player;
+				now TorsoSpeciesName of Child is BodySpeciesName of Player;
+				now BackSpeciesName of Child is BodySpeciesName of Player;
+				now ArmsSpeciesName of Child is BodySpeciesName of Player;
+				now LegsSpeciesName of Child is BodySpeciesName of Player;
+				now AssSpeciesName of Child is TailSpeciesName of Player;
+				now TailSpeciesName of Child is TailSpeciesName of Player;
 			else: [player has all the parts]
 				now HeadName of Child is HeadName of Player;
 				now TorsoName of Child is TorsoName of Player;
@@ -335,14 +342,21 @@ To Birth:
 				now LegsName of Child is LegsName of Player;
 				now AssName of Child is AssName of Player;
 				now TailName of Child is TailName of Player;
+				now HeadSpeciesName of Child is HeadSpeciesName of Player;
+				now TorsoSpeciesName of Child is TorsoSpeciesName of Player;
+				now BackSpeciesName of Child is BackSpeciesName of Player;
+				now ArmsSpeciesName of Child is ArmsSpeciesName of Player;
+				now LegsSpeciesName of Child is LegsSpeciesName of Player;
+				now AssSpeciesName of Child is AssSpeciesName of Player;
+				now TailSpeciesName of Child is TailSpeciesName of Player;
 	[Pureblood check]
 	let IsPureblood be false;
-	if HeadName of Child is TorsoName of Child:
-		if HeadName of Child is BackName of Child:
-			if HeadName of Child is ArmsName of Child:
-				if HeadName of Child is LegsName of Child:
-					if HeadName of Child is AssName of Child:
-						if HeadName of Child is TailName of Child:
+	if HeadSpeciesName of Child is TorsoSpeciesName of Child:
+		if HeadSpeciesName of Child is BackSpeciesName of Child:
+			if HeadSpeciesName of Child is ArmsSpeciesName of Child:
+				if HeadSpeciesName of Child is LegsSpeciesName of Child:
+					if HeadSpeciesName of Child is AssSpeciesName of Child:
+						if HeadSpeciesName of Child is TailSpeciesName of Child:
 							now IsPureblood is true;
 	[gender]
 	let ChildGender be "male";
@@ -453,20 +467,20 @@ To Birth:
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather it into your arms. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. Having regressed partially during their time in your womb, they grow back to maturity while suckling";
 		if IsFeral is true:
-			say ". They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch [if ShowLegs is true][ArmsName of Child] arms and [LegsName of Child] legs. [else]their [ArmsName of Child] arms. [end if]";
+			say ". They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] face as they stretch [if ShowLegs is true][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs. [else]their [ArmsSpeciesName of Child] arms. [end if]";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain.";
+				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child].";
 			else:
-				say "You see that your child has a [TorsoName of Child] front and [BackName of Child] back[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if].";
+				say "You see that your child has a [TorsoSpeciesName of Child] front, [BackSpeciesName of Child] back[if ShowTail is false] and a [AssSpeciesName of Child] behind[else], a [AssSpeciesName of Child] behind and a [TailSpeciesName of Child] tail[end if].";
 		else:
-			say ". They pop free and stand, smiling. With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. ";
+			say ". They pop free and stand, smiling. With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. ";
 			if IsPureblood is true:
-				say "Taking it all in, you see your child is a pureblood of the [HeadName of Child] strain";
+				say "Taking it all in, you see your child is a pureblood [HeadSpeciesName of Child].";
 			else:
 				if Showlegs is true:
-					say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if]";
+					say "Your child has [if ShowTail is true][ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs and a [TailSpeciesName of Child] tail[else][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs[end if]";
 				else:
-					say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if]";
+					say "Your child has [ArmsSpeciesName of Child] arms[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if]";
 		if snakehijack > 0 and "They Have Your Eyes" is listed in feats of Player:
 			say ". It's clear that your influence has forcibly altered the once-snake to take on your appearance, a twisted fate for such a creature, who now assumes itself to be your legitimate offspring.";
 		else if snakehijack > 0:
@@ -505,9 +519,9 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood form of the [Headname of Child] strain.";
+			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
 		else:
-			say "With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. Your child has [ArmsName of Child] arms, [LegsName of Child] legs[if ShowTail is false] and a [AssName of Child] behind[else], a [AssName of Child] behind and a [TailName of Child] tail[end if].";
+			say "With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. Your child has [ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs[if ShowTail is false] and a [AssSpeciesName of Child] behind[else], a [AssSpeciesName of Child] behind and a [TailSpeciesName of Child] tail[end if].";
 		if Player is in Sitting Area and Chris is in Sitting Area:
 			say "     The young buck of an orc warrior looks at you with a broad grin as he continues to show off a bit more, stroking his large hands over the muscle-packed form of his body, then finally gravitating to his crotch. Experimentally wrapping his fingers around the thick shaft, he gives it a few strokes and grunts in pleasure as it fills out to an impressive length of green-skinned man-meat. Winking at you as he lets go and the huge cock swings down between his legs, he then turns to Chris, who'd been watching the birth of his son from a few steps away up until now. 'That's my boy!' Chris bellows out for the world to hear as he steps up to embrace the young orc warrior. 'Time for some male bonding with dad. See ya later!' your green-skinned offspring says over his shoulder, then the two of them walk off, boasting and chatting like frat brothers with each other.";
 		else:
@@ -548,9 +562,9 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. ";
 		say "A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. ";
 		if IsPureblood is true:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood of the [HeadName of Child] strain.";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] face as they stretch their limbs. Taking your offspring in, you see that it is a pureblood [HeadSpeciesName of Child].";
 		else:
-			say "They pop free and stand, a feral look of wanton desire on their [HeadName of Child] head as they stretch [if ShowLegs is true][ArmsName of Child] arms and [LegsName of Child] legs. [else]their [ArmsName of Child] arms. [end if]You see that your child has a [TorsoName of Child] front and [BackName of Child] back, with a [AssName of Child] behind[if ShowTail is true] and a [TailName of Child] tail[end if].";
+			say "They pop free and stand, a feral look of wanton desire on their [HeadSpeciesName of Child] head as they stretch [if ShowLegs is true][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs. [else]their [ArmsSpeciesName of Child] arms. [end if]You see that your child has a [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back, with a [AssSpeciesName of Child] behind[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if].";
 		if IsAlbino is true:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
 		else if HasMelanism is true:
@@ -569,13 +583,13 @@ To Birth:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of Player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. ";
 		say "Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. ";
 		if IsPureblood is true:
-			say "With a slow turn, they show off their pureblood form of the [Headname of Child] strain.";
+			say "With a slow turn, they show off their pureblood [HeadSpeciesName of Child] form.";
 		else:
-			say "With a slow turn, they show off their [Headname of Child] head, their [TorsoName of Child] front and [BackName of Child] back. ";
+			say "With a slow turn, they show off their [HeadSpeciesName of Child] head, their [TorsoSpeciesName of Child] front and [BackSpeciesName of Child] back. ";
 			if Showlegs is true:
-				say "Your child has [if ShowTail is true][ArmsName of Child] arms, [LegsName of Child] legs and a [TailName of Child] tail[else][ArmsName of Child] arms and [LegsName of Child] legs[end if].";
+				say "Your child has [if ShowTail is true][ArmsSpeciesName of Child] arms, [LegsSpeciesName of Child] legs and a [TailSpeciesName of Child] tail[else][ArmsSpeciesName of Child] arms and [LegsSpeciesName of Child] legs[end if].";
 			else:
-				say "Your child has [ArmsName of Child] arms[if ShowTail is true] and a [TailName of Child] tail[end if].";
+				say "Your child has [ArmsSpeciesName of Child] arms[if ShowTail is true] and a [TailSpeciesName of Child] tail[end if].";
 		if IsAlbino is true:
 			say "Their pigmentation is muted and almost white, except for the eyes that appear red. [bold type]They're an albino![roman type]";
 		else if HasMelanism is true:
@@ -616,13 +630,13 @@ To Birth:
 			now Name entry is Name of Child;
 			now BirthTurn entry is turns;
 			now Gender entry is ChildGender;
-			now Head entry is Headname of Child;
-			now Torso entry is TorsoName of Child;
-			now Back entry is BackName of Child;
-			now Arms entry is ArmsName of Child;
-			now Legs entry is LegsName of Child;
-			now Ass entry is AssName of Child;
-			now Tail entry is TailName of Child;
+			now Head entry is HeadSpeciesName of Child;
+			now Torso entry is TorsoSpeciesName of Child;
+			now Back entry is BackSpeciesName of Child;
+			now Arms entry is ArmsSpeciesName of Child;
+			now Legs entry is LegsSpeciesName of Child;
+			now Ass entry is AssSpeciesName of Child;
+			now Tail entry is TailSpeciesName of Child;
 			now ShowTail entry is ShowTail;
 			now ShowLegs entry is ShowLegs;
 			now Pureblood entry is IsPureblood;
@@ -655,13 +669,13 @@ To Birth:
 		now Name entry is Name of Child;
 		now BirthTurn entry is turns;
 		now Gender entry is ChildGender;
-		now Head entry is Headname of Child;
-		now Torso entry is TorsoName of Child;
-		now Back entry is BackName of Child;
-		now Arms entry is ArmsName of Child;
-		now Legs entry is LegsName of Child;
-		now Ass entry is AssName of Child;
-		now Tail entry is TailName of Child;
+		now Head entry is HeadSpeciesName of Child;
+		now Torso entry is TorsoSpeciesName of Child;
+		now Back entry is BackSpeciesName of Child;
+		now Arms entry is ArmsSpeciesName of Child;
+		now Legs entry is LegsSpeciesName of Child;
+		now Ass entry is AssSpeciesName of Child;
+		now Tail entry is TailSpeciesName of Child;
 		now ShowTail entry is ShowTail;
 		now ShowLegs entry is ShowLegs;
 		now Pureblood entry is IsPureblood;
@@ -673,7 +687,7 @@ To Birth:
 		SanLoss 5;
 	increase score by 5; [15 base +5/child]
 	now child is not born;
-	now gestation of child is 0;
+	now gestation of Child is 0;
 	now ubpreg is "false";
 
 Chapter 3-1 - Impregnation and Ovi-Impreg Subroutines
@@ -683,6 +697,11 @@ To impregnate with (x - text):
 		stop the action;
 	if Player is not female and "MPreg" is listed in feats of Player and ( level of Velos is 1 and HP of Velos > 2 ):
 		stop the action;
+	if there is a name of x in the Table of Random Critters:
+		choose a row with Name of x in the Table of Random Critters;
+	else:
+		say "ERROR: Creature [x] not found in the Table of Random Critters. Please report this on the FS Discord.";
+		stop the action;
 	if "Cheerbreeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a Football Wolfman child?";
@@ -691,14 +710,21 @@ To impregnate with (x - text):
 			else:
 				say "You choose not to accept the seed.";
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now HeadName of child is "Football Wolfman";
-		now TorsoName of child is "Football Wolfman";
-		now BackName of child is "Football Wolfman";
-		now ArmsName of child is "Football Wolfman";
-		now LegsName of child is "Football Wolfman";
-		now AssName of child is "Football Wolfman";
-		now TailName of child is "Football Wolfman";
+		now gestation of Child is a random number from 24 to 48;
+		now HeadName of Child is "Football Wolfman";
+		now TorsoName of Child is "Football Wolfman";
+		now BackName of Child is "Football Wolfman";
+		now ArmsName of Child is "Football Wolfman";
+		now LegsName of Child is "Football Wolfman";
+		now AssName of Child is "Football Wolfman";
+		now TailName of Child is "Football Wolfman";
+		now HeadSpeciesName of Child is "Football Wolfman";
+		now TorsoSpeciesName of Child is "Football Wolfman";
+		now BackSpeciesName of Child is "Football Wolfman";
+		now ArmsSpeciesName of Child is "Football Wolfman";
+		now LegsSpeciesName of Child is "Football Wolfman";
+		now AssSpeciesName of Child is "Football Wolfman";
+		now TailSpeciesName of Child is "Football Wolfman";
 	else if "Chase's Breeder" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a Tiger child?";
@@ -708,14 +734,21 @@ To impregnate with (x - text):
 				say "You choose not to accept the seed.";
 				remove "Chase's Breeder" from feats of Player;
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now HeadName of child is "Tiger";
-		now TorsoName of child is "Tiger";
-		now BackName of child is "Tiger";
-		now ArmsName of child is "Tiger";
-		now LegsName of child is "Tiger";
-		now AssName of child is "Tiger";
-		now TailName of child is "Tiger";
+		now gestation of Child is a random number from 24 to 48;
+		now HeadName of Child is "Tiger";
+		now TorsoName of Child is "Tiger";
+		now BackName of Child is "Tiger";
+		now ArmsName of Child is "Tiger";
+		now LegsName of Child is "Tiger";
+		now AssName of Child is "Tiger";
+		now TailName of Child is "Tiger";
+		now HeadSpeciesName of Child is "Tiger";
+		now TorsoSpeciesName of Child is "Tiger";
+		now BackSpeciesName of Child is "Tiger";
+		now ArmsSpeciesName of Child is "Tiger";
+		now LegsSpeciesName of Child is "Tiger";
+		now AssSpeciesName of Child is "Tiger";
+		now TailSpeciesName of Child is "Tiger";
 	else if "Fang's Mate" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with Fang's child?";
@@ -726,14 +759,21 @@ To impregnate with (x - text):
 				remove "Fang's Mate" from feats of Player;
 				now hunger of Fang is 0;
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now HeadName of child is "Feral Wolf";
-		now TorsoName of child is "Feral Wolf";
-		now BackName of child is "Feral Wolf";
-		now ArmsName of child is "Feral Wolf";
-		now LegsName of child is "Feral Wolf";
-		now AssName of child is "Feral Wolf";
-		now TailName of child is "Feral Wolf";
+		now gestation of Child is a random number from 24 to 48;
+		now HeadName of Child is "Feral Wolf";
+		now TorsoName of Child is "Feral Wolf";
+		now BackName of Child is "Feral Wolf";
+		now ArmsName of Child is "Feral Wolf";
+		now LegsName of Child is "Feral Wolf";
+		now AssName of Child is "Feral Wolf";
+		now TailName of Child is "Feral Wolf";
+		now HeadSpeciesName of Child is "Feral Wolf";
+		now TorsoSpeciesName of Child is "Feral Wolf";
+		now BackSpeciesName of Child is "Feral Wolf";
+		now ArmsSpeciesName of Child is "Feral Wolf";
+		now LegsSpeciesName of Child is "Feral Wolf";
+		now AssSpeciesName of Child is "Feral Wolf";
+		now TailSpeciesName of Child is "Feral Wolf";
 	else if "Chris's Breeder Slut" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";
@@ -743,14 +783,21 @@ To impregnate with (x - text):
 				say "You choose not to accept the seed.";
 				remove "Chris's Breeder Slut" from feats of Player;
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now HeadName of child is "Orc Warrior";
-		now TorsoName of child is "Orc Warrior";
-		now BackName of child is "Orc Warrior";
-		now ArmsName of child is "Orc Warrior";
-		now LegsName of child is "Orc Warrior";
-		now AssName of child is "Orc Warrior";
-		now TailName of child is "Orc Warrior";
+		now gestation of Child is a random number from 24 to 48;
+		now HeadName of Child is "Orc Warrior";
+		now TorsoName of Child is "Orc Warrior";
+		now BackName of Child is "Orc Warrior";
+		now ArmsName of Child is "Orc Warrior";
+		now LegsName of Child is "Orc Warrior";
+		now AssName of Child is "Orc Warrior";
+		now TailName of Child is "Orc Warrior";
+		now HeadSpeciesName of Child is "Orc Warrior";
+		now TorsoSpeciesName of Child is "Orc Warrior";
+		now BackSpeciesName of Child is "Orc Warrior";
+		now ArmsSpeciesName of Child is "Orc Warrior";
+		now LegsSpeciesName of Child is "Orc Warrior";
+		now AssSpeciesName of Child is "Orc Warrior";
+		now TailSpeciesName of Child is "Orc Warrior";
 	else if "Human Carrier" is listed in feats of Player:
 		if "Selective Mother" is listed in feats of Player:
 			say "Do you wish to be impregnated with a human child?";
@@ -760,23 +807,33 @@ To impregnate with (x - text):
 				say "You choose not to accept the seed.";
 				remove "Human Carrier" from feats of Player;
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
-		now HeadName of child is "Human";
-		now TorsoName of child is "Human";
-		now BackName of child is "Human";
-		now ArmsName of child is "Human";
-		now LegsName of child is "Human";
-		now AssName of child is "Human";
-		now TailName of child is "Human";
+		now gestation of Child is a random number from 24 to 48;
+		now HeadName of Child is "Human";
+		now TorsoName of Child is "Human";
+		now BackName of Child is "Human";
+		now ArmsName of Child is "Human";
+		now LegsName of Child is "Human";
+		now AssName of Child is "Human";
+		now TailName of Child is "Human";
+		now HeadSpeciesName of Child is "Human";
+		now TorsoSpeciesName of Child is "Human";
+		now BackSpeciesName of Child is "Human";
+		now ArmsSpeciesName of Child is "Human";
+		now LegsSpeciesName of Child is "Human";
+		now AssSpeciesName of Child is "Human";
+		now TailSpeciesName of Child is "Human";
 	else: [normal pregnancy]
 		if "Selective Mother" is listed in feats of Player:
-			say "Do you wish to be impregnated with a/an [x] child?";
+			if Species Name entry is not "":
+				say "Do you wish to be impregnated with a/an [Species Name entry] child?";
+			else:
+				say "Do you wish to be impregnated with a/an [Name entry] child?";
 			if Player consents:
 				increase score by 0;
 			else:
 				say "You choose not to accept the seed.";
 				stop the action;
-		now gestation of child is a random number from 24 to 48;
+		now gestation of Child is a random number from 24 to 48;
 		[making sure all body parts are available]
 		let Impregnator be a person;
 		if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
@@ -787,6 +844,13 @@ To impregnate with (x - text):
 			now LegsName of Impregnator is BodyName of Player;
 			now AssName of Impregnator is TailName of Player;
 			now TailName of Impregnator is TailName of Player;
+			now HeadSpeciesName of Impregnator is FaceSpeciesName of Player;
+			now TorsoSpeciesName of Impregnator is BodySpeciesName of Player;
+			now BackSpeciesName of Impregnator is BodySpeciesName of Player;
+			now ArmsSpeciesName of Impregnator is BodySpeciesName of Player;
+			now LegsSpeciesName of Impregnator is BodySpeciesName of Player;
+			now AssSpeciesName of Impregnator is TailSpeciesName of Player;
+			now TailSpeciesName of Impregnator is TailSpeciesName of Player;
 		else: [player has all the parts]
 			now HeadName of Impregnator is HeadName of Player;
 			now TorsoName of Impregnator is TorsoName of Player;
@@ -795,51 +859,107 @@ To impregnate with (x - text):
 			now LegsName of Impregnator is LegsName of Player;
 			now AssName of Impregnator is AssName of Player;
 			now TailName of Impregnator is TailName of Player;
+			now HeadSpeciesName of Impregnator is HeadSpeciesName of Player;
+			now TorsoSpeciesName of Impregnator is TorsoSpeciesName of Player;
+			now BackSpeciesName of Impregnator is BackSpeciesName of Player;
+			now ArmsSpeciesName of Impregnator is ArmsSpeciesName of Player;
+			now LegsSpeciesName of Impregnator is LegsSpeciesName of Player;
+			now AssSpeciesName of Impregnator is AssSpeciesName of Player;
+			now TailSpeciesName of Impregnator is TailSpeciesName of Player;
 		if "Breeding True" is listed in feats of Player: [child will always look like the father]
-			now HeadName of child is x;
-			now TorsoName of child is x;
-			now BackName of child is x;
-			now ArmsName of child is x;
-			now LegsName of child is x;
-			now AssName of child is x;
-			now TailName of child is x;
+			now HeadName of Child is x;
+			now TorsoName of Child is x;
+			now BackName of Child is x;
+			now ArmsName of Child is x;
+			now LegsName of Child is x;
+			now AssName of Child is x;
+			now TailName of Child is x;
+			now HeadSpeciesName of Child is Species Name entry;
+			now TorsoSpeciesName of Child is Species Name entry;
+			now BackSpeciesName of Child is Species Name entry;
+			now ArmsSpeciesName of Child is Species Name entry;
+			now LegsSpeciesName of Child is Species Name entry;
+			now AssSpeciesName of Child is Species Name entry;
+			now TailSpeciesName of Child is Species Name entry;
 		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
-			now HeadName of child is HeadName of Impregnator;
-			now TorsoName of child is TorsoName of Impregnator;
-			now BackName of child is BackName of Impregnator;
-			now ArmsName of child is ArmsName of Impregnator;
-			now LegsName of child is LegsName of Impregnator;
-			now AssName of child is AssName of Impregnator;
-			now TailName of child is TailName of Impregnator;
+			now HeadName of Child is HeadName of Impregnator;
+			now TorsoName of Child is TorsoName of Impregnator;
+			now BackName of Child is BackName of Impregnator;
+			now ArmsName of Child is ArmsName of Impregnator;
+			now LegsName of Child is LegsName of Impregnator;
+			now AssName of Child is AssName of Impregnator;
+			now TailName of Child is TailName of Impregnator;
+			now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
+			now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
+			now BackSpeciesName of Child is BackSpeciesName of Impregnator;
+			now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
+			now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
+			now AssSpeciesName of Child is AssSpeciesName of Impregnator;
+			now TailSpeciesName of Child is TailSpeciesName of Impregnator;
 		else: [random choosing]
 			if a random chance of 1 in 2 succeeds:
-				now HeadName of child is x;
+				now HeadName of Child is Name entry;
+				if Species Name entry is not "":
+					now HeadSpeciesName of Child is Species Name entry;
+				else:
+					now HeadSpeciesName of Child is Name entry;
 			else:
-				now HeadName of child is HeadName of Impregnator;
+				now HeadName of Child is HeadName of Impregnator;
+				now HeadSpeciesName of Child is HeadSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now TorsoName of child is x;
+				now TorsoName of Child is Name entry;
+				if Species Name entry is not "":
+					now TorsoSpeciesName of Child is Species Name entry;
+				else:
+					now TorsoSpeciesName of Child is Name entry;
 			else:
-				now TorsoName of child is TorsoName of Impregnator;
+				now TorsoName of Child is TorsoName of Impregnator;
+				now TorsoSpeciesName of Child is TorsoSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now BackName of child is x;
+				now BackName of Child is Name entry;
+				if Species Name entry is not "":
+					now BackSpeciesName of Child is Species Name entry;
+				else:
+					now BackSpeciesName of Child is Name entry;
 			else:
-				now BackName of child is BackName of Impregnator;
+				now BackName of Child is BackName of Impregnator;
+				now BackSpeciesName of Child is BackSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now ArmsName of child is x;
+				now ArmsName of Child is Name entry;
+				if Species Name entry is not "":
+					now ArmsSpeciesName of Child is Species Name entry;
+				else:
+					now ArmsSpeciesName of Child is Name entry;
 			else:
-				now ArmsName of child is ArmsName of Impregnator;
+				now ArmsName of Child is ArmsName of Impregnator;
+				now ArmsSpeciesName of Child is ArmsSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now LegsName of child is x;
+				now LegsName of Child is Name entry;
+				if Species Name entry is not "":
+					now LegsSpeciesName of Child is Species Name entry;
+				else:
+					now LegsSpeciesName of Child is Name entry;
 			else:
-				now LegsName of child is LegsName of Impregnator;
+				now LegsName of Child is LegsName of Impregnator;
+				now LegsSpeciesName of Child is LegsSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now AssName of child is x;
+				now AssName of Child is Name entry;
+				if Species Name entry is not "":
+					now AssSpeciesName of Child is Species Name entry;
+				else:
+					now AssSpeciesName of Child is Name entry;
 			else:
-				now AssName of child is AssName of Impregnator;
+				now AssName of Child is AssName of Impregnator;
+				now AssSpeciesName of Child is AssSpeciesName of Impregnator;
 			if a random chance of 1 in 2 succeeds:
-				now TailName of child is x;
+				now TailName of Child is Name entry;
+				if Species Name entry is not "":
+					now TailSpeciesName of Child is Species Name entry;
+				else:
+					now TailSpeciesName of Child is Name entry;
 			else:
-				now TailName of child is TailName of Impregnator;
+				now TailName of Child is TailName of Impregnator;
+				now TailSpeciesName of Child is TailSpeciesName of Impregnator;
 	if Player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
 		if pregtype is 0, now pregtype is 2; [mpreg]
@@ -956,7 +1076,7 @@ to selfimpregnate:
 			if "Fang's Mate" is listed in feats of Player:
 				remove "Fang's Mate" from feats of Player;
 			stop the action;
-	now gestation of child is a random number from 24 to 48;
+	now gestation of Child is a random number from 24 to 48;
 	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "": [player doesn't have all new type parts]
 		now HeadName of Child is FaceName of Player;
 		now TorsoName of Child is BodyName of Player;

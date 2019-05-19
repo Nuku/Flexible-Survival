@@ -234,10 +234,10 @@ to say wereraptordesc:
 
 
 to say losetowereraptor:
-	if bodyname of Player is "Wereraptor":
+	if BodyName of Player is "Wereraptor":
 		if wrmode is 1:
 			if Player is male:
-				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and grinds her hips down onto yours. Catching the scent of her lust, your excitement grows and your feral nature takes over. You grind your cock up against her, roaring as one as you penetrate her. She rides you rough and hard, her claws digging into you as she rides your stiff cock. The feel of your [cock of Player] shaft sliding into her is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at one another while in the throes of wild, primitive lust until you cry out again, cumming hard to fill her womb with your saurian seed.";
+				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and grinds her hips down onto yours. Catching the scent of her lust, your excitement grows and your feral nature takes over. You grind your cock up against her, roaring as one as you penetrate her. She rides you rough and hard, her claws digging into you as she rides your stiff cock. The feel of your [Cock of Player] shaft sliding into her is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at one another while in the throes of wild, primitive lust until you cry out again, cumming hard to fill her womb with your saurian seed.";
 			else:
 				say "     The other wereraptor, having defeated you, hisses and pounces onto you, knocking you to the ground beneath her. You are momentarily worried that she might maul you with those sharp claws of hers, but she instead releases a triumphant roar and turns around, pressing her hindquarters, and more specifically her dripping snatch, into your face. With the scent of the lustful wereraptor right in front of you, your excitement grows and your feral nature takes over. You bury your nose between her legs and start licking wildly at her pussy, lapping up her heated juices and getting a roar of pleasure from her[if Player is female]. You roar in return as she sets to licking at your juicy cunt in return[end if]. In the throes of her lust, her claws dig into you but you hardly notice, your wild and primitive lust driving you to lick until [if Player is female]you both cum loudly with another hissing roar[else]she cums with another loud, hissing roar[end if].";
 		else:
@@ -262,7 +262,7 @@ to say losetowereraptor:
 to say beatthewereraptor:
 	if wrcurseNermine is 9:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
-	else if bodyname of Player is "Wereraptor" and player is not neuter:
+	else if BodyName of Player is "Wereraptor" and player is not neuter:
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[else]him[end if] instinctively. You bear [if wrmode is 1]her[else]him[end if] to the ground and pin them.";
 		say "     [bold type]Shall you give in to your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		LineBreak;
@@ -272,7 +272,7 @@ to say beatthewereraptor:
 			LineBreak;
 			if wrmode is 1:
 				if Player is male:
-					say "     With the female pinned beneath you, you grind your hips down onto hers, pressing your stiff cock against her rear. She hisses in lustful need and quickly moves into the mating stance with her tail raised and her legs wide. As you sink your [cock size desc of Player] [cock of Player] shaft into her, you both roar in pleasure and begin fucking like wild, primitive beasts. You grip her body tightly and sink your claws into her shoulders as you drive yourself into her again and again as your feral nature takes over. You ride her rough and hard, your pulsing shaft pounding into the sexy saurian's body in a primal need to breed her. The feel of her slick, juicy cunt around your cock is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at her neck as you fuck her until you both cry out again, cumming hard to fill her womb with your saurian seed.";
+					say "     With the female pinned beneath you, you grind your hips down onto hers, pressing your stiff cock against her rear. She hisses in lustful need and quickly moves into the mating stance with her tail raised and her legs wide. As you sink your [cock size desc of Player] [Cock of Player] shaft into her, you both roar in pleasure and begin fucking like wild, primitive beasts. You grip her body tightly and sink your claws into her shoulders as you drive yourself into her again and again as your feral nature takes over. You ride her rough and hard, your pulsing shaft pounding into the sexy saurian's body in a primal need to breed her. The feel of her slick, juicy cunt around your cock is just what your wereraptor body needs to satisfy its lustful desires. You nip and lick at her neck as you fuck her until you both cry out again, cumming hard to fill her womb with your saurian seed.";
 				else:
 					say "     With the female pinned beneath you, you turn around and grind your hips down onto her face, pressing your wet pussy into her face. She starts licking it right away, drawing a hiss of pleasure from you. Not wanting to miss out on such a treat, you bury your own head between her muscled legs and dive your tongue into her snatch. This excites her further and drives her to lick you even more excitedly. You lap up each other's heated juices. You both finally roar in pleasure as your wild and primitive lusts drive you both to lick until you both have cum.";
 			else:
@@ -331,12 +331,13 @@ to say wrvict3:		[69 w/male]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -390,11 +391,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -410,9 +412,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -444,13 +446,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -462,8 +464,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -479,7 +481,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -495,19 +497,19 @@ When Play begins:
 
 Section 3 - The Curse
 
-wrbodyname is a text that varies.
+wrBodyName is a text that varies.
 wrbody is a text that varies.
 wrscalevalue is a number that varies.
 wrbodydesc is a text that varies.
 wrbodytype is a text that varies.
 wrdaycycle is a number that varies.
-wrfacename is a text that varies.
+wrFaceName is a text that varies.
 wrface is a text that varies.
-wrskinname is a text that varies.
+wrSkinName is a text that varies.
 wrskin is a text that varies.
-wrtailname is a text that varies.
+wrTailName is a text that varies.
 wrtail is a text that varies.
-wrcockname is a text that varies.
+wrCockName is a text that varies.
 wrcock is a text that varies.
 wrcurseholdback is a number that varies.
 
@@ -604,7 +606,7 @@ this is the wereraptor curse rule:
 					say "     The power of your saurian transformation rushes through you again, growing back to full strength with the coming of the night. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 					wrcurserestore;
 					say ".";
-				else if bodyname of Player is not "Wereraptor" or player is not pure:
+				else if BodyName of Player is not "Wereraptor" or player is not pure:
 					say "     The power of your saurian transformation rushes through you again, pushing to restore your reptilian form. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 					wrcurserestore;
 					say ".";
@@ -643,7 +645,7 @@ to wrcursesave:
 		increase strength of Player by 2;
 		decrease charisma of Player by 2;
 		decrease intelligence of Player by 2;
-	else if bodyname of Player is not "Wereraptor" or player is not pure:
+	else if BodyName of Player is not "Wereraptor" or player is not pure:
 		say "     The power of your cursed transformation rushes through you again, pushing to restore your reptilian form. You feel a rush of hunger and arousal surging through your system as the lust to feed and fuck fills you again";
 		wrcurserestore;
 		say ".";
@@ -658,23 +660,23 @@ to wrcurserestore:
 			if Name entry is "Wereraptor":
 				now MonsterID is y;
 				break;
-	if skinname of Player is not "Wereraptor":
+	if SkinName of Player is not "Wereraptor":
 		wrskinsave;
 		increase hunger of Player by 1;
 		increase Libido of Player by 1;
-	if facename of Player is not "Wereraptor":
+	if FaceName of Player is not "Wereraptor":
 		wrfacesave;
 		increase hunger of Player by 1;
 		increase Libido of Player by 3;
-	if bodyname of Player is not "Wereraptor":
+	if BodyName of Player is not "Wereraptor":
 		wrbodysave;
 		increase hunger of Player by 2;
 		increase Libido of Player by 3;
-	if tailname of Player is not "Wereraptor":
+	if TailName of Player is not "Wereraptor":
 		wrtailsave;
 		increase hunger of Player by 1;
 		increase Libido of Player by 1;
-	if cockname of Player is not "Wereraptor":
+	if CockName of Player is not "Wereraptor":
 		wrcocksave;
 		increase hunger of Player by 1;
 		increase Libido of Player by 8;
@@ -682,72 +684,72 @@ to wrcurserestore:
 
 to wrbodysave:
 	choose row MonsterID from the Table of Random Critters;
-	now wrbodyname is bodyname of Player;
-	now wrbody is body of Player;
+	now wrBodyName is BodyName of Player;
+	now wrbody is Body of Player;
 	now wrscalevalue is scalevalue of Player;
 	now wrbodydesc is bodydesc of Player;
 	now wrbodytype is bodytype of Player;
 	now wrdaycycle is SleepRhythm of Player;
-	now bodyname of Player is "Wereraptor";
-	now body of Player is body entry;
+	now BodyName of Player is "Wereraptor";
+	now Body of Player is body entry;
 	attributeinfect;
 	say ". Your body contorts painfully as [body change entry]";
 
 to wrfacesave:
 	choose row MonsterID from the Table of Random Critters;
-	now wrfacename is facename of Player;
-	now wrface is face of Player;
-	now facename of Player is "Wereraptor";
-	now face of Player is face entry;
+	now wrFaceName is FaceName of Player;
+	now wrface is Face of Player;
+	now FaceName of Player is "Wereraptor";
+	now Face of Player is face entry;
 	say ". Your face cracks and pops as [face change entry]";
 
 to wrskinsave:
 	choose row MonsterID from the Table of Random Critters;
-	now wrskinname is skinname of Player;
-	now wrskin is skin of Player;
-	now skinname of Player is "Wereraptor";
-	now skin of Player is skin entry;
+	now wrSkinName is SkinName of Player;
+	now wrskin is Skin of Player;
+	now SkinName of Player is "Wereraptor";
+	now Skin of Player is skin entry;
 	say ". Your skin feels tight and raw as [skin change entry]";
 
 to wrtailsave:
 	choose row MonsterID from the Table of Random Critters;
-	now wrtailname is tailname of Player;
+	now wrTailName is TailName of Player;
 	now wrtail is tail of Player;
-	now tailname of Player is "Wereraptor";
+	now TailName of Player is "Wereraptor";
 	now tail of Player is tail entry;
 	say ". Your hindquarters stiffen with a harsh pop as [ass change entry]";
 
 to wrcocksave:
 	choose row MonsterID from the Table of Random Critters;
-	now wrcockname is cockname of Player;
-	now wrcock is cock of Player;
-	now cockname of Player is "Wereraptor";
-	now cock of Player is cock entry;
+	now wrCockName is CockName of Player;
+	now wrcock is Cock of Player;
+	now CockName of Player is "Wereraptor";
+	now Cock of Player is cock entry;
 	if Player is male:
 		say ". Your groin feels a surge of wild power as [cock change entry]";
 	else:
 		say ". You feel a rush of hot excitement from your loins";
 
 to wrcurserecede:
-	if bodyname of Player is "Wereraptor":
-		now bodyname of Player is wrbodyname;
-		now body of Player is wrbody;
+	if BodyName of Player is "Wereraptor":
+		now BodyName of Player is wrBodyName;
+		now Body of Player is wrbody;
 		now scalevalue of Player is wrscalevalue;
 		now bodydesc of Player is wrbodydesc;
 		now bodytype of Player is wrbodytype;
 		now SleepRhythm of Player is wrdaycycle;
-	if facename of Player is "Wereraptor":
-		now facename of Player is wrfacename;
-		now face of Player is wrface;
-	if skinname of Player is "Wereraptor":
-		now skinname of Player is wrskinname;
-		now skin of Player is wrskin;
-	if tailname of Player is "Wereraptor":
-		now tailname of Player is wrtailname;
+	if FaceName of Player is "Wereraptor":
+		now FaceName of Player is wrFaceName;
+		now Face of Player is wrface;
+	if SkinName of Player is "Wereraptor":
+		now SkinName of Player is wrSkinName;
+		now Skin of Player is wrskin;
+	if TailName of Player is "Wereraptor":
+		now TailName of Player is wrTailName;
 		now tail of Player is wrtail;
-	if cockname of Player is "Wereraptor":
-		now cockname of Player is wrcockname;
-		now cock of Player is wrcock;
+	if CockName of Player is "Wereraptor":
+		now CockName of Player is wrCockName;
+		now Cock of Player is wrcock;
 	decrease dexterity of Player by 2;
 	decrease strength of Player by 2;
 	increase charisma of Player by 2;
@@ -768,7 +770,7 @@ to wrcurserampage:
 			else if a random chance of 1 in 3 succeeds:
 				say "You have a brief, hazy image of [one of]eating something raw and bloody[or]tearing wildly into some meat[or]the taste of blood as it runs down your muzzle[or]clawing and slashing at something[purely at random].";
 			follow the turnpass rule;
-			if bodyname of Player is not "Wereraptor" or player is not pure:
+			if BodyName of Player is not "Wereraptor" or player is not pure:
 				say "     During the night, your curse overpowers your body and returns it to your wereraptor form";
 				wrcurserestore;
 		if humanity of Player > 0:
@@ -1002,7 +1004,7 @@ to say wrcurseaccept:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running her taloned hands over your body.";
 		say "     'Excellent! Let us begin so the wereraptors may rise again, new and greater than before.' Saying this, she digs her claws into her own arm, causing her blood to flow down her arm before holding it out to you. 'Come, accept my blood into you. Accept the power of these bones into you. Become the wereraptor!'";
 		say "     With the scent of her blood and her arousal in the air, your excitement builds and you press your [if wrcursestatus is 4]mouth[else]muzzle[end if] to the wound, lapping up the flowing blood and feeling it seep into you. The wereraptor hisses as you drink, speaking too low for you to make out the words. The bones behind you rattle and you'd swear you hear the hiss of words from them as well. You open your body and mind up to the beast, the primitive, the raptor within you and it feels as if something is drawn into you as well as spreading throughout you. Dr. Utah moans as well and you sense somehow that she's undergoing a similar change [if wrcursestatus is 4]as your powerful wereraptor form restores itself, this time stronger than ever[else]though there is no visible difference on either of you[end if].";
-		if bodyname of Player is not "Wereraptor" or player is not pure:
+		if BodyName of Player is not "Wereraptor" or player is not pure:
 			now wrcursestatus is 7;
 			now wrcurseactivity is true;
 			say "     As the power of the raptor infuses you, you change, returning to your true form";
@@ -1016,7 +1018,7 @@ to say wrcurseaccept:
 		say "     Looking down at the bottle of poisonous aconite and the silver knife that makes your skin crawl just to look at it, you reject them. Your wereraptor body knows they are cursed and seek to kill you, not save you. You hurl the bottle fast and far, sending over the balcony to the floor far below. Dr. Utah gives a triumphant, hissing laugh and strides forward, running his taloned hands over your body.";
 		say "     'Excellent! Let us begin so the raptors may rise again, new and greater than before.' Saying this, he digs his claws into his own arm, causing his blood to flow down his arm before holding it out to you. 'Come, accept my blood into you. Accept the power of these bones into you. Become the wereraptor!'";
 		say "     With the scent of his blood and his arousal in the air, your excitement builds and you press your [if wrcursestatus is 4]mouth[else]muzzle[end if] to the wound, lapping up the flowing blood and feeling it seep into you. The wereraptor hisses as you drink, speaking too low for you to make out the words. The bones behind you rattle and you'd swear you hear the hiss of words from them as well. You open your body and mind up to the beast, the primitive, the raptor within you and it feels as if something is drawn into you as well as spreading throughout you. Dr. Utah moans as well and you sense somehow that he's undergoing a similar change [if wrcursestatus is 4]as your powerful wereraptor form restores itself, this time stronger than ever[else]though there is no visible difference on either of you[end if].";
-		if bodyname of Player is not "Wereraptor" or player is not pure:
+		if BodyName of Player is not "Wereraptor" or player is not pure:
 			now wrcursestatus is 7;
 			now wrcurseactivity is true;
 			say "     As the power of the raptor infuses you, you change, returning to your true form";
@@ -1039,7 +1041,7 @@ when play ends:
 		if humanity of Player < 10:
 			say "     As your infection is taking hold and your old self is failing, there is another struggle going on inside you. You can feel something wild and primal briefly struggle for freedom, but it is too old and weak, and soon fades away with an angry hiss at being denied its return.";
 	else if wrcursestatus >= 3 and wrcursestatus <= 6:
-		if bodyname of Player is "Wereraptor":
+		if BodyName of Player is "Wereraptor":
 			if humanity of Player < 10:
 				say "     You succumb to the strange, saurian affliction, much of your mind becomes that of the primitive beast lurking inside you. You grow to live for the wild hunt for food and sex at night, mauling and cursing others. During the day, you revert back to whatever infection may be affecting you at the time, but the true you is only hiding behind it, waiting for nightfall to surprise your prey and strike.";
 			else:
@@ -1050,7 +1052,7 @@ when play ends:
 			else:
 				say "     When rescue comes, you do your best to hide your saurian affliction. It is very difficult and takes a considerable toll on you as you fearfully hold it back each night, remaining in your daytime form. Thankfully, it does seem to understand the need to hide while you're at the military compound, though it doesn't like it. You hear the occasional mumble of anomalies with your testing, but nothing further seems to stem from it. In time, you are released and you make a new life for yourself. After the long stay at the facility, you have gained some ability to restrain your curse and it only rises during the full moon to strike. At these times, you don't hold it back, letting it run free. There are reports of monthly attacks by a lizard creature, but it is never caught as it cannot be tracked down after the hunt.";
 	else if wrcursestatus is 7:
-		if bodyname of Player is "Wereraptor":
+		if BodyName of Player is "Wereraptor":
 			if humanity of Player < 10:
 				say "     As the last vestiges of your humanity are consumed by your wereraptor identity, you return to Dr. Utah and join [if UtahGender is 1]him[else]her[end if] in preparation for the rise of the new saurian people, remaining in the fallen city for a time. You, and others like yourselves, form into [']The Society of the Sickle[']. Training yourselves to gain partial control over your transformation, you are able to slip into society and hide yourselves among them, working in secret to infect others and add new members to your order. Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers.";
 			else:

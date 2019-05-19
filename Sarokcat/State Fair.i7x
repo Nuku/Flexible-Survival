@@ -87,7 +87,7 @@ to say borisquestforcock:
 	else if borisquest is 5:
 		if Player is male:
 			if Christyquest is 0:
-				say "     'Um, sorry friend,' Boris says as he glances down at your [cock of Player] cock. 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking - well, let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way. If things were different.... Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'here is a key to the locker room we use here. There should be a box there marked [']Christy[']. If you bring that back here, we can see about having some real fun,' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
+				say "     'Um, sorry friend,' Boris says as he glances down at your [Cock of Player] cock. 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking - well, let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way. If things were different.... Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'here is a key to the locker room we use here. There should be a box there marked [']Christy[']. If you bring that back here, we can see about having some real fun,' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
 				now Christyquest is 1;
 			else if Christyquest is 1:
 				say "     'Sorry friend,' Boris says with a shrug, 'I still don't swing that way. If you really want to try out my new addition, you can go check out that locker room I told you about.'";
@@ -137,8 +137,8 @@ to say Christy_ending:
 	WaitLineBreak;
 	now Christyquest is 4;
 	now humanity of Player is 0;
-	now body of Player is "nothing";
-	now bodyname of Player is "nothing";
+	now Body of Player is "nothing";
+	now BodyName of Player is "nothing";
 	now scalevalue of Player is 3;
 	now bodydesc of Player is "plump";
 	now bodytype of Player is "[one of]plush[or]leonine[or]costume-like[at random]";

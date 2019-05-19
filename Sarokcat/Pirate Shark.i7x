@@ -44,7 +44,7 @@ To say shark loss:
 			if Player consents:
 				now nopiratesharksex is 0;
 				say "     As it turns to make its escape, you pounce upon it. Managing to grab it by the tail fins as it prepares to dive back into the water, you brace yourself and pull hard. This results in its leap falling short and landing on the ground. With her weak and pinned beneath you, you find yourself eager to take advantage of the situation and drive your throbbing manhood into her slick pussy.";
-				say "     Despite her cool skin, her cunt is delightfully warm and a pleasant hole to fuck[if Cock Length of Player < 10]. You're an easy fit for the creature's cunny, her slick flesh squeezing nicely around your throbbing manhood[else if Cock Length of Player < 20]. She's a bit of a tight fuck thanks to your enlarged manhood, but you're able to work your way into her treasure cave and plunder this pirate's booty[else]. Given your [cock size desc of Player] size, she's a tight fuck, but you're intent of plundering this pirate's booty and press on, stretching her treasure cave wide to take you[end if]. She only struggles weakly at first and even that fades off quickly as her arousal gets the better of her. Soon enough, the herm is pushing back into your thrusts, panting heavily as pre drools from her throbbing cock and her hot juices leak out around your [cock of Player] cock.";
+				say "     Despite her cool skin, her cunt is delightfully warm and a pleasant hole to fuck[if Cock Length of Player < 10]. You're an easy fit for the creature's cunny, her slick flesh squeezing nicely around your throbbing manhood[else if Cock Length of Player < 20]. She's a bit of a tight fuck thanks to your enlarged manhood, but you're able to work your way into her treasure cave and plunder this pirate's booty[else]. Given your [cock size desc of Player] size, she's a tight fuck, but you're intent of plundering this pirate's booty and press on, stretching her treasure cave wide to take you[end if]. She only struggles weakly at first and even that fades off quickly as her arousal gets the better of her. Soon enough, the herm is pushing back into your thrusts, panting heavily as pre drools from her throbbing cock and her hot juices leak out around your [Cock of Player] cock.";
 				say "     Seeing the tough pirate reduced to a slutty wench as you pound away at her gray-skinned ass, you don't hold back. As you're about to reach your peak, she cries out beneath you, spraying her hot load from her throbbing cock and drenching your cock in her juices. This sends you over the edge and you drive deep into her, dumping your [Cum Load Size of Player] load into her briny depths. Once spent, you pull out and give her ass a slap with your cock, laughing that she can go now that you've [']buried your treasure[']. She tries to act tough, but she can't help but blush and finger herself as she staggers into the water and swims away.";
 			else:
 				increase nopiratesharksex by 1;
@@ -54,12 +54,13 @@ To say shark loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Pirate Shark";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -71,7 +72,7 @@ When Play begins:
 	now face entry is "rough shark-like snout, above a mouth filled with sharp jagged shark-like teeth stretching out in an easy grin, giving you a very shark-like"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "long and sleek, its rounded shape perfect for cutting through the water, aided by your long shark-like dorsal fin, and your webbed hands and feet, you feel like you would be a terror in any underwater situation, though moving around on land is slightly awkward"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]shark-like[or]rough pebbled[or]rough gray[at random]"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "You have a long, shark-like tail dragging along the ground behind you, its circular shape narrowing down until it broadens out into a very shark-like set of fins. It is covered in [skin of Player] flesh and drags slightly along the ground behind you with every step, forcing you to lean forward as you walk. You can't help but feel it would be much less awkward if you could just get it in the water."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long, shark-like tail dragging along the ground behind you, its circular shape narrowing down until it broadens out into a very shark-like set of fins. It is covered in [Skin of Player] flesh and drags slightly along the ground behind you with every step, forcing you to lean forward as you walk. You can't help but feel it would be much less awkward if you could just get it in the water."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]prehensile[or]flexible[or]forked[or]shark-like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it presses forward, your nose flattening into thin slits as your mouth erupts with sharp shark-like teeth, gills explode along the side of your neck as your eyes shift slightly and your hair disappears, leaving you with a predatory shark-like appearance"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it seems to twist and change, elongating into a longer, sleeker form better suited for cutting through the water, your hands and feet seem to draw up somewhat closer to the body, and thick webbing spreads between your fingers and toes, you groan as a large shark-like fin forces its way out from your spine, as your body finishes changing you into a form better able to survive in an aquatic environment, and prey upon anything you find there"; [ body change text. format as "Your body feels funny as (your text)." ]
@@ -93,7 +94,7 @@ When Play begins:
 	now Cock Length entry is 8;  [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 3;  [ Size of balls ]
 	now Nipple Count entry is 2;  [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;  [ Size of breasts infection will try to attain ]
+	now Breast Size entry is 5;  [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 8;
@@ -113,11 +114,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -133,9 +135,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -167,13 +169,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -185,8 +187,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -202,7 +204,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -225,7 +227,7 @@ Section 3 - Endings
 
 when play ends:
 	if treasurefound is 1:
-		if bodyname of Player is "Pirate Shark":
+		if BodyName of Player is "Pirate Shark":
 			if humanity of Player < 10:
 				say "     Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead. Your handful of gold and your obvious nose for treasure and booty allows you to attract a large crew of fellow pirate sharks, all of them eager to be in on your next big find. Starting out with this large crew lets you immediately start taking on some of the bigger ships in the area, especially the coast guard ships and transport ships for the siege of the city, their crews soon happily joining you in sharkdom as you travel along the coast. Your own personal treasure increases with every haul, and few dare challenge you over it, such challenges you handily defeat and make examples of the losers. As you take more and more ships, you begin placing the most loyal sharks in charge of them, as you spread out across the ocean, unsatisfied with just this one coast, soon pirates loyal to you are capturing ships all over the world, and sending back small portions of their treasure to the greatest of pirate shark captains, you! Eventually most of the oceans fall under your sway, with nations offering you tribute every time their boats sail in order to have their boats actually reach their destination full of sailors and cargo instead of sharks and empty holds. Life as a pirate is a damn good life you realize, as you and your fellow sharks help you set up your own personal kingdom on the large Caribbean island you basically bought with your plunder. Eventually you retire completely undefeated on your island, starting a brand new pirate legend as the greatest captain of the new pirate age, and are happy to go about making the next generation of pirates with the best members of your crew or other sharks that manage to impress you, your treasure at retirement would make even most nations envious, though your most precious bit of treasure is still the handful of gold coins that you found, that started it all....";
 			else:
@@ -236,7 +238,7 @@ when play ends:
 			else:
 				say "     Escaping the city with your mind intact, you are careful not to mention your newfound gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";
 	else:
-		if bodyname of Player is "Pirate Shark":
+		if BodyName of Player is "Pirate Shark":
 			if humanity of Player < 10:
 				say "     Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead. Soon you run into several other piratical sharks, and working together you manage to overwhelm small ships, moving your way from marina to marina as you convert the ship owners into fellow sharks, employing them as lesser crew members, and gathering a small fleet of lesser boats to transport your loot from place to place. Eventually with several different crews working together you manage to start taking cruise ships, and transport liners, your and your fellow pirates influence spreading throughout the ocean by leaps and bounds as your numbers increase as do your captured ships. While several navies try to find and stop you, your ability to vanish into the waves, only to appear again swarming up the sides of the navies boats, soon makes this a losing proposition for the navies, and nets you several well armed boats as well. Eventually you and your fellow sharks rule the oceans in all but name, and those traveling on them bring you tribute in order to pass unmolested, and you settle down on a small island of your own, with your crew at hand, and proceed to enjoy the leisurely life of a successful pirate, and breed the next generation with the best members of your transformed crew...";
 			else:

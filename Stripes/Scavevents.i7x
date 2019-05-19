@@ -152,13 +152,13 @@ Instead of resolving a Protected Supplies:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 				next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and skinname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and SkinName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and bodyname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and BodyName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and cockname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and CockName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and facename of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and FaceName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
@@ -611,7 +611,7 @@ Instead of resolving a Free Drink:
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of Player is "Satyr" and player is pure and player is male:
+		if BodyName of Player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";

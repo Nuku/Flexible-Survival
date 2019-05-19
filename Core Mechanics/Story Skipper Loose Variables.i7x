@@ -298,26 +298,26 @@ to TextVariableSave:
 			now TextVarValue entry is wrbody;
 		-- "wrbodydesc":
 			now TextVarValue entry is wrbodydesc;
-		-- "wrbodyname":
-			now TextVarValue entry is wrbodyname;
+		-- "wrBodyName":
+			now TextVarValue entry is wrBodyName;
 		-- "wrbodytype":
 			now TextVarValue entry is wrbodytype;
 		-- "wrcock":
 			now TextVarValue entry is wrcock;
-		-- "wrcockname":
-			now TextVarValue entry is wrcockname;
+		-- "wrCockName":
+			now TextVarValue entry is wrCockName;
 		-- "wrface":
 			now TextVarValue entry is wrface;
-		-- "wrfacename":
-			now TextVarValue entry is wrfacename;
+		-- "wrFaceName":
+			now TextVarValue entry is wrFaceName;
 		-- "wrskin":
 			now TextVarValue entry is wrskin;
-		-- "wrskinname":
-			now TextVarValue entry is wrskinname;
+		-- "wrSkinName":
+			now TextVarValue entry is wrSkinName;
 		-- "wrtail":
 			now TextVarValue entry is wrtail;
-		-- "wrtailname":
-			now TextVarValue entry is wrtailname;
+		-- "wrTailName":
+			now TextVarValue entry is wrTailName;
 
 to NumberVariableSave:
 	choose blank row in Table of GameNumbers;
@@ -3961,26 +3961,26 @@ to VariableTextLoad:
 					now wrbody is TextVarValue entry;
 				-- "wrbodydesc":
 					now wrbodydesc is TextVarValue entry;
-				-- "wrbodyname":
-					now wrbodyname is TextVarValue entry;
+				-- "wrBodyName":
+					now wrBodyName is TextVarValue entry;
 				-- "wrbodytype":
 					now wrbodytype is TextVarValue entry;
 				-- "wrcock":
 					now wrcock is TextVarValue entry;
-				-- "wrcockname":
-					now wrcockname is TextVarValue entry;
+				-- "wrCockName":
+					now wrCockName is TextVarValue entry;
 				-- "wrface":
 					now wrface is TextVarValue entry;
-				-- "wrfacename":
-					now wrfacename is TextVarValue entry;
+				-- "wrFaceName":
+					now wrFaceName is TextVarValue entry;
 				-- "wrskin":
 					now wrskin is TextVarValue entry;
-				-- "wrskinname":
-					now wrskinname is TextVarValue entry;
+				-- "wrSkinName":
+					now wrSkinName is TextVarValue entry;
 				-- "wrtail":
 					now wrtail is TextVarValue entry;
-				-- "wrtailname":
-					now wrtailname is TextVarValue entry;
+				-- "wrTailName":
+					now wrTailName is TextVarValue entry;
 			if debugactive is 1:
 				say "DEBUG -> VarName '[TextVarName entry]' restored to '[TextVarValue entry]'.";
 	else:

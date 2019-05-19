@@ -296,11 +296,11 @@ instead of fucking Sheng:
 	else if Loyalty of Sheng is 1:
 		say "     When you vocalize your desires to the tiger he arches a look at you. 'I'm sure you've noticed it in the way I talk but there are certain... warnings I must give you before we engage in intimate relations,' the albino feline says with a careful tone, causing you to become curious. 'I do not treat my partners as equals in the bedroom.' Sheng states bluntly. You ask him what exactly he means by that, a couple different things running through your mind. 'Rightly put, it means while in my bend or under my paws, you are my pet and I treat pets [italic type]far[roman type] more differently than non-pet as you'll see,' the tiger says with a tone that makes something curl inside you. 'Now, if you can handle this warning, or even embrace it, then I'll be happy to take you on as bed partner,' he says, looking you firmly in the eyes, waiting for your decision.";
 		now Loyalty of Sheng is 2;
-		if bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList:
+		if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 			say "     However he then takes a quick look at your body, sighing before speaking up. 'However, I guess for now, you can sit on the thought as we can't exactly do anything with your current body shape.' Sheng says, gesturing in your direction. You give him a rather confused look, asking him what he means. 'Well, first of all, you'll have to do certain tasks during our scenes that your form disallows, so please come back to me when you have only two legs,' the white tiger instructs firmly before returning to his work, allowing you to contemplate his words.";
 		else:
 			say "[ShengSexMenu]";
-	else if bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList:
+	else if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 		say "     Looking at you for a second your master sighs. 'What have you done with yourself pet? I don't mind you changing your looks but...' He says before trailing off and gesturing at your body. 'Please come back to me when you have a different body type, specifically two legs, as I do have you potentially doing things that have need of said limbs,' the white tiger says with a firm instructing tone before returning to his work, leaving you to mull over his words.";
 	else:
 		say "     The white tiger gives you a smirk before gesturing you over. 'Oh, so my little pet wants to please me huh?' Sheng asks with a purr, his tail swishing behind him.";

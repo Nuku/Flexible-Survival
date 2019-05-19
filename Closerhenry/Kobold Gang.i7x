@@ -37,7 +37,7 @@ to say losetokoboldgang:
 		if Player is not male:
 			say "     <Sadly, scenes for a female player surrendering are not yet written for this enemy.>";
 		else:
-			if bodyname of Player is "Kobold" and player is pure:
+			if BodyName of Player is "Kobold" and player is pure:
 				say "     You surrender to the group of kobolds, your submissive instincts too strong to ignore. The leader of the gang orders the others to cease fighting. 'Glad to know you see how things work around here!' he praises, walking toward you with a smirk on his muzzle. The pale blue kobold begins to undress you, making sure to sensually stroke your sensitive body with every deliberate movement. 'Why do you wear these rags? It is much better to show off your body. You have wonderful assets,' he murmurs, giving your pert rear a lecherous squeeze. You dimly realize that your tail is raising on its own accord when a light breeze tickles your rear. You know you should feel embarrassed, you know you should feel some sense of shame, but you can't help but feel pride in the fact that every kobold in the area's eyes are locked on your needy, submissive body, all of them thinking of different ways to use you.";
 				say "     The kobold gently guides you to your knees, running his claws lightly over your frame. The tips of his fingers send tingles of pleasure down your body, fogging your mind further with lust. 'Oh, yes, you turned out nicely. See what happens when you do what you're told? Yes, you're rewarded nicely...' he murmurs, as he positions himself behind you. The kobold brings his muzzle to your rear, and you feel his warm tongue lapping against your ass. His tapered tongue runs against your anus, moving around its outer edges and working its way inward. Your anus clenches, the sensitive nerves quaking in pleasure at the kobold's expert rimjob. His tongue pushes inward, probing your depths, filling you with the warmth of his tongue. His tongue explores inside of you, both teasing and preparing you. You feel the tip of his tongue reach your prostate, causing you to audibly moan in pleasure. The kobold pulls his tongue out, leaving your ass feeling hollow.";
 				say "     The kobold stands, his cock fully exposed from his genital slit. The tip of his cock pokes at your rear entrance, causing you to whine impatiently. He grips your rear, and begins inserting himself into your aching entrance. Your ass easily takes his length, stretching to accommodate him without any discomfort. His cock feels wonderful in you, as if your ass is shaped exactly to take his draconic shaft. Your sensitive nerves alight with pleasure as you are filled, and your clawed hands dig into the ground below you. Another colorful kobold approaches your front, his twitching cock leaking with pre. Your muzzle opens without effort, allowing him to stick his shaft into your waiting mouth. You close your jaw around his cock, allowing the male to thrust into your long muzzle. Being filled from both ends, you quiver in pleasure as you are fucked hard by the kobolds. Every thrust from behind tickles your prostate, and the musky taste of the cock in your mouth is delicious. You run your tongue over the smooth shaft, enjoying the flavor of his pre.";
@@ -59,7 +59,7 @@ to say losetokoboldgang:
 				WaitLineBreak;
 				say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.[movichance]";
 	else:
-		if bodyname of Player is "Kobold" and player is pure:
+		if BodyName of Player is "Kobold" and player is pure:
 			if Player is herm:
 				say "     You are struck down, unable to keep up with all of the little kobolds. You look up, as their blue-scaled leader looks down at you with scorn. 'You shouldn't resist what is natural. You are one of us now, and should act like it,' he states coldly. He looks around to the other kobolds, and waves his hand. 'Have your way with him, everyone,' he commands, as the other kobolds cheer. You gulp at his words, fearing that these impish reptiles intend to violate every part of your body. The kobolds grope and squeeze your curves with lecherous abandon, rubbing their thin hands along your skin, their claws just dull enough to avoid scratching you. While uncomfortable at first, the sensation of being manhandled by all these little creatures begins to grow increasingly enjoyable, and even pleasurable to your battle-battered mind, some small part of you lusting for their contact.";
 				say "     You feel a ticklish warmth caress your pucker. Looking down, you spot the muzzle of a teal-colored kobold dipping between your legs, a mischievous look on his muzzle. He leans in close to nip at your ring before his long, tapering tongue extends, that nimble surface sweeping wetly over the sensitive nerves of your anus. Tender sweeps give way to lustful licking, and before long he's boring that muscle into your depths, colon clenching taut around its spit-slick intruder. Your eyes roll back into your head as that avid creature explores your deepest reaches, probing at your anal lining with ravenous enthusiasm, almost devouring your ass with wanton lasciviousness. You shudder when his focus narrows to your prostate, deftly rubbing and grinding along that gland with practiced precision, eroding your mind with every wanton stroke.";
@@ -180,7 +180,7 @@ to say KoboldGangSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if Player is male and bodyname of Player is "Kobold" and player is pure:
+	if Player is male and BodyName of Player is "Kobold" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the Leader";
 		now sortorder entry is 1;
@@ -241,13 +241,14 @@ to say KoboldGangOrgy:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Kobold"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Kobold Gang";
 	now enemy Name entry is "";
@@ -285,7 +286,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity] [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping] [ Width in inches of female sex the infection will try to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -301,11 +302,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -321,9 +323,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -355,13 +357,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -373,8 +375,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -390,7 +392,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -403,7 +405,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of Player is "Kobold":
+	if BodyName of Player is "Kobold":
 		if humanity of Player < 10:
 			say "You succumb to your instincts, casting off your humanity to the infection. You abandon your clothes, seeking out your kobold brethren. They eagerly welcome you, using your body until you are just another kobold in their ranks. Eventually you forge a strong bond with your kobold family, and learn all of the tricks of the trade. When the military storms in, you all are prepared. Many soldiers enter the red light district, but you and your family ambush them time and time again, trapping the soldiers and breeding them until they are just another set of horny, submissive kobolds. As your family grows, the orgies only grow more frequent. A day doesn't roll by without you and the other lower-tiered kobolds are filled by many other kobolds, but you wouldn't have it any other way.";
 		else:

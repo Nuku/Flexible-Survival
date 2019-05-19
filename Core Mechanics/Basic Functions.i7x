@@ -550,7 +550,7 @@ carry out SSCRAction:
 	say "[SelfStripCrotch]";
 
 Example Use:
-say "     You [SelfStripCrotch], then wrap your hand around your [cock of Player] shaft.";
+say "     You [SelfStripCrotch], then wrap your hand around your [Cock of Player] shaft.";
 ]
 
 to say SelfStripCrotch:

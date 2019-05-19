@@ -22,7 +22,7 @@ to say Wolftaur victory:
 			say "     Your mind fogs with pleasure as you pant and beg underneath the strong beast for him to fill you with his canine sperm and claim your body as his. A plea that doesn't go unanswered for long, as the powerful beast lets out a loud howl above you, its loud notes echoing throughout the zoo as his cock floods your womb with his seed. You lie there panting underneath him as you try to recover from your own orgasm, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually his knot shrinks enough that the large male is able to pull himself off you, his cock slipping out and leaving you feeling sadly empty as you lie there on the zoo path with your legs spread. 'That was a very good bit of fun little bitch,' the wolftaur says as he stares down at you with a lupine grin. 'Why don't you come back again sometime so we can do this again? Who knows, you might even make a worthy mate someday,' the large male beast says as he reaches down to give you one last pet on the head and scratch behind the ears, before loping off into the zoo.[impregchance]";
 			infect "Wolftaur";
 		else:
-			say "     The large wolftaur sends you reeling with one last blow, stepping over you as you sprawl out helplessly on the ground. 'Not much of a bitch for me to play with are you?' the beast asks in a slightly amused tone of voice. 'Still, I suppose that doesn't mean we can't have a bit of fun now that you understand who is dominant around here,' the large male wolftaur says as he reaches down to run his hands over your body, pausing to stroke your cock a few times, and watching your reaction with amusement. 'Nice and eager I see,' the male beast says as he begins to tease and play with your cock, his clawed hands pumping over it and making you groan and writhe on the ground under his dominant touch. The canine beast begins to stroke the inside of your legs with one of his forepaws, even as he pumps your cock in short stiff motions, your precum leaking out onto his furred hands as you pant and whine with submissive need. Finally he rubs the base of your cock one last time, and you are unable to restrain yourself any longer, howling with pleasure as you shoot your seed out onto your [skin of Player] chest.";
+			say "     The large wolftaur sends you reeling with one last blow, stepping over you as you sprawl out helplessly on the ground. 'Not much of a bitch for me to play with are you?' the beast asks in a slightly amused tone of voice. 'Still, I suppose that doesn't mean we can't have a bit of fun now that you understand who is dominant around here,' the large male wolftaur says as he reaches down to run his hands over your body, pausing to stroke your cock a few times, and watching your reaction with amusement. 'Nice and eager I see,' the male beast says as he begins to tease and play with your cock, his clawed hands pumping over it and making you groan and writhe on the ground under his dominant touch. The canine beast begins to stroke the inside of your legs with one of his forepaws, even as he pumps your cock in short stiff motions, your precum leaking out onto his furred hands as you pant and whine with submissive need. Finally he rubs the base of your cock one last time, and you are unable to restrain yourself any longer, howling with pleasure as you shoot your seed out onto your [Skin of Player] chest.";
 			say "     Panting you come down from your orgasm to see the large beast is still standing over you with an amused look on its lupine face, its own stiff cock showing just how much it enjoyed the experience as its thick musk fills your head. Unable to leave the canine beast unsatisfied, you quickly begin to return the favor, stroking and rubbing at his already aroused member, your hands tracing over his powerful knot as he moans above you. Given how aroused the male beast already is, it takes little encouragement from you for his canine cock to spill its seed all over your body as well, his strings of cum mingling with your own as his cock unloads its fertile treasure onto your body. Your mind addled with lust and pleasure, and the powerful musk of the male wolftaur, you lie back down on the grass, enjoying the feeling of his seed mingling with your own as it sinks into your body. The male wolftaur gives you another happy grin as he looks down at your prone from, 'That was a good bit of fun there,' the beast says as he lifts up one of his forelegs to give you a pet on the head. 'We should play again sometime, of course maybe you will be a proper bitch by then, but this works too,' he says in a teasing tone of voice before turning and loping back off into the zoo, leaving you lying there happily covered in cum.";
 			infect "Wolftaur";
 
@@ -61,7 +61,7 @@ To say Wolftaur loss:
 					say "     Quickly getting rid of your gear and clothing, you move into position to sit on the wolftaur's furred underside, then stretch forward to run your hands lengthwise through his luxuriously soft belly fur. The canine beast gives a sensual moan as you touch and stroke him and you can feel his throbbing shaft poke against your tailbone as he stretches a bit. Scooching down his body, you grab his cock and jerk it a few times, then rub your own against it and hold both of them together in one hand. Raising himself up on his elbows, the wolftaur looks down to and complains, 'Hey, leave me alone with that kind of gay shit. You can suck me off, but I'm not gonna- *urk*' Having grabbed his balls pretty tightly to remind the big canine who's in control here, you tell him that he'll do whatever you want and that in fact, you'll fuck his ass now. He starts to growl at that, then yelps as you squeeze harder and make him give in. 'Okay okay, you're the boss.'";
 					say "     Unmoved by your wolfie mumbling 'Why did I have to jump a gay one? Oh shit, oh shit', you get into position between his legs, then put your index finger in your mouth to make it wet and start playing with the wolftaur's ass. Seeing how clenched his pucker is, you decide he needs some distraction and take hold of his shaft, slowly jerking him off while you brush your fingers over his asshole, massaging around it, then press in against it. With an alarmed growl, the wolftaur tries to jerk away from you - futilely, with him on his back and you having a good grip on his dick. Before he can do much more than that or start to fight you, your probing finger finds his prostate and rubs against it, making the scared wolf pant in lust and let his head sink back down on the ground again.";
 					WaitLineBreak;
-					say "     Going at it slowly, you show your canine novice at anal sex a good time with first one, then two fingers until he's relatively relaxed down there and pretty aroused. At that point, you decide that it's time to get your own manhood into action. Pulling your fingers out of the wolftaur's hole, you watch it flex closed again, then set the tip of your [cock of Player] shaft against the wolftaur's pucker and move forward until it yields to your pressure and you thrust into the warm and tight embrace of his body. You slide into the panting canine's ass until your balls touch the base of his tail, then start pulling back and thrusting back in, and soon you're pounding in and out of the wolf creature's tight hole.";
+					say "     Going at it slowly, you show your canine novice at anal sex a good time with first one, then two fingers until he's relatively relaxed down there and pretty aroused. At that point, you decide that it's time to get your own manhood into action. Pulling your fingers out of the wolftaur's hole, you watch it flex closed again, then set the tip of your [Cock of Player] shaft against the wolftaur's pucker and move forward until it yields to your pressure and you thrust into the warm and tight embrace of his body. You slide into the panting canine's ass until your balls touch the base of his tail, then start pulling back and thrusting back in, and soon you're pounding in and out of the wolf creature's tight hole.";
 					say "     Confronted with all kinds of new sensations, it doesn't take all that long until you fucking him drives the wolftaur over the edge and he starts to cum, squirting long strings of cum from his knotted cock to land all over his furred underside and some even up to his chest. The twitches and convulsions of each shot run through his whole body, including the muscles in his ass, making an already quite tight hole grip and squeeze your shaft until you join him in orgasm, with a full load of your seed being blasted into this sexy furball's butt.";
 					WaitLineBreak;
 					say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually you pull out of his hole and watch it flex closed before too much of your cum can run out of it, then stand up on shaky legs. While you're collecting your stuff, the wolftaur says, 'That was... something else. Can't remember when I last came that much. But... no, I didn't like it. You made me. It's not me. I'm a real man, not a gay sissy! You made me...' looking up at you with a somewhat sullen expression. Giving him a meaningful grin and a wink, you walk off, leaving him to think up excuses for himself why he came from getting fucked in the butt.";
@@ -99,12 +99,13 @@ to say WolftaurRidingAss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Wolftaur";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -138,7 +139,7 @@ When Play begins:
 	now Cock Length entry is 0;            [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 0;             [ Size of balls ]
 	now Nipple Count entry is 6;                [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 5;            [ Size of breasts infection will try to attain ]
+	now Breast Size entry is 5;            [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;       [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1;                  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 14;
@@ -158,11 +159,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -178,9 +180,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -212,13 +214,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -230,8 +232,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -247,7 +249,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -287,7 +289,7 @@ this is the wtaurpounce rule:		[double-damage pouncing]
 Section 4 - Endings
 
 when play ends:
-	if bodyname of Player is "Wolftaur":
+	if BodyName of Player is "Wolftaur":
 		if level of Lindsey > 3:
 			if humanity of Player < 10:
 				if Player is female:

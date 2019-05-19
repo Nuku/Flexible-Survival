@@ -174,7 +174,7 @@ Instead of conversing the Doctor Moffatt:
 
 to say hypnoPathDialogue:
 	if level of Doctor Moffatt is 5:
-		say "     'Tut tut,' the doctor interrupts you as you open your mouth. '[italic type]Clothes off and on your knees on the sofa. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing your [bodyname of Player] ass at her.";
+		say "     'Tut tut,' the doctor interrupts you as you open your mouth. '[italic type]Clothes off and on your knees on the sofa. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing your [BodyName of Player] ass at her.";
 		say "[MoffatHypnosisFullSex]";
 	else if level of Doctor Moffatt is 3 or level of Doctor Moffatt is 4:
 		say "     'Ah, my sweet little toy.' Upon hearing Doctor Moffat's expression, your legs start to feel weak, and you are compelled to get on your knees. 'Are you here for another [bold type]hypnosis[roman type] session? Or perhaps you are simply here to let your mistress get some time off? Anyway...'";
@@ -226,13 +226,13 @@ to say skunkPathDialogue:
 		say "     As this is going on, you try your best to answer the skunk woman's questions. She asks stuff like 'Are you feeling more aroused now?' and 'Do you feel sexier now?' and 'Would you say you feel more open to sex with those transformed?' In the hormonal rush of your transforming body, you can't help but agree with her questions.";
 		say "     With the changes continuing, but this time in an upward direction, your waist grows fuller. You'd not be called fat, but there's a little extra padding there to flow into those wide hips. Continuing up, your upper body again shifts to more normal proportions for your torso, shoulder and arms, again making your caboose stand out. They almost seem slender in comparison, but are quite lovely and would suit a model or actress, which you say to Dr. Moffatt. She continues to take note of your answers, only pausing on occasion to rub her cock and balls or tweak a nipple.";
 		wait for any key;
-		now bodyname of Player is "Hyperskunk";
+		now BodyName of Player is "Hyperskunk";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if Name entry is "Hyperskunk":
 				now MonsterID is y;
 				break;
-		now body of Player is body entry;
+		now Body of Player is body entry;
 		attributeinfect;
 		let cockstemp be Cock Count of Player;
 		let cocklengthtemp be Cock Length of Player;
@@ -308,7 +308,7 @@ to say sexwithDrMoffattHypnoPath:
 		if lastfuck of Doctor Moffatt - turns < 4:
 			say "     'Again? Oh my, I hope that I did not break you or anything. Come back a little later, [italic type]my sweet little toy[roman type], I am not in the mood yet.'";
 		else:
-			say "     'Great timing,' the doctor gives you a predatory smile. 'I was starting to miss you, my sweet little toy. [italic type]Clothes off, on the couch. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing her your [bodyname of Player] ass at her.";
+			say "     'Great timing,' the doctor gives you a predatory smile. 'I was starting to miss you, my sweet little toy. [italic type]Clothes off, on the couch. Now.[roman type]' Your body enters in a trance-like state, and before you know it, you are on Doctor Moffat's leather sofa, showing her your [BodyName of Player] ass at her.";
 			say "[MoffatHypnosisFullSex]";
 	else if level of Doctor Moffatt is 3:
 		if lastfuck of Doctor Moffatt - turns < 4:
@@ -364,9 +364,9 @@ to say sexwithDrMoffattSkunkPath:
 			let cuntstemp be Cunt Count of Player;
 			let cuntlengthtemp be Cunt Depth of Player;
 			let cuntwidthtemp be Cunt Tightness of Player;
-			if bodyname of Player is not "Hyperskunk":
-				now bodyname of Player is "Hyperskunk";
-				now body of Player is body entry;
+			if BodyName of Player is not "Hyperskunk":
+				now BodyName of Player is "Hyperskunk";
+				now Body of Player is body entry;
 				attributeinfect;
 				say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
 				follow the sex change rule;
@@ -397,9 +397,9 @@ to say sexwithDrMoffattSkunkPath:
 			let cuntstemp be Cunt Count of Player;
 			let cuntlengthtemp be Cunt Depth of Player;
 			let cuntwidthtemp be Cunt Tightness of Player;
-			if bodyname of Player is not "Hyperskunk":
-				now bodyname of Player is "Hyperskunk";
-				now body of Player is body entry;
+			if BodyName of Player is not "Hyperskunk":
+				now BodyName of Player is "Hyperskunk";
+				now Body of Player is body entry;
 				attributeinfect;
 				say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
 				follow the sex change rule;
@@ -445,9 +445,9 @@ to say sexwithDrMoffattSkunkPath:
 				let cuntstemp be Cunt Count of Player;
 				let cuntlengthtemp be Cunt Depth of Player;
 				let cuntwidthtemp be Cunt Tightness of Player;
-				if bodyname of Player is not "Hyperskunk":
-					now bodyname of Player is "Hyperskunk";
-					now body of Player is body entry;
+				if BodyName of Player is not "Hyperskunk":
+					now BodyName of Player is "Hyperskunk";
+					now Body of Player is body entry;
 					attributeinfect;
 					say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
 					follow the sex change rule;
@@ -477,9 +477,9 @@ to say sexwithDrMoffattSkunkPath:
 				let cuntstemp be Cunt Count of Player;
 				let cuntlengthtemp be Cunt Depth of Player;
 				let cuntwidthtemp be Cunt Tightness of Player;
-				if bodyname of Player is not "Hyperskunk":
-					now bodyname of Player is "Hyperskunk";
-					now body of Player is body entry;
+				if BodyName of Player is not "Hyperskunk":
+					now BodyName of Player is "Hyperskunk";
+					now Body of Player is body entry;
 					attributeinfect;
 					say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
 					follow the sex change rule;
@@ -499,7 +499,7 @@ to say sexwithDrMoffattSkunkPath:
 		if lastfuck of Doctor Moffatt - turns < 8:
 			say "     'You are back for more a little earlier than expected,' she says, making some notes. 'But as I stated, I believe we should wait at least a day between your sessions, even now that you've moved past the preliminary portion and are now into the meat of it.' She lets a paw glide over her cock with a grin.";
 		else:
-			if bodyname of Player is not "Hyperskunk":
+			if BodyName of Player is not "Hyperskunk":
 				say "     She slides her fluffy tail across your [bodytype of Player] body. 'Hmmm... it seems you've gone and lost that sexy skunk body of yours while out having some fun. But don't worry, I'll be happy to help you with that once we're through with our session.' She runs her paw along your side before pushing you towards the couch.";
 			else if the player is pure:
 				say "     She smiles as she looks you over appreciatively. 'I must say - you're looking quite the sexy beast. You're certainly best suited to be a beautiful, voluptuous skunk,' she says with a sexy purr in her voice while running her paws over your chest. 'Let's get your session started so I can show you just how much I like the new look.'";
@@ -509,7 +509,7 @@ to say sexwithDrMoffattSkunkPath:
 				increase Libido of Player by 2;
 				SanBoost 5;
 			else:
-				say "[one of]. 'Now tell me about some of these creatures you've been seeing. How has their appearance been affecting you? What features about them spark your interest?' she asks, enjoying your description of those sexy beasts.[or]. 'Let's talk some more about these creatures you've been seeing. Are there any you particularly enjoy running into? What about them makes them so special?' she asks, nodding as she notes down your responses while her own cock twitches[or]. 'And what about these others you see out in the city? Which have been exciting you of most of late?'[or]. 'Have you been helping others out in the city and making new friends? It's important for you to make friends. Difficult times are easier to get through with friends to help you out.' While this sounds like normal psychologist talk, the lewd way her cock throbs makes it pretty clear how she thinks you and your friends in the city should help each other out[or]. 'And what do you find sexy now that you didn't before the outbreak? What have your sexual fantasies and desires been like over the last few days? Do you remember how you would have reacted to that before changing?' she asks. And while you have trouble remembering what you may have been like this all started, how could you not have lusted for all the sexy things you see around you? She smiles and nods at your responses, making more notes[or]. 'Now tell me about your new, sexy [bodytype of Player] body. What do you like about it the most?' she asks, her cock throbbing as you describe how your new body turns you on and what feels best about it[or][if ( player is herm and a random chance of 1 in 2 succeeds ) or ( player is puremale )]. 'Now tell me about this [cock of Player] cock of yours. Have you been wanting to have intercourse with the creatures you've been seeing with it? Which ones in particular get a rise out of you?' she asks, stroking her heavy balls as you start listing off the people and things you'd like to fuck[else if Player is female]. 'Now tell me about that [cunt size desc of Player] pussy of yours. How often have you been wanting intercourse lately? Are there any people you've met or creatures you've seen you'd like to have stuff that juicy hole of yours?' You can't help but start fingering yourself as you list off several well-hung cocks you've seen lately all while the skunk strokes her own twitching penis[else]. 'And how have you been responding to your sexual desires while being a genderless individual? What gender do you want to try being next?' she asks with interest, playing with her own nipples as she listens to your response[end if][in random order]";
+				say "[one of]. 'Now tell me about some of these creatures you've been seeing. How has their appearance been affecting you? What features about them spark your interest?' she asks, enjoying your description of those sexy beasts.[or]. 'Let's talk some more about these creatures you've been seeing. Are there any you particularly enjoy running into? What about them makes them so special?' she asks, nodding as she notes down your responses while her own cock twitches[or]. 'And what about these others you see out in the city? Which have been exciting you of most of late?'[or]. 'Have you been helping others out in the city and making new friends? It's important for you to make friends. Difficult times are easier to get through with friends to help you out.' While this sounds like normal psychologist talk, the lewd way her cock throbs makes it pretty clear how she thinks you and your friends in the city should help each other out[or]. 'And what do you find sexy now that you didn't before the outbreak? What have your sexual fantasies and desires been like over the last few days? Do you remember how you would have reacted to that before changing?' she asks. And while you have trouble remembering what you may have been like this all started, how could you not have lusted for all the sexy things you see around you? She smiles and nods at your responses, making more notes[or]. 'Now tell me about your new, sexy [bodytype of Player] body. What do you like about it the most?' she asks, her cock throbbing as you describe how your new body turns you on and what feels best about it[or][if ( player is herm and a random chance of 1 in 2 succeeds ) or ( player is puremale )]. 'Now tell me about this [Cock of Player] cock of yours. Have you been wanting to have intercourse with the creatures you've been seeing with it? Which ones in particular get a rise out of you?' she asks, stroking her heavy balls as you start listing off the people and things you'd like to fuck[else if Player is female]. 'Now tell me about that [cunt size desc of Player] pussy of yours. How often have you been wanting intercourse lately? Are there any people you've met or creatures you've seen you'd like to have stuff that juicy hole of yours?' You can't help but start fingering yourself as you list off several well-hung cocks you've seen lately all while the skunk strokes her own twitching penis[else]. 'And how have you been responding to your sexual desires while being a genderless individual? What gender do you want to try being next?' she asks with interest, playing with her own nipples as she listens to your response[end if][in random order]";
 			say ". The session goes on for a while with her asking more questions which make you increasingly aroused as you talk about all the sexy things you've been seeing and doing, enjoying how the skunk strokes and caresses herself, clearly turned on by hearing all your sexual desires. You hold nothing back from your shrink, also telling her how she turns you on and how much you want her as well.";
 			if HP of Doctor Moffatt is 8:		[sex]
 				say "     After some time, she calls an abrupt end to the session, tossing aside the notepad. From the way her cock throbs and dribbles pre, it seems she'd rather skip her remaining questions and get on to the in-depth part of your session. Joining you on the couch, she spreads your legs and gets her cock lined up with your [if Player is female]pussy[else]ass[end if]. Looking at the size of it, you can't help but gulp a little, but you are so worked up that your eager for her to try mounting you. You nod to her and reach down to grab her cock, stroking it forwards as a further sign of your willingness. The well-hung skunk grins and eases her wide hips forward, pressing her large, dripping glans against your wanton hole, slowly spreading you open. You moan loudly as her [one of]giant cock[or]meaty missile[or]hyper penis[or]super-sized cock[at random] slowly sinks into you. There is some initial discomfort, but so much more pleasure as well, all your earlier sessions making your body crave this.";
@@ -526,7 +526,7 @@ to say sexwithDrMoffattSkunkPath:
 					if Cock Length of Player >= 24:
 						say "     'Mmm... your cock is coming along nicely. It's such a fine size for such a sexy skunk,' she moans before slowly sinking her muzzle down over it. Your [cock size desc of Player] shaft throbs, spurting precum into her mouth and down her throat as she stretches open to accommodate your big cock in return. Soon you're both stuffed with meat, giving blow jobs to your huge cocks and loving it[if Player is female]. The curvaceous doctor slides a paw under your balls to stroke and tease your pussy, fingering you even as she tries to suck you off[else]. The curvaceous doctor rolls your balls around in her paw, stroking your cum-filled orbs as she tries to suck you off[end if]. Clearly she's had quite a bit of practice of late and soon you can no longer hold back, cumming with a muffled moan around your own meaty mouthful. This is enough to set her off, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
 					else if Player is male:
-						say "     'Mmm... hopefully we can get some more meat on your meat soon,' she says as she runs her tongue along your [cock size desc of Player] shaft before sinking her muzzle down over it. Your [cock of Player] cock throbs, spurting precum into her mouth to give her a taste. Her tongue starts to play over your sensitive member as she sucks your cock, making you release a muffled moan of pleasure and remind you to get back to doing the same to her much larger cock[if Player is female]. The curvaceous doctor slides a paw under your balls to stroke and tease your pussy, fingering you even as she tries to suck you off[else]. The curvaceous doctor rolls your balls around in her paw, stroking your cum-filled orbs as she tries to suck you off[end if]. Clearly she's had quite a bit of practice of late and soon you can no longer hold back, cumming with a muffled moan around your own meaty mouthful. This is enough to set her off, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
+						say "     'Mmm... hopefully we can get some more meat on your meat soon,' she says as she runs her tongue along your [cock size desc of Player] shaft before sinking her muzzle down over it. Your [Cock of Player] cock throbs, spurting precum into her mouth to give her a taste. Her tongue starts to play over your sensitive member as she sucks your cock, making you release a muffled moan of pleasure and remind you to get back to doing the same to her much larger cock[if Player is female]. The curvaceous doctor slides a paw under your balls to stroke and tease your pussy, fingering you even as she tries to suck you off[else]. The curvaceous doctor rolls your balls around in her paw, stroking your cum-filled orbs as she tries to suck you off[end if]. Clearly she's had quite a bit of practice of late and soon you can no longer hold back, cumming with a muffled moan around your own meaty mouthful. This is enough to set her off, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
 					else:
 						say "     'Mmm... such a juicy, needy pussy you have here,' she purrs as she gives you another long lick over your sensitive folds[one of]. 'Hot and ready for a nice big skunk cock, I'd say. In my professional opinion,' she adds, giving you another lick that makes you release muffled moan around your mouthful of meat[or]. 'Perhaps I should stuff you full of skunk kits next time. Would you like that?' she purrs, giving you another lick while you try your best to nod with her cock stuffed in your mouth[or]. 'Does my horny patient want her doctor to fill her pussy next time?' she asks, giving you another long lick while you try your best to nod with her cock stuffed in your mouth[or]. 'Perhaps I'll give you your next dose in this hot and ready cunt of yours,' she moans, giving you another lick that makes you release muffled moan around your mouthful of meat[at random]. As the skunk continues to thrust down into your face, her fingers and tongue lavish attention upon your [cunt size desc of Player] pussy. She [if Cunt Tightness of Player > 5]slides a pair of fingers, then a third, and then her whole dainty paw into your wide pussy. Again and again she stuffs you nicely with her gloved fingers from one end and her pulsing cock from the other[else if Cunt Tightness of Player > 2]inserts a second finger into you and then a third into your ample pussy. Again and again, she stuffs you nicely with her gloved fingers from one end and her pulsing cock from the other[else]. She inserts a second finger into your wet pussy. Again and again, she stuffs you nicely with her gloved fingers from one end and her pulsing cock from the other[end if]. As her paw and muzzle work at your pussy, lapping up your juices, clearly having quite a bit of practice of late. She keeps pounding your face as your tongue does its best to please her in return. Eventually this all becomes too much for her and she cums hard, sending blast after blast of mephit cum down your throat. And while the first few shots are enough to make you feel full, there's plenty more to come after that and it doesn't end until you're left bloated and full like a cum-filled balloon[if Ball Size of Player >= 6]. Stuffed quite full herself, the doctor can only slowly roll herself off of you and onto the floor. You both struggle to get up, feeling so delightfully full you can hardly move[else]. The doctor slowly slides herself off of you and onto the floor, panting as she recovers from the powerful orgasm[end if].";
 				now HP of Doctor Moffatt is 8; [sex next time]
@@ -537,9 +537,9 @@ to say sexwithDrMoffattSkunkPath:
 			let cuntstemp be Cunt Count of Player;
 			let cuntlengthtemp be Cunt Depth of Player;
 			let cuntwidthtemp be Cunt Tightness of Player;
-			if bodyname of Player is not "Hyperskunk":
-				now bodyname of Player is "Hyperskunk";
-				now body of Player is body entry;
+			if BodyName of Player is not "Hyperskunk":
+				now BodyName of Player is "Hyperskunk";
+				now Body of Player is body entry;
 				attributeinfect;
 				say "     You moan loudly, letting your hands roam over yourself as your body [body change entry].";
 				follow the sex change rule;
@@ -563,7 +563,7 @@ to say MoffatHypnosisFullSex:
 		say "     Moffatt purrs from your relentless efforts. She amuses herself by ordering you to go 'faster' and 'slower' from time to time. Eventually, she orders you to stop, and pulls her cock out of your mouth. Strands of saliva and pre crash on the ground. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
 	else:
 		say "She puts one foot on the couch and guide your face to her ballsack. 'Lick.' As soon as you hear the single-worded order, you bury your face into the skunk's scrotum and start licking without pause. In an oblivious frenzy, you make your tongue travel up and down the doctor's crack, focusing on each of her huge balls when she gives you the order. Your hazy mind loses the sense of time, and your service goes on for what feels hours, but only lasts for a dozen minutes.";
-		say "     Moffatt purrs from your relentless efforts. Eventually, she orders you to stop, and puts her foot off the couch. Her cock is rock-hard and rests on your [face of Player] head, wetting the top with her pre, which makes her giggle at the sight. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
+		say "     Moffatt purrs from your relentless efforts. Eventually, she orders you to stop, and puts her foot off the couch. Her cock is rock-hard and rests on your [Face of Player] head, wetting the top with her pre, which makes her giggle at the sight. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
 	[Priority order: pussy, cock, ass]
 	[Pussy, default for females and herms if anal level is 1]
 	if Player is female and (a random chance of 1 in 2 succeeds or anallevel is 1):
@@ -572,7 +572,7 @@ to say MoffatHypnosisFullSex:
 	[Cock, default for males if anal level is 1]
 	else if Player is male and (a random chance of 1 in 2 succeeds or anallevel is 1):
 		say "     Doctor Moffatt walks around you, and snaps her fingers. 'Turn'. You instantly lay on your back on the couch, exposing your erect cock for her, one of your hands relentlessly pumping it. 'Such a good boy. I did not even have to order you to prepare yourself this time.' She softly guides your fingers off your dick, and straddles your pelvis. Trapped in the hypnosis, you simply stare at the ceiling, your penis squirming in expectation. Moffatt wastes no time slamming her ass down on your shaft. She accommodates your [cock size desc of Player] easily. 'Hnnn. Yesss,' she purrs, massaging her belly before stroking her cock, and rocking on your own shaft. Slap, slap, slap. Each time she bottoms out, a small electric shock runs through your spine. Eventually, as you are about to cum, the trance begins to wear off, and your consciousness suddenly realizes where you are and what is happening. The sensory backlash has you cum hard.";
-		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her anal muscles, she strokes her cock with fast, powerful strokes until it sprays fresh cum all over your [bodyname of Player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.";
+		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her anal muscles, she strokes her cock with fast, powerful strokes until it sprays fresh cum all over your [BodyName of Player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.";
 	[Ass]
 	else:
 		say "     Doctor Moffatt walks around you, and positions herself behind you. 'Such a good toy. I did not even have to order you to prepare yourself this time.' She softly guides your right hand fingers out of your ass, and put your hand back on the sofa. Trapped in the hypnosis, you simply stare in front of you, your ass quivering from the sudden removal of your digits. They are quickly replaced by the doctor's cock. It pushes inside you, stretching you nice and good until she bottoms out. 'Hnnn. Yesss.' Moffatt begins to pump her hips against your butt. Slap, slap, slap. Each time her balls slam into your groin, a small electric shock runs through your spine. Eventually, as you are about to cum, the trance begins to wear off, and your consciousness suddenly realizes where you are and what is happening. The sensory backlash has you cum hard.";
@@ -586,7 +586,7 @@ to say MoffatHypnosisPartialSex:
 		say "     Moffatt purrs from your relentless efforts. She amuses herself by ordering you to go 'faster' and 'slower' from time to time, adding the keyword if you show hesitation. Eventually, she orders you to stop, and pulls her cock out of your mouth. Strands of saliva and pre crash on the ground. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
 	else:
 		say "She puts one foot on the couch and guide your face to her ballsack. 'Lick.' You muster all your strength to not obey the command, despite the growing desire to plunge your head between these furry thighs of hers. 'Lick, my dear toy.' As soon as you hear the keyword, you bury your face into the skunk's scrotum and start licking, without pause. Powerless to restrain yourself, you make your tongue travel up and down the doctor's crack, focusing on each of her balls each time she gives the order, adding the keyword to her command if necessary. Your involuntary service goes on for what feels hours, but only lasts for a dozen minutes.";
-		say "     Moffatt purrs from your relentless efforts. Eventually, she orders you to stop, and puts her foot off the couch. Her cock is rock-hard and rests on your [face of Player] head, wetting the top with her pre, which makes her giggle at the sight. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
+		say "     Moffatt purrs from your relentless efforts. Eventually, she orders you to stop, and puts her foot off the couch. Her cock is rock-hard and rests on your [Face of Player] head, wetting the top with her pre, which makes her giggle at the sight. 'Good toy,' she says while petting your head. 'Time to use the other end.'";
 	[Priority order: pussy, cock, ass]
 	[Pussy, default for females and herms if anal level is 1]
 	if Player is female and (a random chance of 1 in 2 succeeds or anallevel is 1):
@@ -595,7 +595,7 @@ to say MoffatHypnosisPartialSex:
 	[Cock, default for males if anal level is 1]
 	else if Player is male and (a random chance of 1 in 2 succeeds or anallevel is 1):
 		say "     Doctor Moffatt walks around you, and snaps her fingers. 'Turn'. You grit your teeth, this time trying not to move. 'Turn, my sweet toy,' she says, and before you realize it, you are on your back, exposing your erect cock for her, one of your hands relentlessly pumping it. 'Such a good boy. I did not even have to order you to prepare yourself this time.' Taken aback and confused as to when you had started to masturbate yourself, you fail to react when the skunk psychiatrist softly guides your fingers off your dick, and straddles your pelvis. Heavily paralyzeed, you can only stare in distress at the doctor, as she wastes no time slamming her ass down on your shaft. She accommodates your [cock size desc of Player] easily. 'Hnnn. Yesss,' she purrs, massaging her belly before stroking her cock, and rocking on your own shaft. Slap, slap, slap. Each time she bottoms out, a small electric shock runs through your spine. Eventually, as you are about to cum, the transe begins to wear off, and your limbs are able to move on their own again. But then, a flow of sensorial pleasure rushes your brain and has you cum hard.";
-		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her anal muscles, she faps her cock with fast, powerful strokes until it sprays fresh cum all over your [bodyname of Player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.";
+		say "     You let out a long, loud bellow as your fists clench the leathery furniture, and your empty your balls into the good doctor in a succession of long, thick ropes of sperm. Doctor Moffatt cums not long after, and while she squeezes your over-sensitive cock with her anal muscles, she faps her cock with fast, powerful strokes until it sprays fresh cum all over your [BodyName of Player] body, up to your face and into your open mouth. You hear her raspy pants behind you as she slides off you slowly, letting her deflating cock flop along your stomach.";
 	[Ass]
 	else:
 		say "     Doctor Moffatt walks around you, and positions herself behind you. 'Such a good girl. I did not even have to order you to prepare yourself this time.' To your greatest shame, you realize that you had started to finger yourself, at some point. She slowly guides your right hand fingers out of your ass, and put your hand back on the sofa. Your entire body shudder, trying to break out from the paralysis, but you are only able to look behind you, as you watch Moffatt line up her cock with your main orifice. The thick shaft pushes inside you, stretching you nice and good until she bottoms out. 'Hnnn. Yesss.' You let a long moan escape your lips as well. Moffatt begins to pump her hips against your butt. Slap, slap, slap. Each time her balls slam into your groin, a small electric shock runs through your spine. Eventually, as you are about to cum, the transe begins to wear off, and your limbs are able to move on their own again. But then, a flow of sensorial pleasure rushes your brain and has you cum hard.";
@@ -634,7 +634,7 @@ an everyturn rule:
 		if skunkbeaststatus is 1 or jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 			say "     Something about your recent changes has affected you. Thoughts of the curvy skunk doctor have stopped filling your mind.";
 			now HP of Doctor Moffatt is 97;
-		else if bodyname of Player is "Hyperskunk" and player is not pure:
+		else if BodyName of Player is "Hyperskunk" and player is not pure:
 			say "     You moan softly as shivers of delight run through your mephit body. Your paws move up to your [if Breast Size of Player > 0]breasts and tease your nipples[else]nipples[end if], pinching and tweaking them. Soon they respond by leaking milk that dribbles down your [one of][bodydesc of Player][or][bodytype of Player][purely at random] body. You are left panting with pleasure as you lick the traces of milk from your dainty fingers even as you feel the milk starting to take effect.";
 			increase Libido of Player by 10;
 			if Libido of Player > 100, now Libido of Player is 100;

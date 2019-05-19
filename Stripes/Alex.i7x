@@ -290,17 +290,17 @@ to say alexsexytimes1:
 	say "     With a grin, Alex slides an arm around your waist and leads you off to his bedroom. This room, like the rest of his condo, is tastefully decorated with modern furnishings. There are several candles around the room, as well as a camping lantern to provide light in the evenings. His bed is quite large and covered in [one of]red[or]blue[or]turquoise[or]crimson[or]aqua[or]scarlet[at random] satin sheets today. He kisses you softly as he lowers you onto the soft sheets, intent on repaying you for all your help, as well as dealing with his pent up arousal from being up here all alone. His hands run across your body, helping you out of any remaining clothes. Once you're naked and comfortable on his bed, he slowly strips for you, taking off his suit and baring his body to you. He s[if alexbrunch is 0]eems a little embarrassed by showing his changed body to[else]hows his changing body to you proudly, having grown much more comfortable with it and with[end if] you.";
 	say "     Aside from his ears, nose and muzzle, you can see that he's softly-furred and ferret-like from his [if alexbrunch is 0]thighs[else if alexbrunch is 1]waist[else if alexbrunch is 2]chest[else if alexbrunch is 3]shoulders[end if] down to his feet, which are a little paw-like. His fur has a two-tone tan coloration. His cock, poking from a tan-furred sheath, is slender and has a strangely curved tip. He runs his fingers over it slowly as he climbs onto the bed to join you, stroking himself towards full hardness[alexbodyreset].";
 	[WaitLineBreak]
-	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek. Soon he's moving down to your neck, licking and nibbling as he softly chirrs. His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [bodyname of Player] body as it goes slowly lower and lower. His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
+	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek. Soon he's moving down to your neck, licking and nibbling as he softly chirrs. His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [BodyName of Player] body as it goes slowly lower and lower. His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
 	if Player is herm:		[HERM]
 		say "     The ferret runs his fingers over your cock[if Cock Count of Player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of Player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you.";
 		say "     After tending to your male genitals, he nuzzles under your balls to give your pussy some attention. The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal.";
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [Ball Size Adjective of Player] [Balls] to slip a finger into your pussy while the other strokes his animalistic member.";
 		[WaitLineBreak]
-		say "     His nimble fingers and artful muzzle tease your [cockname of Player] shaft and [cunt size desc of Player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
+		say "     His nimble fingers and artful muzzle tease your [CockName of Player] shaft and [cunt size desc of Player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else if Player is male:				[MALE]
-		say "     The ferret runs his fingers over your cock[smn], holding [itthemm] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of Player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of Player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [Ball Size Adjective of Player] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your cock[smn], holding [itthemm] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of Player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [CockName of Player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [Ball Size Adjective of Player] balls while the other strokes his animalistic member.";
 		[WaitLineBreak]
-		say "     His nimble fingers and artful muzzle tease your [cockname of Player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
+		say "     His nimble fingers and artful muzzle tease your [CockName of Player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else:								[FEMALE]
 		say "     The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal. After having gotten you all worked up, you moan loudly as that nimble tongue sets to work inside you. He smiles up at you and slips a finger into your snatch alongside his tongue while his other paw strokes his animalistic cock.";
 		[WaitLineBreak]
@@ -398,27 +398,27 @@ to say alexbrunchtime:
 
 to say brunchtimechange:
 	if alexbrunch is 1:
-		now tailname of Player is "Ferret";
+		now TailName of Player is "Ferret";
 		now tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch is 2:
-		now skinname of Player is "Ferret";
-		now skin of Player is "soft, white fur that covers your";
+		now SkinName of Player is "Ferret";
+		now Skin of Player is "soft, white fur that covers your";
 [
 		say "[bold type]Your charisma has increased by 1![roman type][line break]";
 		increase charisma of Player by 1;
 ]
 	if alexbrunch is 3:
-		now facename of Player is "Ferret";
-		now face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
+		now FaceName of Player is "Ferret";
+		now Face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle";
 [
 		say "[bold type]Your intelligence has increased by 2![roman type][line break]";
 		increase intelligence of Player by 2;
 ]
 	if alexbrunch is 4:
-		now bodyname of Player is "Ferret";
-		now body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
-		now cockname of Player is "Ferret";
-		now cock of Player is "ferret";
+		now BodyName of Player is "Ferret";
+		now Body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
+		now CockName of Player is "Ferret";
+		now Cock of Player is "ferret";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of Player is "[one of]mustelid[or]ferret-like[at random]";
@@ -432,30 +432,30 @@ to say brunchtimechange:
 
 
 to say alexbodyreset:
-	if alexbrunch > 0 and tailname of Player is not "Ferret":
+	if alexbrunch > 0 and TailName of Player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
-		now tailname of Player is "Ferret";
+		now TailName of Player is "Ferret";
 		now tail of Player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
-	if alexbrunch > 1 and skinname of Player is not "Ferret":
+	if alexbrunch > 1 and SkinName of Player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
-		now skinname of Player is "Ferret";
-		now skin of Player is "soft, white fur that covers your";
-	if alexbrunch > 2 and facename of Player is not "Ferret":
+		now SkinName of Player is "Ferret";
+		now Skin of Player is "soft, white fur that covers your";
+	if alexbrunch > 2 and FaceName of Player is not "Ferret":
 		say ". He kisses and nuzzles at your face all over, nibbling your ears. You can feel your head changing, returning to its once-mustelid shape";
-		now facename of Player is "Ferret";
-		now face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
-	if alexbrunch > 3 and bodyname of Player is not "Ferret":
+		now FaceName of Player is "Ferret";
+		now Face of Player is "that of an adorable mustelid with darting eyes that search for shinies. You have a cute, pink nose with plentiful whiskers on your ferrety muzzle.";
+	if alexbrunch > 3 and BodyName of Player is not "Ferret":
 		say ". Alex rubs his slinky body against yours, chirring as your body becomes slender and ferret-like once more";
-		now bodyname of Player is "Ferret";
-		now body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
+		now BodyName of Player is "Ferret";
+		now Body of Player is "the slender and flexible form of a ferret. You constantly have the urge to weave and bob about playfully as you move";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of Player is "[one of]mustelid[or]ferret-like[at random]";
 		now SleepRhythm of Player is 0;
-	if alexbrunch > 3 and cockname of Player is not "Ferret":
+	if alexbrunch > 3 and CockName of Player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
-		now cockname of Player is "Ferret";
-		now cock of Player is "ferret";
+		now CockName of Player is "Ferret";
+		now Cock of Player is "ferret";
 
 
 to say pillowtalk:
@@ -488,7 +488,7 @@ to say pillowtalk:
 Section 6 - Endings
 
 when play ends:
-	if bodyname of Player is "Ferret":
+	if BodyName of Player is "Ferret":
 		if humanity of Player < 10:
 			say "     After your mind gives out to the infection, you are eventually drawn back to Alex's condo. After happily greeting you, he quickly realizes something is wrong and that you've lost yourself to the infection. He is briefly saddened by this, but rebounds quickly as you playfully coax him into another romp on the bed. You can't speak much any more, save for requests for sex or the occasional loving phrase for your sexy, ferret guardian during brief moments of clarity.";
 			say "     When the military comes through to rescue everyone, Alex takes care of you and makes sure you are safely taken with him and his clients. There is some argument about what to do with you, but Alex puts his legal prowess to the test and eventually gets you entrusted to his care after you're deemed non-infectious. He even shows you the press tape of his impassioned plea for the brave soul who rescued and protected his clients at the eventual loss of their own mind. You have trouble following the words, but it warms your heart to hear him talk about you with so much love.";

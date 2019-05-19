@@ -87,22 +87,22 @@ to ratetheplayer:
 
 when play ends:
 	if thirst of Player >= 100 or hunger of Player >= 100:	[blocking regular endings]
-		now bodyname of Player is "starvation";
-		now facename of Player is "starvation";
-		now skinname of Player is "starvation";
-		now tailname of Player is "starvation";
-		now cockname of Player is "starvation";
+		now BodyName of Player is "starvation";
+		now FaceName of Player is "starvation";
+		now SkinName of Player is "starvation";
+		now TailName of Player is "starvation";
+		now CockName of Player is "starvation";
 		say "     You have perished from [if hunger of Player >= 100 and thirst of Player >= 100]starvation and thirst[else if hunger of Player >= 100]starvation[else]thirst[end if] and are no more. Your body becomes a meal for another of the more predatory creatures roaming the city.";
-	else if bodyname of Player is "Tigertaur Sex Toy":
+	else if BodyName of Player is "Tigertaur Sex Toy":
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
 		stop the action;
-	else if bodyname of Player is "Broken Husky Slut":
+	else if BodyName of Player is "Broken Husky Slut":
 		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
 		stop the action;
-	else if bodyname of Player is "DBrute Slave":
+	else if BodyName of Player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
 		stop the action;
-	else if bodyname of Player is "Hunter's Bitch":
+	else if BodyName of Player is "Hunter's Bitch":
 		if Player is female:
 			say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, until you are nothing but another husky bitch in Hunter's pack. Still, you only ever play second fiddle to Garnet, whom he is absolutely obsessed by, having gone so far as to search out the movie starlet to take for himself and make her a bitch. Therefore, most of your alpha's time is spent having sex with her. You're drawn into his play with the transformed movie star too, often being ordered to lick cum from her pussy or make out with the woman, with Hunter watching or fucking you as you do so.";
 		else: [male & neuter]
@@ -111,29 +111,29 @@ when play ends:
 			else: [player can't become female]
 				say "     Having succumbed to the alpha husky's indoctrination, your next few days are spent being fucked again and again, with the dominant canine growling a little about the fact that your gender doesn't seem to want to change at all. Still, he breaks you in good as his bitch-boy, used to taking that thick shaft all the time and serving as his guard for when the dominant male goes all out fucking Garnet. Having gone so far as to search out the movie starlet in the middle of the nanite apocalypse, just to take her for himself and make her a bitch, the man is absolutely obsessed with her. You're drawn into his play with the transformed movie star too, often being ordered to lick his cum from her pussy, with Hunter watching or fucking your ass as you do so.";
 		stop the action;
-	else if bodyname of Player is "Demon Slave":
+	else if BodyName of Player is "Demon Slave":
 		say "     Your new reality in hell focuses on satisfying Skarnoth's every desire - of which there are many, mostly carnal ones. As the overlord of his own little demonic realm, your master has the power to play with your body shape too, transforming you as he wishes to better enjoy breaking you to his will...";
 		stop the action;
-	else if bodyname of Player is "Lucifer's Mare":
+	else if BodyName of Player is "Lucifer's Mare":
 		say "     Being used as Lucifer's mare is finally enough to push you over the edge. You can't help but lie on the grass, dripping his cum and feeling it dry on your skin, until the feral mustang eventually returns to fuck you again, and again. Eventually, your form shifts to that of a true feral mare and you join the harem of the powerful stallion, well-bred and well-protected from any challenger to Lucifer's might.";
 		stop the action;
-	else if bodyname of Player is "dead":
+	else if BodyName of Player is "dead":
 		stop the action;
 	else if humanity of Player < 10 and HP of the player > 0:
-		if bodyname of Player is "Dragoness" and HP of Doctor Matt <= 100:
+		if BodyName of Player is "Anthro Dragoness" and HP of Doctor Matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
-		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of Player] form and [facename of Player] face.";
-		if bodyname is "Human":
+		say "You emerge from your harrowing experience with your mind intact, with your [BodyName of Player] form and [FaceName of Player] face.";
+		if BodyName is "Human":
 			say "Despite the traumas set on you, you do your best to fit back in with humanity after the rescue arrives.";
 		if Cock Length of Player > 10 or Ball Size of Player > 3 and player is male:
 			say "Your extreme masculine attributes prove to be more than a little awkward. As society puts itself back together, you do find a niche. Others, changed as you, require the services of such studs, and you never lack for something to do on the weekends.";
 			if Cock Count of Player > 1:
 				say "Your multiple endowments become quite popular amongst some infected, whom come from some great distance to be serviced by you. Though it is illegal to charge for such services, many leave you a 'gift' regardless, even a marriage proposal or two.";
-		if skinname of Player matches the text "Human", case insensitively:
+		if SkinName of Player matches the text "Human", case insensitively:
 			increase score by 0;
 		else:
-			say "Your unnatural [skin of Player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
+			say "Your unnatural [Skin of Player] flesh makes you stand out in a crowd. You find it difficult to keep friends outside of other infected, even after you're declared safe for contact.";
 		if "Fertile" is listed in feats of Player and ( number of filled rows in the Table of PlayerChildren + FeralBirths) > 5:
 			if Player is female:
 				say "You've been pregnant so many times and given birth to so many children that the nanites make a very strange change to your reproductive organs. Your body automatically stored a large amount of cum from the last creature that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life.";
@@ -144,7 +144,7 @@ when play ends:
 					say "You've been pregnant so many times and given birth to so many children with your unusually altered body that the nanites make further changes to your reproductive organs. Your body begins automatically storing a large cum from the last creatures that screwed you. Each time you give birth, a small amount of the cum is used to re-impregnate you automatically. You spend the rest of your life in a constant state of male pregnancy. At first, you're alarmed by this, but your ever-growing brood of children cares for your every whim so you quickly begin to enjoy your new life. Most of your children turn out as males as well, many capable of male pregnancy like you, though lacking your body's ability to be eternally pregnant.";
 			if "Wild Womb" is listed in feats of Player:
 				say "However, thanks to your unusual tendency to birth feral children, many of your young soon strike out on their own, often sneaking away in the night, as their instinct to breed and spread their infection takes control.";
-		if bodyname of Player is "Dragoness":
+		if BodyName of Player is "Anthro Dragoness":
 			say "Your dragon like body proves as much a curiosity as repulsion in those around you. You find gainful employment as a mascot for a theme park, where you are paid to wander the park and entertain the clients within. The job proves largely enjoyable, especially since the more annoying people are intimidated by your bulk and claws.";
 
 Game Endings ends here.

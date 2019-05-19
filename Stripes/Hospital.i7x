@@ -1066,16 +1066,16 @@ to say hosploss:
 	say "[hosptfscene]";
 	say "     Dr Mouse motions to the orderly attending to his procedure. 'Dump that trash on the steps along with its gear. It is of no further use to me.' With those coldly spoken words, the mouse turns his back on you entirely and walks out of the operating theater. The orderly calls forth several of his companions and they drag you, beaten and mutated, to the hospital steps. They toss you and your gear down onto them without a word and head back inside.";
 	waitlinebreak;
-	if bodyname of Player is "Tiger Cop":
-		now bodyname of Player is "Tigress Hooker";
-	if tailname of Player is "Tiger Cop":
-		now tailname of Player is "Tigress Hooker";
-	if facename of Player is "Tiger Cop":
-		now facename of Player is "Tigress Hooker";
-	if skinname of Player is "Tiger Cop":
-		now skinname of Player is "Tigress Hooker";
-	if cockname of Player is "Tiger Cop":
-		now cockname of Player is "Tigress Hooker";
+	if BodyName of Player is "Tiger Cop":
+		now BodyName of Player is "Tigress Hooker";
+	if TailName of Player is "Tiger Cop":
+		now TailName of Player is "Tigress Hooker";
+	if FaceName of Player is "Tiger Cop":
+		now FaceName of Player is "Tigress Hooker";
+	if SkinName of Player is "Tiger Cop":
+		now SkinName of Player is "Tigress Hooker";
+	if CockName of Player is "Tiger Cop":
+		now CockName of Player is "Tigress Hooker";
 	SanLoss 20;
 	increase Libido of Player by 20;
 	decrease score by 50;
@@ -1087,7 +1087,7 @@ to say hosploss:
 			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. Finding you radically transformed and succumbing, he helps take you to a nearby, unoccupied building. There, he beds down with you, having sex with you again and again, turning you into another cute, girly raccoon like him, as it is the only thing he can do for you.";
 			say "[totalcoonification]";
 		else:
-			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [bodyname of Player] body, asserts its dominance over the new you.";
+			say "     You groan, still in some pain from the rough handling as you try to get up. After the heavy dose of transformation and repeated infection, your mind is wavering and unraveling. The random medley of infections your body has been subject to all vie for control. Eventually the most prominent, that of your [BodyName of Player] body, asserts its dominance over the new you.";
 	else if hospquest is 10:		[Refused upon offer]
 		say "     You groan, still in some pain from the rough handling as you try to get up. The pink raccoon, who had been waiting fretfully on the steps for you, rushes over to you. He wraps his arm around you and helps you stand, leading you away from this blighted place.";
 		if pink raccoon is tamed:
@@ -1106,27 +1106,27 @@ to say hosptfscene:
 	sort Table of Random Critters in random order;
 	now MonsterID is 1;
 	choose row MonsterID from the Table of Random Critters;
-	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player:
 		sort Table of Random Critters in random order;
 		now MonsterID is 1;
 		choose row MonsterID from the Table of Random Critters;
-	now tailname of Player is Name entry;
+	now TailName of Player is Name entry;
 	now tail of Player is tail entry;
 	say "     'The first injection will adjust the volunteer's lower spine. We shall begin there, as the changes may be the least visible, depending on the outcome.' The mouse the jabs a second needle, quite painfully, into your ass. As he watches, the doctor comments to the group about how your ass becomes malleable as [ass change entry].";
-	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player:
 		sort Table of Random Critters in random order;
 		now MonsterID is 1;
 		choose row MonsterID from the Table of Random Critters;
-	now facename of Player is Name entry;
-	now face of Player is face entry;
+	now FaceName of Player is Name entry;
+	now Face of Player is face entry;
 	waitlinebreak;
 	say "     'We shall now move on to the head,' he states, motioning for the orderly to step up. He grabs your neck and squeezes it painfully as he injects the next formula into your carotid artery, sending the fluid up into your head. As a burning sensation courses through your head, the doctor discusses how [face change entry]. As your face shifts and changes, the orderly adjusts the various straps as necessary, keeping you restrained.";
-	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player or Name entry is SkinName of Player:
 		sort Table of Random Critters in random order;
 		now MonsterID is 1;
 		choose row MonsterID from the Table of Random Critters;
-	now skinname of Player is Name entry;
-	now skin of Player is skin entry;
+	now SkinName of Player is Name entry;
+	now Skin of Player is skin entry;
 	waitlinebreak;
 	say "     The mad mouse picks up a spray bottle and runs his gloved paw over your chest. 'Before we continue with the patient's body, we shall deal with his epidermal layer.' The bottle contains a thin, milky fluid and you can readily guess what at least one of the ingredients is. Taking care not to spray himself, he spritzes a mist of the sticky fluid across your body. You can feel a tingle all over as the mixture is absorbed into your skin and starts to change you. Shivers of pleasure run all over your skin as [skin change entry].";
 	waitlinebreak;
@@ -1137,12 +1137,12 @@ to say hosptfscene:
 		say "     You can see that the monstrous mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. Another of the vixen nurses is on her knees, licking and kissing the large cock. Her muzzle is pulled onto the thick shaft as Dr Mouse gets tired of foreplay and starts facefucking her with a low growl. She takes it in eagerly, playing with his heavy balls until he cums down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
 	else:		[Dr Mouse is mouse]
 		say "     You can see that the albino mouse is not immune to the increasing sexual energy in the room, having grown quite hard during the procedure. His cock is small, perhaps about four inches to match his small height. But his balls are quite large, perhaps each the size of a peach. One of the vixen nurses is on her knees, licking and kissing his cock before taking it into her muzzle. She fondles his balls and sucks his shaft obediently until he sends his ample load down her throat. Pushing her off after he's done, the last few spurts of his thick seed coat her face and muzzle.";
-	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player or Name entry is bodyname of Player:
+	while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player or Name entry is SkinName of Player or Name entry is BodyName of Player:
 		sort Table of Random Critters in random order;
 		now MonsterID is 1;
 		choose row MonsterID from the Table of Random Critters;
-	now bodyname of Player is Name entry;
-	now body of Player is body entry;
+	now BodyName of Player is Name entry;
+	now Body of Player is body entry;
 	attributeinfect;
 	waitlinebreak;
 	say "     Satiated, the mouse straightens up and regains his composure. 'Ahem! Now that the... intermission is over, let us proceed to the final stages.' He grabs another syringe, the largest yet by far. His paw feels along your body, finding a sensitive spot before jabbing the needle into it, making you wince in pain before the warm tingles of pleasant change flow through you. The jaguar orderly adjusts the various straps as your body alters itself. Continuing to comment, Dr Mouse observes your body as [body change entry].";
@@ -1152,14 +1152,14 @@ to say hosptfscene:
 	LineBreak;
 	waitlinebreak;
 	if Player is male:
-		while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is tailname of Player or Name entry is facename of Player or Name entry is skinname of Player or Name entry is bodyname of Player or Name entry is cockname of Player:
+		while ( there is a non-infectious in row MonsterID of Table of Random Critters and non-infectious entry is true ) or there is no Name entry or Name entry is TailName of Player or Name entry is FaceName of Player or Name entry is SkinName of Player or Name entry is BodyName of Player or Name entry is CockName of Player:
 			sort Table of Random Critters in random order;
 			now MonsterID is 1;
 			choose row MonsterID from the Table of Random Critters;
 		say "     The mouse doctor grins viciously as he looks over your changed form, then turns to the audience. 'There is one final injection to make, my colleagues. And I'm sure this is the one you've all been anxiously awaiting. He moves his paw to your cock(s), quite aroused by the earlier teasing, and gives it a squeeze. Those watching are quite pleased by this and many shift forward in their seats to get a better look.";
 		say "     The doctor fondles your balls teasingly and slides the syringe across your cock and balls, making you involuntarily whimper. You sigh in relief as he moves the needle down further and injects your inner thigh close to your groin. As the mouse observes the changes, an arousing heat flows up into your groin as [cock change entry].";
-		now cockname of Player is Name entry;
-		now cock of Player is cock entry;
+		now CockName of Player is Name entry;
+		now Cock of Player is cock entry;
 		follow the sex change rule;
 		waitlinebreak;
 		if Player is not male:	[now female]
@@ -1746,7 +1746,7 @@ understand "activator" as ec_activating.
 check ec_activating:
 	if hospquest < 19, say "I don't know what you're talking about." instead;
 	if Doctor Mouse is not visible, say "You need to go see Doctor Mouse about that." instead;
-	if bodyname of Player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
+	if BodyName of Player is "Enhanced Chimera" and player is pure, say "There's no need for another dose of the activator. You're already fully in that form." instead;
 
 carry out ec_activating:
 	say "[ec_activation]";
@@ -1764,17 +1764,17 @@ to say ec_activation:
 		say "     Having a tougher time focusing this time around, you keep your attention on your hands. Holding them up in front of your face, you watch as they go through a succession of transformations. They start out turning into hoof-like hands, but they don't stay like this for long. The hard hoof portion starts to recede the moment it's finished forming, reshaping itself into dark claws that eventually sink into sheathes like a cat's. As this is happening, your hands are also getting larger and stronger, with both a strong grip and fine control. Your fingers become plated across the top and over the back of your hand. You ball your hand into an impressive armored fist, confident it'll pack quite the wallop.";
 	else:
 		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if Nipple Count of Player > 0 and Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else if Breast Size of Player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
-	now tailname of Player is "Enhanced Chimera";
-	now facename of Player is "Enhanced Chimera";
-	now skinname of Player is "Enhanced Chimera";
-	now bodyname of Player is "Enhanced Chimera";
-	now cockname of Player is "Enhanced Chimera";
+	now TailName of Player is "Enhanced Chimera";
+	now FaceName of Player is "Enhanced Chimera";
+	now SkinName of Player is "Enhanced Chimera";
+	now BodyName of Player is "Enhanced Chimera";
+	now CockName of Player is "Enhanced Chimera";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if Player is male:
 		if Cock Length of Player < 16:
 			increase Cock Length of Player by 3;
@@ -1831,7 +1831,7 @@ when play ends:
 		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	else if hospquest > 13 and humanity of Player > 9:	[helped Dr Mouse]
-		if bodyname of Player is not "Wolverine Guard":
+		if BodyName of Player is not "Wolverine Guard":
 			if HP of Doctor Matt is 101:				[Dr Matt not defeated]
 				say "When the military comes through, you are taken in by the army. In the chaos of trying to deal with so many infected, you receive little scrutiny and your false identity is not questioned. You discreetly ask a few questions and hear that the military's chief scientist is little help to them, with most of her developments having [']sexual side-effects['] that make a lot of the men worried to use them. After you are cleared, you start to settle into your new life, occasionally hearing from Dr Mouse and helping the underground scientist with [']samples['] when needed. He continues his research, selling his enhancements and customized strains to the highest bidder. Occasionally, he has a new one for you. It is always something subtle that will go unnoticed, but helps you in your new life[if Susan is in Hidden Lab]. Susan continues to accompany him as an assistant and a lover for you[end if].";
 			else if HP of Doctor Matt is 102 or HP of Doctor Matt is 104:		[Dr Matt defeated]

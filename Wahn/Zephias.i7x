@@ -35,7 +35,7 @@ Virgin of Zephias is true.
 AnalVirgin of Zephias is false.
 PenileVirgin of Zephias is false.
 SexuallyExperienced of Zephias is true.
-MainInfection of Zephias is "Spidertaur".
+MainInfection of Zephias is "Spidertaur Male".
 The description of Zephias is "[Zephiasdesc]".
 The conversation of Zephias is { "Meep!" }.
 
@@ -135,7 +135,7 @@ to say ZephiasJulioRandomSelection:
 				say "     [RidingJulio]"; [ride the soldier's cock]
 
 to say ZephiasAlleyFuck:
-	setmonster "Spidertaur";
+	setmonster "Spidertaur Male";
 	choose row MonsterID from the Table of Random Critters;
 	if Player is female:
 		say "     Arranging your dropped clothes to give at least a bit of comfort over the bare stone ground, you lie down on them and obediently spread your legs for Zephias. The spidertaur is on you in seconds, running one of his human hands over your crotch, stroking along your sensitive nether lips, then pushing two fingers into your pussy. He says, 'Very nice, little slut. I'm gonna fuck your hot little hole so hard...', replacing his probing digits a moment later with something much thicker and longer.";
@@ -159,7 +159,7 @@ to say ZephiasAlleyFuck:
 	say "     After he finishes cumming, Zephias pulls his shaft out of you with a wet slurp and gives your freshly fucked form an appraising look before remarking 'I really have to congratulate Elijah again for owning such a nice submissive pet. You can go dress now, Fucktoy.' While you stand up and start collecting your gear, the spidertaur cuts his human captive's bindings and allows him to stand up. As the gag comes off, the young man calls to you 'Thanks for the... help[if lust of Zephias < 1]? I'm Private Julio Vasquez by the way.' [else]?' [end if]Then his gaze is drawn downward to the trickle of cum running down the inside of your leg and he turns an interesting shade of embarrassed red as his thoughts catch up with what just happened here - and why. He pants 'Thanks' again, then beats a hasty retreat and runs off.";
 
 to say ZephiasAlleyWallFuck:
-	setmonster "Spidertaur";
+	setmonster "Spidertaur Male";
 	choose row MonsterID from the Table of Random Critters;
 	if Player is female:
 		say "     Moving forward to bodily pick you up, his human hands holding and squeezing your butt, Zephias kisses you hungrily, then nibbles on your neck and gives you a very obvious and somewhat painful hickey. You can feel his hard cock press against your leg as he carries you with him, over to where the bound soldier is resting against the alley wall. Then you find your back pressed against the smooth plaster right above Zephias's captive, with the spidertaur's long legs pulling forward strong strands of silk from his silk glands to tie you up. After a first few lines over your chest, he takes your left arm, stretches it out and fastens it to the wall, then the right arm on the other side. Soon your upper body is securely webbed to the building, with your lower half still free and held by Zephias's hands stroking over your butt and thighs.";
@@ -202,7 +202,7 @@ to say RidingJulio:
 	say "     After he finishes cumming, Zephias pulls your head off his shaft with a plop and pushes it back so he can lean down and make out with you. The spidertaur's tongue invades your mouth as his lips press against yours, tasting his own cum. As he pulls back, he holds your head by the chin for a moment, giving you an appraising look before remarking 'I really have to congratulate Elijah again for owning such a nice submissive pet. You can go dress now, Fucktoy.' While you pull off the soldier's cock and go grab your stuff, Zephias cuts his bindings and allows him to stand up. As the gag comes off, the young man calls to you 'Thanks for the... help[if lust of Zephias < 1]? I'm Private Julio Vasquez by the way.' [else]?' [end if]Then his gaze is drawn downward to the trickle of cum running down the inside of your leg and he turns an interesting shade of embarrassed red as his thoughts catch up with what just happened here - and why. He pants 'Thanks' again, then beats a hasty retreat and runs off.";
 
 to say BlowingJulio:
-	setmonster "Spidertaur";
+	setmonster "Spidertaur Male";
 	choose row MonsterID from the Table of Random Critters;
 	say "     Walking over to the tied-up soldier, Zephias guides you to kneel down between he young man's legs. Then he pulls your arms behind your back, tying them together at the wrists with soft, but pretty strong strands of spidersilk. The hybrid creature's human hands stroke up and down your back for a moment, followed by him putting his arms around you from behind and starts playing with your nipples. Zephias nibbles on your earlobe, then whispers 'Doesn't he look just delicious?' and nods to the bound man in front of you. Not really expecting an answer, the spidertaur pulls your head to the side to kiss you, then moves over to your exposed neck on the other side to give you a very obvious and slightly painful hickey. That done, he puts a hand on your hip to hold you while his other pushes against your back to bend you over, bringing your head directly over the bound man's crotch. It's obvious what the spidertaur wants you to do, so you obey his unspoken command with a shiver of submissive arousal and immediately take the man's erect shaft into your mouth and start bobbing up and down on it. Zephias's captive moans into his gag as you blow him, his hips soon thrusting upwards as he tries to get more of his cock in your mouth.";
 	say "     While you're busy giving a blowjob to the soldier, you don't notice Zephias move around behind you - until he puts his hands on your buttcheeks, kneading them with his fingers as he pulls them apart. Then you feel the wetness of his tongue lap over your crack and home in on your pucker, licking and poking against it with the tip. He expertly eats your ass for a while, then pulls back and experimentally stretches your pucker with his fingers. Zephias says, 'Very nice, little slut. I'm gonna fuck your hot little hole so hard...', replacing his probing digits a moment later with something much thicker and longer.";

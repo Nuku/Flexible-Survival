@@ -63,7 +63,7 @@ to say losetobeaver:
 			say "     In the mood for a nice, long fuck, that's what you ask the beaver for, and he's more than happy to give it to you. Shifting onto his back, he cuddles you in his arms so you can rest atop his soft, warm belly while riding his cock. He slides his paws down your back and gropes your ass as he thrusts up into you gently, letting you set the pace atop his throbbing rod. You take it slow at first, drawing out the pleasure his chubby nine-inch cock can give while kissing your rodent lover[if a random chance of 1 in 2 succeeds and player is male]. 'Mmm... if we were back home, we could get married and do this all the time,' he says with a grin and a light swat of his broad tail across your ass[end if][if HP of Player < 1]. Having forgotten you were ever reluctant to fuck the plump beaver, you[else]. You[end if][if Player is mpreg_able] find yourself hoping to get a few pudgy beaver children of your own. You[end if]r beaver lover, after you've ridden him for a deliciously long time, informs you that he can't hold back any longer. While grinding down onto him for his few last thrusts, you press your lips to his and kiss him moments before he cums hard. As blast after blast of his syrupy load shoots into you, you [one of]feel both warm and cold inside[or]hear the cheer of a hockey crowd screaming 'GOAL!'[or]taste maple syrup[at random]. This strange sensation lasts only a moment, but is strangely exciting and invigorating, adding to the pleasure each spurt of cum into you brings.[mimpregchance]";
 		say "     After his balls are drained and he's pulled out, he staggers to his feet, thanks you for the fun and turns to go. '[one of]Mmm... I could go for a 50 now. Wonder if I can find one around here[or]Now I'm hungry. Wonder I if can snag me some KD[or]I could use a mickie of rye after a fuck like that[or]Now, where can I get me a two-four of real beer? Maybe this way[or]I could sure go for a nap on the chesterfield right aboot now[at random],' he says confusingly as he wanders off in search of whatever he's talking about.";
 	else if Player is male and a random chance of 2 in 5 succeeds:
-		say "His paw finds its way to your [cock size desc of Player] [cock of Player] cock starts stroking it, grinning as you moan despite yourself. You find yourself quickly getting excited and soon you're helping him to pull off your gear and clothes. Once you're naked, you let the amorous fellow push you back down onto your back so he can tend to your throbbing erection.";
+		say "His paw finds its way to your [cock size desc of Player] [Cock of Player] cock starts stroking it, grinning as you moan despite yourself. You find yourself quickly getting excited and soon you're helping him to pull off your gear and clothes. Once you're naked, you let the amorous fellow push you back down onto your back so he can tend to your throbbing erection.";
 		say "     Leaning in, he gives your cock several slow licks with his tongue. He takes added care for his teeth as he swirls it over your glans, teasing until you're fully hard and dribbling precum[if HP of Player < 1]. By this point, you've become too lustful to continue resisting and stay put while he moves[else]. You smile at him as he shifts[end if] into a new position where he can put those big, webbed feet of his on your cock. The skin, while thick, is also quite smooth and flexible, feeling very nice against your sensitive rod and [Ball Size Adjective of Player] [Balls]. And the webbing between his long toes only means there's more of it to rub against you at once. Already quite excited and dripping pre, this leaves him free to smear the slick fluid across your cock, getting you slick and glistening with your own precum. Enjoying the foot job, you stretch out on your back, looking up at the [if daytimer is day]blue[else]night[end if] sky and bask in the pleasure of him playing with you.";
 		say "     'Mmm... just how I like it. Nice and slippy.' Hearing some additional fapping, you look over to see the beaver's having a good time as well, stroking himself off while working his feet over you. His talented paws aren't even thrown off by this, both his hands and feet seeming to handle their jobs independently as they work those pulsing pillars of manhood. Finding the sight of his paws sliding up and down his chestnut rod a much more interesting sight than [if daytimer is day]watching the clouds go by[else]stargazing[end if], you turn your attention to watching him. He has such a delicious looking nine inches of thick, chubby cock that it's very arousing to watch him play with it while those paws of his work their magic over you.";
 		say "     Between the foot job and the show, you groan in pleasure and cum hard while his webbed toes work your shaft so you cum all over yourself and onto his paws. Your [Cum Load Size of Player] load splatters across your face and body as he does his best to drain you dry. He smears his messy feet over your balls[if anallevel is 3], down to your asshole[end if] before wiping them on your thighs. As you're still basking in the afterglow, he gets up and stands above you, pumping his cock a few more times so he can spray his load down onto you, adding his own seed to the wet mess covering you. You catch the faint maple scent coming from it amidst the scent of your own jizz.";
@@ -77,7 +77,7 @@ to say losetobeaver:
 to say beatthebeaver:
 	say "     You knock the pudgy beaver over, sending him falling onto his rather padded backside. 'Ooof! [one of]Whatcha do that for, you hoser?' he groans[or]I'll call the Mounties on you!' he says indignantly[or]Why're all you Americans so rude?' he grumbles[or]Well, we still beat you in 1812!' he yells[or]Câlice de tarbernacle, mon ostie! That hurt!' he cusses colorfully[or]I think I sprained my Molson muscle,' he complains, rubbing his pudgy belly[or]Did you get the license plate of that transport?' he moans, rubbing his head[or]You knob!' he growls[at random] as he struggles to get back up. ";
 	if nobeaversex > 2:
-		if bodyname of Player is "Beaver":
+		if BodyName of Player is "Beaver":
 			say "As with the others of his kind, you resist the urge for sex and help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 		else:
 			say "As you've done in the past with his kind, you resist the urge to give in to your lusts and instead move to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
@@ -93,7 +93,7 @@ to say beatthebeaver:
 				say "[beaver_pvsex1]"; [anal]
 			else if calcnumber is 2:
 				say "[beaver_pvsex2]"; [m-oral]
-			else if bodyname of Player is "Beaver":	[no sex - Beaver]
+			else if BodyName of Player is "Beaver":	[no sex - Beaver]
 				say "     Resisting the urge to give in to your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 			else:							[no sex]
@@ -103,7 +103,7 @@ to say beatthebeaver:
 			say "     Would you like to have him [link]eat you out (Y)[as]y[end link] or just [link]let him go (N)[as]n[end link]?";
 			if Player consents:
 				say "[beaver_pvsex3]"; [f-oral]
-			else if bodyname of Player is "Beaver":	[no sex - Beaver]
+			else if BodyName of Player is "Beaver":	[no sex - Beaver]
 				say "     Resisting the urge to give in to your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 			else:							[no sex]
@@ -111,7 +111,7 @@ to say beatthebeaver:
 				increase nobeaversex by 1;
 	else:
 		say "     Feeling [if Libido of Player < 33]a bit[else if Libido of Player < 67]a little[else]kinda[end if] turned, but lacking any gender of your own, you pass on having fun with your defeated foe. ";
-		if bodyname of Player is "Beaver":			[neuter - Beaver]
+		if BodyName of Player is "Beaver":			[neuter - Beaver]
 			say "You instead help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 		else:							[neuter]
 			say "You decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
@@ -119,14 +119,14 @@ to say beatthebeaver:
 
 to say beaver_pvsex1:	[anal]
 	now nobeaversex is 0;
-	say "     Deciding the pudgy beaver's ass will make for a nice cushion for some pushin['], you get him to roll over and raise that big tail of his. Spreading his furry cheeks, you rub your stiffening cock between them until you're fully hard and ready to go. He moans as you penetrate him, but doesn't resist, seeming happy to get some fun even if he's got to be on the receiving end. You run your hands over his fat rear, kneading it softly as you start thrusting[if Cock Length of Player > 36]. While slow to get started due to your exceptional size, his pudgy body is able to accommodate even your [cock size desc of Player] [cock of Player] shaft with a little patience and some visible stretching of the beaver's belly[else if Cock Length of Player > 24]. While a little slow to get started due to your considerable size, his pudgy body is able to accommodate your [cock size desc of Player] [cock of Player] shaft after a little while, though there's a bit of stretching of the beaver's belly to do it[else if Cock Length of Player > 12]. His pudgy body is able to accommodate even your [cock size desc of Player] [cock of Player] shaft with little difficulty and only a brief delay while his tight hole relaxes enough to take you in[else]. His pudgy body takes your [cock size desc of Player] [cock of Player] shaft easily enough, his tight hole relaxing enough to take you in[end if]. As you set to work stuffing the beaver, he moans and pants happily. Reaching back, he takes his own cock in hand and starts stroking his throbbing rod.";
+	say "     Deciding the pudgy beaver's ass will make for a nice cushion for some pushin['], you get him to roll over and raise that big tail of his. Spreading his furry cheeks, you rub your stiffening cock between them until you're fully hard and ready to go. He moans as you penetrate him, but doesn't resist, seeming happy to get some fun even if he's got to be on the receiving end. You run your hands over his fat rear, kneading it softly as you start thrusting[if Cock Length of Player > 36]. While slow to get started due to your exceptional size, his pudgy body is able to accommodate even your [cock size desc of Player] [Cock of Player] shaft with a little patience and some visible stretching of the beaver's belly[else if Cock Length of Player > 24]. While a little slow to get started due to your considerable size, his pudgy body is able to accommodate your [cock size desc of Player] [Cock of Player] shaft after a little while, though there's a bit of stretching of the beaver's belly to do it[else if Cock Length of Player > 12]. His pudgy body is able to accommodate even your [cock size desc of Player] [Cock of Player] shaft with little difficulty and only a brief delay while his tight hole relaxes enough to take you in[else]. His pudgy body takes your [cock size desc of Player] [Cock of Player] shaft easily enough, his tight hole relaxing enough to take you in[end if]. As you set to work stuffing the beaver, he moans and pants happily. Reaching back, he takes his own cock in hand and starts stroking his throbbing rod.";
 	say "     Enjoying your pudgy lover's soft, huggable body, you run your hands over him, squeezing his furry sides[if scalevalue of Player < 4] and nuzzling at his back[end if]. His ass feels so delightfully soft when you press against it with each thrust and his asshole is snug and warm around your shaft. Each thrust also slaps your balls against his, setting those furry orbs rocking along with his hips. You keep it up, going for a good, long ride on the well-padded beaver before picking up the pace as you're about to finish. Feeling this, he groans and pumps at his cock all the faster, chewing at his lip with his big incisors as he's fast approaching climax as well, finally cumming moments [one of]before[or]after[at random] you. You send your [Cum Load Size of Player] load shooting into him even as he paints a big puddle on the ground with his own seed[if Ball Size of Player > 6]. Your [Cum Load Size of Player] load ends up leaving the beaver all the pudgier and rounder, now sloshing quite a bit with all your cum inside him[else if Ball Size of Player > 5]. Your [Cum Load Size of Player] load ends up leaving the beaver a little pudgier and sloshing a little as well[end if]. Once you're done, you pull out of the beaver's bottom, pat his ass before slapping his tail down over it. When he finally gets up, you can see your cum leaking out from beneath that tail to run down his legs and drip onto the ground.";
 	say "     Steadying himself as best he can, the tipsy rodent grins at you, thanks you for the fun before turning to go. '[one of]Mmm... I could go for a 50 now. Wonder if I can find one around here[or]Now I'm hungry. Wonder I if can snag me some KD[or]I could use a mickie of rye after all that[or]Now, where can I get me a two-four of real beer? Maybe this way[or]Oh, my aching arse. I could sure go for a nap on the chesterfield right aboot now[at random],' he says confusingly as he wanders off in search of whatever he's talking about.";
 
 
 to say beaver_pvsex2:	[m-oral]
 	now nobeaversex is 0;
-	say "     While a little leery of his overgrown teeth, you do figure who better than a beaver to deal with your wood. Pulling out your cock and stroking it hard, you pull the pudgy fellow's muzzle over to it. It takes very little coaxing to get him started[if a random chance of 1 in 4 succeeds]. He mumbles something about how it's got to be better than this cheap American beer before[else],[end if] opening wide and welcoming your cock into his muzzle. You rub his furry head and round little ears as he works his muzzle over your shaft, licking and sucking eagerly. Taking care with his big teeth, he lets his tongue do most of the work, lavishing attention upon your throbbing meat[if Cock Length of Player > 36]. The eager beaver works at your [cock size desc of Player] [cock of Player] cock steadily, eventually managing to get his muzzle to stretch open enough for you to stuff his mouth and belly with your oversized shaft[else if Cock Length of Player > 24]. The eager beaver works at your [cock size desc of Player] [cock of Player] cock steadily, in time managing to get his muzzle to stretch open enough for you to stuff his mouth and belly with your overgrown shaft[else if Cock Length of Player > 12]. The eager beaver works at your [cock size desc of Player] [cock of Player] cock steadily, getting his muzzle to stretch open wide enough to take in your enlarged shaft down his throat[else]. The eager beaver works his muzzle over your [cock size desc of Player] [cock of Player] cock steadily, taking it into his warm mouth so he can suck you off[end if].";
+	say "     While a little leery of his overgrown teeth, you do figure who better than a beaver to deal with your wood. Pulling out your cock and stroking it hard, you pull the pudgy fellow's muzzle over to it. It takes very little coaxing to get him started[if a random chance of 1 in 4 succeeds]. He mumbles something about how it's got to be better than this cheap American beer before[else],[end if] opening wide and welcoming your cock into his muzzle. You rub his furry head and round little ears as he works his muzzle over your shaft, licking and sucking eagerly. Taking care with his big teeth, he lets his tongue do most of the work, lavishing attention upon your throbbing meat[if Cock Length of Player > 36]. The eager beaver works at your [cock size desc of Player] [Cock of Player] cock steadily, eventually managing to get his muzzle to stretch open enough for you to stuff his mouth and belly with your oversized shaft[else if Cock Length of Player > 24]. The eager beaver works at your [cock size desc of Player] [Cock of Player] cock steadily, in time managing to get his muzzle to stretch open enough for you to stuff his mouth and belly with your overgrown shaft[else if Cock Length of Player > 12]. The eager beaver works at your [cock size desc of Player] [Cock of Player] cock steadily, getting his muzzle to stretch open wide enough to take in your enlarged shaft down his throat[else]. The eager beaver works his muzzle over your [cock size desc of Player] [Cock of Player] cock steadily, taking it into his warm mouth so he can suck you off[end if].";
 	say "     Once he's gotten [if Cock Length of Player > 24]most of [end if]your cock stuffed into his face, he shifts his paws to your balls[if Cock Count of Player > 2] and other cocks[else if Cock Count of Player > 1] and other cock[end if] so he can play with them as well. He works you over, doing his best to please you so he can get your creamy load. And with his eager muzzle at work, it's not too long before you're feeling your cum welling up in your balls and your hot, [Cum Load Size of Player] load his getting pumped into him[if Ball Size of Player > 6]. Your [Cum Load Size of Player] output ends up leaving the beaver all the pudgier and rounder, now sloshing quite a bit with all your cum inside him[else if Ball Size of Player > 5]. Your [Cum Load Size of Player] output ends up leaving the beaver a little pudgier and sloshing a little as well[end if]. Once he's finally convinced you're drained, he [if Cock Length of Player > 24]gradually pulls himself off[else]releases[end if] your spent shaft and grins up at you, licking his lips.";
 	say "     After taking a moment to stroke himself off and cumming onto his hockey jersey, he slowly gets back on his feet[if Ball Size of Player > 5] a little more wobbly for his extra load sloshing around inside his belly[end if]. The tipsy rodent grins at you, thanking you for the tasty treat and rubbing his belly. '[one of]Mmm... almost as good as poutine. Hey, I could sure go for some right now[or]I could go for a 50 now. Wonder if I can find one around here[or]Now I'm hungry after that drink. Wonder I if can snag me some KD[or]I could use a mickie of rye to wash that down[or]Now, where can I get me a two-four of real beer? Maybe this way[or]I could sure go for a nap on the chesterfield [if Ball Size of Player > 5]after a meal like that[else]right aboot now[end if][at random],' he says confusingly as he wanders off in search of whatever he's talking about.";
 
@@ -142,12 +142,13 @@ to say beaver_pvsex3:	[f-oral]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Beaver"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -185,7 +186,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -201,11 +202,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -221,9 +223,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -255,13 +257,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -273,8 +275,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -290,7 +292,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -306,7 +308,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if bodyname of Player is "Beaver":
+	if BodyName of Player is "Beaver":
 		if Player is male and player is pure:
 			project the figure of Beaver2_icon;
 		if humanity of Player < 10:

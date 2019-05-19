@@ -247,7 +247,7 @@ instead of addfeating the basic feats:
 	if intelligence of Player > 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
-	if intelligence of Player > 12 and ( bodyname of Player is not "Human" or facename of Player is not "Human" ):
+	if intelligence of Player > 12 and ( BodyName of Player is not "Human" or FaceName of Player is not "Human" ):
 		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited as well. You gain more XP from these fights as well.";
 	if intelligence of Player > 15 and level of Player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";

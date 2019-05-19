@@ -27,12 +27,12 @@ to say losetosugarferret:
 		if soda is owned:
 			delete soda;
 			decrease lastcaffeine of Sweet Tooth by 2;
-			if bodyname of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
+			if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
 				say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
 				decrease thirst of Player by 6;
 				sfcaffeine;
 				decrease caffeinehigh of Player by 2;
-			else if bodyname of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
+			else if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
 				say "     The wild ferrets rummage through your pack, pulling out all the soda they can find, cheering happily as they do, passing it around as they lustfully tease you. You try to make a grab for your pop as you see them passing it around, at first just trying to get your stash back. But when one can is passed to you, you pop it open right away and start downing it. You can feel the sweet rush as it flows over your tongue and down your throat. You grab the nearest ferret, pulling them into a sweet kiss.";
 				increase caffeinehigh of Player by 2;
 				decrease thirst of Player by 3;
@@ -43,7 +43,7 @@ to say losetosugarferret:
 			while carried of soda is not 0:
 				delete soda;
 				decrease lastcaffeine of Sweet Tooth by 2;
-				if caffeinehigh of Player > 0 and bodyname of Player is "Sugar Ferret":
+				if caffeinehigh of Player > 0 and BodyName of Player is "Sugar Ferret":
 					increase caffeinehigh of Player by 2;
 					if a random chance of 2 in 5 succeeds, increase caffeinehigh of Player by 1;
 					if a random chance of 2 in 5 succeeds, decrease caffeinehigh of Player by 1;
@@ -51,12 +51,12 @@ to say losetosugarferret:
 					decrease humanity of Player by 3;
 					increase Libido of Player by 3;
 		else:
-			if bodyname of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
+			if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player is 0:
 				say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. When one presses some cola to your lips, you drink it down without thinking, your wild, over-caffeinated excitement returning as your Sugar Ferret body reacts. You can feel the caffeine rushing through your system and you grab the nearest ferret, pulling them into a sweet kiss.";
 				decrease thirst of Player by 6;
 				sfcaffeine;
 				decrease caffeinehigh of Player by 2;
-			else if bodyname of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
+			else if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
 				say "     The wild ferrets rummage through your pack, but find it empty of soda. Not to let that get them down, they pull out some soda from their personal stashes to pass around while celebrating their victory. They cheer happily, passing the drinks around as they lustfully tease you. You quickly grow more excited and long to play with them. In your excitement, you try to make a grab for your pop as you see them passing it around and soon you're downing a can of pop that's been passed to you. You can feel the sweet rush as it flows over your tongue and down your throat. You grab the nearest ferret, pulling them into a sweet kiss.";
 				increase caffeinehigh of Player by 2;
 				decrease thirst of Player by 3;
@@ -89,7 +89,7 @@ to say sugarferretdesc:
 		say "     Once cute and cuddly little ferrets, the pastel mustelids have become vibrantly colored. Their cute paws-like hands have gained large, sharp claws and their too-wide grins are filled with pointed teeth. They look at you with sinister intent in their bright, red eyes as they move in to surround you.";
 	else:
 		say "     You find yourself encountering a small group of the sugar ferrets all hepped up on caffeine again, probably still rampaging in search of more cola or candy. Their once pastel colors are now bright and vibrant. Their paws have elongated claws and their wide, manic grins show their saw-like teeth. While only four of five feet tall, there are several of the little bundles of energy here. Overcharged on caffeine and sugar, they have boundless energy and a wild thirst for more. Spotting you, they poing over, intent on ransacking your pack for any soda they can find";
-		if bodyname of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
+		if BodyName of Player is "Sugar Ferret" and caffeinehigh of Player > 0:
 			say ". Still in the throes of your own caffeine high, you clutch your pack possessively, wanting to protect your stash from them.";
 		else:
 			if sugferretjoke is false:
@@ -104,12 +104,13 @@ to say sugarferretdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Sugar Ferret"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -119,10 +120,10 @@ When Play begins:
 	now victory entry is "[losetosugarferret]"; [ Text when monster wins. ]
 	now desc entry is "[sugarferretdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "[if caffeinehigh of Player > 0]that of a wild ferret creature with bright red eyes. You have a wild, manic expression on your face, showing your pointy, saw-like grin[else]that of a cute ferret creature with a happy smile[end if]";
-	now body entry is "[if caffeinehigh of Player > 0]short, slender and elongated. You are filled with excitement and energy barely controlled at times. You have short arms and legs that end in little paws with large, sharp claws. Your ferret-like body is always in motion, twitching from the caffeine-high[else]short, slender, elongated and filled with bouncy energy. You have short arms that end in cute, nimble paws with small claws at their tips. You have short legs that make your flexible body bound and sway whenever you run[end if]"; [ Body. Format as "Your body is [body of Player]." ]
+	now body entry is "[if caffeinehigh of Player > 0]short, slender and elongated. You are filled with excitement and energy barely controlled at times. You have short arms and legs that end in little paws with large, sharp claws. Your ferret-like body is always in motion, twitching from the caffeine-high[else]short, slender, elongated and filled with bouncy energy. You have short arms that end in cute, nimble paws with small claws at their tips. You have short legs that make your flexible body bound and sway whenever you run[end if]"; [ Body. Format as "Your body is [Body of Player]." ]
 	now skin entry is "[if caffeinehigh of Player > 0]brightly colored purple fur that is scraggly and ill-groomed[else]soft fur that is a soft, pastel purple in tone[end if] covers your";
 	now tail entry is "You have the long, slender tail of a [if caffeinehigh of Player > 0]frantic[else]cute[end if] ferret attached to your backside."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "ferret"; [ Cock. Format as "You have a 'size' [cock of Player] cock." ]
+	now cock entry is "ferret"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "it warps and pulses, bulging and shifting in odd places as a sweet taste fills your mouth. Soon you are left with a head much like a ferret's, but with a [if caffeinehigh of Player > 0]wild grin full of pointy teeth and bright red eyes[else]friendly smile[end if]";
 	now body change entry is "it stretches and grows more tube-like while becoming under five feet in height [if caffeinehigh of Player > 0]. Your limbs reshape themselves into short arms and legs ending in paws with sharp claws on each digit. You are filled with a wild, rambunctious energy that makes it difficult for you to keep still[else]. Your limbs reshape themselves into short arms and legs ending in cute, soft paws[end if]";
 	now skin change entry is "prickles spread across it as [if caffeinehigh of Player > 0]bright purple[else]pastel purple[end if] fur spreads all over you";
@@ -163,11 +164,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -183,9 +185,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -217,13 +219,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -235,8 +237,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -252,7 +254,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -269,7 +271,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the sugferret rule:		[continuous temptation]
 	choose row MonsterID from Table of Random Critters;
-	if bodyname of Player is "Sugar Ferret":
+	if BodyName of Player is "Sugar Ferret":
 		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation. If you give in, you could have more soda with them and have some fun[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp[or]'Yay! Playtime!' one of the ferrets calls out[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give in to the manic energy filling you as well[or]'Join us for some fun! Come! We've got sugar!' one of them says in a tempting manner. 'Yeah,' another pipes up, 'we'll share!' Your ferrety impulses do find the offer alluring[at random]...";
 		let targetnum be 200 + humanity of Player + ( plmindbonus * 3 ) - Libido of Player - ( caffeinehigh of Player * 2 );
 		let tempnum be a random number between 1 and ( 200 + ( monmindbonus * 3 ) );
@@ -288,7 +290,7 @@ this is the sugferret rule:		[continuous temptation]
 
 
 when play ends:
-	if bodyname of Player is "Sugar Ferret":
+	if BodyName of Player is "Sugar Ferret":
 		if humanity of Player < 10:
 			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth CandyShop where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
 		else:

@@ -130,11 +130,11 @@ Instead of resolving Spiritual Love:
 			now Spiritual love is resolved;
 			now humanity of Player is 0;
 			now spiritlove is 1;
-			now tailname of Player is "Spirit Wolf";
-			now facename of Player is "Spirit Wolf";
-			now skinname of Player is "Spirit Wolf";
-			now bodyname of Player is "Spirit Wolf";
-			now cockname of Player is "Spirit Wolf";
+			now TailName of Player is "Spirit Wolf";
+			now FaceName of Player is "Spirit Wolf";
+			now SkinName of Player is "Spirit Wolf";
+			now BodyName of Player is "Spirit Wolf";
+			now CockName of Player is "Spirit Wolf";
 			now scalevalue of Player is 3;
 			now bodydesc of Player is "animalistic";
 			now bodytype of Player is "lupine";

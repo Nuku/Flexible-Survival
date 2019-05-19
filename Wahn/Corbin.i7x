@@ -449,7 +449,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 						now CorbinPregCounter is 48; [48 turns till birth]
 						now CorbinPregnancy is 1; [invisibly pregnant]
 						now Libido of Corbin is 1; [player is the father]
-						now CorbinImpregnatingCock is cockname of Player;
+						now CorbinImpregnatingCock is CockName of Player;
 				now HP of Corbin is 4; [he's 'out' to the horsemen - who're starting to get interested]
 				now lastfuck of Corbin is turns;
 		else if HP of Corbin is 5: [player fought off the horsemen going for Corbin]
@@ -464,7 +464,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 					now CorbinPregCounter is 48; [48 turns till birth]
 					now CorbinPregnancy is 1; [invisibly pregnant]
 					now Libido of Corbin is 1; [player is the father]
-					now CorbinImpregnatingCock is cockname of Player;
+					now CorbinImpregnatingCock is CockName of Player;
 			now lastfuck of Corbin is turns;
 		else if HP of Corbin is 90: [barracks slut]
 			say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the somewhat damp fabric of his jeans there. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Then you push your hand under the band of his pants and feel for his sensitive pussy lips, slipping in a finger into the wet hole between them. While you finger Corbin and get him to pant and gasp, you notice some movement in your peripheral view - it's several of the other horsemen in the barracks, turning to watch what you're doing and nudging others awake too. You don't let that distract you and just lean in to plant a hungry kiss on Corbin's lips - leading over to a bit of making out.";
@@ -478,7 +478,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 					now CorbinPregCounter is 48; [48 turns till birth]
 					now CorbinPregnancy is 1; [invisibly pregnant]
 					now Libido of Corbin is 1; [player is the father]
-					now CorbinImpregnatingCock is cockname of Player;
+					now CorbinImpregnatingCock is CockName of Player;
 			if CorbinPregnancy is 0: [not already preggers]
 				let CorbinPregChance be a random number from 1 to 20;
 				if CorbinPregChance > 10: [50% chance]
@@ -500,7 +500,7 @@ to say CorbinSex4: [Corbin's pussy fucked]
 				now CorbinPregCounter is 48; [48 turns till birth]
 				now CorbinPregnancy is 1; [invisibly pregnant]
 				now Libido of Corbin is 1; [player is the father]
-				now CorbinImpregnatingCock is cockname of Player;
+				now CorbinImpregnatingCock is CockName of Player;
 
 to say CorbinSex5: [Corbin's ass fucked]
 	if thirst of Corbin is 1: [in the barracks]
@@ -637,14 +637,14 @@ to say CorbinSex7_Male:
 		WaitLineBreak;
 		say "     Exhausted by the hot fuck, you rest for a moment against Corbin's back, your slowly softening shaft still inside the big feline under him. Klauz meanwhile just leans his head back in total relaxation, and you can literally feel his resounding purr through Corbin lying on the great beast's chest. Corbin gives a satisfied sigh, then says, 'Man, you two are quite something.' while reaching back and stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off the felinoid to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else if calcnumber is 3: [BJ from Corbin]
-		say "     Stepping up to stand over Klauz, your feet left and right of his stretched-out body, you smile down at Corbin and hold out your hard [cock of Player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to grasp your cock and fondle your balls. Your eager cuntboy friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
+		say "     Stepping up to stand over Klauz, your feet left and right of his stretched-out body, you smile down at Corbin and hold out your hard [Cock of Player] shaft to him. He stops his movements on top of the large cat for a moment, sitting still with the large spined shaft deep in his pussy while he reaches out to grasp your cock and fondle your balls. Your eager cuntboy friend licks his lips, then gets to work sucking you off, taking the tip of your member into his mouth and running his tongue over it. After going down on your shaft all the way a few times, he starts sliding up and down on the felinoid's erection once again, timing it with bobbing his head towards you.";
 		WaitLineBreak;
-		say "     Taking Klauz's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Corbin's arousal peaks. With his lips tightly wrapped around your [cock of Player] shaft, the cuntboy cowboy gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
+		say "     Taking Klauz's shaft deep in his pussy while he sucks you off, with its small spines rubbing his inner walls and causing incredible sensations, it doesn't take too much longer until Corbin's arousal peaks. With his lips tightly wrapped around your [Cock of Player] shaft, the cuntboy cowboy gives a somewhat muffled but still loud moan from his throat, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Corbin's face, neck and chest. The now pretty splattered equine gives you a broad smile, then reaches up to pull you down to his level and kiss him, after which you proceed to lick your own cum off him and share its taste while making out.";
 		WaitLineBreak;
 		say "     Corbin gives a satisfied sigh, then says, 'Man, you two are quite something,' while stroking your side affectionately. After a while longer in this position, gently touching each other, an exhausted Corbin sinks off Klauz to the side, coming to a rest against the large cat's flank, pressed against his warm fur and with an arm and a leg still draped over him. You take position on the other side, leaning in against the big feline's warm bulk and rest for a while, then eventually stand up with a sigh and go to collect your clothes. Can't cuddle all day - there's still the matter of ensuring your survival in this chaotic city.";
 	else if calcnumber is 4: [BJ from felinoid]
-		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then hold out your hard [cock of Player] shaft to him. The large cat looks at you with his golden eyes, then down at Corbin riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of Player] [cock of Player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
+		say "     Stepping up to stand against the head end of the bed, you give Klauz's chin an affectionate scratch, then hold out your hard [Cock of Player] shaft to him. The large cat looks at you with his golden eyes, then down at Corbin riding his shaft and back at you. Finally giving an amicable growl, he nuzzles upwards into your groin, teasing your [cock size desc of Player] [Cock of Player] shaft. A rough tongue flicks out across sensitive flesh, taking special care to carefully lap over your balls and tease the underside of your shaft.";
 		WaitLineBreak;
 		say "     While you're getting head from the large beast, Corbin rides his spined cock with unabated vigor moaning and gasping loudly at the sensations it gives him. With how much he enjoys riding the big cat, it doesn't take too much longer until Corbin's arousal peaks. Panting unintelligible sounds in his lust, the cuntboy cowboy rises up and slams himself down on the hard erection under him, a shudder running through his whole body as he comes. Femcum trickling down the felinoid's shaft and Corbin's inner muscles gripping his cock like a vise make sure that it is only moments later that the big cat lets out a satisfied roar himself and his cock starts pulsing with spurt after spurt of his seed shooting into Corbin's pussy. The handsome cuntboy lowers his hand to the height of his belly button, reveling in the feeling of being bred by the large feline creature.";
 		say "     With him breathing deeply and still in the grip of his own orgasm, you take hold of your erect manhood and jerk it, eager to join your two partners in climax. It's not much longer before your frantic movements push you over the edge to your release and you come, blasting your load all over Klauz's furry face, with a few shots landing in his open muzzle. The big cat gives a pleased mrowl at the taste of your seed, using his long tongue to lick up any that landed in the fur around his muzzle. Smiling at that, you help him out by wiping up any that he can't reach with your fingers and holding them out for him to lick your cum off. Then you step closer to Corbin, leaning forward to give him a deep kiss.";

@@ -81,7 +81,7 @@ Section 2 - Dialog
 
 Instead of conversing the Garrett:
 	let nongryph be true;
-	if bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon":
+	if BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon":
 		now nongryph is false;
 	if HP of Garrett is 0:
 		say "     The male gryphon smiles and puts down his magazine as you come speak to him. 'Hey there. It's nice to have some company. Things have been a little quiet around here. Most of the gryphons have gone out into the city. I was out there for a while, handing out milk, but with the others gone, I'm pretty much out of stock now. Besides, I'm a little bored of the gryphons all being herms. Were there... even any other males besides me...' he adds, mostly to himself before trailing off for a bit as he tries to remember.";
@@ -121,7 +121,7 @@ to say sexwithGarrett:
 		say "[garrettsexmenu]";
 	else if ( player is puremale ) and HP of Garrett > 1:		[male players only]
 		let player_puregryph be false;
-		if ( bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon" ) and player is pure:
+		if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
 			now player_puregryph is true;
 		if Player_puregryph is true:
 			if ( HP of Garrett >= 3 and a random chance of anallevel in 5 succeeds ) and anallevel > 1:
@@ -148,7 +148,7 @@ to say sexwithGarrett:
 
 to say garrettsexmenu:
 	let player_puregryph be false;
-	if ( bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon" ) and player is pure:
+	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
 		now player_puregryph is true;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -215,14 +215,14 @@ Section 4 - Sex Scenees
 
 to say garrett_handjob_1:
 	let player_puregryph be false;
-	if ( bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon" ) and player is pure:
+	if ( BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon" ) and player is pure:
 		now player_puregryph is true;
 	if HP of Garrett is 1:
 		say "     'That's great. This'll be so much more fun with a helping hand.' He enfolds one of his strong wings around you and pulls you in close. Guiding your hand to his crotch, it's placed on his growing erection. He must be at least a good eighteen inches when fully hard, making him much better hung than his herm counterparts. Tilting your head [if scalevalue of Player > 3]down[else if scalevalue of Player < 3]up[else]towards him[end if], he gives you a lustful kiss. With his cock in hand, you start stroking him, causing the buff male to moan softly in satisfaction. His taloned paws run over your [bodytype of Player] body, further urging you to continue.";
 	else:
 		say "     'Thanks a lot. I really appreciate all the help you've been giving me. I want to make as much of this as I can and getting a helping hand really helps boost productivity[if Player is puremale]. Nothing like a hot guy to get my motor running and my balls churning[end if]. I can just imagine all those gryphon studs this stuff'll help make,' he adds, grinding his stiffening erection against your [bodytype of Player] body. Your hand slips down to his foot-and-a-half-long erection and start stroking it as he pulls you into a lustful kiss.";
 	if Player is male:
-		say "     A paw of his finds its way to your [cock of Player] cock and starts stroking it as well. His touch is strong, but gentle, working to please you with his steady pumping. He works your manhood with an eagerness that further excites you, as does the throbbing of his own cock in your hand. You fall into a rhythm together, stroking one another in unison. In time, the two of you build towards orgasm. The kiss is broken when he moves his beak down to nip at your neck and shoulder. He moans needfully and pumps you harder, driving you to climax first. You spray shot after shot of your sticky seed from your pulsing rod until finally drained.";
+		say "     A paw of his finds its way to your [Cock of Player] cock and starts stroking it as well. His touch is strong, but gentle, working to please you with his steady pumping. He works your manhood with an eagerness that further excites you, as does the throbbing of his own cock in your hand. You fall into a rhythm together, stroking one another in unison. In time, the two of you build towards orgasm. The kiss is broken when he moves his beak down to nip at your neck and shoulder. He moans needfully and pumps you harder, driving you to climax first. You spray shot after shot of your sticky seed from your pulsing rod until finally drained.";
 	else if Player is female:
 		say "     A paw of his finds its way to your [cunt size desc of Player] pussy and strokes across its damp folds. His touch is strong, but gentle, pleasuring you with his taloned fingers. He slips [if Cunt Tightness of Player < 5]one of them[else if Cunt Tightness of Player < 12]two of them[else]three of them[end if] into your cunny and pumps away while his remaining digits play across your wet folds. He pumps into you with a steady motion and you fall into a rhythm together, stroking him in time to his fingering. His enthusiasm for playing with your pussy isn't that high, but he's still a horny gryphon and performs adequately. In time, you build towards orgasm and end up crying out as your vaginal walls flutter around his probing digit[if Cunt Tightness of Player >= 5]s[end if]. You're left panting and satisfied by the time he moves his hand away.";
 	else:
@@ -382,7 +382,7 @@ to say drinkgryphoncum:
 the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing scent of male gryphon semen.".
 
 to say garrettinfect:
-	if bodyname of Player is "Feral Gryphon" and player is pure and guy is not banned:
+	if BodyName of Player is "Feral Gryphon" and player is pure and guy is not banned:
 		say "     Absorbing Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
 		infect "Feral Gryphon";
 	else:
@@ -399,7 +399,7 @@ to say garrettinfect:
 Section 6 - Endings
 
 when play ends:
-	if bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon":
+	if BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon":
 		now lasthgryphon_TG is lasthgryphon_TG; [do nothing - see those forms for endings]
 	else if HP of Garrett >= 7 and humanity of Player >= 10:
 		say "     Some time after you settle into your new life, you notice a new product on the market - he-gryphon milk. The musky, milky fluid (now microwaved to be non-infectious) is marketed as an exotic drink that temporarily stimulates and enhances male-on-male pleasure in the consumer. It pleases you to see that Garrett's product has become somewhat of a success, especially among the gay community and with guys looking for that little boost to help them try how things are on the fabulous side of the fence[if Player is puremale]. You pick some up on the rare occasion you want to inject a little extra oomph into some hot gay fun you're planning[end if].";

@@ -23,9 +23,9 @@ to say squiredesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	if bodyname of Player is "Knight":
+	if BodyName of Player is "Knight":
 		now kpstatus is 1;
-	else if bodyname of Player is "Squire":
+	else if BodyName of Player is "Squire":
 		now kpstatus is 2;
 	else if Player is bodily human and player is facially human and player is skintone human and tail of Player is "":
 		now kpstatus is 3;
@@ -135,35 +135,35 @@ to say losetosquire:
 to say squirewins_vaginal_shift:
 	choose row MonsterID from the Table of Random Critters;
 	if Player is herm:
-		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Lifting your [cock size desc of Player] cock[if cockname of Player is not listed in infections of InternalList] and balls[end if], he smiles as he confirms the presence of your juicy pussy. 'This encounter gets better and better. This fallen knight has a scabbard as well as a sword. ";
+		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Lifting your [cock size desc of Player] cock[if CockName of Player is not listed in infections of InternalList] and balls[end if], he smiles as he confirms the presence of your juicy pussy. 'This encounter gets better and better. This fallen knight has a scabbard as well as a sword. ";
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. With a fine view of your juicy pussy, he smiles eagerly. 'This encounter gets better and better; this fallen knight has a scabbard for my sword. ";
 	say "But what kind of a knight cannot stand up to a squire? You're unworthy to be a knight for [if HP of Player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says as he pushes a few fingers into your cunt eagerly. He clumsily gropes and teases your cunny, relishing this opportunity with a female. After his inexperienced exploration, he gets his erection lined up with your wet folds and pushes his dribbling cock into your vagina with one confident motion.";
-	say "     He gives a satisfied moan as he sets himself to thrusting into you. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, he does rein it in after his initially overeager start. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if Player is male]takes hold of your [cock of Player] cock and starts jerking you off as he makes love to you[else]puts a hand on your spread folds and tweaks your clit[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your quivering tunnel.";
+	say "     He gives a satisfied moan as he sets himself to thrusting into you. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, he does rein it in after his initially overeager start. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if Player is male]takes hold of your [Cock of Player] cock and starts jerking you off as he makes love to you[else]puts a hand on your spread folds and tweaks your clit[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your quivering tunnel.";
 	WaitLineBreak;
 	say "     Your enjoyment of the increasingly skillful fucking you're receiving increases as it continues, though you don't quite realize why at first. At first you think it just your increasing excitement, but you come to realize the squire's cock is actually engorging further inside you, pushing deeper and filling you more fully. Looking up at him, you see these changes aren't limited to just his cock either. The young man's becoming more mature and strikingly handsome as his body grows to fill out his loose tunic. Even as you watch, his young face becomes that of a nobleman[if squirefeature is 1]. His scruffy brown hair is tamed even as he gains a manly beard to match[else if squirefeature is 2]. His blond locks become long and flowing, making him all the more attractive in his maturity[else if squirefeature is 3]. His pretty-boy face ages to become that of square-jawed man[else if squirefeature is 4]. His goofy grin is replaced by that of a mirthful man who knows no fear[else]. He looks down at you with those blue eyes of his features become regal and dignified[end if].";
 	say "     But the changes not limited to him alone, your knightly body becoming smaller even as he grows, helping to make him seem all the more impressive. ";
-	now bodyname of Player is "Squire";
-	now body of Player is body entry;
+	now BodyName of Player is "Squire";
+	now Body of Player is body entry;
 	decrease humanity of Player by 2;
-	if facename of Player is "Knight":
-		now facename of Player is "Squire";
-		now face of Player is face entry;
+	if FaceName of Player is "Knight":
+		now FaceName of Player is "Squire";
+		now Face of Player is face entry;
 		say "Even as you look up at him, you can feel your own face changing, loosing that mature, noble cast to become more youthfully attractive. ";
 		decrease humanity of Player by 2;
-	if skinname of Player is "Knight":
-		now skinname of Player is "Squire";
-		now skin of Player is skin entry;
+	if SkinName of Player is "Knight":
+		now SkinName of Player is "Squire";
+		now Skin of Player is skin entry;
 		say "Those marks and scars on your skin of brave battles fade away, leaving you with young, smooth skin. ";
 		decrease humanity of Player by 1;
-	if cockname of Player is "Knight":
-		now cockname of Player is "Squire";
-		now cock of Player is cock entry;
+	if CockName of Player is "Knight":
+		now CockName of Player is "Squire";
+		now Cock of Player is cock entry;
 		if Player is male:
 			say "Tingles run through your cock as it changes subtly and you feel less desire to use it, not when you might instead yourself be fucked. ";
 		decrease humanity of Player by 1;
-	if tailname of Player is "Knight":
-		now tailname of Player is "Squire";
+	if TailName of Player is "Knight":
+		now TailName of Player is "Squire";
 		now tail of Player is tail entry;
 		decrease humanity of Player by 2;
 		say "This comes with a reshaping of your buttocks into a cute and sexy bubble-butt made for and longing to be filled. ";
@@ -180,27 +180,27 @@ to say squirewins_anal_shift:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Your genderless crotch gives him momentary pause and he's drawn to rub across your nullpatch. 'What kind of knight has neither sword nor scabbard? No wonder you're unworthy to be a knight and [if HP of Player > 0]surrendered so easily[else]lost[end if]. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. 'What kind of a knight cannot stand up to a squire? You're clearly unworthy to be a knight for [if HP of Player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says before pushing a few spit-slick fingers into your asshole to stretch you out. After this brief preparation, he gets his erection lined up with your asshole and pushes his dribbling cock into your rear with one confident motion.";
-	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if Player is male]takes hold of your [cock of Player] cock and starts jerking you off as he buggers you[else]puts a hand on your barren crotch and rubs at it while buggering you[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your back passage.";
+	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And his skills seem to grow as he pounds into you, thrusting with increasing confidence. As his assertiveness increases, he [if Player is male]takes hold of your [Cock of Player] cock and starts jerking you off as he buggers you[else]puts a hand on your barren crotch and rubs at it while buggering you[end if]. This arouses your further, adding to the stimulation from having his pistoning rod in your back passage.";
 	WaitLineBreak;
 	say "     Your enjoyment of the anal fucking you're receiving increases as it continues, though you don't quite realize why at first. At first you think it just your increasing excitement, but you come to realize the squire's cock is actually engorging further inside you, pushing deeper and filling you more fully. Looking up at him, you see these changes aren't limited to just his cock either. The young man's becoming more mature and strikingly handsome as his body grows to fill out his loose tunic. Even as you watch, his young face becomes that of a nobleman[if squirefeature is 1]. His scruffy brown hair is tamed even as he gains a manly beard to match[else if squirefeature is 2]. His blond locks become long and flowing, making him all the more attractive in his maturity[else if squirefeature is 3]. His pretty-boy face ages to become that of square-jawed man[else if squirefeature is 4]. His goofy grin is replaced by that of a mirthful man who knows no fear[else]. He looks down at you with those blue eyes of his features become regal and dignified[end if].";
 	say "     But the changes not limited to him alone, your knightly body becoming smaller even as he grows, helping to make him seem all the more impressive. ";
-	now bodyname of Player is "Squire";
-	now body of Player is body entry;
-	if facename of Player is "Knight":
-		now facename of Player is "Squire";
-		now face of Player is face entry;
+	now BodyName of Player is "Squire";
+	now Body of Player is body entry;
+	if FaceName of Player is "Knight":
+		now FaceName of Player is "Squire";
+		now Face of Player is face entry;
 		say "Even as you look up at him, you can feel your own face changing, loosing that mature, noble cast to become more youthfully attractive. ";
-	if skinname of Player is "Knight":
-		now skinname of Player is "Squire";
-		now skin of Player is skin entry;
+	if SkinName of Player is "Knight":
+		now SkinName of Player is "Squire";
+		now Skin of Player is skin entry;
 		say "Those marks and scars on your skin of brave battles fade away, leaving you with young, smooth skin. ";
-	if cockname of Player is "Knight":
-		now cockname of Player is "Squire";
-		now cock of Player is cock entry;
+	if CockName of Player is "Knight":
+		now CockName of Player is "Squire";
+		now Cock of Player is cock entry;
 		if Player is male:
 			say "Tingles run through your cock as it changes subtly and you feel less desire to use it, not when you might instead yourself be fucked. ";
-	if tailname of Player is "Knight":
-		now tailname of Player is "Squire";
+	if TailName of Player is "Knight":
+		now TailName of Player is "Squire";
 		now tail of Player is tail entry;
 		say "This comes with a reshaping of your buttocks into a cute and sexy bubble-butt made for and longing to be filled. ";
 	say "As you regress back to the body of a late teen, your lust to be fucked increases further as well, your body desiring to be screwed. You are meant to service noble knights such as the one now thrusting into you. You long to find your own knight to serve and service.";
@@ -218,14 +218,14 @@ to say squirewins_anal_sq:
 		say "     'That should be enough training for now, strange squire,' he says with a satisfied sigh. 'Perhaps that will aid you in your quest to become a better squire. But we should go now and rejoin our knights so we might service them. Your knight may even now have found a means to assist you in your genderless plight,' he adds in a misguided attempt to be encouraging. Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can.";
 	else:
 		say "     'And there you are, strange [if kpstatus is 3]brigand[else]beast[end if]. Perhaps that will [if kpstatus is 3]satisfy that which drives you to villainy[else]slake your monstrous rampage[end if].' Sticky, sore and aching a little, but also flush with the warm of his seed in your rear, you see little point in trying to correct the delusional lad and instead take your leave while you can.";
-	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And so, while this [']lesson['] is a little rough at the start, it quickly becomes enjoyable for you as well. The pistoning of his rod into your back passage and across your prostate sends shivers of erotic pleasure through you. This is further increased when the lustful lad reaches around to stroke and pump at your [cock of Player] cock while he fucks you.";
+	say "     As the young man sets himself to fucking you, he does so with some skill. And while more familiar with being on the receiving end, he has clearly learnt much about how an ass should be fucked. And so, while this [']lesson['] is a little rough at the start, it quickly becomes enjoyable for you as well. The pistoning of his rod into your back passage and across your prostate sends shivers of erotic pleasure through you. This is further increased when the lustful lad reaches around to stroke and pump at your [Cock of Player] cock while he fucks you.";
 	say "     As his pace quickens towards climax, you find your hips pressing up into each thrust, wanting the young man to spill his seed inside you. And given his pace and zeal, you are not left longing for long, with him thrusting deep into your tight hole and dumping several gooey shots of his seed. You cry out in orgasm in response, your lust overtaking you as you cry out while he cums inside you. Your [cock size desc of Player] cock throbs in his hand and sprays its messy load onto the ground beneath you.";
 	say "     'That should be enough training for now, [if HP of Player > 0]my fellow[else]bold[end if] squire,' he says with a satisfied sigh. 'Perhaps that will aid you in your quest to become a better squire. But we should go now and rejoin our knights so we might service them,' he says with an eagerness that part of you feels as well. You try your best to shake off the desire to run off and find [if knightcrestnum is 0]a knight to be your master[else]your knight[end if]. Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can in the hopes of clearing your head.";
 
 
 to say squirewins_ride:
 	say "     The aroused squire pushes you down onto your back and pulls down his pants. Straddling you, he grinds his rear down onto your [cock size desc of Player] cock. '[if Cock Length of Player > 15]My master will surely be impressed when I tell him of your formidable size[else if Cock Length of Player >= 10]My master will be quite impressed when I tell him of your size[else if Cock Length of Player > 5]Not quite as grand as my lord's, but it'll still make for a good training session[else]You don't have much to show for yourself, but at least it can be a warm-up to get me limber before a proper training session[end if], [if kpstatus is 3]rogue[else]beast[end if].'";
-	say "     Aiming your erection to his puckered hole, he lowers himself with [if Cock Length of Player > 15]a groaning effort[else if Cock Length of Player >= 10]a slow moan[else if Cock Length of Player > 5]a soft moan[else]ease[end if] down onto your [cock size desc of Player] shaft. It's clear the young man has had his asshole stretched more than a few times. That does not mean he's loose by any means; his inner muscles and anal rings are quite practiced and squeezing and pulling at your [cock of Player] rod even as he rides you.";
+	say "     Aiming your erection to his puckered hole, he lowers himself with [if Cock Length of Player > 15]a groaning effort[else if Cock Length of Player >= 10]a slow moan[else if Cock Length of Player > 5]a soft moan[else]ease[end if] down onto your [cock size desc of Player] shaft. It's clear the young man has had his asshole stretched more than a few times. That does not mean he's loose by any means; his inner muscles and anal rings are quite practiced and squeezing and pulling at your [Cock of Player] rod even as he rides you.";
 	say "     'It is a squire's duty to serve his knight - not that a [if kpstatus is 3]brigand[else]monster[end if] like you would understand duty or honor. But regardless, I shall train hard to I might slake my knight's needs like a proper and loyal squire,' he pants as he grinds down harder. His pace quickens as he relaxes further, taking you hard and deep with increasing lustful zeal.";
 	WaitLineBreak;
 	say "     The horny squire certainly seems to be enjoying his [']training['], probably looking forward to the next time he might show off his growing skills to his knight. And you grow increasingly aroused as well, the young man's talents working you quickly towards your peak until you cannot hold back and unleash your [Cum Load Size of Player] load into him, [if Ball Size of Player > 5]bloating his belly[else if Ball Size of Player > 4]flooding his bowels[else]painting his prostate[end if] with your seed. He rides you through your orgasm and pulls off you once you're done. Grabbing your head, he presses it to his pulsing cock. Giving himself a few final strokes is all it takes before he cums messily, splattering your face with his sticky semen.";
@@ -234,11 +234,11 @@ to say squirewins_ride:
 to say squirewins_vaginal:
 	say "     The aroused squire slips his hand between your legs and runs his fingers over your wet slit[if HP of Player > 0]. The[else]. Despite your attempts to resist, the[end if] touch of the handsome young man is quite arousing and you feel yourself growing flush from it.";
 	if kpstatus is 2:
-		say "     'It's rare for a lass to be a knight's squire[if Player is male]... though I see you have a sword as well as a scabbard,' he adds, letting his fingers tease your [cock of Player] cock momentarily before returning to your pussy[else],' he says as he fingers your increasingly wet pussy[end if]. 'And as the victor, it is my duty to play the knight and assist in training the weaker squire,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
+		say "     'It's rare for a lass to be a knight's squire[if Player is male]... though I see you have a sword as well as a scabbard,' he adds, letting his fingers tease your [Cock of Player] cock momentarily before returning to your pussy[else],' he says as he fingers your increasingly wet pussy[end if]. 'And as the victor, it is my duty to play the knight and assist in training the weaker squire,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
 	else:
 		say "     'Now normally, this is the knight's privilege, but my lord isn't here right now... And it is a squire's duty to aid his knight in fulfilling his obligations,' he says with a leer. As he pulls down his pants to reveal his seven inch penis to be hard and ready to perform this task.";
 	WaitLineBreak;
-	say "     With his cock pressed to your waiting folds, he wastes no time in thrusting into you with a satisfied moan. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, that he shows such zeal in his want for you provides a carnal excitement. In his lust, his hands [if Player is male]reach around to stroke and pump at your [cock of Player] cock[else if Nipple Count of Player > 0 and Breast Size of Player > 0]grope your [short breast size desc of Player] breasts while his tongue lavishes your nipples[else if Breast Size of Player > 0]grope your [short breast size desc of Player] breasts while his tongue roams over the smooth protrusions[else]squeeze your ass while he runs his tongue across your chest and neck[end if].";
+	say "     With his cock pressed to your waiting folds, he wastes no time in thrusting into you with a satisfied moan. Being more familiar with being on the receiving end, his youthful eagerness shows in how he fucks you hard and fast. And while his inexperience with females shows, that he shows such zeal in his want for you provides a carnal excitement. In his lust, his hands [if Player is male]reach around to stroke and pump at your [Cock of Player] cock[else if Nipple Count of Player > 0 and Breast Size of Player > 0]grope your [short breast size desc of Player] breasts while his tongue lavishes your nipples[else if Breast Size of Player > 0]grope your [short breast size desc of Player] breasts while his tongue roams over the smooth protrusions[else]squeeze your ass while he runs his tongue across your chest and neck[end if].";
 	say "     As his pace quickens towards climax, you find your hips pressing up into each thrust, wanting the young man to spill his seed inside you. And given his pace and zeal, you are not left longing for long, with him thrusting deep into your wet cunny and dumping several gooey shots of his seed. You cry out in orgasm in response, your lust overtaking you as you cry out while he cums inside you.";
 	if kpstatus is 2:
 		say "     'That should be enough training for now,' he says with a satisfied sigh. 'Perhaps that will even leave you with a reminder of the bold squire with whom you trained one [short time of day]. But we should go now and rejoin our knights so we might service them.' Spent and sticky, you see little point in talking further to the delusional lad and instead take your leave while you can.";
@@ -278,12 +278,13 @@ to say beatthesquire:
 Section 4 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Squire"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -321,7 +322,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -337,11 +338,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -357,9 +359,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -391,13 +393,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -409,8 +411,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -426,7 +428,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -443,7 +445,7 @@ Section 5 - Endings
 
 [
 when play ends:
-	if bodyname of Player is "Squire":
+	if BodyName of Player is "Squire":
 		if humanity of Player < 10:
 			say "     You succumb to your template infection.";
 		else:

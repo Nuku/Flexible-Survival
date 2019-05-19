@@ -153,7 +153,7 @@ to say fangsex:
 		now title entry is "Mount Fang";
 		now sortorder entry is 3;
 		now description entry is "Mount the big wolf to show him who's alpha.";
-		if bodyname of Player is "Skunkbeast Lord" and player is pure:
+		if BodyName of Player is "Skunkbeast Lord" and player is pure:
 			choose a blank row in table of fucking options;
 			now title entry is "SBL fuck";
 			now sortorder entry is 4;
@@ -681,7 +681,7 @@ to say fangalphaoral:
 	NPCSexAftermath Player receives "OralCock" from Fang;
 
 to say fangalphafucked:
-	if bodyname of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
 		say "[fangalphafuckedSBL]";
 	else:
 		if Player is impreg_able and hunger of Fang is 0:
@@ -753,7 +753,7 @@ an everyturn rule:
 			say "     Sliding your gear aside for the moment, you shift in your seat to better view the upcoming show. You watch as Candy chats briefly with the large wolf before sliding down his panties and moving onto all fours. With a flick of his tail, he flashes his bare ass at you, raising his skirt. Fang strides around the coon, sniffing at him with increasing interest, then licks under his tail. He seems to find the coon's cotton candy flavor interesting and lashes his tongue over the proffered tailhole. The coon releases some girlish moans as the long, broad tongue laps at his asshole and even slips into it a little.";
 			say "     Once he's gotten his playmate ready, Fang moves atop him, nudging his throbbing wolf cock against the coon's back door before slowly sliding in into him. Candy releases a sensual moan of delight and pushes back, easily taking the wolf's big girth into his practiced hole. His bubble bottom bounces with each thrust of his feral lover.";
 			if Player is male:
-				say "     Enjoying the impromptu show, you take your cock in hand and slowly stroke yourself, sliding over your [cock of Player] dick. As you watch the pair continue to go at it, precum dribbles down your length, allowing you to get nice and slick[if Player is female]. Your free hand moves down to your pussy, slipping a few fingers into it to pleasure your female sex as well[else]. Your free hand moves down to your balls, rubbing over them for further pleasure[end if]. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the powerful wolf banging away quickly at the girly coon's ass.";
+				say "     Enjoying the impromptu show, you take your cock in hand and slowly stroke yourself, sliding over your [Cock of Player] dick. As you watch the pair continue to go at it, precum dribbles down your length, allowing you to get nice and slick[if Player is female]. Your free hand moves down to your pussy, slipping a few fingers into it to pleasure your female sex as well[else]. Your free hand moves down to your balls, rubbing over them for further pleasure[end if]. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the powerful wolf banging away quickly at the girly coon's ass.";
 			else:
 				say "     Enjoying the impromptu show, you slide a hand between your legs and slide them across your pussy, teasing yourself. As your fingers get damp from your juices, you push [if Cunt Tightness of Player > 3]a trio of fingers[else if Cunt Tightness of Player > 1]a pair of fingers[else]a finger[end if] into your needy hole. Your other hand teases at your clit and sensitive folds while you fingerfuck yourself while watching the pair. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the thick wolf cock sinking into the girly coon's ass.";
 			WaitLineBreak;
@@ -808,7 +808,7 @@ when play ends:
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 	else if HP of Fang is 3 or HP of Fang is 4:				[ alpha Fang ]
-		if bodyname of Player is "Feral Wolf":
+		if BodyName of Player is "Feral Wolf":
 			[ see Feral Wolf file for this ending ]
 			now tempnum is 0;
 		else:
@@ -819,7 +819,7 @@ when play ends:
 					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own.";
 			else:
 				say "     When the military comes, you worry about how they'll react to Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. His bestial form distresses the soldiers, but you do your best to appease them. As the squad leader tries to move you out of the way, telling you the wolf can't come, Fang pads confidently in front of you growls for him to let you go. Clearing his throat, he starts talking with some difficulty. In anticipation of this moment, it's clear your clever master has spent some time among the library stacks reading in preparation. With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to articulate clearly his points and that he WILL be going with you. While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building. You hug your wonderful alpha's head before going along to show them the rest of the place. He gives your cheek a lick and ignores the soldiers guarding him as inconsequential, having impressed their alpha, and strides back to his favorite resting spot to await departure.";
-				if bodyname of Player is "Felinoid" and felinoid companion is tamed:
+				if BodyName of Player is "Felinoid" and felinoid companion is tamed:
 					[ see Felinoid Companion file for this ending ]
 					now tempnum is 0;
 				else if Felinoid companion is tamed and player is female:

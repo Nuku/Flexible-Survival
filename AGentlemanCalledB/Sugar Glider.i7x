@@ -14,7 +14,7 @@ when play begins:
 
 to say losetoSugarGlider:
 	now nosugarglidersex is 0;
-	if bodyname of Player is "Sugar Ferret" or facename of Player is "Sugar Ferret":
+	if BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret":
 		if HP of Player > 0:
 			say "     Giving up on resisting the sweet marsupial, you allow her to push you to the ground in her eagerness, stripping you of your clothing and gear in the process. 'Yay! Let's have some fun, you stinky [one of]soda jerk[or]fizz head[or]carbonated tube rat[or]candy hoarder[or]pop guzzler[at random],' she says with a giggle.[run paragraph on]";
 		else:		[steal before]
@@ -40,12 +40,12 @@ to say losetoSugarGlider:
 		say "     The overpowering sweetness of the sugar glider's feminine juices fills your mouth as she cums, sending you over the edge as well. Even as you work to pump your [Cum Load Size of Player] load into her, you continue licking and sucking at her quivering folds, drawing out her climax as long as you can to get as much of the sweet nectar as possible while her second cunt soaks your face and hand in her sticky mess. [if Cock Count of Player is 1]As you're finishing up, she switches to licking at your cock like it's a lollipop, getting your last few spurts of seed to[else if Cock Count of Player is 2]With her muzzle sucking down your load from the penis in her mouth, she strokes your other shaft with her paw, letting your seed[else]With her muzzle sucking down your load from the penis in her mouth, she strokes your other shafts with her paws, letting your seed[end if] splatter across her cute, pink muzzle.";
 		say "     Sitting up, she grinds her crotch against your face a little longer, enjoying her victory while licking your semen from herself. Once cleaned up, the glider gives you one last gleeful titter before springing to her feet and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
 	else if Cock Count of Player is 1: [Male PC 1 cock]
-		say " The glider looks a little disappointed as she discovers your single member, making a cute pouty lip as she teases your [cock of Player] cock to full attention, before positioning herself over your groin and aligning your shaft with one of her dual cunts. She slowly descends over your member, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
+		say " The glider looks a little disappointed as she discovers your single member, making a cute pouty lip as she teases your [Cock of Player] cock to full attention, before positioning herself over your groin and aligning your shaft with one of her dual cunts. She slowly descends over your member, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
 		say "     After breaking the kiss, the glider stares down at you with a smile for a moment before she reaches for your hand, pulling it towards her unfilled cunt and stroking your fingers across her sticky folds until you begin to finger her wanton passage yourself, leaving her free to massage and fondle her pillowy breasts as she begins bouncing happily in your lap. The delightful squeezing of her cunt around your shaft as she rides you is quite distracting, but you do your best to focus on pleasuring her second cunt, working your fingers deep into her syrupy folds to ensure your lovely companion is satisfied. Your effort is soon rewarded, her giggles giving way to long moans of delight as your combined efforts quickly push her to climax. With an adorable squeal the sugar glider reaches her peak, her feminine passages clamping down around your cock as her orgasm hits, pushing you over the edge as well, as her second cunt soaks your hand and groin in her sweet nectar.";
 		WaitLineBreak;
 		say "     As her climax subsides, the glider leans forward once more, giving you another quick kiss on the cheek before rising to her feet, allowing more of her sweet-smelling syrupy mess to drool from her dual cunts as she pulls free of your shaft. With a smile she reaches down into the pouch on her belly and pulls out a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random], slipping it into your mouth with a cute titter before [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
 	else if Cock Count of Player > 1: [Male PC 2+ cocks]
-		say " Almost bouncing with excitement as she reaches for your [cock of Player] cocks, the glider eagerly teases you to full erection before positioning herself over your groin and aligning a shaft with each of her dual cunts. With a gleeful titter, she slowly descends over your [if Cock Count of Player is 2]twin [end if]shafts, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
+		say " Almost bouncing with excitement as she reaches for your [Cock of Player] cocks, the glider eagerly teases you to full erection before positioning herself over your groin and aligning a shaft with each of her dual cunts. With a gleeful titter, she slowly descends over your [if Cock Count of Player is 2]twin [end if]shafts, enveloping your flesh in her syrupy folds. Once fully hilted, the giggling sugar glider leans forward over top of you, pressing her large soft breasts against your body as she presses her short muzzle to your lips, her long, dexterous tongue slipping into your mouth as she kisses you deeply, filling your mouth with her sickly sweet taste.";
 		say "     After breaking the kiss, the glider stares down at you with a smile for a moment before she begins happily bouncing in your lap. The delightful squeezing of her cunts alternates between your shafts, ensuring you don't get a moment of relief from the pleasurable sensation she so eagerly provides as her ride continues. Lost if the throes of her delight, your lovely companion doesn't even notice as you reach for the bouncing pillowy breasts just above you until you give them a playful squeeze, causing her to meep in surprise. As her rhythm returns, you fondle her lovely breasts and tease her nipples, her giggles giving way to long moans of pleasure as your combined efforts quickly push her to climax. With an adorable squeal, the sugar glider reaches her peak, her feminine passages clamping down around your cocks as her orgasm hits, pushing you over the edge as well.";
 		WaitLineBreak;
 		say "     As her climax subsides, the glider leans forward once more, giving you another quick kiss on the cheek before rising to her feet, allowing the sweet-smelling syrupy mess to drool from her dual cunts as she pulls free of your shaft. With a smile, she reaches down into the pouch on her belly and pulls out a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random], slipping it into your mouth with a cute titter before [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
@@ -54,7 +54,7 @@ to say losetoSugarGlider:
 		WaitLineBreak;
 		say "     The overpowering sweetness of the sugar glider's feminine juices fills your mouth as she cums. You continue licking and sucking at her quivering folds, drawing out her climax as long as you can to get as much of the sweet nectar as possible while her second cunt soaks your face in her sticky mess.";
 		say "     Staring down at you, your face still half buried in her groin, the glider gives you one last gleeful titter before springing to her feet and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random], but not before pulling a [one of]lollipop[or]jaw breaker[or]piece of saltwater taffy[at random] from her pouch and slipping it into your mouth with a smile.";
-	if ( bodyname of Player is "Sugar Ferret" or facename of Player is "Sugar Ferret" ) and HP of Player > 0:	[steal after]
+	if ( BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" ) and HP of Player > 0:	[steal after]
 		if carried of chips > 0:
 			say "     It is then that you notice that your pack has been rifled through by the sneaky sugar glider while you were having sweet, syrupy sex together. Looking towards her departing figure, you see her turn back and wave tauntingly with the snacks she's stolen tucked into her pouch. She giggles and gives her tail a teasing flick as she rushes away, making her escape.";
 			decrease carried of chips by 1;
@@ -72,25 +72,25 @@ to say beattheSugarGlider:
 	say "     Beaten, the giggling sugar glider falls to the ground. She looks up at you with a coy grin, putting her body on display as she traces a finger along the outer lips of each of her cunts, trying to entice you to take part in a different game";
 	if nosugarglidersex > 2:
 		say ", but you have little interest in the ditzy marsupial. As with the others of her kind before her, you shake your head and turn to leave. She gives you a cute scowl and blows a long raspberry at you before getting up and [one of]skipping off into the midway[or]scampering up a nearby light post and gliding off over the stalls[or]climbing a nearby stall and bounding off across the rooftops[at random].";
-	else if Player is not neuter and ( Libido of Player > 40 or bodyname of Player is "Sugar Ferret" or facename of Player is "Sugar Ferret" or bodyname of Player is "Sugar Glider" or facename of Player is "Sugar Glider" ):
+	else if Player is not neuter and ( Libido of Player > 40 or BodyName of Player is "Sugar Ferret" or FaceName of Player is "Sugar Ferret" or BodyName of Player is "Sugar Glider" or FaceName of Player is "Sugar Glider" ):
 		say " and the sexy display is quite tempting. Will you take part in some fun with the beaten sugar glider? (Y/N)";
 		if Player consents:
 			now nosugarglidersex is 0;
 			say "     Deciding to have some fun with the eager glider, you drop your gear and move towards her[run paragraph on]";
 			if Player is male and a random chance of 1 in 3 succeeds:	[fellatio]
-				say " front. She gives a disappointed squeak as you grab her head and pull it towards your crotch instead of using your manhood to satisfy her need, but you're more in the mood for some quick, oral relief. Despite not getting what she wanted, the horny marsupial smiles and seems quite pleased to lavish attention upon your [cock of Player] cock[smn].";
+				say " front. She gives a disappointed squeak as you grab her head and pull it towards your crotch instead of using your manhood to satisfy her need, but you're more in the mood for some quick, oral relief. Despite not getting what she wanted, the horny marsupial smiles and seems quite pleased to lavish attention upon your [Cock of Player] cock[smn].";
 				say "     Her saliva smells sweet and is a little sticky, but that tongue of hers is a delight. The long, dexterous tongue slips out and runs across your maleness, licking your manhood and balls. You are soon fully hard and dripping precum across your lustful prize's lips. She welcomes your [cock size desc of Player] cock into her muzzle, sucking at it greedily while her paws grip your ass. The sugary scent of the horny girl has gotten you quite excited and you thrust firmly into her slick muzzle while running your fingers through her cotton-candy fur until you cum with a groan of ecstasy. The sexy marsupial swallows down your load, the scent of her arousal growing much stronger in the air as she orgasms as well, leaving wet patches of her juices on the ground and running down her thighs as she fingers her twin pussies to satisfy herself.";
 				WaitLineBreak;
 				say "     Having been feed a tasty treat and had a crashing climax of her own, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her orgasm. Pulling your still-twitching member from her syrupy muzzle, you take a moment to wipe it across her soft fur. You gather up your things, give her unfucked holes a teasing fingering and grin at her needy moans. You head off with a noticeable spring in your step after the sugary encounter.";
 			else if Player is male:
 				say " supine form. With a cheer she spreads her legs before you, and with her dual cunts now on full display, you quickly move over the giggling glider and find yourself pulled into a tight hug. Her long, sugary sweet tongue slips into your mouth as she kisses you deeply, her sickly sweet taste making you a bit lightheaded and giggly.";
 				if Cock Count of Player is 1: [Male w/single cock]
-					say "     When she finally releases you, you quickly set about aligning your [cock of Player] shaft with one of her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. Noticing her poor empty second cunt before you start thrusting, you plunge a pair of fingers into the syrupy folds just as you start pulling back, alternating between driving your shaft into her and driving your fingers into her depths in a slow, steady rhythm.";
+					say "     When she finally releases you, you quickly set about aligning your [Cock of Player] shaft with one of her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. Noticing her poor empty second cunt before you start thrusting, you plunge a pair of fingers into the syrupy folds just as you start pulling back, alternating between driving your shaft into her and driving your fingers into her depths in a slow, steady rhythm.";
 					say "     The excited giggles of the sugar glider soon give way to long moans of pleasure, her delightful squeezing folds gripping your member tightly as she rapidly approaches climax. With an adorable squeal the sugar glider reaches her peak, her feminine passage clamping down around your cock as her orgasm hits, pushing you over the edge as well. With a groan you blow you [Cum Load Size of Player] load into her body as her paws stroke her candy furred belly in satisfaction.";
 					WaitLineBreak;
 					say "     Sated, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her climax. Pulling your still-twitching member from her syrupy folds, you take a moment to lick the delightfully sweet mess from your hand before gathering your things and departing, a noticeable spring in your step after the sugary encounter.";
 				else if Cock Count of Player > 1: [Male w/multiple cocks]
-					say "     When she finally releases you, you quickly set about aligning your [cock of Player] shafts with her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. The delightful squeezing of her cunts alternates between your shafts, ensuring you don't get a moment of relief from the pleasurable sensation as your slow, steady rhythm builds. Soon the excited giggles of the sugar glider give way to long moans of pleasure. With an adorable squeal the sugar glider reaches her peak, her feminine passage clamping down around your cocks as her orgasm hits, pushing you over the edge as well. With a groan you blow you [Cum Load Size of Player] load into her body as her paws stroke her candy furred belly in satisfaction.";
+					say "     When she finally releases you, you quickly set about aligning your [Cock of Player] shafts with her drooling cunts before plunging into her. Your lovely companion squeals in delight and her long tail wraps around your body, enveloping you in a warm, soft embrace. The delightful squeezing of her cunts alternates between your shafts, ensuring you don't get a moment of relief from the pleasurable sensation as your slow, steady rhythm builds. Soon the excited giggles of the sugar glider give way to long moans of pleasure. With an adorable squeal the sugar glider reaches her peak, her feminine passage clamping down around your cocks as her orgasm hits, pushing you over the edge as well. With a groan you blow you [Cum Load Size of Player] load into her body as her paws stroke her candy furred belly in satisfaction.";
 					WaitLineBreak;
 					say "     Sated, the sugar glider's soft form goes limp, her long tail slipping off your body as she basks in the afterglow of her climax. She pouts a little as you pull your still-twitching members from her syrupy folds, but does little else to resist you leaving as you gather your things and depart, leaving the sugary marsupial to recover on her own.";
 			else: [Female]
@@ -120,13 +120,14 @@ to say SugarGliderdesc:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Sugar Glider"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -136,10 +137,10 @@ When Play begins:
 	now victory entry is "[losetoSugarGlider]"; [ Text when monster wins. Change 'Sugar Glider' as above. ]
 	now desc entry is "[SugarGliderdesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "cute and rodent-like, with large eyes and swiveling ears[if Player is SugarGliderskinned and player is male]. There is a pink stripe in your cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise blue coat[else if Player is SugarGliderskinned]. There is a blue stripe in you cotton candy fur that travels over your head and connects with the stripe on your back, contrasting your otherwise pink coat[end if]";
-	now body entry is "slender and light, yet strangely soft and malleable like taffy[if Player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body. Format as "Your body is [body of Player]." ]
-	now skin entry is "a short coat of sugary cotton candy like fur. It is [if Player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of Player] skin." ]
+	now body entry is "slender and light, yet strangely soft and malleable like taffy[if Player is female], with a large pouch on your belly[end if]. Your arms and legs end in small, dexterous paws with short claws, built for climbing. The most striking feature of your form is the large, thin membrane stretched between your hands and feet"; [ Body. Format as "Your body is [Body of Player]." ]
+	now skin entry is "a short coat of sugary cotton candy like fur. It is [if Player is male]mostly blue, with a pink belly and chest, as well as a pink stripe down your back[else]mostly pink, with a light blue belly and chest, as well as a blue stripe down your back[end if]"; [ Skin. Format as "Looking at yourself, your body is covered in [Skin of Player] skin." ]
 	now tail entry is "You have a long, thick, somewhat prehensile tail, nearly as long as you are tall and covered in thick [if Player is male]blue[else]pink[end if] cotton candy fur."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
-	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]"; [ Cock. Format as "You have a 'size' [cock of Player] cock." ]
+	now cock entry is "[one of]bright pink[or]narrow[or]slender[at random]"; [ Cock. Format as "You have a 'size' [Cock of Player] cock." ]
 	now face change entry is "your thoughts become clouded with a sudden craving for sugary treats, pressure build in your face as it is reshaped into a short, rodent-like muzzle, with large eyes made for seeing in the dark and swiveling ears atop your head"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your whole form goes soft. It shifts to a slender, rodent-like form with [if Player is female]a large marsupial pouch on your belly and [end if]small, dexterous, paw-like hands and feet built for climbing. An unusual pulling sensation builds in your sides, as well as the edges of your arms and legs, and you watch with fascination as your body stretches like fresh taffy, forming large, wing-like membranes between your limbs"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "you try and suppress the urge to giggle, thanks to the tickling sensation of the [if Player is male]blue[else]pink[end if] and [if Player is male]pink[else]blue[end if] cotton candy fur spreading over your body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
@@ -180,11 +181,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -200,9 +202,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -234,13 +236,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -252,8 +254,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -269,7 +271,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -280,23 +282,23 @@ When Play begins:
 
 
 Definition: a person is sugargliderskinned:
-	if skinname of Player is "Sugar Glider", yes;
+	if SkinName of Player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugargliderbodied:
-	if bodyname of Player is "Sugar Glider", yes;
+	if BodyName of Player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugarglidercocked:
-	if cockname of Player is "Sugar Glider", yes;
+	if CockName of Player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugarglidertailed:
-	if tailname of Player is "Sugar Glider", yes;
+	if TailName of Player is "Sugar Glider", yes;
 	no;
 
 Definition: a person is sugargliderfaced:
-	if facename of Player is "Sugar Glider", yes;
+	if FaceName of Player is "Sugar Glider", yes;
 	no;
 
 Section 3 - Crushed Candy
@@ -320,7 +322,7 @@ Section 4 - Endings [Awaiting sugar ferret tie ins]
 
 [
 when play ends:
-	if bodyname of Player is "Sugar Glider":
+	if BodyName of Player is "Sugar Glider":
 		if humanity of Player < 10:
 			say "     Succumbing to your sugary infection, you are soon drawn back to the sights and sounds of the midway...";
 		else:

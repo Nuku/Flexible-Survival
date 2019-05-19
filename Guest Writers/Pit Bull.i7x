@@ -201,7 +201,7 @@ To say beatthepitbull:
 			now sortorder entry is 5;
 			add 5 to randompitbullchoice;
 	if pitbullgender is 1:
-		if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( bodyname of Player is "Breederslut" or facename of Player is "Breederslut" ) and inasituation is false:
+		if HP of Dominick >= 60 and HP of Dominick < 100 and player is female and ( BodyName of Player is "Breederslut" or FaceName of Player is "Breederslut" ) and inasituation is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Recruit for Dominick";
 			now sortorder entry is 99;
@@ -262,7 +262,7 @@ To say beatthepitbull:
 
 
 to say pitbull_vsex1:		[receive fellatio]
-	say "     Pulling the pit bull upright, you offer [if Cock Count of Player > 1]one of [end if]your exposed, [cock of Player] dick[smn] to them. [if pitbullgender is 2]His expression one of ill-regard to this prospect, your compelled to grind the hardening, [cock size desc of Player] organ against his face until he obliges you[else]A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of Player] thing until she'll reluctantly oblige[end if]. [if Cock Length of Player > 18]Much too massive to abide, the beast is relegated to offering a tongue's lone, imposed affection[else]Tongue's imposed affection offered against its length, the beast follows up with their lip's embrace[end if], organ now slick with a mix of saliva and pre.";
+	say "     Pulling the pit bull upright, you offer [if Cock Count of Player > 1]one of [end if]your exposed, [Cock of Player] dick[smn] to them. [if pitbullgender is 2]His expression one of ill-regard to this prospect, your compelled to grind the hardening, [cock size desc of Player] organ against his face until he obliges you[else]A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of Player] thing until she'll reluctantly oblige[end if]. [if Cock Length of Player > 18]Much too massive to abide, the beast is relegated to offering a tongue's lone, imposed affection[else]Tongue's imposed affection offered against its length, the beast follows up with their lip's embrace[end if], organ now slick with a mix of saliva and pre.";
 	say "     [if pitbullgender is 2]Prior restraint slowly dissolved in the wake of his own, rising need, he offers up tainted moans as he[else]Not particularly happy with this arrangement, though too weak to offer up any real protest, she growls as she[end if] tastes your emergent fluids, [if pitbullgender is 2]his[else]her[end if] audible regard vibrating against your length. [if pitbullgender is 2]Stroking himself as [else]Perpetual grimace her regard as s[end if]he attends your needs, [if pitbullgender is 2]it's not long before[else]it takes some time until[end if] you reach your bliss, [if Cock Length of Player > 18]dousing the canine with[else]forcing the canine to swallowd[end if] your [Cum Load Size of Player] payload.";
 	say "     [if pitbullgender is 2]Furiously stroking himself in the wake of this, he spends himself all over the ground soon thereafter, left in a lustful haze as you inevitably[else]Disdainfully spitting out your seed, you let the grumpy creature[end if] depart, tainted need satisfied.";
 
@@ -272,8 +272,8 @@ to say pitbull_vsex2:		[receive cunnilingus]
 	say "     Furiously [if pitbullgender is 2]stroking[else]fondling[end if] [if pitbullgender is 2]him[else]her[end if]self in the wake of this, [if pitbullgender is 2]he[else]she[end if] spends [if pitbullgender is 2]him[else]her[end if]self all over the ground soon thereafter, left in a lustful haze as you inevitably depart, tainted need satisfied.";
 
 to say pitbull_vsex3:		[give vaginal]
-	say "     Pulling the pit bull upright, you offer [if Cock Count of Player > 1]one of [end if]your exposed, [cock of Player] dick[smn] to her. A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of Player] thing until she'll reluctantly oblige. Tongue's imposed affection offered against its length, the beast follows up with their lip's embrace, organ now slick with a mix of saliva and pre.";
-	say "     Satisfied with her work, you pull yourself free of the canine before pushing her into her back. Adjusting her positioning until you might mount her proper, [if Cock Length of Player > 11]she's not particularly happy about the prospect of being impaled by the impressive tool[else]low growl her regard to the plans you have in store for her[end if], not that she has any say in the matter. Slowly, you sink your [cock of Player] dick into the folds of her supple flesh, frame tense with ill-regard for this intrusion, it takes [if Cock Length of Player >= 12]some time until she's properly loosened up for[else]but a moment before her flesh yields to[end if] your endeavors.";
+	say "     Pulling the pit bull upright, you offer [if Cock Count of Player > 1]one of [end if]your exposed, [Cock of Player] dick[smn] to her. A growl her remark, she looks clearly disinterested in what your offering her, forcing you to coax her into compliance as you grind the hardening, [cock size desc of Player] thing until she'll reluctantly oblige. Tongue's imposed affection offered against its length, the beast follows up with their lip's embrace, organ now slick with a mix of saliva and pre.";
+	say "     Satisfied with her work, you pull yourself free of the canine before pushing her into her back. Adjusting her positioning until you might mount her proper, [if Cock Length of Player > 11]she's not particularly happy about the prospect of being impaled by the impressive tool[else]low growl her regard to the plans you have in store for her[end if], not that she has any say in the matter. Slowly, you sink your [Cock of Player] dick into the folds of her supple flesh, frame tense with ill-regard for this intrusion, it takes [if Cock Length of Player >= 12]some time until she's properly loosened up for[else]but a moment before her flesh yields to[end if] your endeavors.";
 	say "     [if scalevalue of Player > 3]Larger frame eclipsing her own, she rocks[else]Rocking[end if] to-and-fro under your weight as you fuck her proper, [if scalevalue of Player > 3]remaining unrelenting[else]she remains unrelenting[end if] in her audible disdain for your abuse, even as her stuffed hole slickens with tainted approval in the wake of your rising fervor. Firmly pinned to the ground, your grip gradually tightens until the ponderous weight of your imminent bliss, sweat-slicked form ill-abiding embrace for the canine, it's not long before your cry out, [if Player is knotted]tying the beast as your [Cum Load Size of Player] load floods her depths[else][Cum Load Size of Player] load flooding her depths[end if][if Cock Count of Player > 2], your exposed members staining her fur[else if Cock Count of Player is 2], your exposed member staining her fur[end if].";
 	say "     [if Cock Length of Player > 11 or player is knotted]Wrenching[else]Pulling[end if] yourself free of her hole, you let the grumpy canine crawl off as you clean yourself up, now satisfied.";
 
@@ -285,7 +285,7 @@ to say pitbull_vsex4:		[give anal]
 		say ". Growls growing louder as you grind [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player], hardening dick[smn] between her exposed cheeks, no doubt she challenges the prospect of being impaled by such an impressive thing";
 	else:
 		say ". Grinding [if Cock Count of Player > 1]one of [end if]your [cock size desc of Player], hardening dick[smn] against these exposed cheeks you elucidate upon your tainted plans for the beast, much to their ill-regard to the prospect";
-	say ". Readied, you thrust the tip of your [cock of Player] cock into [if pitbullgender is 2]his[else]her[end if] [if Cock Length of Player > 11]ill-abiding [end if]pucker. Strained grunts escaping your lips, it takes a measure of work until the tight hole will yield to such an irreverent intrusion, the canine groaning against your tainted endeavor.";
+	say ". Readied, you thrust the tip of your [Cock of Player] cock into [if pitbullgender is 2]his[else]her[end if] [if Cock Length of Player > 11]ill-abiding [end if]pucker. Strained grunts escaping your lips, it takes a measure of work until the tight hole will yield to such an irreverent intrusion, the canine groaning against your tainted endeavor.";
 	say "     [if scalevalue of Player > 3]Ground against the earth under your weight[else]Rocking against the earth[end if], you thrust upon the beast with a rising fervor, alight with this twisted compulsion. Lingering [if pitbullgender is 2]whimpers his[else]growls her[end if] regard, [if pitbullgender is 2]he[else]she[end if] can't help but be influenced by your endeavors, [if pitbullgender is 2]his unattended dick grinding against the ground[else]her unattended cunt staining the ground with its honey[end if]. Pounding [if pitbullgender is 2]his[else]her[end if] ass for a fair measure of time before you find your bliss, [if Player is knotted]tying your knotted[else]hilting your[end if] organ within [if pitbullgender is 2]his[else]her[end if] bowels[if Cock Length of Player > 11], their cries its punctuation when forced to abide the whole of the impressive thing[end if] as you flood [if pitbullgender is 2]his[else]her[end if] depths with your [Cum Load Size of Player] load.";
 	say "     You require a moment to recover before you audibly pull your rod from the canine's hole, letting [if pitbullgender is 2]him[else]her[end if] off, still [if pitbullgender is 2]whimpering as he[else]grumbling as she[end if] nurses [if pitbullgender is 2]his[else]her[end if] [if Cock Length of Player > 11]very [end if]sore and cum-stained ass before you yourself head on your merry way.";
 
@@ -323,11 +323,11 @@ to say pitbull_dom:
 		if Libido of Player <= 50:
 			say "Having taken one too many blows, the monster signals her submission and begins to back away.";
 		else if Player is herm:
-			say "As she falls, you walk up to her and point to the growing bulge in your pants. She pulls them down for you and begins to rub on your [cock of Player] cock. She begins to finger your pussy, and in your ecstasy you fall down and she leaps on your hard [cock size desc of Player] [cock of Player] cock and begins to enthusiastically bounce up and down on it. After a few minutes you cum, filling her pussy with your seed. You help her off and up and both of you go on your ways.";
+			say "As she falls, you walk up to her and point to the growing bulge in your pants. She pulls them down for you and begins to rub on your [Cock of Player] cock. She begins to finger your pussy, and in your ecstasy you fall down and she leaps on your hard [cock size desc of Player] [Cock of Player] cock and begins to enthusiastically bounce up and down on it. After a few minutes you cum, filling her pussy with your seed. You help her off and up and both of you go on your ways.";
 		else if Player is female:
 			say "As she falls, you walk up to her, squeezing your [breast size desc of Player] breasts. She begins to drool at the sight of you and happily obliges you as you remove your pants. She laps heartily at your moist cunt. A few minutes of this and you gently push her over and start to rub your pussy against hers. The feeling is great, and after several minutes of this you both cry out in orgasm. You help her to her feet and both of you head on your ways.";
 		else if Player is pure:
-			say "As she falls, you advance on her, pulling down your pants. She looks at your [cock of Player] cock and says 'I will tear that fucking thing off and shove it down your throat if you come any closer.' You enjoy having it and decide to back down, and by back down you run away, pants around your ankles. You have a wank later.";
+			say "As she falls, you advance on her, pulling down your pants. She looks at your [Cock of Player] cock and says 'I will tear that fucking thing off and shove it down your throat if you come any closer.' You enjoy having it and decide to back down, and by back down you run away, pants around your ankles. You have a wank later.";
 	else:
 		say "Having taken one too many blows, the monster signals his submission and begins to back away.";
 ]
@@ -335,11 +335,11 @@ to say pitbull_dom:
 [
 To say pit bull attack:
 	if Player is herm:
-		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of Player] form. Looking at your crotch she seems to behold it in curiosity. She lies down and begins to lick your [cock size desc of Player] [cock of Player] cock. Then deep-throats it and begins to bob her head up and down like a boat on stormy waters. After getting a taste for your cock, she pulls her head and pushes you on your back. She gets up on your [cock of Player] cock and begins to grind on it. After a few minutes of this she suddenly sticks a few fingers into your pussy and begins to pump back and forth. You try and hold back as much as you can but, after only a short time, cum all over yourself. She gets up and starts to rifle through your clothes.";
+		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of Player] form. Looking at your crotch she seems to behold it in curiosity. She lies down and begins to lick your [cock size desc of Player] [Cock of Player] cock. Then deep-throats it and begins to bob her head up and down like a boat on stormy waters. After getting a taste for your cock, she pulls her head and pushes you on your back. She gets up on your [Cock of Player] cock and begins to grind on it. After a few minutes of this she suddenly sticks a few fingers into your pussy and begins to pump back and forth. You try and hold back as much as you can but, after only a short time, cum all over yourself. She gets up and starts to rifle through your clothes.";
 	else if Player is female:
 		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of Player] form. Looking at your crotch she seems pleased with it and drops down and begins to lick. Her rough tongue feels great, for a moment you forget that she just kicked the shit out of you. After a while she stops and throws you onto your back and begins to remove her clothes. She then begins to grind her crotch into yours starting slowly building up to frantically mashing them together like she was trying to start a fire. After a few minutes of this both you and she climax. Leaving you in a puddle of sex while she looks through your clothes for anything of use.";
 	else if Player is male:
-		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes. Looking at your crotch she seems disappointed. She gets you up on your knees and pushes you forward and grasps your [cock size desc of Player] [cock of Player] cock firmly. She begins to pump on it up and down slapping your balls with her palm all the while. Suddenly you feel a sharp sensation in your ass and look back. SHE IS FISTING YOU! It feels like she's using you as a hand puppet. Your eyes roll back in your head in pleasure as you cum. She pulls her hand out in a *POP* and begins to look through your stuff, finding nothing of value";
+		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes. Looking at your crotch she seems disappointed. She gets you up on your knees and pushes you forward and grasps your [cock size desc of Player] [Cock of Player] cock firmly. She begins to pump on it up and down slapping your balls with her palm all the while. Suddenly you feel a sharp sensation in your ass and look back. SHE IS FISTING YOU! It feels like she's using you as a hand puppet. Your eyes roll back in your head in pleasure as you cum. She pulls her hand out in a *POP* and begins to look through your stuff, finding nothing of value";
 	else:
 		say "As you get hit one too many times you go to knee and signal your submission. She saunters over to you and strips off your clothes from your [bodytype of Player] form. Looking at your crotch she beholds absolutely nothing. She looks surprised and thinks for a moment, and then walks off, seeing nothing she likes.";
 ]
@@ -347,12 +347,13 @@ To say pit bull attack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Pit bull"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -406,11 +407,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -426,9 +428,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -460,13 +462,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -478,8 +480,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -495,7 +497,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -540,7 +542,7 @@ this is the balltit rule:
 
 
 when play ends:
-	if bodyname of Player is "Pit bull":
+	if BodyName of Player is "Pit bull":
 		if humanity of Player < 10:
 			if Player is purefemale:	[Succumb - F]
 				say "     Losing your mind to the infection, you wander off into the city and are drawn to a run-down neighborhood. There, you find one of the female pit bulls you've seen around guarding a junkyard. She approaches cautiously, but as you get on all fours and offer your wet pussy to her, she relaxes and moves in to welcome you properly. Her tongue dives deep into your pussy until you cum before she gets you to return the favor. You settle down with her. When the military move through, you both take hide together among the junk, but do venture out at night to drag away a few more female soldiers to make into horny pit bulls to pleasure your alpha.";

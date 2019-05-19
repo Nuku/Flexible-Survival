@@ -83,12 +83,13 @@ to say beatthecandycoon:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Raccoon"; [Name of your new Monster]
 	now enemy title entry is "Candy Striper Raccoon";
 	now enemy Name entry is "Candy";
@@ -126,7 +127,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
 	now loot entry is "healing booster"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 10; [ Chance of loot dropping 0-100 ]
@@ -142,11 +143,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -162,9 +164,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -196,13 +198,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -214,8 +216,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -231,7 +233,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -438,7 +440,7 @@ after going to Bunker while coonstatus is 1:
 	increase carried of healing booster by 1;
 	if Player is male:
 		say "     'What I'd really like to do is show you how much I appreciate your help,' he says, running a finger up your thigh. 'I doubt I can stop you from keeping up your work out there, but... you don't have to go right away, do you?' he asks, giving you an openly seductive look.";
-		if bodyname of Player is "Raccoon":
+		if BodyName of Player is "Raccoon":
 			say ". 'I'm so glad you decided to keep the new look, sweetie,' he adds, rubbing his slender, coon body against yours with a sexy smile";
 		say ".";
 
@@ -537,29 +539,29 @@ to say sexwithCandy:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		else:
 			say "     'As much as I'd like to repay you, this coon craves cock, sweetie,' he says, giving you a kiss on the cheek";
-			if bodyname of Player is "Raccoon" and Sven is not in the bunker:
+			if BodyName of Player is "Raccoon" and Sven is not in the bunker:
 				say ". Maybe you can find a sexy guy out there willing to play with a pair of coons we can share";
 			say ".";
 
 
 to say sexwithcandy_01:
 	if a random chance of 1 in 2 succeeds:
-		if bodyname of Player is "Raccoon":
+		if BodyName of Player is "Raccoon":
 			say "     Candy moans softly and runs nimble fingers over your equally raccoonish body, teasing and caressing you. His paws travel over your shapely, girly body with churrs of delight as he slides his fluffy, pink tail around your waist. 'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw. 'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
 		say "     He keeps his own outfit on and drops onto all fours. He waves his rear at you and flicks his tail up to raise his skirt and reveal his ready tailhole to you. 'Mmm... come on... Fill your sweet Candy.' You grab his hips and line your cock up with the coon's tight pucker, making him moan softly as you thrust into his rear eagerly. You grip his bubble-butt firmly and start pounding away at him, much to the coon's delight. His tailhole, despite taking you in quite easily, is snug and delightfully warm around your shaft. The cute raccoon's tail swishes about as he pushes back into each of your thrusts with a soft moan. His insides squeeze firmly around you with each thrust into his body, a testament to the raccoon's experience.";
 		say "     The girly raccoon reaches back and wraps his paw around his hot-pink cock, stroking himself rapidly as you pound away at his ass, driving your cock into him again and again. You move your hand overtop his, moving it with his along his quivering shaft. The effeminate coon wiggles his rear and squeezes his tailhole down around your penis each time you thrust into his warm bottom. The feel of his tight ass around your cock, the sight of the girly boytoy beneath you and the cute moans he makes as you fuck him all adds up to be too much. You squeeze his fuzzy rump firmly and drive your shaft deep inside him, unleashing your hot load with a gasp. Having a fresh load of cum warming his insides is enough to set him off, spraying his pink cum onto the floor below and filling the air with the scent of cotton candy.";
 	else:
-		if bodyname of Player is "Raccoon":
+		if BodyName of Player is "Raccoon":
 			say "     Candy moans softly and runs nimble fingers over your equally raccoonish body, teasing and caressing you. His paws travel over your shapely, girly body with churrs of delight as he slides his fluffy, pink tail around your waist. 'You make such a sexy coon,' he churrs as he takes a hold of your cock in one paw. 'I can't wait to have you on top of me,' he adds with a nibble to your ear.";
-		say "     You run your hand along the coon's side and around his hip to give that cute skirted butt of his a squeeze. He giggles at this display of dominance and flicks his tail up to give you easier access. Slipping under his skirt, you caress his bottom, moving his panties down as you do, the coon kicking them somewhere off to the side when they reach his ankles. Placing a hand on your crotch, he rubs your manhood, clearly imagining having it in him soon. Not wanting to disappoint the girly boy, you guide him down onto the cot with his ass in the air. Spreading his ass cheeks, you slide your [cock of Player] cock between them and grind firmly against his bubble butt. His tail twitches with excitement and he churrs, grinding back against your meat as you hotdog it between those sexy buns of his. Drooling pre onto his pucker, the only lube you intend to provide the coon, you ease your [cock size desc of Player] penis into his welcoming hole.";
-		say "     Stretching open easily to accommodate you, it still squeezes and pumps tightly around your [cock of Player] cock as he wiggles and shifts his hips to skillfully work his inner muscles. Running your hands along his back and over his stuffed bottom, you tell him what a pretty coonboy he is and how nice he looks with a cock buried in his ass. He giggles happily at this, adding how it's always available for [one of]you to fuck[or]his sexy friend[or]his heroic stud[in random order]. Reaching around to take hold of his stiff penis, you stroke that hot pink rod of his. The feel of his hard and throbbing cock in your hand is proof of just how much the coon's loving getting buggered.";
+		say "     You run your hand along the coon's side and around his hip to give that cute skirted butt of his a squeeze. He giggles at this display of dominance and flicks his tail up to give you easier access. Slipping under his skirt, you caress his bottom, moving his panties down as you do, the coon kicking them somewhere off to the side when they reach his ankles. Placing a hand on your crotch, he rubs your manhood, clearly imagining having it in him soon. Not wanting to disappoint the girly boy, you guide him down onto the cot with his ass in the air. Spreading his ass cheeks, you slide your [Cock of Player] cock between them and grind firmly against his bubble butt. His tail twitches with excitement and he churrs, grinding back against your meat as you hotdog it between those sexy buns of his. Drooling pre onto his pucker, the only lube you intend to provide the coon, you ease your [cock size desc of Player] penis into his welcoming hole.";
+		say "     Stretching open easily to accommodate you, it still squeezes and pumps tightly around your [Cock of Player] cock as he wiggles and shifts his hips to skillfully work his inner muscles. Running your hands along his back and over his stuffed bottom, you tell him what a pretty coonboy he is and how nice he looks with a cock buried in his ass. He giggles happily at this, adding how it's always available for [one of]you to fuck[or]his sexy friend[or]his heroic stud[in random order]. Reaching around to take hold of his stiff penis, you stroke that hot pink rod of his. The feel of his hard and throbbing cock in your hand is proof of just how much the coon's loving getting buggered.";
 		say "     As your excitement builds, you pick up the pace and fuck him harder, much to his moaning delight. And with such a delightfully responsive lover beneath you, it eventually becomes too much to hold back and you drive your [cock size desc of Player] cock fully into him and cry out in orgasm. Cumming hard, you pump your [Cum Load Size of Player] load into him, painting his bowels with your seed. Feeling your release inside his clenching rectum, he arches his back and grinds hard against your crotch as he cries out in his own release. The scent of cotton candy fills the air around you as his pinkish seed splatters across his sheets. When you're done and have pulled out, he flops down on his bed beside the stain and makes of show of sampling dollops of rosy cum with a coquettish grin even as your own seed leaks out from his creamy hole.";
 	now Libido of Player is ( Libido of Player + 1 ) / 3;
 
 to say sexwithcandy_02:
 	setmonster "Raccoon";
 	choose row MonsterID from the Table of Random Critters;
-	if bodyname of Player is "Raccoon":
+	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
 	if Player is submissive:
 		say "     Candy runs his paws over you with a girlish moan, groping your ass and crotch. 'Mmm... now it's not fair to you for me to always be on bottom, isn't it? I can tell a subby guy like you likes playing receiver, too,' he churrs as he presses you down onto the cot. Flipping up his skirt, he slips his cock out of his panties and grinds it against your ass[if Player is female] while giving a few tentative brushes of his fingertips across your pussy, more out of courtesy than any real eagerness, but his cock is aimed elsewhere[end if]. You don't resist, your submissive tendencies coming to the fore and making you eager to allow the coon to take charge this time. After a few playful grinds against your buttocks, he presses his pink cock against your tight pucker and sinks slowly into you, letting his sweet-smelling pre act as a surprisingly good lube. Soon the coon's average cock is stuffed into you as he moans and churrs, intent on giving his sexy hero a good fucking.";
@@ -576,23 +578,23 @@ to say sexwithcandy_02:
 	now Libido of Player is ( Libido of Player + 1 ) / 3;
 
 to say sexwithcandy_03:
-	if bodyname of Player is "Raccoon":
+	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you, running his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
-	say "     He keeps his own outfit on and drops to his knees before you. He starts nuzzling and licking at your [cockname of Player] shaft, moaning softly at the taste of cock on his tongue again. His talented muzzle works at your hard meat while he plays with your balls with one paw[if Player is female]. He makes a few tentative touches to your pussy, but nothing further, and returns to your balls with almost visible relief[end if]. He smiles up at you even with your cock buried in his muzzle, churring softly around your shaft, as his talented muzzle sets to work. You stroke the cute coon's head, rubbing his ears as he works you over expertly. The raccoon's clearly had a lot of practice and has learned to use his altered muzzle and tongue to his best advantage, lathering his tongue over your head and taking you in to the hilt without any struggle. Looking down, you can see his other paw between his legs, stroking his cute, hot pink cock vigorously.";
+	say "     He keeps his own outfit on and drops to his knees before you. He starts nuzzling and licking at your [CockName of Player] shaft, moaning softly at the taste of cock on his tongue again. His talented muzzle works at your hard meat while he plays with your balls with one paw[if Player is female]. He makes a few tentative touches to your pussy, but nothing further, and returns to your balls with almost visible relief[end if]. He smiles up at you even with your cock buried in his muzzle, churring softly around your shaft, as his talented muzzle sets to work. You stroke the cute coon's head, rubbing his ears as he works you over expertly. The raccoon's clearly had a lot of practice and has learned to use his altered muzzle and tongue to his best advantage, lathering his tongue over your head and taking you in to the hilt without any struggle. Looking down, you can see his other paw between his legs, stroking his cute, hot pink cock vigorously.";
 	say "     The coon continues to tend to your throbbing member until you finally cum, spraying your hot load down into his eager mouth and down his throat. He licks it up happily and even makes a show of swallowing it for you when you pull free, complete with opening his mouth to show you how he swallowed it all. He then lays back on the floor, still stroking himself until he sprays streaks of pink cum across his girly outfit, filling the air with the scent of cotton candy. 'Mmph... definitely one of the better tasting guys I've been with...' he tells you, smiling dazedly as his mind recovers from the afterglow.";
 	now Libido of Player is ( Libido of Player + 1 ) / 2;
 
 to say sexwithcandy_04:
-	if bodyname of Player is "Raccoon":
+	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the equally raccoonish body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. You certainly look adorably sexy like this; it gets me so hard,' he adds with a nibble to your ear as he grinds against you.";
 	say "     Deciding you'd like a taste of the girly coon's cock, you go down on your knees and flip up his short skirt. He giggles cutely, mock-swooning as you run your eyes over the bulge in his panties. Pulling his underwear down, his erection pops free, bobbing in the air and drooling a think trickle of his sticky-sweet precum. Taking a moment to lick your lips, you plunge your mouth over the hot pink rod and start sucking. Your mouth and tongue work over the cute cock, lapping up Candy's faintly sweet pre and teasing against the more sensitive areas of his manhood. You caress the coonboi's nuts in your palm, enjoying his moans and churrs of pleasure. When the raccoon cums, your mouth fills with spurts of hot, cotton candy flavored seed. Enjoying the sugary treat, you lick and suck for all he'll give before releasing him from your mouth, giving a coquettish grin before leaving him to catch his breath.";
 	increase Libido of Player by 10;
 	infect;
 
 to say sexwithcandy_05:
-	if bodyname of Player is "Raccoon":
+	if BodyName of Player is "Raccoon":
 		say "     Candy moans softly as he rubs his body against the raccoon body he's given you and runs his paws over it. He lets his little claws run over your shapely curves and girly body with churrs of delight. His fluffy tail brushes across your legs, caressing them. 'You look so sexy like this, sweetie. I'm glad you appreciate it. And now I'm going to show you how much I appreciate it, too,' he adds with a nibble to your ear as he takes a hold of your stiff erection.";
-	say "     Laying side by side on the coon's cot, you move into a 69 position with Candy. He churrs with excitement as he starts licking over your [cock of Player] manhood, soon stirring it to full erection with his talented tongue. The coon's pink member also rises, a six inch pillar of sweet smelling cock. You take it in your mouth and start sucking him off, eager to pleasure the flamboyant coon. His talented muzzle works you over with a powerful combination of enthusiasm and well-honed skill. He has you moaning in pleasure at the many tricks his tongue and mouth can do to excite you. You do your best to make it as good for him, but can't quite keep up with such an experienced partner. Not that he seems to mind, the pink boytoy clearly enjoying having your [cock size desc of Player] cock in his mouth.";
+	say "     Laying side by side on the coon's cot, you move into a 69 position with Candy. He churrs with excitement as he starts licking over your [Cock of Player] manhood, soon stirring it to full erection with his talented tongue. The coon's pink member also rises, a six inch pillar of sweet smelling cock. You take it in your mouth and start sucking him off, eager to pleasure the flamboyant coon. His talented muzzle works you over with a powerful combination of enthusiasm and well-honed skill. He has you moaning in pleasure at the many tricks his tongue and mouth can do to excite you. You do your best to make it as good for him, but can't quite keep up with such an experienced partner. Not that he seems to mind, the pink boytoy clearly enjoying having your [cock size desc of Player] cock in his mouth.";
 	if a random chance of anallevel in 7 succeeds:
 		say "     Things heat up all the more when the horny coon slips a slick finger into your ass. He's remarkably gentle about it, easing it into your rear after teasing your crinkled pucker open. His finger probing at your prostate soon sets you off and you cum [if Ball Size of Player < 6]quickly[else if Ball Size of Player < 16]heavily[else if Ball Size of Player < 25]messily[else]in a torrent[end if] into the coon's hungry maw. Tasting your hot seed after all his hard work is enough to finally set him off and he spurts several creamy shots of saccharine cum across your licking tongue and down your throat.";
 	else if a random chance of anallevel in 6 succeeds:
@@ -743,22 +745,22 @@ to say totalcoonification:		[version 1 - direct shift, no gender controls]
 		if Name entry is "Raccoon":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Raccoon";
-	now facename of Player is "Raccoon";
-	now skinname of Player is "Raccoon";
-	now bodyname of Player is "Raccoon";
-	now cockname of Player is "Raccoon";
+	now TailName of Player is "Raccoon";
+	now FaceName of Player is "Raccoon";
+	now SkinName of Player is "Raccoon";
+	now BodyName of Player is "Raccoon";
+	now CockName of Player is "Raccoon";
 	attributeinfect "Raccoon";
 	now tail of Player is tail entry; [...to make for quicker and accurate copying of Raccoon appearance.]
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 
 Section 8 - Endings
 
 when play ends:
-	if bodyname of Player is "Raccoon":
+	if BodyName of Player is "Raccoon":
 		if humanity of Player < 10:
 			if coonstatus < 100:				[Coon player - Coon non-pet]
 				if coonstatus is 0:			[Coon still in hospital]
@@ -815,7 +817,7 @@ when play ends:
 				else if coonstatus > 0 and HP of Candy > 2 and HP of Candy < 100: [w/Sane Candy]
 					say "     When the military arrives to rescue survivors, you and Candy are both taken to one of the military's many camps. Candy and you search for any sign of his brother, but according to everyone you ask, Johnathan seems to have simply... disappeared, just before the rescue efforts began. Candy is distraught, but resolves to continue his new, saner life, if only to honor his brother's memory.";
 					say "     The two of you remain [if Player is male]vigorous lovers[else]good friends[end if], but you can't help but notice that the raccoon's self-control is almost legendary in comparison to his past behaviors, refusing to so much as touch a soldier even if they express interest. When you question him about it, he claims that 'It'd be... wrong. I'd rather not risk infecting anyone if I can help it. Johnathan wouldn't have wanted that.'[if Player is male] This doesn't stop him from playing with you every night, of course...[end if]";
-	else if bodyname of Player is "Trash Coon":	[Trash-coon player variations]
+	else if BodyName of Player is "Trash Coon":	[Trash-coon player variations]
 		if humanity of Player < 10:
 			if Candy is in the bunker:
 				if Player is male:
@@ -882,10 +884,10 @@ when play ends:
 				else:						[Candy solo]
 					say "     Having saved him from an uncertain and frightening fate, Candy treats you like a protective big sister. Wanting to do good on the outside and drawing on what he still remembers of his past, he begins learning everything he can from Sarah. For her part, Sarah is grateful to have a distraction from her endless reservoir of barely-controllable lust. She throws herself into more medical training and Candy joins her. Together they become an excellent team, sometimes saving lives against impossible odds. Loving their rescuer with all their hearts, they remain friends with you for the rest of their lives.";
 					say "     When they find a bisexual Samoyed male to partner with them, they find sexual fulfillment along with their professional fulfillment. He is a very friendly and affectionate guy, stern but loving to his horny partners, just what they need to keep them reined in. Not being the jealous type, they aren't upset at all when he has sex with you and are even happy to share him with their most dear friend. But that is a rare treat, as their rampant libidos keep him rather exhausted most of the time.";
-			if bodyname of Player is "Siren":
+			if BodyName of Player is "Siren":
 				say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours. Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 			else if XP of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
-				if bodyname of Player is "Blue Gryphon Herm":
+				if BodyName of Player is "Blue Gryphon Herm":
 					say "     Candy is probably your band's number one fan, running and moderating the band's web forums in his off hours. Being bright pink, you easily spot him dancing happily with your groupies whenever you have a show in town. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and Candy seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two friends. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
@@ -909,25 +911,25 @@ when play ends:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out.";
 			else:
 				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock.";
-			if bodyname of Player is "Ferret":
+			if BodyName of Player is "Ferret":
 				say "     Lorenda and Lee take particular enjoyment out of their fellow [']maid's['] companionship and are often found playing with him in their outfits.";
-			if bodyname of Player is "Siren":
+			if BodyName of Player is "Siren":
 				say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 			else if XP of Timothy < 3 and Gryphoness is tamed:	[coon pet + gryphon pet]
-				if bodyname of Player is "Blue Gryphon Herm":
+				if BodyName of Player is "Blue Gryphon Herm":
 					say "     Your pet raccoon loyally accompanies you on your band's tours and is there to give you his obedient and lustful affection whenever wanted. He seems to legitimately love your band's music as well, dancing happily to it with your groupies whenever he can sneak away from his handlers during your shows. You aren't at all surprised when you start spotting a few fans with colorful raccoon tails in the audience.";
 				else:
 					say "     Denise and your raccoon pet seem to get along well, and one day you return home to be greeted with beautiful singing and amazing dancing by your two loving pets. You are so impressed, you urge them to continue working on music and choreography, and privately wonder if you should take this show on the road, and how to do so without breaking certain decency laws.";
-			if ( pigfucked > 0 ) or ( ( bodyname of Player is "Messy Pig" or bodyname of Player is "Piggy" ) and player is female and Philip is in the Large Shed ):
+			if ( pigfucked > 0 ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and player is female and Philip is in the Large Shed ):
 				say "     Your raccoon pet seems jealous of the affection you give Philip. He mopes quietly if he sees you being affectionate with him or notices the boar's strong scent on you after you've had sex with him. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you share with him. ";
-				if ( Cock Count of Player is 0 and player is female ) or ( ( bodyname of Player is "Messy Pig" or bodyname of Player is "Piggy" ) and player is female ):	[Female at farm OR F/H Piggy at farm]
+				if ( Cock Count of Player is 0 and player is female ) or ( ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and player is female ):	[Female at farm OR F/H Piggy at farm]
 					say "     When the coon gets even more sullen after the move to the pig farm and your oncoming litter, Philip has had enough. The next time the coon hisses at him when he strokes your pregnant belly, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-				else if bodyname of Player is "Messy Pig" or bodyname of Player is "Piggy" and pigfucked > 0:
+				else if BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" and pigfucked > 0:
 					if pigfucked > 2:						[M Piggy sub]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting with the boar, Philip has had enough. The next time the coon hisses at him when he squeezes your subby, cum-filled bottom, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
 					else:					[M Piggy lover]
 						say "     When the coon gets even more sullen after the move to the pig farm and your repeated rutting of the sows, Philip has had enough. The next time the coon hisses at him while watching you in the pen, siring more hogs, he grabs the little boitoy and takes him right then and there, with much squealing from the boar and moans from the coon. From that point on, he's much more affectionate with the boar and seems to like it best when the pig is rough and dirty with him. The raccoon does pick up some bad habits though. When once he was always well-groomed and clean, he becomes a scruffy and dirty raccoon, often rummaging around in the garbage or even taunting the pig to fuck him in the dumpster. You've lost your slutty housekeeper, but gained a much happier, if messier, home for it.";
-			else if ( bodyname of Player is "Messy Pig" or bodyname of Player is "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
+			else if ( BodyName of Player is "Messy Pig" or BodyName of Player is "Piggy" ) and pigfucked is 0 and Philip is in the Large Shed:
 				say "     Your raccoon pet seems jealous of the friendship you have with Philip. He mopes quietly if he sees you with him or notices the boar's strong scent on you after you've hung out. He steadfastly refuses to play with the pig, though will happily enjoy any other lover you offer him."; [M Piggy friend]
 
 Candy Striper ends here.

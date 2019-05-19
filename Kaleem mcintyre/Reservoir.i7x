@@ -42,7 +42,7 @@ instead of sniffing Reservoir:
 	if waterworks is 0:
 		say "The reservoir reeks of the scents of too many odors to discern one by one who or what left them behind. However, the pervasive smell of musk and sexual fluids is not hard to miss in the least.";
 	else if waterworks > 0:
-		say "A clean scent permeates the area of the reservoir making you want to breathe in as much of the refreshing odor until your [bodyname of Player]lungs bursts.";
+		say "A clean scent permeates the area of the reservoir making you want to breathe in as much of the refreshing odor until your [BodyName of Player]lungs bursts.";
 
 Section 1a - Reservoir Main Pathway
 
@@ -247,7 +247,7 @@ The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of Player] face. Reaching an [bodyname of Player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is - what you're almost positive it could only be - a mishmash of mutant cum lining the walls.";
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [FaceName of Player] face. Reaching an [BodyName of Player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is - what you're almost positive it could only be - a mishmash of mutant cum lining the walls.";
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are not found by any more mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase Libido of Player by 20;
 		if Libido of Player > 100, now Libido of Player is 100;
@@ -303,7 +303,7 @@ This is the doorcheck rule:
 					increase diceroll by bonus;
 					if diceroll > 12:
 						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier.";
-						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [facename of Player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes... or was that the brave?";
+						say "Ignoring this you try to look around to find something useful to your quest. Nose quivering at the smells coming from in here you find your eyes widening slightly as you spot an intact refrigerator that seems to have missed the carnage that had dominated the 20' x 15' foot room. Going over and listening to the sounds of the machine still working, a surprise you really hadn't been expecting - with what luck you're having today - you quickly open the fridge door and peek your [FaceName of Player] head in to have a look at the contents. Most of whatever had been inside of here has been cleaned out, no small shocker there, but upon looking onto the side shelves you find both food, chips, and water waiting for you. Lady luck really does smile on the foolish sometimes... or was that the brave?";
 						wait for any key;
 						increase carried of water bottle by 1;
 						increase carried of chips by 1;
@@ -423,11 +423,11 @@ Instead of resolving a A Fight to remember:
 					now A Fight to remember is resolved;
 					now oozing is 1;
 					now humanity of Player is 0;
-					now tailname of Player is "Blob";
-					now facename of Player is "Blob";
-					now skinname of Player is "Blob";
-					now bodyname of Player is "Blob";
-					now cockname of Player is "Blob";
+					now TailName of Player is "Blob";
+					now FaceName of Player is "Blob";
+					now SkinName of Player is "Blob";
+					now BodyName of Player is "Blob";
+					now CockName of Player is "Blob";
 					now scalevalue of Player is 5;
 					now bodydesc of Player is "gleatinous";
 					now bodytype of Player is "ooze";
@@ -459,11 +459,11 @@ Instead of resolving a A Fight to remember:
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of Player is 0;
-						now tailname of Player is " Blob ";
-						now facename of Player is "Blob ";
-						now skinname of Player is "Blob";
-						now bodyname of Player is "Blob ";
-						now cockname of Player is " Blob ";
+						now TailName of Player is " Blob ";
+						now FaceName of Player is "Blob ";
+						now SkinName of Player is "Blob";
+						now BodyName of Player is "Blob ";
+						now CockName of Player is " Blob ";
 						now scalevalue of Player is 5;
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
@@ -490,11 +490,11 @@ Instead of resolving a A Fight to remember:
 						now A Fight to remember is resolved;
 						now oozing is 1;
 						now humanity of Player is 0;
-						now tailname of Player is " Blob ";
-						now facename of Player is "Blob ";
-						now skinname of Player is "Blob";
-						now bodyname of Player is "Blob ";
-						now cockname of Player is " Blob ";
+						now TailName of Player is " Blob ";
+						now FaceName of Player is "Blob ";
+						now SkinName of Player is "Blob";
+						now BodyName of Player is "Blob ";
+						now CockName of Player is " Blob ";
 						now scalevalue of Player is 5;
 						now bodydesc of Player is "gleatinous";
 						now bodytype of Player is "ooze";
@@ -522,7 +522,7 @@ Instead of resolving a PassionAfterTheBattle:
 		say "Having rested up and finished unthawing the reservoir you go about treating and filtering the water, after cleaning up the facility of the frozen Blob monster, and then proceed to set the system to run on automatic just as it had been done before. While there might be a strong possibility that more mutants could show up later you make a plan to inform the local soldiers in this area in hopes that they will send a unit here to protect the place. After all, you've basically done their job for them with cleaning up the mutants and the facility.";
 		say "Taking no mind about the possibilities to come in the near future, you go ahead and prepare to leave out of the facility with pride burning deep inside of your chest. Holding yourself up just a little bit more proudly you realize that you've done something that no one else probably could have done, singlehandedly, as you had. Congratulations.";
 		say "With the water back on this should make life a little easier here for everyone, and maybe, if you play your cards right you might be able to [bold type]get rewarded[roman type] for your efforts in a number of ways later on. The thought of being praised doesn't so much spurn you on as the idea of that special someone outside treating you to a nice round of hot shower sex. Shivering slightly you quickly go over the commands of the main terminal once again to see if you have everything straightened out as it should be before making your way out of the reservoir.";
-		say "Before you can fully exit the reservoir though you find yourself stopping to look at the now crystal clear waters inside of the edifice. Seeing your [facename of Player] face looking back at you, a little bit haggard than before, but no less charming, you fail to see something rising up out of the water until it's too late. Jumping back into a crouch when the waters suddenly splash up into your face you sputter and shake your head before looking at the thing that is now floating into the air.";
+		say "Before you can fully exit the reservoir though you find yourself stopping to look at the now crystal clear waters inside of the edifice. Seeing your [FaceName of Player] face looking back at you, a little bit haggard than before, but no less charming, you fail to see something rising up out of the water until it's too late. Jumping back into a crouch when the waters suddenly splash up into your face you sputter and shake your head before looking at the thing that is now floating into the air.";
 		say "Cold as a winter's morning, blue as the sky during a clear afternoon, sharp with twin lethal edges that beckons to be used against any who stand before you, you see a pair of curved knives gleaming at you somewhat in an otherworldly manner. Not understanding this strange happening you aren't prepared for the twin weapons to float over to you and then stand in front of you. However, a sense of awe makes you reach out for the hilts of the knives before you can stop yourself. A shudder racks throughout your body as a pervasive chill runs down along your spine. When the daggers rest gently into your hand you can feel a sorrowful weight to them as you recall all of those who got trapped inside of the Blob and then frozen with the creature.";
 		say "There are no words that can help you to understand what is going on here, but you have a good feeling that you just received a kind gift that comes around only once in a lifetime. Taking the knives firmly into hand you clutch the twin blades close to your chest before turning to head out of the reservoir.";
 		wait for any key;
@@ -541,7 +541,7 @@ Sanctuary is a situation.
 
 Instead of resolving a Sanctuary:
 	if waterworks is 1:
-		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [facename of Player] face and [bodyname of Player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
+		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [FaceName of Player] face and [BodyName of Player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
 		Extend game by -16;
 
 

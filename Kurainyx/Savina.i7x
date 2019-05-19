@@ -320,7 +320,7 @@ to say SavinaFatalBeg:
 	say "     It does not take long before you reach your climax, the feel of your [if Player is herm]cock[smn] and cunt[sfn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your cum and juices paint the snake's interior[else if Player is male]cock[smn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your cum paints the snake's interior[else if Player is female]cunt[sfn] rubbing against the living tunnel's walls, the sensation too much for you to handle as your juices paint the snake's interior[else]crotch rubbing against the living tunnel's walls, the sensation too much for you to handle[end if]. And it is only the first of many. With your overwhelming desire to please your mistress and the constant squeezing of the encompassing walls, your orgasms come swiftly and frequently, suspending you in an endless cycle of bliss. The pure euphoria as you gradually become one with Savina is everything you could have wished for and then some, and you dearly hope that the serpent derives just as much pleasure from using you. As you are ferried into the deepest depths of the snake, your senses are washed away by the rapturous, churning stomach until you let your weary self rest, offering your final gift to your mistress.";
 	wait for any key;
 	now voreloss is true;
-	now bodyname of Player is "dead";
+	now BodyName of Player is "dead";
 	end the story saying "Savina hums in delight when she feels your sluggish movements come to an end. Rubbing the shrinking bulge in her midsection, she says, 'You were an excellent meal, my pet. Enjoy being a part of me forever.' As the massive snake's stomach claims you to fuel her mighty form, Savina slithers off in search of her next meal, or better yet, her next pet.";
 
 to say SavinaFatalKeep:
@@ -331,7 +331,7 @@ to say SavinaFatalKeep:
 	say "     All too familiar walls of flesh squeeze and rub every inch of your bound form as you are carried deeper into the dark depths. Whether it's Savina's charm or just you accepting that you cannot escape the dominant snake, you hardly feel any worry about the perilous situation that you are in. Instead, you just focus on the tingles of pleasure that the slippery walls give you as they knead your weary body, lulling you into a state of relaxation. The snake's stomach feels oddly comfortable, almost like being stuffed inside of a full-body sleeping bag tailored to fit just you, and the soothing caresses from all sides only enhance the bliss. Feeling safe and snug inside of your mistress, you start to feel drowsy while your eyelids grow heavy, and the last thing you hear before you fall asleep is Savina saying, 'Sweet dreams, my pet.'";
 	wait for any key;
 	now voreloss is true;
-	now bodyname of Player is "dead";
+	now BodyName of Player is "dead";
 	end the story saying "Savina hums in delight when she feels your sluggish movements come to an end. Rubbing the shrinking bulge in her midsection, she says, 'You were an excellent meal, my pet. Enjoy being a part of me forever.' As the massive snake's stomach claims you to fuel her mighty form, Savina slithers off in search of her next meal, or better yet, her next pet.";
 
 to say SavinaFeed:

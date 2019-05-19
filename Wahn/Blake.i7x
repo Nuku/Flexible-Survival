@@ -45,7 +45,7 @@ Tongue Length of Blake is 4. [length in inches]
 Breast Size of Blake is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Blake is 2. [count of nipples]
 Asshole Depth of Blake is 9. [inches deep for anal fucking]
-Asshole Tightness of Blake is 2. [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
+Asshole Tightness of Blake is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 Cock Count of Blake is 1. [number of cocks]
 Cock Girth of Blake is 3. [thickness 1-5, thin/slender/average/thick/monstrous]
 Cock Length of Blake is 8. [length in inches]
@@ -53,7 +53,7 @@ Ball Count of Blake is 2. [allowed numbers: 1 (uniball), 2 or 4]
 Ball Size of Blake is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 Cunt Count of Blake is 0. [number of cunts]
 Cunt Depth of Blake is 0. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-Cunt Tightness of Blake is 0. [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+Cunt Tightness of Blake is 0. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 Clit Size of Blake is 0. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Blake is false.
@@ -198,9 +198,11 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 			else:
 				say "     No, you definitely won't do what he asks of you. Turning your back on the trashy rat a second time, you stumble out into the parking lot, then forget where you actually just came from.";
 				now HP of Blake is 100; [opted out of his content]
+		move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 	else if HP of Blake is 2: [one guaranteed rejection, just to offend the player]
 		say "     'Back for more already, kid? What a slut,' he chuckles. 'I ought to dress you up like me, lock a collar around that cute neck of yours and keep you as my property. Nah, maybe another time,' he says, shooing you away.";
 		now HP of Blake is 3; [he left the player dry when they came back]
+		move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 	else if (lastfuck of Blake - turns < 6): [returning too quickly]
 		let randomnumber1 be a random number from 1 to 3;
 		if randomnumber1 is:
@@ -210,6 +212,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				say "     'Pffhahah, back for more... again? How many times is that now? Remind me, I've lost count. Go away, you filthy little toy. I'm not in the mood right now.' You run away from the humiliation, your cheeks flustered with the fire of embarrassment.";
 			-- 3:
 				say "     'Oh for gods sake, kid. I've already messed with you recently. Give me a while, I've got shit to do other than humiliate you, ahhaha!' You walk away, whining in submission.";
+		move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 	else if HP of Blake is 3: [returning again after one rejection]
 		say "     'Hah, there you are,' the trashy rat chuckles out. 'I've been waiting to use you for a while, kid.' Grinning, he lures you closer, his finger twitching in response to your presence. Of course, you came closer - your past introduction to his methods of forcing you into subservience carrying along - your mind already littered with thoughts of serving the big, dominant, leather-clad rat. Instantly, you fall to your knees.";
 		let randomnumber be a random number from 1 to 3;
@@ -228,7 +231,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				say "     The scent was overpowering to anyone who was unlucky enough to focus in on it - otherwise mixed together with the various scents of sex that emanates from the hut beside you. The strange rat infects your mind with his enjoyment of living in his own trash - changing your thoughts as you suck on his cock. Before long, you're met with a splash of seed, the rank taste of his cum matching that of his cock. Due to your lust-addled mind, however, that disgusting taste seems to be ultimately pleasurable to you.";
 		WaitLineBreak;
 		say "     'Hah, that was fun, wasn't it, bitch? Bet you're starting to enjoy me more and more - just craving that scent, that musk, aren't you?' he teases, grinning as you eagerly lap up the excess cum on your surroundings. Before long though, Blake lays back onto his bed, closing his eyes for a while. Perhaps you should come back another time.";
-	move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
+		move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 
 to say BlakeCounterstrike:
 	say "     Taking a gulp of air and then holding your breath, you spin around and pounce on Blake. He clearly didn't expect that and you see shock on his face as you bowl him over, sending his hat flying and landing on top of him as the two of you tumble to the ground. 'HEY! You're supposed to OBEY! Submit and let me up now!' he snarls at you, yet without the musk you can resist his voice alone. Seeing that his usual tricks aren't working, Blake then tries to worm his arms out of your grasp. You don't have much time as your lungs start to burn in their need for fresh air, so you do the next best thing that comes to your increasingly oxygen-starved mind and bash the rat's head against the asphalt, which knocks him out for now. As the punk rat goes slack, you're free to turn your head to side and take a quick breath, then stand up and wonder what you should do now. He might re-gain consciousness any minute now and be less than pleased with you.";
@@ -457,7 +460,7 @@ to say BlakeSex4: [jerking off ON Blake]
 	say "     You kneel down on the ragged bedding that Blake is stretched out on. After telling him with a smile on your face that it's you who'll make use of him this time, you reach out and cup his furry balls, giving them a relatively gentle squeeze. Blake squirms a bit, mumbling into his ball-gag, but doesn't struggle any more than that as you take hold of his still soft uncut cock. Fingers wrapping around the fairly well-sized member, you start jerking it, with some squeezing and rubbing putting your rodent whore into an aroused state before much longer. Soon, you've got his manhood fully hard and standing straight up like a pole, pulsing slightly from the beat of his heart as it sends blood to this priority. Setting down your other hand on the furry globes of his balls, you stroke and fondle your helpless rat a bit, grinning as you push the unwilling captive closer and closer to orgasm.";
 	say "     Yet as you sense that the rat is close to blasting a load all over the fur of his chest, you just let go of his shaft, watching it slap against his flat abs with a satisfying thud. And that is when you [if Player is not naked]quickly strip off your clothes and gear, then [end if]take hold of your own erect shaft. In a teasing voice, you tell him that he's really a whore through and through if he's this hard for what you'll do next, a cruel joke on the rat as he has no idea, being blindfolded and all. The actual indication of your plans for him is when you slap Blake's muzzle with your by now rock-hard shaft, laughing as he flinches from the sudden touch. Grabbing a handful of his hair, you hold him firm as you rub his face with your dick, wiping the drops of pre-cum it is leaking off onto him. He squirms as if to escape you, but of course, there's little chance of that, with his hands cuffed behind his back and a spreader bar between his legs.";
 	WaitLineBreak;
-	say "     After a while of revelling in your dominance over the street rat, you feel a familiar tightness rise in your balls. Having such power can really go to someone's head, and your arousal is aflame with it right now. With a chuckle, you comment on the fact that his dick is still almost as hard as before. He can't really help it, not with how close to orgasm you pushed him, but you rub it in nonetheless, saying that him staying hard has earned him a special honor from his [master]. With that said, you start jerking yourself off in earnest, soon pushing yourself over the edge and starting to cum - right onto Blake's face. Gleefully aiming your [cock of player] shaft, you hit his face with spurt after spurt of creamy seed, even as he tries to turn it away from you. Grabbing a handful of his hair and giving that a sharp tug puts a stop to his attempts at evasion, allowing you to give his gagged and blindfolded face a more or less even facial with cum.";
+	say "     After a while of revelling in your dominance over the street rat, you feel a familiar tightness rise in your balls. Having such power can really go to someone's head, and your arousal is aflame with it right now. With a chuckle, you comment on the fact that his dick is still almost as hard as before. He can't really help it, not with how close to orgasm you pushed him, but you rub it in nonetheless, saying that him staying hard has earned him a special honor from his [master]. With that said, you start jerking yourself off in earnest, soon pushing yourself over the edge and starting to cum - right onto Blake's face. Gleefully aiming your [Cock of Player] shaft, you hit his face with spurt after spurt of creamy seed, even as he tries to turn it away from you. Grabbing a handful of his hair and giving that a sharp tug puts a stop to his attempts at evasion, allowing you to give his gagged and blindfolded face a more or less even facial with cum.";
 	say "     And that is how you leave the rat, the fur of his face plastered to his features with your seed. As you step away from his ratty bedding, the captive rodent rolls over and starts to grind his face against the already fairly stained sheets, adding another smeared cum-stain to it as he tries to clean himself off. Pretty much on its own accord, the thought of how far Blake has fallen crops up in your mind: From a mind-controlling king of his own dirty little alley to now just being your tied-up whore, to be used by anyone who wants some quick release. One could almost call it a cautionary tale about not trying to take on people as powerful and ruthless as yourself. Shrugging off the idle wondering, you get back to other matters, albeit still with a smile on your face.";
 
 to say BlakeSex5: [fucking Blake's ass]

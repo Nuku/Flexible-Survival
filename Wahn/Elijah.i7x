@@ -494,7 +494,7 @@ to say ElijahTalk3:
 		move player to The Clouds;
 
 to say DemonLairAttack:
-	say "     Armed and prepared as good as you're gonna get, you set out into the wild streets of the city together with Elijah. Some creatures along the way raise their heads and look over at the two of you with lusty gazes, but something about the determined stride and grim expressions you show puts them off from attacking. Seems like they're not ready to take on a [bodyname of Player] and an angel on a mission - not as long as there's countless easier marks to pick from for some sexy fun. A short while later, you arrive at the burned-out chapel from where you rescued Elijah from his captors and step in through the open entrance portal. 'It pains me to see a house of our father in such a state,' Elijah says as he looks around, taking in the ruined remains of the pews and the blackened walls.";
+	say "     Armed and prepared as good as you're gonna get, you set out into the wild streets of the city together with Elijah. Some creatures along the way raise their heads and look over at the two of you with lusty gazes, but something about the determined stride and grim expressions you show puts them off from attacking. Seems like they're not ready to take on a [BodyName of Player] and an angel on a mission - not as long as there's countless easier marks to pick from for some sexy fun. A short while later, you arrive at the burned-out chapel from where you rescued Elijah from his captors and step in through the open entrance portal. 'It pains me to see a house of our father in such a state,' Elijah says as he looks around, taking in the ruined remains of the pews and the blackened walls.";
 	say "     His brows draw together in scorn a moment later, and following his gaze you see the cracked altar at the end of the large room. It is literally dripping cum - some creature must have used it as a fuck-pad and came all over the stone block! The shocked silence at the sacrilege is broken a second later by a whimper and groan coming from behind the altar, and looking further down, the two of you spot a slender human foot poke out from behind the defiled altar. In answer, a deep and gravelly voice can be heard from an open archway in the left-hand wall, saying in a cruel tone, 'Trying to crawl away bitch? Its my turn now and I'm gonna punish you for that! Fuck you till you're raw!' With that said, a hulking demon brute steps out of the shadows, his massive erect shaft leading the way.";
 	WaitLineBreak;
 	say "     'Not while I'm here, creature!' Elijah shouts in rage and sprints forward, engaging the purple demon in a fight. You try to close up and help him, but a second demon follows after the first - coming out of the darkened side room. This one isn't fully hard and his weighty shaft dangles down between thick and muscled legs, its length glisteningly wet and with cum smeared over the head and shaft. Looks like he's the one who took their victim before and 'decorated' the altar in his seed. With an eager grin showing a worrying amount of sharp teeth, the demonic creature turns his red-glowing eyes on you and roars with battle-lust!";
@@ -527,12 +527,12 @@ to say DemonLairAttack:
 			say "     Eventually Skarnoth pulls his prick out of your mouth, gleefully spurting slightly glowing demon cum over your face for good measure. He even hits you in the right eye (on purpose), which stings like hell, then wipes the last drops of his load on your other cheek as you rub at the clenched eyelid. 'That's a good pet. I'll enjoy having you again and again,' the demon says with a cruel grin, then stands up again. He starts walking away, only to pause after a few steps and look over his shoulder. 'Oh yeah, you may come too, slut. Do it now.' His eyes glow even brighter for a second as demonic power lashes out with the command - overwhelming you with a sudden orgasm. Bucking on the hard ground as you scream in lust, [if Player is male]your cock erupts with cum, blasting away everything that your balls have to give and making a total mess of yourself[else if Player is female]your pussy starts leaking and squirting femcum like crazy, making a total mess of yourself and forming a puddle between your legs[else]your sexless body is wracked by unfulfilled breeding imperatives that turn you into a drooling mess[end if]. Skarnoth laughs at the spectacle and says, 'Someone will be along to clean you up eventually.' With that, he walks out of the room, leaving you behind in your still twitching and totally exhausted state.";
 			WaitLineBreak;
 			now battleground is "Void";
-			now bodyname of Player is "Demon Slave";
+			now BodyName of Player is "Demon Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else if fightoutcome >= 30: [fled]
 			say "     You might have gotten away from Skarnoth himself for a second, turning your back on Elijah and running from the demon prince's bedroom, but as fate will have it, a large group of demons come through the pentagram gate just as you reach the hub. Within moments, you're overwhelmed and brought before their master once more, who gleefully fastens your very own slave collar around your neck and then introduces you to the beginning of an eternity of servitude in hell.";
 			now battleground is "Void";
-			now bodyname of Player is "Demon Slave";
+			now BodyName of Player is "Demon Slave";
 			end the story saying "You're stuck in hell - there's no coming back from that!";
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     As you knock the demon prince to the ground, the two sex demons who had been keeping Elijah engaged in team-work attacks look rather shocked at the fact that a mortal beat their master. The two of them share a wide-eyed gaze, then turn and flee out the door, abandoning Skarnoth without a second thought. 'That is the weakness of forced obedience,' Elijah says with audible contempt, then quickly moves to the bed to free the captive. Meanwhile, Skarnoth pushes himself up into a half-crouch, looking at you defiantly as he sneers, 'You think I'm beaten?! You've seen nothing yet!' The demon spits at you, the gob almost hitting your foot, then looks at Elijah with a sneer. 'I notice you're not wearing your blade, little angel. Just how do you plan to finish this then? A bit hard to strike down a man in judgement without it, hah. Goody two-shoes angels are too weak to get their hands dirty - I know you, remember?'";
@@ -617,7 +617,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 	if Player consents: [now it's sure the player will get fucked]
 		now thirst of Elijah is 1; [setting the flag as the player gets fucked either way]
 		now Captured Soldier is active;
-		setmonster "Spidertaur";
+		setmonster "Spidertaur Male";
 		choose row MonsterID from the Table of Random Critters;
 		LineBreak;
 		say "     Elijah leads you out of the library and towards a large townhouse several blocks over, giving you a grin as he ushers you inside, then pulls the door closed after entering himself. Following him further as he walks through the house, you soon find yourself stepping into a bedroom containing a large four-poster bed and lots of thick strands of spiders silk stretched from wall to wall. In the midst of that is a large spidertaur, just busy pulling things into their right place and handling a somewhat loose thread with three of his legs. The creature's black spider's body and legs show an interesting pattern of neon-green lines - seems someone, likely he himself, did some fine body-art with spray-paint.";
@@ -795,7 +795,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 		say "     Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Then suddenly, Elijah's voice cuts into your pleasant buzz by saying, 'You're a bit slow and dainty in your thrusts, demon... but I think I know what might motivate you.' Raising your head, you see the dark angel stand close by, one hand on his hard cock and stroking it with quick jerks. He then walks around the bed, getting behind you and Brutus, then pulls up the demon's tail to bare his asshole. Not bothering with any more preparation than letting a gob of spit drip down on his shaft and spreading its wetness over it, Elijah jabs his manhood into Brutus's rear passage an instant later, driving it in with a hard thrust. Your demon companion bellows at the sudden invasion and for a second his claws tighten and threaten to slice you, then he forces himself to relax again.";
 		say "     With Elijah now starting to fuck Brutus's ass with forceful and deep thrusts, the demon brute's own cock is pushed into you with increased temp too. Thankfully, the relatively slow and gentle fucking up till now allowed your muscles to get used to being stretched out, as well as leaving quite a bit of his precum to leak into you and lube you up. Therefore, you don't have too many problems with the uptake and simply pant and moan as the going gets faster and faster and slapping noises of your little fuck-train fill the bunker. Totally entranced by getting shafted so deep and good, you barely hear Elijah's jeers and taunts at being the master of both you and the demon.";
 		WaitLineBreak;
-		say "     Soon, the sensations drive your arousal over the edge and with a loud moan, your [cock of Player] shaft sprays cum all over the bed. Your twitching and flexing hole around Brutus's shaft quickly pushes the demon to reach his own climax, giving something like a very deep purr as he does so, his pleasure at serving his master quite obvious. With a loud grunt, he begins to pump your bowels full of his seed, easily filling your asshole and intestines. The remaining cum starts squirting out around the demon's thick cock as he thrusts into you a few more times, creating hot squishing noises and making the warm goop run down the inside of your legs. As he finally removes his cock with a loud *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your hole to create a large wet spot on the bed.[mimpregchance]";
+		say "     Soon, the sensations drive your arousal over the edge and with a loud moan, your [Cock of Player] shaft sprays cum all over the bed. Your twitching and flexing hole around Brutus's shaft quickly pushes the demon to reach his own climax, giving something like a very deep purr as he does so, his pleasure at serving his master quite obvious. With a loud grunt, he begins to pump your bowels full of his seed, easily filling your asshole and intestines. The remaining cum starts squirting out around the demon's thick cock as he thrusts into you a few more times, creating hot squishing noises and making the warm goop run down the inside of your legs. As he finally removes his cock with a loud *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your hole to create a large wet spot on the bed.[mimpregchance]";
 		say "     Shoving against Brutus and even managing to push the exhausted demon brute to fall into the bed with you, Elijah steps up on the mattress himself, hand flashing rapidly up and down his shaft as he jerks himself off. It's not long at all before the dark angel reaches the point of no return, aiming his cock alternatively at Brutus and your face as he sends spurt after spurt of his seed flying to splat down on you. Soon you and your demon companion's faces are wet with cum, which makes Elijah laugh darkly and say, 'Yeah, that's a good look for you. Two submissive cum-sluts for me to enjoy. Go on, lick it off each other - you know you want to.' And indeed you do - or at least Brutus does, as his long tongue quickly snakes out to start lapping at your face. You quickly join him at cleaning each other up, licking Elijah's still warm cum off the demon brute's face, which quickly leads over to the two of you making out, kissing and caressing each other. Not too interested in watching that, Elijah steps off the bed and walks away to clean himself up, with a noticeable spring in his step.";
 		if thirst of Elijah is 2:
 			now thirst of Elijah is 3;
@@ -1314,7 +1314,7 @@ Instead of fucking the Elijah:
 		else:
 			say "     You manage to get your feral impulses under control. Now that you're a bit more rational again, you can't think of a worse time or place to try to get it on with an angel.";
 	else if (HP of Elijah is 1 or HP of Elijah is 2): [unconscious on the bunk, transform into Evil Elijah]
-		if bodyname of Player is not listed in the infections of hellspawn and bodyname of Player is not "Hellhound":
+		if BodyName of Player is not listed in the infections of hellspawn and BodyName of Player is not "Hellhound":
 			[if the player isn't a demon, he's not corrupt enough]
 			say "     Looking down over the angel on his bunk, you decide you'd rather let him rest for now. He's strikingly handsome and wakes lust in you from just looking at him, but only the most wicked creatures would take advantage of this helpless and injured person who isn't even conscious most of the time.";
 		else:
@@ -1325,7 +1325,7 @@ Instead of fucking the Elijah:
 				if Player is herm: [herms may choose]
 					say "     Which part of your versatile sex do you want to use to deflower your little angel? (Y for cock, N for pussy)[line break]";
 					if Player consents:
-						say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of Player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
+						say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [Cock of Player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
 						say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 						say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
 						say "     He must never have felt something like this before, as all too soon, a shiver runs through the angel's body and long streaks of white cum blast from his perfect cock so splat down on his chest. The spasms of his insides with each shot grip your shaft tight as a vice, driving you over the edge in short order too and you deposit spurt after spurt of demonic cum deep inside your little angel.";
@@ -1351,7 +1351,7 @@ Instead of fucking the Elijah:
 						now HP of Gabriel is 1;
 						now Angel vs Demons is unresolved;
 				else if Player is male: [male]
-					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of Player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
+					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [Cock of Player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
 					say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
 					say "     You start pumping in and out of your defenseless partner, delighted how each movement makes him gasp and moan, and run a hand over a tightly muscled chest down to his slowly hardening cock. Giving the angel's balls a playful squeeze, you then grab his cock, pumping up and down on its shaft in rhythm with your own thrusts.";
 					say "     He must never have felt something like this before, as all too soon, a shiver runs through the angel's body and long streaks of white cum blast from his perfect cock so splat down on his chest. The spasms of his insides with each shot grip your shaft tight as a vice, driving you over the edge in short order too and you deposit spurt after spurt of demonic cum deep inside your little angel.";
@@ -1385,7 +1385,7 @@ Instead of fucking the Elijah:
 			else:
 				say "     You once again resist the dark impulse and decide you should focus more on helping him.";
 	else if (HP of Elijah is 3): [de-virgin-ify him nice and slowly]
-		if bodyname of Player is listed in the infections of hellspawn or bodyname of Player is "Hellhound":
+		if BodyName of Player is listed in the infections of hellspawn or BodyName of Player is "Hellhound":
 			say "     As you approach Elijah and try to touch him, he flinches back from you, saying 'I feel that evil has corrupted you. You saved me, so let me now return the favor.' He catches your arm in an iron grip, visibly straining himself until a golden glow starts forming around his hand and flows into you. You feel strange, but better - a sense of oppression lifting from your soul as your body suddenly shifts.";
 			say "[de-demonify]";
 		else:
@@ -1400,7 +1400,7 @@ Instead of fucking the Elijah:
 				now HP of Elijah is 4;
 				now lastfuck of Elijah is turns;
 	else if (HP of Elijah is 4): [good repeats]
-		if bodyname of Player is listed in the infections of hellspawn or bodyname of Player is "Hellhound":
+		if BodyName of Player is listed in the infections of hellspawn or BodyName of Player is "Hellhound":
 			say "     Elijah smiles at you as you approach him, eager to get another lesson in how to 'be human'. Then suddenly, his expression shifts when you reach out for him and he shies away from your touch. Elijah says, 'What happened to you? You feel... wrong. Evil almost. I'm sorry my friend, but I can't be close to you like that.' and hurries out of the room.";
 		else:
 			if (lastfuck of Elijah - turns < 6):
@@ -1985,7 +1985,7 @@ to say ElijahSex14: [double penetration with Elijah and Zephias]
 		say "     Getting thoroughly fucked in the cowgirl position, your mind is in a lustful haze for you don't know how long, as you only concentrate on the feelings of Elijah moving inside you and you fill the whole room with your loud moans and gasps. Then, you suddenly feel... something changing - the mattress being pushed down, you think - but as you start turning your head to check it out, Elijah grabs you firmly behind the neck and pulls you down on him in a kiss. Eagerly making out with him, your tongues wrestling with another, you forget all about what's behind you - until you feel a nudge against your pucker, followed by a more forceful push as Zephias thrusts his manhood into you. Your eyes flying open at the sudden invasion, you now see the spidertaur's front legs resting on the bed to your left and right.";
 		WaitLineBreak;
 		say "     Having been somewhat in the grip of your arousal before, now you completely get lost in it as the two of them start moving in concert, one thrusting in as the other pulls out, bombarding you with the constant feeling of having one of them inside you. It doesn't take all that much longer until this double-fuck drives you over the edge, femcum squirting out of your pussy to drip down on Elijah [if Player is male]and cum shooting from your own cock [end if]as you orgasm. Zephias is the next to go, soon afterwards giving one last powerful thrust into your ass, his balls starting to pulsate as they unload blast after blast of his seed deep into your tight hole. Then, just moments later, Elijah groans 'Take my cum in your pussy, you little slut!', the head of his perfect cock right against your cervix and shooting long strings of his fertile cum directly into your womb.";
-		setmonster "Spidertaur";
+		setmonster "Spidertaur Male";
 		choose row MonsterID from the Table of Random Critters;
 		say "[mimpregchance]";
 		setmonster "Seraphim";
@@ -2000,7 +2000,7 @@ to say ElijahSex14: [double penetration with Elijah and Zephias]
 		WaitLineBreak;
 		say "     Having been somewhat in the grip of your arousal before, now you completely get lost in it as the two of them start moving in concert, one thrusting in as the other pulls out, bombarding you with the constant feeling of having one of them move inside you. Sometimes they also thrust in at the same time again, stretching you out quite a bit and making you gasp at the powerful feeling of fullness. It doesn't take all that much longer until this double-penetration fuck drives you over the edge, [if Player is male]long strings of cum shooting from your own cock and painting Elijah's chest in white streaks[else]a tingling feeling of satisfaction running through your whole body[end if]. With your asshole twitching around the two males fucking you and their cocks rubbing against each other, it's hard to say which of them is next to go, as they come either at the same time or the pulsing of one of their hard shafts drives the other over the edge too. Blast after blast of both men's seed shoot deep into your stretched hole, so much that it squirts out around their two cocks.";
 		if a random chance of 1 in 2 succeeds:
-			setmonster "Spidertaur";
+			setmonster "Spidertaur Male";
 			choose row MonsterID from the Table of Random Critters;
 			say "[mimpregchance]";
 			setmonster "Seraphim";
@@ -2010,7 +2010,7 @@ to say ElijahSex14: [double penetration with Elijah and Zephias]
 			setmonster "Seraphim";
 			choose row MonsterID from the Table of Random Critters;
 			say "[mimpregchance]";
-			setmonster "Spidertaur";
+			setmonster "Spidertaur Male";
 			choose row MonsterID from the Table of Random Critters;
 			say "[mimpregchance]";
 		say "     Still breathing heavily, Elijah wraps his arms around you and holds you in position while Zephias pulls out of you and moves around behind you. You can feel his hands on your butt again, groping your asscheeks and holding them apart, then something soft and wet touches you back there - his tongue. The spidertaur proceeds to eat you out, his tongue licking up what cum has run out of you from Elijah's shaft, then wiggling around and into in your hole beside the angel's slowly softening erection. After eating all of the cum dripping out of you, he puts his mouth against your left bun, leaving a somewhat painful hickey there to mark you before he scuttles away from the bed and out of the room, his legs clicking on the hardwood floor.";
@@ -2034,7 +2034,7 @@ to say ElijahSex15:
 	say "     Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Then suddenly, Elijah's voice cuts into your pleasant buzz by saying, 'You're a bit slow and dainty in your thrusts, demon... but I think I know what might motivate you.' Raising your head, you see the dark angel stand close by, one hand on his hard cock and stroking it with quick jerks. He then walks around the bed, getting behind you and Brutus, then pulls up the demon's tail to bare his asshole. Not bothering with any more preparation than letting a gob of spit drip down on his shaft and spreading its wetness over it, Elijah jabs his manhood into Brutus's rear passage an instant later, driving it in with a hard thrust. Your demon companion bellows at the sudden invasion and for a second his claws tighten and threaten to slice you, then he forces himself to relax again.";
 	say "     With Elijah now starting to fuck Brutus's ass with forceful and deep thrusts, the demon brute's own cock is pushed into you with increased temp too. Thankfully, the relatively slow and gentle fucking up till now allowed your muscles to get used to being stretched out, as well as leaving quite a bit of his precum to leak into you and lube you up. Therefore, you don't have too many problems with the uptake and simply pant and moan as the going gets faster and faster and slapping noises of your little fuck-train fill the bunker. Totally entranced by getting shafted so deep and good, you barely hear Elijah's jeers and taunts at being the master of both you and the demon.";
 	WaitLineBreak;
-	say "     Soon, the sensations drive your arousal over the edge and with a loud moan, your [cock of Player] shaft sprays cum all over the bed. Your twitching and flexing hole around Brutus's shaft quickly pushes the demon to reach his own climax, giving something like a very deep purr as he does so, his pleasure at serving his master quite obvious. With a loud grunt, he begins to pump your bowels full of his seed, easily filling your asshole and intestines. The remaining cum starts squirting out around the demon's thick cock as he thrusts into you a few more times, creating hot squishing noises and making the warm goop run down the inside of your legs. As he finally removes his cock with a loud *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your hole to create a large wet spot on the bed.[mimpregchance]";
+	say "     Soon, the sensations drive your arousal over the edge and with a loud moan, your [Cock of Player] shaft sprays cum all over the bed. Your twitching and flexing hole around Brutus's shaft quickly pushes the demon to reach his own climax, giving something like a very deep purr as he does so, his pleasure at serving his master quite obvious. With a loud grunt, he begins to pump your bowels full of his seed, easily filling your asshole and intestines. The remaining cum starts squirting out around the demon's thick cock as he thrusts into you a few more times, creating hot squishing noises and making the warm goop run down the inside of your legs. As he finally removes his cock with a loud *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your hole to create a large wet spot on the bed.[mimpregchance]";
 	say "     Shoving against Brutus and even managing to push the exhausted demon brute to fall into the bed with you, Elijah steps up on the mattress himself, hand flashing rapidly up and down his shaft as he jerks himself off. It's not long at all before the dark angel reaches the point of no return, aiming his cock alternatively at Brutus and your face as he sends spurt after spurt of his seed flying to splat down on you. Soon you and your demon companion's faces are wet with cum, which makes Elijah laugh darkly and say, 'Yeah, that's a good look for you. Two submissive cum-sluts for me to enjoy. Go on, lick it off each other - you know you want to.' And indeed you do - or at least Brutus does, as his long tongue quickly snakes out to start lapping at your face. You quickly join him at cleaning each other up, licking Elijah's still warm cum off the demon brute's face, which quickly leads over to the two of you making out, kissing and caressing each other. Not too interested in watching that, Elijah steps off the bed and walks away to clean himself up, with a noticeable spring in his step.";
 
 to say ElijahSex16: [Brutus and player dominate Elijah]
@@ -2048,20 +2048,20 @@ to say ElijahSex16: [Brutus and player dominate Elijah]
 	say "     Phew, that was fun. After waiting a moment to let your orgasms ebb out, Brutus and you pull free. Leaving the freshly fucked and sticky man to clean himself up later, you grab your gear and clothes, then just walk away, accompanied by Brutus.";
 
 to say de-demonify:
-	if bodyname of Player is listed in infections of hellspawn or bodyname of Player is "Hellhound":
-		now bodyname of Player is "Human";
-		now body of Player is "charmingly human";
-	if skinname of Player is listed in infections of hellspawn or skinname of Player is "Hellhound":
-		now skinname of Player is "Human";
-		now skin of Player is "smooth";
-	if cockname of Player is listed in infections of hellspawn or cockname of Player is "Hellhound":
-		now cockname of Player is "Human";
-		now cock of Player is "";
-	if facename of Player is listed in infections of hellspawn or facename of Player is "Hellhound":
-		now facename of Player is "Human";
-		now face of Player is "charmingly human";
-	if tailname of Player is listed in infections of hellspawn or tailname of Player is "Hellhound":
-		now tailname of Player is "Human";
+	if BodyName of Player is listed in infections of hellspawn or BodyName of Player is "Hellhound":
+		now BodyName of Player is "Human";
+		now Body of Player is "charmingly human";
+	if SkinName of Player is listed in infections of hellspawn or SkinName of Player is "Hellhound":
+		now SkinName of Player is "Human";
+		now Skin of Player is "smooth";
+	if CockName of Player is listed in infections of hellspawn or CockName of Player is "Hellhound":
+		now CockName of Player is "Human";
+		now Cock of Player is "";
+	if FaceName of Player is listed in infections of hellspawn or FaceName of Player is "Hellhound":
+		now FaceName of Player is "Human";
+		now Face of Player is "charmingly human";
+	if TailName of Player is listed in infections of hellspawn or TailName of Player is "Hellhound":
+		now TailName of Player is "Human";
 		now tail of Player is "";
 	now scalevalue of Player is 3;
 	now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
@@ -2092,7 +2092,7 @@ to say fledfromchurchdemons:
 Section 7 - Endings
 
 when play ends:
-	if bodyname of Player is "Demon Slave":
+	if BodyName of Player is "Demon Slave":
 		say ""; [dealt with in Skarnoth's file]
 	else:
 		if (Elijah is in the bunker) and (HP of Elijah is 99): [evil Elijah]
@@ -2115,7 +2115,7 @@ when play ends:
 			if (humanity of Player < 10):
 				say "     When you succumb to your infection, Elijah is heartbroken about losing the friend and lover who helped him explore his newfound humanity. He sets out and tries to heal you, grasping your head in both hands and praying for your sanity - but fails. You're just too far gone, with almost nothing of your former self remaining inside. With tears in his eyes, he lets you go to live out your time in the city. Devastated about his inability to save you, he becomes somewhat fanatic about containing the outbreak, patrolling the borders of the city day and night, stopping anyone with even the slightest hint of change from leaving.";
 			else:
-				if bodyname of Player is listed in the infections of hellspawn or bodyname of Player is "Hellhound": [can't stand demons]
+				if BodyName of Player is listed in the infections of hellspawn or BodyName of Player is "Hellhound": [can't stand demons]
 					say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah pulls you to the side, explaining that he's thankful for you saving him and showing him the pleasant side of being almost human - but that he just can't bear the touch of your corrupted form. With a tear in his eye, he gives you a little goodbye wave and leaves with the chaplain. You don't see any more of Elijah after that, but are told he joined the special unit responsible for containing the outbreak.";
 				else: [living together]
 					say "     When the soldiers come through the city to rescue you and the others, you're all taken to a containment facility for medical evaluation and quarantine. Elijah calmly exclaims that he's not actually infected, but in his natural form and asks to speak to the nearest priest. The military chaplain who gets called in is pretty surprised about Elijah's status report, during which he absolves the angel after an earnest confession of having lost his flaming sword in the line of duty. Then Elijah requests a leave of absence, stating that in his weakened form he can't fight too well, vowing instead to do good in other ways.";

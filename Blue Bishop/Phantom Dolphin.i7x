@@ -94,7 +94,7 @@ to say flotfuck:
 				say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it";
 				if Player is male:
 					say ". Eagerly, it encases[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] where its hole would be[if Cock Count of Player > 2] before taking the rest along with it[else if Cock Count of Player is 2] before taking the other along with it[end if].";
-					say "     The toy continues to wobble against the waters, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if cockname of Player is not listed in infections of internallist] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
+					say "     The toy continues to wobble against the waters, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if CockName of Player is not listed in infections of internallist] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
 					if anallevel > 1:
 						say ". Soon, you feel the tainted material flood your [if Player is female]cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils[else]your ass, pounding your hole with a writhing series of tapered, worming tendrils[end if]";
 					else if Player is female:
@@ -165,7 +165,7 @@ to flotbind:
 				say "     Losing yourself to your overwhelming need, trapped within this vinyl prison, the inflatable dolphin shows no relent in perpetually milking you.";
 			say "     Eventually, you completely lose track of time. From your limited vision through the toy's eyes, you watch on as it finally wrenches itself free of the castle, doomed to constant abuse by this tainted suit as it carries you into the dark depths...";
 			WaitLineBreak;
-			now bodyname of Player is "Flotted";
+			now BodyName of Player is "Flotted";
 			now humanity of Player is 0;
 			end the story saying "You are milked perpetually by the toy.";
 			now Trixieexit is 1;
@@ -265,7 +265,7 @@ to flotprogress: [passable]
 	if flotintense is 2:
 		say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable dolphin, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance ";
 		if Player is male:
-			say "encase your dick[smn], [if cockname of Player is not listed in infections of internallist]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
+			say "encase your dick[smn], [if CockName of Player is not listed in infections of internallist]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
 		else:
 			say "coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...";
@@ -436,7 +436,7 @@ to say flotstrugglebar:
 	say "[if struggleatt > 0]X[else]-[end if][bracket]";
 
 when play ends:
-	if bodyname of Player is "Flotted":
+	if BodyName of Player is "Flotted":
 		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples - all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
 		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if Player is puremale and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";

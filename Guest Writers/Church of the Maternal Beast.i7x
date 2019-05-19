@@ -243,16 +243,16 @@ to Hellhound infect female:
 	say "     You wake up several hours later with your clothing torn to ribbons and slimy, yellow-tinged seed forming a puddle between your legs. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Between your legs is a lewd dripping demon bitch twat, swollen and puffy, leaking the hellhound's piss and cum as you hear a chuckle in your mind. 'Such a pretty bitch you are. Please, go out and enjoy yourself. You are now immune to the changes, just as I promised, as one of us. You will easily return to the form you want to hold, with one or two things that can't be hidden. Such are the rules, there must always be SOME kind visible proof or our infernal origins. Return to me once you a properly... ready,' the voice says, fading out and leaving you alone with your thoughts in the bunker.";
 	say "     Your insides clench with a fiery heat, longing to have a litter of hellhound pups gestating inside you.";
 	if Humanity of Player > 50, now humanity of Player is 50;
-	now skin of Player is "smooth";
-	now face of Player is "leather dog collar around your neck, and a charmingly human";
+	now Skin of Player is "smooth";
+	now Face of Player is "leather dog collar around your neck, and a charmingly human";
 	now tail of Player is "";
 	now Cock of Player is "";
-	now body of Player is "appears perfectly human at first, but on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
-	now bodyname of Player is "Hellhound";
-	now facename of Player is "Hellhound";
-	now skinname of Player is "human";
-	now cockname of Player is "Hellhound";
-	now tailname of Player is "human";
+	now Body of Player is "appears perfectly human at first, but on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
+	now BodyName of Player is "Hellhound";
+	now FaceName of Player is "Hellhound";
+	now SkinName of Player is "human";
+	now CockName of Player is "Hellhound";
+	now TailName of Player is "human";
 	now scalevalue of Player is 3;
 	now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of Player is "human";
@@ -279,16 +279,16 @@ to Hellhound infect male:
 	say "     You wake up several hours later, your clothing torn to ribbons. Feeling your neck, there is a seamless leather collar, engraved with strange infernal characters tightly wrapped around it. Somehow you've been brought back to the bunker, and true to the demon-dog's words, you no longer show any signs of the infection. You seem to have been completely restored to a human form... except for one place. Glancing down, you have the dirty and fouled hellhound shaft from the night before, dried up cum peeling from your skin and making the fur clump together. As you try and take this development in, you hear a chuckle in your mind 'Mmmmmmm, that WAS an enjoyable night, puppy. But you're not quite up to the task yet. You are not ready to be a male in my pack. Return to me once you have a little more... experience,' the voice fades away, leaving you alone with your thoughts in the bunker.";
 	say "     An unholy urge fills you as rub at yourself through your pants. Females, bitches - you need to fill them with your seed.";
 	if Humanity of Player > 50, now humanity of Player is 50;
-	now skin of Player is "smooth";
-	now face of Player is "leather dog collar around your neck, and a charmingly human";
+	now Skin of Player is "smooth";
+	now Face of Player is "leather dog collar around your neck, and a charmingly human";
 	now tail of Player is "";
 	now Cock of Player is "";
-	now body of Player is "appears perfectly human at first, but sprouting between your legs is sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
-	now bodyname of Player is "Hellhound";
-	now facename of Player is "Hellhound";
-	now skinname of Player is "human";
-	now cockname of Player is "Hellhound";
-	now tailname of Player is "human";
+	now Body of Player is "appears perfectly human at first, but sprouting between your legs is sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
+	now BodyName of Player is "Hellhound";
+	now FaceName of Player is "Hellhound";
+	now SkinName of Player is "human";
+	now CockName of Player is "Hellhound";
+	now TailName of Player is "human";
 	now scalevalue of Player is 3;
 	now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of Player is "human";
@@ -348,8 +348,8 @@ to say hellhoundheat:
 [Below this point is the mechanics to 'remove' the infection nanites.]
 every turn (This is the check Hellhound rule):
 	if isHellhound is true:
-		if cockname of Player is not "Hellhound":
-			now cockname of Player is "Hellhound";
+		if CockName of Player is not "Hellhound":
+			now CockName of Player is "Hellhound";
 			if maleHound is True:
 				say "     Almost immediately after the infection alters your maleness, the Hellhound's [']gift['] makes your groin throb and shift back, tip dribbling a bit in arousal.";
 				now Cock of Player is "[if looknow is 1]encased in a dirty furred sheath, with dried up seed peeling off, rests your slimy, foul, Hellhound[else]foul, Hellhound[end if]";
@@ -357,32 +357,32 @@ every turn (This is the check Hellhound rule):
 				say "     Almost immediately after the infection alters your sex, the Hellhound's [']gift['] makes your groin throb and shift back, spade loose and oozing lubricants.";
 				now Cock of Player is "";
 		if humanity of Player > 33:	[Initial Hellhound Infection]
-			if skinname of Player is not "human":
+			if SkinName of Player is not "human":
 				LineBreak;
-				now skinname of Player is "human";
-				now skin of Player is "smooth";
+				now SkinName of Player is "human";
+				now Skin of Player is "smooth";
 				say "     You feel your skin heat, a flush running back over you as the Hellhound's [']gift['] effortlessly destroys the infection, returning your smooth, human skin.";
-			if tailname of Player is not "human":	[Leave this human so that there's no desc text.]
+			if TailName of Player is not "human":	[Leave this human so that there's no desc text.]
 				LineBreak;
-				now tailname of Player is "human";
+				now TailName of Player is "human";
 				now tail of Player is "";
 				say "     You feel a sharp pain at the end of your spine and then, with no further warning, your tail simply drops off, leaving no sign you ever had one.";
-			if facename of Player is not "Hellhound":
+			if FaceName of Player is not "Hellhound":
 				LineBreak;
-				now facename of Player is "Hellhound";
-				now face of Player is "leather dog collar around your neck, and a charmingly human";
+				now FaceName of Player is "Hellhound";
+				now Face of Player is "leather dog collar around your neck, and a charmingly human";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] returns your face to its original, human configuration.";
-			if bodyname of Player is not "Hellhound":
+			if BodyName of Player is not "Hellhound":
 				LineBreak;
-				now bodyname of Player is "Hellhound";
+				now BodyName of Player is "Hellhound";
 				if maleHound is True:
-					now body of Player is "appears perfectly human at first. But sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
+					now Body of Player is "appears perfectly human at first. But sprouting between your legs is a sheath and coarse fur that remains dirty no matter how much you attempt to clean yourself";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
 					now SleepRhythm of Player is 0;
 				else:
-					now body of Player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
+					now Body of Player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of Player is "human";
@@ -417,32 +417,32 @@ every turn (This is the check Hellhound rule):
 				say "     As you surrender your humanity, the hellhound's [']gift['] starts to manifest as the curse it truly is. Your mind starts to embrace the perverted and foul nature that the infernal mutt inflicted upon you. A soft chuckle echoes through your mind and, in your backpack, your journal turns to dust.";
 				say "     You also get an unsettling urge to return to where you first encountered the infernal hound.";
 				delete journal;
-			if skinname of Player is not "Hellhound":
+			if SkinName of Player is not "Hellhound":
 				LineBreak;
-				now skinname of Player is "Hellhound";
-				now skin of Player is "coarse, dirty fur covering your";
+				now SkinName of Player is "Hellhound";
+				now Skin of Player is "coarse, dirty fur covering your";
 				say "     You feel your skin heat, a flush running back over you as the Hellhound's [']gift['] effortlessly destroys the infection. But with what little humanity you are left, a pelt of coarse, dirty dog fur grows over you.";
-			if tailname of Player is not "Hellhound":
+			if TailName of Player is not "Hellhound":
 				LineBreak;
-				now tailname of Player is "Hellhound";
+				now TailName of Player is "Hellhound";
 				now tail of Player is "Extending from your spine is a slender canine tail. Strangely, you don't seem to be able to lower it, exposing yourself to all who may look.";
 				say "     You feel a sharp pain at the end of your spine, then with no further warning you feel something writhe and reshape back there, a hellhound's tail forming.";
-			if facename of Player is not "Hellhound":
+			if FaceName of Player is not "Hellhound":
 				LineBreak;
-				now facename of Player is "Hellhound";
-				now face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now FaceName of Player is "Hellhound";
+				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
-			if bodyname of Player is not "Hellhound":
+			if BodyName of Player is not "Hellhound":
 				LineBreak;
-				now bodyname of Player is "Hellhound";
+				now BodyName of Player is "Hellhound";
 				if maleHound is True:
-					now body of Player is "that of a bipedal dog, paw-like feet, and stubby fingered hands with pawpads and dull black claws.";
+					now Body of Player is "that of a bipedal dog, paw-like feet, and stubby fingered hands with pawpads and dull black claws.";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of Player is "[one of]canine[or]dog-like[at random]";
 					now SleepRhythm of Player is 0;
 				else:
-					now body of Player is "that of a bipedal dog, paw-like feet, and stubby-fingered hands with pawpads and dull black claws.";
+					now Body of Player is "that of a bipedal dog, paw-like feet, and stubby-fingered hands with pawpads and dull black claws.";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of Player is "[one of]canine[or]dog-like[at random]";
@@ -475,32 +475,32 @@ every turn (This is the check Hellhound rule):
 				now hellHoundLevel is 3;
 				say "     You surrender completely, abandoning your humanity and embracing your infernal nature. Nothing matters to you any more besides pleasure and breeding, spawning as many of your kind as possible.";
 				delete journal;
-			if skinname of Player is not "Hellhound":
+			if SkinName of Player is not "Hellhound":
 				LineBreak;
-				now skinname of Player is "Hellhound";
-				now skin of Player is "coarse, dirty fur covering your";
+				now SkinName of Player is "Hellhound";
+				now Skin of Player is "coarse, dirty fur covering your";
 				say "     You feel your skin heat, a flush running back over you as the Hellhound's [']gift['] effortlessly destroys the infection. But with what little humanity you are left, a pelt of coarse, dirty dog fur grows over you.";
-			if tailname of Player is not "Hellhound":
+			if TailName of Player is not "Hellhound":
 				LineBreak;
-				now tailname of Player is "Hellhound";
+				now TailName of Player is "Hellhound";
 				now tail of Player is "Extending from your spine is a slender canine tail. Strangely, you don't seem to be able to lower it, exposing yourself to all who may look.";
 				say "     You feel a sharp pain at the end of your spine, then with no further warning you feel something writhe and reshape back there, a hellhound's tail forming.";
-			if facename of Player is not "Hellhound":
+			if FaceName of Player is not "Hellhound":
 				LineBreak;
-				now facename of Player is "Hellhound";
-				now face of Player is "leather dog collar around your neck and a yellow eyed, canine";
+				now FaceName of Player is "Hellhound";
+				now Face of Player is "leather dog collar around your neck and a yellow eyed, canine";
 				say "     Your face seems to heat up, and feel like soft putty for a few moments as the Hellhound's [']gift['] reveals itself for the curse it truly is, pulling your nose out, your mouth filling with canine teeth as your develop a scraggly, dirty furred canine head.";
-			if bodyname of Player is not "Hellhound":
+			if BodyName of Player is not "Hellhound":
 				LineBreak;
-				now bodyname of Player is "Hellhound";
+				now BodyName of Player is "Hellhound";
 				if maleHound is True:
-					now body of Player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
+					now Body of Player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]quadrupedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of Player is "[one of]canine[or]dog-like[at random]";
 					now SleepRhythm of Player is 2;
 				else:
-					now body of Player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
+					now Body of Player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of Player is 3;
 					now bodydesc of Player is "[one of]quadrupedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of Player is "[one of]canine[or]dog-like[at random]";
@@ -577,19 +577,19 @@ Book 5 - Endings
 When play ends:
 	if hellHoundLevel > 0:
 		Let T be 0;
-		if bodyname of Player is "Reindeer" and facename of Player is "Reindeer" and cockname of Player is "Reindeer" and skinname of Player is "Reindeer" and tailname of Player is "Reindeer":									[gave into the holiday spirit]
+		if BodyName of Player is "Reindeer" and FaceName of Player is "Reindeer" and CockName of Player is "Reindeer" and SkinName of Player is "Reindeer" and TailName of Player is "Reindeer":									[gave into the holiday spirit]
 			say "     Having given in to the magic of the holidays, you are freed from the Hellhound's curse.";
-		else if bodyname of Player is "Bottlenose Toy" and facename of Player is "Bottlenose Toy" and cockname of Player is "Bottlenose Toy" and skinname of Player is "Bottlenose Toy" and tailname of Player is "Bottlenose Toy":			[gave into fun in the sun]
+		else if BodyName of Player is "Bottlenose Toy" and FaceName of Player is "Bottlenose Toy" and CockName of Player is "Bottlenose Toy" and SkinName of Player is "Bottlenose Toy" and TailName of Player is "Bottlenose Toy":			[gave into fun in the sun]
 			say "     Having become an innocent creature living only for happiness and playtime breaks the Hellhound's curse upon you.";
-		else if bodyname of Player is "Wolverine Guard" and facename of Player is "Wolverine Guard" and cockname of Player is "Wolverine Guard" and skinname of Player is "Wolverine Guard" and tailname of Player is "Wolverine Guard":		[succumbed to wolverine sex]
+		else if BodyName of Player is "Wolverine Guard" and FaceName of Player is "Wolverine Guard" and CockName of Player is "Wolverine Guard" and SkinName of Player is "Wolverine Guard" and TailName of Player is "Wolverine Guard":		[succumbed to wolverine sex]
 			say "     Your bond as guardian to the Central Library and to your new mate is too strong for the Hellhound's curse, breaking it and allowing you to become a new protector for the library.";
-		else if bodyname of Player is "Tigress Hooker" and facename of Player is "Tigress Hooker" and cockname of Player is "Tigress Hooker" and skinname of Player is "Tigress Hooker" and tailname of Player is "Tigress Hooker":			[claimed at the tigress motel]
+		else if BodyName of Player is "Tigress Hooker" and FaceName of Player is "Tigress Hooker" and CockName of Player is "Tigress Hooker" and SkinName of Player is "Tigress Hooker" and TailName of Player is "Tigress Hooker":			[claimed at the tigress motel]
 			now T is 0; [do nothing statement]
-		else if bodyname of Player is "Big Tiger" and facename of Player is "Big Tiger" and cockname of Player is "Big Tiger" and skinname of Player is "Big Tiger" and tailname of Player is "Big Tiger":							[victory at tigress motel]
+		else if BodyName of Player is "Big Tiger" and FaceName of Player is "Big Tiger" and CockName of Player is "Big Tiger" and SkinName of Player is "Big Tiger" and TailName of Player is "Big Tiger":							[victory at tigress motel]
 			now T is 0; [do nothing statement]
-		else if bodyname of Player is "Big Tigress" and facename of Player is "Big Tigress" and cockname of Player is "Big Tigress" and skinname of Player is "Big Tigress" and tailname of Player is "Big Tigress":					[victory at tigress motel]
+		else if BodyName of Player is "Big Tigress" and FaceName of Player is "Big Tigress" and CockName of Player is "Big Tigress" and SkinName of Player is "Big Tigress" and TailName of Player is "Big Tigress":					[victory at tigress motel]
 			now T is 0; [do nothing statement]
-		else if bodyname of Player is "Chocolate Lab" and facename of Player is "Chocolate Lab" and cockname of Player is "Chocolate Lab" and skinname of Player is "Chocolate Lab" and tailname of Player is "Chocolate Lab":				[made into Chocolate Lab]
+		else if BodyName of Player is "Chocolate Lab" and FaceName of Player is "Chocolate Lab" and CockName of Player is "Chocolate Lab" and SkinName of Player is "Chocolate Lab" and TailName of Player is "Chocolate Lab":				[made into Chocolate Lab]
 			now T is 0; [do nothing statement]
 		else if vinetrapped is 1 or vinetrapped is 2:							[full plant TF]
 			now T is 0; [do nothing statement]

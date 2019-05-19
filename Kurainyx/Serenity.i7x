@@ -399,9 +399,9 @@ to say SerenitySexMenu:
 to say SerenitySex1:		[Serenity takes your cock into her cunt]
 	say "[SerenitySexIntro]";
 	say "     A devious smirk spread across Serenity's face when she feels something prodding one of her lower coils. More specifically, the coil over your groin area. 'How naughty. Does being trapped by a snake excite you that much?' She moves her sinuous body so that your lower half is brought out, revealing your rock-hard cock[smn]. The shiver from your body being suddenly exposed is noticed as Serenity says, 'Aww, is a part of you cold? I know the perfect place to warm it right back up.' The smirking serpent maneuvers you onto your back, cushioned by both her coils and the pillows underneath it, while she looms over you, spreading her slit with one hand to reveal her inviting pussy. Keeping you immobilized, the naga brushes her folds along the tip of your [if Cock Count of Player > 1]biggest cock[else]cock[end if], the tingling sensations making you squirm with need.";
-	say "     'You are mere moments away from entering my warm, inviting depths,' Serenity says, continuing to tease your needy [cock of Player] rod. 'You can already imagine how my inner walls will caress you, surrounding your happy little member and milking it until you give me every last drop of your delicious cum.' Enticed by her words, you try to buck your hips up to penetrate your captor, but her hold keeps you in check. 'Eager, aren't we? Just remember, the ultimate reward of this coupling is [italic type]my[roman type] pleasure, and you will not be satisfied until I am.' The reptilian temptress grins at your fervent agreement, and she then slowly lowers herself, hissing in satisfaction at the same time you moan loudly when she takes in your [if Cock Count of Player > 1]biggest cock[else]cock[end if]. 'Doesn't that feel marvelous?' Serenity asks huskily while she steadily rocks her hips, the walls of her pussy rubbing your stiff shaft.";
+	say "     'You are mere moments away from entering my warm, inviting depths,' Serenity says, continuing to tease your needy [Cock of Player] rod. 'You can already imagine how my inner walls will caress you, surrounding your happy little member and milking it until you give me every last drop of your delicious cum.' Enticed by her words, you try to buck your hips up to penetrate your captor, but her hold keeps you in check. 'Eager, aren't we? Just remember, the ultimate reward of this coupling is [italic type]my[roman type] pleasure, and you will not be satisfied until I am.' The reptilian temptress grins at your fervent agreement, and she then slowly lowers herself, hissing in satisfaction at the same time you moan loudly when she takes in your [if Cock Count of Player > 1]biggest cock[else]cock[end if]. 'Doesn't that feel marvelous?' Serenity asks huskily while she steadily rocks her hips, the walls of her pussy rubbing your stiff shaft.";
 	WaitLineBreak;
-	say "     The snake's sensual movements knead and massage your [cock of Player] cock, attacking every inch of it from every angle. Her snatch hugs your dick tighter than the coils around your body, the velvet-like walls dragging across your rod, and you almost black out from the wave of pleasure that floods your mind. 'S-such a wonderful look, the look of true happiness,' Serenity comments, her composure faltering from her own derived enjoyment. Despite reaching the verge of climax, your desire to please your scaly lover takes precedence, and you find yourself bucking your body up in time with her thrusts, driving your cock further into the snake, your efforts rewarding you with a gasp of pleasure from the naga. Pushed over her own edge, Serenity promptly throws her poised demeanor aside and grabs the back of your head with her hands, mashing her lips against yours. Her forked tongue slips into your mouth, the prehensile limb exploring every inch before it intertwines with your tongue, making yet another part of you submit to her.";
+	say "     The snake's sensual movements knead and massage your [Cock of Player] cock, attacking every inch of it from every angle. Her snatch hugs your dick tighter than the coils around your body, the velvet-like walls dragging across your rod, and you almost black out from the wave of pleasure that floods your mind. 'S-such a wonderful look, the look of true happiness,' Serenity comments, her composure faltering from her own derived enjoyment. Despite reaching the verge of climax, your desire to please your scaly lover takes precedence, and you find yourself bucking your body up in time with her thrusts, driving your cock further into the snake, your efforts rewarding you with a gasp of pleasure from the naga. Pushed over her own edge, Serenity promptly throws her poised demeanor aside and grabs the back of your head with her hands, mashing her lips against yours. Her forked tongue slips into your mouth, the prehensile limb exploring every inch before it intertwines with your tongue, making yet another part of you submit to her.";
 	say "     Wrapped in a passionate kiss with each other, the two of you continue to pound your hips together, sinking your cock deeper and deeper into the naga's pussy. You don't last much longer before you both reach your respective climaxes. Serenity's hold on you tightens, both her coils and her vagina, as your cock explodes with pleasure, painting her insides with your [Cum Load Size of Player] load. You continue to kiss the naga as her inner walls squeeze your twitching dick in an attempt to draw out every last drop of your essence. Finally, the both of you come down from your highs, and Serenity draws back her head, a serene smile upon her face despite her heavy panting. 'That was simply divine,' she remarks, gently caressing your cheek with her hand. 'And now, it is time for you to rest. Sleep now, my dear[if Player is not defaultnamed] [name of Player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
 	say "[SerenitySexOutro]";
 
@@ -509,7 +509,7 @@ to SerenityBind:
 			say "     'You're serious... And you're not hypnotized either...' Serenity sighs heavily and drops her gaze. 'I... I honestly didn't know that this could happen, but it really does look like you've somehow become addicted to being eaten by me.' Serenity looks back up at you with regret, but after a moment of thought, determination appears in her eyes. 'I want you to listen to me. I really am sorry that I did this to you, and I will do everything in my power to help you. To be honest, I've grown very fond of you, and I was wondering if we could somehow stay together if we ever get out of here, but not like this. Still, while I do hope that this condition of yours is temporary, if you end up not being able to resist being away from me, I promise to take good care of you.' Whether it's because of your own free will or just a desire to comply with the one that provides you with the intimate space that you've grown fond of, you accept Serenity's offer.";
 			wait for any key;
 			now voreloss is true;
-			now bodyname of Player is "Naga Hybrid";
+			now BodyName of Player is "Naga Hybrid";
 			now Trixieexit is 1;
 			end the story saying "You spent too much time inside of a snake";
 		else:
@@ -574,12 +574,13 @@ to say SerenityStruggle:
 Section 6 - Infection
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Naga Hybrid";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -613,11 +614,11 @@ When Play begins:
 	now Cock Length entry is 14;
 	now Ball Size entry is 3;         [ Size of balls ]
 	now Nipple Count entry is 2;            [ Number of nipples. ]
-	now Breast Size entry is 0;        [ Size of breasts infection will try to attain ]
+	now Breast Size entry is 0;        [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0;              [ number of pussies if sex is 'Female' or 'Both' ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 95;            [ Amount player Libido will go up if defeated ]
 	now loot entry is "";              [ Loot monster drops, usually infective with the monster's _own_ strain (for example if there is a Cross-Infection from sex)]
 	now lootchance entry is 0;         [ Chance of loot dropping 0-100 ]
@@ -633,11 +634,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -653,9 +655,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -687,13 +689,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -705,8 +707,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -722,7 +724,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -736,7 +738,7 @@ When Play begins:
 Section 7 - Endings
 
 when play ends:
-	if bodyname of Player is "Naga Hybrid":
+	if BodyName of Player is "Naga Hybrid":
 		if voreloss is true:
 			say "     Serenity spends the following days trying to curb your addiction to her. She has some success as you eventually stop begging for her to eat you, but you still are more than happy to feel the warm embrace of her stomach whenever the opportunity pops up. When you are not filling your scaly mistress, you rarely leave her side, having grown very fond of the naga herself, although it is hard to say how much of that is due to her stomach's influence. When the military arrives, you and Serenity refuse to leave each other and are processed together. It takes some time, mostly due to the officials being wary of Serenity's imposing form, but eventually, the two of you are deemed safe and are allowed to rejoin society.";
 			say "     You end up moving in with Serenity as she resumes her ophiologist work. Thanks to her snake infection, she quickly becomes one of the leading researchers in her field, and you do your best to help her every need, whether it be by being her personal assistant or by being her tasty snack.";

@@ -112,9 +112,9 @@ to say mrevent02:
 		say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a clockwork [one of]fox[or]vixen[at random] who eyes you with its mechanical eyes. From the leaking lubricant and the way it runs its paws over itself, it seems that were it not for Valerie's presence, you'd be the subject to its lustful advances.";
 	else if mre02 is 3:
 		say "     You and Valerie pass through the halls of the museum on no discernible path while she discusses the exhibits. The tour is fairly uneventful except for a brief interruption when some cavorting nymphs dance past with a group of satyrs in hot pursuit. ";
-		if bodyname of Player is "Greek Nymph":
+		if BodyName of Player is "Greek Nymph":
 			say "You are given a few lewd looks from the passing satyrs, but they give you a wide berth, probably due to Valerie's presence.";
-		else if bodyname of Player is "Satyr":
+		else if BodyName of Player is "Satyr":
 			say "You feel a pull to join in the pursuit, but rein it in and continue along with Valerie once the group is past.";
 		else:
 			say "You and Valerie are given a wide berth by the drunken revelers.";
@@ -153,7 +153,7 @@ to say mrevent04:
 			say "     You and Valerie wander the halls of the museum seemingly aimlessly, passing through a medley of exhibits as she discusses them with you. You can't help but notice that she seems rather distracted and is more interested in checking you out while she points out details on the exhibits than examining them herself. Your suspicions are confirmed when her path ends up taking you back to the closed royal bedroom exhibit. With an eager pounce, she hops onto the bed and waves her hindquarters tantalizingly at you.";
 		if Player is male:
 			say "     With such an enticing offer in such a beautiful location, it hardly enters your mind to refuse. Quickly pulling off your gear, you climb onto the bed and move up beside her lovely, leonine form. You run your hands over her body, caressing her soft fur and feeling the strong muscles beneath it. 'Mmm... after such a long [if daytimer is day]night[else]day[end if] of work, this is just what I need,' she rumbles. Those rumbles turn to purring as your hand slips back to her pussy and starts to finger her wet folds.";
-			say "     As you're fingering her, she moves her face to your groin and starts licking over your [cock of Player] shaft, enticing it to full hardness. With you at full mast and her pussy wet with juices, you see no need in waiting any longer and move to mount the sexy sphinx. She releases a mrowl of pleasure as you drive your [cock size desc of Player] cock into her[if Cock Length of Player > 36] with some effort[else if Cock Length of Player > 24] with a little effort[end if] and start thrusting. You run your hands over her feline form while thrusting, driving your manhood into her juicy box again and again.";
+			say "     As you're fingering her, she moves her face to your groin and starts licking over your [Cock of Player] shaft, enticing it to full hardness. With you at full mast and her pussy wet with juices, you see no need in waiting any longer and move to mount the sexy sphinx. She releases a mrowl of pleasure as you drive your [cock size desc of Player] cock into her[if Cock Length of Player > 36] with some effort[else if Cock Length of Player > 24] with a little effort[end if] and start thrusting. You run your hands over her feline form while thrusting, driving your manhood into her juicy box again and again.";
 			say "     While far from the beauty one would expect to be banging in such an opulent bedroom, at the moment you can think of no one better suited to it. There is a regal beauty to the sphinx's leonine form and her tawny coat goes so well with those gold-embroidered quilts that she's trying so hard not to knead her claws into as you pound her. Reaching around, you take hold of her breasts and tease her nipples, drawing a mrowl from her. Delighted at her response, you thrust into her harder and continue to play with her hard nips, soon having her panting and mewling in orgasmic bliss. With her quivering, juicy cunt squeezing down around your manhood, it's not long before you're cumming as well, painting her womb with your [Cum Load Size of Player] load. After your clandestine mating in the luxurious bedroom is over, you cuddle with her on the soft bed and rest for a while before turning to the front, enjoying the downy mattress and pillows, a great comfort compared to your usual sleeping arrangements of late.";
 		else:
 			say "     With such an enticing offer in such a beautiful location, it hardly enters your mind to refuse. Quickly pulling off your gear, you climb onto the bed and move up beside her lovely, leonine form. You run your hands over her body, caressing her soft fur and feeling the strong muscles beneath it. 'Mmm... While I normally prefer male companionship, you were clever enough to solve my riddles. Perhaps you'll be clever enough to solve my puzzle box,' she rumbles with a grin. Those rumbles turn to purring as your hand slips back to her pussy and starts to finger her wet folds.";
@@ -169,10 +169,10 @@ Chapter 5 - Caveman Hunt
 
 to say mrevent05:
 	say "     Your path this time through the Museum takes you past the Prehistory Exhibit. As you approach, you can hear the whooping sounds of several cavemen as they manage to back one of the saber-toothed felines into a corner with their pointed spears. After several feints and jabs, the primitive men tackle the big cat and tie its paws together. Suspending it upside down, they prepare to carry the feline back to their den. From their growing erections and the way they fondle the feline's ass, you have a good suspicion as to how they intend to celebrate their victorious hunt.";
-	if bodyname of Player is "Caveman" or facename of Player is "Caveman":
+	if BodyName of Player is "Caveman" or FaceName of Player is "Caveman":
 		say "     Seeing them awakens those primitive urges in you and you get caught up in the excitement, rushing over to join them in their celebration. They welcome you with only a few grunts and wide grins, their usual wariness replaced with excitement at their success. Valerie watches you go, telling you to have fun, though you barely notice in your current state of primitive excitement.";
 		say "[mre05_hunter]";
-	else if bodyname of Player is "Sabretooth" or facename of Player is "Sabretooth":
+	else if BodyName of Player is "Sabretooth" or FaceName of Player is "Sabretooth":
 		say "     Seeing their hunt and wait awaits their [']prey['], you find your primitive urges awakening and you growl at the hunting party. Taking note of you, several of them rush forward to renew the hunt. This time, you are the prey, chased and jabbed at with the stone spears. You growl and swing at them, but eventually allow yourself to be caught. You are similarly tied up and hung upside down from a pole as they carry you and the other feline back to their den. Valerie smiles as she watches you get carried off, telling you to have fun, though you barely notice in your current state of primitive excitement.";
 		say "[mre05_prey]";
 	else:
@@ -209,17 +209,17 @@ to say mre05_prey:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
 	choose row MonsterID in Table of Random Critters;
-	now tailname of Player is "Caveman";
-	now facename of Player is "Caveman";
-	now skinname of Player is "Caveman";
-	now bodyname of Player is "Caveman";
-	now cockname of Player is "Caveman";
+	now TailName of Player is "Caveman";
+	now FaceName of Player is "Caveman";
+	now SkinName of Player is "Caveman";
+	now BodyName of Player is "Caveman";
+	now CockName of Player is "Caveman";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -239,7 +239,7 @@ to say mre05_prey:
 
 to say mre05_hunter:
 	let y be 0;
-	if bodyname of Player is "Caveman" and the player is pure, let y be 1;
+	if BodyName of Player is "Caveman" and the player is pure, let y be 1;
 	say "     The group is quite excited at both their successful hunt and their visitor this day. You are lead back to their home in the display showing caveman life. The pole holding up the snarling feline is placed on forked rods, leaving it suspended in the air while they start to grope and fondle their prize. As you watch one place his misshapen mouth around the sabretooth's cock, you're greeted with the affectionate grunt of one of the cavemen as he puts his strong arms around you. One hand slips down between your legs to [if Player is female]rub your pussy[else if Player is male]squeeze your cock[else]rub your bare groin[end if]. You feel a brief moment of concern as that thick club of a cock of his grinds against you, but the excitement of watching a pair of the big cavemen taking the big cat from both ends has gotten you too turned on to object. Soon you're pulled into the cromagnon's lap as he sits to watch the show, pulling you down onto that pillar of manhood.";
 	say "     The caveman's big hands roam over your body as he bounces you in his lap roughly, driving that big cock of his deeper and deeper into you until it's fully buried inside you. As his pace quickens, you can't help but groan and grunt as you're [if Player is female]fucked in your juicy hole until you feel that hot, creamy load of his fill your womb with his primitive seed[else]buggered in your tight hole until you feel that hot, creamy load of his fill your ass with his primitive seed[end if]. His hefty balls deliver a large rush of sticky semen into you, filling you with a rush of primal passion that [if Player is male]has you cumming messily in a high arc[else if Player is female]has you cumming messily, your juices adding to the wet mess staining your thighs[else]has you cry out loudly as your body quivers and shakes without a clear outlet for your lusts[end if]. Your belly is left full and warm with his virile output as the tingle of nanites floods your system.";
 	say "     Once done with your ride, you pull yourself off of him with a wet plop and push your way to their captured prey. Already starting to change, he's converted some of his russet-brown fur into scruffy body hair and become partially humanoid. His oversized canines have shrunk down, but are still quite prominent at this point, though the muzzle holding them's almost gone. With one of the cavemen finishing at his mouth, you replace him there and pull the changing mouth ";
@@ -255,17 +255,17 @@ to say mre05_hunter:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
 	setmonster "Caveman";
 	choose row MonsterID in Table of Random Critters;
-	now tailname of Player is "Caveman";
-	now facename of Player is "Caveman";
-	now skinname of Player is "Caveman";
-	now bodyname of Player is "Caveman";
-	now cockname of Player is "Caveman";
+	now TailName of Player is "Caveman";
+	now FaceName of Player is "Caveman";
+	now SkinName of Player is "Caveman";
+	now BodyName of Player is "Caveman";
+	now CockName of Player is "Caveman";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;
@@ -342,17 +342,17 @@ to say mrevent08:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if Player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if Player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of Player is 0;
-				now tailname of Player is "Clockwork Fox";
-				now facename of Player is "Clockwork Fox";
-				now skinname of Player is "Clockwork Fox";
-				now bodyname of Player is "Clockwork Fox";
-				now cockname of Player is "Clockwork Fox";
+				now TailName of Player is "Clockwork Fox";
+				now FaceName of Player is "Clockwork Fox";
+				now SkinName of Player is "Clockwork Fox";
+				now BodyName of Player is "Clockwork Fox";
+				now CockName of Player is "Clockwork Fox";
 				attributeinfect;
 				now tail of Player is tail entry;
-				now face of Player is face entry;
-				now skin of Player is skin entry;
-				now body of Player is body entry;
-				now cock of Player is cock entry;
+				now Face of Player is face entry;
+				now Skin of Player is skin entry;
+				now Body of Player is body entry;
+				now Cock of Player is cock entry;
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;
@@ -377,7 +377,7 @@ to say mrevent08:
 			if "Herm Preferred" is listed in the feats of Player, now sex entry is "Both";
 			say "     The clockwork fox girl runs her paws over your [bodydesc of Player] body, caressing and cuddling you. Her motions are smooth and precise thanks to her recent oiling, only soft whirrs and clicks as the gears move inside her. Her cool muzzle slides across your neck, giving you soft nips as she helps you out of your gear and tugs you over to one of the workbenches. Val gives you a quick wave and tells you to have fun, though you have little chance to respond before the vixen's muzzle is pressed to your lips in a kiss. A curved brass tongue slides out to brush across yours while the lustful fox girl [if Player is female]dips a pair of fingers into your pussy[else]takes hold of your cock and strokes it[end if]. Once the kiss is broken, the fox gets you to lean over the bench, chirring in a soft, musically chiming voice about how she [if Player is male]wants you to wind her so tight she'll scream when her mainspring pops[else]wants you to get her pussy nice and lubed up so one of the tods can wind her up[end if].";
 			if Player is male:
-				say "     The clockwork vixen takes your [cock of Player] cock in hand and starts stroking it as she pours some of the new oil onto it. After some playful stroking that leaves your shaft fully hard and glistening, she bends over the workbench and raises her mechanized tail with a musical moan. She chimes happily as you drive your [cock size desc of Player] shaft into her cunt. It is somewhat cool at first as she guides you into a chair. She's well lubricated by the scented oils she's producing, her recent oiling making her sexual mechanism run smoothly and quickly. It grips around your cock like flesh would, but squeezes and milks at your cock in a rhythmic, mechanical manner. Finding it quite pleasurable, you run your hands over her metallic fur and start pounding away at her. Reaching around, you take hold of her lovely breasts and fondle them to chiming moans and giggles as she urges you to wind her faster.";
+				say "     The clockwork vixen takes your [Cock of Player] cock in hand and starts stroking it as she pours some of the new oil onto it. After some playful stroking that leaves your shaft fully hard and glistening, she bends over the workbench and raises her mechanized tail with a musical moan. She chimes happily as you drive your [cock size desc of Player] shaft into her cunt. It is somewhat cool at first as she guides you into a chair. She's well lubricated by the scented oils she's producing, her recent oiling making her sexual mechanism run smoothly and quickly. It grips around your cock like flesh would, but squeezes and milks at your cock in a rhythmic, mechanical manner. Finding it quite pleasurable, you run your hands over her metallic fur and start pounding away at her. Reaching around, you take hold of her lovely breasts and fondle them to chiming moans and giggles as she urges you to wind her faster.";
 				say "     The pleasure builds and builds as the vixen's clockwork cunny works your manhood with a steadily increasing pace as it warms up. The motion of it grows more and more enjoyable for you as you give yourself over to the lustful excitement of fucking the exotic creature. When you finally cum and add your sticky load to the lubricating fluids, she cries out happily with those music box tones of hers intermixed with the moans and pants you're more used to hearing. She releases as well, the pressure built up inside until her oily female juices are sent pouring out over your shaft and crotch. Having received a fresh oiling, she cums copiously, the slick, musky fluid running down her shiny legs and clinging to your crotch and thighs with a glistening sheen. Once her climactic spasms of joy wind down and her vagina's frantic milking of your shaft returns to a more casual stroking, you slip from her pussy and give her sexy ass a pat. Getting up, she licks your cheek and chimes happily that she really enjoyed the winding and looks forward to getting you to wind her up again soon.";
 			else:
 				say "     The clockwork vixen takes your hand in hers and pours some of the new oil onto it before guiding it to her mechanized cunt. She releases a musical moan as you slip a pair of digits into her and start lubricating her squeezing, sliding passage. As you fingerfuck the vixen, the movement of her vaginal walls becomes smoother and faster, as does her panting moans. Her cool fingers, slick with oil themselves, are guided into your cunny as she returns the favor to you. Her brass digits warm up quickly as she pumps them into you, making you moan with pleasure as she artfully teases your clit and sensitive inner walls while lubing you up[if Nipple Count of Player > 0]. Her free paw, after another liberal application of oil on both playful hands, moves to your chest and starts playing with your nipples[else]. Her free paw, after another liberal application of oil on both playful hands, moves to your ass and gropes your rear[end if]. Kissing her again, you grab her bosom and start fondling her breasts while pumping all the harder. While those diligent paws tease you to even greater heights of pleasure, she chirrs softly and clicks in your ear about how a fresh oiling always makes her so horny. Certainly, it's made her vaginal passage run smoothly and quickly, growing wetter with her own lubrication as well.";
@@ -391,17 +391,17 @@ to say mrevent08:
 				LineBreak;
 				say "     Eager for more sex with the unusual yet sexy vulpines, you return their affectionate snuggling with caresses and gropes of your own. Soon enough, you're pulled into some fun with a [if Player is male]tod and a vixen. After sharing some more kisses and having some of their oil spread across your loins to lube you up again, you are sandwiched between them. You thrust into the lustful girl's mechanized cunny while the guy's pistoning cock is thrust into you. You moan between them, fucking and being fucked in rhythmic unison[else if Player is female]pair of tods. After sharing some more kisses and having some of their oil spread across your loins and holes to lube you up again, you are sandwiched between them, fucked in both the front and the back in rhythmic unison[else]pair of tods. After sharing some more kisses and having some of their oil spread across your anus to lube you up again, you are spitroasted between them, fucked in both the mouth and the rear in rhythmic unison[end if]. As the sex continues, your cries become more chiming as you increasingly lose yourself to your vulpine lovers['] infection. As the orgy goes on and you pass around from partner to partner, you become more and more like the clockwork foxes you're fucking. To say you lose track of time would be inaccurate, as your ticking mind is quite aware of every second of the clock, but it no longer matters to you how long you stay with these sexy vulpines, for you are one of them through and through.";
 				now humanity of Player is 0;
-				now tailname of Player is "Clockwork Fox";
-				now facename of Player is "Clockwork Fox";
-				now skinname of Player is "Clockwork Fox";
-				now bodyname of Player is "Clockwork Fox";
-				now cockname of Player is "Clockwork Fox";
+				now TailName of Player is "Clockwork Fox";
+				now FaceName of Player is "Clockwork Fox";
+				now SkinName of Player is "Clockwork Fox";
+				now BodyName of Player is "Clockwork Fox";
+				now CockName of Player is "Clockwork Fox";
 				attributeinfect;
 				now tail of Player is tail entry;
-				now face of Player is face entry;
-				now skin of Player is skin entry;
-				now body of Player is body entry;
-				now cock of Player is cock entry;
+				now Face of Player is face entry;
+				now Skin of Player is skin entry;
+				now Body of Player is body entry;
+				now Cock of Player is cock entry;
 				if hellHoundLevel is 0:
 					follow the sex change rule;
 					follow the sex change rule;

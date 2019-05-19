@@ -178,7 +178,7 @@ to say JennaTalk3: [Solve the Murder]
 	if calcnumber is 1:
 		LineBreak;
 		say "     'What?! It's not me!' the big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 2:
 		LineBreak;
@@ -210,12 +210,12 @@ to say JennaTalk3: [Solve the Murder]
 	else if calcnumber is 3:
 		LineBreak;
 		say "     'What?! It's not me!' the lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 4:
 		LineBreak;
 		say "     'What?! It's not me!' the dog shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Cane's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 5:
 		LineBreak;

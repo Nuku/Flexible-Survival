@@ -175,15 +175,21 @@ The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-tone
 The player has a text called face. Face is usually "charmingly human".
 The player has a text called tail. tail is usually "".
 The player has a text called body. Body is usually "charmingly human".
-The player has a text called bodyname. Bodyname is usually "Human".
-The player has a text called facename. Facename is usually "Human".
-The player has a text called skinname. Skinname is usually "Human".
-The player has a text called cockname. cockname is usually "Human".
-The player has a text called tailname. Tailname is usually "Human".
+The player has a text called BodyName. BodyName is usually "Human".
+The player has a text called FaceName. FaceName is usually "Human".
+The player has a text called SkinName. SkinName is usually "Human".
+The player has a text called CockName. CockName is usually "Human".
+The player has a text called TailName. TailName is usually "Human".
+The player has a text called bodySpeciesName. BodySpeciesName is usually "Human".
+The player has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
+The player has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
+The player has a text called cockSpeciesName. cockSpeciesName is usually "Human".
+The player has a text called tailSpeciesName. TailSpeciesName is usually "Human".
 
 [Parts: head, torso, back, arms, legs, ass, tail, cock, cunt]
 [expanded set of Player specific infection parts]
 The player has a text called HeadName. HeadName is usually "Human".
+The player has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
 The player has a text called Head Description. Head Description is usually "a typical human".
 The player has a text called Head Adjective. Head Adjective is usually "human".
 The player has a text called Head Skin Adjective. Head Skin Adjective is usually "".
@@ -200,6 +206,7 @@ The player has a text called Eye Adjective. Eye Adjective is usually "round".
 The player has a text called Tongue Adjective. Tongue Adjective is usually "average".
 The player has a text called Tongue Color. Tongue Color is usually "pink".
 The player has a text called TorsoName. TorsoName is usually "Human".
+The player has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
 The player has a text called Torso Description. Torso Description is usually "that of a regular human".
 The player has a text called Torso Adjective. Torso Adjective is usually "human".
 The player has a text called Torso Skin Adjective. Torso Skin Adjective is usually "".
@@ -210,34 +217,41 @@ The player has a text called Torso Adornments. Torso Adornments is usually "".
 The player has a text called Nipple Color. Nipple Color is usually "light brown".
 The player has a text called Nipple Shape. Nipple Shape is usually "oval".
 The player has a text called BackName. BackName is usually "Human".
+The player has a text called BackSpeciesName. BackSpeciesName is usually "Human".
 The player has a text called Back Adornments. Back Adornments is usually "".
 The player has a text called Back Skin Adjective. Back Skin Adjective is usually "".
 The player has a text called Back Color. Back Color is usually "fair".
 The player has a text called ArmsName. ArmsName is usually "Human".
+The player has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
 The player has a text called Arms Description. Arms Description is usually "those of a regular human".
 The player has a text called Arms Skin Adjective. Arms Skin Adjective is usually "".
 The player has a text called Arms Color. Arms Color is usually "fair".
 The player has a text called Locomotion. Locomotion is usually "bipedal".
 The player has a text called LegsName. LegsName is usually "Human".
+The player has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
 The player has a text called Legs Description. Legs Description is usually "that of a regular human, reaching all the way to the ground".
 The player has a text called Legs Skin Adjective. Legs Skin Adjective is usually "".
 The player has a text called Legs Color. Legs Color is usually "fair".
 The player has a text called AssName. AssName is usually "Human".
+The player has a text called AssSpeciesName. AssSpeciesName is usually "Human".
 The player has a text called Ass Description. Ass Description is usually "ass".
 The player has a text called Ass Skin Adjective. Ass Skin Adjective is usually "".
 The player has a text called Ass Color. Ass Color is usually "fair".
 The player has a number called Ass Width. Ass Width is usually 3.
 The player has a text called TailName. TailName is usually "Human".
+The player has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 The player has a text called Tail Description. Tail Description is usually "".
 The player has a text called Tail Skin Adjective. Tail Skin Adjective is usually "".
 The player has a text called Tail Color. Tail Color is usually "fair".
 The player has a text called Asshole Color. Asshole Color is usually "pink".
 The player has a text called CockName. CockName is usually "Human".
+The player has a text called CockSpeciesName. CockSpeciesName is usually "Human".
 The player has a text called Cock Description. Cock Description is usually "is that of a regular human, complete with an uncut foreskin".
 The player has a text called Cock Adjective. Cock Adjective is usually "human".
 The player has a text called Cock Color. Cock Color is usually "tanned".
 The player has a text called Ball Description. Ball Description is usually "balls in a wrinkled, low-hanging sack".
 The player has a text called CuntName. CuntName is usually "Human".
+The player has a text called CuntSpeciesName. CuntSpeciesName is usually "Human".
 The player has a text called Cunt Description. Cunt Description is usually "human in shape, with delicate nether lips and a clit at the top".
 The player has a text called Cunt Adjective. Cunt Adjective is usually "human".
 The player has a text called Cunt Color. Cunt Color is usually "pink".
@@ -252,7 +266,7 @@ A person has a number called Tongue Length. Tongue Length is usually 3.
 A person has a number called Breast Size. Breast Size is usually 0.
 A person has a number called Nipple Count. Nipple Count is usually 2.
 A person has a number called Asshole Depth. Asshole Depth is usually 9.
-A person has a number called Asshole Tightness. Asshole Tightness is usually 4.
+A person has a number called Asshole Tightness. Asshole Tightness is usually 2.
 A person has a number called Cock Count. Cock Count is usually 0.
 A person has a number called Cock Girth. Cock Girth is usually 7.
 A person has a number called Cock Length. Cock Length is usually 6.
@@ -336,6 +350,11 @@ Child has a text called facename. Facename is usually "Human".
 Child has a text called skinname. Skinname is usually "Human".
 Child has a text called cockname. cockname is usually "Human".
 Child has a text called tailname. Tailname is usually "Human".
+Child has a text called bodySpeciesName. BodySpeciesName is usually "Human".
+Child has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
+Child has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
+Child has a text called cockSpeciesName. cockSpeciesName is usually "Human".
+Child has a text called tailSpeciesName. TailSpeciesName is usually "Human".
 Child has a text called HeadName. HeadName is usually "Human".
 Child has a text called TorsoName. TorsoName is usually "Human".
 Child has a text called BackName. BackName is usually "Human".
@@ -343,9 +362,45 @@ Child has a text called ArmsName. ArmsName is usually "Human".
 Child has a text called LegsName. LegsName is usually "Human".
 Child has a text called AssName. AssName is usually "Human".
 Child has a text called TailName. TailName is usually "Human".
+Child has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
+Child has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
+Child has a text called BackSpeciesName. BackSpeciesName is usually "Human".
+Child has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
+Child has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
+Child has a text called AssSpeciesName. AssSpeciesName is usually "Human".
+Child has a text called TailSpeciesName. TailSpeciesName is usually "Human".
 Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
+
+Impregnator is a person.
+The printed name of Impregnator is "Impregnator".
+Impregnator has text called name. The name of Impregnator is usually "".
+Impregnator has a text called bodyname. Bodyname is usually "Human".
+Impregnator has a text called facename. Facename is usually "Human".
+Impregnator has a text called skinname. Skinname is usually "Human".
+Impregnator has a text called cockname. cockname is usually "Human".
+Impregnator has a text called tailname. Tailname is usually "Human".
+Impregnator has a text called bodySpeciesName. BodySpeciesName is usually "Human".
+Impregnator has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
+Impregnator has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
+Impregnator has a text called cockSpeciesName. cockSpeciesName is usually "Human".
+Impregnator has a text called tailSpeciesName. TailSpeciesName is usually "Human".
+Impregnator has a text called HeadName. HeadName is usually "Human".
+Impregnator has a text called TorsoName. TorsoName is usually "Human".
+Impregnator has a text called BackName. BackName is usually "Human".
+Impregnator has a text called ArmsName. ArmsName is usually "Human".
+Impregnator has a text called LegsName. LegsName is usually "Human".
+Impregnator has a text called AssName. AssName is usually "Human".
+Impregnator has a text called TailName. TailName is usually "Human".
+Impregnator has a text called HeadSpeciesName. HeadSpeciesName is usually "Human".
+Impregnator has a text called TorsoSpeciesName. TorsoSpeciesName is usually "Human".
+Impregnator has a text called BackSpeciesName. BackSpeciesName is usually "Human".
+Impregnator has a text called ArmsSpeciesName. ArmsSpeciesName is usually "Human".
+Impregnator has a text called LegsSpeciesName. LegsSpeciesName is usually "Human".
+Impregnator has a text called AssSpeciesName. AssSpeciesName is usually "Human".
+Impregnator has a text called TailSpeciesName. TailSpeciesName is usually "Human".
+
 
 Offspring is a person. [bunker children]
 
@@ -559,25 +614,25 @@ A person can be internal. A person is usually not internal.
 internalbypass is a truth state that varies. internalbypass is usually false.
 
 Definition: A person (called x) is internal:
-	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
+	if CockName of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
 
 A person can be knotted. A person is usually not knotted.
 
 Definition: A person (called x) is knotted:
-	if cockname of Player is listed in infections of knotlist, yes;
+	if CockName of Player is listed in infections of knotlist, yes;
 	no;
 
 A person can be barbed. A person is usually not barbed.
 
 Definition: A person (called x) is barbed:
-	if cockname of Player is listed in infections of BarbedCocklist, yes;
+	if CockName of Player is listed in infections of BarbedCocklist, yes;
 	no;
 
 A person can be flared. A person is usually not flared.
 
 Definition: A person (called x) is flared:
-	if cockname of Player is listed in infections of Bluntlist, yes;
+	if CockName of Player is listed in infections of Bluntlist, yes;
 	no;
 
 Definition: A person (called x) is perminfected:
@@ -586,10 +641,10 @@ Definition: A person (called x) is perminfected:
 
 Definition: A person (called x) is pure:
 	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
-		if bodyname of x is facename of x:
-			if bodyname of x is tailname of x:
-				if bodyname of x is skinname of x:
-					if bodyname of x is cockname of x:
+		if BodyName of x is FaceName of x:
+			if BodyName of x is TailName of x:
+				if BodyName of x is SkinName of x:
+					if BodyName of x is CockName of x:
 						yes;
 		no;
 	else:
@@ -606,11 +661,11 @@ Definition: A person (called x) is pure:
 
 Definition: A person (called x) is purehuman:
 	if HeadName of Player is "" or TorsoName of Player is "" or BackName of Player is "" or ArmsName of Player is "" or LegsName of Player is "" or AssName of Player is "" or TailName of Player is "" or CockName of Player is "" or CuntName of Player is "": [player doesn't have all new type parts]
-		if bodyname of Player is "Human" or bodyname of Player is "Herm Human":
-			if facename of Player is "Human" or facename of Player is "Herm Human":
-				if tailname of Player is "Human" or tailname of Player is "Herm Human":
-					if skinname of Player is "Human" or skinname of Player is "Herm Human":
-						if cockname of Player is "Human" or cockname of Player is "Herm Human":
+		if BodyName of Player is "Human" or BodyName of Player is "Herm Human":
+			if FaceName of Player is "Human" or FaceName of Player is "Herm Human":
+				if TailName of Player is "Human" or TailName of Player is "Herm Human":
+					if SkinName of Player is "Human" or SkinName of Player is "Herm Human":
+						if CockName of Player is "Human" or CockName of Player is "Herm Human":
 							yes;
 		no;
 	else:
@@ -872,7 +927,13 @@ Definition: A person (called x) is HasTail:
 	if Tail Description of x is not "", yes;
 	no;
 
-A person can be quadrupedal. A person is usually quadrupedal.
+A person can be octapedal. A person is usually not octapedal.
+
+Definition: A person (called x) is octapedal:
+	if Locomotion of x is "octapedal", yes;
+	no;
+
+A person can be quadrupedal. A person is usually not quadrupedal.
 
 Definition: A person (called x) is quadrupedal:
 	if Locomotion of x is "quadrupedal", yes;
@@ -884,13 +945,13 @@ Definition: A person (called x) is bipedal:
 	if Locomotion of x is "bipedal", yes;
 	no;
 
-A person can be serpentine. A person is usually serpentine.
+A person can be serpentine. A person is usually not serpentine.
 
 Definition: A person (called x) is serpentine:
 	if Locomotion of x is "serpentine", yes;
 	no;
 
-A person can be sliding. A person is usually sliding.
+A person can be sliding. A person is usually not sliding.
 
 Definition: A person (called x) is sliding:
 	if Locomotion of x is "sliding", yes;
@@ -1032,7 +1093,7 @@ to say Gender Adjective of ( x - a person ):
 		-- 1:
 			say "hypermasculine";
 		-- 2:
-			say "masculine";
+			say "[one of]masculine[or]manly[at random]";
 		-- 3:
 			say "somewhat effeminate";
 		-- 4:
@@ -1044,7 +1105,7 @@ to say Gender Adjective of ( x - a person ):
 		-- 7:
 			say "tomboyish";
 		-- 8:
-			say "feminine";
+			say "[one of]feminine[or]womanly[or]ladylike[at random]";
 		-- 9:
 			say "hyperfeminine";
 
@@ -1055,13 +1116,13 @@ to say Body Hair Adjective of ( x - a person ): [used in "He touches your [Body 
 		-- 1:
 			say "smooth";
 		-- 2:
-			say "slightly hairy";
+			say "[one of]slightly hairy[or]lightly fuzzed[at random]";
 		-- 3:
-			say "somewhat hairy";
+			say "[one of]somewhat hairy[or]moderately hairy[at random]";
 		-- 4:
-			say "hairy";
+			say "[one of]hairy[or]thickly fuzzed[at random]";
 		-- 5:
-			say "very hairy";
+			say "[one of]very hairy[or]almost furry[at random]";
 
 to say Body Hair Description of ( x - a person ): [used in "You have a broad, [Torso Color of Player] chest with [Body Hair Description]."]
 	if Body Hair Length of x is:
@@ -1070,13 +1131,13 @@ to say Body Hair Description of ( x - a person ): [used in "You have a broad, [T
 		-- 1:
 			say "smooth skin";
 		-- 2:
-			say "light body hair";
+			say "[one of]light body hair[or]a light fuzz of hair[or]a little body hair[at random]";
 		-- 3:
-			say "moderate body hair";
+			say "[one of]moderate body hair[or]a moderate fuzz of hair[or]a moderate amount of body hair[at random]";
 		-- 4:
-			say "heavy body hair";
+			say "[one of]heavy body hair[or]thick body hair[or]a large amount of body hair[at random]";
 		-- 5:
-			say "furry body hair";
+			say "[one of]furry body hair[or]a whole lot of body hair[or]a fur-like amount of hair[at random]";
 
 to say Limbs Adjective of ( x - a person ):
 	if Body Weight of x < 4: [low weight group]
@@ -1196,7 +1257,7 @@ to say Asshole Tightness Adjective of ( x - a person ):
 		-- 2:
 			say "tight";
 		-- 3:
-			say "well-used";
+			say "receptive";
 		-- 4:
 			say "open";
 		-- 5:
@@ -1566,12 +1627,12 @@ title	subtable	description	toggle
 "Exit"	--	"Previous Menu"	menu exit rule
 
 Table of Random Critters
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
-false	"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+false	"Anthro Dragon"	"Anthro Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [Skin of Player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [Skin of Player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	""	0	"default"	false
 
 Table of New Infection Parts
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
-"Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+"Anthro Dragon"	"Anthro Dragoness"	4	8	7	"your face draws forward into a reptilian snout, covered in black overlapping scales"	"a sharp-toothed anthro dragoness"	"draconic"	"scaly"	"black"	"pair of spiraling horns"	0	"straight"	"black"	"ponytail"	""	0	"crimson"	"slitted"	10	10	"broad"	"purple"	7	"your torso broadens, with overlapping black scales growing out of your skin to give it an armor-plated look"	"broad, covered in overlapping black scales"	"draconic"	"scale-covered tummy"	"scaled"	"black"	"layered"	"perky"	5	0	2	"scarlet"	"oval"	"a pair of leathery black wings sprout from your upper back, unfolding to stretch wide to your left and right"	"the pair of leathery wings growing from beneath your shoulderblades"	"scaled"	"black"	"sharp claws sprout from the tips of your fingers and black scales form on the outside of your arms"	"long and plated in overlapping black scales, ending in clawed hands"	"scaled"	"black"	"bipedal"	"black scales garb them into overlapping armor and sharp scales form on your feet"	"long and plated in overlapping black scales, ending in clawed feet"	"scaled"	"black"	"it widens and flexible scales grow to cover its curves"	"ass, covered in flexible black scales"	"scaled"	"black"	4	"A long tail sprouts from your lower back, forming black scales and a spade at the end"	"long, black-scaled tail ending in a spade"	"scaled"	"black"	10	3	"black"	"ridges form along the underside of the shaft, leading up to a pointed tip"	"has a pointed tip and a number of ridges along the underside of the shaft"	"draconic"	"scarlet"	0	0	0	"balls in a firm sack of leathery skin"	0	0	"it takes on a triangular shape, with the clit at the lowest point"	"draconic"	"scarlet"	"triangular in shape, with its clit at the lower point"	1	14	6	3
 
 understand the command "feed" as something new.
 
@@ -1632,7 +1693,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Anthro Shaft Beast", "Dragon", "Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
+	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
 
 Felinelist is a marker. [list of feline infections]
 when play begins:
@@ -1652,11 +1713,11 @@ when play begins:
 
 Reptilelist is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Dragon", "Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
+	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
 
 Insectlist is a marker. [list of insectile/arachnid/bug infections]
 when play begins:
-	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur" } to infections of Insectlist;
+	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur Male", "Spidertaur Female" } to infections of Insectlist;
 
 Plantlist is a marker. [list of plant infections]
 when play begins:
@@ -1709,7 +1770,7 @@ when play begins:
 
 Internallist is a marker. [list of infections w/internal male genitals]
 when play begins:
-	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Internallist;
+	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of Internallist;
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
@@ -2315,7 +2376,7 @@ To process (x - a grab object):
 				if morale of Player > 0, now morale of Player is 0;
 				say "You feel better having eaten.";
 	else if x is chips:
-		if labhost > 0 and bodyname of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
+		if labhost > 0 and BodyName of Player is "Chocolate Lab" and a random chance of labhost in 4 succeeds:
 			say "[line break]     As you begin unwrapping your snack a powerful rumbling begins in your stomach, you release a low groan as the churning inside your body increases, the [if labhost is 2]labs[else]lab[end if] clearly excited about something. There is a sudden pressure at your chest as your feel the churning begin to focus at a single point, before you have a chance to react, or even realize what's happening, a canine snout pushes out of your chocolaty chest, grabbing the [one of]chocolate bar[or]chocolate[or]M&Ms[at random] from your hand and swallowing it whole. You stand there shocked for a moment as the lab spits up the chewed remains of your treat's wrapper before releasing a happy bark and receding into your body. Dissappointed at the loss of your snack, you release a heavy sigh and continue on your way.";
 		else if "Junk Food Junky" is listed in feats of Player:
 			if hunger of Player > 14:
@@ -2487,9 +2548,9 @@ To process (x - a grab object):
 			say "You ready your [x]";
 			if x is unwieldy:
 				if scalevalue of Player > objsize of x:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [bodyname of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 4]large[else]massive[end if] [BodyName of Player] hand dwarfs the [x], making it [if scalevalue of Player - objsize of x > 3]very[else if scalevalue of Player - objsize of x is 3]rather[else]somewhat[end if] [one of]unwieldy[or]awkward[or]difficult[at random] to use accurately";
 				else:
-					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [bodyname of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
+					say ". Your [if scalevalue of Player is 3]normal-size[else if scalevalue of Player is 2]small[else]tiny[end if] [BodyName of Player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of Player > 3]very[else if objsize of x - scalevalue of Player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
 	else if x is equipment:
 		if x is equipped: [unequip]
@@ -2504,7 +2565,7 @@ To process (x - a grab object):
 					if slot of z is slot of x:
 						say "     [bold type]Your [z] is in the way![roman type][line break]";
 						continue the action;
-			if (slot of x is "feet" or slot of x is "waist") and (bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList):
+			if (slot of x is "feet" or slot of x is "waist") and (BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList):
 				say "     [bold type]Sadly, the [x] [if plural of x is true]are[else]is[end if] incompatible with your body type![roman type][line break]";
 				continue the action;
 			if size of x > 0: [objects with size restrictions]
@@ -3041,7 +3102,7 @@ This is the sex change rule:
 			now Cock Length of Player is 8;
 		if prevcock > Cock Length of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [cockname of Player in lower case] [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
+			say "Strong [one of]erotic tingles[or]cold waves[or]hot flashes[at random] run over your impressive [CockName of Player in lower case] [if Cock Count of Player > 1][one of]cocks[or]penises[or]shafts[or]poles[at random] as they begin[else][one of]cock[or]penis[or]shaft[or]pole[at random] as it begins[end if] to diminish somewhat to better suit your new infection. [if Cock Count of Player > 1]They dwindle[else]It dwindles[end if] in size, becoming [descr].";
 	if ( the sex entry is "Male" or the sex entry is "Both" ) and Ball Size of Player < Ball Size entry and Cock Count of Player is not 0 and "Female Preferred" is not listed in feats of Player:
 		let prevcock be Ball Size of Player;
 		increase Ball Size of Player by 1;
@@ -3059,7 +3120,7 @@ This is the sex change rule:
 			now Ball Size of Player is 3;
 		if prevcock > Ball Size of Player:		[did cock actually shrink?]
 			follow the cock descr rule;
-			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [cockname of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
+			say "You can feel a [one of]draining of[or]tightness around[or]pressure dropping in[at random] your [if Player is internal]internal[else]impressive[end if] [CockName of Player in lower case] [one of]balls[or]testicles[or]gonads[or]nuts[at random] as they begin to diminish somewhat to better suit your new infection. You cum hard to drain their seed as they dwindle in size, becoming [Ball Size Adjective of Player] balls.";
 	if Cock Count of Player < Cock Count entry and ( the sex entry is "Male" or the sex entry is "Both" ) and "Female Preferred" is not listed in feats of Player:
 		let prevcock be Cock Count of Player;
 		if Player is not male:
@@ -3068,8 +3129,8 @@ This is the sex change rule:
 			now the Ball Size of Player is 1;
 			increase Cock Length of Player by ( Cock Length entry ) divided by 3;
 			if skipcockchange is false:
-				now cockname of Player is Name entry;
-				now cock of Player is cock entry;
+				now CockName of Player is Name entry;
+				now Cock of Player is cock entry;
 			if "Modest Organs" is listed in feats of Player and Cock Length of Player > 8:
 				now Cock Length of Player is 8;
 			if "Modest Organs" is listed in feats of Player and Ball Size of Player > 3:
@@ -3105,10 +3166,10 @@ This is the sex change rule:
 			else:
 				say "[line break]";
 		if Cock Count of Player > 1 and a random chance of 2 in 5 succeeds and "All The Things" is not listed in feats of Player:
-			say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+			say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 			decrease Cock Count of Player by 1;
 	else if Cock Count of Player > Cock Count entry and a random chance of 1 in 3 succeeds and "One Way" is not listed in feats of Player and (sex entry is "Male" or sex entry is "Both" ) and "All The Things" is not listed in feats of Player:
-		say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
+		say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember it by.";
 		decrease Cock Count of Player by 1;
 	if ( the sex entry is "Female" or the sex entry is "Both" ) and Cunt Depth of Player < Cunt Depth entry and Cunt Count of Player is not 0 and "Male Preferred" is not listed in feats of Player:
 		let prevcunt be Cunt Depth of Player;
@@ -3266,11 +3327,11 @@ This is the breast change rule:
 			decrease Breast Size of Player by 2;
 			follow the breast descr rule;
 			if ( Nipple Count entry > Nipple Count of Player and "One Pair" is not listed in feats of Player ) or ( Nipple Count of Player is 0 and Nipple Count entry > 0 ):
-				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [skin of Player] hide.";
+				say " Your chest tingles intensely as two new sensitive points form up, announcing the arrival of two new [descr] breasts, pressing out of your [Skin of Player] hide.";
 				increase Nipple Count of Player by 2;
 			else if Nipple Count entry < Nipple Count of Player and "Bouncy Bouncy" is not listed in feats of Player:
 				decrease Nipple Count of Player by 2;
-				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [skin of Player] flesh behind.";
+				say " You look down just in time to see two nipples, [descr] breasts included, be reabsorbed into your body, leaving nothing but [Skin of Player] flesh behind.";
 			increase Breast Size of Player by 2;
 		if Nipple Count of Player is 0:
 			increase score by 0; [do nothing]
@@ -3278,7 +3339,7 @@ This is the breast change rule:
 			if Breast Size of Player < Breast Size entry and ( ( "Male Preferred" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player ) or "Breasts" is listed in feats of Player ):
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( Breast Size entry minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
@@ -3286,7 +3347,7 @@ This is the breast change rule:
 			else if Breast Size of Player > Breast Size entry and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus Breast Size entry ) divided by 3;
 				follow the breast descr rule;
@@ -3300,7 +3361,7 @@ This is the breast change rule:
 			if Breast Size of Player < breasttarget:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 				increase Breast Size of Player by 1;
 				increase Breast Size of Player by ( breasttarget minus Breast Size of Player ) divided by 3;
 				follow the breast descr rule;
@@ -3308,7 +3369,7 @@ This is the breast change rule:
 			else if Breast Size of Player > breasttarget and "One Way" is not listed in feats of Player:
 				follow the breast descr rule;
 				let oldbreast be descr;
-				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+				say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 				decrease Breast Size of Player by 1;
 				decrease Breast Size of Player by ( Breast Size of Player minus breasttarget ) divided by 3;
 				follow the breast descr rule;
@@ -3321,7 +3382,7 @@ To grow breasts by (x - a number):
 		continue the action;
 	follow the breast descr rule;
 	let oldbreast be descr;
-	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
+	say "You [one of]groan and grab at your chest[or]give a loud moan, shuddering[or]almost tip forward in surprise[or]look down fearfully as sensation builds[at random], [Skin of Player] skin glistening as your [oldbreast] breasts[run paragraph on]";
 	increase Breast Size of Player by a random number from 1 to x;
 	if Breast Size of Player > 26, now Breast Size of Player is 26;
 	follow the breast descr rule;
@@ -3474,31 +3535,31 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 	repeat with y running through bodyparts:
 		now x is y;
 		if y is 1:
-			if skinname of Player is Name entry:
+			if SkinName of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 2:
-			if facename of Player is Name entry:
+			if FaceName of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 3:
-			if tailname of Player is Name entry:
+			if TailName of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 4:
-			if bodyname of Player is Name entry:
+			if BodyName of Player is Name entry:
 				next;
 			else:
 				now found is 1;
 				break;
 		if y is 5:
-			if cockname of Player is Name entry:
+			if CockName of Player is Name entry:
 				next;
 			else:
 				now found is 1;
@@ -3529,41 +3590,67 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			say "You wave a tiny microwave transmitter over the affected area. Ahhh, all clean!";
 			stop the action;
 	if x is 1: [skin]
-		if skinname of Player is not Name entry:
+		if SkinName of Player is not Name entry:
 			say "Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	if x is 2: [face]
-		if facename of Player is not Name entry:
+		if FaceName of Player is not Name entry:
 			say "Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-			now facename of Player is Name entry;
-			now face of Player is face entry;
+			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
+			now Face of Player is face entry;
 			now HeadName of Player is ""; [wiping out the new style parts]
+			now HeadSpeciesName of Player is ""; [wiping out the new style parts]
 	if x is 3: [tail]
-		if tailname of Player is not Name entry:
+		if TailName of Player is not Name entry:
 			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-			now tailname of Player is Name entry;
+			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now tail of Player is tail entry;
 			now AssName of Player is ""; [wiping out the new style parts]
+			now AssSpeciesName of Player is ""; [wiping out the new style parts]
 	if x is 4: [body]
 		follow the breast change rule;
-		if bodyname of Player is not Name entry:
+		if BodyName of Player is not Name entry:
 			say "Your [one of][bodytype of Player] [or][bodydesc of Player] [or][bodydesc of Player] [or][bodytype of Player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-			now bodyname of Player is Name entry;
-			now body of Player is body entry;
+			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
+			now Body of Player is body entry;
 			now TorsoName of Player is ""; [wiping out the new style parts]
+			now TorsoSpeciesName of Player is ""; [wiping out the new style parts]
 			now BackName of Player is ""; [wiping out the new style parts]
+			now BackSpeciesName of Player is ""; [wiping out the new style parts]
 			now LegsName of Player is ""; [wiping out the new style parts]
+			now LegsSpeciesName of Player is ""; [wiping out the new style parts]
 			now ArmsName of Player is ""; [wiping out the new style parts]
+			now ArmsSpeciesName of Player is ""; [wiping out the new style parts]
 		attributeinfect; [sets the new attributes]
 		follow the sex change rule;
 		say "[line break]";
 	if x is 5: [genitals]
 		follow the sex change rule;
-		if cockname of Player is not Name entry:
+		if CockName of Player is not Name entry:
 			if Player is male, say "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-			now cockname of Player is Name entry;
-			now cock of Player is cock entry;
+			now CockName of Player is Name entry;
+			if Species Name entry is not "":
+				now CockSpeciesName of Player is Species Name entry;
+			else:
+				now CockSpeciesName of Player is Name entry;
+			now Cock of Player is cock entry;
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
 			if Name entry is listed in infections of internallist and internalbypass is true:
@@ -3669,11 +3756,16 @@ to NewInfectionRoll:
 			stop the action;
 	if x is 1: [head]
 		if HeadName of Player is not Name entry:
-			say "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Head Change entry].";
+			say "Your [Head Adjective of Player] head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Head Change entry].";
 			now HeadName of Player is Name entry;
+			if Species Name entry is not "":
+				now HeadSpeciesName of Player is Species Name entry;
+			else:
+				now HeadSpeciesName of Player is Name entry;
 			now Head Description of Player is Head Description entry;
 			now Head Adjective of Player is Head Adjective entry;
 			now Head Skin Adjective of Player is Head Skin Adjective entry;
+			now Head Color of Player is Head Color entry;
 			now Head Adornments of Player is Head Adornments entry;
 			now Eye Adjective of Player is Eye Adjective entry;
 			now Mouth Length of Player is Mouth Length entry;
@@ -3691,13 +3783,21 @@ to NewInfectionRoll:
 		[setting the old parts too, as old infections will compare to these]
 		if FaceName of Player is not Name entry:
 			choose row MonsterID from the Table of Random Critters;
-			now facename of Player is Name entry;
-			now face of Player is face entry;
+			now FaceName of Player is Name entry;
+			if Species Name entry is not "":
+				now FaceSpeciesName of Player is Species Name entry;
+			else:
+				now FaceSpeciesName of Player is Name entry;
+			now Face of Player is face entry;
 	else if x is 2: [Torso]
 		follow the breast change rule;
 		if TorsoName of Player is not Name entry:
 			say "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry].";
 			now TorsoName of Player is Name entry;
+			if Species Name entry is not "":
+				now TorsoSpeciesName of Player is Species Name entry;
+			else:
+				now TorsoSpeciesName of Player is Name entry;
 			now Torso Description of Player is Torso Description entry;
 			now Torso Adjective of Player is Torso Adjective entry;
 			now Torso Adornments of Player is Torso Adornments entry;
@@ -3718,53 +3818,93 @@ to NewInfectionRoll:
 		[setting the old parts too, as old infections will compare to these]
 		if BodyName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now bodyname of Player is Name entry;
-			now body of Player is body entry;
+			now BodyName of Player is Name entry;
+			if Species Name entry is not "":
+				now BodySpeciesName of Player is Species Name entry;
+			else:
+				now BodySpeciesName of Player is Name entry;
+			now Body of Player is body entry;
 		if SkinName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	else if x is 3: [Back]
 		if BackName of Player is not Name entry:
 			if Back Adornments entry is not "": [no adornments, no message]
 				say "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry].";
 			now Back Adornments of Player is Back Adornments entry;
 			now BackName of Player is Name entry;
+			if Species Name entry is not "":
+				now BackSpeciesName of Player is Species Name entry;
+			else:
+				now BackSpeciesName of Player is Name entry;
 			now Back Skin Adjective of Player is Back Skin Adjective entry;
+			now Back Color of Player is Back Color entry;
 		[setting the old parts too, as old infections will compare to these]
 		if SkinName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	else if x is 4: [Arms]
 		if ArmsName of Player is not Name entry:
 			say "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry].";
 			now ArmsName of Player is Name entry;
+			if Species Name entry is not "":
+				now ArmsSpeciesName of Player is Species Name entry;
+			else:
+				now ArmsSpeciesName of Player is Name entry;
 			now Arms Description of Player is Arms Description entry;
 			now Arms Skin Adjective of Player is Arms Skin Adjective entry;
+			now Arms Color of Player is Arms Color entry;
 		[setting the old parts too, as old infections will compare to these]
 		if SkinName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	else if x is 5: [Legs]
 		if LegsName of Player is not Name entry:
 			say "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry].";
 			now LegsName of Player is Name entry;
+			if Species Name entry is not "":
+				now LegsSpeciesName of Player is Species Name entry;
+			else:
+				now LegsSpeciesName of Player is Name entry;
 			now Legs Description of Player is Legs Description entry;
 			now Legs Skin Adjective of Player is Legs Skin Adjective entry;
+			now Legs Color of Player is Legs Color entry;
 			now Locomotion of Player is Locomotion entry;
 		[setting the old parts too, as old infections will compare to these]
 		if SkinName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	else if x is 6: [Ass]
 		if AssName of Player is not Name entry:
 			say "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry].";
 			now AssName of Player is Name entry;
+			if Species Name entry is not "":
+				now AssSpeciesName of Player is Species Name entry;
+			else:
+				now AssSpeciesName of Player is Name entry;
 			now Ass Description of Player is Ass Description entry;
 			now Ass Skin Adjective of Player is Ass Skin Adjective entry;
+			now Ass Color of Player is Ass Color entry;
 			now Ass Width of Player is Ass Width entry;
 			now Asshole Color of Player is Asshole Color entry;
 			now Asshole Depth of Player is Asshole Depth entry;
@@ -3774,29 +3914,43 @@ to NewInfectionRoll:
 		[setting the old parts too, as old infections will compare to these]
 		if SkinName of Player is not Name Entry:
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is Name entry;
-			now skin of Player is skin entry;
+			now SkinName of Player is Name entry;
+			if Species Name entry is not "":
+				now SkinSpeciesName of Player is Species Name entry;
+			else:
+				now SkinSpeciesName of Player is Name entry;
+			now Skin of Player is skin entry;
 	else if x is 7: [Tail]
 		if TailName of Player is not Name entry:
-			say "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry].";
+			if Tail Change entry is not "": [no tail, no message]
+				say "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry].";
 			now TailName of Player is Name entry;
+			if Species Name entry is not "":
+				now TailSpeciesName of Player is Species Name entry;
+			else:
+				now TailSpeciesName of Player is Name entry;
 			now Tail Description of Player is Tail Description entry;
 			now Tail Skin Adjective of Player is Tail Skin Adjective entry;
+			now Tail Color of Player is Tail Color entry;
 			[setting the old parts too, as old infections will compare to these]
 			choose row MonsterID from the Table of Random Critters;
 			now tail of Player is tail entry;
 	else if x is 8:
 		follow the sex change rule;
-		if cockname of Player is not Name entry:
+		if CockName of Player is not Name entry:
 			if Player is male, say "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now CockName of Player is Name entry;
+			if Species Name entry is not "":
+				now CockSpeciesName of Player is Species Name entry;
+			else:
+				now CockSpeciesName of Player is Name entry;
 			now Cock Description of Player is Cock Description entry;
 			now Cock Adjective of Player is Cock Adjective entry;
 			now Cock Color of Player is Cock Color entry;
 			now Ball Count of Player is Ball Count entry;
 			[setting the old parts too, as old infections will compare to these]
 			choose row MonsterID from the Table of Random Critters;
-			now cock of Player is cock entry;
+			now Cock of Player is cock entry;
 			if Name entry is listed in infections of internallist and internalbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 	else if x is 9:
@@ -3804,6 +3958,10 @@ to NewInfectionRoll:
 		if Cuntname of Player is not Name entry:
 			if Player is female, say "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry].";
 			now CuntName of Player is Name entry;
+			if Species Name entry is not "":
+				now CuntSpeciesName of Player is Species Name entry;
+			else:
+				now CuntSpeciesName of Player is Name entry;
 			now Cunt Description of Player is Cunt Description entry;
 			now Cunt Adjective of Player is Cunt Adjective entry;
 			now Cunt Color of Player is Cunt Color entry;
@@ -3811,7 +3969,7 @@ to NewInfectionRoll:
 
 to attributeinfect:		[sets the player values from the new attributes]
 	choose row MonsterID from the Table of Random Critters;
-	if bodyname of Player is listed in infections of TaurList or bodyname of Player is listed in infections of NoLegList:
+	if BodyName of Player is listed in infections of TaurList or BodyName of Player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
 				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
@@ -4306,28 +4464,28 @@ This is the turnpass rule:
 	let yy be 1;
 	if "Singular" is listed in feats of Player and a random chance of 1 in yy succeeds:
 		let z be 0;
-		if facename of Player is bodyname of Player:
+		if FaceName of Player is BodyName of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if tailname of Player is bodyname of Player:
+		if TailName of Player is BodyName of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if skinname of Player is bodyname of Player:
+		if SkinName of Player is BodyName of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if cockname of Player is bodyname of Player:
+		if CockName of Player is BodyName of Player:
 			now z is z;
 		else:
 			now z is 1;
-		if bodyname of Player is "Human" or ( shiftable is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
+		if BodyName of Player is "Human" or ( shiftable is 2 and humanity of Player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y from the Table of Random Critters;
-				if Name entry exactly matches the text bodyname of Player, case insensitively:
+				if Name entry exactly matches the text BodyName of Player, case insensitively:
 					if ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row MonsterID of Table of Random Critters or non-infectious entry is false ):
 						now MonsterID is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
@@ -4342,7 +4500,7 @@ This is the turnpass rule:
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 5;
 		now Ball Size of Player is 3;
-		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
+		say "You feel a pressure at your groin that soon bursts forth as a brand new cock. This [Cock of Player] shaft spurts and dribbles with cum from its orgasmic formation.";
 	else if "Always A Pussy" is listed in feats of Player and Cunt Count of Player is 0:
 		now Cunt Count of Player is 1;
 		now Cunt Depth of Player is 5;
@@ -4350,17 +4508,17 @@ This is the turnpass rule:
 		say "You feel a tingling dampness at your groin that soon turns into a wet gush of fluids as your flesh splits open into a brand new pussy. This dripping cunny with sopping with feminine juices from its orgasmic formation.";
 	if balloversize is 0:
 		if ( scalevalue of Player is 1 or scalevalue of Player is 2 ) and Ball Size of Player >= 4:
-			if cockname of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internal:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, so huge when compared to your [Body Size Adjective of Player] frame, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if ( scalevalue of Player is 3 or scalevalue of Player is 4 ) and Ball Size of Player >= 6:
-			if cockname of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internal:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, are so big and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
 		else if Ball Size of Player >= 7:
-			if cockname of Player is not "Tanuki" and player is not internal:
+			if CockName of Player is not "Tanuki" and player is not internal:
 				decrease Dexterity of Player by 1 + (dexterity of Player / 10 );
 				now balloversize is 1 + (dexterity of Player / 10 );
 				say "     Your balls, huge even when compared to your huge frame, are so massive and heavy that it's difficult to carry them around, hindering your ability to move around somewhat.";
@@ -4369,7 +4527,7 @@ This is the turnpass rule:
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your balls, no longer quite so huge compared to your [if scalevalue of Player is not 3][Body Size Adjective of Player] [end if]body, no longer hinder you. Your legs definitely feel better for not having to carry such a heavy weight anymore.";
-		else if cockname of Player is "Tanuki":
+		else if CockName of Player is "Tanuki":
 			increase dexterity of Player by balloversize;
 			now balloversize is 0;
 			say "     Your mystical, Tanuki nature allows you to carry your oversize balls with ease, no longer hindered by their massive size.";
@@ -4489,11 +4647,11 @@ This is the turnpass rule:
 			say "The rush of giddiness leaves you as your morale normalizes, leaving you feeling confident but no longer manic.";
 			now the morale of the player is maxmorale;
 	let corruption be 0;
-	if skinname of Player is not "Human", increase corruption by a random number from 0 to 1;
-	if cockname of Player is not "Human", increase corruption by a random number from 0 to 1;
-	if bodyname of Player is not "Human", increase corruption by a random number from 0 to 1;
-	if tailname of Player is not "Human", increase corruption by a random number from 0 to 1;
-	if facename of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if SkinName of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if CockName of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if BodyName of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if TailName of Player is not "Human", increase corruption by a random number from 0 to 1;
+	if FaceName of Player is not "Human", increase corruption by a random number from 0 to 1;
 	if corruption > 0:
 		if "Weak Psyche" is listed in feats of Player:
 			increase corruption by a random number from 0 to 1;
@@ -4562,24 +4720,28 @@ This is the brain descr rule:
 	else if humanity of Player > 70:
 		now descr is "[one of]lightly tainted[or]occasionally plagued with odd instinctual[at random][lusting]";
 	else if humanity of Player > 30:
-		if facename of Player is not "Human":
-			now descr is "increasingly [facename of Player] perspective[lusting]";
-		else if bodyname of Player is not "Human":
-			now descr is "increasingly [bodyname of Player] perspective[lusting]";
-		else if skinname of Player is not "Human":
-			now descr is "increasingly [skinname of Player] perspective[lusting]";
-		else if cockname of Player is not "Human":
-			now descr is "increasingly [cockname of Player] perspective[lusting]";
-		else if tailname of Player is not "Human":
-			now descr is "increasingly [tailname of Player] perspective[lusting]";
+		if FaceName of Player is not "Human":
+			now descr is "increasingly [FaceName of Player] perspective[lusting]";
+		else if BodyName of Player is not "Human":
+			now descr is "increasingly [BodyName of Player] perspective[lusting]";
+		else if SkinName of Player is not "Human":
+			now descr is "increasingly [SkinName of Player] perspective[lusting]";
+		else if CockName of Player is not "Human":
+			now descr is "increasingly [CockName of Player] perspective[lusting]";
+		else if TailName of Player is not "Human":
+			now descr is "increasingly [TailName of Player] perspective[lusting]";
 		else:
 			now descr is "increasingly corrupted perspective[lusting]";
 	else:
 		now descr is "almost entirely subsumed[lusting]";
 	if Libido of Player < 21, now lusting is " thoughts.";
 	if Libido of Player > 80:
+		let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+[
 		let mun be a random number from 1 to number of filled rows in Table of Random Critters;
 		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row MonsterID of the Table of Random Critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+]
 	else if Libido of Player > 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
 	else if Libido of Player > 20:
@@ -4736,10 +4898,23 @@ This is the self examine rule:
 	now looknow is 1;
 	showstats player;
 	if name of Player is not "Player":
-		say "Your name is [name of Player].";
+		say "Your name is [name of Player] and you ";
+	else:
+		say "You ";
+	if ScaleValue of Player is:
+		-- 1:
+			say "are quite small, about the size of a housecat.";
+		-- 2:
+			say "are fairly small, about half as tall as a regular human.";
+		-- 3:
+			say "are about as big as a regular human.";
+		-- 4:
+			say "are superhumanly tall.";
+		-- 5:
+			say "enormous in size, a lot larger than any regular human ever could be.";
 	[ Infection Descriptions Below   ]
 	if HeadName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your [if Player is HasHumanHead][Head Color of Player]-skinned[else][Head Skin Adjective of Player][end if] face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
+		say "Pulling out a small mirror, you check yourself over from head to toe, attempting to make sense of your current form. Your head and face resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance. [if Player is HasBeard]You have a [Hair Color of Player] [Beard Style of Player]. [end if][if Player is HasHeadHair]On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style. [end if]Inspecting your [Mouth Length Adjective of Player] mouth with both the mirror and your digits, you attempt to look past your [Tongue Length of Player] inch long, [Tongue Color of Player], [Tongue Adjective of Player] tongue and into your [Mouth Length Adjective of Player] throat. [if Player is HasHeadAdornments]Before moving on from your head, you give your [Head Adornments of Player] a proud glance followed by a light caress. [end if][line break]";
 	else: [old infection]
 		say "Your face is [Face of Player]. ";
 	if TorsoName of Player is "": [old infection]
@@ -4776,9 +4951,9 @@ This is the self examine rule:
 		say "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]";
 		if Ass Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Ass Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Ass Color of Player] skin[end if]";
-		say ". With a single finger you check out your [Asshole Color of Player] hole finding it to be [Asshole Tightness Adjective of Player]. ";
+		say ". With a single finger you check out your [Asshole Color of Player] hole, finding it to be [Asshole Tightness Adjective of Player]. ";
 		say "[if Player is HasTail]Just below your lower back sprouts a [Tail Description of Player], which you move back and forth with glee. [end if]";
-		say "As your inspection goes even lower, you come to the [if Player is bipedal]two [Limbs Adjective of Player] legs supporting you. They are [else if Player is quadrupedal]four [Limbs Adjective of Player] legs supporting you. They are [else if Player is serpentine]long slithering tail supporting you. It is [else if Player is sliding]gelatinous mass supporting you. It is [end if][Legs Description of Player]";
+		say "As your inspection goes even lower, you come to the [if Player is bipedal]two [Limbs Adjective of Player] legs supporting you. They are [else if Player is quadrupedal]four [Limbs Adjective of Player] legs supporting you. They are [else if Player is octapedal]eight [Limbs Adjective of Player] legs supporting you. They are [else if Player is serpentine]long slithering tail supporting you. It is [else if Player is sliding]gelatinous mass supporting you. It is [end if][Legs Description of Player]";
 		if Legs Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Legs Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Legs Color of Player] skin[end if]";
 		say ".";
@@ -4800,9 +4975,9 @@ This is the self examine rule:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state. ";
-		else if heatlevel is 1 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 1 and player is impreg_able and CockName of Player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat. ";
-		else if heatlevel is 3 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 3 and player is impreg_able and CockName of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you. ";
 	if "Angie's Mate" is listed in feats of Player:
 		say "Thin lines of healed claw-marks run down your back, marking you as Angie's mate. ";
@@ -4896,7 +5071,7 @@ This is the self examine rule:
 					say "[descmod of x] ";
 					now CrotchVisible is false;
 	if CrotchVisible is true: [no undies, so the actual crotch is visible]
-		say "Your [bodyname of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
+		say "Your [BodyName of Player in lower case] waist and legs are bare-ass naked, exposing your privates for everyone to see. ";
 	let Barefoot be true;
 	repeat with x running through equipped owned equipment:
 		if placement of x is "feet":
@@ -4930,14 +5105,14 @@ This is the self examine rule:
 			if ( entry 1 of childrenskins is not entry 1 of childrenbodies ) or ( entry 1 of childrenskins is not entry 1 of childrenfaces ):
 				say "Your child has a [entry 1 of childrenfaces] face, and a [entry 1 of childrenbodies] body covered in [entry 1 of childrenskins] skin.";
 			else:
-				say "Your child is a pureblood of the [entry 1 of childrenfaces] strain.";
+				say "Your child is a pureblood [entry 1 of childrenfaces].";
 			say "They look as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 		else:
 			repeat with x running from 1 to number of entries in childrenfaces:
 				if ( entry x of childrenskins is not entry x of childrenbodies ) or ( entry x of childrenskins is not entry x of childrenfaces ):
 					say "One has a [entry x of childrenfaces] face, and a [entry x of childrenbodies] body covered in [entry x of childrenskins] skin.";
 				else:
-					say "One is a pureblood of the [entry x of childrenfaces] strain.";
+					say "One is a pureblood [entry x of childrenfaces].";
 			say "They all are as alert and human as you are, taking after you eagerly. Despite their age, they are already grown to young adults, both physically and in apparent emotional and mental development.";
 	[new style children]
 	if number of filled rows in Table of PlayerChildren > 0: [player has new style children]
@@ -4961,7 +5136,7 @@ This is the self examine rule:
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " is a pureblood of the [Head entry] strain. ";
+				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
 				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
 			else if Melanism entry is true:
@@ -4988,7 +5163,7 @@ This is the self examine rule:
 						say "child";
 					else:
 						say "child '[Name entry]'";
-					say " is a pureblood of the [Head entry] strain. ";
+					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
 					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
 				else if Melanism entry is true:
@@ -5045,7 +5220,7 @@ to say OffspringDesc:
 					say "child";
 				else:
 					say "child '[Name entry]'";
-				say " is a pureblood of the [Head entry] strain. ";
+				say " is a pureblood [Head entry]. ";
 			if Albino entry is true:
 				say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
 			else if Melanism entry is true:
@@ -5072,7 +5247,7 @@ to say OffspringDesc:
 						say "child";
 					else:
 						say "child '[Name entry]'";
-					say " is a pureblood of the [Head entry] strain. ";
+					say " is a pureblood [Head entry]. ";
 				if Albino entry is true:
 					say "[bold type]Their pigmentation is muted and almost white, except for the eyes that appear red. [roman type]";
 				else if Melanism entry is true:
@@ -6172,6 +6347,7 @@ Include Spartan by Wahn.
 Include Sphinx by Sarokcat.
 Include Spidergirl by Guest Writers.
 Include Spidertaur Male by Wahn.
+Include Spidertaur Female by Wahn.
 Include sprite by Nuku Valente.
 Include Squid by Stripes.
 Include Squire by Stripes.
@@ -7339,7 +7515,7 @@ to skincolorsetting:
 		clear the screen;
 		say "[bold type]Skin Color:[roman type][line break]";
 		say "(1) [link]Very Fair[as]1[end link] ";
-		if Torso Color of Player is "very fair":
+		if Torso Color of Player is "pale":
 			say ": Current";
 		LineBreak;
 		say "(2) [link]Fair[as]2[end link] ";
@@ -7372,41 +7548,71 @@ to skincolorsetting:
 			else:
 				say "Invalid Entry";
 		if calcnumber is 1:
-			now Torso Color of Player is "very fair";
-			now Cock Color of Player is "very fair";
-			now Cunt Color of Player is "very fair";
-			now Asshole Color of Player is "very fair";
-			now Nipple Color of Player is "very fair";
+			now Head Color of Player is "pale";
+			now Torso Color of Player is "pale";
+			now Back Color of Player is "pale";
+			now Arms Color of Player is "pale";
+			now Legs Color of Player is "pale";
+			now Ass Color of Player is "pale";
+			now Cock Color of Player is "peach";
+			now Cunt Color of Player is "taffy";
+			now Asshole Color of Player is "taffy";
+			now Nipple Color of Player is "pastel pink";
 		else if calcnumber is 2:
+			now Head Color of Player is "fair";
 			now Torso Color of Player is "fair";
-			now Cock Color of Player is "fair";
-			now Cunt Color of Player is "fair";
-			now Asshole Color of Player is "fair";
-			now Nipple Color of Player is "fair";
+			now Back Color of Player is "fair";
+			now Arms Color of Player is "fair";
+			now Legs Color of Player is "fair";
+			now Ass Color of Player is "fair";
+			now Cock Color of Player is "dark almond";
+			now Cunt Color of Player is "tan";
+			now Asshole Color of Player is "tan";
+			now Nipple Color of Player is "cognac";
 		else if calcnumber is 3:
+			now Head Color of Player is "medium";
 			now Torso Color of Player is "medium";
-			now Cock Color of Player is "medium";
-			now Cunt Color of Player is "medium";
-			now Asshole Color of Player is "medium";
-			now Nipple Color of Player is "medium";
+			now Back Color of Player is "medium";
+			now Arms Color of Player is "medium";
+			now Legs Color of Player is "medium";
+			now Ass Color of Player is "medium";
+			now Cock Color of Player is "brown sugar";
+			now Cunt Color of Player is "cinnamon";
+			now Asshole Color of Player is "cinnamon";
+			now Nipple Color of Player is "sweet cocoa";
 		else if calcnumber is 4:
+			now Head Color of Player is "olive";
 			now Torso Color of Player is "olive";
-			now Cock Color of Player is "olive";
-			now Cunt Color of Player is "olive";
-			now Asshole Color of Player is "olive";
-			now Nipple Color of Player is "olive";
+			now Back Color of Player is "olive";
+			now Arms Color of Player is "olive";
+			now Legs Color of Player is "olive";
+			now Ass Color of Player is "olive";
+			now Cock Color of Player is "cinnamon";
+			now Cunt Color of Player is "sienna";
+			now Asshole Color of Player is "sienna";
+			now Nipple Color of Player is "sweet cocoa";
 		else if calcnumber is 5:
+			now Head Color of Player is "brown";
 			now Torso Color of Player is "brown";
-			now Cock Color of Player is "brown";
-			now Cunt Color of Player is "brown";
-			now Asshole Color of Player is "brown";
-			now Nipple Color of Player is "brown";
+			now Back Color of Player is "brown";
+			now Arms Color of Player is "brown";
+			now Legs Color of Player is "brown";
+			now Ass Color of Player is "brown";
+			now Cock Color of Player is "chocolate brown";
+			now Cunt Color of Player is "umber brown";
+			now Asshole Color of Player is "umber brown";
+			now Nipple Color of Player is "walnut brown";
 		else if calcnumber is 6:
+			now Head Color of Player is "ebony";
 			now Torso Color of Player is "ebony";
-			now Cock Color of Player is "ebony";
-			now Cunt Color of Player is "ebony";
-			now Asshole Color of Player is "ebony";
-			now Nipple Color of Player is "ebony";
+			now Back Color of Player is "ebony";
+			now Arms Color of Player is "ebony";
+			now Legs Color of Player is "ebony";
+			now Ass Color of Player is "ebony";
+			now Cock Color of Player is "dark chocolate";
+			now Cunt Color of Player is "dark maroon";
+			now Asshole Color of Player is "dark maroon";
+			now Nipple Color of Player is "almost black";
 		now menuexit is 1;
 
 to hairsetting:
@@ -8537,6 +8743,8 @@ to say promptsay:
 	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
 	if "Unerring Hunter" is listed in feats of Player and (there is a visible dangerous door or earea of location of Player is not "void"):
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
+	if NewTypeInfectionActive is true:
+		say "[link][bracket]Enemy Stats[close bracket][as]ShowEncounteredEnemies[end link] ";
 	say "[line break]";
 	say "Exits:";
 	repeat with nam running through valid directions:

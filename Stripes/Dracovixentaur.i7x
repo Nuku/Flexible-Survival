@@ -67,12 +67,12 @@ to say losetoDVtaur1:	[DV fucks]
 
 to say losetoDVtaur2:	[DV rides]
 	say "     Having defeated you, the dracovixentaur rumbles excitedly and presses you to the ground. She murrs in your ear about how [one of]she wants you to breed some kits in her[or]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
-	say "     She gets your [cock size desc of Player] [cock of Player] shaft lined up and sinks down onto your throbbing rod with ease. She rumbles and yips as she rides up and down. Her inner walls squeeze and ripple across your manmeat in so many delightful ways. She presses your face to her breast, coaxing you to start suckling from her, drinking down her spicy, perfumy milk. Her large, pulsing cock is pressed between you both as she rides your rod. The dracovixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums. You blast your [if Ball Size of Player > 5]large [end if]load into her, breeding the lustful vixen, possibly siring more of these hybrid creatures. Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if Ball Size of Player > 5]flowing[else]leaking[end if] out of it.";
+	say "     She gets your [cock size desc of Player] [Cock of Player] shaft lined up and sinks down onto your throbbing rod with ease. She rumbles and yips as she rides up and down. Her inner walls squeeze and ripple across your manmeat in so many delightful ways. She presses your face to her breast, coaxing you to start suckling from her, drinking down her spicy, perfumy milk. Her large, pulsing cock is pressed between you both as she rides your rod. The dracovixen fucks you with wild, animalistic abandon, pounding her hips down onto yours until you're nearly insensate with lust and finally climax as her pussy clamps down around your shaft as she cums. You blast your [if Ball Size of Player > 5]large [end if]load into her, breeding the lustful vixen, possibly siring more of these hybrid creatures. Having got what she wanted, she giggles and heads off after flashing you her pussy with your cum [if Ball Size of Player > 5]flowing[else]leaking[end if] out of it.";
 
 
 to say losetoDVtaur3:	[DV nursing]
 	say "     Having defeated you, the dracovixentaur rumbles excitedly and presses you to the ground. She murrs in your ear about how [one of]much fun she's going to have with you[or]she's been looking for some fun[at random]. You are beyond resisting her advances at this point, wrapping your arms around her and burying your face in her bosom. You kiss and licks at her many nipples, drawing excited yips from the vulpine.";
-	say "     She grinds her hips down onto you, rubbing her wet, dripping pussy and ridged, dragon cock against your [skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her cum and juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
+	say "     She grinds her hips down onto you, rubbing her wet, dripping pussy and ridged, dragon cock against your [Skin of Player] flesh. Her paws rub and knead over you, [if Player is herm]one of them wrapping around your [cock size desc of Player] cock while the other goes for your juicy pussy[else if Player is male]one of them wrapping around your [cock size desc of Player] [Cock of Player] cock[else if Player is female]one of them slipping between your legs to tease your [cunt size desc of Player] pussy[else]teasing every sensitive spot they can find[end if]. She presses your face to her breast, coaxing you to start suckling from her, drinking down her tasty, perfumy milk. She continues to rub against you until she finally cums, soaking you in her cum and juices. Having had her fun, she gets up with a giggle, presses her sticky crotch into your face and trots off merrily.";
 
 
 to say losetoDVtaur4:	[DV blow job]
@@ -126,8 +126,8 @@ to say beatDVtaur2:
 	say "     As you wait for her balls to drain into you and her knot to go down, you turn your attention back to her numerous breasts. You stroke over the large and lovely melons, enjoying their soft, lilac fur and perky, lavender nipples. As you tease and pinch those purple nips, the hybrid's milk starts to flow while yips and rumbles of pleasure come from her. Feeling her knot having shrunk enough to free yourself, you pop off of her with a wet, sticky sound and a flow of cum down your thighs. Once she's gotten up, you give her rear a playful swat and send her on her way.";
 
 to say beatDVtaur3:
-	say "     Deciding that you might indeed want to have some fun with the hybrid, but on your own terms, you keep a grip on the dracovixen and move around in front of her. Grabbing her horns, you pull her face between your legs so her muzzle's squarely at your cock. Finding herself face to penis with you, she becomes more accommodating and gives your cock a few slow licks. Eager for more, you pull her head forward and order her to get sucking. The powerful herm accepts her punishment for being beaten with little reluctance, opening her draconic muzzle and accepting your [cock of Player] cock into its warm embrace.";
-	say "     Her tongue slides along your shaft and out of her sucking mouth to play across your balls[if Player is female]. It delves further back to lap across your pussy a few times before returning to the task at hand[end if]. Soon enough she's lapping over your erection and balls, growing more eager to service the victor. She fellates you with considerable skill, her talented muzzle is silky smooth. Her agile tongue, soft palate and gripping throat feel wonderful as well. The whole of her muzzle feels like a hot cunt around your cock with the added pleasure of her delightful tongue. Clearly designed for it by the nanites, these sexy dracovixens give a wonderful blowjob and you eagerly take advantage of the opportunity to enjoy it. And from the wet moans and muffled yips of pleasure from the taur's stuffed muzzle, she's certainly savoring it as well. You thrust into her muzzle, driving your [cock size desc of Player] [cock of Player] cock into her mouth harder and faster until you finally cum, feeding the horny hybrid taur your cum[if Ball Size of Player > 6] until she's stuffed full and bloated with it[else] and leaving her tummy a little rounded from it all[end if]. The dracovixentaur eagerly licks you clean before releasing your spent shaft. You give her rear a playful swat and send her on her way.";
+	say "     Deciding that you might indeed want to have some fun with the hybrid, but on your own terms, you keep a grip on the dracovixen and move around in front of her. Grabbing her horns, you pull her face between your legs so her muzzle's squarely at your cock. Finding herself face to penis with you, she becomes more accommodating and gives your cock a few slow licks. Eager for more, you pull her head forward and order her to get sucking. The powerful herm accepts her punishment for being beaten with little reluctance, opening her draconic muzzle and accepting your [Cock of Player] cock into its warm embrace.";
+	say "     Her tongue slides along your shaft and out of her sucking mouth to play across your balls[if Player is female]. It delves further back to lap across your pussy a few times before returning to the task at hand[end if]. Soon enough she's lapping over your erection and balls, growing more eager to service the victor. She fellates you with considerable skill, her talented muzzle is silky smooth. Her agile tongue, soft palate and gripping throat feel wonderful as well. The whole of her muzzle feels like a hot cunt around your cock with the added pleasure of her delightful tongue. Clearly designed for it by the nanites, these sexy dracovixens give a wonderful blowjob and you eagerly take advantage of the opportunity to enjoy it. And from the wet moans and muffled yips of pleasure from the taur's stuffed muzzle, she's certainly savoring it as well. You thrust into her muzzle, driving your [cock size desc of Player] [Cock of Player] cock into her mouth harder and faster until you finally cum, feeding the horny hybrid taur your cum[if Ball Size of Player > 6] until she's stuffed full and bloated with it[else] and leaving her tummy a little rounded from it all[end if]. The dracovixentaur eagerly licks you clean before releasing your spent shaft. You give her rear a playful swat and send her on her way.";
 
 to say beatDVtaur4:
 	say "     Keeping a grip on the hybrid, you move around in front of her. Grabbing her head by the horns, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and rumbles happily. [one of]'Mmm... to the victor go the spoils!' [or]'Let me take care of that for you,' [or]'I'm sorry for being such a naughty girl earlier. Let me make it up to you,' [or]'Ooo! This looks serious! Lemme kiss it and make it aaallllll better,' [at random]she says excitedly. And with that, the purple hybrid sets to work licking and lapping at your cunt.";
@@ -140,12 +140,13 @@ to say beatDVtaur0:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Dracovixentaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -161,7 +162,7 @@ When Play begins:
 	now cock entry is "[one of]ridged[or]draconic[or]pointed[or]tapered[or]knotted[or]sheathed[as decreasingly likely outcomes]";
 	now face change entry is "you feel a powerful pounding at the top of your skull as your face grows flush with heat. As this grows worse, your face pushes outward and changes with several snaps and pops. A draconic muzzle forms as the pain in your skull suddenly fades as large horns push forth from the back of your head. Fox ears and long, lilac hair form behind those";
 	now body change entry is "your body shifts and bends unnaturally into two sections. The upper half reforms into a feminine body with sexy curves and a fit physique. The lower section becomes that of a four-legged creature with a powerful frame and taloned paws for feet. Your hands are a cross between these and normal hands. Finding yourself with a dracovixentaur body like Sam's, your mind quickly adjusts to compensate for your new quadrupedal form";
-	now skin change entry is "your skin grows thick and hard in places, forming heavy blue scales across limbs, back and sides. Across your chest[if bodyname of Player is listed in infections of Taurlist], underbelly[end if], shoulders, hands and feet";
+	now skin change entry is "your skin grows thick and hard in places, forming heavy blue scales across limbs, back and sides. Across your chest[if BodyName of Player is listed in infections of Taurlist], underbelly[end if], shoulders, hands and feet";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, dracovulpine tail is complete";
 	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation as a knot swells at its base. Below your knot, your flesh reshapes itself to form a furry sheath to house your maleness. You find yourself looking forward to putting your new tool to use";
 	now str entry is 16; [ These are now the creature's stats... ]
@@ -199,11 +200,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -219,9 +221,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -253,13 +255,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -271,8 +273,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -288,7 +290,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -355,7 +357,7 @@ this is the DVtaurscent rule:
 Section 4 - Endings
 
 when play ends:
-	if bodyname of Player is "Dracovixentaur":
+	if BodyName of Player is "Dracovixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "***Succumb w/Sam as Dragontaur. Should not be possible.";

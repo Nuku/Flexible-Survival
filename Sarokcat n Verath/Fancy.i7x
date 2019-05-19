@@ -116,8 +116,8 @@ instead of conversing the Fancy:
 					say "The feel of your master's seed filling you is so amazing, you find yourself crying out with pleasure yet again, as the amazing sensations intensify and your own orgasm rocks your body, sending your already lust hazed mind spiraling out of control as you pant limply underneath the wonderful specimen of stallionhood above you. You barely notice when your master pulls his still thick rod out of your body, as you lie there limply, only barely able to think enough to miss that wonderful warm feeling of being filled as you look up at him with dazed eyes as the stallion turns eagerly to the other heat-filled mare over in the corner. What a lucky mare you find yourself thinking absently as your eyes drift shut and you begin to drift off in a haze of pleasure, such a lucky lucky mare indeed to be fucked and bred by such a powerful stallion, and maybe even bear his foals.... With that last thought swimming around in your head, you finally succumb to the teasing whispers of unconsciousness, with a happy smile on your new equine muzzle ";
 					now Nightmareslavery is 1;
 					now humanity of Player is 0;
-[					now body of Player is ""; ]
-[					now bodyname of Player is "equine"; ]
+[					now Body of Player is ""; ]
+[					now BodyName of Player is "equine"; ]
 [					now scalevalue of Player is 3; ]
 [					now bodydesc of Player is "sultry"; ]
 [					now bodytype of Player is "[one of]equine[or]horse-like[at random]"; ]
@@ -135,8 +135,8 @@ instead of conversing the Fancy:
 			now fancyquest is 15;
 			say "'Wow, you look... amazingly good,' the obviously aroused mare says rather dreamily, before shaking herself slightly and smiling back up at you. 'This could actually work I think, you just need to beat the Stablemaster now, and get the collar on him, I take it Nermine explained what it does?' she says with a smile, her smile stretching into a rather predatory grin for an equine as you nod in agreement. 'Excellent. Now the only hard part left is actually drawing the Stablemaster out, or getting you in to see him. He has been extremely cautious lately, and with good reason obviously.' Fancy smirks slightly as her eyes linger on your new powerful equine form. 'Now we have a plan for that actually, and we have been keeping her nice and ready just in case things worked out,' she says with a gesture at the almost completely changed mare named Daisy. 'You just me know when you are ready to take him on, and we will get you in to see him! What happens then depends on you... though for my sake at least, I hope you win,' Fancy says with a smile as she looks up at you with a mixture of lust and adoration in her eyes.";
 			now nightmaretf is 4;
-			now bodyname of Player is "Nightmare";
-			now body of Player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
+			now BodyName of Player is "Nightmare";
+			now Body of Player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
 			attributeinfect "Nightmare";
 			increase strength of Player by 4;
 			increase stamina of Player by 4;
@@ -327,7 +327,7 @@ To say nightmaremagic:
 		now jackalboytf is 5;
 		say "You feel strange as the liquid runs down your throat, feeling strangely more dominant and less like a good little jackal slut as the changes begin to run through your body.";
 		say "The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish color when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
-		now tailname of Player is "Nightmare";
+		now TailName of Player is "Nightmare";
 		now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of Player by 5;
@@ -336,7 +336,7 @@ To say nightmaremagic:
 		stop the action;
 	if nightmaretf is 0:
 		say "Eyeing the unusual liquid dubiously for a minute, you watch the strange play of the light off the whitish fluid, noting the dark and almost red swirls within the vial. Feeling rather dubious, but increasingly curious about the vial, you decide you might as well get on with it, and carefully take a drink. The strange salty yet delicious taste of the strange mixture washes over your tongue, and burns like fire or fine whiskey as it slides down your throat easily. Before you know it you have drank the whole vial and are licking your lips looking for more. It isn't long however, before you are distracted by a strange warmth growing within as what feels like a dim coal of power burning within you ignites. And you moan as your body begins to shift and reshape itself, your spine seeming to crack slightly and become more flexible, as a silken waterfall of fine horsehair erupts from your rear, spilling forth to form a surprisingly comfortable and handsome long black equine tail, with just the hint of a dark reddish color when the light reflects off of it. You swish your new tail behind you experimentally for a minute, finding it surprisingly easy to move and control, the new balance your tail provides to be quite helpful as well as handsome. You grin slightly with a strange pleasure at your new appendage, as well as the new sense of power burning within you awoken by the strange but delicious liquid.";
-		now tailname of Player is "Nightmare";
+		now TailName of Player is "Nightmare";
 		now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		say "[bold type]Your dexterity has increased by 5![roman type][line break]";
 		increase dexterity of Player by 5;
@@ -345,8 +345,8 @@ To say nightmaremagic:
 		stop the action;
 	if nightmaretf is 1:
 		say "Holding the strange vial up, you once again gaze curiously at the strange whitish liquid, with its unusual black and red streaks, recalling both the rush of power and the strangely fascinating taste of the liquid from your last drink. Feeling rather adventurous, you eagerly toss back the liquid in one large drink, before gasping as the fiery sensation once more burns its way down your throat and spreads throughout your body. You feel a sense of power growing within you, and you find yourself grinning ferally for a minute, before the bones in your jaw begin to stretch and snap. You groan as the burning sensation spreads throughout your face, your bones reshaping as your forehead flattens out and your eyes shift positions. The sensation is surprisingly pleasant however, feeling much more like a building pressure instead of pain, as something inside you slowly presses outwards and reshapes your face to better match that of a proper equine. After several minutes, your face begins to settle down into its new configuration, and you give out a rather equine snort of relief from your new large nostrils, even as you explore your larger mouth and flat teeth with your tongue, and your new sharper eyes scan your surroundings noticing things about them you never saw before. Flicking your ears from side to side, you notice several black and red strands from your new mane have a tendency to fall into view, their shining colors going quite well with the dark black fur of your new equine face. Amused and eager to see your new face, you glance into a nearby reflective surface, only to blink in surprise as you see your bright red eyes now almost seem to burn with an inner light, just like that small reservoir of power within you burns brighter now as well.";
-		now facename of Player is "Nightmare";
-		now face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face.";
+		now FaceName of Player is "Nightmare";
+		now Face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face.";
 		increase perception of Player by 4;
 		say "[bold type]Your perception has increased by 4![roman type][line break]";
 		increase intelligence of Player by 3;
@@ -356,8 +356,8 @@ To say nightmaremagic:
 		stop the action;
 	if nightmaretf is 2:
 		say "Holding the vial up, you find yourself grinning widely with anticipation as you look at the swirling liquid within, before tipping it back and drinking it all down. The delicious liquid burns all the way down your long muzzle and throat as you drink it up, the sensation quickly spreading through your entire body this time. Soon you moan with pleasure as your skin darkens, and shadows almost seem to gather around you and blend into your body as dark black fur covers your entire form. The sensation of the tingling fur growing is much like having your entire body stroked from within and without at the same time by invisible hands, and you moan with increasing pleasure as you stroke your sensitive body with your own hands as well. Eventually however the changes stop, leaving you coated in midnight black horse fur, which almost seems to meld into the shadows around you, and with an even more powerful fire burning inside you.";
-		now skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
-		now skinname of Player is "Nightmare";
+		now Skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
+		now SkinName of Player is "Nightmare";
 		now fancyquest is 13;
 		say "[bold type]Your charisma has increased by 4![roman type][line break]";
 		say "[bold type]Your stamina has increased by 4![roman type][line break]";
@@ -370,72 +370,72 @@ To say nightmaremagic:
 
 An everyturn rule:
 	if nightmaretf is 1:
-		if tailname of Player is not "Nightmare":
+		if TailName of Player is not "Nightmare":
 			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
-			now tailname of Player is "Nightmare";
+			now TailName of Player is "Nightmare";
 			now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 	if nightmaretf is 2:
-		if tailname of Player is not "Nightmare":
+		if TailName of Player is not "Nightmare":
 			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
-			now tailname of Player is "Nightmare";
+			now TailName of Player is "Nightmare";
 			now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
-		if facename of Player is not "Nightmare":
+		if FaceName of Player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			now facename of Player is "Nightmare";
-			now face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
+			now FaceName of Player is "Nightmare";
+			now Face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 	if nightmaretf is 3:
-		if tailname of Player is not "Nightmare":
+		if TailName of Player is not "Nightmare":
 			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
-			now tailname of Player is "Nightmare";
+			now TailName of Player is "Nightmare";
 			now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
-		if facename of Player is not "Nightmare":
+		if FaceName of Player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			now facename of Player is "Nightmare";
-			now face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
-		if skinname of Player is not "Nightmare":
+			now FaceName of Player is "Nightmare";
+			now Face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
+		if SkinName of Player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";
-			now skinname of Player is "Nightmare";
-			now skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
+			now SkinName of Player is "Nightmare";
+			now Skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 	if nightmaretf is 4:
-		if tailname of Player is not "Nightmare":
+		if TailName of Player is not "Nightmare":
 			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
-			now tailname of Player is "Nightmare";
+			now TailName of Player is "Nightmare";
 			now tail of Player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
-		if facename of Player is not "Nightmare":
+		if FaceName of Player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark blood red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			now facename of Player is "Nightmare";
-			now face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
-		if skinname of Player is not "Nightmare":
+			now FaceName of Player is "Nightmare";
+			now Face of Player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
+		if SkinName of Player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";
-			now skinname of Player is "Nightmare";
-			now skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
-		if bodyname of Player is not "Nightmare":
+			now SkinName of Player is "Nightmare";
+			now Skin of Player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
+		if BodyName of Player is not "Nightmare":
 			say "You can feel that strange energy from the vials you drank building up withing you again, and causing your body to burn with energy as it begins to twist and reshape itself as it changes back into your now familiar and comfortable equine form. Flexing your hands and stomping your hooves on the ground, you find yourself grinning with amusement as you throw off the weak and pathetic infection that tried to mar your Nightmarish equine beauty.";
-			now bodyname of Player is "Nightmare";
-			now body of Player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
+			now BodyName of Player is "Nightmare";
+			now Body of Player is "the strong and powerful body of a black stallion, with blood red hooves and hoof tipped hands, as well as a large chest and fully digitigrade equine legs. Your new body is amazingly responsive and powerful feeling, with almost unnatural amounts of energy surging through you constantly";
 			attributeinfect "Nightmare";
-		if cockname of Player is not "Nightmare":
-			now cockname of Player is "Nightmare";
-			now cock of Player is "[one of]equine[or]blunt-tipped[or]horse-like[at random]";
+		if CockName of Player is not "Nightmare":
+			now CockName of Player is "Nightmare";
+			now Cock of Player is "[one of]equine[or]blunt-tipped[or]horse-like[at random]";
 
 
 to quietrestorenightmareform:
 	now nmformswitch is false;
-	if bodyname of Player is not "Nightmare" or the player is not pure:
+	if BodyName of Player is not "Nightmare" or the player is not pure:
 		now nmformswitch is true;
 		setmonster "Nightmare";
 		choose row MonsterID from the Table of Random Critters;
 		if Name entry is "Nightmare":
-			now bodyname of Player is "Nightmare";
-			now facename of Player is "Nightmare";
-			now skinname of Player is "Nightmare";
-			now tailname of Player is "Nightmare";
-			now cockname of Player is "Nightmare";
-			now body of Player is body entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
+			now BodyName of Player is "Nightmare";
+			now FaceName of Player is "Nightmare";
+			now SkinName of Player is "Nightmare";
+			now TailName of Player is "Nightmare";
+			now CockName of Player is "Nightmare";
+			now Body of Player is body entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
 			now tail of Player is tail entry;
-			now cock of Player is cock entry;
+			now Cock of Player is cock entry;
 			attributeinfect "Nightmare";
 
 

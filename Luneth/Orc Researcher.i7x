@@ -20,7 +20,7 @@ Instead of resolving a Orc Researcher:
 		LineBreak;
 		say "     Despite the fact that something very... large and powerful came through here at some point, you don't let it deter you from your goal, and you cast a glance around to find another point of entry. Circling around to the side of the building you find a broken window. [if scalevalue of Player <= 3]You easily just slip inside with no problems thanks to your small size. [else]With some difficulty you are able to get inside, shattering the window in the process, causing part of the wall to collapse as well. [end if]Looking around the room that you are in, you see that it is a disaster with broken furniture and shattered glass littering the floor, and come to the conclusion that this must have been a condemned apartment building, or at the very least it should have been. As you turn down the hallway outside of the main door, you are able to make out the stairwell leading up to the second floor.";
 		say "     Keeping an ear out for any sounds that could mean a potential threat, you finally reach the top of stairs. Directly in front of you is a door with that same flickering light blinking underneath it. As you approach an aroma exudes from within the room. It smells ";
-		if facename of Player is "Orc Breeder" or facename of Player is "Orc Warrior":
+		if FaceName of Player is "Orc Breeder" or FaceName of Player is "Orc Warrior":
 			say "sweet and makes your mouth begin to water";
 		else:
 			say "musky, almost how a locker-room smells";

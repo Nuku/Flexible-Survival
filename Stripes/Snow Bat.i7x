@@ -78,7 +78,7 @@ to say beatthesnowbat:
 	now snowbatfight is 1; [victory]
 	let skipx be 0;
 	let resistance be ( 100 + humanity of Player ) - ( Libido of Player + ( thirst of Player * 2 ) );
-	if bodyname of Player is "Snow Bat" and facename of Player is "Snow Bat" and a random number between 1 and 200 >= resistance:
+	if BodyName of Player is "Snow Bat" and FaceName of Player is "Snow Bat" and a random number between 1 and 200 >= resistance:
 		say "     Driven by your feral infection you'll not abide the peculiar feline's retreat, compelling you to fling yourself into the open air and grab him as he attempts to fly off, forcibly anchoring the creature to the earth. This snow bat will reap the harvest he has sewn, much in spite of his screeching lack of compliance.";
 		say "     You have to contend with him flailing about, clearly not intent on playing the victim, until your fangs find shelter within the flesh of the beast's neck. Feeding on his blood, he rapidly fatigues until he can only barely contest your assault, your own blinding fervor fueled further[if Player is herm]. Much in spite the feast, you hunger further, and you prepare to assail your victim in another manner, relinquishing yourself of your clothing[end if].";
 		if Player is male and anallevel > 1 and ( ( player is female and a random chance of 1 in 3 succeeds ) or a random chance of anallevel in 5 succeeds ):
@@ -91,7 +91,7 @@ to say beatthesnowbat:
 			say "     [if Player is male]Cock[smn] driven blatantly erect[else if Player is female]Puss[yfn] transparently dripping with wanton desire[else]Your genital-devoid crotch exposed before him[end if], you would humiliate the creature in another fashion... It takes a bit of effort to compel the creature into erection, but your endeavors are richly rewarded and you're soon impaling yourself through your anal ring with his cock. His exhausted form further fatigued from this abuse, he can only remain a victim of your lust.";
 			say "     Weakened cries escaping his lips, you feel him unload into you multiple times, until you too are sated. Doubly draining the snowbat of his essence, [if Cock Count of Player > 1]your own cocks spilling their seed against him[else if Player is male]your own cock spilling its seed against him[end if][if Player is herm] and [end if][if Cunt Count of Player > 1]your cunts leaving a stain of its own sexual fluids across his crotch[else if Player is female]your cunt leaving a stain of its own sexual fluids across his crotch[else]you don't shy away from stealing his seed as well[end if].[mimpregchance]";
 		else if Player is male:
-			say "     Grabbing your [cock size desc of Player] [cock of Player] cock[smn], you straddle the bat-feline and stroke your meat vigorously. You shift to grinding yourself against his soft fur, enjoying the feel of it sliding across your shaft[smn][if Cunt Count of Player > 1]. You slide your cunts across him as well, but you're focused on jerking off, so you shift back to that after a few swipes across your juicy folds[else if Player is female]. You slide your cunt across him as well, but you're focused on draining your balls, so you shift back to that after a few swipes across your juicy folds[end if]. It is all the more exciting for the power you have over your fallen enemy, able to use him as an object of your pleasure after feasting from him. You keep this up, alternating between rubbing your shaft[smn] and grinding against his fluffy pelt until you feel your balls about to unleash. At that point, you grab his bat-like head and pump hard, splattering your seed across his face and into his mouth, giving a hissing chuckle as you return some of the liquid you've stolen from him.";
+			say "     Grabbing your [cock size desc of Player] [Cock of Player] cock[smn], you straddle the bat-feline and stroke your meat vigorously. You shift to grinding yourself against his soft fur, enjoying the feel of it sliding across your shaft[smn][if Cunt Count of Player > 1]. You slide your cunts across him as well, but you're focused on jerking off, so you shift back to that after a few swipes across your juicy folds[else if Player is female]. You slide your cunt across him as well, but you're focused on draining your balls, so you shift back to that after a few swipes across your juicy folds[end if]. It is all the more exciting for the power you have over your fallen enemy, able to use him as an object of your pleasure after feasting from him. You keep this up, alternating between rubbing your shaft[smn] and grinding against his fluffy pelt until you feel your balls about to unleash. At that point, you grab his bat-like head and pump hard, splattering your seed across his face and into his mouth, giving a hissing chuckle as you return some of the liquid you've stolen from him.";
 		else if Player is female:
 			say "     Dipping a few fingers into your juicy cunt[sfn], you tease your clit[sfn] rub your folds. Already quite wet from the earlier excitement, you're eager to get yourself off. Pinning your foe down with ease, you grind your [cunt size desc of Player] puss[yfn] against his soft fur, letting some of your juices wet his pet. You grind and rub yourself, purring softly as his fluffy pelt rubs against you. It is all the more exciting for the power you have over your fallen enemy, able to use him as an object of your pleasure after feasting from him. It only takes a short session to push you over the edge and you cum with a hissing mrowl of delight, your hot juices soaking into his fur, returning a little of the fluid you've stolen from him.";
 		else:
@@ -106,12 +106,13 @@ to say beatthesnowbat:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Snow Bat"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -165,11 +166,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -185,9 +187,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -219,13 +221,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -237,8 +239,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -254,7 +256,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
@@ -266,7 +268,7 @@ When Play begins:
 
 
 An everyturn rule:
-	if facename of Player is "Snow Bat" and a random chance of 1 in 2 succeeds:
+	if FaceName of Player is "Snow Bat" and a random chance of 1 in 2 succeeds:
 		increase thirst of Player by a random number between 0 and 1;
 		if "Strong Psyche" is listed in feats of Player and a random chance of 1 in 2 succeeds:
 			decrease humanity of Player by a random number between 0 and 1;
@@ -278,7 +280,7 @@ An everyturn rule:
 
 
 when play ends:
-	if bodyname of Player is "Snow Bat":
+	if BodyName of Player is "Snow Bat":
 		if humanity of Player < 10 and HP of Sven is 54 and player is male:	[Special: Male/Herm Snow Bat + Svetlana]
 			say "     As your will to resist the infection falters and fails, you succumb to your dark thirst and head off into the city to sate it. After leaving behind a few random meals passed out after your feeding, you head off to your true goal. Now having the strength to fly after feeding, you take to the night air. While part of your memories are hazy, you do recall a female snow leopard waiting to see you again and make your way there one evening. Standing in the shadows outside, you purr softly and wait for her to notice you. Hearing you, she is drawn out and into your arms. She mewls softly as you seduce her into a kiss before you bite her neck and drink her blood while mating her. You only drink a little, wanting to draw out the pleasure of enjoying her, sending her back into the store to wait for the next evening. She comes to you willingly every night, her dark lover, to let you feed and fuck her. After a few days, she grows weaker and you lure her away from her mouse mistress to be yours.";
 			say "     You fly off with her into the night, taking her to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Svetlana, unable to escape even if she wanted to, becomes yours to mate and feed upon, filling her with your hybrid spawn.";
@@ -298,7 +300,7 @@ when play ends:
 				say "     You fly off with them into the night, taking them to your hidden lair in a high-rise tower. The floor you've chosen has been isolated from the others by rubble and contains several windowless rooms, perfect for your daytime sleeping. Sven and Candy, unable to escape even if they wanted to, becomes yours to play with and feed upon[if Player is female]. Sven fills you with hybrid spawn even as his transformation into a snow bat is completed[else]. You fuck the sexy snowmeow even as his transformation into a snow bat is completed[end if]. While Candy doesn't change much physically, his pink color becomes a little darker and he gains a taste for blood as well, lustfully fucking and feeding upon any male prey you and Sven bring back to the lair.";
 		else:
 			say "     You manage to survive your time in the city and are rescued by the military's forces. Once out of the city, you are better able to deal with your body's dark urges and manage to suppress them. You hide the true nature from the scientists, fearful of their reaction and pass yourself off as having run into a bat creature somewhere.";
-			if facename of Player is "Snow Bat":
+			if FaceName of Player is "Snow Bat":
 				say "     After your release, you take to working night jobs, as you find the daytime uncomfortably bright. When you do have to go out during daylight hours, you wear dark sunglasses and rely on your echolocation to make up for it, slowly getting the hang of it. Flying unfortunately eludes you, but you do manage a little gliding during your attempts. Your exotic body attracts several other winged lovers and while you often lick and nibble along their necks, you are always careful never to bite as those lightly slumbering instincts would have you do to them.";
 			else:
 				say "     After your release, you take to working night jobs, as you find the nighttime preferable. Flying unfortunately eludes you, but you do manage a little gliding during your attempts. Your exotic body attracts several other winged lovers and while you often lick and nibble along their necks, you are always careful never to bite as those lightly slumbering instincts would have you do.";

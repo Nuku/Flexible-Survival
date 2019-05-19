@@ -186,7 +186,7 @@ to DrMattSampleQuestStart:
 	say "     Raising one hand as if to nervously brush over his graying hair, Matt stops himself before he hits the helmet, letting his gloved fingers drop with a frown. 'Anyways, since we only have this limited amount of time, I would suggest you move quickly. I have been trying to delay convince the military to delay its [']surge['], but without data to support my warnings, they're easily ignored. Please come over here for a moment with me,' he says, then walks to a nearby terminal and sits down in front of it. He opens up a folder named 'observed specimens', which contains a whole row of still images from surveillance cams. 'Thankfully the exterior security system's cameras do have battery backup, so they've captured footage of some interesting creatures since the outbreak. Here, this is something that I earmarked being of special interest.'";
 	WaitLineBreak;
 	if hermaphrodite is not banned and furry is not banned:
-		if bodyname of Player is "Blue Gryphon Herm":
+		if BodyName of Player is "Blue Gryphon Herm":
 			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. You know the shape well, as it is what your body currently looks like. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
 			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor.";
 			DrMattGryphonExam;
@@ -198,7 +198,7 @@ to DrMattSampleQuestStart:
 		say "     (Note: This quest stage was skipped due to your ban settings)[line break]";
 		now Strength of Doctor Matt is 1; [Gryphon stage skipped]
 	WaitLineBreak;
-	if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
+	if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 		say "     The next image that he pulls up shows a humanoid figure walking, or maybe gliding, along the sidewalk down the road from the Trevor Labs building, only seen for a moment. It is a bit grainy from being zoomed in to. 'This here is another specimen that had me guessing since it was captured on tape. Vaguely humanoid and semitransparent, yet with no recognizable internal organs. I must admit that I do not know how it can exist and be capable of any greater intelligence than an amoeba, but as you can see, it moves with focused intent and mimics the external shape of a human quite well.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
 		DrMattGooExam;
 		if Strength of Doctor Matt is 0: [nothing delivered yet]
@@ -260,7 +260,7 @@ to DrMattSampleDelivery:
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [not enough milk, but enough goo]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -269,7 +269,7 @@ to DrMattSampleDelivery:
 				now Strength of Doctor Matt is 2; [goo delivered]
 			DrMattGooDelivery;
 		else if carried of gryphon milk is 0 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [no milk, but enough goo]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have any gryphon samples for analysis. But then, since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -278,7 +278,7 @@ to DrMattSampleDelivery:
 				now Strength of Doctor Matt is 2; [goo delivered]
 			DrMattGooDelivery;
 		else if carried of gryphon milk > 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [got milk, not enough goo]
-			if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
+			if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 				LineBreak;
 				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
@@ -292,12 +292,12 @@ to DrMattSampleDelivery:
 				decrease carried of gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
 		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [milk delivered]
 			else:
-				if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
+				if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 					say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 					LineBreak;
 					DrMattGooExam;
@@ -305,12 +305,12 @@ to DrMattSampleDelivery:
 				else:
 					say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0 and (carried of glob of goo is 0 and carried of blue gel is 0 and carried of pink gel is 0 and carried of purple gel is 0): [neither enough milk nor goo]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of the hybrid gryphon infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
 				say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
-			else if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
+			else if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of a fluidic infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
 				DrMattGooExam;
 				now Strength of Doctor Matt is 2; [goo delivered]
@@ -322,7 +322,7 @@ to DrMattSampleDelivery:
 			DrMattGooDelivery;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else: [not enough goo]
-			if bodyname of Player is "Goo Girl" or bodyname of Player is "Blue Gel" or bodyname of Player is "Pink Gel" or bodyname of Player is "Purple Gel":
+			if BodyName of Player is "Goo Girl" or BodyName of Player is "Blue Gel" or BodyName of Player is "Pink Gel" or BodyName of Player is "Purple Gel":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
 				DrMattGooExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -336,14 +336,14 @@ to DrMattSampleDelivery:
 			decrease carried of gryphon milk by 2;
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1: [not enough milk]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a thoughtful nod, then says, 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
 			else:
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0:
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "gives a slight frown, then says, 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
@@ -636,7 +636,7 @@ to say DrMattQuestTalk:
 		say "     ([link]N[as]n[end link]) - No.";
 		if Player consents:
 			say "     You tell the doctor that you are of course willing to get your humanity back. The doctor smiles and nods, opening up a drawer and pulling out a rat's nest of wires and bio-sensors. 'Okay. Strip down so I can get you hooked up. This sort of thing isn't my usual area of expertise, but thankfully another of my former associates was doing bio-research, so I can use their equipment. She won't be needing it now that she's a feral mutant.'";
-			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if Nipple Count of Player > 0]. Some are even placed directly over your nipples[end if][if Player is male]. One is placed upon your [cock of Player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if Player is male and player is not internal]. A linked pair are attached upon your balls[end if][if Player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
+			say "     While he speaks casually about what has happened to his colleagues, he does remain silent for a while, quietly attaching the sensors all over your body with tape. A lot of them get placed across your chest and upon your face, though others end up elsewhere[if Nipple Count of Player > 0]. Some are even placed directly over your nipples[end if][if Player is male]. One is placed upon your [Cock of Player] cock[smn], tape snugly wrapped clear around your shaft[smn][end if][if Player is male and player is not internal]. A linked pair are attached upon your balls[end if][if Player is female]. A small ovoid ones are pushed unceremoniously (and without even dinner and a movie) into your cunt[sfn] and asshole, leaving the wires dangling out of you[else]. A small ovoid one is pushed unceremoniously (and without even dinner and a movie) into your asshole, leaving the wire dangling out of you[end if].";
 			WaitLineBreak;
 			say "     With a final smack, the doctor adheres a large suction cup to your forehead. The thin wires from all of these separate sensors are wound together into one larger cable which is then plugged into a monitoring device. It starts up, showing blips and waveforms on its screens while outputting a constant stream of ticker tape.";
 			say "     'Alright, we're ready to go,' the doctor says with enthusiasm. The prospect of science has brightened his mood and he quickly snatches up the spray can[if susan is visible]. Susan, while clearly concerned about you, takes several large steps back to avoid getting hit[end if]. The doctor starts spraying you all over, spreading the mist of strange antiseptic-smelling liquid all over you. You can feel the strange liquid burn and tingle as it sinks into your body, surprisingly you find yourself feeling a little better and more human almost immediately.";
@@ -645,17 +645,17 @@ to say DrMattQuestTalk:
 			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if Player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
 			setmonster "Human";
 			choose row MonsterID from the Table of Random Critters;
-			now tailname of Player is "Human";
-			now facename of Player is "Human";
-			now skinname of Player is "Human";
-			now bodyname of Player is "Human";
-			now cockname of Player is "Human";
+			now TailName of Player is "Human";
+			now FaceName of Player is "Human";
+			now SkinName of Player is "Human";
+			now BodyName of Player is "Human";
+			now CockName of Player is "Human";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			SanBoost 20;
 		else:
 			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.' He stores the can away.";
@@ -728,6 +728,24 @@ check monitoring:
 to monitor:
 	say "You hook up the infection analyzer and run the program, checking on your body's status for any changes while looking yourself over.";
 	if NewTypeInfectionActive is true: [new body parts]
+		if debugactive is 1:
+			say "DEBUG:[line break]";
+			say "Head species status: [HeadSpeciesName of Player]     Torso species status: [TorsoSpeciesName of Player][line break]";
+			say "Back species status: [BackSpeciesName of Player]     Arms species status: [ArmsSpeciesName of Player][line break]";
+			say "Legs species status: [LegsSpeciesName of Player]     Ass species status: [AssSpeciesName of Player][line break]";
+			say "Tail species status: [TailSpeciesName of Player][line break]";
+			if Player is male:
+				say "Cock species status: [CockSpeciesName of Player]     ";
+			if Player is female:
+				say "Cunt species status: [CuntSpeciesName of Player][line break]";
+			if Player is herm:
+				say "Gender: Herm[line break]";
+			else if Player is male:
+				say "Gender: Male[line break]";
+			else if Player is female:
+				say "Gender: Female[line break]";
+			else:
+				say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 		say "Head status: [HeadName of Player]     Torso status: [TorsoName of Player][line break]";
 		say "Back status: [BackName of Player]     Arms status: [ArmsName of Player][line break]";
 		say "Legs status: [LegsName of Player]     Ass status: [AssName of Player][line break]";
@@ -745,23 +763,23 @@ to monitor:
 		else:
 			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	else: [old body parts]
-		say "Head status: [facename of Player]     Body status: [bodyname of Player][line break]";
-		say "Skin status: [skinname of Player]     Tail status: [tailname of Player][line break]";
+		say "Head status: [FaceName of Player]     Body status: [BodyName of Player][line break]";
+		say "Skin status: [SkinName of Player]     Tail status: [TailName of Player][line break]";
 		if Player is male:
 			if Player is female:
-				say "Cock status: [cockname of Player]     Gender: Herm[line break]";
+				say "Cock status: [CockName of Player]     Gender: Herm[line break]";
 			else:
-				say "Cock status: [cockname of Player]     Gender: Male[line break]";
+				say "Cock status: [CockName of Player]     Gender: Male[line break]";
 		else if Player is female:
-			say "Groin status: [cockname of Player]     Gender: Female[line break]";
+			say "Groin status: [CockName of Player]     Gender: Female[line break]";
 		else:
 			say "Analyzing gender... [special-style-2]ERROR![roman type][line break]";
 	if ( HP of Doctor Matt >= 23 and HP of Doctor Matt < 100 ) or hospquest >= 23:
 		let defaultheat be true;
 		let heatname be "Default";
 		choose row 1 in table of infection heat;
-		if cockname of Player is a infect name listed in Table of infection heat:	[check name of heat]
-			choose a row with a infect name of (cockname of Player) in Table of infection heat;
+		if CockName of Player is a infect name listed in Table of infection heat:	[check name of heat]
+			choose a row with a infect name of (CockName of Player) in Table of infection heat;
 			if Player is female and fheat entry is false:	[no female heat for that form]
 				choose row 1 in table of infection heat;
 			else if Player is not female and mpregheat entry is false:		[no mpreg-heat for that form]
@@ -789,7 +807,7 @@ to monitor:
 					choose a row with name of TailName of Child in the Table of New Infection Parts;
 					if Tail Description entry is not "":
 						now ShowTail is true;
-				say "Current fetal form: Head: [Headname of Child] Torso: [TorsoName of Child] Back: [BackName of Child] Arms: [ArmsName of Child] Legs: [LegsName of Child] Ass: [AssName of Child] [if ShowTail is true] Tail: [TailName of Child][end if][line break]";
+				say "Current fetal form: Head: [HeadSpeciesName of Child] Torso: [TorsoSpeciesName of Child] Back: [BackSpeciesName of Child] Arms: [ArmsSpeciesName of Child] Legs: [LegsSpeciesName of Child] Ass: [AssSpeciesName of Child] [if ShowTail is true] Tail: [TailSpeciesName of Child][end if][line break]";
 		else if heat enabled is false:
 			say "Estrus Status: Inactive[line break]";
 		else if animal heat is false:

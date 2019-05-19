@@ -48,7 +48,7 @@ instead of going down from Open Ocean:
 	if hasgills is 1:
 		say "     You dive into the water, making your way to the sunken ship, feeling the gills appear on your neck to allow you to breath. It doesn't take you that long to get their thankfully so you quite quickly arrive at the ship.";
 		move player to Sunken Ship;
-	else if facename of Player is listed in infections of swimlist:
+	else if FaceName of Player is listed in infections of swimlist:
 		say "     With your natural ability to breathe underwater due to your infection, you dart under and swim towards the sunken ship. Thankfully for your patience it doesn't take you long to reach the ship.";
 		move player to Sunken Ship;
 	else:

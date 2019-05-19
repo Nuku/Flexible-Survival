@@ -50,7 +50,7 @@ the scent of Phi Iota Gamma is "The frat house smells strongly of stale beer, pi
 to say phiiotagammadesc:
 	if piginitiation is 0:
 		say "     Seeing how things have calmed down after the massive kegger, you decide to approach the frat house. Not that the party's actually stopped, it's just died down to those die-hards still conscious after the big party. You can see several sows and hogs flopped out on the messy lawn, some still making out and others just passed out. Approaching the steps, your way is blocked by a big boar with a small keg under his meaty arm. After slamming back a big swig straight from it, he looks you over.";
-		if bodyname of Player is not "Messy Pig" and bodyname of Player is not "Piggy" and facename of Player is not "Messy Pig" and facename of Player is not "Piggy":
+		if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy" and FaceName of Player is not "Messy Pig" and FaceName of Player is not "Piggy":
 			say "     Unimpressed, he gives a beer-scented belch. 'What do you think you're doing here? Members and guests only,' he says curtly.";
 			say "     [bold type]Shall you tell him that you're looking to join up or just let it go and leave?[roman type][line break]";
 			LineBreak;
@@ -85,7 +85,7 @@ to say phiiotagammadesc:
 		say "     ([link]Y[as]y[end link]) - Ask to join the frat.";
 		say "     ([link]N[as]n[end link]) - Take the hint and leave.";
 		if Player consents:
-			if bodyname of Player is not "Messy Pig" and bodyname of Player is not "Piggy" and facename of Player is not "Messy Pig" and facename of Player is not "Piggy":
+			if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy" and FaceName of Player is not "Messy Pig" and FaceName of Player is not "Piggy":
 				say "     In the hopes of gaining access this time, you tell him that you're interested in joining. He snorts at this and gives you a light shove back. 'Like I said, members and guests only. If you want to join the mighty Phi Iota Gamma...' There is a pause for a cacophony of snorting comes from he and all the pigs within earshot, even those clearly dead drunk. '...you've got to find a member willing to sponsor you[if Player is female]. Given how things are these days, we're not so picky about it being guys only, but you[else]You[end if] need a senior frat brother in good standing to vouch for you. Until then, shove off, you mooch.'";
 				say "     Since trying to force your way in will likely bring the whole frat down upon you, you decide to leave for now. You try to think if anyone you've met might be a member of the fraternity.";
 			else:
@@ -99,7 +99,7 @@ to say phiiotagammadesc:
 		move player to College Campus;
 	else if piginitiation is 2 or piginitiation is 3:
 		say "     As before, you find some light carousing and sex going on around the frat house[if a random chance of 2 in 5 succeeds]. There seems to be some noisy activity going on inside, [one of]an orgy[or]a drinking contest[or]an eating contest[or]some sweaty sex[in random order] from the sounds of it[end if]. That big boar's still sitting on the porch[one of], stuffing his face with some dry pretzels from a plastic jug[or], working on his next mini-keg[or], enjoying a blow job from one of the sows[in random order]. Seeing you coming up, he grunts and gets up to block the steps.";
-		if bodyname of Player is not "Messy Pig" and bodyname of Player is not "Piggy" and facename of Player is not "Messy Pig" and facename of Player is not "Piggy":
+		if BodyName of Player is not "Messy Pig" and BodyName of Player is not "Piggy" and FaceName of Player is not "Messy Pig" and FaceName of Player is not "Piggy":
 			say "     'Look, I told you that you can't join up without a sponsor. The mighty Phi Iota Gamma...' Again, he pauses to oink and snort loudly along with his frat brothers. '...doesn't let just anyone join up. You'll need to find a senior member in good standing willing to support your joining up. As you can see, we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.' And with this, another round of oinking and snorting starts up. No further ahead for your troubles, you turn to go even before the noise dies down.";
 		else:
 			say "     'Look, I'm glad to see you're eager to join up, but you can't do so without a sponsor. The mighty Phi Iota Gamma...' Again, he pauses to oink and snort loudly along with his frat brothers. '...is the best around. You'll need to find a senior member in good standing willing to support your joining up. You might look like you'll fit in, but we've got no lack of willing members, so only the best get to join the mighty Phi Iota Gamma.' No further ahead for your troubles, you turn to go even before the noise dies down.";
@@ -121,7 +121,7 @@ to say pig_fratinitiation:
 	say "     'Man! You are the stuff of legends! Did you really put a dozen pigs in the dean's office?' Not even waiting for an answer, he turns and starts calling out to the others that Philip the Grand is here. This rouses all but the most drunken of pigs into a cacophony of discussion.";
 	say "     'What, Philip the Grand?' 'Grand Porker Philip is here?' 'Whozzat?' 'Biggest Grand Porker there ever was.' 'I heard he ate something like 300 chicken wings in one night.' 'No, I'd heard it was almost 350.' 'Someone get him a beer.' 'Yeah, let's party to celebrate!'";
 	WaitLineBreak;
-	say "     And with that, you and Philip ushered bodily into the fraternity by the excited mob of pigs. Drinks are passed around, an ornamental bathrobe is draped over Philip's shoulders and he's given a seat of honor. At first, you are a secondary concern, everyone wanting to toast this legendary member. Jokingly told it's tradition by their seniors, the freshmen are made to lick his piggy feet and take turns sucking his cock. You watch laughing and drinking alongside the others [if Player is male and girl is not banned]while some sow licks and sucks your [cock of Player] cock[else if Player is male]while some young male porker licks and sucks your [cock of Player] cock[else]while a lusty frat boar eats you out[end if].";
+	say "     And with that, you and Philip ushered bodily into the fraternity by the excited mob of pigs. Drinks are passed around, an ornamental bathrobe is draped over Philip's shoulders and he's given a seat of honor. At first, you are a secondary concern, everyone wanting to toast this legendary member. Jokingly told it's tradition by their seniors, the freshmen are made to lick his piggy feet and take turns sucking his cock. You watch laughing and drinking alongside the others [if Player is male and girl is not banned]while some sow licks and sucks your [Cock of Player] cock[else if Player is male]while some young male porker licks and sucks your [Cock of Player] cock[else]while a lusty frat boar eats you out[end if].";
 	say "     As the last of them is pushed away, you're noticed and shoved forward, told to pay your respects to the veteran Grand Porker as well. Philip chuckles and presses your face to his musky loins, thick with slobber from those who've come before you. 'If you're looking to join the frat, you've got to be initiated. Get to work, pledge,' he oinks. Already quite aroused and muddled-headed from the experience, his heady scent is very enticing and you plunge your mouth over his manhood, licking and sucking it eagerly. The frat boars laugh and tease you, several of them groping you while you work that thick pillar of pork with your lips and tongue. And when the big pig's about to blow, someone presses your face right into his crotch so you're forced to swallow down every last drop of it - not that you mind by this point.";
 	if Player is male and ( girl is not banned ):
 		say "     Like the beer, you get passed around between several boars and sows. Over the course of it, you have sex with several of them while everyone gets well and truly inebriated and thoroughly fucked. You quickly lose track of how many times you've been cum in or on and how many hot holes you've filled. Throughout it all, you become increasingly porcine, transformed by the raucous partygoers into another messy frat pig.";
@@ -157,17 +157,17 @@ to say pig_fratinitiation:
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 4 and 8;
 	setmonster "Piggy";
 	choose row MonsterID from the Table of Random Critters;
-	now tailname of Player is "Piggy";
-	now facename of Player is "Piggy";
-	now skinname of Player is "Piggy";
-	now bodyname of Player is "Piggy";
-	now cockname of Player is "Piggy";
+	now TailName of Player is "Piggy";
+	now FaceName of Player is "Piggy";
+	now SkinName of Player is "Piggy";
+	now BodyName of Player is "Piggy";
+	now CockName of Player is "Piggy";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if Libido of Player < 45, now Libido of Player is 45;
 	if humanity of Player < 10:
 		if Player is not female and girl is not banned:

@@ -161,7 +161,7 @@ after going down from 2F Trevor Labs when the HP of Doctor Matt > 2 and HP of Or
 				LineBreak;
 				say "     Orthas puts on a toothy grin as she reaches up with strong arms and pulls you down onto herself. Her long tongue wraps around yours in an exciting bit of French kissing, while her hands rub your body, making it all tingly in response to her actions. She pulls off the kiss after a moment and rips off the somewhat slimy remnants of her clothes, the sight of which makes you wonder a bit about what happened during her visit to the basement. The dragoness's body is toned and athletic, looking practically amazonian to your own lust-filled eyes. She caresses every part of your body for a little while of pleasurable exploration, before assisting you in taking off any clothes and gear you have with you.";
 				if Player is male: [male or herm player]
-					say "     'Ooooh... you're quite the stud!' she says, getting a good gander at your manhood, already half-erect from the heat of the moment. Leaning back on the cushions, the dragoness spreads her strong, scaled legs, fingers moving to pull open the folds of her sex in eager anticipation of your entry. 'Mmm! Come on big boy, give me some love!' An idle thought passes through your mind about whether dragonesses would lay eggs or have live young, but such worries fade before the escalating lust you feel as you push into Orthas's sweltering depths. 'Fuck yeah!' the dragoness growls in satisfaction, her claws digging into the abused sofa as she bucks her hips against yours to drive your shaft deeper. Doing what comes natural, you thrust in and out of her in a rapid tempo, your [cock of Player] manhood stretching the inner walls of your draconic lover. She feels amazing around your dick, quite warm and snug, as her strong muscles flex and contracting to become a perfect fit over your member.";
+					say "     'Ooooh... you're quite the stud!' she says, getting a good gander at your manhood, already half-erect from the heat of the moment. Leaning back on the cushions, the dragoness spreads her strong, scaled legs, fingers moving to pull open the folds of her sex in eager anticipation of your entry. 'Mmm! Come on big boy, give me some love!' An idle thought passes through your mind about whether dragonesses would lay eggs or have live young, but such worries fade before the escalating lust you feel as you push into Orthas's sweltering depths. 'Fuck yeah!' the dragoness growls in satisfaction, her claws digging into the abused sofa as she bucks her hips against yours to drive your shaft deeper. Doing what comes natural, you thrust in and out of her in a rapid tempo, your [Cock of Player] manhood stretching the inner walls of your draconic lover. She feels amazing around your dick, quite warm and snug, as her strong muscles flex and contracting to become a perfect fit over your member.";
 					say "     Orthas herself has her tongue lolling out of her mouth in helpless pleasure and her hands squeeze at her hefty bosom while you ride her. Her pussy muscles seem to be working overdrive on your member, and she is definitely a screamer, as the roars of pleasure fill the whole lobby and make the intact windowpanes tremble in their frames. You're certain that Doctor Matt on the floor above can hear your mating loud and clear. Before long, your pleasure nears the point of no return, and a tingly feeling of tightness fills your balls. You start to gasp out that you're close, but before you have said more than a few words, Orthas's pussy walls clamp down on your cock hard! They squeeze your length in a rhythmic fashion, practically milking you for your cum - and with a pleased groan, you are happy to oblige her and erupt into the woman's innermost depths. Spurt after spurt of your seed paint the walls of her pussy white while Orthas's slit gushes her femcum over your throbbing member and balls.";
 					WaitLineBreak;
 					if Player is not female: [true male player]
@@ -268,7 +268,7 @@ to say Orthas_task2_done:
 	say "     She tosses the stuff back into the box and closes it up. 'Look, I didn't get much of a chance to prove myself as a parent or husband, but I know I can do it.' She wraps her tail around you, pulling and turning you into a hug from behind with her hands on your [if gestation of child > 0]pregnant [end if]belly and her wings around you. 'My old life ain't really worth remembering, but I don't want to forgot to do better this time around. Now, I can't promise to be around all the time - the doc's work's important and someone's got to protect him. But I figure someone like you'll understand that a bit better as sometimes there's things you've got to take care of too. Once we're out of this mess, I'll be around for you and the eggs when you need me.'";
 	WaitLineBreak;
 	if Player is male:
-		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of Player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [cock of Player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blow job.";
+		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of Player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [Cock of Player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blow job.";
 		say "     Once she's gotten you good and horny, she lays herself back across her security desk, wantonly spreading her legs. With a tantalizing grin, she fingers her dripping snatch before spreading her folds invitingly. 'Come on, lover,' she purrs sensually and you can hardly resist such an invitation. Tossing aside your gear and moving into position, you grab her legs and drive your throbbing cock into her cunny, causing the dragoness to cry out lustfully. You pound away at her, giving her the thorough breeding she desires.";
 		say "     The dragoness's strong inner muscles, capable of dealing with pushing out her eggs, squeeze and massage around your thrusting member, increasing the pleasure for both of you. The thought of dumping your load in her and there being an egg produced right away makes you feel like a virile stud, eager to knock up this fecund scaled beauty. Nuzzling her bosom, you lick and kiss her nipples, telling her how sexy she looks and how you're looking forward to putting an egg in her. To this she grins and licks your cheek with her draconic tongue, rumbling how she's looking forward to putting her egg in you.";
 		say "     Before you can respond to this, the squeezing and milking of her vaginal walls intensifies as her orgasm begins with a roar. Under the powerful stimulation her quivering cunny provides, you don't hold out much longer and are soon blasting your gooey seed into her womb. By the time you're done emptying your load into her, she's already sitting up and rolling you over onto your back. Pulling off your spent shaft, she lets her emerging ovipositor slap wetly against it with a lustful grin.";
@@ -286,7 +286,7 @@ to say Orthas_task2_done:
 			if the gestation of the child > 0:
 				say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 				decrease gestation of child by a random number from 5 to 10;
-				if gestation of child < 1, now gestation of child is 1;
+				if gestation of child < 1, now gestation of Child is 1;
 			else if Player is impreg_able:
 				say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 				impregnate with "Dragon";
@@ -300,7 +300,7 @@ to say Orthas_task2_done:
 				if the gestation of the child > 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 					decrease gestation of child by a random number from 5 to 10;
-					if gestation of child < 1, now gestation of child is 1;
+					if gestation of child < 1, now gestation of Child is 1;
 				else:
 					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
@@ -370,7 +370,7 @@ to say Orthasfuck:
 						if the gestation of the child > 0:
 							say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 							decrease gestation of child by a random number from 5 to 10;
-							if gestation of child < 1, now gestation of child is 1;
+							if gestation of child < 1, now gestation of Child is 1;
 						else:
 							say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 							impregnate with "Dragon";
@@ -444,14 +444,14 @@ to say Orthasfuck:
 				if the gestation of the child > 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 					decrease gestation of child by a random number from 5 to 10;
-					if gestation of child < 1, now gestation of child is 1;
+					if gestation of child < 1, now gestation of Child is 1;
 				else:
 					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
 					now pregtype is 1;
 					if HP of Orthas < 4, now HP of Orthas is 4;
 		else: [ Herm ]
-			if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of Player is not listed in infections of TaurList:
+			if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and BodyName of Player is not listed in infections of TaurList:
 				say "     You give Orthas that look and she grins. 'Aw yeah! Let's do this!' she says eagerly. She pushes you backwards over her security desk even as a hand gropes its way between your legs. Soon enough, you're getting hard in her scaly hand as she pumps your manhood to erection. Her draconic muzzle bends down to let her run her long tongue tease across your shaft before she envelops it in her steamy maw. The oral warm-up is brief but intense, her tongue playing across your dick as she sucks it. As she's wrapping up, she slips her muzzle lower to let her writhing tongue squirm into your cunt.";
 				say "     With you more than ready by this point, she lays across the desk with her tail raised high and her toned ass on display. She gives her rear a tantalizing wiggle and reaches back between her legs to part her wet folds, showing you her welcoming, waiting vagina. Needing no encouragement, you're atop the black dragoness right away, grinding your [cock size desc of Player] cock against her scaly rear before lining up and thrusting into her. She gives a lustful growl of pleasure and pushes back into your thrust. Her hot tunnel squeezes and milks at your cock, longing for the seed to fertilize her eggs.";
 				WaitLineBreak;
@@ -467,14 +467,14 @@ to say Orthasfuck:
 			say "     ([link]N[as]n[end link]) - Ass.";
 			if Player consents:
 				LineBreak;
-				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of Player is not listed in infections of TaurList:
+				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and BodyName of Player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your slit and moan as it wriggles into you. It worms its way into you with delightful pulses. Soon it's nudging at your cervix, working to tease that final barrier loose. With her tentacle [']cock['] rubbing through the full length of your vagina, she's able to drive you to another orgasm, a female-centric one this time, just as her egg is nudging its way past your pussy lips. traveling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your cervix to be deposited in your womb.";
 				else:
 					say "     Moving to the floor, Orthas lays down with her slick phallus at the ready. Climbing on, you push her [']cock['] toward your slit, and you already feel her pushing deep at your cervix - it doesn't take long for it to reach full length, does it? She bobs her hips, but since she is in control of her eggs, she waits for you to get your pleasure first. But with the way that [']member['] bobs and weaves in your slit, it won't take you long at all, and as you climax, you feel the egg pushing at your slit, and forcing its way up your pussy into your womb.";
 				if the gestation of the child > 0:
 					say "     The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 					decrease gestation of child by a random number from 5 to 10;
-					if gestation of child < 1, now gestation of child is 1;
+					if gestation of child < 1, now gestation of Child is 1;
 				else:
 					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
@@ -482,14 +482,14 @@ to say Orthasfuck:
 					if HP of Orthas < 4, now HP of Orthas is 4;
 			else if Player is mpreg_ok:
 				LineBreak;
-				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of Player is not listed in infections of TaurList:
+				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and BodyName of Player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. With your hand to guide it, you aim it towards your back door and moan as it wriggles into you. It worms its way into your rectum with delightful pulses. Soon it's squirmed deep inside you and is nudging at that hidden second entrance to your womb. At this point, you're far too lustfully excited by the prospect of what is to come to think better of it. You start riding that undulating ovipositor for all you're worth while it works to tease that final barrier loose. With her tentacle [']cock['] rubbing along your sensitive rectal walls and pulsing against your prostate, she's able to drive you to another orgasm just as her egg is nudging its way past your anal ring. traveling through her rippling [']member['], it passes through your spasming tunnel and - with a few mind-numbingly pleasurable pushes - pops past your secondary cervix to be deposited in your womb. This sends a kinky thrill through you and you masturbate yourself, both cock and pussy, until you're fully spent from your orgasm.";
 				else:
 					say "     Moving to the floor, Orthas lays down with her slick phallus at the ready. Deciding to avoid your cunt, you climb on but angle the ovipositor for your rear. As you sink down onto its slick length, you remember that your womb links in there as well, ensuring you'll get pregnant either way you take one of the dragon's eggs. But you are too lustfully excited by the idea to think better of it, and start riding eagerly. It doesn't take Orthas long to get to the point where her egg is pushing up her [']shaft['], and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft and slides into your womb from its back entrance. You moan in kinky pleasure at having taken her egg in such a manner.";
 				if the gestation of the child > 0:
 					say "The essence of the egg just stimulates and aids the progress of the child already inside of you, dissolving its essence to help the young one grow.";
 					decrease gestation of child by a random number from 5 to 10;
-					if gestation of child < 1, now gestation of child is 1;
+					if gestation of child < 1, now gestation of Child is 1;
 				else:
 					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
@@ -497,7 +497,7 @@ to say Orthasfuck:
 					if HP of Orthas < 4, now HP of Orthas is 4;
 			else:
 				LineBreak;
-				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and bodyname of Player is not listed in infections of TaurList:
+				if HP of Orthas >= 7 and a random chance of 1 in 2 succeeds and BodyName of Player is not listed in infections of TaurList:
 					say "     Sitting on the edge of her desk, Orthas pulls you up into her lap, readying to drive that phallic tendril of hers into you. Rather than come out of this with another pregnancy, you guide it with your hand towards your back door and moan as it wriggles into you. It worms its way into your rectum with delightful pulses. Soon it's squirmed deep inside you as you ride that undulating ovipositor for all you're worth. With her tentacle [']cock['] rubbing along your sensitive rectal walls and pulsing against your prostate, she's able to drive you to another orgasm just as her egg is nudging its way past your anal ring. traveling through her rippling [']member['], it passes with a kinky mix of pleasure and pain through your spasming tunnel and is eventually deposited deep inside your bowels along with a gush of gooey fluids. This sends a kinky thrill through you and you masturbate yourself, both cock and pussy, until you're fully spent from your orgasm. A pleasure you'll likely repeat a little later when the egg comes back out.";
 				else:
 					say "     Moving to the floor, Orthas lays down with her slick phallus at the ready. Deciding you don't need to come out of this with another pregnancy, you climb on but angle the ovipositor for your rear. You know that this egg will stretch you more than you've ever been stretched in that hole, but you don't care, knowing that you're more comfortable not carrying another child in the womb at the moment. It doesn't take Orthas long to get to the point where her egg is pushing up her [']shaft['], and you can feel it pressing hard at your anal opening, and somehow, the egg finds its way past your tight anal ring, passing further up her shaft. After a few more tense moments of mixed pain and pleasure, the egg finishes its journey up there, and pops out of her shaft, making you moan lustfully... the egg will come out later.";
@@ -539,12 +539,13 @@ to say Orthasdesc:
 Section 6 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "";
 	now Name entry is "Dragon"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -598,11 +599,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is "";
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -618,9 +620,9 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
@@ -652,13 +654,13 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -670,8 +672,8 @@ When Play begins:
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
 	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, well-used, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -687,7 +689,7 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
