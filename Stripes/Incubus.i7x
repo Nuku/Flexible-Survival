@@ -9,8 +9,8 @@ Section 1 - Creature Responses
 incubusnosex is a number that varies.
 
 when play begins:
-	add { "Incubus" } to infections of guy;
-	add { "Incubus" } to infections of hellspawn;
+	add { "Incubus" } to infections of MaleList;
+	add { "Incubus" } to infections of DemonList;
 
 to say incubusdesc:
 	setmongender 3; [creature is male]
@@ -62,7 +62,7 @@ to say losetoincubus:
 		say "     The pleasure you feel as his large, perfect cock pushes into you is one of utter, sinful delight. He fucks you hard and fast, rocking his hips and pumping his shaft into you. His hands roam over your body, joining his tail in teasing against your flesh. It is only the soft sound of the beating of his wings that tells you how he's supporting himself so easily atop you. His body, penis, fingers, tongue, mouth and tail all move with the practiced ease of one who's spent countless ages exploring sexual pleasure and loving every moment of it. You cannot help but moan and push back into his thrusts as he buggers you, your asshole practically milking at his cock with lustful need.";
 		say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if Cock Count of Player is 1]. Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[else if Player is male]. He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load. Each sticky handful of cum is brought forward for you both to lustfully lap up[end if]. His large balls slap against your thighs as he drains them his infernal seed into you. Spent, he gives you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.[impregchance]";
 	if Libido of Player > 80, now Libido of Player is 80;
-	if "Female Preferred" is listed in feats of Player and girl is not banned:
+	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 		infect "Succubus";
 	else:
 		infect "Incubus";
@@ -81,7 +81,7 @@ to say beattheincubus:
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker. He moans lustfully and pushes back, spearing himself onto your [cock size desc of Player] shaft with the ease of one who's been taken by the erections of numerous demonic creatures before. The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole. His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed. You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure. He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load. He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing. You lap up the rest and even suck his fingers clean. After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body. 'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. You watch him go while his tainted seed sends warm tingles through your body.";
 				if Libido of Player > 80, now Libido of Player is 80;
-				if "Female Preferred" is listed in feats of Player and girl is not banned:
+				if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 					infect "Succubus";
 				else:
 					infect "Incubus";
@@ -106,7 +106,7 @@ to say beattheincubus:
 			else:
 				say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly. This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. He licks and sucks your cock clean, then nibbles on your balls lightly.";
 				say "     'Mmm... that was most enjoyable. Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease. He makes a show of licking his lips before turning and heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. It is not until he's gone that you notice the warm, wet feeling on your ballsack and look down to see the puddle of incubus cum with a hand streak through it.";
-			if "Female Preferred" is listed in feats of Player and girl is not banned:
+			if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 				infect "Succubus";
 			else:
 				infect "Incubus";
@@ -224,7 +224,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -257,12 +257,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]

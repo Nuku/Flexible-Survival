@@ -5,10 +5,10 @@ Version 1 of Gels by Darthan begins here.
 Section 1 - Creature Responses
 
 when play begins:
-	add { "Pink Gel" } to infections of girl;
-	add { "Blue Gel" } to infections of guy;
-	add { "Purple Gel" } to infections of hermaphrodite;
-	add { "Pink Gel", "Blue Gel", "Purple Gel" } to infections of humanoid;
+	add { "Pink Gel" } to infections of FemaleList;
+	add { "Blue Gel" } to infections of MaleList;
+	add { "Purple Gel" } to infections of HermList;
+	add { "Pink Gel", "Blue Gel", "Purple Gel" } to infections of HumanoidList;
 
 to say losetopinkgel: [Loss to Pink Gel.]
 	if inasituation is true:
@@ -27,19 +27,19 @@ to say losetopinkgel: [Loss to Pink Gel.]
 			say "     As she approaches the Pink Gel seems a little disappointed. After a brief moment she decides what she wants to do. Pushing you onto your back she turns around and sits down, shoving her pussy in your face. Licking at the pink girl's juicy nethers your mouth is filled with the taste of strawberry jello. This only serves to increase your pace as you reach up and grab her ass, pulling her down to make sure you have full access to her dripping pussy. Moaning the gel girl returns the favor and buries her face in your moist crotch. After what seems like hours you feel your climax approaching. Not wanting to be outdone you increase your stimulation of the pink girl to be rewarded with a gush of her sweet fluids covering your face. Unable to hold back any more you cover her face with your own fluids. Smiling, the gel girl gives you a deep kiss, giving you a taste of your mixed fluids, before getting up and leaving.";
 		else: [Neuter Player]
 			say "     As the Pink Gel approaches you can see the look of disappointment on her face as she stares at your featureless groin. Undaunted she pushes you onto your back and shoves her pussy into your face. As you begin to lick her juicy nethers your mouth is filled with the taste of strawberry jello. This only serves to increase your pace as the gel girl begins to moan. Looking up you can see that she has started fondling her massive tits while you continue to eat her out. After what seems like hours the pink girl lets out a final moan and arches her back. As she reaches her climax she coats your face in her sweet pink fluids. Once she is finished she gets up and leaves, but not before giving you a final kiss, licking most of her fluids up in the process.";
-		if "Female Preferred" is listed in feats of Player and girl is not banned: [Changes target to Pink Gel for infection.]
+		if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Pink Gel":
 					now MonsterID is y;
 					break;
-		if "Herm Preferred" is listed in feats of Player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
+		if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Purple Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Purple Gel":
 					now MonsterID is y;
 					break;
-		else if guy is not banned: [Changes target to Blue Gel for infection. Cross infect, Pink Gel infects with Blue Gel if no gender preferred feat or if male preferred.]
+		else if MaleList is not banned: [Changes target to Blue Gel for infection. Cross infect, Pink Gel infects with Blue Gel if no gender preferred feat or if male preferred.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Blue Gel":
@@ -100,19 +100,19 @@ to say losetobluegel: [Loss to Blue Gel.]
 			say "     Spreading your legs the Blue Gel buries his cock into your [CockName of Player] sex. Grabbing your [Skin of Player] [breast size desc of Player] breasts for leverage he begins pistoning into you. As he continues you can't help but start thrusting back into him. Unable to hold back you scream as you reach your peak, clamping down on his blue member. The added pressure causes the gel to reach his end as well and he fills you with his blue seed. Pulling out, he sprays his last few jets of cum across your body. Seeming to have enjoyed himself the gel continues on his way leaving you covered in his goo with it leaking out of your abused pussy.[impregchance]";
 		else: [Neuter Player]
 			say "     Seeming displeased that you have no gender, the Blue Gel grabs you by the back of the head an impales your throat on his member. Unable to muster the strength to fight back you are forced to allow the gel to brutally facefuck you. After some time he slams himself fully in your mouth and begins pumping his seed down your throat. When he finally finishes and pulls out you are relieved that the ordeal is over. The gel man has other plans though. Forcing you onto your stomach the blue man lines himself up and pushes into your rear entrance. Eventually, with one final thrust, he fills your bowels with his blue seed. Once he has finished he pulls out dropping you to the ground as his goo leaks from your ass and leaves.";
-		if "Male Preferred" is listed in feats of Player and guy is not banned: [Changes target to Blue Gel for infection.]
+		if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Blue Gel":
 					now MonsterID is y;
 					break;
-		else if "Herm Preferred" is listed in feats of Player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
+		else if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Purple Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Purple Gel":
 					now MonsterID is y;
 					break;
-		else if girl is not banned: [Changes target to Pink Gel for infection. Cross infect, Blue Gel infects with Pink Gel if no gender preferred feat or if female preferred.]
+		else if FemaleList is not banned: [Changes target to Pink Gel for infection. Cross infect, Blue Gel infects with Pink Gel if no gender preferred feat or if female preferred.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Pink Gel":
@@ -171,13 +171,13 @@ to say losetopurplegel: [Loss to Purple Gel.]
 			say "     Spreading your legs the Purple Gel the tip of her member across your [CockName of Player] pussy. After a few minutes of teasing she easily slides into your now soaked slit. Grabbing your hips for extra leverage she begins to piston in and out of you. Leaning over the gel girl embraces you in a deep and passionate kiss. When she finally pulls away you feel slightly empty but are soon to distracted by the waves of pleasure running through your body as the purple girl picks up her pace. Reaching down you give your [breast size desc of Player] [SkinName of Player] tits a squeeze which is enough to set off your orgasm causing your vaginal walls to clamp down on the girl's member. This in turn causes her to peak and fill you with her purple seed as a gush of juices spray from her pussy onto the ground. Pulling out the gel leans over and gives you another kiss before leaving you in a growing puddle of her juices and seed.[impregchance]";
 		else: [Neuter Player]
 			say "     Disappointed that you have no sexual organs for her to enjoy the Purple Gel turns and shoves her pussy in your face while [if Breast Size of Player > 0]sliding her member between your [breast size desc of Player] [SkinName of Player] breasts[else]stoking her member[end if]. You begin licking the girl's waiting pussy as she grinds it against your face. Soon you bring her to her peak and she covers your face with a gush of her juices as her purple seed covers your [if Breast Size of Player > 0]tits[else]chest[end if] and stomach. After finishing the gel girl turns around and gives you a kiss and begins licking her juices off your face. Once she is done she moves down and licks her goo off your [if Breast Size of Player > 0]breasts[else]chest[end if] and stomach. Once she has licked you clean she gives you a final kiss, allowing you to taste the mixed flavors of her fluids, before turning and walking away.";
-		if "Female Preferred" is listed in feats of Player and girl is not banned: [Changes target to Pink Gel for infection.]
+		if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Pink Gel":
 					now MonsterID is y;
 					break;
-		else if "Male Preferred" is listed in feats of Player and guy is not banned: [Changes target to Blue Gel for infection.]
+		else if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if Name entry is "Blue Gel":
@@ -328,7 +328,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -361,12 +361,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -490,7 +490,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -523,12 +523,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -652,7 +652,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -685,12 +685,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -784,11 +784,11 @@ to say gel1:
 	say "     Eating the cup of pink jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Female Preferred" is listed in feats of Player and girl is not banned: [Changes target to Pink Gel for infection.]
+	if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		infect "Pink Gel";
-	else if "Herm Preferred" is listed in feats of Player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
+	else if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Purple Gel for infection.]
 		infect "Purple Gel";
-	else if guy is not banned: [Cross infection. Will infect with Blue Gel instead of Pink Gel if no gender preferred feat or if Female preferred.]
+	else if MaleList is not banned: [Cross infection. Will infect with Blue Gel instead of Pink Gel if no gender preferred feat or if Female preferred.]
 		infect "Blue Gel";
 	else:
 		infect "Pink Gel";
@@ -810,11 +810,11 @@ to say gel2:
 	say "     Eating the cup of blue jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Male Preferred" is listed in feats of Player and guy is not banned: [Changes target to Blue Gel for infection.]
+	if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
-	else if "Herm Preferred" is listed in feats of Player and hermaphrodite is not banned: [Changes target to Herm Gel for infection.]
+	else if "Herm Preferred" is listed in feats of Player and HermList is not banned: [Changes target to Herm Gel for infection.]
 		infect "Purple Gel";
-	else if girl is not banned: [Cross infection. Will infect with Pink Gel instead of Blue Gel if no gender preferred feat or if male preferred.]
+	else if FemaleList is not banned: [Cross infection. Will infect with Pink Gel instead of Blue Gel if no gender preferred feat or if male preferred.]
 		infect "Pink Gel";
 	else:
 		infect "Blue Gel";
@@ -836,9 +836,9 @@ to say gel3:
 	say "     Eating the cup of purple jello makes you a little less hungry and helps quench your thirst a bit, and really, what harm could it be?";
 	PlayerEat 6;
 	PlayerDrink 3;
-	if "Male Preferred" is listed in feats of Player and guy is not banned: [Changes target to Blue Gel for infection.]
+	if "Male Preferred" is listed in feats of Player and MaleList is not banned: [Changes target to Blue Gel for infection.]
 		infect "Blue Gel";
-	else if "Female Preferred" is listed in feats of Player and girl is not banned: [Changes target to Pink Gel for infection.]
+	else if "Female Preferred" is listed in feats of Player and FemaleList is not banned: [Changes target to Pink Gel for infection.]
 		infect "Pink Gel";
 	else:
 		infect "Purple Gel";

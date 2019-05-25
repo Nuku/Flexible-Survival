@@ -345,11 +345,11 @@ The printed name of Child is "Child".
 Child has text called name. The name of Child is usually "".
 Child has a number called Gestation.
 Child can be born. Child is not born.
-Child has a text called bodyname. Bodyname is usually "Human".
-Child has a text called facename. Facename is usually "Human".
-Child has a text called skinname. Skinname is usually "Human".
-Child has a text called cockname. cockname is usually "Human".
-Child has a text called tailname. Tailname is usually "Human".
+Child has a text called BodyName. BodyName is usually "Human".
+Child has a text called FaceName. FaceName is usually "Human".
+Child has a text called SkinName. SkinName is usually "Human".
+Child has a text called CockName. CockName is usually "Human".
+Child has a text called TailName. TailName is usually "Human".
 Child has a text called bodySpeciesName. BodySpeciesName is usually "Human".
 Child has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
 Child has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
@@ -373,14 +373,21 @@ Childrenfaces is a list of text that varies.
 Childrenskins is a list of text that varies.
 Childrenbodies is a list of text that varies.
 
+Table of GameCharacterIDs
+object	name
+child	"child"
+yourself	"yourself"
+Offspring	"offspring"
+Impregnator	"Impregnator"
+
 Impregnator is a person.
 The printed name of Impregnator is "Impregnator".
 Impregnator has text called name. The name of Impregnator is usually "".
-Impregnator has a text called bodyname. Bodyname is usually "Human".
-Impregnator has a text called facename. Facename is usually "Human".
-Impregnator has a text called skinname. Skinname is usually "Human".
-Impregnator has a text called cockname. cockname is usually "Human".
-Impregnator has a text called tailname. Tailname is usually "Human".
+Impregnator has a text called BodyName. BodyName is usually "Human".
+Impregnator has a text called FaceName. FaceName is usually "Human".
+Impregnator has a text called SkinName. SkinName is usually "Human".
+Impregnator has a text called CockName. CockName is usually "Human".
+Impregnator has a text called TailName. TailName is usually "Human".
 Impregnator has a text called bodySpeciesName. BodySpeciesName is usually "Human".
 Impregnator has a text called faceSpeciesName. FaceSpeciesName is usually "Human".
 Impregnator has a text called skinSpeciesName. SkinSpeciesName is usually "Human".
@@ -470,12 +477,6 @@ NewGraphicsRatio is a number that varies. NewGraphicsRatio is usually 30.
 NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually false. [set to true for entire playthrough if graphics window opened - unless inline/disabled specified at start]
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
-
-Table of GameCharacterIDs
-object	name
-child	"child"
-yourself	"yourself"
-Offspring	"offspring"
 
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
@@ -921,6 +922,49 @@ Definition: A person (called x) is HasTorsoAdornments:
 	if Torso Adornments of x is not "", yes;
 	no;
 
+A person can be HasHeadSkinAdjective. A person is usually not HasHeadSkinAdjective.
+
+Definition: A person (called x) is HasHeadSkinAdjective:
+	if Head Skin Adjective of x is not "", yes;
+	no;
+
+A person can be HasTorsoSkinAdjective. A person is usually not HasTorsoSkinAdjective.
+
+Definition: A person (called x) is HasTorsoSkinAdjective:
+	if Torso Skin Adjective of x is not "", yes;
+	no;
+
+A person can be HasBackSkinAdjective. A person is usually not HasBackSkinAdjective.
+
+Definition: A person (called x) is HasBackSkinAdjective:
+	if Back Skin Adjective of x is not "", yes;
+	no;
+
+A person can be HasArmsSkinAdjective. A person is usually not HasArmsSkinAdjective.
+
+Definition: A person (called x) is HasArmsSkinAdjective:
+	if Arms Skin Adjective of x is not "", yes;
+	no;
+
+A person can be HasLegsSkinAdjective. A person is usually not HasLegsSkinAdjective.
+
+Definition: A person (called x) is HasLegsSkinAdjective:
+	if Legs Skin Adjective of x is not "", yes;
+	no;
+
+
+A person can be HasAssSkinAdjective. A person is usually not HasAssSkinAdjective.
+
+Definition: A person (called x) is HasAssSkinAdjective:
+	if Ass Skin Adjective of x is not "", yes;
+	no;
+
+A person can be HasTailSkinAdjective. A person is usually not HasTailSkinAdjective.
+
+Definition: A person (called x) is HasTailSkinAdjective:
+	if Tail Skin Adjective of x is not "", yes;
+	no;
+
 A person can be HasTail. A person is usually not HasTail.
 
 Definition: A person (called x) is HasTail:
@@ -1206,36 +1250,32 @@ to say Breast Size Description of ( x - a person ):
 		-- 5:
 			say "DD cup";
 		-- 6:
-			say "E cup";
-		-- 7:
 			say "DDD cup";
-		-- 8:
-			say "F cup";
-		-- 9:
+		-- 7:
 			say "DDDD cup";
-		-- 10:
+		-- 8:
 			say "G cup";
-		-- 11:
+		-- 9:
 			say "H cup";
-		-- 12:
+		-- 10:
 			say "I cup";
-		-- 13:
+		-- 11:
 			say "J cup";
-		-- 14:
+		-- 12:
 			say "K cup";
-		-- 15:
+		-- 13:
 			say "L cup";
-		-- 16:
+		-- 14:
 			say "M cup";
-		-- 17:
+		-- 15:
 			say "N cup";
-		-- 18:
+		-- 16:
 			say "O cup";
-		-- 19:
+		-- 17:
 			say "P cup";
-		-- 20:
+		-- 18:
 			say "Q cup";
-		-- 21:
+		-- 19:
 			say "R cup";
 
 to say Asshole Depth Adjective of ( x - a person ):
@@ -1281,7 +1321,7 @@ to say Ball Size Adjective of ( x - a person ):
 		-- 0:
 			say "non-existant";
 		-- 1:
-			say "acorn-sized";
+			say "[one of]acorn-sized[or]gumball-sized[at random]";
 		-- 2:
 			say "dove egg-sized";
 		-- 3:
@@ -1297,11 +1337,11 @@ to say Ball Size Adjective of ( x - a person ):
 
 to say Cunt Tightness Adjective of ( x - a person ):
 	if Cunt Tightness of x < 4: [inches circumference]
-		say "extremely tight";
+		say "[one of]extremely tight[or]very snug[at random]";
 	else if Cunt Tightness of x < 6: [inches circumference]
-		say "tight";
+		say "[one of]tight[or]snug[at random]";
 	else if Cunt Tightness of x < 8: [inches circumference]
-		say "well-used";
+		say "[one of]receptive[or]well-used[at random]";
 	else if Cunt Tightness of x < 11: [inches circumference]
 		say "open";
 	else: [inches deep]
@@ -1312,15 +1352,15 @@ to say Clit Size Adjective of ( x - a person ):
 		-- 0:
 			say "nonexistent";
 		-- 1:
-			say "very small";
+			say "[one of]very small[or]tiny[at random]";
 		-- 2:
 			say "small";
 		-- 3:
-			say "average";
+			say "[one of]average[or]mid-sized[or]well sized[at random]";
 		-- 4:
-			say "large";
+			say "[one of]large[or]big[or]above average[at random]";
 		-- 5:
-			say "very large";
+			say "[one of]very large[or]very big[or]huge[at random]";
 
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
@@ -1658,141 +1698,132 @@ to say exitlist:
 Book 6 - Rules, Obey them!
 
 Part 1 - Flags
-
-[flag is a kind of thing.
-A flag has a list of text called infections.
-A flag has a list of situations called badspots.
-A flag can be banned. A flag is usually not banned.
-A flag can be warded. A flag is usually not warded.
-Cockvore is a flag.
-Furry is a flag.
-Guy is a flag.
-Girl is a flag.
-Humorous is a flag.
-Hermaphrodite is a flag.
-Hellspawn is a flag.
-Feral is a flag.
-Transgender is a flag.
-Incest is a flag.
-Noncon is a flag.
-Mindcontrol is a flag.
-Vore is a flag.
-when play begins:
-	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
-	add { "Ember Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman Bitch", "Ebonflame Drake", "Ewe", "Feline", "Husky Bitch", "Fruit Bat", "German Shepherd Male", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon Herm", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Smooth Collie Shemale", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of furry;
-	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd Male", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of guy;
-	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Pirate Shark", "Sewer Gator", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of hermaphrodite;
-	add { "Bear", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman Bitch", "Ewe", "Feline", "Husky Bitch", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of girl;
-	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of feral;
-	add { "Demon Brute" } to infections of hellspawn;
-	add { "Mothgirl", "Smooth Collie Shemale" } to infections of transgender;
-]
+[Tags and Flags moved to Core Mechanics/Banning.i7x]
 
 [corollary]
 marker is a kind of thing.
 A marker has a list of text called infections.
-Tailweapon is a marker.
-when play begins:
-	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
 
-Felinelist is a marker. [list of feline infections]
-when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of Felinelist;
+[Species Lists]
+AvianList is a marker. [list of avian/bird infections]
+AvianpredList is a marker. [list of predatory avian/bird infections]
+AquaticList is a marker. [list of aquatic infections]
+CanineList is a marker. [list of canine/lupine infections]
+CervineList is a marker. [list of cervine infections]
+EquineList is a marker. [list of equine infections]
+FelineList is a marker. [list of feline infections]
+HumanList is a marker. [list of humanish infections]
+InsectList is a marker. [list of insectile/arachnid/bug infections]
+LatexList is a marker. [list of infections w/latex/rubber/plastic skin]
+MachineList is a marker. [list of machine infections]
+MustelidList is a marker.
+PlantList is a marker. [list of plant infections]
+PorkineList is a marker. [list of piggy infections]
+PrimateList is a marker. [list of plant infections]
+ReptileList is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
+RodentList is a marker. [list of rodent infections]
+SlimeList is a marker. [list of slime infections]
+UrsineList is a marker. [list of bear infections]
+VulpineList is a marker. [list of vulpine infections]
 
-Caninelist is a marker. [list of canine/lupine infections]
-when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Caninelist;
-
-Equinelist is a marker. [list of equine infections]
-when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Red Horse", "Stallionboi", "Unicorn", "Zebra" } to infections of Equinelist;
-
-Vulpinelist is a marker. [list of vulpine infections]
-when play begins:
-	add { "Arctic fox", "Clockwork Fox", "Hermaphrodite Latex Vixen", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of Vulpinelist;
-
-Reptilelist is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
-when play begins:
-	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
-
-Insectlist is a marker. [list of insectile/arachnid/bug infections]
-when play begins:
-	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur Male", "Spidertaur Female" } to infections of Insectlist;
-
-Plantlist is a marker. [list of plant infections]
-when play begins:
-	add { "Awesome tree", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of Plantlist;
-
-Avianlist is a marker. [list of avian/bird infections]
-when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman Male", "Blue Gryphon Herm", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of Avianlist;
-
-Avianpredlist is a marker. [list of predatory avian/bird infections]
-when play begins:
-	add { "Bald Eagle", "Fluffy Owl", "Hawkman Male", "Blue Gryphon Herm" } to infections of Avianpredlist;
-
-Rodentlist is a marker. [list of rodent infections]
-when play begins:
-	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of Rodentlist;
-
-Latexlist is a marker. [list of infections w/latex/rubber/plastic skin]
-when play begins:
-	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of Latexlist;
-
-Slimelist is a marker. [list of slime infections]
-when play begins:
-	add { "Liquidshifter" } to infections of Slimelist;
-
-Magicallist is a marker. [list of magic based infections]
-when play begins:
-	add { "Goblin", "Hydra Beast", "Mothgirl" } to infections of Magicallist;
-
-Machinelist is a marker. [list of machine infections]
-when play begins:
-	add { "Clockwork Fox", "Junkman", "Wildcat" } to infections of Machinelist;
-
-Humanishlist is a marker. [list of humanish infections]
-when play begins:
-	add { "Caveman", "Helot", "Spartan", "Viking" } to infections of Humanishlist;
-
+[Type Lists]
+HistoricalList is a marker. [list of historical creature infections]
+MagicalList is a marker. [list of magic based infections]
+MythologicalList is a marker. [list of mythological creature infections]
+NoLegList is a marker. [list of infections without legs]
+OtherworldlyList is a marker. [list of infections from other worlds]
 TaurList is a marker. [list of tauric infections]
+
+[Genital Lists]
+BarbedCockList is a marker. [List of creatures with a barbed cock]
+BluntList is a marker. [list of infections w/blunt cock]
+InternalList is a marker. [list of infections w/internal male genitals]
+KnotList is a marker. [list of infections w/knotted cock]
+OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
+TentacleList is a marker. [list of infections w/tentacle cock]
+
+[Ability Lists]
+FirebreathList is a marker. [List of fire breathing creatures]
+FlightList is a marker. [list of infections w/flight capability]
+SwimList is a marker. [list of infections capable of swimming underwater]
+TailweaponList is a marker.
+
 when play begins:
-	add { "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Reptaur", "Skunk Taur", "Tigertaur", "Wolftaur" } to infections of TaurList;
+	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
+
+when play begins:
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of FelineList;
+
+when play begins:
+	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
+
+when play begins:
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Morgan Horse Stallion", "Stallionboi", "Unicorn", "Zebra Stallion" } to infections of EquineList;
+
+when play begins:
+	add { "Arctic fox", "Clockwork Fox", "Hermaphrodite Latex Vixen", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of VulpineList;
+
+when play begins:
+	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of ReptileList;
+
+when play begins:
+	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur Male", "Spidertaur Female" } to infections of InsectList;
+
+when play begins:
+	add { "Awesome tree", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of PlantList;
+
+when play begins:
+	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman Male", "Blue Gryphon Herm", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of AvianList;
+
+when play begins:
+	add { "Bald Eagle", "Fluffy Owl", "Hawkman Male", "Blue Gryphon Herm" } to infections of AvianpredList;
+
+when play begins:
+	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of RodentList;
+
+when play begins:
+	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of LatexList;
+
+when play begins:
+	add { "Liquidshifter" } to infections of SlimeList;
+
+when play begins:
+	add { "Goblin", "Hydra Beast", "Mothgirl" } to infections of MagicalList;
+
+when play begins:
+	add { "Clockwork Fox", "Junkman", "Wildcat" } to infections of MachineList;
+
+when play begins:
+	add { "Caveman", "Helot Manservant", "Spartan", "Viking Woman" } to infections of HumanList;
+
+when play begins:
+	add { "Centaur Mare", "Centaur Stallion", "Mutant Centaur", "Panther Taur", "Reptaur", "Skunk Taur", "Spidertaur Male", "Spidertaur Female", "Tigertaur", "Wolftaur" } to infections of TaurList;
 [Note, this does not contain the special tauric version of the Skunkbeast Lord form, as that is conditional. It also does not include the Spidergirl and Spidertaur forms, as their genitals are located in the front where the human pelvis would be, and therefore would not match with scenes specifically designed for taur anatomy.]
 
-NoLegList is a marker. [list of infections without legs]
 when play begins:
 	add { "Blue Gel", "Pink Gel", "Purple Gel" } to infections of NoLegList;
 
-Knotlist is a marker. [list of infections w/knotted cock]
 when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman Bitch", "Dracovixentaur", "Husky Bitch", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd Male", "Hellhound", "Blue Gryphon Herm", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Smooth Collie Shemale", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of Knotlist;
+	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman Bitch", "Dracovixentaur", "Husky Bitch", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd Male", "Hellhound", "Blue Gryphon Herm", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Smooth Collie Shemale", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of KnotList;
 
-Internallist is a marker. [list of infections w/internal male genitals]
 when play begins:
-	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of Internallist;
+	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of InternalList;
 
-BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
 
-Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
-	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of Firebreathlist;
+	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of FirebreathList;
 
-Bluntlist is a marker. [list of infections w/blunt cock]
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra", "Wyvern" } to infections of Bluntlist;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino Stallion", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra Stallion", "Wyvern" } to infections of BluntList;
 
-Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman Male", "Harpy", "Blue Gryphon Herm", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
+	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman Male", "Harpy", "Blue Gryphon Herm", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of FlightList;
 
-Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
-	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of Swimlist;
+	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of SwimList;
 
-OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
 when play begins:
 	add { "Frost Drake", "Avalon Kobold" } to infections of OviImpregnatorList;
 
@@ -3923,7 +3954,7 @@ to NewInfectionRoll:
 	else if x is 7: [Tail]
 		if TailName of Player is not Name entry:
 			if Tail Change entry is not "": [no tail, no message]
-				say "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry].";
+				say "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if Player is HasTail]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if].";
 			now TailName of Player is Name entry;
 			if Species Name entry is not "":
 				now TailSpeciesName of Player is Species Name entry;
@@ -4920,7 +4951,7 @@ This is the self examine rule:
 	if TorsoName of Player is "": [old infection]
 		say "Looking at yourself, your body is covered in [Skin of Player] skin. ";
 	if TorsoName of Player is not "" and BackName of Player is not "" and ArmsName of Player is not "" and NewTypeInfectionActive is true: [new infection on player and activated]
-		say "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]";
+		say "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]. Your [Limbs Adjective of Player] arms are [Arms Description of Player]";
 		if Arms Skin Adjective of Player is "":
 			say "[if Body Hair Length of Player > 1], covered in [Arms Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Arms Color of Player] skin[end if]";
 		say ". [if Player is HasBackAdornments]Your back tickles with the feeling of movement caused by [Back Adornments of Player]. [end if]";
@@ -4934,7 +4965,7 @@ This is the self examine rule:
 				if Nipple Count of Player > 4, say "The rest of your breasts keep going down by around a cup size at least the lower they go. ";
 		else:
 			say "You have two breasts on your [Torso adjective of Player] chest, curving out making it so you could easily fill a [Breast Size Description of Player]. Each one with a [Nipple Color of Player] [Nipple Shape of Player] resting at their center. ";
-		say "[if Player is HasTorsoAdornments]As you continue to inspect yourself, your [Arms Skin Adjective of Player] hand rubs across your lower stomach. You take a moment to feel your [Torso Adornments of Player]. [end if]";
+		say "[if Player is HasTorsoAdornments]As you continue to inspect yourself, your hand rubs across your lower stomach. You take a moment to feel your [Torso Adornments of Player]. [end if]";
 	else: [old infection]
 		say "Your body is [Body of Player]. ";
 		follow the breast descr rule;
@@ -6368,7 +6399,8 @@ Include Trash Coon by Stripes.
 Include Triceratops by Stripes.
 Include Twisted Pimp by Sarokcat.
 Include Unicorn by Sarokcat.
-Include Viking by Wahn.
+Include Viking Man by Wahn.
+Include Viking Woman by Wahn.
 Include Vixentaur by Stripes.
 Include Voodoo Gecko by Stripes.
 Include Vulpogryph by Stripes.
@@ -7949,8 +7981,8 @@ to BeardStyleSetting:
 		if Beard Style of Player is "chin strap beard":
 			say ": Current";
 		LineBreak;
-		say "(6) [link]Chin Strip[as]6[end link] ";
-		if Beard Style of Player is "chin strip":
+		say "(6) [link]Chin Strip Beard[as]6[end link] ";
+		if Beard Style of Player is "chin strip beard":
 			say ": Current";
 		LineBreak;
 		say "(7) [link]Circle Beard[as]7[end link] ";
@@ -8018,7 +8050,7 @@ to BeardStyleSetting:
 			-- 5:
 				now Beard Style of Player is "chin strap beard";
 			-- 6:
-				now Beard Style of Player is "chin strip";
+				now Beard Style of Player is "chin strip beard";
 			-- 7:
 				now Beard Style of Player is "circle beard";
 			-- 8:
@@ -8192,66 +8224,66 @@ to playernaming:
 	now name of Player is playerinput;
 
 to say menuwardlist:
-	if cockvore is warded or furry is warded or guy is warded or girl is warded or humorous is warded or hellspawn is warded or hermaphrodite is warded or incest is warded or transgender is warded or mindcontrol is warded or noncon is warded or vore is warded:
+	if CockVoreList is warded or FurryList is warded or MaleList is warded or FemaleList is warded or HumorousList is warded or DemonList is warded or HermList is warded or IncestList is warded or TransList is warded or MindcontrolList is warded or NonconList is warded or VoreList is warded:
 		say "[bold type]Warded: [bracket] ";
-		if cockvore is warded:
+		if CockVoreList is warded:
 			say "Cockvore ";
-		if feral is warded:
+		if FeralList is warded:
 			say "Feral ";
-		if furry is warded:
+		if FurryList is warded:
 			say "Furry ";
-		if guy is warded:
+		if MaleList is warded:
 			say "Guy ";
-		if girl is warded:
+		if FemaleList is warded:
 			say "Girl ";
-		if hermaphrodite is warded:
+		if HermList is warded:
 			say "Hermaphrodite ";
-		if humorous is warded:
+		if HumorousList is warded:
 			say "Humorous ";
-		if hellspawn is warded:
+		if DemonList is warded:
 			say "Hellspawn ";
-		if transgender is warded:
+		if TransList is warded:
 			say "Transgender ";
-		if incest is warded:
+		if IncestList is warded:
 			say "Incest ";
-		if noncon is warded:
+		if NonconList is warded:
 			say "Noncon ";
-		if mindcontrol is warded:
+		if MindcontrolList is warded:
 			say "Mindcontrol ";
-		if vore is warded:
+		if VoreList is warded:
 			say "Vore ";
 		say "[close bracket][roman type]";
 	else:
 		say "[bold type]None Warded[roman type]";
 
 to say menubanlist:
-	if cockvore is banned or furry is banned or guy is banned or girl is banned or humorous is banned or hellspawn is banned or hermaphrodite is banned or incest is banned or transgender is banned or mindcontrol is banned or noncon is banned or vore is banned:
+	if CockVoreList is banned or FurryList is banned or MaleList is banned or FemaleList is banned or HumorousList is banned or DemonList is banned or HermList is banned or IncestList is banned or TransList is banned or MindcontrolList is banned or NonconList is banned or VoreList is banned:
 		say "[bold type]Banned: [bracket] ";
-		if cockvore is banned:
+		if CockVoreList is banned:
 			say "Cockvore ";
-		if feral is banned:
+		if FeralList is banned:
 			say "Feral ";
-		if furry is banned:
+		if FurryList is banned:
 			say "Furry ";
-		if guy is banned:
+		if MaleList is banned:
 			say "Guy ";
-		if girl is banned:
+		if FemaleList is banned:
 			say "Girl ";
-		if hermaphrodite is banned:
+		if HermList is banned:
 			say "Hermaphrodite ";
-		if humorous is banned:
+		if HumorousList is banned:
 			say "Humorous ";
-		if hellspawn is banned:
+		if DemonList is banned:
 			say "Hellspawn ";
-		if transgender is banned:
+		if TransList is banned:
 			say "Transgender ";
-		if incest is banned:
+		if IncestList is banned:
 			say "Incest ";
-		if noncon is banned:
+		if NonconList is banned:
 			say "Noncon ";
-		if mindcontrol is banned:
+		if MindcontrolList is banned:
 			say "Mindcontrol ";
-		if vore is banned:
+		if VoreList is banned:
 			say "Vore ";
 		say "[close bracket][roman type]";
 	else:

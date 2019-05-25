@@ -30,8 +30,8 @@ Needy Rabbit Girl	"Needy Rabbit Girl"
 Needy Rabbit Girl is a situation.
 
 when play begins:
-	add Needy Rabbit Girl to badspots of girl;
-	add Needy Rabbit Girl to badspots of furry;
+	add Needy Rabbit Girl to BadSpots of FemaleList;
+	add Needy Rabbit Girl to BadSpots of FurryList;
 
 After resolving a Needy Rabbit Girl, try looking;
 

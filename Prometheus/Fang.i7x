@@ -580,7 +580,7 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and player is not neuter:	[ignored for 3+ days]
+instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and FemaleList is banned) and player is not neuter:	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
@@ -738,7 +738,7 @@ to say fangwscontent:
 Chapter 4 - Alpha Fang and Candy
 
 an everyturn rule:
-	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		now lastCandyfucked is turns;
 		now lastfuck of Fang is turns;
@@ -766,7 +766,7 @@ an everyturn rule:
 		else:
 			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy. You putter around in there for a while, Candy eventually returning. His fur is rather scruffy and his dress has got a tear in it. He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3]. The others seem a little concerned at this and you[else]. You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
 			say "     'Aieee! My dress!' Candy shrieks, spotting the torn shoulder. He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur. He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behavior['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack[']. As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
-	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
+	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		now lastfuck of Fang is turns;
 		project the Figure of Fang_face_icon;
@@ -830,7 +830,7 @@ when play ends:
 					else if lust of Fang < ( level of Felinoid companion - 6 ):	[felinoid victor]
 						say "     After your release from the military, you settle into your new life with the two of them coming along. They snap and growl at one another, but things remain civil enough at first. In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so. You accept your role readily, having become the wolf's fucktoy. But one day, Klauz takes exception to this and the two have a great fight that devastates your living room. In the end, your felinoid companion is victorious and forces the big wolf to submit to him as well.";
 						say "     Klauz celebrates his victory by mounting you while the wolf is left to watch, breeding you with a powerful roar. Once finished with you, he forces himself onto the defeated wolf, fucking him as well. ";
-						if hermaphrodite is banned:
+						if HermList is banned:
 							say "As you watch, Fang is fucked repeatedly until he's made submissive to the stronger cat. Klauz trains the wolf well, always making sure the wolf knows his place beneath him. Fang may still be your alpha wolf, but Klauz owns you both now.";
 						else:
 							say "As you watch, Fang gains a wet, bitch pussy to go along with his cock and balls and is then bred by the victorious Klauz. The felinoid trains the wolf well, breeding cubs in both your bellies. Fang may still be your alpha wolf, but Klauz owns you both now.";

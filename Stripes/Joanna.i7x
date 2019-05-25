@@ -12,8 +12,8 @@ Overrun Garden	"Overrun Garden"
 Overrun Garden is a situation. The level of Overrun Garden is 10.
 The sarea of Overrun Garden is "High".
 when play begins:
-	add Overrun Garden to badspots of hermaphrodite;
-	add Overrun Garden to badspots of girl;
+	add Overrun Garden to badspots of HermList;
+	add Overrun Garden to BadSpots of FemaleList;
 
 Instead of resolving a Overrun Garden:
 	if HP of Joanna is 0:
@@ -601,9 +601,9 @@ Dog Chase	"Dog Chase"
 Dog Chase is a situation. The level of Dog Chase is 2.
 The sarea of Dog Chase is "Outside".
 when play begins:
-	add Dog Chase to badspots of furry;
-	add Dog Chase to badspots of guy;
-	add Dog Chase to badspots of girl;
+	add Dog Chase to BadSpots of FurryList;
+	add Dog Chase to BadSpots of MaleList;
+	add Dog Chase to BadSpots of FemaleList;
 
 Instead of resolving a Dog Chase:
 	if HP of Joanna is 0:

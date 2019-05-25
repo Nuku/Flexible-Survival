@@ -255,8 +255,8 @@ Lonely Gryphoness	"Lonely Gryphoness"
 Lonely Gryphoness is a situation.
 The sarea of Lonely Gryphoness is "Outside".
 when play begins:
-	add Lonely Gryphoness to badspots of hermaphrodite;
-	add Lonely Gryphoness to badspots of furry;
+	add Lonely Gryphoness to badspots of HermList;
+	add Lonely Gryphoness to BadSpots of FurryList;
 
 gryphoncomforted is a number that varies.
 
@@ -308,8 +308,8 @@ Gryphoness nest	"Gryphoness nest"
 Gryphoness nest is a situation. Gryphoness nest is inactive.
 The sarea of Gryphoness nest is "Beach".
 when play begins:
-	add Gryphoness nest to badspots of hermaphrodite;
-	add Gryphoness nest to badspots of furry;
+	add Gryphoness nest to badspots of HermList;
+	add Gryphoness nest to BadSpots of FurryList;
 
 Instead of resolving Gryphoness nest:
 	project Figure of BlueGryphon_icon;

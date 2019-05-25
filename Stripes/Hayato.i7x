@@ -17,8 +17,8 @@ Garage Demon	"Garage Demon"
 Garage Demon is a situation.
 The sarea of Garage Demon is "Capitol".
 when play begins:
-	add Garage Demon to badspots of guy;
-	add Garage Demon to badspots of hellspawn;
+	add Garage Demon to BadSpots of MaleList;
+	add Garage Demon to badspots of DemonList;
 
 Instead of resolving a Garage Demon:
 	if debugactive is 1:
@@ -427,9 +427,9 @@ Noh Mask	"Noh Mask"
 Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
 The sarea of Noh Mask is "Campus".
 when play begins:
-	add Noh Mask to badspots of furry;
-	add Noh Mask to badspots of guy;
-	add Noh Mask to badspots of girl;
+	add Noh Mask to BadSpots of FurryList;
+	add Noh Mask to BadSpots of MaleList;
+	add Noh Mask to BadSpots of FemaleList;
 
 instead of resolving Noh Mask:
 	if HP of Hayato is 11:
@@ -511,8 +511,8 @@ Oni Lair	"Oni Lair"
 Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
 The sarea of Oni Lair is "Capitol".
 when play begins:
-	add Oni Lair to badspots of guy;
-	add Oni Lair to badspots of hellspawn;
+	add Oni Lair to BadSpots of MaleList;
+	add Oni Lair to badspots of DemonList;
 
 instead of resolving Oni Lair:
 	if debugactive is 1:

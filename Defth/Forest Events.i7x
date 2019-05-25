@@ -9,10 +9,10 @@ Small Cave	"Small Cave"
 Small Cave is a situation.
 The sarea of Small Cave is "Forest".
 When play begins:
-	add Small Cave to badspots of Feral;
-	add Small Cave to badspots of Furry;
-	add Small Cave to badspots of Cockvore;
-	add Small Cave to badspots of Vore;
+	add Small Cave to badspots of FeralList;
+	add Small Cave to BadSpots of FurryList;
+	add Small Cave to badspots of CockvoreList;
+	add Small Cave to badspots of VoreList;
 
 Instead of resolving a Small Cave:
 	if glowing mushroom is owned:

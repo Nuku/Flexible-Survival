@@ -27,7 +27,7 @@ Smashed Hive	"Smashed Hive"
 Smashed Hive is a situation.
 The sarea of Smashed Hive is "Park".
 when play begins:
-	add Smashed Hive to badspots of girl;
+	add Smashed Hive to BadSpots of FemaleList;
 
 Instead of resolving a Smashed Hive:
 	if HP of bee girl is 0:

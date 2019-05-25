@@ -12,8 +12,8 @@ Easter Eggs	"Easter Eggs"
 Easter Eggs is a scavevent.
 The sarea of Easter Eggs is "Forest".
 when play begins:
-	add Easter Eggs to badspots of furry;
-	add Easter Eggs to badspots of hermaphrodite;
+	add Easter Eggs to BadSpots of FurryList;
+	add Easter Eggs to badspots of HermList;
 
 Instead of resolving Easter Eggs:
 	say "     Entering a small glade between the trees, you look around cautiously before crossing into it. At one edge, you spot a strange splash of color tucked under a bush. You approach and brush the leaves aside to see a mound of decorated eggs. They're colorful, some with solid colors and others striped or spotted - Easter eggs.";

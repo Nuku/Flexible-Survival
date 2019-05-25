@@ -59,47 +59,20 @@ to say LoganDesc:
 an everyturn rule:
 	if LoganRelationship > 10 and LoganRelationship < 90:
 		if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
-			if Player is in Logan's Bedroom and Logan is nowhere:
-				project the figure of Logan_face_icon;
-				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A short moment later, the three of them come into the Bedroom and Logan greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, the man sets down his gear next to the bed, quickly strips off and gets into bed, slipping under the covers dressed only in some baggy boxer shorts. His two wolves quickly follow, cuddling up to their master and getting some pats from him before all three of them doze off.";
-			else if Player is in Survivor Refuge and Logan is nowhere:
-				project the figure of Logan_face_icon;
-				say "     The front door is unlocked with the key and Logan opens it, letting in his two wolves Romulus and Remus. The feral canines beat their tails, happy to arrive back home and make a beeline for you, sniffing a little before they move on. A short moment later, when Logan is done closing the door and re-locking it securely, he greets you, but quickly makes clear that he's fairly tired and needs some rest. Yawning, he adds that you of course can feel free to stay longer, just to please not wake him. And with that, he vanishes into his bedroom, together with the two wolves.";
-			else if Player is in Logan's Bathroom and Logan is nowhere:
-				say "     You hear the front door open and close, then the barks of Romulus and Remus as they happily arrive back home. A little while later, you hear another door - that must have been the one to the bedroom. Sounds like the three of them came back and went straight to bed.";
-			move Logan to Logan's Bedroom;
-		[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Logan sleeps]
-		[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Logan sleeps in]
+			say "...";
+		else if TimekeepingVar is 0 or TimekeepingVar is -8: [pre dawn]
+			say "...";
+		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
+			say "...";
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-			if Player is in Logan's Bedroom:
-				project the figure of Logan_face_icon;
-				say "     Waking up after a restful night, Logan sits up between the two wolves cuddled up against him and stretches his arms, which gives you a good view of his broad-shouldered chest and trained body. He yawns and says good morning to you, then gently shakes Romulus and Remus awake and goes into the main room of the apartment to feed them. Logan returns a little while later, still in nothing but his baggy boxer shorts. 'Did I miss anything exciting going on out there?' he asks with a nod to the city outside the large windows and his telescope specifically. As you shake your head, he smiles and goes to grab his usual outfit, getting dressed before he sits down at his desk.";
-			else if Player is in Survivor Refuge:
-				say "     Suddenly, the door to the bedroom opens and Logan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
-			else if Player is in Logan's Bathroom:
-				say "     You hear a door open and close, then happy barks by Romulus and Remus. Sounds like Logan woke up and just went to feed them.";
+			say "...";
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
-			if Player is in Logan's Bedroom:
-				project the figure of Logan_face_icon;
-				say "     Sitting up from working at his desk, where he was updating some lists and his journal, Logan stretches out and goes into the main room of the loft apartment.";
-			else if Player is in Survivor Refuge:
-				project the figure of Logan_face_icon;
-				say "     Logan comes out of the bedroom and nods to you, then sits down on the lifting bench and starts to pump a weight up and down. He keeps at it tirelessly for quite a while too - no wonder he has such a physique.";
-			else if Player is in Logan's Bathroom:
-				say "     You hear a door open and close somewhere nearby - the bedroom maybe? Then some fairly low, rhythmic grunting starts up in the main room of the loft apartment.";
-			move Logan to Survivor Refuge;
+			say "...";
 		else if TimekeepingVar is 4 or TimekeepingVar is -4: [mid afternoon]
-			if Player is in Survivor Refuge and Logan is in Survivor Refuge:
-				project the figure of Logan_face_icon;
-				say "     Finishing with a fairly well-rounded exercise routine, Logan moves over to the comfortable sofa in the front half of the room and sits down on it. As he leans forward to grab a book, Romulus and Remus are already on the way to join him on the sofa, soon flanking the muscular man on both sides and pressing up against him. They sniff him happily and lap at any exposed skin, licking his salty sweat off. After a minute or two of this, with Logan stroking his companions['] fur, the three of them quiet down and sit quietly to read - the wolves either understanding what is written in the book too, or simply enjoying the companionship with their master.";
+			say "...";
 		else if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
-			if ((player is in Logan's Bedroom or player is in Logan's Bathroom) and Logan is in Survivor Refuge):
-				say "     You hear Logan say, 'Come on guys, time for some scavenging!' The happy barks of his two wolves follow, and soon after, you hear the front door open and close.";
-			else if Player is in Survivor Refuge and Logan is in Survivor Refuge:
-				project the figure of Logan_face_icon;
-				say "     Going to collect his gear - backpack, baseball bat and taser - Logan then waves the wolves up from where they have been lounging around and says, 'Come on guys, time for some scavenging!' Both Romulus as well as Remus give happy barks, tails wagging eagerly to go out with their master. Logan bids you farewell, saying that you can stay and keep an eye on the place while he's out, then leads his companions to the door and leaves.";
-			now Logan is nowhere; [stashed in another dimension]
-		[else if TimekeepingVar is 2 or TimekeepingVar is -6:] [early night - unused, Logan is out scavenging]
+			say "...";
+		else if TimekeepingVar is 2 or TimekeepingVar is -6: [early night]
 ]
 
 [***********************************************************]

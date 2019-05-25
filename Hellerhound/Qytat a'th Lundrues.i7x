@@ -11,8 +11,8 @@ Guard Gryphon	"Guard Gryphon"
 Guard Gryphon is a situation.
 findablestairs is a number that varies.
 when play begins:
-	add Guard Gryphon to badspots of hermaphrodite;
-	add Guard Gryphon to badspots of furry;
+	add Guard Gryphon to badspots of HermList;
+	add Guard Gryphon to BadSpots of FurryList;
 
 
 Instead of resolving a Guard Gryphon:

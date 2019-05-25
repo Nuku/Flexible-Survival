@@ -17,8 +17,8 @@ Surprise Shark Encounter is a situation.
 The sarea of Surprise Shark Encounter is "Atlantis".
 
 when play begins:
-	add Surprise Shark Encounter to badspots of guy;
-	add Surprise Shark Encounter to badspots of furry;
+	add Surprise Shark Encounter to BadSpots of MaleList;
+	add Surprise Shark Encounter to BadSpots of FurryList;
 
 after going to Atlantis City Center while (Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1):
 	FirstKurtEvent;
@@ -47,8 +47,8 @@ Predator's Lunch is inactive.
 The sarea of Predator's Lunch is "Atlantis".
 
 when play begins:
-	add Predator's Lunch to badspots of guy;
-	add Predator's Lunch to badspots of furry;
+	add Predator's Lunch to BadSpots of MaleList;
+	add Predator's Lunch to BadSpots of FurryList;
 
 after going to Atlantis City Market while (Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
 	SecondKurtEvent;

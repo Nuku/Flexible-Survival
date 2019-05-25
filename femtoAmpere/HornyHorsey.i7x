@@ -388,27 +388,27 @@ to say ammy_playerchestdesc:
 	say "[if Breast Size of Player > 0][breast size desc of Player] breasts[else][bodytype of Player] chest[end if]";
 
 to ammy_infect:
-	if furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned ):
+	if FurryList is banned or ( MaleList is banned and FemaleList is banned and HermList is banned ):
 		increase score by 0; [do nothing]
 	else:
 		let rinflist be a list of numbers;
-		if girl is not banned:
-			add 1 to rinflist; [Mareslut]
-		if guy is not banned:
-			add 2 to rinflist; [Horseman]
-			add 3 to rinflist; [Stallionboi]
-			add 4 to rinflist; [Zebra]
-			add 5 to rinflist; [red horse]
-			add 6 to rinflist; [Unicorn]
-		if hermaphrodite is not banned:
-			add 7 to rinflist; [black equinoid]
+		if FemaleList is not banned:
+			add 1 to rinfList; [Mareslut]
+		if MaleList is not banned:
+			add 2 to rinfList; [Horseman]
+			add 3 to rinfList; [Stallionboi]
+			add 4 to rinfList; [Zebra]
+			add 5 to rinfList; [red horse]
+			add 6 to rinfList; [Unicorn]
+		if HermList is not banned:
+			add 7 to rinfList; [black equinoid]
 		sort rinflist in random order;
 		if entry 1 of rinflist is:
 		-- 1: infect "Mareslut";
 		-- 2: infect "Horseman";
 		-- 3: infect "Stallionboi";
-		-- 4: infect "Zebra";
-		-- 5: infect "Red Horse";
+		-- 4: infect "Zebra Stallion";
+		-- 5: infect "Morgan Horse Stallion";
 		-- 6: unicornify;
 		-- 7: infect "Black Equinoid";
 

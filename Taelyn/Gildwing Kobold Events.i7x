@@ -330,9 +330,9 @@ GildwingKoboldTest is a situation.
 The sarea of GildwingKoboldTest is "Nowhere".
 
 when play begins:
-	add GildwingKoboldTest to badspots of girl;
-	add GildwingKoboldTest to badspots of guy;
-	add GildwingKoboldTest to badspots of furry;
+	add GildwingKoboldTest to BadSpots of FemaleList;
+	add GildwingKoboldTest to BadSpots of MaleList;
+	add GildwingKoboldTest to BadSpots of FurryList;
 
 Instead of resolving GildwingKoboldTest:
 	GildwingKoboldTest;

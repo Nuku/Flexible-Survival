@@ -302,7 +302,9 @@ impregwith is an action applying to one topic.
 understand "impreg with [text]" as impregwith.
 
 check impregwith:
-	if debugactive is 0, say "You aren't currently debugging." instead;
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out impregwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -316,7 +318,9 @@ infectwith is an action applying to one topic.
 understand "infect with [text]" as infectwith.
 
 check infectwith:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out infectwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -554,12 +558,27 @@ RemoveFeat is an action applying to one topic.
 understand "RemoveFeat [text]" as RemoveFeat.
 
 check RemoveFeat:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out RemoveFeat:
 	if topic understood is listed in feats of Player:
 		remove topic understood from feats of Player;
 	else:
 		say "[topic understood] is not in Feats of Player!";
+
+DebugInfect is an action applying to one topic.
+
+understand "DebugInfect [text]" as DebugInfect.
+
+check DebugInfect:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DebugInfect:
+	say "Infecting with [topic understood]:[line break]";
+	infect "[topic understood]";
 
 Debugging Tools ends here.

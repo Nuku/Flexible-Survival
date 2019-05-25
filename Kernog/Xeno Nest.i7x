@@ -96,7 +96,7 @@ to say boldNestExploration:
 
 to xenoNestEncounter:
 	WaitLineBreak;
-	setmonster "Xeno"; [We set the monster to Xeno here, so that every monster can use ovichance in their scenes]
+	setmonster "Xeno Drone"; [We set the monster to Xeno here, so that every monster can use ovichance in their scenes]
 	let rand be a random number between 1 and 5;
 	if rand is 1:
 		say "[nestXenoFight]";
@@ -107,7 +107,7 @@ to xenoNestEncounter:
 
 to say nestXenoFight:
 	now inasituation is true;
-	challenge "Xeno";
+	challenge "Xeno Drone";
 	now inasituation is false;
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent. Instead of having its way with you, the creature violently bashes your head on the floor, knocking you out on the spot. As your consciousness fades, you feel the monster grab your leg and drag you to an unknown place.";

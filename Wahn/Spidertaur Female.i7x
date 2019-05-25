@@ -5,9 +5,6 @@ Version 1 of Spidertaur Female by Wahn begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Spidertaur Female" } to infections of girl;
-
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
@@ -18,6 +15,12 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is true;
 	now Species Name entry is "Spidertaur";
+	add "Spidertaur Female" to infections of FemaleList;
+	add "Spidertaur Female" to infections of TaurList;
+	add "Spidertaur Female" to infections of InsectList;
+	add "Spidertaur Female" to infections of InternalList;
+	add "Spidertaur Female" to infections of MythologicalList;
+	add "Spidertaur Female" to infections of OviImpregnatorList;
 	now Name entry is "Spidertaur Female";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -64,7 +67,7 @@ When Play begins:
 	now type entry is "[one of]arachnid[or]spider-person[at random]";
 	now magic entry is false;
 	now resbypass entry is false;
-	now non-infectious entry is true;
+	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
@@ -84,7 +87,7 @@ When Play begins:
 	now Androginity entry is 8; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is "they take on the appearance of an attractive human with almost porcelain-pale skin "; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is "of an attractive human with almost porcelain-pale skin"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Description entry is "an attractive human with almost porcelain-pale skin"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is "human"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -105,7 +108,7 @@ When Play begins:
 	now Tongue Color entry is "pink"; [one word color descriptor]
 	now Tongue Length entry is 6; [length in inches]
 	now Torso Change entry is "it becomes that of a regular human, if somewhat slender in build. Pale, almost porcelain-like skin quickly spreads over it"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is "that of a regular human, somewhat slender in build and with pale, almost porcelain-like skin"; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is "that of a regular human, somewhat slender in build and with pale, almost porcelain-like skin"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is "human"; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -127,32 +130,32 @@ When Play begins:
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "octapedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is "they contort and flex, dividing into four, then eight separate limbs. Growing quickly to become long and spindly, the skin on all of your legs hardens into plates of midnight black chitin, with all eight of them ending in sharp points as dangerous as short swords"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "plated in hard chitin plates, midnight black with spiky protrusions and ending in sharp points as dangerous as short swords"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Change entry is "they contort and flex, dividing into four, then eight separate limbs. Growing quickly to become long and spindly, the skin on all of your legs hardens into plates of midnight-black chitin, with all eight of them ending in sharp points as dangerous as short swords"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is "plated in hard chitin plates, midnight-black with spiky protrusions and ending in sharp points as dangerous as short swords"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is "chitin-plated"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is "midnight black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is "it becomes small and dainty in size, its midnight black-skinned cheeks framed by thin and flexible chitin plates"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "buttocks, framed by thin and flexible chitin plates as they are"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Legs Color entry is "midnight-black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is "it becomes a bulging insectile abdomen, soon covered in quickly hardening black plates of chitin"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is "and bulging insectile abdomen plated in glistening-black plates of curved chitin"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
 	now Ass Skin Adjective entry is "chitinous";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is "midnight black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 1; [ass width from 1-5]
+	now Ass Color entry is "midnight-black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 5; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is "a bulging insectile abdomen grows out of your tailbone, soon covered in quickly hardening black plates of chitin"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
-	now Tail Description entry is "bulging insectile abdomen plated in glistening black plates of curved chitin"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is "chitinous"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is "midnight black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 20; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is "glistening black"; [one word color descriptor]
+	now Asshole Color entry is "glistening-black"; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is "[one of]spidertaur[or]nonhuman[or]ridged[at random]"; [one word adjective: avian/canine/...]
-	now Cock Change entry is "it takes on a nunhuman shape, with a pointy tip as well as a series of ridges on the underside"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Change entry is "it takes on a nonhuman shape, with a pointy tip as well as a series of ridges on the underside"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
 	now Cock Description entry is "has a pointy tip as well as a series of ridges on the underside, promising a receiving partner a wild ride"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is "dark almond"; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
@@ -166,7 +169,7 @@ When Play begins:
 	now Cunt Adjective entry is "[one of]spidertaur[or]nonhuman[or]protected[at random]"; [one word adjective: avian/canine/...]
 	now Cunt Change entry is "it withdraws a little into your body, with chitinous plates forming around it in a little shield. With a little concentration, you can pull them aside to reveal the delicate folds of your nether lips"; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is "protected by chitinous armor plates, with the delicate folds of your nether lips and an averagely sized clit hidden beneath"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
-	now Cunt Color entry is "glistening black"; [one word color descriptor]
+	now Cunt Color entry is "glistening-black"; [one word color descriptor]
 	now Clit Size entry is 3; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 

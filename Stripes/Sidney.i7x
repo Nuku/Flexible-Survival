@@ -61,8 +61,8 @@ Meeting Sidney	"Meeting Sidney"
 Meeting Sidney is a situation.
 The sarea of Meeting Sidney is "Outside".
 when play begins:
-	add Meeting Sidney to badspots of furry;
-	add Meeting Sidney to badspots of girl;
+	add Meeting Sidney to BadSpots of FurryList;
+	add Meeting Sidney to BadSpots of FemaleList;
 
 sa_redvixen is a truth state that varies. sa_redvixen is usually false.
 sa_otteress is a truth state that varies. sa_otteress is usually false.
@@ -120,7 +120,7 @@ to say sidneyconvinced:
 to say sidneyoptions:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if guy is banned, now sa_wusky is true;
+	if MaleList is banned, now sa_wusky is true;
 	if sa_redvixen is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Red Fox Vixen";
@@ -387,7 +387,7 @@ to say sexwithSidney:
 		say "ERROR-Sidney-[HP of Sidney]F: You should not be able to find me yet. Resetting.";
 		now HP of Sidney is 0;
 		now Sidney is nowhere;
-		if girl is not banned and furry is not banned, now Meeting Sidney is active;
+		if FemaleList is not banned and FurryList is not banned, now Meeting Sidney is active;
 	else if Player is neuter:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";
 	else if lastfuck of Sidney - turns < 6:

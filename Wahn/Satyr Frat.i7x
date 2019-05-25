@@ -187,8 +187,8 @@ Let's Party is a situation.
 Let's Party is inactive.
 The sarea of Let's Party is "Campus".
 when play begins:
-	add Let's Party to badspots of guy;       [frat boys]
-	add Let's Party to badspots of girl;      [sorority girls]
+	add Let's Party to BadSpots of MaleList;       [frat boys]
+	add Let's Party to BadSpots of FemaleList;      [sorority girls]
 
 Instead of resolving a Let's Party:
 	SatyrFratPartyVisit;
@@ -593,8 +593,8 @@ Divine Wine-Cellar is inactive.
 The sarea of Divine Wine-Cellar is "Museum".
 
 when play begins:
-	add Divine Wine-Cellar to badspots of guy; [male satyr]
-	add Divine Wine-Cellar to badspots of furry; [satyr involved]
+	add Divine Wine-Cellar to BadSpots of MaleList; [male satyr]
+	add Divine Wine-Cellar to BadSpots of FurryList; [satyr involved]
 
 [ JaksEncounters                                            ]
 [  0: not met                                               ]

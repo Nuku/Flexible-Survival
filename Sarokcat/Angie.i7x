@@ -41,8 +41,8 @@ AngieTrapped	"AngieTrapped"
 AngieTrapped is a situation.
 The sarea of AngieTrapped is "Zoo".
 when play begins:
-	add AngieTrapped to badspots of hermaphrodite;
-	add AngieTrapped to badspots of furry;
+	add AngieTrapped to badspots of HermList;
+	add AngieTrapped to BadSpots of FurryList;
 
 Instead of Resolving a AngieTrapped:
 	if AngieHappy is 0:

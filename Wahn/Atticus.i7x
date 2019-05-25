@@ -39,8 +39,8 @@ Incubus Offspring Meeting is a situation.
 The sarea of Incubus Offspring Meeting is "Nowhere".
 
 when play begins:
-	add Incubus Offspring Meeting to badspots of guy;
-	add Incubus Offspring Meeting to badspots of Incest;
+	add Incubus Offspring Meeting to BadSpots of MaleList;
+	add Incubus Offspring Meeting to badspots of IncestList;
 
 after going to Burned-Out Chapel while (LilithKidCounter > 0 and PlayerMet of Atticus is false and Elijah is not in Burned-Out Chapel and a random chance of 1 in 3 succeeds): [Atticus exists, hasn't met the player, Elijah not in there (too complex), 33% chance]
 	move Atticus to Burned-Out Chapel;

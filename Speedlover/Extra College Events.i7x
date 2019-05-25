@@ -151,7 +151,7 @@ Fountain Naiad is a situation.
 The sarea of Fountain Naiad is "Campus".
 
 when play begins:
-	add Fountain Naiad to badspots of girl;
+	add Fountain Naiad to BadSpots of FemaleList;
 
 after going to College Fountain while (Fountain Naiad is active and Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
 	try looking;
@@ -196,7 +196,7 @@ Frat Party Recruiter is inactive.
 The sarea of Frat Party Recruiter is "Campus".
 
 when play begins:
-	add Frat Party Recruiter to badspots of guy;
+	add Frat Party Recruiter to BadSpots of MaleList;
 
 after going to College Walkway West while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	try looking;
@@ -328,8 +328,8 @@ Course Advice is a situation.
 The sarea of Course Advice is "Campus".
 
 when play begins:
-	add Course Advice to badspots of girl;
-	add Course Advice to badspots of guy;
+	add Course Advice to BadSpots of FemaleList;
+	add Course Advice to BadSpots of MaleList;
 
 after going north from College Fountain while (Course Advice is not resolved):
 	try looking;
@@ -473,10 +473,10 @@ to LibrarySexEvent:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 3:
-				say "You decide to wander around between the rows of bookshelves. Picking out one book that interests you, taking a seat at one of the reading tables is almost automatic right after. You find yourself next to an androgynous goat student. [if Girl is banned or Girl is warded]He[else]She[end if] has the complete look of the quiet, nerdy collegian, including the large glasses and the timid look given when your eyes catch each other. After ten minutes or so of reading, you hear something buzz. You look around, but you cannot see any mobile phone around. You go back to your reading, but the buzzing comes back at regular intervals, until it becomes rather annoying. You are about to go look for the guilty party, when you hear your caprine neighbor groan. 'E-enough.'";
+				say "You decide to wander around between the rows of bookshelves. Picking out one book that interests you, taking a seat at one of the reading tables is almost automatic right after. You find yourself next to an androgynous goat student. [if FemaleList is banned or FemaleList is warded]He[else]She[end if] has the complete look of the quiet, nerdy collegian, including the large glasses and the timid look given when your eyes catch each other. After ten minutes or so of reading, you hear something buzz. You look around, but you cannot see any mobile phone around. You go back to your reading, but the buzzing comes back at regular intervals, until it becomes rather annoying. You are about to go look for the guilty party, when you hear your caprine neighbor groan. 'E-enough.'";
 				say "     [bold type]Do you wish to talk to the student?[roman type][line break]";
 				LineBreak;
-				say "     ([link]Y[as]y[end link]) [if Girl is banned or Girl is warded]He[else]She[end if] acts funny. You should talk to [if Girl is banned or Girl is warded]him[else]her[end if].";
+				say "     ([link]Y[as]y[end link]) [if FemaleList is banned or FemaleList is warded]He[else]She[end if] acts funny. You should talk to [if FemaleList is banned or FemaleList is warded]him[else]her[end if].";
 				say "     ([link]N[as]n[end link]) - Something fishy must be going on, you would better focus on your reading.";
 				if Player consents:
 					LineBreak;
@@ -484,7 +484,7 @@ to LibrarySexEvent:
 					say "     Just as she says these words, another buzzing shook her body. She cowered on her chair, trembling. You swear you can hear her moan. 'C-cummm...' She looks up at you again. Her groin area looks damp. 'E-excuse me. I-I need to go to the restroom,' she suddenly says, and she hurries off, the buzzing noise accompanying her on her way out.";
 				else:
 					LineBreak;
-					say "     You resume your reading, doing your best to ignore the vibrating noise. Eventually, the student leaves in a hurry, the buzzing going away with [if Girl is banned or Girl is warded]him[else]her[end if].";
+					say "     You resume your reading, doing your best to ignore the vibrating noise. Eventually, the student leaves in a hurry, the buzzing going away with [if FemaleList is banned or FemaleList is warded]him[else]her[end if].";
 			-- 4:
 				say "You make a round in the library, checking the various sections, when you hear a pair of virile grunts coming from the photocopy room.";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";
@@ -540,11 +540,11 @@ to BrutusLibraryEvent:
 	if Player consents:
 		LineBreak;
 		if DBCaptureQuestVar is 5:
-			say "     You stumble upon Brutus, busy plowing a [if Girl is not banned and Girl is not warded]male[else]female[end if] student from behind. The poor [if Girl is not banned and Girl is not warded]stallion[else]mare[end if]'s feet dangle over the ground, [if Girl is not banned and Girl is not warded]his[else]her[end if] legs balancing with each slam of the demon's package inside of [if Girl is not banned and Girl is not warded]his[else]her[end if]. Brutus holds [if Girl is not banned and Girl is not warded]his[else]her[end if] torso with one arm, while his free hand is pressed against [if Girl is not banned and Girl is not warded]his[else]her[end if] mouth, fingers slipped deep inside her muzzle, and muffling the loud neighs escaping from [if Girl is not banned and Girl is not warded]his[else]her[end if] mouth. 'Dumb slut,' you hear him mumble. 'Told you I'd win.' After an additional minute of thrusting, Brutus's grunts get louder, and he unloads his balls inside the student, [if Girl is not banned and Girl is not warded]his[else]her[end if] belly bulging out visibly from the sheer quantity of demonic sperm.";
-			say "     Brutus pulls out, his claws twitching as if to drop [if Girl is not banned and Girl is not warded]him[else]her[end if] like a piece of trash - but the amulet around your neck hums a little and enforces the rule of not hurting anyone without cause that you set for him. With a slightly annoyed grunt, he sets the student on the ground slowly, [if Girl is not banned and Girl is not warded]his[else]her[end if] clothes in tatter. Waving him to the side, you inquire about what happened and Brutus shows a broad grin, nodding to the cum-dripping young equine. 'Bitch started to get bossy. 'Be quiet! This is a library!' Bla bla bla. Hah - told [if Girl is not banned and Girl is not warded]him[else]her[end if] I would fuck [if Girl is not banned and Girl is not warded]his ass[else]her pussy[end if] and no one would notice and come to help. And I did!' Shaking your head, you pull Brutus with you and get away from the scene as fast as you can.";
+			say "     You stumble upon Brutus, busy plowing a [if FemaleList is not banned and FemaleList is not warded]male[else]female[end if] student from behind. The poor [if FemaleList is not banned and FemaleList is not warded]stallion[else]mare[end if]'s feet dangle over the ground, [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] legs balancing with each slam of the demon's package inside of [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if]. Brutus holds [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] torso with one arm, while his free hand is pressed against [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] mouth, fingers slipped deep inside her muzzle, and muffling the loud neighs escaping from [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] mouth. 'Dumb slut,' you hear him mumble. 'Told you I'd win.' After an additional minute of thrusting, Brutus's grunts get louder, and he unloads his balls inside the student, [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] belly bulging out visibly from the sheer quantity of demonic sperm.";
+			say "     Brutus pulls out, his claws twitching as if to drop [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] like a piece of trash - but the amulet around your neck hums a little and enforces the rule of not hurting anyone without cause that you set for him. With a slightly annoyed grunt, he sets the student on the ground slowly, [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] clothes in tatter. Waving him to the side, you inquire about what happened and Brutus shows a broad grin, nodding to the cum-dripping young equine. 'Bitch started to get bossy. 'Be quiet! This is a library!' Bla bla bla. Hah - told [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] I would fuck [if FemaleList is not banned and FemaleList is not warded]his ass[else]her pussy[end if] and no one would notice and come to help. And I did!' Shaking your head, you pull Brutus with you and get away from the scene as fast as you can.";
 		else:
-			say "     You stumble upon Brutus, busy plowing a [if Girl is not banned and Girl is not warded]male[else]female[end if] student from behind. He is gently holding the [if Girl is not banned and Girl is not warded]stallion[else]mare[end if] over the ground with both arms, while he pumps inside [if Girl is not banned and Girl is not warded]him[else]her[end if] in a slow, but deep rhythm. The two of them are locked in a deep kiss, partly in order to quell their moans of pleasure. 'We're winning,' Brutus grins. 'You- you're still on this?' the student answers between two stifled moans. The two go at it for another minute or so, until Brutus's grunts get louder, and he unloads his balls inside the student, [if Girl is not banned and Girl is not warded]his[else]her[end if] belly bulging out visibly from the sheer quantity of demonic sperm.";
-			say "     Brutus pulls down the horse gently, letting [if Girl is not banned and Girl is not warded]him[else]her[end if] get [if Girl is not banned and Girl is not warded]his[else]her[end if] bearings back. You enquire about what happened. 'I was too noisy, and this [if Girl is not banned and Girl is not warded]guy[else]girl[end if] came and asked me to be quieter. Then [if Girl is not banned and Girl is not warded]he[else]she[end if] saw... all of me, and was interested. I bet [if Girl is not banned and Girl is not warded]him[else]her[end if] I could do [if Girl is not banned and Girl is not warded]him[else]her[end if] and still be silent enough. And I - we - won.' Smiling, you let Brutus part ways with the equine student and return to the entrance of the library.";
+			say "     You stumble upon Brutus, busy plowing a [if FemaleList is not banned and FemaleList is not warded]male[else]female[end if] student from behind. He is gently holding the [if FemaleList is not banned and FemaleList is not warded]stallion[else]mare[end if] over the ground with both arms, while he pumps inside [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] in a slow, but deep rhythm. The two of them are locked in a deep kiss, partly in order to quell their moans of pleasure. 'We're winning,' Brutus grins. 'You- you're still on this?' the student answers between two stifled moans. The two go at it for another minute or so, until Brutus's grunts get louder, and he unloads his balls inside the student, [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] belly bulging out visibly from the sheer quantity of demonic sperm.";
+			say "     Brutus pulls down the horse gently, letting [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] get [if FemaleList is not banned and FemaleList is not warded]his[else]her[end if] bearings back. You enquire about what happened. 'I was too noisy, and this [if FemaleList is not banned and FemaleList is not warded]guy[else]girl[end if] came and asked me to be quieter. Then [if FemaleList is not banned and FemaleList is not warded]he[else]she[end if] saw... all of me, and was interested. I bet [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] I could do [if FemaleList is not banned and FemaleList is not warded]him[else]her[end if] and still be silent enough. And I - we - won.' Smiling, you let Brutus part ways with the equine student and return to the entrance of the library.";
 		now CollegeLibraryBrutusEncounter is 1;
 	else:
 		LineBreak;
@@ -558,20 +558,20 @@ to RyouseiLibraryEvent:
 	say "     ([link]N[as]n[end link]) - He is a big boy. He will manage.";
 	if Player consents:
 		LineBreak;
-		say "     '[if Girl is not banned and Girl is not warded]Madam[else]Sir[end if], please go slower. I am... Aaah...'";
-		say "     The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if Girl is not banned and Girl is not warded]vixen[else]fox[end if].";
+		say "     '[if FemaleList is not banned and FemaleList is not warded]Madam[else]Sir[end if], please go slower. I am... Aaah...'";
+		say "     The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if FemaleList is not banned and FemaleList is not warded]vixen[else]fox[end if].";
 		say "     'Tut, tut... No discussing a staff's order. Now, stay still, and be quieter. You would not want someone to catch us together, would you?'";
-		say "     The both of them go like this for some time, with the poor Ryousei trying to stifle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if Girl is not banned and Girl is not warded]Madam[else]Sir[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
+		say "     The both of them go like this for some time, with the poor Ryousei trying to stifle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if FemaleList is not banned and FemaleList is not warded]Madam[else]Sir[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
 		say "     The librarian caresses the tiger's soft fur, and eventually stands back up.";
 		say "     'Well, that was a good way to relieve tension. You would not believe how horny hearing all these teenagers fuck in the library is.'";
 		say "     Ryousei gets back on his feet as well: 'I, er, guess?' he comments, while he fetches his kimono. 'So, are we even?'";
 		say "     'What do you mean?'";
 		say "     'The fine? For making noise in this place?'";
 		say "     'Oh, right. Sure, sure. Just, don't do it again. Or, do it again, and let's work this out together, hm?'";
-		say "     You have barely the time to jump away from the door before Ryousei walks out from the room, his tail waving in the air behind him. It seems he has a new fan. You go back at the entrance of the library, and find him waiting for you. You ask him innocently why he looks disheveled all of a sudden. 'Well, this place of knowledge is so, er, admirable,' the feline begins while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You silently sympathize with the tiger, as you see the librarian walk back to [if Girl is not banned and Girl is not warded]her[else]his[end if] desk and blow them a kiss from her chair.";
+		say "     You have barely the time to jump away from the door before Ryousei walks out from the room, his tail waving in the air behind him. It seems he has a new fan. You go back at the entrance of the library, and find him waiting for you. You ask him innocently why he looks disheveled all of a sudden. 'Well, this place of knowledge is so, er, admirable,' the feline begins while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You silently sympathize with the tiger, as you see the librarian walk back to [if FemaleList is not banned and FemaleList is not warded]her[else]his[end if] desk and blow them a kiss from her chair.";
 		now CollegeLibraryRyouseiEncounter is 1;
 	else:
-		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if Girl is not banned and Girl is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
+		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if FemaleList is not banned and FemaleList is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
 Table of GameEventIDs (continued)
 Object	Name

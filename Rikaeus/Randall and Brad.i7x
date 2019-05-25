@@ -27,8 +27,8 @@ Hanging out on the Green is inactive.
 The sarea of Hanging out on the Green is "Campus".
 
 when play begins:
-	add Hanging out on the Green to badspots of guy;
-	add Hanging out on the Green to badspots of furry;
+	add Hanging out on the Green to BadSpots of MaleList;
+	add Hanging out on the Green to BadSpots of FurryList;
 
 instead of going to College Walkway West while (Hanging out on the Green is active and Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
@@ -58,8 +58,8 @@ Bunny Eavesdropper is inactive.
 The sarea of Bunny Eavesdropper is "Campus".
 
 when play begins:
-	add Bunny Eavesdropper to badspots of guy;
-	add Bunny Eavesdropper to badspots of furry;
+	add Bunny Eavesdropper to BadSpots of MaleList;
+	add Bunny Eavesdropper to BadSpots of FurryList;
 
 instead of going to College Walkway West while (Bunny Eavesdropper is active and Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
@@ -89,8 +89,8 @@ Operation Horny Bunny is inactive.
 The sarea of Operation Horny Bunny is "Campus".
 
 when play begins:
-	add Operation Horny Bunny to badspots of guy;
-	add Operation Horny Bunny to badspots of furry;
+	add Operation Horny Bunny to BadSpots of MaleList;
+	add Operation Horny Bunny to BadSpots of FurryList;
 
 instead of going to Lecture Street while (Operation Horny Bunny is active and Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
@@ -134,8 +134,8 @@ New Roommates is inactive.
 The sarea of New Roommates is "Campus".
 
 when play begins:
-	add New Roommates to badspots of guy;
-	add New Roommates to badspots of furry;
+	add New Roommates to BadSpots of MaleList;
+	add New Roommates to BadSpots of FurryList;
 
 instead of going to Dorm Street while (New Roommates is active and New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Dorm Street;

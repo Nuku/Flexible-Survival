@@ -16,12 +16,12 @@ The sarea of Equineguardpost is "Stable".
 Instead of Resolving a Equineguardpost:
 	if XP of Onyx is 1:
 		let skip be 0;
-		if guy is not banned:
+		if MaleList is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy two of those wannabe horsemen you saw outside relaxing in the area, more importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the stallionbois.";
 			challenge "Stallionboi";
 			if lost is 0:
 				challenge "Stallionboi";
-		else if girl is not banned:
+		else if FemaleList is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy a pair of donkey women in leathers taking their turn on guard. More importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the donkey women.";
 			challenge "Donkeywoman";
 			if lost is 0:
@@ -85,7 +85,7 @@ Ignored Memos is a situation.
 The sarea of Ignored Memos is "Stable".
 
 Instead of Resolving a Ignored Memos:
-	if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
+	if MaleList is banned or FemaleList is banned or HermList is banned or FurryList is banned:
 		say "     Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly. Feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone writing cryptic notes. They all say things to the effect of 'This quest requires guys, girls, herms and furries.' Odd. Clearly the mad ramblings of some deranged creature.";
 		now Resolution of Ignored Memos is 99; [event critical creatures banned]
 		now Ignored Memos is resolved;

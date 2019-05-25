@@ -570,8 +570,8 @@ Jewelry Box	"Jewelry Box"
 
 Jewelry Box is a scavevent.
 when play begins:
-	add Jewelry Box to badspots of girl;
-	add Jewelry Box to badspots of furry;
+	add Jewelry Box to BadSpots of FemaleList;
+	add Jewelry Box to BadSpots of FurryList;
 
 Instead of resolving a Jewelry Box:
 	say "     While searching some abandoned homes in the hopes of finding something of use, you discover that this one isn't quite as abandoned as you'd assumed. Emerging from a side room, a creature appears.";

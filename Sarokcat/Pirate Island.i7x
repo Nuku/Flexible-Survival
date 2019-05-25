@@ -167,7 +167,7 @@ carry out treasurehunt:
 					say "     Wandering through the caves of the island, you hear a strange, rhythmic noise coming from one of the caverns up ahead. Do you want to investigate?";
 					if Player consents:
 						say "     Moving ahead, you find yourself in a large open beach cave, a strangely pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if Player is female or girl is banned:
+						if Player is female or FemaleList is banned:
 							infect "Feral Sea Dragon";
 							infect "Feral Sea Dragon";
 						else:
@@ -208,7 +208,7 @@ Instead of resolving a Noteinbottle:
 			now fightoutcome is 100;
 			fight;
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				if guy is banned or furry is banned or hermaphrodite is banned:
+				if MaleList is banned or FurryList is banned or HermList is banned:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination reveals it to be an old-fashioned glass bottle with - as you half expected - a roll of paper inside! More than a bit curious at this point, you quickly open the bottle up and fish the message out. But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available. Please try again. No purchase necessary. Void where prohibited. May cause unexpected priapism.' Hmmm... very strange.";
 				else:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination reveals it to be an old-fashioned glass bottle with - as you half expected - a roll of paper inside! More than a bit curious at this point, you quickly open the bottle up and fish the message out. Spreading it out on the sand beside you, you puzzle over the hastily scrawled message. It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out. There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now. Still, if there are pirates, there might be treasure, right? Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway. Perhaps you should do some more investigating.";

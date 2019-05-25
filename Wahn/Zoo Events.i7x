@@ -30,7 +30,7 @@ Circle of Life is a situation.
 The sarea of Circle of Life is "Zoo".
 
 when play begins:
-	add Circle of Life to badspots of furry;
+	add Circle of Life to BadSpots of FurryList;
 
 Instead of resolving a Circle of Life:
 	say "     While exploring the large expanse of the zoo, wandering along the walkways and even through the (usually breached) enclosures where the main way is blocked, you suddenly hear a not too distant roar, followed by frightened cries from a number of female voices. In the subsequent moments, the sound of hooves on asphalt comes closer rapidly as you decide to duck out of sight until you know more about what is going on. Hidden behind a bush, you see a whole group of anthro gazelles sprint past in full flight - Panicked, one of the group members actually runs the wrong way at a fork just a short distance ahead. She is about two dozen feet down when she notices that something is up as she takes in the lack of her kin around her. Stopping in a scrape of hooves upon stone, the separated gazelle heavily pants as she looks back the way she came.";
@@ -181,7 +181,7 @@ The Prereq1Resolution of Tiger Trick is { 1, 2, 3, 4 }.
 The sarea of Tiger Trick is "Zoo".
 
 when play begins:
-	add Tiger Trick to badspots of furry;
+	add Tiger Trick to BadSpots of FurryList;
 
 Instead of resolving a Tiger Trick:
 	project the Figure of Malakhi_icon;
@@ -240,7 +240,7 @@ The Prereq1Resolution of Zookeepers at Work is { 1, 2, 3, 4 }.
 The sarea of Zookeepers at Work is "Zoo".
 
 when play begins:
-	add Zookeepers at Work to badspots of furry;
+	add Zookeepers at Work to BadSpots of FurryList;
 
 Instead of resolving a Zookeepers at Work:
 	if BarnabasRelationship is 0: [first time]
@@ -312,7 +312,7 @@ The Prereq1Resolution of Zookeepers at Play is { 1, 2, 3 }.
 The sarea of Zookeepers at Play is "Zoo".
 
 when play begins:
-	add Zookeepers at Play to badspots of furry;
+	add Zookeepers at Play to BadSpots of FurryList;
 
 Instead of resolving a Zookeepers at Play:
 	say "     Strolling along the pathways of the zoo, you come upon a mid-sized enclosure that actually seems fully intact and even well-cared for. The nearby information sign about it tells you that it is the home of a jaguarundi, a south American wildcat. You can see it resting in the branches of a small tropical tree sticking up just on the other side of the water-filled ditch separating the animal from any zoo visitors like yourself. The real show right now though isn't the small-ish feline but rather who else is in there. You recognize Barnabas and Malakhi, the anthro panther zookeeper and his panther-hybrid intern, taking turns washing themselves under a tiny waterfall that feeds the water barrier after a dozen feet of an artificial brook. It is just wide enough for one of them to stand under - which Barnabas is doing right now, quickly rubbing himself with a piece of soap and rinsing it off before stepping to the side, his short fur plastered to his body, showing off all its muscles.";
@@ -391,8 +391,8 @@ Lemur Jerks is a situation.
 The sarea of Lemur Jerks is "Zoo".
 
 when play begins:
-	add Lemur Jerks to badspots of furry;
-	add Lemur Jerks to badspots of guy;
+	add Lemur Jerks to BadSpots of FurryList;
+	add Lemur Jerks to BadSpots of MaleList;
 
 instead of resolving Lemur Jerks:
 	say "     As you're walking the stone-lined walkways of the zoo you hear a weird noise from behind you, followed by muffled laughter. Turning around, the source of it isn't immediately obvious - until another spurt of cum sprays right past your nose, just barely missing you. Glancing up you spot a group of what appear to be lemur-men in a large tree, making a sport of trying to hit you as they jerk off. It looks like there are about four of them up there, looking fairly close to what you know of regular lemurs: they're covered in brownish-red to gray hair and sport long furry tails with a black and white stripe pattern. What isn't so typical are the intelligent green eyes with which they observe you, or the fact that they're joking with one another like a group of horny frat boys. 'You always were shit at aiming, with a basketball or a dick!' one of them riles up the last one who came and missed you, while a third one is panting eagerly as he jerks himself with furious speed.";
@@ -407,9 +407,9 @@ Gazelle Breeding Bitch is a situation.
 The sarea of Gazelle Breeding Bitch is "Zoo".
 
 when play begins:
-	add Gazelle Breeding Bitch to badspots of furry;
-	add Gazelle Breeding Bitch to badspots of girl;
-	add Gazelle Breeding Bitch to badspots of Hermaphrodite;
+	add Gazelle Breeding Bitch to BadSpots of FurryList;
+	add Gazelle Breeding Bitch to BadSpots of FemaleList;
+	add Gazelle Breeding Bitch to badspots of HermList;
 
 instead of resolving Gazelle Breeding Bitch:
 	say "     While walking the zoo grounds you overhear what sounds to be a series of dog yips and yelps. Curiosity over the sounds wins out over caution, and you're soon peering around a corner, your gaze falling onto the familiar sight of a sexual encounter just about to start. About thirty feet distant, a little group of herm gazelle girls crowded around anthro retriever. The canine bitch appears to be in heat, lying on the ground amidst a scattering of clothes that she seems to have clawed off her body. She is panting heavily, the dripping cunt between her legs matting the fur of her crotch and inner legs. This spectacle seems to have awakened strong urges in the usually fairly shy gazelles, their hard cocks explaining why fleeing herd animals went on the offensive here. There are four of the tawny-furred antelopes, and a second later, they start stroking over their own cocks and pussies as they stare at the naked canine.";
@@ -427,8 +427,8 @@ Egged Tigress is a situation.
 The sarea of Egged Tigress is "Zoo".
 
 when play begins:
-	add Egged Tigress to badspots of furry;
-	add Egged Tigress to badspots of girl;
+	add Egged Tigress to BadSpots of FurryList;
+	add Egged Tigress to BadSpots of FemaleList;
 
 instead of resolving Egged Tigress:
 	say "     As you wander past a little shop deeper in the zoo that seems to have offered snacks and souvenirs to the visitors, you hear squeaking noises coming from within. Curiosity aroused, you creep closer and peer through one of the open sales windows. There is a fairly large and brightly colored tigress in there, writhing on the floor. You can immediately tell that this isn't an animal but rather a rubber creature since its skin shines with reflections in the light and the creature's limbs twist and bend with far greater flexibility than anything with bones ever could. Worry starts to rise in you as thoughts of some new and terrible affliction hurting the infected spring up in your mind, but then you notice that she isn't thrashing around in pain or anything; it's rather the opposite in fact. The tigress is smiling ecstatically, with even a little drool trickling out of the corners of her muzzle.";
@@ -445,9 +445,9 @@ Panda Shepherd is a situation.
 The sarea of Panda Shepherd is "Zoo".
 
 when play begins:
-	add Panda Shepherd to badspots of furry;
-	add Panda Shepherd to badspots of girl;
-	add Panda Shepherd to badspots of guy;
+	add Panda Shepherd to BadSpots of FurryList;
+	add Panda Shepherd to BadSpots of FemaleList;
+	add Panda Shepherd to BadSpots of MaleList;
 
 instead of resolving Panda Shepherd:
 	say "     Passing by the panda habitat you hear a thumping noise. Sounds like a rhythm of low beats, followed shortly by a low cry. Sneaking closer to the habitat, you creep up behind a little thicket of bamboo and peer through cracks between the poles. The first thing you notice is the black and white furry back of a panda girl. She is busy bouncing up and down on a thick knotted canine shaft, belonging to a German shepherd that has his muzzle buried in the panda's hefty cleavage. Muffled as well as unmuffled moans of pleasure can be heard as the panda rides the male shepherd, filling the area with loud slapping sounds. Then suddenly, the panda falls forward and her tongue lolls slightly from her mouth. 'Ahh! Yes! I'm so close, k-keep going doggie!' she squeals at the height of her voice. Unable to really answer since his muzzle is buried under her breasts and upper body, the shepherd simply lets out a low, barely audible whine as he jackhammers his hips upward as much as possible.";
@@ -465,10 +465,10 @@ Elven Mount is a situation.
 The sarea of Elven Mount is "Zoo".
 
 when play begins:
-	add Elven Mount to badspots of furry;
-	add Elven Mount to badspots of girl;
-	add Elven Mount to badspots of guy;
-	add Elven Mount to badspots of feral;
+	add Elven Mount to BadSpots of FurryList;
+	add Elven Mount to BadSpots of FemaleList;
+	add Elven Mount to BadSpots of MaleList;
+	add Elven Mount to badspots of FeralList;
 
 instead of resolving Elven Mount:
 	say "     Wandering through the zoo and stepping onto one of the bigger thoroughfares through the zoo from a side passage, you suddenly you hear the dominant growl of a big cat somewhere from the side. Yet as you spin around to face your foe, things aren't quite what you expected. About thirty feet to your left, a seemingly intact enclosure for large predators harbors a feral cheetah perched in a dominant position over a woman. She's an elf from what you can see, with pointy ears and surrounded by seemingly hastily stripped off clothes that would fit a fantasy setting. Maybe she wandered into the zoo from somewhere else? Wherever she might have come from, she's currently under a clearly horny dominant cheetah. Though the position apparently wasn't forced upon her, as the woman's face is clearly showing pleasure... and embarrassment at being caught, as she stares back you through the chain fence surrounding the enclosure.";
@@ -521,8 +521,8 @@ Bird Masturbation is a situation.
 The sarea of Bird Masturbation is "Zoo".
 
 when play begins:
-	add Bird Masturbation to badspots of furry;
-	add Bird Masturbation to badspots of girl;
+	add Bird Masturbation to BadSpots of FurryList;
+	add Bird Masturbation to BadSpots of FemaleList;
 
 instead of resolving Bird Masturbation:
 	say "     Deciding to rest against the side of a gift shop for a few moments, you lean against it and tilt your head up to rest against the wall. At first you think it's just some decoration on the roof of the building across from you, but as your eyes set upon it, you realize that it's a woman - a bird of paradise, to be exact. She's covered in a rainbow of lovely colored feathers, with a pair of just as lovely wings that sprout from her back, which would explain her being on a roof. Additionally, one of her long, talon-tipped fingers is slowly moving in and out between her legs. She moves a finger slowly into her cloaca-like pussy, her head tilted down, focused on her work.";
@@ -549,8 +549,8 @@ Lemur Conga Gangbang is a situation.
 The sarea of Lemur Conga Gangbang is "Zoo".
 
 when play begins:
-	add Lemur Conga Gangbang to badspots of furry;
-	add Lemur Conga Gangbang to badspots of guy;
+	add Lemur Conga Gangbang to BadSpots of FurryList;
+	add Lemur Conga Gangbang to BadSpots of MaleList;
 
 instead of resolving Lemur Conga Gangbang:
 	say "     As you are walking through a more tree'd-in area of the zoo, you hear the excited gibbering of... something? You look around but can't seem to locate the sound, until you hear more, they sound a mix between monkey grunts and human words. It sounds like at least four of them gibbering and mumbling, spinning around again and again readying yourself for a fight you still see nothing. Until a squeal of laughter finally draws you to look up above you, there, about thirty feet into the trees are what look to be lemur men. Each of them behind the other in a conga line, sitting on a thick branch... butt fucking each other...";

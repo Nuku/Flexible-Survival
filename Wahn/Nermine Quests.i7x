@@ -45,7 +45,7 @@ The Sarea of Bacchus Wine is "Museum".
 WineFound is a number that varies.
 
 when play begins:
-	add Bacchus Wine to badspots of guy;
+	add Bacchus Wine to BadSpots of MaleList;
 
 Instead of resolving a Bacchus Wine:
 	if WineFound is 0 or WineFound is 2: [regular scene or repeat after quest]
@@ -122,8 +122,8 @@ Alternative Entry	"Alternative Entry"
 Alternative Entry is a situation. The level of Alternative Entry is 8.
 The Sarea of Alternative Entry is "Museum".
 when play begins:
-	add Alternative Entry to badspots of guy;
-	add Alternative Entry to badspots of furry;
+	add Alternative Entry to BadSpots of MaleList;
+	add Alternative Entry to BadSpots of FurryList;
 
 Instead of resolving a Alternative Entry:
 	if HyenaTrailing is 2:
@@ -170,8 +170,8 @@ Hyena Challenge	"Hyena Challenge"
 
 Hyena Challenge is a situation. The level of Hyena Challenge is 12.
 when play begins:
-	add Hyena Challenge to badspots of hermaphrodite;
-	add Hyena Challenge to badspots of furry;
+	add Hyena Challenge to badspots of HermList;
+	add Hyena Challenge to BadSpots of FurryList;
 
 Instead of resolving a Hyena Challenge:
 	if HyenaTrailing is 4:
@@ -297,8 +297,8 @@ Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
 The Sarea of Bestial Pheromones is "Zoo".
 anubisrequest is a number that varies.
 when play begins:
-	add Bestial Pheromones to badspots of girl;
-	add Bestial Pheromones to badspots of furry;
+	add Bestial Pheromones to BadSpots of FemaleList;
+	add Bestial Pheromones to BadSpots of FurryList;
 
 Instead of resolving a Bestial Pheromones:
 	if anubisrequest is 0:
@@ -340,7 +340,7 @@ The Sarea of Twisted fruit grove is "Park".
 FelinoidRescued is a number that varies.
 Vinetrapped is a number that varies.
 when play begins:
-	add Twisted fruit grove to badspots of hermaphrodite;
+	add Twisted fruit grove to badspots of HermList;
 
 Instead of resolving a Twisted fruit grove:
 	if FelinoidRescued is 1: [player lost the fight to save the Felinoid]
@@ -525,7 +525,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     ([link]N[as]n[end link]) - Err... no, not right now.[line break]";
 		if Player consents:
 			LineBreak;
-			if guy is banned or furry is banned or girl is banned:
+			if MaleList is banned or FurryList is banned or FemaleList is banned:
 				say "     'Oh, Nermine is seeing now that she looks at her visitor that [heshe] will not be able to help her in this regard. Nermine is feeling most sorry for them, restricting their fun so. One should not be so picky, she is thinking.' Nermine shakes her jackal head sadly.";
 				say "(The rare item quest requires hermaphrodite, guy, girl and furry content to be available. Sorry.)";
 			else:

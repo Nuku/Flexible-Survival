@@ -583,7 +583,7 @@ Carry out PitBattle:
 to say ArenaFightCheck:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if furry is not banned and guy is not banned:
+	if FurryList is not banned and MaleList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Wolftaur";
 		now sortorder entry is 1;
@@ -596,17 +596,17 @@ to say ArenaFightCheck:
 		now title entry is "Husky Alpha";
 		now sortorder entry is 5;
 		now description entry is "dominant canine";
-	if guy is not banned:
+	if MaleList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Minotaur";
 		now sortorder entry is 3;
 		now description entry is "mythological monstrosity";
-	if furry is not banned and girl is not banned:
+	if FurryList is not banned and FemaleList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Great Dane";
 		now sortorder entry is 4;
 		now description entry is "female canine fighter";
-	if furry is not banned and hermaphrodite is not banned:
+	if FurryList is not banned and HermList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Wildcat";
 		now sortorder entry is 6;

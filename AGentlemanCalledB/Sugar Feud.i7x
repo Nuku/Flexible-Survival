@@ -12,9 +12,9 @@ Sugar Shack	"Sugar Shack"
 Sugar Shack is a situation.
 The sarea of Sugar Shack is "Fair".
 when play begins:
-	add Sugar Shack to badspots of furry;
-	add Sugar Shack to badspots of girl;
-	add Sugar Shack to badspots of humorous;
+	add Sugar Shack to BadSpots of FurryList;
+	add Sugar Shack to BadSpots of FemaleList;
+	add Sugar Shack to badspots of HumorousList;
 
 Instead of resolving a Sugar Shack:
 	setmonster "Sugar Glider";

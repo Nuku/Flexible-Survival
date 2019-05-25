@@ -31,8 +31,8 @@ Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
 the sarea of Gryphon's Plot is "Outside".
 
 when play begins:
-	add Gryphon's Plot to badspots of hermaphrodite;
-	add Gryphon's Plot to badspots of furry;
+	add Gryphon's Plot to badspots of HermList;
+	add Gryphon's Plot to BadSpots of FurryList;
 
 instead of resolving a Gryphon's Plot:
 	if GryphPlotTracking is 0 or GryphPlotTracking is 1: [first time or repeat after failing to find them]

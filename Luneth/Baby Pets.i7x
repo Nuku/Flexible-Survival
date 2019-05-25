@@ -393,9 +393,9 @@ Lost skunk kit	"Lost skunk kit"
 Lost skunk kit is a situation.
 The sarea of Lost skunk kit is "Forest".
 when play begins:
-	add Lost skunk kit to badspots of girl;
-	add Lost skunk kit to badspots of furry;
-	add Lost skunk kit to badspots of guy;
+	add Lost skunk kit to BadSpots of FemaleList;
+	add Lost skunk kit to BadSpots of FurryList;
+	add Lost skunk kit to BadSpots of MaleList;
 
 
 littlelostskunk is a number that varies.

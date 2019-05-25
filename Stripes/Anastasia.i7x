@@ -50,9 +50,9 @@ Captured Bird is a situation.
 The level of Captured Bird is 3.
 
 when play begins:
-	add Captured Bird to badspots of girl;
-	add Captured Bird to badspots of hermaphrodite;
-	add Captured Bird to badspots of furry;
+	add Captured Bird to BadSpots of FemaleList;
+	add Captured Bird to badspots of HermList;
+	add Captured Bird to BadSpots of FurryList;
 
 Instead of resolving a Captured Bird:
 	say "     Your exploration of the city is interrupted by a loud, avian shriek, soon followed by several feline growls. There is quite a commotion coming from somewhere off to your left. You consider moving away, but the noise seems to be remaining in the same spot, so you decide at least risking a quick peek to see what's going on. Passing between some building, you take cover behind a short fence and gaze out at the small vacant lot across the street.";
@@ -75,7 +75,7 @@ Instead of resolving a Captured Bird:
 					say "     The bird moves through the air with an unearthly grace, especially for a bird this large. It banks back towards you, and for a moment you prepare yourself for it to attack you as well, but instead it passes over you as it examines its rescuer closely. You can swear that you can see some sort of intelligence behind the bird's eyes as it nods to you lightly before flying off into the sky.";
 					increase score by 15;
 					now HP of Anastasia is 1;
-					if guy is not banned, now A Familiar Feather is active;
+					if MaleList is not banned, now A Familiar Feather is active;
 					now Resolution of Captured Bird is 1;	[Saved phoenix]
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
@@ -103,7 +103,7 @@ instead of resolving A Familiar Feather:
 	say "     'Ever since I came to this world, I have been met with nothing but hostility, yet you...' The bird looks you over, examining your form with a curious gaze and a tilt of her head. 'I know not why, but you risked your life, and I would assume, your only life to save me.' She tilts her head the other way, her crest of head feathers flaring for a moment as she seemed to ponder you. 'A curious creature you are. I think I will keep an eye on you.' Without giving you even a moment to question her, the bird launches herself into the air with a single powerful flap of her wings, and just as suddenly as she came, the bird soars into the distance, blazing like a shooting-star across the sky.";
 	now A Familiar Feather is resolved;
 	now HP of Anastasia is 2;
-	if guy is not banned, now FireAndIce is active;
+	if MaleList is not banned, now FireAndIce is active;
 
 
 Table of GameEventIDs (continued)

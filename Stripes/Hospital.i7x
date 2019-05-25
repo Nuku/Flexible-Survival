@@ -170,8 +170,8 @@ Staff Lounge	"Staff Lounge"
 Staff Lounge is a situation.
 The sarea of Staff Lounge is "Hospital".
 when play begins:
-	add Staff Lounge to badspots of guy;
-	add Staff Lounge to badspots of furry;
+	add Staff Lounge to BadSpots of MaleList;
+	add Staff Lounge to BadSpots of FurryList;
 
 Instead of resolving a Staff Lounge:
 	say "     In one corner of the hospital, you come across a lounge for the staff. Taking a glance inside, you find it unoccupied and go in to search. There are a few chairs and couches, but it seems like some of the staff have used them for [']recreation['] recently. Not wanting to run into a couple of them sneaking in here for more fun, you confine yourself to a quick search of the room. Without power, the food in the fridge has gone bad, but you do manage to find an unopened bottle of water.";
@@ -222,10 +222,10 @@ Radiology	"Radiology"
 Radiology is a situation. The level of Radiology is 5.
 The sarea of Radiology is "Hospital".
 when play begins:
-	add Radiology to badspots of girl;
-	add Radiology to badspots of guy;
-	add Radiology to badspots of hermaphrodite;
-	add Radiology to badspots of furry;
+	add Radiology to BadSpots of FemaleList;
+	add Radiology to BadSpots of MaleList;
+	add Radiology to badspots of HermList;
+	add Radiology to BadSpots of FurryList;
 
 Instead of resolving a Radiology:
 	say "     The radiology department, where the x-rays are taken, seems to have had recent use. There are several fresh x-rays showing images of the altered physiology of transformees. While some seem to have been taken during partial transformation, most are of completed changes. Many are arranged out on the illuminated viewers with annotations marked on. Most are circles or arrows marking key points with a red wax pencil, but others contain medical jargon about the bones or joints being changed. Briefly distracted by all this, you don't hear the sound of approaching footsteps until it's too late and one of the hospital's creatures steps in.";
@@ -291,14 +291,14 @@ to say hospfight3:		[no Raccoon, Psycho Weasel instead... generic fight]
 
 to say hospfight4:		[no Raccoon, flags handled internally]
 	let T be a list of numbers;
-	if guy is not banned:
+	if MaleList is not banned:
 		add 1 to T; [Psycho Weasel]
 		add 2 to T; [Jaguar]
-	if girl is not banned:
+	if FemaleList is not banned:
 		add 3 to T; [Fluffy Owl]
 		add 4 to T; [Vixen Nurse]
 		add 4 to T; [Vixen Nurse]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		add 5 to T; [Mismatched Chimera]
 		add 5 to T; [Mismatched Chimera]
 	sort T in random order;
@@ -319,10 +319,10 @@ Pathology	"Pathology"
 Pathology is a situation. The level of Pathology is 5.
 The sarea of Pathology is "Hospital".
 when play begins:
-	add Pathology to badspots of girl;
-	add Pathology to badspots of guy;
-	add Pathology to badspots of hermaphrodite;
-	add Pathology to badspots of furry;
+	add Pathology to BadSpots of FemaleList;
+	add Pathology to BadSpots of MaleList;
+	add Pathology to badspots of HermList;
+	add Pathology to BadSpots of FurryList;
 
 Instead of resolving a Pathology:
 	say "     Hearing the sound of footsteps and talking approaching, you slip through a nearby door. Inside you find yourself in a medical lab. The room, unlike many of the others has been kept clean and seems largely undisturbed by the events which have struck the hospital. Curious, you are about to look around further when the door opens and in strides the two creatures. You seem to have inadvertently hidden yourself at their destination. The first charges at you while the other, laden with several test tubes and samples, moves to set its burden down first.";
@@ -376,10 +376,10 @@ Records Room	"Records Room"
 Records Room is a situation. The level of Records Room is 5.
 The sarea of Records Room is "Hospital".
 when play begins:
-	add Radiology to badspots of girl;
-	add Radiology to badspots of guy;
-	add Radiology to badspots of hermaphrodite;
-	add Radiology to badspots of furry;
+	add Radiology to BadSpots of FemaleList;
+	add Radiology to BadSpots of MaleList;
+	add Radiology to badspots of HermList;
+	add Radiology to BadSpots of FurryList;
 
 instead of resolving Records Room:
 	say "     You come across the hospital's records room, where all the patient files are stored. It is tightly packed with ceiling high filing cabinets and shelves. There are a few files set out that seem to have been recently updated to include post-infection data, making you wonder who's still performing medical tests at the hospital. Setting them aside, you move around the room, searching for anything of use and almost bump into a creature as it emerges from a door to another filing room.";
@@ -573,7 +573,7 @@ Instead of conversing the Doctor Mouse:
 			say "     'Yes! That is it,' Doctor Mouse says as he hops down from his stool to grab for it before thinking better of it. 'Uh, would you be so kind as to put it over there for me?' he asks, pointing to an open spot on the central work area.";
 			say "[hospquestpt2]";
 	if hospquest is 4:
-		if girl is banned or guy is banned or furry is banned or hermaphrodite is banned:
+		if FemaleList is banned or MaleList is banned or FurryList is banned or HermList is banned:
 			say "     'I had hoped to obtain some samples, but the creatures cannot be located. I don't have anything further for you,' the mouse says, shaking his head.";
 			say "     (Unable to proceed with current creature blocks. Girl, guy, herm and furry are all needed for subsequent segments.)";
 		else if DoctorMouseProgress minus turns < 8:

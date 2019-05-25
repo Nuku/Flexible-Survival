@@ -543,7 +543,7 @@ Bird Troubles	"Bird Troubles"
 Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus".
 when play begins:
-	add Bird Troubles to badspots of girl;
+	add Bird Troubles to BadSpots of FemaleList;
 
 Instead of resolving a Bird Troubles:
 	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organizations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock.";
@@ -598,7 +598,7 @@ Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 
 when play begins:
-	add Lost Chick to badspots of girl; [female gymnasts]
+	add Lost Chick to BadSpots of FemaleList; [female gymnasts]
 
 Instead of resolving a Lost Chick:
 	if HP of Nadia is 2: [first attempt]

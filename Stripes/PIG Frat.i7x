@@ -21,8 +21,8 @@ Frat House	"Frat House"
 Frat House is a situation. The level of Frat House is 3.
 The sarea of Frat House is "Campus".
 when play begins:
-	add Frat House to badspots of girl;
-	add Frat House to badspots of furry;
+	add Frat House to BadSpots of FemaleList;
+	add Frat House to BadSpots of FurryList;
 
 Instead of resolving a Frat House:
 	say "     Exploring the edge of campus, you can hear the raucous sounds of drunken partying happening nearby. Approaching cautiously, you find a large frat house with numerous boars, hogs and sows partying out on the lawn. All of them are carousing with beer in hand or lustfully fucking one another, or both. Despite the messy state of the pigs, there's something tempting about their carefree partying that draws your attention to watch. You find yourself a little too drawn to watch a well-hung hog fucking a squealing sow and fail to notice one of the messy pigs sneaking up on you. With a lustful squeal, she charges, trying to force herself onto you.";
@@ -121,9 +121,9 @@ to say pig_fratinitiation:
 	say "     'Man! You are the stuff of legends! Did you really put a dozen pigs in the dean's office?' Not even waiting for an answer, he turns and starts calling out to the others that Philip the Grand is here. This rouses all but the most drunken of pigs into a cacophony of discussion.";
 	say "     'What, Philip the Grand?' 'Grand Porker Philip is here?' 'Whozzat?' 'Biggest Grand Porker there ever was.' 'I heard he ate something like 300 chicken wings in one night.' 'No, I'd heard it was almost 350.' 'Someone get him a beer.' 'Yeah, let's party to celebrate!'";
 	WaitLineBreak;
-	say "     And with that, you and Philip ushered bodily into the fraternity by the excited mob of pigs. Drinks are passed around, an ornamental bathrobe is draped over Philip's shoulders and he's given a seat of honor. At first, you are a secondary concern, everyone wanting to toast this legendary member. Jokingly told it's tradition by their seniors, the freshmen are made to lick his piggy feet and take turns sucking his cock. You watch laughing and drinking alongside the others [if Player is male and girl is not banned]while some sow licks and sucks your [Cock of Player] cock[else if Player is male]while some young male porker licks and sucks your [Cock of Player] cock[else]while a lusty frat boar eats you out[end if].";
+	say "     And with that, you and Philip ushered bodily into the fraternity by the excited mob of pigs. Drinks are passed around, an ornamental bathrobe is draped over Philip's shoulders and he's given a seat of honor. At first, you are a secondary concern, everyone wanting to toast this legendary member. Jokingly told it's tradition by their seniors, the freshmen are made to lick his piggy feet and take turns sucking his cock. You watch laughing and drinking alongside the others [if Player is male and FemaleList is not banned]while some sow licks and sucks your [Cock of Player] cock[else if Player is male]while some young male porker licks and sucks your [Cock of Player] cock[else]while a lusty frat boar eats you out[end if].";
 	say "     As the last of them is pushed away, you're noticed and shoved forward, told to pay your respects to the veteran Grand Porker as well. Philip chuckles and presses your face to his musky loins, thick with slobber from those who've come before you. 'If you're looking to join the frat, you've got to be initiated. Get to work, pledge,' he oinks. Already quite aroused and muddled-headed from the experience, his heady scent is very enticing and you plunge your mouth over his manhood, licking and sucking it eagerly. The frat boars laugh and tease you, several of them groping you while you work that thick pillar of pork with your lips and tongue. And when the big pig's about to blow, someone presses your face right into his crotch so you're forced to swallow down every last drop of it - not that you mind by this point.";
-	if Player is male and ( girl is not banned ):
+	if Player is male and ( FemaleList is not banned ):
 		say "     Like the beer, you get passed around between several boars and sows. Over the course of it, you have sex with several of them while everyone gets well and truly inebriated and thoroughly fucked. You quickly lose track of how many times you've been cum in or on and how many hot holes you've filled. Throughout it all, you become increasingly porcine, transformed by the raucous partygoers into another messy frat pig.";
 	else if Player is male:
 		say "     Like the beer, you get passed around between several boars. Over the course of it, you have sex with several of them while everyone gets well and truly inebriated and thoroughly fucked. You quickly lose track of how many times you've been cum in or on and how many hot holes you've filled. Throughout it all, you become increasingly porcine, transformed by the raucous partygoers into another messy frat pig.";
@@ -170,7 +170,7 @@ to say pig_fratinitiation:
 	now Cock of Player is cock entry;
 	if Libido of Player < 45, now Libido of Player is 45;
 	if humanity of Player < 10:
-		if Player is not female and girl is not banned:
+		if Player is not female and FemaleList is not banned:
 			say "     The party continues on from there with plenty more sex and drinking, though many adjourn to their rooms for more private romps or to pass out. You get dragged up to the doorkeeper's room along with some sows for some added fun. You have a lot of wild, piggish sex with him and the girls over the next several hours. Eventually you all end up passing out. When you wake up, the girls are gone, but your new roommate is still there. And like a good roommate and freshman member should, you take his cock into your snout and wake him up with a good-morning blow-job.";
 		else:
 			say "     The party continues on from there with plenty more sex and drinking, though many adjourn to their rooms for more private romps or to pass out. You get dragged up to the doorkeeper's room along with a few other members for some added fun. You have a lot of wild, piggish sex with them over the next several hours. Eventually you all end up passing out. When you wake up, others are gone, but your new roommate is still there. And like a good roommate and freshman member should, you take his cock into your snout and wake him up with a good-morning blow-job.";

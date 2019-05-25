@@ -64,7 +64,7 @@ instead of conversing the Tristian:
 	else if HP of Tristian is 8:
 		say "     Tristian looks up eagerly as you approach, only to sigh as you shake your head and let him know there is no news on his brother yet. The palomino nods, and the two of you make small talk for a while as you chat on other subjects, but you can tell that his mind is elsewhere, and so you decide to let him be for now... though maybe a roll in the hay with his lovely little pet could help distract him instead...";
 	else if HP of Tristian is 7:
-		if furry is banned or hermaphrodite is banned or guy is banned:
+		if FurryList is banned or HermList is banned or MaleList is banned:
 			say "     Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' he says with a sigh, 'I just got word about my brother, or at least maybe I did, but it's not good. All I know is someone saw some lights and activity at his apartment in the city, but then no longer,' the horse says with a sad look on his long face.";
 			say "(This quest is inaccessible w/o furry/guy/hermaphrodite content available. Sorry.)[line break]";
 			now HP of Tristian is 100;
@@ -85,7 +85,7 @@ instead of conversing the Tristian:
 
 
 to say sexwithtristian:
-	setmonster "Palomino";
+	setmonster "Palomino Stallion";
 	if HP of tristian is 0:
 		say "You might want to introduce yourself first.";
 	else if lastfuck of tristian - turns < 6:
@@ -151,7 +151,7 @@ to say sexwithtristian:
 
 to palominoinfect:
 	choose row MonsterID from the Table of Random Critters;
-	setmonster "Palomino";
+	setmonster "Palomino Stallion";
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect;
@@ -166,9 +166,9 @@ Tristbrother	"Tristbrother"
 
 Tristbrother is a situation. Tristbrother is inactive.
 when play begins:
-	add Tristbrother to badspots of hermaphrodite;
-	add Tristbrother to badspots of guy;
-	add Tristbrother to badspots of furry;
+	add Tristbrother to badspots of HermList;
+	add Tristbrother to BadSpots of MaleList;
+	add Tristbrother to BadSpots of FurryList;
 
 Instead of resolving Tristbrother:
 	If HP of Tristian is 8:

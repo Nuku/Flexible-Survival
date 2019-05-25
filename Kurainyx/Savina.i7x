@@ -54,9 +54,9 @@ SexuallyExperienced of Savina is false.
 MainInfection of Savina is "".
 
 when play begins:
-	add Abandoned Camp to badspots of girl;
-	add Abandoned Camp to badspots of feral;
-	add Abandoned Camp to badspots of guy;
+	add Abandoned Camp to BadSpots of FemaleList;
+	add Abandoned Camp to badspots of FeralList;
+	add Abandoned Camp to BadSpots of MaleList;
 
 Instead of resolving a Abandoned Camp:
 	if HP of Savina is 0:			[First encounter]

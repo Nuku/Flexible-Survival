@@ -12,14 +12,14 @@ AptAid is a number that varies.
 
 The sarea of Apartment 319 is "High".
 When play begins:
-	Add Apartment 319 to badspots of hellspawn;
-	Add Apartment 319 to badspots of furry;
-	Add Apartment 319 to badspots of guy;
+	Add Apartment 319 to badspots of DemonList;
+	Add Apartment 319 to BadSpots of FurryList;
+	Add Apartment 319 to BadSpots of MaleList;
 
 Instead of resolving a Apartment 319:
 	if AptAid is 0:
 		say "     Briskly walking through the streets of the high rise, you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment, you simply shrug and go off about your way.";
-	If AptAid is 1 and ( guy is banned or hellspawn is banned or furry is banned or hermaphrodite is banned ):
+	If AptAid is 1 and ( MaleList is banned or DemonList is banned or FurryList is banned or HermList is banned ):
 		say "     Jogging down the side of the streets of the high rise district, you end up bumping into someone. Not being able to stop yourself, you flail around wildly to collect your balance only to end up collapsing on the other in spite of your attempts. Luckily, whoever is in front of you is able to catch your weight before you end up dragging the both of you down to the pavement. 'Whoa there, are you okay stranger?' The person holding you up, who just so happens to be a Dalmatian, asks with their dark brown eyes shining at you somewhat playfully.";
 		say "     Nodding to the other, you pull yourself away from them to stand on your own two feet and then, on a whim, look down to inspect the shirt the Dal is wearing, an oddity in this town with almost everyone running around half naked. What you see makes your senses slightly spark and you quickly tip your head up to ask the Dal if he is from Station 86. 'Y-yes, I am. Who are you though?' The man wearing the blue, firefighter-embroidered shirt takes a step back from you, yet in spite of this you give the Dalmatian the rundown of what's happening and who you just so happen to be. Watching the other's face go through a multitude of expression before stilling on surprise, you can bet that he never imagined hearing this information when he woke up today.";
 		WaitLineBreak;

@@ -110,7 +110,7 @@ Carry out milking:
 		repeat with T running from one to Z:
 			increase carried of margay milk by 1;
 		now lastmilking is turns;
-	else if BodyName of Player is "Xeno":
+	else if BodyName of Player is "Xeno Drone":
 		say "Bringing your clawed hands to your [if Player is xenoskinned]black, [end if]green-veined breasts, you pinch and squeeze your nipples, drawing out green, acidic milk that sizzles where it falls. You manage to contain some in a jar that it doesn't seem to be able to eat through right away";
 		let z be the square root of ( Nipple Count of Player * Breast Size of Player );
 		let z be z / 2;

@@ -168,17 +168,17 @@ to say sexwithAndrew:
 		let male4c be "";
 		if HP of Andrew is 8, sort randomcolorlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
-			now male1c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male1c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male2c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male2c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male3c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male3c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male4c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male4c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 [		say "TEST:[line break]";
 		say "male1type: [male1type][line break]";
@@ -252,11 +252,11 @@ to say andrewdemonshow: [evil Brutus + Andrew]
 		let male2c be "";
 		sort randomcolorlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
-			now male1c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male1c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male2c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male2c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 [		say "TEST:[line break]";
 		say "male1c: [male1c] / male1type: [male1type][line break]";
 		say "male2c: [male2c] / male2type: [male2type][line break][line break]";]
@@ -301,11 +301,11 @@ to say AndrewBrutusShow: [cleansed Brutus + Andrew]
 	let male2c be "";
 	sort randomcolorlist in random order; [fresh randomized set]
 	if a random chance of 1 in 5 succeeds:
-		now male1c is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now male1c is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 5 succeeds:
-		now male2c is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now male2c is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	say "     With you still standing on the edge of the stage, you get approached by a naked [male1c][male1type] who pulls you into his arms, giving you a wet, sticky kiss that's heavily flavored by the cum of the guy he just finished blowing. You're treated to a slick mouthful of semen as his tongue pushes past your lips to play with yours.";
 	LineBreak;
 	say "     Do you want to stay in the middle of this little orgy on the stage, or extricate yourself from the grasp of this pretty randy guy and join crowd to just watch the show?";
@@ -370,17 +370,17 @@ carry out andrewtesting:
 		let male4c be "";
 		if HP of Andrew is 8, sort randomcolorlist in random order; [fresh randomized set]
 		if a random chance of 1 in 5 succeeds:
-			now male1c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male1c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male2c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male2c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male3c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male3c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 5 succeeds:
-			now male4c is entry 1 of randomcolorlist;
-			rotate randomcolorlist;
+			now male4c is entry 1 of randomcolorList;
+			rotate randomcolorList;
 		if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 		say "TEST:[line break]";
 		say "male1type: [male1type][line break]";

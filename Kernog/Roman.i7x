@@ -100,7 +100,7 @@ instead of conversing the Team Captain Roman:
 	now sortorder entry is 1;
 	now description entry is "Chat with Roman";
 	[]
-	if ((GorillasMember is 0 or GorillasMember is 1 ) and Guy is not banned and Furry is not banned and Roman is in Astroslide Football Field):
+	if ((GorillasMember is 0 or GorillasMember is 1 ) and MaleList is not banned and FurryList is not banned and Roman is in Astroslide Football Field):
 		choose a blank row in table of fucking options;
 		now title entry is "Join";
 		now sortorder entry is 2;

@@ -33,7 +33,7 @@ Orcish Slave Raid	"Orcish Slave Raid"
 Orcish Slave Raid is a situation.
 The sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
-	add Orcish Slave Raid to badspots of guy;       [male orcs]
+	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
 
 Instead of resolving a Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;

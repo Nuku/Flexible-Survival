@@ -361,9 +361,9 @@ To Birth:
 	[gender]
 	let ChildGender be "male";
 	let ChildGenderRoll be a random number from 1 to 10;
-	if Hermaphrodite is warded or Hermaphrodite is banned and (ChildGenderRoll is 7 or ChildGenderRoll is 8):
+	if HermList is warded or HermList is banned and (ChildGenderRoll is 7 or ChildGenderRoll is 8):
 		now ChildGenderRoll is a random number from 1 to 6;
-	if Transgender is warded or Transgender is banned and (ChildGenderRoll is 9 or ChildGenderRoll is 10):
+	if TransList is warded or TransList is banned and (ChildGenderRoll is 9 or ChildGenderRoll is 10):
 		now ChildGenderRoll is a random number from 1 to 6;
 	if ChildGenderRoll is:
 		-- 1:
@@ -874,13 +874,22 @@ To impregnate with (x - text):
 			now LegsName of Child is x;
 			now AssName of Child is x;
 			now TailName of Child is x;
-			now HeadSpeciesName of Child is Species Name entry;
-			now TorsoSpeciesName of Child is Species Name entry;
-			now BackSpeciesName of Child is Species Name entry;
-			now ArmsSpeciesName of Child is Species Name entry;
-			now LegsSpeciesName of Child is Species Name entry;
-			now AssSpeciesName of Child is Species Name entry;
-			now TailSpeciesName of Child is Species Name entry;
+			if Species Name entry is not "":
+				now HeadSpeciesName of Child is Species Name entry;
+				now TorsoSpeciesName of Child is Species Name entry;
+				now BackSpeciesName of Child is Species Name entry;
+				now ArmsSpeciesName of Child is Species Name entry;
+				now LegsSpeciesName of Child is Species Name entry;
+				now AssSpeciesName of Child is Species Name entry;
+				now TailSpeciesName of Child is Species Name entry;
+			else:
+				now HeadSpeciesName of Child is Name entry;
+				now TorsoSpeciesName of Child is Name entry;
+				now BackSpeciesName of Child is Name entry;
+				now ArmsSpeciesName of Child is Name entry;
+				now LegsSpeciesName of Child is Name entry;
+				now AssSpeciesName of Child is Name entry;
+				now TailSpeciesName of Child is Name entry;
 		else if "They Have Your Eyes" is listed in feats of Player: [child will always look like the player]
 			now HeadName of Child is HeadName of Impregnator;
 			now TorsoName of Child is TorsoName of Impregnator;

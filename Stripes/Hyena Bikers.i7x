@@ -14,9 +14,9 @@ Hyena Bikers	"Hyena Bikers"
 Hyena Bikers is a situation.
 The sarea of Hyena Bikers is "High".
 when play begins:
-	add Hyena Bikers to badspots of guy;
-	add Hyena Bikers to badspots of hermaphrodite;
-	add Hyena Bikers to badspots of furry;
+	add Hyena Bikers to BadSpots of MaleList;
+	add Hyena Bikers to badspots of HermList;
+	add Hyena Bikers to BadSpots of FurryList;
 
 Instead of resolving a Hyena Bikers:
 	setmonster "Herm Hyena";

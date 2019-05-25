@@ -29,8 +29,8 @@ Arts Department	"Arts Department"
 Arts Department is a situation. The level of Arts Department is 3.
 The sarea of Arts Department is "Campus".
 when play begins:
-	add Arts Department to badspots of girl;
-	add Arts Department to badspots of furry;
+	add Arts Department to BadSpots of FemaleList;
+	add Arts Department to BadSpots of FurryList;
 
 Instead of resolving a Arts Department:
 	say "     You find yourself in front of the school's arts department building, finding it a rather small and neglected part of the campus. Clearly used just for some easy credits, it's not given much respect here. You decide to slip inside, hoping to find something of use since the muscle-bound creatures around don't seem to have been around here. You go down the halls, finding most of the rooms locked or empty until you come to a room used for sculpting. Inside, you find a female lizard who's elated to find you, an ample subject for her special, artistic talents.";
@@ -67,17 +67,17 @@ The sarea of Wandering the Campus is "Campus".
 campuswander is a list of numbers that varies.
 campuswanderfight is a number that varies.
 when play begins:
-	add Wandering the Campus to badspots of furry;
+	add Wandering the Campus to BadSpots of FurryList;
 
 Instead of resolving a Wandering the Campus:
-	if guy is banned and 1 is not listed in campuswander, add 1 to campuswander;
-	if hermaphrodite is banned and 2 is not listed in campuswander, add 2 to campuswander;
-	if hermaphrodite is banned and 3 is not listed in campuswander, add 3 to campuswander;
-	if girl is banned and 4 is not listed in campuswander, add 4 to campuswander;
-	if hermaphrodite is banned and 5 is not listed in campuswander, add 5 to campuswander;
-	if guy is banned and 6 is not listed in campuswander, add 6 to campuswander;
-	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
-	if guy is banned and girl is banned and hermaphrodite is banned:
+	if MaleList is banned and 1 is not listed in campuswander, add 1 to campuswander;
+	if HermList is banned and 2 is not listed in campuswander, add 2 to campuswander;
+	if HermList is banned and 3 is not listed in campuswander, add 3 to campuswander;
+	if FemaleList is banned and 4 is not listed in campuswander, add 4 to campuswander;
+	if HermList is banned and 5 is not listed in campuswander, add 5 to campuswander;
+	if MaleList is banned and 6 is not listed in campuswander, add 6 to campuswander;
+	if MaleList is banned and 7 is not listed in campuswander, add 7 to campuswander;
+	if MaleList is banned and FemaleList is banned and HermList is banned:
 		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
 		now Resolution of Wandering the Campus is 3;	[Did not meet anyone]
 	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
@@ -135,8 +135,8 @@ The sarea of Anime Club is "Campus".
 animeclubfight is a truth state that varies. animeclubfight is usually false.
 
 when play begins:
-	add Anime Club to badspots of girl;
-	add Anime Club to badspots of guy;
+	add Anime Club to BadSpots of FemaleList;
+	add Anime Club to BadSpots of MaleList;
 
 Instead of resolving a Anime Club:
 	say "     As you're going through one of the many buildings on campus, you hear some knocking and a voice coming from the next floor while climbing the stairwell. Heading towards it, you quickly start to make out the female voice getting louder and more frantic about wanting to get inside. '...from the window. Please, I just need somewhere safe to hide. Please. Quick. I can hear someth... whaaaa!'";
@@ -240,8 +240,8 @@ Course Advice is a situation.
 The sarea of Course Advice is "Campus".
 
 when play begins:
-	add Course Advice to badspots of girl;
-	add Course Advice to badspots of guy;
+	add Course Advice to BadSpots of FemaleList;
+	add Course Advice to BadSpots of MaleList;
 
 instead of going north from College Fountain while (Course Advice is not resolved):
 	AdminIntro;

@@ -10,8 +10,8 @@ Red Light Requisition	"Red Light Requisition"
 Red Light Requisition is a situation.
 The sarea of Red Light Requisition is "Red".
 when play begins: [these exceptions are based on the second half so people aren't left standing]
-	add Red Light Requisition to badspots of guy;
-	add Red Light Requisition to badspots of furry;
+	add Red Light Requisition to BadSpots of MaleList;
+	add Red Light Requisition to BadSpots of FurryList;
 
 Instead of resolving a Red Light Requisition:
 	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
@@ -31,8 +31,8 @@ Trickster's Masterpiece	"Trickster's Masterpiece"
 Trickster's Masterpiece is a situation.
 The sarea of Trickster's Masterpiece is "Outside".
 when play begins:
-	add Trickster's Masterpiece to badspots of guy; [male soldiers]
-	add Trickster's Masterpiece to badspots of furry; [minotaur involved]
+	add Trickster's Masterpiece to BadSpots of MaleList; [male soldiers]
+	add Trickster's Masterpiece to BadSpots of FurryList; [minotaur involved]
 
 Instead of resolving a Trickster's Masterpiece:
 	say "     Following lust-filled grunts and bellows, you come upon a mid-sized military encampment on the parking space behind an office building. There you find a strange scene - in the middle of several olive green tents, there is a wooden hitching post - which a buck-naked soldier uses to hold on to. Behind the man is a very tall musclebound humanoid, sporting a horned bull's head and furred legs ending in cloven hooves - a minotaur. He's in a full on mating frenzy, shafting the human in front of him with mighty thrusts of his long cock. A bit to the side, a group of soldiers stands in front of an officer, many of them apprehensively looking over to the rutting minotaur before they turn back to their superior.";
@@ -66,7 +66,7 @@ Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the '
 The sarea of Back at the Camp is "Outside".
 
 when play begins:
-	add Back at the Camp to badspots of guy; [male soldiers]
+	add Back at the Camp to BadSpots of MaleList; [male soldiers]
 
 lastGuardBeg is a number that varies. lastGuardBeg is usually 555.
 

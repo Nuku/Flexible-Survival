@@ -100,15 +100,15 @@ instead of conversing Larissa:
 		say "     'We are looking for extracted vial samples. If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.'";
 		if ( HP of Doctor Matt < 17 or HP of Doctor Matt >= 100 ) and ( hospquest < 17 ):
 			if zephyrtask is 0:
-				if furry is not banned and hermaphrodite is not banned:
+				if FurryList is not banned and HermList is not banned:
 					say "     She flips through a few papers on her desk, trying to find something. 'We've also been experiencing a bit of a pest problem. Some of those panther taur creatures have been harassing us.' She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs. It's fondling its breasts and smiling lewdly at the camera. 'The guards are able drive them off easily enough, but it does upset the other customers. We're in the business of helping you, but we'll need some help to do that. If you could go beat up some of them around here, it might discourage them from coming around again. We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 1;
 					now zephyrpests is 0;
-				else if furry is not banned and guy is not banned:
+				else if FurryList is not banned and MaleList is not banned:
 					say "     She flips through a few papers on her desk, trying to find something. 'We've also been experiencing a bit of a pest problem. Some of those German shepherd creatures have been harassing us.' She holds a photo of a German shepherd person with black and tan fur. It's growling and making a rude gesture at the camera. 'The guards are able drive them off easily enough, but it does upset the other customers. We're in the business of helping you, but we'll need some help to do that. If you could go beat up some of them around here, it might discourage them from coming around again. We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 2;
 					now zephyrpests is 0;
-				else if girl is not banned:
+				else if FemaleList is not banned:
 					say "     She flips through a few papers on her desk, trying to find something. 'We've also been experiencing a bit of a pest problem. Some of those city sprite creatures have been harassing us.' She holds a photo of a cluster of fairy-winged girls hovering in the air. Several of them are sticking out their tongues or otherwise making faces at the camera. 'The guards are able drive them back to that [bold type]urban forest[roman type] they live in, but they keep coming back. They harass the customers and are destructive little pests. We're in the business of helping you, but we'll need some help to do that. If you could track them down and beat a few of them up, it might discourage them from coming around again. We'd appreciate your assistance and will reward you for the completion of the task.'";
 					now zephyrtask is 3;
 					now zephyrpests is 0;
@@ -397,18 +397,18 @@ when play begins:
 	add { "Succubus" } to Larissa_possible_forms_hellspawn;
 
 this is the larissa_tfoption rule:
-	if furry is not banned, add Larissa_possible_forms_furry to Larissa_possible_forms, if absent;
-	if guy is not banned, add Larissa_possible_forms_guy to Larissa_possible_forms, if absent;
-	if girl is not banned, add Larissa_possible_forms_girl to Larissa_possible_forms, if absent;
-	if hermaphrodite is not banned, add Larissa_possible_forms_herm to Larissa_possible_forms, if absent;
-	if hellspawn is not banned, add Larissa_possible_forms_hellspawn to Larissa_possible_forms, if absent;
-	if humorous is not banned, add Larissa_possible_forms_humorous to Larissa_possible_forms, if absent;
-	if furry is banned, remove Larissa_possible_forms_furry from Larissa_possible_forms;
-	if guy is banned, remove Larissa_possible_forms_guy from Larissa_possible_forms;
-	if girl is banned, remove Larissa_possible_forms_girl from Larissa_possible_forms;
-	if hermaphrodite is banned, remove Larissa_possible_forms_herm from Larissa_possible_forms;
-	if hellspawn is banned, remove Larissa_possible_forms_hellspawn from Larissa_possible_forms;
-	if humorous is banned, remove Larissa_possible_forms_humorous from Larissa_possible_forms;
+	if FurryList is not banned, add Larissa_possible_forms_furry to Larissa_possible_forms, if absent;
+	if MaleList is not banned, add Larissa_possible_forms_guy to Larissa_possible_forms, if absent;
+	if FemaleList is not banned, add Larissa_possible_forms_girl to Larissa_possible_forms, if absent;
+	if HermList is not banned, add Larissa_possible_forms_herm to Larissa_possible_forms, if absent;
+	if DemonList is not banned, add Larissa_possible_forms_hellspawn to Larissa_possible_forms, if absent;
+	if HumorousList is not banned, add Larissa_possible_forms_humorous to Larissa_possible_forms, if absent;
+	if FurryList is banned, remove Larissa_possible_forms_furry from Larissa_possible_forms;
+	if MaleList is banned, remove Larissa_possible_forms_guy from Larissa_possible_forms;
+	if FemaleList is banned, remove Larissa_possible_forms_girl from Larissa_possible_forms;
+	if HermList is banned, remove Larissa_possible_forms_herm from Larissa_possible_forms;
+	if DemonList is banned, remove Larissa_possible_forms_hellspawn from Larissa_possible_forms;
+	if HumorousList is banned, remove Larissa_possible_forms_humorous from Larissa_possible_forms;
 	[Adds each list only if it is permitted. Removal also required because elements will be present multiple times.]
 
 check Larissatfing:

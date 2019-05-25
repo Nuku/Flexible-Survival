@@ -25,8 +25,8 @@ Campus Lovers is a situation.
 The sarea of Campus Lovers is "Campus".
 
 when play begins:
-	add Campus Lovers to badspots of guy;
-	add Campus Lovers to badspots of furry;
+	add Campus Lovers to BadSpots of MaleList;
+	add Campus Lovers to BadSpots of FurryList;
 
 instead of going to College Fountain while (Campus Lovers is active and Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;

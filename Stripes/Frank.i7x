@@ -11,9 +11,9 @@ Mephitness	"Mephitness"
 Mephitness is a situation. The level of Mephitness is 6.
 The sarea of Mephitness is "High".
 when play begins:
-	add Mephitness to badspots of guy;
-	add Mephitness to badspots of girl;
-	add Mephitness to badspots of furry;
+	add Mephitness to BadSpots of MaleList;
+	add Mephitness to BadSpots of FemaleList;
+	add Mephitness to BadSpots of FurryList;
 
 Instead of resolving a Mephitness:
 	say "     As you travel the city streets, you hear some commotion up ahead and getting closer. Taking cover, you watch as a hefty fellow with a skunk head and tail wheezes as he runs past you with a trio of skunk girls in hot pursuit. He staggers and drops his pack as he scrambles to keep going[if Urban Forest is known]. Given your distance from that forested area, it's clear the chase has been going on for a while[end if]. The skunk girls move in, giggling at their panting, exhausted prey. They seem reinvigorated by their chase coming to a close and their prize ready for the taking.";

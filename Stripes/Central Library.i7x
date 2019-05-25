@@ -23,9 +23,9 @@ mattintel is a number that varies.
 mouseintel is a number that varies.
 hyenaintel is a number that varies.
 when play begins:
-	add Central Library to badspots of guy;
-	add Central Library to badspots of girl;
-	add Central Library to badspots of furry;
+	add Central Library to BadSpots of MaleList;
+	add Central Library to BadSpots of FemaleList;
+	add Central Library to BadSpots of FurryList;
 
 Instead of resolving a Central Library:
 	if centrallib is 0:
@@ -361,13 +361,13 @@ to say libraryexplore:
 	say "     Inside the library, you start looking around quickly, passing through the stacks. You spot a few signs of transformed victims - clothes and cum stains mostly - but not many. Clearly only a few people were here when the outbreak started. You scan through the stacks, looking for anything that might be helpful to your situation.";
 	WaitLineBreak;
 	let randomlist be a list of numbers;
-	if 1 is not listed in bookcollection, add 1 to randomlist;
-	if 2 is not listed in bookcollection, add 2 to randomlist;
-	if 3 is not listed in bookcollection, add 3 to randomlist;
-	if 4 is not listed in bookcollection, add 4 to randomlist;
-	if 5 is not listed in bookcollection, add 5 to randomlist;
-	if 6 is not listed in bookcollection, add 6 to randomlist;
-	if 7 is not listed in bookcollection, add 7 to randomlist;
+	if 1 is not listed in bookcollection, add 1 to randomList;
+	if 2 is not listed in bookcollection, add 2 to randomList;
+	if 3 is not listed in bookcollection, add 3 to randomList;
+	if 4 is not listed in bookcollection, add 4 to randomList;
+	if 5 is not listed in bookcollection, add 5 to randomList;
+	if 6 is not listed in bookcollection, add 6 to randomList;
+	if 7 is not listed in bookcollection, add 7 to randomList;
 	sort randomlist in random order;
 	if randomlist is empty:
 		say "     Perusing the books, you find nothing of interest in the nearby shelves. You are about to move to the next section when you spot a bottle of water and some chips someone must have set down on the shelf. From the pile of clothes and sticky mess on the floor, it's likely they won't be coming back for them any time soon. You grab them and stuff them into your pack for later consumption.";

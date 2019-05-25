@@ -12,9 +12,9 @@ Disorganization	"Disorganization"
 Disorganization is a situation. The level of Disorganization is 9.
 DRS is a number that varies.[@Tag:NotSaved]
 when play begins:
-	add Disorganization to badspots of furry;
-	add Disorganization to badspots of guy;
-	add Disorganization to badspots of hermaphrodite;
+	add Disorganization to BadSpots of FurryList;
+	add Disorganization to BadSpots of MaleList;
+	add Disorganization to badspots of HermList;
 
 Instead of resolving Disorganization:
 	If drs is 0:

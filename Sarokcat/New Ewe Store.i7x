@@ -33,7 +33,7 @@ New Ewe Store	"New Ewe Store"
 New Ewe Store is a situation.
 The sarea of New Ewe Store is "Outside".
 when play begins:
-	add New Ewe Store to badspots of furry;
+	add New Ewe Store to BadSpots of FurryList;
 
 NESProgress is a number that varies.
 
@@ -256,7 +256,7 @@ Instead of conversing the Leon:
 				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason, it doesn't seem to bother you to smell like your fellow sheep; you all belong to the same ram, after all... Blushing uncertainly at that thought, you return to the main store area.";
 				increase Libido of Player by 10;
 				increase RamFucked by 1;
-				if girl is not banned and "Male Preferred" is not listed in feats of Player:
+				if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 					infect "Ewe";
 					infect "Ewe";
 				else:
@@ -292,7 +292,7 @@ instead of conversing the Mary:
 				say "     You continue to talk about a number of subjects as you both relax, eventually Mary falling asleep in your lap. Softly moving her into a more comfortable position, you realize how much your comfortable time with your new flock member seems to have changed you, even making you smell a bit like her.";
 				increase Libido of Player by 10;
 				increase EweFucked by 1;
-				if guy is not banned and "Female Preferred" is not listed in feats of Player:
+				if MaleList is not banned and "Female Preferred" is not listed in feats of Player:
 					infect "Ram";
 					infect "Ram";
 				else:
@@ -370,7 +370,7 @@ to say sexwithLeon:
 					SanLoss 10;
 					if "Strong Psyche" is listed in feats of Player, increase humanity of Player by 2;
 					if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by 2;
-					if girl is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 						infect "Ewe";
 					else:
 						infect "Ram";
@@ -424,7 +424,7 @@ to say sexwithLeon:
 					say "     Having already gotten off recently, Leon has a lot of stamina, pounding you for a long, long time. Any attempt by your waning humanity to recover is disrupted by the steady rutting, ram musk, soft wool and sheep scents absorbing all your focus. These moments become weaker and less frequent until they stop altogether, not missed at all by your submissive sheep mind. By the time Leon's reached his second orgasm and pumps a fresh, full load of ram semen into your wanton ass, all that's left is the male ewe he desires you to be. His climax is just as powerful as the last, filling your bowels with his virile seed even as you moan and cum again from being filled by your ram.";
 					WaitLineBreak;
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more. All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass. Confident that you're fully his now, he leaves you there to return to the store. Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind. It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
-					if girl is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 						setmonster "Ewe";
 						choose row MonsterID from the Table of Random Critters;
 						now TailName of Player is "Ewe";
@@ -462,12 +462,12 @@ to say sexwithLeon:
 					stop the action;
 				else:
 					say "     After pulling out, the chuckling ram swipes his sticky cock across your [if SkinName of Player is ram or SkinName of Player is ewe]woolly [end if]ass, leaving fresh smears of his musky semen across your cheeks. Between the heavy dose of it you ended up breathing in and scent of rut clinging to you, you are left in a lustful daze of submissive urges long after he's left you alone in the room. Even once you start to regain your senses, it takes considerable effort to force yourself up and out of the room so you can clear your head before you give in completely.";
-					if girl is not banned and "Male Preferred" is not listed in feats of Player:
+					if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 						infect "Ewe";
 					else:
 						infect "Ram";
 			increase lust of leon by 1;
-		if girl is not banned and "Male Preferred" is not listed in feats of Player:
+		if FemaleList is not banned and "Male Preferred" is not listed in feats of Player:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -496,7 +496,7 @@ to say sexwithmary:
 			say "     Mary's sheep-like face pouts slightly as she takes in your female form. 'It looks like you aren't quite ready to be the ram of the flock yet,' she says as she runs her hands over your body, 'but that doesn't mean we can't have a little bonding time in the flock anyways.' She leans over you to lick the side of your face erotically. Wasting no time she begins running her hands up and down your body, teasing and exciting you as she begins to lick and kiss her way down your body. She pays special attention to your nipples and stomach, before finally lowering her head to your wet pussy, which she begins to nibble and tease with her soft lips and flexible tongue. Unable to help yourself you bury your hands in the soft fleece around her head as you moan and writhe underneath her, her marvelously skilled tongue quickly bringing you to the edge of orgasm, before finally making you cry out as you cum, your juices eagerly licked up by her wonderful tongue.";
 			WaitLineBreak;
 			say "     As you collapse back onto the couch from your amazing orgasm, Mary slowly moves back up your body in order to kiss you again, the taste of your own sexual fluids exploding into your mouth from the deep kiss. Eventually breaking the kiss off, she lies next to you as you drift off into an exhausted sleep. You can vaguely here her comment as you drift off, something about not being able to wait for next time...";
-		if guy is not banned and "Female Preferred" is not listed in feats of Player:
+		if MaleList is not banned and "Female Preferred" is not listed in feats of Player:
 			infect "Ram";
 		else:
 			infect "Ewe";

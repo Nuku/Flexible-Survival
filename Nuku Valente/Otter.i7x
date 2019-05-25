@@ -10,13 +10,13 @@ Otterconsent is a number that varies.
 
 [Summary of the dancing around the flags:
 Anal play scenes will not occur if the player is set as Less Anal.
-If guy is banned, the male interplay scenes are removed from the sex. Female scenes will instead be more likely (75% chance each).
-If girl is banned, the female interplay scenes are removed from the sex. Male scenes will instead be more likely (75% chance each).
-A male otter may ride the player's cock if guy is not banned, but the female is more common (75%) unless female is banned.
+if MaleList is banned, the male interplay scenes are removed from the sex. Female scenes will instead be more likely (75% chance each).
+if FemaleList is banned, the female interplay scenes are removed from the sex. Male scenes will instead be more likely (75% chance each).
+A male otter may ride the player's cock if MaleList is not banned, but the female is more common (75%) unless female is banned.
 An otter (75% male/25% female unless banned) may rim the player if they're not receiving anal sex and if the player is set for More Anal.
-If girl or guy is banned, direct reference to that gender is removed from combat.
+If girl or MaleList is banned, direct reference to that gender is removed from combat.
 If both guy and girl are banned, then they will show as normal during combat.
-If both guy and girl is banned, a special case is reached, with a unique herm otter coming in for the sex.
+If both guy and FemaleList is banned, a special case is reached, with a unique herm otter coming in for the sex.
 If guy, girl and hermaphrodite are banned, the player will be punished.]
 
 to say otterdesc:
@@ -27,23 +27,23 @@ to say otterdesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	if guy is banned and girl is banned and hermaphrodite is banned:
+	if MaleList is banned and FemaleList is banned and HermList is banned:
 		setmongender 19; [creatures are mixed/variable]
-	else if guy is banned and girl is not banned:
+	else if MaleList is banned and FemaleList is not banned:
 		setmongender 14; [creatures are female]
-	else if girl is banned and guy is not banned:
+	else if FemaleList is banned and MaleList is not banned:
 		setmongender 13; [creatures are male]
 	else:
 		setmongender 19; [creatures are mixed/variable]
 	say "     Not one, but a group of playful looking otters. They spot you and move to intercept you swiftly, swimming all around you with their athletic forms rubbing amorously against your own. Your fingers can't help but brush against their aroused bodies in the rush before one grins at you, 'You want to play with us?'";
 
 to say otterstrike:
-	if guy is banned and girl is banned and hermaphrodite is banned:
+	if MaleList is banned and FemaleList is banned and HermList is banned:
 		say "The otters, shocked by your banning of all genders, join hands in a circle around you and yell 'WTF!' This sonic attack is devastating, crushing your bones into jelly.";
 		decrease the HP of Player by 1000;
-	else if guy is banned and girl is not banned:
+	else if MaleList is banned and FemaleList is not banned:
 		say "[one of]An otter grabs you around the midsection, her pussy grinding against your hip as she hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
-	else if girl is banned and guy is not banned:
+	else if FemaleList is banned and MaleList is not banned:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. The eager male gropes and fondles your body even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
 	else:
 		say "[one of]An otter grabs you around the midsection, his long cock poking between your cheeks as he hauls you underwater for a moment of panic.[or]An otter leaps from the water just to land on you, plunging you into the depths. You learn that it is as she as her slender breasts press against you even as you struggle for breath.[or]Two otters grab either of your hands and play tug o war with you, arguing over who gets to play first.[or]Even as you try to defend yourself, you feel something warm descend on your groin, lapping at you eagerly and unexpectedly. You squeak in surprise, but hands grab at you and pull you beneath the waves.[at random]";
@@ -53,10 +53,10 @@ to say Otter attack:
 		say "     When you stop struggling, the otters squeal with joy, pressing in warmly from all directions and holding you in their loving, if lecherous, arms. You are passed from one otter to the next, sniffed at and licked across the face and chest along the way. Only when you've been passed to each in turn do they push you into the center, all smiling, and move to begin play in earnest.";
 		now otterconsent is 1;
 		WaitLineBreak;
-	if guy is banned and girl is banned and hermaphrodite is banned:		[HUH! All banned! Madness!]
+	if MaleList is banned and FemaleList is banned and HermList is banned:		[HUH! All banned! Madness!]
 		say "     The otters, so confused that you're even here at all, collectively throw up their hands and leave. Floating like a boneless jellyfish, you eventually wash up on shore.";
 		wait for any key;
-	else if guy is banned and girl is banned:					[in herm only mode - special case]
+	else if MaleList is banned and FemaleList is banned:					[in herm only mode - special case]
 		choose row MonsterID from the Table of Random Critters;
 		now sex entry is "Both";
 		say "     As the otters swim around you excitedly, they seem to sense something about you and back off as a group, letting a lone member of the raft move up to you. You notice immediately that this member is special, being both male and female in one. Around hir neck is a short pendant with pink and periwinkle colored scallop shells. Hir small bosom, dainty handfuls, seems perfect on hir swimmer's frame, letting hir move through the water with grace. Shi moves up to you, running hir paws across your chest as hir smooth body swims around you, examining you intently.";
@@ -86,31 +86,31 @@ to say Otter attack:
 		wait for any key;
 		infect "Sea Otter"; [powerful, extra infection]
 	else:
-		if girl is banned:
+		if FemaleList is banned:
 			say "     As the otters swim around you excitedly, the females move off, sensing something about you. They instead swim on watch to prevent any interruption of your time with the male members of the raft.";
 			WaitLineBreak;
-		if guy is banned:
+		if MaleList is banned:
 			say "     As the otters swim around you excitedly, the males move off, sensing something about you. They instead swim on watch to prevent any interruption of your time with the female members of the raft.";
 			WaitLineBreak;
-		if guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and anallevel > 1:
+		if MaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel > 1:
 			say "     An otter swims up behind you and grabs you at the sides, pulling you back against a stiff shaft. He nuzzles into your left ear, then right, as he snuggles up against your back and works the pointed tip of his bestial member into your back door, slowly working it into your body as his friends bark and cheer their encouragement. He pulls you back firmly, sinking several inches more of himself into you, the pain giving way to nanite induced pleasure that echoes outwards from where he stretches you lustfully. His slick, throbbing cock feels increasingly pleasurable inside you, finally peaking when his hot semen floods your bowels.[mimpregchance]";
 			WaitLineBreak;
-		else if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and anallevel is 3:
+		else if ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel is 3:
 			let randomog be 1; [male]
-			if guy is banned or ( girl is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2; [female]
+			if MaleList is banned or ( FemaleList is not banned and a random chance of 1 in 4 succeeds ), now randomog is 2; [female]
 			say "     An otter swims up behind you and nuzzles at your rear, tickling at your bottom with [if randomog is 1]his[else]her[end if] whiskered face. [if randomog is 1]He[else]She[end if] nuzzles between your cheeks and starts licking at your pucker, making you squirm in response. Soon [if randomog is 1]his[else]her[end if] tongue's pressing past your anal ring and sliding into you through your back door. [if randomog is 1]His[else]Her[end if] webbed paws knead at your bottom as the playful lutrine licks your asshole, a sensation that grows increasingly pleasant as [if randomog is 1]he[else]she[end if] and the other otters play with you.";
-		if guy is not banned and player is female and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ):
+		if MaleList is not banned and player is female and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ):
 			say "     An otter nuzzles into your throat as he presses himself against your front for a moment. He grabs for your hips, then leans back, pressing his eager pointed tool against your nethers, easing it into you with a few sharp thrusts. He begins to piston against you like a machine, eyes closed and chest heaving with heavy gulps of air as he makes wild love. The rough loving is painful only for the first moment, giving way to erotic waves of tingling pleasure that run up and down your belly, centered on your ecstatic cunt, trembling tightly around the penetrating pole of that eager creature.";
 			say "     The playful otter strokes his webbed paws across your hips as he thrusts into you before finally emptying his load into your trembling pussy. Sated, he moves back, only to be replaced by another. They continue to take turns with you, seeding you again and again.[impregchance]";
 			WaitLineBreak;
-		if a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and ( guy is banned or girl is banned ) ):
-			if girl is not banned and ( a random chance of 3 in 4 succeeds or guy is banned ):
+		if a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and ( MaleList is banned or FemaleList is banned ) ):
+			if FemaleList is not banned and ( a random chance of 3 in 4 succeeds or MaleList is banned ):
 				say "     An otter suddenly clambers up on top of you, somehow avoiding plunging you into the waves as it settles down on your head and perches. It turns out to be a she, the heated scent of her aroused cunt close to your nose as she curls to look down at you from above, grinning";
-			else if guy is not banned:
+			else if MaleList is not banned:
 				say "     Soft pricks are felt as otter paws grab you and pull you down. Narrowly avoiding plunging you, an otter scales you and perches on your head with a happy bark, his balls draping over your face to obscure your vision for a moment before he laughs and moves a bit";
 			say ". The otter on your head leans back a little, balancing quite well as they begin to pleasure themselves with throaty groans and loud barks, sharing in the pleasure of the moment.";
 			WaitLineBreak;
-		if Player is male and girl is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and guy is banned ) ):
+		if Player is male and FemaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and MaleList is banned ) ):
 			if Cock Length of Player > 12:
 				say "     Too large for her to ride the traditional way, one of the females goes for the alternative, grabbing at your huge length and grinding her entire front along it, stroking it with her slender breasts and thick waterproofed hide. Her arms warp around it as she works you closer to climax.";
 				if Cock Count of Player > 1:
@@ -121,7 +121,7 @@ to say Otter attack:
 				if Cock Count of Player > 1:
 					say "     Noticing you have extra male meat, another female swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their sopping wet cunts, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
 				WaitLineBreak;
-		else if Player is male and guy is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and girl is banned ) ) and anallevel > 1:
+		else if Player is male and MaleList is not banned and ( a random chance of 1 in 2 succeeds or ( a random chance of 1 in 2 succeeds and FemaleList is banned ) ) and anallevel > 1:
 			say "     You can feel the soft, webbed paws of one of the otter's on your cock and you glance down to see a slender, young male grabbing and stroking your cock. He seems to almost grin as he nuzzles his softly-furred face against it";
 			if Cock Length of Player > 12:
 				say ". Too large for him to take, he continues to work his paws over your big cock. His digits move to fondle your balls as well as he worships your impressive member. His brown eyes are locked on it, staring at it lustfully";
@@ -133,7 +133,7 @@ to say Otter attack:
 			else:
 				say ". After worshipping your cock and gotten you quite hard and eager, the male slides his body across yours, running his waterproof fur across your chest. The eager fellow slides his tail across your legs and presses down onto your shaft, taking it into his rear easily. He grinds and wriggles atop it, making your cock throb with need. A strange warmth builds in your cock as it plunges hard and fast into the otter male's rump, pleasure building in your body in the motion of the otters around you.";
 				if Cock Count of Player > 1:
-					if girl is not banned:
+					if FemaleList is not banned:
 						say "     Not to be left out, the females swim up, intent on your extra male meat. The flexible otters wriggle into position, the females taking turns with your additional maleness. The feel of their pussies around your cock is different from the male riding your cock, but both are equally enjoyable in their own ways.";
 					else:
 						say "     Noticing you have extra male meat, another male swims up, one to a cock. It becomes quite crowded as they all press in tight to work your cocks deep into their tight rears, but they seem up for the challenge as they pile in together to work at you and bleed you of every drop of cum you can produce.";
@@ -243,7 +243,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -276,12 +276,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]

@@ -9,13 +9,13 @@ Section 1 - Creature Responses
 beatsatyr is a number that varies.
 
 when play begins:
-	add { "Satyr" } to infections of guy;
+	add { "Satyr" } to infections of MaleList;
 
 to say Satyr attack:
 	if Player is female:
 		say "     'Hah!' the satyr says as he pins you to the wall. 'What do we have here?' the goat-like man says with a leer as his hands roam your body. 'Not quite a proper nymph, I'll admit, but you'll do!' the satyr says as he begins to fondle you, wine spilling everywhere the scent of the strong wine seeming to spiral through your head making you feel as if you had had a few too many drinks yourself. The satyr pays no attention however to your distraction, as he is too busy positioning his large member for best effect, a fact brought to your attention as it begins to poke at your feminine opening. Looking down you can only get small glimpses of his large member, as his body is in the way as he presses your back up against the wall. His hands drop to your hips as he spreads you wide for him, you open your mouth to try to protest, but only a lusty moan comes out as he begins to sink his hot goat-like meat into you.";
 		say "     Your mind fogs even more as the scent of wine, the satyrs musk and your own body's lust combine, sending you into a pleasurable haze as he begins to fuck you hard against the wall. His stout goat-like legs easily supporting both your weight, as he holds your moaning body up, you can't help but realize now why nymphs always end up letting satyrs catch them. You find yourself thinking idly, their cock just feels sooo good. You moan in delight as his cock stimulates all the places deep inside you, throwing your head back as you orgasm around his cock, and he doesn't even stop, just pumps into you all the harder. You find your legs and arms wrapping around his back as he thrusts into you, holding him tight as he continues to fuck you, bringing you to yet another orgasm as his wonderful rod thrusts into you. Finally satisfied that you are good and fucked, the satyr groans himself, and lets his cock explode inside of you, filling you with his hot seed. Gasping, you shudder in one last orgasm as your mind goes blank for a minute, only dimly noticing as the sated satyr pulls you off of him and lies you down carefully on the floor. 'Not quite the fun of a real nymph yet,' you think you hear the satyr say, 'but I have to admit that was pretty damn good anyways. Maybe you'll let me catch ya again sometime and we can make a real nymph out of you,' the satyr finishes with a smile, then snags his wine cup from where it fell and goes looking for a refill. Slowly you manage to pull your well used body together, and you head back off into the museum halls yourself, almost looking forward to that next promised chase.[impregchance]";
-		if girl is not banned, infect "Greek Nymph";
+		if FemaleList is not banned, infect "Greek Nymph";
 	else if ( player is submissive and a random chance of 1 in 2 succeeds and anallevel > 1) or ( player is mpreg_ok and a random chance of 1 in 3 succeeds ) or ( anallevel is 3 and a random chance of 1 in 3 succeeds ):
 		say "     'Hey there brother! Up with you now, there are nymphs waiting for...' he starts to say before he stops short. He grins lecherously down at you as he looks you over, clearly reconsidering the options before him[if Player is submissive]. It seems your submissive instincts have kicked in and you're subconsciously taken on a rather alluring pose, putting on a rather wanton display for the horny goat man. 'Mmm... it seems I was too hasty... It seems I've found someone who wants to cavort right here,' he says, running his rough hands over your body. Your submissive needs, further awakened, have you moan softly and shift to rub against the satyr's rising erection[else]. It seems something about you has caught the horny goat man's attention. 'Mmm... it seems I was too hasty. Perhaps you'd like a drink from my horn first,' he chuckles, his cock stiffening to erection as he takes another swig of wine[end if].";
 		say "     Confused and excited by the jovial satyr and his musky male scent, you take his shaft in hand, stroke it a few times and guide it to your mouth. You slide your lips over it, slowly at first to taste his strong, masculine flavor before getting it all in and starting to work over it. You knead his hairy balls while he rubs your head and chuckles merrily, grabbing another swig of his drink, spilling some down onto you. The drops which land on his rounded belly and roll to his shaft are licked up to you, adding to the exciting taste and fueling your drunken lust all the more. Pulling free from his shaft, you wantonly lick up the wine before diving down to his balls and cleaning them as well.";
@@ -113,7 +113,10 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Satyr";
+	add "Satyr" to infections of MaleList;
+	add "Satyr" to infections of Magicallist;
+	add "Satyr" to infections of MythologicalList;
 	now Name entry is "Satyr";
 	now enemy title entry is "";
 	now enemy Name entry is "";
@@ -201,7 +204,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -234,12 +237,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]

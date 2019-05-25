@@ -15,10 +15,10 @@ darkdays is a number that varies.
 
 The sarea of DogHouse is "Warehouse".
 when play begins:
-	add DogHouse to badspots of furry;
-	add DogHouse to badspots of girl;
-	add DogHouse to badspots of guy;
-	add DogHouse to badspots of hermaphrodite;
+	add DogHouse to BadSpots of FurryList;
+	add DogHouse to BadSpots of FemaleList;
+	add DogHouse to BadSpots of MaleList;
+	add DogHouse to badspots of HermList;
 
 Instead of resolving DogHouse:
 	if fin is 1:

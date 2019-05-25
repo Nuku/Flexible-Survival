@@ -145,7 +145,7 @@ Barricaded Lockerroom	"Barricaded Lockerroom"
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
 The sarea of Barricaded Lockerroom is "Campus".
 when play begins:
-	add Barricaded Lockerroom to badspots of hermaphrodite; [cuntboy, later a fight against a hulking cheerleader]
+	add Barricaded Lockerroom to badspots of HermList; [cuntboy, later a fight against a hulking cheerleader]
 
 Instead of resolving a Barricaded Lockerroom:
 	say "     While exploring the sports arena on the campus, you come upon the closed door to the men's locker room, looking rather battered with lots of claw scratches on it. When you try the door-handle, it opens only a crack before bumping into something heavy - accompanied by a loud clanking noise. A man's voice can be heard from inside a moment later: 'Stay away you crazy critters! I'm warning you - I've got a baseball bat and am willing to use it. You're not getting another bite out of me!'";

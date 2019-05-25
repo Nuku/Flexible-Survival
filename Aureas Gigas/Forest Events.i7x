@@ -10,9 +10,9 @@ The sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
-	add One flew into the Cuckoos Nest to badspots of humorous;
-	add One flew into the Cuckoos Nest to badspots of guy;
-	add One flew into the Cuckoos Nest to badspots of girl;
+	add One flew into the Cuckoos Nest to badspots of HumorousList;
+	add One flew into the Cuckoos Nest to BadSpots of MaleList;
+	add One flew into the Cuckoos Nest to BadSpots of FemaleList;
 
 Instead of resolving a One flew into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -47,9 +47,9 @@ The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
 The sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
-	add Two crash into the Cuckoos Nest to badspots of humorous;
-	add Two crash into the Cuckoos Nest to badspots of guy;
-	add Two crash into the Cuckoos Nest to badspots of girl;
+	add Two crash into the Cuckoos Nest to badspots of HumorousList;
+	add Two crash into the Cuckoos Nest to BadSpots of MaleList;
+	add Two crash into the Cuckoos Nest to BadSpots of FemaleList;
 
 Instead of resolving a Two crash into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -104,8 +104,8 @@ The Prereq1Resolution of Avian Tent is { 1, 2 }.
 The sarea of Avian Tent is "Forest";
 
 when play begins:
-	add Avian Tent to badspots of guy;
-	add Avian Tent to badspots of girl;
+	add Avian Tent to BadSpots of MaleList;
+	add Avian Tent to BadSpots of FemaleList;
 
 Instead of resolving a Avian Tent:
 	say "     As you are making your way through the forest you come across Izzy, the female member of the cuckoo couple you've met before. She is strolling down a path not too far from your own, heading deeper into the woods away from you. Based on the clothing she is wearing and only carrying a metal bar for self-defense it seems like she's on the 'hunt' for something besides supplies. The sexy avian wears a low cut white blouse which has been tied off to show her slender waist, combined with a skimpy tartan miniskirt that hardly conceals anything. As she bends down to get past a low-hanging branch you see that she doesn't have any panties on either.";
@@ -187,8 +187,8 @@ The sarea of Thief's Punishment is "Forest".
 BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
 when play begins:
-	add Thief's Punishment to badspots of guy;
-	add Thief's Punishment to badspots of girl;
+	add Thief's Punishment to BadSpots of MaleList;
+	add Thief's Punishment to BadSpots of FemaleList;
 
 instead of resolving Thief's Punishment:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -233,8 +233,8 @@ The Prereq1Resolution of Thief's Reformation is { 1, 2 }.
 The sarea of Thief's Reformation is "Forest".
 
 when play begins:
-	add Thief's Reformation to badspots of guy;
-	add Thief's Reformation to badspots of girl;
+	add Thief's Reformation to BadSpots of MaleList;
+	add Thief's Reformation to BadSpots of FemaleList;
 
 instead of resolving Thief's Reformation:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]

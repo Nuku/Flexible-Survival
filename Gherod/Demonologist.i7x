@@ -16,7 +16,7 @@ Hellish Trashpile is a situation.
 The sarea of Hellish Trashpile is "Warehouse".
 
 when play begins:
-	add Hellish Trashpile to badspots of hellspawn;
+	add Hellish Trashpile to badspots of DemonList;
 
 
 LastTrashSearchTurn is a number that varies. [@Tag:NotSaved]
@@ -65,7 +65,7 @@ to HellTrashEvent:
 		LineBreak;
 		say "     Hidden behind the wall, you grab a nearby rock and throw it into the alleyway. It ricochets off the walls, making a loud impact sound that echoes through the narrow pathways. 'Huh?! What was this?! Is someone there?! Answer!' Your strategy worked, as the imp is now walking away from the portal and towards your position. Now's your chance to take him down!";
 		now ImpType is 1; [trash-dumping imp]
-		challenge "Imp";
+		challenge "Imp Male";
 		now ImpType is 0; [reset to scout imps]
 		if Resolution of Hellish Trashpile < 2:
 			DemonicRitualTapeGet;

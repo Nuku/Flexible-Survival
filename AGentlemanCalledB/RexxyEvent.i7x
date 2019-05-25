@@ -33,9 +33,9 @@ Forced Adoption is a situation.
 
 The sarea of Forced Adoption is "High".
 when play begins:
-	add Forced Adoption to badspots of guy;
-	add Forced Adoption to badspots of girl;
-	add Forced Adoption to badspots of furry;
+	add Forced Adoption to BadSpots of MaleList;
+	add Forced Adoption to BadSpots of FemaleList;
+	add Forced Adoption to BadSpots of FurryList;
 
 Instead of Resolving a Forced Adoption:
 	if HP of Rex is 0:

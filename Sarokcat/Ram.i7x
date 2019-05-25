@@ -54,7 +54,7 @@ to say ram_attack:
 		say "     Knocking you to the ground, the powerful male grins as he stands over your defeated form, 'And now to claim you as part of my flock,' he says teasingly, as he pushes your legs apart with one of his rough hooflike hands, his touch making you shudder slightly, as his masculine musk fills your head, causing your pussy to moisten eagerly. You feel yourself moaning submissively, as he runs his hooves over your body teasingly, even as he settles himself between your legs, the feeling of his thick cock rubbing up against your crotch making you feel even more submissive as you spread your legs wider for him.";
 		say "     'Now that's a good eager little ewe,' the ram mutters smugly, as he enjoys your body's automatic response to his dominant scent and actions. You try to protest, only to find yourself bleating just like an ewe as he sheathes himself in you in one swift move, the feel of his thick cock pressing into your body making your mind explode with pleasure. As the powerful ram thrusts into you again and again, you can feel your protests fading, and you can feel your dominant urges fading with each thrust, replaced by feelings of happy submission to your ram. With the intense pleasure of his cock stroking your insides, you can't help but embrace your new instincts, and you pant eagerly as you begin to clutch the powerful ram to your body tightly.";
 		say "     Happy at this newest evidence of his complete victory over your body, the Ram lets out a triumphant cry as he shoots his seed into you, making you moan happily in response. After a minute of lying there with his cock still twitching inside you, the ram pulls himself out of your body, making you blink as you look up at the powerful beast. Standing up the ram grins down at you, 'Now that you know what it's like to be a proper ewe, I expect you will come running next time I call,' he says teasingly as you nod absently. 'I need to go find a few more members for the flock, so once you are a proper ewe, be sure to hunt me down. That's an order from your new Ram,' he says with amusement as he turns and jogs off into the city. Leaving you lying there on the ground, your mind still fogged with submissive bliss, a strong desire to obey and do just what your ram ordered welling up within you, even as you try to hold on to your remaining humanity.[impregchance]";
-		if girl is not banned:
+		if FemaleList is not banned:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -63,24 +63,24 @@ to say ram_attack:
 			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
 		else:
 			say "     Confused by your own submissive behavior, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [Cock of Player] cock to fullness[if CockName of Player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of Player] manhood before [end if]straddling your thighs and sinking your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
-			if guy is not banned:
+			if MaleList is not banned:
 				infect "Ram";
 	else if ramvar is 2:
 		if Player is not male:
 			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down for your cock... only to find none. Considering you've turned him into your cockhungry [if rambjvirg is false]slut[else]bottom[end if], the ram seems more than a little confused and disappointed that you aren't packing anything for him to play with. With a sad bleat, he rubs at where your cock once was before getting up and leaving you alone on the ground.";
 		else:
 			say "     Confused at somehow managing to beat you, the ram seems unsure of what to do with himself. For a second, you're almost certain he's about to turn around and leave before a firm look of determination crosses his features. Approaching you, he eases you onto your back before reaching down to stroke your [Cock of Player] cock to fullness[if CockName of Player is not listed in infections of internallist], making sure to massage your balls with his hoof-like hands[end if]. Tentatively, [if rambjvirg is false]he brings his muzzle down over your cock to suckle on your [cock size desc of Player] manhood before [end if]straddling your thighs and sinking your length into his waiting tailhole. Bleating in ecstasy, he pistons himself on your [if Cock Length of Player > 18]massive[else if Cock Length of Player > 12]impressive[else if Cock Length of Player > 6]sizable[else]average[end if] rod, bucking atop you desperately while trying to make this as pleasurable for you as it is for him. Clenching tight around you, the ram soon bucks roughly atop you as he bleats in orgasm and sprays his seed across your chest and stomach, prompting you to unload your own virile cum into his warm bowels. Collapsing atop you, he nuzzles your chest for a short while before climbing off of you and setting off.";
-			if guy is not banned:
+			if MaleList is not banned:
 				infect "Ram";
 	else if "Male Preferred" is listed in feats of Player:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
 		say "     'Ah, that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before turning to depart, leaving you to contend with the mess he left in his wake.";
-		if guy is not banned:
+		if MaleList is not banned:
 			infect "Ram";
 	else:
 		say "     The beast pushes you down to the ground roughly, pinning you there as he pumps his own cock eagerly. You are forced to watch as his hoof-hands rub at his balls and cock, an impressive set of genitals on the woolly victor, unable to look away even as he starts to pump harder. You groan in defeat as he shoots his sticky seed all over your body, marking you as his.";
 		say "     'Ah that was good,' the ram says happily as he rubs his cock some more. 'Almost nothing feels as good as defeating a trespasser in my territory,' the ram says as he gets off you, before grinning evilly as he looks down at your helpless form. 'Now once you're done transforming into a proper ewe for me, you come find me right away. That's an order from your ram,' the powerful ram says, before chuckling as he heads back into the city. You are left lying there covered in his seed, and with a surprisingly strong desire to hunt him down again, just like he told you to...";
-		if girl is not banned:
+		if FemaleList is not banned:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -128,7 +128,7 @@ to say genericramride:
 	say "     [if Player is male]You could fuck him, but you'd much rather ride the ram's cock. [end if]Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before sinking your juicy cunt down onto it with a low moan. Exhausted as he is, he makes no effort to force you off of him as you [if Cunt Depth of Player < 5]try and take as much of his cock into you as you can[else]take his entire length into you[end if] and ride him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together[if Player is male], shooting your [Cum Load Size of Player] load over the ram's chest[end if]. Catching your breath, you slide off of him and moan at warm feeling of his warm semen slipping out of your pussy. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.[impregchance]";
 	LineBreak;
 	if a random chance of 1 in 2 succeeds:
-		if girl is not banned:
+		if FemaleList is not banned:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -137,7 +137,7 @@ to say genericramride1:
 	say "     Having come to a decision, you smirk down at the ram [if Player is dominant]smugly[else]coyly[end if] before pouncing atop his prone form and tell him exactly what you intend to do. The ram bleats in surprise as you reach down and stroke his softening cock back to fullness, [if Player is dominant]giving it a tight squeeze to remind him you're the one in charge[else]giving it special attention[end if] before lining up his cockhead with your backdoor. Exhausted as he is, he makes no effort to force you off of him as you sink his entire length into you, savoring the feel of his cock stretching out your inner walls as you start rocking your body and riding him hard and fast. Bleating and moaning, the two of you keep bucking and thrusting until you both reach a loud, crashing orgasm together, your anal muscles tightening around his pulsing manhood. Catching your breath, you slide off of him and moan at warm feeling of his warm semen spilling out of your hole. Standing up, you tell him what a good [if Player is dominant]obedient toy[else]lay[end if] he is.[mimpregchance]";
 	LineBreak;
 	if a random chance of 1 in 2 succeeds:
-		if girl is not banned:
+		if FemaleList is not banned:
 			infect "Ewe";
 		else:
 			infect "Ram";
@@ -259,8 +259,8 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	add "Ram" to infections of guy;
-	add "Ram" to infections of furry;
+	add "Ram" to infections of MaleList;
+	add "Ram" to infections of FurryList;
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "";
@@ -351,7 +351,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -384,12 +384,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -427,7 +427,7 @@ The usedesc of tainted wool is "[taintedwooleffect]";
 
 to say taintedwooleffect:
 	say "You take out the small bundle of wool you acquired earlier, and your head swims slightly as your nose fills with its strong musky odor. Feeling a bit aroused by the strange scent, you slowly start to rub the wool up against your cheek in order to enjoy the smell better. The feeling of the soft wool rubbing against your body, as well as the arousing aroma, make you lose track of time for a minute, until you realize you can feel your body starting to change.";
-	if girl is not banned:
+	if FemaleList is not banned:
 		infect "Ewe";
 	else:
 		infect "Ram";

@@ -98,8 +98,8 @@ Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
 
 when play begins:
-	add Temple of Hera to badspots of guy;       [male soldiers]
-	add Temple of Hera to badspots of furry;     [female husky involved]
+	add Temple of Hera to BadSpots of MaleList;       [male soldiers]
+	add Temple of Hera to BadSpots of FurryList;     [female husky involved]
 
 Instead of resolving a Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
@@ -120,8 +120,8 @@ Biker Hangout is a situation.
 The Prereq1 of Biker Hangout is Temple of Hera.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
-	add Biker Hangout to badspots of guy;
-	add Biker Hangout to badspots of furry;
+	add Biker Hangout to BadSpots of MaleList;
+	add Biker Hangout to BadSpots of FurryList;
 
 Instead of resolving a Biker Hangout:
 	say "     After a while of searching, you do find a chain-link gate that leads on to the junkyard proper from an adjoining dark alley. Near that back entrance, there is a run-down shack with three bikes parked in front of it. Seems you've found the hideout of the biker gang that kidnapped Joel. There is no one in sight right now, but where the bikes are, the bikers to go with them can't be far... so you decide to scout the place out stealthily first. As you carefully make your way through the piles of rusty cars and metal scrap, always using what concealment from observation through the shack's dirty windows you can get, you soon find out that there is another structure behind the shack - a chain link dog kennel. In it, you see the humanoid figure of an anthro dog lying on the ground, a short chain connecting his collar to an iron ring anchored in the concrete floor. From the looks of it, that chain doesn't even allow him to sit up, only to cower low to the ground or lie flat.";

@@ -25,7 +25,7 @@ Refugee Mare is a situation. Refugee Mare is inactive.
 The sarea of Refugee Mare is "Smith Haven".
 
 when play begins:
-	add Refugee Mare to badspots of furry;
+	add Refugee Mare to BadSpots of FurryList;
 
 Instead of resolving a Refugee Mare:
 	if GloryFate is 0:

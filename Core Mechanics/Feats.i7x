@@ -132,6 +132,7 @@ To addfeat (x - text) with (y - text):
 
 
 instead of addfeating the fun feats:
+	[TODO: Investigate why this is commented out]
 	[if "Male Preferred" is not listed in feats of Player and "Female Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "Single Sexed" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player and "Always A Pussy" is not listed in feats of Player:
 		if isHellhound is false or ( isHellhound is true and maleHound is true ):
 			addfeat "Male Preferred" with "Outside of special circumstances, you'll remain a guy.";

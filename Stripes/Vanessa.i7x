@@ -43,7 +43,7 @@ Paratrooper	"Paratrooper"
 Paratrooper is a situation. Paratrooper is inactive.		[unlocked after 3rd stage of 'Military presence']
 The sarea of Paratrooper is "Plains".
 when play begins:
-	add Paratrooper to badspots of girl;
+	add Paratrooper to BadSpots of FemaleList;
 
 Instead of resolving a Paratrooper:
 	say "     After checking through the crumbling ruins of a building, you notice a figure approaching in the distance. Seeing as they're humanoid and not rushing wildly towards you, you head cautiously in their direction. As you draw closer, you make out additional details - she's female, is wearing a camo jacket and is nude below the waist. This last gives you pause, but she doesn't seem aggressive or lust-crazed, though she does seem to be quite dazed or in shock. Once you reach her, you can notice further details - ears growing pointed, the start of an equine tail and the strong scent of centaur musk coming from the semen staining her bare thighs. Given she's still got her heavy boots on, you surmise her pants were torn clean off her by the randy stallion. Her tummy's still a little rounded, probably with the centaur's load, and possibly even with a bun in the oven.";
@@ -356,7 +356,7 @@ to say Vanessasex5:
 	say "     As you enjoy the centaur's milk, you caress her sides and flanks, enjoying the soft moans of pleasure she gives. When you swap to her other breast when the flow of the first tapers off, you get milk from it right away, her fingers having teased that breast to the point of leaking. '[one of]That's a good [if Player is female]girl[else]boy[end if][or]Mmm... I have plenty for you, my dear[or]Oh, this is turning me on soooo much[or]This has to be one of the best parts of being a breeding mare[at random],' she says, unable to hold back a nicker of excitement at the end.";
 	say "     And speaking of nickering in delight, when you finish her breast and are still thirsty for more, you move under the sexy mare's lower body and find her equine udder. She nickers and whinnies in even greater pleasure when you stroke the softly furred flesh and put your lips around one of its nipples, suckling for the warm milk inside. When you're rewarded with a taste of it, you find the flavor a little different from that of her human breasts, but equally enjoyable. And having her pussy within easy reach of there, you slide a playful hand around to finger her to a loud, nickering orgasm while you nurse from her udder like one of her centaur children. When you've had your fill and she's been left quite satisfied as well, you move out from under her, making a show of licking her pussy juices from your fingers.";
 	PlayerDrink 9;
-	if "Female Preferred" is listed in feats of Player and girl is not banned:		[change target to Mare for infection]
+	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:		[change target to Mare for infection]
 		infect "Centaur Mare";
 	else:
 		infect "Centaur Stallion";

@@ -10,8 +10,8 @@ The Prereq1Resolution of Refueling is { 1, 2 }.
 The sarea of Refueling is "Forest";
 
 when play begins:
-	add Refueling to badspots of guy;
-	add Refueling to badspots of girl;
+	add Refueling to BadSpots of MaleList;
+	add Refueling to BadSpots of FemaleList;
 
 Instead of resolving a Refueling:
 	say "     As you travel down a dusty path through the forest you come across the ruins of an aged dollar store, the outside looks thoroughly ransacked with shards of glass from broken car windshields and shredded cardboard lies strewn all around park. Some plastic bags flutter listlessly about in the wind. A massive eighteen-wheeler in the back that has been flipped on side by a large redwood and two elms. One of back doors is open, indicating that the truck was being unloaded when P.Day started. Hoping to find some useful you peek inside to see a variety of  boxes that have been shredded to bits. Based on the bite and scratch marks it would seem like a pack of wolves found cargo before you. The few boxes that seem relatively untouched contain items like laundry detergent, brooms, and paper towels. Makes sense that the feral beasts would ignore those remnants of society no longer useful in this postapocalyptic environment. With the truck a scavenging bust you venture in the back area of the store hoping to have more luck inside the storage room in back of the store.";

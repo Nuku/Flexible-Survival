@@ -13,9 +13,9 @@ Feline Friend	"Feline Friend"
 Feline Friend is a situation.
 The sarea of Feline Friend is "Park".
 when play begins:
-	add Feline Friend to badspots of guy;
-	add Feline Friend to badspots of girl;
-	add Feline Friend to badspots of furry;
+	add Feline Friend to BadSpots of MaleList;
+	add Feline Friend to BadSpots of FemaleList;
+	add Feline Friend to BadSpots of FurryList;
 
 Instead of resolving a Feline Friend:
 	say "     Move through the trees after being forced off the path by a pack of wolves you spotted, you try your best to remain quiet while moving quickly. As you hear the pack howl, you push aside some branches, hoping to find another section of path, but instead find yourself at a small clearing before a rocky hillside. There is the mouth to a cave in the cliff's face at this edge of the park. Worried about what may lurk there, you start to step back when you hear a voice call out.";

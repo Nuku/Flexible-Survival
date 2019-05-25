@@ -20,7 +20,7 @@ Panda Inspiration is a situation.
 The sarea of Panda Inspiration is "Campus".
 
 when play begins:
-	add Panda Inspiration to badspots of guy;
+	add Panda Inspiration to BadSpots of MaleList;
 
 instead of going to Tenvale College Male Dorms while (Panda Inspiration is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 0 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Male Dorms;
@@ -50,7 +50,7 @@ Panda Question is resolved.
 The sarea of Panda Question is "Campus".
 
 when play begins:
-	add Panda Question to badspots of guy;
+	add Panda Question to BadSpots of MaleList;
 
 instead of going to Creative Street while (Panda Question is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 1 and a random chance of 1 in 3 succeeds):
 	move player to Creative Street;
@@ -82,7 +82,7 @@ Art Supply Retrieval is resolved.
 The sarea of Art Supply Retrieval is "Campus".
 
 when play begins:
-	add Art Supply Retrieval to badspots of girl;
+	add Art Supply Retrieval to BadSpots of FemaleList;
 
 instead of going to Lecture Street while (Art Supply Retrieval is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 2 and a random chance of 1 in 3 succeeds):
 	move player to Lecture Street;
@@ -138,7 +138,7 @@ Grateful Panda is resolved.
 The sarea of Grateful Panda is "Campus".
 
 when play begins:
-	add Grateful Panda to badspots of guy;
+	add Grateful Panda to BadSpots of MaleList;
 
 instead of going to Lecture Street while (Grateful Panda is not resolved and LastCampusWalkin - turns > 0 and HP of Jake is 3 and a random chance of 1 in 3 succeeds):
 	move player to Lecture Street;

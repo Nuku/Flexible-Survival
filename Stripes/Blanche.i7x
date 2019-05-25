@@ -11,9 +11,9 @@ Wolfrape	"Wolfrape"
 Wolfrape is a situation. The level of Wolfrape is 16.
 The sarea of Wolfrape is "Capitol".
 when play begins:
-	add Wolfrape to badspots of hermaphrodite;
-	add Wolfrape to badspots of girl;
-	add Wolfrape to badspots of furry;
+	add Wolfrape to badspots of HermList;
+	add Wolfrape to BadSpots of FemaleList;
+	add Wolfrape to BadSpots of FurryList;
 
 Instead of resolving Wolfrape:
 	say "     While searching the city, you hear sounds of both ecstasy and agony floating from a nearby alleyway. Cautiously, you approach and peer inside. An anthro white wolf female has been caught and pinned by one of the herm drakes. The demonic features of the reptile herm contrast the clean, pure coloration of the white wolf woman. The wolf's blouse is ripped into tatters as her captor's sharp claws digs into her shoulders to keep her restrained, leaving the wolf woman to only be able to pitifully to be spared as the dragon-creature drills into her from behind.";

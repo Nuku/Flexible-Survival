@@ -226,16 +226,16 @@ understand "bfandi5" as bfanditesting5.
 
 carry out bfanditesting5:
 	say "[special-style-2]FLAGS:[roman type][line break]";
-	say "[bold type]Girl:[roman type] ([special-style-2][number of entries in infections of girl][roman type]) [infections of girl].";
-	say "[bold type]Guy:[roman type] ([special-style-2][number of entries in infections of guy][roman type]) [infections of guy].";
-	say "[bold type]Hermaphrodite:[roman type] ([special-style-2][number of entries in infections of hermaphrodite][roman type]) [infections of hermaphrodite].";
-	say "[bold type]Feral:[roman type] ([special-style-2][number of entries in infections of feral][roman type]) [infections of feral].";
-	say "[bold type]Furry:[roman type] ([special-style-2][number of entries in infections of furry][roman type]) [infections of furry].";
-	say "[bold type]Hellspawn:[roman type] ([special-style-2][number of entries in infections of hellspawn][roman type]) [infections of hellspawn].";
-	say "[bold type]Humorous:[roman type] ([special-style-2][number of entries in infections of humorous][roman type]) [infections of humorous].";
+	say "[bold type]Girl:[roman type] ([special-style-2][number of entries in infections of FemaleList][roman type]) [infections of FemaleList].";
+	say "[bold type]Guy:[roman type] ([special-style-2][number of entries in infections of MaleList][roman type]) [infections of MaleList].";
+	say "[bold type]Hermaphrodite:[roman type] ([special-style-2][number of entries in infections of HermList][roman type]) [infections of HermList].";
+	say "[bold type]Feral:[roman type] ([special-style-2][number of entries in infections of FeralList][roman type]) [infections of FeralList].";
+	say "[bold type]Furry:[roman type] ([special-style-2][number of entries in infections of FurryList][roman type]) [infections of FurryList].";
+	say "[bold type]Hellspawn:[roman type] ([special-style-2][number of entries in infections of DemonList][roman type]) [infections of DemonList].";
+	say "[bold type]Humorous:[roman type] ([special-style-2][number of entries in infections of HumorousList][roman type]) [infections of HumorousList].";
 	LineBreak;
 	say "[special-style-1]MARKERS:[roman type][line break]";
-	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of Tailweapon][roman type]) [infections of tailweapon].";
+	say "[bold type]Tailweapon:[roman type] ([special-style-1][number of entries in infections of TailweaponList][roman type]) [infections of TailweaponList].";
 	say "[bold type]Felinelist:[roman type] ([special-style-1][number of entries in infections of Felinelist][roman type]) [infections of Felinelist].";
 	say "[bold type]Caninelist:[roman type] ([special-style-1][number of entries in infections of Caninelist][roman type]) [infections of Caninelist].";
 	say "[bold type]Equinelist:[roman type] ([special-style-1][number of entries in infections of Equinelist][roman type]) [infections of Equinelist].";

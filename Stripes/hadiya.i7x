@@ -49,8 +49,8 @@ Annoyed Hyena	"Annoyed Hyena"
 Annoyed Hyena is a situation.
 The sarea of Annoyed Hyena is "Junkyard".
 when play begins:
-	add Annoyed Hyena to badspots of hermaphrodite;
-	add Annoyed Hyena to badspots of furry;
+	add Annoyed Hyena to badspots of HermList;
+	add Annoyed Hyena to BadSpots of FurryList;
 
 Instead of Resolving a Annoyed Hyena:
 	say "     While exploring, you accidentally run face first into what at first seems a warm, furry wall. Upon recovering and taking a second look, you realize that it's actually a hyena. A tall, obviously intimidating hyena. Her sharp predatory teeth as well as the oversized tongue hanging out of her muzzle doesn't exactly give her the most pleasant looks, but her distinctive spotted red fur helps her stand out from the other hyenas that you've met in the past. She doesn't seem to be hostile to you, or at least not just yet to say the least... as she just seems to be more amused by your presence than anything else.";
@@ -119,7 +119,7 @@ instead of conversing Hadiya:
 	else if hyg is 4 and a random chance of 1 in 3 succeeds and hadiyahyg is false:
 		say "     'I hear you've been running around with that mangy hyena gang. I don't appreciate my fucktoy running around with the likes of them[if matriarchowned is 1]. And besides, what would they think if they knew their precious Matriarch was sneaking off to get fucked in the ass like the needy bitch she is,' she says with a chuckle. 'Speaking of, I think you need another reminder of just why I'm more than enough hyena for you,' she adds, pushing you down[else]. I should be more than enough to keep even a slutty bitch like you satisfied,' she adds, pushing you down[end if].";
 		now hadiyahyg is true;
-	else if ( HP of Hadiya is 7 or HP of Hadiya is 57 ) and guy is not banned:
+	else if ( HP of Hadiya is 7 or HP of Hadiya is 57 ) and MaleList is not banned:
 		say "     'Hey, butt-boy! I've got a job for you. You've probably been wondering why I'm living here. Thing is, I'm trying to find my guitar. It was really bitchin['] - an all black flying-V with a flaming skull on it. My last boyfriend didn't like my playing and threw it out with a bunch of other junk... so I threw the dumb bitch out. I was so pissed,' she growls. 'Now, I've been looking all over the junkyard for it, but it hasn't turned up yet. It's been taking so long that I've been able to build this shack for myself with other stuff I've found. I want you to keep an eye out for it,' she says, giving your butt a firm squeeze.";
 		increase HP of Hadiya by 1;
 		now Goblin Thief is active;

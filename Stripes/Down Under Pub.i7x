@@ -15,10 +15,10 @@ lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
 when play begins:
-	add Aussie Pub to badspots of girl;
-	add Aussie Pub to badspots of guy;
-	add Aussie Pub to badspots of hermaphrodite;
-	add Aussie Pub to badspots of furry;
+	add Aussie Pub to BadSpots of FemaleList;
+	add Aussie Pub to BadSpots of MaleList;
+	add Aussie Pub to badspots of HermList;
+	add Aussie Pub to BadSpots of FurryList;
 
 Instead of resolving a Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'. Some bright blue paint has been used to add 'TAKE ME' to the front of its name. Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub. You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
@@ -347,14 +347,14 @@ to say sexwithgillian:
 	else:
 		say "     Gillian smiles happily at your suggestion of sex. 'Yeah, let's have some fun,' she says as she pushes you eagerly over to the ";
 		let gilliansexlist be { 1 }; [give cunnilingus]
-		if Player is not neuter, add 2 to gilliansexlist; [69]
-[		if Player is male, add 3 to gilliansexlist; [get blow job]			]
-		if Player is male, add 4 to gilliansexlist; [fuck her]
-[		if Player is female, add 5 to gilliansexlist; [strap-on: vaginal]		]
-[		if anallevel is 3 and Cunt Count of Player is 0, add 6 to gilliansexlist; [strap-on: anal]	]
+		if Player is not neuter, add 2 to gilliansexList; [69]
+[		if Player is male, add 3 to gilliansexList; [get blow job]			]
+		if Player is male, add 4 to gilliansexList; [fuck her]
+[		if Player is female, add 5 to gilliansexList; [strap-on: vaginal]		]
+[		if anallevel is 3 and Cunt Count of Player is 0, add 6 to gilliansexList; [strap-on: anal]	]
 		sort gilliansexlist in random order;
-		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexlist; [avoids repeats unless only option]
-		now lust of Gillian is entry 1 of gilliansexlist; [saving selection for next time]
+		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexList; [avoids repeats unless only option]
+		now lust of Gillian is entry 1 of gilliansexList; [saving selection for next time]
 		if entry 1 of gilliansexlist is 1, say "[gilliansex01]";
 		if entry 1 of gilliansexlist is 2, say "[gilliansex02]";
 		if entry 1 of gilliansexlist is 3, say "[gilliansex03]";
@@ -423,7 +423,7 @@ to say randomdesc:	[male]
 	if T is 5:
 		now slutname is "bear";
 	if T is 6:
-		now slutname is "stag";
+		now slutname is "Blacktail Stag";
 	if T is 7:
 		now slutname is "cheetah";
 	if T is 8:
@@ -433,7 +433,7 @@ to say randomdesc:	[male]
 	if T is 10:
 		now slutname is "bull";
 	if T is 11:
-		now slutname is "zebra";
+		now slutname is "Zebra Stallion";
 	if T is 12:
 		now slutname is "mouse";
 	if T is 13:
@@ -466,7 +466,7 @@ to say randomdesc2:	[female]
 	if T is 10:
 		now slutname is "cow";
 	if T is 11:
-		now slutname is "zebra";
+		now slutname is "Zebra Stallion";
 	if T is 12:
 		now slutname is "mouse";
 	if T is 13:

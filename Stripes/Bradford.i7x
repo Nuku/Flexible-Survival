@@ -12,8 +12,8 @@ Bounty Hunter	"Bounty Hunter"
 Bounty Hunter is a situation.
 The sarea of Bounty Hunter is "Red".
 when play begins:
-	add Bounty Hunter to badspots of furry;
-	add Bounty Hunter to badspots of guy;
+	add Bounty Hunter to BadSpots of FurryList;
+	add Bounty Hunter to BadSpots of MaleList;
 
 Instead of resolving Bounty Hunter:
 	follow the breast descr rule;
@@ -105,7 +105,7 @@ Instead of conversing the Bradford:
 		say "     As he pauses to take another peek out between the blinds, you consider pointing out that his target might not have survived the city at all, let alone be identifiable. Either the bull knows something or he's clinging to some false hope. Either way, best not to risk upsetting him.";
 		WaitLineBreak;
 		say "     'Now, like I said, I got me a mite more contracts than I can handle on my own. Couple of [']em I've got partially done, having dealt with some of the beasties earlier on. But they ain't comin['] around here much anymore, so if'n you can finish those contracts off for me, I'd be appreciative and cut you in on the bounty. And that's on top of the per-head reward them Zephyr guys are a-givin['].'";
-		if humorous is banned:
+		if HumorousList is banned:
 			say "     He pulls out a folded printout from his vest pocket and looks it over. 'Hmm... Now ain't that odd. This one's done gone and changed on me. Says the bounty's been closed due to bannin['].' He turns the page towards you so you can see the red [']BANNED['] stamped across the image of a walking phallus creature. 'Guess we're not gettin['] that one no more,' he grumbles.";
 			WaitLineBreak;
 			say "     Taking another sheet from his vest, he checks that one. 'Okay, this one's still active. It's a little further away though.' You look it over quickly. The top of the page has [']BOUNTY['] printed across it with more details under the grayscale image of a smooth, latex-skinned wolf. Among the details are mentions of [']high viscosity['], [']encasement['] and [']corruptive infection[']. Another odd detail is how it stated the bounty is for eight of them, but there's another printed number marking that there's [bold type]four remaining[roman type] to complete the bounty.";

@@ -12,9 +12,9 @@ Canine Patrol	"Canine Patrol"
 Canine Patrol is a situation.
 The sarea of Canine Patrol is "Red".
 when play begins:
-	add Canine Patrol to badspots of guy;
-[	add Canine Patrol to badspots of girl; ]
-	add Canine Patrol to badspots of furry;
+	add Canine Patrol to BadSpots of MaleList;
+[	add Canine Patrol to BadSpots of FemaleList; ]
+	add Canine Patrol to BadSpots of FurryList;
 
 gshepsquad is a number that varies.
 catdogstate is a number that varies.

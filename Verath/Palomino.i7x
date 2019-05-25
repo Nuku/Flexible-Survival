@@ -8,7 +8,7 @@ Section 1 - The Palomino Club
 
 Table of GameRoomIDs (continued)
 Object	Name
-PALOMINO	"PALOMINO"
+PALOMINO	"Palomino Stallion"
 
 The Palomino is a room. It is fasttravel.
 The earea of The Palomino is "Outside".
@@ -27,9 +27,6 @@ instead of sniffing Palomino:
 
 
 Section 2 - Palomino Infection
-
-when play begins:
-	add { "Palomino" } to infections of Equinelist; [list of equine infections]
 
 to say Palominowins:
 	say "'wow you got here how did that happen.'";
@@ -50,15 +47,19 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Palomino";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
-	now defeated entry is "[Palominoloses]";
-	now victory entry is "[Palominowins]";
-	now desc entry is "The Palomino is watching you!!"; [ Description of the creature when you encounter it.]
+	now Species Name entry is "Palomino";
+	add "Palomino Stallion" to infections of MaleList;
+	add "Palomino Stallion" to infections of FurryList;
+	add "Palomino Stallion" to infections of Bluntlist;
+	add "Palomino Stallion" to infections of EquineList;
+	now Name entry is "Palomino Stallion";
+	now enemy title entry is "Goth Palomino";
+	now enemy Name entry is "Tristian";
+	now enemy type entry is 1; [non-unique enemy]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
 	now face entry is "that is a mixture of human and equine features, with a short palomino-like muzzle and dark equine eyes. Your features are only accentuated by the multiple earrings hanging from your new, more equine ears and the long, dark black mane which hangs down the side of your face. The lovely spiked collar Tristian gave you finishes the new look of your face"; [You have a (your text) face."]
 	now body entry is "that of a humanoid horse, thick and rather muscular. Your hands and feet have slightly hoof-like fingernails. You are wearing the outfit that your fellow horse goth picked out for you, your strong torso covered in a tight, long-sleeved fishnet shirt, the fishnet pattern tracing down your well-muscled arms to your spiked cuffs. Your thick, black leather pants only serve to accentuate your well-defined lower body, and your slightly hoof-like feet rest easily in the modified black leather boots Tristian had made for you";
 	now skin entry is "[one of]palomino spotted[or]lightly furred[or]palomino furred[at random]";
@@ -79,7 +80,7 @@ When Play begins:
 	now HP entry is 21;
 	now lev entry is 2; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 5; [Amount of Damage monster Does when attacking.]
-	now area entry is "Palomino"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now Cock Count entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now Cock Length entry is 14; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 2; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
@@ -138,7 +139,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -171,12 +172,12 @@ When Play begins:
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -207,7 +208,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if BodyName of Player is "Palomino":
+	if BodyName of Player is "Palomino Stallion":
 		if humanity of Player < 10:
 			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper! You love the feeling of showing off your handsome [if Player is herm]herm[else if Player is male]male[else if Player is female]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
 			if Player is male:

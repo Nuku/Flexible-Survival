@@ -11,7 +11,7 @@ halodestroyed is a number that varies.
 
 instead of resolving a Secure Area:
 	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
-	if guy is banned:
+	if MaleList is banned:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		now Resolution of Secure Area is 100; [content banned]
@@ -96,7 +96,7 @@ carry out shifting:
 	let critter list be a list of text;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
-		add Name entry to critter list;
+		add Name entry to critter List;
 		if Name entry matches the regular expression "^[critter]$", case insensitively:
 			now MonsterID is X;
 			now ttransform is 1;
@@ -106,7 +106,7 @@ carry out shifting:
 		now critter list is {};
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:
 			choose row X from the Table of Random Critters;
-			add Name entry to critter list;
+			add Name entry to critter List;
 			if Name entry matches the regular expression ".*[critter].*", case insensitively:
 				now MonsterID is X;
 				now ttransform is 1;

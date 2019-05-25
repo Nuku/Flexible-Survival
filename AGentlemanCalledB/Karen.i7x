@@ -126,7 +126,7 @@ instead of conversing the Karen:
 		say "     Karen isn't here.";
 
 instead of conversing Retriever Girl:
-	if Retriever Girl is not tamed:
+	if retriever girl is not tamed:
 		say "     Who?";
 	else:
 		if Player is in Breakroom and Karen is in Breakroom:

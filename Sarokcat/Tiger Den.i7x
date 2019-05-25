@@ -39,9 +39,9 @@ TigerVSTaur	"TigerVSTaur"
 TigerVSTaur is a situation. The level of TigerVSTaur is 9.
 The sarea of TigerVSTaur is "Zoo".
 when play begins:
-	add TigerVSTaur to badspots of hermaphrodite;
-	add TigerVSTaur to badspots of furry;
-	add TigerVSTaur to badspots of guy;
+	add TigerVSTaur to badspots of HermList;
+	add TigerVSTaur to BadSpots of FurryList;
+	add TigerVSTaur to BadSpots of MaleList;
 
 Instead of Resolving a TigerVSTaur:
 	say "     Traveling down the zoo pathways, you hear a strange roaring noise nearby, followed by some violent sounds, after a few seconds the sounds fade somewhat, and you cautiously peek through the greenery to see a strange sight on one of the employee travel paths of the zoo. Two creatures appear to have been fighting here, strangely enough it appears to be a couple of the tigertaurs that have been plaguing the zoo. Closer inspection however, reveals that only one of the combatants happens to be a tigertaur, the other combatant appears to be merely an extremely tiger-like humanoid, with no tiger-like lower body at all! The combat is quickly drawing to a close however, as the tigertaurs larger form seems to give it an advantage against the more human-like tiger, and indeed as you watch, the tigerman seems to be growing more and more aroused and less able to resist the tigertaurs advances. You could intervene if you wanted, but it truly doesn't look like the situation is any of your affair. Do you interfere?";

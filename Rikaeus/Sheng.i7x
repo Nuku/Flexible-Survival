@@ -178,7 +178,7 @@ to say ShengPotionBuy:
 	now description entry is "Transform into an Alpha Husky";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Stag";
+	now title entry is "Blacktail Stag";
 	now sortorder entry is 3;
 	now description entry is "Transform into a Stag";
 	[]
@@ -202,7 +202,7 @@ to say ShengPotionBuy:
 					say "[ShengOtterPotionSale]";
 				-- "Husky Alpha":
 					say "[ShengHuskyPotionSale]";
-				-- "Stag":
+				-- "Blacktail Stag":
 					say "[ShengStagPotionSale]";
 				WaitLineBreak;
 		else if calcnumber is 0:
@@ -280,9 +280,9 @@ to say ShengStagPotionSale:
 				say "     Eyeing you up and down Sheng walks over to his potion shelf and grabs a ocean blue filled vial before setting it down in front of you. 'I have no clue how you got down here in the first place without them, but this potion gives you gills. The transformation you're aiming to purchase cannot breathe underwater so I'm giving you this for free so you don't drown,' the tiger says with a tone that says he'd rather charge you for it but he'd probably also prefer you not to choke on water. Shrugging your shoulders you take it and chug it before feeling something tingle at your neck. Afterwards he gestures with his hand as if asking for the vials of demon seed.";
 				now hasgills is 1;
 			say "     You promptly hand over the payment which prompts the tiger to hand you your purchase. Accepting it, you uncork the vial and chug it, feeling it take affect rather instantly. Wanting to turn and thank Sheng you see he's already back to work sadly, leaving you in the middle of the store.";
-			infect "Stag";
-			infect "Stag";
-			infect "Stag";
+			infect "Blacktail Stag";
+			infect "Blacktail Stag";
+			infect "Blacktail Stag";
 		else:
 			say "     Shaking your head you say that you've changed your mind, causing the tiger to scoff. 'Don't waste my time, if you're gonna say you're gonna buy something then do so.' Sheng says with a slight glare. Shrugging your shoulders you just let the male get back to work, leaving you to yourself in the shop.";
 	else:
@@ -428,8 +428,8 @@ Petted in Public is inactive.
 The sarea of Petted in Public is "Atlantis".
 
 when play begins:
-	add Petted in Public to badspots of guy;
-	add Petted in Public to badspots of furry;
+	add Petted in Public to BadSpots of MaleList;
+	add Petted in Public to BadSpots of FurryList;
 
 after going to Atlantis City Park while Loyalty of Sheng is 3:
 	say "     Wandering around the city you soon come upon the park. At first it looks like there's nobody you recognize here but you soon spot somebody familiar. Sitting in the portion of the park with mixed herbs and flowers is Sheng, when you notice him you instantly wander over which causes the white tiger to look up with a raised brow. The male is currently harvesting some of the plants, possibly for some of his potions. 'Lay right here pet while I do my chores,' he orders, before turning back to the patch of herbs. Obliging your... master, you make your place and lay next to him on your back so that you're looking up at him.";

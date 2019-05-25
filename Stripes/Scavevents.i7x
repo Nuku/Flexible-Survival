@@ -440,7 +440,7 @@ Instead of resolving a Plains Scavenging:
 	if x is 9:
 		now y is "lucky horseshoe";
 	if x is 10:
-		if guy is banned or girl is banned or furry is banned:
+		if MaleList is banned or FemaleList is banned or FurryList is banned:
 			now y is "dirty water";
 		else:
 			now y is "cow milk";
@@ -544,11 +544,11 @@ veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
-	add Garden Veggies to badspots of furry;
+	add Garden Veggies to BadSpots of FurryList;
 
 
 Instead of resolving a Garden Veggies:
-	if girl is banned and guy is banned:
+	if FemaleList is banned and MaleList is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		increase carried of food by 1;
 		now Garden Veggies is resolved;
@@ -569,15 +569,15 @@ Instead of resolving a Garden Veggies:
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
-		if guy is banned:
+		if MaleList is banned:
 			challenge "Ewe";
 		else:
 			challenge "Ram";
 		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
-			say "     Having beaten the [if guy is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
+			say "     Having beaten the [if MaleList is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if MaleList is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if MaleList is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
-			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if MaleList is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if MaleList is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
 		else if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
@@ -592,7 +592,7 @@ Free Drink	"Free Drink"
 Free Drink is a scavevent.
 The sarea of Free Drink is "Campus".
 when play begins:
-	add Free Drink to badspots of guy;
+	add Free Drink to BadSpots of MaleList;
 
 Instead of resolving a Free Drink:
 	project the figure of Talov_Kerr_Barrel_icon;

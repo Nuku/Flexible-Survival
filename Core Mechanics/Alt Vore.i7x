@@ -19,11 +19,11 @@ ubpreg is a text that varies. ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
 
 HardVoreExclusion is a marker. [list of infections to not be hard vored - similar to above list, but also includes non-flesh monsters]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
 Section 1 - Event
 
@@ -34,10 +34,10 @@ Inner Predator	"Inner Predator"
 Inner Predator is a scavevent. The level of Inner Predator is 4.
 The sarea of Inner Predator is "Allzones".
 when play begins:
-	add Inner Predator to badspots of furry;
+	add Inner Predator to BadSpots of FurryList;
 
 Instead of resolving a Inner Predator:
-	if guy is banned and girl is banned:
+	if MaleList is banned and FemaleList is banned:
 		say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
 		say "(This event is closed if both guy and girl are banned.)";
 		now Inner Predator is resolved;
@@ -52,7 +52,7 @@ Instead of resolving a Inner Predator:
 		say "     Wrapping the candy bar back up, you replace it in your pack and being to gather your things to leave, slightly perturbed by these events. Hopefully whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
 		increase carried of chips by 1;
 		WaitLineBreak;
-		if girl is not banned:
+		if FemaleList is not banned:
 			say "     As you're turning to leave, a female husky, looking rather worse for wear, spots you and charges in to attack. Already weakened, a quick blow sends her tumbling and a few more put her to the ground for good. It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger. You look down upon your beaten foe as a new, predatory instinct arises in your mind. Before you can even think about it, you kneel next to the husky, hands reaching out for its exhausted body. She lifts her head to look at you, fearful about what you intend to do, but a swift strike from your palm to her head renders her unconscious. Now, practically unable to control your own body, you are forced to watch what unfolds.";
 			WaitLineBreak;
@@ -427,7 +427,7 @@ to say hvbp_ram:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Female Preferred" is listed in feats of Player or BodyName of Player is "Ewe" ) and girl is not banned:
+	else if ( "Female Preferred" is listed in feats of Player or BodyName of Player is "Ewe" ) and FemaleList is not banned:
 		setmonster "Ewe";
 		choose row MonsterID from the Table of Random Critters;
 
@@ -457,7 +457,7 @@ to say hvbp_ewe:
 		else:
 			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or player is male ) and guy is not banned:
+	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or player is male ) and MaleList is not banned:
 		setmonster "Ram";
 		choose row MonsterID from the Table of Random Critters;
 

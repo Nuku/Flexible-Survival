@@ -17,8 +17,8 @@ Jam Session	"Jam Session"
 Jam Session is a situation.
 The sarea of Jam Session is "Junkyard".
 when play begins:
-	add Jam Session to badspots of furry;
-	add Jam Session to badspots of guy;
+	add Jam Session to BadSpots of FurryList;
+	add Jam Session to BadSpots of MaleList;
 
 Instead of resolving Jam Session:
 	say "     Searching through the junkyard for something to take your mind off of the suffering that seems to be trying to grip at your heart you find your ears perking as you catch the sounds of an electric guitar being strummed followed by someone else starting to sing. Finding it odd to hear an instrument being played right here and now you make your way over to the source of the sound without having to think twice about it. Completely forgoing the possibility that this may all be a clever trap by a group of cunning mutants you find your body coming alive in a scary sort of way as your senses begin to tingle at the growing volume of the music filtering into your ears. Continuing to follow the song around a large tower of ruined cars you find, to your delight, a small group of four mutants all jamming together on different instruments. So close to the music as you are now you find that the young adults are making the right kind of melody to get your heart thumping wildly inside of your chest as your mind screams, somewhat fanatically, that you're in front of one of your favorite local bands. If you remember correctly the name of the group is Fallen Roses and they were supposed to be and up and coming group that had been scheduled to come into the city for a month long tour. How awesome is it that you're getting to see them for free right here and right now?";
@@ -39,8 +39,8 @@ Blind Boy's Love	"Blind Boy's Love"
 Blind Boy's Love is a situation.
 The sarea of Blind Boy's Love is "Junkyard".
 when play begins:
-	add Blind Boy's Love to badspots of furry;
-	add Blind Boy's Love to badspots of guy;
+	add Blind Boy's Love to BadSpots of FurryList;
+	add Blind Boy's Love to BadSpots of MaleList;
 
 Instead of resolving Blind Boy's Love:
 	say "     You find yourself stopping abruptly as a familiar noise makes its way across your field of hearing. Turn your head towards the sounds general location and then concentrating you come to realize that you know exactly what the ruckus is on about. Ducking quickly behind a slightly beaten up old Lexus you manage to trace the panting and yelping noises of two forms fucking one another coming from around a beaten up truck three yards away from your current position. Curiosity makes you wonder if you should you go and try and see what's happening, after all someone might be in need of help. But then again, this might turn into an all out fuckfest if you happen to get caught up in a mutant orgy.";
@@ -75,7 +75,7 @@ Dragonian Trial is a situation.
 The sarea of Dragonian Trial is "Beach".
 
 when play begins:
-	add Dragonian Trial to badspots of guy;
+	add Dragonian Trial to BadSpots of MaleList;
 
 Instead of resolving Dragonian Trial:
 	say "     Upon making your way to the beach you end up stumbling across a young man with green hair standing in the middle of an empty area of the beach while looking out at the lapping waters. Thinking little of this, as this is the seaside after all and some people do come here to think, you find yourself almost passing the other without a second thought before you notice something bizarre about the youth. The fact the other is almost completely human seems to be the highlight of your befuddlement as you wonder how the other hasn't been changed into one of the numerous mutants that now all but dominant the city. Watching ivy green hair dance in the wind, a long pony tail swaying in time with the motions of the incoming salty sea air, you find yourself almost captivated by the young man as you notice all of the perfectly cut lines framing the youth's long body as he stands with his arms cross while gazing out at the ocean. The white tunic that he has on, draped down all the way pass the middle of his thighs, combine with the tight fitting black leggings give the other somewhat of a medieval feeling as you note an actually sword sheathed alongside the youth's belt.";

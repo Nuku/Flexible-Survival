@@ -261,7 +261,7 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 2;
 		now description entry is "Ask Alexandra about her past";
 	[]
-	if HP of Alexandra < 56 or ( HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned ):
+	if HP of Alexandra < 56 or ( HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned ):
 		choose a blank row in table of fucking options;
 		now title entry is "Supplies";
 		now sortorder entry is 3;
@@ -505,7 +505,7 @@ to say alexandra_supplies:
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
 			now sextablerun is 0; [continued talking allowed]
-	else if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
+	else if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned:
 		say "     'I was thinking we should have some medical supplies here in case of emergencies. I figured I'd go check out the city hospital to get them. I'll be heading out there shortly. Did you want to come along? I should be fine, but the help would be appreciated if you're free.'";
 		say "     Shall you accompany the doberwoman on her scavenging expedition?";
 		if Player consents:
@@ -779,14 +779,14 @@ to AlexandraTaskChat:
 	if Zoo Entrance is unknown, add 12 to AlexandraTask;
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
 	if Eager Dal is unresolved and AT_Stella is false, add 14 to AlexandraTask;
-	if AT_Jimmy is false and guy is not banned and HP of Alexandra >= 56:
+	if AT_Jimmy is false and MaleList is not banned and HP of Alexandra >= 56:
 		if HP of Jimmy is 0:
 			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
 		else:
 			add { 50, 50 } to AlexandraTask;
 	if AT_Repair is false and HP of Alexandra >= 56 and policerepair is 0:
 		add { 51, 51, 51, 51, 51 } to AlexandraTask;
-	if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
+	if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned:
 		add { 52, 52, 52, 52, 52 } to AlexandraTask;
 	if HP of Alexandra >= 56:
 		if AT_Patrol is false:

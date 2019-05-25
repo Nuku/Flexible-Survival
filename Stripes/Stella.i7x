@@ -21,8 +21,8 @@ Eager Dal	"Eager Dal"
 Eager Dal is a situation.
 The sarea of Eager Dal is "Red".
 when play begins:
-	add Eager Dal to badspots of hermaphrodite;
-	add Eager Dal to badspots of furry;
+	add Eager Dal to badspots of HermList;
+	add Eager Dal to BadSpots of FurryList;
 
 Instead of resolving a Eager Dal:
 	if debugactive is 1:

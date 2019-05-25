@@ -603,9 +603,9 @@ The level of Strange Sighting is 5. [minimum level to find the event]
 The sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
 
 when play begins: [flags for blocking this event]
-	add Strange Sighting to badspots of guy;
-	add Strange Sighting to badspots of feral;
-	add Strange Sighting to badspots of furry;
+	add Strange Sighting to BadSpots of MaleList;
+	add Strange Sighting to badspots of FeralList;
+	add Strange Sighting to BadSpots of FurryList;
 
 Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
@@ -643,9 +643,9 @@ The sarea of Jewel Heist is "High". [or "Park", or "Museum", ...]
 Jewel Heist is resolved.
 
 when play begins: [flags for blocking this event]
-	add Jewel Heist to badspots of guy;
-	add Jewel Heist to badspots of feral;
-	add Jewel Heist to badspots of furry;
+	add Jewel Heist to BadSpots of MaleList;
+	add Jewel Heist to badspots of FeralList;
+	add Jewel Heist to BadSpots of FurryList;
 
 Instead of resolving a Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewelry shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
@@ -779,18 +779,18 @@ The sarea of Valuable Museum Artifact is "Museum". [or "Park", or "Museum", ...]
 Valuable Museum Artifact is inactive.
 
 when play begins: [flags for blocking these events]
-	add Valuable Museum Artifact to badspots of guy;
-	add Valuable Museum Artifact to badspots of feral;
-	add Valuable Museum Artifact to badspots of furry;
-	add Valuable Warehouse Artifact to badspots of guy;
-	add Valuable Warehouse Artifact to badspots of feral;
-	add Valuable Warehouse Artifact to badspots of furry;
-	add Valuable RLD Artifact to badspots of guy;
-	add Valuable RLD Artifact to badspots of feral;
-	add Valuable RLD Artifact to badspots of furry;
-	add Valuable Stables Artifact to badspots of guy;
-	add Valuable Stables Artifact to badspots of feral;
-	add Valuable Stables Artifact to badspots of furry;
+	add Valuable Museum Artifact to BadSpots of MaleList;
+	add Valuable Museum Artifact to badspots of FeralList;
+	add Valuable Museum Artifact to BadSpots of FurryList;
+	add Valuable Warehouse Artifact to BadSpots of MaleList;
+	add Valuable Warehouse Artifact to badspots of FeralList;
+	add Valuable Warehouse Artifact to BadSpots of FurryList;
+	add Valuable RLD Artifact to BadSpots of MaleList;
+	add Valuable RLD Artifact to badspots of FeralList;
+	add Valuable RLD Artifact to BadSpots of FurryList;
+	add Valuable Stables Artifact to BadSpots of MaleList;
+	add Valuable Stables Artifact to badspots of FeralList;
+	add Valuable Stables Artifact to BadSpots of FurryList;
 	[Something to play with later, but not right now:		]
 	[let eventlist be {"Valuable Museum Artifact", "Valuable Warehouse Artifact", "Valuable RLD Artifact", "Valuable Stables Artifact"};
 	let badspotlist be {"guy", "feral", "furry"};

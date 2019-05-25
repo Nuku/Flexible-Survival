@@ -15,8 +15,8 @@ FindingKristen	"FindingKristen"
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:
-	add FindingKristen to badspots of girl;
-	add FindingKristen to badspots of furry;
+	add FindingKristen to BadSpots of FemaleList;
+	add FindingKristen to BadSpots of FurryList;
 
 Instead of resolving FindingKristen:
 	if HP of Kristen is not 0:

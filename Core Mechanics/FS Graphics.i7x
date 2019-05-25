@@ -707,7 +707,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"	g-black	"normal"
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
-"Helot"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
+"Helot Manservant"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
@@ -718,7 +718,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
-"Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Imp Male"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
 "Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -848,7 +848,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
-"Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
+"Shadow Beast Male"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
 "Smooth Collie Shemale"	Figure of SSCollie_icon	"Anymouse1968"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
@@ -864,7 +864,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sonny_shaved_jeans"	Figure of Sonny_shaved_jeans_icon	"The_Negative"	g-black	"normal"
 "Sonny_shaved_nude_icon"	Figure of Sonny_shaved_nude_icon	"The_Negative"	g-black	"normal"
 "Sonny_face"	Figure of Sonny_face_icon	"The_Negative"	g-black	"normal"
-"Spartan"	Figure of Spartan_icon	"Obieblu"	g-white	"normal"
+"Spartan Warrior"	Figure of Spartan_icon	"Obieblu"	g-white	"normal"
 "Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
@@ -913,7 +913,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
-"Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
+"Zebra Stallion"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 "Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"
 [emap - special]
@@ -1265,7 +1265,7 @@ to artistbanmenu: [more compact version]
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
 			say "[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
-			BlockCheck entry countnumber of artistlist;
+			BlockCheck entry countnumber of artistList;
 			if remainder after dividing countnumber by 5 is 0:
 				LineBreak;
 			increase countnumber by 1;
@@ -1281,7 +1281,7 @@ to artistbanmenu: [more compact version]
 		if calcnumber is 0:
 			now abmexit is 1;
 		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
-			artistbanswitch entry calcnumber of artistlist;
+			artistbanswitch entry calcnumber of artistList;
 
 to BlockCheck (x - text):
 	if x is not listed in BlockList of Player:

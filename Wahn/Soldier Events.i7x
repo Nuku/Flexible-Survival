@@ -8,9 +8,9 @@ Soldier Squad	"Soldier Squad"
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse".
 when play begins:
-	add Soldier Squad to badspots of guy;       [male soldiers]
-	add Soldier Squad to badspots of girl;      [one changes into a female husky]
-	add Soldier Squad to badspots of furry;     [female husky involved]
+	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
+	add Soldier Squad to BadSpots of FemaleList;      [one changes into a female husky]
+	add Soldier Squad to BadSpots of FurryList;     [female husky involved]
 
 SquadEncounters is a number that varies. SquadEncounters is usually 0.
 
@@ -265,8 +265,8 @@ Human Urges	"Human Urges"
 Human Urges is a situation.
 The sarea of Human Urges is "Red".
 when play begins:
-	add Human Urges to badspots of guy;      [male soldier]
-	add Human Urges to badspots of girl;     [female soldier]
+	add Human Urges to BadSpots of MaleList;      [male soldier]
+	add Human Urges to BadSpots of FemaleList;     [female soldier]
 
 Instead of resolving a Human Urges:
 	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
@@ -285,8 +285,8 @@ Soldiers & Snowmeows	"Soldiers & Snowmeows"
 Soldiers & Snowmeows is a situation.
 The sarea of Soldiers & Snowmeows is "Red".
 when play begins:
-	add Soldiers & Snowmeows to badspots of guy;      [male soldier & snow leopard]
-	add Soldiers & Snowmeows to badspots of furry;    [snow leopard involved]
+	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
+	add Soldiers & Snowmeows to BadSpots of FurryList;    [snow leopard involved]
 
 SnowmeowSoldierStatus is a number that varies. SnowmeowSoldierStatus is usually 0.
 
@@ -380,8 +380,8 @@ Dangerous Load	"Dangerous Load"
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
 when play begins:
-	add Dangerous Load to badspots of guy;
-	add Dangerous Load to badspots of furry;
+	add Dangerous Load to BadSpots of MaleList;
+	add Dangerous Load to BadSpots of FurryList;
 
 Instead of resolving a Dangerous Load:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really, as this makes you wonder what monster might be hiding behind the next corner. Then, as you come to the next street intersection and peek around the edge of a brick building, you are surprised by the fact that it isn't one of the infected in some sort of strange shape that you see. No, instead there are two humans just a few steps away - dressed in army fatigues and armed with rifles.";
@@ -442,8 +442,8 @@ Lone Soldier	"Lone Soldier"
 Lone Soldier is a situation.
 The sarea of Lone Soldier is "Outside".
 when play begins:
-	add Lone Soldier to badspots of guy;
-	add Lone Soldier to badspots of furry;
+	add Lone Soldier to BadSpots of MaleList;
+	add Lone Soldier to BadSpots of FurryList;
 
 Instead of resolving a Lone Soldier:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really. Therefore you're not really surprised when grunts, growls and shouts echo out of a nearby alley, drawing your attention. Being the curious person that you are, you do a little sprint over to the opening of said alley and peek inside. The fight going on in the alley is between two anthro hyenas in leather jackets and a male soldier. As you stick your head around the corner, the muscular black guy just punches the first of his attackers right in the muzzle, sending her sprawling on the floor. This enrages the second hyena quite a bit, who throws himself on the soldier, earning him a painful punch to the side but also forcing the human into close-up wrestling to keep the hyena's gnashing teeth from his throat.";
