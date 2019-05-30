@@ -122,7 +122,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Wolf"; [name of the overall species of the infection, used for children, ...]
 	add "Wrestling Wolf" to infections of CanineList;
 	add "Wrestling Wolf" to infections of FurryList;
 	add "Wrestling Wolf" to infections of NatureList;
