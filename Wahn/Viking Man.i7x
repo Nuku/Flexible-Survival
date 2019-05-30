@@ -218,9 +218,8 @@ When Play begins:
 	now sex entry is "Male";
 	now HP entry is 80;
 	now lev entry is 9;
-	now wdam entry is 15;
-	now area entry is "Beach";             [ Case sensitive]
-	[now area entry is "Nowhere";]         [ TODO: Disable until update]
+	now wdam entry is 15;
+	now area entry is "Nowhere";           [ TODO: Disable until update]
 	now Cock Count entry is 1;             [ number of cocks if sex is 'Male' or 'Both' ]
 	now Cock Length entry is 10;
 	now Ball Size entry is 2;              [ Size of balls ]
