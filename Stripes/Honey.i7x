@@ -101,7 +101,7 @@ Instead of resolving a Smashed Hive:
 					say "     Following the tracks and snapped branches for a few minutes leads you to a cluster of large boulders. The bear seems to have made its home here, having scattered a few odds and ends around, including a large clay pot labeled as 'hunny'. When the bear lumbers into view, she's stuffing her maw with a pawful of sticky honey from another such crock pot. Her ill-gotten gains have made this one somewhat pudgier than the other bears around, causing her red shirt to stretch tightly over her upper chest, struggling to contain her large bosom.";
 					say "     Seeing you both there, she drops the honey pot in surprise. It smashes to the ground in a sticky mess. 'Oh bother,' she says. 'Look at what you made me do.' She licks the last of the honey from her sticky paw before balling it into a fist and striding towards you. 'The honey's mine - every last smackerel,' she growls.";
 					now HP of bee girl is 3;
-					challenge "Bear";
+					challenge "Brown Bear Female";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     The bear gives another sad moan of 'Oh bother' as she staggers back. She trips over a log and ends up tumbling end over end and around, coming to a crashing halt as she falls face first between the rocks. Her pudgy body gets stuck in the rocks and, despite her struggles, she cannot pull herself free. Honey laughs and gives the bear's furry brown bottom a hard smack. 'That'll teach you to steal from bees,' she yells at the bear. While this is going on, your eyes are drawn to the bear's big backside and her honeyed slit.";
 						if Player is male:

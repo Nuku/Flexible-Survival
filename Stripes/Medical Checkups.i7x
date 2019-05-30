@@ -524,6 +524,7 @@ to say Medeaadjustments:
 						now LegsSpeciesName of Child is "Husky";
 						now AssSpeciesName of Child is "Husky";
 						now TailSpeciesName of Child is "Husky";
+						now ubpreg is "Husky Bitch";
 					else:
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that. He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch. Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it. Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning. Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
@@ -547,13 +548,13 @@ to say Medeaadjustments:
 						now LegsSpeciesName of Child is "Latex Fox";
 						now AssSpeciesName of Child is "Latex Fox";
 						now TailSpeciesName of Child is "Latex Fox";
+						now ubpreg is "Latex Fox";
 					now playercanub is true;
 					add "UB Pred" to feats of Player;
 					now ubcount is 1;
 					decrease humanity of Player by 3;
 					say "     You have the [bold type]UB Predator[roman type] feat, granting you the ability to unbirth fallen foes. If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
-					now gestation of Child is a random number between 8 and 16;
-					now ubpreg is Name entry;
+					now Gestation of Child is a random number between 8 and 16;
 					now pregtype is 1;
 					if "Safe Appetite" is not listed in feats of Player:
 						now researchbypass is 1;

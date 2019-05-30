@@ -132,7 +132,7 @@ Instead of Resolving a union break:
 		now Resolution of Union Break is 1; [Nothing of interest]
 	else if T is 6:
 		say "     With the working fellows all gone, you're left standing by your lonesome. Not for long, though, as with a creak of leather and jingle of jewelry an opossum sailor saunters by. 'It isn't just a well laid course and a weighed anchor that gets this sailor's blood a-racing. All those strong men, rhh, gets a girl going. Why don't you give my sails an unfurling?' Though she cackles manically at her own wit, it seems you are in for a fight!";
-		challenge "Opossum Sailor";
+		challenge "Opossum Herm";
 		now Resolution of Union Break is 2; [Fought Opossum]
 	else if T is 7:
 		say "     After everyone else has drifted past, one of the stretched-out otter looking fellows hangs back. He nudges your side, gesturing for you to lean in so he can whisper conspiratorially. 'Hey mate, you look like you have a minute. Can you give me a hand with my uh... swordfish?' He grins wickedly, letting his coat swing open to reveal his hardening cock. At least he asked first.";

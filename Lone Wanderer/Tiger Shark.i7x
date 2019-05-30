@@ -23,10 +23,6 @@ Version 1 of Tiger Shark by Lone Wanderer begins here.
 
 Section 0 - Monster Variables, Flags and Markers and aiding functions
 
-when play begins:
-	add { "Tiger Shark" } to infections of MaleList;
-	add { "Tiger Shark" } to infections of FurryList;
-
 ts_warrior is a truth state that varies.		[registers if the player is fighting the shark warrior or not.]
 ts_warrior is usually false.
 tsw_victory is a truth state that varies.	[registers whether Tiger Shark Warrior won or not.]
@@ -36,11 +32,11 @@ tsw_fsd is 0.
 tsw_relationship is a number that varies.	[The standing of the shark warrior towards you. Currently it memorizes last actions]
 
 to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
-	Setmonster "Tiger Shark";
+	Setmonster "Tiger Shark Male";
 	choose row MonsterID from the Table of Random Critters;
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	infect "Tiger Shark";
+	infect "Tiger Shark Male";
 	now non-infectious entry is true;
 
 Section 1 - Events
@@ -63,7 +59,7 @@ Instead of resolving Shark Warrior:
 	if (BodyName of Player is "Feral Sea Dragon" and player is pure) or (BodyName of Player is "Feral Sea Dragoness" and player is pure):	[Check if the player is a pure feral sea dragon/ess]
 		say "     The shark stands on the shore for a bit, judging your form. 'Well, look at that. You dragons don't seem to understand your place in this world. It's in the sea, with me!' With that, the scarred one starts running towards you.";
 		now ts_warrior is true;
-		challenge "Tiger Shark"; [Fight the Tiger Shark variant]
+		challenge "Tiger Shark Male"; [Fight the Tiger Shark variant]
 		if tsw_victory is true:
 			LineBreak;
 			say "     You are interrupted in your afterglow, the tiger shark ";
@@ -312,11 +308,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Tiger Shark";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Tiger Shark"; [name of the overall species of the infection, used for children, ...]
+	add "Tiger Shark Male" to infections of AquaticList;
+	add "Tiger Shark Male" to infections of FurryList;
+	add "Tiger Shark Male" to infections of NatureList;
+	add "Tiger Shark Male" to infections of MaleList;
+	add "Tiger Shark Male" to infections of TaperedCockList;
+	add "Tiger Shark Male" to infections of InternalCockList;
+	add "Tiger Shark Male" to infections of BipedalList;
+	add "Tiger Shark Male" to infections of SwimList;
+	add "Tiger Shark Male" to infections of TailList;
+	add "Tiger Shark Male" to infections of TailweaponList;
+	now Name entry is "Tiger Shark Male";
+	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He drives his elbow forcefully into your chest.[or]You are hit by the tiger shark spinning around, smacking you with his heavy tail.[or]You don't react quickly enough and see an ochre fist punching you across the face.[or]The tiger shark grapples you from behind and sends you face forward into the sand.[or]The fish-man catches you and bites down on your shoulder. While his teeth don't penetrate your skin it is enough to make you groan in pain.[at random]";
 	now defeated entry is "[Tiger Shark loses]";
 	now victory entry is "[Tiger Shark wins]";
@@ -371,7 +377,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -427,7 +433,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -460,14 +466,14 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 when play ends:
-	if BodyName of Player is "Tiger Shark":
+	if BodyName of Player is "Tiger Shark Male":
 		if humanity of Player < 10:
 			say "     REMOVE ME";
 		else:

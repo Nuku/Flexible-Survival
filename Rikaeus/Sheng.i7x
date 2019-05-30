@@ -115,8 +115,9 @@ to say ShengTalkMenu:
 	if loyalty of Sheng is 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Relationship";
-		now sort order entry is 6;
+		now sortorder entry is 6;
 		now description entry is "Ask to take the relationship further";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -171,8 +172,8 @@ to say ShengTalk4:
 	if loyalty of Sheng < 5:
 		say "     Mentioning that the only things you've seen on his list of potions for sale were transformative potions, you ask if he sells anything else. That causes him to quirk an expression of dispassionate interest towards you. 'Nothing that you'd be able to access at the moment for sure.' Sheng says in a somewhat kurt tone. That statement confirming that he [italic type]does[roman type] have other types of potions you ask why not. 'Because, for one I don't know you that well. Secondly, I don't sell those potions to people who do not have my interest, and [bold type]you[roman type] do not hold my interest at the moment [if Player is herm or player is neuter]peon[else if Player is male]boy[else if Player is female]girl[end if],' the tiger says with a deriding tone. You realize you aren't going to get anywhere with this topic until you somehow either get respect from the tiger or catch his interest and you feel the second one is far more likely with his attitude.";
 	else:
-		say "     Your master gives you a contemplative look and look before nodding. 'You've definitely garnered my interest [if bodyname of player is listed in infections of CanineList]puppy[else if]pet[end if], so tell you what,' he says, pulling you closer and causing your pulse to race and your body to heat up in excitement as you nod eagerly[if tailname of player is listed in infections of CanineList] and wag your tail[end if]. 'As long as you keep being a good [if bodyname of player is listed in infections of CanineList]puppy[else]pet[end if], I'll sell you my non-transformative potions, how's about that?' Sheng tells you, causing you to jump at him and lick his face. That just causes him to chuckle and shout down pet, which you obediently do. 'Alrighty then, for now I'll only be selling one of them, perhaps overtime there'll be more but you'll have to see...' Your master says with a wink.";
-		hp of Sheng is now 1;
+		say "     Your master gives you a contemplative look and look before nodding. 'You've definitely garnered my interest [if bodyname of player is listed in infections of CanineList]puppy[else]pet[end if], so tell you what,' he says, pulling you closer and causing your pulse to race and your body to heat up in excitement as you nod eagerly[if tailname of player is listed in infections of CanineList] and wag your tail[end if]. 'As long as you keep being a good [if bodyname of player is listed in infections of CanineList]puppy[else]pet[end if], I'll sell you my non-transformative potions, how's about that?' Sheng tells you, causing you to jump at him and lick his face. That just causes him to chuckle and shout down pet, which you obediently do. 'Alrighty then, for now I'll only be selling one of them, perhaps overtime there'll be more but you'll have to see...' Your master says with a wink.";
+		now HP of Sheng is 1;
 
 to say ShengTalk5:
 	say "     Stepping up closer to the counter you try your best to look your master in the eyes but you end up dropping your own to his chest which just causes him to chuckle. '[if bodyname of player is listed in infections of CanineList]Doggy, [else if Player is neuter or player is herm]Peon, [else if Player is male]Boy, [else if Player is female]Girl, [end if]do you have something that you wish to ask?' The albino tiger says with a mirthful tone. You nod slightly and then speak up, saying that you wish to take the next step in your relationship, finally managing to look upward. When you do, you see that your master's eyebrows are raised and he has a curious look on his face.";
@@ -606,6 +607,20 @@ The placement of sheng's pet collar is "neck".
 The descmod of sheng's pet collar is "A soft and gentle feeling blue silk collar with a tiger emblem on it that you want to treasure with all your heart, because after all, your master gave it to you.".
 The slot of sheng's pet collar is "neck".
 
+to say SCollarDesc:
+	say "WIP TEXT";
+
+to say SCollarUse:
+	if diego's heirloom collar is equipped:
+		say "WIP TEXT"; [text that details why you don't take the collar off]
+	else:
+		repeat with z running through equipped equipment:
+			if slot of z is "neck":
+				say "     [bold type]Your [z] is in the way![roman type][line break]";
+				continue the action;
+		say "     Looking at the collar, you can't help but wonder how it would feel to have it on. WIP"; [Text that details putting the collar on]
+		now sheng's pet collar is equipped;
+
 Table of Game Objects(continued)
 name	desc	weight	object
 "lust potion"	"A special sex potion for getting you (or someone else) horny."	0	lust potion
@@ -641,7 +656,7 @@ check potiongiving someone (called x):
 		say "     Doctor Matt looks suspiciously at the potion you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
 	else if x is Elijah and HP of Elijah < 4:
 		say "     Now is probably not a good time for that.";
-	else if x is Athanasia and HP of Athanasia < 5:
+	else if x is Anastasia and HP of Anastasia < 5:
 		say "     Now is probably not a good time for that.";
 	else if x is Solstice and HP of Solstice < 5:
 		say "     Now is probably not a good time for that.";

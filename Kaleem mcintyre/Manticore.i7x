@@ -4,12 +4,6 @@ Manticore by Kaleem mcintyre begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Manticore" } to infections of MaleList;
-	add { "Manticore" } to infections of FurryList;
-	add { "Manticore" } to infections of TailweaponList;
-
-
 to say Manticore attack:
 	if Player is female:
 		say "     The lion-like beast lets out a roar loud enough to shake the surrounding world as he stands over your defeated form. Not believing that you could have lost to the beast, you are not ready for what happens next as the winged lion lowers his head to look down at you and then smile predatorily into your direction. Taking a thick gulp, you wonder just how bad this is going to be as you watch the mutant with the scorpion tail slowly pad his way over to you. Rust red fur puffing out because of his victory, you have about three seconds to think how much the other looks like an arrogant prick as he lets his black mane sway around him proudly before the manticore is pushing you back onto your back with a firm paw. Grunting as your back hits the ground, for a second time no less, you don't have the energy to struggle as the mythic creature tears you out of your clothing to reveal your nude body to the winged feline's lustful gaze. Clenching your legs together, you try and hide your leaking pussy as the manticore's blazing yellow eyes look you up and down. Growling at you with a savage rumble from deep within its throat, you can hardly stop yourself from growing more damp as the maned beast smirks at you again with a knowing look.";
@@ -96,11 +90,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Manticore"; [name of the overall species of the infection, used for children, ...]
+	add "Manticore" to infections of HybridList;
+	add "Manticore" to infections of FurryList;
+	add "Manticore" to infections of MythologicalList;
+	add "Manticore" to infections of HermList;
+	add "Manticore" to infections of BarbedCockList;
+	add "Manticore" to infections of SheathedCockList;
+	add "Manticore" to infections of BipedalList;
+	add "Manticore" to infections of TailList;
+	add "Manticore" to infections of TailweaponList;
 	now Name entry is "Manticore";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]";
 	now defeated entry is "[Manticore loss]";
 	now victory entry is "[Manticore attack]";
@@ -155,7 +158,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -211,7 +214,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -244,7 +247,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

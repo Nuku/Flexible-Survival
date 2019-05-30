@@ -70,7 +70,7 @@ Instead of resolving a Raiding Party:
 						[puts Tigress Hooker as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in Table of Random Critters:
 							choose row y in Table of Random Critters;
-							if Name entry is "Tigress Hooker":
+							if Name entry is "Malayan Tiger Herm":
 								now MonsterID is y;
 								break;
 						say "[losetotigress]";

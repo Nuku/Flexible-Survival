@@ -247,7 +247,7 @@ object	name
 skunk kit	"skunk kit"
 
 skunk kit is a pet. skunk kit is a part of the player.
-understand "Peppy" as little fox.
+understand "Peppy" as skunk kit.
 The description of the skunk kit is "[Peppydesc]".
 The weapon damage of skunk kit is 6.
 The level of skunk kit is 1.
@@ -255,7 +255,7 @@ The Dexterity of skunk kit is 13.
 The summondesc of skunk kit is "[SummonPeppy]".
 The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
-the fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
+The fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
 
 to say SummonPeppy:
 	now Peppy is nowhere;

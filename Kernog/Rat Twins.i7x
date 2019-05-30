@@ -500,7 +500,7 @@ Instead of resolving a Pirate Standoff:
 		else:
 			say "'Ye freshwater pirate!' The pirate shark shakes her fist angrily at you, and begins to climb the hill to teach you a lesson.";
 			now inasituation is true;
-			challenge "Pirate Shark";
+			challenge "Shark Herm";
 			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     'Arrr! Ye won't get away with this, ye cachinnating cockatoo!' the defeated shark says, visibly straining her repertoire of Captain Haddock curses. She makes a hasty retreat, leaving you with the pride of having done a good deed. Just as you were about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";

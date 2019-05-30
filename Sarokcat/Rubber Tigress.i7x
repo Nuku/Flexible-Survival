@@ -7,10 +7,6 @@ Version 2 of Rubber Tigress by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Rubber tigress" } to infections of FemaleList;
-	add { "Rubber tigress" } to infections of FurryList;
-
 to say Rubber tigress attack:
 	if Player is male and a random chance of 2 in 3 succeeds:
 		say "     [if HP of Player > 0]Despite your surrender, the tigress doesn't let up, bowling you over with a final charge[else]With one last charge, the tigress bowls you over[end if], landing on top of you as you fall to the ground. As you lie there, stunned, she takes advantage of the situation to reach down and spread your legs wide. You swear you see a feline grin cross her rubber muzzle as she lowers one of her hands down to stroke your erect cock. The feel of her soft and smooth paw rubbing up against your cock makes you moan and give up any pretense at fighting as you thrust upwards helplessly into her paw. With a squeaky giggle the tigress positions herself over you, before carefully guiding you into her with her paw.";
@@ -35,11 +31,19 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Rubber tigress" to infections of FelineList;
+	add "Rubber tigress" to infections of FurryList;
+	add "Rubber tigress" to infections of LatexList;
+	add "Rubber tigress" to infections of FemaleList;
+	add "Rubber tigress" to infections of BarbedCockList;
+	add "Rubber tigress" to infections of SheathedCockList;
+	add "Rubber tigress" to infections of BipedalList;
+	add "Rubber tigress" to infections of TailList;
 	now Name entry is "Rubber tigress";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She swipes at you with her surprisingly sharp claws.[or]The rubber beast rubs itself on you, leaving a patch of orange and black rubber attached to your skin.[or]The beast draws back for a second, and then springs forward in a rush, knocking you to the ground.[or]Crouching low for a second, the tigress explodes into motion as she lashes you again and again with her rubber paws.[or]She opens her muzzle wide, revealing the inside of her pink rubber mouth, and her soft rubber teeth, before clamping her jaws down on your arm, strangely for being bitten by the squeaky rubber beast, it actually feels kind of good.[or]The tigress grabs some nearby fair prizes, and starts throwing them at you![or]Panting as she shows off her body, she turns to wiggle her ass at you, it isn't until you feel something on your leg that you realize she has rubbed her tail up the inside of your thighs, leaving a trail of rubber behind.[or]She slams herself into you recklessly, her hands moving to do all she can to spread her orange rubber-like coating to your body as well.[at random]";
 	now defeated entry is "[Rubber tigress loss]";
 	now victory entry is "[Rubber tigress attack]";
@@ -94,7 +98,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -150,7 +154,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -183,7 +187,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

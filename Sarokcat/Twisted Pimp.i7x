@@ -6,10 +6,6 @@ Version 2 of Twisted Pimp by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Twisted Pimp" } to infections of MaleList;
-	add { "Twisted Pimp" } to infections of FurryList;
-
 twpimpbeaten is a number that varies.
 twpimploss is a number that varies.
 
@@ -32,7 +28,7 @@ to say pimp attack:
 		say "     You can hear the strange pimp chuckle with amusement as you fall to your knees in defeat, his other women surrounding you now and holding you in place as the pimp stalks forward until he is right in front of you. '[if Player is not female]You think you a match for me man? You wanna take my place or my bitches? I think you need me to put you in your place instead[else]You think you can disrespect me, you slut? You think you're too good to be with my bitches? Well, that's fool thinkin['], you ho. I think you need to be put in your place instead[end if],' the pimp says harshly as he whips his slightly strange and [one of]pointed[or]knotted[or]barbed[or]reptilian[or]goat-like[at random] cock out, and you open your mouth to protest, only to nearly choke as he shoves his thick length right into your mouth. 'I think you need some of the training I give my girls,' the pimp says with a chuckle, several of the girls in question giggling along as they stroke your helpless body, and while you try to resist and spit his cock out, you find yourself sucking on it eagerly instead.";
 		say "     'That's right, you be a good bitch and suck me off, and maybe you'll even end up as much of a whore on the outside as you are on the inside,' he says as he thrusts into your mouth several times, his strangely enticing perfume filling your head and making you feel strangely submissive and horny, even as the taste of his strange meat fills your mouth with pleasure. His cock thrusts into your mouth again and again, and each time it rubs against the back of your throat you find yourself moaning wantonly, your eyes drifting closed as you focus on the nearly hypnotic sensation of his cock pounding into your eager mouth. Your tongue licking and teasing his cock almost automatically as you suck at his meaty rod, something about the entire situation seeming so very right to you, even as soft female hands stroke your body and his other whores whisper soft words of encouragement to you.";
 		say "     You are so lost in the surreal sensations of pleasing him with your mouth, that you are completely surprised when his cock finally begins to shoot its seed into your mouth. You nearly choke for a minute, some of his seed dribbling down the sides of your mouth, before locking your lips around his cock and swallowing eagerly, somehow sure you need to get every bit of that wonderful transformative sperm inside you. When his load is finally spent, and he pulls his cock away from your mouth, you find yourself nearly crying at the loss of that amazing member, panting for several minutes as the pimp chuckles above you, before your lust fogged brain begins to start working again. 'You took to the training like a proper little slut, you should just go with that and become a nice little whore for me already,' the pimp says with a laugh, his other whores laughing along and making you groan as you realize just how much like a whore you were acting, as the pimp and his entourage wander away down into the red light district still laughing.";
-	infect "Twisted Pimp";
+	infect "Human Hybrid";
 	increase twpimploss by 1;
 
 To say pimp loss:
@@ -68,11 +64,18 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Twisted Pimp";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Human Hybrid"; [name of the overall species of the infection, used for children, ...]
+	add "Human Hybrid" to infections of HybridList;
+	add "Human Hybrid" to infections of FurryList;
+	add "Human Hybrid" to infections of MaleList;
+	add "Human Hybrid" to infections of TaperedCockList;
+	add "Human Hybrid" to infections of SheathedCockList;
+	add "Human Hybrid" to infections of BipedalList;
+	add "Human Hybrid" to infections of TailList;
+	now Name entry is "Human Hybrid";
+	now enemy title entry is "Twisted Pimp"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He snaps his fingers and you feel dizzy for a minute, almost wanting to go over to him and do what he says.[or]He reaches out quickly and backhands you across the face.[or]He grins at you, his sharp teeth glinting for a minute before the punch you never saw coming lands right in your crotch.[or]You are distracted for a minute by one of the pimps stable of strange women, letting him land a powerful hit![or]A strangely arousing scent fills your head, making you pant with need and wonder why you are fighting instead of fucking...[or]The pimp gestures, and several of the women get in your way, giving him a clear shot at you.[or]Facing the pimp, you are surprised when several of his harem mob you at once, beating you with their fists before withdrawing while the pimp laughs at you[at random]";
 	now defeated entry is "[pimp loss]";
 	now victory entry is "[pimp attack]";
@@ -127,7 +130,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -183,7 +186,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -216,7 +219,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -299,7 +302,7 @@ to say estrogen pill use:
 
 
 when play ends:
-	if BodyName of Player is "Twisted Pimp":
+	if BodyName of Player is "Human Hybrid":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Succumbing to your bodies needs, your mind fills with images of the lovely pimp, and all his lusty little whores, and you smile happily as you finally realize your true purpose in life. 'I'm a whore...' you mutter with a happy smile on your face, before giggling in amusement, wondering how you could have not realized such a simple truth sooner. Your thoughts turning towards the strange pimp again, you moan in pleasure as you realize just how good an owner the obviously experienced pimp would make, after all, every slutty little whore like yourself needs an owner to take care of them right? Giggling rather ditzily again, you quickly begin to saunter back towards the red light district, where you are sure to find a proper owner who will find lots of handsome beasts to rent you out to so they can fill your empty pussy up again and again.";

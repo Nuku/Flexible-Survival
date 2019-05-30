@@ -139,10 +139,10 @@ to say BakeryChocLab:
 			challenge "Chocolate Lab";
 
 to say BakeryRetriever:
-	challenge "Retriever";
+	challenge "Retriever Female";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     With the first of the two golden-furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
-		challenge "Retriever";
+		challenge "Retriever Female";
 
 Section 2 - Location
 
@@ -1211,7 +1211,7 @@ to cheesecakeinfect:
 Francoismixcleaned is a truth state that varies. Francoismixcleaned is usually false.
 Francoismix is a marker.
 when play begins:
-	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Husky Bitch", "German Shepherd Male", "Pit bull", "Retriever", "Smooth Collie Shemale", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
+	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Husky Bitch", "German Shepherd Male", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
 
 to francoisinfect:
 	if Francoismixcleaned is false:

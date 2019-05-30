@@ -173,10 +173,10 @@ when play begins:
 Instead of resolving Tristbrother:
 	If HP of Tristian is 8:
 		say "     You manage to make your way to the area where Tristian indicated his brother lived. As you're scouting out the area, you hear a loud noise from the small apartment building you're approaching. Rushing inside, you notice a couple of hyenas have broken into an apartment that someone obviously barricaded. From the sounds of things, there is someone inside who is obviously protesting... although they sound more willing by the minute. Looking inside, you see several hyenas holding down what used to be an unchanged human, one of them is already shooting her seed onto the human's chest, while another appears to be ready to take him in the ass while the others hold the young man down. Looking up, one of the hyenas notices you. 'Oh good, another new addition to the gang,' she says before attacking!";
-		Challenge "Herm Hyena";
+		Challenge "Hyena Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having dealt with the first hyena, you rush towards the others. Seeing how you've already dropped one of their numbers, they're a little more reluctant to face you, but another steps forward to protect their catch.";
-			Challenge "Herm Hyena";
+			Challenge "Hyena Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having beaten another of the gang hyenas up, you growl menacingly at the rest. They turn tail and run, their fallen compatriots scrambling out as well. With the hyenas driven off, you stagger over to where the human was lying, and find him half delirious as his body is slowly sprouting hyena fur and looking more bestial by the minute. You wipe off what you can of the mess of cum and decide to get him back to the club in the hopes that perhaps someone there can help with the changes, or at least change him into something a bit more suited to life with his brother, instead of just another laughing hyena gang member...'";
 				now HP of Tristian is 9;

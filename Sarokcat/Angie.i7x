@@ -240,7 +240,7 @@ Virgin of Angie is false.
 AnalVirgin of Angie is true.
 PenileVirgin of Angie is true.
 SexuallyExperienced of Angie is true.
-MainInfection of Angie is "pantherherm".
+MainInfection of Angie is "Panther Herm".
 The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
 The icon of Angie is the figure of Angie_icon.
@@ -644,7 +644,7 @@ to say AngieSex1: [fucking her]
 			say "     You can't help but grin as you respond to her need by doing what she asks, increasing your pace as you lean over her form, pressing her down against the shop counter as she yowls out her pleasure to the empty room, each lusty and needful sound another sign of your total victory over her body. All too soon, you reach the point of no return and orgasm within her hot folds, your seed shooting into her needy passage triggering Angie's own earth-shattering orgasm. She lets loose a loud cat-like scream of pleasure, as her cock covers the front of the counter with her own seed, and her trembling folds milk seem to milk every last bit of cum out of you.";
 			say "     Eventually you both manage to come back to your senses, and as you pull out of her, Angie looks back at you with a self-satisfied look on her face. Her skirt still hangs uselessly on her well-fucked body as she regains her balance after your exertions. 'That was just amazing,' the pantheress purrs happily. 'Almost as good as having a real cat mount me,' Angie says teasingly as she rubs her dark-furred body up against you. 'I almost can't wait till you can fuck me like that again, holding me down and making me a proper kitty toy for you to use whenever you want...' She murrs softly with excitement at the thought, and you find the image of the strong panther-woman submitting to you again and again to be rather enticing as well, even as she rubs up against you one last time before relaxing back on the counter with a happy smile on her muzzle...";
 			NPCSexAftermath Angie receives "PussyFuck" from Player;
-		Infect "Pantherherm";
+		Infect "Panther Herm";
 		now lastfuck of Angie is turns;
 		now lastfuck of Midnight is turns;
 
@@ -730,7 +730,7 @@ to say AngieSex2: [getting fucked by Angie]
 			WaitLineBreak;
 			say "     'A nice, large panther mounting me while I mount you - doesn't that sound nice? Or maybe he could mount you while I put that lovely little mouth of yours to use, or maybe we could even have him mount you while I mount him...' Angie purrs, obviously lost in thought for a minute before focusing on you again. 'Or maybe I could just mount you myself every time and make you my sexy little mate, and you could submit to me every night and be my little sexy panther pet, and I could be his...' the large panther herm says teasingly, obviously seriously interested in the erotic idea as she looks at you with a happy smile on her muzzle.";
 			NPCSexAftermath Player receives "PussyFuck" from Angie;
-		Infect "Pantherherm";
+		Infect "Panther Herm";
 		now lastfuck of Angie is turns;
 		now lastfuck of Midnight is turns;
 
@@ -865,7 +865,7 @@ to say AngieSex3: [herm sex with Angie]
 				WaitLineBreak;
 				say "     'A nice, large panther mounting me while I mount you - doesn't that sound nice? Or maybe you could mount me while he mounts you...' Angie purrs, obviously lost in thought for a minute before focusing on you again. 'Or maybe I could just mount myself every time and make you my mate. Then we could take turns being on top,' the large panther herm says teasingly, obviously seriously interested in the erotic idea as she looks at you with a happy smile on her muzzle.";
 				NPCSexAftermath Player receives "PussyFuck" from Angie;
-		Infect "Pantherherm";
+		Infect "Panther Herm";
 		now lastfuck of Angie is turns;
 		now lastfuck of Midnight is turns;
 
@@ -881,11 +881,11 @@ to say AngieSex4: [Angie rides the player's cock]
 	WaitLineBreak;
 	say "     You both lie there for a minute, panting to catch your breath while Angie cools down from her mating frenzy. Eventually, a measure of calm and reason returns into her eyes and after giving you a kiss, she pulls off your softening shaft and staggers to lean on the counter. You just keep where you are and stare up at her from your position on the floor, eyes taking in those shapely breasts and everything else of your sexy beast of a friend. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
 	say "     'That was unbelievably amazing,' she finally says after taking a few more deep breaths, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
-	Infect "Pantherherm";
+	Infect "Panther Herm";
 	NPCSexAftermath Angie receives "PussyFuck" from Player;
 
 to say AngieSex5: [Angie fucks the player]
-	setmonster "Pantherherm";
+	setmonster "Panther Herm";
 	choose row MonsterID from the Table of Random Critters;
 	if Player is herm:
 		say "     As you step up to Angie ant tell her you want to get fucked, the pantheress draws you into an eager kiss, then pants, 'Of course, my love. Do you want to take my cock in your pussy, or rather that tight and sexy ass of yours? (Y = pussy, N = ass)'";
@@ -897,7 +897,7 @@ to say AngieSex5: [Angie fucks the player]
 		say "[Angie5PussyFuck]";
 	else:
 		say "[Angie5AssFuck]";
-	Infect "Pantherherm";
+	Infect "Panther Herm";
 
 to say Angie5PussyFuck:
 	say "     Angie gives an aroused mrowl and starts making out with you while her hands roam over your body, pulling off your clothes in eager haste. Soon, you're both completely naked and Angie steps back, letting her eyes roam over your shapely form. 'Mmm, yes! It looks like you're definitely ready,' she says as she runs one of her soft paws teasingly over your increasingly damp pussy, paw-pads rubbing across your clit and making you gasp with renewed arousal as the panther herm chuckles at your eager response. 'You're like a needy female in heat and I'm the one who gets to mount you,' Angie says happily, a large feline grin spreading across her muzzle, 'Every time I sink my shaft into you, it feels so good... so right...'";
@@ -960,7 +960,7 @@ to say AngieSex6: [giving her a blowjob]
 			now lastfuck of Angie is turns;
 			if AngieAroused < 6:
 				increase AngieAroused by 1;
-			Infect "Pantherherm";
+			Infect "Panther Herm";
 			now lastfuck of Angie is turns;
 		else:
 			say "     ...can't quite manage to quell her fears. Biting her lip, the pantheress gives a shake of her head and moves back a few steps with a sigh.";
@@ -982,7 +982,7 @@ to say AngieSex6: [giving her a blowjob]
 		NPCSexAftermath Player receives "OralCock" from Angie;
 		if AngieAroused < 6:
 			increase AngieAroused by 1;
-		Infect "Pantherherm";
+		Infect "Panther Herm";
 		now lastfuck of Angie is turns;
 	else if AngieAroused is 7: [player-Angie relationship]
 		say "     'Ready to play with the kitty again?' Angie says, trailing one of her claws down your chest teasingly. 'I can't wait!' Her soft rumbling purr fills the gift shop and the scent of her arousal spikes even higher, making you grin at how eager she is to play as she tosses her purple top to the side without hesitation. 'I haven't been able to think of much else since you showed me what I was missing,' she purrs as she rubs her large breasts up against your body, the formerly reluctant pantherherm obviously having no remaining inhibitions. Lowering her muzzle down to yours and kissing you eagerly, her feline tongue teases your own as she clutches you tightly to her.";
@@ -1019,7 +1019,7 @@ to say AngieSex6: [giving her a blowjob]
 		NPCSexAftermath Angie receives "OralCock" from Midnight;
 
 to say AngieSex7:
-	setmonster "Pantherherm";
+	setmonster "Panther Herm";
 	choose row MonsterID from the Table of Random Critters;
 	if Player is herm: [herms]
 		say "     <just a placeholder for herm players for now, sorry>";
@@ -1053,7 +1053,7 @@ to say AngieSex7:
 to say AngiePTFun:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Pantherherm":
+		if Name entry is "Panther Herm":
 			now MonsterID is y;
 			break;
 	say "     Angie rears up in place as you approach before the poofed fur on her tail settles down, 'Oh! I thought you were one of the mutants for a moment there.' She pauses, then laughs a little. 'I guess you are. You look...' she approaches you and begins to circle around you, eyeing your every contour. A soft purr announces Midnight's approach as he joins the inspection, sniffing at you curiously a moment.";
@@ -1091,8 +1091,8 @@ to say AngiePTFun:
 		else:
 			say "She finishes her inspection and seems a little disappointed, 'You're missing a little something there, hon, why don't you get a little... something, and come back. I really want to give that a test run if you know what I mean.";
 			continue the action;
-	Infect "Pantherherm";
-	Infect "Pantherherm";
+	Infect "Panther Herm";
+	Infect "Panther Herm";
 	now lastfuck of Angie is turns;
 	now lastfuck of Midnight is turns;
 
@@ -1118,11 +1118,11 @@ to say AngieRTFun:
 	WaitLineBreak;
 	SanLoss 20;
 	now thirst of Player is 0;
-	Infect "Pantherherm";
-	Infect "Pantherherm";
-	Infect "Pantherherm";
-	Infect "Pantherherm";
-	Infect "Pantherherm";
+	Infect "Panther Herm";
+	Infect "Panther Herm";
+	Infect "Panther Herm";
+	Infect "Panther Herm";
+	Infect "Panther Herm";
 	LineBreak;
 	say "     As your bones settle back into place Angie cuddles up to you, licking your new fur. 'Oh that was wonderful,' she purrs. 'Tiger's aren't as sexy as panthers, but they'll do in a pinch, right?' She laughs as you rub your throat, which still feels stretched. 'Was I a little rough? It's funny, you know. You touch my cock, then suddenly I'm all dominant and growly. You lick my pussy and I'm a needy little whore. It's a switch.' She sighs and leans her head onto your chest. 'Thanks for being my toy, felt good to be in charge for once. Midnight's a very top cat panther.";
 	now lastfuck of Angie is turns;

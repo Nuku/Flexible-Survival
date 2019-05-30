@@ -53,19 +53,19 @@ Instead of resolving a Raided Corner Store:
 	if Player consents:
 		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.";
 		if hyg is 4:
-			if the BodyName of Player is "Herm Hyena" or FaceName of Player is "Hyena Herm":
+			if the BodyName of Player is "Hyena Herm" or FaceName of Player is "Hyena Herm":
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.";
 				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
 				increase carried of soda by 2;
 				increase carried of chips by 2;
 			else:
-				challenge "Herm Hyena";
-				challenge "Herm Hyena";
+				challenge "Hyena Herm";
+				challenge "Hyena Herm";
 				say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.";
 		else:
-			challenge "Herm Hyena";
-			challenge "Herm Hyena";
+			challenge "Hyena Herm";
+			challenge "Hyena Herm";
 			say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open. Disappointed, you head back into the city.";
 		now Resolution of Raided Corner Store is 1; [tried to get into the back]
 	else:
@@ -175,7 +175,7 @@ to say stripbarsearch:
 		increase score by 1;
 	if T is 3:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizeable bulge under hir skirt.";
-		challenge "Tigress Hooker";
+		challenge "Malayan Tiger Herm";
 	if T is 4:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' Shi grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before shi catches up with you, pulling you into a fight.";
 		challenge "Smooth Collie Shemale";

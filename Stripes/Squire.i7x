@@ -8,9 +8,6 @@ Section 0 - Setup
 
 squirefeature is a number that varies. squirefeature is usually 1.
 
-when play begins:
-	add { "Squire" } to infections of MaleList;
-
 Section 1 - Description
 
 to say squiredesc:
@@ -135,7 +132,7 @@ to say losetosquire:
 to say squirewins_vaginal_shift:
 	choose row MonsterID from the Table of Random Critters;
 	if Player is herm:
-		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Lifting your [cock size desc of Player] cock[if CockName of Player is not listed in infections of InternalList] and balls[end if], he smiles as he confirms the presence of your juicy pussy. 'This encounter gets better and better. This fallen knight has a scabbard as well as a sword. ";
+		say "     The smaller guy gets you down on your back and slides your ass up into his lap. Lifting your [cock size desc of Player] cock[if CockName of Player is not listed in infections of InternalCockList] and balls[end if], he smiles as he confirms the presence of your juicy pussy. 'This encounter gets better and better. This fallen knight has a scabbard as well as a sword. ";
 	else:
 		say "     The smaller guy gets you down on your back and slides your ass up into his lap. With a fine view of your juicy pussy, he smiles eagerly. 'This encounter gets better and better; this fallen knight has a scabbard for my sword. ";
 	say "But what kind of a knight cannot stand up to a squire? You're unworthy to be a knight for [if HP of Player > 0]surrendering so easily[else]losing[end if] to a squire. You're clearly undeserving of your title,' he says as he pushes a few fingers into your cunt eagerly. He clumsily gropes and teases your cunny, relishing this opportunity with a female. After his inexperienced exploration, he gets his erection lined up with your wet folds and pushes his dribbling cock into your vagina with one confident motion.";
@@ -284,11 +281,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Human"; [name of the overall species of the infection, used for children, ...]
+	add "Squire" to infections of HumanList;
+	add "Squire" to infections of NatureList;
+	add "Squire" to infections of MaleList;
+	add "Squire" to infections of BipedalList;
 	now Name entry is "Squire"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The squire[or]The brave lad[or]The young man[or]The bold retainer[or]The brave squire[as decreasingly likely outcomes] [one of]swings his short sword at you[or]jab at you with his sword[or]manages a quick hit on you[or]feints before striking you with his blade[or]shows some skill as he dodges before thrusting at you[at random]!";
 	now defeated entry is "[beatthesquire]"; [ Text when monster loses. ]
 	now victory entry is "[losetosquire]"; [ Text when monster wins. ]
@@ -343,7 +344,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -399,7 +400,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -432,7 +433,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

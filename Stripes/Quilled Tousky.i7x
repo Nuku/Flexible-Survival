@@ -4,15 +4,6 @@ Version 1 of Quilled Tousky by Stripes begins here.
 
 "Adds Quilled Tousky to Flexible Survival."
 
-when play begins:
-	add { "Quilled Tousky" } to infections of MaleList;
-	add { "Quilled Tousky" } to infections of FurryList;
-	add { "Quilled Tousky" } to infections of HumorousList;
-	add { "Quilled Tousky" } to infections of TailweaponList; [usable for Tail Strike feat]
-	add { "Quilled Tousky" } to infections of CanineList; [list of canine infections]
-	add { "Quilled Tousky" } to infections of KnotList; [list of cock infections with a knot]
-
-
 to say quilledtouskydesc:
 	setmongender 3; [creature is male]
 	say "     Before you is a strange, mish-mash creature that seems to have been cobbled together by some exceptionally confused nanites. The quilled tousky's body is covered in feathery-quilled flesh. His head is large, mostly resembling that of a husky, with a long, broad, colorful beak instead of a muzzle, big enough to take up most of his face. His canine body is solidly-built, with just a bit of adorable chubbiness to him. A cute pair of black-feathered wings (which appear far too small to support him in flight) flutters upon his back. His arms are somewhat short and pudgy, with harmless-looking claws on the tips of his paws. His legs are digitigrade, puppy-like in proportion to the rest of his body, and ending in bird claws where paws might be on a more sensibly-assembled creature. He has what looks like a cheerfully-wagging canine tail, covered in an alarming blend of long quills and feathers instead of fur. At his crotch, he has a large perky canine maleness, measuring 8 inches and a small set of balls.";
@@ -41,11 +32,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Quilled Tousky" to infections of CanineList;
+	add "Quilled Tousky" to infections of HumorousList;
+	add "Quilled Tousky" to infections of FurryList;
+	add "Quilled Tousky" to infections of NatureList;
+	add "Quilled Tousky" to infections of MaleList;
+	add "Quilled Tousky" to infections of KnottedCockList;
+	add "Quilled Tousky" to infections of SheathedCockList;
+	add "Quilled Tousky" to infections of BipedalList;
+	add "Quilled Tousky" to infections of TailList;
+	add "Quilled Tousky" to infections of TailweaponList;
 	now Name entry is "Quilled Tousky"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The quilled tousky smacks you with its quilled tail. After the initial pain, you feel oddly euphoric.[or]The quilled tousky headbutts you with a happy 'Marp!'[or]The odd creature grabs you with its taloned feet and climbs all over you, marping happily as it sits on your head like an odd, pointy hat.[or]The hybrid creature flails its paws at you, slapping at you wildly.[at random]";
 	now defeated entry is "[beatthequilledtousky]";
 	now victory entry is "[losetoquilledtousky]";
@@ -100,7 +101,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -156,7 +157,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -189,7 +190,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

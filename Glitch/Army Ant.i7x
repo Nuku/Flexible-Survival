@@ -5,12 +5,6 @@ Version 1 of army ant by Glitch begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Army Ant" } to infections of MaleList;
-	add { "Army Ant" } to infections of FurryList;
-	add { "Army Ant" } to infections of InsectList;
-	add { "Army Ant" } to infections of InternalList;
-
 to say armyantdesc:
 	setmongender 3; [creature is male]
 	say "     Before you is the fit and ready figure of an Army Ant. His body is covered in army camo-patterned, gleaming chitin-plated flesh that is sculpted for tone, compact muscle. His face is smooth and planed with chitin bands arching across the center, concealing where a nose would normally be. Fine, articulated plates form the brow and jawline, and the features are lean and stoic. Paired antennae jut from the scalp, and a pair of mandibular pincers flanks the mouth, which is otherwise humanoid. The eyes are ovoid and segmented, a honeycomb of fine gems forming otherwise homogeneous orbs. His insectile body excessively toned and trim with segmented indentations between the chest, abdomen, and hips. The musculature is chiseled, as if comprised of polished stones and hewn into a single, polished piece. His arms span out from his shoulders and where the abdomen and chest join. The upper pair are slightly larger, but both pairs are coated in polished, hunter green chitin, segmented and powerfully built but lean.";
@@ -53,11 +47,18 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Ant"; [name of the overall species of the infection, used for children, ...]
+	add "Army Ant" to infections of InsectList;
+	add "Army Ant" to infections of FurryList;
+	add "Army Ant" to infections of NatureList;
+	add "Army Ant" to infections of MaleList;
+	add "Army Ant" to infections of InternalCockList;
+	add "Army Ant" to infections of HexapedalList;
+	add "Army Ant" to infections of TailList;
 	now Name entry is "Army Ant"; [The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Ant Warrior";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The army ant slides in close, striking with balled knuckles in repeated blows to your body.[or]The army ant closes the distance, hands grabbing at your shoulders before his head snaps forwards in a swift but heinous headbutt.[or]With a swift motion, the army ant delivers a knee to your gut and follows through with a bludgeoning strike downwards with several fists when you bow from the blow.[or]Crouching low when he's closed the distance, the army ant uppercuts solidly with a bodily spring, following through with a second from the lower arm's fist.[or]The army ant delivers a sweeping blow, stooping low with he strike while his leg kicks out.[or]With his sinews creaking tightly, the army ant checks you with a quick shoulder rush, following the maneuver with a fierce gut punch.[or]In rapid succession, the army ant lashes out with his finger talons in a series of surgical strikes to lacerate you multiple times.[at random]"; [ Text when monster loses. Change 'template' as above. ]
 	now defeated entry is "[beatthearmyant]"; [ Text when monster loses. ]
 	now victory entry is "[losetoarmyant]"; [ Text when monster wins. Change 'template' as above. ]
@@ -112,7 +113,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -168,7 +169,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -201,7 +202,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

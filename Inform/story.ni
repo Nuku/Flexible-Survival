@@ -15,7 +15,7 @@ use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 270000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
-use MAX_OBJECTS of 2000.
+use MAX_OBJECTS of 4000.
 use MAX_ACTIONS of 2000.
 use MAX_VERBS of 2000.
 use MAX_VERBSPACE of 50000.
@@ -615,13 +615,13 @@ A person can be internal. A person is usually not internal.
 internalbypass is a truth state that varies. internalbypass is usually false.
 
 Definition: A person (called x) is internal:
-	if CockName of x is listed in infections of internallist and internalbypass is false, yes;
+	if CockName of x is listed in infections of InternalCockList and internalbypass is false, yes;
 	no;
 
 A person can be knotted. A person is usually not knotted.
 
 Definition: A person (called x) is knotted:
-	if CockName of Player is listed in infections of knotlist, yes;
+	if CockName of Player is listed in infections of KnottedCockList, yes;
 	no;
 
 A person can be barbed. A person is usually not barbed.
@@ -630,11 +630,301 @@ Definition: A person (called x) is barbed:
 	if CockName of Player is listed in infections of BarbedCocklist, yes;
 	no;
 
-A person can be flared. A person is usually not flared.
+A person can be blunt. A person is usually not blunt.
 
-Definition: A person (called x) is flared:
-	if CockName of Player is listed in infections of Bluntlist, yes;
+Definition: A person (called x) is blunt:
+	if CockName of Player is listed in infections of BluntCockList, yes;
 	no;
+
+A person can be HeadFurred. A person is usually not HeadFurred.
+
+Definition: A person (called x) is HeadFurred:
+	if HeadName of Player is listed in infections of Bovinelist, yes;
+	if HeadName of Player is listed in infections of CanineList, yes;
+	if HeadName of Player is listed in infections of CervineList, yes;
+	if HeadName of Player is listed in infections of EquineList, yes;
+	if HeadName of Player is listed in infections of FelineList, yes;
+	if HeadName of Player is listed in infections of LeporineList, yes;
+	if HeadName of Player is listed in infections of MarsupialList, yes;
+	if HeadName of Player is listed in infections of MustelidList, yes;
+	if HeadName of Player is listed in infections of PrimateList, yes;
+	if HeadName of Player is listed in infections of RodentList, yes;
+	if HeadName of Player is listed in infections of UrsineList, yes;
+	if HeadName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be HeadFeathered. A person is usually not HeadFeathered.
+
+Definition: A person (called x) is HeadFeathered:
+	if HeadName of Player is listed in infections of AvianList, yes;
+	if HeadName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be HeadScaled. A person is usually not HeadScaled.
+
+Definition: A person (called x) is HeadScaled:
+	if HeadName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be HeadPlated. A person is usually not HeadPlated.
+
+Definition: A person (called x) is HeadPlated:
+	if HeadName of Player is listed in infections of ArachnidList, yes;
+	if HeadName of Player is listed in infections of InsectList, yes;
+	if HeadName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be HeadSkinned. A person is usually HeadSkinned.
+
+Definition: A person (called x) is HeadSkinned:
+	if HeadName of Player is listed in infections of HybridList, no;
+	if x is HeadPlated, no;
+	if x is HeadScaled, no;
+	if x is HeadFeathered, no;
+	if x is HeadFurred, no;
+	yes;
+
+A person can be TorsoFurred. A person is usually not TorsoFurred.
+
+Definition: A person (called x) is TorsoFurred:
+	if TorsoName of Player is listed in infections of Bovinelist, yes;
+	if TorsoName of Player is listed in infections of CanineList, yes;
+	if TorsoName of Player is listed in infections of CervineList, yes;
+	if TorsoName of Player is listed in infections of EquineList, yes;
+	if TorsoName of Player is listed in infections of FelineList, yes;
+	if TorsoName of Player is listed in infections of LeporineList, yes;
+	if TorsoName of Player is listed in infections of MarsupialList, yes;
+	if TorsoName of Player is listed in infections of MustelidList, yes;
+	if TorsoName of Player is listed in infections of PrimateList, yes;
+	if TorsoName of Player is listed in infections of RodentList, yes;
+	if TorsoName of Player is listed in infections of UrsineList, yes;
+	if TorsoName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be TorsoFeathered. A person is usually not TorsoFeathered.
+
+Definition: A person (called x) is TorsoFeathered:
+	if TorsoName of Player is listed in infections of AvianList, yes;
+	if TorsoName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be TorsoScaled. A person is usually not TorsoScaled.
+
+Definition: A person (called x) is TorsoScaled:
+	if TorsoName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be TorsoPlated. A person is usually not TorsoPlated.
+
+Definition: A person (called x) is TorsoPlated:
+	if TorsoName of Player is listed in infections of ArachnidList, yes;
+	if TorsoName of Player is listed in infections of InsectList, yes;
+	if TorsoName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be TorsoSkinned. A person is usually TorsoSkinned.
+
+Definition: A person (called x) is TorsoSkinned:
+	if TorsoName of Player is listed in infections of HybridList, no;
+	if x is TorsoPlated, no;
+	if x is TorsoScaled, no;
+	if x is TorsoFeathered, no;
+	if x is TorsoFurred, no;
+	yes;
+
+
+A person can be ArmsFurred. A person is usually not ArmsFurred.
+
+Definition: A person (called x) is ArmsFurred:
+	if ArmsName of Player is listed in infections of Bovinelist, yes;
+	if ArmsName of Player is listed in infections of CanineList, yes;
+	if ArmsName of Player is listed in infections of CervineList, yes;
+	if ArmsName of Player is listed in infections of EquineList, yes;
+	if ArmsName of Player is listed in infections of FelineList, yes;
+	if ArmsName of Player is listed in infections of LeporineList, yes;
+	if ArmsName of Player is listed in infections of MarsupialList, yes;
+	if ArmsName of Player is listed in infections of MustelidList, yes;
+	if ArmsName of Player is listed in infections of PrimateList, yes;
+	if ArmsName of Player is listed in infections of RodentList, yes;
+	if ArmsName of Player is listed in infections of UrsineList, yes;
+	if ArmsName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be ArmsFeathered. A person is usually not ArmsFeathered.
+
+Definition: A person (called x) is ArmsFeathered:
+	if ArmsName of Player is listed in infections of AvianList, yes;
+	if ArmsName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be ArmsScaled. A person is usually not ArmsScaled.
+
+Definition: A person (called x) is ArmsScaled:
+	if ArmsName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be ArmsPlated. A person is usually not ArmsPlated.
+
+Definition: A person (called x) is ArmsPlated:
+	if ArmsName of Player is listed in infections of ArachnidList, yes;
+	if ArmsName of Player is listed in infections of InsectList, yes;
+	if ArmsName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be ArmsSkinned. A person is usually ArmsSkinned.
+
+Definition: A person (called x) is ArmsSkinned:
+	if ArmsName of Player is listed in infections of HybridList, no;
+	if x is ArmsPlated, no;
+	if x is ArmsScaled, no;
+	if x is ArmsFeathered, no;
+	if x is ArmsFurred, no;
+	yes;
+
+A person can be LegsFurred. A person is usually not LegsFurred.
+
+Definition: A person (called x) is LegsFurred:
+	if LegsName of Player is listed in infections of Bovinelist, yes;
+	if LegsName of Player is listed in infections of CanineList, yes;
+	if LegsName of Player is listed in infections of CervineList, yes;
+	if LegsName of Player is listed in infections of EquineList, yes;
+	if LegsName of Player is listed in infections of FelineList, yes;
+	if LegsName of Player is listed in infections of LeporineList, yes;
+	if LegsName of Player is listed in infections of MarsupialList, yes;
+	if LegsName of Player is listed in infections of MustelidList, yes;
+	if LegsName of Player is listed in infections of PrimateList, yes;
+	if LegsName of Player is listed in infections of RodentList, yes;
+	if LegsName of Player is listed in infections of UrsineList, yes;
+	if LegsName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be LegsFeathered. A person is usually not LegsFeathered.
+
+Definition: A person (called x) is LegsFeathered:
+	if LegsName of Player is listed in infections of AvianList, yes;
+	if LegsName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be LegsScaled. A person is usually not LegsScaled.
+
+Definition: A person (called x) is LegsScaled:
+	if LegsName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be LegsPlated. A person is usually not LegsPlated.
+
+Definition: A person (called x) is LegsPlated:
+	if LegsName of Player is listed in infections of ArachnidList, yes;
+	if LegsName of Player is listed in infections of InsectList, yes;
+	if LegsName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be LegsSkinned. A person is usually LegsSkinned.
+
+Definition: A person (called x) is LegsSkinned:
+	if LegsName of Player is listed in infections of HybridList, no;
+	if x is LegsPlated, no;
+	if x is LegsScaled, no;
+	if x is LegsFeathered, no;
+	if x is LegsFurred, no;
+	yes;
+
+
+A person can be AssFurred. A person is usually not AssFurred.
+
+Definition: A person (called x) is AssFurred:
+	if AssName of Player is listed in infections of Bovinelist, yes;
+	if AssName of Player is listed in infections of CanineList, yes;
+	if AssName of Player is listed in infections of CervineList, yes;
+	if AssName of Player is listed in infections of EquineList, yes;
+	if AssName of Player is listed in infections of FelineList, yes;
+	if AssName of Player is listed in infections of LeporineList, yes;
+	if AssName of Player is listed in infections of MarsupialList, yes;
+	if AssName of Player is listed in infections of MustelidList, yes;
+	if AssName of Player is listed in infections of PrimateList, yes;
+	if AssName of Player is listed in infections of RodentList, yes;
+	if AssName of Player is listed in infections of UrsineList, yes;
+	if AssName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be AssFeathered. A person is usually not AssFeathered.
+
+Definition: A person (called x) is AssFeathered:
+	if AssName of Player is listed in infections of AvianList, yes;
+	if AssName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be AssScaled. A person is usually not AssScaled.
+
+Definition: A person (called x) is AssScaled:
+	if AssName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be AssPlated. A person is usually not AssPlated.
+
+Definition: A person (called x) is AssPlated:
+	if AssName of Player is listed in infections of ArachnidList, yes;
+	if AssName of Player is listed in infections of InsectList, yes;
+	if AssName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be AssSkinned. A person is usually AssSkinned.
+
+Definition: A person (called x) is AssSkinned:
+	if AssName of Player is listed in infections of HybridList, no;
+	if x is AssPlated, no;
+	if x is AssScaled, no;
+	if x is AssFeathered, no;
+	if x is AssFurred, no;
+	yes;
+
+A person can be TailFurred. A person is usually not TailFurred.
+
+Definition: A person (called x) is TailFurred:
+	if TailName of Player is listed in infections of Bovinelist, yes;
+	if TailName of Player is listed in infections of CanineList, yes;
+	if TailName of Player is listed in infections of CervineList, yes;
+	if TailName of Player is listed in infections of EquineList, yes;
+	if TailName of Player is listed in infections of FelineList, yes;
+	if TailName of Player is listed in infections of LeporineList, yes;
+	if TailName of Player is listed in infections of MarsupialList, yes;
+	if TailName of Player is listed in infections of MustelidList, yes;
+	if TailName of Player is listed in infections of PrimateList, yes;
+	if TailName of Player is listed in infections of RodentList, yes;
+	if TailName of Player is listed in infections of UrsineList, yes;
+	if TailName of Player is listed in infections of VulpineList, yes;
+	no;
+
+A person can be TailFeathered. A person is usually not TailFeathered.
+
+Definition: A person (called x) is TailFeathered:
+	if TailName of Player is listed in infections of AvianList, yes;
+	if TailName of Player is listed in infections of AvianpredList, yes;
+	no;
+
+A person can be TailScaled. A person is usually not TailScaled.
+
+Definition: A person (called x) is TailScaled:
+	if TailName of Player is listed in infections of ReptileList, yes;
+	no;
+
+A person can be TailPlated. A person is usually not TailPlated.
+
+Definition: A person (called x) is TailPlated:
+	if TailName of Player is listed in infections of ArachnidList, yes;
+	if TailName of Player is listed in infections of InsectList, yes;
+	if TailName of Player is listed in infections of MachineList, yes;
+	no;
+
+A person can be TailSkinned. A person is usually TailSkinned.
+
+Definition: A person (called x) is TailSkinned:
+	if TailName of Player is listed in infections of HybridList, no;
+	if x is TailPlated, no;
+	if x is TailScaled, no;
+	if x is TailFeathered, no;
+	if x is TailFurred, no;
+	yes;
 
 Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
@@ -1704,73 +1994,126 @@ Part 1 - Flags
 marker is a kind of thing.
 A marker has a list of text called infections.
 
+
 [Species Lists]
-AvianList is a marker. [list of avian/bird infections]
-AvianpredList is a marker. [list of predatory avian/bird infections]
+AmphibianList is a marker. [list of amphibian infections - frogs, ...]
 AquaticList is a marker. [list of aquatic infections]
+ArachnidList is a marker. [list of arachnic infections - spidergirl, scorpions, spidertaur, ...]
+AvianList is a marker. [list of avian/bird infections - pigeon, ...]
+AvianpredList is a marker. [list of predatory avian/bird infections - hawk, ...]
+Bovinelist is a marker. [list of bovine infections - cows, sheep, antelopes, yaks, bison, buffalo, ...]
 CanineList is a marker. [list of canine/lupine infections]
-CervineList is a marker. [list of cervine infections]
+CervineList is a marker. [list of cervine infections - Deer, Elk, Moose, Reindeer, ...]
+CetaceanList is a marker. [list of air-breathing aquatics - Dolphin, Whale, Porpoise, ...]
 EquineList is a marker. [list of equine infections]
 FelineList is a marker. [list of feline infections]
-HumanList is a marker. [list of humanish infections]
-InsectList is a marker. [list of insectile/arachnid/bug infections]
+FoodList is a marker. [list of animated food infections - Gingerbread, Cheesecake, ...]
+HumanList is a marker. [list of human infections]
+HybridList is a marker. [list of mixed infections - manticore, ...]
+InsectList is a marker. [list of insectile infections - ant, bee, scarab, ...]
 LatexList is a marker. [list of infections w/latex/rubber/plastic skin]
+LeporineList is a marker. [list of rabbit infections - rabbit, hare, ...]
 MachineList is a marker. [list of machine infections]
-MustelidList is a marker.
+MarsupialList is a marker. [list of marsupial infections - kangaroo, koala, ...]
+MustelidList is a marker. [list of mustelid infections - weasels, ferrets, wolverines, badgers, ...]
+NonOrganicList is a marker. [list of nonorganic infections - golems, etc.]
+OrcList is a marker. [list of orc and orc-adjacent infections - orc warrior, worg, ...]
+PiscineList is a marker. [list of gilled aquatics - fish...]
 PlantList is a marker. [list of plant infections]
-PorkineList is a marker. [list of piggy infections]
-PrimateList is a marker. [list of plant infections]
+PorcineList is a marker. [list of piggy infections - pigs, boars, warthogs, ...]
+PrimateList is a marker. [list of primate infections - gorilla, monkey, ...]
 ReptileList is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
-RodentList is a marker. [list of rodent infections]
+RodentList is a marker. [list of mustelid infections - rats, mice, beaver, chinchilla, ...]
 SlimeList is a marker. [list of slime infections]
+ToyList is a marker. [list of animated toy infections - plush lion, plastic reindeer, ...]
 UrsineList is a marker. [list of bear infections]
 VulpineList is a marker. [list of vulpine infections]
 
-[Type Lists]
+[Origin Lists]
 HistoricalList is a marker. [list of historical creature infections]
 MagicalList is a marker. [list of magic based infections]
 MythologicalList is a marker. [list of mythological creature infections]
-NoLegList is a marker. [list of infections without legs]
+NatureList is a marker. [list of infections based on natural creatures]
 OtherworldlyList is a marker. [list of infections from other worlds]
-TaurList is a marker. [list of tauric infections]
+ScienceList is a marker. [list of creatures that were created]
 
 [Genital Lists]
-BarbedCockList is a marker. [List of creatures with a barbed cock]
-BluntList is a marker. [list of infections w/blunt cock]
-InternalList is a marker. [list of infections w/internal male genitals]
-KnotList is a marker. [list of infections w/knotted cock]
-OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
-TentacleList is a marker. [list of infections w/tentacle cock]
+BarbedCockList is a marker. [List of creatures with a barbed cock - feline, ...]
+BluntCockList is a marker. [list of infections w/blunt cock - equine, ...]
+InternalCockList is a marker. [list of infections w/internal male genitals]
+KnottedCockList is a marker. [list of infections w/knotted cock - canine, ...]
+OviPositorList is a marker. [list of infections with ovipositor]
+PrehensileCocklist is a marker. [list of infections with movable cock]
+SheathedCockList is a marker. [list of infections with sheathed cocks]
+TaperedCockList is a marker. [list of infections with tapering cock - canine, orca, ...]
+TentacleCockList is a marker. [list of infections w/tentacle cock]
 
-[Ability Lists]
-FirebreathList is a marker. [List of fire breathing creatures]
+[Tail Lists]
+TailList is a marker. [list of infections with tails]
+
+[Locomotion Lists]
+BipedalList is a marker. [2 legs]
+QuadrupedalList is a marker. [4 legs]
+HexapedalList is a marker. [6 legs]
+OctapedalList is a marker. [8 legs]
+TaurList is a marker. [4 legs + arms]
+SerpentineList is a marker. [no legs, slithering]
+SlidingList is a marker. [no legs, gooping]
 FlightList is a marker. [list of infections w/flight capability]
 SwimList is a marker. [list of infections capable of swimming underwater]
+
+[Body State Lists]
+AlwaysLacList is a marker. [infections that lactate constantly]
+HeatList is a marker. [infections capable of heat]
+AlwaysHeatList is a marker. [infections are always in heat]
+RutList is a marker. [infections capable of rut]
+AlwaysRutList is a marker. [infections are always in rut]
+GillList is a marker. [can breathe underwater]
+NotBreathingList is a marker. [does not need to breathe]
+
+[Impregnation Lists]
+Birthlist is a marker. [infections that are doing live births]
+Egglaylist is a marker. [infections that are capable of laying eggs]
+MpregList is a marker. [infections that are capable of Mpreg]
+OviImpregnatorList is a marker. [list of infections capable of ovi impregnation - used for the function NPCSexAftermath to determine the way of impregnation]
+Sterilelist is a marker. [infections that are sterile]
+
+[Mind Lists]
+FeralmindList is a marker. [list of feral infections]
+HivemindList is a marker. [list of hive mind infections]
+PackmindList is a marker. [list of pack creatures]
+
+[Combat Ability Lists]
+FirebreathList is a marker. [List of fire breathing creatures]
 TailweaponList is a marker.
 
+[TODO: replace this one in the code with the locomotion lists]
+NoLegList is a marker. [list of infections without legs]
+
+[
 when play begins:
-	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
+	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Dolphin Herm", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Shark Herm", "Red Kangaroo", "Gator Herm", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
 
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Tigress Hooker", "Wildcat" } to infections of FelineList;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
 
 when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
+	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
 
 when play begins:
 	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Pegasus", "Morgan Horse Stallion", "Stallionboi", "Unicorn", "Zebra Stallion" } to infections of EquineList;
 
 when play begins:
-	add { "Arctic fox", "Clockwork Fox", "Hermaphrodite Latex Vixen", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of VulpineList;
+	add { "Arctic fox", "Clockwork Fox", "Latex Vixen Herm", "Kitsune", "Latex Fox", "Vixen Nurse", "Vulpogryph" } to infections of VulpineList;
 
 when play begins:
-	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of ReptileList;
+	add { "Dragon", "Anthro Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Gator Herm", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of ReptileList;
 
 when play begins:
 	add { "Black Wasp", "Butterfly", "Drone Wasp", "Mothgirl", "Spidergirl", "Spidertaur Male", "Spidertaur Female" } to infections of InsectList;
 
 when play begins:
-	add { "Awesome tree", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of PlantList;
+	add { "Pod Person", "Dryad", "Mushroom Men", "Parasitic Plant" } to infections of PlantList;
 
 when play begins:
 	add { "Bald Eagle", "Bird of Paradise", "Fluffy Owl", "Harpy", "Hawkman Male", "Blue Gryphon Herm", "Peacock", "Quilled Tousky", "Siren", "Vulpogryph" } to infections of AvianList;
@@ -1782,7 +2125,7 @@ when play begins:
 	add { "Beaver", "Hyper Squirrel", "Slut Rat" } to infections of RodentList;
 
 when play begins:
-	add { "Bottlenose Toy", "Hermaphrodite latex vixen", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of LatexList;
+	add { "Bottlenose Toy", "Latex Vixen Herm", "Latex Fox", "Latex Mistress", "Latex Wolf", "Rubber Puma", "Rubber tigress" } to infections of LatexList;
 
 when play begins:
 	add { "Liquidshifter" } to infections of SlimeList;
@@ -1804,25 +2147,26 @@ when play begins:
 	add { "Blue Gel", "Pink Gel", "Purple Gel" } to infections of NoLegList;
 
 when play begins:
-	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman Bitch", "Dracovixentaur", "Husky Bitch", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd Male", "Hellhound", "Blue Gryphon Herm", "hermaphrodite latex vixen", "Herm Hyena", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever", "Smooth Collie Shemale", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of KnotList;
+	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Arctic fox", "Black Wolf", "Cerberus", "Chocolate Lab", "Clockwork Fox", "Coyote", "Dalmatian", "Doberman Bitch", "Dracovixentaur", "Husky Bitch", "Fennec", "Feral Wolf", "Football Wolfman", "German Shepherd Male", "Hellhound", "Blue Gryphon Herm", "Latex Vixen Herm", "Hyena Herm", "Jackalboy", "Jackalman", "Kitsune", "Latex Fox", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Quilled Tousky", "Retriever Female", "Smooth Collie Shemale", "Vixen Nurse", "Vixentaur", "Vulpogryph", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of KnottedCockList;
 
 when play begins:
-	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Hydra Beast", "Naga", "Pirate Shark", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of InternalList;
+	add { "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Hydra Beast", "Naga", "Shark Herm", "Sierrasaur", "Snake", "Yamato Dragon", "Yamato Dragoness", "Wyvern", "Spidertaur Male" } to infections of InternalCockList;
 
 when play begins:
-	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
+	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast Male", "Sphinx", "Snow Bat", "Tiger", "Malayan Tiger Male", "Tigertaur", "Malayan Tiger Herm", "Wildcat", "Rubber Puma" } to infections of BarbedCockList;
 
 when play begins:
 	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of FirebreathList;
 
 when play begins:
-	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino Stallion", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra Stallion", "Wyvern" } to infections of BluntList;
+	add { "Black Equinoid", "Centaur Mare", "Centaur Stallion", "Donkeyman", "Donkeywoman", "Friendship Pony", "Giraffe", "Horseman", "Mareslut", "Mutant Centaur", "Nightmare", "Palomino Stallion", "Pegasus", "Reindeer", "Sierrasaur", "Stallionboi", "Unicorn", "Zebra Stallion", "Wyvern" } to infections of BluntCockList;
 
 when play begins:
 	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman Male", "Harpy", "Blue Gryphon Herm", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of FlightList;
 
 when play begins:
-	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Hermaphrodite Dolphin", "Killer Whale", "Pirate Shark", "Platypus", "Sea Otter", "Sewer Gator" } to infections of SwimList;
+	add { "Bottlenose Toy", "Feral Sea Dragon", "Feral Sea Dragoness", "Dolphin Herm", "Killer Whale", "Shark Herm", "Platypus", "Sea Otter", "Gator Herm" } to infections of SwimList;
+]
 
 when play begins:
 	add { "Frost Drake", "Avalon Kobold" } to infections of OviImpregnatorList;
@@ -3684,7 +4028,7 @@ to OldInfectionRoll: [old infections with less body parts made before 07.05.2019
 			now Cock of Player is cock entry;
 			now Cock Description of Player is ""; [wiping out the new style parts]
 			now Cunt Description of Player is ""; [wiping out the new style parts]
-			if Name entry is listed in infections of internallist and internalbypass is true:
+			if Name entry is listed in infections of InternalCockList and internalbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 
 to NewInfectionRoll:
@@ -3982,7 +4326,7 @@ to NewInfectionRoll:
 			[setting the old parts too, as old infections will compare to these]
 			choose row MonsterID from the Table of Random Critters;
 			now Cock of Player is cock entry;
-			if Name entry is listed in infections of internallist and internalbypass is true:
+			if Name entry is listed in infections of InternalCockList and internalbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 	else if x is 9:
 		follow the sex change rule;
@@ -5039,7 +5383,7 @@ This is the self examine rule:
 			if Cunt Count of Player > 1:
 				now cunttext is "have [Cunt Count of Player] [Cunt Tightness Adjective of Player] [one of]cunts[or]pussies[or]vaginas[at random] that are [Cunt Description of Player]. Further probing shows them to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 			else:
-				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [Cunt Description of Player]. Further probing shows it to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
+				now cunttext is "have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]. Further probing shows it to be [Cunt Depth of Player] inches deep and [Cunt Tightness Adjective of Player]. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if]. You have a [Clit Size Adjective of Player] clitoris that is extremely sensitive. ";
 	else: [old style]
 		let cunttext be "";
 		follow the cunt descr rule;

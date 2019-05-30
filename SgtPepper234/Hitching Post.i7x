@@ -163,7 +163,7 @@ to say Behemoth Event:
 	PlayerEat 10;
 
 to say Hyena Gang Event:
-	setmonster "Herm Hyena";
+	setmonster "Hyena Herm";
 	say "[Hitching Scene Start]";
 	say "     You haven't been waiting long when your ears pick up a faint rumble in the distance, growing steadily louder. It doesn't take you very long to realize the rumble is unmistakably that of a motorcycle. Or more precisely, multiple motorcycles! As the rumbling slowly becomes a thunder, you are also able to pick up a cackling laughter and you realize you are about to be beset by a gang of hyenas. You shake in your stocks in anticipation of what is to come. Hyenas are not known for their gentle treatment of those that so willingly submit to be used. It is going to be a rough hour.";
 	WaitLineBreak;

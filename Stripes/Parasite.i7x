@@ -147,12 +147,6 @@ Section 3 - Black Wasp creature
 
 Chapter 1 - Creature Responses
 
-when play begins:
-	add { "Black Wasp" } to infections of MaleList;
-	add { "Black Wasp" } to infections of FeralList;
-	add { "Black Wasp" } to infections of TailweaponList;
-
-
 to say blackwaspdesc:
 	setmongender 3; [creature is male]
 	say "     As you travel along, you hear a growing buzzing sound, looking up in time to see one of the black wasps [if larvaegg is 1 and gestation of Child is 0]drawn to you by your scent[else]coming in towards you[end if]. The giant insect is nearly as long as an average person's height. Shaped much like a yellowjacket but completely black, this wasp has large, oval eyes, three pairs of legs ending in small, clawed feet and a large, segmented abdomen. Looking at its abdomen, you can see its rather phallic stinger is out and dripping fluid. It is much like their queen's knotted one, though somewhat smaller. Your belly squirms as a wave of arousal washes through you, the larva inside you pumping something into you, making you increasingly aroused and eager to submit to this insect.";
@@ -190,11 +184,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Black Wasp" to infections of InsectList;
+	add "Black Wasp" to infections of FurryList;
+	add "Black Wasp" to infections of NatureList;
+	add "Black Wasp" to infections of MaleList;
+	add "Black Wasp" to infections of KnottedCockList;
+	add "Black Wasp" to infections of BipedalList;
+	add "Black Wasp" to infections of FlightList;
+	add "Black Wasp" to infections of FeralmindList;
+	add "Black Wasp" to infections of TailList;
+	add "Black Wasp" to infections of TailweaponList;
 	now Name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of Player < 4]The insect grabs you flies up several feat before tossing you to the ground[else]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insects numerous feet scratch at you with their little claws![at random]";
 	now defeated entry is "[beattheblackwasp]"; [ Text when monster loses. ]
 	now victory entry is "[losetoblackwasp]"; [ Text when monster wins. ]
@@ -249,7 +253,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -305,7 +309,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -338,7 +342,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

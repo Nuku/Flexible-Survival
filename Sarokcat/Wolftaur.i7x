@@ -6,10 +6,6 @@ Version 2 of Wolftaur by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Wolftaur" } to infections of MaleList;
-	add { "Wolftaur" } to infections of FurryList;
-
 to say Wolftaur victory:
 	if level of Lindsey > 3:
 		say "     The large beast knocks you to the ground, before moving around you to claim its prize, you shudder as your body responds eagerly to the presence of another strong male wolftaur, as the more dominant beast steps behind you, before stopping and sniffing your submissive body. 'It seems you have already been claimed by a pack,' the beast says sadly, his rough voice making you shudder as your body squirms with desire. 'Far be it from me to poach on an alpha's territory,' the wolftaur says as he runs one of his clawed hands over your body, making you squirm. 'But let your alpha know that if he doesn't keep track of his bitches... well, anything can happen if I find you out here again,' the beast concludes with a smug growl deep in his throat, the dominant posture and musk making you whine in need even as he leaves you lying there on the path unsatisfied. You can't help but wonder if maybe you should chase after him and beg him to take you like a bitch, or if you should go see if your alpha wants to use you like a proper bitch instead...";
@@ -105,11 +101,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Wolftaur"; [name of the overall species of the infection, used for children, ...]
+	add "Wolftaur" to infections of FelineList;
+	add "Wolftaur" to infections of FurryList;
+	add "Wolftaur" to infections of NatureList;
+	add "Wolftaur" to infections of MaleList;
+	add "Wolftaur" to infections of TaperedCockList;
+	add "Wolftaur" to infections of KnottedCockList;
+	add "Wolftaur" to infections of SheathedCockList;
+	add "Wolftaur" to infections of TaurList;
+	add "Wolftaur" to infections of TailList;
 	now Name entry is "Wolftaur";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed fore-paw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaur's strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]";
 	now defeated entry is "[Wolftaur loss]";
 	now victory entry is "[Wolftaur victory]";
@@ -164,7 +169,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -220,7 +225,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -253,7 +258,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

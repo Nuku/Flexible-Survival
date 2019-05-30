@@ -5,10 +5,6 @@ Version 1 of Dark Elf by Stripes begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Dark Elf" } to infections of HermList;
-
-
 to say darkelfdesc:
 	setmongender 5; [creature is herm]
 	say "     The dark skinned herm before you has an otherworldly quality to her. Her [one of]deep ebony[or]black[or]midnight black[at random] skin is smooth and supple, free of any flaw of blemish. She has beautiful, feminine features with an exotically beautiful face. She has wide, canted, vertically slit eyes. Her lips are plump and kissable, and her long, elfin ears stick straight out from the sides of her head. She has long, silvery white hair. Her body is thin and curvy with a narrow waist leading to wider hips and a large rack beneath her skin-tight [one of]white[or]red[or]black[or]silver[at random] dress. Her every move exudes feminine sensuality that cries out for attention as well as confidence that speaks of her desire to take what she wants, from you or anyone else. Her arms and legs are long and slender despite her proportionally shorter stature. Her fingers are long and agile, ending in sharp, inch-long nails. Clearly visible as a bulge beneath her tight dress is a cock that's already quite large despite not being fully aroused.";
@@ -92,11 +88,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Dark Elf" to infections of HumanList; [close enough to match]
+	add "Dark Elf" to infections of MagicalList;
+	add "Dark Elf" to infections of HermList;
+	add "Dark Elf" to infections of BipedalList;
 	now Name entry is "Dark Elf"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [ Successful attack message ]
 	now defeated entry is "[beatthedarkelf]"; [ Text when monster loses. ]
 	now victory entry is "[losetodarkelf]"; [ Text when monster wins. ]
@@ -151,7 +151,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -207,7 +207,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -240,7 +240,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -278,7 +278,7 @@ to say defeatedbywolf:
 			else if GroupFightCounter is 3:
 				challenge "Husky Alpha";
 			else if GroupFightCounter is 5 or GroupFightCounter is 6:
-				challenge "Twisted Pimp";
+				challenge "Human Hybrid";
 			increase GroupFightCounter by 1;
 		if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "[fightlost]";

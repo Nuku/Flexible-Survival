@@ -252,7 +252,7 @@ to say doggyinfect:
 	else if tempnum is 7:
 		infect "Husky Alpha";
 	else if tempnum is 8:
-		infect "Retriever";
+		infect "Retriever Female";
 	else if tempnum is 9:
 		infect "Cerberus";
 	else if tempnum is 10:
@@ -452,7 +452,7 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 9:
 		challenge "Siamese Cat";
 	if tempnum is 10:
-		challenge "Retriever";
+		challenge "Retriever Female";
 	if tempnum is 11:
 		challenge "Catgirl";
 

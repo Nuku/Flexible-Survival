@@ -308,11 +308,16 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Tentacle Horror" to infections of ScienceList;
+	add "Tentacle Horror" to infections of FurryList;
+	add "Tentacle Horror" to infections of HermList;
+	add "Tentacle Horror" to infections of TentacleCockList;
+	add "Tentacle Horror" to infections of BipedalList;
 	now Name entry is "Tentacle Horror"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A bit of gloop detaches from the ceiling and splatters on your shoulder. Taking advantage of the distraction, the beast launches its moist appendages towards you from three different directions, wrapping around your arms and legs and lifting you into the air. New tentacles quickly squirm their way inside of your clothing. The tentacles rub all across your body, leaving damp patches wherever they've touched you, and driving your arousal up a notch. You struggle back to your senses and then out of the creatures grasp. Too bad you were twenty feet in the air when you broke free.[or]You feel something tap your on your left shoulder, whipping your head around wildly to the left you see nothing. A second set of taps is felt coming from your right shoulder, and you yank your head around to the right, only to find nothing there again. Turning back towards the creature, you are just in time to receive what feels like a boxer's punch, as four tentacles wrapped around each other slam into your unsuspecting, and unprotected face.[or]The creatures appendages erupt with sticky fluids, coating you from all angles. At first you're not concerned in the least; however, you quickly realize that the goop is cutting off your air. Struggling to wipe the gunk from your mouth, you slip and fall, slamming into the unforgiving concrete floor. Thankfully this dislodges enough goo for you to get a breath, but afterwards, you stand up shakily, your head feeling fuzzy. You can't decide if the lightheaded feeling you're fighting is due to your recent deprivation of oxygen, or the mild concussion your good pal the concrete floor gave you. You tell the voices in your head to shut up and prepare to continue your struggle against the monster.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[horror defeated]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[horror victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -367,7 +372,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -423,7 +428,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -456,7 +461,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

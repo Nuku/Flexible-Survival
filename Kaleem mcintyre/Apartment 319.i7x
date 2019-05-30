@@ -72,11 +72,11 @@ Instead of resolving a Apartment 319:
 		if Player consents:
 			LineBreak;
 			say "     Telling the unknown man where he can shove it, you let him know that he'll be the one to get out, preferably with a foot in his ass if any of his thugs harms Dagaz any more. 'Really? Well, you got some moxie about you, whoever you are, but do you have anything to back it up?' A snap of fingers has the hyenas moving towards you.";
-			challenge "Herm Hyena";
+			challenge "Hyena Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				challenge "Herm Hyena";
+				challenge "Hyena Herm";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					challenge "Herm Hyena";
+					challenge "Hyena Herm";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     'Now I'm impressed.' The unknown mutant claps his hands while looking down at the defeated hyenas. 'But how do you handle demons?' Another snap of fingers, and the two demon brutes are coming your way.";
 						challenge "Demon Brute";

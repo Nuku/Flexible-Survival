@@ -137,7 +137,7 @@ hadiyafucked is a number that varies. hadiyafucked is usually 0.
 hadiyahyg is a truth state that varies. hadiyahyg is usually false.
 
 to say sexwithHadiya:
-	setmonster "Herm Hyena";
+	setmonster "Hyena Herm";
 	if debugactive is 1:
 		say "DEBUG (Hadiya) -> HP: [HP of Hadiya], hadiyafucked: [hadiyafucked], lastfuck: [lastfuck of Hadiya], Hyena Gang ref: [if hadiyahyg is true]Y[else]N[end if] <- DEBUG[line break]";
 	if ( HP of Hadiya >= 13 and HP of Hadiya < 50) or HP of Hadiya >= 63:
@@ -410,7 +410,7 @@ to say sexwithGobby:
 		say "Gobby seems a little preoccupied with his hyena mistress at the moment.";
 	else:
 		if Player is male and HP of Gobby > 1 and lastfuck of Hadiya - turns >= 6 and a random chance of anallevel in 7 succeeds and anallevel > 1:
-			say "     Wanting a go at the goblin's ass, you grab the little guy's rear and pull out your cock. He gives a little squeak and squirms, but doesn't pull away. His nimble hands clutch your shaft [if CockName of Player is not listed in infections of InternalList] and balls[end if], stroking and teasing to get you fully hard. As he's doing so, you slip those tight pants of his down, baring his bottom.";
+			say "     Wanting a go at the goblin's ass, you grab the little guy's rear and pull out your cock. He gives a little squeak and squirms, but doesn't pull away. His nimble hands clutch your shaft [if CockName of Player is not listed in infections of InternalCockList] and balls[end if], stroking and teasing to get you fully hard. As he's doing so, you slip those tight pants of his down, baring his bottom.";
 			WaitLineBreak;
 			say "     'Hey, if you sluts are going to go at it, I want in on this action,' Hadiya growls with a grin on her muzzle. 'Gobby, get over here and put that mouth of yours to work.'";
 			say "     'Yes, Oh-Great-Toothy-Beast. Of course, mistress,' he responds obsequiously and hurries over to take her canine shaft in hand. He starts off by licking and kissing at it while fondling her balls.";
@@ -420,7 +420,7 @@ to say sexwithGobby:
 			say "     'Come on, you horny slut,' she growls commandingly at you. 'Pound his ass harder. It makes his throat clench nice and tight.' Your mistress's insistence is all that's needed to wear down your remaining restraint and you stop going easy on the slutty goblin beneath you. And if his throat is anything like his clenching asshole, it must feel wonderful when it clamps down with every hard push you make. Hadiya certainly seems pleased, tongue lolling from the side of her hyenine muzzle. Soon you're all cumming, the goblin getting fed sticky semen from both ends even as his own balls splatter their load across the floor. He's left panting and moaning by the time you pull out, sticky and [if Ball Size of Player > 5]bloated [end if]full of semen.";
 			now lastfuck of Hadiya is turns;
 		else if Player is male:
-			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you. Already having pulled out your [Cock of Player] cock[smn], he takes it in hand and rubs his nimble hands along your firm flesh. His fingers are soon joined by his tongue before he slides his mouth down over it. He licks and sucks on your manhood with an eagerness that goes beyond just his gratitude[if CockName of Player is not listed in infections of internallist and Cock Length of Player > 12]. His fingers work over the remainder of your [cock size desc of Player] shaft that's too much for him to take comfortably into his mouth, sometimes moving down to play with your [Ball Size Adjective of Player] [Balls][else if CockName of Player is not listed in infections of internallist]. His fingers move down to play with your [Ball Size Adjective of Player] [Balls] while he sucks you off[else if Cock Length of Player > 12]. His fingers work over the remainder of your [cock size desc of Player] shaft that's too much for him to take comfortably into his mouth[else]. His hands rest on your hips as he bobs his mouth over your [cock size desc of Player] shaft[end if][if Cock Count of Player > 1]. He remains fairly focused on the one cock he's tending to, working to give it his full attention to satisfy you[end if].";
+			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you. Already having pulled out your [Cock of Player] cock[smn], he takes it in hand and rubs his nimble hands along your firm flesh. His fingers are soon joined by his tongue before he slides his mouth down over it. He licks and sucks on your manhood with an eagerness that goes beyond just his gratitude[if CockName of Player is not listed in infections of InternalCockList and Cock Length of Player > 12]. His fingers work over the remainder of your [cock size desc of Player] shaft that's too much for him to take comfortably into his mouth, sometimes moving down to play with your [Ball Size Adjective of Player] [Balls][else if CockName of Player is not listed in infections of InternalCockList]. His fingers move down to play with your [Ball Size Adjective of Player] [Balls] while he sucks you off[else if Cock Length of Player > 12]. His fingers work over the remainder of your [cock size desc of Player] shaft that's too much for him to take comfortably into his mouth[else]. His hands rest on your hips as he bobs his mouth over your [cock size desc of Player] shaft[end if][if Cock Count of Player > 1]. He remains fairly focused on the one cock he's tending to, working to give it his full attention to satisfy you[end if].";
 			say "     With Hadiya watching on, a paw casually rubbing her half-hard member with a grin on her muzzle, you enjoy the fine blow job the goblin's providing. Putting a hand on his head, you get him to quicken the pace as your excitement grows. You rub his pointed ears, drawing a happy sigh from him that gets him sucking harder. Soon enough you're balls tighten up and you feel the rush of ecstasy as you pump your hot load into the goblin's mouth. He makes a show of swallowing [if Ball Size of Player > 4]down the last mouthful[else]it down[end if] after you're done. After licking you clean, he heads back to his mistress's side, giving her the same treatment after the show.";
 		else:
 			say "     At your beckon for Gobby to come over, he excuses himself from his mistress's side to join you. Already having taken a seat with your legs spread, he kneels between them and runs a nimble hand across your dewy flesh. His fingers play across your folds, working to get you increasingly aroused before bringing in his long tongue to join in. He licks and fingers at your pussy with an eagerness that goes beyond just his gratitude, as Hadiya doesn't permit him to play with her pussy either[if Cunt Count of Player > 1]. His tongue remains largely focused on the one pussy he's eating out to satisfy you while leaving his hands to shift between them[end if].";
@@ -436,14 +436,14 @@ to hadiyahyenaify:
 		[puts Herm Hyena as lead monster in case of impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Herm Hyena":
+			if Name entry is "Hyena Herm":
 				now MonsterID is y;
 				now sex entry is "Male";
 				infect;
 				now sex entry is "Both";
 				break;
 	else:
-		infect "Herm Hyena";
+		infect "Hyena Herm";
 
 
 Section 9 - Endings

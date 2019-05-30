@@ -372,7 +372,7 @@ Instead of resolving a Treasure Hunters:
 	say "     'Huh? Ohhhhhhhh! You,' the other responds, 'are a genius.'";
 	say "     'I know. I know. That's why that dumb coyote sold the map to us. Knew we'd be smart enough to find it.' And with that, she takes the rather new looking [']ancient['] map back.";
 	say "     Their plan decided, they down some water, wipe their brows and get ready to head off and glance back at you.";
-	if hyg is 4 and ( FaceName of Player is "Herm Hyena" or BodyName of Player is "Herm Hyena" ):
+	if hyg is 4 and ( FaceName of Player is "Hyena Herm" or BodyName of Player is "Hyena Herm" ):
 		if matriarchowned is 1:
 			say "     Only now do they realize who you are and start fumbling around, trying to hide the shovels and map. 'Oh... umm... we... we didn't recognize you there, Matriarch,' the first starts up. 'We didn't mean to call you a loser, [if Player is herm]sir, ma'am, sir,[else if Player is female]sir, uh, ma'am,[else]uh, sir,[end if]' the first one adds in a mumble, which earns her a light smack from the second. 'We... we were trying to get the treasure for the gang, yeah! That's right. For you and for the gang,' she babbles in an attempt to curry favor with you. For a brief moment you consider dressing down these idiots and ordering them off their bogus treasure hunt, but decide you really don't want these half-wits trying to do any legitimate work for your gang. You thank them for their diligence and order them back to work. You add that you're looking forward to seeing them show up with the treasure, and will be very disappointed if they don't come back with it. Nodding and bowing submissively, the hyenas babble some thanks and then hurry off to restart their quest.";
 			increase score by 10;

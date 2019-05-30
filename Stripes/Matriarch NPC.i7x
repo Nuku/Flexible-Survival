@@ -42,7 +42,7 @@ Section 2 - Sexxxings
 the fuckscene of the Matriarch is "[sexwithMatriarch]".
 
 to say sexwithMatriarch:
-	if BodyName of Player is not "Herm Hyena":
+	if BodyName of Player is not "Hyena Herm":
 		say "     The hyena matriarch glances over at you as you start your needy pleas for sex, but she just gives you a shove with her foot, knocking you over. 'Someone deal with that unhyena bitch and make her more pleasing to me,' she growls. You're dragged off and presented to the hyena gang members, who are more than happy to have a plaything presented to them by the matriarch.";
 		WaitLineBreak;
 		now lastfuck of Gang Members is turns + 8;
@@ -74,12 +74,12 @@ to say sexwithMatriarch:
 	[puts Herm Hyena as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Herm Hyena":
+		if Name entry is "Hyena Herm":
 			now MonsterID is y;
 			break;
 	now sex entry is "Female";
-	infect "Herm Hyena";
-	infect "Herm Hyena";
+	infect "Hyena Herm";
+	infect "Hyena Herm";
 	now sex entry is "Both";
 
 to say HyenaMatSexScenes:
@@ -290,15 +290,15 @@ to HyenaMatBind:
 			wait for any key;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Herm Hyena":
+				if Name entry is "Hyena Herm":
 					now MonsterID is y;
 					break;
 			now voreloss is true;
-			now BodyName of Player is "Herm Hyena";
-			now FaceName of Player is "Herm Hyena";
-			now TailName of Player is "Herm Hyena";
-			now SkinName of Player is "Herm Hyena";
-			now CockName of Player is "Herm Hyena";
+			now BodyName of Player is "Hyena Herm";
+			now FaceName of Player is "Hyena Herm";
+			now TailName of Player is "Hyena Herm";
+			now SkinName of Player is "Hyena Herm";
+			now CockName of Player is "Hyena Herm";
 			now tail of Player is tail entry;
 			now Face of Player is face entry;
 			now Skin of Player is skin entry;

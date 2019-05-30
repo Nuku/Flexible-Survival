@@ -264,7 +264,7 @@ Instead of resolving a Beach Detector Site:
 		if a random chance of 1 in 2 succeeds:
 			challenge "feral sea dragon";
 		else if a random chance of 1 in 2 succeeds:
-			challenge "Hermaphrodite Dolphin";
+			challenge "Dolphin Herm";
 		else:
 			challenge "feral sea dragoness";
 		if lost is 1:
@@ -307,7 +307,7 @@ Instead of resolving a Red Light Detector Site:
 		SanLoss 5;
 		WaitLineBreak;
 		say "     Reaching the building's roof, you find that you are not alone. There is a large, latex vixen here who seems to be lustfully enjoying sounds coming from the building below. You try to slip around her quietly, but her eyes lock on you and she grins.";
-		challenge "Hermaphrodite Latex Vixen";
+		challenge "Latex Vixen Herm";
 		if lost is 1:
 			say "     Defeated, the hermaphrodite vixen banishes you from her rooftop, forcing you to return another time to try and place the detector after you've recovered.";
 			now Resolution of Red Light Detector Site is 2; [detector not placed, lost fight]

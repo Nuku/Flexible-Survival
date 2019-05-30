@@ -246,13 +246,13 @@ carry out bfanditesting5:
 	say "[bold type]Avianlist:[roman type] ([special-style-1][number of entries in infections of Avianlist][roman type]) [infections of Avianlist].";
 	say "[bold type]Avianpredlist:[roman type] ([special-style-1][number of entries in infections of Avianpredlist][roman type]) [infections of Avianpredlist].";
 	say "[bold type]Taurlist:[roman type] ([special-style-1][number of entries in infections of Taurlist][roman type]) [infections of Taurlist].";
-	say "[bold type]Rodentlist:[roman type] ([special-style-1][number of entries in infections of Rodentlist][roman type]) [infections of Rodentlist].";
-	say "[bold type]Knotlist:[roman type] ([special-style-1][number of entries in infections of Knotlist][roman type]) [infections of Knotlist].";
+	say "[bold type]RodentList:[roman type] ([special-style-1][number of entries in infections of RodentList][roman type]) [infections of RodentList].";
+	say "[bold type]KnottedCockList:[roman type] ([special-style-1][number of entries in infections of KnottedCockList][roman type]) [infections of KnottedCockList].";
 	say "[bold type]Latexlist:[roman type] ([special-style-1][number of entries in infections of Latexlist][roman type]) [infections of Latexlist].";
-	say "[bold type]Internallist:[roman type] ([special-style-1][number of entries in infections of Internallist][roman type]) [infections of Internallist].";
+	say "[bold type]InternalCockList:[roman type] ([special-style-1][number of entries in infections of InternalCockList][roman type]) [infections of InternalCockList].";
 	say "[bold type]BarbedCocklist:[roman type] ([special-style-1][number of entries in infections of BarbedCocklist][roman type]) [infections of BarbedCocklist].";
 	say "[bold type]Firebreathlist:[roman type] ([special-style-1][number of entries in infections of Firebreathlist][roman type]) [infections of Firebreathlist].";
-	say "[bold type]Bluntlist:[roman type] ([special-style-1][number of entries in infections of Bluntlist][roman type]) [infections of Bluntlist].";
+	say "[bold type]BluntCockList:[roman type] ([special-style-1][number of entries in infections of BluntCockList][roman type]) [infections of BluntCockList].";
 
 [------------------------------------------------------------]
 [Listing items, and all critters who drop items as well as their drop chance. ]

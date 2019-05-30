@@ -583,7 +583,7 @@ When play ends:
 			say "     Having become an innocent creature living only for happiness and playtime breaks the Hellhound's curse upon you.";
 		else if BodyName of Player is "Wolverine Guard" and FaceName of Player is "Wolverine Guard" and CockName of Player is "Wolverine Guard" and SkinName of Player is "Wolverine Guard" and TailName of Player is "Wolverine Guard":		[succumbed to wolverine sex]
 			say "     Your bond as guardian to the Central Library and to your new mate is too strong for the Hellhound's curse, breaking it and allowing you to become a new protector for the library.";
-		else if BodyName of Player is "Tigress Hooker" and FaceName of Player is "Tigress Hooker" and CockName of Player is "Tigress Hooker" and SkinName of Player is "Tigress Hooker" and TailName of Player is "Tigress Hooker":			[claimed at the tigress motel]
+		else if BodyName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and CockName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm" and TailName of Player is "Malayan Tiger Herm":			[claimed at the tigress motel]
 			now T is 0; [do nothing statement]
 		else if BodyName of Player is "Big Tiger" and FaceName of Player is "Big Tiger" and CockName of Player is "Big Tiger" and SkinName of Player is "Big Tiger" and TailName of Player is "Big Tiger":							[victory at tigress motel]
 			now T is 0; [do nothing statement]

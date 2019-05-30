@@ -5,11 +5,6 @@ Version 1 of Prairie Dog by Stripes begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Prairie Dog" } to infections of HermList;
-	add { "Prairie Dog" } to infections of FurryList;
-	add { "Prairie Dog" } to infections of RodentList;
-
 to say prairiedogdesc:
 	setmongender 15; [creatures are herm]
 	say "     You hear a squeaking, barking sound coming from behind you and turn around, but find nothing there. Soon there are others all around you as the call is answered. Still seeing nothing, you try to continue on only to have your legs sink into a hole in the ground. More holes open up around you as prairie dog creatures emerge from the earth. The sandy, brown rodents are larger than normal and are about three feet tall and walk on their hind legs. Some have found toy hard hats, bandanas or small shovels to use, but most are nude save for their fur. Their breasts seem quite large on their small bodies, as do their swollen sheaths and balls. As you are pulling yourself out of the hole, they charge to attack you!";
@@ -30,11 +25,17 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Prairie Dog" to infections of RodentList;
+	add "Prairie Dog" to infections of FurryList;
+	add "Prairie Dog" to infections of NatureList;
+	add "Prairie Dog" to infections of HermList;
+	add "Prairie Dog" to infections of BipedalList;
+	add "Prairie Dog" to infections of TailList;
 	now Name entry is "Prairie Dog";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The prairie dogs bite and nip at your legs![or]The burrowing rodents swing at you with sticks and toy shovels from all sides![or]A team of the rodents charge at you, latching onto your legs and trying to pull you down![or]As you try to ward off the blows from those closest to you, four at the back take another by the arms and legs, swinging and launching her to land in your face. She pounds at your head while grinding her earthy-smelling ballsack in your face![or]One of the prairie dogs rides on the shoulders of another and climbs onto your back to nip and scratch at you while the others keep at you from all sides![or]Your legs and hips are scratched and clawed from the horde around you![at random]";
 	now defeated entry is "[beattheprairiedog]";
 	now victory entry is "[losetoprairiedog]";
@@ -89,7 +90,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -145,7 +146,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -178,7 +179,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

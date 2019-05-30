@@ -9,12 +9,6 @@ labtimerA is a number that varies. labtimerA is usually 0. [tracks how long olde
 labtimerB is a number that varies. labtimerB is usually 0. [tracks how long most recent lab has been piggybacking]
 
 Section 1 - Creature Responses
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
-
-when play begins:
-	add { "Chocolate Lab" } to infections of HermList;
-	add { "Chocolate Lab" } to infections of HumorousList;
-	add { "Chocolate Lab" } to infections of FurryList;
 
 to say choclabdesc:
 	setmongender 9; [creature is variable]
@@ -154,11 +148,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Chocolate Lab" to infections of FoodList;
+	add "Chocolate Lab" to infections of HumorousList;
+	add "Chocolate Lab" to infections of FurryList;
+	add "Chocolate Lab" to infections of HermList;
+	add "Chocolate Lab" to infections of TaperedCockList;
+	add "Chocolate Lab" to infections of KnottedCockList;
+	add "Chocolate Lab" to infections of SheathedCockList;
+	add "Chocolate Lab" to infections of QuadrupedalList;
+	add "Chocolate Lab" to infections of FeralmindList;
+	add "Chocolate Lab" to infections of TailList;
 	now Name entry is "Chocolate Lab"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]milk chocolate creature knocks itself into you, trying to push you down[or]semi-fluid canine slashes its forepaws at you, suddenly making them hard and leaving chocolate scraps across your skin[or]The gooey Labrador bites at your wrist, leaking some of its thick, chocolate saliva onto you[or]malleable dog flows around your leg, gripping it firmly. You pull frantically as it starts to flow up over it. You manage to pull free, but wrench your knee in the process[or]chocolate lab snaps at you as you try to fend it off, but you end up splattered with chocolaty syrup. The scent of it makes your head dizzy, draining your will to resist the sweet smelling beast[or]flowing dog pounces at you, trying to push you down, partially collapsing into a wave of chocolate that you have to pull free from[or]milk chocolate dog swipes its paws at you, leaving thick streaks of chocolate across your body. The scent of it weakens your resolve to keep fighting[or]chocolate Lab pounces onto you, covering your face in slobbery, chocolate kisses that weaken your resolve to continue resisting[at random]!";
 	now defeated entry is "[beatthelab]";
 	now victory entry is "[losetolab]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -213,7 +217,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -269,7 +273,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -302,7 +306,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

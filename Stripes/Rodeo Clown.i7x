@@ -4,10 +4,6 @@ Version 1 of Rodeo Clown by Stripes begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Rodeo Clown" } to infections of HermList;
-	add { "Rodeo Clown" } to infections of HumorousList;
-
 to say rodeoclowndesc:
 	setmongender 5; [creature is herm]
 	say "     Coming towards you is a very strange-looking person. With a face covered in greasepaint and brightly colored clothes and a stetson, they look at first glance like a rodeo clown. But things just don't quite seem right. Details quickly pile up to make it clear that they're not a regular rodeo clown bullfighter. The most obvious is the large, F-cup breasts and the smaller, but still noticeable bulge in the crotch of the dusty, baggy overalls. There's also the way she walks with arms and legs that flex and bend in arches rather than at a fixed joint. Her face, you can see when she draws closer to you, is not actually painted with make-up, but naturally has a clown's colorful markings to make it brighter and her exposed skin is a little too pink and smooth to quite be normal. Her clothes as well, it seems, are not really clothes at all, but somehow also a part of her.";
@@ -69,11 +65,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Rodeo Clown" to infections of BodyHorrorList;
+	add "Rodeo Clown" to infections of HumorousList;
+	add "Rodeo Clown" to infections of HermList;
+	add "Rodeo Clown" to infections of BipedalList;
 	now Name entry is "Rodeo Clown";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Rodeo Clown jumps and dodges around, tiring you out as you chase it![or]The bull taunter leaps over your shoulder and shoves you into a nearby wall as you make a grab at it![or]The Rodeo Clown waves a prop red cape at you, then tosses it over your head. Unable to see for a moment, you get hit with a few light punches![or]The weaving and dodging clown leaps onto your back spanks your ass while riding you like a bucking bronco![or]The cavorting clown calls out 'Here bully-bully-bull!' while juggling its large tits alluringly at you![or]The floppy-limbed fool weaves and rolls about, taking slaps at you as it does![at random]";
 	now defeated entry is "[beattherodeoclown]";
 	now victory entry is "[losetorodeoclown]";
@@ -128,7 +128,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -184,7 +184,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -217,7 +217,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -197,17 +197,17 @@ to say sexwithYolanda:
 		now title entry is "Bound for oral";
 		now sortorder entry is 6;
 		now description entry is "have some kinky oral fun";
-		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Garden View and HP of Icarus >= 51 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 1";
 			now sortorder entry is 10;
 			now description entry is "have a threesome with light bondage and sex";
-		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Garden View and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 2";
 			now sortorder entry is 11;
 			now description entry is "have a threesome with sex and footplay";
-		if HP of Yolanda >= 9 and ( Icarus is in Grey Abbey Library and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
+		if HP of Yolanda >= 9 and ( Icarus is in Garden View and HP of Icarus >= 53 ) and lastfuck of Icarus is not turns:
 			choose a blank row in table of fucking options;
 			now title entry is "3some w/Dom Icarus - 3";
 			now sortorder entry is 12;
@@ -412,13 +412,13 @@ to say yolandasex04_A:
 
 to say yolandasex04_B:
 	say "     Yolanda has an excited grin at the corners of her beak as she moves in with the cockring. She wraps ";
-	if CockName of Player is listed in infections of InternalList:
+	if CockName of Player is listed in infections of InternalCockList:
 		say "the [if Cock Length of Player > 18]large[else]small[end if] leather band around the base of your cock and clips it snugly onto you";
 	else:
 		say "a section of the [if Cock Length of Player > 18]large[else]small[end if] leather band around the base of your cock and another around your scrotum and clips it snugly onto you";
 	say ". It squeezes around your shaft, constricting the blood flow to keep you hard. With you fully engorged, she eyes your [cock size desc of Player] [Cock of Player] pole with lustful hunger while spreading some lube into the false vagina. She slides it slowly onto your manhood, letting your increasingly sensitive shaft feel every ridge and tickler inside it[if Cock Length of Player >= 18]. It also proves to be remarkably stretchy, expanding to accommodate your [cock size desc of Player] penis[end if].";
 	say "     Your moan of pleasure makes her smile all the more. 'Oh, you like that, don't you? Maybe you want the real thing? Waiting for your chance to stuff this bird?' she asks, turning around to shake her tailfeathers at you, her cloacal pussy on display, all while leaving the fake one wrapped around your erection. Turning back to face you, she grabs the jellylike cunny and gives it another slow slide down your shaft. 'Well, too bad. This bird doesn't give it up for just anyone. You've got to give me something to make it worth my time. Until then, this is the closest you'll get,' she says, switching to pumping the false vagina over your pole.";
-	say "     While certainly not the same as the real thing, it is quite pleasurable in its own right and you do your best to thrust into its motions. Its internal ridges and bumps tease your sensitive shaft while the stretchy material squeezes down around you. The pleasure builds and builds, but without release. Your cock and balls ache with a growing need to cum that is thwarted by the cockring clenched down on its base. Pressing your urethra[if CockName of Player is not listed in infections of InternalList] and vas deferens[end if] shut, the path to blow your load is blocked and the pressure can only continue to build. Your moans of pleasure become mixed with whimpers of need as your balls feel fuller and fuller.";
+	say "     While certainly not the same as the real thing, it is quite pleasurable in its own right and you do your best to thrust into its motions. Its internal ridges and bumps tease your sensitive shaft while the stretchy material squeezes down around you. The pleasure builds and builds, but without release. Your cock and balls ache with a growing need to cum that is thwarted by the cockring clenched down on its base. Pressing your urethra[if CockName of Player is not listed in infections of InternalCockList] and vas deferens[end if] shut, the path to blow your load is blocked and the pressure can only continue to build. Your moans of pleasure become mixed with whimpers of need as your balls feel fuller and fuller.";
 	say "     Eventually Yolanda relents and pops the snaps on the cockring. A long groan issues from your throat as your long-awaited orgasm can occur freely. Your backed up balls send blast after blast of thick seed into the depths of the false cunny[if Ball Size of Player > 4], filling it to overflowing[end if]. Your orgasm is even better for the enforced delay, your head spinning from the strength of it. And by the time it comes to an end, you're left dazed, but awash in warm ecstasy all over.";
 	say "     You're only half aware at first when the raven tilts your head up. 'Good boy. Now it's time for your tasty treat,' she trills while pouring the gooey contents of the fake vagina into your mouth. Before you realize what's going on, you're already swallowing it down, made to eat your own cum for the avian's amusement. This final humiliation over, she lowers you back down and releases you from your bonds, though it takes a while after all this before you're ready to get up and do anything.";
 	if Ball Size of Player < 7:
@@ -612,7 +612,7 @@ Instead of resolving a Raven Key Fob:
 
 Section 5 - Yolanda and Icarus
 
-instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Library and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( player is male ):
+instead of going up from Grey Abbey Library while ( Icarus is in Garden View and HP of Icarus >= 3 and HP of Icarus < 50 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and ( player is male ):
 	say "     As you're coming up the stairs, you can hear the excited caws of Yolanda. Curious, you go to check on her and find her in lustful play with Icarus. Sitting atop him in avian posture, she's got your passerine pet tied up with his tail raised and her strap-on buried in his ass. She's even put something akin to a combination bird hood and ball gag onto him. Seeing you there, her first response is to give a few hard thrusts into this feathery bottom, drawing out some muffled chirps from his muzzled beak.";
 	say "     [bold type]Giving him a firm nip on the neck, she pauses, as if waiting to see if you'll come join them or leave.[roman type][line break]";
 	LineBreak;
@@ -637,7 +637,7 @@ instead of going up from Grey Abbey Library while ( Icarus is in Grey Abbey Libr
 		now HP of Yolanda is 8;
 
 an everyturn rule:
-	if Player is in Grey Abbey Library and ( Icarus is in Grey Abbey Library and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and player is not neuter and skipturnblocker is 0:
+	if Player is in Grey Abbey Library and ( Icarus is in Garden View and HP of Icarus >= 51 ) and ( Yolanda is in Darkened Alcove and HP of Yolanda is 7 ) and lastfuck of Yolanda is not turns and lastfuck of Icarus is not turns and player is not neuter and skipturnblocker is 0:
 		let avpred be false;
 		if BodyName of Player is listed in infections of Avianpredlist and FaceName of Player is listed in infections of Avianpredlist:
 			now avpred is true;

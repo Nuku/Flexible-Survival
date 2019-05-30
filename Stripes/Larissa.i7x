@@ -390,10 +390,10 @@ Larissa_possible_forms_hellspawn is a list of text that varies.[@Tag:NotSaved]		
 Larissa_possible_forms_humorous is a list of text that varies.[@Tag:NotSaved]		[Infections contained within the 'humorous' flag]
 
 when play begins:
-	add { "Panda", "Husky Alpha", "German Shepherd Male", "Tigress Hooker", "Teddy Bear", "Mammoth", "Red Kangaroo", "Panther Taur", "Bald Eagle" } to Larissa_possible_forms_furry;
+	add { "Panda", "Husky Alpha", "German Shepherd Male", "Malayan Tiger Herm", "Teddy Bear", "Mammoth", "Red Kangaroo", "Panther Taur", "Bald Eagle" } to Larissa_possible_forms_furry;
 	add { "Panda", "Teddy Bear", "Latex Mistress", "Red Kangaroo", "Succubus", "Goo Girl", "Centaur Mare" } to Larissa_possible_forms_girl;
 	add { "Husky Alpha", "German Shepherd Male", "Naga", "Bald Eagle" } to Larissa_possible_forms_guy;
-	add { "Tigress Hooker", "Mammoth", "Panther Taur", "Dark Elf" } to Larissa_possible_forms_herm;
+	add { "Malayan Tiger Herm", "Mammoth", "Panther Taur", "Dark Elf" } to Larissa_possible_forms_herm;
 	add { "Succubus" } to Larissa_possible_forms_hellspawn;
 
 this is the larissa_tfoption rule:
@@ -453,7 +453,7 @@ carry out Larissatfing:
 			say "[Larissaisnow-alphahusky]";
 		else if entry calcnumber in Larissa_possible_forms is "German Shepherd Male":
 			say "[Larissaisnow-GSDmale]";
-		else if entry calcnumber in Larissa_possible_forms is "Tigress Hooker":
+		else if entry calcnumber in Larissa_possible_forms is "Malayan Tiger Herm":
 			say "[Larissaisnow-tighooker]";
 		else if entry calcnumber in Larissa_possible_forms is "Teddy Bear":
 			say "[Larissaisnow-teddybear]";
@@ -742,7 +742,7 @@ to say Larissaisnow-GSDmale:
 
 to say Larissaisnow-tighooker:
 	let goahead be 1;
-	if LarissaInfName is "Tigress Hooker":
+	if LarissaInfName is "Malayan Tiger Herm":
 		say "[subjpro_Cap of Larissa]'s already got that infection.";
 		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		LineBreak;
@@ -753,17 +753,17 @@ to say Larissaisnow-tighooker:
 		else:
 			let goahead be 0;
 	if goahead is 1:
-		if "Tigress Hooker" is not listed in vials of Player:
+		if "Malayan Tiger Herm" is not listed in vials of Player:
 			say "You don't have one of those vials to offer [objpro of Larissa].";
 		else if freecred < LarissTFcost:
 			say "You don't have enough credits right now.";
 		else:
-			deletevial "Tigress Hooker";
+			deletevial "Malayan Tiger Herm";
 			decrease freecred by LarissTFcost;
 			say "[Larissa pre-tf]";
-			LarissaData "Tigress Hooker";
+			LarissaData "Malayan Tiger Herm";
 			now LarissaForm is "[if Cunt Count of Larissa > 0]tigress[else]tiger[end if]";
-			now LarissaInfName is "Tigress Hooker";
+			now LarissaInfName is "Malayan Tiger Herm";
 			now LarissaHandForm is "paw";
 			now LarissaFootForm is "paw";
 			now LarissaSkin is "white tiger fur";

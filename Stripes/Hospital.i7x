@@ -1066,16 +1066,16 @@ to say hosploss:
 	say "[hosptfscene]";
 	say "     Dr Mouse motions to the orderly attending to his procedure. 'Dump that trash on the steps along with its gear. It is of no further use to me.' With those coldly spoken words, the mouse turns his back on you entirely and walks out of the operating theater. The orderly calls forth several of his companions and they drag you, beaten and mutated, to the hospital steps. They toss you and your gear down onto them without a word and head back inside.";
 	waitlinebreak;
-	if BodyName of Player is "Tiger Cop":
-		now BodyName of Player is "Tigress Hooker";
-	if TailName of Player is "Tiger Cop":
-		now TailName of Player is "Tigress Hooker";
-	if FaceName of Player is "Tiger Cop":
-		now FaceName of Player is "Tigress Hooker";
-	if SkinName of Player is "Tiger Cop":
-		now SkinName of Player is "Tigress Hooker";
-	if CockName of Player is "Tiger Cop":
-		now CockName of Player is "Tigress Hooker";
+	if BodyName of Player is "Malayan Tiger Male":
+		now BodyName of Player is "Malayan Tiger Herm";
+	if TailName of Player is "Malayan Tiger Male":
+		now TailName of Player is "Malayan Tiger Herm";
+	if FaceName of Player is "Malayan Tiger Male":
+		now FaceName of Player is "Malayan Tiger Herm";
+	if SkinName of Player is "Malayan Tiger Male":
+		now SkinName of Player is "Malayan Tiger Herm";
+	if CockName of Player is "Malayan Tiger Male":
+		now CockName of Player is "Malayan Tiger Herm";
 	SanLoss 20;
 	increase Libido of Player by 20;
 	decrease score by 50;

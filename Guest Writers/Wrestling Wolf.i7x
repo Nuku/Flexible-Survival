@@ -6,10 +6,6 @@ Version 3 of Wrestling Wolf by Guest Writers begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Wrestling Wolf" } to infections of MaleList;
-	add { "Wrestling Wolf" } to infections of FurryList;
-
 wrestlingwolfdefeat is a number that varies.
 wwheal is a number that varies.
 wrwolfanal is a number that varies.
@@ -127,10 +123,19 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "";
+	add "Wrestling Wolf" to infections of CanineList;
+	add "Wrestling Wolf" to infections of FurryList;
+	add "Wrestling Wolf" to infections of NatureList;
+	add "Wrestling Wolf" to infections of MaleList;
+	add "Wrestling Wolf" to infections of TaperedCockList;
+	add "Wrestling Wolf" to infections of KnottedCockList;
+	add "Wrestling Wolf" to infections of SheathedCockList;
+	add "Wrestling Wolf" to infections of BipedalList;
+	add "Wrestling Wolf" to infections of TailList;
 	now Name entry is "Wrestling Wolf"; [Name of your new Monster]
 	now enemy title entry is "Wrestling Wolf";
 	now enemy Name entry is "Anaranjado";
-	now enemy type entry is 1; [non-unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He charges at you with his arm extended. Wrapping his extended arm around neck, he performs a Lariot strong enough to have torn your head clean off, tossing you hard onto the ground.[or]Faster than he looks, he gets past your defenses as he moves behind you. He wraps his arms around your waist from behind and lifts you into the air momentarily before slamming you back down head first in a German Suplex.[or]You charge at him with the intent of tackling him. He stands his ground as he takes your attack, but it is like tackling a brick wall, causing you to stumble back a bit, but not before he kicks you hard in your gut.[or]The Wrestling Wolf grabs hold of the back of your neck and groin and effortlessly hoists you up above his head before bringing you down hard onto his waiting knee, performing a devastating BackBreaker[or]The Wrestling Wolf delivers a powerful punch to your gut, causing you to bend over as you hug your gut. He wraps his arms around your waist from above and lifts you upside down. You begin to scream as he jumps into the air before landing on his ass, your head slammed onto the mat by his deadly Piledriver.[or]The wolf extends his arms out and brings them back together, slamming your head in between. You start to fall to your knees from the attack, only to be caught by the wolf, who places your ass on top the nearest post. He proceeds to hook your legs with his arms before turning you over as he places your head on his shoulder. The wrestling wolf jumps as high as he can into the air before crashing down again, delivering a powerful Muscle Buster.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatthewrwolf]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[wrestlingwolfattack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -185,7 +190,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -241,7 +246,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -274,7 +279,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

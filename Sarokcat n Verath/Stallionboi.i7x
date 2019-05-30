@@ -4,10 +4,6 @@ Stallionboi by Sarokcat n Verath begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Stallionboi" } to infections of MaleList;
-	add { "Stallionboi" } to infections of FurryList;
-
 to say Stallionboi wins:
 	if Player is female:
 		say "     The slutty stallionboi gives a rather girlish squeal of glee as you finally give up your futile attempt at resisting the strange horseboi's assault. 'We are going to make such a pretty little stallionslut out of you!' He gushes happily, as he grabs your arms and practically drags you through the halls with a lusty smirk on his face, his sexy black horselike tail swishing eagerly in front of you as he drags you along. Catching your breath slightly, you try to open your mouth to protest your rough handling only to stumble as he stops in front of a door and throws it open wide. You get a confused glimpse of several equine heads turning in your direction as he shoves you inside, his call of 'Boys, we got a new playtoy!' fills your ears for a second, before the sound of loud partially equine squealing drowns out anything else. You gasp and try to struggle as a large number of the vaguely feminine stallionbois descend eagerly on your already aroused body, their hands groping and stroking you all over even as the aroused musk of a roomful of horny equines washes over you. Unable to resist their advances, you find yourself moaning wantonly as they begin to tease and play with your body, rubbing their thick erect equine cocks up against you as you find yourself hauled down onto the bed. [line break]";
@@ -30,11 +26,19 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Stallionboi" to infections of EquineList;
+	add "Stallionboi" to infections of FurryList;
+	add "Stallionboi" to infections of NatureList;
+	add "Stallionboi" to infections of MaleList;
+	add "Stallionboi" to infections of BluntCockList;
+	add "Stallionboi" to infections of SheathedCockList;
+	add "Stallionboi" to infections of BipedalList;
+	add "Stallionboi" to infections of TailList;
 	now Name entry is "Stallionboi";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random].";
 	now defeated entry is "[Stallionboi loses]";
 	now victory entry is "[Stallionboi wins]";
@@ -89,7 +93,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -145,7 +149,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -178,7 +182,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

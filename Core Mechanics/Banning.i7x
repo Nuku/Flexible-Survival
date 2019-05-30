@@ -16,16 +16,18 @@ A Tag can be banned. A Tag is usually not banned.
 
 BodyHorrorList is a flag.
 FurryList is a flag.
-MaleList is a flag.
-FemaleList is a flag.
-TransList is a flag.
-HermList is a flag.
-HumorousList is a flag.
-HumanoidList is a flag.
 DemonList is a flag.
 FeralList is a flag.
+HumorousList is a flag.
+HumanoidList is a flag.
 
-CockvoreList is a tag.
+FemaleList is a flag.
+HermList is a flag.
+MaleList is a flag.
+TransList is a flag.
+
+
+CockVoreList is a tag.
 IncestList is a tag.
 MindcontrolList is a tag.
 NonconList is a tag.
@@ -36,11 +38,11 @@ The player has a list of text called BanList.
 
 when play begins:
 	add { "Cock Cannon", "Feral Shaft Beast" } to infections of BodyHorrorList;
-	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of HumorousList;
-	add { "Ember Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman Bitch", "Ebonflame Drake", "Ewe", "Feline", "Husky Bitch", "Fruit Bat", "German Shepherd Male", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon Herm", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Smooth Collie Shemale", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of FurryList;
+	add { "Pod Person", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of HumorousList;
+	add { "Ember Breeder", "Brown Bear Female", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman Bitch", "Ebonflame Drake", "Ewe", "Feline", "Husky Bitch", "Fruit Bat", "German Shepherd Male", "Harpy", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Shark Herm", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Gator Herm", "Smooth Collie Shemale", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of FurryList;
 	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd Male", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of MaleList;
-	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Herm Hyena", "Hermaphrodite Dolphin", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Pirate Shark", "Sewer Gator", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of HermList;
-	add { "Bear", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman Bitch", "Ewe", "Feline", "Husky Bitch", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of FemaleList;
+	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Shark Herm", "Gator Herm", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of HermList;
+	add { "Brown Bear Female", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman Bitch", "Ewe", "Feline", "Husky Bitch", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of FemaleList;
 	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast Male", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of FeralList;
 	add { "Demon Brute" } to infections of DemonList;
 	add { "Mothgirl", "Smooth Collie Shemale" } to infections of TransList;

@@ -626,21 +626,21 @@ to say TatiHyenaCharm:
 		say "[TatiHyenaMenu]";
 
 to say TatiHyenaFuck:
-	setmonster "Herm Hyena";
+	setmonster "Hyena Herm";
 	say "     Walking up to the hyenas fucking their new recruit, you step next to the one jerking his own cock and waiting his turn. The horny guy opens his mouth to warn you off and say that he's up next, only to let out a burst of laughter as you pull your clothes off and bend over the table instead, presenting yourself for him. 'Seems like I'm done waiting,' he tells his companion and shares a fist-bump with them, then steps up behind you and rubs his shaft up and down between the buns of your ass. ";
 	if Player is female:
 		say "Proceeding to brush the dickhead further down, your hyena moans in pleasure as he touches the soft folds of your sex. He pushes into your pussy without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet pussy,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
-		infect "Herm Hyena";
-		infect "Herm Hyena";
+		infect "Hyena Herm";
+		infect "Hyena Herm";
 		fimpregchance;
 		fimpregchance;
 		WaitLineBreak;
 	else:
 		say "Proceeding to brush the dickhead up and down your crack, your hyena moans in pleasure as he touches the wrinkled ring of your pucker. Thankfully, his dickhead is slick with pre-cum, as he pushes into your ass without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet ass,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your asshole, unloading his seed right and painting your inner passage white. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy asshole and dumping their loads into it.";
-		infect "Herm Hyena";
-		infect "Herm Hyena";
+		infect "Hyena Herm";
+		infect "Hyena Herm";
 		mimpregchance;
 		mimpregchance;
 		WaitLineBreak;

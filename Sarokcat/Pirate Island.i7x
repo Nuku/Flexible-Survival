@@ -125,9 +125,9 @@ carry out treasurehunt:
 						stop the action;
 				if T is 7:
 					say "     Traveling through the dark and damp caves, you swear you hear some off key singing from around the bend, peeking around you find several pirate sharks dicing over some small items in a cave half filled with water. You lean closer to get a closer look, only to be spotted by one of the sharks, they give out a cry and dive into the water, circling before charging back to engage you, looks like you are in for a fight!";
-					challenge "Pirate Shark";
-					challenge "Pirate Shark";
-					challenge "Pirate Shark";
+					challenge "Shark Herm";
+					challenge "Shark Herm";
+					challenge "Shark Herm";
 					say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
@@ -244,9 +244,9 @@ Instead of resolving Findingboat:
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Finding a usable boat, you make sure you have everything you might need, before setting out on the waves in search of the island the map talks about, visions of pirate treasure sparkling through your head.";
-			challenge "Pirate Shark";
+			challenge "Shark Herm";
 			if lost is 0:
-				challenge "Pirate Shark";
+				challenge "Shark Herm";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
 					now Pirate Island is known;

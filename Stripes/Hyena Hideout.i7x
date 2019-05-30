@@ -236,9 +236,9 @@ instead of fucking Gina:
 to say hyenamat_challenge:
 	now inasituation is true;
 	now fightoutcome is 100;
-	Challenge "Herm Hyena";
+	Challenge "Hyena Herm";
 	if fightoutcome >= 10 and fightoutcome <= 19:
-		Challenge "Herm Hyena";
+		Challenge "Hyena Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			Challenge "Hyena Matriarch";
 			if fightoutcome >= 10 and fightoutcome <= 19:			[victory]
@@ -265,14 +265,14 @@ to say hyenamat_challenge:
 
 
 to say hyenamat_victorytf:
-	setmonster "Herm Hyena";
+	setmonster "Hyena Herm";
 	choose row MonsterID from the Table of Random Critters;
 	say "     As the hyena orgy goes on, you feel a growing sense of confidence and empowerment. Looking over yourself, you can see that the victory has not left you unchanged. Your hyena body's gotten larger and stronger with an improved physique. You gain several inches of height as well, making you all the more impressive for leading the gang. You've become a powerful figure suitable for your new role as the gang's matriarch.";
-	now TailName of Player is "Herm Hyena";
-	now FaceName of Player is "Herm Hyena";
-	now SkinName of Player is "Herm Hyena";
-	now BodyName of Player is "Herm Hyena";
-	now CockName of Player is "Herm Hyena";
+	now TailName of Player is "Hyena Herm";
+	now FaceName of Player is "Hyena Herm";
+	now SkinName of Player is "Hyena Herm";
+	now BodyName of Player is "Hyena Herm";
+	now CockName of Player is "Hyena Herm";
 	now tail of Player is tail entry;
 	now Face of Player is face entry;
 	now Skin of Player is skin entry;

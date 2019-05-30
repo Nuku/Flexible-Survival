@@ -106,7 +106,7 @@ to swimmingfight:
 		if FurryList is banned or HermList is banned:
 			increase T by 1;
 		else:
-			challenge "Hermaphrodite Dolphin";
+			challenge "Dolphin Herm";
 	if T is 4:
 		if FurryList is banned or MaleList is banned:
 			increase T by 1;

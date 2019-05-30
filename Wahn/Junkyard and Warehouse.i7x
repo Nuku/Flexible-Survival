@@ -39,7 +39,7 @@ Section 2 - Entering the Warehouse
 Definition: a person is facially human:
 	if FaceName of Player is "Human", yes;
 	if FaceName of Player is "Herm Human", yes;
-	if FaceName of Player is "Awesome tree", yes;
+	if FaceName of Player is "Pod Person", yes;
 	if FaceName of Player is "Siren", yes;
 	if FaceName of Player is "Greek Nymph", yes;
 	if FaceName of Player is "Spartan Warrior", yes;
@@ -52,7 +52,7 @@ Definition: a person is facially human:
 	if FaceName of Player is "Squire", yes;
 	if HeadName of Player is "Human", yes;
 	if HeadName of Player is "Herm Human", yes;
-	if HeadName of Player is "Awesome tree", yes;
+	if HeadName of Player is "Pod Person", yes;
 	if HeadName of Player is "Siren", yes;
 	if HeadName of Player is "Greek Nymph", yes;
 	if HeadName of Player is "Spartan Warrior", yes;
@@ -68,7 +68,7 @@ Definition: a person is facially human:
 Definition: a person is skintone human:
 	if SkinName of Player is "Human", yes;
 	if SkinName of Player is "Herm Human", yes;
-	if SkinName of Player is "Awesome tree", yes;
+	if SkinName of Player is "Pod Person", yes;
 	if SkinName of Player is "City Sprite", yes;
 	if SkinName of Player is "Wood Elf", yes;
 	if SkinName of Player is "Elven Hunter", yes;
@@ -94,7 +94,7 @@ Definition: a person is bodily human:
 	if BodyName of Player is "Herm Human", yes;
 	if BodyName of Player is "Wood Elf", yes;
 	if BodyName of Player is "Elven Hunter", yes;
-	if BodyName of Player is "Awesome tree", yes;
+	if BodyName of Player is "Pod Person", yes;
 	if BodyName of Player is "Greek Nymph", yes;
 	if BodyName of Player is "Spartan Warrior", yes;
 	if BodyName of Player is "Helot Manservant", yes;
@@ -532,13 +532,17 @@ When play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Morgan Horse";
-	add "Morgan Horse Stallion" to infections of MaleList;
 	add "Morgan Horse Stallion" to infections of Equinelist;
-	add "Morgan Horse Stallion" to infections of Bluntlist;
+	add "Morgan Horse Stallion" to infections of NatureList;
+	add "Morgan Horse Stallion" to infections of MaleList;
+	add "Morgan Horse Stallion" to infections of BluntCockList;
+	add "Morgan Horse Stallion" to infections of SheathedCockList;
+	add "Morgan Horse Stallion" to infections of BipedalList;
+	add "Morgan Horse Stallion" to infections of TailList;
 	now Name entry is "Morgan Horse Stallion";
-	now enemy title entry is "";
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Steven";
-	now enemy type entry is 1; [unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]";
@@ -593,7 +597,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -649,7 +653,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -682,7 +686,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -140,14 +140,19 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is true;
 	now Species Name entry is "Wolfman";
-	add "Football Wolfman" to infections of MaleList;
-	add "Football Wolfman" to infections of FurryList;
 	add "Football Wolfman" to infections of CanineList;
-	add "Football Wolfman" to infections of KnotList;
+	add "Football Wolfman" to infections of FurryList;
+	add "Football Wolfman" to infections of NatureList;
+	add "Football Wolfman" to infections of MaleList;
+	add "Football Wolfman" to infections of KnottedCockList;
+	add "Football Wolfman" to infections of TaperedCockList;
+	add "Football Wolfman" to infections of SheathedCockList;
+	add "Football Wolfman" to infections of BipedalList;
+	add "Football Wolfman" to infections of TailList;
 	now Name entry is "Football Wolfman";
 	now enemy title entry is "Football Wolfman Recruiter";
 	now enemy Name entry is "Septus";
-	now enemy type entry is 1; [unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[fw_attack]";
 	now defeated entry is "[Septus loses]";
 	now victory entry is "[Septus wins]";
@@ -210,7 +215,7 @@ When Play begins:
 	now Androginity entry is 2; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is "your ears are drawn upwards to the top of your head, forming pointy wedges standing upright. A broad muzzle pushes forward to give you the head of an anthro wolf"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is "an anthro wolf, complete with ears standing upright in pointy wedges as well as a muzzle full of sharp teeth"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Description entry is "an anthro wolf with [Head Color of Player] fur, complete with ears standing upright in pointy wedges as well as a muzzle full of sharp teeth"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "furred"; [one word descriptive adjective]
 	now Head Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -231,7 +236,7 @@ When Play begins:
 	now Tongue Color entry is "pink"; [one word color descriptor]
 	now Tongue Length entry is 6; [length in inches]
 	now Torso Change entry is "black hair sprouts all over it, giving you a shiny coat of dense fur"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is "covered in a dense coat of black fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Description entry is "covered in a dense coat of [Torso Color of Player] fur"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is "canine"; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is "team number, the digits '22' written in blood-red fur on your chest"; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -249,23 +254,23 @@ When Play begins:
 	now Back Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
 	now Arms Change entry is "your fingernails grow into blunt claws and black fur spreads over your paw-hands, then up towards your shoulders"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is "covered in black fur, ending in paw-hands with blunt claws"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Description entry is "covered in [Arms Color of Player] fur, ending in paw-hands with blunt claws"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is "they shift into the digitigrade stance of an anthro wolf with dense black fur, ending in a pair of clawed paws"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of an anthro wolf, with dense black fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Description entry is "that of an anthro wolf, with dense [Legs Color of Player] fur covering them from your hips down to the clawed paws"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is "furred"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it becomes well rounded, with black fur sprouting over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "ass, covered black fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
-	now Ass Skin Adjective entry is "furry";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Description entry is "ass, covered in [Ass Color of Player] fur"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass shape adjective of Player] [ass description of Player]."]
+	now Ass Skin Adjective entry is "furred";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
 	now Tail Change entry is "a mid-length canine tail sprouts from your tailbone, soon covered in dense black fur"; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is "mid-length tail with dense black fur"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Description entry is "mid-length tail with dense [Tail Color of Player] fur"; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is "furry"; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is "black"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 12; [inches deep for anal fucking]
@@ -278,7 +283,7 @@ When Play begins:
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 12; [length in inches]
 	now Cock Change entry is "it takes on a pink color and canine shape, complete with a pointy tip, knot at the base and a sheath to protect it"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "has a pointy tip and a knot at the base, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is "is [Cock Color of Player] and has a pointy tip. There is a knot at the base of the shaft, as well as a sheath to protect it when not erect"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cock Color entry is "pink"; [one word color descriptor]
 	now Ball Count entry is 2;
@@ -290,7 +295,7 @@ When Play begins:
 	now Cunt Tightness entry is 0;
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Change entry is "it takes on a canine appearance, complete with a clit at the top"; [partial sentence that fits in: "Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt Change entry]."]
-	now Cunt Description entry is "shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is "is [Cunt Color of Player]-colored and shaped like that of a canine bitch, with delicate nether lips and the clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Adjective entry is "canine"; [one word adjective: avian/canine/...]
 	now Cunt Color entry is "black"; [one word color descriptor]
 	now Clit Size entry is 2; [size 1-5, see Clit Size Adjective]
@@ -1148,11 +1153,14 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is true;
 	now Species Name entry is "Human";
+	add "Wolfman Cheerleader" to infections of HumanList;
+	add "Wolfman Cheerleader" to infections of NatureList;
 	add "Wolfman Cheerleader" to infections of FemaleList;
+	add "Wolfman Cheerleader" to infections of BipedalList;
 	now Name entry is "Wolfman Cheerleader";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "    <cheerleaders shouldn't fight, when did you see this?>"; [Text used when the monster makes an Attack]
 	now defeated entry is "    <cheerleaders shouldn't fight, when did you see this?>";
 	now victory entry is "    <cheerleaders shouldn't fight, when did you see this?>";
@@ -1215,7 +1223,7 @@ When Play begins:
 	now Androginity entry is 8; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is "all little blemishes and marks on your skin disappear, leaving you with a quite attractive human face with relatively fine features"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is "an attractive human with [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] skin and relatively fine features"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Description entry is "an attractive human with [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] [Head Color of Player] skin and relatively fine features"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is "human"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is "flawless"; [one word descriptive adjective]
 	now Head Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -1254,16 +1262,16 @@ When Play begins:
 	now Back Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
 	now Arms Change entry is "they become human-like, covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] skin"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is "that of a human, but covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] skin"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Description entry is "that of a human, but covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] [Arms Color of Player] skin"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is "they become human-like, covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] skin"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is "that of a human, but covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] skin"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Description entry is "that of a human, but covered in [one of]flawless[or]perfect[or]unblemished[or]blemishless[at random] [Legs Color of Player] skin"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is "it narrows down to a dainty width"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is "human ass"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is "human ass"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is "pale"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 1; [ass width from 1-5]
@@ -1284,7 +1292,7 @@ When Play begins:
 	now Cock Length entry is 0; [length in inches]
 	now Cock Adjective entry is "human"; [one word adjective: avian/canine/...]
 	now Cock Change entry is "it becomes human in shape, [one of]flawlessly[or]perfectly[at random] formed and with a snug foreskin covering the head"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is "is a [one of]flawless[or]perfect[at random] human manhood"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Description entry is "is [Cock Color of Player] and human in shape"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
 	now Cock Color entry is "pastel pink"; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
@@ -1296,7 +1304,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is "human"; [one word adjective: avian/canine/...]
 	now Cunt Change entry is "it becomes human, complete with delicate nether lips and a well-sized clit at the top"; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is "human, complete with delicate nether lips and a well-sized clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is "is [Cunt Color of Player] in color and human-shaped, complete with delicate nether lips and a well-sized clit at the top"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is "pastel pink"; [one word color descriptor]
 	now Clit Size entry is 3; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

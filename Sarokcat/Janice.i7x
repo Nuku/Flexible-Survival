@@ -136,7 +136,7 @@ instead of conversing the Janice:
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 25;
-		else if BodyName of Player is "Hermaphrodite Latex Vixen":
+		else if BodyName of Player is "Latex Vixen Herm":
 			say "     'Well, with a body like that, it's certainly clear that you have something on your mind,' Janice says with a coy smile as she takes in your changed body. 'A soft, pretty fox playtoy,' she adds with some amusement as she eyes you up and down. Her eyes linger over your changed form as she seems to size you up for a minute before giving you a rather feral vulpine grin. 'I'm glad I suggested you go looking for proof, as it's clear you're off to a good start in becoming a sexy lover for a vixen as lovely as I. And what a lovely idea that is. Perhaps you should join me here and we can see about making you even more beautiful.' She stretches out on her divan and strokes the cushions, eying you with considerable arousal.";
 			now janicetalk is 4;
 			now janicearoused is 1;

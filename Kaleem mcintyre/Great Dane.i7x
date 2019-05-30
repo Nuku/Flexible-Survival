@@ -1,23 +1,8 @@
 Great Dane by Kaleem mcintyre begins here.
 
-[ Edit the above line, replace 'Great Dane' with your monster's name, and 'Kaleem McIntyre' with the name you'd like credited for the mod. ]
 "Adds a Great Dane creature to Flexible Survival's Wandering Monsters table"
-[Description text for this Extension.]
 
 Section 1 - Creature Responses
-
-[ Use 'to say xxxxx' for overlong text boxes or complex situations, using '[xxxxx]' (in square brackets) within a say statement to execute them. Typically, these are needed if there are a lot of cock/species/cunt checks. ]
-
-when play begins:
-[These flags indicate which monster groups your creature belongs to, should someone want to remove any given type.]
-[Delete the lines with unneeded flags and replace 'Great Dane' with your creature's Name entry. Case sensitive.]
-	add { "Great Dane" } to infections of FemaleList;
-	add { "Great Dane" } to infections of FurryList;
-	add { "Great Dane" } to infections of CanineList;
-
-[Sample loss and victory text Great Danes.]
-[Numerous other variations can be found in existing creature files.]
-[Change the 'Great Dane' in their names here and below to something appropriate to your creature.]
 
 to say losetoGreat Dane:
 	say "     Knocking you down, the bitch Dane growls at you warningly not to get up. ";
@@ -96,11 +81,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Great Dane"; [name of the overall species of the infection, used for children, ...]
+	add "Great Dane" to infections of CanineList;
+	add "Great Dane" to infections of FurryList;
+	add "Great Dane" to infections of NatureList;
+	add "Great Dane" to infections of FemaleList;
+	add "Great Dane" to infections of TaperedCockList;
+	add "Great Dane" to infections of KnottedCockList;
+	add "Great Dane" to infections of SheathedCockList;
+	add "Great Dane" to infections of BipedalList;
+	add "Great Dane" to infections of TailList;
 	now Name entry is "Great Dane"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Great Dane Rogue";
+	now enemy title entry is "Great Dane Fighter";
 	now enemy Name entry is "Rogue";
-	now enemy type entry is 1; [non-unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Great Dane attacks with a blinding series of punches![or]The Great Dane kicks you hard enough that spit flies free from your [FaceName of Player] mouth![or]The Great Dane uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane sends a right hook firmly across your jaw![or]The Great Dane slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane kick you in the chest forcing air to gush out from your lungs![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheGreat Dane]"; [ Text when monster loses. Change 'Great Dane' as above. ]
 	now victory entry is "[losetoGreat Dane]"; [ Text when monster wins. Change 'Great Dane' as above. ]
@@ -155,7 +149,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -211,7 +205,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -244,7 +238,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

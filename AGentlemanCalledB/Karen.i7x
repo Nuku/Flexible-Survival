@@ -65,7 +65,7 @@ Virgin of Retriever Girl is false.
 AnalVirgin of Retriever Girl is true.
 PenileVirgin of Retriever Girl is true.
 SexuallyExperienced of Retriever Girl is true.
-MainInfection of Retriever Girl is "Retriever".
+MainInfection of Retriever Girl is "Retriever Female".
 The description of Retriever Girl is "[KarenDesc]".
 The weapon damage of Retriever Girl is 7.
 The level of Retriever Girl is 5.

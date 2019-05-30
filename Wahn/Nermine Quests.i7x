@@ -196,7 +196,7 @@ Instead of resolving a Hyena Challenge:
 			now fightoutcome is 0; [reset]
 			while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 				now inasituation is true;
-				challenge "Herm Hyena";
+				challenge "Hyena Herm";
 				increase HyenaFightCounter by 1;
 			now inasituation is false; [reset]
 			if fightoutcome < 20: [player won]
@@ -208,7 +208,7 @@ Instead of resolving a Hyena Challenge:
 				now HyenaFightCounter is 0; [reset]
 				while fightoutcome < 20 and HyenaFightCounter < 2: [runs for 2 times or until the player loses or flees]
 					now inasituation is true;
-					challenge "Herm Hyena";
+					challenge "Hyena Herm";
 					increase HyenaFightCounter by 1;
 				now inasituation is false; [reset]
 				if fightoutcome < 20: [player won]

@@ -7,10 +7,6 @@ firstgarg is a truth state that varies. firstgarg is usually true. [tracks for s
 
 Section 1 - Creature Responses
 
-when play begins:
-		add { "Gargoyle" } to infections of MaleList;
-		add { "Gargoyle" } to infections of TailweaponList;
-
 to say gargoyledesc:
 	setmongender 3; [creature is male]
 	say "A flutter of wings has you ducking for cover just in time for you to find a fascinating creature dropping down from the sky to land gracefully in front of you. With beautiful gray skin strapped tight over numerous muscles you look over the bare form of this horrible monster and realize what you're dealing with. The gargoyle stands with wings spread and a menacing glare pointed in your direction. [one of]The creature warbles at you quietly, seeming to want to challenge you, though you're not sure why[or]A hissing growl has your nerves buzzing as you see the monster snarling at you heatedly[or]A hiss and then flap of the monster's wings has you on guard as you feel the need to fight come over you[at random].";
@@ -71,11 +67,18 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Gargoyle"; [name of the overall species of the infection, used for children, ...]
+	add "Gargoyle" to infections of NonOrganicList;
+	add "Gargoyle" to infections of MaleList;
+	add "Gargoyle" to infections of BarbedCockList;
+	add "Gargoyle" to infections of BipedalList;
+	add "Gargoyle" to infections of FlightList;
+	add "Gargoyle" to infections of TailList;
+	add "Gargoyle" to infections of TailweaponList;
 	now Name entry is "Gargoyle";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A gray arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]";
 	now defeated entry is "[gargoyle loss]";
 	now victory entry is "[gargoyle attack]";
@@ -130,7 +133,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -186,7 +189,7 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
@@ -219,7 +222,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
