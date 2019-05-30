@@ -710,7 +710,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Destabilizing Mutant";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The spasmodic blob that once was a person lunges towards you![or]The horror incarnate creature undulates in your direction before striking in your direction.[or]The rapidly shifting glob of semi-humanoid mass charges straight at you![at random]";
@@ -886,7 +886,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Destabilizing Mass";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The spazmodic mass that once was a single blob shambles towards you![or]The horror incarnate creature undulates in your direction before slaming into you.[or]The rapidly shifting mass of semi-blobular creatures charges straight at you![at random]";
@@ -1058,7 +1058,7 @@ When Play begins:
 	now NewTypeInfection entry is false;
 	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Gnome";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "***";

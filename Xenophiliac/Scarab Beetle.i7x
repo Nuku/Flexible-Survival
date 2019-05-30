@@ -24,7 +24,7 @@ When Play begins:
 	add "Scarab Beetle" to infections of HexapedalList;
 	add "Scarab Beetle" to infections of FlightList;
 	now Name entry is "Scarab Beetle";
-	now enemy title entry is "Giant Scarab Beetle"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Giant Scarab Beetle"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Amuran"; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[NonCombatError]";

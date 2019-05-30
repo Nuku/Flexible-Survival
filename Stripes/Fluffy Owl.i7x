@@ -74,7 +74,7 @@ When Play begins:
 	add "Fluffy Owl" to infections of FlightList;
 	add "Fluffy Owl" to infections of TailList;
 	now Name entry is "Fluffy Owl"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The big-breasted owl grabs you and buries your face in her downy bosom, trying to smother you with them![or]The fluffy owl slashes at you with a taloned hand![or]The stacked avian emits a high-pitched shriek that hurts your ears and makes you wobble unsteadily as it scrambles your inner ear![or]The owl woman makes a gliding swoop around you, then comes in to slash at you with her taloned feet![or]The owl creature presses her soft, fluffy body against yours, rubbing those huge breasts against you, hooting softly with need![or]The bird woman angrily snaps at you with her sharp beak![or]The avian woman grabs her big breasts and shakes them enticingly at you![at random]";

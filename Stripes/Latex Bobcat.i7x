@@ -118,7 +118,7 @@ When Play begins:
 	add "Latex Bobcat" to infections of QuadrupedalList;
 	add "Latex Bobcat" to infections of TailList;
 	now Name entry is "Latex Bobcat"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if Player is male and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if Player is male and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";

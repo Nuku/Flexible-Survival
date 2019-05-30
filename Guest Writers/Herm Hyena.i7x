@@ -153,7 +153,7 @@ When Play begins:
 	add "Hyena Herm" to infections of BipedalList;
 	add "Hyena Herm" to infections of TailList;
 	now Name entry is "Hyena Herm"; [Name of your new Monster]
-	now enemy title entry is "Herm Hyena"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Herm Hyena"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The hyena [one of]rakes her claws across your midsection, leaving bloody gashes in their wake[or]suddenly clocks you with one hell of a haymaker. You kind of want to sit down for a moment now[or]leaps at you, bringing her knee to your face with alarming speed[or]sweepkicks your legs out from under you, then swiftly and painfully drops herself elbow first directly onto your sternum[at random]."; [Text used when the monster makes an Attack]

@@ -151,7 +151,7 @@ When Play begins:
 	add "Beaver" to infections of TailList;
 	add "Beaver" to infections of TailweaponList;
 	now Name entry is "Beaver"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]beaver[or]furry Canuck[or]pudgy beaver[or]too-friendly beaver[at random] [one of]gropes you with a big smile on his face[or]pulls you into a kiss, pressing his whiskered muzzle to your lips[or]turns quickly and slaps you with his big tail. 'Sorry, eh,' he says with a chuckle[or]laughs and punches you hard on the shoulder[or]presses his rotund body to yours and hugs you tight, grinding his chubby cock against you as he does[or]bites you with his sharp incisors, then blushes and covers his mouth. 'Sorry aboot that, eh? Beaver and all that,' he says. 'Lemme kiss it and make it allll better,' he adds[or]he rushes at you, body checking you like an aggressive defenseman so hard against a wall your teeth rattle[at random].";

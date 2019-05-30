@@ -103,7 +103,7 @@ When Play begins:
 	add "Psycho Weasel" to infections of BipedalList;
 	add "Psycho Weasel" to infections of TailList;
 	now Name entry is "Psycho Weasel"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The crazed weasel batters at you with the long sleeves of his straightjacket![or]The wild-eyed creature bites you![or]The crazy weasel wraps his arms around you and humps his throbbing cock against your side![or]The weasel punches at you wildly![or]The weasel slams his shoulder into you, knocking you against the wall![or]The wild babble the creature keeps spouting fills you with confusion, giving it an opportunity to strike you![at random]";

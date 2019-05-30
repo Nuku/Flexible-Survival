@@ -82,7 +82,7 @@ When Play begins:
 	add "City Sprite" to infections of BipedalList;
 	add "City Sprite" to infections of FlightList;
 	now Name entry is "City Sprite"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The swarm of sprites rushes over you, tickling at your sides in a maddening onslaught of the senses, leaving you giggling.[or][if Player is male]A sprite zips between your thighs and grabs at your [Cock of Player] organ, tickling at the very tip of it with her wings as she holds on tight.[else]The sprites focus on your chest, licking and rubbing against you in an excited swarm![end if][or][if Player is female and Cunt Depth of Player > 5]With a sudden wet noise, you feel your vulva spread apart as a sprite flies up into you with astounding accuracy. She begins to wriggle in deeper, lost to sight, but certainly not to your slick tunnel which spasms in forced delight[else]The sprites get a sudden violent fit, grabbing tiny pebbles and rocks and pelting you with them in a hail of tiny debris[end if].[at random]"; [Text used when the monster makes an Attack]

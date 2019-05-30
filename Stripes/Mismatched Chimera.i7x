@@ -173,7 +173,7 @@ When Play begins:
 	add "Mismatched Chimera" to infections of FeralmindList;
 	add "Mismatched Chimera" to infections of TailList;
 	now Name entry is "Mismatched Chimera"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The mismatched hybrid strikes you with its [larmdata] fist![or]The strange chimera wraps its mismatched arms around you and squeezes you with a powerful bearhug![or]The disturbing creature manages to bite your arm with its [headdata] head![or]The vicious creature slashes at you with its clawed right hand, leaving bloody gashes![or]The beast charges at you, swinging a volley of wild punches and slashes![or]The angry creature grabs your arm bites your shoulder with its [headdata] mouth![or]The fractured beast growls and kicks you with its [llegdata]![at random]";

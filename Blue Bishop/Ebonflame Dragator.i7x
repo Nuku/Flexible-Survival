@@ -119,7 +119,7 @@ When Play begins:
 	add "Ebonflame Dragator" to infections of TailList;
 	add "Ebonflame Dragator" to infections of TailweaponList;
 	now Name entry is "Ebonflame Dragator";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The gator[or]The oversized lizard[or]The scaled beast[or]The ebonflame dragator[or]It[or]He[at random] [one of]lunges forward and snaps it jaws around one of your limbs, the horribly sharp teeth digging into you until you finally pry its jaw wide enough to free yourself[or]shreds you painfully with its claws[or]attempts to pin you against the ground, biting and clawing at you until you push yourself free[or]painfully bashes you with its large, powerful tail[at random].";

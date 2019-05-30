@@ -36,7 +36,7 @@ When Play begins:
 	add "Stallionboi" to infections of BipedalList;
 	add "Stallionboi" to infections of TailList;
 	now Name entry is "Stallionboi";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He gives you an equine grin for a minute, confusing you slightly, as he slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show[or]The stallionboi reaches out and strokes his hands over your body teasingly[or]Pulling a large transparent blue double ended dildo from somewhere, he smacks you in the ass with it[at random].";

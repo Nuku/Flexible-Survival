@@ -219,7 +219,7 @@ When Play begins:
 	add "Vixen Nurse" to infections of BipedalList;
 	add "Vixen Nurse" to infections of TailList;
 	now Name entry is "Vixen Nurse"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The naughty nurse gives you a hard slap![or]The vixen bonks you on the head with the clipboard she's carrying![or]The silver vixen gives you a scratch with her claws![or]The vixen nurse stomps her foot-paw down onto the top of your foot![or]Lunging at you, the nurse tries to smother you in her ample cleavage![or]The vixen nurse knees you in the side![or]The silver-furred nurse strikes you firmly at the temple, making your ear ring![or]The nurse moves in quick and grinds her body against you as she gives you a steaming kiss![or]The vixen swings wildly, managing to bop you on the nose with her clipboard![or]She sidesteps you as she grabs your upper arm in one paw and spanks you repeatedly with her clipboard![at random]";

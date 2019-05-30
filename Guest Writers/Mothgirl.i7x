@@ -82,7 +82,7 @@ When Play begins:
 	add "Mothgirl" to infections of BipedalList;
 	add "Mothgirl" to infections of FlightList;
 	now Name entry is "Mothgirl"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She hits you on the cheek with her hand[or]A kick lands upside your face as the moth girl turns in midair[or]The mothgirl punches you in the gut with her fist[or]The mothgirl rams her butt into your face[at random]."; [Text used when the monster makes an Attack]

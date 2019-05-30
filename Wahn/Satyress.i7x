@@ -139,7 +139,7 @@ When Play begins:
 	add "Satyress" to infections of BipedalList;
 	add "Satyress" to infections of TailList;
 	now Name entry is "Satyress";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She splashes you with some wine from her cup, giggling as the red liquid trickles down over your body.[or]She grins and whirls around, showing off her body with a wiggle off her ass. Your eyes are almost hypnotically drawn to where the pale soft skin of her back leads over to a very perky pair of buttocks, covered in the blond curls of her fur.[or]Her enticing goat-like musk distracts you for a minute as she dances around you.[or]Dancing around nimbly on her goat hooves, the satyress comes up close, brushing against your body and giving you a squeeze.[or]The satyress pulls out pipes from... somewhere, and starts to play a little tune. To your surprise you can't help but dance a little along with the music.[at random]";

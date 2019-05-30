@@ -101,7 +101,7 @@ When Play begins:
 	add "Manticore" to infections of TailList;
 	add "Manticore" to infections of TailweaponList;
 	now Name entry is "Manticore";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]";

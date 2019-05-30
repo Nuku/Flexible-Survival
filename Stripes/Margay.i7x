@@ -118,7 +118,7 @@ When Play begins:
 	add "Margay" to infections of BipedalList;
 	add "Margay" to infections of TailList;
 	now Name entry is "Margay"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The large feline slashes at you with her rending claws![or]The Rubenesque beauty grabs you in her strong arms and grinds her large pussies against you![or]The tropical cat mrowls as she grabs one arm with a clawed paw and keeps the other velveted as she gropes you firmly![or]In a surprising feat of flexibility for one so large, the margay kicks you firmly in the gut, causing you to stumble back![or]The full-figured margay pulls you in close for a warm, tender hug that saps some of your will to resist her increasing tempting body![or]The large feline slams into you and pushes you down, trying to smother you under her ample figure![at random]";

@@ -215,7 +215,7 @@ When Play begins:
 	add "Centaur" to infections of TaurList;
 	add "Centaur" to infections of TailList;
 	now Name entry is "Mutant Centaur"; [Name of your new Monster]
-	now enemy title entry is "Mutant Centaur"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Mutant Centaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Centaur punches your face with its hand[or]The Centaur headbutts you[or]The Centaur's green tentacles rise from under him and slap you[or]The Centaur rears up and slams you with his one of its hooves[at random]!";

@@ -529,7 +529,7 @@ When Play begins:
 	add "Feral Sea Dragoness" to infections of TailList;
 	add "Feral Sea Dragoness" to infections of TailweaponList;
 	now Name entry is "Feral Sea Dragoness";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dragoness calls out and nips at you.[or]The dragoness slaps you with her narrow tail knocking you across the ground.[or]She tackles you and grinds herself against you before you manage to get free thanks to the loose sand.[or]She sings to you. Breaking your focus and making you trip over a rock.[at random]";

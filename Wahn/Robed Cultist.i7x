@@ -34,7 +34,7 @@ When Play begins:
 	add "Robed Cultist" to the infections of MaleList;
 	add "Robed Cultist" to the infections of BipedalList;
 	now Name entry is "Robed Cultist";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The robed cultist slashes at you with a sharp knife.[or]You are kneed in the side by the cultist - that wide robe totally hid the movement till it was too late.[or]The cultist slashes at you with one hand showing scales and claws.[at random]";
@@ -219,7 +219,7 @@ When Play begins:
 	add "Deep One" to the infections of Swimlist;
 	add "Deep One" to the infections of BipedalList;
 	now Name entry is "Deep One";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The fish-man slashes at you with his claws.[or]The fish-man snaps at you with a maw full of sharp teeth.[or]A kick from the fish-man sends you stumbling backwards.[at random]";

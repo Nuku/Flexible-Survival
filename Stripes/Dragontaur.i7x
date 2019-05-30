@@ -72,7 +72,7 @@ When Play begins:
 	add "Dragontaur" to infections of TailList;
 	add "Dragontaur" to infections of TailweaponList;
 	now Name entry is "Dragontaur"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dragontaur slams its tail into you, bashing you aside![or]The dragontaur rears up and slashes you with its foreclaws![or]It snaps and tears at you with its fangorious maw![or]The dragontaur punches you soundly in the jaw![or]The dragon creature grabs you with its clawed hands and slams its bony head into yours. The head butt leaves you seeing stars for a moment.[at random]";

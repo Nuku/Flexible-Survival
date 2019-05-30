@@ -48,7 +48,7 @@ When Play begins:
 	add "Greek Nymph" to infections of FemaleList;
 	add "Greek Nymph" to infections of BipedalList;
 	now Name entry is "Greek Nymph";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She slaps at you playfully, and you are surprised at how much it stings.[or]She giggles and poses for a second, causing you to pause and stare in fascination at her perfect body.[or]The nymph erupts into amused laughter as she dances around you. Strangely, you find yourself doubling over in laughter as well, everything seeming so amusing for a second.[or]She runs right at you, knocking you both to the ground.[or]'Tag!' she shouts, as she whacks you upside the head.[at random]";

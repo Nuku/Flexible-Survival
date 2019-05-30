@@ -145,7 +145,7 @@ When Play begins:
 	add "Naiad" to infections of Swimlist;
 	add "Naiad" to infections of GillList;
 	now Name entry is "Naiad";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The naiad strokes your arm and you feel your will to resist weaken.[or]Giving you a seductive look, the naiad makes your thoughts wander, weakening your will to resist.[or]She comes up to you closely and pushes her naked body against yours. Why do you even resist this?[or]As she gives you a smile and a wink, images of the both of you frolicking in the water dance in front of your eyes. Distracted, you feel some of the need to resist drain away.[at random]";

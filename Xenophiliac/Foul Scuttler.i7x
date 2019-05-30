@@ -153,7 +153,7 @@ When Play begins:
 	add "Foul Scuttler" to infections of HexapedalList;
 	add "Foul Scuttler" to infections of FeralmindList;
 	now Name entry is "Foul Scuttler";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Leaping back, the Foul Scuttler releases an ear-splitting screech, the corridors of the labs funneling the entirety of the sonic wave towards you. You throw your hands to your ears, doing your best to block out the sound. You eventually recover, but not without a pounding head[or]Flinging the entirety of its muscled mass at you, the Foul Scuttler bowls you over, rending massive gashes across your chest as it drags its claws across your body[or]Sliding past your defenses, the Foul Scuttler bites down on your leg, ripping large chunks of flesh off of your leg as it withdraws[or]Lowering its head and bounding forward, the beasts slams its head into your chest, knocking the wind out of you and throwing you back a few feet[at random].";

@@ -229,7 +229,7 @@ When Play begins:
 	add "Human Gangmember" to infections of MaleList;
 	add "Human Gangmember" to infections of HumanList;
 	now Name entry is "Human Gangmember"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The young man gives you a kick.[or]He smacks his baton into your side.[or]You get hit in the face by the human's elbow.[or]He tries to knee you in the groin - even though you manage to turn in the last moment, it still smarts as his knee hits your leg.[at random]";
@@ -397,7 +397,7 @@ When Play begins:
 	add "Blue Oni" to infections of BipedalList;
 	add "Blue Oni" to infections of MaleList;
 	now Name entry is "Blue Oni"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Rane";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[NonCombatError]";

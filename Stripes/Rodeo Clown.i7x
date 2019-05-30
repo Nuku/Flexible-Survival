@@ -71,7 +71,7 @@ When Play begins:
 	add "Rodeo Clown" to infections of HermList;
 	add "Rodeo Clown" to infections of BipedalList;
 	now Name entry is "Rodeo Clown";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Rodeo Clown jumps and dodges around, tiring you out as you chase it![or]The bull taunter leaps over your shoulder and shoves you into a nearby wall as you make a grab at it![or]The Rodeo Clown waves a prop red cape at you, then tosses it over your head. Unable to see for a moment, you get hit with a few light punches![or]The weaving and dodging clown leaps onto your back spanks your ass while riding you like a bucking bronco![or]The cavorting clown calls out 'Here bully-bully-bull!' while juggling its large tits alluringly at you![or]The floppy-limbed fool weaves and rolls about, taking slaps at you as it does![at random]";

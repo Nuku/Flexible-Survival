@@ -211,7 +211,7 @@ When Play begins:
 	add "Panther Taur" to infections of TaurList;
 	add "Panther Taur" to infections of TailList;
 	now Name entry is "Panther Taur"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";

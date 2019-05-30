@@ -417,7 +417,7 @@ When Play begins:
 	add "Sierrasaur" to infections of TailList;
 	add "Sierrasaur" to infections of TailweaponList;
 	now Name entry is "Sierrasaur";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Slowly[or]Ponderously[at random], the [one of]beast[or]creature[or]reptile[at random] [one of]tries forcing you to the ground, seemingly intent on compelling you into submission than overtly taking you out[or]attempts to tackle you, pinning you to the ground in hopes to subdue you[or]grabs you with its maw, attempting to hold onto you until you exhaust yourself from trying to get free[at random]. Eventually, you [one of]manage to pry yourself away[or]slip out of its hold[at random], [one of]maintaining your distance once more[or]needing a second to catch your breath before continuing[at random].";

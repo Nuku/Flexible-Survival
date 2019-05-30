@@ -137,7 +137,7 @@ When Play begins:
 	add "Naga" to infections of TailList;
 	add "Naga" to infections of TailweaponList;
 	now Name entry is "Naga";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The naga swipes at you with his pipe with alarming accuracy[or]With a loud hiss, the male naga lashes at you, sinking his fangs painfully into your [bodydesc of Player] body[or]The naga lashes out with its tail, striking you solidly with the heavy mass[at random].";

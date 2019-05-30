@@ -196,7 +196,7 @@ When Play begins:
 	add "Black Wasp" to infections of TailList;
 	add "Black Wasp" to infections of TailweaponList;
 	now Name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The wasp grabs at you with its insect legs, trying to shove you down![or]The black insect jabs its phallic stinger against you several times, leaking precum onto you![or]The bug nips at you with its mandibles![or][if scalevalue of Player < 4]The insect grabs you flies up several feat before tossing you to the ground[else]The insect grabs onto your arm and flies frantically. While not able to lift you, it does drag you around, pulling you into something nearby[end if]![or]The wasp buzzes angrily and bashes its chitinous body against yours![or]The insects numerous feet scratch at you with their little claws![at random]";

@@ -94,7 +94,7 @@ When Play begins:
 	add "Automaton" to infections of BipedalList;
 	add "Automaton" to infections of TailList;
 	now Name entry is "Automaton"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] strikes you with a metal fist![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] squeezes your wrist in its painfully strong grip![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] batters you hard blows![or][if a random chance of 1 in 3 succeeds]The automaton[else if autogender is 1]He[else]She[end if] knees you in the gut with its metal leg![at random]";

@@ -98,7 +98,7 @@ When Play begins:
 	add "Math Teacher" to infections of HermList;
 	add "Math Teacher" to infections of BipedalList;
 	now Name entry is "Math Teacher"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The teacher swats you painfully with her ruler![or]The professor bashes you with her textbook, making numbers swirl around in your eyes temporarily![or]The math teacher confuses you by asking you a math question that derails your brain. When you can't answer in time, she screams that you get an F and clubs you with her textbook![or]She runs her hands over her [if a random chance of 2 in 3 succeeds]D-cup breasts[else]plump ass cheeks[end if] while making sexy comments about their area, volume, density, elasticity and other numerical attributes, ending by summarizing them as [if a random chance of 1 in 3 succeeds]a 10 out of 10[else if a random chance of 1 in 2 succeeds]an A+[else]worth 10 bonus points[end if]. While unusual, this wanton display wears down your resistance to her advances![at random]";

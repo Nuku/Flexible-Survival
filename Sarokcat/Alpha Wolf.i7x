@@ -175,7 +175,7 @@ When Play begins:
 	add "Alpha Wolf" to infections of BipedalList;
 	add "Alpha Wolf" to infections of TailList;
 	now Name entry is "Alpha Wolf";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed paw out, slapping you down like a submissive wolf[or]His large, erect member catches your eye for a minute. Noticing, he pauses to stroke it and gestures towards you, the obvious demand eroding your desire to resist[or]He grabs your arm in his teeth and wrestles you to the ground[or]Striking where you aren't expecting it, he grabs your foot and jerks it out from under you, dumping you on the ground[at random].";

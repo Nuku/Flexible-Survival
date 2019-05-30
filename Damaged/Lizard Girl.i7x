@@ -131,7 +131,7 @@ When Play begins:
 	add "Lizard Girl" to infections of BipedalList;
 	add "Lizard Girl" to infections of TailList;
 	now Name entry is "Lizard Girl"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She rakes you with her sharp claws.[or]A spinning scaled form precludes the tail that smacks into your face, knocking you down.[or]Laughing the reptile lances her head forward to bite you on the arm.[at random][line break][lizgirl check angry]"; [Text used when the monster makes an Attack]

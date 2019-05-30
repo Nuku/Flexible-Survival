@@ -201,7 +201,7 @@ When Play begins:
 	add "Skunkbeast Lord" to infections of TailList;
 	add "Skunkbeast Lord" to infections of TailweaponList;
 	now Name entry is "Skunkbeast Lord"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The enormous skunkbeast bats you aside with one of its large paws as you make a rush for the gun![or]Those vicious teeth dig into you![or]The skunkbeast's paw slams atop you, trying to crush you with its massive bulk![or]The skunkbeast lord slashes at you with its claws![or]As you make a move towards the gun, the beast moves quickly and knocks you aside with its charge![or]You attempt a feint and then rush for the gun, but the beast continues to turn, bringing its huge tail to block your path and push you back. As you are tossed back, you take in a heavy whiff of its strong, masculine scent and your will to keep resisting its bestial might erodes further![at random]"; [ Successful attack message ]

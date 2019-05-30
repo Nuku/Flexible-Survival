@@ -195,7 +195,7 @@ When Play begins:
 	add "Cerberus" to infections of QuadrupedalList;
 	add "Cerberus" to infections of TailList;
 	now Name entry is "Cerberus"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Cerberus herm growls and swings hir powerful arms at you, striking you with hir heavy paws![or]The Cerberus herm presses hir body to yours, leaking milk from hir many nipples across your body. The scent of that warm milk running across your body and the scent of it filling your nose weakens your resolve to keep fighting hir![or]The canine foe releases spurts of hir pre from hir tail's cock across your face. You can't help but lick it up and find yourself thirsting for more![or]As shi grapples with you, hir tailcock rubs against you, spurting precum onto your body. The scent of it excites you, making you want to cease struggling![or]Dropping briefly to all fours, the Cerberus herm pounces at you and knocks you over, hir triple heads panting and drooling as shi grinds hir wet pussy against you until you manage to push away![at random]";

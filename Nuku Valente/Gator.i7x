@@ -109,7 +109,7 @@ When Play begins:
 	add "Gator Herm" to infections of TailList;
 	add "Gator Herm" to infections of TailweaponList;
 	now Name entry is "Gator Herm"; [Name of your new Monster]
-	now enemy title entry is "Sewer Gator"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Sewer Gator"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She drags you towards the water with a sneer.[or]She manages to get your head under the surface of the water, holding you down a moment.[or]Her excited member grinds against your sensitive regions needfully as her powerful claws grapple at you.[or]Her terrible teeth snap at you, sending pain through your form.[at random]"; [Text used when the monster makes an Attack]

@@ -117,7 +117,7 @@ When Play begins:
 	add "Satyr" to infections of BipedalList;
 	add "Satyr" to infections of TailList;
 	now Name entry is "Satyr";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He splashes wine around everywhere, as he tries to get you to try some.[or]He grins as he shows off his large goat cock, the sight stirring something strange deep within you.[or]His strong goat-like musk distracts you for a minute as he attacks.[or]Dancing around nimbly on his goat hooves, the satyr then plants one of the hooves right where it hurts the most.[or]Swinging the wine cup around haphazardly, somehow he manages to bounce it off your head.[or]The satyr brings up his pipes and whistles a little tune, and to your surprise you can't help but dance a little.[at random]";

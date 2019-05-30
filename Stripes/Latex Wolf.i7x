@@ -145,7 +145,7 @@ When Play begins:
 	add "Latex Wolf" to infections of QuadrupedalList;
 	add "Latex Wolf" to infections of TailList;
 	now Name entry is "Latex Wolf"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The latex wolf [one of]slaps you with a rubbery pad[or]claws you with plastic nails[or]bites with rubbery teeth[or]pounces forward and bodyslams you[at random].";

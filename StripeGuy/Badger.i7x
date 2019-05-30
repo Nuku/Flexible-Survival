@@ -38,7 +38,7 @@ When Play begins:
 	add "Badger" to infections of BipedalList;
 	add "Badger" to infections of TailList;
 	now Name entry is "Badger";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The brock lunges forward, leaning his shoulder into a powerful tackle![or]The big mustelid rubs down his striped body, flexing thick musculature in sequence, milking out his thickly scented musk. He flings the liquid at you in a spray, dazing you![or]The broad badger bring his big paws to bear, swiping at you with his thick claws![or]With a deep growl, the badger crouches down and shoots forward, open muzzle darting forward to bite![or]The gruff badger stud throws himself forward into a dropkick, slamming his stout legs into your chest![at random]";

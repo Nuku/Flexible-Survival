@@ -71,7 +71,7 @@ When Play begins:
 	add "Corota" to infections of TailList;
 	add "Corota" to infections of TailweaponList;
 	now Name entry is "Corota"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The corota[or]She[or]The serpent-hybrid[or]The bifurcated creature[as decreasingly likely outcomes] [one of]sweeps your feet out from under your with a pass of its powerful tails[or]bashes its thick tails against you[or]moves its head in to bite, splitting them at the last moment to avoid your block and bite you from two sides[or]sinks its fangs into your side[or]slashes at you with its claws, rending at your flesh[at random]";

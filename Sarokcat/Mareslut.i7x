@@ -55,7 +55,7 @@ When Play begins:
 	add "Mareslut" to infections of BipedalList;
 	add "Mareslut" to infections of TailList;
 	now Name entry is "Mareslut";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She rubs her large sexy breasts teasingly as she slides up against you.[or]The mare reaches out and strokes her hands over your body teasingly[or]The powerful mare moves surprisingly fast as she slams one of her hoof-like fists into your body![or]The sexy mare charges forward, running right into you![or]She gives you an equine grin for a minute, confusing you slightly, as she slowly stretches and poses teasingly in front of you, your body growing hot and aroused from the sexy show.[or]The mare reaches out with her powerful arms, and tries to pin you up against her sexy body, rubbing her soft fur all over your skin as she moans with excitement![or]She charges forward, and her hoof-like hands reach around your head, and pull you forward until your face is buried in her ample cleavage while she moans with excitement as she rubs her soft breasts up against your face.[at random]";

@@ -50,7 +50,7 @@ When Play begins:
 	add "Hippo" to infections of BipedalList;
 	add "Hippo" to infections of TailList;
 	now Name entry is "Hippo"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Hippo Strongman"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Hippo Strongman"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The hippo strongman crushes you with his muscly arms![or]The strongman delivers a pair of powerful blows with his meaty fists![or]The hippo strongman grabs you roughly and slams you down so hard onto his strength test that he rings the bell... or maybe that's just the ringing in your head![or]The big hippo bashes you with the large mallet for his strength test![or]Grabbing one of his heavy barbells, he heaves it at you. You manage to get partially out of the way, but are still struck hard by one of the metal ends![or]The strongman lobs several of his dumbbells at you, painfully slamming the weights into you![or]The muscled hippoman strikes your jaw with a fist as hard as stone![at random]"; [ Successful attack message ]

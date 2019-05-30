@@ -75,7 +75,7 @@ When Play begins:
 	add "Giraffe" to infections of BipedalList;
 	add "Giraffe" to infections of TailList;
 	now Name entry is "Giraffe"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The giraffe slides her tongue across your face in a long slurp that sends shivers of delight through you.[or]The well-endowed herm slaps her have cock against you, trying to knock you down with her hefty slab of meat.[or]She kicks you solidly with her hoof![or]The tall herm charges you, using her head and long neck like a battering ram to your gut![or]Her long reach lets her deck you in the face with a solid punch![at random]";

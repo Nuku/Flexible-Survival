@@ -270,7 +270,7 @@ When Play begins:
 	add "Seraphim Warrior" to the infections of BipedalList;
 	add "Seraphim Warrior" to the infections of Flightlist;
 	now Name entry is "Seraphim Warrior";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Gabriel";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Seraphim calls out, 'Surrender! This just prolongs your pain. It will be over quickly if you do not struggle.' Then he smites you with a faintly glowing hand.[or]Your angelic opponent calls out, 'Stop fighting, foolish mortal - I only want to help you!' Then he gives you a hard punch in the face, a mixture of regret and annoyance on his face.[or]Hooking a foot behind your leg, the Seraphim pulls it out from under you. As you crash down on the ground, he calls out, 'Surrender, I do not wish to hurt you more than necessary.'[at random]";

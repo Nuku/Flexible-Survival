@@ -77,7 +77,7 @@ When Play begins:
 	add "Leopardman" to infections of BipedalList;
 	add "Leopardman" to infections of TailList;
 	now Name entry is "Leopardman";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The leopardman swipes at you with his sharp claws![or]The leopardman pounces you playfully![or]He darts forward quickly and lashes out with a closed fist![or]The leopardman pauses for a second to watch you carefully, before darting forward and swiping at your legs, knocking you down![or]The leopardman grabs your arms with his hands, and leans forward to give you a teasing kiss before releasing you.[or]He charges forward and knocks you into a wall, pinning you for a second while he rubs his soft fur against you.[at random]";

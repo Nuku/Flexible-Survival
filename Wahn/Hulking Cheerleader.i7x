@@ -81,7 +81,7 @@ When Play begins:
 	add "Hulking Cheerleader" to infections of TransList; [dickgirl]
 	add "Hulking Cheerleader" to infections of BipedalList; [dickgirl]
 	now Name entry is "Hulking Cheerleader";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]You get grabbed by an arm and slammed on the ground.[or]Your opponent throws a pom-pom at your face, then kicks you while you're distracted.[or]The cheerleader does an awe-inspiring flip through the air and suddenly lands right behind you. Before you can react, you are caught in a bearhug and gasping for air.[at random]"; [Text used when the monster makes an Attack]

@@ -94,7 +94,7 @@ When Play begins:
 	add "Dark Elf" to infections of HermList;
 	add "Dark Elf" to infections of BipedalList;
 	now Name entry is "Dark Elf"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dark elf[or]The ebon-skinned elf[or]The dark-skinned herm[or]She[at random] [one of]moves with speed and grace as she weaves in close and punches you in the side[or]grabs you roughly with those sharp-nailed hands and knees you in the gut[or]twists your arm roughly as she tries to force you to the ground[or]bends her exotic body a swift motion that quickly brings her leg up and around, striking you hard[at random]!"; [ Successful attack message ]

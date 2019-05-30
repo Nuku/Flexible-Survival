@@ -481,7 +481,7 @@ When Play begins:
 	add "Malayan Tiger Herm" to infections of BipedalList;
 	add "Malayan Tiger Herm" to infections of TailList;
 	now Name entry is "Malayan Tiger Herm"; [Name of the monster infection]
-	now enemy title entry is "Tigress Hooker"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Tigress Hooker"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Slamming her shoulder into you, she pushes you back against a nearby wall, grabbing your groin![or]Punched in the gut, you reflexively bend forward, allowing her to bury your face in her cleavage![or]The tigress grabs you in a reverse arm lock and grinds the hard bulge under her skirt against your rear until you can twist free![or]You have but a moment to awe at the tigress's flexibility before that kick strikes you upside the head! Dazed, you try to get up, only to have her press your face under her skirt and against her pink panties![or]After several quick slashes of her claws, she grabs your shoulders and pulls you forward into an equally fierce kiss![or]With a judo throw, she tosses you to the ground, then pounces atop you, nipping along your neck with a rumbling purr! As you roll away, she manages to grab your ass one last time![at random]";

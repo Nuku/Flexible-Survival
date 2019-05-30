@@ -88,7 +88,7 @@ When Play begins:
 	add "Dryad" to infections of HermList;
 	add "Dryad" to infections of BipedalList;
 	now Name entry is "Dryad"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The dryad [one of]punches your face solidly with a fist that feels like bark[or]kicks your face, exposing her cute pussy[or]whips the tree's branches at you[or]causes tentacle-like vines to rise out of the ground and slap you[at random]."; [Text used when the monster makes an Attack]

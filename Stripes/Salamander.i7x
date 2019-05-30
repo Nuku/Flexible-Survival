@@ -59,7 +59,7 @@ When Play begins:
 	add "Salamander" to infections of TailweaponList;
 	add "Salamander" to infections of FirebreathList;
 	now Name entry is "Salamander";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]salamander[or]salamander femme[or]female amphibian[or]red salamander[or]speckled salamander[at random] [one of]scratches at you with her claws[or]smacks you with her tail[or]bites you with her wide mouth[or]contorts in an unnatural manner to punch you in the side[or]grabs onto you and turns up her personal heat, cooking your flesh[in random order].";

@@ -631,7 +631,7 @@ When Play begins:
 	add "Human Martial Artist" to infections of MaleList;
 	add "Human Martial Artist" to infections of BipedalList;
 	now Name entry is "Human Martial Artist";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Joshiro";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Joshiro kicks you right in the face.[or]The martial artist kicks your knee.[or]For a second, you think you got him, but Joshiro elbows you in the stomach and sends you stumbling back.[or]Joshiro's balled fist hits your side![at random]";

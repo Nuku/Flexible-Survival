@@ -50,7 +50,7 @@ When Play begins:
 	add "Ewe" to infections of BipedalList;
 	add "Ewe" to infections of TailList;
 	now Name entry is "Ewe";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She moves forward and rubs her soft wool over your body.[or]She lowers her head down and charges, knocking you back.[or]The ewe eyes you carefully before striking at your weak spots![or]The naked ewe pauses and strokes her soft wool teasingly, distracting you from the fight![or]The ewe windmills her arms as she charges forward, somehow managing to land a lucky blow.[at random]";

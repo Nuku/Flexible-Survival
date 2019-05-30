@@ -116,7 +116,7 @@ When Play begins:
 	add "Red Kangaroo" to infections of TailList;
 	add "Red Kangaroo" to infections of TailweaponList;
 	now Name entry is "Red Kangaroo"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble[or]Sweeping around, the powerful tail slams into your side, knocking the wind out of your lungs[or]After blocking a punch, she throws an uppercut into your chin, followed by a left and then a right jab to your stomach[or]The kangaroo hops from one foot to the other as she delivers a series of quick punches[at random].[rookickreset]"; [Text used when the monster makes an Attack]

@@ -550,7 +550,7 @@ When Play begins:
 	add "Dragon" to infections of TailList;
 	add "Dragon" to infections of TailweaponList;
 	now Name entry is "Dragon"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The dragoness slams into you, slamming you back against one of the tables![or]Orthas slashes out at you with her sharp claws, slashing you violently![or]The dragoness's sharp teeth dig into your arm, biting into your flesh![or]Despite her large size, the black dragoness makes a sweeping kick to your legs, sending you to the ground![or]Orthas's jaws move in, trying to bite your head. You manage to grab her head and keep her from getting you with a potentially lethal bite. As you struggle to hold her, she exhales a thick cloud of smoke and sparks that cause you to choke![or]Orthas strikes at you with a series of martial arts strikes. You struggle to block, but end up battered![or]Orthas feints with her fists and manages to wrap her tail around your waist long enough to land a powerful uppercut![at random]";

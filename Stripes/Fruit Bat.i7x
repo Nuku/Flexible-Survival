@@ -155,7 +155,7 @@ When Play begins:
 	add "Fruit Bat" to infections of FlightList;
 	add "Fruit Bat" to infections of TailList;
 	now Name entry is "Fruit Bat"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your [if Breast Size of Player > 0 and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";

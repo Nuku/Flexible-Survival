@@ -240,7 +240,7 @@ When Play begins:
 	add "Pink Gel" to infections of TentacleCockList;
 	add "Pink Gel" to infections of SlidingList;
 	now Name entry is "Pink Gel"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Pink Gel tries to suffocate you with her enormous boobs![or]The Pink Gel strikes you in the jaw with surprising force![or]The Pink Gel lands a swift kick to your gut, knocking the wind out of you![or]The Pink Gel squeezes you in a tight hug, making it hard for you to breath![at random]"; [ Successful attack message ]
@@ -406,7 +406,7 @@ When Play begins:
 	add "Blue Gel" to infections of TentacleCockList;
 	add "Blue Gel" to infections of SlidingList;
 	now Name entry is "Blue Gel"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Blue Gel slaps you with his footlong cock![or]The Blue Gel strikes you in the jaw with surprising force![or]The Blue Gel lands a swift kick to your gut, knocking the wind out of you![or]The Blue Gel crushes you in a tight hug, making it hard for you to breath![at random]"; [ Successful attack message ]
@@ -572,7 +572,7 @@ When Play begins:
 	add "Purple Gel" to infections of TentacleCockList;
 	add "Purple Gel" to infections of SlidingList;
 	now Name entry is "Purple Gel"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Purple Gel tries to suffocate you with her enormous boobs![or]The Purple Gel slaps you with her footlong cock![or]The Purple Gel strikes you in the jaw with surprising force![or]The Purple Gel lands a swift kick to your gut, knocking the wind out of you![or]The Purple Gel squeezes you in a tight hug, making it hard for you to breath![at random]"; [ Successful attack message ]

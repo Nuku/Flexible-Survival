@@ -288,7 +288,7 @@ When Play begins:
 	add "Blue Gryphon Herm" to infections of FlightList;
 	add "Blue Gryphon Herm" to infections of TailList;
 	now Name entry is "Blue Gryphon Herm"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "She [one of]throws her impressive, and somewhat jiggly bulk against you[or]snaps at you with that razor sharp beak, leaving a thin red line as it cuts your [Skin of Player] body[or]presses up against you suddenly and grinds her huge shaft against your belly. While you are distracted, you can feel her grabbing at your sides, squeezing painfully[or]charges at you, wings pulling her free of the ground just moments before her body crashes into you[at random].";

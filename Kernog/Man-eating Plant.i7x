@@ -34,7 +34,7 @@ When Play begins:
 	add "Man-eating Plant" to infections of BipedalList;
 	add "Man-eating Plant" to infections of TailList;
 	now Name entry is "Man-eating Plant"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[didnotsubmit][one of]One of the vines slap your thigh, leaving a small bruise.[or]A vine makes a downward motion on your head, clubbering you with surprising strength.[or]You barely evade one of the vines attempting to grab your arm, leaving instead a shallow cut on your skin.[or]One of the vines manages to get around your neck, choking you until you can pull it off and gasp for air.[at random]"; [Text used when the monster makes an Attack]

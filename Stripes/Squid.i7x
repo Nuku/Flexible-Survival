@@ -80,7 +80,7 @@ When Play begins:
 	add "Squid" to infections of FeralmindList;
 	add "Squid" to infections of TailweaponList;
 	now Name entry is "Squid";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The squid girl whips her tentacles at you, slapping you around with her numerous tentacles![or]The female cephalopod turns and squids ink at you, temporarily blinding you and letting her strike at you with her tentacles![or]The squid girl wraps her tentacles around you and squeezes, trying to crush the fight out of you![or]The squid's tentacle arms manage to latch onto you, pulling you into her embrace for a cold, wet kiss![or]The squid girls tentacles grab you, groping you all over![at random]";

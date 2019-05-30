@@ -141,7 +141,7 @@ When Play begins:
 	add "Football Gorilla" to infections of MaleList;
 	add "Football Gorilla" to infections of BipedalList;
 	now Name entry is "Football Gorilla";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The gorilla throws himself on you in a tackle that drives the air out of your lungs.[or]Calling out, 'Come on, let's have some fun,' the gorilla claps his strong hand against your back, with a strength that leaves you somewhat stunned.[or]You get thrown aside and fall down as the gorilla demonstrates one of his moves - by running at you at full steam and striping you with his armored shoulder-pad.[at random]"; [Text used when the monster makes an Attack]

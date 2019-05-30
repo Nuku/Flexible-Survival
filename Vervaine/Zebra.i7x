@@ -455,7 +455,7 @@ When Play begins:
 	add "Zebra Stallion" to infections of BipedalList;
 	add "Zebra Stallion" to infections of TailList;
 	now Name entry is "Zebra Stallion";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He slams his large forehead right into your head, causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grins at you lewdly, the sight and his strong dominant musk sapping your will to fight![or]He lashes out at you with his strong hoof-like hands![or]He charges forward wildly, slamming his body into yours![or]The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]";

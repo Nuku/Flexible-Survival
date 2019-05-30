@@ -182,7 +182,7 @@ When Play begins:
 	add "Latex Vixen Herm" to infections of BipedalList;
 	add "Latex Vixen Herm" to infections of TailList;
 	now Name entry is "Latex Vixen Herm";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She swipes at you with her sharp black claws, leaving trails of blood across your chest[or]You see a brilliant flash of red as the Vixen spins and whips at you with her rubber, yet still bushy, tail[or]Her head darts forward, gleaming teeth nipping at you[at random].";

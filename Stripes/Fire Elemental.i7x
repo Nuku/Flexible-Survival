@@ -92,7 +92,7 @@ When Play begins:
 	add "Fire Elemental" to infections of BarbedCockList;
 	add "Fire Elemental" to infections of BipedalList;
 	now Name entry is "Fire Elemental"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The fire elemental[or]The fiery woman[or]The flaming woman[or]She[at random] [one of]sends a burst of flame at you[or]exhales a cone of heat[or]sends a fiery kick at you[or]strikes you with a flaming fist[at random]!";

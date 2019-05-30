@@ -97,7 +97,7 @@ When Play begins:
 	add "Cum Girl" to infections of FemaleList;
 	add "Cum Girl" to infections of SlidingList;
 	now Name entry is "Cum Girl"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The cum girl's arm quickly elongates as she strikes at you with a whip-like motion[or]The cum girl pulls you into a warm, sticky hug, planting several kisses on your face before you manage to push her away[or]The cum girl's arousing aroma of sex distracts you momentarily, allowing her to strike you quickly[or]The cum girl lashes out with both arms, quickly forming long gooey tendrils that wrap themselves around your legs, tripping you[at random]!"; [ Successful attack message ]

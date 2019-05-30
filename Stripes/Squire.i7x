@@ -287,7 +287,7 @@ When Play begins:
 	add "Squire" to infections of MaleList;
 	add "Squire" to infections of BipedalList;
 	now Name entry is "Squire"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The squire[or]The brave lad[or]The young man[or]The bold retainer[or]The brave squire[as decreasingly likely outcomes] [one of]swings his short sword at you[or]jab at you with his sword[or]manages a quick hit on you[or]feints before striking you with his blade[or]shows some skill as he dodges before thrusting at you[at random]!";

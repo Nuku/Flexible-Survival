@@ -39,7 +39,7 @@ When Play begins:
 	add "Arctic Fox" to infections of BipedalList;
 	add "Arctic Fox" to infections of TailList;
 	now Name entry is "Arctic Fox";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster than the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the arctic fox purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground![or]She bunches her powerful hind legs up, and leaps directly at you, painfully knocking you back![or]She grins at you, baring her sharp canid teeth, before leaping forward and biting you.[at random]";

@@ -33,7 +33,7 @@ When Play begins:
 	add "Prairie Dog" to infections of BipedalList;
 	add "Prairie Dog" to infections of TailList;
 	now Name entry is "Prairie Dog";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The prairie dogs bite and nip at your legs![or]The burrowing rodents swing at you with sticks and toy shovels from all sides![or]A team of the rodents charge at you, latching onto your legs and trying to pull you down![or]As you try to ward off the blows from those closest to you, four at the back take another by the arms and legs, swinging and launching her to land in your face. She pounds at your head while grinding her earthy-smelling ballsack in your face![or]One of the prairie dogs rides on the shoulders of another and climbs onto your back to nip and scratch at you while the others keep at you from all sides![or]Your legs and hips are scratched and clawed from the horde around you![at random]";

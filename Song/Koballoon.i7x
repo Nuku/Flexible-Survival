@@ -356,7 +356,6 @@ Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
@@ -370,7 +369,7 @@ When Play begins:
 	add "Koballoon" to infections of TailList;
 	add "Koballoon" to infections of TailweaponList;
 	now Name entry is "Koballoon"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]One of the koballoons bounces up behind you swings his mighty cock, knocking you over![or]Disoriented by the koballoons['] constant bouncing, you're caught off-guard by one of them tackling you from the side![or]One of the twisted kobolds strokes its cock until unloading with a loud moan. You barely dodge the blast, only to be caught in the arms of another latex creature and pushed back and forth between their ranks for a while.[or]A koballoon spins as it bounces and laughs. His massive, swinging prick slams against your chest, nearly knocking the wind of you![or]The koballoons push and shove at you while laughing at your predicament. You're left feeling dizzy and disoriented by their playful assault![or]One of the over-endowed kobolds manages to grapple you, holding you tightly to his fore as he bounces around energetically, his massive cock rubbing against your back all the while. By the time he releases you, you're left slick with his lube-like pre, your will to fight faltering.[or]Growing dizzy in the flurry of movements, a koballoon seizes the opportunity to bounce behind you and wrap his arms around your midriff. He grinds his stiff cock against your back, smearing his heady pre into your flesh and nibbling on your neck. After having his fun, you're passed between several other lustful kobolds, who grope and play with you until you finally wrench free.[at random]"; [ Successful attack message ]

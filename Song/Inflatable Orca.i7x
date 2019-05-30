@@ -406,7 +406,7 @@ When Play begins:
 	add "Inflatable Orca" to infections of TailList;
 	add "Inflatable Orca" to infections of TailweaponList;
 	now Name entry is "Inflatable Orca"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The playful cetacean bumps you every which way, making you stumble on the unsteady footing of the padded floor[or]The orca knocks you off your feet with a mighty swing of its tail[or]Trilling playfully, the orca rears up and rubs its synthetic body against your side, making you stumble[or]The large inflatable jumps at you and attempts to pin you down. You quickly weasel out from under it before it can do much else[or]The giant orca slams the ground with it tail, bouncing you up into the air before landing harmlessly on the padded floor again[or]The cetacean makes a point of rubbing against you suggestively. You stumble in your efforts to push it away[at random].";

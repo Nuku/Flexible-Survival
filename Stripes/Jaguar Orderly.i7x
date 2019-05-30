@@ -122,7 +122,7 @@ When Play begins:
 	add "Jaguar" to infections of BipedalList;
 	add "Jaguar" to infections of TailList;
 	now Name entry is "Jaguar"; [Name of your new Monster]
-	now enemy title entry is "Jaguar Orderly"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Jaguar Orderly"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The jaguar orderly strikes you firmly across the head![or]The orderly grabs his strong arms around you and squeezes you until you're able to slip free![or]The angry jaguar bites down on your arm with his powerful jaws![or]The vicious creature slashes at you with its sharp claws, leaving bloody gashes![or]Charges at you, slamming his shoulder into your chest and knocking you back several steps![or]The feline orderly grabs your arm and twists it behind your back in an attempt to painfully restrain you![or]The beast growls and headbutts you so hard that you're dizzy for a moment![or]The powerful jungle cat punches you hard in the chest, making you wheeze for breath![or]He clubs your sides repeatedly with his fists![at random]";

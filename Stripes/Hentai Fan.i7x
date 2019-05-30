@@ -35,7 +35,7 @@ When Play begins:
 	add "Hentai Fan" to infections of MaleList;
 	add "Hentai Fan" to infections of BipedalList;
 	now Name entry is "Hentai Fan"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The tentacle creature[or]The tentacled young man[or]The tentacled student[or]The mutant fanboy[or]The grabby otaku[at random] [one of]strikes at you with his sticky tentacles[or]slides a tentacle across your loins[or]manages to pinch your ass while his tentacles are assaulting you[or]drones on incessantly about anime and manga, muddling your mind[or]fakes you out with his tentacles to instead punch you[at random].";

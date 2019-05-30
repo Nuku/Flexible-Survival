@@ -176,7 +176,7 @@ When Play begins:
 	add "Feral Gryphon" to infections of FeralmindList;
 	add "Feral Gryphon" to infections of TailList;
 	now Name entry is "Feral Gryphon";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The gryphon slashes at you with a sharp talon![or]The gryphon pecks you relentlessly![or]The gryphon batters you with its wings![or]The gryphon gives a shrill screech![at random]";

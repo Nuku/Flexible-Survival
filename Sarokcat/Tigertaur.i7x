@@ -75,7 +75,7 @@ When Play begins:
 	add "Tigertaur" to infections of TaurList;
 	add "Tigertaur" to infections of TailList;
 	now Name entry is "Tigertaur";
-	now enemy title entry is "Tigertaur"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Tigertaur"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She leaps forward, slamming her large body into you roughly[or]Lashing out with one of her large tiger forepaws, she her claws rake over your body.[or]The tiger-like taur moans and rubs her hands along her body, a strong scent of need and arousal filling the air.[or]Much to your surprise, she rubs her body against yours in excitement instead of attacking![or]Dancing forward on her four feline legs, she lashes out with one of her clawed hands.[or]Springing forward, she slams her head forward, her tiger teeth glinting dangerously as they approach your face, only to find her muzzle lock with your mouth as she kisses you passionately![or]She charges forward, her hands and paws roaming excitedly over your body as she tries to find a way to pin you down.[at random]";

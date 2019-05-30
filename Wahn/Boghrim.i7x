@@ -894,7 +894,7 @@ When Play begins:
 	add "Orc Boss" to infections of MpregList;
 	add "Orc Boss" to infections of BipedalList;
 	now Name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Boghrim";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Boghrim[or]The powerful orc[or]The green-skinned brute[or]The muscular orc[or]The brutish orc[or]The muscled brute[at random] [one of]throws himself on you, pushing you down on the mattress. You can feel his erect cock rub against your side hotly before you manage to wind your way out of his grasp.[or]gets a grip on your shoulder and pushes you down, putting you on all fours with your ass raised. When you feel one of this thick fingers brush over your asshole an eye-blink later, you barely manage to crawl away before he starts to finger-fuck you.[or]grabs you by the neck, pulling your head down against his crotch. His cock rests hotly against your cheek for a moment, leaving a string of precum when you manage to pull away.[or]gives you a light slap that dazes you for a second, then lets his large hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";

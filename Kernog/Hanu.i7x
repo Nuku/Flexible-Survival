@@ -273,7 +273,7 @@ When Play begins:
 	add "Monkey Thug" to infections of BipedalList;
 	add "Monkey Thug" to infections of TailList;
 	now Name entry is "Monkey Thug";
-	now enemy title entry is "Wukong Thugs"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Wukong Thugs"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]You leave yourself open for one of the thugs to grab your arms, offering a couple of cheap shots to his comrades[or]One of the thugs tackle you, and you fall on your butt. You struggle to get her off of you while her friends kick your body[or]One of the thugs grab you, forcing you to a standstill while one of his allies deliver a sturdy kick in your ribs[at random].";

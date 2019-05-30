@@ -426,7 +426,7 @@ When Play begins:
 	add "Butterfly" to infections of BipedalList;
 	add "Butterfly" to infections of FlightList;
 	now Name entry is "Butterfly"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Mariposa";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high-pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]

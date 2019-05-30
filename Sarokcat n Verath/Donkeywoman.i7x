@@ -89,7 +89,7 @@ When Play begins:
 	add "Donkeywoman" to infections of BipedalList;
 	add "Donkeywoman" to infections of TailList;
 	now Name entry is "Donkeywoman";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The sexy donkeywoman lets out a loud braying laugh as she mocks your attempt to escape, the sound making you feel surprisingly submissive.[or]She lashes out at you with her short riding crop, its stinging bite making you feel strangely more submissive with each strike.[or]She reaches out and traces the tip of her whip over your skin teasingly, the touch of the soft leather making you shudder with desire.[or]She raises her whip to strike at you, and as you duck away, her other hand lashes out at you and strikes you square in the face, knocking you back![or]She strides forward confidently, describing lovingly just what kind of strangely sexy bondage games she has in store for you, her words making you shudder slightly with a strange desire to give in to the powerful female and let her have her way with you.[or]She charges right at you and twists aside at the last second, bringing her hand around to grab at your crotch teasingly.[at random]";

@@ -99,7 +99,7 @@ When Play begins:
 	add "Tenrec" to infections of TailList;
 	add "Tenrec" to infections of TailweaponList;
 	now Name entry is "Tenrec";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The tenrec lunges for you with both paws slashing![or]The sleek fisherstud darts left, then right, and traps you in a tight hug with his large tail, grinding his cock up against you![or]The limber otter-shrew feints left and strikes with his large tail![or]The fisherman reaches into his loose coat and pulls out a large fish. Which is then chucked at your head![or]The no-nonsense tenrec just punches you upside your head like an errant cub.[or]With a snarl, the tenrec uses his sharp teeth to bite you![or]The horny male grabs hold of a passing net, swinging above you. He uses his height to splatter precum all over you![at random]";

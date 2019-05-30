@@ -147,7 +147,7 @@ When Play begins:
 	add "Elk Tribe Bull" to infections of BipedalList;
 	add "Elk Tribe Bull" to infections of TailList;
 	now Name entry is "Elk Tribe Bull";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
@@ -457,7 +457,7 @@ When Play begins:
 	add "Elk Tribe Cow" to infections of BipedalList;
 	add "Elk Tribe Cow" to infections of TailList;
 	now Name entry is "Elk Tribe Cow";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
@@ -767,7 +767,7 @@ When Play begins:
 	add "Elk Tribe Herm" to infections of BipedalList;
 	add "Elk Tribe Herm" to infections of TailList;
 	now Name entry is "Elk Tribe Herm";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
@@ -1078,7 +1078,7 @@ When Play begins:
 	add "Elk Tribe Trans Bull" to infections of BipedalList;
 	add "Elk Tribe Trans Bull" to infections of TailList;
 	now Name entry is "Elk Tribe Trans Bull";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
@@ -1388,7 +1388,7 @@ When Play begins:
 	add "Elk Tribe Trans Cow" to infections of BipedalList;
 	add "Elk Tribe Trans Cow" to infections of TailList;
 	now Name entry is "Elk Tribe Trans Cow";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";

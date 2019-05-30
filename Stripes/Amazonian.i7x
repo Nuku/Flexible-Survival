@@ -72,7 +72,7 @@ When Play begins:
 	add "Amazonian" to infections of HermList;
 	add "Amazonian" to infections of BipedalList;
 	now Name entry is "Amazonian"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She[or]The Amazonian[or]The Amazon woman[or]The muscular herm[at random] [one of]strikes you with a powerful punch[or]connects with a snap kick[or]strikes you with a powerful blow[at random].";

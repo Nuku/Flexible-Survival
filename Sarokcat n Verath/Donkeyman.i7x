@@ -86,7 +86,7 @@ When Play begins:
 	add "Donkeyman" to infections of BipedalList;
 	add "Donkeyman" to infections of TailList;
 	now Name entry is "Donkeyman";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]";

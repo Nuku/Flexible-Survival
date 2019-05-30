@@ -169,7 +169,7 @@ When Play begins:
 	add "Anime Babe" to infections of FemaleList;
 	add "Anime Babe" to infections of BipedalList;
 	now Name entry is "Anime Babe"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The anime babe giggles as she punches you soundly, sending you flying![or]The anime babe whips out a paper fan and smacks you repeatedly until you're dizzy![or]The anime babe kicks you in the gut![or]The anime babe bends over, flashing her panties at you![or]The anime babe lunges at you, burying your face in her bosom![at random]";

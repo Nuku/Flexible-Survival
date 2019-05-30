@@ -123,7 +123,7 @@ When Play begins:
 	add "Latex Ermine" to infections of BipedalList;
 	add "Latex Ermine" to infections of TailList;
 	now Name entry is "Latex Ermine";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The latex ermine[or]The latex beauty[or]The curvy ermine[or]The sensual stoat[or]She[at random] [one of]gropes you before you can pull away from her eager grabbing[or]caresses her smooth hands over your [bodytype of Player] body while suggesting you two have some fun together[or]manages to slide in close and rubs her sexy body against yours, tempting you to give in[or]presses her soft, tantalizing melons against you, weakening your resistance to just giving in and playing with her[or]shoves you roughly, calling you a meanie for not playing with her[or]runs her large tail across your [bodydesc of Player] body. Its sensual touch feels very good, making you want to grab that sexy body of hers[at random].[le_libidoup]";

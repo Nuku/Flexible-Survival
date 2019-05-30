@@ -194,7 +194,7 @@ When Play begins:
 	add "Enhanced Chimera" to infections of TailList;
 	add "Enhanced Chimera" to infections of TailweaponList;
 	now Name entry is "Enhanced Chimera"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]enhanced chimera[or]powerful chimera[or]hybrid creature[or]lustful chimera[at random] [one of]strikes you with one of its powerful backhand[or]bashes you with an armored fist[or]charges you with its horns[or]head-butts you hard enough to make your head ring[or]slashes at you with its claws[or]gnaws at your arm with its mix of sharp teeth[or]growls and kicks you hard with a powerful leg[or]spins around sharply to bash you against a wall with its big tail[at random]!";

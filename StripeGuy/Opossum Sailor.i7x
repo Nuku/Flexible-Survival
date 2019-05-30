@@ -44,7 +44,7 @@ When Play begins:
 	add "Opossum Herm" to infections of TailList;
 	add "Opossum Herm" to infections of TailweaponList;
 	now Name entry is "Opossum Herm";
-	now enemy title entry is "Opossum Sailor"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Opossum Sailor"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]";

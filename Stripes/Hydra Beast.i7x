@@ -228,7 +228,7 @@ When Play begins:
 	add "Hydra Beast" to infections of TailList;
 	add "Hydra Beast" to infections of TailweaponList;
 	now Name entry is "Hydra Beast"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The hydra beast[or]The hydra[or]The scaled horror[or]The multi-headed monstrosity[or]It[at random] [one of]manages to bite down onto you firmly with one of its fearsome heads![or]bashes its thick, ridged tail into you when you try to outmaneuver its many snapping jaws![or]chomps down on you with on of its fang-filled mouths![or]bashes one of its heads into you, knocking you back![or]rears up with surprising ease for something of its size and tears into you with a clawed foot![or]latches one of its mouths around your waist, biting deeply before you force its jaws open and pull free![at random]";

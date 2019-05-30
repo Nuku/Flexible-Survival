@@ -74,7 +74,7 @@ When Play begins:
 	add "Cougar" to infections of BipedalList;
 	add "Cougar" to infections of TailList;
 	now Name entry is "Cougar"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The tough feline slashes at you with her sharp claws![or]The puma tries to bear you down under her weight. You get away, but not without several scratches![or]The cougar's teeth dig into your side![or]The mountain lion kicks you in the leg![or]The creature grabs you with one paw and digs her claws in while the other moves to grope you![or]Grabbing your wrists, the big cat pushes your arms away so she can grind her body against yours. You can feel her firm breasts and throbbing cock pressed against you![at random]"; [ Successful attack message ]

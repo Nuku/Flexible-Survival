@@ -260,7 +260,7 @@ When Play begins:
 	add "Fire Sprite" to infections of NatureList;
 	add "Fire Sprite" to infections of BipedalList;
 	now Name entry is "Fire Sprite"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The fire sprite [one of]prances about wildly, distracting you long enough to sneak in a quick strike[or]strikes you with a fiery fist[or]kicks you in the shin with a flaming foot[or]weaves under your defenses, landing a sharp blow[at random]!"; [ Successful attack message ]

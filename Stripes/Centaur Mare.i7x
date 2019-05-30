@@ -71,7 +71,7 @@ When Play begins:
 	add "Centaur Mare" to infections of TaurList;
 	add "Centaur Mare" to infections of TailList;
 	now Name entry is "Centaur Mare";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The centaur mare fires her bow at you, piercing your side with an arrow![or]The centaur mare charges at you, knocking you to the ground roughly![or]The centaur rears up and manages to land a heavy hoof on your shoulder![or]The centaur swings a punch at you, bashing you in the jaw![or]The mare turns around and whinnies, flicking her tail and winking her equine pussy at you tantalizingly![at random]";

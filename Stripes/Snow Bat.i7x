@@ -120,7 +120,7 @@ When Play begins:
 	add "Snow Bat" to infections of FeralmindList;
 	add "Snow Bat" to infections of TailList;
 	now Name entry is "Snow Bat"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Snow Bat Hybrid"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Snow Bat Hybrid"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The snow bat digs its claws into you painfully as it tries to sink its fangs into your neck![or]The snow bat releases a sharp, high-pitched mrowl that hurts your ears and makes you dizzy from the ultrasonic attack![or]The feline bat swoops at you and digs its talons into your shoulders![or]The hybrid bat-feline growls and slashes at you with its sharp claws![or]The snow bat bites you, sinking its teeth into your arm![at random]";

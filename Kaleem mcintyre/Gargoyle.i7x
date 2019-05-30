@@ -76,7 +76,7 @@ When Play begins:
 	add "Gargoyle" to infections of TailList;
 	add "Gargoyle" to infections of TailweaponList;
 	now Name entry is "Gargoyle";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A vicious swipe at your stomach has you stumbling backwards as you feel the sharp talons of the gargoyle leaving you a lasting impression of the creature.[or]Sidestepping a flimsy attack the gargoyle snorts decisively before charging at you with its fists raised to repay the favor.[or]Letting out an earth trembling roar the monster charges forward and then slams one of its fists into your gut making you cough as air almost visibly leaves your throat.[or]A gray arm reaches up to block your next attack, the assault almost bouncing harmlessly off of the creature's marble-like body, and soon the gargoyle spins around to slap you with its flexible serpentine tail to show you the folly of your actions.[or]Growing bored with your presence the beast hisses at you and then flings itself over to pound its knuckles against your face.[at random]";

@@ -320,7 +320,7 @@ When Play begins:
 	add "Tiger Shark Male" to infections of TailList;
 	add "Tiger Shark Male" to infections of TailweaponList;
 	now Name entry is "Tiger Shark Male";
-	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Tiger Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He drives his elbow forcefully into your chest.[or]You are hit by the tiger shark spinning around, smacking you with his heavy tail.[or]You don't react quickly enough and see an ochre fist punching you across the face.[or]The tiger shark grapples you from behind and sends you face forward into the sand.[or]The fish-man catches you and bites down on your shoulder. While his teeth don't penetrate your skin it is enough to make you groan in pain.[at random]";

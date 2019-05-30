@@ -116,7 +116,7 @@ When Play begins:
 	add "Sugar Ferret" to infections of BipedalList;
 	add "Sugar Ferret" to infections of TailList;
 	now Name entry is "Sugar Ferret"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The crazed ferrets try to tackle you down en masse![or]One of the ferrets manages to bite your ankle with his sharp teeth! 'That's for being a meanie and not playing with us,' she says.[or]The colorful ferrets pelt debris at you while making demands for soda![or]The ferrets claw at you, leaving several deep gashes![or]One of the manic mustelids weaves in and around your legs at high speed, scratching and pinching you mercilessly![or]The multicolor mob tries to rush you as a hyperactive wave of fur, teeth and claws![or]One of the ferrets grabs your arm, pulling you towards it. 'Play with me!' 'No, me first!' another calls out, grabbing your other arm and pulling you in the other direction![or][if scalevalue of Player > 3]Being carried piggy-backed by another to reach your height, a[else]A[end if] ferret comes at you, swinging his arms in wild punches as he laughs maniacally.[at random]"; [ Successful attack message ]

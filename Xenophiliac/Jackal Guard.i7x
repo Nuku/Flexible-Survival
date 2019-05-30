@@ -34,7 +34,7 @@ When Play begins:
 	add "Jackal Guard" to infections of NotBreathingList;
 	add "Jackal Guard" to infections of TailList;
 	now Name entry is "Jackal Guard";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Slamming his solid stone fist straight into your chest and knocking the breath out of you, you think that the guardian may have broken a few of your ribs[or]Slashing a deep gash across your chest, you're not even sure if you're going to survive this encounter[or]You're almost knocked out when the stone guardian hits you with his entire weight[at random].";

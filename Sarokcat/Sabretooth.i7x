@@ -43,7 +43,7 @@ When Play begins:
 	add "Sabretooth" to infections of QuadrupedalList;
 	add "Sabretooth" to infections of TailList;
 	now Name entry is "Sabretooth";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The large cat pounces at you, his large form knocking you back as he rams into you.[or]The large beast snaps its teeth at you, its signature fangs leaving bloody wounds in your side.[or]The sabretooth bats at you with one of its large paws.[or]The prehistoric cat launches itself up on its hind legs, as its front paws bat at your head.[or]The beast bounds towards you, its large body twisting and pressing on you as it tries to wrestle you to the ground.[or]You gasp in surprise as the beast turns and sprays the area with its scent, the male musk filling your open mouth and making your body twitch in response.[or]The large cat pauses for a moment, its feline eyes catching your own as you find yourself locked into a staring contest with the large beast, after several seconds you find your mind growing slightly duller, as your eyes are forced downward under the dominant cat's gaze.[at random]";

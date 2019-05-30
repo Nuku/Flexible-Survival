@@ -73,7 +73,7 @@ When Play begins:
 	add "Human Hybrid" to infections of BipedalList;
 	add "Human Hybrid" to infections of TailList;
 	now Name entry is "Human Hybrid";
-	now enemy title entry is "Twisted Pimp"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Twisted Pimp"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He snaps his fingers and you feel dizzy for a minute, almost wanting to go over to him and do what he says.[or]He reaches out quickly and backhands you across the face.[or]He grins at you, his sharp teeth glinting for a minute before the punch you never saw coming lands right in your crotch.[or]You are distracted for a minute by one of the pimps stable of strange women, letting him land a powerful hit![or]A strangely arousing scent fills your head, making you pant with need and wonder why you are fighting instead of fucking...[or]The pimp gestures, and several of the women get in your way, giving him a clear shot at you.[or]Facing the pimp, you are surprised when several of his harem mob you at once, beating you with their fists before withdrawing while the pimp laughs at you[at random]";

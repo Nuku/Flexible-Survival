@@ -86,7 +86,7 @@ When Play begins:
 	add "Megakitty" to infections of BipedalList;
 	add "Megakitty" to infections of TailList;
 	now Name entry is "Megakitty"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Big Momma"; [specific name of unique enemy]
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Megakitty[or]Big Momma[or]The margay[or]The huge margay[or]The massive feline[or]The Rubenesque hulk[or]The full-figured feline[at random] [one of]bashes you atop the head with her vibrator-turned-club, making your brains rattle[or]clubs you in the side with the massive sextoy[or]jabs you in the face with the base of her dripping club[or]slams her massive body into you, knocking you back[or]squeezes you against a wall with her heavy body[or]tosses her vibrator up, freeing her hands briefly to rapidly slash you with her painted claws[or]knees you in the gut before shoving you to the ground[or]slams into you and pushes you down, trying to smother you under her ample figure[or]pins to against something with the juicy vibrator. As she holds you there, her other paw gropes and fondles you roughly[in random order]!";

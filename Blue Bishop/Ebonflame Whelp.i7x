@@ -114,7 +114,7 @@ When Play begins:
 	add "Ebonflame Whelp" to infections of TailList;
 	add "Ebonflame Whelp" to infections of TailweaponList;
 	now Name entry is "Ebonflame Whelp";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The ebonflame whelp[or]The creature[or]The whelp[or]He[at random] [one of]clings to your [bodytype of Player] form, nipping and clawing at you until you pry it free and send it flying back[or]immediately tries to fuck you, forcing you pull it from your back and toss him away[or]holds onto one of your limbs, biting and screeching at you until you fling him off[at random].";

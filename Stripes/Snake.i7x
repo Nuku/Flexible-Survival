@@ -237,7 +237,7 @@ When Play begins:
 	add "Snake" to infections of TailList;
 	add "Snake" to infections of TailweaponList;
 	now Name entry is "Snake";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]snake winds itself around your leg, squeezing as it tries to scale your body[or]ring-necked snake snaps at your arm as you try to attack it[or]ringneck hisses and snaps at your leg![or]As you attack, the snake whips its tail around your arms and latches on, squeezing them powerfully[at random]!";

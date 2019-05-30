@@ -131,7 +131,7 @@ When Play begins:
 	add "Sugar Glider" to infections of FlightList;
 	add "Sugar Glider" to infections of TailList;
 	now Name entry is "Sugar Glider"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The Sugar Glider [one of]reaches into her pouch, withdrawing a small piece of candy. 'Catch!' she shouts, tossing the candy towards you. Distracted by the flying sweets, she quickly steps forwards, planting a sugary kiss on your cheek before you can react[or]runs towards you before stopping suddenly and spinning her body. Her long, thick tail strikes you in the face as she spins, filling your dizzy head with her sugary sweet scent[or]strikes you with her short, sharp claws[or]leaps towards you, wrapping you in her wing-like embrace, giggling happily as you struggle to push her off[or]wraps her long, soft tail around your [bodydesc of Player] [bodytype of Player] body, temporarily distracting you from fighting[at random]."; [ Successful attack message ]

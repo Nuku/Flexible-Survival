@@ -97,7 +97,7 @@ When Play begins:
 	add "Behemoth" to infections of TailList;
 	add "Behemoth" to infections of TailweaponList;
 	now Name entry is "Behemoth"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Behemoth attacks with a bellowing roar, all but destroying your eardrums![or]The Behemoth sweeps its massive clawed forepaw into you sending you corkscrewing across the ground![or]The Behemoth batters with a mighty charge, knocking you across the ground![or]The Behemoth spins around to strike at you with its gargantuan tail![or]The Behemoth slams it forepaws into the ground causing and earthquake to upset your balance. It then flies into you to knock you into the ground![or]The Behemoth charges at you, hitting you directly into the chest with its toughened skull![at random]"; [ Successful attack message ]

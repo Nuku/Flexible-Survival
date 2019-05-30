@@ -231,7 +231,7 @@ When Play begins:
 	add "Feline Gymnast" to infections of BipedalList;
 	add "Feline Gymnast" to infections of TailList;
 	now Name entry is "Feline Gymnast"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Feline Gymnast"; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is "Feline Gymnast"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The gymnast leaps at you, but instead of hitting you, she vaults over you, slashing at your back.[or]She slashes quickly at any part of you she can reach.[at random]";

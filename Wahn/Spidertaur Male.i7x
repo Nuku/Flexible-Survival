@@ -213,7 +213,7 @@ When Play begins:
 	add "Spidertaur Male" to infections of InternalCockList;
 	add "Spidertaur Male" to infections of OviImpregnatorList;
 	now Name entry is "Spidertaur Male";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Aelias";
 	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]Sweeping one of his front legs, he leaves a long, but surprisingly shallow, slash in your flesh with the underarm-length claw at the end of it.[or]He crawls up the nearest wall, then drops down on you.[or]He leaps to one side and turns his abdomen to face you, and sticky strands spray over your form![or]He suddenly charges and knocks you down with the weight of his body, then stands over you and sprays webbing over your prone form![at random]";

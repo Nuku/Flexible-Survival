@@ -145,7 +145,7 @@ When Play begins:
 	add "Wolverine Guard" to infections of BipedalList;
 	add "Wolverine Guard" to infections of TailList;
 	now Name entry is "Wolverine Guard";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]";

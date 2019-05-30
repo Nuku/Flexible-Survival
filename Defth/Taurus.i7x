@@ -22,7 +22,7 @@ When Play begins:
 	add "Taurus" to infections of BipedalList;
 	add "Taurus" to infections of TailList;
 	now Name entry is "Taurus";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The mighty bull charges at you.[or]Swinging his horns, the bull tries to impale you on their pointy ends.[or]He takes a step back, tensing his muscles, then charges at you.[or]The bull groans and moos like a mad cow before going for a frantic attack.[or]The bull's horns gleam with ecstasy as he readies his next attack, then tries to spear you with one of them, giving you a bleeding scratch.[at random]"; [Text used when the monster makes an Attack]

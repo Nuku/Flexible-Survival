@@ -139,7 +139,7 @@ When Play begins:
 	add "Hermaid" to infections of TailList;
 	add "Hermaid" to infections of TailweaponList;
 	now Name entry is "Hermaid";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The Hermaid lungs unexpectedly at you, breaking past your guard and dragging long, bloody streaks across your face and down your chest with her razor-like claws.[or]She dives underwater, and you soon lose track of her. Seconds later, you're dragged underwater and held down, slowly drowning. As you are about to pass out, you break free and surface, coughing up water and much more exhausted than before.[or]The Hermaid snaps at your legs, gouging large chunks out of your limbs.[or]She kicks at you wildly with her webbed feet, landing a few nasty hits across your body.[at random]";

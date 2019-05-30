@@ -90,7 +90,7 @@ When Play begins:
 	add "Pegasus" to infections of FlightList;
 	add "Pegasus" to infections of TailList;
 	now Name entry is "Pegasus"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The pegasus rushes forward to kick you with its cloven hooves![or]The pegasus flies up into the sky and then shoots some of its needle-like feather down onto you![or]The pegasus batters you as it knocks you down with its head and then stomp viciously onto your chest![or]The pegasus flies up into the sky and then power-dives into you![or]The pegasus raises up onto its back hooves and then flaps its wings hard enough to send a gale of wind shooting at you![or]The pegasus pushes up into the sky and then folds its wings tight before spinning. Sadly in its descent it directs itself unswervingly towards you![at random]"; [ Successful attack message ]

@@ -229,7 +229,7 @@ When Play begins:
 	add "Blue Chaffinch" to infections of FlightList;
 	add "Blue Chaffinch" to infections of TailList;
 	now Name entry is "Blue Chaffinch"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]blue chaffinch[or]energetic avian[or]blue songbird[or]passerine male[or]male songbird[at random] [one of]snaps at your with his pointed beak[or]buffets you with his wings[or]flaps up a few feet and slashes at you with his foot claws[or]claws at you with his taloned hand[at random]!";

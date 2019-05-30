@@ -97,7 +97,7 @@ When Play begins:
 	add "Harpy" to infections of FlightList;
 	add "Harpy" to infections of TailList;
 	now Name entry is "Harpy"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She manages to get a good grip with a talon around an arm, digging her claws in as her wings-arms beat powerfully[or]She dive bombs from above, knocking you to the ground[or]A sudden hug has you pressed to her soft front, only to be released above the ground[at random]."; [Text used when the monster makes an Attack]

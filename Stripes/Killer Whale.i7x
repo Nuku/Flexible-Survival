@@ -131,7 +131,7 @@ When Play begins:
 	add "Killer Whale" to infections of TailList;
 	add "Killer Whale" to infections of TailweaponList;
 	now Name entry is "Killer Whale"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The orca smashes his tail against your side![or]The killer whale bites down onto your arm![or]The killer whale leans forward and hits you with a blast of sea water from his blowhole![or]The orca strikes you with his powerful arms![or]The orca tries to crush you in his strong arms![at random]";

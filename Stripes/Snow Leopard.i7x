@@ -170,7 +170,7 @@ When Play begins:
 	add "Snow Leopard" to infections of FeralmindList;
 	add "Snow Leopard" to infections of TailList;
 	now Name entry is "Snow Leopard"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The agile feline slashes at you with his sharp claws![or]The snow leopard tries to bear you down under his weight. You barely scramble free, but are scratched up in the process![or]The snowmeow manages to bite your shoulder![or]The snowmeow knees your firmly in the breadbasket![or]The creature digs his claws into you, but you painfully pull free of its pointy grip![at random]"; [ Successful attack message ]

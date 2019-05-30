@@ -112,7 +112,7 @@ When Play begins:
 	add "Wolftaur" to infections of TaurList;
 	add "Wolftaur" to infections of TailList;
 	now Name entry is "Wolftaur";
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed fore-paw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaur's strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]";

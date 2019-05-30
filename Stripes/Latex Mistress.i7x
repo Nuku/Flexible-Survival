@@ -86,7 +86,7 @@ When Play begins:
 	add "Latex Mistress" to infections of FemaleList;
 	add "Latex Mistress" to infections of BipedalList;
 	now Name entry is "Latex Mistress"; [Name of your new Monster]
-	now enemy title entry is ""; [name of the encountered creature at combat start - "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]Latex Mistress[or]strange dominatrix[or]latex-clad woman[at random] [one of]strikes you with her whip[or]lashes you with her whip[or]whips around your ankle and pulls you over[or]slashes at you with her small claws when you get too close[at random].";
