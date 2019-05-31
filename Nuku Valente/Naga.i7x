@@ -7,8 +7,6 @@ Version 2 of Naga by Nuku Valente begins here.
 Section 1 - Creature Responses
 
 nagawarning is a truth state that varies. nagawarning is usually false.
-when play begins:
-	add { "Naga" } to infections of guy;
 
 to say NagaDesc:
 	setmongender 3; [creature is male]
@@ -101,8 +99,8 @@ to say WinOverNaga:
 	if Player consents:
 		LineBreak;
 		if Player is male:
-			say "     Dropping your gear and sliding off all of clothing as you go along, you step up to stand over the naga and present your [cock size desc of Player] cock[smn] to him. After hesitating a moment more and giving a low hiss, the snake-creature says, 'You defeated me, so I will ssserve for your pleasssure - just thisss once. Do not think thisss meansss anything if we meet again.' That said, he gives a little shrug and reaches out, gently handling[if Cock Count of Player > 1] one of[end if] your manhood[smn][if CockName of Player is not listed in infections of internallist] and [Ball Size Adjective of Player] [Balls][end if] with his fingers. Seems like he brushed your whole fight and any resentment at losing aside as 'in the past' and now is totally concentrated on trying to have a somewhat nice time with you.";
-			say "     While he fondles you, the male naga's tongue plays over your skin in a feathery-light touch. [if CockName of Player is not listed in infections of internallist]He spends some time teasing your balls, wrapping his forked tongue around one then the other and lightly squeezing them[else]He spends some time teasing your crotch, lightly lashing his forked tongue against your [bodytype of Player] form[end if], [if anallevel > 1]even snaking it down between your legs to brush against your back door, [end if]then moving his attention to your hardening cock. It's a strange but very pleasant feeling to have him play his long but thin tongue over your erection, wrapping and tugging on it in a stimulating fashion. Overwhelmed in the sensations of having this snake-person jerk you off with his tongue, you moan and lean your head backwards, savoring the pleasure he gives you.";
+			say "     Dropping your gear and sliding off all of clothing as you go along, you step up to stand over the naga and present your [cock size desc of Player] cock[smn] to him. After hesitating a moment more and giving a low hiss, the snake-creature says, 'You defeated me, so I will ssserve for your pleasssure - just thisss once. Do not think thisss meansss anything if we meet again.' That said, he gives a little shrug and reaches out, gently handling[if Cock Count of Player > 1] one of[end if] your manhood[smn][if CockName of Player is not listed in infections of InternalCockList] and [Ball Size Adjective of Player] [Balls][end if] with his fingers. Seems like he brushed your whole fight and any resentment at losing aside as 'in the past' and now is totally concentrated on trying to have a somewhat nice time with you.";
+			say "     While he fondles you, the male naga's tongue plays over your skin in a feathery-light touch. [if CockName of Player is not listed in infections of InternalCockList]He spends some time teasing your balls, wrapping his forked tongue around one then the other and lightly squeezing them[else]He spends some time teasing your crotch, lightly lashing his forked tongue against your [bodytype of Player] form[end if], [if anallevel > 1]even snaking it down between your legs to brush against your back door, [end if]then moving his attention to your hardening cock. It's a strange but very pleasant feeling to have him play his long but thin tongue over your erection, wrapping and tugging on it in a stimulating fashion. Overwhelmed in the sensations of having this snake-person jerk you off with his tongue, you moan and lean your head backwards, savoring the pleasure he gives you.";
 			WaitLineBreak;
 			say "     After a while of just licking and squeezing your manhood, the naga moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his broad, seemingly toothless maw. Thankfully, his fangs are folded away into their pockets in the roof of his mouth so you don't have to worry about them. Bobbing up and down in the great blowjob he's giving you, the naga male also strokes his long body against you, with the tip of his tail brushing softly against your sides and back. Arousal quickly mounting higher and higher from your partner's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker, and the need to cum rises in your balls. You moan that you're close, which only has the snake-person speed up more, lips still tightly wrapped around your shaft as you blow your [Cum Load Size of Player] load. He eagerly swallows spurt after spurt of your cum, even milking the very last drops from your softening cock. 'That was - sssatisfactory,' he says, then slithers away without looking back";
 		else if Player is female:
@@ -128,11 +126,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Naga"; [name of the overall species of the infection, used for children, ...]
+	add "Naga" to infections of ReptileList;
+	add "Naga" to infections of FurryList;
+	add "Naga" to infections of NatureList;
+	add "Naga" to infections of MythologicalList;
+	add "Naga" to infections of TaperedCockList;
+	add "Naga" to infections of InternalCockList;
+	add "Naga" to infections of SerpentineList;
+	add "Naga" to infections of TailList;
+	add "Naga" to infections of TailweaponList;
 	now Name entry is "Naga";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The naga swipes at you with his pipe with alarming accuracy[or]With a loud hiss, the male naga lashes at you, sinking his fangs painfully into your [bodydesc of Player] body[or]The naga lashes out with its tail, striking you solidly with the heavy mass[at random].";
 	now defeated entry is "[WinOverNaga]";
 	now victory entry is "[LoseToNaga]";
@@ -187,7 +194,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -216,7 +223,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -243,18 +250,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -276,7 +283,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

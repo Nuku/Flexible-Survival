@@ -65,7 +65,7 @@ to say purehumanend: [Pure Human version]
 
 to say passhumanend: [Passably Human version]
 	if humanity of Player < 10:
-		if FaceName of Player is "Awesome tree":
+		if FaceName of Player is "Pod Person":
 			say "Succumbing to the infection that is spreading through your body, you wander the streets until you come across several tall trees with assorted fruits at their base. You instinctively begin eating the fruit at random as your body begins to become more and more human. After having your fill you look around and wonder at just how awesome this really is. After taking a few steps you are suddenly brought to a halt. Looking down it seems that you have gotten taller and that your feet seem to have taken root in the ground. You can't help but feel that you are slowly becoming more awesome as your skin starts to harden and take on a bark-like appearance.";
 			say "As you take one last look around before your neck becomes too hard and stiff to turn, it dawns on you just how awesome everything really is. As your mind slowly begins to fade you realize how awesome your new existence will be in this grove of awesome trees. Awesome.";
 			stop the action;
@@ -73,7 +73,7 @@ to say passhumanend: [Passably Human version]
 			say "As the last of your humanity falls away to the infection your siren mind takes over and you are drawn to the beach where you once again come across the sirens who are more than happy to see you again. After they fully transform you into another sexy siren you join their hidden aerie, using your nearly-human bodies and angelic voices you lure many travelers in for you and your new friends to enjoy.";
 		else if FaceName of Player is "Greek Nymph":
 			say "As you loose the last of your humanity you are drawn back to the Museum by your Greek Nymph mind. Searching the halls you come across several nymphs that happily welcome you back. After several hours with your new friends you take your place as another sexy Greek Nymph. From then on you spend the rest of your days frolicking through the Museum halls chasing and being chased by the satyrs.";
-		else if SkinName of Player is "Awesome Tree":
+		else if SkinName of Player is "Pod Person":
 			say "Succumbing to the infection that is spreading through your body, you wander the streets until you come across several tall trees with assorted fruits at their base. You instinctively begin eating the fruit at random as your body begins to become more and more human. After having your fill you look around and wonder at just how awesome this really is. After taking a few steps you are suddenly brought to a halt. Looking down it seems that you have gotten taller and that your feet seem to have taken root in the ground. You can't help but feel that you are slowly becoming more awesome as your skin starts to harden and take on a bark-like appearance.";
 			say "As you take one last look around before your neck becomes too hard and stiff to turn, it dawns on you just how awesome everything really is. As your mind slowly begins to fade you realize how awesome your new existence will be in this grove of awesome trees. Awesome.";
 			stop the action;

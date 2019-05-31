@@ -12,7 +12,7 @@ Stabled Situation	"Stabled Situation"
 Stabled Situation is a situation.
 Stablesearchstatus is a number that varies.
 when play begins:
-	add Stabled Situation to badspots of furry;
+	add Stabled Situation to BadSpots of FurryList;
 
 Instead of Resolving Stabled Situation:
 	if Stablesearchstatus is 0:

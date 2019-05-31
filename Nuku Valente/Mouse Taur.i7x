@@ -14,8 +14,8 @@ Mouse Taur Encounter	"Mouse Taur Encounter"
 Mouse Taur Encounter is a situation.
 The sarea of Mouse Taur Encounter is "Red".
 When play begins:
-	add Mouse Taur Encounter to badspots of furry;
-	add Mouse Taur Encounter to badspots of girl;
+	add Mouse Taur Encounter to BadSpots of FurryList;
+	add Mouse Taur Encounter to BadSpots of FemaleList;
 
 After resolving a Mouse Taur Encounter, try looking;
 
@@ -44,9 +44,9 @@ Find Porn Store	"Find Porn Store"
 Find Porn Store is a situation. The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
 When play begins:
-	add Find Porn Store to badspots of furry;
-	add Find Porn Store to badspots of girl;
-	add Find Porn Store to badspots of hermaphrodite;
+	add Find Porn Store to BadSpots of FurryList;
+	add Find Porn Store to BadSpots of FemaleList;
+	add Find Porn Store to badspots of HermList;
 
 Instead of Resolving a Find Porn Store:
 	FindPornStore;
@@ -77,7 +77,7 @@ to FindPornStore:
 			LineBreak;
 			say "     Putting on a determined expression, you back up and get ready to ram the door. Yet just as you dash forward, it swings open a little to allow a large mouse taur to look out. Unable to slow down in time you ram into the door, smacking it against the shoulder and side of the taur, sending you both crashing to the floor right behind the doorstep. A little dizzy from the impact, you stand up and lean against a wall to recover, still blinking away stars as you hear the mouse taur get up. Shaking her head clear she glares at you. 'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell are you?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses and you start out in an angry argument.";
 			say "     [bold type]Sadly, all the noise attracts the attention of one of the more hands-on locals.[roman type]";
-			challenge "Tigress Hooker";
+			challenge "Malayan Tiger Herm";
 			if fightoutcome < 20: [player won]
 				say "     By the time you have beaten off the overeager tigress hooker and she is swaying on her feet from your last blow, the mouse taur has retrieved what looks like a sturdy quarterstaff and a squirt gun from inside the store. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away from her store. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. She listens to you for a little while, then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
 				say "[LisaIntroTalk]";
@@ -168,7 +168,7 @@ to say pornstoredesc:
 		say "     Given the feline's interest in the toys, you ask Lisa about them. 'Well, I'd set them aside for a potential customer who wanted them, but the kitty's not been back for quite some time. At this point, I suspect he got caught by some critter out there and has gone feral. Poor guy.' She scritches her chin, pondering for a moment.";
 		say "     'How does this sound? Since they're probably not coming back, I could sell them off to you and your kitty.' Artemis mrowls eagerly and nuzzles against your hip, purring loudly, clearly seeking to endear herself to you to get her desired treats. 'But since money's no good and I won't take those silly freecred, I guess you can maybe do me a favor instead to pay for it. Not that kind of favor,' she adds quickly.";
 		WaitLineBreak;
-		if hellspawn is not banned:
+		if DemonList is not banned:
 			say "     'There's been some succubi in the area who have been harassing my store. And it's too bad, too. They look like they'd be a lot of fun if they'd just be more neighborly,' she adds wistfully, licking her lips at the thought of those sexy females. 'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it. If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.' Artemis ignores the final comment, mewling again and purring happily. You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount1 is 1;
 		else:
@@ -179,7 +179,7 @@ to say pornstoredesc:
 
 instead of conversing the Lisa:
 	if lisaartemiscount1 is 5 or lisaartemiscount2 is 5:
-		say "     Having helped deal with her [if hellspawn is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them. She smiles at the news and heads towards the counter. 'I thought that might be the case. There's been a lot less trouble from them lately. It's looking like the word's getting around among them not to harass my place. I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
+		say "     Having helped deal with her [if DemonList is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them. She smiles at the news and heads towards the counter. 'I thought that might be the case. There's been a lot less trouble from them lately. It's looking like the word's getting around among them not to harass my place. I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
 		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of Player is rubber tigress], much to the feline's mewling delight. She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if]. You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat. The mousetaur giggles at this and leans over the counter. 'I couldn't help noticing that your feline friend's a little lacking under the tail. Maybe your rubber kitty's wants a little more out of them than you think.' [if companion of Player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her murine face. Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
 		now HP of rubber tigress is 10;
 		now lisaartemiscount1 is 0;

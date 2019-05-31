@@ -15,10 +15,10 @@ lastpubvisit is a number that varies.
 pubvisit is a number that varies.
 
 when play begins:
-	add Aussie Pub to badspots of girl;
-	add Aussie Pub to badspots of guy;
-	add Aussie Pub to badspots of hermaphrodite;
-	add Aussie Pub to badspots of furry;
+	add Aussie Pub to BadSpots of FemaleList;
+	add Aussie Pub to BadSpots of MaleList;
+	add Aussie Pub to badspots of HermList;
+	add Aussie Pub to BadSpots of FurryList;
 
 Instead of resolving a Aussie Pub:
 	say "     While exploring the area, you come across an Australian themed pub previously called 'Down Under'. Some bright blue paint has been used to add 'TAKE ME' to the front of its name. Through the windows, you can see there are lots of carousing and arousing kangaroos in the pub. You can see them eating, drinking and/or fucking with uproarious enjoyment inside.";
@@ -185,11 +185,11 @@ to say gillianpubfun:
 			if Player is male:
 				say ", she gets her furry hands on your [one of][Cock of Player][or][cock size desc of Player][at random] cock and eagerly strokes it to erection. She gets down on her knees and nuzzles against your manhood before making a show of slowly licking across your glans. Not wanting to wait any longer, she plunges her muzzle over your throbbing shaft[if Cock Length of Player > 30], doing her best to get your [cock size desc of Player] manhood down her throat and her best proves her to be quite the champ, able to take the full of it after only a few attempts[else if Cock Length of Player > 20], putting in the added effort to get your [cock size desc of Player] cock into her mouth and down her throat[end if]. She sucks at your shaft like a vacuum while her tongue artfully plays across it";
 				if Player is female:
-					if CockName of Player is listed in infections of internallist:
+					if CockName of Player is listed in infections of InternalCockList:
 						say ". Your having internal balls leaves her with free access to your juicy pussy, letting her plunge her fingers into your cunny as well";
 					else:
 						say ". After giving your [Ball Size Adjective of Player] [Balls] a grope, she shifts her paw's focus to your juicy pussy and plunges her fingers into your cunny";
-				else if CockName of Player is not listed in infections of internallist:
+				else if CockName of Player is not listed in infections of InternalCockList:
 					say ". As she sucks your throbbing rod, she gropes your balls, eager for the tasty treat inside them";
 				say ".";
 				say "     With her working so hard to get it, it's not long before you're moaning that you're about to cum. She doesn't let up, having you blast your load into her muzzle and down her throat. She strokes your shaft even as she eases her muzzle back, pushing the last few drops from your urethra. Keeping it in her muzzle, she [one of]makes a big production of swallowing it down for the crowd[or]goes over to a nearby [if a random chance of 2 in 3 succeeds]jill[else]boomer[end if] and snowballs your load with them, much to the delight of the crowd[or]lets it drool out over the next plateful of food she's handed, giving some lucky roo some [']secret sauce['] for their burger[cycling].";
@@ -347,14 +347,14 @@ to say sexwithgillian:
 	else:
 		say "     Gillian smiles happily at your suggestion of sex. 'Yeah, let's have some fun,' she says as she pushes you eagerly over to the ";
 		let gilliansexlist be { 1 }; [give cunnilingus]
-		if Player is not neuter, add 2 to gilliansexlist; [69]
-[		if Player is male, add 3 to gilliansexlist; [get blow job]			]
-		if Player is male, add 4 to gilliansexlist; [fuck her]
-[		if Player is female, add 5 to gilliansexlist; [strap-on: vaginal]		]
-[		if anallevel is 3 and Cunt Count of Player is 0, add 6 to gilliansexlist; [strap-on: anal]	]
+		if Player is not neuter, add 2 to gilliansexList; [69]
+[		if Player is male, add 3 to gilliansexList; [get blow job]			]
+		if Player is male, add 4 to gilliansexList; [fuck her]
+[		if Player is female, add 5 to gilliansexList; [strap-on: vaginal]		]
+[		if anallevel is 3 and Cunt Count of Player is 0, add 6 to gilliansexList; [strap-on: anal]	]
 		sort gilliansexlist in random order;
-		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexlist; [avoids repeats unless only option]
-		now lust of Gillian is entry 1 of gilliansexlist; [saving selection for next time]
+		if entry 1 of gilliansexlist is lust of Gillian, reverse gilliansexList; [avoids repeats unless only option]
+		now lust of Gillian is entry 1 of gilliansexList; [saving selection for next time]
 		if entry 1 of gilliansexlist is 1, say "[gilliansex01]";
 		if entry 1 of gilliansexlist is 2, say "[gilliansex02]";
 		if entry 1 of gilliansexlist is 3, say "[gilliansex03]";
@@ -373,7 +373,7 @@ to say gilliansex01:	[give cunnilingus]
 to say gilliansex02:	[69]
 	say "bed. Pushing you down onto it, she moves atop you, face to crotch. Provided with an eyeful of her succulent pussy, you dive right in. She moans happily at your eagerness and soon has her muzzle pressed to your loins.";
 	if Player is male:
-		say "     She starts by nuzzling and kissing at your manhood before licking from your [if Player is female]pussy[else if CockName of Player is not listed in infections of internallist]balls[else]taint[end if] to your glans. She swirls her tonguetip around it a few times before lowering her muzzle down over your shaft. [if Cock Length of Player > 30]With considerable effort to deal with your exceptional manhood[else if Cock Length of Player > 20]With some effort to deal with your enlarged manhood[else]Taking it slow to savor it[end if], she works her muzzle and throat down over the whole of your [cock size desc of Player] cock.";
+		say "     She starts by nuzzling and kissing at your manhood before licking from your [if Player is female]pussy[else if CockName of Player is not listed in infections of InternalCockList]balls[else]taint[end if] to your glans. She swirls her tonguetip around it a few times before lowering her muzzle down over your shaft. [if Cock Length of Player > 30]With considerable effort to deal with your exceptional manhood[else if Cock Length of Player > 20]With some effort to deal with your enlarged manhood[else]Taking it slow to savor it[end if], she works her muzzle and throat down over the whole of your [cock size desc of Player] cock.";
 		say "     When she feels that the pleasure of this is distracting you too much from your own task, she grinds her meaty hips down onto you, pressing her pussy down onto your face. Grabbing that rounded roo ass of hers, you dive in with renewed zeal. Your tongue brushes across her folds and licks across her firm clit. After a few rounds of this, you wriggle it into her cunny, wetly caressing her inner walls and lapping up her juices. She moans in appreciation around your shaft, rewarding you with extra vigor of her own.";
 		say "     With you both going at the other's crotch so lustfully, it's not long before your lusts boil over into orgasm. Her honeyed juices flow across your tongue and soak your face while you feed the buxom kangaroo your [Cum Load Size of Player] load. She grinds her quivering mound down onto your face as she sucks every drop of spunk she can get from you. Only once she's satisfied that you've got no more to give, at least for the moment, does she release your shaft and roll off of you. Flopped out on the bed beside you, you both need a several minutes to recover.";
 	else:
@@ -421,9 +421,9 @@ to say randomdesc:	[male]
 	if T is 4:
 		now slutname is "Anthro Rabbit";
 	if T is 5:
-		now slutname is "bear";
+		now slutname is "Brown Bear Female";
 	if T is 6:
-		now slutname is "stag";
+		now slutname is "Blacktail Stag";
 	if T is 7:
 		now slutname is "cheetah";
 	if T is 8:
@@ -433,7 +433,7 @@ to say randomdesc:	[male]
 	if T is 10:
 		now slutname is "bull";
 	if T is 11:
-		now slutname is "zebra";
+		now slutname is "Zebra Stallion";
 	if T is 12:
 		now slutname is "mouse";
 	if T is 13:
@@ -454,7 +454,7 @@ to say randomdesc2:	[female]
 	if T is 4:
 		now slutname is "bunny";
 	if T is 5:
-		now slutname is "bear";
+		now slutname is "Brown Bear Female";
 	if T is 6:
 		now slutname is "doe";
 	if T is 7:
@@ -466,7 +466,7 @@ to say randomdesc2:	[female]
 	if T is 10:
 		now slutname is "cow";
 	if T is 11:
-		now slutname is "zebra";
+		now slutname is "Zebra Stallion";
 	if T is 12:
 		now slutname is "mouse";
 	if T is 13:

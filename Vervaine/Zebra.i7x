@@ -7,10 +7,6 @@ Version 5 of Zebra by Vervaine begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Zebra" } to infections of guy;
-	add { "Zebra" } to infections of furry;
-
 ZebraLossCount is a number that varies. ZebraLossCount is usually 0.
 LostToZebra is a number that varies. LostToZebra is usually 0.
 
@@ -101,7 +97,7 @@ to say Zebra loses:
 			if calcnumber is 1:			[cunnilingus]
 				say "     You strip, revealing your dripping pussy, then snap your fingers, your intent obvious. The zebra male crawls forward, unconsciously licking his lips before burying his muzzle in your folds. Nice long tongue, this zebra, and he knows how to use it. It reaches deep inside of you and expertly finds the spots that make you gasp and moan. You grab his mane and grind your cunt into his face, making sure he knows who's in charge. His oral stimulation drives your arousal to new heights quickly, and before much longer, you orgasm, a gush of femcum running down over the zebra's face. Stepping back, you grin at the cum-splattered stallion.";
 				say "     Not content with just one orgasm, you finish admiring your handiwork and tell him to get back to work. He doesn't hesitate before diving back in, this time [if Player is male]jerking you off[else]playing with your clit[end if] as he eats your pussy. You milk another orgasm or two out of your toy, soaking his face with your juices, before you let him jack himself to completion. The zebra man smiles proudly when you say he really knows how to show a lady a good time. He leans into your hand as you pat him on the head before leaving him in a puddle of your combined cum.";
-				infect "Zebra";
+				infect "Zebra Stallion";
 			else if calcnumber is 2:			[ride him]
 				say "[zebrasex_ride]";
 			else if calcnumber is 3:			[discipline]
@@ -138,11 +134,11 @@ to say Zebra loses:
 				say "     The knowledge that it was you that has changed this once dominant stallion into the sub kneeling before you pushes you almost to the edge of orgasm. A few more thrusts pushes you over, and as you start to cum, you slowly pull him off you, filling his mouth with cum before you spend your last blasts on his face. The zebra shudders, and you grin as his massive pole flares and cums all over the ground in front of him, some of it landing on your thighs and legs. You scoop some up and rub it between your fingers. Telling him that he's changed for the better now that he's your little slut, you turn and walk away, leaving the zebra sitting in his own mess, with your cum drying on his face.";
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is "Zebra":
+					if Name entry is "Zebra Stallion":
 						now MonsterID is y;
 						break;
 				now sex entry is "Male";
-				infect "Zebra";
+				infect "Zebra Stallion";
 			else if calcnumber is 2:			[fuck him]
 				say "     You snap your fingers and the zebra gets on all fours, presenting his striped ass invitingly. You quickly strip down and make him nicker in surprise as you dive forward and start eating him out. His cock throbs as you pull his firm globes apart and tongue fuck his hole. You pull back, his hole now moist with your slobber, and start fingering him. He groans in anticipation and thrusts back onto your two, three, four fingers. You pull out, and he turns to look at you when he doesn't feel your dick at his backdoor. He sees you laying on your back, hands cradling your head, with your [Cock of Player] shaft jutting up. Telling your pet that you want him to show you how much he wants your prick, you wait to see what he'll do.";
 				say "     With a lick of his lips, the stallion eagerly crawls forward. As he crawls over your body to get into position, he laps at your [Cock of Player] meat, then drawing his tongue along your body before stopping at your face. He looks at you and you nod, letting him kiss you briefly before pushing him back. The zebra sits up and begins backing up onto your pole. He winces as your head breaches his hole. You whisper that you're glad he's still tight for his [master], making his massive cock twitch. He braces himself on your chest as he slides down slowly, moaning as inch after inch of your cock enters his velvety insides. Finally, his hands clutching you tightly, his meaty ass hits your groin, and you both moan as that final inch is stuffed in. Your eyes lock, and you tell him to fuck himself. He nods and says, 'Yes, [master],' before he begins to bob up and down on your dick.";
@@ -151,11 +147,11 @@ to say Zebra loses:
 				say "     You grab the zebra's cock, hard, drawing a yelp from him as you tell him that you're not finished yet. He nods and begins to bounce again on your shaft. Bathed in his cum, nestled in his tight ass, it's not much longer before you're shooting your seed into him, asking if he's ready to bear [italic type]your[roman type] young. 'Y-yes, [master], fill me with your foals,' he replies, and he shudders, cumming again though his cock, but only dribbles this time. He pulls himself off of you and helps you up. After you finish dressing, you smile and caress his muzzle, saying that he's a good boy for coming a long way in such a short time. You abruptly turn and walk away, leaving the zebra with your load in his ass behind you.";
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is "Zebra":
+					if Name entry is "Zebra Stallion":
 						now MonsterID is y;
 						break;
 				now sex entry is "Male";
-				infect "Zebra";
+				infect "Zebra Stallion";
 			else if calcnumber is 3:			[ride him]
 				say "[zebrasex_ride]";
 			else if calcnumber is 4:			[discipline]
@@ -228,11 +224,11 @@ to say Zebra loses:
 					say "     After you're done cumming, you pull out and grin down at the defeated stallion holding your cum behind his closed lips. You order him to swish your cum around a bit, taste it, then show you his tongue. You pull on his mane a bit until he complies and finally sticks his tongue out, covered with your white cum. Pleased with his obedience, you tell him to swallow and show you. With an unhappy expression, he swallows down everything and shows you his cum-free tongue as you ask him to. Praising your stripey slut for his efforts, you tell him that maybe you'll add him as your boy mare. As he squirms, you say you look forward to next time then leave him kneeling at that spot and walk away.";
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
-						if Name entry is "Zebra":
+						if Name entry is "Zebra Stallion":
 							now MonsterID is y;
 							break;
 					now sex entry is "Male";
-					infect "Zebra";
+					infect "Zebra Stallion";
 					now sex entry is "Female";
 					increase ZebraLossCount by 1;
 				else if calcnumber is 2:			[fuck him]
@@ -243,11 +239,11 @@ to say Zebra loses:
 					say "     You pound his ass, accompanied by slapping noises as your hips meet his cheeks, and soon, you feel a familiar feeling rise in your balls. Shouting for him to take your load, you cross the line with one last deep thrust, shooting long blasts of cum deep inside of his ass. There's something especially satisfying about filling up this proud stallion who had originally planned to make you his mare. As you finish cumming inside of him and pull out, you smile even more as you see his equine shaft dangling erect between his legs. You mock him, using his throbbing member as proof that he loves getting fucked. Ordering your bitch to jerk himself off, you say that you see a great future as a boy mare for him, then watch as he jerks off shame-faced and blows his load onto the ground. Grinning, you walk away after that.";
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:
 						choose row y in Table of Random Critters;
-						if Name entry is "Zebra":
+						if Name entry is "Zebra Stallion":
 							now MonsterID is y;
 							break;
 					now sex entry is "Male";
-					infect "Zebra";
+					infect "Zebra Stallion";
 					now sex entry is "Female";
 					increase ZebraLossCount by 1;
 				else if calcnumber is 3:			[ride him]
@@ -267,7 +263,7 @@ to say Zebra loses:
 						say "Invalid choice. Type [link]1[end link] to get a licked, [link]2[end link] to ride him or [link]3[end link] to rough him up.";
 				if calcnumber is 1:								[cunnilingus]
 					say "     Pulling off your clothes, you reveal your already moist and swollen pussy, then step up close to him, grinding your crotch against his face. It's clear that you want him to lick you, and the words are barely out of your mouth before he starts to use his tongue on your vagina. Nice long tongue, this zebra, and he knows how to use it. His oral stimulation drives your arousal to new heights quickly, and before much longer, you orgasm, a gush of femcum running down over the zebra's face. Stepping back, you grin at the cum-splattered stallion. You revel in the afterglow of your orgasm, glad that you've found a use for the zebra's mouth. Looking down to his erect equine shaft you taunt him for getting hard from servicing you before getting dressed, squashing any hope he may have had of fucking you. Armed and ready again, you turn and walk away, though you look back once or twice to watch the zebra jerk off his almost painfully hard cock and shoot his seed onto the ground.";
-					infect "Zebra";
+					infect "Zebra Stallion";
 					increase ZebraLossCount by 1;
 				else if calcnumber is 2:			[ride him]
 					say "[zebrasex_ride]";
@@ -287,7 +283,7 @@ to say zebrasex_ride:
 		WaitLineBreak;
 		say "     By the time you're ready to cum, you've got him thoroughly blue-balled and aching for release. Taking pity on your pet, you command him to fuck you. The zebra wastes no time, eagerly thrusting into your stretched pussy, causing you to moan loudly. Crying out, he cums hard, blasting shot after gooey shot of his virile seed up into your womb. Feeling this sends you over the top, driving you to a crashing orgasm that milks his needy shaft all the harder. Once you've drained his balls[if scalevalue of Player <= 3] and rounded your belly by an inch or three, thanks to all of that semen[end if], you rise up off of him. A good amount of his messy load ends up flowing out of you, splattering across his lap. The zebra, thoroughly drained, moans and collapses backwards onto the ground as you leave him.";
 		impregchance;
-		infect "Zebra";
+		infect "Zebra Stallion";
 	else if Player is dominant:
 		say "     You push him back and he falls onto his back, barely catching himself with his hands. Pulling off any gear or garments in the way, you bare your ass and move onto his lap, grabbing his fully hard cock firmly in hand. Holding up his equine shaft, you press your tight pucker against its flared tip. The subservient male begins to buck into you, but you slap him with your free hand and tell him firmly that he is not to move without your say so. He nods eagerly and holds still, meekly waiting for you to engulf him. After getting yourself slick with his pre, you pop his thick shaft into your anus and drop down a few inches, getting an excited nicker from the zebra.";
 		say "     You take your time, enjoying his girth as you bob on the first half of his cock, which takes its toll on the stallion. You see him grit his teeth, muscles straining as he struggles to follow your order to keep still. You pat his head lightly, calling him a good toy, making yourself gasp as his rod pulses when you call him your toy. After adjusting to his impressive size, you start to ride him a little faster. Your anal walls squeeze and ripple across his meat, drawing lustful whimpers from the obedient male. You delight in the way his equine shaft fills you up so nicely and how its medial ring feels as it pops in and out of you, drawing out your own enjoyment while always slowing down any time your stallion prize is getting close.";
@@ -296,11 +292,11 @@ to say zebrasex_ride:
 		mimpregchance;
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Zebra":
+			if Name entry is "Zebra Stallion":
 				now MonsterID is y;
 				break;
 		now sex entry is "Male";
-		infect "Zebra";
+		infect "Zebra Stallion";
 	else if Player is female:
 		say "     Keeping a firm grip on his mane, you force him into a seated position and grab his half-hard cock firmly in hand. Stroking it, you get it to quickly rise to full erection. Pulling off any gear or garments in the way, you bare your loins and move onto his lap. Holding up his equine shaft, you press your juicy pussy against its flared tip. The overconfident male starts to chuckle that he knew you couldn't resist him, but you silence him with a rough pull on his mane and a growl that you're only after some cock and that he's lucky it got to be his at all. Dropping down a few inches, you pop his thick shaft into your dripping cunny, getting an excited nicker from the zebra.";
 		say "     You take your time with the first few instances of you lowering yourself down onto his shaft, much to the stallion's frustration. You keep a firm grip on his mane with one hand and his nuts with the other, ensuring that he stays in line. After adjusting to his impressive size, you start to ride him a little faster. Your vaginal walls squeeze and ripple across his meat, drawing lustful whimpers from the tightly held male. You delight in the way his equine shaft fills you up so nicely and how its medial ring rubs along your sensitive spots, enjoying several smaller orgasms while always slowing down any time your stallion prize is getting close.";
@@ -383,7 +379,7 @@ to say ZebraDommingPlayerSex1: [Face Fuck]
 	say "     You groan around the rod in your throat in response to your master's words, jacking yourself off even faster. With a loud whinny, the stallion slams his horsecock home, and you feel it shooting his cum into your stomach. You can feel your belly swell as it's filled with your stallion's virile seed. As your vision begins to dim, you cum as well, shooting your seed onto the ground, pushed to orgasm with your purpose as a cum dump fulfilled. Your stallion pulls free and kicks you over, pumping the last few spurts of seed onto your crumpled form. 'You'll have to teach my mares how to do that. Otherwise, I'll never leave you alone.' He grins and trots away.";
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Zebra":
+		if Name entry is "Zebra Stallion":
 			now MonsterID is y;
 			break;
 	now sex entry is "Male";
@@ -397,7 +393,7 @@ to say ZebraDommingPlayerSex2: [Mounted]
 	mimpregchance;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Zebra":
+		if Name entry is "Zebra Stallion":
 			now MonsterID is y;
 			break;
 	now sex entry is "Male";
@@ -410,7 +406,7 @@ to say ZebraDommingPlayerSex3: [Face Sit]
 	say "     'Those [one of]huskies[or]wolves[or]German Shepherds[at random] were right about you beta bitches. You really are obsessed with dick. And you are truly obsessed with [italic type]my[roman type] dick,' he says as he slaps your face with a loud smack. Your own prick throbbing with unfulfilled lust, you plead with him, asking if you can suck him, jack him off, or even just touch his rod while you finish yourself off. He laughs as he walks away, leaving you to pull yourself together. You try to get yourself off alone, but without your master present, your heart isn't in it. Giving up in spite of the desperate need within you, you get dressed to face survival in this dangerous new world.";
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Zebra":
+		if Name entry is "Zebra Stallion":
 			now MonsterID is y;
 			break;
 	now sex entry is "Male";
@@ -428,7 +424,7 @@ to say ZebraDommingPlayerSex4: [Mating Rut]
 	mimpregchance;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Zebra":
+		if Name entry is "Zebra Stallion":
 			now MonsterID is y;
 			break;
 	now sex entry is "Male";
@@ -450,11 +446,18 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Zebra";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Zebra";
+	add "Zebra Stallion" to infections of Equinelist;
+	add "Zebra Stallion" to infections of FurryList;
+	add "Zebra Stallion" to infections of MaleList;
+	add "Zebra Stallion" to infections of BluntCockList;
+	add "Zebra Stallion" to infections of SheathedCockList;
+	add "Zebra Stallion" to infections of BipedalList;
+	add "Zebra Stallion" to infections of TailList;
+	now Name entry is "Zebra Stallion";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He slams his large forehead right into your head, causing you to see stars![or]The large beast pauses for a minute to stroke his thick zebra cock and grins at you lewdly, the sight and his strong dominant musk sapping your will to fight![or]He lashes out at you with his strong hoof-like hands![or]He charges forward wildly, slamming his body into yours![or]The zebra stallion lowers his shoulder and rams into you, throwing you to the ground painfully![at random]";
 	now defeated entry is "[Zebra loses]";
 	now victory entry is "[Zebra wins]";
@@ -509,7 +512,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -538,7 +541,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -565,18 +568,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -598,14 +601,14 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 when play ends:
-	if BodyName of Player is "Zebra":
+	if BodyName of Player is "Zebra Stallion":
 		if humanity of Player < 10:
 			if Player is female and player is dominant and (ZebraLossCount > 4):
 				say "     Finally free of the last vestiges of your humanity, you make your way to the zoo, eager to assert your rightful place in the new world order. It's not long before you find what you're looking for; your servile stallion, the key to your plan. He yields his harem to you, and you assess the strengths and weaknesses of your sizeable herd. It's obvious that your pet zebra wanted more of a harem than a real fighting force as even the few boy-mares you have are more suited to breeding than battle. You institute drills for all herd members not currently foaling, and between raiding and special sessions with some willing fillies, you even out the gender imbalance in your herd. It takes a few weeks, but thankfully, the nanites make it easy to achieve your goal of a strong gang.";
@@ -658,6 +661,6 @@ the usedesc of zebra fur is "[zebra fur use]";
 to say zebra fur use:
 	say "Playing a bit with the coarse strands of hair, you stroke them over your arm. A moment later, they suddenly disintegrate into a fine powder which just seems to melt into your skin...";
 
-zebra fur is infectious. The strain of zebra fur is "Zebra".
+zebra fur is infectious. The strain of zebra fur is "Zebra Stallion".
 
 Zebra ends here.

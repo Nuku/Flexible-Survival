@@ -76,7 +76,7 @@ Carry out milking:
 		if Breast Size of Player > 8:
 			increase carried of vixen milk by 1;
 		now lastmilking is turns;
-	else if BodyName of Player is "Hermaphrodite Dolphin":
+	else if BodyName of Player is "Dolphin Herm":
 		say "Running both hands over your [if Nipple Count of Player is 2]two[else][Nipple Count of Player][end if] [breast size desc of Player] cetacean breasts, you revel in the pleasant sensations that gives you. As you caress their nipples with your fingers, it doesn't take long till small beads of milk form at their tips. Gently milking yourself, you gather the thick dolphin milk in an empty plastic bottle, all the while imagining how amazing it would be to have your own little kids to suckle on your breasts.";
 		increase carried of dolphin milk by 1;
 		if Breast Size of Player > 8:
@@ -110,7 +110,7 @@ Carry out milking:
 		repeat with T running from one to Z:
 			increase carried of margay milk by 1;
 		now lastmilking is turns;
-	else if BodyName of Player is "Xeno":
+	else if BodyName of Player is "Xeno Drone":
 		say "Bringing your clawed hands to your [if Player is xenoskinned]black, [end if]green-veined breasts, you pinch and squeeze your nipples, drawing out green, acidic milk that sizzles where it falls. You manage to contain some in a jar that it doesn't seem to be able to eat through right away";
 		let z be the square root of ( Nipple Count of Player * Breast Size of Player );
 		let z be z / 2;

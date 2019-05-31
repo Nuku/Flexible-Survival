@@ -65,7 +65,7 @@ Virgin of Retriever Girl is false.
 AnalVirgin of Retriever Girl is true.
 PenileVirgin of Retriever Girl is true.
 SexuallyExperienced of Retriever Girl is true.
-MainInfection of Retriever Girl is "Retriever".
+MainInfection of Retriever Girl is "Retriever Female".
 The description of Retriever Girl is "[KarenDesc]".
 The weapon damage of Retriever Girl is 7.
 The level of Retriever Girl is 5.
@@ -126,7 +126,7 @@ instead of conversing the Karen:
 		say "     Karen isn't here.";
 
 instead of conversing Retriever Girl:
-	if Retriever Girl is not tamed:
+	if retriever girl is not tamed:
 		say "     Who?";
 	else:
 		if Player is in Breakroom and Karen is in Breakroom:

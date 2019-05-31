@@ -40,8 +40,8 @@ Poor Kitty	"Poor Kitty"
 Poor Kitty is a situation.
 The sarea of Poor Kitty is "Fair".
 when play begins:
-	add Poor Kitty to badspots of girl;
-	add Poor Kitty to badspots of furry;
+	add Poor Kitty to BadSpots of FemaleList;
+	add Poor Kitty to BadSpots of FurryList;
 
 Instead of resolving a Poor Kitty:
 	if HP of rubber tigress is 0:
@@ -656,7 +656,7 @@ to say artemissex9:	[Engulf and sex]
 					say "     After having covered the rest of your [Body Size Adjective of Player], [bodydesc of Player] body, all that remains is your head. With her head still largely intact, but clearly softening in preparation of what's to come, she gives you a tender smile and presses her flowing muzzle to your lips in a kiss. As you moan into your kiss, her gooey latex tongue presses into your mouth, playing with your tongue briefly before it continues to stretch out and flow down your throat, coating your insides. As her features start to settle into place, you start to drift off into the orange-tinted dreamscape that leaves your body hers to control. After a quick stretch and a playful grope that you share sensation of, she stashes your gear and heads off in search of someone to play with.";
 			if a random chance of 1 in 1 succeeds:				[more variations to come]
 				say "     Having settled you inside her and shifted herself into that sexy feline shape that will surely draw the attention of the lustful mutants around, she takes your borrowed body out into the city again. Moving with a fair amount of grace now, the kitty struts around, putting her body on display in a search for a playmate. Being such a sexy sight, the smooth tigress doesn't have to wait long before managing to attract a horny ";
-				if anallevel > 1 and ( player is puremale ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and guy is not banned:
+				if anallevel > 1 and ( player is puremale ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and MaleList is not banned:
 					say "[randombodypart]"; [yields male 'bodyselector']
 					if bodyselector is "tiger":
 						while bodyselector is "tiger":
@@ -902,7 +902,7 @@ to artemisnap:
 					say "well-hung [bodyselector], who she eagerly runs over to. On her knees before him, she runs her paws along his legs and starts licking and kissing at his cock. With such enticing, the [bodyselector] laughs and grows hard, the rubbery tigress soon taking his cock into her muzzle and throat (and thereby down your throat as well). She licks and sucks at him eagerly, kneading her paws over his nuts as she does. She releases wet, squeaking moans as she blows her chosen lover. He cums soon enough, feeding a hefty load of hot, cream seed to the eager kitty. This flows down into you, pooling in your rubber-coated stomach. Having gotten her creamy treat, the tigress gets up, licks her muzzle and waddles off happily, rubbing her rounded belly. Her fun over for now, she stumbles back to your resting spot where she passes out in a blissful haze and you sink further into sleep.";
 			else:
 				say "     After settling you inside her, the rubber kitty controlling you takes your body out into the city again, clearly looking for more fun. Moving with a fair amount of grace now, the kitty struts around, putting her body on display in a search for a playmate. Being such a sexy sight, the smooth tigress doesn't have to wait long before managing to attract a horny ";
-				if anallevel > 1 and ( player is puremale ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and guy is not banned:
+				if anallevel > 1 and ( player is puremale ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and MaleList is not banned:
 					say "[randombodypart]"; [yields male 'bodyselector']
 					if bodyselector is "tiger":
 						while bodyselector is "tiger":
@@ -1453,8 +1453,8 @@ to say artemis_sex_mod:
 		say "***tailcock specific scenes.";
 	else if lust of rubber tigress is 2 and a random chance of 1 in 5 succeeds:
 		say "***cuntmouth specific scenes.";]
-[	else if anallevel > 1 and ( Cunt Count of rubber tigress is 0 and lust of rubber tigress is 0 ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and guy is not banned:	]
-	if anallevel > 1 and ( Cunt Count of rubber tigress is 0 and lust of rubber tigress is 0 ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and guy is not banned:
+[	else if anallevel > 1 and ( Cunt Count of rubber tigress is 0 and lust of rubber tigress is 0 ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and MaleList is not banned:	]
+	if anallevel > 1 and ( Cunt Count of rubber tigress is 0 and lust of rubber tigress is 0 ) and ( a random chance of anallevel in 12 succeeds or ( player is mpreg_ok and a random chance of 1 in 12 succeeds ) or ( player is submissive and a random chance of 1 in 12 succeeds ) ) and MaleList is not banned:
 		say "[randombodypart]"; [yields male 'bodyselector']
 		if bodyselector is "tiger":
 			while bodyselector is "tiger":

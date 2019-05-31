@@ -5,26 +5,23 @@ Version 1 of Helot by Wahn begins here.
 
 FuckedBySpartan is a number that varies. FuckedBySpartan is usually 0.		[for use in the endings]
 
-when play begins:
-	add { "Helot" } to infections of guy;
-
 Section 1 - Creature Responses
 
 to say StealthHelotTransformation:
-	now BodyName of Player is "Helot";
+	now BodyName of Player is "Helot Manservant";
 	now Body of Player is "that of a young man, muscular, but with a lean look that hints at going hungry at least part of the time. It in nothing but a pair of sandals and a pretty ragged loincloth of faded cloth";
-	now SkinName of Player is "Helot";
+	now SkinName of Player is "Helot Manservant";
 	now Skin of Player is "smooth, sun-bronzed";
-	now CockName of Player is "Helot";
+	now CockName of Player is "Helot Manservant";
 	now Cock of Player is "Human";
-	now FaceName of Player is "Helot";
+	now FaceName of Player is "Helot Manservant";
 	now Face of Player is "a handsome young man's, still smooth and beardless. Shaggy black hair falls down to your shoulders";
-	now TailName of Player is "Helot";
+	now TailName of Player is "Helot Manservant";
 	now tail of Player is "You have a tight, firmly muscled butt.";
 
 to say Helot wins:
 	if HP of Player > 0: [player submits]
-		if BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and Cunt Count of Player is 0: [Spartans, but not herms and females]
+		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0: [Spartans, but not herms and females]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all. Are you afraid to fight me, Spartan boy - or do you just long for a real man to take your ass? Not that it matters now...' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get it, little Spartan,' he says tauntingly, holding out his erection and grinning widely as you crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I want to take a Spartan boy's asshole. Get on your back, little warrior.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pucker, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft deep in your tight hole. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting yourself to getting used as a slave with that realization, your arms and legs pull him down on top of you, making him go deeper and pound your ass harder. Loud moans escape your mouth as his cock rubs your prostrate. Slamming forward with powerful thrusts, the young man's hips hitting your ass with slapping noises, the Helot speeds up as his arousal mounts. Soon he gives a satisfied grunt, plunging his cock as deep into your body as he can, and spurt after spurt of his seed shoot into you. You can feel his hard shaft pulse against your inner walls with each further burst of cum.[mimpregchance]";
@@ -32,7 +29,7 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
-		else if BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and player is female: [Spartan females + herms]
+		else if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and player is female: [Spartan females + herms]
 			say "     As you kneel down in front of him to show your submission, the Helot looks at you in shock for a second, then chuckles. 'So you're not all such unbeatable warriors after all.' Looking downward, he notices that even though you do have a male body, there is a pussy between your legs. 'Oh wait - you aren't a Spartan boy after all. What were you thinking coming here, girl? Not that it matters now... gonna pound that pussy!' The young man undoes the knots on his ragged loincloth, then throws it aside to reveal his already half hard cock. 'Come and get me ready, little Spartan,' he says tauntingly, holding out his erection and grinning widely as you have to crawl several feet to take it into your mouth. He lets you bob up and down on his shaft for a while, then decides to take things into his own hands. Plucking your Greek helmet off and donning it himself, he runs both his hands over your head and grabs you by the hair. Then he starts moving your head as he fucking into your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
 			say "     The Helot's moans in lust get louder and louder and he plunges in and out of your mouth with increasing speed until suddenly, he stops, his shaft deep in your throat. Taking a deep breath, he pulls out slowly, waiting a moment before saying 'Phew - almost came right here. But not yet - I promised you I'll fuck you. Get on your back, girlie.' Stepping back, he leers at you in lust as you move to lie down on your red cloak. Your captor moves into position between your legs, raising and spreading them. As you feel the tip of his erection hotly against your pussy lips, he says 'Look me in the eye when I fuck you like a common slave! Admit it, this is what you wanted all along!' Then he thrusts into you with a satisfied grunt, burying his hard shaft in your vagina. As his invading member slides deeper, stretching your passage around it, something inside you tells you he's right - this is right - your place in the world is under this virile young man, serving him. Fully submitting to be the Spartan's slave with that realization, you grind back against him, moaning deeply as his cock rubs your insides. Slamming forward with powerful thrusts, the young warrior's hips hitting yours with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoot into you, splashing into your womb. You can feel his hard shaft pulse against your inner walls with each further burst of cum. 'Feel that, you Spartan bitch? That's a former slave's load filling you. Try to explain that to your family!'[fimpregchance]";
@@ -41,7 +38,7 @@ to say Helot wins:
 			say "     Lying on the ground, exhausted, naked and sweaty, you notice something... different about the man who just fucked you. His hair has gotten shorter and he seems even more in shape than before. The helmeted head of the changed Helot turns to look at you. 'Get off my cloak, slave - before you leak cum all over it.' He even sounds different, more commanding and certain of being obeyed somehow. Undoing the clasp holding your red cloak, you put a hand under your asshole so that the man's sperm doesn't drip on the fabric and move aside. Your fucker picks up the cloak and dons it, then walks away, his transformation into a proud warrior complete. After the newly shifted Spartan is gone, you clean yourself up as much as possible, then pick up the ragged loincloth lying beside you and bind it around your hips.";
 			say "[StealthHelotTransformation]";
 		else: [general sex]
-			if BodyName of Player is "Helot" and FaceName of Player is "Helot":
+			if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
 				say "     As you submit, the Helot grasps your shoulder and says 'Sorry buddy, but... you know how it is to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
 			else if BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian":
 				say "     As you fall to your knees, beaten, the Helot strokes a finger along your cheek and says 'Combat just isn't for women, see - come on, let me show you a good time instead. That's what the gods made you for, after all.' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
@@ -49,7 +46,7 @@ to say Helot wins:
 				say "     As you fall to your knees, beaten, the Helot grasps your shoulder and says 'Sorry about this, but... it's hard to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
 			say "[Helot fucks]";
 	else: [player loses]
-		if BodyName of Player is "Spartan" and FaceName of Player is "Spartan": [special sex scene for Helot on Spartan]
+		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior": [special sex scene for Helot on Spartan]
 			say "     As you stumble back from the last blow, the Helot goes for a follow-up stroke that almost literally knocks you out of your sandals. Bruised, you fall to the ground to lie on your back. When the stars stop dancing in front of your eyes, you see the young man standing over your chest, looking down on you with a grin. 'How the mighty have fallen...' He leans down to pull the Greek helmet off your head, then dons it himself. 'Let us see how you like being a slave for a change!'";
 			say "     Hands moving to undo the knots of his ragged loincloth, the Helot throws it aside to reveal his already half hard cock. After stroking it a few times, he kneels and pushes the tip of his shaft against your mouth. 'Come on, open up - you're mine now,' he says, then slides his shaft between your lips and starts fucking your mouth. Pushing deep quickly, he makes you cough a few times but still continues going without much interest in your comfort.";
 			WaitLineBreak;
@@ -65,7 +62,7 @@ to say Helot wins:
 			WaitLineBreak;
 			say "     Being bred by this young man, the amazing full feeling of having his warm load inside you, your own orgasm follows just moments later. [if Player is male]Long bursts of cum jet out of the tip of your manhood, splashing over the ground below[else if Player is female]Your whole body shakes in the grip of climax, femcum running down your legs[else]Your whole body shakes in the grip of climax[end if]. Meanwhile, the Helot pumps in and out of you a few more times as he shoots his last spurts of cum, then pulls out of your ass with a slurping noise. He wipes the cum on his cock off on your skin, then stands up and grabs his loincloth from the ground. With an affectionate slap on the ass and a moaned 'Good dog.', the Helot leaves you ";
 		else: [general sex]
-			if BodyName of Player is "Helot" and FaceName of Player is "Helot":
+			if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
 				say "     As you fall to your knees, beaten, the Helot puts a hand to your shoulder and says 'Sorry buddy, but... you know how it is to be hungry. And I'm somehow horny all the time here too...' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
 			else if BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian":
 				say "     As you fall to your knees, beaten, the Helot strokes a hand along your cheek and says 'Combat just isn't for women, see - come on, let me show you a good time instead. That's what the gods made you for, after all.' With that, his hands move to the knots of his loincloth, which he lets drop to the ground, revealing his full-on erection.";
@@ -90,9 +87,9 @@ to say Helot fucks:
 		say "     Digging in your pack, the Helot looks up after a while, a disappointed expression on his face. 'You don't have any food either? Damn. Looks like this'll be another hungry day for me then.' He shrugs and walks off, and you can hear him murmur 'At least my balls don't ache as much now...'";
 
 to say Helot loses:
-	if BodyName of Player is "Helot" and FaceName of Player is "Helot":
+	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
 		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I'm sorry I tried to rob you, but... you know how it is to be hungry.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
-	else if BodyName of Player is "Spartan" and FaceName of Player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
+	else if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
 		say "     Breathing hard, the somewhat bruised young Helot grimaces, then drops both arms to his sides and looks down. 'I'm sorry... master. I shouldn't have tried fighting you.' His hands move to undo the knots of his loincloth, letting it fall to the ground. Now the lean, muscled man stands submissively before you. 'I'm ready for your punishment. Do with me what you will.'";
 	else if BodyName of Player is "Amazon" and FaceName of Player is "Amazon": [Someone in a costume he recognizes]
 		say "     Breathing hard, the somewhat bruised young Helot raises his hands to placate you. 'Whoa - you really can fight! I was wrong about you.' He looks to the ground for a second, then back at you. 'I don't have anything, so I guess you'll be taking my body as repayment? That's how it is in this land?' With that, he undoes the knots of his loincloth and lets it fall to the ground, revealing his lean, muscled body.";
@@ -202,9 +199,9 @@ to say Helot blown:
 to say HelotDesc:
 	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals and a ragged loincloth. He's has dark hair, sun-bronzed skin and is muscular, but with a lean look - likely from going hungry some days. He gives you a wary look, then says:[line break]";
-	if BodyName of Player is "Helot" and FaceName of Player is "Helot": [no honor among slaves]
+	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant": [no honor among slaves]
 		say "     'Another slave like me, eh? Don't think that makes us friends - it's everyone for himself in this strange, cursed place... especially with how hungry - and horny - I am right now!' Having unobtrusively walked closer while he was talking, the man suddenly jumps you.";
-	else if BodyName of Player is "Spartan" and FaceName of Player is "Spartan": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
+	else if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior": [note: Cypteia = secret police, killing rebellious Helots to keep them under control]
 		say "     'Well, well - one of our lords and masters all alone. Are you part of the Cypteia? No matter - with no armor and no weapon, you won't be rounding any of us up. I'll give you a good trashing instead!' With a snarl, he throws himself on you.";
 	else if BodyName of Player is "Amazon" and FaceName of Player is "Amazon": [Someone in a costume he recognizes]
 		say "     'A woman as a soldier? Stop fooling yourself - come over here, wench... I'll show you a good time.' As you don't immediately jump to his orders, the young man murmurs something about showing you your place, then rushes at you.";
@@ -222,11 +219,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Helot";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Helot";
+	add "Helot Manservant" to infections of HumanList;
+	add "Helot Manservant" to infections of HistoricalList;
+	add "Helot Manservant" to infections of MaleList;
+	add "Helot Manservant" to infections of BipedalList;
+	now Name entry is "Helot Manservant";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]He gives you a hard kick - ouch, that hurt.[or]He punches you with a balled fist.[or]Throwing a handful of dirt into your face, the young Helot manages a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Helot loses]";
 	now victory entry is "[Helot wins]";
@@ -281,7 +282,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -310,7 +311,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -337,18 +338,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -370,7 +371,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -379,7 +380,7 @@ When Play begins:
 Section 3 - Endings
 
 when play ends:
-	if BodyName of Player is "Helot":
+	if BodyName of Player is "Helot Manservant":
 		if humanity of Player < 10: [succumbed]
 			if Player is submissive:
 				if FuckedBySpartan is 1: [had sex with a Spartan - wants to go back]

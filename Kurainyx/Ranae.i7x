@@ -97,8 +97,8 @@ The sarea of Trench Coat Salesman is "Outside".
 Trench Coat Salesman is inactive.
 
 when play begins:
-	add Starving Frog to badspots of girl;
-	add Starving Frog to badspots of furry;
+	add Starving Frog to BadSpots of FemaleList;
+	add Starving Frog to BadSpots of FurryList;
 
 Instead of resolving a Starving Frog:
 	now hunger of Ranae is 1;		[Met Ranae]

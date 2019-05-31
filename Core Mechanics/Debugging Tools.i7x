@@ -302,7 +302,9 @@ impregwith is an action applying to one topic.
 understand "impreg with [text]" as impregwith.
 
 check impregwith:
-	if debugactive is 0, say "You aren't currently debugging." instead;
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out impregwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -316,7 +318,9 @@ infectwith is an action applying to one topic.
 understand "infect with [text]" as infectwith.
 
 check infectwith:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out infectwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -554,12 +558,187 @@ RemoveFeat is an action applying to one topic.
 understand "RemoveFeat [text]" as RemoveFeat.
 
 check RemoveFeat:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out RemoveFeat:
 	if topic understood is listed in feats of Player:
 		remove topic understood from feats of Player;
 	else:
 		say "[topic understood] is not in Feats of Player!";
+
+DebugInfect is an action applying to one topic.
+
+understand "DebugInfect [text]" as DebugInfect.
+
+check DebugInfect:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DebugInfect:
+	say "Infecting with [topic understood]:[line break]";
+	infect "[topic understood]";
+
+TagListReadout is an action applying to one topic.
+
+understand "TagListReadout" as TagListReadout.
+
+check TagListReadout:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out TagListReadout:
+	say "All current lists:";
+	LineBreak;
+	sort Infections of AquaticList;
+	sort Infections of ArachnidList;
+	sort Infections of AvianList;
+	sort Infections of AvianpredList;
+	sort Infections of Bovinelist;
+	sort Infections of CanineList;
+	sort Infections of CervineList;
+	sort Infections of CetaceanList;
+	sort Infections of EquineList;
+	sort Infections of FelineList;
+	sort Infections of FoodList;
+	sort Infections of HumanList;
+	sort Infections of HybridList;
+	sort Infections of InsectList;
+	sort Infections of LatexList;
+	sort Infections of LeporineList;
+	sort Infections of MachineList;
+	sort Infections of MarsupialList;
+	sort Infections of MustelidList;
+	sort Infections of NonOrganicList;
+	sort Infections of OrcList;
+	sort Infections of PiscineList;
+	sort Infections of PlantList;
+	sort Infections of PorcineList;
+	sort Infections of PrimateList;
+	sort Infections of ReptileList;
+	sort Infections of RodentList;
+	sort Infections of SlimeList;
+	sort Infections of ToyList;
+	sort Infections of UrsineList;
+	sort Infections of VulpineList;
+	sort Infections of HistoricalList;
+	sort Infections of MagicalList;
+	sort Infections of MythologicalList;
+	sort Infections of NatureList;
+	sort Infections of OtherworldlyList;
+	sort Infections of ScienceList;
+	sort Infections of BarbedCockList;
+	sort Infections of BluntCockList;
+	sort Infections of InternalCockList;
+	sort Infections of KnottedCockList;
+	sort Infections of OviPositorList;
+	sort Infections of PrehensileCocklist;
+	sort Infections of SheathedCockList;
+	sort Infections of TaperedCockList;
+	sort Infections of TentacleCockList;
+	sort Infections of TailList;
+	sort Infections of BipedalList;
+	sort Infections of QuadrupedalList;
+	sort Infections of HexapedalList;
+	sort Infections of OctapedalList;
+	sort Infections of TaurList;
+	sort Infections of SerpentineList;
+	sort Infections of SlidingList;
+	sort Infections of FlightList;
+	sort Infections of SwimList;
+	sort Infections of AlwaysLacList;
+	sort Infections of HeatList;
+	sort Infections of AlwaysHeatList;
+	sort Infections of RutList;
+	sort Infections of AlwaysRutList;
+	sort Infections of GillList;
+	sort Infections of NotBreathingList;
+	sort Infections of Birthlist;
+	sort Infections of Egglaylist;
+	sort Infections of MpregList;
+	sort Infections of OviImpregnatorList;
+	sort Infections of Sterilelist;
+	sort Infections of FeralmindList;
+	sort Infections of HivemindList;
+	sort Infections of PackmindList;
+	sort Infections of FirebreathList;
+	sort Infections of TailweaponList;
+	say "AquaticList: [Infections of AquaticList][line break][line break]";
+	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
+	say "AvianList: [Infections of AvianList][line break][line break]";
+	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
+	say "Bovinelist: [Infections of Bovinelist][line break][line break]";
+	say "CanineList: [Infections of CanineList][line break][line break]";
+	say "CervineList: [Infections of CervineList][line break][line break]";
+	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
+	say "EquineList: [Infections of EquineList][line break][line break]";
+	say "FelineList: [Infections of FelineList][line break][line break]";
+	say "FoodList: [Infections of FoodList][line break][line break]";
+	say "HumanList: [Infections of HumanList][line break][line break]";
+	say "HybridList: [Infections of HybridList][line break][line break]";
+	say "InsectList: [Infections of InsectList][line break][line break]";
+	say "LatexList: [Infections of LatexList][line break][line break]";
+	say "LeporineList: [Infections of LeporineList][line break][line break]";
+	say "MachineList: [Infections of MachineList][line break][line break]";
+	say "MarsupialList: [Infections of MarsupialList][line break][line break]";
+	say "MustelidList: [Infections of MustelidList][line break][line break]";
+	say "NonOrganicList: [Infections of NonOrganicList][line break][line break]";
+	say "OrcList: [Infections of OrcList][line break][line break]";
+	say "PiscineList: [Infections of PiscineList][line break][line break]";
+	say "PlantList: [Infections of PlantList][line break][line break]";
+	say "PorcineList: [Infections of PorcineList][line break][line break]";
+	say "PrimateList: [Infections of PrimateList][line break][line break]";
+	say "ReptileList: [Infections of ReptileList][line break][line break]";
+	say "RodentList: [Infections of RodentList][line break][line break]";
+	say "SlimeList: [Infections of SlimeList][line break][line break]";
+	say "ToyList: [Infections of ToyList][line break][line break]";
+	say "UrsineList: [Infections of UrsineList][line break][line break]";
+	say "VulpineList: [Infections of VulpineList][line break][line break]";
+	say "HistoricalList: [Infections of HistoricalList][line break][line break]";
+	say "MagicalList: [Infections of MagicalList][line break][line break]";
+	say "MythologicalList: [Infections of MythologicalList][line break][line break]";
+	say "NatureList: [Infections of NatureList][line break][line break]";
+	say "OtherworldlyList: [Infections of OtherworldlyList][line break][line break]";
+	say "ScienceList: [Infections of ScienceList][line break][line break]";
+	say "BarbedCockList: [Infections of BarbedCockList][line break][line break]";
+	say "BluntCockList: [Infections of BluntCockList][line break][line break]";
+	say "InternalCockList: [Infections of InternalCockList][line break][line break]";
+	say "KnottedCockList: [Infections of KnottedCockList][line break][line break]";
+	say "OviPositorList: [Infections of OviPositorList][line break][line break]";
+	say "PrehensileCocklist: [Infections of PrehensileCocklist][line break][line break]";
+	say "SheathedCockList: [Infections of SheathedCockList][line break][line break]";
+	say "TaperedCockList: [Infections of TaperedCockList][line break][line break]";
+	say "TentacleCockList: [Infections of TentacleCockList][line break][line break]";
+	say "TailList: [Infections of TailList][line break][line break]";
+	say "BipedalList: [Infections of BipedalList][line break][line break]";
+	say "QuadrupedalList: [Infections of QuadrupedalList][line break][line break]";
+	say "HexapedalList: [Infections of HexapedalList][line break][line break]";
+	say "OctapedalList: [Infections of OctapedalList][line break][line break]";
+	say "TaurList: [Infections of TaurList][line break][line break]";
+	say "SerpentineList: [Infections of SerpentineList][line break][line break]";
+	say "SlidingList: [Infections of SlidingList][line break][line break]";
+	say "FlightList: [Infections of FlightList][line break][line break]";
+	say "SwimList: [Infections of SwimList][line break][line break]";
+	say "AlwaysLacList: [Infections of AlwaysLacList][line break][line break]";
+	say "HeatList: [Infections of HeatList][line break][line break]";
+	say "AlwaysHeatList: [Infections of AlwaysHeatList][line break][line break]";
+	say "RutList: [Infections of RutList][line break][line break]";
+	say "AlwaysRutList: [Infections of AlwaysRutList][line break][line break]";
+	say "GillList: [Infections of GillList][line break][line break]";
+	say "NotBreathingList: [Infections of NotBreathingList][line break][line break]";
+	say "Birthlist: [Infections of Birthlist][line break][line break]";
+	say "Egglaylist: [Infections of Egglaylist][line break][line break]";
+	say "MpregList: [Infections of MpregList][line break][line break]";
+	say "OviImpregnatorList: [Infections of OviImpregnatorList][line break][line break]";
+	say "Sterilelist: [Infections of Sterilelist][line break][line break]";
+	say "FeralmindList: [Infections of FeralmindList][line break][line break]";
+	say "HivemindList: [Infections of HivemindList][line break][line break]";
+	say "PackmindList: [Infections of PackmindList][line break][line break]";
+	say "FirebreathList: [Infections of FirebreathList][line break][line break]";
+	say "TailweaponList: [Infections of TailweaponList][line break][line break]";
+
 
 Debugging Tools ends here.

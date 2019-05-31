@@ -5,10 +5,6 @@ Version 1 of Shadow Beast by UrsaOmega begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Shadow Beast" } to infections of guy;
-	add { "Shadow Beast" } to infections of Felinelist; [list of feline infections]
-
 to say shadowbeastdesc:
 	setmongender 3; [creature is male]
 	increase mondodgebonus by 5;
@@ -90,11 +86,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Shadow Beast";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Shadow Beast";
+	add "Shadow Beast Male" to infections of FelineList;
+	add "Shadow Beast Male" to infections of FurryList;
+	add "Shadow Beast Male" to infections of ScienceList;
+	add "Shadow Beast Male" to infections of MaleList;
+	add "Shadow Beast Male" to infections of BarbedCockList;
+	add "Shadow Beast Male" to infections of SheathedCockList;
+	add "Shadow Beast Male" to infections of QuadrupedalList;
+	add "Shadow Beast Male" to infections of FeralmindList;
+	add "Shadow Beast Male" to infections of TailList;
+	now Name entry is "Shadow Beast Male";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The beast disappears in a flicker of darkness before reappearing behind you, striking at you![or]The beast lashes out with its tentacles![or]The beast leaps at you![or]The Shadow Beast firmly makes its point![or]One of its tentacles whips though the air and gives you a painful slap.[or]A slash of a clawed paw leaves bloody marks on you.[at random]";
 	now defeated entry is "[beattheshadowbeast]";       [ Text when monster loses. Change 'shadowbeast' as above. ]
 	now victory entry is "[losetoshadowbeast]";         [ Text when monster wins. Change 'shadowbeast' as above. ]
@@ -149,7 +154,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -178,7 +183,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -205,18 +210,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -238,7 +243,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -256,7 +261,7 @@ Hunted Survivor is a situation.
 The sarea of Hunted Survivor is "Sealed".
 
 when play begins:
-	add Hunted Survivor to badspots of guy;
+	add Hunted Survivor to BadSpots of MaleList;
 
 Instead of resolving a Hunted Survivor:
 	say "     As you step through the access door into the underground levels under the Trevor Labs and move down the dark corridor beyond, you hear something. The sound of naked feet on the concrete floor echo from somewhere ahead, quickly getting louder as their source gets closer. Then a man bursts out of one of the side passages, clothed in nothing but a few shreds of tattered clothing and running all out towards the exit.";
@@ -267,7 +272,7 @@ Instead of resolving a Hunted Survivor:
 		say "     Uh-oh - what now? Maybe try to help this man (Y)? Or would you rather get out of here before you're the next target of a hungry - or horny - monstrosity (N)?";
 		if Player consents:
 			now ShadowBeastEventState is 1; [special event description instead of the normal one]
-			challenge "Shadow Beast";
+			challenge "Shadow Beast Male";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost/submitted]
 				say "     With the tentacled panther back into darkness, you're left alone in the hallway, sticky with its cum leaking out of your [if Player is female]pussy[else]ass[end if]. Collecting your gear, you clean up as good as you can and go back to the surface exit, relieved as you leave behind the dark corridors. Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
 				now Resolution of Hunted Survivor is 2; [player lost, man escaped]
@@ -287,7 +292,7 @@ Instead of resolving a Hunted Survivor:
 Section 4 - Endings
 
 when play ends:
-	if BodyName of Player is "Shadow Beast":
+	if BodyName of Player is "Shadow Beast Male":
 		if humanity of Player < 10:
 			if Player is male: [male+herm]
 				if Player is submissive: [male+sub]

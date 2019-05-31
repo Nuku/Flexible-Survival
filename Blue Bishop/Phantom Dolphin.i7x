@@ -94,7 +94,7 @@ to say flotfuck:
 				say "     Forcibly, you're pulled on top of the dolphin, wobbling violently against the waves as it balances you on it";
 				if Player is male:
 					say ". Eagerly, it encases[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-erect dick[smn] where its hole would be[if Cock Count of Player > 2] before taking the rest along with it[else if Cock Count of Player is 2] before taking the other along with it[end if].";
-					say "     The toy continues to wobble against the waters, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if CockName of Player is not listed in infections of internallist] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
+					say "     The toy continues to wobble against the waters, easily having consumed your[if Cock Length of Player > 11] impressive[end if] meat as a latex-like substance quickly engulfs[if CockName of Player is not listed in infections of InternalCockList] your [Ball Size Adjective of Player] [Balls][else]the rest of your crotch[end if] as well";
 					if anallevel > 1:
 						say ". Soon, you feel the tainted material flood your [if Player is female]cunt[sfn] and ass, pounding your holes with a writhing series of tapered, worming tendrils[else]your ass, pounding your hole with a writhing series of tapered, worming tendrils[end if]";
 					else if Player is female:
@@ -265,7 +265,7 @@ to flotprogress: [passable]
 	if flotintense is 2:
 		say "     You begin to find it somewhat difficult to pull your limbs free of the inflatable dolphin, sticking to its surface rather firmly. Moreover, you feel a warm, latex-like substance ";
 		if Player is male:
-			say "encase your dick[smn], [if CockName of Player is not listed in infections of internallist]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
+			say "encase your dick[smn], [if CockName of Player is not listed in infections of InternalCockList]your [Ball Size Adjective of Player] [Balls], and coat[else]coating[end if] [if Player is female]your cunt[sfn] and ass[else]your ass[end if][if Player is female or anallevel > 1]. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further[end if].";
 		else:
 			say "coat your cunt[sfn] and ass. It doesn't seem compelled to penetrate you just yet, though the undulating material certainly drives your need further.";
 		say "     By the looks of things, this peculiar toy is only just getting started. Should you persist, things are clearly going to get a lot worse...";

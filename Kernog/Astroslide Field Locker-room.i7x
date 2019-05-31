@@ -88,7 +88,7 @@ to say RomanHumiliation:
 [General Sex menu]
 instead of fucking the Gorilla Team-Members:
 	setmonster "Football Gorilla";
-	if Furry is banned:
+	if FurryList is banned:
 		say "     Too much fur for your taste.";
 	else:
 		now sextablerun is 0;
@@ -105,7 +105,7 @@ instead of fucking the Gorilla Team-Members:
 		now sortorder entry is 2;
 		now description entry is "Take position in a circle of masturbating males and let them bathe you in their cum";
 		[]
-		if (player is male and Guy is not banned):
+		if (player is male and MaleList is not banned):
 			choose a blank row in table of fucking options;
 			now title entry is "Join a chain fuck";
 			now sortorder entry is 3;
@@ -145,7 +145,7 @@ instead of fucking the Gorilla Team-Members:
 
 [General Sex scenes]
 to say GorillaTeamSex1: [bukkake (giving)]
-	if (Girl is banned or Girl is warded):
+	if (FemaleList is banned or FemaleList is warded):
 		let randomnumber be a random number from 1 to 5;
 		now tempGorillaGender is 0;
 		if randomnumber is:
@@ -159,7 +159,7 @@ to say GorillaTeamSex1: [bukkake (giving)]
 			now TempGorillaName1 is "Steve";
 		-- 5:
 			now TempGorillaName1 is "Marty";
-	else if (Guy is banned or Guy is warded):
+	else if (MaleList is banned or MaleList is warded):
 		let randomnumber be a random number from 1 to 5;
 		now tempGorillaGender is 1;
 		if randomnumber is:
@@ -294,7 +294,7 @@ PeepingRoman	"PeepingRoman"
 PeepingRoman is a situation.
 The sarea of PeepingRoman is "Nowhere".
 
-instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and Furry is not banned and Furry is not warded and a random chance of 1 in 3 succeeds):
+instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and FurryList is not banned and FurryList is not warded and a random chance of 1 in 3 succeeds):
 	move player to Astroslide Field Locker-room;
 	PeepingRomanEvent;
 

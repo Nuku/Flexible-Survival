@@ -130,7 +130,7 @@ to say BjornTalkMenu:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Viking";
+	now title entry is "Viking Woman";
 	now sortorder entry is 1;
 	now description entry is "Ask him about his tribe";
 	[]
@@ -159,7 +159,7 @@ to say BjornTalkMenu:
 			if Player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Viking"):
+				if (nam is "Viking Woman"):
 					say "[BjornViking]";
 				if (nam is "Spar"):
 					say "[BjornSpar]";
@@ -315,7 +315,7 @@ to say BjornSex1:
 	now lastfuck of Bjorn is turns;
 
 to say BjornSex2:
-	setmonster "Viking";
+	setmonster "Viking Woman";
 	say "     As soon as you mention allowing the male to fuck you up the ass, he smiles widely. 'That's a great idea,' he says, clearly eager to get his cock up your hole. Bjorn quickly begins to divest himself of his clothing, starting with his scale-mail chest piece which is promptly tossed onto the ground. Followed by that are his leather pants that join the top on the sand in a pile. His dick is revealed by now, slowly starting to harden, a testament to his horniness. Figuring that you too should strip, you remove your clothing and let it join the Viking's on the floor. The buff male walks up to you and plants a kiss on your neck, something that makes you shiver with pleasure. His hands begin to inch closer and closer to your hole as he switches his attention to your own mouth, starting a rough make-out session.";
 	say "     When his fingers finally reach your pucker he slowly pushes in one digit, making causing you to let out a groan of pleasure and pain. Of course your sounds are muffled when he slips his tongue into your mouth, exploring the insides of your oral cavity. This distracts you from the sensation of him adding another finger and beginning to scissor your hole open. Your friend continues this for a while before switching to thrusting his two digits in and out of your entrance[if Player is male], making sure to brush up against your prostate to make you moan wantonly[end if]. Sadly though this comes to an end as Bjorn pulls his fingers out of your entrance.";
 	WaitLineBreak;

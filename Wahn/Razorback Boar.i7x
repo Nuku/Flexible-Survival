@@ -12,9 +12,6 @@ RazorbackBoarEvents is a number that varies.
 FuckedByRazorbackBoar is a number that varies.
 GarthRelationship is a number that varies.
 
-when play begins:
-	add { "Razorback Boar" } to infections of guy;
-
 Section 1 - Events
 
 Table of GameEventIDs (continued)
@@ -26,8 +23,8 @@ The level of Razorback Fury is 7.
 The sarea of Razorback Fury is "Forest".
 
 when play begins:
-	add Razorback Fury to badspots of guy;
-	add Razorback Fury to badspots of furry;
+	add Razorback Fury to BadSpots of MaleList;
+	add Razorback Fury to BadSpots of FurryList;
 
 Instead of resolving a Razorback Fury:
 	project the Figure of Garth_face_icon;
@@ -58,8 +55,8 @@ The level of Boar Payback is 7.
 The sarea of Boar Payback is "Forest".
 
 when play begins:
-	add Boar Payback to badspots of guy;
-	add Boar Payback to badspots of furry;
+	add Boar Payback to BadSpots of MaleList;
+	add Boar Payback to BadSpots of FurryList;
 
 Instead of resolving a Boar Payback:
 	say "     As you wander through the forest, you spot someone moving a little bit ahead of you - it's a dashing young anthro wolf, clad in designer jeans and a tight shirt, bearing a determined expression on his face. After a moment or two, you recall his name being Andy, and you having seen him and two buddies try (and fail) to take on a tough razorback boar out here. Wondering what he's doing out here again after the thrashing and face-fuck Garth the boar gave him, you almost automatically start following him unobtrusively - then suddenly spot the [if daytimer is day]daylight[else]moonlight[end if] glisten on something metallic stuck behind his belt, just above the tail cut-out he put in those jeans. The would-be wolfpack (or gang) leader has a gun! Doesn't take a genius to figure out who he's got a score to settle with.";
@@ -107,8 +104,8 @@ Prereq1Resolution of Canine Indecision is { 1, 2 }.
 The level of Canine Indecision is 7.
 The sarea of Canine Indecision is "Forest".
 when play begins:
-	add Canine Indecision to badspots of guy;
-	add Canine Indecision to badspots of furry;
+	add Canine Indecision to BadSpots of MaleList;
+	add Canine Indecision to BadSpots of FurryList;
 
 Instead of resolving a Canine Indecision:
 	say "     As you wander through the outskirts of the forest, where trees and buildings meet and sometimes even meld under the influence of the ever-present nanite infection, you spot something moving a little bit ahead of you. Careful not to give yourself away, you move a little closer to check out what it is - and it turns out to be someone you know (a little bit at least). Not too far away and with his back turned, a dashing young anthro wolf stands, looking rather lost and unsure of himself. It is Andy, the would-be gang-member that you saw before in his meetings with the razorback boar man Garth. To his left, the green and brown expanse of the forest beckons, cool in the shade and full of life - while to his right, a narrow street leads back to the heart of the city, promising some loot and luxury for the ones who can assert themselves in a harsh post-apocalyptic society.";
@@ -150,8 +147,8 @@ The level of Boar Encounter is 7.
 The sarea of Boar Encounter is "Forest".
 
 when play begins:
-	add Boar Encounter to badspots of guy;
-	add Boar Encounter to badspots of furry;
+	add Boar Encounter to BadSpots of MaleList;
+	add Boar Encounter to BadSpots of FurryList;
 
 Instead of resolving a Boar Encounter:
 	project the Figure of Garth_face_icon;
@@ -221,8 +218,8 @@ Prereq2Resolution of Woodcutting Boar is { 1 }. [encountered at least once]
 The sarea of Woodcutting Boar is "Forest".
 
 when play begins:
-	add Woodcutting Boar to badspots of guy;
-	add Woodcutting Boar to badspots of furry;
+	add Woodcutting Boar to BadSpots of MaleList;
+	add Woodcutting Boar to BadSpots of FurryList;
 
 Instead of resolving a Woodcutting Boar:
 	say "     Moving through the expansive urban forest, one sometimes can almost forget that this was once the middle of a city, surrounded by what seem to be ancient trees and all sorts of other vegetation forming thick undergrowth. Yet all too often, the truth is revealed by objects coming into view beyond the thick trunks as you keep walking: roadsigns on crooked poles almost pushed over by roots bursting the concrete below, mounds of rubble that were once buildings, as well as a few wall segments miraculously still standing despite the explosive growth patterns of vegetation hereabouts. Glancing down, you see a large fragment of concrete, complete with several rebar struts sticking out of it. From the looks of it, they snapped under too much strain, showing that even something as simple as a growing tree can bring down what humanity has built - given enough time that is, or an out of control nanite infection to help things along.";
@@ -705,11 +702,17 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Razorback Boar";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Razorback Boar";
+	add "Razorback Boar Male" to infections of PorcineList;
+	add "Razorback Boar Male" to infections of FurryList;
+	add "Razorback Boar Male" to infections of NatureList;
+	add "Razorback Boar Male" to infections of MaleList;
+	add "Razorback Boar Male" to infections of BipedalList;
+	add "Razorback Boar Male" to infections of TailList;
+	now Name entry is "Razorback Boar Male";
+	now enemy title entry is "Razorback Boar Survivalist";
+	now enemy Name entry is "Garth";
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]With a deep grunt, the boar-man charges at you. You're thrown onto the ground as he bowls you over.[or]Making a fist, the razorback boar punches you in the gut, leaving you coughing for breath.[or]Snapping his head forward, the boar-man bites at you and leaves shallow gashes with his tusks.[or]Kicking a leg out from under you with one of his cloven hooves, the wild pig sends you sprawling on the ground.[at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[RazorbackBoar loses]";
 	now victory entry is "[RazorbackBoar wins]";
@@ -764,7 +767,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -793,7 +796,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -820,18 +823,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -853,7 +856,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

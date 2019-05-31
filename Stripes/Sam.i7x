@@ -55,10 +55,10 @@ Another Researcher	"Another Researcher"
 Another Researcher is a situation.
 The sarea of Another Researcher is "Outside".
 when play begins:
-	add Another Researcher to badspots of furry;
-	add Another Researcher to badspots of guy;
-	add Another Researcher to badspots of girl;
-	add Another Researcher to badspots of hermaphrodite;
+	add Another Researcher to BadSpots of FurryList;
+	add Another Researcher to BadSpots of MaleList;
+	add Another Researcher to BadSpots of FemaleList;
+	add Another Researcher to badspots of HermList;
 
 Instead of resolving Another Researcher:
 	say "     While passing along a narrow side street, you hear the not-uncommon sounds of rutting sex coming from somewhere nearby. Picking up something odd about the sounds, you cut across the alley and peek out into the street. There you find a canine finishing up in what appears to be an unchanged human male. The guy being pounded spots you and blushes a little, motioning for you to be quiet and wait. Expecting him to start changing soon, you prepare to back away, but even after the canine is done and gone, no infection appears. The guy gets up slowly and starts rearranging his clothes, waving you over. Confused but cautious, you approach him.";
@@ -1205,10 +1205,10 @@ monstermemory is a number that varies.
 to say DVimpregchance: [Allows for varied offspring by Sam/Dracovixentaur]
 	let Z be a random number between 1 and 4;
 	now monstermemory is MonsterID;
-	if Z is 1 and girl is not banned: [puts Vixentaur as lead monster in case of impregnation]
+	if Z is 1 and FemaleList is not banned: [puts Vixentaur as lead monster in case of impregnation]
 		setmonster "Vixentaur";
 		say "[impregchance]";
-	else if Z is 2 and guy is not banned: [puts Dragontaur as lead monster in case of egg-pregnation]
+	else if Z is 2 and MaleList is not banned: [puts Dragontaur as lead monster in case of egg-pregnation]
 		setmonster "Dragontaur";
 		say "[ovichance]";
 	else if Z is 3: [puts Dracovixentaur as lead monster in case of impregnation]

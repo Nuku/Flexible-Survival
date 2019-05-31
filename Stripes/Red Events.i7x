@@ -41,8 +41,8 @@ Raided Corner Store	"Raided Corner Store"
 Raided Corner Store is a situation. The level of Raided Corner Store is 3.
 The sarea of Raided Corner Store is "Red".
 when play begins:
-	add Raided Corner Store to badspots of hermaphrodite;
-	add Raided Corner Store to badspots of furry;
+	add Raided Corner Store to badspots of HermList;
+	add Raided Corner Store to BadSpots of FurryList;
 
 Instead of resolving a Raided Corner Store:
 	say "     You come across a small corner store. While it has been raided, you can see that it's not been as badly damaged as others and may still hold something of interest. You slip inside and glance around, but the shelves, coolers and displays have been emptied of anything useful. The cash register is empty as well. You head to check the back and find that the entrance to the back is locked. Perhaps there is something worthwhile in there. You start by knocking as asking if anyone's still safe in there, but get no response.";
@@ -53,19 +53,19 @@ Instead of resolving a Raided Corner Store:
 	if Player consents:
 		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.";
 		if hyg is 4:
-			if the BodyName of Player is "Herm Hyena" or FaceName of Player is "Hyena Herm":
+			if the BodyName of Player is "Hyena Herm" or FaceName of Player is "Hyena Herm":
 				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.";
 				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
 				increase carried of soda by 2;
 				increase carried of chips by 2;
 			else:
-				challenge "Herm Hyena";
-				challenge "Herm Hyena";
+				challenge "Hyena Herm";
+				challenge "Hyena Herm";
 				say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open.";
 		else:
-			challenge "Herm Hyena";
-			challenge "Herm Hyena";
+			challenge "Hyena Herm";
+			challenge "Hyena Herm";
 			say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open. Disappointed, you head back into the city.";
 		now Resolution of Raided Corner Store is 1; [tried to get into the back]
 	else:
@@ -88,8 +88,8 @@ Flooded Street	"Flooded Street"
 Flooded Street is a situation. The level of Flooded Street is 3.
 The sarea of Flooded Street is "Red".
 when play begins:
-	add Flooded Street to badspots of guy;
-	add Flooded Street to badspots of humorous;
+	add Flooded Street to BadSpots of MaleList;
+	add Flooded Street to badspots of HumorousList;
 
 Instead of resolving a Flooded Street:
 	say "     You come across a small lake of cum blocking your path. This section of street is literally flooded with cum. Wading through the musky pond are several of those giant walking cocks. At the far side of the cum flood, a pair of them are pleasuring one another, releasing more spurts into the sea of semen. You certainly cannot cross here and expect to remain intact and so start to back away slowly.";
@@ -118,8 +118,8 @@ Strip Bar is a situation.
 The sarea of Strip Bar is "Red".
 stripbarcounter is a number that varies.
 when play begins:
-	add Strip Bar to badspots of hermaphrodite;
-	add Strip Bar to badspots of furry;
+	add Strip Bar to badspots of HermList;
+	add Strip Bar to BadSpots of FurryList;
 
 Instead of resolving a Strip Bar:
 	if stripbarcounter is 1:
@@ -175,7 +175,7 @@ to say stripbarsearch:
 		increase score by 1;
 	if T is 3:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizeable bulge under hir skirt.";
-		challenge "Tigress Hooker";
+		challenge "Malayan Tiger Herm";
 	if T is 4:
 		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' Shi grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before shi catches up with you, pulling you into a fight.";
 		challenge "Smooth Collie Shemale";
@@ -208,11 +208,11 @@ Evangelist	"Evangelist"
 Evangelist is a situation.
 The sarea of Evangelist is "Red".
 when play begins:
-	add Evangelist to badspots of girl;
-	add Evangelist to badspots of guy;
-	add Evangelist to badspots of hermaphrodite;
-	add Evangelist to badspots of furry;
-	add Evangelist to badspots of humorous;
+	add Evangelist to BadSpots of FemaleList;
+	add Evangelist to BadSpots of MaleList;
+	add Evangelist to badspots of HermList;
+	add Evangelist to BadSpots of FurryList;
+	add Evangelist to badspots of HumorousList;
 
 Instead of resolving a Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car. Still hunkered down, you see an unchanged human. Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol. He is wild-eyed and waves a bible around as he start yelling at no one. He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth. You try to calm him down, but he will have none of it. Clearly overwrought by witnessing the transforming populous from his hiding spot, he's gone off the deep end. From some of his rambling, you gather he's always been upset by the lascivious nature of the neighborhood around his home.";
@@ -313,7 +313,7 @@ Business as Usual	"Business as Usual"
 Business as Usual is a situation.
 The sarea of Business as Usual is "Red".
 when play begins:
-	add Business as Usual to badspots of furry;
+	add Business as Usual to BadSpots of FurryList;
 
 Instead of resolving a Business as Usual:
 	say "     You spot a gray mouse person a few buildings away. He's wearing a blue t-shirt and shorts and is carrying a small backpack in one hand. Despite their small size, barely over four feet tall, you take cover to observe him for a moment, trying to decide what to do. He darts intently across the street, stopping short of a tigress who steps from a nearby alleyway.";

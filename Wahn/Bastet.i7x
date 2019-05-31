@@ -91,8 +91,8 @@ Restaurateur's Office	"Restaurateur's Office"
 Restaurateur's Office is a situation. Restaurateur's Office is inactive.
 The sarea of Restaurateur's Office is "Museum".
 when play begins:
-	add Restaurateur's Office to badspots of guy;       [monkey king]
-	add Restaurateur's Office to badspots of furry;     [monkey king]
+	add Restaurateur's Office to BadSpots of MaleList;       [monkey king]
+	add Restaurateur's Office to BadSpots of FurryList;     [monkey king]
 
 Instead of resolving a Restaurateur's Office:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";

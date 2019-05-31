@@ -452,7 +452,7 @@ This is the player attack rule:
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
 		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of Player and bonusattacks < 2:
-			if TailName of Player is listed in infections of Tailweapon:
+			if TailName of Player is listed in infections of TailweaponList:
 				increase bonusattack by 1;
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -1153,7 +1153,7 @@ to win:
 		increase vorechance by ( 100 - humanity of Player ) / 4;
 		increase vorechance by ( scalevalue of Player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds or hunger of Player > 80:					[chance for vore]
-			if Name entry is not listed in infections of VoreExclusion:
+			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now voreprompted is true; [player will be prompted for vore]
 	if Playercanub is true and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of Child is 0 and larvaegg is not 2 and player is female:
 		let vorechance be 25 + ( Cunt Tightness of Player * 5 );
@@ -1169,7 +1169,7 @@ to win:
 		increase vorechance by ( 100 - humanity of Player ) / 4;
 		increase vorechance by ( scalevalue of Player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
-			if Name entry is not listed in infections of VoreExclusion:
+			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
 	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]

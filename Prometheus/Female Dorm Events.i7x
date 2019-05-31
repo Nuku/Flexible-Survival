@@ -8,8 +8,8 @@ Female Dorm One is a situation.
 The sarea of Female Dorm One is "Nowhere".
 
 when play begins:
-	add Female Dorm One to badspots of girl;
-	add Female Dorm One to badspots of furry;
+	add Female Dorm One to BadSpots of FemaleList;
+	add Female Dorm One to BadSpots of FurryList;
 
 instead of going north from Dorm Street while (Female Dorm One is active and Female Dorm One is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -63,8 +63,8 @@ Female Dorm Three is a situation.
 The sarea of Female Dorm Three is "Nowhere".
 
 when play begins:
-	add Female Dorm Three to badspots of girl;
-	add Female Dorm Three to badspots of furry;
+	add Female Dorm Three to BadSpots of FemaleList;
+	add Female Dorm Three to BadSpots of FurryList;
 
 instead of going north from Dorm Street while (Female Dorm Three is active and Female Dorm Three is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -98,8 +98,8 @@ Female Dorm Four is a situation.
 The sarea of Female Dorm Four is "Nowhere".
 
 when play begins:
-	add Female Dorm Four to badspots of girl;
-	add Female Dorm Four to badspots of guy;
+	add Female Dorm Four to BadSpots of FemaleList;
+	add Female Dorm Four to BadSpots of MaleList;
 
 instead of going north from Dorm Street while (Female Dorm Four is active and Female Dorm Four is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -133,8 +133,8 @@ Female Dorm Five is a situation.
 The sarea of Female Dorm Five is "Nowhere".
 
 when play begins:
-	add Female Dorm Five to badspots of girl;
-	add Female Dorm Five to badspots of guy;
+	add Female Dorm Five to BadSpots of FemaleList;
+	add Female Dorm Five to BadSpots of MaleList;
 
 instead of going north from Dorm Street while (Female Dorm Five is active and Female Dorm Five is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
@@ -161,7 +161,7 @@ Female Dorm Six is a situation.
 The sarea of Female Dorm Six is "Nowhere".
 
 when play begins:
-	add Female Dorm Six to badspots of girl;
+	add Female Dorm Six to BadSpots of FemaleList;
 
 instead of going north from Dorm Street while (Female Dorm Six is active and Female Dorm Six is not resolved and Female Dorm Five is resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;

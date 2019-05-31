@@ -73,10 +73,10 @@ Dorms Part Three	"Dorms Part Three"
 The Dorms Part Three is a situation.
 The sarea of The Dorms Part Three is "Campus".
 When play begins:
-	Add The Dorms Part Three to badspots of furry;
-	Add The Dorms Part Three to badspots of guy;
-	Add The Dorms Part Three to badspots of girl;
-	Add The Dorms Part Three to badspots of hermaphrodite;
+	Add The Dorms Part Three to BadSpots of FurryList;
+	Add The Dorms Part Three to BadSpots of MaleList;
+	Add The Dorms Part Three to BadSpots of FemaleList;
+	Add The Dorms Part Three to badspots of HermList;
 
 Instead of resolving a The Dorms Part Three:
 	say "     Making your way through the college dorms, you find yourself stumbling over a large fluffy towel lying prone in the middle of the floor. Wondering who had left that there, you turn your head to regard several distinct noises coming out from the huge co-ed washroom on your left - or at least it's been relabeled as co-ed now. Your suspicions on the situation are confirmed after you kick the offending towel and notice that the cotton material is quite sticky with musky goop. Feeling quite curious to check it out, you do pause to wonder if you should have a look inside... for educational purposes of course.";
@@ -122,8 +122,8 @@ Training Room	"Training Room"
 Training Room is a situation.
 The sarea of Training Room is "Campus".
 When play begins:
-	Add Training Room to badspots of furry;
-	Add Training Room to badspots of guy
+	Add Training Room to BadSpots of FurryList;
+	Add Training Room to BadSpots of MaleList
 
 Instead of resolving a Training Room:
 	say "     Finding your way through the campus grounds, you end up making your way downstairs inside of the college's gymnasium after jogging across the slightly sticky grass over to the imposing looking building. The musky smell of sweat and testosterone is heavy here, but surprisingly there is little cum or female juice wafting about on either the walls or the training equipment. Raising an eyebrow at this you figure out why as you notice a large wolverine standing by the door you just entered through. The large and slightly hunched over male is draped in barely any clothing, but from what you can see as you walk next to him he is far from aroused as he looks over the students assembled within the room with a calculating look in his dark eyes. Either this man was once one of the gym teachers before the epidemic and watching out over the place to make sure that it stayed in top shape, or either he had been put here by someone else to do the same thing. Either way, from the look the wolverine gives you as you enter into the room, you can see in his eyes that he won't accept any nonsense from you. Nodding to him while making sure to keep an arm's length of space between the two of you, you go over to have a better look at the gym and its surroundings.";
@@ -177,8 +177,8 @@ Janitor's Closet	"Janitor's Closet"
 Janitor's Closet is a situation.
 The sarea of Janitor's Closet is "Campus".
 When play begins:
-	Add Janitor's Closet to badspots of furry;
-	Add Janitor's Closet to badspots of guy
+	Add Janitor's Closet to BadSpots of FurryList;
+	Add Janitor's Closet to BadSpots of MaleList
 
 
 Instead of resolving a Janitor's Closet:
@@ -255,8 +255,8 @@ DogAndPony Show	"DogAndPony Show"
 DogAndPony Show is a situation.
 The sarea of DogAndPony Show is "Campus".
 When play begins:
-	Add DogAndPony Show to badspots of furry;
-	Add DogAndPony Show to badspots of guy;
+	Add DogAndPony Show to BadSpots of FurryList;
+	Add DogAndPony Show to BadSpots of MaleList;
 
 Instead of resolving a DogAndPony Show:
 	say "     'I really wish the water would come on already!' A voice rumbles dangerously just as you pop your head into the laundry area nestled downstairs in the campus's main building basement. Having been wandering around all this time you had only come down here because you were wondering about the full extent of the campus and now it would see that your journey has led you to quite an interesting scene. Standing there in the middle of the large expanse of a room jam-packed washers and dryers is a naked shire horse leaning against up against the wall with his muscular arms crossed together over his impressive chest. Over on the left side of the stallion - as you can tell the other is by the prodigious sheath and full testicles swaying between the horse's black legs - is a smaller Doberman scowling at the now defunct washer machine. His clothes sit atop the unusable machine in a bright blue basket. 'Eric, there's nothing we can do about it right now,' the shire says before whinnying in mild vexation. 'Why don't you just go all natural like me and half the other students? It's not like it would be so wrong now with everyone being much more furry and whatnot.'";

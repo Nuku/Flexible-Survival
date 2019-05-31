@@ -11,8 +11,8 @@ Hidden Kitty	"Hidden Kitty"
 Hidden Kitty is a situation. The level of Hidden Kitty is 5.
 The sarea of Hidden Kitty is "Red".
 when play begins:
-	add Hidden Kitty to badspots of guy;
-	add Hidden Kitty to badspots of furry;
+	add Hidden Kitty to BadSpots of MaleList;
+	add Hidden Kitty to BadSpots of FurryList;
 
 Instead of resolving a Hidden Kitty:
 	now lastSvendrink is turns + 8;
@@ -830,7 +830,7 @@ to say ConfidentSvenSex03:	[Ride him (anal)]
 
 to say ConfidentSvenSex04:	[Blow job]
 	say "     Suggesting that the studly kitty could suck your cock if he'd like, his response is a big smile and bringing his muzzle to your groin. He takes in the scent of your arousal with a soft, rumbling moan. Together, you divest yourself of any gear and bare your [cock size desc of Player] shaft to the lustful feline. He nuzzles and licks at it for a while, enjoying tantalizing you while playing with your stiff manhood. Soon enough though this is not enough for the horny kitty and he slathers his tongue across your glans before taking your [Cock of Player] cock into his maw.";
-	say "     Sven licks and sucks at your pulsing rod while bobbing his muzzle slowly over it while [if CockName of Player is not listed in infections of internallist]fondling your balls[else]gripping your hips tightly[end if]. His textured tongue feels great across your sensitive flesh and a slides all over it, teasing every square millimeter of it in his desire to enjoy it to the fullest. And to make you enjoy it to the fullest as well, of course.";
+	say "     Sven licks and sucks at your pulsing rod while bobbing his muzzle slowly over it while [if CockName of Player is not listed in infections of InternalCockList]fondling your balls[else]gripping your hips tightly[end if]. His textured tongue feels great across your sensitive flesh and a slides all over it, teasing every square millimeter of it in his desire to enjoy it to the fullest. And to make you enjoy it to the fullest as well, of course.";
 	WaitLineBreak;
 	say "     You rest a hand atop his head, running it through his long hair and scritching his cute ears while he works your cock over with his hot muzzle. You place the other on his shoulder and start rocking your hips a little, thrusting into the horny kitty's maw. He gives a soft moan and relaxes his throat, letting your thrust deeper.";
 	if a random chance of 2 in 3 succeeds:
@@ -1009,7 +1009,7 @@ when play ends:
 	[Sven special cases]
 	if Sven is in the bunker and HP of Sven < 30 and BodyName of Player is not "Snow Leopard" and BodyName of Player is not "Siamese Cat" and BodyName is not "Snow Bat":
 		if humanity of Player < 10:
-			if ( BodyName of Player is "Pantherherm" and angiearoused is 3 ) or ( felinoid companion is tamed and BodyName of Player is "Felinoid" ) or BodyName of Player is "Rubber tigress" or BodyName of Player is "Plush Lion":
+			if ( BodyName of Player is "Panther Herm" and angiearoused is 3 ) or ( felinoid companion is tamed and BodyName of Player is "Felinoid" ) or BodyName of Player is "Rubber tigress" or BodyName of Player is "Plush Lion":
 				increase score by 0; [blank - Special Sven succumb endings as per species of Player]
 			else if HP of Sven > 3 and HP of Sven < 8:
 				say "     When you succumb to your infection, Sven's loyalty to you makes him waver, but he manages to make his escape from the bunker, running off into the city. What rational thought you have left doesn't think much of his chances and expect he'll end up in the arms of a lustful snow leopard or taken as a fuck-toy by one of the many other creatures out there.";
@@ -1037,7 +1037,7 @@ when play ends:
 					say "     You come home one day to find Sandra the bunny girl spread out on your couch with Sven pounding away eagerly at her pussy. From the look, and smell, of things, they'd been going at it for quite a while. The rabbit, having come over to visit you while in heat and wanting to share her lustful need with you, arrived while you were out. Despite their somewhat shy, timid natures, they soon gave in to their arousal and had a long, lustful breeding session leaving her bloated with snow leopard cum. Her swollen tummy doesn't go away completely, growing into hybrid cabbits in her sated womb. They are lovely pair of white bunnies girls with long snowmeow tails and markings. The twins, despite their timid, quiet natures, always seem to get themselves pulled into wild, erotic escapades.";
 				if pink raccoon is tamed:		[pink raccoon pet]
 					say "     Your coon pet gets along well with Sven, snuggling up to him often and after some initial trepidation on the kitty's part, gets them to have sex together. The beautiful snowmeow becomes the pink coonboi's preferred lover, after yourself, loving the feel of the kitty's big cock in him or filling the snow leopard's ass with his sweet-scented seed. The girly raccoon spends hours doting over your kitty, scritching, brushing and petting him, attention that your pretty pet enjoys so much and always rewards the coon by another romp to satisfy their lusts for cock.";
-				if felinoid companion is tamed and hermaphrodite is not banned:	[felinoid companion w/o herm blocked]
+				if felinoid companion is tamed and HermList is not banned:	[felinoid companion w/o herm blocked]
 					say "     Sven soon draws the attention of Klauz, who nuzzles and snuggles up with the other feline. Over the next few days, they grow closer and closer, spending more time nuzzling and grooming one another. On the evening of the third day, you come home to find the feral feline mounted atop Sven, pounding away at him. Glad they're getting along so well, you take a seat to watch the show, but soon realize that things are not quite as they were. Growing breasts sway from Sven's chest and the felinoid is driving his cock into your snow leopard's new, virgin pussy. Their mating is repeated several times, until Sven, now a sexy snowmeow herm, is well bred and filled with kittens. She bears him many litters of [if HP of Sven is 10]colorful [end if]snow leopard kittens and is fucked often, used to slake his lusts between the new play-toys you lure home for him to enjoy.";
 
 Sven ends here.

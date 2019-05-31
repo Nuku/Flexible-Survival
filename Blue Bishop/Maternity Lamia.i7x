@@ -11,11 +11,6 @@ mlamiamet is a truth state that varies.
 mlamialoss is a number that varies.				[fights lost]
 mlamiabeaten is a number that varies.			[fights won]
 
-when play begins:
-	add { "Lamia" } to infections of girl;
-	add { "Lamia" } to infections of Reptilelist; [list of reptile infections]
-	add { "Lamia" } to infections of Internallist; [list of infections w/internal male genitals]
-
 to say lamiadesc:
 	say "     Making your way through the hospital, you encounter [if mlamiamet is false]what appears to be a half-human, half snake creature[else]the lamia creature once more[end if]. Dressed in a bulging, clearly ill-fitting nurse's outfit[if mlamiamet is false]. It's also apparent how stacked the lamia is, having to re-tailor the attire to fit her bulging,[else], complete with those[end if] six pairs of breasts, barely able to contain themselves within it. Having spotted you, she's very quick to slither her way over, boobs jiggling with each heave of her large, advancing body. Her human skin is a flawlessly smooth and her scaled hide is a milky white, a sharp contrast to her raven black hair.";
 	say "     '[one of]Oh[or]Huh[or]Hey[at random], [one of]what are you doing in here all on your lonesome[or]were you looking for me[or]are you supposed to be here[at random]? [one of]I could use the company[or]I don't think you're supposed to be here[or]Oh well, you look like a fun diversion[at random]...' Reptilian eyes from her otherwise attractive, human face gaze piercingly at you, her intended, [bodytype of Player] victim-to-be before she lurches forward to subdue you!";
@@ -30,9 +25,9 @@ to say losetolamia:
 		say "     Collapsing from exhaustion, she cries out in almost overwrought despair, lunging forward to wrap you into a tight embrace. Clothing practically bursting at the seams to contain her numerous breasts, you're very firmly [one of][or]re[stopping]introduced to them as she practically tries to smother you with her cleavage, fussing obsessively over you.";
 		say "     '[one of]Oh no[or]Shh[or]Ah[at random], I'm so sorry, [one of]I didn't mean to be so rough[or]you gave me little choice[or]I'll take care of you[at random]!' Clearly, she seems to have twisted her victory into an opportunity to 'care' for you, pulling any attire or supplies from you and tossing them aside.";
 	if Player is male and a random chance of 1 in 3 succeeds:
-		say "     Scaled coils gently constricting you, they caress along your[if scalevalue of Player > 4], larger[end if] [bodytype of Player] form as her grip gradually tightens around you, the half-serpent repositioning herself as her hand moves along you grope at your[if CockName of Player is listed in infections of internallist] partially[end if] exposed, [cock size desc of Player] dick[smn].";
+		say "     Scaled coils gently constricting you, they caress along your[if scalevalue of Player > 4], larger[end if] [bodytype of Player] form as her grip gradually tightens around you, the half-serpent repositioning herself as her hand moves along you grope at your[if CockName of Player is listed in infections of InternalCockList] partially[end if] exposed, [cock size desc of Player] dick[smn].";
 		say "     '[one of]I really need this[or]This ought to be fun[or]Someone's excited to see me[at random]...' Eager to bring you into full arousal, it doesn't take long for her to get what she wants[if HP of Player <= 0], in spite of your impotent struggles[end if]. Hissing eagerly, her movement finally reveals her[one of][or] familiar,[stopping] triple pussies.";
-		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if Player is flared] blunt[end if] head of [if Cock Count of Player > 3]three of your cocks[else if Cock Count of Player is 3]all three cocks[else if Cock Count of Player is 2]both your cocks[else]your cock[end if] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if Player is knotted]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so does her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of Player > 3] - a feat made somewhat challenging by your size[end if].";
+		say "     Head forcibly buried within her abundant cleavage again, she gradually sinks the[if Player is blunt] blunt[end if] head of [if Cock Count of Player > 3]three of your cocks[else if Cock Count of Player is 3]all three cocks[else if Cock Count of Player is 2]both your cocks[else]your cock[end if] within her tight, scaled lips. The creature hissing and moaning with twisted glee, she can barely temper any restraint in burying your flesh inside her, and, [if Player is knotted]after forcing her way past your knot[smn][else]once hilting you within her slick depths[end if], so does her coils tighten further to hide her [one of]newfound[or]familiar[stopping] toy from the outside world[if scalevalue of Player > 3] - a feat made somewhat challenging by your size[end if].";
 		say "     '[one of]Calm down[or]Let me take care of this[or]Oh, you feel so nice[at random]...' Writhing, twisting body grinding against you, forced to [if HP of Player > 0]abide[else]endure[end if] the creature's strength as her whole form clenches rhythmically, practically intent on squeezing your bliss from you. As her tainted need grows, your face is made slick with her dribbling teats, [if HP of Player > 0]driven[else]made[end if] to taste her sweet fluid in the heat of the moment.";
 		if Libido of Player > 33:
 			say "     It's not long before you're finally overtaken, letting out a muffled cry in the darkness as you pump her hole[smn] full of your [Cum Load Size of Player] load[if Ball Size of Player > 5], until she can take no more and it begins to squirt between the crevices of her tightly-gripping coils[end if]. The wet sounds of her continued motions filling the air, she finally hisses out loudly as she's brought to bliss as well barely able to breathe against her near-crushing hold as you're milked dry.";
@@ -153,15 +148,23 @@ Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Lamia"; [name of the overall species of the infection, used for children, ...]
+	add "Lamia" to infections of ReptileList;
+	add "Lamia" to infections of FurryList;
+	add "Lamia" to infections of MythologicalList;
+	add "Lamia" to infections of FemaleList;
+	add "Lamia" to infections of TaperedCockList;
+	add "Lamia" to infections of InternalCockList;
+	add "Lamia" to infections of SerpentineList;
+	add "Lamia" to infections of TailList;
+	add "Lamia" to infections of TailweaponList;
 	now Name entry is "Lamia"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The lamia[or]The altered nurse[or]The creature[or]She[at random] [one of]tries to wrap around you[if scalevalue of Player > 4]r larger form[end if] and pin you into the submission, forcing you to struggle free and put some distance between you and her[or]lashes you firmly with the tail end of her serpentine body[or]attempts to grip at and overpower you, forcing you to pry yourself free of her hold[at random]."; [ Successful attack message ]
 	now defeated entry is "[beatthelamia]"; [ Text when monster loses. ]
 	now victory entry is "[losetolamia]"; [ Text when monster wins. ]
@@ -216,7 +219,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -245,7 +248,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -272,18 +275,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -305,7 +308,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

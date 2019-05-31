@@ -8,10 +8,6 @@ Section 1 - Creature Responses
 
 nopiratesharksex is a number that varies.
 
-when play begins:
-	add { "Pirate Shark" } to infections of hermaphrodite;
-	add { "Pirate Shark" } to infections of furry;
-
 To say pirateSharkDesc:
 	project Figure of PirateShark_icon;
 	say "     [if inasituation is false][mongendernum 5]All of a sudden, you notice a triangular fin cutting through the water nearby, heading right for you! Before you can respond, there is a loud splash as a shark-like beast erupts out of the water, its strange and sudden appearance startling you as you stare at it. The beast seems to be a cross between a shark and a person, with webbed hands and feet, as well as small breast-like bulges on its torso and a rather obvious shark-like genital slit between its legs, from which you can see the tip of a slight pink cock poking, as well as a slight wet opening below that. Its long shark-like tail lashes against the ground behind it as it stares at you in obvious desire, its mouth pulled back in a grin that exposes its many serrated teeth. Its head seems to sport a rather jaunty looking pirate bandana with a skull with shark teeth above crossed bones, and a similar bandana is tied to the beast's upper arm. [']Is this some sort of pirate shark?['] you find yourself thinking as it stalks forward. Its mouth opens in a grin as it says, '[one of]Surrender the booty[or]Time to do some plunderin['][or]You will make a fine addition to my crew[or]I think I might keep you[or]You're mine now[or]Looks like I found myself a treasure[or]You won't be getting away from me[or]I knew I'd find me some treasure in these waters[at random]!' The beast grins as it charges, its intentions clear![end if]";
@@ -60,11 +56,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Pirate Shark";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Shark"; [name of the overall species of the infection, used for children, ...]
+	add "Shark Herm" to infections of AquaticList;
+	add "Shark Herm" to infections of FurryList;
+	add "Shark Herm" to infections of NatureList;
+	add "Shark Herm" to infections of MaleList;
+	add "Shark Herm" to infections of TaperedCockList;
+	add "Shark Herm" to infections of InternalCockList;
+	add "Shark Herm" to infections of BipedalList;
+	add "Shark Herm" to infections of SwimList;
+	add "Shark Herm" to infections of TailList;
+	add "Shark Herm" to infections of TailweaponList;
+	now Name entry is "Shark Herm";
+	now enemy title entry is "Pirate Shark"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[if inasituation is true][one of]She drags you towards the water with a sneer.[or]The beast manages to get your head under the surface of the water, holding you down a moment.[or]The powerful beast tosses you into the water painfully before chasing after you.[or]Her sharp shark teeth snap at you viciously, tearing and rending at your body![or]She charges at you with her sleek form, knocking you down painfully.[or]She twists around for a second, bringing her large shark-like tail around in a powerful slap![at random][else][one of]Her sharp shark teeth snap at you viciously, tearing and rending at your body![or]She charges at you with her sleek form, knocking you down painfully.[or]She twists around for a second, bringing her large shark-like tail around in a powerful slap![at random][end if]";
 	now defeated entry is "[shark loss]";
 	now victory entry is "[shark attack]";
@@ -119,7 +125,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -148,7 +154,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -175,18 +181,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -208,7 +214,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -218,7 +224,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "pirate bandana"	"A slightly damp bit of black cloth, with a skull and crossbones on the front, closer inspection reveals that the skull has sharp shark-like teeth."	1	pirate bandana
 
-pirate bandana is a grab object. It is part of the player. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Pirate Shark".
+pirate bandana is a grab object. It is part of the player. Understand "bandana" and "bandana" as pirate bandana. Pirate bandana is infectious. The strain of pirate bandana is "Shark Herm".
 
 The usedesc of pirate bandana is "Looking at the small piece of cloth, you decide to put it on for a minute, tying it around your head and grinning at the vicious look it gives you. You pose for a minute in your new bandana, before the much abused cloth finally tears and falls to the ground, you sigh sadly at the loss of your new fashion accessory, but still feel much more piratical afterwards.";
 
@@ -227,7 +233,7 @@ Section 3 - Endings
 
 when play ends:
 	if treasurefound is 1:
-		if BodyName of Player is "Pirate Shark":
+		if BodyName of Player is "Shark Herm":
 			if humanity of Player < 10:
 				say "     Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead. Your handful of gold and your obvious nose for treasure and booty allows you to attract a large crew of fellow pirate sharks, all of them eager to be in on your next big find. Starting out with this large crew lets you immediately start taking on some of the bigger ships in the area, especially the coast guard ships and transport ships for the siege of the city, their crews soon happily joining you in sharkdom as you travel along the coast. Your own personal treasure increases with every haul, and few dare challenge you over it, such challenges you handily defeat and make examples of the losers. As you take more and more ships, you begin placing the most loyal sharks in charge of them, as you spread out across the ocean, unsatisfied with just this one coast, soon pirates loyal to you are capturing ships all over the world, and sending back small portions of their treasure to the greatest of pirate shark captains, you! Eventually most of the oceans fall under your sway, with nations offering you tribute every time their boats sail in order to have their boats actually reach their destination full of sailors and cargo instead of sharks and empty holds. Life as a pirate is a damn good life you realize, as you and your fellow sharks help you set up your own personal kingdom on the large Caribbean island you basically bought with your plunder. Eventually you retire completely undefeated on your island, starting a brand new pirate legend as the greatest captain of the new pirate age, and are happy to go about making the next generation of pirates with the best members of your crew or other sharks that manage to impress you, your treasure at retirement would make even most nations envious, though your most precious bit of treasure is still the handful of gold coins that you found, that started it all....";
 			else:
@@ -238,7 +244,7 @@ when play ends:
 			else:
 				say "     Escaping the city with your mind intact, you are careful not to mention your newfound gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";
 	else:
-		if BodyName of Player is "Pirate Shark":
+		if BodyName of Player is "Shark Herm":
 			if humanity of Player < 10:
 				say "     Finally giving in to your new instincts, you return to the coast and head out into the sea, leaving the military and the other infected to fight over the city itself, you realize there is a whole world out there for you to plunder instead. Soon you run into several other piratical sharks, and working together you manage to overwhelm small ships, moving your way from marina to marina as you convert the ship owners into fellow sharks, employing them as lesser crew members, and gathering a small fleet of lesser boats to transport your loot from place to place. Eventually with several different crews working together you manage to start taking cruise ships, and transport liners, your and your fellow pirates influence spreading throughout the ocean by leaps and bounds as your numbers increase as do your captured ships. While several navies try to find and stop you, your ability to vanish into the waves, only to appear again swarming up the sides of the navies boats, soon makes this a losing proposition for the navies, and nets you several well armed boats as well. Eventually you and your fellow sharks rule the oceans in all but name, and those traveling on them bring you tribute in order to pass unmolested, and you settle down on a small island of your own, with your crew at hand, and proceed to enjoy the leisurely life of a successful pirate, and breed the next generation with the best members of your transformed crew...";
 			else:

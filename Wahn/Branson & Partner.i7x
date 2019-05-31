@@ -66,7 +66,7 @@ to say MelanieTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";
 	now sortorder entry is 1;
-	now description entry is "Try to get to know him";
+	now description entry is "Try to get to know her";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ask about her boss, 'Mr. B'";

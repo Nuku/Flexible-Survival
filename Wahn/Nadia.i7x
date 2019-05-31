@@ -543,7 +543,7 @@ Bird Troubles	"Bird Troubles"
 Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus".
 when play begins:
-	add Bird Troubles to badspots of girl;
+	add Bird Troubles to BadSpots of FemaleList;
 
 Instead of resolving a Bird Troubles:
 	say "     The science faculty of Fairhaven College, once a place that churned out graduates for local organizations like Trevor Labs and the City Hospital, now lie largely abandoned since the outbreak. The teaching laboratories occupy one block near the back of the building, and it's there you find yourself as you wander the campus, examining a couple of trucks parked by a loading dock. The trucks are empty, long looted of anything that might have been valuable, but what catches your attention is a potential entrance into the faculty building by way of a number of shutters and doors set into the rear of the loading dock.";
@@ -598,7 +598,7 @@ Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 
 when play begins:
-	add Lost Chick to badspots of girl; [female gymnasts]
+	add Lost Chick to BadSpots of FemaleList; [female gymnasts]
 
 Instead of resolving a Lost Chick:
 	if HP of Nadia is 2: [first attempt]
@@ -713,7 +713,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and G
 	say "     The conversation mostly stays on topic at first, although you catch Nadia giving Denise's cock the occasional embarrassed glance as they discuss the possibility of a recital and perhaps singing a duet some time in the future. Inevitably, though, the discussion slowly turns from music to their experiences of being fucked and bred by you. As with their vocal talents, although the two avians are in general consensus, they don't quite agree on the finer points, with Denise preferring the former and Nadia favoring the latter. Still, with all the talk on the details of your exploits with each of them and the two avian breeders giggling as they compare notes, you decide it's probably best to leave them be for now and come back a little later when they're done.";
 	now NadiaChar-A is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and NadiaChar-B is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Garden View and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and NadiaChar-B is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realize what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";

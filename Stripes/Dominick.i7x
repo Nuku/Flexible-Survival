@@ -16,8 +16,8 @@ Corrupt Kennel	"Corrupt Kennel"
 Corrupt Kennel is a situation.
 The sarea of Corrupt Kennel is "Forest".
 when play begins:
-	add Corrupt Kennel to badspots of furry;
-	add Corrupt Kennel to badspots of guy;
+	add Corrupt Kennel to BadSpots of FurryList;
+	add Corrupt Kennel to BadSpots of MaleList;
 
 Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! Or Sir if you're nasty.]
 	say "     As you're cutting through a quiet neighborhood half-overgrown by trees, the silence is suddenly broke by the sounds of a struggle in the building you're passing. The door flies open as a male husky pushes through. While your first instinct is to expect an attack from him, he barely notices you, pushing past you after knocking into a parked car. With him so close, you can see his blackened eye and broken jaw.";

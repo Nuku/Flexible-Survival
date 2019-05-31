@@ -8,8 +8,8 @@ Horse Sense	"Horse Sense"
 Horse Sense is a situation.
 The sarea of Horse Sense is "Plains".
 when play begins:
-	add Horse Sense to badspots of furry;
-	add Horse Sense to badspots of hermaphrodite;
+	add Horse Sense to BadSpots of FurryList;
+	add Horse Sense to badspots of HermList;
 
 Instead of Resolving a Horse Sense:
 	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [BodyName of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
@@ -36,9 +36,9 @@ Victim	"Victim"
 Victim is a situation. The level of Victim is 8.
 The sarea of Victim is "Red".
 when play begins:
-	add Victim to badspots of furry;
-	add Victim to badspots of hermaphrodite;
-	add Victim to badspots of guy;
+	add Victim to BadSpots of FurryList;
+	add Victim to badspots of HermList;
+	add Victim to BadSpots of MaleList;
 
 Instead of Resolving a Victim:
 	say "     Passing through the streets of the red light district, you hear some commotion nearby and hide around a corner to listen in without being seen. Daring a glance, you can make out the figures of a pimp and a tigress hooker locked in a heated argument. The man is castigating her about something, and when she tries to defy him, his hand is out like a whip to slap her cheek roughly. The harsh impact knocks her to the pavement, and the pimp's temper boils over into shouts and biting insults. Squinting to see more clearly, you realize that he's been trying to force her to drink something, a bottle of milky white fluid clutched tightly in his other hand. The hermaphrodite tigress seems very reluctant to comply, but she hesitantly reaches up to grab the drink when the pimp raises his hand again.";
@@ -54,7 +54,7 @@ Instead of Resolving a Victim:
 		now Resolution of Victim is 1; [punched out the pimp]
 		now Victim is resolved;
 	else:
-		challenge "Twisted Pimp";
+		challenge "Human Hybrid";
 		if lost is 0:
 			say "     Defeating the piece of scum you help the tigress up to her feet only to be glomped and then kissed like mad as the striped female shows her appreciation to you in a very physical way. Pushing the other off from you when the need for air becomes paramount you listen to the other rumble a purr at you before smiling and then turning to go about her way as quickly as possible. The unconscious pimp at your feet is left forgotten by the other, though you could have sworn that you heard the tigress say something about [']getting out of this business['] before she managed to get out of earshot. Shrugging you make your move out from the red light district to find somewhere else to be, you've done your job saving the little kittens stuck in a tree after all.";
 			SanBoost 10;
@@ -103,9 +103,9 @@ Portrait	"Portrait"
 Portrait is a situation. The level of Portrait is 9.
 The sarea of Portrait is "Outside".
 when play begins:
-	add Portrait to badspots of furry;
-	add Portrait to badspots of guy;
-	add Portrait to badspots of hermaphrodite;
+	add Portrait to BadSpots of FurryList;
+	add Portrait to BadSpots of MaleList;
+	add Portrait to badspots of HermList;
 
 
 Instead of Resolving a Portrait:
@@ -128,8 +128,8 @@ Hurting	"Hurting"
 Hurting is a situation.
 The sarea of Hurting is "Hospital".
 when play begins:
-	add Hurting to badspots of furry;
-	add Hurting to badspots of guy;
+	add Hurting to BadSpots of FurryList;
+	add Hurting to BadSpots of MaleList;
 
 Instead of Resolving a Hurting:
 	say "     Walking through the halls of the hospital, you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard, you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small but well-lit area, you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there, you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
@@ -176,8 +176,8 @@ The sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
-	add Conchien to badspots of furry;
-	add Conchien to badspots of hermaphrodite;
+	add Conchien to BadSpots of FurryList;
+	add Conchien to badspots of HermList;
 
 Instead of Resolving a Conchien:
 	now beauceronmet is true;
@@ -196,9 +196,9 @@ Chocolate Treat is a situation.
 The sarea of Chocolate Treat is "High".
 
 when play begins:
-	add Chocolate Treat to badspots of furry;
-	add Chocolate Treat to badspots of humorous;
-	add Chocolate Treat to badspots of hermaphrodite;
+	add Chocolate Treat to BadSpots of FurryList;
+	add Chocolate Treat to badspots of HumorousList;
+	add Chocolate Treat to badspots of HermList;
 
 Instead of Resolving a Chocolate Treat:
 	setmonster "Chocolate Lab";

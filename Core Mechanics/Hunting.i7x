@@ -160,7 +160,12 @@ carry out HuntAction:
 			say "DEBUG -> Target Creature: [Name entry] found by exact match with: [HuntId][line break]";
 		if there is an area entry:
 			if area entry exactly matches the text battleground:
-				say "You are almost certain you saw some [Name entry] tracks...";
+				if Enemy Type entry is 2: [named and name known]
+					say "You are almost certain you saw some of [Enemy Name entry]'s tracks...";
+				else if Enemy Title Entry is not "":
+					say "You are almost certain you saw some [Enemy Title entry] tracks...";
+				else:
+					say "You are almost certain you saw some [Name entry] tracks...";
 		add Name entry to PossibleEncounters; [basic chance to find the creature]
 		[extra encounter chances]
 		let zed be perception of Player / 3;
@@ -243,7 +248,12 @@ carry out HuntAction:
 					[right area for the creature?]
 					if area entry exactly matches the text battleground or area entry is "Everywhere":
 						now Found is 10; [creature found, right area and time]
-						say "You are almost certain you saw some [Name entry] tracks...";
+						if Enemy Type entry is 2: [named and name known]
+							say "You are almost certain you saw some of [Enemy Name entry]'s tracks...";
+						else if Enemy Title Entry is not "":
+							say "You are almost certain you saw some [Enemy Title entry] tracks...";
+						else:
+							say "You are almost certain you saw some [Name entry] tracks...";
 						if debugactive is 1:
 							say "DEBUG -> Found: [Found], Area '[Area Entry]' matches Battleground '[Battleground]'.[line break]";
 					else:

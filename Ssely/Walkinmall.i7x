@@ -24,9 +24,9 @@ Mall Orgy is a situation.
 The sarea of Mall Orgy is "Smith Haven".
 
 when play begins:
-	add Mall Orgy to badspots of furry;
-	add Mall Orgy to badspots of guy;
-	add Mall Orgy to badspots of girl;
+	add Mall Orgy to BadSpots of FurryList;
+	add Mall Orgy to BadSpots of MaleList;
+	add Mall Orgy to BadSpots of FemaleList;
 
 instead of resolving Mall Orgy:
 	if debugactive is 1:

@@ -12,9 +12,9 @@ Gourmet Treats is a situation. The level of Gourmet Treats is 8.
 The sarea of Gourmet Treats is "High".
 
 when play begins:
-	add Gourmet Treats to badspots of guy;       [random encounter may involve male opponents]
-	add Gourmet Treats to badspots of girl;     [random encounter may involve female opponents]
-	add Gourmet Treats to badspots of furry;     [random encounter will involve canine opponents]
+	add Gourmet Treats to BadSpots of MaleList;       [random encounter may involve male opponents]
+	add Gourmet Treats to BadSpots of FemaleList;     [random encounter may involve female opponents]
+	add Gourmet Treats to BadSpots of FurryList;     [random encounter will involve canine opponents]
 
 Instead of Resolving a Gourmet Treats:
 	if HP of Karen is 1:
@@ -139,10 +139,10 @@ to say BakeryChocLab:
 			challenge "Chocolate Lab";
 
 to say BakeryRetriever:
-	challenge "Retriever";
+	challenge "Retriever Female";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     With the first of the two golden-furred canines defeated, your attention is quickly drawn to the second as she barks happily before rushing towards you.";
-		challenge "Retriever";
+		challenge "Retriever Female";
 
 Section 2 - Location
 
@@ -410,25 +410,25 @@ Francois_Undiscovered is a list of numbers that varies.
 Francois_Discovered is a list of numbers that varies.
 
 to say FrancoisListCompile:
-	if girl is not banned:
+	if FemaleList is not banned:
 		add 1 to Francois_Undiscovered; [crème abondante - distilled milk + pink gel]
-	if guy is not banned and hermaphrodite is not banned:
+	if MaleList is not banned and HermList is not banned:
 		add 2 to Francois_Undiscovered; [bleuettonne - chocolate milk + blue gel]
-	if guy is not banned:
+	if MaleList is not banned:
 		add 3 to Francois_Undiscovered; [boysenberry blossom - Awesome Fruit + blue gel]
-	if girl is not banned:
+	if FemaleList is not banned:
 		add 4 to Francois_Undiscovered; [Muffin muffin - Awesomer Fruit + pink gel]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		add 5 to Francois_Undiscovered; [lollicock - musky cock flower + honeycomb]
-	if humorous is not banned and furry is not banned and hermaphrodite is not banned:
+	if HumorousList is not banned and FurryList is not banned and HermList is not banned:
 		add 6 to Francois_Undiscovered; [dragon moelleux - dragon heart + glowing ember + chocolate milk]
-	if furry is not banned and humorous is not banned and girl is not banned:
+	if FurryList is not banned and HumorousList is not banned and FemaleList is not banned:
 		add 7 to Francois_Undiscovered; [fizz-aux-Pommes - pony cider + soda + crushed candies]
-	if girl is not banned and furry is not banned and guy is not banned:
+	if FemaleList is not banned and FurryList is not banned and MaleList is not banned:
 		add 8 to Francois_Undiscovered; [vin-coeur - crushed candies+ Satyr wine + wyvern goop]
-	if girl is not banned and furry is not banned and guy is not banned:
+	if FemaleList is not banned and FurryList is not banned and MaleList is not banned:
 		add 9 to Francois_Undiscovered; [gingerbread - Egg nog + pixie dust + Blue gel]
-	if girl is not banned and furry is not banned and hermaphrodite is not banned:
+	if FemaleList is not banned and FurryList is not banned and HermList is not banned:
 		add 10 to Francois_Undiscovered; [cheesecake - cheese + pixie dust + pink gel]
 
 check Francoisbaking:
@@ -1211,15 +1211,15 @@ to cheesecakeinfect:
 Francoismixcleaned is a truth state that varies. Francoismixcleaned is usually false.
 Francoismix is a marker.
 when play begins:
-	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Husky Bitch", "German Shepherd Male", "Pit bull", "Retriever", "Smooth Collie Shemale", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
+	add { "Catgirl", "Siamese Cat", "Ninja Cat", "Chocolate Lab", "Husky Bitch", "German Shepherd Male", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Ember Breeder", "Pink Poodle", "Horny Doctor", "Blue Chaffinch", "Bird of Paradise" } to infections of Francoismix;
 
 to francoisinfect:
 	if Francoismixcleaned is false:
-		if hermaphrodite is banned:
+		if HermList is banned:
 			remove "Ember Breeder" from infections of Francoismix, if present;
 			remove "Chocolate Lab" from infections of Francoismix, if present;
 			remove "Smooth Collie Shemale" from infections of Francoismix, if present;
-		if humorous is banned:
+		if HumorousList is banned:
 			remove "Chocolate Lab" from infections of Francoismix, if present;
 		sort infections of Francoismix in random order;
 		let xform be "a";

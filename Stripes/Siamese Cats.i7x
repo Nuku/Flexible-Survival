@@ -26,12 +26,6 @@ Definition: Siamgender is female:
 malecatHP is a number that varies.
 femalecatHP is a number that varies.
 
-when play begins:
-	add { "Siamese Cat" } to infections of guy;
-	add { "Siamese Cat" } to infections of girl;
-	add { "Siamese Cat" } to infections of furry;
-
-
 to say siamesecatdesc:
 	setmongender 19; [creatures are mixed/variable]
 	choose row MonsterID from the Table of Random Critters;
@@ -307,11 +301,20 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Siamese Cat";
+	add "Siamese Cat" to infections of FelineList;
+	add "Siamese Cat" to infections of FurryList;
+	add "Siamese Cat" to infections of NatureList;
+	add "Siamese Cat" to infections of MaleList;
+	add "Siamese Cat" to infections of FemaleList;
+	add "Siamese Cat" to infections of BarbedCockList;
+	add "Siamese Cat" to infections of SheathedCockList;
+	add "Siamese Cat" to infections of BipedalList;
+	add "Siamese Cat" to infections of TailList;
 	now Name entry is "Siamese Cat"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is "Siamese Cat Twins";
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[siameseattack]";
 	now defeated entry is "[beatthesiamesecat]";
 	now victory entry is "[losetosiamesecat]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -366,7 +369,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -395,7 +398,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -422,18 +425,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -455,7 +458,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -486,7 +489,7 @@ when play ends:
 					say "     Sven is briefly surprised by all this, but the love and adoration he's shared for you that you can now feel tells you how much he loves being one with you. You and your lover, now permanently joined, adjust quickly. As you should, for you are whole now.";
 					say "     You do end up taking on Sven's pet-like nature, making you become a loving pet, eager to serve your owner as Sven does. When you are found by [if HP of Sven is 10 or coonsex > 0]Candy[else if pigfucked > 3]Philip[else if Sandra is in the bunker]Sandra[else]your zookeeper friend[end if], you are taken to their home to become a pair of lustful, loving pets for them. As lustful pets, you are there to satisfy their sexual desires and you submit to playing with their friends eagerly. As conjoined kitties, there are so many ways to please your new owner and their friends. Soon enough, you and Sven are together at the zoo, sharing in the joy of breeding with the great cats as your own watches with a smile.";
 					if Player is female and "Sterile" is not listed in the feats of Player:
-						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if hermaphrodite is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[else]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do.";
+						say "     Sven fucks you often, pumping his feline seed into you until you bear him kittens. These lovely felines are joined together at the tail as you are. They, and their many siblings to come, grow into lovely pet pairs much like their parents[if HermList is banned]. They come in a mix of couples, sometimes matching males or females, or as a mixed, breeding pair[else]. They come in a mix of couples, any combination of males, females and herms[end if]. These sexy felines always grow to become horny pets and sextoys for their owners, coming in high demand for their unique nature and lustful servitude, many sold for a lot of money by your owner. You and Sven are always very proud of them as they head off into their new lives of sex and servitude, knowing they'll enjoy the same satisfaction as you do.";
 				else:
 					say "     At times, you feel that something is not quite right or that you are incomplete. But when you feel that way, you need only put your arms around your pet and you feel much better. The feeling never quite goes away, but a little romp with him makes everything a little brighter. You know he loves and adores you, and will never leave you, and this soothes the strange longing.";
 [			else if HP of Sven >= 30 and HP of Sven < 50:

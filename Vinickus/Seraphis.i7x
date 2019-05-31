@@ -43,8 +43,8 @@ Conflict within the Plains	"Conflict within the Plains"
 Conflict within the Plains is a situation. The level of Conflict within the Plains is 6.
 The sarea of Conflict within the Plains is "Plains".
 when play begins:
-	add Conflict within the Plains to badspots of guy;
-	add Conflict within the Plains to badspots of furry;
+	add Conflict within the Plains to BadSpots of MaleList;
+	add Conflict within the Plains to BadSpots of FurryList;
 
 [
 if (Cock Count of Player < 1) and (Cunt Count of Player <= 1): [All scenes so far are based around the player character having a dick.]

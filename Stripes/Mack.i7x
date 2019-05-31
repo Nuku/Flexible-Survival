@@ -27,8 +27,8 @@ Finding Mack is a situation. The level of Finding Mack is 8.
 The sarea of Finding Mack is "Forest".
 
 when play begins:
-	add Finding Mack to badspots of guy;
-	add Finding Mack to badspots of furry;
+	add Finding Mack to BadSpots of MaleList;
+	add Finding Mack to BadSpots of FurryList;
 
 Instead of resolving Finding Mack:
 	if HP of Macadamia is 0:

@@ -555,7 +555,7 @@ The level of Despairing Biologist is 0.
 The sarea of Despairing Biologist is "Campus".
 
 when play begins:
-	add Despairing Biologist to badspots of furry;
+	add Despairing Biologist to BadSpots of FurryList;
 
 instead of going to College Walkway East while (Despairing Biologist is active and Despairing Biologist is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;

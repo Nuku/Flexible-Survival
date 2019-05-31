@@ -5,11 +5,6 @@ Version 1 of Donkeyman by Sarokcat n Verath begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Donkeyman" } to infections of guy;
-	add { "Donkeyman" } to infections of furry;
-
-
 to say Donkeyman wins:
 	if Player is female:
 		say "     The Donkeyman lets out a low braying laugh as you collapse to your knees in front of him, the amused sound echoing around you as the leather-clad beast sizes you up for a minute. His masked face stretches out in an equine grin as he reaches down to stroke the side of your face with his hand. 'A pretty little female for me to teach a lesson to. This is going to a rare treat,' he says, his harsh amused tone making you shudder slightly as the aroused musk of the male beast fills your head and makes you whimper slightly as your body begins to heat up with desire.";
@@ -36,7 +31,7 @@ to say Donkeyman wins:
 		WaitLineBreak;
 		say "     The sheer feeling of being used helplessly by the powerful donkey soon has you moaning happily, unable to protest with your mouth full of that equine meat, and unwilling to protest even if you could, as he takes control. The taste of his meat and his pre fills your mouth as you suck at his cock, until finally with one last rough thrust, the donkey man grunts and his cock shoots its salty delicious equine load into your waiting mouth. You do your best to swallow as much as you can of the donkey's equine treat, though some of it leaks out the sides of your mouth and down your chest as he pulls himself out of your mouth with a chuckle. Your own member is hard as a rock as your body vibrates with need, but he just chuckles at you as he leaves you there with his seed dripping down your chest, and your [if Player is male]throbbing cock reminding you of just how arousing it can be to be used by a more powerful male[else]genderless body aching for some kind of release after being used by the powerful male[end if]. Eventually you manage to work your way free of the leather binding, and gather your stuff up [if Player is male]after taking time to take care of your arousal, [end if]and stagger back towards the entrance, half hoping you will encounter another of those strange donkey again on your way...";
 		Sanloss 4;
-	if girl is not banned and "Dominant" is listed in feats of Player:
+	if FemaleList is not banned and "Dominant" is listed in feats of Player:
 		infect "Donkeywoman";
 	else:
 		infect "Donkeyman";
@@ -55,7 +50,7 @@ To say Donkeyman loses:
 			say "     The donkeyman writhes underneath you helplessly as you continue to tease the tip of his large shaft by rubbing yourself against it, the feeling of power and control rushing through you is almost as exhilarating as the feel of his thick member rubbing up between your thighs. After teasing him for another minute or so, you moan with pleasure as you finally slip his hard equine length inside of you, taking time to enjoy the sensations as you slowly lower yourself down onto his amazingly pleasurable shaft. The donkeyman moans helplessly underneath you as you slowly begin to ride him, your hands tangled in his leather harness as you rise up on his shaft, and then lower yourself down even further with slow teasing motions. When you have almost his entire wonderful length inside of you, its wonderfully shaped tip and thick shaft spreading you open wide and making you moan with pleasure, the submissive donkey obviously can't take any more of your sensual torture, and his body begins to shake with pleasure as he orgasms.";
 			WaitLineBreak;
 			say "     His thick seed erupts inside of you making you moan with pleasure as your body is filled with a torrent of thick equine seed, overflowing your stuffed pussy and dripping down your thighs as he continues to fill you full of his cum. His orgasm triggers your own, and you cry out happily as your little donkey toy fills you nice and full, every spurt of his seed into your body another sign of his total submission to your dominance. The sheer erotic thrill of conquering the male donkey makes your own orgasm all the stronger, the sensations continuing until both of you are completely worn out by the pleasure. Groaning, you pull yourself up once you can stand again, some of his seed leaking down your inner thighs as he slides out of you, the feeling surprisingly pleasurable as you begin to gather your stuff together again. You spare a glance back at where the donkeyman has passed out in a puddle of your mixed sexual fluids, and almost consider for a minute taking him along to be a proper pet for you to use whenever you want, before shaking your head and continuing on your way.[impregchance]";
-			if girl is banned or player is submissive:
+			if FemaleList is banned or player is submissive:
 				infect "Donkeyman";
 			else:
 				infect "Donkeywoman";
@@ -64,7 +59,7 @@ To say Donkeyman loses:
 			say "     His lust-filled mind quickly realizing your intentions, he wastes no time in complying, pulling his battered body up onto his hands and knees, his thick donkey like tail lifting up automatically as he presents himself to you. Seeing him on his hands and knees like that with his thick equine cock hanging beneath him only serves to arouse you even more, the situation seeming increasingly sexy to your lust-filled mind as you begin to move up behind him, his tail brushing up against your chest as your cock rubs up against his ass teasingly, making the defeated donkey whimper eagerly as he lifts his ass up for you. Grinning lustily, you find his leather harness makes for a perfect set of handholds as you sheathe your already hard cock in him with one quick thrust, and he cries out underneath you in pleasure.";
 			WaitLineBreak;
 			say "     The feel of his tight tailhole gripping your cock is amazing, and you groan as he begins to rock backwards to meet each of your powerful thrusts, the silken hairs of his tail rubbing up against your chest pleasantly as you begin to speed up your thrusts. The feel of the powerful male donkey submitting to your dominance is intoxicating, and your lust seems to grow even stronger as you reach down and wrap your hand around his thick cock again. He moans into his bondage mask with pleasure as you stroke his thick equine meat with one hand in time to your own thrusts into his partially equine body, while your other hand tightens its grip on his leather harness. Finally the erotic pleasure of the situation grows so powerful that you can't hold back any longer and you begin thrusting madly into his submissive body. Your hand pumps over his cock enthusiastically, even as you pound your own cock into his tight ass again and again. Soon your mind explodes with pleasure as you orgasm into the donkeyman's tight body, your cock spurting its seed into his ass even as his own cock spills his equine seed onto the floor underneath him. Groaning, you hold him to you tightly until your cock stops spurting and softens, before pulling out and letting the donkey man collapse to floor on top of his large puddle of equine seed, your own seed leaking out his ass as he moans in pleasure on the ground. Groaning slightly yourself as you haul yourself back up to your feet, you find yourself grinning with amusement at how much the donkey man seemed to enjoy being bound and used, and wondering absently as you continue on your way, if maybe you should try out a little bondage yourself sometime...";
-			if girl is not banned and player is dominant and "Male Preferred" is not listed in feats of Player:
+			if FemaleList is not banned and player is dominant and "Male Preferred" is not listed in feats of Player:
 				infect "Donkeywoman";
 			else:
 				infect "Donkeyman";
@@ -81,11 +76,19 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Donkey"; [name of the overall species of the infection, used for children, ...]
+	add "Donkeyman" to infections of EquineList;
+	add "Donkeyman" to infections of FurryList;
+	add "Donkeyman" to infections of NatureList;
+	add "Donkeyman" to infections of MaleList;
+	add "Donkeyman" to infections of BluntCockList;
+	add "Donkeyman" to infections of SheathedCockList;
+	add "Donkeyman" to infections of BipedalList;
+	add "Donkeyman" to infections of TailList;
 	now Name entry is "Donkeyman";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The powerful donkey twists around and kicks out at you with one of his boot covered hooves![or]He charges forward swinging wildly![or]The powerful donkeyman grabs you and tries to pin you up against the wall![or]The strangely sexy donkey strokes his cock teasingly, the sight making you feel strangely aroused.[or]he charges forward, slamming his powerful donkey-like body right into you![or]He strikes at you powerfully, only to overbalance and trip, sending both of you sprawling to the ground![or]The donkey like brute swings his powerful fist right into your gut![at random]";
 	now defeated entry is "[Donkeyman loses]";
 	now victory entry is "[Donkeyman wins]";
@@ -140,7 +143,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -169,7 +172,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -196,18 +199,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -229,7 +232,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

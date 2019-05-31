@@ -23,11 +23,11 @@ check museumrounding:
 
 carry out museumrounding:
 	if XP of Valerie is 0:
-		if guy is banned, remove { 5 } from mrevents, if present;
-		if girl is banned, remove { 4 } from mrevents, if present;
-		if guy is banned and girl is banned, remove { 8 } from mrevents, if present;
-		if furry is banned, remove { 8, 11 } from mrevents, if present;
-		if hermaphrodite is banned, remove { 11 } from mrevents, if present;
+		if MaleList is banned, remove { 5 } from mrevents, if present;
+		if FemaleList is banned, remove { 4 } from mrevents, if present;
+		if MaleList is banned and FemaleList is banned, remove { 8 } from mrevents, if present;
+		if FurryList is banned, remove { 8, 11 } from mrevents, if present;
+		if HermList is banned, remove { 11 } from mrevents, if present;
 	if riddlewin < 3:
 		say "     'I'd prefer more intellectual companionship while making my rounds. One needs to be clever to deal with many of the denizens of the Museum. Perhaps you could prove your cleverness by solving a few of my riddles?' she says with an enigmatic grin.";
 	else if HP of Valerie - turns < 8:

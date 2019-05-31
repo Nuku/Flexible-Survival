@@ -16,8 +16,8 @@ Harmless Joke is a situation.
 The sarea of Harmless Joke is "Nowhere".
 
 when play begins:
-	add Harmless Joke to badspots of girl;
-	add Harmless Joke to badspots of hellspawn;
+	add Harmless Joke to BadSpots of FemaleList;
+	add Harmless Joke to badspots of DemonList;
 
 instead of navigating Grey Abbey Library while (Harmless Joke is active and Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
@@ -37,8 +37,8 @@ Fool Me Once is a situation.
 The sarea of Fool Me Once is "Nowhere".
 
 when play begins:
-	add Fool Me Once to badspots of girl;
-	add Fool Me Once to badspots of hellspawn;
+	add Fool Me Once to BadSpots of FemaleList;
+	add Fool Me Once to badspots of DemonList;
 
 after resting while (Fool Me Once is active and Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
 	say "     Deciding to rest for the next few hours you lay down, closing your eyes slowly drifting to sleep. You dream of your life before the nanobots and the apocalypse, what little you can remember at least. Of previous friends, your old job and your old worries. Suddenly jolted out of your dream by a barrage of ringing and beeping. You nearly launch yourself from your bedding as you swivel around the blaringly loud room for the source of the noises. Set around the room are nearly a dozen alarm clocks, all at full volume and shrieking bells at you. You stand up and stumble around the room confused but intent on ending to the obnoxious noise. Shutting off a few and simply slamming others onto the floor. Soon enough the room is quiet, but the ringing is quickly replaced by a familiar feminine laughter, looking to the doorway you finally get a good look at your prankster.";
@@ -56,8 +56,8 @@ Fool Me Twice is a situation.
 The sarea of Fool Me Twice is "Nowhere".
 
 when play begins:
-	add Fool Me Twice to badspots of girl;
-	add Fool Me Twice to badspots of hellspawn;
+	add Fool Me Twice to BadSpots of FemaleList;
+	add Fool Me Twice to badspots of DemonList;
 
 after resting while (Fool Me Twice is active and Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
 	say "     Deciding to set your trap as ready to feign rest, you position a blanket across your body to use as a net and close your eyes. You lay waiting for what feels like an hour, just as you're about to give up you hear what sounds like the flapping lightly echoing down the hall. Readying yourself and cracking an eye open you spot the same imp prankster carrying a bucket of suspicious intent. As she makes her way over to your bedside you leap into action, gripping the edge of the blanket and throwing it over her before leaping atop it. You hear a squeal of surprise as the bucket she was holding drops to the floor and the grub-worms inside spill out onto the ground. You pin the struggling bundle of imp and blanket to the floor as she squeals and whines in protest. 'Let me go you big bully!' she yells as you have her fully trapped, her stinger-tipped tail pinned under one of your limbs as it struggles and twists to free itself.";

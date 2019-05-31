@@ -49,7 +49,7 @@ Dressing Room Rampage is a situation.
 The sarea of Dressing Room Rampage is "Smith Haven".
 
 when play begins:
-	add Dressing Room Rampage to badspots of furry;
+	add Dressing Room Rampage to BadSpots of FurryList;
 
 Instead of resolving a Dressing Room Rampage:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You stroll in and out of various stores, some occupied by the refugees of the outbreak, others laying abandoned. But just as you pass through a fancy clothing boutique that is empty of people, you hear something - the slapping sound of flesh on flesh, followed by a lewd moan. Curiosity guides your steps deeper into the store, walking along the aisles full of skimpy garments that are less than useless in the current crisis, until you spot a series of dressing rooms against the back wall. You notice that the third little room has its curtain drawn closed, and it is moving a little, as if being bumped around by its occupants. Judging by their tone of voice, the moans emanating from within must belong to two men who are clearly distracted indulging in carnal pleasures.";
@@ -156,7 +156,7 @@ Size Envy is a situation.
 The sarea of Size Envy is "Smith Haven".
 
 when play begins:
-	add Size Envy to badspots of furry;
+	add Size Envy to BadSpots of FurryList;
 
 Instead of resolving a Size Envy:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, other anthros, demi-human hybrids, as well as very rare pure humans. You curiously stroll in and out of the various stores - some are occupied by the refugees, others lay abandoned. Going into one of the places that is inhabited, your attention is drawn by a group of young men huddled in the far corner, with one of them suddenly calling out, 'No way! You're just pulling our leg.' Casually turning your steps to move closer, you inspect the little group of guys: there is a German shepherd-human hybrid sporting paw-feet and a tail, a slender mall rat with spiky, purple hair, a shirtless anthro donkey wearing jeans, and a clockwork fox standing there in the nude, unconcerned about showing off his metallic body and all of its details.";

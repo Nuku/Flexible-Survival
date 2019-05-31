@@ -11,8 +11,8 @@ Gryphon Milkman	"Gryphon Milkman"
 Gryphon Milkman is a scavevent.
 The sarea of Gryphon Milkman is "Outside".
 when play begins:
-	add Gryphon Milkman to badspots of furry;
-	add Gryphon Milkman to badspots of hermaphrodite;
+	add Gryphon Milkman to BadSpots of FurryList;
+	add Gryphon Milkman to badspots of HermList;
 
 Instead of resolving a Gryphon Milkman:
 	project the figure of Garrett_icon;
@@ -29,8 +29,8 @@ Free Milk	"Free Milk"
 Free Milk is a scavevent.
 The sarea of Free Milk is "Outside".
 when play begins:
-	add Free Milk to badspots of furry;
-	add Free Milk to badspots of hermaphrodite;
+	add Free Milk to BadSpots of FurryList;
+	add Free Milk to badspots of HermList;
 
 Instead of resolving a Free Milk:
 	say "     Your search for edible items leads you into a residential area. As you stand in the middle of the local street, trying to decide which house might contain something useful, you suddenly realize something - there's a milk bottle standing in front of the door of the house over there - and it's full. Walking over to the house, you take the bottle. It has a blue and silver label with the text [']QaL Dairy[']. The milk is rather cold and smells delicious, but there is a faint smell of something almost otherworldly. You can't help but wonder where it came from. You'd have thought that with the apocalypse and all, deliveries by the milkman would stop, and are there even any cows left with these changing infections?";
@@ -44,8 +44,8 @@ Abandoned Milk	"Abandoned Milk"
 Abandoned Milk is a scavevent.
 The sarea of Abandoned Milk is "Outside".
 when play begins:
-	add Abandoned Milk to badspots of furry;
-	add Abandoned Milk to badspots of hermaphrodite;
+	add Abandoned Milk to BadSpots of FurryList;
+	add Abandoned Milk to badspots of HermList;
 
 Instead of resolving a Abandoned Milk:
 	say "     Your search for edible items leads you into a playground and you see near a bench some men's clothing partially torn, as is the wearer had ripped out of them as they changed form. The back of the shirt is badly shredded, almost as if wings or similar had erupted out their back.";
@@ -382,7 +382,7 @@ to say drinkgryphoncum:
 the scent of gryphon cum is "The bottle's contents is the tantalizingly arousing scent of male gryphon semen.".
 
 to say garrettinfect:
-	if BodyName of Player is "Feral Gryphon" and player is pure and guy is not banned:
+	if BodyName of Player is "Feral Gryphon" and player is pure and MaleList is not banned:
 		say "     Absorbing Garrett's spunk causes your body to tingle as your existing gryphon infection is stimulated.";
 		infect "Feral Gryphon";
 	else:

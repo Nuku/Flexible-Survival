@@ -21,7 +21,7 @@ to say WYVDESC:
 	else:
 		now WYVGEN is 0;
 		malepronouns;
-	if guy is banned and girl is banned:
+	if MaleList is banned and FemaleList is banned:
 		setmongender 19; [creatures are mixed/variable]
 		say "     As you explore the city you look up to the sky, watching as a pair of wyverns circle the sky. You're not rightly sure if they're minding you, but something inevitably set them off and, with a disdainful screech, they fly off into the distance. Strange, and you get the odd impression that you won't be seeing them again.";
 		now BannedStatus entry is true;
@@ -29,18 +29,18 @@ to say WYVDESC:
 		now combat abort is 1;
 		now WYVGEN is 0;
 	else:
-		if ishunting is true and (guy is warded or girl is warded) and wyvernbias is 0:
+		if ishunting is true and (MaleList is warded or FemaleList is warded) and wyvernbias is 0:
 			say "     [italic type]Hunting for a wyvern, it appears you have one or both genders warded. In the case of this monster, what is your exact bias?[roman type][line break]";
 			wyvernbiasrequest;
-		if guy is banned or wyvernbias is 1:
+		if MaleList is banned or wyvernbias is 1:
 			now WYVGEN is 1;
 			femalepronouns;
 			now WYVSF is 3;
-		else if girl is banned or wyvernbias is 5:
+		else if FemaleList is banned or wyvernbias is 5:
 			now WYVGEN is 0;
 			malepronouns;
 			now WYVSF is 1;
-		else if (guy is warded and girl is warded) or wyvernbias is 3:
+		else if (MaleList is warded and FemaleList is warded) or wyvernbias is 3:
 			if a random chance of 1 in 2 succeeds:
 				now WYVGEN is 1;
 				femalepronouns;
@@ -55,10 +55,10 @@ to say WYVDESC:
 				now WYVGEN is 0;
 				malepronouns;
 		else if ishunting is false:
-			if guy is warded or (wyvernbias < 3 and wyvernbias is not 0):
+			if MaleList is warded or (wyvernbias < 3 and wyvernbias is not 0):
 				now WYVGEN is 1;
 				femalepronouns;
-			else if girl is warded or wyvernbias > 3:
+			else if FemaleList is warded or wyvernbias > 3:
 				now WYVGEN is 0;
 				malepronouns;
 		psycheeval;
@@ -641,15 +641,24 @@ Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Wyvern"; [name of the overall species of the infection, used for children, ...]
+	add "Wyvern" to infections of ReptileList;
+	add "Wyvern" to infections of FurryList;
+	add "Wyvern" to infections of MythologicalList;
+	add "Wyvern" to infections of MaleList;
+	add "Wyvern" to infections of BarbedCockList;
+	add "Wyvern" to infections of SheathedCockList;
+	add "Wyvern" to infections of BipedalList;
+	add "Wyvern" to infections of FlightList;
+	add "Wyvern" to infections of TailList;
+	add "Wyvern" to infections of TailweaponList;
 	now Name entry is "Wyvern"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[WYVATK]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[WYVDEF]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[WYVVIC]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -704,7 +713,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -733,7 +742,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -760,18 +769,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -793,7 +802,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -998,7 +1007,7 @@ to wyvernkinroll:
 		now wyvkinocc is 1;
 	else:
 		now wyvkinocc is 0;
-	if girl is banned or wyvernbias is 5 or (girl is warded and ishunting is false):
+	if FemaleList is banned or wyvernbias is 5 or (FemaleList is warded and ishunting is false):
 		now wyvkin1gen is 1;
 		[say "First is male.";]
 		now wyvkin2gen is 1;
@@ -1009,7 +1018,7 @@ to wyvernkinroll:
 		if wyvkinocc is 2:
 			now wyvkin4gen is 1;
 			[say "Fourth is Male.";]
-	else if guy is banned or wyvernbias is 1 or (guy is warded and ishunting is false):
+	else if MaleList is banned or wyvernbias is 1 or (MaleList is warded and ishunting is false):
 		now wyvkin1gen is 0;
 		[say "First is female.";]
 		now wyvkin2gen is 0;
@@ -1860,10 +1869,10 @@ to wyvernmatron:
 			say "     The wyvern turns to inspect the egg as [ghe] catches [ghis] breath. From what you can tell, the drop was enough to stir the occupant from its prior slumber. Helping it break free of the tough shell, the air is eventually filled with the noise of another wyvern kin emerging into this world, tumbling from its prison. You're not rightly sure if this is the beast's legitimate offspring or someone who succumbed to a similar fate to you[if WYVGEN is 0], probably the latter[end if].";
 			say "     And with that, the wyvern matron takes to the air once more, perhaps to find more potential offspring or perhaps to hunt for food. In either case, the new kin quickly notices your predicament and begins its approach, no doubt eager to join in. From what you can gather, they appear to be ";
 			if wyvkinocc is 1:
-				if girl is banned or wyvernbias is 5 or (girl is warded and ishunting is false):
+				if FemaleList is banned or wyvernbias is 5 or (FemaleList is warded and ishunting is false):
 					now wyvkin4gen is 1;
 					say "[bold type]male[roman type].";
-				else if guy is banned or wyvernbias is 1 or (guy is warded and ishunting is false):
+				else if MaleList is banned or wyvernbias is 1 or (MaleList is warded and ishunting is false):
 					now wyvkin4gen is 0;
 					say "[bold type]female[roman type].";
 				else:
@@ -1890,10 +1899,10 @@ to wyvernmatron:
 							say "[bold type]female[roman type].";
 				now wyvkinocc is 2;
 			else:
-				if girl is banned or wyvernbias is 5 or (girl is warded and ishunting is false):
+				if FemaleList is banned or wyvernbias is 5 or (FemaleList is warded and ishunting is false):
 					now wyvkin3gen is 1;
 					say "[bold type]male[roman type].";
-				else if guy is banned or wyvernbias is 1 or (guy is warded and ishunting is false):
+				else if MaleList is banned or wyvernbias is 1 or (MaleList is warded and ishunting is false):
 					now wyvkin3gen is 0;
 					say "[bold type]female[roman type].";
 				else:
@@ -1966,9 +1975,9 @@ when play ends:
 					say "companion...";
 			else:
 				if WYVSF is 0:
-					if guy is banned or wyvernbias < 3 or guy is warded:
+					if MaleList is banned or wyvernbias < 3 or MaleList is warded:
 						now WYVSF is 3;
-					else if girl is banned or wyvernbias > 3 or girl is warded:
+					else if FemaleList is banned or wyvernbias > 3 or FemaleList is warded:
 						now WYVSF is 1;
 					else:
 						now WYVSF is 2;

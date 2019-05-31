@@ -5,10 +5,6 @@ Version 2 of Cheetah by Sarokcat begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Cheetah Woman" } to infections of girl;
-	add { "Cheetah Woman" } to infections of furry;
-
 to say CheetahWomanWins:
 	if Player is male:
 		say "     A happy grin stretches across the cheetah woman's muzzle as you stumble, off balance due to her swift movements. She pounces before you can recover your balance, knocking you to the ground beneath her. 'That was a good workout,' she murmurs in a low voice as she rubs the side of her muzzle slowly along your face, her whiskers tickling you as her soft fur trails along your [Skin of Player] skin. 'But working out always leaves me so... hot,' she moans, one of her hands caressing your side, while her other hand slowly trails down her body, emphasizing her lithe form and her pert breasts, before she runs it over her soft mound seductively. You find yourself growing hard underneath her teasing as the scent of a cheetah in heat washes over you, its effect only intensified by her recent exertion. 'Mmmm,' she moans above you as her hand moves from her wet mound to rub over your erect cock, the feel of her juice on your cock as she strokes it with her soft paw nearly making you erupt right then and there.";
@@ -65,11 +61,19 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is "Cheetah"; [name of the overall species of the infection, used for children, ...]
+	add "Cheetah Woman" to infections of FelineList;
+	add "Cheetah Woman" to infections of FurryList;
+	add "Cheetah Woman" to infections of NatureList;
+	add "Cheetah Woman" to infections of FemaleList;
+	add "Cheetah Woman" to infections of BarbedCockList;
+	add "Cheetah Woman" to infections of SheathedCockList;
+	add "Cheetah Woman" to infections of BipedalList;
+	add "Cheetah Woman" to infections of TailList;
 	now Name entry is "Cheetah Woman";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She darts forward quickly, sideswiping you with her body.[or]Swiftly racing forward and to the side, she slashes at you as she passes.[or]Her front paw flashes out faster than the eye can follow, leaving a painful set of claw marks on you.[or]Lashing her tail in anticipation, the cheetah woman purrs as she stares deep into your eyes, her sinuous movements almost hypnotically appealing.[or]Charging forward with no warning whatsoever, she pounces and knocks you to the ground.[or]She bunches her powerful hind legs up and leaps directly at you![or]She grins at you, baring her sharp feline teeth, before leaping forward and snapping them at you.[at random]";
 	now defeated entry is "[CheetahWomanLoses]";
 	now victory entry is "[CheetahWomanWins]";
@@ -124,7 +128,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -153,7 +157,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -180,18 +184,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -213,7 +217,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -292,13 +296,13 @@ to say cheetahwomaninheat:
 				if there is no Name entry, next;
 				if area entry is battleground:
 					if Name entry is listed in infections of Felinelist:
-						add X to cmonlist;
+						add X to cmonList;
 			let cheetahchance be 40 + ( perception of Player ) * 2;
 			if cheetahchance > 90, now cheetahchance is 90;
 			if cmonlist is not empty and a random chance of cheetahchance in 100 succeeds:
 				now slutfucked is 0;
 				sort cmonlist in random order;
-				now MonsterID is entry 1 of cmonlist;
+				now MonsterID is entry 1 of cmonList;
 				choose row MonsterID from the Table of Random Critters;
 				say "Catching the scent of a feline on the air, your heat-driven instincts take over and you follow it in search of relief. You find the [Name entry] soon enough, your pheromones having caught its nose. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of Player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
 				WaitLineBreak;

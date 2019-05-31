@@ -10,8 +10,8 @@ The level of Valuable RLD Artifact is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
 when play begins:
-	add Curious Pearl to badspots of furry;
-	add Valuable Warehouse Artifact to badspots of feral;
+	add Curious Pearl to BadSpots of FurryList;
+	add Valuable Warehouse Artifact to badspots of FeralList;
 
 Instead of resolving Curious Pearl:
 	if KyrverthStage is 3:

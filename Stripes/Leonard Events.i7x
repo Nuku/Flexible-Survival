@@ -251,7 +251,7 @@ to say leodenspecial1:
 	now feline_meow is feline_meow / 2;
 	now lastdenevent is turns;
 	now lastfuck of Leonard is turns;
-	remove 1 from leodenlist;
+	remove 1 from leodenList;
 	PlayerEat 30;
 	PlayerDrink 12;
 	now leodinner is true;
@@ -278,10 +278,10 @@ to say leodenspecial2:
 		felinebodyshift;
 	increase XP of Player by ( intelligence of Player * 2 ) + level of Player;
 	now lastdenevent is turns;
-	remove 2 from leodenlist;
+	remove 2 from leodenList;
 	PlayerDrink 6;
 	now leoshadowmet is true;
-	add 11 to leoparklist; [opens Shadow #2 in Park Events]
+	add 11 to leoparkList; [opens Shadow #2 in Park Events]
 
 
 Part 9 - Railway Watch
@@ -372,7 +372,7 @@ to say leosupplyscene:
 to say leosupplyoral1:
 	say "     Feeling that you could use some relief of your own, you stand beside the plush chair and place your [if BodyName of Player is listed in infections of Felinelist]paw[else]hand[end if] on her head, guiding it to your crotch. Leonard boosts her rear up, getting his cock into position before lowering her down onto it just as you press her muzzle [if Player is male]over your throbbing shaft[else]to your juicy folds[end if]. She smiles at the opportunity to please you as well as her leonine master, licking lustfully at her matron's loins while she's getting fucked.";
 	if Player is male:
-		say "     As she rides in Leonard's lap, she works her muzzle over your throbbing manhood with every bounce. Her paws knead at your [if CockName of Player is listed in infections of Internallist]ass[else]balls[end if] while her lips and tongue do their best to pleasure you even as she's getting fucked. If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long. Seeing the lion's thick cock pumping in and out of that tight hole makes you lick your lips and long to feel him inside you again soon.";
+		say "     As she rides in Leonard's lap, she works her muzzle over your throbbing manhood with every bounce. Her paws knead at your [if CockName of Player is listed in infections of InternalCockList]ass[else]balls[end if] while her lips and tongue do their best to pleasure you even as she's getting fucked. If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long. Seeing the lion's thick cock pumping in and out of that tight hole makes you lick your lips and long to feel him inside you again soon.";
 		say "     Things grow more heated as everyone's lusts grow higher and higher. Having a grip on her head already, you rub her ears (which poke through slits cut into her cap) and tell her what a fine, eager kitty she is and how pleased you both are with her hard work. She seems to blush a little in her ears and sucks down on you all the harder, soon pushing you over the edge. You pump your [Cum Load Size of Player] load down her throat, feeding her your seed. With the kitty cumming at the taste of it, the lion is set off soon afterwards, filling her sopping cunt with his leonine cum until her womb it stuffed full of his virile output.";
 	else:
 		say "     As she rides in Leonard's lap, she laps her tongue over your wet pussy with every bounce. Her paws knead at your ass while her lips and tongue do their best to pleasure you even as she's getting fucked. If the rumble of her purring and the amount of juices flowing from her stuffed cunt are to be judged, you can tell she's really enjoying getting stuffed after being away on scavenging duty for so long. Seeing the lion's thick cock pumping in and out of that tight hole makes you lick your lips and long to feel him inside you again soon.";
@@ -715,8 +715,8 @@ to say leoparkscene1:
 	else:
 		infect "Feline";
 	now lastfuck of Leonard is turns + 8;
-	remove 1 from leoparklist;
-[	add 7 to leoparklist; [opens next walk]		]
+	remove 1 from leoparkList;
+[	add 7 to leoparkList; [opens next walk]		]
 	now battleground is "void";
 	move player to Lion's Den;
 
@@ -737,7 +737,7 @@ to say leoparkscene2:
 	say "     You snuggle up behind her and purr to her about what a good and loyal kitty she is and how she never gave up in her goal to please her master. You lick her ears and rub your fingers at her wet folds, pressing them around Leonard's thrusting shaft. Feeling it pumping inside her, you long to have it inside you again, but you know that this is her special time with Leonard and you're determined to make it even better for her by stroking and fingering the kitty through several smaller orgasms and a change of position to lying atop you so she can nurse from your bosom while being fucked. She comes to a loud and powerful orgasm that soaks your paw as the lion finally cums and pumps her small belly full of his seed. Left with a rounded tummy from the lion's output, she purrs happily as her mate and her matron snuggle up on either side of her for a much-needed catnap.";
 	infect "Feline";
 	now battleground is "void";
-	remove 2 from leoparklist;
+	remove 2 from leoparkList;
 	now Leonardcabinet is true;
 	move player to Lion's Den;
 
@@ -746,21 +746,21 @@ Part 3 - Special Park Pride 3 - Wounded Non-Pride Kitty
 
 to say leoparkscene3:
 	say "***Special 3.";
-	remove 3 from leoparklist;
+	remove 3 from leoparkList;
 
 
 Part 4 - Special Park Pride 4 - Infected Kitty
 
 to say leoparkscene4:
 	say "***Special 4.";
-	remove 4 from leoparklist;
-	add 8 to leoparklist;
+	remove 4 from leoparkList;
+	add 8 to leoparkList;
 
 
 Part 5 - Special Park Pride 5 - Kitty Rescue
 
 to say leoparkscene5:
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		say "     You hear a plaintive yowl in the distance and your matronly instincts kick in before you even know what's happening. You move as quickly as you can towards the sound. You soon arrive at a pair of wolves who have one of the feline girls pinned and are getting ready to ravage her. Hearing you charging, one remains to deal with their prisoner while the other turns to confront you with a growl.";
 		challenge "Painted Wolf Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
@@ -787,21 +787,21 @@ to say leoparkscene5:
 			decrease morale of Player by 3;
 	else:
 		say "     You come across the signs of a struggle and a few scattered tufts of feline fur and the musky scent of lupine sex. It seems that one of the feline girls was captured and mated here. From the way her paw prints change, it seems she was fucked and transformed into a wolf by her assailants. You are saddened by this, but know there's little you can do about it at this point.";
-	remove 5 from leoparklist;
+	remove 5 from leoparkList;
 
 
 Part 6 - Special Park Pride 6 - Work Group Fight
 
 to say leoparkscene6:
-	say "     While following a wooded path, you hear the sounds of fighting breaking out up ahead. At first, you prepare to turn around and find another route, but the angry growls and snarls of felines changes your mind. Advancing quickly, you find your work group in the midst of a pitched battle with a [if hermaphrodite is not banned]painted wolf[else]bear woman[end if]. The girls seem to be faring quite well and fighting as a unit with the black-haired Raven leading the charge. While it's pretty clear they'll prevail, you rush to their aid rather than risk one of them getting hurt unnecessarily. Seeing you join the fight, the creature makes a hasty retreat. The girls let it go rather than pursue it, instead turning their attention to snuggling their matron.";
-	say "     Another feline, the [if hermaphrodite is not banned]wolf[else]bear[end if][']s original opponent, comes out of hiding and purrs happily as she kisses all of her rescuers. You end up spending an enjoyable break with the lovely felines, letting them all nurse from you[if Player is not felinebodied], restoring your feline form[end if] before advancing to some more sexual play. Your impromptu orgy with the female felines involves a lot of licking, kissing and fingering of their juicy pussies[if Player is male]. Your original trio of girls take turns licking and sucking at your cock until you're hard. You then alternate between fucking Raven and the girl they'd been rescuing. You finish by cumming hard into the feline pride member with the work group pairing off with one set licking and sucking you clean with the other two take turns licking the cum from the seeded girl's pussy[else if Player is female]. The horny felines switch partners several times, sharing their love for their pride mates. They eventually finish up with a pair from the work group taking turns at your pussy with the other two doing the same to the girl they rescued[end if]. Once everyone's had another powerful orgasm, you all snuggle up together in a warm bundle of fur and love on the grass, taking a nap. After some kisses and snuggling when you awaken, the snuggle pile breaks up with the work group returning to their patrolling and the feline girl getting back to her assigned duties.";
+	say "     While following a wooded path, you hear the sounds of fighting breaking out up ahead. At first, you prepare to turn around and find another route, but the angry growls and snarls of felines changes your mind. Advancing quickly, you find your work group in the midst of a pitched battle with a [if HermList is not banned]painted wolf[else]bear woman[end if]. The girls seem to be faring quite well and fighting as a unit with the black-haired Raven leading the charge. While it's pretty clear they'll prevail, you rush to their aid rather than risk one of them getting hurt unnecessarily. Seeing you join the fight, the creature makes a hasty retreat. The girls let it go rather than pursue it, instead turning their attention to snuggling their matron.";
+	say "     Another feline, the [if HermList is not banned]wolf[else]bear[end if][']s original opponent, comes out of hiding and purrs happily as she kisses all of her rescuers. You end up spending an enjoyable break with the lovely felines, letting them all nurse from you[if Player is not felinebodied], restoring your feline form[end if] before advancing to some more sexual play. Your impromptu orgy with the female felines involves a lot of licking, kissing and fingering of their juicy pussies[if Player is male]. Your original trio of girls take turns licking and sucking at your cock until you're hard. You then alternate between fucking Raven and the girl they'd been rescuing. You finish by cumming hard into the feline pride member with the work group pairing off with one set licking and sucking you clean with the other two take turns licking the cum from the seeded girl's pussy[else if Player is female]. The horny felines switch partners several times, sharing their love for their pride mates. They eventually finish up with a pair from the work group taking turns at your pussy with the other two doing the same to the girl they rescued[end if]. Once everyone's had another powerful orgasm, you all snuggle up together in a warm bundle of fur and love on the grass, taking a nap. After some kisses and snuggling when you awaken, the snuggle pile breaks up with the work group returning to their patrolling and the feline girl getting back to her assigned duties.";
 	if Player is not felinebodied:
 		felinebodyshift;
 		infect "Feline";
 	else:
 		infect "Feline";
 		infect "Feline";
-	remove 6 from leoparklist;
+	remove 6 from leoparkList;
 	now battleground is "void";
 	rest;
 
@@ -817,15 +817,15 @@ to say leoparkscene7:
 	now lastfuck of Leonard is turns + 8;
 	now battleground is "void";
 	move player to Lion's Den;
-	remove 7 from leoparklist;
-[	add 10 to leoparklist; [opens next walk]	]
+	remove 7 from leoparkList;
+[	add 10 to leoparkList; [opens next walk]	]
 
 
 Part 8 - Special Park Pride 8 - Infected Kitty #2
 
 to say leoparkscene8:
 	say "***Special 8.";
-	remove 8 from leoparklist;
+	remove 8 from leoparkList;
 
 
 Part 9 - Special Park Pride 9 - Writing Desk
@@ -861,7 +861,7 @@ to say leoparkscene9:
 		infect "Feline";
 	now lastfuck of Leonard is turns;
 	now battleground is "void";
-	remove 9 from leoparklist;
+	remove 9 from leoparkList;
 	now Leonardwrdesk is true;
 	move player to Lion's Den;
 
@@ -870,7 +870,7 @@ Part 10 - Special Park Pride 10 - Walk #3
 
 to say leoparkscene10:
 	say "***Special 10.";
-	remove 10 from leoparklist;
+	remove 10 from leoparkList;
 
 
 Part 11 - Shadow 2
@@ -918,7 +918,7 @@ to say leoparkscene11:
 	now lastfuck of Leonard is turns + 8;
 	now battleground is "void";
 	PlayerEat 12;
-	remove 11 from leoparklist;
+	remove 11 from leoparkList;
 	now Leonardcaraway is true; [***]
 	move player to Lion's Den;
 

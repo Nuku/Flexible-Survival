@@ -48,27 +48,27 @@ instead of resolving an intact fountain:
 		say "You avoid the fountain like it was another nanite plague.";
 	if a random chance of one in three succeeds:
 		let S be a random number between one and 7;
-		if S is 1 and guy is not banned and hellspawn is not banned:
+		if S is 1 and MaleList is not banned and DemonList is not banned:
 			say "You identify some demon seed on the side of the fountain. Do you wish to collect it?";
 			if Player consents:
 				increase carried of demon seed by 1;
-		else if S is 2 and hermaphrodite is not banned and furry is not banned:
+		else if S is 2 and HermList is not banned and FurryList is not banned:
 			say "You find some Gryphon Milk on the fountain. Collect it?";
 			if Player consents:
 				increase carried of gryphon milk by 1;
-		else if S is 3 and girl is not banned:
+		else if S is 3 and FemaleList is not banned:
 			say "You find a glob of goo floating in the fountain water. It appears to be unaffected by the clamor of nanites around it. Collect?";
 			if Player consents:
 				increase carried of glob of goo by 1;
-		else if S is 4 and hermaphrodite is not banned and furry is not banned:
+		else if S is 4 and HermList is not banned and FurryList is not banned:
 			say "You find a bunch of identifiably dog milk on the spray nozzle, currently off. Collect?";
 			if Player consents:
 				increase carried of dog milk by 1;
-		else if S is 5 and girl is not banned and furry is not banned:
+		else if S is 5 and FemaleList is not banned and FurryList is not banned:
 			say "There is skunk goo floating in the cloudy water. Collect?";
 			if Player consents:
 				increase carried of skunk goo by 1;
-		else if S is 6 and hermaphrodite is not banned and girl is not banned:
+		else if S is 6 and HermList is not banned and FemaleList is not banned:
 			say "There is some webbing across sections of the fountain. Do you want to collect it?";
 			if Player consents:
 				increase carried of spider webbing by 1;

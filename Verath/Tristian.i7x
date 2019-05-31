@@ -64,7 +64,7 @@ instead of conversing the Tristian:
 	else if HP of Tristian is 8:
 		say "     Tristian looks up eagerly as you approach, only to sigh as you shake your head and let him know there is no news on his brother yet. The palomino nods, and the two of you make small talk for a while as you chat on other subjects, but you can tell that his mind is elsewhere, and so you decide to let him be for now... though maybe a roll in the hay with his lovely little pet could help distract him instead...";
 	else if HP of Tristian is 7:
-		if furry is banned or hermaphrodite is banned or guy is banned:
+		if FurryList is banned or HermList is banned or MaleList is banned:
 			say "     Tristian looks kind of down as you approach the handsome stud pony, and you are curious enough to lend him an ear and see what is bothering him. 'Well,' he says with a sigh, 'I just got word about my brother, or at least maybe I did, but it's not good. All I know is someone saw some lights and activity at his apartment in the city, but then no longer,' the horse says with a sad look on his long face.";
 			say "(This quest is inaccessible w/o furry/guy/hermaphrodite content available. Sorry.)[line break]";
 			now HP of Tristian is 100;
@@ -85,7 +85,7 @@ instead of conversing the Tristian:
 
 
 to say sexwithtristian:
-	setmonster "Palomino";
+	setmonster "Palomino Stallion";
 	if HP of tristian is 0:
 		say "You might want to introduce yourself first.";
 	else if lastfuck of tristian - turns < 6:
@@ -151,7 +151,7 @@ to say sexwithtristian:
 
 to palominoinfect:
 	choose row MonsterID from the Table of Random Critters;
-	setmonster "Palomino";
+	setmonster "Palomino Stallion";
 	now non-infectious entry is false;
 	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	infect;
@@ -166,17 +166,17 @@ Tristbrother	"Tristbrother"
 
 Tristbrother is a situation. Tristbrother is inactive.
 when play begins:
-	add Tristbrother to badspots of hermaphrodite;
-	add Tristbrother to badspots of guy;
-	add Tristbrother to badspots of furry;
+	add Tristbrother to badspots of HermList;
+	add Tristbrother to BadSpots of MaleList;
+	add Tristbrother to BadSpots of FurryList;
 
 Instead of resolving Tristbrother:
 	If HP of Tristian is 8:
 		say "     You manage to make your way to the area where Tristian indicated his brother lived. As you're scouting out the area, you hear a loud noise from the small apartment building you're approaching. Rushing inside, you notice a couple of hyenas have broken into an apartment that someone obviously barricaded. From the sounds of things, there is someone inside who is obviously protesting... although they sound more willing by the minute. Looking inside, you see several hyenas holding down what used to be an unchanged human, one of them is already shooting her seed onto the human's chest, while another appears to be ready to take him in the ass while the others hold the young man down. Looking up, one of the hyenas notices you. 'Oh good, another new addition to the gang,' she says before attacking!";
-		Challenge "Herm Hyena";
+		Challenge "Hyena Herm";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     Having dealt with the first hyena, you rush towards the others. Seeing how you've already dropped one of their numbers, they're a little more reluctant to face you, but another steps forward to protect their catch.";
-			Challenge "Herm Hyena";
+			Challenge "Hyena Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having beaten another of the gang hyenas up, you growl menacingly at the rest. They turn tail and run, their fallen compatriots scrambling out as well. With the hyenas driven off, you stagger over to where the human was lying, and find him half delirious as his body is slowly sprouting hyena fur and looking more bestial by the minute. You wipe off what you can of the mess of cum and decide to get him back to the club in the hopes that perhaps someone there can help with the changes, or at least change him into something a bit more suited to life with his brother, instead of just another laughing hyena gang member...'";
 				now HP of Tristian is 9;

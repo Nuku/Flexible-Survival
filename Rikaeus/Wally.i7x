@@ -40,7 +40,7 @@ College Hopeful is a situation.
 The sarea of College Hopeful is "Beach".
 
 when play begins:
-	add College Hopeful to badspots of guy;
+	add College Hopeful to BadSpots of MaleList;
 
 instead of resolving College Hopeful:
 	if WallyQuestDenial is 0:
@@ -86,7 +86,7 @@ Otter Escort Mission is resolved.
 The sarea of Otter Escort Mission is "Outside"
 
 when play begins:
-	add Otter Escort Mission to badspots of guy;
+	add Otter Escort Mission to BadSpots of MaleList;
 
 instead of resolving Otter Escort Mission while HP of Wally is 1:
 	now inasituation is true;
@@ -160,7 +160,7 @@ Otter Class Sign Up is resolved.
 The sarea of Otter Class Sign Up is "Campus"
 
 when play begins:
-	add Otter Class Sign Up to badspots of guy;
+	add Otter Class Sign Up to BadSpots of MaleList;
 
 instead of going to College Administration Building while (Otter Class Sign Up is not resolved and LastCampusWalkin - turns > 0 and HP of Wally is 2 and a random chance of 1 in 3 succeeds):
 	move player to College Administration Building;

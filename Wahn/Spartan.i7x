@@ -3,14 +3,11 @@ Version 2 of Spartan by Wahn begins here.
 
 "Adds a Male Spartan to Flexible Survival's Wandering Monsters table, with impreg chance"
 
-when play begins:
-	add { "Spartan" } to infections of guy;
-
 Section 1 - Creature Responses
 
 to say Spartan wins:
 	if HP of Player > 0:[player submits]
-		if BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and Cunt Count of Player is 0:[Spartans, but not herms and females]
+		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0:[Spartans, but not herms and females]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he shouts 'Impostor! How dare you disguise yourself as one of your betters, slave. I'll teach you your place, dirty Helot!' With that, he rips the helmet off your head and throws it on the ground, its metal crumpling like it's a cheap copy and not the well-crafted helmet it was seconds before. Then he shreds your cloak, its bright red color fading as he touches it and the material ripping easily in his hands.";
 			LineBreak;
 			say "     Forcefully pulling your head to his crotch, the Spartan thrusts his cock into your mouth, fucking your face without restraint or mercy. He pumps in and out, pushing deep until your nose touches his pubic hair and his shaft is in your throat. You cough from the rough treatment, but he just keeps going, shoving his cock down your throat and angrily saying 'Yeah, choke on it - you should have thought twice about donning that disguise!' Both hands on your head, he holds you tight, his thick shaft in your throat cutting off your breathing. Only when you start feeling woozy and see stars does he release you to collapse at his feet, gasping for air.";
@@ -20,7 +17,7 @@ to say Spartan wins:
 			LineBreak;
 			say "     Exhausted, you sink to the ground. Lying there, naked and sweaty, the Spartan's cum oozing out of your asshole, you see him walk around and stand over you. 'There, let that be a lesson. It would be good for you if you remembered it.' He spits on the ground then leaves you lying in the dust. After the Spartan is gone, you clean yourself up as much as possible, then use the faded shreds of your former cloak to bind a loincloth around your hips.";
 			say "[StealthHelotTransformation]"; [full transformation]
-		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan" and FaceName of Player is "Spartan") and player is female:[females and herms in Amazonian/Spartan form]
+		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior") and player is female:[females and herms in Amazonian/Spartan form]
 			say "     A shocked expression on his face, the young warrior stares at you as you kneel and submit to him. Then anger clouds his features and he moves forward to rip aside your clothes to reveal your pussy. 'You silly little bitch! You can disguise yourself as a warrior, but your true nature always shines through - one of us would never just give in and beg for mercy as you just did! Couldn't hold back your urges anymore - I bet. Fine, have your wish! Get here and suck my cock.'";
 			LineBreak;
 			say "     Forcefully pulling your head to his crotch, the Spartan thrusts his cock into your mouth, fucking your face without restraint or mercy. He pumps in and out, pushing deep until your nose touches his pubic hair and his shaft is in your throat. You cough from the rough treatment, but he just keeps going, shoving his cock down your throat and angrily saying 'Yeah, choke on it - you should have thought twice about donning that disguise!' Both hands on your head, he holds you tight, his thick shaft in your throat cutting off your air. Only when you start feeling woozy and see stars does he release you to collapse at his feet, gasping for air.";
@@ -31,18 +28,18 @@ to say Spartan wins:
 			say "     You fall to your knees, submitting to the young warrior. 'Good, finally a slave that knows his place - present yourself, I want to see what you have to offer.'";
 			say "     Stripping off your clothes, you stand in front of the young man, a shudder of arousal running through you as you display your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
 			say "[Spartan fucks]";
-		infect "Helot";
+		infect "Helot Manservant";
 	else:[player loses]
 		say "     With a shove, he pushes you to lie on the ground before him. 'Do you admit defeat before me and swear you'll submit to my commands?' the young Spartan asks you. Not ready to face another pounding like that, you lower your head in submission and nod. 'Good - this workout has made me horny. Present yourself. I want to see what I have won.'";
-		if BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and Cunt Count of Player is 0:[Spartans, but not herms and females]
+		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0:[Spartans, but not herms and females]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - but you clearly need to train more if you ever hope to finish first in this test. For now. I'm clearly superior... and want to make use of my winning privileges. On your knees.'";
-		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and player is female):[amazons, and herm/female Spartans]
+		else if (BodyName of Player is "Amazonian" and FaceName of Player is "Amazonian") or (BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and player is female):[amazons, and herm/female Spartans]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'A woman as a soldier? Pah. Silly girl. On your knees - I'll show you your proper place.'";
 		else: [every other shape]
 			say "     Stripping off your clothes, you stand in front of the young man, displaying your naked body. Eyes wandering over you, he gestures for you to stretch and spin, jerking himself to full hardness over your little show. 'Not bad - on your knees, slave. I want to make use of you.'";
 		say "[Spartan fucks]";
 		if Player is submissive:
-			infect "Helot";
+			infect "Helot Manservant";
 
 to say Spartan fucks:
 	if Player is female:[female + herm]
@@ -54,7 +51,7 @@ to say Spartan fucks:
 		LineBreak;
 		say "     Kneeling down, you get into position for the young man. You feel him moving into position behind you and spread your cheeks. Then he gets a finger wet in his mouth before pressing it against your hole. After some quick finger-fucking with first one, then two fingers, the probing digits are replaced by the tip of his cock. With the young man's precum providing a bit more lubrication, he slowly presses forward until your pucker yields and allows him to slide into your body. After giving you a moment to get used to his shaft, he pulls out almost all the way, then thrusts back in deep. He fucks you vigorously, pistoning in and out with fluid movements and makes you gasp and moan in pleasure at his invasion of your body. Slamming forward with powerful thrusts, his hips hitting your ass with slapping noises, the Spartan speeds up as his arousal mounts. Soon he gives a deep moan, plunging his shaft as deep into your body as he can, and spurt after spurt of his seed shoots into you. You can feel his hard shaft pulse against your inner walls with each burst of cum.[mimpregchance]";
 		LineBreak;
-		if BodyName of Player is "Spartan" and FaceName of Player is "Spartan" and Cunt Count of Player is 0:[male + neuter Spartans]
+		if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior" and Cunt Count of Player is 0:[male + neuter Spartans]
 			say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down at you, on the ground with his cum dripping from your asshole, he remarks 'Nice ass. I could get used to fucking you. If you get through the trials, seek me out. I'll take you under my wing and into my bed.' Then he walks away.";
 		else:
 			say "     The Spartan rests his hard cock inside you for a moment after he stops cumming, then pulls out and gets ready to leave. Looking down at you, on the ground with his cum dripping from your asshole, he remarks 'Nice ass. I could get used to fucking you. Maybe I'll take you with me as a personal slave when I get initiated as a full soldier.' Then he walks away.";
@@ -164,7 +161,7 @@ to say Spartan blown:
 to say SpartanDesc:
 	setmongender 3;
 	say "     You cross paths with a young man clothed in nothing but sandals, a long red cloak and a plumed Greek helmet. He holds a pretty self-confident expression as he walks up to you.";
-	if BodyName of Player is "Spartan" and FaceName of Player is "Spartan":
+	if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior":
 		say "     'Welcome, brother - I see I'm not the only one selected for this test. Let us measure our strength against each other and see who is superior.'";
 	else:
 		say "     'Ah, a Helot. Some welcome relief for my aching balls,' he says to himself, lowering a hand to fondle them and stroke his long cock. 'Get over here, slave - I have need of you.'";
@@ -178,11 +175,15 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Spartan";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Spartan";
+	add "Spartan Warrior" to infections of HumanList;
+	add "Spartan Warrior" to infections of HistoricalList;
+	add "Spartan Warrior" to infections of MaleList;
+	add "Spartan Warrior" to infections of BipedalList;
+	now Name entry is "Spartan Warrior";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]With a quick sweep of his leg, he brings you crashing to the floor.[or]He grabs hold of you, taking you into a choke-hold that you only just manage to wind your way out of.[or]First throwing a handful of dirt into your face, the young Spartan strikes a painful blow to your side while you're off guard.[at random]";
 	now defeated entry is "[Spartan loses]";
 	now victory entry is "[Spartan wins]";
@@ -237,7 +238,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -266,7 +267,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -293,18 +294,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -326,7 +327,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -342,7 +343,7 @@ History Lecture is a situation.			[repeatable event infecting with Spartan/Helot
 The sarea of History Lecture is "Campus".
 
 when play begins:
-	add History Lecture to badspots of guy;
+	add History Lecture to BadSpots of MaleList;
 
 Instead of resolving a History Lecture:
 	HistoryLectureVisit;
@@ -361,12 +362,12 @@ to HistoryLectureVisit:
 		if Player consents:[enter]
 			say "     You step inside the large room, closing the door behind you. 'Good, good - now come closer, my eyesight isn't quite what it was. Who are you - one of my Spartan pupils?'";
 			if Player consents:[listen to the lecture]
-				if BodyName of Player is "Spartan" and FaceName of Player is "Spartan":
+				if BodyName of Player is "Spartan Warrior" and FaceName of Player is "Spartan Warrior":
 					say "     'Yes, of course I am. Sorry for coming late,' you say, then move into the second row and sit down two seats beside the nearest Spartan. The young man turns to you, nodding in greeting, then returns his attention to the lecturer as he starts up talking again. '...so let us return to the battle of [one of]Laconia[or]Arcadia[or]Achaea[or]Elis[or]Argolis[at random] then. As I was saying, [one of]Herimades[or]Thucydides[or]Lycurgus[or]Herodotus[or]Eligonis[at random] had just...'";
 				else:
 					say "     'Yes, of course I am. Sorry for coming late,' you say, then move into the second row and sit down two seats beside the nearest Spartan. The young man turns to you, momentarily puzzled by your appearance. He opens his mouth as if to say something, then his attention is pulled back to the front as the lecturer clears his throat and starts up talking again. '...so let us return to the battle of [one of]Laconia[or]Arcadia[or]Achaea[or]Elis[or]Argolis[at random] then. As I was saying, [one of]Herimades[or]Thucydides[or]Lycurgus[or]Herodotus[or]Eligonis[at random] had just...'";
 				say "     You listen to the exciting report of the battle, almost feeling as if you were there and could hear the clang of metal and smell the sweat and blood as the old man recounts his story. It's amazing what your people accomplished through superior tactics and discipline. 'Your people? Now wait a minute!' a little voice in your head tries to interject and remind you that you were born more than 2500 years later and are not really a Spartan yourself - only to be drowned out as the historian asks his listeners to suggest what they would have done better, a discussion you eagerly join in.";
-				infect "Spartan";
+				infect "Spartan Warrior";
 				SanLoss 5;
 				WaitLineBreak;
 				say "     Some time later, the professor calls for a quick break and turns to a young man in a loincloth standing over at the door of a side room. 'Get the other slaves, it's time for some refreshments.' With a nod the Helot servant goes through the door, soon to return with several others, carrying platters with food and drink. The gathered Spartans take what their slaves offer them, eating and drinking heartily and chatting amongst themselves.";
@@ -384,7 +385,7 @@ to HistoryLectureVisit:
 							say "     Do you just want him to keep going until you cum ([link]Y[as]y[end link]), or would you rather fuck his ass next ([link]N[as]n[end link])?";
 							if Player consents: [get blown and cum in his mouth]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, then let him pull back and take a breath. Fucking his face with quick thrusts that make your balls slap against his chin, from time to time holding him tight with your erection all the way in, you're having an amazing time with the young slave. The urge to cum rapidly rises in your balls, and when you finally can't hold back any longer, you pull back until the tip of your cock is between his lips, then blast spurt after spurt of your seed in his mouth. As your orgasm winds down, you tell him to stick out his tongue - covered in your white cum - and then to swallow it all, which he does without hesitation.";
-								infect "Spartan";
+								infect "Spartan Warrior";
 								WaitLineBreak;
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 							else: [fuck his ass]
@@ -392,7 +393,7 @@ to HistoryLectureVisit:
 								say "     Penetrating the Helot servant's pucker easily, you slide all the way into this very well trained bottom's ass in one go. His soft asscheeks against your crotch, you can feel him flex his muscles around your manhood, almost as if he's jerking you off. Holding on to his hips, you push against him so he moves up until you're only just inside him with your cockhead, then pull him down on your pole again, fucking him with rapid and hard strokes. As amazing as his ass feels around your cock, you're quickly moving towards orgasm and soon feel the urgent need to cum rise in your balls. With a loud, satisfied grunt, you drive all of yourself into him one last time, spurting blast after blast of your seed deep into his inner passage.";
 								WaitLineBreak;
 								say "     Cock still twitching inside the young man's ass, you reach around him, your hand finding his cock, rock-hard from getting fucked. You grab it tightly, jerking him off. Soon your freshly fucked bottom gasps, his shaft twitching in your hand as he sprays his load over the back of the row of seats in front. You stay sitting there for a moment longer, the Helot on your lap with your slowly softening shaft still inside him, then let him stand up. Fingering his cum-dripping hole and giving him a playful slap, you leave him to get back to his other duties.";
-								infect "Spartan";
+								infect "Spartan Warrior";
 								LineBreak;
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you hard again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 						else if Player is female:[females]
@@ -401,15 +402,15 @@ to HistoryLectureVisit:
 							say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])?";
 							if Player consents:[let him get you off orally]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, so he can get really deep into your opening with his tongue. Feeling him wriggle inside you sends shivers of pleasure up your spine and you moan deeply. He gets back to fingering and licking after that, driving you into a lustful haze where you don't care about much more than him touching you. After who knows how long in blissed out contentment, he drives you over the edge with his talented fingers, screaming in satisfaction as femcum squirts out of your pussy to run over the Helot's fingers. He just keeps going, fingering and licking until your orgasm finally winds down. You sigh your thanks, then leave him to get back to his other duties.";
-								infect "Spartan";
+								infect "Spartan Warrior";
 								WaitLineBreak;
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you ready to go again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 							else:[let him fuck you]
-								setmonster "Helot";
+								setmonster "Helot Manservant";
 								choose row MonsterID from the Table of Random Critters;
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you pull him away from your nether lips with a sigh and look into his eyes as you tell him 'I want you fuck me. Pound my pussy with your hard cock...' Eagerly, the Helot stands up again, his shaft erect and ready to go. Without delay, he moves forward to put its head between your pussy lips, then sinks into your body. You can feel his manhood spreading your inner passage around it, pleasure tingling through you from the touch of his hard rod against the walls of your vagina. Driving into you with a quick stroke, the slave servant starts fucking you deeply, obviously very horny and happy to be the active partner during sex for once.";
 								say "     Being penetrated by the Helot, his balls slapping against your hips as he thrusts in and out, you give yourself to the feeling of having him inside you. A lustful haze rises in your mind and you lose track of time for a while, not caring for much else except getting fucked. After you don't know how long, you orgasm messily, lots of femcum dripping from your pussy and squirting out around the slave's cock as it thrusts in and out. Grunting urgently, the Helot isn't far behind, grinding his hips against yours as he blasts his fertile seed deep into you. A very satisfied grin on his face as he waits for his cock to finish shooting, the servant then pulls out and goes back to his other duties, leaving you leaning back on your seat with his cum dripping your of your pussy.[impregchance]";
-								infect "Spartan";
+								infect "Spartan Warrior";
 								WaitLineBreak;
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you ready to go again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 						now Resolution of History Lecture is 1; [had sex with the servant]
@@ -430,20 +431,20 @@ to HistoryLectureVisit:
 						LineBreak;
 						say "     Doing your best to please your current master, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. When he finally pulls out, you proudly stick out your tongue to show him his load, then demonstratively swallow it.";
 						say "     'There, that's that,' the professor says, then continues, 'Now leave us, these young men have a lot to learn about strategy and tactics.' He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
-						infect "Helot";
+						infect "Helot Manservant";
 						now Resolution of History Lecture is 3; [subby BJ with a spartan]
 					else:[grudging blowjob]
 						say "     Not having much other choice, with all those Spartans in here, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out hesitantly, you earn a cuff on the head from him and only then put your mind to really sucking him off. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
 						LineBreak;
 						say "     Trying to get the professor off quickly to get this over with, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. Putting his hands on your head and holding you tightly, he looks down at you and says 'Stick your tongue out and show it to me. And don't you dare spit out my cum.' Grudgingly, when he lets go of your head, you show him your tongue, covered in his creamy load. He nods, then continues with 'Now swallow it.' and watches as you do so, demanding to see you open your mouth to prove it.";
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
-						infect "Helot";
+						infect "Helot Manservant";
 						now Resolution of History Lecture is 4; [gruding BJ with a spartan]
 				else:[forced blowjob]
 					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten,' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 					say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
-					infect "Helot";
-					infect "Helot";
+					infect "Helot Manservant";
+					infect "Helot Manservant";
 					now Resolution of History Lecture is 5; [forced BJ with a spartan]
 		else:[leave]
 			say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
@@ -452,7 +453,7 @@ to HistoryLectureVisit:
 Section 4 - Endings
 
 when play ends:
-	if BodyName of Player is "Spartan":
+	if BodyName of Player is "Spartan Warrior":
 		if humanity of Player < 10: [succumbed]
 			if Player is female:[female + herm]
 				if Player is submissive:
@@ -503,6 +504,6 @@ to say pita bread use:
 	say "Taking the bread into your hands, you bite into it and... it's really good. Bread, salad, sauce - and the meat is even still warm. Something tells you that it has to be packed with nanites through and through to keep it in this state, but you don't really care at the moment as you devour the tasty treat...";
 	PlayerEat 15;
 
-pita bread is infectious. The strain of pita bread is "Spartan".
+pita bread is infectious. The strain of pita bread is "Spartan Warrior".
 
 Spartan ends here.

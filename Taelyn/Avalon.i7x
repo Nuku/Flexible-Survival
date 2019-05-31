@@ -37,9 +37,9 @@ Fall-O-the-Wisp is a situation.
 The sarea of Fall-O-the-Wisp is "Nowhere".
 
 when play begins:
-	add Fall-O-the-Wisp to badspots of girl;
-	add Fall-O-the-Wisp to badspots of guy;
-	add Fall-O-the-Wisp to badspots of furry;
+	add Fall-O-the-Wisp to BadSpots of FemaleList;
+	add Fall-O-the-Wisp to BadSpots of MaleList;
+	add Fall-O-the-Wisp to BadSpots of FurryList;
 
 instead of resolving Fall-O-the-Wisp:
 	WispFollow;

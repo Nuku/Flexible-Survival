@@ -14,7 +14,7 @@ Goblin Trap is a situation. The level of Goblin Trap is 2.
 The sarea of Goblin Trap is "Junkyard".
 goblinfight is a number that varies.
 when play begins:
-	add Goblin Trap to badspots of guy;
+	add Goblin Trap to BadSpots of MaleList;
 
 Instead of resolving a Goblin Trap:
 	say "     As you are traveling along, looking over the various junk piles as you go, you inadvertently set off a hidden trap. A snare closes around your ankles and pulls your feet out from under you as you hear a heavy weight strike the ground nearby, pulling the rope. This also sets off a spring trap which sends a cluster of machine parts at you, aimed to land at your location. Battered by the volley of junk, you try to extricate yourself from the snare as a giggling goblin scrambles out from his hidey-hole in the junkpile after you set off his trap. 'Hee hee! It worked! It worked! And now to claim my prize,' he cackles as he comes at you as you get your legs free. You have taken 12 damage.";
@@ -41,9 +41,9 @@ Raiding Party is a situation. The level of Raiding Party is 2.
 The sarea of Raiding Party is "Junkyard".
 junknum is a number that varies.
 when play begins:
-	add Raiding Party to badspots of guy;
-	add Raiding Party to badspots of furry;
-	add Raiding Party to badspots of hermaphrodite;
+	add Raiding Party to BadSpots of MaleList;
+	add Raiding Party to BadSpots of FurryList;
+	add Raiding Party to badspots of HermList;
 
 Instead of resolving a Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline. There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder. You can tell there are several people laughing and they're getting closer.";
@@ -70,7 +70,7 @@ Instead of resolving a Raiding Party:
 						[puts Tigress Hooker as lead monster in case of impregnation]
 						repeat with y running from 1 to number of filled rows in Table of Random Critters:
 							choose row y in Table of Random Critters;
-							if Name entry is "Tigress Hooker":
+							if Name entry is "Malayan Tiger Herm":
 								now MonsterID is y;
 								break;
 						say "[losetotigress]";
@@ -120,8 +120,8 @@ Scattered Trash	"Scattered Trash"
 Scattered Trash is a situation.
 The sarea of Scattered Trash is "Junkyard".
 when play begins:
-	add Scattered Trash to badspots of girl;
-	add Scattered Trash to badspots of furry;
+	add Scattered Trash to BadSpots of FemaleList;
+	add Scattered Trash to BadSpots of FurryList;
 
 Instead of resolving a Scattered Trash:
 	say "     You come across a mess of garbage scattered here, sprawling across the path between the junk mounds here. From the looks of it, it seems this stuff has been rummaged through and possibly even rolled around in. As it is just tossed around, there are clear spots to walk while you move through it. You decide to keep your eyes open in case you spot anything of interest while making your way through the trash.";

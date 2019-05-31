@@ -21,9 +21,9 @@ Fox Adventurer is a situation. The level of Fox Adventurer is 5.
 The sarea of Fox Adventurer is "Outside".
 
 when play begins:
-	add Fox Adventurer to badspots of girl;
-	add Fox Adventurer to badspots of hermaphrodite;
-	add Fox Adventurer to badspots of furry;
+	add Fox Adventurer to BadSpots of FemaleList;
+	add Fox Adventurer to badspots of HermList;
+	add Fox Adventurer to BadSpots of FurryList;
 
 Instead of resolving Fox Adventurer:
 	if HP of Solstice is 0:
@@ -99,9 +99,9 @@ Prereq1ResolvedMandatory of Onyx Crow is false.
 The sarea of Onyx Crow is "Museum".
 
 when play begins:
-	add Onyx Crow to badspots of girl;
-	add Onyx Crow to badspots of hermaphrodite;
-	add Onyx Crow to badspots of furry;
+	add Onyx Crow to BadSpots of FemaleList;
+	add Onyx Crow to badspots of HermList;
+	add Onyx Crow to BadSpots of FurryList;
 
 Instead of resolving Onyx Crow:
 	if HP of Solstice is not 1:	[should not come up, but just in case, we have this.]

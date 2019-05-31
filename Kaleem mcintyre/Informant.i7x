@@ -11,8 +11,8 @@ Informant is a situation. The level of Informant is 9.
 The sarea of Informant is "High".
 smf is a number that varies.
 when play begins:
-	add Informant to badspots of furry;
-	add Informant to badspots of guy;
+	add Informant to BadSpots of FurryList;
+	add Informant to BadSpots of MaleList;
 
 Instead of resolving a Informant:
 	if smf is 0:
@@ -75,7 +75,7 @@ instead of linkactioning Homaru when Homarutalk > 0:
 
 instead of conversing the Homaru:
 	if Homarutalk is 0:
-		If guy is banned or furry is banned or girl is banned:
+		if MaleList is banned or FurryList is banned or FemaleList is banned:
 			say "     Homaru goes over some of the information highlighted on his screen and then freezes all of a sudden. When the power to the building suddenly get cut off, the brown-haired man lets out a line of swear words that might have made a nun blush. 'Unbelievable! Someone's caught onto me!' When you ask the other what he means, you get a furious stare in return. 'I think someone's realized you were trying to find the missing firefighters and have shut me down. I won't be able to find any of them for you now.'";
 			say "     Homaru sighs in the darkness and then flops his head down onto his desk in disgust. The lights to the building come back on seconds afterwards, ironically.";
 			say "     (This quest requires guy, girl and furry content to advance.)";

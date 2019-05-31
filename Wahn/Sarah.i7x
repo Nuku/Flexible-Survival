@@ -61,8 +61,8 @@ Husky Pack	"Husky Pack"
 Husky Pack is a situation. The level of Husky Pack is 8.
 the sarea of Husky Pack is "Outside".
 when play begins:
-	add Husky Pack to badspots of girl;
-	add Husky Pack to badspots of furry;
+	add Husky Pack to BadSpots of FemaleList;
+	add Husky Pack to BadSpots of FurryList;
 
 instead of resolving a Husky Pack:
 	say "     Rounding a corner in one of the inner-city blocks, you run right into the leader of a small husky pack, his fur cushioning the impact. As you jump back from the imposing anthro canine, he snarls in your face, drawing back his lips from a muzzle full of white and sharp teeth. 'Fuck off,' the alpha husky growls in annoyance and is immediately supported by the group of husky bitches following behind him. 'You better run, [if Player is female]skank[else]asshole[end if]!' one of them barks and gives you a quite rude gesture, then a second laughs in a shrill tone and adds, 'That's right. Our man will fuck you up otherwise.' Between the group of naked anthro females, you catch a glimpse of a thin human woman with a red leather collar on a leash. She has got a hand on the collar and clearly is uncomfortable with the tightness against her throat. And not only that - from the way the leash is stretched taut between her and the male, he has been dragging her along by force. Both of the items still bear price tags, so your guess would be that this little gang just came out of the nearby pet store after outfitting the newest unwilling recruit to his harem of bitches.";
@@ -83,7 +83,7 @@ instead of resolving a Husky Pack:
 			if Player is submissive: [submissive trait]
 				LineBreak;
 				say "[SarahLeftSubmissive]";
-			else if Player is not dominant and guy is not banned: [Possible willing submission, not for Dominants]
+			else if Player is not dominant and MaleList is not banned: [Possible willing submission, not for Dominants]
 				say "     Being taken so viscerally could potentially be fun, especially with such a virile figure as that lead husky. Maybe you should join them?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Submit to the pack.";
@@ -138,7 +138,7 @@ to say SarahRescue:
 		now inasituation is true;
 		if GroupFightCounter < 3:
 			challenge "Husky Bitch";
-		else if guy is not banned:
+		else if MaleList is not banned:
 			challenge "Husky Alpha";
 		else:
 			challenge "Husky Bitch";
@@ -165,7 +165,7 @@ to say SarahRescue:
 		else: [Lost to Alpha/Fourth Husky]
 			LineBreak;
 			say "     During the confusion of the conflict, Sarah had managed to break free with the female huskies subdued, but you're not that lucky.";
-			if guy is not banned:
+			if MaleList is not banned:
 				say "[HuskyAlphaWin]";
 	else if fightoutcome is 30: [fled]
 		LineBreak;
@@ -190,7 +190,7 @@ to say HuskyGangbang:
 		say "     Eager paws capture the girth of your member, sister bitches sharing the grip as several muzzles lean in to lap over your tip and sac, shaft and base. The joint efforts readily slather you in hot husky drool, polishing over your pole and nuts until they fairly gleam. [if anal is not banned and anallevel > 1]A moist finger slides between your ass cheeks with the pad of it pressing and massaging into your snug bud, rolling it in little circles. With careful but firm pressure, that damp digit sinks in, spreading your star. [end if]Panting breathes wash across your polished cock, and more lapping still moistens your belly and thighs, too. One of the husky girls seals her dark lips over the crown of your prick, and she audibly nurses, slurping noisily while the silky stroke of her tongue drags against your cum slit and shines your tip. Several soft-padded hands grip and begin to paw up your length in rapid strokes.";
 		say "     The girl's pack sister pushes down on her head, forcing her to take you deeper suddenly and roughly. With a snort and glurk, she sputters around your girth, eyes crossing briefly. [if anal is not banned and anallevel > 1]The exploring finger burrows within your anal depths, curling past the snug cuff and petting in against the meaty lining to find your sweet lily and massage it, milking that prostate. [end if]The husky girl's nostrils flare as she pants nasally, head bobbing, lips tugging and nursing from your prick, despite her sister's mean push. The same sister shimmies down and slides one of your nuts into her mouth, rubbing her nose against her pack sister's chin and your cock's belly. Within the warm, wet confines of her mouth, her tongue slathers and bathes, suckling the salts that cling to your sac. When your nuts tug up tight, you can feel the heat welling up your length. The girls pull off as you start to cum, and your jizz spatters against your own belly messily.";
 		WaitLineBreak;
-	if guy is banned:
+	if MaleList is banned:
 		say "     Even in the afterglow of your passions, Sarah crawls through the tumult of gorgeous female bodies. Panting headily, she croons, 'Thank you. For trying to help,' a bit breathlessly. The other woman's face draws close, and it's glistened with the fragrance of husky nectar while she steals a kiss, pressing her breasts to you in the shared moment. Those molten petals linger only briefly before sliding free. She stands, sliding a leg over your shoulder to mash her perfumed lower lips up against your nose, grinding in to paint you with her juices. 'Mmmn, here, you earned it.' Her fingers clutch against the back of your scalp, and she holds you in against the radiant heat, lithely grinding her pussy against you.";
 		say "     From behind, one of the bitches pushes her mound against the back of your head, helping sandwich you against Sarah's damp flower.. the air is all the more bogged in the fragrant miasma of girl sex, and damp paws and cushy breasts press in from all around, smothering you in the press of the bodies. You can't help but start to nuzzle and lick into those insistent lips. Sarah's cunny splits with the press of your nose and tongue, washing you more with her heat and juices, filling your senses with her special perfume as nails comb over your scalp. She gasps and groans, one of the husky girls reaching up from behind her and cups the undercurves of her breasts, lifting and rolling the mounds while Sarah rides your face. Everything begins to blur together, breathing becoming more and more difficult in the hot press, drowning in pussy and exotic pheromones. There's an electric current that steals along your spine, scintillating as a joint orgasm strikes the gang, and nectar flows. So hard to breath, but so delicious. Your consciousness swims in that hot pool, lost in the waters of climax.";
 	else:
@@ -222,7 +222,7 @@ to say HuskyGangbang:
 			LineBreak;
 			say "     As you spread your mouth, offering the dampness within for his cleaning and pleasure, the Alpha husky's lips peel back into a pleased smile, 'Good, good. You'll do well,' while leveling his prick and pointing its taper towards the welcoming O. Gripping against your scalp with his other hand, he guides your eager lips over the cummy tip, a playful roll of his hips smearing it across your petals like lipstick. The rich flavor of cum, cock, cunny juice and sweat slides across your tongue as the male husky takes your mouth. You can feel every flavorful inch sinking past your lips, and your tongue slathers its belly. Your gurgled moans run vibrantly over that hot canine cock as its knot bumps and smacks against your nose and lips. The husky's hefty sac sways and swats against your chin as his taper punches against the back of your throat, eager to feel your sucking maw.";
 			say "     A deep, abiding rumble rolls through the dog's chest, and his taut abs roll before your eyes as he bucks into your mouth. His potent aroma fills your nostrils, and his flavor permeates every bit of your mouth. You can feel each pulsing vein along that hot, thrusting manflesh even as it bloats, and the knot quakes. The Alpha husky's balls tighten as he howls out in pleasure, and fresh, thick seed gushes into your mouth. Your head is held there as the husky forces you to swallow the bulk of his load. Its heat seers down your throat, and only then does he pull out. Several thick ropes eject form his tip, landing hot ribbons across your face of the gooey canine spunk. The bridge of saliva connecting your lips to his prick snaps as he says, 'Mmmn, good. I should make you one of my own.' The husky pack coalesces, collecting up the spent Sarah as they prepare to leave.";
-		else if noncon is not banned:
+		else if NonconList is not banned:
 			LineBreak;
 			say "     It seems like no is not an answer the Alpha wants as he brusquely closes the distance between himself and you. The dog's grip clamps down on your scalp, drawing you in close. Beneath the heavy tone of his abdomen, the gleaming pillar of the alpha husky's tapered prick is laced with throbbing veins, livid with his ire. Its pungent scent spreads, rich with the male's virile musk and the salts of exertion, and that cock's heat is radiant, bathing your backside with its intensity. Stooping over your forcefully knelt figure, the alpha husky's breath steals across your neck, and his whisper is ragged with anger, 'This will be for my pleasure, not for yours. I will take each ill you've done unto mine out on your hide,' before his jaws close, gripping on your shoulder like a vice.";
 			say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if Player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and permeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
@@ -270,7 +270,7 @@ to say HuskyThreesome:
 		LineBreak;
 		say "     As you spread your mouth, offering the dampness within for his cleaning and pleasure, the Alpha husky's lips peel back into a pleased smile, 'Good, good. You'll do well,' while leveling his prick and pointing its taper towards the welcoming O. Gripping against your scalp with his other hand, he guides your eager lips over the cummy tip, a playful roll of his hips smearing it across your petals like lipstick. The rich flavor of cum, cock, cunny juice and sweat slides across your tongue as the male husky takes your mouth. You can feel every flavorful inch sinking past your lips, and your tongue slathers its belly. Your gurgled moans run vibrantly over that hot canine cock as its knot bumps and smacks against your nose and lips. The husky's hefty sac sways and swats against your chin as his taper punches against the back of your throat, eager to feel your sucking maw.";
 		say "     A deep, abiding rumble rolls through the dog's chest, and his taut abs roll before your eyes as he bucks into your mouth. His potent aroma fills your nostrils, and his flavor permeates every bit of your mouth. You can feel each pulsing vein along that hot, thrusting manflesh even as it bloats, and the knot quakes. The Alpha husky's balls tighten as he howls out in pleasure, and fresh, thick seed gushes into your mouth. Your head is held there as the husky forces you to swallow the bulk of his load. Its heat seers down your throat, and only then does he pull out. Several thick ropes eject form his tip, landing hot ribbons across your face of the gooey canine spunk. The bridge of saliva connecting your lips to his prick snaps as he says, 'Mmmn, good. I should make you one of my own.' The husky pack coalesces, collecting up the spent Sarah as they prepare to leave.";
-	else if noncon is not banned:
+	else if NonconList is not banned:
 		LineBreak;
 		say "     It seems like no is not an answer the Alpha wants as he brusquely closes the distance between himself and you. The dog's grip clamps down on your scalp, drawing you in close. Beneath the heavy tone of his abdomen, the gleaming pillar of the alpha husky's tapered prick is laced with throbbing veins, livid with his ire. Its pungent scent spreads, rich with the male's virile musk and the salts of exertion, and that cock's heat is radiant, bathing your backside with its intensity. Stooping over your forcefully knelt figure, the alpha husky's breath steals across your neck, and his whisper is ragged with anger, 'This will be for my pleasure, not for yours. I will take each ill you've done unto mine out on your hide,' before his jaws close, gripping on your shoulder like a vice.";
 		say "     The hot slather of the canine's erect fuckflesh drags across your taint, smearing its perspirations into your valley and dribbling mercurial heat over your puckered bud. The hot drizzle of pre spills beneath, rivulets of slick, hot juice parting over your [if Player is female]lips[else]sac[end if] and glistening down over your thighs. The searing taper of that angry spear buts against your star, spreading it insistently before an angry thrust spits your quivering ring, force-fitting around the throbbing girth. Pain shoots in scintillating waves, piercing your groin and permeating into your bowels as the fresh, burning ache of your anal cuff being stretched is joined by the insistent pulse of the invader. The husky's blunt, canid claws rake down your sides, pulling back on your hips, meeting his thrust so that his muscled thighs clap against your ass, and his full sac slaps against you heftily.";
@@ -288,7 +288,7 @@ to say HuskyThreesome:
 
 to say HuskyAlphaWin:
 	now Resolution of Husky Pack is 4; [player lost to alpha husky after beating the others]
-	if noncon is not banned:
+	if NonconList is not banned:
 		if Player is male and "Artemis's Disciple" is listed in feats of Player: [bad end]
 			say "[BrokenHuskySlutBadend]";
 		else: [regular fucking]

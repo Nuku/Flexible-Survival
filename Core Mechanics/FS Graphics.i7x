@@ -586,7 +586,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
 "Aurora_clothed"	Figure of Aurora_clothed_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
-"Bear"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
+"Brown Bear Female"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
 "Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-white	"normal"
 "Blanche1"	Figure of Blanche1_icon	"The_Negative"	g-white	"normal"
@@ -707,18 +707,18 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"	g-black	"normal"
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
-"Helot"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
+"Helot Manservant"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
 "Blue Gryphon Herm"	Figure of BlueGryphon_icon	"dbd"	g-black	"normal"
 "Hermaphrodite Gryphon Face"	Figure of BlueGryphon_face_icon	"dbd"	g-black	"normal"
-"Hermaphrodite Latex Vixen"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
-"Herm Hyena"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
+"Latex Vixen Herm"	Figure of LatexVixen_icon	"Anymouse1968"	g-white	"normal"
+"Hyena Herm"	Figure of Herm_Hyena_clothed_icon	"Vashaa"	g-White	"normal"
 "Herm Hyena_naked"	Figure of Herm_Hyena_naked_icon	"Vashaa"	g-White	"normal"
 "Homo Sapiens"	Figure of HomoSapiens_icon	"Astro"	g-black	"normal"
 "Honey"	Figure of Honey_icon	"SandySchreiber"	g-white	"normal"
 "Horny Doctor_M"	Figure of HornyDoctor_M_icon	"Cooper"	g-white	"normal"	[only shown for males]
 "Human Survivor"	Figure of Brennan_clothed_icon	"SineAlas"	g-black	"normal"
 "Hulking Cheerleader"	Figure of Hulking_Cheerleader_icon	"Seija"	g-white	"normal"
-"Imp"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Imp Male"	Figure of Imp_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Imp_naked"	Figure of Imp_naked_icon	"Kupo Klein"	g-white	"normal"
 "Imp_face"	Figure of Imp_face_icon	"Kupo Klein"	g-white	"normal"
 "Incubus"	Figure of Incubus_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -824,7 +824,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
 "Pewter Consort"	Figure of Pewter_Consort_icon	"Xilrayne"	g-white	"normal"
-"Pirate Shark"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
+"Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
 "Ram"	Figure of Ram_icon	"Anymouse1968"	g-white	"normal"
@@ -848,7 +848,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Septus"	Figure of Septus_icon	"Feralise"	g-black	"normal"
 "Septus_face"	Figure of Septus_face_icon	"Cirrusthecloud"	g-black	"normal"
 "SgtMarks"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
-"Shadow Beast"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
+"Shadow Beast Male"	Figure of ShadowBeast_icon	"Hioshiru"	g-white	"normal"
 "Smooth Collie Shemale"	Figure of SSCollie_icon	"Anymouse1968"	g-white	"normal"
 "Shy_vixen"	Figure of Shy_Vixen_icon	"Watsup"	g-white	"normal"
 "Siamese Cat"	Figure of SiameseCat_icon	"RedCoatCat"	g-white	"normal"
@@ -864,7 +864,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sonny_shaved_jeans"	Figure of Sonny_shaved_jeans_icon	"The_Negative"	g-black	"normal"
 "Sonny_shaved_nude_icon"	Figure of Sonny_shaved_nude_icon	"The_Negative"	g-black	"normal"
 "Sonny_face"	Figure of Sonny_face_icon	"The_Negative"	g-black	"normal"
-"Spartan"	Figure of Spartan_icon	"Obieblu"	g-white	"normal"
+"Spartan Warrior"	Figure of Spartan_icon	"Obieblu"	g-white	"normal"
 "Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
@@ -883,13 +883,13 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thomas_face"	Figure of Thomas_face_icon	"Inkydemon"	g-black	"normal"
 "Thomas_soft"	Figure of Thomas_soft_icon	"Inkydemon"	g-black	"normal"
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
-"Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
-"Tiger Shark"	Figure of TSW_icon	"Zealot"	g-white	"normal"
+"Malayan Tiger Male"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
+"Tiger Shark Male"	Figure of TSW_icon	"Zealot"	g-white	"normal"
 "Timothy"	Figure of Timothy_icon	"Waxraven/WXRVN"	g-white	"normal"
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
-"Tigress Hooker"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
+"Malayan Tiger Herm"	Figure of TigressHooker_icon	"Sharei"	g-black	"normal"
 "TinyTim"	Figure of TinyTim_icon	"Obieblu"	g-black	"normal"
 "Tiny_In_Action"	Figure of TinyTim_In_Action_icon	"Obieblu"	g-black	"normal"
 "Toven_clothed"	Figure of Toven_clothed_icon	"Kupo Klein"	g-white	"normal"
@@ -913,7 +913,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yatur_naked"	Figure of Yatur_naked_icon	"Kupo Klein"	g-white	"normal"
 "Yolanda"	Figure of Yolanda_icon	"SandySchreiber"	g-white	"normal"
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
-"Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
+"Zebra Stallion"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
 "Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"
 [emap - special]
@@ -1265,7 +1265,7 @@ to artistbanmenu: [more compact version]
 		say "[bold type]Artists:[roman type][line break]";
 		while countnumber <= number of entries in artistlist:
 			say "[link][entry countnumber of artistlist][as][countnumber][end link]: [run paragraph on]";
-			BlockCheck entry countnumber of artistlist;
+			BlockCheck entry countnumber of artistList;
 			if remainder after dividing countnumber by 5 is 0:
 				LineBreak;
 			increase countnumber by 1;
@@ -1281,7 +1281,7 @@ to artistbanmenu: [more compact version]
 		if calcnumber is 0:
 			now abmexit is 1;
 		else if calcnumber >= 1 and calcnumber <= number of entries in artistlist:
-			artistbanswitch entry calcnumber of artistlist;
+			artistbanswitch entry calcnumber of artistList;
 
 to BlockCheck (x - text):
 	if x is not listed in BlockList of Player:

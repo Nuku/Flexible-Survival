@@ -12,7 +12,7 @@ Poppy Field	"Poppy Field"
 Poppy Field is a situation.
 The sarea of Poppy Field is "Park".
 when play begins:
-	add Poppy Field to badspots of hermaphrodite;
+	add Poppy Field to badspots of HermList;
 
 Instead of Resolving a Poppy Field:
 	say "     Traveling through the park, you stumble into a less used area where some strange flowers appear to have taken root. Looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, and for some reason you feel like stopping to relax here for a while. Do you take a rest?";
@@ -50,8 +50,8 @@ fallen tree	"fallen tree"
 fallen tree is a situation. The level of fallen tree is 4.
 The sarea of fallen tree is "Park".
 when play begins:
-	add fallen tree to badspots of girl;
-	add fallen tree to badspots of furry;
+	add fallen tree to BadSpots of FemaleList;
+	add fallen tree to BadSpots of FurryList;
 
 Instead of Resolving a fallen tree:
 	say "While traveling along one of the hiking paths in the park, you note a tree seems to have fallen across the path, it isn't in the best location for just going around either, as the thick undergrowth could conceal just about anything. You can continue onwards if you choose, but something seems slightly suspicious about this, maybe it would be safer to head back... Do you go on?";
@@ -75,8 +75,8 @@ Felinoid lair	"Felinoid lair"
 Felinoid lair is a situation.
 The sarea of Felinoid lair is "Park".
 when play begins:
-	add Felinoid lair to badspots of girl;
-	add Felinoid lair to badspots of furry;
+	add Felinoid lair to BadSpots of FemaleList;
+	add Felinoid lair to BadSpots of FurryList;
 
 lairconsent is a number that varies.
 

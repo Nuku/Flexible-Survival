@@ -10,8 +10,8 @@ An Old Tale	"An Old Tale"
 An Old Tale is a situation.
 The sarea of Old Tale is "High".
 When play begins:
-	Add Old Tale to badspots of furry;
-	Add Old Tale to badspots of guy;
+	Add Old Tale to BadSpots of FurryList;
+	Add Old Tale to BadSpots of MaleList;
 
 Instead of resolving a Old Tale:
 	say "     As you walk through the high rises district, you come across a large black feral wolf with a cross-shaped scar across its chest sitting down and scratching at its left ear. While not very strange a thing to see with the city the way it is the sight of the black wolf's companion, a smaller auburn wolf with a bracelet wrapped around its left front paw, nuzzling and licking at the large wolf while prancing around like mad really took the cake. The large wolf doesn't seem to mind the other's antics as he wrinkles his muzzle while letting his long tail sweep behind him playfully.";
@@ -64,8 +64,8 @@ Cosplay	"Cosplay"
 Cosplay is a situation.
 The sarea of Cosplay is "Red".
 When play begins:
-	Add Cosplay to badspots of furry;
-	Add Cosplay to badspots of guy;
+	Add Cosplay to BadSpots of FurryList;
+	Add Cosplay to BadSpots of MaleList;
 
 Instead of resolving a Cosplay:
 	say "     'No, I am not going to wear either that jacket or that tacky red scarf. So just forget about it!' You find yourself stopping as these words enter into your ears just as you pass an open store front. Peeking inside you find a large gray wolf standing on the balls of his hind feet offering up something in the way of clothing to a smaller orange and white fox. 'Come on already. It's just for today,' the wolf growls. By the tone of the other's voice you can tell that wolf is male, the same as his foxy companion. 'And besides, you'd look kinda cute with this on!' The wolf's tail is wagging a mile a minute as rumbles a murr out from his throat while looking at the sexy looking vulpine.";
@@ -93,8 +93,8 @@ Fantasy	"Fantasy"
 Fantasy is a situation.
 The sarea of Fantasy is "High".
 When play begins:
-	Add Fantasy to badspots of furry;
-	Add Fantasy to badspots of guy;
+	Add Fantasy to BadSpots of FurryList;
+	Add Fantasy to BadSpots of MaleList;
 
 Instead of resolving a Fantasy:
 	say "     When a large red wolf runs pass you on all fours with a blue furred feline that's carrying a spear across its shoulder right on its trail, you can almost swear that you've seen those two somewhere before. Not really sure where you simply shrug before going about your way. That is, right before you end up coming across a massive beast of a collie standing at about twelve feet in height. The horny shemale growls happily as it looks to you and suddenly you realize what the other pair was running away from.";
@@ -113,7 +113,7 @@ Controversy is a situation.
 
 The sarea of Controversy is "High".
 When play begins:
-	Add Controversy to badspots of humorous;
+	Add Controversy to badspots of HumorousList;
 
 Instead of resolving a Controversy:
 	say "     Walking down the street you find yourself coming across a boarded up mini mart with a fat black bear wearing a long overcoat and a skinny weasel with long dirty blonde hair draped down off the side of his head bobbing their heads in time with music playing on an old fashioned boombox in between them. From what you can see the weasel is smoking on something that looks like a cigarette, but from the smell that's lingering in the air you can tell that what he's trippin['] on isn't tobacco. Finding yourself getting slightly lightheaded you walk over to the others without really knowing why.";
@@ -166,8 +166,8 @@ Dr Feel Good	"Dr Feel Good"
 Dr Feel Good is a situation.
 The sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.
 When play begins:
-	Add Dr Feel Good to badspots of furry;
-	Add Dr Feel Good to badspots of girl;
+	Add Dr Feel Good to BadSpots of FurryList;
+	Add Dr Feel Good to BadSpots of FemaleList;
 
 Instead of resolving a Dr Feel Good:
 	say "     Traversing the inner sanctum of the hospital, you come across a room with a pair of vixens wearing nurse uniforms muttering over something sitting on a table in between them. Stepping into the room to take a peek at what the vulpines happen to be surveying what you see makes your mouth drop open in surprise. You blink twice just to be sure that what you are looking at is real, but upon the vision not dissipating you realize that you are indeed looking at a young fennec boy staring up to the two females with something akin to uncertainty written across his light brown muzzle. The fact that the other is naked and is trying to shyly cross his legs so that his sheath isn't clearly on display gives you a clue about what's taking place here.";

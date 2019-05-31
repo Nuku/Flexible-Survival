@@ -774,7 +774,7 @@ to say MaleDiegoSuccumbEnding:
 
 Section 5 - Events
 
-instead of navigating Park Entrance while (XP of Diego is 0 and DiegoTalk > 0 and player is not dominant and noncon is not banned and noncon is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
+instead of navigating Park Entrance while (XP of Diego is 0 and DiegoTalk > 0 and player is not dominant and NonconList is not banned and NonconList is not warded and DiegoChanged is 0 and CoyoteTricks > 4 and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Park Entrance]";
 	if NavCheckReturn is false, stop the action;
 	move player to Park Entrance;

@@ -501,7 +501,7 @@ to say Medeaadjustments:
 					say "     Soon she's working her [if Cunt Depth of Player < 12]whole hand[else if Cunt Depth of Player < 24]forearm[else]whole arm[end if] into your squeezing, tugging cunt and smearing the slick goo at your very depths. As your cervix starts to relax, she pushes another handful of the body-altering cream right into your womb. It takes a lot of effort from her to be able to pull her arm free after that, grunting with the effort to resist the strong inward motion of your vaginal muscles.";
 					WaitLineBreak;
 					say "     As the cream inside your uterus starts to react, you become increasingly aware of the empty feeling of your unfertilized womb and you want to do something about it. Noticing your attention focusing on her, the reptilian doctor stops fingering herself and rushes you outside, that sense of emptiness to be filled growing with every step. Catching sight of another creature wandering nearby, she pushes you off in its direction and moves back to observe the results, her medical ethics forgotten in her desire to observe your altered reproductive system in action.";
-					if girl is not banned:
+					if FemaleList is not banned:
 						setmonster "Husky Bitch";
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a female husky. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these cute girls, there is a certain symmetry to that. She seems pleased to see you as well, smelling your arousal and sniffing her way towards your crotch. Making no effort to dissuade her, you seem like a willing playmate and she approaches with eager caution.";
 						say "     When she brings her muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute husky with new, maternally longing instincts, feeling that she'd be perfect to fill it. Before you can even think about it, you grab the husky by the head and yank it forward, driving her muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull her in, stretching around her canine head with an orgasmic effort that has you moaning. Your juices soak her head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
@@ -524,6 +524,7 @@ to say Medeaadjustments:
 						now LegsSpeciesName of Child is "Husky";
 						now AssSpeciesName of Child is "Husky";
 						now TailSpeciesName of Child is "Husky";
+						now ubpreg is "Husky Bitch";
 					else:
 						say "     As you approach the rummaging creature, part of you can't help but be pleased to see that it is a latex fox. That small part of you which is still able to reason can't help but think it appropriate. Given how your first meal was also one of these rubbery guys, there is a certain symmetry to that. He seems pleased to see you as well, smelling your arousal and sniffing his way towards your crotch. Making no effort to dissuade him, you seem like a willing playmate and he approaches with eager caution.";
 						say "     When he brings his muzzle in to lick at your leaking pussy, your body is struck with another throbbing sense of the void inside you. You look down at the cute fox with new, maternally longing instincts, feeling that he'd be perfect to fill it. Before you can even think about it, you grab the fox by the head and yank it forward, driving his muzzle into your hot, needy cunny. Your pussy stretches as you continue to pull him in, stretching around his vulpine head with an orgasmic effort that has you moaning. Your juices soak his head and shoulders, making it easier for your tugging inner walls to start pulling them in as well.";
@@ -547,13 +548,13 @@ to say Medeaadjustments:
 						now LegsSpeciesName of Child is "Latex Fox";
 						now AssSpeciesName of Child is "Latex Fox";
 						now TailSpeciesName of Child is "Latex Fox";
+						now ubpreg is "Latex Fox";
 					now playercanub is true;
 					add "UB Pred" to feats of Player;
 					now ubcount is 1;
 					decrease humanity of Player by 3;
 					say "     You have the [bold type]UB Predator[roman type] feat, granting you the ability to unbirth fallen foes. If you're not pregnant, there is a chance your body will want to use your enemy to fill your womb. You may adjust some vore related settings via the [bold type]vore menu[roman type].";
-					now gestation of Child is a random number between 8 and 16;
-					now ubpreg is Name entry;
+					now Gestation of Child is a random number between 8 and 16;
 					now pregtype is 1;
 					if "Safe Appetite" is not listed in feats of Player:
 						now researchbypass is 1;
@@ -790,7 +791,7 @@ instead of resolving Obstetrics Department:
 	let playernum be a random number between 0 and ( 200 + humanity of Player - Libido of Player );
 	say "     [special-style-1][playernum][roman type] vs [special-style-2]120[roman type]: ";
 	if Playernum >= 120:
-		if furry is banned:
+		if FurryList is banned:
 			say "You manage to block out the smell, at least for the moment, and start searching through the Obstetrics Department for the items that Dr. Medea described. You gather up the specialized equipment that she's requested and leave as quickly as you can before your activity can draw the attention of one of the hospital's denizens.";
 			now HP of doctor Medea is 4;
 			now Resolution of Obstetrics Department is 1; [got Medea's stuff (all monsters banned)]

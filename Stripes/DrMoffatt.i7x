@@ -36,10 +36,10 @@ Another Doctor	"Another Doctor"
 Another Doctor is a situation.
 The sarea of Another Doctor is "Hospital".
 when play begins:
-	add Another Doctor to badspots of hermaphrodite;
-	add Another Doctor to badspots of girl;
-	add Another Doctor to badspots of guy;
-	add Another Doctor to badspots of furry;
+	add Another Doctor to badspots of HermList;
+	add Another Doctor to BadSpots of FemaleList;
+	add Another Doctor to BadSpots of MaleList;
+	add Another Doctor to BadSpots of FurryList;
 
 Instead of resolving a Another Doctor:
 	say "     While searching through some patient rooms, you hear a noise behind you and freeze. At the door, you spot a large and womanly skunk in a doctor's coat and a short skirt. Her limited clothes can do nothing to contain her considerable assets. Her breasts are each larger than her head and prominently display their plump, round nipples. These melons are so big that she doesn't even bother to try closing the white coat, which you doubt could even be managed. Further down, her hips are very wide and womanly and her thighs are round and meaty to match, all straining the poor skirt's attempt to cover them. But what the skirt completely fails to cover are the skunk woman's huge hanging maleness and oversized balls. The latter are each nearly as large as her breasts and the former hangs down just as low despite its mostly flaccid state.";

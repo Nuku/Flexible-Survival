@@ -68,9 +68,9 @@ Hungry dog	"Hungry dog"
 Hungry dog is a situation.
 The sarea of Hungry dog is "Outside".
 When play begins:
-	add Hungry dog to badspots of furry;
-	add Hungry dog to badspots of guy;
-	add Hungry dog to badspots of vore;
+	add Hungry dog to BadSpots of FurryList;
+	add Hungry dog to BadSpots of MaleList;
+	add Hungry dog to badspots of VoreList;
 
 Instead of resolving a Hungry dog:
 	if vorelevel > 2:
@@ -152,10 +152,10 @@ Little trouble	"Little trouble"
 Little trouble is a situation.
 The sarea of Little trouble is "Outside".
 When play begins:
-	add Little trouble to badspots of furry;
-	add Little trouble to badspots of guy;
-	add Little trouble to badspots of girl;
-	add Little trouble to badspots of vore;
+	add Little trouble to BadSpots of FurryList;
+	add Little trouble to BadSpots of MaleList;
+	add Little trouble to BadSpots of FemaleList;
+	add Little trouble to badspots of VoreList;
 
 Instead of resolving Little trouble:
 	say "     While exploring the city and wandering through an alley, you find a small hole at the foot of one of the two walls flanking you. The building it belongs to looks oriental in decoration. There are some banners with Chinese letters hanging on poles from the upper stories, but they're hard to read since the colors are pretty faded. The rest of the wall you're standing in front of is painted with some red and gold design across it. Upon hearing some noises from inside the building, you decide to crouch down and take a peek. You can't see much of what is going on inside, but clearly, something is making rhythmic banging noises in there.";
@@ -305,7 +305,7 @@ to say ChineseUB:
 	say "     Slowly pulling her nether lips apart, you can see two holes that you could penetrate if you wanted to right now. ";
 	if wslevel > 2: [more WS selected]
 		say "Grinning from ear to ear, you touch her urethra, just prodding to see how the dame reacts to the stimuli. She squirms for a bit, but it doesn't look like this will wake her up either - so it's time to have some fun. Pushing your arm inside her urethra, you gently prod and even lightly pinch her insides, making the anthro dog squirm and tremble, giving you a hint on what is to come.";
-		say "     You feel the liquid starting to push your arm out of the hole, the golden flow almost scalding hot at your size and making your arm burn for a bit before you are flung out of her pee hole with a spurt of the liquid. Soon, your whole body is drenched in her urine, the acrid taste spilling in your mouth and the pungent smell filling your lungs. The golden rain goes on for a bit, showering your prone form in her piss. When it finally stops and you start to wipe the liquid from your eyes, you realize that the girl is not sleeping anymore. She stares down at you in the pool of her urine, then reaches out to snatch you up in her paw.";
+		say "     You feel the liquid starting to push your arm out of the hole, the golden flow almost scalding hot at your size and making your arm burn for a bit before you are flung out of her pee hole with a spurt of the liquid. Soon, your whole body is drenched in her urine, the acrid taste spilling in your mouth and the pungent smell filling your lungs. The golden rain goes on for a bit, showering your prone form in her piss. When it finally stops and you start to wipe the liquid from your eyes, you realize that the FemaleList is not sleeping anymore. She stares down at you in the pool of her urine, then reaches out to snatch you up in her paw.";
 	else: [going for the pussy]
 		say "You go right to her snatch, pushing your whole arm inside of her once more, this time on purpose. If you were your normal size, this fisting would be hard on her, but at this scale, she barely reacts to it a second time, even as you wiggle your arm around a bit inside her. Defiant about not being able to affect her that much after all, you step up to the challenge and start to climb up, wanting to enter her pussy with your whole naked body. But it isn't actually that easy to do. Surrounded by her slick, fleshy folds, you barely have anything to hold onto to pull yourself in. After a futile attempt or two, you eventually end up taking a running leap to jump into her opening head first, then work your way deeper, wiggling against her inner walls.";
 		say "     This is actually quite a bit of fun, slippery warmth rubbing against your naked body from all sides. Soon, your front half is in what feels like a little bit of a larger space. Blinking a few times, you realize that you can actually see a little bit in here too. Do those shrooms have a side effect of enabling you to see in the dark? No matter what or how, you are able to make out the enclosed space of her vagina around you with the inner ring of her cervix further up and back. That'll be a difficult, but definitely fun, climb. While you are already mapping out the best route to take, your legs, which are still sticking out between the husky's folds, are suddenly grasped and pulled upon. In one quick pull, you're out of the comfy enclosure once more and in the anthro canine's paw.";

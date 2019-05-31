@@ -14,7 +14,7 @@ PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false
 PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
 
 when play begins:
-	add Pure Pool to badspots of girl;
+	add Pure Pool to BadSpots of FemaleList;
 
 instead of resolving Pure Pool:
 	if PurePoolSeen is false:

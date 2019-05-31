@@ -97,9 +97,9 @@ instead of conversing the Harold:
 		increase freecred by 100;
 		increase XP of Player by 12 + level of Player;
 		now Haroldtalk is 4;
-	else if femonyxq is 0 and girl is not banned and XP of Onyx >= 6 and XP of Onyx <= 8:
+	else if femonyxq is 0 and FemaleList is not banned and XP of Onyx >= 6 and XP of Onyx <= 8:
 		say "     As you approach bar, you're stricken with the notion that Onyx might be better suited here than at the Abbey, though you're not sure if all the ladies around might have an effect on him. Shall you raise the topic with him?";
-		if girl is warded:
+		if FemaleList is warded:
 			say "     [italic type][bracket]Ward Caution: Will turn Onyx female[close bracket][roman type][line break]";
 		if Player consents:
 			say "     You call the bartender over and ask about perhaps sheltering a friend of your who might be able to work for him. When asked why here, in particular, you suggest that it simply felt appropriate, given the name of the bar and the Onyx's equine infection.";
@@ -552,8 +552,8 @@ carry out Vodkadrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a small shot glass full of a layered liquid in front of you. The drink is mostly clear, with several thin, stripe-like layers of darker liquid, which makes you grin at the slight resemblance to zebra striping the bartender obviously went to some effort to emulate. Raising your glass to Harold, you toss back the shot, gasping slightly as the liquid burns its way down your throat. A warm, happy sensation spreads outward from your chest as you slam the shot down and smile at Harold. Your smile only grows larger as you note that the canny bartender already has another shot set out on the bar for you. Saluting him again with your glass, you drink several more shots. A pleasant buzz starts to set in, even as you realize that your body is beginning to change slightly. Though, in your mildly inebriated state, it is hard to think why that would be a problem.";
-		infect "Zebra";
-		infect "Zebra";
+		infect "Zebra Stallion";
+		infect "Zebra Stallion";
 		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;
@@ -573,8 +573,8 @@ carry out Tequiladrinking:
 		say "     Harold looks at you for a minute thoughtfully, before sighing and shaking his head sadly. 'Sorry friend, I can only give you so much at a time. It's so you can have a drink or two to loosen up a bit, but not enough to get drunk hopefully,' the bartender says with an amused chuckle at the idea. 'Besides, it's actually pretty hard to keep stock up since there haven't been any deliveries from the outside world for a while. We have to be careful how much we give out in a day.' He gives an apologetic shrug, and you sigh and realize you will have to come back again later if you want another drink from the bar.";
 	else:
 		say "     Harold nods at you as you place your order, pulling a couple of bottles out from behind the bar, and mixing your drink with an expert's touch. It isn't long before he sets a small glass of orange tequila in front of you. 'That will put whiskers on ya,' he says with a broad grin. 'Might loosen ya up some, too,' Harold adds with amusement as he goes back to tending the bar, shooting you an occasional amused glance as you raise your glass. Eyeing the tequila suspiciously, you shrug as you pick up the glass and take a big drink. The tequila burns harshly as it goes down, the liquor carrying an even stronger bite then regular tequila, but with a strangely pleasant aftertaste. Realizing you have drained your glass, you set it back down on the bar, gasping slightly as the liquor hits your system, making you feel nice and warm as it loosens you up. Grinning happily, you note that the canny bartender already has another glass set out on the bar for you. Snagging the fresh glass, you quickly drink some more of the powerful liquor, feeling it loosen you right up as it makes your body tingle with excitement. The drink makes you feel nice and sexy, and perhaps even a little bit slutty, as you grin longingly as you look around the room. You enjoy the sights of so many different, horny beasts having fun. You find yourself wondering just what some of the horny dancers would give to have fun with you as well. The thought of selling your body for the night seeming strangely alluring even as your body shifts and changes on the outside to match your new, sexy and slutty inside.";
-		infect "Tigress Hooker";
-		infect "Tigress Hooker";
+		infect "Malayan Tiger Herm";
+		infect "Malayan Tiger Herm";
 		SanLoss 5;
 		PlayerDrink 5;
 		now lastDrinkserved is turns;

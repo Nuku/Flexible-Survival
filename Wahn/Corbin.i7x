@@ -421,7 +421,7 @@ to say CorbinSex3: [Corbin's cunt licked/fingered]
 		say "     Stepping up close to Corbin, you put your hand on his crotch, rubbing against the fabric of his jeans. The equine cuntboy can barely suppress a moan, his hips shifting a bit forward to lean into your touch. Kneeling down, you pop open the button of his jeans, then lower the zipper and pull them down his legs. Corbin's already a bit swollen-looking nether lips and the perky breasts on his crotch come into sight, looking pretty inviting. You don't waste a second, leaning forward to put your lips to one of his nipples, softly suckling on it and being rewarded with a squirt of tasty milk. You drink several swallows from this breast, then the other, pleased at the look of bliss coming over Corbin's face as you suckle from him. It's clearly giving him more than just a bit of arousal, judging from how wet and dripping his pussy gets.";
 		say "     Letting go of his breasts and turning your attention to Corbin's female bits, you give him a careful lick and taste his juices, then really go to town on him - licking and fondling him until he's panting and squirming in arousal, his hands grabbing your shoulders to hold on to something. You keep going for quite a bit until suddenly, he gives a lust-filled gasp and orgasms, dripping femcum from his spread pussy. As you stand up next to the still heavily breathing cowboy, he grabs you and pulls you into a deep kiss, then says 'Thank you, I really needed that.'";
 		now lastfuck of Corbin is turns;
-		infect "Cowboy Cuntboy";
+		infect "Gypsy Horse Transman";
 
 to say CorbinSex4: [Corbin's pussy fucked]
 	if thirst of Corbin is 1: [in the barracks]

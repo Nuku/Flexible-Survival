@@ -84,8 +84,8 @@ Captured Demon	"Captured Demon"
 Captured Demon is a situation.
 The sarea of Captured Demon is "Red".
 when play begins:
-	add Captured Demon to badspots of guy; [male soldier, demon brute]
-	add Captured Demon to badspots of hellspawn; [demon brute]
+	add Captured Demon to BadSpots of MaleList; [male soldier, demon brute]
+	add Captured Demon to badspots of DemonList; [demon brute]
 
 Instead of resolving a Captured Demon:
 	say "     Moving through an alley in the seedier part of town, you hear voices from the smashed window of a nearby bar. Careful not to step on anything and make a sound, you slowly walk closer and listen.";
@@ -137,7 +137,7 @@ The Prereq1 of Thankful Soldier is Captured Demon.
 The Prereq1Resolution of Thankful Soldier is { 1 }.
 The sarea of Thankful Soldier is "Outside".
 when play begins:
-	add Thankful Soldier to badspots of guy; [male soldier]
+	add Thankful Soldier to BadSpots of MaleList; [male soldier]
 
 TSEventCounter is a number that varies. TSEventCounter is usually 0.
 LastTSEvent is a number that varies. LastTSEvent is usually 555.

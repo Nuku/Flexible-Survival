@@ -14,7 +14,7 @@ Giant's Frozen Yogurt is a situation.
 The sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.
 when play begins:
-	add Giant's Frozen Yogurt to badspots of girl;
+	add Giant's Frozen Yogurt to BadSpots of FemaleList;
 
 Instead of resolving a Giant's Frozen Yogurt:
 	if HP of frost giantess is 0:			[first time finding]

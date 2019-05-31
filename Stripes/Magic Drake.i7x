@@ -23,12 +23,6 @@ mdrakeanal is a number that varies.			[times fucked by MD]
 mdstaffface is a truth state that varies.	[staff blasted face]
 mdmaxlossscene is a number that varies.	[helps cycle max loss scenes]
 
-when play begins:
-	add { "Magic Drake" } to infections of hermaphrodite; [shemale]
-	add { "Magic Drake" } to infections of Tailweapon; [usable for Tail Strike feat]
-	add { "Magic Drake" } to infections of Reptilelist; [list of reptile infections]
-	add { "Magic Drake" } to infections of Firebreathlist; [List of fire breathing creatures]
-
 to say magicdrakedesc:
 	setmongender 6; [creature is shemale]
 	if debugactive is 1:
@@ -108,7 +102,7 @@ to say losetomagicdrake:
 					decrease humanity of Player by 1;
 					increase Libido of Player by 5;
 				else if Player is male and Ball Size of Player < Ball Size entry and "Female Preferred" is not listed in feats of Player and "Modest Organs" is not listed in feats of Player:
-					say "     While cumming, the draconic sorceress reaches around to [if CockName of Player is listed in infections of internallist]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testicles to grow further. When she's done both her climax and her spell, she [if scalevalue of Player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
+					say "     While cumming, the draconic sorceress reaches around to [if CockName of Player is listed in infections of InternalCockList]rub over your hidden balls[else]grab your twitching balls and knead them[end if]. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that causes your testicles to grow further. When she's done both her climax and her spell, she [if scalevalue of Player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
 					increase Ball Size of Player by 1;
 					now Ball Size of Player is ( ( Ball Size of Player * 3 ) + Ball Size entry ) / 4;
 					decrease humanity of Player by 1;
@@ -569,7 +563,7 @@ to say mdrake_pvictory_05:
 
 to say mdrake_pvictory_06:		[Receive fellatio]
 	say "     Feeling you deserve some small payback for the trouble this lust-crazed creature's been causing, you take hold of your [cock size desc of Player] cock and stroke it to erection. The sight of it catches the sorceress's attention, partially distracting her from her efforts to rise. As you approach her draconic muzzle, she licks her lips and releases a needy moan. And when you bring your [Cock of Player] manhood just barely within reach, her reptilian tongue stretches out to lick its tip.";
-	say "     'Come on. Give it to me, my sweet,' she moans with an obvious need that brings a grin to your lips. While a little tempted to tease her longer, you want to get it on and so move forward, plunging your [Cock of Player] cock into her warm muzzle. Rocking your hips, you plunge into her sucking maw. Her tongue plays over your meat and her hands [if CockName of Player is listed in infections of Internallist]fondle your [Ball Size Adjective of Player] [Balls] with an obvious hunger[else]grab your hips to urge you onwards[end if].";
+	say "     'Come on. Give it to me, my sweet,' she moans with an obvious need that brings a grin to your lips. While a little tempted to tease her longer, you want to get it on and so move forward, plunging your [Cock of Player] cock into her warm muzzle. Rocking your hips, you plunge into her sucking maw. Her tongue plays over your meat and her hands [if CockName of Player is listed in infections of InternalCockList]fondle your [Ball Size Adjective of Player] [Balls] with an obvious hunger[else]grab your hips to urge you onwards[end if].";
 	say "     Seeing her meaty pillar bobbing in front of you, you grab it and start stroking it as further encouragement for the slutty sorceress. The titanic manhood is shaped like a normal cock, but taken to enormous size. Its smooth flesh, phallic shape and throbbing veins would have it seem human in form were it not for its green hue. This examination is a casual one, undertaken while enjoying the blow job and giving a hand job (as best you can give its size) in return.";
 	say "     As your climax hits you, you thrust deeply into the buxom beauty's maw. Cumming hard, you blast your [Cum Load Size of Player] load across her tongue and down her throat[if Ball Size of Player >= 6]. Your voluminous output is enough to plump the dragoness's belly with her feast of hot semen[end if]. With your orgasm waning, you shift your focus to her cock, rubbing and stroking it just right to finish her off. Angling it away, you delight in watching the high arcs and messy splatters her blasts of cum make until finally her spent shaft flops down onto the ground, temporarily sated.";
 
@@ -665,11 +659,21 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Magic Drake" to infections of ReptileList;
+	add "Magic Drake" to infections of FurryList;
+	add "Magic Drake" to infections of MagicalList;
+	add "Magic Drake" to infections of HermList;
+	add "Magic Drake" to infections of TaperedCockList;
+	add "Magic Drake" to infections of InternalCockList;
+	add "Magic Drake" to infections of BipedalList;
+	add "Magic Drake" to infections of TailList;
+	add "Magic Drake" to infections of TailweaponList;
+	add "Magic Drake" to infections of FirebreathList;
 	now Name entry is "Magic Drake"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The scaly sorceress[or]The magical drake[or]The dragon woman[or]The buxom shemale[at random] [one of]shoots you with a blast of sticky sparkles from her staff[or]hip-checks you with her massive bottom, slamming you between her ass and something else[or]slaps you hard with her throbbing erection[or]swings her staff in a wide arc, sending you tumbling as some unseen force sends you and debris flying back[or]conjures a spectral fist from her staff which then strikes you repeatedly[or]mashes your face between her tits, both suffocating and crushing your head between those plump globes[at random]."; [ Successful attack message ]
 	now defeated entry is "[beatthemagicdrake]"; [ Text when monster loses. ]
 	now victory entry is "[losetomagicdrake]"; [ Text when monster wins. ]
@@ -724,7 +728,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -753,7 +757,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -780,18 +784,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -813,7 +817,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

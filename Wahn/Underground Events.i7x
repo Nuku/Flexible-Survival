@@ -9,8 +9,8 @@ Captive Breeding is a situation.
 The sarea of Captive Breeding is "Sealed".
 
 when play begins:
-	add Captive Breeding to badspots of girl;
-	add Captive Breeding to badspots of guy;
+	add Captive Breeding to BadSpots of FemaleList;
+	add Captive Breeding to BadSpots of MaleList;
 
 CaptiveBreederEncounter is a number that varies.
 
@@ -159,8 +159,8 @@ Trashed Refuge is a situation.
 The sarea of Trashed Refuge is "Sealed".
 
 when play begins:
-	add Trashed Refuge to badspots of girl;
-	add Trashed Refuge to badspots of guy;
+	add Trashed Refuge to BadSpots of FemaleList;
+	add Trashed Refuge to BadSpots of MaleList;
 
 [Resolution of Trashed Refuge]
 [0 - not seen, not searched]

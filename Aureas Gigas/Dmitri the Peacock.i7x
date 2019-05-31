@@ -14,9 +14,9 @@ The sarea of Captivating Plumage is "High".
 Peacocked is a number that varies. Peacocked is usually 0.
 
 when play begins:
-	add Captivating Plumage to badspots of guy;
-	add Captivating Plumage to badspots of girl;
-	add Captivating Plumage to badspots of hermaphrodite;
+	add Captivating Plumage to BadSpots of MaleList;
+	add Captivating Plumage to BadSpots of FemaleList;
+	add Captivating Plumage to badspots of HermList;
 
 Instead of resolving a Captivating Plumage:
 	if debugactive is 1:

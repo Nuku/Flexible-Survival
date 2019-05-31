@@ -16,8 +16,8 @@ Birthing Time is a situation.
 The sarea of Birthing Time is "Zoo".
 
 when play begins:
-	add Birthing Time to badspots of furry;
-	add Birthing Time to badspots of girl;
+	add Birthing Time to BadSpots of FurryList;
+	add Birthing Time to BadSpots of FemaleList;
 
 Instead of resolving Birthing Time:
 	say "     You find yourself walking around the zoo and sighing at the remnants of the once majestic place that are now left dilapidated. Scanning the place almost twice over, you find that most of the cages and assortment of eateries have been utterly devastated by the mutants that have gone through the area. Hearing the sounds of someone moaning you find yourself freezing in your tracks as you try and figure out just what kind of whimpering croon you had just heard. Being in this city for so long you've actually learned how to differentiate cries of help from cries of rampant pleasure. Subsequently avoiding the latter because they usually heralded trouble, it takes you a minute to go over the vocal outcry to judge the sincerity of the now yelping groan as being something worthy of your attention. You come to the conclusion that this gasp however, was of someone sounding as though they were in pain, not in the throes of ecstasy. Feeling as though you might be able to help you take a step in the direction of the voice before stopping.";
@@ -47,10 +47,10 @@ Girl Time is a situation.
 The sarea of Girl Time is "Red".
 
 when play begins:
-	add Girl Time to badspots of furry;
-	add Girl Time to badspots of girl;
-	add Girl Time to badspots of guy;
-	add Girl Time to badspots of hermaphrodite;
+	add Girl Time to BadSpots of FurryList;
+	add Girl Time to BadSpots of FemaleList;
+	add Girl Time to BadSpots of MaleList;
+	add Girl Time to badspots of HermList;
 
 Instead of resolving Girl Time:
 	say "     On your way to the red light district, you spot the sultry faces of several ladies, not to mention men of the night, all winking and posing while giving you [italic type]come-hither[roman type] glances. The fact that most, if not all of the people here are now covered with different textures and patterns of fur types only serve to make you shake your head and keep walking as you try not to become aroused by the prostrating mutants. You find it somewhat amazing that despite the epidemic rolling throughout the metropolis there are some things about people that will never change. This fact is proven to be even more true as your ears catch the sounds of giggling girls laughing at each other from the inside of a derelict clothing store that you are just now passing in front of. Curiosity has you taking a look inside of the rundown store before you can stop yourself.";
@@ -96,9 +96,9 @@ The sarea of Spiritual Love is "Park".
 spiritlove is a number that varies.
 
 when play begins:
-	add Girl Time to badspots of furry;
-	add Girl Time to badspots of guy;
-	add Girl Time to badspots of girl;
+	add Girl Time to BadSpots of FurryList;
+	add Girl Time to BadSpots of MaleList;
+	add Girl Time to BadSpots of FemaleList;
 
 Instead of resolving Spiritual Love:
 	say "     Humming while walking through the park, you find yourself coming to a small group of standing trees with a glowing flash of light piercing through the cracks of the sentinel-like figures. Interested as to what's going on you watch as leaves shudder, but not from a breeze as the wind is quite still, while the air seems to be electrified with the kind of energy you normally only expect to feel during a storm. Looking to the sky to see that it's clear you find yourself growing more and more curious as you feel a keen sense of inquisitiveness take you over. However, before you can take a single step forward a scream of warning resounds through your head, nearly making you deaf for a moment. Grabbing your head and then falling onto your knees you take a second to gather yourself together as sensations, the likes of which you have never experience before, consume you in a white hot fire of madness. Once your head no longer feels as though it's going to crack open like an acorn in between the fangs of a chipmunk you carefully get up onto your feet and then shake yourself like a dog just getting out from under a heavy downpour of rain. Wondering what in the heck that was all about you suddenly feel as though you are making a terrible decision about continuing on your path as you notice the white glow getting brighter and brighter in between the trees.";

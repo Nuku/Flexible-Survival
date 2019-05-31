@@ -38,8 +38,8 @@ Snared Vixen is a situation. The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
 
 when play begins:
-	add Snared Vixen to badspots of girl; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
-	add Snared Vixen to badspots of furry;
+	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
+	add Snared Vixen to BadSpots of FurryList;
 
 Instead of resolving a Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
@@ -63,10 +63,10 @@ Instead of resolving a Snared Vixen:
 		now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
 		let templist be { "A", "C", "D", "E"}; [Prepares additional events to add to dolphinlist]
 		sort templist in random order; [Sets these extra events to slots 3, 5, 9, and 11 for a quasi-random search]
-		now entry 3 of dolphinlist is entry 1 of templist;
-		now entry 5 of dolphinlist is entry 2 of templist;
-		now entry 9 of dolphinlist is entry 3 of templist;
-		now entry 11 of dolphinlist is entry 4 of templist;
+		now entry 3 of dolphinlist is entry 1 of tempList;
+		now entry 5 of dolphinlist is entry 2 of tempList;
+		now entry 9 of dolphinlist is entry 3 of tempList;
+		now entry 11 of dolphinlist is entry 4 of tempList;
 		now Resolution of Snared Vixen is 1;	[Vixen was taken to Bouncy Castle]
 	else: [Aborts finding the Bouncy Castle entirely]
 		say "     Deciding that it's not of interest to you, you turn away and head back the way you came.";
@@ -772,7 +772,7 @@ to say bcpptendril:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	sort primarycolorlist in random order;
-	now ppcolor is entry 1 in primarycolorlist;
+	now ppcolor is entry 1 in primarycolorList;
 	say "     [one of]Before you can move away, the pillar in front of you strikes you with one of the[or]As you're attempting to move away, a pillar behind you strikes you with one of its[at random] tentacles with a wet, sticky sound[if weapon object of Player is not journal]. You attempt to fight it off with your [weapon of Player], but it seems to have no effect on the flowing [ppcolor] latex[end if]. Trying to steady yourself on the unsteady floor with the slimy appendage wrapping around your leg, you attempt to pull yourself free[if compnumber is 1]. Your companion moves to assist you, but is ensnared by the tendrils of another of the pillars[else if compnumber > 1]. Your companions move to assist you, but are ensnared by the tendrils of the other pillars[end if].";
 	let playernum be strength of Player + dexterity of Player + scalevalue of Player;
 	if bcseenpunchingpillars is true, increase playernum by 5;
@@ -1528,7 +1528,7 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 	if x > 12:
 		say "There are only a dozen to search.";
 	else:
-		let status be entry x of dolphinlist;
+		let status be entry x of dolphinList;
 		if status is "A":
 			say "[dolcheckA]";
 		else if status is "B":

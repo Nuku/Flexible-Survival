@@ -15,10 +15,10 @@ darkdays is a number that varies.
 
 The sarea of DogHouse is "Warehouse".
 when play begins:
-	add DogHouse to badspots of furry;
-	add DogHouse to badspots of girl;
-	add DogHouse to badspots of guy;
-	add DogHouse to badspots of hermaphrodite;
+	add DogHouse to BadSpots of FurryList;
+	add DogHouse to BadSpots of FemaleList;
+	add DogHouse to BadSpots of MaleList;
+	add DogHouse to badspots of HermList;
 
 Instead of resolving DogHouse:
 	if fin is 1:
@@ -278,7 +278,7 @@ to say defeatedbywolf:
 			else if GroupFightCounter is 3:
 				challenge "Husky Alpha";
 			else if GroupFightCounter is 5 or GroupFightCounter is 6:
-				challenge "Twisted Pimp";
+				challenge "Human Hybrid";
 			increase GroupFightCounter by 1;
 		if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "[fightlost]";

@@ -28,8 +28,8 @@ Leather Daddy Kitty	"Leather Daddy Kitty"
 Leather Daddy Kitty is a situation. The level of Leather Daddy Kitty is 2.
 The sarea of Leather Daddy Kitty is "high".
 when play begins:
-	add Leather Daddy Kitty to badspots of guy; [Oliver is a male kitty]
-	add Leather Daddy Kitty to badspots of furry; [Oliver is a kitty]
+	add Leather Daddy Kitty to BadSpots of MaleList; [Oliver is a male kitty]
+	add Leather Daddy Kitty to BadSpots of FurryList; [Oliver is a kitty]
 
 Instead of resolving a Leather Daddy Kitty:
 	if OliverRelationship is 1 or player is submissive:

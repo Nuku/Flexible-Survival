@@ -16,12 +16,12 @@ The sarea of Equineguardpost is "Stable".
 Instead of Resolving a Equineguardpost:
 	if XP of Onyx is 1:
 		let skip be 0;
-		if guy is not banned:
+		if MaleList is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy two of those wannabe horsemen you saw outside relaxing in the area, more importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the stallionbois.";
 			challenge "Stallionboi";
 			if lost is 0:
 				challenge "Stallionboi";
-		else if girl is not banned:
+		else if FemaleList is not banned:
 			say "     Investigating the dimly lit halls of the whorsehouse, you find your way to a rather small room that the equines appear to have converted into a guardpost of sorts. Glancing inside carefully, you spy a pair of donkey women in leathers taking their turn on guard. More importantly however, you also spy several small bundles of keys tossed around the room, obviously left there by guards that aren't on shift right now. Realizing that one of those bundles of keys almost certainly has the key to Onyx's cell, you realize you won't get a better chance while the more powerful guards our out roaming. You still prepare yourself for a rough fight as you prepare to attack the donkey women.";
 			challenge "Donkeywoman";
 			if lost is 0:
@@ -85,7 +85,7 @@ Ignored Memos is a situation.
 The sarea of Ignored Memos is "Stable".
 
 Instead of Resolving a Ignored Memos:
-	if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
+	if MaleList is banned or FemaleList is banned or HermList is banned or FurryList is banned:
 		say "     Wandering through the halls of the Stables, you come across a desk that seems to have a small pile of papers tossed on it haphazardly. Feeling curious as to who would bother with paperwork while the world is going crazy, you decide to take a look at some of the pages. Surprisingly enough, all of the papers seem to be about the same thing, someone writing cryptic notes. They all say things to the effect of 'This quest requires guys, girls, herms and furries.' Odd. Clearly the mad ramblings of some deranged creature.";
 		now Resolution of Ignored Memos is 99; [event critical creatures banned]
 		now Ignored Memos is resolved;
@@ -525,10 +525,10 @@ Instead of resolving a contract hyenegotiation:
 
 to say HyenegotiationHyenaAbuse:
 	say "their hands teasing and stroking your [Skin of Player] skin. Before long, you are dragged into the crowd, where tons of spotted forms rub up against you, and soon their thick, knotted cocks are rubbing up against you as every orifice on your body is stuffed full of their thick hyena meat. You lose track of time and the number of cocks that use your weakened body through the evening, your body responding with increasing eagerness to their assault as they pass you around like a party favor as the celebration continues. You hear the sounds of several other fights going on in the background, but find it hard to care about anything other than the next lovely black cock that is about to be stuffed into you. Eventually your mind is unable to take any more stimulation, and you pass out even as they continue to use your all to pliant and sexy form to slake their perverse desires. When you finally wake up much later, you are relieved to discover that while you are almost completely covered in the hyenas sticky cum, they appear to have left you lying there on the street where the party was rather than taking you with them. Shifting your aching body slightly, you hear something crinkle, and you look down to see that someone has tossed a note and the paper from fancy down next to you. Picking up the note first, you begin to read the hyenas message. 'Well that was certainly a fun night, almost worth the concessions you asked for, so hey we signed your little paper. Not that we really think a weakling like you has a chance to take over the Stables, but at least if you do we know it won't be hard to renegotiate if we really need to. Besides, the thought of such an eager hyena slut in charge of the Stables is pretty amusing you have to admit,' it says, and you sigh as you check and see that yes they did indeed sign the new agreement, though somehow you really don't think you will be telling Fancy about just how you got the hyena gang to agree as you pick yourself up and head back to the library to clean up.";
-	infect "Herm Hyena";
-	infect "Herm Hyena";
-	infect "Herm Hyena";
-	infect "Herm Hyena";
+	infect "Hyena Herm";
+	infect "Hyena Herm";
+	infect "Hyena Herm";
+	infect "Hyena Herm";
 
 Section 10 - Horsepitfight (Fancy quest part 4b)
 

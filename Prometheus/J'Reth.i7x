@@ -63,7 +63,7 @@ The level of Introduction By Soup is 0.
 The sarea of Introduction By Soup is "Nowhere".
 
 when play begins:
-	add Introduction By Soup to badspots of guy;
+	add Introduction By Soup to BadSpots of MaleList;
 
 after going to Mall Foodcourt while (Introduction By Soup is not resolved and a random chance of 1 in 3 succeeds):
 	IntroductionBySoupEvent;

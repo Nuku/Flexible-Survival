@@ -13,8 +13,8 @@ Quiet Apartment Building	"Quiet Apartment Building"
 Quiet Apartment Building is a situation.
 The sarea of Quiet Apartment Building is "Red".
 when play begins:
-	add Quiet Apartment Building to badspots of hermaphrodite;
-	add Quiet Apartment Building to badspots of furry;
+	add Quiet Apartment Building to badspots of HermList;
+	add Quiet Apartment Building to BadSpots of FurryList;
 
 Instead of resolving a Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";

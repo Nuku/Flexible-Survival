@@ -54,8 +54,8 @@ Centaur Gangbang	"Centaur Gangbang"
 Centaur Gangbang is a situation. The level of Centaur Gangbang is 5.
 The sarea of Centaur Gangbang is "Plains".
 when play begins:
-	add Centaur Gangbang to badspots of hermaphrodite;      [Thomas becomes a herm in/after this scene]
-	add Centaur Gangbang to badspots of guy;                [male centaurs]
+	add Centaur Gangbang to badspots of HermList;      [Thomas becomes a herm in/after this scene]
+	add Centaur Gangbang to BadSpots of MaleList;                [male centaurs]
 
 Instead of resolving a Centaur Gangbang:
 	say "     Moving between the large piles of rubble left by several buildings, you hear some noise from further ahead and decide to investigate. You make your way forward carefully, ducking behind the remains of walls and anything else available, and pretty soon a small group of centaurs comes into sight. There are three stallions and a mare, with one of the males on her back, his long cock plunging in and out of her dripping pussy. The other two stand next to them, cheering their buddy on and fondling the mare's body and breasts.";

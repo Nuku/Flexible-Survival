@@ -13,9 +13,9 @@ tcopfight is a number that varies.
 pquest is a number that varies.
 
 when play begins:
-	add Policeman to badspots of guy;
-	add Policeman to badspots of hermaphrodite;
-	add Policeman to badspots of furry;
+	add Policeman to BadSpots of MaleList;
+	add Policeman to badspots of HermList;
+	add Policeman to BadSpots of FurryList;
 
 TigerCopRoomConnection is a number that varies.[@Tag:NotSaved]
 
@@ -99,7 +99,7 @@ Instead of resolving a Policeman:
 			wait for any key;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Tiger Cop":
+				if Name entry is "Malayan Tiger Male":
 					now MonsterID is y;
 					break;
 			now area entry is "High"; [activates Tiger Cop as a wandering monster]
@@ -107,7 +107,7 @@ Instead of resolving a Policeman:
 				say "     That blow was too much for you and you are sent sprawling to the ground, unable to retaliate or flee.";
 				say "[losetotigercop]";
 			else:
-				challenge "Tiger Cop";
+				challenge "Malayan Tiger Male";
 			now mqstatus is 99; [set to refused quest]
 			now Resolution of Policeman is 99; [refused the quest]
 			now Policeman is resolved;
@@ -252,7 +252,7 @@ to say motelquest:
 		LineBreak;
 		now mqfightresult is 3; [set to fled by default]
 		now inasituation is true;
-		challenge "Tigress Hooker";
+		challenge "Malayan Tiger Herm";
 		now inasituation is false;
 		if mqfightresult is 3:
 			say "[mqranaway]";
@@ -267,7 +267,7 @@ to say motelquest:
 	LineBreak;
 	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
-	challenge "Tigress Hooker";
+	challenge "Malayan Tiger Herm";
 	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
@@ -282,7 +282,7 @@ to say motelquest:
 	LineBreak;
 	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
-	challenge "Tigress Hooker";
+	challenge "Malayan Tiger Herm";
 	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
@@ -301,7 +301,7 @@ to say motelquest:
 	LineBreak;
 	now mqfightresult is 3; [set to fled by default]
 	now inasituation is true;
-	challenge "Tigress Hooker"; [mqstatus 6 will adjust stats to Matron level]
+	challenge "Malayan Tiger Herm"; [mqstatus 6 will adjust stats to Matron level]
 	now inasituation is false;
 	if mqfightresult is 3:
 		say "[mqranaway]";
@@ -345,14 +345,14 @@ to say totalTH:
 		now Libido of Player is 70;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
 		choose row y in Table of Random Critters;
-		if Name entry is "Tigress Hooker":
+		if Name entry is "Malayan Tiger Herm":
 			now MonsterID is y;
 			break;
-	now TailName of Player is "Tigress Hooker";
-	now FaceName of Player is "Tigress Hooker";
-	now SkinName of Player is "Tigress Hooker";
-	now BodyName of Player is "Tigress Hooker";
-	now CockName of Player is "Tigress Hooker";
+	now TailName of Player is "Malayan Tiger Herm";
+	now FaceName of Player is "Malayan Tiger Herm";
+	now SkinName of Player is "Malayan Tiger Herm";
+	now BodyName of Player is "Malayan Tiger Herm";
+	now CockName of Player is "Malayan Tiger Herm";
 	attributeinfect;
 	now tail of Player is tail entry; [...to make for quicker and accurate copying of TH appearance.]
 	now Face of Player is face entry;
@@ -623,11 +623,6 @@ to say turning tricks:
 
 Section 8 - Monster Desc for Tiger Cop
 
-when play begins:
-	add { "Tiger Cop" } to infections of guy;
-	add { "Tiger Cop" } to infections of hermaphrodite;
-	add { "Tiger Cop" } to infections of furry;
-
 to say tigercopdesc:
 	setmongender 3; [creature is male]
 	choose row MonsterID from the Table of Random Critters;
@@ -661,7 +656,7 @@ to say losetotigercop:
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Tiger Cop":
+				if Name entry is "Malayan Tiger Male":
 					now MonsterID is y;
 					break;
 			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
@@ -681,7 +676,7 @@ to say losetotigercop:
 			[puts Tigress Hooker as lead monster in case of impregnation]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Tigress Hooker":
+				if Name entry is "Malayan Tiger Herm":
 					now MonsterID is y;
 					break;
 			say "     Unable to stand up to the large tiger any longer, he grabs you and shoves you down onto a nearby car. Pressing your face to the dirty hood, he growls in your ear. 'I warned you what would happen if I caught you,' he rumbles. With a strong paw firmly at your neck, the other bares your bottom and moves you into position.";
@@ -697,7 +692,7 @@ to say losetotigercop:
 			if a random chance of mchance in 12 succeeds:
 				say "     The victorious tiger grabs you roughly and tosses you to the ground at his feet. He puts a heavy paw at your shoulder, pushing you to the ground. 'I warned you what would happen if I caught you,' he rumbles. Above you, you can hear the sound of him unzipping his pants.";
 				say "     Reaching down, he grabs you with his paws and pushes you onto all fours. One paw then holds you firmly by the neck while the other bares your bottom to him";
-				if TailName of Player is "Tigress Hooker" or TailName of Player is "Tiger" or TailName of Player is "Tigertaur":
+				if TailName of Player is "Malayan Tiger Herm" or TailName of Player is "Tiger" or TailName of Player is "Tigertaur":
 					say ". He grabs you by your striped tail and raises your rear up. 'Here you've got this sexy tail and no juicy pussy to go with it. It just ain't right,' he grumbles, giving your ass a hard swat before getting his cock lined up with your rear.";
 				else:
 					say ". He gives your rear a firm swat and lines up his cock with your rear.";
@@ -710,7 +705,7 @@ to say losetotigercop:
 				say "     Soon you are licking at that throbbing shaft, then taking it into your eager mouth. You lick and suck on it, moaning around the tiger's large cock. With a firm hold on you, he fucks your face hard and fast, pushing his throbbing cock down your throat again and again.";
 				say "     You start to moan and fondle his ballsack as the powerful male fucks you, losing yourself in the sex. 'That's a good slut,' he rumbles. 'Take it, you whore.' Your lips slide over his thick, foot-long member until he finally unleashes his hot seed into your mouth and flooding your throat with his sperm.";
 				say "     Finished with you, he pulls his cock from you roughly and shoves you on your way.";
-	infect "Tigress Hooker";
+	infect "Malayan Tiger Herm";
 	if tcopfight < 4:
 		increase tcopfight by 1;
 
@@ -727,7 +722,7 @@ To say beattigercop:
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Tiger Cop":
+				if Name entry is "Malayan Tiger Male":
 					now MonsterID is y;
 					break;
 			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
@@ -759,25 +754,33 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "";
-	now Name entry is "Tiger Cop"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Tiger"; [name of the overall species of the infection, used for children, ...]
+	add "Malayan Tiger Male" to infections of FelineList;
+	add "Malayan Tiger Male" to infections of FurryList;
+	add "Malayan Tiger Male" to infections of NatureList;
+	add "Malayan Tiger Male" to infections of MaleList;
+	add "Malayan Tiger Male" to infections of BarbedCockList;
+	add "Malayan Tiger Male" to infections of SheathedCockList;
+	add "Malayan Tiger Male" to infections of BipedalList;
+	add "Malayan Tiger Male" to infections of TailList;
+	now Name entry is "Malayan Tiger Male"; [Name of your new Monster]
+	now enemy title entry is "Malayan Tiger Male"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The feline cop jabs the nightstick into your gut, causing you to double over. This sets you up for a big knee to the face![or]He cracks the nightstick hard against your upper arm, forcing you to stagger back![or]As the tiger readies another swing of his nightstick, you start to dodge, only to step into a punch from his left paw instead![or]He sends a heavy kick to your chest, sending you to the ground![or]The large tiger grabs at your arm, sinking his sharp claws into it before you manage to pull free![at random]";
 	now defeated entry is "[beattigercop]";
 	now victory entry is "[losetotigercop]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[tigercopdesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "now a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your pretty, blue eyes"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "curvaceous and desirable, moving with feline fluidity. Your body moves sensually with every step, drawing in the eye of all who see you. Your hands are human in shape, but with feline claws, pawpads and fur"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "ivory white fur streaked with tiger stripes that covers your"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "From your rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with [one of]concealed nervousness[or]excitement[or]lustful playfulness[at random]."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "ebon feline"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "shivers of delight run down your spine. You can feel it growing, extending out into a long, tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now face entry is "that of a beautiful tiger-like appearance, its short muzzle and feline eyes giving your features an exotic predatory cast, and your slightly rounded tiger ears complete the look, making it seem like almost the perfect blend of tiger features and human features"; [You have a (your text) face."]
+	now body entry is "lean and lined with corded muscle, giving you a somewhat exotic look, as you balance easily on your digitigrade tiger paws, your human-like hands with their tiger-like claws tipping your fingers complete the look"; [Your Body is (your text)"]
+	now skin entry is "[one of]tiger striped[or]tiger furred[or]soft furred[or]orange and black striped[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a long, tiger-like tail extending from just above your ass, lashing back and forth in excitement with every movement."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]feline[or]Tiger[or]barbed[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "a pleasurable stretching sensation comes over your face, as your teeth begin to sharpen and length, and your jaw extends outward and the muscles rearrange themselves into the powerful configuration of a tiger. Your nose twitching as it flattens out, newly discovered scents washing over you as it merges into your new muzzle. Your eyes narrow into slitted cat-like pupils, and your ears finishing their adjustment to their new place on top of your head"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your muscles tighten underneath your skin, twisting and cording and arranging themselves in a more feline manner. You stumble as your legs shift underneath you, your ankles stretching upwards as your feet expand and change, shifting your balance to the balls of your new paw-like feet, and the rest of the leg rearranges itself into a partially digitigrade stance, causing you to lean forward slightly"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it shudders and seems to shift on its own, thick orange and black tiger fur pushing out in soft pleasurable waves of change all over your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "your ass grows powerfully muscled, and a long sleek tiger tail erupts outwards from your tailbone, soon it is lashing around behind you in long natural motions, almost feeling as if it had always been a part of you"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it shifts and tapers to a soft point, short barbs slowly sprouting along its length, as the skin of your belly stretches out to pull it up close to your body, and wraps it in a proper furry tiger's sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 20;
 	now sta entry is 14;
@@ -795,9 +798,9 @@ When Play begins:
 	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
 	now Breast Size entry is 4; [Size of breasts infection will try to attain ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now Cunt Depth entry is 12; [ Length of female sex infection will attempt to give you. ]
-	now Cunt Tightness entry is 4; [ Width of female sex infection will try and give you ]
+	now Cunt Count entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now Cunt Depth entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now Cunt Tightness entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 100; [ Amount player Libido will go up if defeated ]
 	now loot entry is "pepperspray"; [ Dropped item. Key will be used later ]
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
@@ -807,7 +810,7 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
+	now Cross-Infection entry is "Malayan Tiger Herm"; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
@@ -818,7 +821,7 @@ Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Descr
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is "";
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -847,7 +850,7 @@ When Play begins:
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -874,18 +877,18 @@ When Play begins:
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]"]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
@@ -907,7 +910,7 @@ When Play begins:
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -919,18 +922,18 @@ Section 10 - Endings
 when play ends:
 	[force auto-change of name. Prevents problems with dirty water, etc... with endings]
 	[Does not resolve issues with children/use of descriptive names during the game, but better than nothing]
-	if BodyName of Player is "Tiger Cop":
-		now BodyName of Player is "Tigress Hooker";
-	if TailName of Player is "Tiger Cop":
-		now TailName of Player is "Tigress Hooker";
-	if FaceName of Player is "Tiger Cop":
-		now FaceName of Player is "Tigress Hooker";
-	if SkinName of Player is "Tiger Cop":
-		now SkinName of Player is "Tigress Hooker";
-	if CockName of Player is "Tiger Cop":
-		now CockName of Player is "Tigress Hooker";
+	if BodyName of Player is "Malayan Tiger Male":
+		now BodyName of Player is "Malayan Tiger Herm";
+	if TailName of Player is "Malayan Tiger Male":
+		now TailName of Player is "Malayan Tiger Herm";
+	if FaceName of Player is "Malayan Tiger Male":
+		now FaceName of Player is "Malayan Tiger Herm";
+	if SkinName of Player is "Malayan Tiger Male":
+		now SkinName of Player is "Malayan Tiger Herm";
+	if CockName of Player is "Malayan Tiger Male":
+		now CockName of Player is "Malayan Tiger Herm";
 	if mqstatus is 0 or mqstatus is 1:				[no motel quest / incomplete]
-		if BodyName of Player is "Tigress Hooker":
+		if BodyName of Player is "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingC]";
 			else:
@@ -938,7 +941,7 @@ when play ends:
 	if mqstatus is 99:						[refused the motel key hunt]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_refusal][line break]";
-		if BodyName of Player is "Tigress Hooker":
+		if BodyName of Player is "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingD]";
 			else:
@@ -946,18 +949,18 @@ when play ends:
 	if mqstatus is 2:							[gave keys, did not accompany]
 		if humanity of Player > 9:				[all survivors get a standard add-on]
 			say "[THending_helper][line break]";
-		if BodyName of Player is "Tigress Hooker":
+		if BodyName of Player is "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingE]";
-			else if TailName of Player is "Tigress Hooker" and FaceName of Player is "Tigress Hooker" and SkinName of Player is "Tigress Hooker":			[visibly fully tigress]
+			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";
 	if mqstatus is 4:							[fled from motel hunt]
-		if BodyName of Player is "Tigress Hooker":
+		if BodyName of Player is "Malayan Tiger Herm":
 			if humanity of Player < 10:
 				say "[THendingF]";
-			else if TailName of Player is "Tigress Hooker" and FaceName of Player is "Tigress Hooker" and SkinName of Player is "Tigress Hooker":			[visibly fully tigress]
+			else if TailName of Player is "Malayan Tiger Herm" and FaceName of Player is "Malayan Tiger Herm" and SkinName of Player is "Malayan Tiger Herm":			[visibly fully tigress]
 				say "[THendingB]";
 			else:
 				say "[THendingA]";

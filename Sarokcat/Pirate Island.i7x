@@ -125,9 +125,9 @@ carry out treasurehunt:
 						stop the action;
 				if T is 7:
 					say "     Traveling through the dark and damp caves, you swear you hear some off key singing from around the bend, peeking around you find several pirate sharks dicing over some small items in a cave half filled with water. You lean closer to get a closer look, only to be spotted by one of the sharks, they give out a cry and dive into the water, circling before charging back to engage you, looks like you are in for a fight!";
-					challenge "Pirate Shark";
-					challenge "Pirate Shark";
-					challenge "Pirate Shark";
+					challenge "Shark Herm";
+					challenge "Shark Herm";
+					challenge "Shark Herm";
 					say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
 					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
 					choose row minortreasure from the Table of Random Critters;
@@ -167,7 +167,7 @@ carry out treasurehunt:
 					say "     Wandering through the caves of the island, you hear a strange, rhythmic noise coming from one of the caverns up ahead. Do you want to investigate?";
 					if Player consents:
 						say "     Moving ahead, you find yourself in a large open beach cave, a strangely pleasant scent filling your nostrils as you move into the cave. The noise continues, before a loud roar lets out behind you. Jumping you turn around swiftly to see a sea dragon and dragoness panting together in the far back of the cave, this must be their lair, and the rhythmic sound was the sound of their mating! The two large beasts stare at you for a second, and you stare back at them as well, before they can react you break into a run, leaving the cave to the two large beasts before they can get around to punishing you for trespassing. Still after the encounter you find yourself feeling slightly strange and woozy, your head still filled with the scent of their mating as you realize it is trying to change you...";
-						if Player is female or girl is banned:
+						if Player is female or FemaleList is banned:
 							infect "Feral Sea Dragon";
 							infect "Feral Sea Dragon";
 						else:
@@ -208,7 +208,7 @@ Instead of resolving a Noteinbottle:
 			now fightoutcome is 100;
 			fight;
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				if guy is banned or furry is banned or hermaphrodite is banned:
+				if MaleList is banned or FurryList is banned or HermList is banned:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination reveals it to be an old-fashioned glass bottle with - as you half expected - a roll of paper inside! More than a bit curious at this point, you quickly open the bottle up and fish the message out. But it seems water leaked into the bottle and the message is unreadable except for a short scrawl at the bottom that says: 'The treasure hunt requires guy, hermaphrodite and furry content to be available. Please try again. No purchase necessary. Void where prohibited. May cause unexpected priapism.' Hmmm... very strange.";
 				else:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination reveals it to be an old-fashioned glass bottle with - as you half expected - a roll of paper inside! More than a bit curious at this point, you quickly open the bottle up and fish the message out. Spreading it out on the sand beside you, you puzzle over the hastily scrawled message. It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out. There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now. Still, if there are pirates, there might be treasure, right? Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway. Perhaps you should do some more investigating.";
@@ -244,9 +244,9 @@ Instead of resolving Findingboat:
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Finding a usable boat, you make sure you have everything you might need, before setting out on the waves in search of the island the map talks about, visions of pirate treasure sparkling through your head.";
-			challenge "Pirate Shark";
+			challenge "Shark Herm";
 			if lost is 0:
-				challenge "Pirate Shark";
+				challenge "Shark Herm";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
 					now Pirate Island is known;

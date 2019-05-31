@@ -89,7 +89,7 @@ instead of conversing the Janice:
 		else:
 			say "     'Just looking for a little fun without any commitment?' Janice says with a slight sigh, 'Well you certainly aren't the only one around here with that kind of attitude, still I think I'll wait for someone more interested in sticking around,' the sexy foxwoman says as she stretches her lithe body out teasingly, before proceeding to ignore your further attempts at conversation.";
 			now Janicetalk is 2;
-	else if girl is not banned and kristenmsg3 is false:
+	else if FemaleList is not banned and kristenmsg3 is false:
 		say "     'Well, there's one other thing you could do to show your willingness to help me out. It's a bit of a long shot though. A few days after this crazy fun kicked in, I was outside and I thought I spotted a friend of mine in the distance - and still human at that. I called out to her, but some of the other guys outside saw her and ended up chased her away. She's about 5['] 10', wears blonde hair in a pony tail and dresses pretty casually.' She goes on to describe her some more. 'I know it's not much to go on, but can you keep an eye out and try [bold type]findingKristen[roman type] for me?";
 		now kristenmsg3 is true;
 		if HP of Kristen >= 2:
@@ -136,7 +136,7 @@ instead of conversing the Janice:
 			now janicetalk is 4;
 			now janicearoused is 1;
 			increase score by 25;
-		else if BodyName of Player is "Hermaphrodite Latex Vixen":
+		else if BodyName of Player is "Latex Vixen Herm":
 			say "     'Well, with a body like that, it's certainly clear that you have something on your mind,' Janice says with a coy smile as she takes in your changed body. 'A soft, pretty fox playtoy,' she adds with some amusement as she eyes you up and down. Her eyes linger over your changed form as she seems to size you up for a minute before giving you a rather feral vulpine grin. 'I'm glad I suggested you go looking for proof, as it's clear you're off to a good start in becoming a sexy lover for a vixen as lovely as I. And what a lovely idea that is. Perhaps you should join me here and we can see about making you even more beautiful.' She stretches out on her divan and strokes the cushions, eying you with considerable arousal.";
 			now janicetalk is 4;
 			now janicearoused is 1;

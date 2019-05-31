@@ -67,19 +67,19 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 			choose row X from the Table of Random Critters;
 			if there is no area entry, next;
 			if area entry is heatzone:
-				add X to hmonlist;
+				add X to hmonList;
 				if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
-					add X to hmonlist;
+					add X to hmonList;
 		if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[Loop through and select all monsters that appear nearby (Outside by default)]
 				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry is "Outside":
-					add X to hmonlist;
+					add X to hmonList;
 					if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
-						add X to hmonlist;
+						add X to hmonList;
 		sort hmonlist in random order;
-		now MonsterID is entry 1 of hmonlist;
+		now MonsterID is entry 1 of hmonList;
 		choose row MonsterID from the Table of Random Critters;
 		say "The enticing scent leads to a [Name entry]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 		wait for any key;

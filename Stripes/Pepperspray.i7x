@@ -192,7 +192,7 @@ to say enhancedattack:
 		else:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of Player], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of Player:		[+5% of tail attack w/pepperspray]
-			if TailName of Player is listed in infections of Tailweapon:
+			if TailName of Player is listed in infections of TailweaponList:
 				let z be 0;
 				repeat with y running from 1 to number of rows in Table of Random Critters:
 					choose row y in Table of Random Critters;

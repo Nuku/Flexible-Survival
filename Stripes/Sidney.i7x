@@ -61,8 +61,8 @@ Meeting Sidney	"Meeting Sidney"
 Meeting Sidney is a situation.
 The sarea of Meeting Sidney is "Outside".
 when play begins:
-	add Meeting Sidney to badspots of furry;
-	add Meeting Sidney to badspots of girl;
+	add Meeting Sidney to BadSpots of FurryList;
+	add Meeting Sidney to BadSpots of FemaleList;
 
 sa_redvixen is a truth state that varies. sa_redvixen is usually false.
 sa_otteress is a truth state that varies. sa_otteress is usually false.
@@ -120,7 +120,7 @@ to say sidneyconvinced:
 to say sidneyoptions:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if guy is banned, now sa_wusky is true;
+	if MaleList is banned, now sa_wusky is true;
 	if sa_redvixen is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Red Fox Vixen";
@@ -387,7 +387,7 @@ to say sexwithSidney:
 		say "ERROR-Sidney-[HP of Sidney]F: You should not be able to find me yet. Resetting.";
 		now HP of Sidney is 0;
 		now Sidney is nowhere;
-		if girl is not banned and furry is not banned, now Meeting Sidney is active;
+		if FemaleList is not banned and FurryList is not banned, now Meeting Sidney is active;
 	else if Player is neuter:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";
 	else if lastfuck of Sidney - turns < 6:
@@ -492,7 +492,7 @@ to say sexwithSidney_03:
 to say sexwithSidney_04:
 	if Player is male:
 		say "     Taking out your cock[smn], you offer [itthemm] to the [if level of Sidney is 21]vulpine[else if level of Sidney is 22 or level of Sidney is 23]lutrine[else]canine[end if] female. She [if level of Sidney is 71]pants[else]grins[end if] at the sight of [itthemm] and leans in to nuzzle [itthemm]. Sniffing at the scent of your arousal, she moans softly and then slides her muzzle over your shaft. She licks and sucks at your cock with gusto, her body knowing just what to do. You rub a hand encouragingly over her head, petting the eager girl.";
-		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if CockName of Player is listed in infections of InternalList and player is female] and puss[yfn][else if Player is female], balls and puss[yfn][else if CockName of Player is not listed in infections of InternalList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
+		say "     You let her go at her own pace and she seems to enjoy, even savor, every moment of it. She lavishes your cock[smn][if CockName of Player is listed in infections of InternalCockList and player is female] and puss[yfn][else if Player is female], balls and puss[yfn][else if CockName of Player is not listed in infections of InternalCockList] and balls[end if] with attention from her [if level of Sidney is 71]long[else]talented[end if] tongue. The once cautious and reserved soldier's become quite lustful now that her inner woman's been released, and she clearly wants to thank you in the best ways possible for it[if lust of Sidney > 8]. The sight of this sexy pregnant female sucking you off is a beautiful and arousing one[end if].";
 		if a random chance of 3 in 5 succeeds:
 			if Cock Count of Player is 1:
 				say "     With her so eagerly at work, you can only hold out so long before grunting in release. You pump your [Cum Load Size of Player] load into her muzzle and down her throat as she swallows as much semen as she can get. Releasing your spent shaft, she licks her chops and smiles up at you. 'Yummy!'";

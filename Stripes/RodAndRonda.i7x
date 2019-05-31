@@ -189,7 +189,7 @@ Chapter 1 - Interactions w/Rod and Nermine
 
 instead of going to Mall FoodCourt while ( HP of Ronda is 1 and lastfuck of rod - turns >= 16 ):
 	move player to Mall FoodCourt;
-	if furry is banned or girl is banned or hermaphrodite is banned or humorous is banned or guy is banned:
+	if FurryList is banned or FemaleList is banned or HermList is banned or HumorousList is banned or MaleList is banned:
 		say "     Rod seems particularly down and you go over to talk to him. He sighs sadly and tells you about how he went to the mysterious shop in the mall to look for a cure for Ronda. 'But the spooky dog-woman said nothing could be done for her. She had some weird, mumbo-jumbo explanation. Something about needing the creatures that have been banned or something. So, I guess nothing can be done for her.' With that, he slumps off to be alone at one of the tables in the far corner of the food court.";
 		say "     (This quest requires that Furry, Girl, Guy, Hermaphrodite and Humorous content all be unbanned.)[line break]";
 		now HP of ronda is 2;

@@ -15,9 +15,9 @@ The sarea of CandyShop is "Fair".
 sugarferretfight is a number that varies.
 
 when play begins:
-	add CandyShop to badspots of girl;
-	add CandyShop to badspots of guy;
-	add CandyShop to badspots of furry;
+	add CandyShop to BadSpots of FemaleList;
+	add CandyShop to BadSpots of MaleList;
+	add CandyShop to BadSpots of FurryList;
 
 Instead of resolving a CandyShop:
 	say "     You are in one of the more permanent sections of the state fair where small shops and booths have been built. Things are a little more peaceful here, giving you a moment to relax and look around. The wild lights and sounds of the fair are more subdued here and you don't spot any crazy creatures running around. In fact, there doesn't seem to be much activity at all.";
@@ -128,6 +128,7 @@ to say Sweet Tooth scene:
 		say "     As all this attention continues, you can feel a pleasant giddiness spreading through you. The ferret head you're stroking starts to feel different. At first you think it's changing, but you soon realize that it is your hand changing shape, becoming a cute little paw like those of your friends. This change spreads up your arm and to your body. Your proportions change, becoming under five feet tall, but with an elongated, tubular body on short limbs. The pleasant sensations spread down to your groin.";
 		now BodyName of Player is "Sugar Ferret";
 		now Body of Player is body entry;
+		attributeinfect;
 		follow the sex change rule;
 		if soda is owned:
 			delete soda;
@@ -152,7 +153,7 @@ to say Sweet Tooth scene:
 		say "     An orgy of wild, ferrety sex breaks out as the hobs and jills get aroused in their caffeine-induced excitement. The place if filled with groups of vibrantly colorful ferrets licking, sucking and fucking one another wildly. And you're at the center of this, jills and hobs lustfully welcoming you to their group[if Player is herm]. You fuck and are fucked several times over the course of the orgiastic event[else if Player is male]. You fuck several of the ferrets over the course of the orgiastic event[else]. You are fucked several times by the hobs over the course of the orgiastic event[end if], though the details all quickly become a blur of bright colors and sweet, sweet soda. Eventually it winds down somewhat when a large mob of ferrets rush outside with plans to scour the fairground for more soda. Still having a little self-control, you bound away with a surplus of energy.[impregchance]";
 		infect "Sugar Ferret";
 		increase ferretvisit by 1;
-		if humorous is not banned, now Caught Glider is active;
+		if HumorousList is not banned, now Caught Glider is active;
 	else:
 		[puts Sugar Ferret as lead monster for impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:

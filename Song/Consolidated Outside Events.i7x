@@ -22,8 +22,8 @@ Grumpy Old Men is a situation.
 The sarea of Grumpy Old Men is "Outside".
 
 when play begins:
-	add Grumpy Old Men to badspots of furry;
-	add Grumpy Old Men to badspots of guy;
+	add Grumpy Old Men to BadSpots of FurryList;
+	add Grumpy Old Men to BadSpots of MaleList;
 
 Instead of resolving Grumpy Old Men:
 	say "     While walking down the city streets, you stop when your eyes catch the form of two old men, a tiger and a wolf, arguing with each other while waving their hands up and down wildly at one another. Worrying that the two are about to start a fight, you watch as they move right on down the street past you, completely ignoring you. You wonder if you should speak up to say anything to stop their argument, but you find your words disappearing inside of your throat as you listen to their conversation, if only in bits and pieces.";
@@ -44,9 +44,9 @@ Fleeing Minotaur is a situation.
 The sarea of Fleeing Minotaur is "Outside".
 
 when play begins:
-	add Fleeing Minotaur to badspots of furry;
-	add Fleeing Minotaur to badspots of hermaphrodite;
-	add Fleeing Minotaur to badspots of guy;
+	add Fleeing Minotaur to BadSpots of FurryList;
+	add Fleeing Minotaur to badspots of HermList;
+	add Fleeing Minotaur to BadSpots of MaleList;
 
 Instead of resolving Fleeing Minotaur:
 	say "     While traversing the city streets, you spot a figure swerving rapidly around a corner. As it sprints closer, you realize that it's some kind of minotaur, and you dodge it just in time to avoid being pulverized. To your surprise, the creature runs straight past you, ignoring your presence entirely and hightailing it at top speeds in the direction you just came from. Seeing the odd creature running so fast makes wonder what the hell could scare it so badly, only for the answer to come in the form of a hyena dominatrix charging down the street with a whip in her hand.";
@@ -64,8 +64,8 @@ Scavenging Dalmatian is a situation.
 The sarea of Scavenging Dalmatian is "Outside".
 
 when play begins:
-	add Scavenging Dalmatian to badspots of furry;
-	add Scavenging Dalmatian to badspots of guy;
+	add Scavenging Dalmatian to BadSpots of FurryList;
+	add Scavenging Dalmatian to BadSpots of MaleList;
 
 Instead of resolving Scavenging Dalmatian:
 	say "     Walking down the almost deserted streets of the city, you come across a lone Dalmatian scavenging through a trash can. More than likely looking for food, the figure is failing to find anything appetizing inside the smelly waste container, their spotted tail hanging limply behind them.";
@@ -110,8 +110,8 @@ Captured Wyvern is a situation.
 The sarea of Captured Wyvern is "Outside".
 
 when play begins:
-	add Captured Wyvern to badspots of feral;
-	add Captured Wyvern to badspots of furry;
+	add Captured Wyvern to badspots of FeralList;
+	add Captured Wyvern to BadSpots of FurryList;
 
 Instead of resolving Captured Wyvern:
 	say "     Coming across a large group of soldiers, you notice that the uniformed men and women seem to have somehow brought a wyvern down onto the ground and are currently staring at the mutant irritably. The large beast, which has to be almost thirty feet long, cries and chirps loudly as the soldiers begin to shout and kick at it. The desperation in some of the humans['] voices has your body tensing as you watch the assembled collective.";
@@ -151,9 +151,9 @@ Secrets is a situation.
 The sarea of Secrets is "Outside".
 
 when play begins:
-	add Secrets to badspots of furry;
-	add Secrets to badspots of girl;
-	add Secrets to badspots of hermaphrodite;
+	add Secrets to BadSpots of FurryList;
+	add Secrets to BadSpots of FemaleList;
+	add Secrets to badspots of HermList;
 
 Instead of resolving Secrets:
 	say "     While walking through the streets of the city, you come across an old public bathroom and decide to stop in to see if the water is working in here. You doubt it'll still be running, but there's no harm in checking. Walking into the public facility, you step carefully to avoid the globs of cum, milk and urine littering the once white tiled floor and walls. You make your way to the women's side of the restrooms, figuring the men's side is probably a biohazard zone by now. Right before you head to the sinks, which are amazingly free from any kind of stains, you freeze in place as an all too familiar noise reaches your ears. The sounds of moaning and thumping are resounding from off of the stalls of the public washroom, and you immediately feel compelled to flee before trouble finds you. However, before you can beat a retreat, one of the bathroom stalls pops open. The banging you had heard was coming from the cheap tin frame and not the far wall, and quickly two half-dressed soldiers pop out and onto the ground. Both are indeed female, and the larger of the pair catches her bulk with her hands to avoid crushing her fuck buddy. You find it odd that two women could be making so much noise, but your confusion is lifted when you spot the large feline shaft connecting them together. It would seem that the larger valkyrie has been tainted by this unclean world.";
@@ -172,7 +172,7 @@ School Spirit is a situation.
 The sarea of School Spirit is "Outside".
 
 when play begins:
-	add School Spirit to badspots of girl;
+	add School Spirit to BadSpots of FemaleList;
 
 Instead of resolving School Spirit:
 	say "     While exploring the city, you discover a crashed school bus. There is no one on the bus, but you do find a dozen shredded cheerleader uniforms. Judging by the uniforms, the cheerleaders were from the local college. All the uniforms are ripped around the middle, almost as if the bellies of all the cheerleaders grew until they ripped through their uniforms. You can only surmise that a creature must have boarded the bus and impregnated every single cheerleader with its infectious seed. Feeling uneasy, you quietly leave the bus and sneak away before the cheerleaders or their spawn return.";
@@ -190,8 +190,8 @@ Another Survivor is a situation.
 The sarea of Another Survivor is "Outside".
 
 when play begins:
-	add Another Survivor to badspots of furry;
-	add Another Survivor to badspots of hermaphrodite;
+	add Another Survivor to BadSpots of FurryList;
+	add Another Survivor to badspots of HermList;
 
 Instead of resolving Another Survivor:
 	say "     While exploring the city, you spot another survivor. Before you get a chance to introduce yourself, a Hermaphrodite Gryphon swoops out of the sky, snatches up the other survivor, and flies away.";
@@ -209,8 +209,8 @@ Masturbating Fox is a situation.
 The sarea of Masturbating Fox is "Outside".
 
 when play begins:
-	add Masturbating Fox to badspots of furry;
-	add Masturbating Fox to badspots of guy;
+	add Masturbating Fox to BadSpots of FurryList;
+	add Masturbating Fox to BadSpots of MaleList;
 
 Instead of resolving Masturbating Fox:
 	say "     While exploring the city, you hear a strange sound in the distance.";
@@ -245,8 +245,8 @@ Ice Cream Truck is a situation.
 The sarea of Ice Cream Truck is "Outside".
 
 when play begins:
-	add Ice Cream Truck to badspots of furry;
-	add Ice Cream Truck to badspots of hermaphrodite;
+	add Ice Cream Truck to BadSpots of FurryList;
+	add Ice Cream Truck to badspots of HermList;
 
 IceCreamTruckBadEnd is a truth state that varies. IceCreamTruckBadEnd is usually false.
 
@@ -348,7 +348,7 @@ Wyvern Flight is a situation.
 The sarea of Wyvern Flight is "Outside".
 
 when play begins:
-	add Wyvern Flight to badspots of furry;
+	add Wyvern Flight to BadSpots of FurryList;
 
 Instead of resolving Wyvern Flight:
 	say "     You spy a small group of wyverns hauling off tables and chairs from a sidewalk café, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
@@ -365,8 +365,8 @@ Strange Preacher is a situation.
 The sarea of Strange Preacher is "Outside".
 
 when play begins:
-	add Strange Preacher to badspots of furry;
-	add Strange Preacher to badspots of hermaphrodite;
+	add Strange Preacher to BadSpots of FurryList;
+	add Strange Preacher to badspots of HermList;
 
 Instead of resolving Strange Preacher:
 	say "     Wandering the deserted streets, you hear what sounds like a loud voice father down the street. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street. Moving closer in case this is some kind of trick, you get a better look at the creature and find yourself shaking your head in astonishment. With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her spread legs giving you a good look at hir erect feline cock. Behind hir, a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach. Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch off the ground. It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak.";
@@ -384,7 +384,7 @@ Hyena Kill is a situation.
 The sarea of Hyena Kill is "Outside".
 
 when play begins:
-	add Hyena Kill to badspots of furry;
+	add Hyena Kill to BadSpots of FurryList;
 
 Instead of resolving Hyena Kill:
 	say "     You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person. You hope that isn't what they think of you.";
@@ -401,9 +401,9 @@ Panther Trap is a situation.
 The sarea of Panther Trap is "Outside".
 
 when play begins:
-	add Panther Trap to badspots of furry;
-	add Panther Trap to badspots of hermaphrodite;
-	add Panther Trap to badspots of noncon;
+	add Panther Trap to BadSpots of FurryList;
+	add Panther Trap to badspots of HermList;
+	add Panther Trap to badspots of NonconList;
 
 Instead of resolving Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
@@ -454,7 +454,7 @@ CatsandDogs is a situation.
 The sarea of CatsandDogs is "Outside".
 
 when play begins:
-	add CatsandDogs to badspots of furry;
+	add CatsandDogs to BadSpots of FurryList;
 
 Instead of resolving CatsandDogs:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side. The windows are open and the tenants are yelling at one another. One building appears to be populated entirely by cats and the other by dogs. They are growling, yowling and making rude gestures at one another. They jeer at one another and toss trash across the alley dividing their buildings. Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them. You make note of the location and remind yourself to keep away, finding another path around this neighborhood.";

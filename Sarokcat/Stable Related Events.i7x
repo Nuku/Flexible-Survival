@@ -12,8 +12,8 @@ Kitchenkegger	"Kitchenkegger"
 Kitchenkegger is a situation.
 The sarea of Kitchenkegger is "Stable".
 when play begins:
-	add Kitchenkegger to badspots of guy;
-	add Kitchenkegger to badspots of furry;
+	add Kitchenkegger to BadSpots of MaleList;
+	add Kitchenkegger to BadSpots of FurryList;
 
 Instead of Resolving a Kitchenkegger:
 	say "     Wandering through the halls of the Stables, you hear strange noises coming from behind one of the employee passages, and being curious at the time, you move to investigate. As you travel down the dimly lit service passages, the strange noise resolves itself into rather drunken sounding singing, which only serves to increase your curiosity as you continue to approach. You eventually find yourself outside of a set of large double doors marked [']kitchen['] from which the singing seems to originate. Figuring that whatever or whoever is singing doesn't sound terribly dangerous, and that if you are ever going to find some useful supplies it would be in a kitchen, you steel yourself for combat as you swing the doors open and step inside.";
@@ -116,8 +116,8 @@ Soldierstabling is a situation.
 The sarea of Soldierstabling is "Stable".
 Soldierhorsetf is a number that varies.
 when play begins:
-	add Soldierstabling to badspots of girl;
-	add Soldierstabling to badspots of furry;
+	add Soldierstabling to BadSpots of FemaleList;
+	add Soldierstabling to BadSpots of FurryList;
 
 Instead of Resolving a Soldierstabling:
 	if Soldierhorsetf is 0:
@@ -163,7 +163,7 @@ Satisfied customer	"Satisfied customer"
 Satisfied customer is a situation.
 The sarea of Satisfied customer is "Stable".
 when play begins:
-	add Satisfied customer to badspots of furry;
+	add Satisfied customer to BadSpots of FurryList;
 
 Instead of Resolving a Satisfied customer:
 	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those German shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";

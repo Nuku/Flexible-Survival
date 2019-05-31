@@ -471,7 +471,7 @@ Section 3 - Events
 Part A - Flagging
 
 when play begins:
-	add Pirate Standoff to badspots of furry; [this badspot makes every other useless.]
+	add Pirate Standoff to BadSpots of FurryList; [this badspot makes every other useless.]
 
 Part B - Initial Event - Pirate Standoff
 
@@ -495,12 +495,12 @@ Instead of resolving a Pirate Standoff:
 		now HP of Erin is 1;
 		say "     You get back on your feet and, from the top of the dune, shout the first moderately witty insult that comes to mind - something about them being cheap Jack Sparrow knock-offs. Three sharks turn in your direction, and the siblings use the opportunity to charge the pirate captain. Ducking under her grasping arms, the two rodents are past the captain in a flash and run with their tails between their legs in direction of the public beach.";
 		say "     'Aaarg! After them, ye pea-brained bastards!' the leader of the sharks shouts angrily. Her goons obey, and run after the young rats, while the captain turns her ire towards yourself. ";
-		if Hermaphrodite is banned or Hermaphrodite is warded:
+		if HermList is banned or HermList is warded:
 			say "'Ye freshwater pirate!' the pirate shark says. 'Praise the sea gods that we don't meet again!' And with that, she goes after the siblings as well, leaving you with the pride of having done a good deed. Just as you are about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
 		else:
 			say "'Ye freshwater pirate!' The pirate shark shakes her fist angrily at you, and begins to climb the hill to teach you a lesson.";
 			now inasituation is true;
-			challenge "Pirate Shark";
+			challenge "Shark Herm";
 			now inasituation is false;
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     'Arrr! Ye won't get away with this, ye cachinnating cockatoo!' the defeated shark says, visibly straining her repertoire of Captain Haddock curses. She makes a hasty retreat, leaving you with the pride of having done a good deed. Just as you were about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
@@ -509,7 +509,7 @@ Instead of resolving a Pirate Standoff:
 		now Resolution of Pirate Standoff is 1; [helped the rats]
 	else:
 		say "     An awkward silence settles in, eventually broken as the trio of sharks laugh heartily. 'Har! What are ye goin['] about, rattie. Ain't nothing but us [']ere. And yer booties. Which we're gonna take. On board, maties!'";
-		if Hermaphrodite is banned or Hermaphrodite is warded or anallevel is 1:
+		if HermList is banned or HermList is warded or anallevel is 1:
 			say "     You hurriedly take your leave, as the sounds of a scuffle, then sex clamor behind you. Somehow, you feel like you missed an opportunity to something.";
 		else:
 			say "     You would not have called this a scuffle. More like a beating. The poor rats are knocked around, before being pinned on the ground. The herms press the tired rodents['] heads in the sand, while pulling their butts up. 'Ready ta share the loot, cap'n,' one of the pirates says.";

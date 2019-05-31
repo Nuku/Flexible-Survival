@@ -30,8 +30,8 @@ Pachyderm predicament	"Pachyderm predicament"
 Pachyderm predicament is a situation.
 The sarea of Pachyderm predicament is "Zoo".
 when play begins:
-	add Pachyderm predicament to badspots of hermaphrodite;
-	add Pachyderm predicament to badspots of furry;
+	add Pachyderm predicament to badspots of HermList;
+	add Pachyderm predicament to BadSpots of FurryList;
 
 Instead of Resolving a Pachyderm predicament:
 	say "     Wandering through the zoo, you hear some shouting in the distance. Moving closer, you find one of the zoo employees that obviously hasn't succumbed fully to the changes yet. Unfortunately, he is stranded in the middle of one of the more open enclosures, standing on a rock in what appears to be a lake of cum. You blink at the sheer amount of the stuff coating the area, but you are distracted by some rough slapping sounds underneath the hoarse cries of the trapped employee.";
@@ -276,8 +276,8 @@ Feeding time	"Feeding time"
 Feeding time is a situation. The level of feeding time is 9.
 The sarea of Feeding time is "Zoo".
 when play begins:
-	add Feeding time to badspots of hermaphrodite;
-	add Feeding time to badspots of furry;
+	add Feeding time to badspots of HermList;
+	add Feeding time to BadSpots of FurryList;
 
 Instead of Resolving a Feeding time:
 	say "     Traveling through the twisting paths of the zoo, you come across a rather strange sight. Someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around, you can't see any reason for someone to have done so, and the food and water could be pretty useful. Still, it is rather suspicious. Do you try to take it?";
@@ -310,9 +310,9 @@ Security Station	"Security Station"
 Security Station is a situation.
 The sarea of Security Station is "Zoo".
 when play begins:
-	add Security Station to badspots of guy;
-	add Security Station to badspots of girl;
-	add Security Station to badspots of furry;
+	add Security Station to BadSpots of MaleList;
+	add Security Station to BadSpots of FemaleList;
+	add Security Station to BadSpots of FurryList;
 
 Instead of Resolving a Security Station:
 	say "     Traveling through the deserted zoo, you come across the entrance to a security station. While normally the doors to such areas are locked tightly, this one seems to have been broken down at some point during the recent troubles. Deciding to take a look inside, you can see the security station has several monitors that appear to be working at a glance, although some of them appear to be playing on a loop. Moving into the small security area, you note that it smells like bestial sex in here, leaving no doubt as to why the security station was broken into, the rich musky scent makes your body tingle with lust, and you realize you can't stay in here for long without becoming even more aroused than usual. Still there might be something of use in here, you think as you search the small monitoring room, you find your eyes continually drawn to the monitors however, as the action on the screen repeats itself over and over. Soon you stop even trying to search the area, and are just watching intently, as a cheetah woman teases a zoo intruder into becoming her male mate, and the scene as a pair of wolftaurs burst out of the bathroom and run down some of the zoo paths, before the male catches the female and begins to mate her like an animal. Other scenes of sex and transformation are played out on the monitors in front of you, but you manage to pull yourself away from the sexual scene and scents, and stagger out of the Security booth. Somehow sure that if you had stayed much longer, you would have stayed there watching the sexual scenes and growing increasingly aroused until one of the beasts in the zoo managed to find you in there, and given how aroused you already are.. by that point you might not even have fought whatever strong sexual beast came to take you... Shaking your head to try to clear it of the increasingly lewd thoughts you continue on your way through the zoo.";
@@ -374,9 +374,9 @@ Picture striping	"Picture striping"
 Picture striping is a situation.
 The sarea of Picture striping is "Zoo".
 when play begins:
-	add Picture striping to badspots of guy;
-	add Picture striping to badspots of girl;
-	add Picture striping to badspots of furry;
+	add Picture striping to BadSpots of MaleList;
+	add Picture striping to BadSpots of FemaleList;
+	add Picture striping to BadSpots of FurryList;
 
 Instead of Resolving a Picture striping:
 	say "     Traveling through the mostly deserted zoo, you find yourself next to one of those old fashioned photo kiosks, this one proudly displaying several various animal themed backgrounds you can choose from. Smiling, you pull the curtain to step inside, only to find your nose assaulted with the scent of sex and musk. Letting the curtain fall, you gasp for some clean air. As you do so, you notice that the slot that dispenses pictures seems to have a strip already in it, and curious, you pull the strip of pictures out.";
@@ -394,8 +394,8 @@ Lazy River	"Lazy River"
 Lazy River is a situation.
 The sarea of Lazy River is "Zoo".
 when play begins:
-	add Lazy River to badspots of guy;
-	add Lazy River to badspots of furry;
+	add Lazy River to BadSpots of MaleList;
+	add Lazy River to BadSpots of FurryList;
 
 Instead of Resolving a Lazy River:
 	say "     Traveling through the zoo area, you spot something odd in the hippo enclosure. Sneaking up to the fence and peaking over, you spot a large hippo man relaxing on his back in the water. One of his large hands is wrapped around his massive shaft, gently stroking its thick length while his other kneads his large ballsack. Floating lazily along, he pumps and strokes his throbbing shaft. You can't seem to look away from this arousing scene, your knees feeling weak as your mind is filled with thoughts of sex with this beast.";

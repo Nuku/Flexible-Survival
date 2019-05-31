@@ -1,60 +1,69 @@
-Version 1 of Banning by Core Mechanics begins here.
-[Banning/Warding - Written by Speedlover]
-[Updates to have Tags for content and Flags for creatures / situations - Dys]
+Version 2 of Banning by Core Mechanics begins here.
+[ Version 1 - Banning/Warding - Written by Speedlover]
+[ Version 1.1 - Updates to have Tags for content and Flags for creatures / situations - Dys]
+[ Version 2 - Flags and Tags renamed into unique XLists]
 
-flag is a kind of thing.
-A flag has a list of text called infections.
-A flag has a list of situations called badspots.
-A flag can be banned. A flag is usually not banned.
-A flag can be warded. A flag is usually not warded.
-tag is a kind of thing.
-A tag has a list of text called infections.
-A tag has a list of situations called badspots.
-A tag can be warded. A tag is usually not warded.
-A tag can be banned. A tag is usually not banned.
-Body Horror is a flag.
-Furry is a flag.
-Guy is a flag.
-Girl is a flag.
-Transgender is a flag.
-Hermaphrodite is a flag.
-Humorous is a flag.
-Humanoid is a flag.
-Hellspawn is a flag.
-Feral is a flag.
-Incest is a tag.
-Noncon is a tag.
-Mindcontrol is a tag.
-Vore is a tag.
-Cockvore is a tag.
+Flag is a kind of thing.
+A Flag has a list of text called Infections.
+A Flag has a list of situations called BadSpots.
+A Flag can be banned. A Flag is usually not banned.
+A Flag can be warded. A Flag is usually not warded.
+Tag is a kind of thing.
+A Tag has a list of text called Infections.
+A Tag has a list of situations called BadSpots.
+A Tag can be warded. A Tag is usually not warded.
+A Tag can be banned. A Tag is usually not banned.
+
+BodyHorrorList is a flag.
+FurryList is a flag.
+DemonList is a flag.
+FeralList is a flag.
+HumorousList is a flag.
+HumanoidList is a flag.
+
+FemaleList is a flag.
+HermList is a flag.
+MaleList is a flag.
+TransList is a flag.
+
+
+CockVoreList is a tag.
+IncestList is a tag.
+MindcontrolList is a tag.
+NonconList is a tag.
+VoreList is a tag.
+
 The player has a list of text called WardList.
 The player has a list of text called BanList.
 
 when play begins:
-	add { "Awesome tree", "Cock Cannon" } to infections of humorous;
-	add { "Slut Rat", "Husky Bitch", "Black Equinoid", "Ember Breeder", "Lizard Girl", "Skunk", "Smooth Collie Shemale", "Bovine", "Feline", "Herm Hyena", "Bear", "Pit bull", "Painted Wolf Herm", "Sewer Gator", "Deer", "Sea Otter", "Ebonflame Drake", "Red Kangaroo", "German Shepherd Male", "Chinchilla" } to infections of furry;
-	add { "Skunk", "Smooth Collie Shemale", "Bovine", "Tentacle Horror", "Demon Brute", "Cock Cannon", "Feral Sea Dragon", "German Shepherd Male", "Feline", "Felinoid" } to infections of guy;
-	add { "Ember Breeder", "Ebonflame Drake", "Slut Rat", "Parasitic Plant", "Herm Hyena", "Painted Wolf Herm", "Sewer Gator", "Deer", "Black Equinoid", "Spidergirl", "Mothgirl" } to infections of hermaphrodite;
-	add { "Husky Bitch", "Lizard Girl", "Tentacle Horror", "Feline", "Bear", "Skunk", "Spidergirl", "Mothgirl", "Red Kangaroo", "City Sprite", "Feral Sea Dragoness", "Bovine" } to infections of girl;
-	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
+	add { "Cock Cannon", "Feral Shaft Beast" } to infections of BodyHorrorList;
+	add { "Pod Person", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of HumorousList;
+	add { "Ember Breeder", "Brown Bear Female", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman Bitch", "Ebonflame Drake", "Ewe", "Feline", "Husky Bitch", "Fruit Bat", "German Shepherd Male", "Harpy", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Shark Herm", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Gator Herm", "Smooth Collie Shemale", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of FurryList;
+	add { "Bovine", "Cock Cannon", "Demon Brute", "Feline", "Felinoid", "Feral Mutt", "Feral Sea Dragon", "Fruit Bat", "German Shepherd Male", "Junkman", "Killer Whale", "Latex Fox", "Latex Wolf", "Liquidshifter", "Ram", "Platypus", "Quilled Tousky", "Sandman", "Sea Otter", "Skunk", "Tentacle Horror" } to infections of MaleList;
+	add { "Ember Breeder", "Black Equinoid", "Deer", "Ebonflame Drake", "Hyena Herm", "Dolphin Herm", "Blue Gryphon Herm", "Painted Wolf Herm", "Panther Taur", "Parasitic Plant", "Shark Herm", "Gator Herm", "Sea Otter", "Slut Rat", "Spidergirl", "Wildcat" } to infections of HermList;
+	add { "Brown Bear Female", "Bottlenose Toy", "Bovine", "City Sprite", "Doberman Bitch", "Ewe", "Feline", "Husky Bitch", "Feral Sea Dragoness", "Harpy", "Lizard Girl", "Mothgirl", "Red Kangaroo", "Sea Otter", "Skunk", "Spidergirl", "Tentacle Horror", "Trash Coon" } to infections of FemaleList;
+	add { "Bovine", "Behemoth", "Cerberus", "Ebonflame Dragator", "Ebonflame Whelp", "Feral Cheetah", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Gryphon", "Feral Shaft Beast", "Feral Wolf", "Flaming Lynx", "Friendship Pony", "Hydra Beast", "Latex Fox", "Latex Wolf", "Manticore", "Peculiar Dragon", "Pegasus", "Quilled Tousky", "Sabretooth", "Shadow Beast Male", "Sierrasaur", "Snake", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of FeralList;
+	add { "Demon Brute" } to infections of DemonList;
+	add { "Mothgirl", "Smooth Collie Shemale" } to infections of TransList;
 
 to new ban menu:
-	let flaglist be { "Body Horror", "Furry", "Guy", "Girl", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
-	let taglist be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};
+	let FlagList be { "Body Horror", "Furry", "Males", "Females", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
+	let TagList be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
 	while nbmexit is 0:
 		say "[bold type]Select which categories you want banned/warded:[roman type][line break]";
 		say "[bold type]Warding a monster will mean you can only find them by hunting for them, banning them removes them from the game entirely. (Banning is sure to choke off MANY threads of the story and quests as well. Use with caution. You have been warned.)[roman type][line break]";
 		say "[line break][bold type]FLAGS[roman type][line break]";
-		while countnumber <= number of entries in flaglist:
-			say "[link][countnumber] - [entry countnumber of flaglist][as][countnumber][end link]: [run paragraph on]";
-			bancheck entry countnumber of flaglist;
+		while countnumber <= number of entries in FlagList:
+			say "[link][countnumber] - [entry countnumber of FlagList][as][countnumber][end link]: [run paragraph on]";
+			bancheck entry countnumber of FlagList;
 			increase countnumber by 1;
 		say "[line break][bold type]TAGS[roman type][line break]";
-		while countnumber <= (number of entries in flaglist + number of entries in taglist):
-			say "[link][countnumber] - [entry (countnumber - number of entries in flaglist) of taglist][as][countnumber][end link]: [run paragraph on]";
-			bancheck entry (countnumber - number of entries in flaglist) of taglist;
+		while countnumber <= (number of entries in FlagList + number of entries in TagList):
+			say "[link][countnumber] - [entry (countnumber - number of entries in FlagList) of TagList][as][countnumber][end link]: [run paragraph on]";
+			bancheck entry (countnumber - number of entries in FlagList) of TagList;
 			increase countnumber by 1;
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -65,13 +74,13 @@ to new ban menu:
 				break;
 			else:
 				say "Invalid Entry";
-		let turq be number of entries in flaglist;
+		let turq be number of entries in FlagList;
 		if calcnumber is 0:
 			now nbmexit is 1;
 		else if calcnumber <= turq:
-			banchange entry calcnumber of flaglist;
+			banchange entry calcnumber of FlagList;
 		else:
-			banchange entry (calcnumber - number of entries in flaglist) of taglist;
+			banchange entry (calcnumber - number of entries in FlagList) of TagList;
 		now countnumber is 1; [Must reset to 1 or it wont print the list again]
 
 to bancheck (name - text):
@@ -88,143 +97,143 @@ to banchange (name - text):
 		remove name from BanList of Player;
 		oldflagunban name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now normal[roman type]";
+		say "[bold type][name] is now normal.[roman type][line break]";
 	else if name is listed in WardList of Player:
 		remove name from WardList of Player;
 		oldflagunward name;
 		add name to BanList of Player;
 		oldflagban name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now banned[roman type]";
+		say "[bold type][name] is now banned.[roman type][line break]";
 	else:
 		add name to WardList of Player;
 		oldflagward name;
 		if clearnomore is 0, clear the screen;
-		say "[bold type][name] is now warded[roman type]";
+		say "[bold type][name] is now warded.[roman type][line break]";
 	WaitLineBreak;
 
 to oldflagban (flagname - text):
 	if flagname is:
 		-- "Body Horror":
-			now Body Horror is not banned;
+			now BodyHorrorList is banned;
 		-- "Cockvore":
-			now Cockvore is banned;
+			now CockvoreList is banned;
 		-- "Furry":
-			now Furry is banned;
-		-- "Guy":
-			now Guy is banned;
-		-- "Girl":
-			now Girl is banned;
+			now FurryList is banned;
+		-- "Males":
+			now MaleList is banned;
+		-- "Females":
+			now FemaleList is banned;
 		-- "Humorous":
-			now Humorous is banned;
+			now HumorousList is banned;
 		-- "Hermaphrodite":
-			now Hermaphrodite is banned;
+			now HermList is banned;
 		-- "Hellspawn":
-			now Hellspawn is banned;
+			now DemonList is banned;
 		-- "Feral":
-			now Feral is banned;
+			now FeralList is banned;
 		-- "Transgender":
-			now Transgender is banned;
+			now TransList is banned;
 		-- "Incest":
-			now Incest is banned;
+			now IncestList is banned;
 		-- "Noncon":
-			now Noncon is banned;
+			now NonconList is banned;
 		-- "Mindcontrol":
-			now Mindcontrol is banned;
+			now MindcontrolList is banned;
 		-- "Vore":
-			now Vore is banned;
+			now VoreList is banned;
 
 to oldflagward (flagname - text):
 	if flagname is:
 		-- "Body Horror":
-			now Body Horror is not warded;
+			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now Cockvore is warded;
+			now CockvoreList is warded;
 		-- "Furry":
-			now Furry is warded;
+			now FurryList is warded;
 		-- "Guy":
-			now Guy is warded;
+			now MaleList is warded;
 		-- "Girl":
-			now Girl is warded;
+			now FemaleList is warded;
 		-- "Humorous":
-			now Humorous is warded;
+			now HumorousList is warded;
 		-- "Hermaphrodite":
-			now Hermaphrodite is warded;
+			now HermList is warded;
 		-- "Hellspawn":
-			now Hellspawn is warded;
+			now DemonList is warded;
 		-- "Feral":
-			now Feral is warded;
+			now FeralList is warded;
 		-- "Transgender":
-			now Transgender is warded;
+			now TransList is warded;
 		-- "Incest":
-			now Incest is warded;
+			now IncestList is warded;
 		-- "Noncon":
-			now Noncon is warded;
+			now NonconList is warded;
 		-- "Mindcontrol":
-			now Mindcontrol is warded;
+			now MindcontrolList is warded;
 		-- "Vore":
-			now Vore is warded;
+			now VoreList is warded;
 
 to oldflagunban (flagname - text):
 	if flagname is:
 		-- "Body Horror":
-			now Body Horror is not banned;
+			now BodyHorrorList is not banned;
 		-- "Cockvore":
-			now Cockvore is not banned;
+			now CockvoreList is not banned;
 		-- "Furry":
-			now Furry is not banned;
+			now FurryList is not banned;
 		-- "Guy":
-			now Guy is not banned;
+			now MaleList is not banned;
 		-- "Girl":
-			now Girl is not banned;
+			now FemaleList is not banned;
 		-- "Humorous":
-			now Humorous is not banned;
+			now HumorousList is not banned;
 		-- "Hermaphrodite":
-			now Hermaphrodite is not banned;
+			now HermList is not banned;
 		-- "Hellspawn":
-			now Hellspawn is not banned;
+			now DemonList is not banned;
 		-- "Feral":
-			now Feral is not banned;
+			now FeralList is not banned;
 		-- "Transgender":
-			now Transgender is not banned;
+			now TransList is not banned;
 		-- "Incest":
-			now Incest is not banned;
+			now IncestList is not banned;
 		-- "Noncon":
-			now Noncon is not banned;
+			now NonconList is not banned;
 		-- "Mindcontrol":
-			now Mindcontrol is not banned;
+			now MindcontrolList is not banned;
 		-- "Vore":
-			now Vore is not banned;
+			now VoreList is not banned;
 
 to oldflagunward (flagname - text):
 	if flagname is:
 		-- "Body Horror":
-			now Body Horror is not warded;
+			now BodyHorrorList is not warded;
 		-- "Cockvore":
-			now Cockvore is not warded;
+			now CockvoreList is not warded;
 		-- "Furry":
-			now Furry is not warded;
+			now FurryList is not warded;
 		-- "Guy":
-			now Guy is not warded;
+			now MaleList is not warded;
 		-- "Girl":
-			now Girl is not warded;
+			now FemaleList is not warded;
 		-- "Humorous":
-			now Humorous is not warded;
+			now HumorousList is not warded;
 		-- "Hermaphrodite":
-			now Hermaphrodite is not warded;
+			now HermList is not warded;
 		-- "Hellspawn":
-			now Hellspawn is not warded;
+			now DemonList is not warded;
 		-- "Feral":
-			now Feral is not warded;
+			now FeralList is not warded;
 		-- "Transgender":
-			now Transgender is not warded;
+			now TransList is not warded;
 		-- "Incest":
-			now Incest is not warded;
+			now IncestList is not warded;
 		-- "Noncon":
-			now Noncon is not warded;
+			now NonconList is not warded;
 		-- "Mindcontrol":
-			now Mindcontrol is not warded;
+			now MindcontrolList is not warded;
 		-- "Vore":
-			now Vore is not warded;
+			now VoreList is not warded;
 
 Banning ends here.

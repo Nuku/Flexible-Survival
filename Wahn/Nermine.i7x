@@ -476,13 +476,13 @@ to say NermineBrennanTalk:
 	now Libido of Brennan is 2;
 
 to say RareInfectionMenu:
-	say "     As you ask Nermine about any 'interesting' physical shapes she might be able to help you archieve, the jackaless smiles mysteriously and taps the side of her delicate muzzle. 'Ah, the dear customer has a taste for the exceptional? [SubjectProCap of Player] is wise to come to Nermine with their desires. The humble jackaless does indeed have some rare and precious artifacts that are bound to allow for special transformations!' She takes you for a little tour through her over-filled store and points out this or that ancient item, some of which wake your interest while others make you cringe internally as you imagine what you could end up as. 'So, what shall it be, dear customer? Oh, and please be advised that Nermine has much more to offer, she just needs some time to locate the items in storage...'";
+	say "     As you ask Nermine about any 'interesting' physical shapes she might be able to help you achieve, the jackaless smiles mysteriously and taps the side of her delicate muzzle. 'Ah, the dear customer has a taste for the exceptional? [SubjectProCap of Player] is wise to come to Nermine with their desires. The humble jackaless does indeed have some rare and precious artifacts that are bound to allow for special transformations!' She takes you for a little tour through her over-filled store and points out this or that ancient item, some of which wake your interest while others make you cringe internally as you imagine what you could end up as. 'So, what shall it be, dear customer? Oh, and please be advised that Nermine has much more to offer, she just needs some time to locate the items in storage...'";
 	LineBreak;
 	say "Which infection are you interested in?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if girl is not banned:
+	if FemaleList is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Female Spidertaur";
 		now sortorder entry is 1;
@@ -752,7 +752,7 @@ to NermineRequestHelp:
 		say "     ([link]N[as]n[end link]) - Eh - better not. There have to be other ways...";
 		if Player consents:
 			LineBreak;
-			if guy is banned or furry is banned or girl is banned:
+			if MaleList is banned or FurryList is banned or FemaleList is banned:
 				say "     'Oh, Nermine is seeing now that she looks closer at her visitor that [SubjectPro of Player] will not be able to help her. She is feeling sad to see someone restrict their fun so. Being not so picky would be much more interesting, she thinks.' Saying this, Nermine shakes her jackal head sadly.";
 				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type]";
 			else:

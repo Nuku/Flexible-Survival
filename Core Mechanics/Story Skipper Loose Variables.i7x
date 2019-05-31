@@ -3675,13 +3675,13 @@ to TextListVariableSave:
 				repeat with y running from 1 to the number of entries in lbcomplist:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
-					now TextListVarValue entry is entry y of lbcomplist;
+					now TextListVarValue entry is entry y of lbcompList;
 		-- "ndmlist":
 			if the number of entries in ndmlist is not 0:
 				repeat with y running from 1 to the number of entries in ndmlist:
 					choose a blank row in the table of GameTextLists;
 					now TextListVarName entry is CurrentVariableName;
-					now TextListVarValue entry is entry y of ndmlist;
+					now TextListVarValue entry is entry y of ndmList;
 
 to NumberListVariableSave:
 	if CurrentVariableName is:
@@ -3720,13 +3720,13 @@ to NumberListVariableSave:
 				repeat with y running from 1 to the number of entries in leodenlist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of leodenlist;
+					now NumberListVarValue entry is entry y of leodenList;
 		-- "leoparklist":
 			if the number of entries in leoparklist is not 0:
 				repeat with y running from 1 to the number of entries in leoparklist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of leoparklist;
+					now NumberListVarValue entry is entry y of leoparkList;
 		-- "mrevents":
 			if the number of entries in mrevents is not 0:
 				repeat with y running from 1 to the number of entries in mrevents:
@@ -3738,7 +3738,7 @@ to NumberListVariableSave:
 				repeat with y running from 1 to the number of entries in pfpclist:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of pfpclist;
+					now NumberListVarValue entry is entry y of pfpcList;
 		-- "velospostmusings":
 			if the number of entries in velospostmusings is not 0:
 				repeat with y running from 1 to the number of entries in velospostmusings:
@@ -7360,9 +7360,9 @@ to VariableTextListLoad:
 				-- "Childrenskins":
 					add TextListVarValue entry to Childrenskins;
 				-- "lbcomplist":
-					add TextListVarValue entry to lbcomplist;
+					add TextListVarValue entry to lbcompList;
 				-- "ndmlist":
-					add TextListVarValue entry to ndmlist;
+					add TextListVarValue entry to ndmList;
 			if debugactive is 1:
 				say "DEBUG -> [x]: Added '[TextListVarValue entry]' to TextList [TextListName].";
 	else:
@@ -7397,13 +7397,13 @@ to VariableNumberListLoad:
 				-- "Francois_Undiscovered":
 					add NumberListVarValue entry to Francois_Undiscovered;
 				-- "leodenlist":
-					add NumberListVarValue entry to leodenlist;
+					add NumberListVarValue entry to leodenList;
 				-- "leoparklist":
-					add NumberListVarValue entry to leoparklist;
+					add NumberListVarValue entry to leoparkList;
 				-- "mrevents":
 					add NumberListVarValue entry to mrevents;
 				-- "pfpclist":
-					add NumberListVarValue entry to pfpclist;
+					add NumberListVarValue entry to pfpcList;
 				-- "velospostmusings":
 					add NumberListVarValue entry to velospostmusings;
 			if debugactive is 1:
