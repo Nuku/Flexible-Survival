@@ -132,9 +132,11 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				say "     You stumble away, leaving the dark alley behind. It is a bit of a relief to go out into the open area of the parking lot, but somehow you can't shake the feeling of something oily having touched your mind.";
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [rejected by Blake or refused him]
+				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again.";
+				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else:
 				LineBreak;
 				say "[BlakeCounterstrike]";
@@ -146,7 +148,7 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 			say "     [bold type]What do you do next?[roman type][line break]";
 			say "     [link](1)[as]1[end link] - Give yourself to the trashy punk-rat!";
 			say "     [link](2)[as]2[end link] - Leave now! Just get out of there.";
-			say "     [link](4)[as]3[end link] - Fight against the invasive thought before it takes hold!";
+			say "     [link](3)[as]3[end link] - Fight against the invasive thought before it takes hold!";
 			say "     [link](4)[as]4[end link] - Attack the rodent! No one messes with your mind!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 4:
@@ -165,16 +167,19 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				say "     In fact, the moan made him gasp in pleasure - the pure sound of it bringing him to orgasm, his mucky seed spurting violently into your mouth - your lust-coated thoughts enticing you to swallow. Of course you do - following it up with a whine. 'Ahh... Gods, what a great time. You're such a good slut, you know, kid?' He grins at you - cum leaking out of your mouth, your cock left needy, dangling beneath you. 'Off you go, then...' he laughs at you, watching as you detach yourself from his creaking form, walking away...";
 				now lastfuck of Blake is turns;
 				now HP of Blake is 2; [Sucked his cock]
+				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else if calcnumber is 2:
 				LineBreak;
 				say "     You turn and flee, stumbling out into the open of the parking lot, followed by an amused laugh from Blake. Glancing back, you can't really see him in the dark of the alley, but you just know he's there watching you. Somehow you can't shake the feeling of something oily having touched your mind.";
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [refused him]
+				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else if calcnumber is 3:
 				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again. From the darkness of the alley behind you, Blake's voice calls out in a condescending tone, 'You'll be back. Just you wait.'";
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [refused him]
+				move player to Smith Haven Mall Lot East; [player is thrown out after each scene]
 			else:
 				LineBreak;
 				say "[BlakeCounterstrike]";
