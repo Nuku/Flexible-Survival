@@ -5,8 +5,6 @@ Section 1 - Monster Responses
 DinoPackOral is a number that varies.[@Tag:NotSaved]
 
 to say DinoPackLoss:
-	say "...";
-[
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
@@ -30,11 +28,9 @@ to say DinoPackLoss:
 				say "     Even in the face of their mockery, you're unable to muster up any resistance. Perhaps there's more truth to their barbs than you would like to admit? You quickly shake your head as if attempting to dislodge the unexpected thoughts, but it doesn't quite clear your mind completely. Even as you try and focus on inconsequential, unarousing details, you keep noticing exactly the opposite. Attempts to focus on a nearby display case lead to watching the shimmering traces of pre on their members, thoughts of ancient artifacts drifting into thoughts about overfilled balls. It seems that the dino pack somehow notices this shift in your thoughts, your growing weakness acting as a signal. The lizards all close in further around you, their work pleasuring themselves on increasing in speed, the scent of their oncoming release growing heavy in the air.";
 				say "     You try not to react to their actions, but can't quite keep yourself from opening your mouth and leaning forward just in time for the first of the massive shafts to start spasming, releasing blast after blast of cum onto your face and front. From there you briefly enter a world consisting only of cocks and cum, the pack slowly releasing its combined bounty onto you. A splurt of enchanted jizz from one side is followed by a flood of the very same onto your face and mouth, and all you can do is passively take everything they offer you. After what seems like an eternity, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. You may not have given in completely yet, but you will soon enough.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
 				infect "Magic Drake";
-]
+
 
 to say DinoPackVictory:
-	say "...";
-[
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else:
@@ -70,16 +66,14 @@ to say DinoPackVictory:
 		else:
 			WaitLineBreak;
 			say "     Deciding against it, you turn around and head off, leaving the remaining dino to fend for itself.";
-]
 
-[
+
 to say DinoBargain: [Currently not called by anything]
 	say "     Once more you lay beaten and defeated in the center of a ring of the tiny dinos. They have proven their superior skills, and you are eagerly awaiting the moment when they prove how suprerior they are in other ways as well. However, after a moment, you realize that isn't quite what's about to happen. Instead of dominating you with their mighty dicks, several of the reptiles seem to be quietly discussing something. As much as you may want to know what's going on, you wait patiently, knowing that you're certain to enjoy anything they come up with. When they finally stop taliking and turn back to you, you're surprised once more, as rather than torment you with their endowments, they press in tightly around you and lift you up into the air. Before you can react, the pack is already carrying you away.";
 	say "     It doesn't take long for you to realize exactly where they're taking you, as they enter the red light district. Sure enough, you're soon brought into a small square, and placed on the ground before the Magic Drake. The dinos spread out around you, before looking expectantly at the drake. She raises her staff slowly, eyeing you in your new place on the ground as she does so. 'You have done well, bringing my familiar back to me, and shall be rewarded.' A single twist of her phallic staff, and you can feel a tingling in the air, like what you feel each time the drake has worked her magic on you. This time, however, you're instead watching her do the same to three of the dinos. Their already huge shafts and balls start growing to even greater proportions, dwarfing their reptilian forms in a cascade of cockflesh.";
 	WaitLineBreak;
 	say "     The newly blessed dinosaurs each shudder and moan, the sensation of their new endowments clearly too much, each of them cumming on the spot, a miniature flood of spunk flowing out of each one of them. Unconsciously you lick your lips in anticipation, because surely such impressive cocks wouldn't exist if you weren't going to be given the honor of serving them? Even as you imagine various ways of enjoying those members, the other dinos are clearly in awe of what the chosen three were given, chittering excitedly at each other. After several moments of this, the empowered dinos finally seem to get a hold of themselves, turning their attention towards you. The drake looks on, grinning at the sight before her, before speaking. 'Go ahead. I've given you your payment, now why don't you put it to use showing my familiar their place? I promise that they'll enjoy it.'";
 	say "     A";
-]
 
 to say DinoPackDesc:
 	setmongender 3;
@@ -96,7 +90,7 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is true;
+	now NewTypeInfection entry is false;
 	now Species Name entry is "Tiny Dino";
 	add "Tiny Dino" to infections of ReptileList;
 	add "Tiny Dino" to infections of FurryList;
@@ -157,6 +151,7 @@ When Play begins:
 	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
 	now BannedStatus entry is false;
 
+[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -256,14 +251,13 @@ When Play begins:
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 
-[
 when play ends:
 	if BodyName of Player is "Tiny Dino":
 		if humanity of Player < 10:
 			say "     ...";
 		else:
 			say "     ...";
-]
 
 Dino Pack ends here.

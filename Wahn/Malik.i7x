@@ -124,12 +124,12 @@ to say MalikTalkMenu:
 	now title entry is "Yourself";
 	now sortorder entry is 3;
 	now description entry is "Ask the orc what he thinks of you";
-	[]
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Respect";
 	now sortorder entry is 4;
 	now description entry is "Demand some respect from him";
-	[]
+	]
 	choose a blank row in table of fucking options;
 	now title entry is "Running";
 	now sortorder entry is 5;
@@ -315,7 +315,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Stamina of Chris
 	say "     'This boy will make us proud,' Chris boasts as he joins the two of you, laying his arms around you both. 'Almost as strong as his dad, and you should have seen him take out that German shepherd we ran into not too far from here. That doggy sure didn't make any boasts about being an Alpha anymore when we left him in a puddle of cum on the street!' 'Yeah! Pounded and bred that little bitch good! He was a bit too whiny to keep, but not bad as a casual cumdump,' Malik tells you with a smirk as he lets a hand casually wander down your backside to grope your ass. 'Better watch out boy, that's your chieftain's breeder!' Chris tells him and punches the other orc's shoulder. For a second, a challenging expression crosses Malik's face, then he gives in and pulls his hand away. Your three-way family hug breaks up after that, with Chris suggesting the three of you hang around together on a nearby sofa, you on his lap and his son next to him as you chat for a while.";
 	now Strength of Chris is 1; [introduced]
 
-after going to Sitting Area while (Chris is in Sitting Area and Daytimer is day and Intelligence of Malik is 0 and Strength of Chris > 0 and Libido of Malik is not 0):
+after going to Sitting Area while (Chris is in Sitting Area and Daytimer is day and Intelligence of Malik is 0 and Strength of Chris > 0 and (Loyalty of Malik > 0 or Loyalty of Malik < 0)):
 	if debugactive is 1:
 		say "     DEBUG: Malik NPC Placement Scene; Libido of Malik: [Libido of Malik][line break]";
 	say "     As you enter the area, your gaze falls upon Chris, who is casually standing against one of the bookshelves, an orc brew in his hand. The orc warrior greets you with a smile, then draws you closer and gives you a possessive kiss. You start to chat a little, only to be interrupted by a call of, 'Hey dad - err, dads!' coming from the side. It's Malik, your firstborn son with Chris, who comes strolling up to stand before you. Broad-shouldered and with bulging muscles, he's almost the archetype of a proud orc warrior. 'Just wanted to tell ya that I'm gonna go out and hang in the street most of the time from now on. The library's swell and all, but I want some more action! New people wandering by to fuck and all that, hah!' Showing a confident, tusk-bearing grin, he exchanges a fist-bump with Chris, then squeezes the side of your arm as he adds, 'Gonna be out at the looted shops during the days. See ya, breeder-dad!'";
@@ -428,6 +428,7 @@ after going to Sitting Area while (Chris is in Sitting Area and Stamina of Chris
 				if Loyalty of Malik > -6 and Loyalty of Malik < 6: [relationship building phase]
 					if a random chance of 1 in 4 succeeds: [25% chance]
 						decrease Loyalty of Malik by 1; [disappointment]
+	now Stamina of Malik is turns; [last training turn]
 
 to say MalikRunningTraining:
 	say "     Running side by side, the two of you work up a good sweat and light burn in your muscles as you continue for a few blocks, then make a right turn and start curving back towards the library on a large circuit. Along the way, you surprisingly do not see all that many creatures out and about. The ones that do make an appearance are mostly weaker breeds that are peeking out of their hiding spots and are completely ignored by Malik. At first you think he really just wants to run right now, but then it becomes clear that they were just beneath his notice, with the orc preferring stronger prey: Ahead of the two of you, ";
@@ -581,7 +582,7 @@ to say MalikRunningCaptiveSexMenu:
 					say "[MalikRunSex3]";
 				else if nam is "Take the ram's cock as he is fucked" or nam is "Take the German shepherd's cock as he is fucked" or nam is "Take the husky's cock as he is fucked":
 					say "[MalikRunSex4]";
-				else if nam is "Finger Malik's ass as he fucks the captive":
+				else if nam is "Finger and eat Malik's ass as he fucks the captive":
 					say "[MalikRunSex5]";
 				wait for any key;
 		else if calcnumber is 0:

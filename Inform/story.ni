@@ -6529,8 +6529,6 @@ Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
-[Include Dino Pack by Qazarar.]
-[Include Testcreature by Wahn.] [TODO: Remove]
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Stripes.
 Include Doberman Male by Wahn.
