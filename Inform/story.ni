@@ -4325,7 +4325,7 @@ to NewInfectionRoll:
 			now Ball Count of Player is Ball Count entry;
 			[setting the old parts too, as old infections will compare to these]
 			choose row MonsterID from the Table of Random Critters;
-			now Cock of Player is cock entry;
+			now Cock of Player is Cock Adjective entry;
 			if Name entry is listed in infections of InternalCockList and internalbypass is true:
 				say "[italic type]...After some time, it appears that your balls re-emerge, in spite of this strain's normally internal anatomy.[roman type]";
 	else if x is 9:
@@ -6529,6 +6529,8 @@ Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
+[Include Dino Pack by Qazarar.]
+[Include Testcreature by Wahn.] [TODO: Remove]
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Stripes.
 Include Doberman Male by Wahn.
@@ -6581,6 +6583,7 @@ Include Giant by Stripes.
 Include Giraffe by Stripes.
 Include Goat Janitor by McRabid.
 Include Goblin by Blue Bishop.
+Include Golden Retriever Male Infection by Luneth.
 Include Goo Girl by Nuku Valente.
 Include Gorilla by Wahn.
 Include Great Dane by Kaleem Mcintyre.
