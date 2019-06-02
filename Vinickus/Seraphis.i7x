@@ -43,8 +43,8 @@ Conflict within the Plains	"Conflict within the Plains"
 Conflict within the Plains is a situation. The level of Conflict within the Plains is 6.
 The sarea of Conflict within the Plains is "Plains".
 when play begins:
-	add Conflict within the Plains to badspots of guy;
-	add Conflict within the Plains to badspots of furry;
+	add Conflict within the Plains to BadSpots of MaleList;
+	add Conflict within the Plains to BadSpots of FurryList;
 
 [
 if (Cock Count of Player < 1) and (Cunt Count of Player <= 1): [All scenes so far are based around the player character having a dick.]
@@ -145,7 +145,7 @@ Instead of resolving a Conflict within the Plains:
 					LineBreak;
 					say "     Considering he can't really move from where he's standing, it's not hard to stay away from him, and after a few hours it starts to seem as though he's coming down from his lust high. More intelligence is visible within his eyes with each passing second, and as the third or fourth hour passes, you can tell his cock is deflating a little. However, he's still very evidently horny, but at least a little more in control than before. 'Huh. You're a rather...unique individual. Most would have jumped at the chance for a fuck, especially now-a-days.'";
 					say "     You tell him about what you've been through so far, leaving out anything too risky, and his face seems to lighten up a bit. 'Ah, so you avoided the brunt of the start. Lucky, ";
-					if bodyname of Player is "Human":
+					if BodyName of Player is "Human":
 						say "and you've even kept your own body.' His equine shaft jerks up a bit as he says that";
 					else:
 						say "well, for the most part, for you definitely lost your old body,' he remarks with some evident disappointment";
@@ -226,7 +226,7 @@ to say DominantSeraphisFirst:
 
 to say SubmissiveSeraphisFirst:
 	if Player is male:
-		say "     You open up your clothes and let your [cockname of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him";
+		say "     You open up your clothes and let your [CockName of Player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him";
 		if anallevel is 3:
 			say ", but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
 			say "     Your nose is quickly met with a strong, masculine musk, and as you poke your tongue out, the taste of sweat and the very same musk you smelled, greets you. With a near mad vigor, you run your tongue over every nook and cranny of his ass, gracing the hole ever so slightly at random intervals, keeping the centaur on edge the entire time. It doesn't take long for his hole to start winking, his excitement growing with each swipe of your tongue, each huffed breath over his ass. Whinny after whinny starts filling your ears, panting gasps and moans following each one, and as you finally move over his twitching hole, you dart your tongue straight into him.";

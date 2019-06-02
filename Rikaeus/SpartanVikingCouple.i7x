@@ -78,7 +78,7 @@ War Declaration is a situation.
 The sarea of War Declaration is "Nowhere".
 
 when play begins:
-	add War Declaration to badspots of guy;
+	add War Declaration to BadSpots of MaleList;
 
 instead of going to Pericles' Room while (War Declaration is active and War Declaration is not resolved and VikingWar - turns > 1 and PericlesRelationship is 6 and BjornRelationship is 3):
 	move player to Pericles' Room;
@@ -114,8 +114,8 @@ Assault On The Gym is inactive.
 The sarea of Assault On The Gym is "Campus".
 
 when play begins:
-	add Assault On The Gym to badspots of guy;
-	add Assault On The Gym to badspots of girl;
+	add Assault On The Gym to BadSpots of MaleList;
+	add Assault On The Gym to BadSpots of FemaleList;
 
 instead of going to Athletic Street while (Assault On The Gym is active and Assault On The Gym is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 1):
 	move player to Athletic Street;
@@ -172,8 +172,8 @@ Raid On The Fountain is inactive.
 The sarea of Raid On The Fountain is "Campus".
 
 when play begins:
-	add Raid On The Fountain to badspots of guy;
-	add Raid On The Fountain to badspots of girl;
+	add Raid On The Fountain to BadSpots of MaleList;
+	add Raid On The Fountain to BadSpots of FemaleList;
 
 instead of going to College Fountain while (Raid On The Fountain is active and Raid On The Fountain is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 2):
 	move player to College Fountain;
@@ -235,8 +235,8 @@ Siege Of The Belltower is inactive.
 The sarea of Siege Of The Belltower is "Campus".
 
 when play begins:
-	add Siege Of The Belltower to badspots of guy;
-	add Siege Of The Belltower to badspots of girl;
+	add Siege Of The Belltower to BadSpots of MaleList;
+	add Siege Of The Belltower to BadSpots of FemaleList;
 
 instead of going to College Belltower while (Siege Of The Belltower is active and Siege Of The Belltower is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 3):
 	move player to College Belltower;
@@ -295,8 +295,8 @@ Battle For Tenvale Campus is inactive.
 The sarea of Battle For Tenvale Campus is "Campus".
 
 when play begins:
-	add Battle For Tenvale Campus to badspots of guy;
-	add Battle For Tenvale Campus to badspots of girl;
+	add Battle For Tenvale Campus to BadSpots of MaleList;
+	add Battle For Tenvale Campus to BadSpots of FemaleList;
 
 instead of going to College Campus Entrance while (Battle For Tenvale Campus is active and Battle For Tenvale Campus is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 4):
 	move player to College Campus Entrance;
@@ -348,8 +348,8 @@ Peace Between Communities is inactive.
 The sarea of Peace Between Communities is "Campus".
 
 when play begins:
-	add Peace Between Communities to badspots of guy;
-	add Peace Between Communities to badspots of girl;
+	add Peace Between Communities to BadSpots of MaleList;
+	add Peace Between Communities to BadSpots of FemaleList;
 
 instead of going to Tenvale College Library while (Peace Between Communities is active and Peace Between Communities is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 5):
 	move player to Tenvale College Library;

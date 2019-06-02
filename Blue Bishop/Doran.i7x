@@ -6,9 +6,9 @@ Doran by Blue Bishop begins here.
 Section 1.0 - Doran Coding Miscellany
 
 when play begins:
-	add { "Peculiar Dragon" } to infections of guy;
-	add { "Peculiar Dragon" } to infections of furry;
-	add { "Peculiar Dragon" } to infections of feral;
+	add { "Peculiar Dragon" } to infections of MaleList;
+	add { "Peculiar Dragon" } to infections of FurryList;
+	add { "Peculiar Dragon" } to infections of FeralList;
 
 [ DoranPlayerRegard - raw string, determines what Doran calls the player.    ]
 [   Varies between "Master" and "Mistress", or "Pet", "Slave", "Bitch"       ]
@@ -270,7 +270,7 @@ Section 1.2 - Doran Monster Sex Pool
 to say DoranVictory_MountHim: [fuck the dragon]
 	say "     You suggest, rather bluntly, that he bend over and offer himself to you. The dragon, particularly excited by your blunt request, turns around, [if scalevalue of Player < 4]lowering himself to the ground before [end if]hiking his tail over to leave your entry unexposed. Shapely ass revealed before you, he's already quite aroused by the prospect of your imminent abuse, knotted, fleshy, and impressive dick [if DoranInternal is true]bulging out from his meager genital slit and[else]and ample, scaled balls[end if] exposed to the open air.";
 	say "     'My victor ought not worry for my welfare, abuse me as much as it pleases them.' It's glaringly obvious by now that this beast is very heavily inclined towards submission. You expose your [cock size desc of Player] dick[smn] before [ghim], [if Cock Length of Player > 17]a very eager look in his eyes at the prospect of getting[else]clearly eager to be[end if] impaled by [if Cock Count of Player > 1]one of those things[else]such a thing[end if].";
-	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if Player is flared] blunt[end if] head of[if Cock Count of Player > 1] one of[end if] your[if Cock Length of Player > 17] impressive[end if] tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
+	say "     Approaching the dragon, you more rigorously invoke your arousal by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] against his well-toned rear, scales immaculate and smooth under your touch, illustrating that the creature takes very good care of his appearance. Slowly, you sink the[if Player is blunt] blunt[end if] head of[if Cock Count of Player > 1] one of[end if] your[if Cock Length of Player > 17] impressive[end if] tool[smn] past his fleshy, yielding anal ring, eliciting from the beast a series of approving moans at your initial pace.";
 	if Cock Length of Player > 17:
 		say "     Very quickly, his supple hole becomes increasingly strained to abide your member, but this only entices the beast to coax you on. 'Further, further!' is his reply, and with a bit of work and pre's slick lubrication, his tight tailpipe grows progressively willing to take your sizeable tool[if Player is knotted], up to the knot[end if], granting you the freedom to start fucking him proper.";
 	else:
@@ -386,16 +386,17 @@ to say DoranVictory_TurnDown: [turn down]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is "Peculiar Dragon";
 	now enemy title entry is "Peculiar Dragon";
 	now enemy Name entry is "Doran";
-	now enemy type entry is 1; [unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "     [one of]With great poise, the dragon[or]Strutting close to you, he[or]He[or]The dragon[at random] [one of]sweeps his tail at you, knocking you with a concussive thud[or]strikes you with the palm of his talon, a rather painful affair even if he refrains from using his claws[or]headbutts you rather fiercely, knocking you back[or]flaps his wings in your direction, sending a thundering gust of wind upon you[at random] before he yields[one of], preening and gesturing as though to taunt you[or], strutting about a bit to give you a chance to retaliate[or], preparing for what retaliation you might offer up against him[or][at random].";
 	now defeated entry is "[Doran_Beat]";
 	now victory entry is "[Doran_Lose]";
@@ -429,7 +430,7 @@ When Play begins:
 	now Male Breast Size entry is 0;
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 45;
 	now loot entry is "";
 	now lootchance entry is 0;
@@ -445,11 +446,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -457,7 +459,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -465,20 +467,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -499,26 +501,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -534,11 +536,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -1502,7 +1504,7 @@ to say DoranDom_RidingBehind: [Riding Behind]
 		say "     '[one of]Tsk, tsk, I think [DoranPlayerRegard] loves their [gdragon]'s ass so much they should give it a kiss[or]Before we can begin, [DoranPlayerRegard] needs to show their [gdragon] how much they love [ghis] ass[or]Oh, it's so excited to see [DoranPlayerRegard], I think they should return the affection[at random]!' [gche] only eases up on you when your lips embrace [ghis] supple hole. Moaning softly, the [gdragon]'s soft, yielding passage squeezes approvingly against your tongue's inevitable intrusion, quickly slicked by your saliva. Bathing in the heat of the creature's rising need, [ghe] continues to smother you for a while longer until [ghe] finally seems satisfied, once more putting some space between you and [ghim].";
 	else:
 		say "     Compelled to plunge a finger past that supple hole, a gentle moan is pushed from the lips of the ever-obliging Doran, the soft, yielding passage squeezing gently against the invader. [gche] continues to oblige your continued fingering, for a while, but [ghe] eventually pulls free of you, putting some space between the two of you once more.";
-	say "     '[if DoranRoleIntensity is 0][one of]My [DoranPlayerRegard] has their [gdragon]'s permission to ride them[or]I need to feel my [DoranPlayerRegard] inside me[or]Now it's time for my naughty little [DoranPlayerRegard] to get their reward[at random][else][one of]Time for [DoranPlayerRegard] to take a ride on their [gdragon][or]Hop on[or][DoranPlayerRegard] should enjoy this[at random][end if]...!' Inviting your approach once more, this time [ghe] lowers [ghim]self to the ground for you, allowing you to [if scalevalue of Player > 3]get a hold on [ghis] back[else]wrap an arm around [ghis] tail[end if] as you line up[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] dick[smn] with [ghis] eager hole. Already quite aroused by the previous bit of foreplay, it doesn't take much for your organ's[if Player is flared] blunt[end if] head to plunge itself into [ghis] inviting depths.";
+	say "     '[if DoranRoleIntensity is 0][one of]My [DoranPlayerRegard] has their [gdragon]'s permission to ride them[or]I need to feel my [DoranPlayerRegard] inside me[or]Now it's time for my naughty little [DoranPlayerRegard] to get their reward[at random][else][one of]Time for [DoranPlayerRegard] to take a ride on their [gdragon][or]Hop on[or][DoranPlayerRegard] should enjoy this[at random][end if]...!' Inviting your approach once more, this time [ghe] lowers [ghim]self to the ground for you, allowing you to [if scalevalue of Player > 3]get a hold on [ghis] back[else]wrap an arm around [ghis] tail[end if] as you line up[if Cock Count of Player > 1] one of[end if] your [cock size desc of Player] dick[smn] with [ghis] eager hole. Already quite aroused by the previous bit of foreplay, it doesn't take much for your organ's[if Player is blunt] blunt[end if] head to plunge itself into [ghis] inviting depths.";
 	if DoranRoleIntensity is 0 and a random chance of 1 in 2 succeeds:
 		say "     '...[run paragraph on][one of]Ah[or]Hm[or]Tsk[at random], [one of][DoranPlayerRegard] will only go as fast as I command[or]not so fast, [DoranPlayerRegard], I'm the one in charge here[or]take it slow, [DoranPlayerRegard], and show me how obedient they are to their [gdragon][at random].' It seems [ghe][']ll chastise you if you move at any speed that isn't painfully slow, seemingly eager to torment you as [ghis] powerful passage slowly massages along your length. [gche] seems to greatly enjoy it when you move in a single, complete motion, [ghis] body rocking slightly to exaggerate every time you [if Player is knotted]tie with[else]hilt[end if] [ghim].";
 		say "     It becomes more of an ordeal with each passing minute for you to maintain your composure, desperate to pound the [gdragon]'s ass into oblivion. Doran doesn't seem to let up, however, and is absolutely insistent on you to maintain your slow, deliberate motions.";
@@ -1781,7 +1783,7 @@ Section 3.2 - Doran NPC Submissive Sex Pool
 to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 	say "     You [if DoranRoleIntensity is 4]order[else]ask[end if] the [gdragon] to turn away and offer [ghim]self to you. Eager to please, [ghe] wheels around, [if scalevalue of Player < 4]lowering [ghim]self to the ground before [end if]hiking [ghis] tail over to leave your entry exposed. Shapely ass revealed before you, [ghe]'s already quite aroused by the prospect of your imminent abuse, partially exposed tool staining the dirt with its[if DoranBallModStatus > 0] excessive[end if] pre.";
 	say "     '[one of]Ah[or]Oh[or]Mm[or]Very well[at random], [DoranPlayerRegard], [if DoranRoleIntensity is 4][one of]completely ruin me[or]please abuse me[or]I ache for them[at random][else][one of]don't hold back[or]I'm ready for anything they've got[or]I'm all theirs[at random][end if].' You expose your [cock size desc of Player] dick[smn] before the open air, [if Cock Length of Player > 17 or DoranRoleIntensity is 4]a very eager, needy look in [ghis] eyes at the prospect of getting[else]clearly eager to be[end if] impaled by [if Cock Count of Player > 1]one of those things[else]the thing[end if].";
-	say "     Approaching the [gdragon], you more rigorously make yourself hard by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] between the cheeks of [ghis] well-toned rear, the immaculate and smooth caressing along your length. Slowly, you sink the[if Player is flared] blunt[end if] head of[if Cock Count of Player > 1]one of [end if]your [if Cock Length of Player > 17]impressive [end if]tool[smn] past [ghis] fleshy, yielding anal ring, each successive inch forcing out a series of approving moans from the beast.";
+	say "     Approaching the [gdragon], you more rigorously make yourself hard by grinding[if Cock Count of Player > 1] one of[end if] your hardening shaft[smn] between the cheeks of [ghis] well-toned rear, the immaculate and smooth caressing along your length. Slowly, you sink the[if Player is blunt] blunt[end if] head of[if Cock Count of Player > 1]one of [end if]your [if Cock Length of Player > 17]impressive [end if]tool[smn] past [ghis] fleshy, yielding anal ring, each successive inch forcing out a series of approving moans from the beast.";
 	if Cock Length of Player > 17:
 		say "     Very quickly, [ghis] supple hole becomes increasingly strained to abide your member, but this only this only seems to excite the [gdragon].";
 		say "     '[one of]More, [DoranPlayerRegard]. I need it all[or]Further, [DoranPlayerRegard], further[at random]!' [ghe] [if DoranRoleIntensity is 4]begs[else]asks[end if], and with a bit of work and pre's slick lubrication [ghis] tight tailpipe grows increasingly willing to take your sizeable tool[if Player is knotted], up to the knot[end if], allowing you the freedom to start fucking [ghim] proper.";
@@ -1815,7 +1817,7 @@ to say DoranSub_AnalFuck: [Anal Catching] [BODY MODDED]
 	say "     '[one of]My thanks[or]Many thanks[or]My appreciation[at random], [DoranPlayerRegard]. [if DoranRoleIntensity is 4][one of]I long for their further abuse[or]Please don't be afraid to use their [gdragon] again[or]Their treatment brings me immense pleasure[at random][else][one of]I hope they enjoyed themself[or]That was fun[or]I look forward to the next bout[at random][end if].' Yourself satisfied, [ghe] goes back off on [ghis] own to clean up the devastation you've wrought.";
 
 to say DoranSub_CockOral: [Cock Oral] [BODY MODDED]
-	say "     [if DoranRoleIntensity is 4]Without having to say a word[else]A little awkwardly[end if] you set yourself down, exposing your [cock size desc of Player], [cock of Player] dick[smn] before the [gdragon]. [if DoranRoleIntensity is 4]Immediately, [ghe]'s upon you, easily understanding what you need of [ghim],[else]Gesturing [ghim] over [ghe] makes [ghis] way to you, clearly eager to please[end if] and looking rather excited by the offering.";
+	say "     [if DoranRoleIntensity is 4]Without having to say a word[else]A little awkwardly[end if] you set yourself down, exposing your [cock size desc of Player], [Cock of Player] dick[smn] before the [gdragon]. [if DoranRoleIntensity is 4]Immediately, [ghe]'s upon you, easily understanding what you need of [ghim],[else]Gesturing [ghim] over [ghe] makes [ghis] way to you, clearly eager to please[end if] and looking rather excited by the offering.";
 	say "     '[if DoranRoleIntensity is 4][one of][DoranPlayerRegard], nothing would please their [gdragon] more[or][DoranPlayerRegard], their [gdragon] longs to taste them[or]I see [DoranPlayerRegard] is in need of me[at random][else][one of]I'd be happy to oblige [DoranPlayerRegard][or][DoranPlayerRegard]'s very eager for my affection, I see[or]it certainly looks like [DoranPlayerRegard]'s excited to see me[at random][end if]...' The [gdragon] goes quiet for a moment, [ghis] scaled lips parting to engulf [if Cock Count of Player > 2]the head of one of them, taloned hands moving to caress its brothers[else if Cock Count of Player is 2]the head of one of them, taloned hand moving to caress its brother[else]its head[end if]. Humid breath washing over your lower torso, [if DoranRoleIntensity is 4][ghe]'s rather gentle in this initial, oral embrace, clearly in love with the taste of your flesh[else]you abide [ghis] thick tongue's initial, teasing query[end if].";
 	If DoranTitModStatus > 0:
 		say "     [gchis] ample breasts press gently against you, perhaps you could [if DoranRoleIntensity is 4]command[else]ask[end if] [ghim] to make use of them?";

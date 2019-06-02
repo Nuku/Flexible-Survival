@@ -33,7 +33,7 @@ It is not temporary.
 The AC of Apocalypse Skirt is 0.
 The effectiveness of Apocalypse Skirt is 0.
 The placement of Apocalypse Skirt is "waist".
-The descmod of Apocalypse Skirt is "A torn and burnt mini skirt barely covers your lower [bodyname of Player in lower case] body.".
+The descmod of Apocalypse Skirt is "A torn and burnt mini skirt barely covers your lower [BodyName of Player in lower case] body.".
 The slot of Apocalypse Skirt is "waist".
 the scent of Apocalypse Skirt is "There is a faint smell of smoke lingering on the item of clothing.".
 
@@ -63,7 +63,7 @@ It is not temporary.
 The AC of Apocalypse Scarf is 0.
 The effectiveness of Apocalypse Scarf is 0.
 The placement of Apocalypse Scarf is "face".
-The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [facename of Player] face.".
+The descmod of Apocalypse Scarf is "A torn and burnt scarf covers your [FaceName of Player] face.".
 The slot of Apocalypse Scarf is "face".
 the scent of Apocalypse Scarf is "There is a faint smell of smoke lingering on the item of clothing.".
 

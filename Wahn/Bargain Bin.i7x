@@ -100,7 +100,7 @@ carry out bargainhunting:
 				say "[bold type]'Like Attracts Like' has been added to your feats![roman type][line break]";
 				add "Like Attracts Like" to feats of Player;
 		else if Z is 6: [cat charm]
-			if furry is not banned and guy is not banned:
+			if FurryList is not banned and MaleList is not banned:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type] tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly, it seems to slip through your fingers - or rather melt, as you try to catch it and notice that the thing didn't slip but rather is covering part of your fingers now as a silver sheen. Before you have much time to stare at it, the flowing metal seems to be absorbed by your skin, vanishing without a trace. As you scratch your head, puzzled about the strange effect, you realize your body is feeling slightly different...";
 				LineBreak;
 				StatChange "Dexterity" by 1;
@@ -154,7 +154,7 @@ carry out bargainhunting:
 			ScoreGain 20;
 		else if Z is 14: [infection samples]
 			say "     Hunting through strange bin full of items, you find yourself touching what appears to be some sort of plastic bag. Overcome with curiosity, you quickly pull it out of the bin and take a look inside. You are surprised to see that the bag contains several [bold type]neatly labeled samples taken from creatures inside the city[roman type]. 'Ah Nermine was looking for those!' you can hear the jackal-like shopkeeper say as you inspect the items, making you look up at her instead. 'If the fine-looking customer doesn't want to keep those, Nermine is more than willing to buy them found items,' she says with a grin on her soft, silver-painted muzzle while you try to decide what to do with the items.";
-			if furry is banned:
+			if FurryList is banned:
 				say "     Taking another quick glance at the contents, you decide that you have no interest in any of the bestially infected items and return the bag to Nermine while she puts your earlier payment back on the counter. Checking the items she lays out, you find yourself grinning as you realize the sly jackal-woman slipped you an extra package of food as well.";
 				LineBreak;
 				say "[bold type]You gain 2 food![roman type][line break]";
@@ -178,17 +178,17 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Deciding to keep the items yourself, since they could come in handy in this strange city you are stuck in, you stuff the bag into your pack. Nermine sighs slightly at your choice and shakes her head as she goes back to standing at the counter.";
 					LineBreak;
-					if girl is not banned:
+					if FemaleList is not banned:
 						say "[bold type]You gain 1 tuft of chin fur![roman type][line break]";
 						increase carried of tuft of chin fur by 1;
 						say "[bold type]You gain 1 skunk goo![roman type][line break]";
 						increase carried of skunk goo by 1;
-					if guy is not banned:
+					if MaleList is not banned:
 						say "[bold type]You gain 1 chipped tooth![roman type][line break]";
 						increase carried of chipped tooth by 1;
 						say "[bold type]You gain 1 pirate bandana goo![roman type][line break]";
 						increase carried of pirate bandana by 1;
-					if hermaphrodite is not banned:
+					if HermList is not banned:
 						say "[bold type]You gain 1 dog milk![roman type][line break]";
 						increase carried of dog milk by 1;
 					say "[bold type]You gain 1 honeycomb![roman type][line break]";
@@ -196,20 +196,20 @@ carry out bargainhunting:
 					say "[bold type]You gain 1 tasty fish![roman type][line break]";
 					increase carried of Tasty Fish by 1;
 		else if Z is 15: [Dr Matt samples]
-			if girl is banned and ( hermaphrodite is banned or furry is banned ):
+			if FemaleList is banned and ( HermList is banned or FurryList is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
 				LineBreak;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 			else:
-				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, you blink in surprise as you note it seems to contain a bottle of water along with [if girl is not banned]two nicely labeled samples of goo[else]a wad of used bubblegum[end if], and [if hermaphrodite is not banned and furry is not banned]two small vials of gryphon milk[else]a wad of used bubblegum[end if]. Staring at the items for a moment, you realize that you are obviously not the [if HP of Doctor Matt is 0 or HP of Doctor Matt is 100 or HP of Doctor Matt is 103]only person to consider keeping some of the strange things to be found[else]first person the good Doctor Matt sent out in the city to retrieve samples for him[end if]. Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of if, and if they are happier as whatever they are now.";
+				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, you blink in surprise as you note it seems to contain a bottle of water along with [if FemaleList is not banned]two nicely labeled samples of goo[else]a wad of used bubblegum[end if], and [if HermList is not banned and FurryList is not banned]two small vials of gryphon milk[else]a wad of used bubblegum[end if]. Staring at the items for a moment, you realize that you are obviously not the [if HP of Doctor Matt is 0 or HP of Doctor Matt is 100 or HP of Doctor Matt is 103]only person to consider keeping some of the strange things to be found[else]first person the good Doctor Matt sent out in the city to retrieve samples for him[end if]. Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of if, and if they are happier as whatever they are now.";
 				LineBreak;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
-				if hermaphrodite is not banned and furry is not banned:
+				if HermList is not banned and FurryList is not banned:
 					say "[bold type]You gain 2 gryphon milk![roman type][line break]";
 					increase carried of gryphon milk by 2;
-				if girl is not banned:
+				if FemaleList is not banned:
 					say "[bold type]You gain 2 glob of goo![roman type][line break]";
 					increase carried of glob of goo by 2;
 		else if Z is 16: [strange doll]
@@ -502,13 +502,13 @@ carry out bargainhunting:
 					say "[bold type]You acquired some dirty water![roman type][line break]";
 					increase carried of dirty water by 1;
 				else:
-					if guy is not banned and furry is not banned:
+					if MaleList is not banned and FurryList is not banned:
 						say "[bold type]You acquired a Chipped tooth![roman type][line break]";
 						increase carried of Chipped tooth by 1;
-					else if girl is not banned and furry is not banned:
+					else if FemaleList is not banned and FurryList is not banned:
 						say "[bold type]You acquired some Skunk Goo![roman type][line break]";
 						increase carried of Skunk Goo by 1;
-					else if hermaphrodite is not banned and furry is not banned:
+					else if HermList is not banned and FurryList is not banned:
 						increase carried of panther milk by 1;
 						say "[bold type]You acquired some panther milk![roman type][line break]";
 					else:
@@ -517,13 +517,13 @@ carry out bargainhunting:
 					say "[bold type]You acquired some dirty water![roman type][line break]";
 					increase carried of dirty water by 1;
 			else:
-				if guy is not banned and furry is not banned:
+				if MaleList is not banned and FurryList is not banned:
 					say "[bold type]You acquired a Chipped tooth![roman type][line break]";
 					increase carried of Chipped tooth by 1;
-				else if girl is not banned and furry is not banned:
+				else if FemaleList is not banned and FurryList is not banned:
 					say "[bold type]You acquired some Skunk Goo![roman type][line break]";
 					increase carried of Skunk Goo by 1;
-				else if hermaphrodite is not banned and furry is not banned:
+				else if HermList is not banned and FurryList is not banned:
 					say "[bold type]You acquired some panther milk![roman type][line break]";
 					increase carried of panther milk by 1;
 				else:
@@ -539,7 +539,7 @@ carry out bargainhunting:
 
 [ Plush Lion / rubber tigress / chocolate lab in bin ]
 to say plrtcl:
-	if humorous is banned or furry is banned or ( guy is banned and girl is banned and hermaphrodite is banned):
+	if HumorousList is banned or FurryList is banned or ( MaleList is banned and FemaleList is banned and HermList is banned):
 		say "     As you start to dig in one corner of the bin, Nermine steps up to you and lays a slender paw-hand on your arm. 'Nermine can tell that her bargain-hunting customer will not be wanting anything from that corner. She is sorry, but the bargain bin is like that some times. As not to leave her hopeful visitor dissatisfied, Nermine will gladly refund the items paid - maybe to be held ready for another go at finding something desirable?' With that, the jackaless gives you back your food and the water bottle. 'But Nermine also has to comment that maybe her dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
 		LineBreak;
 		say "[bold type]You gain 1 food![roman type][line break]";
@@ -548,9 +548,9 @@ to say plrtcl:
 		increase carried of water bottle by 1;
 	else:
 		let Q be a list of numbers;
-		if guy is not banned, add 1 to Q;  [Plush Lion]
-		if girl is not banned, add 2 to Q;  [Rubber tigress]
-		if hermaphrodite is not banned, add 3 to Q;  [Chocolate Lab]
+		if MaleList is not banned, add 1 to Q;  [Plush Lion]
+		if FemaleList is not banned, add 2 to Q;  [Rubber tigress]
+		if HermList is not banned, add 3 to Q;  [Chocolate Lab]
 		sort Q in random order;
 		now tempnum is entry 1 of Q;
 		if tempnum is 1:
@@ -559,16 +559,16 @@ to say plrtcl:
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Plush Lion";
-			now cockname of Player is "Plush Lion";
-			now bodyname of Player is "Plush Lion";
-			now facename of Player is "Plush Lion";
-			now tailname of Player is "Plush Lion";
+			now SkinName of Player is "Plush Lion";
+			now CockName of Player is "Plush Lion";
+			now BodyName of Player is "Plush Lion";
+			now FaceName of Player is "Plush Lion";
+			now TailName of Player is "Plush Lion";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Plush Lion";
 		else if tempnum is 2:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across an [bold type]inflatable tiger[roman type]. Pulling out the small rubber toy, you grin in bemusement at what a silly little thing like this is doing in such a strange place. Looking it over quickly, it seems to have surprisingly survived its time in the bargain bin unpunctured. You give it a light squeeze between your hands and it pops with an odd, meow-like bang, causing you to jump back in surprise. The popped balloon toy hangs limply in your hands... which start to tingle. Looking down, you realize that the toy's rubber skin is melting into your own and spreading all over your body! Panicking slightly, you try to shake the stuff off of you - to no avail. As your head shifts an inflates into a more feline form, you blink your plasticky eyes as you realize that having such lovely, smooth skin could be a good thing.";
@@ -576,16 +576,16 @@ to say plrtcl:
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Rubber tigress";
-			now cockname of Player is "Rubber tigress";
-			now bodyname of Player is "Rubber tigress";
-			now facename of Player is "Rubber tigress";
-			now tailname of Player is "Rubber tigress";
+			now SkinName of Player is "Rubber tigress";
+			now CockName of Player is "Rubber tigress";
+			now BodyName of Player is "Rubber tigress";
+			now FaceName of Player is "Rubber tigress";
+			now TailName of Player is "Rubber tigress";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Rubber tigress";
 		else:
 			say "     Sorting through the unusual and strange items in the bargain bin, you blink as you come across a strange chocolate treat. Held in a rather plain box, this two-pound [bold type]chocolate hound[roman type] is small, but solid. You presume it must be a leftover from Easter and pop the top to take a better look. Certainly, you feel, this would make a tastier treat than some of your recent meals. Your mouth waters as the scent of delicious, quality milk chocolate fills the air. You pull it out and look it over, telling yourself you'll just take a nibble and save the rest for the next time you're hungry. The canine confectionary seems well molded, with considerable attention to detail, further instilling the idea that it's a quality product in your mind. But then, you start to notice flaws and few details being slightly off... and more and more after that.";
@@ -594,16 +594,16 @@ to say plrtcl:
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
 			choose row MonsterID from the Table of Random Critters;
-			now skinname of Player is "Chocolate Lab";
-			now cockname of Player is "Chocolate Lab";
-			now bodyname of Player is "Chocolate Lab";
-			now facename of Player is "Chocolate Lab";
-			now tailname of Player is "Chocolate Lab";
+			now SkinName of Player is "Chocolate Lab";
+			now CockName of Player is "Chocolate Lab";
+			now BodyName of Player is "Chocolate Lab";
+			now FaceName of Player is "Chocolate Lab";
+			now TailName of Player is "Chocolate Lab";
 			now tail of Player is the tail entry;
-			now face of Player is the face entry;
-			now skin of Player is the skin entry;
-			now body of Player is the body entry;
-			now cock of Player is the cock entry;
+			now Face of Player is the face entry;
+			now Skin of Player is the skin entry;
+			now Body of Player is the body entry;
+			now Cock of Player is the cock entry;
 			attributeinfect "Chocolate Lab";
 
 Table of Game Objects (continued)
@@ -653,7 +653,7 @@ the scent of strange doll is "The strange doll smells strangely like you.".
 when play ends:
 	if strange doll is tamed:
 		if humanity of Player < 10:
-			if bodyname of Player is "Plush Lion":
+			if BodyName of Player is "Plush Lion":
 				say "     The little plush doll you got at the shop seems as happy to be a plush lion creature as you are now, and you find your muzzle pulling back in a grin full of amusement as you look down at your little companion, an idea striking you. Soon with a little work and some extra stuffing your plush doll is of a much more appropriate size to be a proper companion to you, and you can't help but admire your handiwork as you stare at the newest lovely plush little lioness for the pride. Your former doll seems to approve of her newly altered body, purring and rubbing herself up against you, eager and happy to be a proper little member of your plush pride.";
 			else:
 				say "     The strange doll from the shop stays with you, even as you surrender fully to the infection, following you around through the city and mimicking your actions as you settle into your new life. Eventually your lust clouded mind will begin to recognize that the strange doll you found is becoming more and just like you, as it grows in size daily, and seems to take on a more realistic appearance. You aren't able to figure out just when the little toy finishes changing, but before you know it, instead of being kept company by an animate toy, you have a perfect twin of your new self keeping you company instead. The two of you sharing your new life and fate together eagerly.";

@@ -31,8 +31,8 @@ Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
 the sarea of Gryphon's Plot is "Outside".
 
 when play begins:
-	add Gryphon's Plot to badspots of hermaphrodite;
-	add Gryphon's Plot to badspots of furry;
+	add Gryphon's Plot to badspots of HermList;
+	add Gryphon's Plot to BadSpots of FurryList;
 
 instead of resolving a Gryphon's Plot:
 	if GryphPlotTracking is 0 or GryphPlotTracking is 1: [first time or repeat after failing to find them]
@@ -147,7 +147,7 @@ instead of resolving a Gryphon's Plot:
 			now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
-		if bodyname of Player is "Blue Gryphon Herm" and player is pure:
+		if BodyName of Player is "Blue Gryphon Herm" and player is pure:
 			say "     Being a gryphon yourself, you can't help but feel like the guys might react badly to your presence. Still, do you want to approach them?";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes, who knows? You may be wrong with your assumption";
@@ -335,7 +335,7 @@ to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
 
 
 to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
-	if bodyname of Player is not "Blue Gryphon Herm":
+	if BodyName of Player is not "Blue Gryphon Herm":
 		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. Although the gryphons are wary that you aren't one of their own, they gladly accept your help. Soon, with the combined efforts of you and your unlikely allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, looking your way with contemplating looks on their face. Then they gesture to the newly transformed soldiers, all with cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
 		LineBreak;
 		say "     [bold type]What do you want to do?[roman type][line break]";

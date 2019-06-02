@@ -63,7 +63,7 @@ The level of Introduction By Soup is 0.
 The sarea of Introduction By Soup is "Nowhere".
 
 when play begins:
-	add Introduction By Soup to badspots of guy;
+	add Introduction By Soup to BadSpots of MaleList;
 
 after going to Mall Foodcourt while (Introduction By Soup is not resolved and a random chance of 1 in 3 succeeds):
 	IntroductionBySoupEvent;
@@ -74,7 +74,7 @@ Instead of resolving Introduction By Soup:
 to IntroductionBySoupEvent:
 	say "     The activity inside of the mall's food court seems to be even greater than usual. Laughter, chatter, and just general hubbub shows just how normal life can still be despite the effects of the nanites. Feeling a little peckish, you begin to approach the counter but accidentally bump against someone's side, causing them to drop their tray of food. With a shout of surprise, steaming soup splatters over their clothes and on the floor, the plastic bowl clattering mockingly beside their feet. You begin to apologize, but upon seeing them, the words halt in your throat. Their appearance is unlike any you have seen before. Their frame is somewhat slight, though they are not completely devoid of muscles, making you wonder what gender they are. Through their t-shirt that is rapidly becoming transparent, you can see that the same green scales that cover their face are present on the rest of their body, while darker-green chitinous plates appear to be a form of natural armor in places around their chest, forearms, thighs, and shins. You realize just how much you aren't paying attention to your surroundings when you spot the wings sprouting from their back, similar to those on a praying mantis.";
 	say "     A voice interrupts you, sarcastically commenting, 'You bumped into me, yet you seem to be the one in shock. Perhaps stop staring and finish apologizing or cleaning up your mess.' You realize that the Draco-Mantis in front of you is the one who spoke, and he's looking at you expectantly from behind some spectacles, his face just as androgynous as the rest of him, with piercing blue eyes. You bashfully continue saying sorry, offering him a hand, only to be met with a rather sharp looking blade that extends from the chitinous guards on his forearm. 'Careful. I'm sure it was only an accident, soI don't need to take a pound of flesh. Also, I don't want to risk contracting ";
-	if bodyname of Player is "Human" and player is pure:
+	if BodyName of Player is "Human" and player is pure:
 		say "any infections that you've had contact with, ";
 	else:
 		say "whatever you are, ";

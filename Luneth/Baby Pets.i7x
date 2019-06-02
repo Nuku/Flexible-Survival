@@ -247,7 +247,7 @@ object	name
 skunk kit	"skunk kit"
 
 skunk kit is a pet. skunk kit is a part of the player.
-understand "Peppy" as little fox.
+understand "Peppy" as skunk kit.
 The description of the skunk kit is "[Peppydesc]".
 The weapon damage of skunk kit is 6.
 The level of skunk kit is 1.
@@ -255,7 +255,7 @@ The Dexterity of skunk kit is 13.
 The summondesc of skunk kit is "[SummonPeppy]".
 The dismissdesc of skunk kit is "[DismissPeppy]".
 The assault of skunk kit is "[one of]The little skunk viciously launches itself at your attacker![or]Turning around, the skunk sprays your attacker in the face![or]Afraid of being left alone again, the little skunk goes into a frenzy of biting![or]All of a sudden the powerful scent of skunk washes over the fight from where your little skunk kit is playing nearby.[or]Taking advantage of your foes['] distraction, the skunk nips and bites at whatever part of your opponent it can reach.[or]Your adversary pauses for a minute as the little skunk growls at it, startling it enough for you to land a hit![or]The little skunk charges in to protect you, and your opponent seems so startled at its sudden appearance it falls backwards.[or]The little skunk tries to threaten your adversary from the sidelines, and spotting the skunk your adversary recoils in fear of its smell.[at random]".
-the fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
+The fuckscene of skunk kit is "The little skunk kit you've rescued is too young and small for such perversions.".
 
 to say SummonPeppy:
 	now Peppy is nowhere;
@@ -393,9 +393,9 @@ Lost skunk kit	"Lost skunk kit"
 Lost skunk kit is a situation.
 The sarea of Lost skunk kit is "Forest".
 when play begins:
-	add Lost skunk kit to badspots of girl;
-	add Lost skunk kit to badspots of furry;
-	add Lost skunk kit to badspots of guy;
+	add Lost skunk kit to BadSpots of FemaleList;
+	add Lost skunk kit to BadSpots of FurryList;
+	add Lost skunk kit to BadSpots of MaleList;
 
 
 littlelostskunk is a number that varies.
@@ -405,7 +405,7 @@ Instead of resolving Lost skunk kit:
 		say "     Wandering through the woods, you come across what was obviously the remains of a recent combat, the ground torn and savaged, and spots of blood staining the ground, looking around you find it hard to tell exactly what happened here, but you know it was violent. You glance around to see if there is anything of use in the area, or if you can determine what the combatants were and why they fought, finding several strange boot prints and what you think might be a bullet casing, but that makes no sense... Sighing you prepare to go on about your business, when you hear a small whimpering noise from under a nearby bush. Considering the state of the area investigating could be dangerous, do you look anyways?";
 		if Player consents:
 			say "     Looking under the thorny bushy you note a small hollow dug out underneath, far too small for anyone your size to fit in, but just the right size for the shaking little skunk kit that is currently occupying it, quite possibly the offspring of one of those large skunk beasts in the area as even though it is obviously just a child, it is still almost the size of a full grown dog. Seeing you the little thing whimpers and shudders some more, and you can smell a soft whiff of skunk smell from the area, you quickly back off so as not to panic the little creature. Taking a new look at the site of the battle now that you know what to look for, you imagine something was after the skunk beasts young and it objected, somehow this one managed to hide from whatever or whoever took the rest though. You feel a bit sorry for the little skunk kit, as it obviously is all alone now, but as it seems terrified of your looks and your smell, you aren't sure what you can do to help.";
-			if bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" or bodyname of Player is "Skunkbeast Lord":
+			if BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
 				say "Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
 				if Player consents:
 					say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.";
@@ -457,7 +457,7 @@ Instead of resolving Lost skunk kit:
 			now Lost skunk kit is resolved;
 	else if littlelostskunk is 1:
 		say "     Traveling through the forest again, you realize that you are near the site of the skunks battle from earlier, curiosity getting the better of you, you decide to go see if that little skunk kit is still ok. Returning to the battle site easily enough, you note that other creatures have passed this way recently, probably looking to scavenge something as well, so you probably shouldn't stay too long. Still as you approach the little skunks hiding spot, you hear the telltale whimpering that tells you the little creature is still hanging in there. Feeling even sorrier for having left the little creature alone, you quickly check to see if you might have any way to get it to trust you better this time.";
-		if bodyname of Player is "Skunk" or bodyname of Player is "Skunk Taur" or bodyname of Player is "Skunkbeast Lord":
+		if BodyName of Player is "Skunk" or BodyName of Player is "Skunk Taur" or BodyName of Player is "Skunkbeast Lord":
 			say "     Looking down at yourself you focus on your skunk-like attributes, and wonder if just maybe if you are careful the little skunk might not be drawn to them, you try to decide if you should try drawing the little creature out again.";
 			if Player consents:
 				say "     Deciding to try again, you once more approach the little creature, this time emphasizing your skunk-like attributes, you carefully try coaxing the little kit out of its hiding spot, offering it flashes of your skunk-like body and scent until finally it nervously emerges. Sitting down within easy reach, you wait while the obviously young skunk kit inspects you carefully. Seeming to find something familiar about you, the little beast then throws itself into your lap, whimpering. Feeling oddly maternal and protective of the little creature, you stroke its smooth fur and tell it that it will be all right, checking it over for damage as you do. The lucky little skunk seems to have come through its ordeal with only a few small scratches from the thornbush, and it is mostly just scared.[line break]";

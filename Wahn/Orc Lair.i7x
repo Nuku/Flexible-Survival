@@ -33,7 +33,7 @@ Orcish Slave Raid	"Orcish Slave Raid"
 Orcish Slave Raid is a situation.
 The sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
-	add Orcish Slave Raid to badspots of guy;       [male orcs]
+	add Orcish Slave Raid to BadSpots of MaleList;       [male orcs]
 
 Instead of resolving a Orcish Slave Raid:
 	project the figure of Orc_Brothers_clothed_icon;
@@ -62,7 +62,7 @@ Instead of resolving a Orcish Slave Raid:
 			else if fightoutcome >= 30: [fled]
 				say "[RunFromOrcSlavers]";
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-				if bodyname of Player is "Orc Warrior" and player is pure and player is male:
+				if BodyName of Player is "Orc Warrior" and player is pure and player is male:
 					say "     Two down, one to go. Though as you step up to the third orc, he raises his hands consolingly. 'Wait a minute! Seems like we underestimated you and you're a real orc after all...' He pulls the bundled-up fox to his side, then says 'Look, how about you stop beating up my brothers and have some fun with this little bitch instead? Freshly caught - you'd be the first one to break him in.'";
 					LineBreak;
 					say "     [bold type]Do you accept and fuck the helpless captive right then and there, then allow them to take him away afterwards?[roman type][line break]";
@@ -389,7 +389,7 @@ Main Hall is west of Dark Hallway 1.
 The description of Main Hall is "     This is the main hall of the orc lair, where the big brutes come to chug beer, hang out, fuck and fight. All the desks in what previously was the main working area of this police station have been pushed together to form a long table in the center of the room, which is laden with food and drink - whole kegs of beer and all kinds of other stuff. Mattresses and sofas brought in from somewhere else are strewn about the room - with some of them currently in use by the twenty-odd orcs present.".
 
 instead of going West from Dark Hallway 1:
-	if bodyname of Player is "Orc Warrior" and player is pure:
+	if BodyName of Player is "Orc Warrior" and player is pure:
 		if BoghrimMet is 0:
 			say "[BoghrimSlaveDeal]";
 		else:
@@ -462,18 +462,18 @@ to say OrcLairBadEnd:
 	say "     The panting orc leader leers over your limp form and chuckles. 'Thanks for the warm up. We'll see you for round two once every one else has had their turn.' Your eyes betray a sense of both panic and excitement as more thick green cocks slide into your holes and begin fucking you again. Boghrim laughs, walking away to recover. Many hours pass and you eventually lose track of time as you are taken over and over by every orc in the hall. Slowly you come to realize what you have gotten yourself into. There are enough orcs here to fuck you again and again while the rest leave to sleep, recuperate, hunt, and go about their daily lives.";
 	WaitLineBreak;
 	say "     Days pass and you have barely slept. Your anus gapes wide open as it is worked almost constantly by massive cocks, almost never giving it the needed time to pull closed again - which you were surprised to find it actually can. Turns out that orc breeders are actually very flexible in that regard... they have to, after all, to give birth to orclings. Green skin covers your body now, which is pretty lean and fit, except the fact that your belly is bloated big from all the semen filling it. Then at one point, you suddenly feel a twitch go through your insides, almost like... a kick. So maybe it isn't just cum that keeps you bulged out like a pregnant woman, but also an orcling - or two - growing inside you. A once comfortable bed in the main hall has become your home, though now it is always soaked and slippery with orc cum. The rich, creamy fluid is all you need in terms of nourishment, slaking your thirst and the hunger to be filled again and again. Eventually your mind gives out and you forget everything you were, your mission was forgotten after the first two days of constant fucking. The only thing you know, and feel you've ever known is this place, where you are filled over and over, day after day, night after night. More time passes and your mind eventually accepts that this is all you ever will know.";
-	now tailname of Player is "Communal Orc Fucktoy";
-	now facename of Player is "Communal Orc Fucktoy";
-	now skinname of Player is "Communal Orc Fucktoy";
-	now bodyname of Player is "Communal Orc Fucktoy";
-	now cockname of Player is "Communal Orc Fucktoy";
+	now TailName of Player is "Communal Orc Fucktoy";
+	now FaceName of Player is "Communal Orc Fucktoy";
+	now SkinName of Player is "Communal Orc Fucktoy";
+	now BodyName of Player is "Communal Orc Fucktoy";
+	now CockName of Player is "Communal Orc Fucktoy";
 	now humanity of Player is 1;
 	end the story saying "Surrounded by horny orcs, being a breeder slave is your life now...";
 
-instead of going West from Dark Hallway 2 while bodyname of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
+instead of going West from Dark Hallway 2 while BodyName of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";
 
-instead of going North from Breeder Lockup A while bodyname of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
+instead of going North from Breeder Lockup A while BodyName of Player is "Orc Warrior" and player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";
 
 Table of GameRoomIDs (continued)
@@ -1054,9 +1054,9 @@ An everyturn rule:
 				say "[MulFuck1]";
 				if OrcSlaverStatus is 1:
 					now OrcSlaverStatus is 3;
-	if bodyname of Player is not "Orc Warrior" and player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance and a random chance of 1 in 3 succeeds:
+	if BodyName of Player is not "Orc Warrior" and player is in Breeder Lockup A or player is in Dark Hallway 1 or player is in Dark Hallway 2 or player is in Orc Lair Side Entrance and a random chance of 1 in 3 succeeds:
 		challenge "Orc Warrior"; [random orc]
-	else if bodyname of Player is "Orc Warrior" and player is pure and (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
+	else if BodyName of Player is "Orc Warrior" and player is pure and (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		say "[BoghrimSlaveDeal]";
 	else if (player is in Dark Hallway 1 or player is in Dark Hallway 2) and a random chance of 1 in 4 succeeds:
 		now inasituation is true;
@@ -1112,7 +1112,7 @@ to say OrcGangbang1:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if bodyname of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
+	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
 		add "MPreg" to feats of Player;
@@ -1157,7 +1157,7 @@ to say OrcGangbang2:
 	LineBreak;
 	infect "Orc Breeder";
 	infect "Orc Breeder";
-	if bodyname of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
+	if BodyName of Player is "Orc Breeder" and player is pure and player is not mpreg_ok:
 		LineBreak;
 		say "     You feel something change deep inside you, as all the cum the three orcs filled you with completes your transformation to a real orc breeder. You'll now be able to be impregnated through anal sex. The ['][bold type]MPreg[roman type]['] feat has been added to your list.";
 		add "MPreg" to feats of Player;
@@ -1210,7 +1210,7 @@ to say KoghhFuck2:
 			say "     Seems like he likes what he sees, as his cock twitches a bit and a glistening drop of precum appears at its tip. Holding his shaft out to you, the muscular orc chuckles as you immediately kneel down and eagerly slide your lips over the tip of his erect cock. Fulfilling the demands of your horny and strong master has you getting quite aroused, only helped along by the delicious and stimulating taste of his precum. Koghh lets you suck on his cock for a while, then suddenly pulls out and nods towards the sturdy leather-covered bench in the middle of the cell. 'Move over there, now!' he growls in a domineering tone that has you shivering with lust inside.";
 			WaitLineBreak;
 			say "     Quickly getting up and almost stumbling as you rush over to the bench, you're joined a moment later by your orc master, who lies down with his stomach on it. He positions himself with spread legs so his hips are just past the end of the bench, allowing his cock do dangle freely below and presenting his muscled and shapely ass to you. Looking over his shoulder, Koghh commands 'Get licking, slut!' and you of course immediately obey, kneeling behind the muscled brute. Pressing your nose against the somewhat hairy skin between his legs, you take a deep sniff of his clean, masculine smell and start lapping away at his hole. His pucker is pretty relaxed and accommodating, easily allowing you to push your tongue into his body - at which point you realize why that's the case, as you can clearly taste orc cum in his hole. While you explore his insides with your probing tongue, you idly wonder who the strong orc warrior might be having sex with and allow to fuck him.";
-			if bodyname of Player is "Orc Warrior" and cockname of Player is "Orc Warrior" and player is male:
+			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and player is male:
 				LineBreak;
 				say "     [bold type]In the horny and aroused state you're in right now, your own orc nature rears its head and pushes the idea of burying your manhood in Koghh's ass to the forefront of your mind. You've got him in a perfect position to do it - but do you really want to suppress your normal submissive urges and take the chance to fuck your master?[roman type][line break]";
 				if Player consents:
@@ -1242,7 +1242,7 @@ to say KoghhFuck2:
 			say "     Seems like he likes what he sees, as his cock twitches a bit and a glistening drop of precum appears at its tip. Holding his shaft out to you, Koghh grunts in impatience as you don't react at once, then puts a hand on your shoulder and pushes down, making you kneel. The grunted command of 'Get to work, slave' and him gripping your hair finally results in you reluctantly opening your mouth and sliding your lips over the tip of his erect cock. Suckling on the orc's cock gives you a surprisingly delicious and stimulating taste of his precum, and despite yourself you can't help but get aroused. Koghh lets you suck on his cock for a while, then suddenly pulls out and nods towards the sturdy leather-covered bench in the middle of the cell. 'Move over there, now!' he growls in a domineering tone.";
 			WaitLineBreak;
 			say "     Being roughly pulled up by your arm, you're given a push towards the sturdy leather-covered bench in the middle of the cell. Stumbling over to it, you're joined a moment later by your orc master, who lies down with his stomach on it. He positions himself with spread legs so his hips are just past the end of the bench, allowing his cock do dangle freely below and presenting his muscled and shapely ass to you. Looking over his shoulder, Koghh commands 'Get licking, slut!' and you obey after he growls 'Now! I'll get angry if you make me stand up again,' kneeling behind the muscled brute. Sniffling with your nose so close to the hairy skin of his butt, you're relieved that at least he smells clean, only of the usual masculine orc scent and nothing else. With a sigh, you start lapping away at his hole. His pucker is pretty relaxed and accommodating, easily allowing you to push your tongue into his body - at which point you realize why that's the case, as you can clearly taste orc cum in his hole. While you explore his insides with your probing tongue, you idly wonder who the strong orc warrior might be having sex with and allow to fuck him.";
-			if bodyname of Player is "Orc Warrior" and cockname of Player is "Orc Warrior" and player is male:
+			if BodyName of Player is "Orc Warrior" and CockName of Player is "Orc Warrior" and player is male:
 				LineBreak;
 				say "     [bold type]Given how horny and aroused you've gotten by now, the idea of burying your own manhood in him comes to your mind. You've got him in a perfect position to do it - do you take the chance to try fucking your 'owner'?[roman type][line break]";
 				if Player consents:
@@ -1274,7 +1274,7 @@ to say KoghhFuck2:
 to say YaturFuck1:
 	project the figure of Yatur_naked_icon;
 	say "     'My brothers Mul and Koghh are busy [one of]drinking[or]fucking some soldiers that are being passed around in the main hall[or]wrestling a minotaur[or]in a brawl[at random], so I guess I've got you all to myself right now.' He chuckles and grips the bulge in his loincloth, continuing with 'You won't forget the name Yatur after I'm done with you.' With that, he steps up to you, pulling off your gear and clothing without much restraint or care, just tossing everything aside until you're completely naked before him. His large orc hands grope you all over, roughly squeezing your ass and feeling you up. ";
-	if skinname of Player is not "Orc Breeder" and skinname of Player is not "Orc Warrior" and skinname of Player is not "Hulking Cheerleader":
+	if SkinName of Player is not "Orc Breeder" and SkinName of Player is not "Orc Warrior" and SkinName of Player is not "Hulking Cheerleader":
 		say "'Oh yes, you'll do nicely. I can't wait till you have beautiful green skin on you...'";
 	else if Player is impreg_now:
 		say "'Oh yes, you'll do nicely. I can't wait till you give birth and I can fill you up with my seed again. You're gonna be a proper little breeder and bear me lots of children...'";
@@ -1675,7 +1675,7 @@ instead of conversing the Orc Mob:
 						say "     This now leaves you alone in the wood, with a powerful feral beast in your grasp and at your mercy. In short, he's exactly what you need to impress everyone back at the orc lair. [bold type]Do you want to introduce the canine into his new role as an orcish fuckhole ([link]Y[as]y[end link]), or maybe just knock him out, leaving the beast to roam free while you go back empty handed ([link]N[as]n[end link])?[roman type][line break]";
 						if Player consents:
 							LineBreak;
-							say "     You set out with the others to find a slave, so now that you got this proud wolf subdued, of course you're gonna fuck him! Keeping him pinned down, you yank up his tail, exposing the tight tailstar waiting for you there - twitching in apprehension, which only makes this all the more delicious. He whimpers a little, then starts making some boastful threats as you let go of his muzzle to grab the furry rear of your captive. Ignoring his impotent complaints, you instead grab his tail with your other hand and press your throbbing member against his back door. The fearful whine as you penetrate him with your cockhead seems like the sweetest music to your ears. He tries to scrape himself forward, but you keep a tight grip on the alpha wolf, moaning in his ear as you sink your [cock size desc of Player] [cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";
+							say "     You set out with the others to find a slave, so now that you got this proud wolf subdued, of course you're gonna fuck him! Keeping him pinned down, you yank up his tail, exposing the tight tailstar waiting for you there - twitching in apprehension, which only makes this all the more delicious. He whimpers a little, then starts making some boastful threats as you let go of his muzzle to grab the furry rear of your captive. Ignoring his impotent complaints, you instead grab his tail with your other hand and press your throbbing member against his back door. The fearful whine as you penetrate him with your cockhead seems like the sweetest music to your ears. He tries to scrape himself forward, but you keep a tight grip on the alpha wolf, moaning in his ear as you sink your [cock size desc of Player] [Cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";
 							say "     Reaching beneath him, you find that his cock has become quite hard and is leaking precum steadily. Chuckling at this, you tease the beaten wolf about how much he clearly likes being the bitch. He growls and tries to respond that he's not a female, and not your bitch, but you just laughingly tell him that orcs usually prefer males and thrust harder into him, pressing against his prostate and making him moan. His penis throbs in your hand, releasing a large spurt of precum as his ears dip down in shame. Your cock throbs in response as well as you revel in making this dominant male submit to you. You fuck him hard until he howls in defeat, cumming a large puddle of wolf cum onto the ground from being pounded in the ass. This sends you over the edge and you cram your shaft deep inside him, cumming hard and filling him [if Ball Size of Player >= 5]to the point of overflowing [end if]with your hot load.";
 							WaitLineBreak;
 							say "     Lying on top of the wolf, your manhood still buried balls-deep inside him, you feel something happening with your captive. He groans and trembles, fur bristling as a transformation sets in - which actually feels pretty nice around your cock, almost as if his body molds itself to fit the shaft while absorbing your seed. For a moment, fear rises in you that you'll end up with just another orc breeder - which all of itself isn't so bad, other than costing you any chance at winning the 'feral round' of the slave hunt. Instead, he just seems to become 'more wolf' ...as in bigger, stronger and wilder, with his canines elongating to show as fangs even in a closed muzzle.";

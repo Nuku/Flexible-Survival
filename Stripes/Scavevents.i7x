@@ -152,13 +152,13 @@ Instead of resolving a Protected Supplies:
 			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 				next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and skinname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and SkinName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and bodyname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and BodyName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and cockname of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and CockName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of Player and facename of Player is Name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of Player and FaceName of Player is Name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
@@ -440,7 +440,7 @@ Instead of resolving a Plains Scavenging:
 	if x is 9:
 		now y is "lucky horseshoe";
 	if x is 10:
-		if guy is banned or girl is banned or furry is banned:
+		if MaleList is banned or FemaleList is banned or FurryList is banned:
 			now y is "dirty water";
 		else:
 			now y is "cow milk";
@@ -544,11 +544,11 @@ veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
 lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
-	add Garden Veggies to badspots of furry;
+	add Garden Veggies to BadSpots of FurryList;
 
 
 Instead of resolving a Garden Veggies:
-	if girl is banned and guy is banned:
+	if FemaleList is banned and MaleList is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		increase carried of food by 1;
 		now Garden Veggies is resolved;
@@ -569,15 +569,15 @@ Instead of resolving a Garden Veggies:
 	else if gardenveg is 3:
 		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
-		if guy is banned:
+		if MaleList is banned:
 			challenge "Ewe";
 		else:
 			challenge "Ram";
 		now veggiegardenfight is 0;
 		if fightoutcome >= 10 and fightoutcome <= 19:			[player victory]
-			say "     Having beaten the [if guy is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if guy is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if guy is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
+			say "     Having beaten the [if MaleList is banned]ewe[else]ram[end if], you are startled as a loud bang goes off and a chunk of the fence beside you is blown to pieces. Another sheep, a [if MaleList is banned]ram[else]ewe[end if] this time, comes out wielding a shotgun. 'Now you back away from my [if MaleList is banned]husband... er... wife[else]wife... er... husband[end if]... right now, or I won't miss next time.' You don't need to be told twice and flee the garden. You'll have to look elsewhere for food from now on.";
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player loss]
-			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if guy is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if guy is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
+			say "     As you struggle to get back up after having been beaten by the sheep, you are startled as another sheep, this time a [if MaleList is banned]ram[else]ewe[end if] comes out wielding a shotgun. Seeing the gun, you turn and flee before [if MaleList is banned]her[else]his[end if] angry mate can shoot you. You'd best not return there... for a whole bunch of reasons.";
 		else if fightoutcome >= 30:					[player fled]
 			say "     As you're making a break for it, you catch a glimpse of another sheep exiting the home, this time with a shotgun. As you push through the back gate, it goes off. 'You stay away, you veggie thief, or we'll fill you full of lead next time.'";
 		now Garden Veggies is resolved;
@@ -592,7 +592,7 @@ Free Drink	"Free Drink"
 Free Drink is a scavevent.
 The sarea of Free Drink is "Campus".
 when play begins:
-	add Free Drink to badspots of guy;
+	add Free Drink to BadSpots of MaleList;
 
 Instead of resolving a Free Drink:
 	project the figure of Talov_Kerr_Barrel_icon;
@@ -611,7 +611,7 @@ Instead of resolving a Free Drink:
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of Player is "Satyr" and player is pure and player is male:
+		if BodyName of Player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";

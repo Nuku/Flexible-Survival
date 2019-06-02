@@ -11,13 +11,13 @@ To fight:
 	now MonsterID is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
 	if "Unerring Hunter" is not listed in feats of Player: [only adds random monsters if the player isn't an unerring hunter]
-		if ( bodyname of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
+		if ( BodyName of Player is "Mental Mouse" or mousecurse is 1 ) and companion of Player is not mouse girl:	[hunted by the mouse collective]
 			if there is a name of "Mental Mouse" in the Table of Random Critters:
 				add "Mental Mouse" to PossibleEncounters;
 				if humanity of Player < 75:
 					repeat with x running from 1 to ( ( 100 - humanity of Player ) / 25 ):
 						add "Mental Mouse" to PossibleEncounters;
-		if insectlarva is true and larvaegg is 1 and gestation of child is 0: [hunted by wasp hive anywhere outdoors]
+		if insectlarva is true and larvaegg is 1 and gestation of Child is 0: [hunted by wasp hive anywhere outdoors]
 			if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
 				if there is a name of "Black Wasp" in the Table of Random Critters:
 					add "Black Wasp" to PossibleEncounters;
@@ -49,11 +49,11 @@ To fight:
 			if skipit is 1, next;
 			add Name entry to PossibleEncounters;
 			if "Like Attracts Like" is listed in the feats of Player:
-				if bodyname of Player is Name entry, add Name entry to PossibleEncounters;
-				if facename of Player is Name entry, add Name entry to PossibleEncounters;
-				if skinname of Player is Name entry, add Name entry to PossibleEncounters;
-				if tailname of Player is Name entry, add Name entry to PossibleEncounters;
-				if cockname of Player is Name entry, add Name entry to PossibleEncounters;
+				if BodyName of Player is Name entry, add Name entry to PossibleEncounters;
+				if FaceName of Player is Name entry, add Name entry to PossibleEncounters;
+				if SkinName of Player is Name entry, add Name entry to PossibleEncounters;
+				if TailName of Player is Name entry, add Name entry to PossibleEncounters;
+				if CockName of Player is Name entry, add Name entry to PossibleEncounters;
 	if the number of entries in PossibleEncounters is 0 and debugactive is 1:
 		say "     DEBUG: No Possible Monsters Found![line break]";
 	if the number of entries in PossibleEncounters is not 0:

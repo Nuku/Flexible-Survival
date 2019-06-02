@@ -28,7 +28,7 @@ Daily Training Session is inactive.
 The sarea of Daily Training Session is "Campus".
 
 when play begins:
-	add Daily Training Session to badspots of guy;
+	add Daily Training Session to BadSpots of MaleList;
 
 instead of going to Athletic Street while (Daily Training Session is active and Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
@@ -60,7 +60,7 @@ History Class Lesson is inactive.
 The sarea of History Class Lesson is "Campus".
 
 when play begins:
-	add History Class Lesson to badspots of guy;
+	add History Class Lesson to BadSpots of MaleList;
 
 instead of going to Lecture Street while (History Class Lesson is active and History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to Lecture Street;
@@ -90,7 +90,7 @@ Private Masturbation is inactive.
 The sarea of Private Masturbation is "Campus".
 
 when play begins:
-	add Private Masturbation to badspots of guy;
+	add Private Masturbation to BadSpots of MaleList;
 
 instead of going to Tenvale College Library while (Private Masturbation is active and Private Masturbation is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Library;
@@ -157,7 +157,7 @@ History Video is inactive.
 The sarea of History Video is "Campus".
 
 when play begins:
-	add History Video to badspots of guy;
+	add History Video to BadSpots of MaleList;
 
 instead of going to Tenvale College Male Dorms while (History Video is active and History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Male Dorms;
@@ -356,7 +356,7 @@ to say PericlesSexMenu:
 	clear the screen and hyperlink list;
 
 to say PericlesSex1:
-	if bodyname of Player is "Helot" and facename of Player is "Helot":
+	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
 		say "     Getting an idea of what you want to do to the Spartan-Helot, you make your way to behind him and wrap one of your arms around the guy to reach for his crotch. However, before you can you're shoved up against the wall by the window. 'It looks like somebody is getting ideas above their station,' Pericles says gruffly, reaching his hand instead to squeeze at your ass. Your face blushes red and you look down submissively, your Helot infection causing you to defer dominance to this male. Though, you know it's because he is the originator of the Helots and Spartans but that information doesn't help you at all mentally. You are quickly snapped out of this thought process when Pericles harshly spanks your ass, causing you to let out a gasp. 'You've been playing around with my soldiers... haven't you?' The question is more of a statement than anything else. Nevertheless you nod your head, confirming it to the alpha male in front of you.";
 		say "     Pericles gives you a calculating look before he nods to himself with a smirk. 'Slave, strip and lay on my bed, back first. That is a direct order,' the Spartan-Helot orders you, sending shivers down your spine as you promptly obey. You quickly deprive yourself of clothing, letting it pool on the floor, moving onto the bed soon after. Once you're in position, you see the buff male looking up and down at your body in desire. A few seconds later he then too drops everything he's wearing, letting you once more look upon his glory. Pericles['] cock is already rock hard but he pays no mind to it as he walks over to the bedside drawer, which he opens and pulls out a bottle of lube. Popping it open the Spartan-Helot moves on over to you and pours some of it onto his hand before reaching for your hole, slipping a finger in right away, making you let out a gasp at the cool sensation.";
 		WaitLineBreak;
@@ -377,7 +377,7 @@ to say PericlesSex1:
 	now lastfuck of Pericles is turns;
 
 to say PericlesSex2:
-	if bodyname of Player is "Helot" and facename of Player is "Helot":
+	if BodyName of Player is "Helot Manservant" and FaceName of Player is "Helot Manservant":
 		say "     Having an idea of what you want to do, you make your way over to Pericles, who appears to sense you coming up behind him. Upon seeing your lust-filled look his facial expression changes into one that you recognize, if only barely, from the Spartan-Helot's drills with his soldiers. 'Ah, the slave seems to want something, don't you?' he asks, the male's eyes filled with a heat that sends shivers down your spine. You nod half-mindedly, a smirk coming to the leader's face as it then turns to a stern look. 'On your knees then, helot!' he orders firmly '. Not even thinking of disobeying, you immediately sink to the floor, now face first with his clothed crotch. 'Is this what you desired, slut?' he questions, pulling your head closer to your prize. You mumble out a sound of agreement as you nuzzle your face closer to the warmth, inhaling the scent from behind his pants, the musk making your head light.";
 		say "     'Now unbutton them, slave,' he orders you firmly, you promptly obeying, reaching up with your hand, something that he saps away. 'With your mouth.' You nod at him before bringing your teeth to the button of his pants. You bite at the cloth and then tug at them, mentally thanking whatever power there is when it comes undone. Moving down you bring your teeth to his zipper which you promptly drag down, revealing his jock strap underneath. You nuzzle the cloth cupping his crotch, licking at it softly, enjoying the taste that you can gather from it. This action appears to make Pericles moan softly, showing that he enjoys what you're doing, though it was already obvious by his hardening cock from behind the underwear. Soon after, without him even saying, you use your teeth to pull down his jock strap, freeing his dick and making it slap you in the face, leaving a bit of precum on your cheek.";
 		WaitLineBreak;

@@ -18,18 +18,18 @@ to say wolfherm attack:
 	else:
 		if wolfhermdefeat is 0: [first time losing to wolf herm]
 			if Player is herm:
-				say "     The Painted Wolf Herm chuckles, the creature rolling hir hips as shi strolls forward, showing the graceful curves of hir figure and the huge throbbing dick between hir legs. With a pleasant chuckle, hir hands tear into your clothing, stripping you nude before holding you upside down. After looking your [bodydesc of Player] form over, shi spins around over you and gets onto all fours, taking your full length into hir mouth and fellating you quite skillfully. Hir nose crushed to your groin, shi drags hir tongue along your thick, meaty length and nibbles at your plump testicles until a cry of pleasure opens your mouth wide. The motion presents the Painted Wolf Herm with an undeniable opportunity. The creature thrusts hir cock forward and into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating your now stretched wide mouth as shi cries out in hir own pleasure, slowly locking hir knot behind your lips as hir own mouth suckles on your [cock of Player] cock like a blowjob queen.";
+				say "     The Painted Wolf Herm chuckles, the creature rolling hir hips as shi strolls forward, showing the graceful curves of hir figure and the huge throbbing dick between hir legs. With a pleasant chuckle, hir hands tear into your clothing, stripping you nude before holding you upside down. After looking your [bodydesc of Player] form over, shi spins around over you and gets onto all fours, taking your full length into hir mouth and fellating you quite skillfully. Hir nose crushed to your groin, shi drags hir tongue along your thick, meaty length and nibbles at your plump testicles until a cry of pleasure opens your mouth wide. The motion presents the Painted Wolf Herm with an undeniable opportunity. The creature thrusts hir cock forward and into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating your now stretched wide mouth as shi cries out in hir own pleasure, slowly locking hir knot behind your lips as hir own mouth suckles on your [Cock of Player] cock like a blowjob queen.";
 				say "     You feel hir dip a furred paw down lower and brush across your clit. Hir paw begins to quickly slide a digit across your little button and you feel hir cock begin to bulge in your mouth. A massive load of wolf seed begins squirting directly down your throat, deep into your [bodytype of Player] belly. Hir ministrations on your own body push you over the edge and shi brings you to orgasm, your cock spatters your virile spunk against the back of hir throat as your cunt gushes sweet nectar out across the ground. Shi stands up and turns around, licking you once on the cheek before walking away licking hir paws clean of your juices.";
 			else if Player is male:
 				say "     The Painted Wolf Herm chuckles, the creature rolling hir hips as shi strolls forward, showing the graceful curves of hir figure and the huge throbbing dick between hir legs. With a pleasant chuckle, hir hands tear into your clothing, stripping you nude before holding you upside down. After looking your [bodydesc of Player] form over, shi spins around over you and gets onto all fours, taking your full length into hir mouth and fellating you quite skillfully.";
-				say "     Hir nose crushed to your groin, shi drags hir tongue along your thick, meaty length and nibbles at your plump testicles until a cry of pleasure opens your mouth wide. The motion presents the Painted Wolf Herm with an undeniable opportunity, the creature thrusts hir cock forward and into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating that open mouth as shi cries out in pleasure, slowly locking hir knot behind those lips as hir own mouth suckles on your [cock of Player] cock like a blowjob queen. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you likewise spill your seed into hirs. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you cry out and drench the creature's muzzle in juice.";
+				say "     Hir nose crushed to your groin, shi drags hir tongue along your thick, meaty length and nibbles at your plump testicles until a cry of pleasure opens your mouth wide. The motion presents the Painted Wolf Herm with an undeniable opportunity, the creature thrusts hir cock forward and into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating that open mouth as shi cries out in pleasure, slowly locking hir knot behind those lips as hir own mouth suckles on your [Cock of Player] cock like a blowjob queen. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you likewise spill your seed into hirs. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you cry out and drench the creature's muzzle in juice.";
 			else:
 				say "     The Painted Wolf Herm chuckles, the creature rolling hir hips as shi strolls forward, showing the graceful curves of hir figure and the huge throbbing dick between hir legs. With a pleasant chuckle, hir hands tear into your clothing, stripping you nude before holding you upside down. After looking your [bodydesc of Player] form over, shi spins around over you and gets onto all fours. Burying hir nose in your snatch, the Painted Wolf Herm drags hir tongue along your damp, painfully moist slit until, with a cry of pleasure, your mouth opens wide. The motion presents the Painted Wolf Herm with an undeniable opportunity, the creature thrusting hir cock forward into your open maw. With a loud, lewd moan, the Painted Wolf Herm thrusts over and over again, penetrating your open mouth as shi cries out in pleasure, slowly stretching your lips wide with hir nose. With a final violent shudder, the Painted Wolf Herm cries out in pleasure, dumping a thick, rich splattering of semen inside your maw as you cry out and drench the creature's muzzle in juice.";
 			now wolfhermdefeat is 1;
 		else:
 			if a random chance of 1 in 5 succeeds: [Chance for a submissive footjob!]
 				if Player is male:
-					say "     Shi saunters over to you as you are lying on the ground with an evil gleam in hir eyes. Gesturing for you to remove your clothes, shi walks over to a nearby stream and dips both of hir footpaws in for a moment, scrubbing them clean. You lie on the ground and await hir next move with a questioning look in your eyes. One of hir paws begins to trail up your leg and as realization dawns on you, shi grins and pushes hir paw against your still soft cock, starting to stroke up and down its length with it squeezed between two of hir toes. A moan escapes your lips as your [cock of Player] shaft begins to throb, gaining length and swelling to its full size between hir toes[if Cock Length of Player > 12]. Shi takes it and maneuvers it to rest against your belly, pointing your sizable length to point right at your face[end if]. Hir paw begins to slide quickly across your length, aided by your copious leaking of pre-cum. Shi doesn't slow down or give you a chance to protest as hir grips on your [cock size desc of Player] cock tightens and your shaft begins to swell to disgorge its plentiful load. Something feels wrong though. Shi's pressed hir heel down at the base of your cock denying you release! You begin to moan and beg hir to move hir footpaw and let you cum and after an agonizing minute of denial shi finally lets the pressure up[if Cock Length of Player > 12]. Shi keeps your [cock of Player] cock pointed at your face as you experience a massively powerful orgasm. You shoot of several more spurts of cum than usual and end up with your entire face covered in your own seed[else]. Shi works her paws over your cock, splattering your seed across her feet and your crotch[end if]. Shi giggles and lies down on top of you, hir tongue darting out and starting to clean up your mess for you. Once all the cum is gone, you open your eyes to hir walking away and waving at you.";
+					say "     Shi saunters over to you as you are lying on the ground with an evil gleam in hir eyes. Gesturing for you to remove your clothes, shi walks over to a nearby stream and dips both of hir footpaws in for a moment, scrubbing them clean. You lie on the ground and await hir next move with a questioning look in your eyes. One of hir paws begins to trail up your leg and as realization dawns on you, shi grins and pushes hir paw against your still soft cock, starting to stroke up and down its length with it squeezed between two of hir toes. A moan escapes your lips as your [Cock of Player] shaft begins to throb, gaining length and swelling to its full size between hir toes[if Cock Length of Player > 12]. Shi takes it and maneuvers it to rest against your belly, pointing your sizable length to point right at your face[end if]. Hir paw begins to slide quickly across your length, aided by your copious leaking of pre-cum. Shi doesn't slow down or give you a chance to protest as hir grips on your [cock size desc of Player] cock tightens and your shaft begins to swell to disgorge its plentiful load. Something feels wrong though. Shi's pressed hir heel down at the base of your cock denying you release! You begin to moan and beg hir to move hir footpaw and let you cum and after an agonizing minute of denial shi finally lets the pressure up[if Cock Length of Player > 12]. Shi keeps your [Cock of Player] cock pointed at your face as you experience a massively powerful orgasm. You shoot of several more spurts of cum than usual and end up with your entire face covered in your own seed[else]. Shi works her paws over your cock, splattering your seed across her feet and your crotch[end if]. Shi giggles and lies down on top of you, hir tongue darting out and starting to clean up your mess for you. Once all the cum is gone, you open your eyes to hir walking away and waving at you.";
 				else if Player is female:
 					say "     Shi saunters over to you as you are lying on the ground with an evil gleam in hir eyes. Gesturing for you to remove your clothes shi walks over to a nearby stream and dips both of hir footpaws in for a moment, scrubbing them clean. You lie on the ground and await hir next move with a questioning look in your eyes. One of hir paws begins to trail up your leg and as realization dawns on you shi grins and pushes hir paw against the top of your moistened slit. Hir heel presses into your clit and shi slides it back and forth several times before repositioning hir foot so hir toes are on sitting right over your sensitive love button. Shi giggles and begins to slide hir foot back, slowly at first but picking up speed quite rapidly. You feel each digit slide over your clit very lightly and the sensation begins to drive you crazy, your [bodytype of Player] body writhes against hir foot as your moans beg hir to push you further. Shi begins to stroke hirself and you can tell that the wolf isn't far from hir own orgasm. Hir foot begins to dig almost painfully into you, but your orgasm is so close you ignore the pain and focus on the pleasure. Before your eyes begin to roll back into your head, you see hir knot swell and shi howls as hir cock starts to shoot its creamy load over your [bodydesc of Player] body as your snatch drenches the ground under you with your delicious nectar. Shi doesn't stop hir foot and you soon pass out from the overload of pleasure. When you come to, shi is nowhere to be found!";
 			else:
@@ -45,7 +45,7 @@ to say beatpwh:
 		say "     Looking over the wild wolf herm's painted body, you feel a lustful urge to have sex with hir. As your eyes roam over hir sexy body, hir arousing scent makes you eye hir cock and pussy longingly. Shall you give in to those urges completely and have sex with the lupine herm or hold back and sate your lusts orally? (Y=sex, N=oral)";
 		if Player consents:
 			if Player is male:
-				say "     You press hir onto hir back and slide your hard cock under hir balls, getting it lined up with hir wet slit. The shi-wolf howls in delight as you sink your [cock size desc of Player] cock into hir wet cunt. Shi does not resist your mounting hir and squeezes hir paws over your hands as you start fondling hir four large breasts. Hir black nipples are plump and hard and you find yourself playing with them eagerly. As your arousal builds as hir scent gets thicker, you are drawn to lean in and licks those nipples, then start nursing from them. You taste hir milk leaking onto your tongue and you drink it down thirstily, feeling it warm your [bodytype of Player] belly. The mottled wolf moves hir paws, bringing one to stroke your head as you nurse from hir as the other grabs your rear. Hir paws urge you to keep nursing and thrusting, not that you need any encouragement for either. As you satisfy your thirst on hir milk, you drive your [cock of Player] cock into hir and blast your thick cum into hir ready womb.";
+				say "     You press hir onto hir back and slide your hard cock under hir balls, getting it lined up with hir wet slit. The shi-wolf howls in delight as you sink your [cock size desc of Player] cock into hir wet cunt. Shi does not resist your mounting hir and squeezes hir paws over your hands as you start fondling hir four large breasts. Hir black nipples are plump and hard and you find yourself playing with them eagerly. As your arousal builds as hir scent gets thicker, you are drawn to lean in and licks those nipples, then start nursing from them. You taste hir milk leaking onto your tongue and you drink it down thirstily, feeling it warm your [bodytype of Player] belly. The mottled wolf moves hir paws, bringing one to stroke your head as you nurse from hir as the other grabs your rear. Hir paws urge you to keep nursing and thrusting, not that you need any encouragement for either. As you satisfy your thirst on hir milk, you drive your [Cock of Player] cock into hir and blast your thick cum into hir ready womb.";
 				if Player is female:
 					say "     Lost in the lust of hir arousing milk, you don't protest as shi rolls you over and lines up hir throbbing cock with your pussy and mounts you. Hir throbbing, lupine meat sinks into you, spreading your wet folds open around hir animalistic penis. Shi growls softly and drives hirself fully into you, tying with you before unleashing hir lupine seed deep inside you. You moan loudly, drifting into a lustful haze. When you finally recover, shi has gone, leaving you with a warm, full feeling deep inside.[impregchance]";
 					infect "Painted Wolf Herm";
@@ -79,16 +79,26 @@ to say beatpwh:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "Painted Wolf"; [name of the overall species of the infection, used for children, ...]
+	add "Painted Wolf Herm" to infections of CanineList;
+	add "Painted Wolf Herm" to infections of FurryList;
+	add "Painted Wolf Herm" to infections of NatureList;
+	add "Painted Wolf Herm" to infections of MaleList;
+	add "Painted Wolf Herm" to infections of TaperedCockList;
+	add "Painted Wolf Herm" to infections of KnottedCockList;
+	add "Painted Wolf Herm" to infections of SheathedCockList;
+	add "Painted Wolf Herm" to infections of BipedalList;
+	add "Painted Wolf Herm" to infections of TailList;
 	now Name entry is "Painted Wolf Herm"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The painted wolf herm [one of]gouges you with hir claws, leaving streaks of blood across your skin[or]leaps at you, catching your arm in hir mouth. Shi bites down hard, leaving a muzzle-shaped wound[or]howls, causing you to tremble in fear for a moment before you regain your resolve[at random]."; [Text used when the monster makes an Attack]
 	now defeated entry is "[beatpwh]"; [Text used when player wins, can be directly entered like combat text or description. If it is more complex it can be linked with a 'To say' block as the demonstration text shows.]
 	now victory entry is "[wolfherm attack]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To say' block as the demonstration text shows.]
@@ -138,11 +148,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -150,7 +161,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -158,20 +169,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -192,26 +203,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -227,18 +238,18 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 when play ends:
-	if bodyname of Player is "Painted Wolf Herm":
+	if BodyName of Player is "Painted Wolf Herm":
 		if humanity of Player < 10:
 			if Player is female:
 				say "     Falling prey to the infection, you wander off into the park to sate your lusts. You are drawn there by a faint scent that grows as you track your target. Finding the hermaphrodite wolf before you is releasing that rich blend of masculine and feminine scents, you approach her quickly, moaning with need. You bend over for hir, displaying your own lovely attributes to hir. Shi takes hir time teasing you, caressing your [if Player is male]throbbing cock and [end if]dripping cunt. You are reduced to moaning, needful yips at all the unsatisfying attention to your genitals.";

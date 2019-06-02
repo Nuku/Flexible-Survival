@@ -8,10 +8,6 @@ Section 1 - Creature Responses
 
 incubusnosex is a number that varies.
 
-when play begins:
-	add { "Incubus" } to infections of guy;
-	add { "Incubus" } to infections of hellspawn;
-
 to say incubusdesc:
 	setmongender 3; [creature is male]
 	say "     You are confronted by a person who moves to block your path. At first, you could almost mistake him for a handsome man, were it not for some extra features which confirm a more sinister nature. Atop his lovely face are a pair of small, red horns and his amber eyes have a hint of an unearthly glow to them. On his back, there is a pair of large bat-like wings in a dark red color. Finally, from the end of his spine extends a long, slender tail ending in a spaded tip. His physique is well-toned and his [one of]cream[or]pink[or]tan[or]chocolate[at random] skin is smooth and without blemish despite the mess of the surrounding city. The man's body is beautifully muscled, but not massively so, looking like a statue of Adonis come to life.";
@@ -19,7 +15,7 @@ to say incubusdesc:
 
 to say losetoincubus:
 	now incubusnosex is 0;
-	if bodyname of Player is "Incubus" or bodyname of Player is "Succubus":
+	if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 		if Player is female:
 			say "     Unwilling or unable to continue resisting the infernal temptation that the incubus provides, you give your body up to him. Stepping up to you, he runs his hands over your face and shoulders, lightly caressing you. 'Mmm... I see that you've already begun to accept our infernal gifts and give in to your lustful nature. Good.' He guides you onto all fours and lets his tail slide across your body, sending shivers of delight through your tainted flesh.";
 			say "     The incubus moves atop you after pushing down his tight leather pants, rubbing his throbbing cock between your cheeks, leaking precum steadily. You can't help but moan as his tail continues to sensually tease you as he lets his glans brush across your anus before continuing on down to your wet slit. It slides against your folds teasingly, making you beg for him to fuck you. He grins at this and slides his tongue across your cheek, then nibbles your ear. 'Certainly, my dear. Let's make some hellspawn.' With that, he thrusts into you.";
@@ -62,14 +58,14 @@ to say losetoincubus:
 		say "     The pleasure you feel as his large, perfect cock pushes into you is one of utter, sinful delight. He fucks you hard and fast, rocking his hips and pumping his shaft into you. His hands roam over your body, joining his tail in teasing against your flesh. It is only the soft sound of the beating of his wings that tells you how he's supporting himself so easily atop you. His body, penis, fingers, tongue, mouth and tail all move with the practiced ease of one who's spent countless ages exploring sexual pleasure and loving every moment of it. You cannot help but moan and push back into his thrusts as he buggers you, your asshole practically milking at his cock with lustful need.";
 		say "     Finally, after what feels like hours of sinful fucking, he drives his shaft fully into you and unleashes his hot seed, pouring his tainted load into your bowels[if Cock Count of Player is 1]. Your balls tighten and your cock throbs as he pumps it, spraying your semen onto his waiting hand before bringing it forward for you both to lustfully lap up[else if Player is male]. He pumps at your cocks, playfully stroking each to orgasm in turn while his other hand waits to catch the load. Each sticky handful of cum is brought forward for you both to lustfully lap up[end if]. His large balls slap against your thighs as he drains them his infernal seed into you. Spent, he gives you a tongue-filled kiss and a final grope before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time.[impregchance]";
 	if Libido of Player > 80, now Libido of Player is 80;
-	if "Female Preferred" is listed in feats of Player and girl is not banned:
+	if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 		infect "Succubus";
 	else:
 		infect "Incubus";
 
 
 to say beattheincubus:
-	if bodyname of Player is "Incubus" or bodyname of Player is "Succubus":
+	if BodyName of Player is "Incubus" or BodyName of Player is "Succubus":
 		if Player is male:
 			say "     'Well done, my infernal sibling,' the incubus says with a smile as he bows in submission to you. 'You are definitely the more powerful seducer,' he acknowledges with another, lower bow and you can't help but smile, feeling strangely at ease now that the combat is over. 'Shall you claim your prize?' he says with a grin, turning around and getting onto all fours. His tail arches up and his shapely, bubble butt is offered to you. You are quite tempted by the sight, eager to give him the good, hard fucking he would have given you.";
 			say "     [bold type]Shall you?[roman type][line break]";
@@ -81,7 +77,7 @@ to say beattheincubus:
 				say "     You move atop him eagerly, bringing your throbbing cock to his dark pucker. He moans lustfully and pushes back, spearing himself onto your [cock size desc of Player] shaft with the ease of one who's been taken by the erections of numerous demonic creatures before. The feel of his gripping, squeezing walls around your cock is exquisite, filling you with such sinful pleasure at buggering that hot hole. His anus is like a hot vice around your shaft and almost seems to suck on it with its lustful need for your seed. You let your hand roam over his muscled body, then move it down to stroke over that perfect cock of his.";
 				say "     When you finally cum, painting his inner walls with your semen, he cums as well with a loud cry of sexual pleasure. He holds a cupped hand into the spurting blasts, gathering a palmful of his tainted load. He laps up some of it and, when he offers you some as well, you are too lost in your lustful pleasure to even consider refusing. You lap up the rest and even suck his fingers clean. After withdrawing, you both rise and he gives you a passionate French kiss while running his hands over your body. 'I look forward to you joining our ranks more fully so we may continue to share in the pleasures of the flesh,' he whispers while nibbling your ear before heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. You watch him go while his tainted seed sends warm tingles through your body.";
 				if Libido of Player > 80, now Libido of Player is 80;
-				if "Female Preferred" is listed in feats of Player and girl is not banned:
+				if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 					infect "Succubus";
 				else:
 					infect "Incubus";
@@ -106,7 +102,7 @@ to say beattheincubus:
 			else:
 				say "     As the great blow job continues, you enjoy the moans of the incubus sucking you off. As he performs a particularly pleasurable bit of tonguework that has you panting and moaning, he grabs your balls with a warm, sticky hand and rubs them firmly. This soon has you over the edge and shooting your hot seed into the demonic boytoy's mouth to feed his dark lusts. He licks and sucks your cock clean, then nibbles on your balls lightly.";
 				say "     'Mmm... that was most enjoyable. Do you see how much better it could be now if you just give in and accept the pleasures of the flesh?' he says with a grin as he rises with ease. He makes a show of licking his lips before turning and heading off in nimble leaps across the rubble, using flaps of his large wings to assist his progress from time to time. It is not until he's gone that you notice the warm, wet feeling on your ballsack and look down to see the puddle of incubus cum with a hand streak through it.";
-			if "Female Preferred" is listed in feats of Player and girl is not banned:
+			if "Female Preferred" is listed in feats of Player and FemaleList is not banned:
 				infect "Succubus";
 			else:
 				infect "Incubus";
@@ -120,7 +116,7 @@ to say beattheincubus:
 to say incubus fight:
 	say "[one of]The incubus zips up beside you incredibly quickly, pressing his throbbing shaft against you as his hands teasingly play across your body, making you strongly consider just giving in to him![or]The incubus lands a one-two combo of punches that strike with unnatural might![or]The incubus does an acrobatic flip back and stretches his body in a sensual display, making you long for its sinful pleasures![or]The demonic creature grabs your wrists and stares deep into your eyes. His eyes seem to glow and your will to keep resisting wavers![or]The incubus weaves in close to you and presses his body to yours. As he gropes you, his tongue slides along your neck and up to your ear, which he gives a playful nibble![or]The demonic seducer spins, slapping his tail across your ass, then rubs it teasingly against your sore bottom before pulling it away again![at random]";
 	increase Libido of Player by a random number from 3 to 8;
-	if bodyname of Player is "Succubus" or bodyname of Player is "Incubus", increase Libido of Player by a random number between 1 and 2;
+	if BodyName of Player is "Succubus" or BodyName of Player is "Incubus", increase Libido of Player by a random number between 1 and 2;
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by 1;
 	if Libido of Player >= 110:
@@ -130,16 +126,22 @@ to say incubus fight:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Incubus" to infections of DemonList;
+	add "Incubus" to infections of OtherworldlyList;
+	add "Incubus" to infections of MaleList;
+	add "Incubus" to infections of BipedalList;
+	add "Incubus" to infections of TailList;
 	now Name entry is "Incubus"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[incubus fight]"; [ Successful attack message ]
 	now defeated entry is "[beattheincubus]"; [ Text when monster loses. ]
 	now victory entry is "[losetoincubus]"; [ Text when monster wins. ]
@@ -173,7 +175,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping] [ Width of female sex the infection will try to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 80; [ Target libido the infection will rise towards. ]
 	now loot entry is "libido pill"; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 30; [ Percentage chance of dropping loot, from 0-100. ]
@@ -189,11 +191,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -201,7 +204,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -209,20 +212,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -243,26 +246,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -278,11 +281,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -292,7 +295,7 @@ When Play begins:
 [Numerous other examples can be found in existing creature files.]
 
 when play ends:
-	if bodyname of Player is "Incubus":
+	if BodyName of Player is "Incubus":
 		if Player is pure and graphics is true, project the figure of Incubus_clothed_icon;
 		if humanity of Player < 10:
 			if Player is herm:

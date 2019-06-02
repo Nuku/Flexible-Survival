@@ -152,8 +152,8 @@ Rubber tigerchase	"Rubber tigerchase"
 Rubber tigerchase is a situation. The level of Rubber tigerchase is 6.
 The sarea of Rubber tigerchase is "Fair".
 when play begins:
-	add Rubber tigerchase to badspots of girl;
-	add Rubber tigerchase to badspots of furry;
+	add Rubber tigerchase to BadSpots of FemaleList;
+	add Rubber tigerchase to BadSpots of FurryList;
 
 Instead of Resolving a Rubber tigerchase:
 	say "     Wandering through the cheerful midway of the fair, you spot one of those rubber tigresses hanging around doing something at one of the prize booths, unfortunately it seems to spot you at the same time. Somewhat unusually for one of the rubber beasts, it squeaks and flees down towards one of the nearby buildings, do you give chase?";
@@ -178,9 +178,9 @@ Lion Modifying is a situation.
 The sarea of Lion Modifying is "Fair".
 [ Quest requires all three ]
 when play begins:
-	add Lion Modifying to badspots of guy;
-	add Lion Modifying to badspots of girl;
-	add Lion Modifying to badspots of furry;
+	add Lion Modifying to BadSpots of MaleList;
+	add Lion Modifying to BadSpots of FemaleList;
+	add Lion Modifying to BadSpots of FurryList;
 
 Instead of Resolving a Lion Modifying:
 	if borisquest is 0:
@@ -214,9 +214,9 @@ Locked Lockers is a situation. The level of Locked Lockers is 6.
 The sarea of Locked lockers is "Fair".
 [ Quest requires all three ]
 when play begins:
-	add Locked Lockers to badspots of guy;
-	add Locked Lockers to badspots of girl;
-	add Locked Lockers to badspots of furry;
+	add Locked Lockers to BadSpots of MaleList;
+	add Locked Lockers to BadSpots of FemaleList;
+	add Locked Lockers to BadSpots of FurryList;
 
 Instead of Resolving a Locked Lockers:
 	if Christyquest is 0:

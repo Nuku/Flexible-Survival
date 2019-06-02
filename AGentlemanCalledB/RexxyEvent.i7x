@@ -33,9 +33,9 @@ Forced Adoption is a situation.
 
 The sarea of Forced Adoption is "High".
 when play begins:
-	add Forced Adoption to badspots of guy;
-	add Forced Adoption to badspots of girl;
-	add Forced Adoption to badspots of furry;
+	add Forced Adoption to BadSpots of MaleList;
+	add Forced Adoption to BadSpots of FemaleList;
+	add Forced Adoption to BadSpots of FurryList;
 
 Instead of Resolving a Forced Adoption:
 	if HP of Rex is 0:
@@ -83,14 +83,14 @@ bonelust is a number that varies. [tracks time without using bone or fucking Rex
 
 Dog Bone is a grab object.
 Dog Bone has a usedesc "[DogBoneUse]".
-Dog Bone is infectious. The strain of Dog Bone is "retriever". It is not temporary.
+Dog Bone is infectious. The strain of Dog Bone is "Retriever Female". It is not temporary.
 
 the scent of Dog Bone is "The bone-shaped doggie dildo smells strongly of canine sex, much like the bitch you acquired it from.".
 
 To say DogBoneUse:
 	if HP of Rex is 1:
 		say "[DogBoneScene1]";
-		infect "Retriever";
+		infect "Retriever Female";
 		decrease humanity of Player by 3;
 		now HP of Rex is 2;
 	else if HP of Rex is 2:
@@ -98,7 +98,7 @@ To say DogBoneUse:
 			say "[DogBoneScene2f]";
 		else:
 			say "[DogBoneScene2m]";
-		infect "Retriever";
+		infect "Retriever Female";
 		decrease humanity of Player by 3;
 		now HP of Rex is 3;
 	else if HP of Rex is 3:
@@ -115,7 +115,7 @@ To say DogBoneUse:
 			say "[DogBoneScene4f]";
 		else:
 			say "[DogBoneScene4m]";
-		infect "Retriever";
+		infect "Retriever Female";
 		now bonelust is 1;
 		decrease humanity of Player by 4;
 
@@ -172,7 +172,7 @@ Carry out Treatbegging:
 	say "     Unable to deny your hunger for the bone-shaped treats any longer, you quickly find yourself on all fours in front of Rex, whimpering and begging for one of the small cookies. He smiles intently as he pulls one of the treats from the jar, telling you to sit like a good doggy. As you sit patiently in front of him, Rex reaches out and places the treat on the end of your nose, the delicious scent of it making your mouth water even more. When Rex finally signals you to eat the treat, you drop it to the floor and pounce on it instantly, eating the entire thing in one bite. As you lick the final crumbs from your chops, you begin to think how much you'd like another, even as you realize how much of yourself you are losing to the happy retriever sexpet Rex is training you to be.";
 	decrease hunger of Player by 10;
 	if hunger of Player < 0, now hunger of Player is 0;
-	infect "Retriever";
+	infect "Retriever Female";
 	decrease humanity of Player by a random number between 4 and 8;
 
 the scent of Rex's Place is "The air here is thick with the scent of canine heat and sex. You find the powerful musk of the large male lounging on a couch in the back especially arousing, thoughts of pleasing him like a proper pet drifting into your mind as he eyes you intently.".
@@ -214,7 +214,7 @@ Virgin of Rex is true.
 AnalVirgin of Rex is true.
 PenileVirgin of Rex is false.
 SexuallyExperienced of Rex is true.
-MainInfection of Rex is "Retriever".
+MainInfection of Rex is "Retriever Female".
 The description of Rex is "[Rexdescribing]".
 The conversation of Rex is { "rextalk" }.
 
@@ -231,7 +231,7 @@ instead of conversing the Rex:
 			say "     With a knowing grin you reach into your backpack, digging out the bag of treats you retrieved from the bakery. Rex begins panting heavily as you pull the brown paper bag out, even drooling a bit from the corner of his mouth. 'My lovely stray bringing ME a treat? And how did you know these were my favorite?' Rex asks happily as you drop the bag into his waiting paws. With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into a few small piles, pushing one towards Karen, who barks happily in response before digging in. Next he offers one pile to you, which you politely refuse, despite a strong desire to enjoy the share he's offering you. With a confused smirk and a shrug, Rex combines your pile with his own before he begins eating. With the two retrievers seemingly distracted by your gift, you slowly begin creeping around the room, carefully approaching your prize sitting on a side table near Rex's favorite seat. Soon the bone is within your grasp again, and you reach out to take it, only to stop just short when you hear a low growl behind you. Slowly turning around, you find yourself face to face with Rex. Apparently your little distraction wasn't enough to occupy him long. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
 			now HP of Karen is 4;
 			now inasituation is true;
-			challenge "Retriever";
+			challenge "Retriever Female";
 			now inasituation is false;
 			if fightoutcome is 30:
 				say "     You jump back and grab the bone off the nearby table, deciding to try and make a break for it. Unfortunately your earlier assessment was quite correct and as you try to weave past Rex he steps back to block your escape, catching you by the throat as you collide with him. Before you have a chance to react, he lifts you into the air and throws you to the ground, knocking the wind out of you and sending the bone flying out of your grasp.";
@@ -239,7 +239,7 @@ instead of conversing the Rex:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Looking over Rex's beaten form, you feel a familiar need welling up inside you, but this time there's something different. Deep inside you a new desire is rapidly growing, a need to take what you want from the beaten canine, rather than the submissive desire to have it given to you.";
 				if Player is male:
-					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, propping his furred ass in the air as best as you can before moving into position behind him. Softly stroking your would-be master's furred ass with one hand, you stroke your [cock size desc of Player] [cock of Player] shaft to full attention with the other before driving it into the canine below you. Rex whimpers beneath you at your sudden entrance. However, despite his clear displeasure at the situation, you notice Rex bracing himself against the floor as you pull back and prepare to sink into his pucker again, some small part of him apparently accepting this outcome. Before long Rex has all four paws firmly planted on the floor, pushing his arse backwards to meet each of your thrusts while groaning wantonly beneath you. Your fucking grows increasingly powerful with each push, being fueled by the swelling dominant desires washing through you. You howl in pleasure as you reach climax, driving yourself into Rex one last time as you drain your balls into his bowels. Rex groans in frustration beneath you, clearly on the verge of his own orgasm as your fucking comes to a stop, denying him of the release. Collapsing on top of Rex, your body is filled with a pleasant cooling sensation, soothing the overwhelming lust and clearing your mind of his taint. Even as your twitching member gives its last few spurts of cum, you begin to drift from consciousness as the squirming canine beneath you tries to pull himself free with a weak whine.";
+					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, propping his furred ass in the air as best as you can before moving into position behind him. Softly stroking your would-be master's furred ass with one hand, you stroke your [cock size desc of Player] [Cock of Player] shaft to full attention with the other before driving it into the canine below you. Rex whimpers beneath you at your sudden entrance. However, despite his clear displeasure at the situation, you notice Rex bracing himself against the floor as you pull back and prepare to sink into his pucker again, some small part of him apparently accepting this outcome. Before long Rex has all four paws firmly planted on the floor, pushing his arse backwards to meet each of your thrusts while groaning wantonly beneath you. Your fucking grows increasingly powerful with each push, being fueled by the swelling dominant desires washing through you. You howl in pleasure as you reach climax, driving yourself into Rex one last time as you drain your balls into his bowels. Rex groans in frustration beneath you, clearly on the verge of his own orgasm as your fucking comes to a stop, denying him of the release. Collapsing on top of Rex, your body is filled with a pleasant cooling sensation, soothing the overwhelming lust and clearing your mind of his taint. Even as your twitching member gives its last few spurts of cum, you begin to drift from consciousness as the squirming canine beneath you tries to pull himself free with a weak whine.";
 				else:
 					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, and after rolling him onto his back you reach for his thick member, stroking it to full attention as he whimpers at your touch. Stepping over the beaten canine, you begin lowering yourself onto his pointed cock, reaching behind yourself to ensure it's properly aligned with your [if Player is female]dripping cunt[else]ass[end if]. With a sigh of relief, you slowly lower yourself onto his firm rod, [if Player is female]your cunt quivering with pleasure as the pointed member spreads you open[else]your cheeks spreading easily for the pointed member[end if]. Rex groans beneath you, clearly beginning to enjoy the feeling despite his displeasure at the situation. When you finally feel the swelling canine knot pressing at your [if Player is female]pussy lips[else]ass[end if], you pause for a moment, staring into the eyes of the canine below you with a smirk until he looks away. With your dominant position asserted, you eagerly begin riding the thick shaft buried within you, rocking back and forth as you slide up and down the engorged member. Riding him faster and harder, you soon feel Rex's swollen knot pressing deeper into your wanton entrance, and with a howl of ecstasy you throw all your weight into one final thrust, driving the knot into your body as [if Player is female]you both reach[else]Rex reaches[end if] a powerful climax[impregchance].";
 					say "     You brace yourself on Rex's shoulders as [if Player is female]orgasm wracks your body, delighting in the sensation of Rex's warm seed, trapped by his knot, flowing into your womb while you bask in the afterglow of your own climax[else]you enjoy the sensation of Rex's warm seed surging into your body, trapped deep within you by his knot[end if]";
@@ -315,7 +315,7 @@ Instead of fucking the Rex:
 	[puts Retriever as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Retriever":
+		if Name entry is "Retriever Female":
 			now MonsterID is y;
 			break;
 	if lastfuck of Rex - turns < 8:
@@ -337,7 +337,7 @@ Instead of fucking the Rex:
 			say "[RexTrainMedLustScene]";
 		else:
 			say "[RexTrainLowLustScene]";
-		infect "Retriever";
+		infect "Retriever Female";
 		now bonelust is 1;
 		SanLoss 5;
 		now lastfuck of Rex is turns;
@@ -375,7 +375,7 @@ Every turn when the player is in Rex's Place and Rex is visible:
 	if HP of Rex > 9:
 		if lastfuck of Rex - turns > 14:
 			say "[RexPetLongWait]";
-			infect "Retriever";
+			infect "Retriever Female";
 			now bonelust is 1;
 			SanLoss 5;
 			now lastfuck of Rex is turns;
@@ -384,7 +384,7 @@ Every turn when the player is in Rex's Place and Rex is visible:
 				say "[RexPetMedWait1]";
 			else:
 				say "[RexPetMedWait2]";
-			infect "Retriever";
+			infect "Retriever Female";
 			decrease bonelust by 4;
 			SanLoss 5;
 			decrease lastfuck of Rex by 4;
@@ -407,19 +407,19 @@ to say fullRetrieverTF:
 	[puts Retriever as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Retriever":
+		if Name entry is "Retriever Female":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Retriever";
-	now facename of Player is "Retriever";
-	now skinname of Player is "Retriever";
-	now bodyname of Player is "Retriever";
-	now cockname of Player is "Retriever";
+	now TailName of Player is "Retriever Female";
+	now FaceName of Player is "Retriever Female";
+	now SkinName of Player is "Retriever Female";
+	now BodyName of Player is "Retriever Female";
+	now CockName of Player is "Retriever Female";
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

@@ -14,7 +14,7 @@ PurePoolPolluted is a truth state that varies. PurePoolPolluted is usually false
 PurePoolPollutedByPlayer is a truth state that varies. PurePoolPollutedByPlayer is usually false.
 
 when play begins:
-	add Pure Pool to badspots of girl;
+	add Pure Pool to BadSpots of FemaleList;
 
 instead of resolving Pure Pool:
 	if PurePoolSeen is false:
@@ -29,7 +29,7 @@ instead of resolving Pure Pool:
 		if Player consents:
 			say "     You follow the sound to the clear pool you found before. However, two wyverns are fighting. It is pretty obvious from the dialogue that they want to infect the pool, but cannot agree on who will do it first.";
 			if Player is male and Libido of Player > 49:
-				if cockname of Player is "Wyvern":
+				if CockName of Player is "Wyvern":
 					say "     You could help resolve the situation by corrupting the pond yourself. Do you wish to do so?";
 					if Player consents:
 						say "     You begin stroking your [cock size desc of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], moaning as pleasure builds in your loins. By the time the wyverns turn around and notice you, you are about to blow your load";
@@ -37,7 +37,7 @@ instead of resolving Pure Pool:
 							say ". They begin stroking as well, rushing to come before you.";
 						else:
 							say ". They watch as you continue, stunned that someone would have the precocity to subvert their efforts.";
-						say "     You blow your load into the pool, thick streams of seed spraying from your [cock of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
+						say "     You blow your load into the pool, thick streams of seed spraying from your [Cock of Player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
 						now PurePoolPolluted is true;
 						now PurePoolPollutedByPlayer is true;
 						now Resolution of Pure Pool is 2; [player polluted it]

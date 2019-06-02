@@ -65,7 +65,7 @@ to say borisquestforcock:
 		say "     Perhaps you should introduce yourself first.";
 	else if borisquest is 0:
 		say "     'Sorry hun, it's not that I might not want to, but well, you see, this WAS intended to be a family friendly fair,' Boris says with a sigh, 'and since we couldn't have the kiddies asking questions about things like that... well, let's just say I'm currently ill-equipped to do much of anything with you,' he says with a sad gesture to his featureless furred crotch.";
-		if furry is banned or girl is banned or guy is banned:
+		if FurryList is banned or FemaleList is banned or MaleList is banned:
 			say "(Completion of this quest requires furry, guy and girl content to be available. Sorry.)";
 	else if borisquest is 1:
 		say "     'Sorry, I am still kinda ill-equipped for that kinda activity,' he says sadly. He seems to perk up however when you tell him about the scene you witnessed in the fair, thinking about the possibilities. 'Well that sounds interesting,' he says thoughtfully. 'I kinda wondered what was going on there, you know. It's not like we gave away anatomically correct plush toys either... Tell you what, if you can help find me something similar, I definitely think it would be worth giving it a shot. It sounds like it might hurt a bit, but I'm willing to take the risk, and I would definitely owe you big time.'";
@@ -87,7 +87,7 @@ to say borisquestforcock:
 	else if borisquest is 5:
 		if Player is male:
 			if Christyquest is 0:
-				say "     'Um, sorry friend,' Boris says as he glances down at your [cock of Player] cock. 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking - well, let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way. If things were different.... Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'here is a key to the locker room we use here. There should be a box there marked [']Christy[']. If you bring that back here, we can see about having some real fun,' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
+				say "     'Um, sorry friend,' Boris says as he glances down at your [Cock of Player] cock. 'I may owe you a lot for what you've done, but if there is going to be cock involved in any fucking - well, let's just say I would rather it be mine,' Boris says apologetically. 'I just don't swing that way. If things were different.... Hmm, that gives me an idea,' Boris says as he eyes you thoughtfully. 'I think I know where there might be something that could help us both out a lot, since you are obviously interested in getting to know me better,' he says as he pats his newly acquired member. 'Since you went to such pains to find such a nice thing for me, it seems only fair I should find a way for you to try it out,' Boris finishes with a grin. 'You must have liked the look of it after all to pick such a nice one. Anyways,' he says, shaking himself as he gets back to the conversation at hand, 'here is a key to the locker room we use here. There should be a box there marked [']Christy[']. If you bring that back here, we can see about having some real fun,' Boris says with a wink, his muzzle stretched out in a lewd grin as he sends you on your way.";
 				now Christyquest is 1;
 			else if Christyquest is 1:
 				say "     'Sorry friend,' Boris says with a shrug, 'I still don't swing that way. If you really want to try out my new addition, you can go check out that locker room I told you about.'";
@@ -137,8 +137,8 @@ to say Christy_ending:
 	WaitLineBreak;
 	now Christyquest is 4;
 	now humanity of Player is 0;
-	now body of Player is "nothing";
-	now bodyname of Player is "nothing";
+	now Body of Player is "nothing";
+	now BodyName of Player is "nothing";
 	now scalevalue of Player is 3;
 	now bodydesc of Player is "plump";
 	now bodytype of Player is "[one of]plush[or]leonine[or]costume-like[at random]";

@@ -172,7 +172,7 @@ carry out browsebooks:
 		else:
 			say "[myse]";
 	else if X is 7:
-		If furry is banned:
+		If FurryList is banned:
 			say "     While browsing through some books on a large table, you happen across an illustrated book discussing in great detail the mating rituals of some of the wild animals of [one of]Africa[or]Asia[or]North America[or]South America[or]Europe[or]Australia[at random]. Not interested in the book, you turn up your nose, push it aside, and continue to look through the pile.";
 		else:
 			say "     While browsing through some books on a large table, you come across a large, highly illustrated book on the mating rituals of some of the wild animals of [one of]Africa[or]Asia[or]North America[or]South America[or]Europe[or]Australia[at random]. Your interest piqued, you turn to see if Beverly is watching and find that she is currently looking through some books in another part of the store. Unable to control yourself, you open the book and browse through it until you are panting softly with arousal. Finding yourself getting too worked up, you snap the book shut with a shiver and quickly turn away from the table.";

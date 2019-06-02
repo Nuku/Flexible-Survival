@@ -56,7 +56,7 @@ Instead of resolving a potential resources:
 				say "Your specific hunting leads you towards your target.";
 	say "While wandering about, you're certain you see some [y] and move to get it.";
 	now x is a random number from 1 to 5;
-	if guy is banned and girl is banned and x is 5, now x is a random number between 1 and 4;
+	if MaleList is banned and FemaleList is banned and x is 5, now x is a random number between 1 and 4;
 	if x is 1:
 		say "It's just laying there [one of]in a busted vending machine[or]on a counter[or]in a wheel barrow[or]discarded in the middle of a street[or]in a bag[or]in a backpack[or]in an abandoned car[or]beneath a pile of discarded clothes[or]a few feet away from the some rather messy cum stains[purely at random].";
 		add y to invent of Player;
@@ -87,8 +87,8 @@ Instead of resolving a potential resources:
 			let bonus be ( dexterity of Player plus level of Player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
 			if "Three Bags Full" is listed in feats of Player, increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ewe", increase bonus by 1;
-			if "Three Bags Full" is listed in feats of Player and bodyname of Player is "Ram", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ewe", increase bonus by 1;
+			if "Three Bags Full" is listed in feats of Player and BodyName of Player is "Ram", increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
@@ -161,7 +161,7 @@ Instead of resolving a potential resources:
 				say ", though having an intimidating guard by your side may have helped a little";
 			say ".";
 	else if x is 5:
-		if guy is banned or a random chance of 1 in 2 succeeds:	[female mutant]
+		if MaleList is banned or a random chance of 1 in 2 succeeds:	[female mutant]
 			say "It is in the hands of a sentient! Seeming peaceful enough, you try to convince her to part with it since she and her nearby friends seem to have enough. You try to negotiate a trade, but she has no interest in anything you have to offer, instead suggesting you might earn your reward with your tongue. Spreading her legs and lifting the scraps of her clothes, the transformed person bares her pussy to you and tells you to start licking. Shall you whore yourself out for a [y]?";
 			if Player consents:
 				say "[scavsex_f01]";

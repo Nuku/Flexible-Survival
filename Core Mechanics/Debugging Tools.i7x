@@ -113,6 +113,8 @@ carry out TestMode:
 	increase carried of water bottle by 15;
 	increase carried of medkit by 5;
 	increase carried of libido suppressant by 10;
+	increase carried of orc cum by 10;
+	increase carried of orc brew by 10;
 	increase carried of gryphon milk by 10;
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
@@ -300,7 +302,9 @@ impregwith is an action applying to one topic.
 understand "impreg with [text]" as impregwith.
 
 check impregwith:
-	if debugactive is 0, say "You aren't currently debugging." instead;
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out impregwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -314,7 +318,9 @@ infectwith is an action applying to one topic.
 understand "infect with [text]" as infectwith.
 
 check infectwith:
-	if debugactive is 0, say "You aren't currently debugging.";
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
 
 carry out infectwith:
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
@@ -342,11 +348,12 @@ ShowEncounteredEnemies is an action applying to nothing.
 understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
 
 carry out ShowEncounteredEnemies:
+	EncounteredEnemiesList;
+
+to EncounteredEnemiesList:
 	sort EncounteredEnemies of Player;
-	say "     DEBUG: Enemies that the player encountered so far: [EncounteredEnemies of Player]";
-	say "     DEBUG:";
-	let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of Player;
-	say " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of Player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+	say "Thinking back to your misadventures in the city so far, you call into memory all the creatures you have encountered and fought:[line break]";
+	say "[EncounteredEnemies of Player]";
 
 InfectionOverview is an action applying to nothing.
 
@@ -360,10 +367,10 @@ carry out InfectionOverview:
 		now Cock Length of Player is 10;
 		now Cunt Depth of Player is 8;
 		now tail of Player is the tail entry;
-		now face of Player is the face entry;
-		now skin of Player is the skin entry;
-		now body of Player is the body entry;
-		now cock of Player is the cock entry;
+		now Face of Player is the face entry;
+		now Skin of Player is the skin entry;
+		now Body of Player is the body entry;
+		now Cock of Player is the cock entry;
 		say "[bold type][y] - [Name entry][roman type]:";
 		LineBreak;
 		DescriptionDisplay;
@@ -375,9 +382,9 @@ to DescriptionDisplay:
 	follow the cock descr rule;
 	if Player is male:
 		if Cock Count of Player > 1:
-			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have [Cock Count of Player] [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 		else:
-			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
+			now cocktext is "have a [cock size desc of Player] [Cock Length of Player]-inch-long [Cock of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if Libido of Player <= 25]only somewhat aroused at the moment[else if Libido of Player <= 50]partially hard and dribbling a little pre[else if Libido of Player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if Player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [Ball Size Adjective of Player] [Balls].";
 	let cunttext be "";
 	follow the cunt descr rule;
 	if Player is female:
@@ -385,12 +392,12 @@ to DescriptionDisplay:
 			now cunttext is " have [Cunt Count of Player] [cunt size desc of Player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [Cunt Depth of Player] inches deep and able to stretch to about [Cunt Tightness of Player] around. They are [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of Player], and further probing shows it to be [Cunt Depth of Player] inches deep and able to stretch to [Cunt Tightness of Player] around. It is [if Libido of Player <= 25]a little damp at the moment[else if Libido of Player <= 50]wet with your juices[else if Libido of Player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
-	say "Looking over yourself, your body is covered in [skin of Player] skin. Your face is [face of Player].[run paragraph on]";
+	say "Looking over yourself, your body is covered in [Skin of Player] skin. Your face is [Face of Player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
 			say " [descmod of x][run paragraph on]";
-	say " Your body is [body of Player].[run paragraph on]";
+	say " Your body is [Body of Player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "body":
@@ -438,7 +445,7 @@ to DescriptionDisplay:
 	if child is not born and gestation of child > 0:
 		if gestation of child < 10:
 			now looknow is 0;
-			say "Your [skin of Player] swollen belly looks ready to spill forth life at any moment.";
+			say "Your [Skin of Player] swollen belly looks ready to spill forth life at any moment.";
 			now looknow is 1;
 		else if gestation of child < 20:
 			say "You have a noticeable bulge, a soft roundness to your belly that speaks of too many nights with a tub of ice cream, or an incoming child.";
@@ -447,9 +454,9 @@ to DescriptionDisplay:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
-		else if heatlevel is 1 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 1 and player is impreg_able and CockName of Player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
-		else if heatlevel is 3 and player is impreg_able and cockname of Player is not "Human":
+		else if heatlevel is 3 and player is impreg_able and CockName of Player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	now looknow is 0;
 	rule succeeds;
@@ -474,6 +481,9 @@ carry out DebugCritterRow:
 DebugPrintCritterRow is an action applying to one topic.
 
 understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
+
+check DebugPrintCritterRow:
+	if debugactive is 0, say "You aren't currently debugging.";
 
 carry out DebugPrintCritterRow:
 	let NumericalValue be 0;
@@ -547,10 +557,188 @@ RemoveFeat is an action applying to one topic.
 
 understand "RemoveFeat [text]" as RemoveFeat.
 
+check RemoveFeat:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
 carry out RemoveFeat:
 	if topic understood is listed in feats of Player:
 		remove topic understood from feats of Player;
 	else:
 		say "[topic understood] is not in Feats of Player!";
+
+DebugInfect is an action applying to one topic.
+
+understand "DebugInfect [text]" as DebugInfect.
+
+check DebugInfect:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out DebugInfect:
+	say "Infecting with [topic understood]:[line break]";
+	infect "[topic understood]";
+
+TagListReadout is an action applying to one topic.
+
+understand "TagListReadout" as TagListReadout.
+
+check TagListReadout:
+	if debugactive is 0:
+		say "You aren't currently debugging.";
+		stop the action;
+
+carry out TagListReadout:
+	say "All current lists:";
+	LineBreak;
+	sort Infections of AquaticList;
+	sort Infections of ArachnidList;
+	sort Infections of AvianList;
+	sort Infections of AvianpredList;
+	sort Infections of Bovinelist;
+	sort Infections of CanineList;
+	sort Infections of CervineList;
+	sort Infections of CetaceanList;
+	sort Infections of EquineList;
+	sort Infections of FelineList;
+	sort Infections of FoodList;
+	sort Infections of HumanList;
+	sort Infections of HybridList;
+	sort Infections of InsectList;
+	sort Infections of LatexList;
+	sort Infections of LeporineList;
+	sort Infections of MachineList;
+	sort Infections of MarsupialList;
+	sort Infections of MustelidList;
+	sort Infections of NonOrganicList;
+	sort Infections of OrcList;
+	sort Infections of PiscineList;
+	sort Infections of PlantList;
+	sort Infections of PorcineList;
+	sort Infections of PrimateList;
+	sort Infections of ReptileList;
+	sort Infections of RodentList;
+	sort Infections of SlimeList;
+	sort Infections of ToyList;
+	sort Infections of UrsineList;
+	sort Infections of VulpineList;
+	sort Infections of HistoricalList;
+	sort Infections of MagicalList;
+	sort Infections of MythologicalList;
+	sort Infections of NatureList;
+	sort Infections of OtherworldlyList;
+	sort Infections of ScienceList;
+	sort Infections of BarbedCockList;
+	sort Infections of BluntCockList;
+	sort Infections of InternalCockList;
+	sort Infections of KnottedCockList;
+	sort Infections of OviPositorList;
+	sort Infections of PrehensileCocklist;
+	sort Infections of SheathedCockList;
+	sort Infections of TaperedCockList;
+	sort Infections of TentacleCockList;
+	sort Infections of TailList;
+	sort Infections of BipedalList;
+	sort Infections of QuadrupedalList;
+	sort Infections of HexapedalList;
+	sort Infections of OctapedalList;
+	sort Infections of TaurList;
+	sort Infections of SerpentineList;
+	sort Infections of SlidingList;
+	sort Infections of FlightList;
+	sort Infections of SwimList;
+	sort Infections of AlwaysLacList;
+	sort Infections of HeatList;
+	sort Infections of AlwaysHeatList;
+	sort Infections of RutList;
+	sort Infections of AlwaysRutList;
+	sort Infections of GillList;
+	sort Infections of NotBreathingList;
+	sort Infections of Birthlist;
+	sort Infections of Egglaylist;
+	sort Infections of MpregList;
+	sort Infections of OviImpregnatorList;
+	sort Infections of Sterilelist;
+	sort Infections of FeralmindList;
+	sort Infections of HivemindList;
+	sort Infections of PackmindList;
+	sort Infections of FirebreathList;
+	sort Infections of TailweaponList;
+	say "AquaticList: [Infections of AquaticList][line break][line break]";
+	say "ArachnidList: [Infections of ArachnidList][line break][line break]";
+	say "AvianList: [Infections of AvianList][line break][line break]";
+	say "AvianpredList: [Infections of AvianpredList][line break][line break]";
+	say "Bovinelist: [Infections of Bovinelist][line break][line break]";
+	say "CanineList: [Infections of CanineList][line break][line break]";
+	say "CervineList: [Infections of CervineList][line break][line break]";
+	say "CetaceanList: [Infections of CetaceanList][line break][line break]";
+	say "EquineList: [Infections of EquineList][line break][line break]";
+	say "FelineList: [Infections of FelineList][line break][line break]";
+	say "FoodList: [Infections of FoodList][line break][line break]";
+	say "HumanList: [Infections of HumanList][line break][line break]";
+	say "HybridList: [Infections of HybridList][line break][line break]";
+	say "InsectList: [Infections of InsectList][line break][line break]";
+	say "LatexList: [Infections of LatexList][line break][line break]";
+	say "LeporineList: [Infections of LeporineList][line break][line break]";
+	say "MachineList: [Infections of MachineList][line break][line break]";
+	say "MarsupialList: [Infections of MarsupialList][line break][line break]";
+	say "MustelidList: [Infections of MustelidList][line break][line break]";
+	say "NonOrganicList: [Infections of NonOrganicList][line break][line break]";
+	say "OrcList: [Infections of OrcList][line break][line break]";
+	say "PiscineList: [Infections of PiscineList][line break][line break]";
+	say "PlantList: [Infections of PlantList][line break][line break]";
+	say "PorcineList: [Infections of PorcineList][line break][line break]";
+	say "PrimateList: [Infections of PrimateList][line break][line break]";
+	say "ReptileList: [Infections of ReptileList][line break][line break]";
+	say "RodentList: [Infections of RodentList][line break][line break]";
+	say "SlimeList: [Infections of SlimeList][line break][line break]";
+	say "ToyList: [Infections of ToyList][line break][line break]";
+	say "UrsineList: [Infections of UrsineList][line break][line break]";
+	say "VulpineList: [Infections of VulpineList][line break][line break]";
+	say "HistoricalList: [Infections of HistoricalList][line break][line break]";
+	say "MagicalList: [Infections of MagicalList][line break][line break]";
+	say "MythologicalList: [Infections of MythologicalList][line break][line break]";
+	say "NatureList: [Infections of NatureList][line break][line break]";
+	say "OtherworldlyList: [Infections of OtherworldlyList][line break][line break]";
+	say "ScienceList: [Infections of ScienceList][line break][line break]";
+	say "BarbedCockList: [Infections of BarbedCockList][line break][line break]";
+	say "BluntCockList: [Infections of BluntCockList][line break][line break]";
+	say "InternalCockList: [Infections of InternalCockList][line break][line break]";
+	say "KnottedCockList: [Infections of KnottedCockList][line break][line break]";
+	say "OviPositorList: [Infections of OviPositorList][line break][line break]";
+	say "PrehensileCocklist: [Infections of PrehensileCocklist][line break][line break]";
+	say "SheathedCockList: [Infections of SheathedCockList][line break][line break]";
+	say "TaperedCockList: [Infections of TaperedCockList][line break][line break]";
+	say "TentacleCockList: [Infections of TentacleCockList][line break][line break]";
+	say "TailList: [Infections of TailList][line break][line break]";
+	say "BipedalList: [Infections of BipedalList][line break][line break]";
+	say "QuadrupedalList: [Infections of QuadrupedalList][line break][line break]";
+	say "HexapedalList: [Infections of HexapedalList][line break][line break]";
+	say "OctapedalList: [Infections of OctapedalList][line break][line break]";
+	say "TaurList: [Infections of TaurList][line break][line break]";
+	say "SerpentineList: [Infections of SerpentineList][line break][line break]";
+	say "SlidingList: [Infections of SlidingList][line break][line break]";
+	say "FlightList: [Infections of FlightList][line break][line break]";
+	say "SwimList: [Infections of SwimList][line break][line break]";
+	say "AlwaysLacList: [Infections of AlwaysLacList][line break][line break]";
+	say "HeatList: [Infections of HeatList][line break][line break]";
+	say "AlwaysHeatList: [Infections of AlwaysHeatList][line break][line break]";
+	say "RutList: [Infections of RutList][line break][line break]";
+	say "AlwaysRutList: [Infections of AlwaysRutList][line break][line break]";
+	say "GillList: [Infections of GillList][line break][line break]";
+	say "NotBreathingList: [Infections of NotBreathingList][line break][line break]";
+	say "Birthlist: [Infections of Birthlist][line break][line break]";
+	say "Egglaylist: [Infections of Egglaylist][line break][line break]";
+	say "MpregList: [Infections of MpregList][line break][line break]";
+	say "OviImpregnatorList: [Infections of OviImpregnatorList][line break][line break]";
+	say "Sterilelist: [Infections of Sterilelist][line break][line break]";
+	say "FeralmindList: [Infections of FeralmindList][line break][line break]";
+	say "HivemindList: [Infections of HivemindList][line break][line break]";
+	say "PackmindList: [Infections of PackmindList][line break][line break]";
+	say "FirebreathList: [Infections of FirebreathList][line break][line break]";
+	say "TailweaponList: [Infections of TailweaponList][line break][line break]";
+
 
 Debugging Tools ends here.

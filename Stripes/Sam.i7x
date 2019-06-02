@@ -1,6 +1,7 @@
 Version 2 of Sam by Stripes begins here.
 [Version 2.5 - surrendering to Rick]
 [Version 2.6 - Minor maintenance and character relocation - Luneth]
+[Version 3 - Added talk menu and Shrinking Shroom Expansion - Kurainyx]
 "Adds a fellow Researcher named Sam to the Flexible Survival game."
 
 [ HP of Sam                                                                    ]
@@ -37,6 +38,14 @@ Version 2 of Sam by Stripes begins here.
 [ 99 - wild vixentaur                                                          ]
 [ 100 - did not save                                                           ]
 
+[ Hunger of Sam                                                                ]
+[ 0 - Have not started Shrinking Shroom content                                ]
+[ 1-8 - Sam is out of the library searching for Shrinking Shrooms              ]
+[ 9 - Sam returns to library from searching for Shrinking Shrooms              ]
+[ 10 - Sam has Shrinking Shrooms                                               ]
+[ 11 - Opens Sam's Shrinking Shrooms sex scenes                                ]
+[ 12-20 - Timer for Sam giving player a Shrinking Shroom                       ]
+
 Section 1 - Event
 
 Table of GameEventIDs (continued)
@@ -46,15 +55,15 @@ Another Researcher	"Another Researcher"
 Another Researcher is a situation.
 The sarea of Another Researcher is "Outside".
 when play begins:
-	add Another Researcher to badspots of furry;
-	add Another Researcher to badspots of guy;
-	add Another Researcher to badspots of girl;
-	add Another Researcher to badspots of hermaphrodite;
+	add Another Researcher to BadSpots of FurryList;
+	add Another Researcher to BadSpots of MaleList;
+	add Another Researcher to BadSpots of FemaleList;
+	add Another Researcher to badspots of HermList;
 
 Instead of resolving Another Researcher:
 	say "     While passing along a narrow side street, you hear the not-uncommon sounds of rutting sex coming from somewhere nearby. Picking up something odd about the sounds, you cut across the alley and peek out into the street. There you find a canine finishing up in what appears to be an unchanged human male. The guy being pounded spots you and blushes a little, motioning for you to be quiet and wait. Expecting him to start changing soon, you prepare to back away, but even after the canine is done and gone, no infection appears. The guy gets up slowly and starts rearranging his clothes, waving you over. Confused but cautious, you approach him.";
 	WaitLineBreak;
-	if bodyname of Player is "Human" and the player is pure:
+	if BodyName of Player is "Human" and the player is pure:
 		say "     'Hey there. I didn't think I'd come across another unchanged person out here. How are you making out? Pretty crazy out here, huh?' ";
 	else:
 		say "     'Hey there. When I first saw you, I thought you might be another creature waiting its turn, but then I realized you weren't quite at that point yet. Pretty crazy out here, huh?' ";
@@ -153,6 +162,62 @@ to say samdesc:
 
 
 Instead of conversing the Sam:
+	if HP of Sam > 50:		[Talk menu for Sam's dracovixentaur form]
+		say "     'Hey there, [if player is not defaultnamed], [name of player][end if],' Sam greets while looking through several vials laid out on a nearby table. The scientist glances up to give you a welcoming smile for a brief moment before returning their attention to their work.'";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Talk";
+		now sortorder entry is 1;
+		now description entry is "See how Sam is doing";
+		[]
+		if hunger of Sam is 0 and vorelevel > 1:
+			choose a blank row in table of fucking options;
+			now title entry is "Research";
+			now sortorder entry is 2;
+			now description entry is "Ask how Sam is doing with their research";
+		[]
+		if hunger of Sam > 0:
+			choose a blank row in table of fucking options;
+			now title entry is "Shrinking Shrooms";
+			now sortorder entry is 3;
+			now description entry is "Talk to Sam about the Shrinking Shrooms";
+		[]
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if Player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Talk":
+						say "[SamTalk]";
+					if nam is "Research":
+						say "[SamShroom]";
+					if nam is "Shrinking Shrooms":
+						say "[SamShroom]";
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the taur, shaking your head slightly. Sam shrugs and returns to their experiments.";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+	else:
+		say "[SamTalk]";
+
+to say SamTalk:
 	if HP of Sam is 1:
 		say "     'I've really got a lot on my plate here with trying to deal with all the tests they need me to take care of now that I'm on my own. Rick and I used to take shifts, but now I've got to do it all. So I was hoping I could get you to give me a hand. There's some tests that they want me to run on some samples from the City Zoo. Rick was working that area when he decided it'd be more fun to just join the fun full-time. I'd lose too much time traveling back and forth out there to be able to keep up with the rest of the work. They want samples of cheetah milk and rhino cum, though I'll make some vials out of it when I'm done.";
 		if Zoo Entrance is unknown:
@@ -314,7 +379,7 @@ Instead of conversing the Sam:
 					say "     After some fast tonguework gets her leaking cock ready, you move atop her, lining up her dracovixen penis with your [if Player is female]juicy cunt[else]tight pucker[end if] and start to ease yourself down onto her. She rumbles in pleasure and wraps her lower limbs around you, pulling you into a hug that forces you further down onto her pulsing rod. Her draconic rod with its tapered tip, pushes easily into you, prying your hole open with jolts of pleasure from those delightful ridges. 'Oh, now that feels soooo good. I've really missed fucking a [if Player is female]hot pussy[else]tight ass[end if]. Mmm... I can hardly wait to see how it feels fucking all those creatures out there again and breeding them full of whelps,' she rumbles, running her paws over her new body in continued exploration of the new delights her hermaphroditic hybrid form can bring. Her strong tail winds around you in a fluffy hug, pulling you down into each thrust.";
 					say "     You place a hand at the nearest of her lower breasts, drawing a low moan from her as you tease its nipple. She has three rows of breasts along her underbelly and, from the extent of her reaction, they're quite sensitive. Your other hand reaches back to rub and fondle her heavy orbs, savoring the weight of them and knowing their contents will soon be inside you. You smile and ride that ridged rod harder and faster, cumming hard as you get her growing knot popped inside you. Her cunt quivers moments later as she orgasms from both genders at once with a loud cry of ecstasy while flooding your [if Player is female]womb[else]rectum[end if] with her thick, virile seed.[DVimpregchance]";
 				else:
-					say "     After some fast tonguework gets her leaking cock ready, you line up your [cock of Player] penis and start to ease yourself into her. She rumbles and yips in pleasure as you start fucking her. 'Oh, that feels sooooo good. It's even better with a cock of my own. Mmm... I can hardly wait to find stuff a pussy with this sexy new cock of mine,' she rumbles, running her paws over her new body in continued exploration of the new delights her hermaphroditic hybrid form can bring. Her strong tail winds around you in a fluffy hug, pulling you into each thrust.";
+					say "     After some fast tonguework gets her leaking cock ready, you line up your [Cock of Player] penis and start to ease yourself into her. She rumbles and yips in pleasure as you start fucking her. 'Oh, that feels sooooo good. It's even better with a cock of my own. Mmm... I can hardly wait to find stuff a pussy with this sexy new cock of mine,' she rumbles, running her paws over her new body in continued exploration of the new delights her hermaphroditic hybrid form can bring. Her strong tail winds around you in a fluffy hug, pulling you into each thrust.";
 					say "     You place a hand at the nearest of her lower breasts, drawing a low moan from her as you tease its nipple. She has three rows of breasts along her underbelly and, from the extent of her reaction, they're quite sensitive. Your other hand continues pumping and stroking her cock, feeling those ridges under your fingers and wondering how they'd feel inside you, breeding you instead. You smile and pound harder and faster into her wet vulpine cunt, cumming hard as you get her to spray her hot seed across her belly. Her cunt quivers moments later as she orgasms from both genders at once with a loud cry of ecstasy.";
 				WaitLineBreak;
 				say "     Her tail uncoils and flops down on the ground as she's left panting and rumbling softly in ecstasy from her orgasm. You smile down at her and wipe yourself off on a dry patch of her fur. She motions for you to come around and she kisses you passionately, her arms around you in a tight hug.";
@@ -357,6 +422,18 @@ Instead of conversing the Sam:
 		say "     [one of]'You don't have to worry about feeding me. I can take care of myself,' the dracovixen rumbles.[or]'I think this new body of mine is much better. Thanks for insisting I take them both.'[or]'I'm looking forward to breeding a few more litters in those females out there.'[or]'I'm looking forward to finding more males out there breed kits in me,' she says with a grin.[or]'My litters have been turning out to be a mix of kits, with male dragontaurs, female vixentaurs and even a few herms hybrids like me. It's so nice seeing them heading off to play in the city.'[or]'You'll need to be careful out there with my new offspring running around. They'll be eager to play with someone as sexy as you. I know I am,' she adds, giving your ass a playful swat.[or][if number of bunkered people + number of booked people > 2]'I've already gathered samples from the others here,' she says. 'Not like that,' she adds quickly, 'just refined from blood samples they gave.'[else]'If you happen to rescue any others who've been transformed, I'll take samples from them as well.'[end if][or]'My resistance treatment still seems to be holding out despite my big changes. That means I can have all the fun I like and still stay a sexy dracovixen taur.'[or][or]She runs a hand along your body[if Player is male]. 'You should have some more fun with the horny dracovixen beast soon. I can tell you want to stuff your cock inside me[else]. 'You should try letting the sexy dracovixen beast mount you. I can tell your body wants this ridged beast I'm packing inside you,' she rumbles, giving your ass a squeeze[end if] as she presses her furry melons against you while giving you a hug.[or]'I'm looking forward to fucking you again. Another romp with a sexy herm like me is definitely what that horny body of your needs to satisfy it,' she rumbles, licking your cheek slowly with her forked tongue.[or]'There's a lot of sexy beasts out there. You should let a few more of them have their way with you. Then you can come back here so I can have my way with you too. That way, we both get to enjoy it.'[or]'I think I'm in the mood to find a [if a random chance of 1 in 2 succeeds]herm[else if a random chance of 1 in 2 succeeds]female[else]male[end if] next time. Hopefully there's one around that I haven't tried before.'[or]'My new look as Sammie's pretty sexy, isn't it?' she asks with a grin, stretching her arms behind her head to show off her lovely breasts and perky, purple nipples.[at random]";
 	else:
 		say "ERROR-Sam-[HP of Sam]L: You should not be able to find me!";
+
+
+SamTest is an action applying to nothing.
+understand "Sam Test" as SamTest.
+
+carry out SamTest:
+	increase carried of cheetah milk by 2;
+	increase carried of rhino cum by 2;
+	increase carried of pink gel by 1;
+	increase carried of blue gel by 1;
+	increase carried of purple gel by 1;
+	increase carried of eagle feather by 2;
 
 
 Section 4 - Confrontation at the Mini-Lab
@@ -459,11 +536,11 @@ to assaultonminilab:
 				say "     Wanting to be a part of the forming feline coalition, you shuck out of your clothes and then obediently head over to the tigertaur, your head cast down to show your submission. Grinning like mad, the tigertaur moves away from her new pet, reassuringly the other with a lick across hir new snout, before stalking over to you with a smug air surrounding hirself. 'Well,' the tigertaur begins slowly as shi walks around you. 'I think I can find room for you in my new streak, little one. Though first I think you and Sammie over there should become more [italic type]acquainted[roman type] with one another, if you catch my drift.' Looking up and nodding at your new mistress you eagerly head over to where Sammy is watching the both of you, the newly made hybrid busily rubbing her squirming stomach with one of her new paws. A feline smile crossing hir face...";
 				now surrender is 1;
 				now humanity of Player is 0;
-				now tailname of Player is "Feline Hexataur";
-				now facename of Player is "Feline Hexataur";
-				now skinname of Player is "Feline Hexataur";
-				now bodyname of Player is "Feline Hexataur";
-				now cockname of Player is "Feline Hexataur";
+				now TailName of Player is "Feline Hexataur";
+				now FaceName of Player is "Feline Hexataur";
+				now SkinName of Player is "Feline Hexataur";
+				now BodyName of Player is "Feline Hexataur";
+				now CockName of Player is "Feline Hexataur";
 				now scalevalue of Player is 5;
 				now bodydesc of Player is "silky";
 				now bodytype of Player is "feline";
@@ -617,7 +694,7 @@ to say sexwithSam:
 		now HP of Sam is 13;
 		now lastfuck of Sam is turns;
 	else if HP of Sam is 13 or HP of Sam is 14 or HP of Sam is 15 or HP of Sam is 16:
-		if a random chance of 3 in 5 succeeds and bodyname of Player is listed in infections of Taurlist: [taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 			say "[samdragontaurfuck]";
 		else if a random chance of 3 in 5 succeeds:
 			say "[samdragonfuck]";
@@ -637,7 +714,7 @@ to say sexwithSam:
 		if Player is male, now HP of Sam is 33;
 		now lastfuck of Sam is turns;
 	else if HP of Sam >= 33 and HP of Sam <= 36:
-		if a random chance of 3 in 5 succeeds and bodyname of Player is listed in infections of Taurlist: [male/herm taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [male/herm taur]
 			say "[samvixentaurfuck]";
 		else if a random chance of 3 in 5 succeeds and player is male:
 			say "[samvixenfuck]";
@@ -654,7 +731,7 @@ to say sexwithSam:
 		now lastfuck of Sam is turns;
 		now HP of Sam is 53;
 	else if HP of Sam is 53:
-		if a random chance of 3 in 5 succeeds and bodyname of Player is listed in infections of Taurlist: [taur]
+		if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 			if Player is herm:
 				if a random chance of 1 in 2 succeeds:
 					say "[samDVtaurfuck_top]";
@@ -690,7 +767,7 @@ to say sexwithSam:
 			tripletaur_active;
 			now HP of Sam is 55;
 		else:
-			if a random chance of 3 in 5 succeeds and bodyname of Player is listed in infections of Taurlist: [taur]
+			if a random chance of 3 in 5 succeeds and BodyName of Player is listed in infections of Taurlist: [taur]
 				say "[samDVtaurfuck_top]";
 			else if a random chance of 3 in 5 succeeds:
 				say "[samDVfuck_top]";
@@ -700,37 +777,56 @@ to say sexwithSam:
 		say "     Approaching the exotically beautiful hybrid, you wonder what fun you'd like to enjoy with her this time.";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Give fellatio";
 		now sortorder entry is 1;
 		now description entry is "suck the dracovixentaur's cock";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Give cunnilingus";
 		now sortorder entry is 2;
 		now description entry is "eat the dracovixentaur's pussy";
+		[]
 		if Player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Receive fellatio";
 			now sortorder entry is 3;
 			now description entry is "have the dracovixentaur suck you off";
+		[]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck Sammie";
 			now sortorder entry is 4;
 			now description entry is "screw the sexy hybrid";
+		[]
 			if bodyname of Player is listed in infections of Taurlist:
 				choose a blank row in table of fucking options;
 				now title entry is "Mount Sammie";
 				now sortorder entry is 6;
 				now description entry is "mount that sexy taur";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Fucked by Sammie";
 		now sortorder entry is 5;
 		now description entry is "have the sexy hybrid screw you";
+		[]
 		if bodyname of Player is listed in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Mounted by Sammie";
 			now sortorder entry is 7;
 			now description entry is "have that sexy taur mount you";
+		[]
+		if hunger of Sam > 10:
+			choose a blank row in table of fucking options;
+			now title entry is "Shrinking Shroom Oral";
+			now sortorder entry is 8;
+			now description entry is "Use a shrinking shroom to go into Sam's mouth";
+		[]
+			choose a blank row in table of fucking options;
+			now title entry is "Shrinking Shroom Anal";
+			now sortorder entry is 9;
+			now description entry is "Use a shrinking shroom to go into Sam's ass";
+		[]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
@@ -763,6 +859,10 @@ to say sexwithSam:
 						say "[samDVtaurfuck_bottom]";
 					else if title entry is "Mounted by Sammie":
 						say "[samDVtaurfuck_top]";
+					else if title entry is "Shrinking Shroom Oral":
+						say "[SamShroomOral]";
+					else if title entry is "Shrinking Shroom Anal":
+						say "[SamShroomAnal]";
 			else:
 				say "Invalid Option.";
 
@@ -811,7 +911,7 @@ to say samdragontaurfuck:
 		if Name entry is "Dragontaur":
 			now MonsterID is y;
 			break;
-	say "     Sam rumbles lustfully as he looks your [bodytype of Player] form over. 'Rrr... now this is a fine body you've got here. A sexy taur just ripe for mounting,' he rumbles appreciatively. 'And now to give that hot [bodyname of Player] body of yours what it needs - a good fucking and a hot dose of dragon cum.' His powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. His stiff meat rubs against your rump, spitting precum onto you as it moves into position. With his tapered glans lined up with your [if Player is female]wet cunt[else]tight pucker[end if], he pushes himself further onto you, sinking it into you with a strong thrust. His cock, made for spreading open his lovers, dribbles precum along your passage as his muscled hips push forward, driving his increasingly thicker shaft into you. You moan beneath him in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath him in ecstasy as he fucks you with that exquisite cock of his in strong, hard thrusts.";
+	say "     Sam rumbles lustfully as he looks your [bodytype of Player] form over. 'Rrr... now this is a fine body you've got here. A sexy taur just ripe for mounting,' he rumbles appreciatively. 'And now to give that hot [BodyName of Player] body of yours what it needs - a good fucking and a hot dose of dragon cum.' His powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. His stiff meat rubs against your rump, spitting precum onto you as it moves into position. With his tapered glans lined up with your [if Player is female]wet cunt[else]tight pucker[end if], he pushes himself further onto you, sinking it into you with a strong thrust. His cock, made for spreading open his lovers, dribbles precum along your passage as his muscled hips push forward, driving his increasingly thicker shaft into you. You moan beneath him in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath him in ecstasy as he fucks you with that exquisite cock of his in strong, hard thrusts.";
 	WaitLineBreak;
 	say "     With his tauric lower body atop yours, his humanoid top half presses against your back, letting him wrap his arms around you. He hugs you like this and nips at your neck and shoulder he thrusts into you again and again. 'Mmm... you make for such a sexy taur slut. That dragon cock stuffing you feels good, doesn't it?' he rumbles[if Player is female]. 'Mmm... let's breed some whelps in that hot taur body of yours, my dear,' he adds[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. His hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
 	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of Player] form lusting for the lustful pleasure of having the dragontaur mounting you like some beast[if Player is not neuter]. Soon you're grinding your hindquarters back against him as your orgasm washes through you, cumming over and over again as he drives his meat into you[else]. Soon you're grinding your hindquarters back against him in delight, your body aching to feel his release since your genderless body cannot have one of its own[end if][if Player is male]. Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if Player is female]. Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[else]. Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstasy[end if]. Your [bodytype of Player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if Player is female]womb in an attempt to breed you[else]bowels, bloating your belly with his virile load[end if].[ovichance]";
@@ -825,7 +925,7 @@ Part 3 - Vixen Sex
 
 to say samvixenfirsttime:
 	say "     Samantha grins at your offer and takes a hold of you in her furry arms. 'Mmm... I've been looking forward to this since we got here.' She kisses you as best she can with her vulpine muzzle, letting her tongue play across your lips before diving into your mouth. As her tongue explores your palate, she lowers you onto one of the cots. Her front foxpaws knead over your [bodytype of Player] chest as she moves to climb atop you, murring in pleasure as she breaks the kiss to move into position. Her hindquarters grind down atop your [cock size desc of Player] cock, quite hard after that wild kiss, then shift into position. Her wet vixen muff is ready and waiting, dripping juices down onto your loins as she climbs onto the strained cot. Placing her forepaws on your shoulders, she grips you firmly and lines up with your stiff member before sliding down onto it slowly.";
-	say "     Your [cock of Player] cock slips into her with ease, her slick vagina eagerly accepting its first penis. Her cunny quivers around you delightfully as you take her newfound virginity as she yips and yiffs in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you. 'Ohhh... oh wow! Mmmmm yeah, give it to me, baby. Fuck that slutty vixen,' she yips, bouncing her hindquarters harder and faster as her excitement builds - and you love every moment of it.";
+	say "     Your [Cock of Player] cock slips into her with ease, her slick vagina eagerly accepting its first penis. Her cunny quivers around you delightfully as you take her newfound virginity as she yips and yiffs in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you. 'Ohhh... oh wow! Mmmmm yeah, give it to me, baby. Fuck that slutty vixen,' she yips, bouncing her hindquarters harder and faster as her excitement builds - and you love every moment of it.";
 	WaitLineBreak;
 	say "     Her forepaws keep a firm grip on you, pinning you down onto the cot and keeping herself steady as she slams down onto your prick. You thrust up into her each time she comes down, eagerly getting herself fucked like some wild beast in heat. Despite her personal inexperience, it seems her body knows just what to do, with her inner walls squeezing and rippling across your [cock size desc of Player] meat in so many delightful ways. Pressing your face to the nearest of her many breasts, you wrap your lips around the rosy nipple. You get a yip of surprise from her as you give it a nibble and start suckling. After the frantic fucking becomes too much for Sam and she presses herself down hard onto your shaft one last time, you moan loudly and cum into her orgasming pussy, pumping your hot load into the sexy taur's untarnished womb, claiming it for the first time.";
 	say "     Once you're finished up, she steps back slowly, a little weak-kneed as your cock slips free. Her recently stuffed pussy quivers and leaks out a few trickles of your cum. 'Mmm... If you ever want another go, I'd love to have you in me again. Give me a proper fucking like a vixen slut needs,' she giggles with a teasing grin. She even turns around and raises her tail, giving you an eyeful of her puffy and stretched pussy with your fresh load leaking out of her.";
@@ -833,7 +933,7 @@ to say samvixenfirsttime:
 
 to say samvixenoral:
 	if Player is male and a random chance of 2 in 3 succeeds:
-		say "     Samantha runs her hands along your sides and then down to your loins. Rubbing over your cock, she nibbles your ear. 'I was hoping to get a taste of this sexy meat of yours,' she moans. Pushing you to take a seat on the cot, she lowers herself vixentaur body to the floor and nuzzles between your legs. You run your hands through her soft hair and scritch her ears, getting a murr of pleasure from her. She gives you a foxish grin and slowly slides her tongue along your shaft, making little licks across your [cock size desc of Player] [cock of Player] meat. She continues to tease you, moving down to do the same to your balls, further exciting and frustrating your growing arousal.";
+		say "     Samantha runs her hands along your sides and then down to your loins. Rubbing over your cock, she nibbles your ear. 'I was hoping to get a taste of this sexy meat of yours,' she moans. Pushing you to take a seat on the cot, she lowers herself vixentaur body to the floor and nuzzles between your legs. You run your hands through her soft hair and scritch her ears, getting a murr of pleasure from her. She gives you a foxish grin and slowly slides her tongue along your shaft, making little licks across your [cock size desc of Player] [Cock of Player] meat. She continues to tease you, moving down to do the same to your balls, further exciting and frustrating your growing arousal.";
 		WaitLineBreak;
 		say "     As she returns to your cock, you decide press her muzzle down onto your maleness, pushing it into her silky mouth. She moans softly at this treatment and starts sucking and licking at your penis excitedly. Clearly what she wanted all along, you drive your cock into her hot muzzle again and again, loving the feel of her sucking down on you. Her teeth, which you'd except to be sharp in a fox's muzzle, are actually quite smooth and slide across your cock in a way that only further stimulates you. Her agile tongue, soft palate and gripping throat feel wonderful as well. The whole of her muzzle feels like a hot cunt around your cock with the added pleasure of her delightful tongue. The sexy vixen's muzzle is clearly designed to give a wonderful blowjob and you eagerly take advantage of the opportunity to enjoy it. And from the wet moans and muffled yips of pleasure from Sam's stuffed muzzle, she's certainly savoring it as well. When you finally cum and blast your hot load down her throat, she eagerly swallows it all down and cums herself, soaking her thighs without even touching herself.";
 	else:
@@ -842,17 +942,17 @@ to say samvixenoral:
 		say "     She moans and yips as your tongue plays across her sensitive folds, then finds its way to her clit. As you slide your tongue across it over and over, her hips quiver and she shifts from paw to paw. 'Mmm... right there, hon. Your poor foxy needs that so badly.' You slip a few fingers into her vagina, pumping them in and out and rubbing along her inner walls. You do your best to pleasure the horny vixen, wanting her to enjoy her new female body as much as possible. And enjoy it she does as you tease her through several small orgasms before finally going wild in her juicy muff until you drive her to a loud, powerful orgasm that leaves your face soaked in her juices and the very satisfied vixen panting and moaning on the floor. She stretches out and fondles her upper bosom while you, lustfully aroused by the taste and scent of her all over your face, [if Player is male]jerk yourself off onto her lower breasts while she watches you get off as well[else if Player is female]finger yourself to a powerful orgasm of your own while she watches you get off as well[else]lick up as much as you can and wipe it up with your hands to lick it off your fingers while the pleased vixen watches you enjoy her musky juices[end if].";
 
 to say samvixenfuck:
-	say "     Samantha moans lustfully and presses her bosom against you as she hugs you tight. 'Mmm... I'm ready for more. Best give this horny vixen what she needs - a good fucking and a hot dose of your thick cum,' she says with a grin as she pushes you down onto the cot. 'Horny vixens need fuckings. It's a scientific fact,' she giggles as she rubs her forepaws across your chest before climbing up onto the cot with you. She rubs her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [cock of Player] cock. With your erection hard and throbbing between you both, she shifts her hips and gets you lined up before sinking herself down onto your stiff member eagerly.";
+	say "     Samantha moans lustfully and presses her bosom against you as she hugs you tight. 'Mmm... I'm ready for more. Best give this horny vixen what she needs - a good fucking and a hot dose of your thick cum,' she says with a grin as she pushes you down onto the cot. 'Horny vixens need fuckings. It's a scientific fact,' she giggles as she rubs her forepaws across your chest before climbing up onto the cot with you. She rubs her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [Cock of Player] cock. With your erection hard and throbbing between you both, she shifts her hips and gets you lined up before sinking herself down onto your stiff member eagerly.";
 	say "     Your maleness slips into her with ease, her slick vagina eagerly accepting your penis into its warm embrace. Her cunny quivers around you delightfully as she yips and yiffs in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you, her six breasts and hard nipples rubbing down onto your [bodydesc of Player] body. 'Oh yeah, that's just what this slutty vixen needs. Mmm... give it to me hard and breed me,' she cries as she starts riding you hard and fast.";
 	WaitLineBreak;
 	say "     Her forepaws keep a firm grip on your shoulders to help keep herself steady as she slams down onto your prick over and over. You thrust up into her each time she comes down, eagerly getting herself fucked like some wild beast in heat. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways. Samantha's clearly learning quickly and is making the most of her new body's sexual abilities. Her vagina moves and slides across your hard flesh easily, but grips and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You bring your lips to one of her many breasts and start suckling at its rosy nipple, getting a moan from the lusty vixen. As Sam's orgasm sends shivers of delight throughout her body, she slams down onto you one last time, letting her talented cunt spasm and tug at your cock frantically, milking at your cock until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed.";
 	say "     Once you're finished up, she slides off your spent shaft slowly, reluctantly releasing your cock. She nuzzles you and gives you a passionate kiss before hopping off the bunk. Turning around, she gives you a grin as she makes sure to show you your handiwork again - her well-fucked pussy dripping with your fresh load as a mix of your seed and her juices run down her thighs. 'Let's do this again soon, sweetie. A slutty vixen like me will need plenty of hot cum to keep her happy and healthy,' she says with a grin, giving her rump a little shake at you before trotting off with a giggle.";
 
 to say samvixentaurfuck:
-	say "     Samantha moans lustfully and runs her paws across your [bodytype of Player] form. 'Mmm... now this is a fine body you've got here. A sexy taur to mount the sexy vixen,' she says with a grin before turning around and presenting her hindquarters to you. She gives her fluffy tail a swish and wiggles her rear invitingly. 'Come on, sweetie. This body of mine needs a hard cock and a hard fucking.' The tantalizing sight of the horny taur presenting herself sets off your own tauric instincts and you quickly mount her, sliding your [cock size desc of Player] [cock of Player] cock into her [one of]after several attempts to get lined up[or]after a little shifting to get into proper position[or]on the first try as you're mounting her[as decreasingly likely outcomes]. With your hard erection sinking into her juicy cunt, she steadies her paws and pushes back, driving you further into her.";
+	say "     Samantha moans lustfully and runs her paws across your [bodytype of Player] form. 'Mmm... now this is a fine body you've got here. A sexy taur to mount the sexy vixen,' she says with a grin before turning around and presenting her hindquarters to you. She gives her fluffy tail a swish and wiggles her rear invitingly. 'Come on, sweetie. This body of mine needs a hard cock and a hard fucking.' The tantalizing sight of the horny taur presenting herself sets off your own tauric instincts and you quickly mount her, sliding your [cock size desc of Player] [Cock of Player] cock into her [one of]after several attempts to get lined up[or]after a little shifting to get into proper position[or]on the first try as you're mounting her[as decreasingly likely outcomes]. With your hard erection sinking into her juicy cunt, she steadies her paws and pushes back, driving you further into her.";
 	say "     Your maleness slips into her tauric body with ease, her slick vagina eagerly accepting your penis into its warm embrace. Her cunny quivers around you delightfully as she yips and yiffs in lustful ecstasy. You growl aggressively and pound into her hard and fast while your upper body presses against her softly-furred back. You wrap your arms around her in a strong hug, moving your hands to fondle her lovely breasts and tease her perky pink nipples. 'Oh yeah, just like that. Breed me like a beast, you powerful taur,' she cries as you do just that and pound into her hard like an animal.";
 	WaitLineBreak;
-	say "     Her tauric body pushes back into every thrust you make as it responds to its lustful need to breed and you can't help but let your [bodyname of Player] body respond in kind. Each thrust you make has your cock squeezed and milked at by the horny vixen's cunny. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways, clearly built to be fucked and especially so by another taur. Samantha's clearly learning quickly to make the most of her new body's sexual abilities and works her vaginal muscles to pleasure you as much as possible to get the best fuck and biggest load out of her lover. Your hard flesh slides easily into her vagina with each thrust, but that luscious hole also and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You nuzzle at her neck and nibble at her foxy ears while your hands pinch her nipples, getting yips and moans from the lusty vixen. As Samantha's orgasm sends shivers of delight throughout her body, you thrust hard into her one last time as her talented cunt spasms and tugs at your cock frantically, milking at your rod until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed.";
+	say "     Her tauric body pushes back into every thrust you make as it responds to its lustful need to breed and you can't help but let your [BodyName of Player] body respond in kind. Each thrust you make has your cock squeezed and milked at by the horny vixen's cunny. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways, clearly built to be fucked and especially so by another taur. Samantha's clearly learning quickly to make the most of her new body's sexual abilities and works her vaginal muscles to pleasure you as much as possible to get the best fuck and biggest load out of her lover. Your hard flesh slides easily into her vagina with each thrust, but that luscious hole also and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You nuzzle at her neck and nibble at her foxy ears while your hands pinch her nipples, getting yips and moans from the lusty vixen. As Samantha's orgasm sends shivers of delight throughout her body, you thrust hard into her one last time as her talented cunt spasms and tugs at your cock frantically, milking at your rod until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed.";
 	say "     Once you're finished up, you slide off the well-bred vixen and plant your four feet on the ground to steady yourself, feeling a little woozy with the afterglow from your powerful orgasm. She wraps her arms around you, hugging you tight and kissing you passionately. Turning around, she gives you a grin and flashes her rump at you, showing off her well-fucked pussy and your hot semen leaking from it. Her thighs are soaked with it and her juices after the wild, bestial fucking. 'Oh, that was wonderful, sweetie. You should definitely try out some other taur forms so you can come back and breed me with them as well,' she murrs, giving her rump a little shake at you before trotting off with a giggle.";
 
 
@@ -864,7 +964,7 @@ to say samDVfirsttime:
 	say "     Sammie grins at your offer and takes a hold of you in his big, strong arms. 'Mmm... I've been looking forward to this since we got here.' She kisses you as best she can with her dracovixen muzzle, letting her tongue play across your lips before diving into your mouth. As her tongue explores your palate, she lowers you onto one of the cots. Her front paws knead over your [bodytype of Player] chest as she moves to climb atop you, murring in pleasure as she breaks the kiss to move into position";
 	if Player is male:
 		say ". Her hindquarters grind down atop your [cock size desc of Player] cock, quite eagerly after that passionate kiss, then shift into position. Her wet, vixen muff is ready and waiting, dripping juices down onto your loins as she climbs onto the strained cot. Placing her forepaws on your shoulders, she grips you firmly and lines up with your stiff member before sliding down onto it slowly.";
-		say "     Your [cock of Player] cock slips into her with ease, her slick vagina eagerly accepting its first penis. Her cunny quivers around you delightfully as you take her newfound virginity as she yips and rumbles in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you. 'Ohhh... oh wow! Mmmmm yeah, give it to me, baby. Fuck that horny herm,' she yips, bouncing her hindquarters harder and faster as her excitement builds - and you love every moment of it.";
+		say "     Your [Cock of Player] cock slips into her with ease, her slick vagina eagerly accepting its first penis. Her cunny quivers around you delightfully as you take her newfound virginity as she yips and rumbles in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you. 'Ohhh... oh wow! Mmmmm yeah, give it to me, baby. Fuck that horny herm,' she yips, bouncing her hindquarters harder and faster as her excitement builds - and you love every moment of it.";
 		WaitLineBreak;
 		say "     Her forepaws keep a firm grip on you, pinning you down onto the cot and keeping herself steady as she slams down onto your prick. You thrust up into her each time she comes down, eagerly getting herself fucked like some wild beast in heat. Despite her personal inexperience, it seems her body knows just what to do, with her inner walls squeezing and rippling across your [cock size desc of Player] meat in so many delightful ways. Pressing your face to the nearest of her many breasts, you wrap your lips around the lavender nipple. You get a yip of surprise from her as you give it a nibble and start suckling. You can feel her draconic cock throbbing between you, spurting precum as its vulpine knot starts to swell. After the frantic fucking becomes too much for Sammie and she presses herself down hard onto your shaft one last time, you moan loudly and cum into her orgasming pussy, pumping your hot load into the sexy taur's untarnished womb, claiming it for the first time. Even as you're pumping your semen into her, she's soaking both your chest and her lower torso with her own seed.";
 		say "     Once you're finished up, she steps back slowly, a little weak-kneed as your cock slips free. Her recently stuffed pussy quivers and leaks out a few trickles of your cum. 'Mmm... If you ever want another go, I'd love to have you in me again. That was such a wonderful experience. Such a much better way to enjoy a cock inside you,' she says with a grin and a pat on her rump. 'Maybe next time you can enjoy getting a hot, creamy load like that.' She even turns around and raises her tail, giving you an eyeful of her puffy and stretched pussy with your fresh load leaking out of her.";
@@ -892,7 +992,7 @@ to say samDVoral1:
 	say "     With most of her pulsing member stuffed into your mouth and down your throat, you moan wetly in pleasure. Sliding one hand further back to rub her wet folds, you move the other down to your [if Player is neuter]bare [end if]crotch[if Player is female] to finger your dripping pussy[else if Player is male] to stroke your cock[end if], imagining having that ridged member inside you. As her rumbles of pleasure grow louder, she pushes you forward, driving a few more inches into you before cumming hard. Her hot seed blasts from her pulsing cock, shooting down your throat to feed you her rich load. Her high output causes a sizeable amount of creamy cum to overflow from your mouth and dribble down your [bodytype of Player] chest, letting you enjoy the spicy-sweet flavor of her cum. Once she's spent and withdrawn, you lay back [if Player is female]fingering your pussy to orgasm and your other hand rubs her cum all over yourself[else if Player is male]stroking your cock until you cum as well, adding your seed to hers across your body before rubbing it all over yourself[else]and rub her cum all over yourself[end if]. Sammie smiles as she watches you put on this show, rumbling about how sexy you look covered in her seed and how she might try mounting you next time.";
 
 to say samDVoral2:
-	say "     Sammie runs her hands along your sides and then down to your loins. Rubbing over your cock, she nibbles your ear. 'I was hoping to get a taste of this sexy meat of yours,' she rumbles. Pushing you to take a seat on the cot, she lowers herself dracovixentaur body to the floor and nuzzles between your legs. You reach around her horns, run your hands through her soft hair and scritch her ears, getting a murr of pleasure from her. She gives you a foxish grin and slowly slides her tongue along your shaft, making little licks across your [cock size desc of Player] [cock of Player] meat. She continues to tease you, moving down to do the same to your balls, further exciting and frustrating your growing arousal.";
+	say "     Sammie runs her hands along your sides and then down to your loins. Rubbing over your cock, she nibbles your ear. 'I was hoping to get a taste of this sexy meat of yours,' she rumbles. Pushing you to take a seat on the cot, she lowers herself dracovixentaur body to the floor and nuzzles between your legs. You reach around her horns, run your hands through her soft hair and scritch her ears, getting a murr of pleasure from her. She gives you a foxish grin and slowly slides her tongue along your shaft, making little licks across your [cock size desc of Player] [Cock of Player] meat. She continues to tease you, moving down to do the same to your balls, further exciting and frustrating your growing arousal.";
 	WaitLineBreak;
 	say "     As she returns to your cock, you decide press her muzzle down onto your maleness, pushing it into her silky mouth. She moans softly at this treatment and starts sucking and licking at your penis excitedly. Clearly what she wanted all along, you drive your cock into her hot muzzle again and again, loving the feel of her sucking down on you. Her teeth, which you'd except to be sharp in a dragon-like muzzle, are actually quite smooth and slide across your cock in a way that only further stimulates you. Her agile tongue, soft palate and gripping throat feel wonderful as well. The whole of her muzzle feels like a hot cunt around your cock with the added pleasure of her delightful tongue. The sexy dracovixen's muzzle is clearly designed to give a wonderful blowjob and you eagerly take advantage of the opportunity to enjoy it. And from the wet moans and muffled yips of pleasure from Sammie's stuffed muzzle, she's certainly savoring it as well. When you finally cum and blast your hot load down her throat, she eagerly swallows it all down and cums herself, soaking her thighs and underbelly without even touching herself.";
 
@@ -912,7 +1012,7 @@ to say samDVfuck_top:
 
 
 to say samDVfuck_bottom:
-	say "     Sammie moans lustfully and presses her bosom against you as she hugs you tight. 'Mmm... I'm ready for more. Best give this horny dracovixen what she needs before she decides to just take it,' she ways with a playful wink and a twitch of her hard cock. 'I could use a good fucking and a hot dose of your thick cum,' she adds with a grin as she pushes you down onto the cot. Sammie runs her forepaws across your chest before climbing up onto the cot with you. She rubs her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [cock of Player] cock. With your erection hard and throbbing against her own, she shifts her hips and gets you lined up before sinking herself down onto your stiff member eagerly.";
+	say "     Sammie moans lustfully and presses her bosom against you as she hugs you tight. 'Mmm... I'm ready for more. Best give this horny dracovixen what she needs before she decides to just take it,' she ways with a playful wink and a twitch of her hard cock. 'I could use a good fucking and a hot dose of your thick cum,' she adds with a grin as she pushes you down onto the cot. Sammie runs her forepaws across your chest before climbing up onto the cot with you. She rubs her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [Cock of Player] cock. With your erection hard and throbbing against her own, she shifts her hips and gets you lined up before sinking herself down onto your stiff member eagerly.";
 	say "     Your maleness slips into her with ease, her slick vagina eagerly accepting your penis into its warm embrace. Her cunny quivers around you delightfully as she yips and rumbles in lustful ecstasy. You moan and pant beneath her as she squirms in pleasure atop you, her six breasts and hard nipples rubbing down onto your [bodydesc of Player] body as her draconic cock twitches and spurts pre. 'Oh yeah, that's just what I needed. Mmm... give it to me hard and breed me,' she moans as she starts riding you hard and fast.";
 	WaitLineBreak;
 	say "     Her forepaws keep a firm grip on your shoulders to help keep herself steady as she slams down onto your prick over and over. You thrust up into her each time she comes down, eagerly getting herself fucked like some wild beast in heat. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways. Sammie's clearly learning quickly and is making the most of her new body's sexual abilities. Her vagina moves and slides across your hard flesh easily, but grips and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You bring your lips to one of her many breasts and start suckling at its rosy nipple, getting a moan from the lusty vixen. As the hybrid's orgasm sends shivers of delight throughout her body, she slams down onto you one last time, letting her talented cunt spasm and tug at your cock frantically, milking at your cock until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed. As she cums, her penis pulses and sends sticky blasts of her seed to soak you both.";
@@ -920,7 +1020,7 @@ to say samDVfuck_bottom:
 
 
 to say samDVtaurfuck_top:
-	say "     Sammie rumbles lustfully as she looks your [bodytype of Player] form over. 'Mmm... now this is a fine body you've got here. A sexy taur just ripe for mounting,' she rumbles appreciatively. 'I'd say that hot [bodyname of Player] body of yours needs a good fucking and a hot dose of dracovixen cum.' Her powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. Her stiff meat rubs against your rump, spitting precum onto you as it moves into position. With her tapered glans lined up with your [if Player is female]wet cunt[else]tight pucker[end if], she pushes himself further onto you, sinking it into you with a strong thrust. Her cock, made for spreading open her lovers, dribbles precum along your passage as her muscled hips push forward, driving her increasingly thicker shaft into you. You moan beneath her in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath her in ecstasy as she fucks you with that exquisite cock of hers in strong, hard thrusts.";
+	say "     Sammie rumbles lustfully as she looks your [bodytype of Player] form over. 'Mmm... now this is a fine body you've got here. A sexy taur just ripe for mounting,' she rumbles appreciatively. 'I'd say that hot [BodyName of Player] body of yours needs a good fucking and a hot dose of dracovixen cum.' Her powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. Her stiff meat rubs against your rump, spitting precum onto you as it moves into position. With her tapered glans lined up with your [if Player is female]wet cunt[else]tight pucker[end if], she pushes himself further onto you, sinking it into you with a strong thrust. Her cock, made for spreading open her lovers, dribbles precum along your passage as her muscled hips push forward, driving her increasingly thicker shaft into you. You moan beneath her in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath her in ecstasy as she fucks you with that exquisite cock of hers in strong, hard thrusts.";
 	WaitLineBreak;
 	say "     With her tauric lower body atop yours, her humanoid top half presses against your back, letting her wrap his arms around you. She hugs you like this and nips at your neck and shoulder she thrusts into you again and again. 'Mmm... you make for such a sexy taur. That big cock stuffing you feels good, doesn't it? Taurs are made for mounting,' she rumbles as she rubs her breasts against your back[if Player is female]. 'Mmm... let's breed some kits in that hot taur body of yours, my dear,' she adds[end if][if Nipple Count of Player > 0 and Breast Size of Player > 0]. Her hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
 	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of Player] form lusting for the lustful pleasure of having the dragonvixentaur mounting you like some beast[if Player is not neuter]. Soon you're grinding your hindquarters back against her as your orgasm washes through you, cumming over and over again as she drives her meat into you[else]. Soon you're grinding your hindquarters back against her in delight, your body aching to feel her release since your genderless body cannot have one of its own[end if][if Player is male]. Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if Player is female]. Your pussy clenches and tugs at her cock, milking at it in wanton need as you orgasm repeatedly[else]. Your tight hole clenches and tugs at her cock, squeezing firmly around it as you're awash with ecstasy[end if]. Your [bodytype of Player] body is sent into pleasure overload as the big taur drives hard into you one last time, tying her knot inside you and releases her hot seed, blasting heavy spurts of thick semen into your [if Player is female]womb in an attempt to breed you[else]bowels, bloating your belly with her virile load[end if].[DVimpregchance]";
@@ -931,10 +1031,10 @@ to say samDVtaurfuck_top:
 
 
 to say samDVtaurfuck_bottom:
-	say "     Sammie moans lustfully and runs her paws across your [bodytype of Player] form. 'Mmm... now this is a fine body you've got here. A sexy taur to mount the sexy dracovixen,' she says with a grin before turning around and presenting her hindquarters to you. She gives her fluffy tail a swish and wiggles her rear invitingly. 'Come on, sweetie. You gave me this bod, so now you've got to help me tend to its needs. And right now it needs a hard cock and a hard fucking.' The tantalizing sight of the horny taur presenting herself sets off your own tauric instincts and you quickly mount her, sliding your [cock size desc of Player] [cock of Player] cock into her [one of]after several attempts to get lined up[or]after a little shifting to get into proper position[or]on the first try as you're mounting her[as decreasingly likely outcomes]. With your hard erection sinking into her juicy cunt, she steadies her paws and pushes back, driving you further into her.";
+	say "     Sammie moans lustfully and runs her paws across your [bodytype of Player] form. 'Mmm... now this is a fine body you've got here. A sexy taur to mount the sexy dracovixen,' she says with a grin before turning around and presenting her hindquarters to you. She gives her fluffy tail a swish and wiggles her rear invitingly. 'Come on, sweetie. You gave me this bod, so now you've got to help me tend to its needs. And right now it needs a hard cock and a hard fucking.' The tantalizing sight of the horny taur presenting herself sets off your own tauric instincts and you quickly mount her, sliding your [cock size desc of Player] [Cock of Player] cock into her [one of]after several attempts to get lined up[or]after a little shifting to get into proper position[or]on the first try as you're mounting her[as decreasingly likely outcomes]. With your hard erection sinking into her juicy cunt, she steadies her paws and pushes back, driving you further into her.";
 	say "     Your maleness slips into her tauric body with ease, her slick vagina eagerly accepting your penis into its warm embrace. Her cunny quivers around you delightfully as she yips and moans in lustful ecstasy. You growl aggressively and pound into her hard and fast while your upper body presses against her smoothly scaled back. You wrap your arms around her in a strong hug, moving your hands to fondle her lovely breasts and tease her perky pink nipples. 'Oh yeah, just like that. Breed me like a beast, you powerful taur,' she cries as you do just that and pound into her hard like an animal.";
 	WaitLineBreak;
-	say "     Her tauric body pushes back into every thrust you make as it responds to its lustful need to breed and you can't help but let your [bodyname of Player] body respond in kind. Each thrust you make has your cock squeezed and milked at by the horny vixen's cunny and makes her own hard cock twitch in response. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways, clearly built to be fucked and especially so by another taur. Sammie's clearly learning quickly to make the most of her new body's sexual abilities and works her vaginal muscles to pleasure you as much as possible to get the best fuck and biggest load out of her lover. Your hard flesh slides easily into her vagina with each thrust, but that luscious hole also and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You nuzzle at her neck and nibble at her foxy ears while your hands pinch her nipples, getting yips and moans from the lusty vixen. As Sammie's orgasm sends shivers of delight throughout her body, you thrust hard into her one last time as her talented cunt spasms and tugs at your cock frantically, milking at your rod until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed. As your balls drain into her, her balls pull up tight and send their ample load spraying from her ridged cock onto the floor.";
+	say "     Her tauric body pushes back into every thrust you make as it responds to its lustful need to breed and you can't help but let your [BodyName of Player] body respond in kind. Each thrust you make has your cock squeezed and milked at by the horny vixen's cunny and makes her own hard cock twitch in response. Her inner walls squeeze and ripple across your [cock size desc of Player] meat in so many delightful ways, clearly built to be fucked and especially so by another taur. Sammie's clearly learning quickly to make the most of her new body's sexual abilities and works her vaginal muscles to pleasure you as much as possible to get the best fuck and biggest load out of her lover. Your hard flesh slides easily into her vagina with each thrust, but that luscious hole also and squeezes as well, milking at your cock to build you towards what will surely be a powerful climax. You nuzzle at her neck and nibble at her foxy ears while your hands pinch her nipples, getting yips and moans from the lusty vixen. As Sammie's orgasm sends shivers of delight throughout her body, you thrust hard into her one last time as her talented cunt spasms and tugs at your cock frantically, milking at your rod until you groan loudly and cum hard, blasting your load to fill her needy womb with your seed. As your balls drain into her, her balls pull up tight and send their ample load spraying from her ridged cock onto the floor.";
 	say "     Once you're finished up, you slide off the well-bred hybrid and plant your four feet on the ground to steady yourself, feeling a little woozy with the afterglow from your powerful orgasm. She wraps her arms around you, hugging you tight and kissing you passionately. Turning around, she gives you a grin and flashes her rump at you, showing off her well-fucked pussy and your hot semen leaking from it. Her thighs are soaked with it and her juices after the wild, bestial fucking. 'Oh, that was wonderful, sweetie. You should definitely try out some other taur forms so you can come back and breed me with them as well,' she murrs, giving her rump a little shake at you before trotting off with a rumble of pleasure.";
 
 to say samDVfuck54:
@@ -965,14 +1065,101 @@ to say samDVfuck2_top:
 	say "     Once she's finished up and her knot's gone down, she pops it out of you, unleashing a flow of excess cum out of your recently stuffed pussy. Moving around, she presses her many breasts across your face while she starts fingering your creamy hole. As you start nursing from her bosom, she works several fingers in and out of your well-stretched cunt. Drinking her spicy, perfumy milk and enjoying her nimble fingers, you are pushed to another orgasm that leaves you weak and panting on the bed as she strides away[if HP of Sam is 54]. As you watch her go, you notice that her underbelly's looking noticeably rounder than when she was first transformed. It seems she's gotten herself pregnant sometime along the line with all the sex she's been having[end if].";
 
 to say samDVfuck2_bottom:
-	say "     Sammie moans lustfully as she pushes you down onto one of the bunks, running her forepaws across your chest as she climbing up onto the cot with you. Her powerful body pins you down grinds down against your [bodytype of Player] body, rubbing her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [cock of Player] cock. After some pleasurable grinding while you play with her lower breasts, she shifts her position and gets her juicy pussy lined up with your glans. She wiggles her rear so it rubs against your tip, drawing a few spurts of precum from your excited shaft. With your erection hard and throbbing against her waiting cunt, she sinks herself down onto it with a soft moan of pleasure.";
+	say "     Sammie moans lustfully as she pushes you down onto one of the bunks, running her forepaws across your chest as she climbing up onto the cot with you. Her powerful body pins you down grinds down against your [bodytype of Player] body, rubbing her soft, sexy body down atop of yours, making sure to grind her hindquarters firmly against your [cock size desc of Player] [Cock of Player] cock. After some pleasurable grinding while you play with her lower breasts, she shifts her position and gets her juicy pussy lined up with your glans. She wiggles her rear so it rubs against your tip, drawing a few spurts of precum from your excited shaft. With your erection hard and throbbing against her waiting cunt, she sinks herself down onto it with a soft moan of pleasure.";
 	say "     Your pulsing maleness slips into her with ease, her slick vagina eagerly accepting your manhood into its warm embrace. Her cunny quivers around you delightfully as she yips and rumbles in lustful ecstasy. You moan and pant beneath her as works her hips, grinding and riding your hard shaft. Her six breasts and hard nipples rub down onto your [bodydesc of Player] body as her knotted, draconic cock twitches and spurts pre. 'Oh yeah, that's just what I needed. Mmm... give it to me hard and fill me up,' she moans as she starts riding you hard and fast.";
 	WaitLineBreak;
 	say "     Her forepaws keep a firm grip on your shoulders to help keep herself steady as she slams down onto your prick over and over. You thrust up into her each time she comes down, eagerly getting herself fucked like some wild beast in heat. Her inner walls squeeze and ripple across your [cock size desc of Player] meat as she milks your manhood with her talented cunt. Her vagina moves and slides across your hard flesh easily, but grips and squeezes as well, a powerful climax fast approaching. You bring your lips to one of her many breasts and start suckling at its rosy nipple, getting a moan from the lusty vixen as well as a taste of spicy, perfumed milk. As the hybrid's orgasm sends shivers of delight throughout her body, she slams down onto you one last time, letting her talented cunt spasm and tug at your cock frantically, milking at your shaft until you groan loudly and cum hard, blasting your [Cum Load Size of Player] load into her needy womb. As she cums, her penis pulses and sends sticky blasts of her seed to soak you both.";
 	say "     Once you're finished up, she slides off your spent shaft slowly, reluctantly releasing your cock. Moving around, she presses her many breasts across your face while she starts stroking your flagging shaft. As you start nursing from her bosom, she works you back to full erection. Drinking her spicy, perfumy milk and enjoying her nimble fingers, you are pushed to another orgasm that leaves you weak and panting on the bed as she strides away[if HP of Sam is 54]. As you watch her go, you notice that her underbelly's looking noticeably rounder than when she was first transformed. It seems she's gotten herself pregnant sometime along the line with all the sex she's been having[end if].";
 
 
-Section 6 - Subroutines and Functions
+Section 6 - Shrinking Shroom Content
+
+
+to say SamShroom:
+	if hunger of Sam is 0:	[First talk with Sam about shrinking shrooms]
+		say "     Sam waves a hand over the vials scattered around the shed. 'As you can see here, I've been busy collecting more samples, but I must admit that it's getting harder to find more unique specimens. If you happen to find anything interesting during your explorations, please let me know.'";
+		if MushroomCaveVisited is 1:	[Had visited the shrinking shroom site]
+			say "Recalling the miniaturized landscape that you found earlier, you tell Sam about it, which swiftly grabs the [if hp of Sam < 30]dragontaur's[else if hp of Sam < 50]vixentaur's[else]dracovixentaur's[end if] attention. 'Fascinating,' Sam responds. 'And you believe that this shrunken area has something to do with nanites and radiation? This is definitely something that I need to look into. You wouldn't happen to have brought back a sample from that area, would you?'";
+			if glowing mushroom is owned:
+				say "     [bold type]Do you give a glowing mushroom to Sam?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Give the scientist a mushroom.";
+				say "     ([link]N[as]n[end link]) - Keep the mushroom to yourself.";
+				if player consents:		[Give Sam a shrinking shroom]
+					LineBreak;
+					say "     You pull out a mushroom that you harvested from the site in question and give it to the scientist. 'Interesting... Very interesting...' Sam says as they take the shroom and slowly turn it around to examine the glowing green fungus. 'I would love to have some more of these to run tests on, but I imagine that it would be a major hassle to constantly run back and forth just to sate my curiosity. Hmm... I wonder...' Sam looks over to one of the vial stashes lying around and sifts through it, extracting one vial filled with a murky-white liquid before going outside. Curious, you follow the taur to the back of the shed where there are several large planter boxes filled with soil. Sam puts the mushroom into one of the boxes, completely covering it with dirt, and then pours the vial's contents where the fungus was planted.";
+					say "     You and Sam stare at the planter box for several minutes, and to your surprise, several tiny green mushrooms eventually pop up from the soil. Sam chuckles at your amazement and explains, 'I used extracted nutrients from some of the  rapidly growing plant life that have been popping up in some parts of the city.' Sam looks back to the mushrooms, which seemed to have stopped growing once they were about half the size of the original. 'I'm glad to see that my little gardening project works, and although it will take a bit longer before this batch fully matures, it looks like I'll be able to grow my own mushrooms here to fuel my research. Thank you for bringing this incredible find to me. Give me a moment to study them, and I'll share whatever information that I can get.'";
+					decrease carried of glowing mushroom by 1;
+					now hunger of Sam is 10;
+				else:	[Sam goes searching for their own shrinking shrooms]
+					say "[SamShroomSearch]";
+			else:
+				say "[SamShroomSearch]";
+		else:
+			say "You tell the scientist that you'll keep an eye out for anything of interest.";
+	else if hunger of Sam is 9:		[Sam returns from looking for shrinking shrooms]
+		say "     'As you can see, I'm back from taking a look at that miniaturized site that you told me about,' Sam greets. 'Come on. I have something to show you.' Curious, you follow the scientist to the back of the shed where there are several large planter boxes filled with soil, one of which is glowing faintly as several small, but familiar mushrooms, are growing. 'I gathered some mushrooms from the site and decided to try planting one of them. I added some extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city, and from the looks of it, my little gardening project works. It will take a bit longer before this batch fully matures, but it looks like that I'll be able to grow my own mushrooms here. I'll be able to keep on running tests on them without the inconvenience of running back and forth. Thank you for telling me about this incredible find.'";
+		now hunger of Sam is 10;
+	else if hunger of Sam is 10:	[Sam talk to open shrinking shroom vore scenes]
+		say "     'I've been studying the mushrooms from the shrinking zone, and your initial hypothesis about radiation affecting nanites is right. I haven't yet been able to determine exactly why, but these mutated nanites have been given shrinking properties. As you might already know, anyone that decides to eat these [italic type]shrinking shrooms[roman type] will be reduced to roughly the size of a mouse. Fortunately, the effect is only temporary. I'll continue studying these shrooms as I grow them, but if you want, I can spare you one every now and then.'";
+		say "     Sam pauses for a moment to look over your entire body before continuing, 'Actually, while we're on the subject of these shrinking shrooms, I've realized that they can also be used to help me gather some other valuable data, but I will need your help with that. You see, I've been interested in possibly studying the insides of a person transformed by the nanites, but I never had the means to, until now. My plan is to have you consume a shrinking shroom so that your miniaturized form can enter me either orally or anally. You'll then spend some time inside of me before I expel you from my body so that I can swab you for samples of my insides. I know that this is an odd request, but you're my best shot at this because it's not like I can ask any random person off the street if I could eat them, and for the same reason, I can't have you go around being eaten by potentially dangerous individuals. Nonetheless, I am aware that all of this sounds bizarre and dangerous, so you are under no obligation to do any of this. If you do decide to help me though, I assure you that not only will I take every precaution to ensure your safety, but I believe that I can make this experiment enjoyable for the both of us.'";
+		now hunger of Sam is 11;
+	else if hunger of Sam is 20:	[Sam gives player a shrinking shroom]
+		say "     You ask if Sam can give you a shrinking shroom. 'Sure thing. Here you go.' Sam takes out a shrinking shroom from a covered storage container and then hands it to you with a smile.";
+		now hunger of Sam is 11;
+		increase carried of glowing mushroom by 1;
+	else:	[Sam doesn't have a shrinking shroom to give to player]
+		say "     You ask if Sam can give you a shrinking shroom. 'Sorry, but I've used all of the shrinking shrooms on experiments and tests,' Sam apologizes. 'I'll try to save you one from the next batch.'";
+
+to say SamShroomSearch:		[Sam goes searching for Shrinking Shrooms]
+	say "     Shaking your head, you say that you don't have anything on hand, but you do tell Sam where the place is. The scientist mulls on your information for a moment before quickly stuffing several empty vials and a few other specimen collection containers into a bag. 'This place sounds so interesting. I must go and check it out right now. I shouldn't be gone for more than a day, so check back then if you're interested in finding out what I discovered. See you later.' With those departing words, Sam exits the shed, leaving you to go about your business until the taur returns.";
+	now hunger of Sam is 1;
+	now Sam is nowhere;
+
+an everyturn rule:	[Timer for Sam's Shrinking Shroom Content]
+	if hunger of Sam > 0 and hunger of Sam < 9:		[Sam is searching for Shrinking Shrooms]
+		increase hunger of Sam by 1;
+	else if hunger of Sam is 9:		[Sam is back from searching for Shrinking Shrooms]
+		move Sam to large shed;
+		if player is in large shed:
+			say "     The shed door opens, and you turn to see Sam step in. 'Ah, you're here. As you can see, I'm back from taking a look at that miniaturized site that you told me about,' Sam greets. 'Come on. I have something to show you.' Curious, you follow the scientist to the back of the shed where there are several large planter boxes filled with soil, one of which is glowing faintly as several small, but familiar mushrooms, are growing. 'I gathered some mushrooms from the site and decided to try planting one of them. I added some extracted nutrients from some of the rapidly growing plant life that have been popping up in some parts of the city, and from the looks of it, my little gardening project works. It will take a bit longer before this batch fully matures, but it looks like that I'll be able to grow my own mushrooms here. I'll be able to keep on running tests on them without the inconvenience of running back and forth. Thank you for telling me about this incredible find.'";
+			now hunger of Sam is 10;
+	else if hunger of Sam > 10 and hunger of Sam < 20:	[Timer for Sam giving player a shrinking shroom]
+		increase hunger of Sam by 1;
+
+to say SamShroomIntro:
+	say "     You tell Sam that you're willing to help with studying their insides, and the [if hp of Sam < 30]dragontaur[else if hp of Sam < 50]vixentaur[else]dracovixentaur[end if] smiles at you with both eagerness and gratitude. 'Thank you[if player is not defaultnamed], [name of player][end if],' they say. 'I'm sure that this will be an enlightening experience for the both of us.' Sam takes out a shrinking shroom from a covered storage container and gives it to you. It only takes a few moments after you consume the mushroom before the room gets seemingly bigger as you shrink. Soon, you're no bigger than a mouse, and the towering taur in front of you feels like that they're as big as a house due to your diminutive size. Sam quickly but neatly sets aside your belongings before they lay their open hand on the ground in front of you, allowing you to climb onto it. Once you're situated, Sam carefully raises their hand, and even though you know that they are moving at a slow speed for your safety, the trip up still has a hint of foreboding as you pass by a sea of [if hp of Sam < 30]blue scales[else if hp of Sam < 50]pink fur[else]violet scales and fur[end if] until you're face to gigantic face with the scientist's muzzle.";
+
+to say SamShroomOral:	[Oral Shrinking Shroom scene]
+	say "[SamShroomIntro]";
+	say "     'So, the plan is that you'll crawl into my mouth,' Sam explains. 'You'll stay in there for a bit to get coated in my saliva before you'll go down into my stomach. Don't worry, the nanites will prevent you from being digested for a duration, and I'll be sure to get you out of there long before that protection expires. So, you ready to be eaten?' Though you know that Sam meant it as a joke, it doesn't change the fact that you're more or less willingly offering yourself as food for a predator, but while the notion seems bizarre, you can't help but feel a bit excited and curious with the plan. When you say that you're ready, Sam smiles briefly before slowly opening their maw. Your breath hitches at the sight of both their massive fangs and the tunnel of flesh behind it.";
+	WaitLineBreak;
+	say "     The hand that you're riding on moves up against Sam's mouth as they loll out their tongue, and after you take a deep breath, you jump onto the living welcome carpet, the soft muscle cushioning your fall, even if it makes for a somewhat wet landing. Sam's tongue then retracts between their teeth, taking you along with it, and you have a brief moment to marvel at the cave of pink flesh all around you before the mouth closes, plunging you into a muggy, heated darkness. You don't have long to acclimate to your new surroundings before you feel Sam's tongue rise up, and you're knocked onto your back when you're mashed against the top of their mouth. The tongue gently grinds you against the ceiling, and although your front is being pressed into a hard, bony surface, it is offset by the soft muscle squishing beneath you, giving you a form of erotic full-body massage. You can't help but moan in pleasure from the flurry of sensations, and you can feel a growing need in your loins.";
+	say "     But before you can have your mounting arousal tended to, the rubbing stops as the tongue lowers back down, and you're panting from the overwhelming stimuli to your senses. However, you're given no rest as Sam drops you to the bottom of the mouth, and their tongue promptly pins you against the base of their bottom teeth to lavish you with an onslaught of licks. You're already drenched from the earlier grinding, but Sam seems to be making extra sure that you're thoroughly coated as they lick every one of your nooks and crannies. You're unable to stop the massive muscle, not that you want to. The warm, soft tongue gently drags across your entire body, leaving nothing but pleasure in its wake, and your arousal shoots past the point that you were brought to earlier.";
+	WaitLineBreak;
+	say "     Almost as if sensing your growing need, Sam moves to focus on your lower half, the tip of their tongue carefully caressing [if player is herm]all of your genitals[else if player is male]your cock[smn][else if player is female]your cunt[sfn][else]your groin[end if]. You don't last long under the oral ministrations, and you cry out when you hit your climax[if player is herm], Sam humming in approval as your sexual fluids spray all over their taste buds[else if player is male], Sam humming in approval as you cum all over their taste buds[else if player is female], Sam humming in approval as your juices spray all over their taste buds[end if]. You slump onto the tongue in exhaustion, and you don't resist when it maneuvers you on top of it and ferries you to the back of the mouth. A little light shines in when Sam opens up to take a deep breath, giving you a glimpse of the drop into the scientist's throat right before they tilt their head back, sending you hurtling down into the pink abyss.";
+	say "     The passage quickly narrows down into a long, narrow tube, supple flesh squeezing down on your hapless form and slowing your descent while Sam's sigh of satisfaction echoes around you. Plunged into darkness once again, you can only concentrate on the sounds of squelching flesh and the feel of the throat muscles pressing into you. The tight, compressing passage makes it impossible for you to do little more than squirm, and all you can do is abide the muscles dragging you deeper into the dark depths. As the slick walls press in, you find that you're still sensitive from your earlier climax, and it doesn't take much for the encompassing silken touches to bring you to yet another orgasm. After what felt like an eternity of being subjugated to the pulsating walls and the pleasure that they constantly wring out of you, your feet briefly touches a wall before you are squeezed through a ring of flesh and fall into an open space that can only be the taur's stomach.";
+	say "     There is plenty of room in the living cavern, but your exhaustion from Sam's ministrations and traveling through their innards, as well as the constantly shifting floor, makes it impossible for you to stand, let alone move about. 'I have to admit, you were delicious,' comes Sam's voice from all around you. 'I certainly enjoyed our little experiment, and from the look of things, you did too. I'll need you to stay inside of my stomach for a while to make sure I can get good samples, so just sit back and relax for now. I'll let you out when I'm ready.' Tired yet satisfied by your miniature ordeal, you crawl into a spot where you can rest against the pliant wall. The warm, humid air and the oddly calming sounds of your squelching surroundings only add to your weariness, and it doesn't take long for you to pass out.";
+	WaitLineBreak;
+	say "[SamShroomEnd]";
+
+to say SamShroomAnal:	[Anal Shrinking Shroom scene]
+	say "[SamShroomIntro]";
+	say "     'Alright, so the goal is for you to enter my anus for this sample collection, however, there is a bit of a small problem, and it has to do with, well, you being so small. I need samples from deep inside of me, and while you might be the appropriate size, it's going to be tough for you to power your way in. My hands cannot reach back there to assist you, but fortunately, I have a tool that will solve our problems... in a slightly unorthodox way.' Using the hand that's not holding you, Sam reaches into a nearby box and pulls out a dildo, and not just any dildo. While it was shaped like an ordinary human dick, the size of it would have been more fitting on a horse, which is actually appropriately fitting for Sam's large tauric body.";
+	WaitLineBreak;
+	say "     'I found this during one of my jaunts around the city, and this thing has helped me with the extraction process from several difficult subjects. [if hp of Sam < 30 or hp of Sam > 49]Although, I haven't used it since this body of mine has a much better version built right into it,' they add with a chuckle. '[end if]You'll be holding onto this thing when it goes inside of me, and hopefully, we'll be able to get you in really deep. So, you ready?' Though you know that your role is nothing more than a bizarre mix of butt food and an add-on sex toy, you can't help but feel a bit excited and curious with the plan. Nodding your assent, Sam affixes the dildo onto the shed wall, and after adjusting it so that it's level with their ass, you are brought right up to the giant plastic phallus. You climb onto the dildo, the synthetic cock slightly cold and soft to the touch, and you make your way to its tip. Once you wrapped your limbs around the sex toy, Sam says, 'Alright, I'm going to start. Hold on tight. This is going to be quite the ride for the both of us.'";
+	say "     The taur scientist turns around, showing off a titanic ass of [if hp of Sam < 30]blue scales[else if hp of Sam < 50]pink fur[else]violet scales and fur[end if] with a puckered hole right in its center, which just so happens to be your destination. The humongous booty slowly moves closer, encompassing your vision, and even from a distance, you get a whiff of the musk emanating from it. Sam moans when the dildo tip slowly pushes inside of him, and you're soon plunged into a darkness of musk and taut flesh sliding along and engulfing your entire body. The anal walls clenches down tightly on your intrusion, but the squeezing sensation only lasts for a moment before you feel the surrounding flesh slide in the opposite direction until you find yourself back in the outside world.";
+	WaitLineBreak;
+	say "     However, your respite doesn't last long as the gargantuan ass pushes right back into the dildo, returning you to the musky depths. In and out you go of the tunnel of flesh as Sam fucks themself on the phallic wall ornament, each push sinking both the sex toy and you deeper into the taur. 'A-almost there!' Sam announces after a while, heavily panting from the lustful exertion. 'Get ready to let go!' With a loud groan, Sam gives one final push, taking the dildo all the way to the hilt and plunging you deep inside of them. While Sam catches their breath, you let go of the dildo, and soon, the plastic phallus withdraws, leaving you behind. With your phallic transport gone, the surrounding walls promptly clamp down on your hapless form, the clenching muscles slowly drawing you even deeper.";
+	say "     The tight tunnel makes it impossible for you to do anything but squirm, which quickly becomes a problem. Your head swims with lust from being exposed to the depths of Sam's intoxicating aroma, and the surrounding flesh caressing you from all sides only adds to the fire stirring in your loins. While you cannot tend to yourself by normal means, you're able to shift yourself until you can press your groin right up against a wall, grinding your [if player is male]cock[smn][else if player is female]cunt[sfn][else]crotch[end if] against the supple flesh. It doesn't take long for you to moan out in pleasure when your body twitches from your climax[if player is male], your cum smearing against the walls[else if player is female], your juices smearing against the walls[end if]. Exhausted from both your orgasm and the ordeal needed to achieve it, you slowly drift off to sleep to the oddly relaxing caress of Sam's anal walls as they draw you deeper and deeper into the taur.";
+	WaitLineBreak;
+	say "[SamShroomEnd]";
+
+to say SamShroomEnd:
+	say "     When you come to, you find yourself lying on the floor of the shed with a blanket draped over you. Not only are you back to your usual size, but you had been thoroughly cleaned of your spelunking within Sam. Speaking of Sam, the transformed scientist is busy inspecting a set of vials, but they turn to you when they notice your movements. 'Oh good. You're awake,' Sam greets cheerfully. 'I have to admit that I had quite a bit of fun having you inside of me, but the most important part is that I got all sorts of valuable samples from you. Thank you again for all of your help. Of course, I can always use more samples, so if you feel like being my [italic type]little[roman type] assistant again, let me know.'";
+	LibidoLoss 40;
+
+Section 7 - Subroutines and Functions
 
 to vixentaur_active:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -1018,10 +1205,10 @@ monstermemory is a number that varies.
 to say DVimpregchance: [Allows for varied offspring by Sam/Dracovixentaur]
 	let Z be a random number between 1 and 4;
 	now monstermemory is MonsterID;
-	if Z is 1 and girl is not banned: [puts Vixentaur as lead monster in case of impregnation]
+	if Z is 1 and FemaleList is not banned: [puts Vixentaur as lead monster in case of impregnation]
 		setmonster "Vixentaur";
 		say "[impregchance]";
-	else if Z is 2 and guy is not banned: [puts Dragontaur as lead monster in case of egg-pregnation]
+	else if Z is 2 and MaleList is not banned: [puts Dragontaur as lead monster in case of egg-pregnation]
 		setmonster "Dragontaur";
 		say "[ovichance]";
 	else if Z is 3: [puts Dracovixentaur as lead monster in case of impregnation]
@@ -1033,14 +1220,14 @@ to say DVimpregchance: [Allows for varied offspring by Sam/Dracovixentaur]
 	now MonsterID is monstermemory;
 
 
-Section 7 - Endings
+Section 8 - Endings
 
 when play ends:
-	if bodyname of Player is "Feline Hexataur": [special surrender ending]
+	if BodyName of Player is "Feline Hexataur": [special surrender ending]
 		say "     Having given yourself over to Rick, you and Sammie are made into lovely hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers[']. And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
 		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead you, Sammie, and your cubs out of the city and into the rest of the world. From what little you remember of that time, you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs, and those who did manage to catch up to the lot of you... well, currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you, Sammie, and the pair of cubs the two of you are currently nursing.";
 		stop the action;
-	else if bodyname of Player is not "Vixentaur" and bodyname of Player is not "Dragontaur" and bodyname of Player is not "Dracovixentaur":
+	else if BodyName of Player is not "Vixentaur" and BodyName of Player is not "Dragontaur" and BodyName of Player is not "Dracovixentaur":
 		if humanity of Player < 10:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "     After you succumb to the infection and do not return, Sam strikes back out on his own, heading into the city to enjoy the sexy creatures populating the fallen city. He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature.";

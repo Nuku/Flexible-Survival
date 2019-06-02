@@ -41,7 +41,7 @@ instead of conversing the Duke:
 		if HP of Duke is 0:
 			say "     Note: Hm, you shouldn't be able to talk to him before watching his event with Shawn the ram - please report how you got to see this.";
 		else if HP of Duke is 1:
-			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (BodyName of Player is "ram" or BodyName of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I haven't seen you around here before, so you came in from elsewhere in the city? And you're a sheep-person!' He turns his head to look at his 'special' ram friend, then back to you. 'I was hoping that there might be... sheep-people out there somewhere - and now you just walk into our farm and come to talk to me.'";
 				say "     Duke takes a deep breath, then says 'You see - my boyfriend and I started working here a while ago as shepherds, and... then everything went crazy with that nanite infection and I turned into an actual German shepherd. At least still more or less humanoid...' He looks down over his naked body and stretches his arms a bit, then points at the young ram you saw him with before. 'Shawn on the other hand, he went all the way to being a sheep. He can't even talk, and barely recognizes me. I don't know if there's much left of him inside, he acts pretty much like any other ram.'";
 				say "     He sniffs a bit, then continues 'I tried to... infect him with being a German shepherd, but it doesn't work. Nothing someone here on the farm has worked so far. I think having a similar infection might be the only way to make him a person again - a sheep-person, like you' Duke gives you a pleading look and a wag of his tail 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
@@ -73,7 +73,7 @@ instead of conversing the Duke:
 					say "     You assure Duke you'll have an eye out for sheep in the city and walk away from him a bit.";
 					now HP of Duke is 2;
 		else if HP of Duke is 2:
-			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (BodyName of Player is "ram" or BodyName of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he looks you up and down with a happy, almost ecstatic expression, his tail wagging excitedly. 'I ask you to get some wool, and you go all the way and come back as a sheep-person. Thank you - you're amazing!' He turns his head to look at his ram boyfriend, then back to you. 'Could you maybe... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";
@@ -102,7 +102,7 @@ instead of conversing the Duke:
 					say "     Shaking your head to show that you don't have what he needs, you see Duke's raised tail droop a bit, then partly perk up again as you assure him you'll have an eye out for sheep in the city.";
 					now HP of Duke is 2;
 		else if HP of Duke is 3:
-			if (bodyname of Player is "ram" or bodyname of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
+			if (BodyName of Player is "ram" or BodyName of Player is "ewe") and player is pure: [with a player in sheep form, this gets pretty easy]
 				say "     As you walk up to Duke, he gives you a hopeful but still somewhat guarded look, then says 'Have you changed your mind? Please let it be so. You could just... rub your fur against his or something? I'd be incredibly thankful -' *glancing at Shawn the ram, he adds* 'we both would be.'";
 				LineBreak;
 				say "     Well, that's a task for once that doesn't seem hard at all. Do you want to help Duke out and try to transform the ram yourself?";

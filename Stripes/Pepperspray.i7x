@@ -133,7 +133,7 @@ to say enhancedattack:
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
 	if "Know Thyself" is listed in feats of Player:		[That's what you get for thinking with your crotch.]
-		if cockname of Player is Name entry, increase Libido of Player by a random number from 0 to 2;
+		if CockName of Player is Name entry, increase Libido of Player by a random number from 0 to 2;
 	if hardmode is true:
 		if the combat bonus > 12:				[pepperspray increases hardmode bonus limit to +12]
 			now combat bonus is 12;
@@ -150,10 +150,10 @@ to say enhancedattack:
 				increase dam by 1;
 			if "Black Belt" is listed in feats of Player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
-			if "Natural Armaments" is listed in feats of Player and bodyname of Player is not "Human":
+			if "Natural Armaments" is listed in feats of Player and BodyName of Player is not "Human":
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is bodyname of Player:
+					if Name entry is BodyName of Player:
 						now z is y;
 						break;
 				choose row z in Table of Random Critters;
@@ -184,7 +184,7 @@ to say enhancedattack:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapon's knowledge, you attack with[or]Like the veteran fighter you are, you strike with[at random] [weapon of Player], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of Player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodyname of Player][or]Drawing strength from your [bodyname of Player], you attack[or]You attack using your [bodyname of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of Player][']s natural defenses[at random], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [BodyName of Player][or]Drawing strength from your [BodyName of Player], you attack[or]You attack using your [BodyName of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodyName of Player][']s natural defenses[at random], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of Player or "Martial Artist" is listed in feats of Player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -192,18 +192,18 @@ to say enhancedattack:
 		else:
 			say "You [one of]strike with[or]attack with[or]use[or]abuse with[at random] [weapon of Player], hitting [Name entry] for [special-style-2][dam][roman type] damage!";
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of Player:		[+5% of tail attack w/pepperspray]
-			if tailname of Player is listed in infections of Tailweapon:
+			if TailName of Player is listed in infections of TailweaponList:
 				let z be 0;
 				repeat with y running from 1 to number of rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry is tailname of Player:
+					if Name entry is TailName of Player:
 						now z is y;
 						break;
 				choose row z in Table of Random Critters;
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [tailname of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
+				say "[line break]You make an additional attack using your [TailName of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row MonsterID from Table of Random Critters;
 		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12:

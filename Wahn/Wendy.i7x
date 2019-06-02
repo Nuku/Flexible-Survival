@@ -10,7 +10,7 @@ Cow Hunting	"Cow Hunting"
 Cow Hunting is a situation. The level of Cow Hunting is 5.
 The sarea of Cow Hunting is "Plains".
 when play begins:
-	add Cow Hunting to badspots of hermaphrodite; [Cuntboy cowboy]
+	add Cow Hunting to badspots of HermList; [Cuntboy cowboy]
 
 Instead of resolving a Cow Hunting:
 	project the Figure of Corbin_face_icon;
@@ -42,12 +42,12 @@ Instead of resolving a Cow Hunting:
 		say "     The cowboy shouts out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
-			if Name entry is "Cowboy Cuntboy":
+			if Name entry is "Gypsy Horse Transman":
 				now MonsterID is y;
 				now area entry is "Plains";
 				now non-infectious entry is false;
 				break;
-		challenge "Cowboy Cuntboy";
+		challenge "Gypsy Horse Transman";
 		now Resolution of Cow Hunting is 2; [attacked to Corbin]
 	else if calcnumber is 3: [seriously?]
 		LineBreak;
@@ -141,18 +141,27 @@ object	name
 Wendy	"Wendy"
 
 Wendy is a woman.
-ScaleValue of Wendy is 4.
-Cock Count of Wendy is 0.
-Cock Length of Wendy is 0.
-Ball Size of Wendy is 0.
-Ball Count of Wendy is 0.
-Cunt Count of Wendy is 1.
-Cunt Depth of Wendy is 30.
-Cunt Tightness of Wendy is 15.
-Nipple Count of Wendy is 4. [4 nipples]
-Breast Size of Wendy is 0.
-TwistedCapacity of Wendy is true.
-Sterile of Wendy is true.
+ScaleValue of Wendy is 4. [human+ sized]
+Body Weight of Wendy is 6. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Wendy is 3. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Wendy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Wendy is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Wendy is 4.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Wendy is 8. [length in inches]
+Breast Size of Wendy is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Wendy is 4. [count of nipples]
+Asshole Depth of Wendy is 8. [inches deep for anal fucking]
+Asshole Tightness of Wendy is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Wendy is 0. [number of cocks]
+Cock Girth of Wendy is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Wendy is 0. [length in inches]
+Ball Count of Wendy is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Wendy is 0. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Wendy is 1. [number of cunts]
+Cunt Depth of Wendy is 30. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Wendy is 4. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Wendy is 4. [size 1-5, very small/small/average/large/very large]
 [Basic Interaction states as of game start]
 PlayerMet of Wendy is false.
 PlayerRomanced of Wendy is false.
@@ -164,7 +173,9 @@ Virgin of Wendy is false.
 AnalVirgin of Wendy is false.
 PenileVirgin of Wendy is true.
 SexuallyExperienced of Wendy is true.
-MainInfection of Wendy is "".
+TwistedCapacity of Wendy is false.
+Sterile of Wendy is false.
+MainInfection of Wendy is "Human".
 The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.

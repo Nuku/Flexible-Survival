@@ -17,8 +17,8 @@ Garage Demon	"Garage Demon"
 Garage Demon is a situation.
 The sarea of Garage Demon is "Capitol".
 when play begins:
-	add Garage Demon to badspots of guy;
-	add Garage Demon to badspots of hellspawn;
+	add Garage Demon to BadSpots of MaleList;
+	add Garage Demon to badspots of DemonList;
 
 Instead of resolving a Garage Demon:
 	if debugactive is 1:
@@ -353,7 +353,7 @@ to say hayatosex1:
 
 to say hayatosex2:
 	say "     Wanting some relief, you look over at the docile oni and grin. Noticing you pulling out your [cock size desc of Player] cock, his own manhood stirs. Offering it to the sitting fellow, he licks his thick lips with his bright red tongue, but hesitates. Running a hand through his coarse hair, you tell him that you know he wants it and to just be a good cockslut and get to work. The next pass of his tongue has it slide across your glans before he assents and opens his mouth to take it in[if Cock Length of Player > 36]. It takes quite a bit of effort even for the muscular oni to push his maw and throat over your massive meat, but he continues with growing enthusiasm until he's managed to stretch himself around it all[else if Cock Length of Player > 24]. It takes him some effort to him to get your enlarged meat into his maw and down his throat, but he does so with growing enthusiasm until he's succeeded[else if Cock Length of Player > 12]. He works the full length of your meat into his maw and throat with growing enthusiasm until it's all in there[else]. He takes the full length of your meat into his maw with a growing enthusiasm[end if].";
-	say "     While working his mouth and tongue over your [cock of Player] shaft, the red oni [one of]pants and moans around your cock while busily pumping his own hard and fast[or][if cockname of Player is not listed in infections of internallist]eagerly rubs your [Ball Size Adjective of Player] [Balls] in his strong hand[else if Player is female]stuffs a thick finger into your cunny and works it in and out[else if anallevel is 3]teases a finger at your anus before stuffing it into your tight hole[else]kneads your ass with his strong hand[end if][or]grabs your ass and moans, clearly wanting you to fuck his face[or]has an expression of lustful delight on his otherwise fearsome face[at random]. You rub your hands through his rough hair and over those horns of his. When your own excitement crests, you grab onto those horns and pull him into each thrust you make, having your way with the muscular demon ogre's mouth until you cum a [Cum Load Size of Player] load of gooey semen down his throat. As he's swallowing down your seed, he pumps his own red pillar until his jizz splatters everywhere. Sated now, you push his head away and leave the big guy in an orgasmic daze while some of your excess seed leaks from the corner of his mouth.";
+	say "     While working his mouth and tongue over your [Cock of Player] shaft, the red oni [one of]pants and moans around your cock while busily pumping his own hard and fast[or][if CockName of Player is not listed in infections of InternalCockList]eagerly rubs your [Ball Size Adjective of Player] [Balls] in his strong hand[else if Player is female]stuffs a thick finger into your cunny and works it in and out[else if anallevel is 3]teases a finger at your anus before stuffing it into your tight hole[else]kneads your ass with his strong hand[end if][or]grabs your ass and moans, clearly wanting you to fuck his face[or]has an expression of lustful delight on his otherwise fearsome face[at random]. You rub your hands through his rough hair and over those horns of his. When your own excitement crests, you grab onto those horns and pull him into each thrust you make, having your way with the muscular demon ogre's mouth until you cum a [Cum Load Size of Player] load of gooey semen down his throat. As he's swallowing down your seed, he pumps his own red pillar until his jizz splatters everywhere. Sated now, you push his head away and leave the big guy in an orgasmic daze while some of your excess seed leaks from the corner of his mouth.";
 
 to say hayatosex3:
 	setmonster "Red Oni";
@@ -391,7 +391,7 @@ to say hayatosex5:
 	else:
 		say "     In the mood to have another go at the docile oni's ass, you continue playing with his cock while guiding him over onto all fours. He shows little reluctance this time, accepting your unspoken request by raising his red-skinned bottom and bracing his strong body. You smile at this and caress his enlarged cock, [one of]telling him that you appreciate the view[or]teasing about what a fine bottom he's becoming[or]causing him to moan with need[or][if anallevel is 3]slipping a lubed finger into his anus to spread him open[else]teasing his crinkled hole[end if][or]tantalizing him with your shaft between those muscled cheeks until he begs for it[in random order].";
 	say "     You press your cock against his back door, taking your time to coax it open slowly[if HayatoHunger is 0] for his first time[end if]. You're quite hard and throbbing as you ease [if Cock Length of Player > 2]inch after inch[else]your small shaft[end if] into him, letting your pre get his hole slick. He whimpers [if Cock Length of Player < 12]a little[else]momentarily[end if] at first while balling his clawed hands into fists as he grows used to the penetration, but pushes back onto your manhood all the same. Keeping a grip on his cock the whole time, you continue stroking him, further encouraging him to press on. And from how rock hard it's gotten, you can tell he's enjoying it quite a lot.";
-	say "     [if Cock Length of Player > 36]After managing to sink fully into him, even his large, muscular torso's been stretched somewhat by your massive manhood[else if Cock Length of Player > 24]After managing to sink fully into him, you can feel a roundness pressing his strong abs outwards as they're stretched outwards by your hefty manhood[else]With your manhood sunk fully into him, you can feel his tight hole squeezing down around you[end if][one of]. Draping yourself across his back and gripping your free arm around his chest, you throw yourself into action and start pounding away at that ass of his. Taking delight in how he moans, growls and pants with excitement, you [if scalevalue of Player > 3]lick and nibble at his ear[else if scalevalue of Player is 3]nuzzle and kiss along his neck and shoulders[else]nuzzle against his back[end if][or]. Gripping his meaty rear, you knead the firm buttock as you slowly build up the speed of your thrusts. You ease him from thrusts that are frustratingly slow that have him longing for more, up through a steady and enjoyable rhythm until you're pounding him hard and fast near the end[or]. Placing your other hand on his heavy ballsack, you rub and caress them while you thrust into him with a good, steady rhythm that soon has him panting with excitement[if cockname of Player is not listed in infections of internallist]. You even rub his scrotum against your own, teasingly making the balls touch to get him to blush a deeper crimson[end if][in random order]. Your continued pumping of his pre-drooling penis is finally rewarded when he growls and blasts thick streams of gooey seed across the floor. As he climaxes, Hayato's rectum spasms and clenches like a vice around your cock, driving you to paint his insides with your [Cum Load Size of Player] load. Left sticky and panting, he flops onto the floor when you pull out of him, the scary demon ogre reduced to orgasmic bliss by the ass-fucking he's received.";
+	say "     [if Cock Length of Player > 36]After managing to sink fully into him, even his large, muscular torso's been stretched somewhat by your massive manhood[else if Cock Length of Player > 24]After managing to sink fully into him, you can feel a roundness pressing his strong abs outwards as they're stretched outwards by your hefty manhood[else]With your manhood sunk fully into him, you can feel his tight hole squeezing down around you[end if][one of]. Draping yourself across his back and gripping your free arm around his chest, you throw yourself into action and start pounding away at that ass of his. Taking delight in how he moans, growls and pants with excitement, you [if scalevalue of Player > 3]lick and nibble at his ear[else if scalevalue of Player is 3]nuzzle and kiss along his neck and shoulders[else]nuzzle against his back[end if][or]. Gripping his meaty rear, you knead the firm buttock as you slowly build up the speed of your thrusts. You ease him from thrusts that are frustratingly slow that have him longing for more, up through a steady and enjoyable rhythm until you're pounding him hard and fast near the end[or]. Placing your other hand on his heavy ballsack, you rub and caress them while you thrust into him with a good, steady rhythm that soon has him panting with excitement[if CockName of Player is not listed in infections of InternalCockList]. You even rub his scrotum against your own, teasingly making the balls touch to get him to blush a deeper crimson[end if][in random order]. Your continued pumping of his pre-drooling penis is finally rewarded when he growls and blasts thick streams of gooey seed across the floor. As he climaxes, Hayato's rectum spasms and clenches like a vice around your cock, driving you to paint his insides with your [Cum Load Size of Player] load. Left sticky and panting, he flops onto the floor when you pull out of him, the scary demon ogre reduced to orgasmic bliss by the ass-fucking he's received.";
 	if HayatoHunger is 0, now HayatoHunger is 1;
 
 to say hayatosex6:
@@ -427,9 +427,9 @@ Noh Mask	"Noh Mask"
 Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
 The sarea of Noh Mask is "Campus".
 when play begins:
-	add Noh Mask to badspots of furry;
-	add Noh Mask to badspots of guy;
-	add Noh Mask to badspots of girl;
+	add Noh Mask to BadSpots of FurryList;
+	add Noh Mask to BadSpots of MaleList;
+	add Noh Mask to BadSpots of FemaleList;
 
 instead of resolving Noh Mask:
 	if HP of Hayato is 11:
@@ -511,8 +511,8 @@ Oni Lair	"Oni Lair"
 Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
 The sarea of Oni Lair is "Capitol".
 when play begins:
-	add Oni Lair to badspots of guy;
-	add Oni Lair to badspots of hellspawn;
+	add Oni Lair to BadSpots of MaleList;
+	add Oni Lair to badspots of DemonList;
 
 instead of resolving Oni Lair:
 	if debugactive is 1:
@@ -578,7 +578,7 @@ to say onilairassault:
 		if Player consents:
 			if Player is male:
 				LineBreak;
-				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be force-fed your [cock of Player] cock. Grabbing him by the horns, you pull his face to your crotch. When a particularly hard thrust from Hayato has him cry out, you thrust your [cock size desc of Player] shaft into his mouth[if Cock Length of Player > 9] and down his throat[end if]. Your would-be assailant sets himself to licking and sucking your [cock of Player] rod right away, though he continues to growl and struggle. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
+				say "     Seeing how this is the one who threatened to eat you, you feel it only fitting that he be force-fed your [Cock of Player] cock. Grabbing him by the horns, you pull his face to your crotch. When a particularly hard thrust from Hayato has him cry out, you thrust your [cock size desc of Player] shaft into his mouth[if Cock Length of Player > 9] and down his throat[end if]. Your would-be assailant sets himself to licking and sucking your [Cock of Player] rod right away, though he continues to growl and struggle. And from the way he's hard and drooling precum steadily, it's clear the creature is more upset about having lost than about the fucking itself.";
 				say "     'Show some respect to your betters and ride that cock like I know you want it, you slut,' Hayato growls as he reaches around to pump at the demon ogre's drooling erection. 'I want to see you sucking harder.' Between the assault on both fronts and that hand stroking him off, the oni's struggles cease quickly and his hips press all the harder against Hayato's, welcoming each thrust from the increasingly dominant oni.";
 				say "     This release of Hayato's inner oni leads to quite the powerful release from the big guy, his oversized balls pulsating as they unleash blast after blast of thick semen into his foe. When this causes the oni between you to cum as well (his load barely half what Hayato can produce), Hayato mocks him again for being a weak slut before grabbing your head and pulling your face forward into a forceful kiss. His tongue delves into your mouth and this last thing is enough to push you over the edge into orgasm, feeding your hot [Cum Load Size of Player] load down the demon ogre's throat. When you're all finished, the oni beneath you is left too worn out from his struggles and the buggering and passes out.";
 			else:
@@ -614,17 +614,17 @@ to say onilairlost1:
 	now HP of Hayato is 96;
 	setmonster "Red Oni";
 	choose row MonsterID in Table of Random Critters;
-	now tailname of Player is "Red Oni";
-	now facename of Player is "Red Oni";
-	now skinname of Player is "Red Oni";
-	now bodyname of Player is "Red Oni";
-	now cockname of Player is "Red Oni";
+	now TailName of Player is "Red Oni";
+	now FaceName of Player is "Red Oni";
+	now SkinName of Player is "Red Oni";
+	now BodyName of Player is "Red Oni";
+	now CockName of Player is "Red Oni";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

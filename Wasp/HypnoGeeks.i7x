@@ -20,8 +20,8 @@ The level of HypnoGeeks is 5. [minimum level to find the event]
 The sarea of HypnoGeeks is "Campus".
 
 when play begins: [flags for blocking this event]
-	add HypnoGeeks to badspots of guy;
-	add HypnoGeeks to badspots of furry;
+	add HypnoGeeks to BadSpots of MaleList;
+	add HypnoGeeks to BadSpots of FurryList;
 
 Instead of resolving a HypnoGeeks:
 	if HG_Stage is 0: [HG_INTRO]

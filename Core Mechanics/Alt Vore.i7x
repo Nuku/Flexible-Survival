@@ -19,11 +19,11 @@ ubpreg is a text that varies. ubpreg is usually "false".
 
 VoreExclusion is a marker.	[list of infections to not be vored]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Sugar Ferret", "Anthro Rabbit", "City Sprite", "Koballoon", "Sea Otter", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger" } to infections of VoreExclusion;
 
 HardVoreExclusion is a marker. [list of infections to not be hard vored - similar to above list, but also includes non-flesh monsters]
 when play begins:
-	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Tiger Cop", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Bear", "Sewer Gator", "Dragon", "Feral Cheetah", "Badger", "Opossum Sailor", "Hermaphrodite Latex Vixen", "Wrestling Wolf", "Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Awesome tree", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Cowboy Cuntboy", "Plains Lizard", "Thought Eater", "Viking", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
+	add { "Smooth Collie Shemale", "Raccoon", "Doberman Bitch", "Nightmare", "Sphinx", "Hyena matriarch", "Blob", "Skunkbeast Lord", "Blue Chaffinch", "Peacock", "Hippo", "Albino Mouse", "Malayan Tiger Male", "Sea Lion and Orca Toys", "Siamese Cat", "Anthro Goat", "Brown Bear Female", "Gator Herm", "Dragon", "Feral Cheetah", "Badger", "Opossum Herm", "Latex Vixen Herm", "Wrestling Wolf", "Blacktail Stag", "Football Wolfman", "Reindeer", "Triceratops", "Butterfly", "German Shepherd Male", "Magic Drake", "Monkey", "Lamia", "Jackal Guard", "Mental Mouse", "Mushroom Men", "Parasitic Plant", "Yamato Dragon", "Yamato Dragoness", "Giant", "Feral Sea Dragon", "Feral Sea Dragoness", "Wyvern", "Pod Person", "Tentacle Horror", "Sierrasaur", "Mammoth", "Hydra Beast", "Xeno Drone", "Peculiar Dragon", "Sea Horror", "Cum Girl", "Flesh Blob", "Jaguar Warrior", "Gypsy Horse Transman", "Plains Lizard Male", "Thought Eater", "Viking Woman", "Megakitty", "Royal Tiger", "Sugar Ferret", "Anthro Rabbit", "Koballoon", "City Sprite", "Sea Otter", "Black Wasp", "Cock Cannon", "Clockwork Fox", "Automaton", "Blue Gel", "Bottlenose Toy", "Chocolate Lab", "Goo Girl", "Latex Fox", "Latex Ermine", "Latex Wolf", "Werewolf Costume", "Naiad", "Pink Gel", "Purple Gel", "Rubber Tigress", "Sand Man", "Teddy Bear", "Plush Lion" } to infections of HardVoreExclusion;
 
 Section 1 - Event
 
@@ -34,10 +34,10 @@ Inner Predator	"Inner Predator"
 Inner Predator is a scavevent. The level of Inner Predator is 4.
 The sarea of Inner Predator is "Allzones".
 when play begins:
-	add Inner Predator to badspots of furry;
+	add Inner Predator to BadSpots of FurryList;
 
 Instead of resolving a Inner Predator:
-	if guy is banned and girl is banned:
+	if MaleList is banned and FemaleList is banned:
 		say "     Picking your way between several immobile and abandoned cars, you spot an all to familiar sight in the road ahead. Piles of clothing, ripped and covered in various fluids, along with the personal items of whomever (or whatever) use to be in those clothes. Among the shredded clothes and scattered items, one specific thing catches your eye - a sealed briefcase. Polished and very official looking, with its clasp broken from the evident scuffle that had taken place here, it rests atop a torn lab coat. Curious, and hoping to find something you might be able to use, you crack the case open slowly. Sadly, it is empty, someone clearly having gotten here first and emptied it.";
 		say "(This event is closed if both guy and girl are banned.)";
 		now Inner Predator is resolved;
@@ -52,7 +52,7 @@ Instead of resolving a Inner Predator:
 		say "     Wrapping the candy bar back up, you replace it in your pack and being to gather your things to leave, slightly perturbed by these events. Hopefully whatever you just drank out of that vial does not come back to bite you later... relatively speaking.";
 		increase carried of chips by 1;
 		WaitLineBreak;
-		if girl is not banned:
+		if FemaleList is not banned:
 			say "     As you're turning to leave, a female husky, looking rather worse for wear, spots you and charges in to attack. Already weakened, a quick blow sends her tumbling and a few more put her to the ground for good. It is a quick fight and thankfully one of the easiest you've faced since this mess began.";
 			say "     As your defeated foe collapses in a heap before you, your body is struck with another wave of intense hunger. You look down upon your beaten foe as a new, predatory instinct arises in your mind. Before you can even think about it, you kneel next to the husky, hands reaching out for its exhausted body. She lifts her head to look at you, fearful about what you intend to do, but a swift strike from your palm to her head renders her unconscious. Now, practically unable to control your own body, you are forced to watch what unfolds.";
 			WaitLineBreak;
@@ -269,7 +269,7 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 	if Player is male:
 		say "     Having beaten down the messy pig, you eye her a bit hungrily. She turns to flee from you as you feel that familiar emptiness in your belly and pounce upon her before she can get too far.";
 		say "     The sow has a hungry look of her own when you pin her down and your hard-on begins to push against her belly. 'I just love bacon,' you say as you press your [bodydesc of Player] form down atop her porcine body. She looks down as best as she can at your stiffening crotch. 'Well... I'm a little hungry myself,' she responds with a lick of her snout, giving you the idea in your head to try something kinky.";
-		say "     Laying down on your back you motion her to take your cock into her snout while presenting her pussy towards you. As she gets into position, you give it a few licks and quickly feel her tongue and snout go over your [cock of Player] manhood. She immediately begins to hungrily suck on it in return.";
+		say "     Laying down on your back you motion her to take your cock into her snout while presenting her pussy towards you. As she gets into position, you give it a few licks and quickly feel her tongue and snout go over your [Cock of Player] manhood. She immediately begins to hungrily suck on it in return.";
 		say "     After a few moments of waiting while she's distracted, you give her pussy one last lick before moving her hooves to your mouth. Opening up wide, you start to slowly press her hooves into your mouth as you lick over them. A confused sound coming from her as you begin, but she's too distracted by your cock and not expecting anything dangerous.";
 		say "     Licking over her ankles, you begin to carefully slide more of her feet into your mouth while being careful to not let her feel much of your maw. Her snout remains firmly over your cock as she sucks and licks over it, your pre leaking out and giving her a bit of a taste. That along with your scene and musk begins to cloud her mind from much of anything else.";
 		say "     Sliding more of her into your mouth, you have to bend your body slightly along with her legs - though thankfully not too much yet - as you move up her thighs. You lick over them as your tongue moves towards her pussy and, in a few moments, you begin to lick over it. Her snout may be sucking heavily on your [cock size desc of Player] cock, but she's starting to realize something is up at the point she feels her hooves press against your throat. She releases a confused squeal from her and tries to look back, though a hand placed on top of her head keeps her from looking back. She starts to ask 'What's going o...' as you stuff your penis back into her snout.";
@@ -294,7 +294,7 @@ to say vbp_messypig:		[written by Wolfwing, edited by Stripes]
 
 to say vbp_hermgryph:
 	if Player is male:
-		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue slides across your manhood before she takes it into her warm mouth. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, thrusting your [cock of Player] cock into the gryphon's mouth. As you're nearing your peak, you pull out and stroke yourself to climax, spraying your messy load across her face and beak.";
+		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue slides across your manhood before she takes it into her warm mouth. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, thrusting your [Cock of Player] cock into the gryphon's mouth. As you're nearing your peak, you pull out and stroke yourself to climax, spraying your messy load across her face and beak.";
 	else:
 		say "     With the gryphon herm sufficiently weakened, she cannot resist as you grab her and push her onto the ground. Pressing her beak to your loins, you order her to start licking. Her tongue brushes across your folds before sliding into your hot tunnel. She can't delve far because of her beak, but the rubbing of that hard nose against your clit more than makes up for it. You're hungry and look forward to consuming your meal, but you're not above playing with your food first. Especially when they do such a fine job at it. You rock your hips firmly, grinding your pussy against her beak and tongue. When you cum, it is a juicy orgasm that leaks your femcum across the gryphon's face and beak.";
 	say "     Having basted the bird with your [if Player is male]semen[else]juices[end if], your hunger rises anew. Leaning down towards her, she thinks your coming in for a sloppy thank-you kiss and tilts her head up with her eyes closed. You grin and open your mouth wide, taking her beak and part of her head right into your gaping maw instead. By the time she realizes the extent of her mistake, it's too late and you're pushing her head into your throat.";
@@ -332,7 +332,7 @@ to say hvorebyplayer00:	[master list to decide scenes]
 		say "[hvbp_succubus]";
 	else if Name entry is "Incubus" and a random chance of 3 in 5 succeeds:
 		say "[hvbp_incubus]";
-	else if Name entry is "Hermaphrodite Dolphin" and dolphintricked > 2 and a random chance of 3 in 5 succeeds:
+	else if Name entry is "Dolphin Herm" and dolphintricked > 2 and a random chance of 3 in 5 succeeds:
 		say "[hvbp_dolphin]";
 	else if Player is male and ( currentmonster is cunted or anallevel > 1 ) and a random chance of 1 in 4 succeeds and hvorecount >= 3:
 		say "[hvorebyplayer04]";
@@ -408,10 +408,10 @@ to say hvorebyplayer05:
 to say hvbp_ram:
 	say "     You grab the rambunctious ram by the horns and wrestle him to the ground, slamming his face hard into the dirt. 'Mmm... mutton,' you say teasingly in his ear while giving his plush ass a squeeze. He bleats angrily at this and squirms, but to no avail. Exhausted from the fight, he has too little strength left.";
 	let wolfcheck be false;
-	if facename of Player matches the text "wolf", case insensitively:
+	if FaceName of Player matches the text "wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with a lick across his cheek, sending a shiver up the ram's spine. You can feel him trembling beneath you, eyes locked on your lupine teeth.";
 		now wolfcheck is true;
-	else if bodyname of Player matches the text "wolf", case insensitively:
+	else if BodyName of Player matches the text "wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word by smacking his face against the ground by pushing and pulling at his horn. You can feel him trembling beneath you, pinned under your strong, lupine body.";
 		now wolfcheck is true;
 	else:
@@ -422,12 +422,12 @@ to say hvbp_ram:
 	say "     Reaching forward, you clamp his muzzle shut before you bite down. Your sharp teeth chomp right through both his legs, filling your mouth with the taste of blood and fresh mutton. The ram screams into your hand, the noise muffled. He swings at you wildly, but you shrug off his feeble blows. He's too weak and getting weaker rapidly as his lifeblood flows out.";
 	say "     After chomping down a few times on the severed legs, you swallow them down so you can turn your attention to your remaining meal. You give his bloody hips a few licks before biting down again, this time into his loins. He screams again and passes out, putting an end to his annoying struggles. You take your time with the next several mouthfuls, consuming his lower torso chunk after delicious chunk. By this point, your bloodlust feels sated, so you stuff the rest of him, arms, head and upper body down your throat, providing a satisfyingly heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
-		if facename of Player matches the text "wolf", case insensitively:
-			setmonster "[facename of Player]";
+		if FaceName of Player matches the text "wolf", case insensitively:
+			setmonster "[FaceName of Player]";
 		else:
-			setmonster "[bodyname of Player]";
+			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Female Preferred" is listed in feats of Player or bodyname of Player is "Ewe" ) and girl is not banned:
+	else if ( "Female Preferred" is listed in feats of Player or BodyName of Player is "Ewe" ) and FemaleList is not banned:
 		setmonster "Ewe";
 		choose row MonsterID from the Table of Random Critters;
 
@@ -435,10 +435,10 @@ to say hvbp_ram:
 to say hvbp_ewe:
 	say "     You grab the over-eager ewe and push her down onto her back, pinning her to the ground. 'Mmm... mutton,' you say teasingly in her ear while giving his plush bosom. She baaaas softly and squirms a little at the rough handling[if Player is male]. Seeing your cock[smn] though, she spreads her legs invitingly. Rather than turn down the opportunity, you grind your manhood against her wet woolen snatch[else]. Still lustful, she spreads her legs invitingly[end if].";
 	let wolfcheck be false;
-	if facename of Player matches the text "wolf", case insensitively:
+	if FaceName of Player matches the text "wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with a lick across her cheek, sending shivers up the ewe's spine. You can feel her trembling beneath you, eyes locked on your lupine teeth.";
 		now wolfcheck is true;
-	else if bodyname of Player matches the text "wolf", case insensitively:
+	else if BodyName of Player matches the text "wolf", case insensitively:
 		say "     'Poor little lost lamb. Where's your shepherd to protect you from the Big. Bad. Wolf?' You punctuate each final word with another possessive squeeze of her breast. You can feel her trembling beneath you, pinned under your strong, lupine body.";
 		now wolfcheck is true;
 	else:
@@ -446,18 +446,18 @@ to say hvbp_ewe:
 		say "     '[one of]Please. Please. I'm just so lonely and horny,' she bleats[or][if Player is male]I just need it so bad. Please won't you fuck me?' she moans with need[else]I... I... I didn't mean it. I was just so horny,' she bleats[end if][or]I'm sorry[if wolfcheck is true and Cunt Count of Player is 0], Mr. Wolf[else if wolfcheck is true], Mrs. Wolf[end if]. I didn't mean to upset you. I'll j-j-just be going now,' she whimpers[or][if wolfcheck is false]Please. I just need someone for a little while,' she moans, grinding her hips up[else]No-no-no-no,' she bleats fearfully, your lupine aggression frightening her[end if][if Player is male and wolfcheck is true]I j-j-just need a fuck so bad. Even one from a w-w-wolf,' she bleats, torn between her fear and her need[else if wolfcheck is true]I j-j-just need to get off so bad. Even with a w-w-wolf,' she bleats, torn between her fear and her need[else if Player is male]I just need a fuck so bad. Aren't I pretty enough to fuck?' she bleats, sexily rubbing her hands over her fluffy body[else]I just need to get off so bad. Please, let's just cuddle for a little while,' she bleats, sexily rubbing her hands over her fluffy body[end if][at random].";
 	WaitLineBreak;
 	if Player is male:
-		say "     Having grown aroused, you sink your [cock of Player] cock into her mutton muff, drawing a baaing moan of delight and relief. Your hunger won't be denied long, but a little fun before your meal seems acceptable. You pant heavily and start thrusting, pounding her juicy snatch. Still fondling her breasts, you lean in and start licking at them and sucking on her nipples. Her cunny quivers around your shaft as it slides into that hot, wet tunnel of hers over and over again.";
+		say "     Having grown aroused, you sink your [Cock of Player] cock into her mutton muff, drawing a baaing moan of delight and relief. Your hunger won't be denied long, but a little fun before your meal seems acceptable. You pant heavily and start thrusting, pounding her juicy snatch. Still fondling her breasts, you lean in and start licking at them and sucking on her nipples. Her cunny quivers around your shaft as it slides into that hot, wet tunnel of hers over and over again.";
 	else:
 		say "     Having gotten aroused, you stuff a pair of fingers into her mutton muff and start finger-fucking her. This draws a baaing moan of delight from the ewe. Your hunger won't be denied long, but a little fun before your meal seems acceptable. Still fondling her breasts with your other hand, you lean in and start licking at them and sucking on her nipples. Her cunny quivers as your finger that hot, wet tunnel of hers.";
 	say "     After a couple of minutes of this fun, your hunger won't be denied any longer. You give her breasts another long lick. 'Mmm... what a delicious rack of lamb, you have. I could just eat you up,' you say coldly. Your grin flashes your elongated, pointy teeth and you clamp a hand over her muzzle before she can cry out. Her eyes go wide with fear [if wolfcheck is true]as she realizes just how far the big bad wolf is willing to take this[else]and she shakes her head from side to side[end if]. Her cunt clamps down around your [if Player is male]shaft deliciously tightly[else]fingers[end if] as she's struck with terror. You open your mouth wide and chomp down onto her breast, biting through it and into her chest. She squeals into your hand and feebly tries to push free, but cannot dislodge you. You chew up the tasty mouthful and tear out another morsel as your meal.";
 	say "     She grows weaker with every bite until she passes out and you continue eating her. By the time you've eaten out most of her chest cavity, the worse of your bloodlust is sated, so you stuff the remaining chunks of her - arms, legs and then the head - down your throat. They provide a satisfyingly full and heavy weight in your belly. Your ravenous nanites kick in, digesting the remains of the ram to sustain you. In the end, there is nothing left but some tufts of blood-soaked wool and a crimson stain to commemorate your grisly deed.";
 	if wolfcheck is true:
-		if facename of Player matches the text "wolf", case insensitively:
-			setmonster "[facename of Player]";
+		if FaceName of Player matches the text "wolf", case insensitively:
+			setmonster "[FaceName of Player]";
 		else:
-			setmonster "[bodyname of Player]";
+			setmonster "[BodyName of Player]";
 		choose row MonsterID from the Table of Random Critters;
-	else if ( "Male Preferred" is listed in feats of Player or bodyname of Player is "Ram" or player is male ) and guy is not banned:
+	else if ( "Male Preferred" is listed in feats of Player or BodyName of Player is "Ram" or player is male ) and MaleList is not banned:
 		setmonster "Ram";
 		choose row MonsterID from the Table of Random Critters;
 
@@ -527,7 +527,7 @@ to femalepronouns:
 	now gche is "She";
 	now gchim is "Her";
 	now gchishers is "Hers";
-	now gdragon is "dragoness";
+	now gdragon is "Anthro Dragoness";
 	now gmasculine is "feminine";
 ]
 
@@ -539,7 +539,7 @@ to ubbyplayer:
 	say "[ubbyplayer00]"; [Master ub scene]
 	say "     Indulging in this perversely twisted act has further weakened your grip on your own humanity even as you feel the nanites from your prey flooding your system [if ovipreglevel is 3]even as they are being encased in a protective shell[else]as they bond to your imprisoning womb via a rapidly forming placenta[end if]. With the [Name entry] taking root as your next child, you sigh in satisfaction, your maternal demands satisfied for now. The huge bulge of your belly goes down gradually as they regress somewhat in size, allowing you to eventually get up and continue on your way.";
 	decrease humanity of Player by 3;
-	now gestation of child is a random number between 8 and 16;
+	now gestation of Child is a random number between 8 and 16;
 	now ubpreg is Name entry;
 	now pregtype is 1;
 	if "Safe Appetite" is not listed in feats of Player:
@@ -548,13 +548,29 @@ to ubbyplayer:
 		now researchbypass is 0;
 	increase ubcount by 1;
 	[All Child parts are the unbirthed creature - might be overwritten by the player having "They have your Eyes" during birth]
-	now HeadName of child is Name entry;
-	now TorsoName of child is Name entry;
-	now BackName of child is Name entry;
-	now ArmsName of child is Name entry;
-	now LegsName of child is Name entry;
-	now AssName of child is Name entry;
-	now TailName of child is Name entry;
+	now HeadName of Child is Name entry;
+	now TorsoName of Child is Name entry;
+	now BackName of Child is Name entry;
+	now ArmsName of Child is Name entry;
+	now LegsName of Child is Name entry;
+	now AssName of Child is Name entry;
+	now TailName of Child is Name entry;
+	if Species Name entry is not "":
+		now HeadSpeciesName of Child is Species Name entry;
+		now TorsoSpeciesName of Child is Species Name entry;
+		now BackSpeciesName of Child is Species Name entry;
+		now ArmsSpeciesName of Child is Species Name entry;
+		now LegsSpeciesName of Child is Species Name entry;
+		now AssSpeciesName of Child is Species Name entry;
+		now TailSpeciesName of Child is Species Name entry;
+	else:
+		now HeadName of Child is Name entry;
+		now TorsoName of Child is Name entry;
+		now BackName of Child is Name entry;
+		now ArmsName of Child is Name entry;
+		now LegsName of Child is Name entry;
+		now AssName of Child is Name entry;
+		now TailName of Child is Name entry;
 
 Chapter 6 - UB Scenes
 

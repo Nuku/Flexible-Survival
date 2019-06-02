@@ -91,17 +91,17 @@ carry out supersponsor:
 				say "     Mentioning that you'd like some infected items, Trixie nods. 'Yeah, I've got some of those around here somewhere.' Leading the way, she flies into one of the side rooms and points out a small backpack behind a chair. 'While you were hiding out in the bunker, some other survivor ended up camping out in here. It seems they were collecting these things for some reason, so somebody out there probably wants at least some of these. But their last owner got a little too over-excited about testing them and ended up a horny hybrid. You should be careful about that - unless you're into that kind of thing, that is.'";
 				say "     Opening it up, you find an eclectic collection of fluids and goo, all conveniently labelled. Isn't that handy?";
 				say "     You got: ";
-				if furry is not banned:
+				if FurryList is not banned:
 					let liststarted be false;
-					if hermaphrodite is not banned:
+					if HermList is not banned:
 						now liststarted is true;
 						increase carried of motel key by 1;
 						increase carried of gryphon milk by 1;
 						say "motel key, gryphon milk";
-						if humorous is not banned:
+						if HumorousList is not banned:
 							increase carried of chocolate milk by 1;
 							say ", chocolate milk";
-					if girl is not banned:
+					if FemaleList is not banned:
 						increase carried of tiger patch by 1;
 						increase carried of cheetah milk by 1;
 						if liststarted is true:
@@ -109,7 +109,7 @@ carry out supersponsor:
 						else:
 							now liststarted is true;
 						say "tiger patch, cheetah milk";
-					if guy is not banned:
+					if MaleList is not banned:
 						increase carried of rhino cum by 1;
 						increase carried of eagle feather by 1;
 						if liststarted is true:
@@ -120,17 +120,17 @@ carry out supersponsor:
 				else:
 					increase carried of dirty water by 1;
 					say "dirty water";
-				if girl is not banned:
+				if FemaleList is not banned:
 					increase carried of glob of goo by 1;
 					increase carried of centaur hair by 1;
 					say ", glob of goo, centaur hair";
-				if guy is not banned:
+				if MaleList is not banned:
 					increase carried of centaur cum by 1;
 					say ", centaur cum";
-				if hellspawn is not banned and guy is not banned:
+				if DemonList is not banned and MaleList is not banned:
 					increase carried of demon seed by 1;
 					say ", demon seed";
-				if feral is not banned:
+				if FeralList is not banned:
 					increase carried of wyvern goop by 1;
 					say ", wyvern goop";
 				say ".";
@@ -184,16 +184,16 @@ carry out supersponsor:
 		else if calcnumber is 14:
 			Now bodydesc of Player is "[one of]average[or]normal[or]unchanged[at random]";
 			Now bodytype of Player is "Human";
-			Now skin of Player is "smooth";
-			Now cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
-			Now face of Player is "Human";
+			Now Skin of Player is "smooth";
+			Now Cock of Player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+			Now Face of Player is "Human";
 			Now tail of Player is "Human";
-			Now body of Player is "Human";
-			Now bodyname of Player is "Human";
-			Now facename of Player is "Human";
-			Now skinname of Player is "Human";
-			Now Cockname of Player is "Human";
-			Now Tailname of Player is "Human";
+			Now Body of Player is "Human";
+			Now BodyName of Player is "Human";
+			Now FaceName of Player is "Human";
+			Now SkinName of Player is "Human";
+			Now CockName of Player is "Human";
+			Now TailName of Player is "Human";
 		else:
 			now Trixieexit is 1;
 		LineBreak;

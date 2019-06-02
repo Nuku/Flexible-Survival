@@ -22,7 +22,7 @@ to say kangaroo wins:
 	if HP of Player > 0:
 		say "     Unwilling to resist the feisty kangaroo, you [if weapon object of Player is not journal]lay down your arms [end if]and raise your hands in the air to signal your submission. The female marsupial hops around your form, still leery about your intentions and unwilling to lower her guard. 'So that's it? You're just going to let me fuck you, no struggle?' she balks. You nod in affirmation, reiterating your desires, and she finally seems to realize that you're serious about the offer. 'And here I was looking forward to trouncing you,' she teases, her thick tail swaying behind her as she appraises you with obvious hunger. 'Be a good joey and undress for me, dear. I want to see everything you've got to work with.' The kangaroo reaches beneath her short dress to play with her folds while she watches you expose yourself [if daytimer is day]in broad daylight[else]under the dim light of the stars above[end if]. You feel no small measure of arousal as you strip down for the sexy marsupial, putting on a tantalizing show that is sure to excite your prospective partner further.";
 		if Player is male:
-			say "     The moment your [cock of Player] length[smn] spring[smv] into view, the kangaroo's muzzle spreads in a lecherous smile. 'I need you inside me,' she says in a breathy, lascivious voice, barely restraining herself from pushing you flat and riding your mast[smn]. Instead, the lustful marsupial turns around, giving you a sultry look over her shoulder as she crouches low and lifts her massive tail. This hikes her skirt up and out of the way, leaving her plush pink petals on prominent display. 'Take me,' she all but moans, a hand reaching back to hold the base of her tail steady while she supports her weight with the other.";
+			say "     The moment your [Cock of Player] length[smn] spring[smv] into view, the kangaroo's muzzle spreads in a lecherous smile. 'I need you inside me,' she says in a breathy, lascivious voice, barely restraining herself from pushing you flat and riding your mast[smn]. Instead, the lustful marsupial turns around, giving you a sultry look over her shoulder as she crouches low and lifts her massive tail. This hikes her skirt up and out of the way, leaving her plush pink petals on prominent display. 'Take me,' she all but moans, a hand reaching back to hold the base of her tail steady while she supports her weight with the other.";
 			say "     The temptation of sinking into the kangaroo's hot, tight pussy is too great for your lust-addled mind to bear. You hurriedly move closer, laying your fore over her meaty tail and wrapping your arms around her chest. 'Yesss,' she hisses out, pushing her achingly needy cunt back against you, the slavering folds of her pussy drenching your hardening length[smn] in sticky wetness. Your fingers dig into the supple mounds beneath her white blouse, and you can feel her nipples through the fabric, hard with arousal. The kangaroo gives a soft whine as you toy with them, her muscular body tensing beneath your form. 'No more teasing,' she pleads softly, any semblance of her earlier fighting spirit extinguished by the baser need of having a strong male inside her.";
 			WaitLineBreak;
 			if Cock Count of Player > 1 and anallevel > 1:
@@ -68,7 +68,7 @@ to say kangaroo wins:
 		say "     With a deft blow to the jaw, then a sweep of her tail, the kangaroo knocks you down onto your back before a large foot is placed on your chest, her muzzle splitting into a grin. 'You're going to be my joey for today.' Trying to get away, a heavy foot slams into your back, pressing you to the ground again. Rolling you over, the kangaroo strips your clothes off to see what she has to work with.";
 		WaitLineBreak;
 		if Player is male:
-			say "     'Oh, what do we have here?' Her hands start to caress your [bodydesc of Player] body, her fingers tracing down until she reaches your flagging, [cock of Player] shaft[smn]. 'Perfect,' she whispers. Climbing atop your body, her drooling pussy hovers over [if Cock Count of Player > 1]one of your malenesses[else]your maleness[end if]. Slamming down onto you, a grunt rises from your chest from the force as a moan escapes hers. Bouncing quickly with the help of those powerful legs, she rides you with more force than you're used to, grinding her much larger hips hard against your own while her cunt squeezes tightly, drooling lewdly over your lower half.";
+			say "     'Oh, what do we have here?' Her hands start to caress your [bodydesc of Player] body, her fingers tracing down until she reaches your flagging, [Cock of Player] shaft[smn]. 'Perfect,' she whispers. Climbing atop your body, her drooling pussy hovers over [if Cock Count of Player > 1]one of your malenesses[else]your maleness[end if]. Slamming down onto you, a grunt rises from your chest from the force as a moan escapes hers. Bouncing quickly with the help of those powerful legs, she rides you with more force than you're used to, grinding her much larger hips hard against your own while her cunt squeezes tightly, drooling lewdly over your lower half.";
 			WaitLineBreak;
 			say "     Riding you harder with each passing second, you soon end up giving her what she wants. Ropes of your seed pump up into her gripping depths as her powerful hips grind down on you to draw every last spurt from you. She bounces some more, a paw slipping down between the connection to help bring her own orgasm to fruition. The tight velvet of her cunt squeezes around you, milking you of any and all seed that you're able to give her. 'Oh, you've been fun. I will have to find you again, very soon,' she pants down at you, resting on your limp form, before she pushes off of you with a shove. She bounces away, dripping your seed across the ground as she goes, leaving you in a puddle of mixed juices.";
 		else:
@@ -83,13 +83,13 @@ To say kangaroo loses:
 		say "     Whimpering, she rears back onto her tail, using it as a seat while her thick legs open, showing off her moist cunt to you. [bold type]Do you accept her offer[roman type]?";
 		if Player consents:
 			if Cock Length of Player > 10:
-				say "     As you press your [cock of Player] manhood to her cunt, she winces, jerking away. 'No dear, that won't do.' She then slips onto the ground on her back, patting her belly for you to climb on. Moving over her belly, she takes your cock in between her tits, wrapping the furred mounds of flesh around your [cock size desc of Player] [cock of Player] pole, letting you thrust between them, her tongue lapping over the tip when it peeks through the top of her cleavage. With groans of pleasure from you, she redoubles her effort, suckling over the tip and lapping up any precum that drools from it. The force of your thrusts make her tits shake in her hands with muffled slapping sounds.";
+				say "     As you press your [Cock of Player] manhood to her cunt, she winces, jerking away. 'No dear, that won't do.' She then slips onto the ground on her back, patting her belly for you to climb on. Moving over her belly, she takes your cock in between her tits, wrapping the furred mounds of flesh around your [cock size desc of Player] [Cock of Player] pole, letting you thrust between them, her tongue lapping over the tip when it peeks through the top of her cleavage. With groans of pleasure from you, she redoubles her effort, suckling over the tip and lapping up any precum that drools from it. The force of your thrusts make her tits shake in her hands with muffled slapping sounds.";
 				WaitLineBreak;
-				say "     Whines from the kangaroo girl under you tip you off that she's getting off from being used like this. Popping free your cockhead, her hot breath washes over the tip as she looks up to you, her eyes needful. 'Please...' is all she says, and with all the sensations, a few more hard thrusts are all it takes for your [cock of Player] dick to swell up. You fire off thick ropes of seed, splattering the surprised kangaroo in the face, then down along her neck, the last few errant strands landing over her tits. The two of you pant from the exertion for a while before you rise from her, admiring the mess you've made of her fur. After wiping your cock on her muscular tail, you walk away from the needy marsupial, leaving her to whine as she gets up and hops away, defeated and horny.";
+				say "     Whines from the kangaroo girl under you tip you off that she's getting off from being used like this. Popping free your cockhead, her hot breath washes over the tip as she looks up to you, her eyes needful. 'Please...' is all she says, and with all the sensations, a few more hard thrusts are all it takes for your [Cock of Player] dick to swell up. You fire off thick ropes of seed, splattering the surprised kangaroo in the face, then down along her neck, the last few errant strands landing over her tits. The two of you pant from the exertion for a while before you rise from her, admiring the mess you've made of her fur. After wiping your cock on her muscular tail, you walk away from the needy marsupial, leaving her to whine as she gets up and hops away, defeated and horny.";
 			else:
-				say "     You move between those spread legs, taking her thighs in each hand. Your [cock of Player] shaft presses into that moist tunnel, a moan rising from both of you, punctuated with a hard thrust by you that makes her gasp. Her breasts jiggle about with each thrust, her body rocking on her tail, and your hands press her legs farther apart, allowing you to drive deeper into her needy pussy. Your balls slap against her rump and tail with every thrust into her wet, squeezing tunnel.";
+				say "     You move between those spread legs, taking her thighs in each hand. Your [Cock of Player] shaft presses into that moist tunnel, a moan rising from both of you, punctuated with a hard thrust by you that makes her gasp. Her breasts jiggle about with each thrust, her body rocking on her tail, and your hands press her legs farther apart, allowing you to drive deeper into her needy pussy. Your balls slap against her rump and tail with every thrust into her wet, squeezing tunnel.";
 				WaitLineBreak;
-				say "     Grunting deeply, you lean over her upper body, rocking her harder with your thrusts. With a particularly rough thrust, you knock her off her tail, the two of you falling to the ground and grunting. The jolt of the fall sends her into climax, and her tight, spasming cunt around your [cock of Player] cock sends you over the edge, firing your thick seed into her. Once you have finished, you climb off of her limp, panting body and get your clothes back on, leaving her there as you head off.";
+				say "     Grunting deeply, you lean over her upper body, rocking her harder with your thrusts. With a particularly rough thrust, you knock her off her tail, the two of you falling to the ground and grunting. The jolt of the fall sends her into climax, and her tight, spasming cunt around your [Cock of Player] cock sends you over the edge, firing your thick seed into her. Once you have finished, you climb off of her limp, panting body and get your clothes back on, leaving her there as you head off.";
 		else:
 			say "     Quickly scrabbling to her feet, she bounds off in a hurry, not wanting to be hurt any further.";
 	else:
@@ -99,16 +99,26 @@ To say kangaroo loses:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "Red Kangaroo"; [name of the overall species of the infection, used for children, ...]
+	add "Red Kangaroo" to infections of MarsupialList;
+	add "Red Kangaroo" to infections of FurryList;
+	add "Red Kangaroo" to infections of NatureList;
+	add "Red Kangaroo" to infections of FemaleList;
+	add "Red Kangaroo" to infections of TaperedCockList;
+	add "Red Kangaroo" to infections of SheathedCockList;
+	add "Red Kangaroo" to infections of BipedalList;
+	add "Red Kangaroo" to infections of TailList;
+	add "Red Kangaroo" to infections of TailweaponList;
 	now Name entry is "Red Kangaroo"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A left hook catches you in the chin, making you stumble[or]Sweeping around, the powerful tail slams into your side, knocking the wind out of your lungs[or]After blocking a punch, she throws an uppercut into your chin, followed by a left and then a right jab to your stomach[or]The kangaroo hops from one foot to the other as she delivers a series of quick punches[at random].[rookickreset]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[kangaroo loses]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[kangaroo wins]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -116,7 +126,7 @@ When Play begins:
 	now face entry is "rounded, medium-sized muzzle with a black nose pad at the very tip";
 	now body entry is "a soft rounded shoulder build with a tight stomach, leading down into wide hips, large spring-like thighs and feet";
 	now skin entry is "[one of]rusty red furred[or]short furred[or]softly furred[at random]";
-	now tail entry is "You have a thick, muscled tail, being able to be used as a third leg. It is covered in [skin of Player] hide and lightly thumps on the ground with each movement.";
+	now tail entry is "You have a thick, muscled tail, being able to be used as a third leg. It is covered in [Skin of Player] hide and lightly thumps on the ground with each movement.";
 	now cock entry is "[one of]marsupial[or]kangaroo[at random]";
 	now face change entry is "your face draws forward into a kangaroo muzzle, stretching to mold to the new shape";
 	now body change entry is "your muscles switch, moving lower as your bottom half now becomes a powerful spring board, leaving your upper half reasonably muscled";
@@ -138,7 +148,7 @@ When Play begins:
 	now Cock Length entry is 10; [ Length infection will make cock grow to if cocks]
 	now Ball Size entry is 3; [ Size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	now Nipple Count entry is 2; [ Number of nipples infection will give you (males have nipples too) ]
-	now Breast Size entry is 7; [ Size of breasts infection will try to attain ]
+	now Breast Size entry is 7; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now Cunt Depth entry is 10; [ Length of female sex infection will attempt to give you. ]
@@ -158,11 +168,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -170,7 +181,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -178,20 +189,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -212,26 +223,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -247,11 +258,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -294,14 +305,14 @@ to say rookickreset:
 Section 4 - Definitions
 
 Definition: a person is redroobodied:
-	if bodyname of Player is "Red Kangaroo", yes;
+	if BodyName of Player is "Red Kangaroo", yes;
 	no;
 
 
 Section 5 - Endings
 
 when play ends:
-	if bodyname of Player is "Red Kangaroo":
+	if BodyName of Player is "Red Kangaroo":
 		if humanity of Player < 10:
 			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos, becoming a flyer to the dominant male around.";
 		else:

@@ -116,8 +116,8 @@ Strange wave	"Strange wave"
 Strange wave is a situation.
 The sarea of Strange wave is "Beach".
 when play begins:
-	add Strange wave to badspots of girl;
-	add Strange wave to badspots of furry;
+	add Strange wave to BadSpots of FemaleList;
+	add Strange wave to BadSpots of FurryList;
 
 Instead of resolving a Strange wave:
 	say "     Walking along the beach, you hear a strange noise all of a sudden, almost like a loud groan, causing you to look towards the water. You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don't get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more than you would expect.";
@@ -151,9 +151,9 @@ Dragon voyeurism	"Dragon voyeurism"
 Dragon voyeurism is a situation.
 The sarea of Dragon voyeurism is "Beach".
 when play begins:
-	add Dragon voyeurism to badspots of girl;
-	add Dragon voyeurism to badspots of guy;
-	add Dragon voyeurism to badspots of furry;
+	add Dragon voyeurism to BadSpots of FemaleList;
+	add Dragon voyeurism to BadSpots of MaleList;
+	add Dragon voyeurism to BadSpots of FurryList;
 
 
 Instead of resolving a Dragon voyeurism:
@@ -203,8 +203,8 @@ Tainted Yacht	"Tainted Yacht"
 Tainted Yacht is a situation.
 The sarea of Tainted Yacht is "Beach".
 when play begins:
-	add Tainted Yacht to badspots of hermaphrodite;
-	add Tainted Yacht to badspots of furry;
+	add Tainted Yacht to badspots of HermList;
+	add Tainted Yacht to BadSpots of FurryList;
 
 Instead of resolving a Tainted Yacht:
 	say "     While moving along the nearly deserted coast, you spot a small, sixty foot yacht anchored nearby. You think with a bit of effort you might be able to swim out to the anchored boat. Do you try?";
@@ -213,8 +213,8 @@ Instead of resolving a Tainted Yacht:
 		say "     Making it to the ship at last, you tiredly haul yourself aboard, only to stare around you in shock. The deck is a slippery mess of fluid, and champagne glasses and bits of clothing lie scattered around the deck forlornly. Looking around inside carefully, you find the ship seems deserted, at least the front cabin is, you look around to try to figure out what happened here, and spot a few small journal entries in the log. Skimming the log you begin to understand what happened. While apparently the owners of this yacht were intending to wait out the infection in style with a close group of friends, one of the people they let on the boat must have been infected already and not shown it yet. Soon after they set up anchor for their nightly party, the orgy must have started, spreading the conversion throughout the small enclosed ship like a wildfire.";
 		say "     Searching the ship further could be dangerous, as not all of the creatures may have abandoned ship fully, still you decide to check to see if the boat still runs. Unfortunately something seems to have flooded the engines, rendering them currently inoperable, moving forward to open the hatchway leading to the engines, you are overcome with the strong scent of musk and sex, making your skin twitch with the first signs of impending change. Quickly slamming the door shut you realize that an orgy seems to have taken place near the engine room, and whatever the engine is flooded with, trying to clean it out would most likely result in you turning into whatever creature these people became. Quickly abandoning that idea, you go check the food supplies only to find that they like everything else on the ship, are tainted with the results of the boats occupants long orgy. Sighing, you go about gathering up some of the least tainted of the water supplies before heading back to shore, only slightly changed by your experience.";
 		increase carried of dirty water by 2;
-		infect "Sewer Gator";
-		infect "Sewer Gator";
+		infect "Gator Herm";
+		infect "Gator Herm";
 		now Resolution of Tainted Yacht is 1; [got in the yacht]
 	else:
 		say "     Deciding some things are best left alone, you continue your nice walk along the sands.";
@@ -245,7 +245,7 @@ otter view	"otter view"
 otter view is a situation.
 The sarea of otter view is "Beach".
 when play begins:
-	add otter view to badspots of furry;
+	add otter view to BadSpots of FurryList;
 
 Instead of resolving a otter view:
 	say "     As you wander along the beach, you hear some laughter and splashing from the cove up ahead. Moving forward to take a closer look, you spy a small group of otters, laughing and frolicking in the shallow water. You smile at the innocently playful creatures for a while, until their play starts to get a bit more 'hands on' with each other. At which point you continue on your journey before they notice you.";
@@ -261,8 +261,8 @@ Cream stand	"Cream stand"
 Cream stand is a situation. The level of Cream stand is 2.
 The sarea of Cream stand is "Beach".
 when play begins:
-	add Cream stand to badspots of hermaphrodite;
-	add Cream stand to badspots of furry;
+	add Cream stand to badspots of HermList;
+	add Cream stand to BadSpots of FurryList;
 
 Instead of resolving a Cream stand:
 	say "     Wandering along the beach, you notice someone seems to have recently set up one of the ice cream stands, though you don't spot anyone nearby. It is something of a hot day - perhaps you should go help yourself to some ice cream?";

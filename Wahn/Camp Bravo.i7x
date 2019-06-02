@@ -10,8 +10,8 @@ Red Light Requisition	"Red Light Requisition"
 Red Light Requisition is a situation.
 The sarea of Red Light Requisition is "Red".
 when play begins: [these exceptions are based on the second half so people aren't left standing]
-	add Red Light Requisition to badspots of guy;
-	add Red Light Requisition to badspots of furry;
+	add Red Light Requisition to BadSpots of MaleList;
+	add Red Light Requisition to BadSpots of FurryList;
 
 Instead of resolving a Red Light Requisition:
 	say "     Moving through a seedier area of the city, you come around a corner and spot two soldiers a bit down the road, lugging around a large sack. When they spot you, their faces flush red with embarrassment and they run off, dashing away from you. You run after them, but then slip on something that must have dropped out of the sack as they jostled it while running. It's... a dark blue rubber dildo?";
@@ -31,8 +31,8 @@ Trickster's Masterpiece	"Trickster's Masterpiece"
 Trickster's Masterpiece is a situation.
 The sarea of Trickster's Masterpiece is "Outside".
 when play begins:
-	add Trickster's Masterpiece to badspots of guy; [male soldiers]
-	add Trickster's Masterpiece to badspots of furry; [minotaur involved]
+	add Trickster's Masterpiece to BadSpots of MaleList; [male soldiers]
+	add Trickster's Masterpiece to BadSpots of FurryList; [minotaur involved]
 
 Instead of resolving a Trickster's Masterpiece:
 	say "     Following lust-filled grunts and bellows, you come upon a mid-sized military encampment on the parking space behind an office building. There you find a strange scene - in the middle of several olive green tents, there is a wooden hitching post - which a buck-naked soldier uses to hold on to. Behind the man is a very tall musclebound humanoid, sporting a horned bull's head and furred legs ending in cloven hooves - a minotaur. He's in a full on mating frenzy, shafting the human in front of him with mighty thrusts of his long cock. A bit to the side, a group of soldiers stands in front of an officer, many of them apprehensively looking over to the rutting minotaur before they turn back to their superior.";
@@ -66,7 +66,7 @@ Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the '
 The sarea of Back at the Camp is "Outside".
 
 when play begins:
-	add Back at the Camp to badspots of guy; [male soldiers]
+	add Back at the Camp to BadSpots of MaleList; [male soldiers]
 
 lastGuardBeg is a number that varies. lastGuardBeg is usually 555.
 
@@ -235,7 +235,7 @@ instead of fucking Private Marc Orwell:
 			say "     ([link]N[as]n[end link]) - Blow him off.";
 			if Player consents:
 				LineBreak;
-				say "     Grinding your hardening bulge against his ass in anticipation, you reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Quickly throwing off your own clothes, you step up close behind him and rub your [cock of Player] cock up and down between his firm cheeks. Then you position its head at his hole, pushing forward against his well-trained pucker that easily lets you slide in while still gripping your shaft tightly. Your soldier boy gives a soft moan as you bottom out inside him, then says under his breath 'Yeah, that feels great. Now fuck me.'";
+				say "     Grinding your hardening bulge against his ass in anticipation, you reach around Marc and undo the button and zipper of his pants, then pull them down to reveal his well-muscled butt. Quickly throwing off your own clothes, you step up close behind him and rub your [Cock of Player] cock up and down between his firm cheeks. Then you position its head at his hole, pushing forward against his well-trained pucker that easily lets you slide in while still gripping your shaft tightly. Your soldier boy gives a soft moan as you bottom out inside him, then says under his breath 'Yeah, that feels great. Now fuck me.'";
 				project the figure of Marc_fucked_icon;
 				say "     Eager to follow Marc's request, you pull back a bit, then thrust back in and continue fucking him with deep strokes. It's amazing how tight and gripping his muscles are around your erection, his years of training as a bottom paying off handsomely. Almost losing yourself in a haze of lust, you shaft his ass, slamming forward until your hips hit his cheeks with slapping noises. Then suddenly, your soldier boy reaches back to grip your ass, holding you tight against him. 'Whoa Tiger,' he says after another stifled moan and a little laugh. 'You rocked the whole car with that last one. Not that I mind a good hard fuck, but we do have an audience who would love to make trouble if we get too obvious...'";
 				WaitLineBreak;
@@ -863,7 +863,7 @@ to say CampBravoGetFucked:
 			now MonsterID is y;
 			break;
 	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	if child is born or gestation of Child is not 0, now baby is 1;
 	if lastfuck of Tiny Tim - turns <= 4:
 		say "     Alexander shakes his head at your request. 'I know you've got to keep tabs on Tiny Tim and how this process is going, but you had a session with him just recently. I understand you like to be [']hands-on['] with you inspection,' he says with a bit of a grin. 'And that's fine by me, but I've got the Major barking at me to keep the lines moving. We've got to [if thirst of Tiny Tim - turns < 4]give the big guy a bit of a chance to recover[else]keep the big guy on program with the soldiers[end if].'";
 	else if Player is female:

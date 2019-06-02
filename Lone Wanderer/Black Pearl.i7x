@@ -10,8 +10,8 @@ The level of Valuable RLD Artifact is 5. [minimum level to find the event]
 Curious Pearl is inactive.
 
 when play begins:
-	add Curious Pearl to badspots of furry;
-	add Valuable Warehouse Artifact to badspots of feral;
+	add Curious Pearl to BadSpots of FurryList;
+	add Valuable Warehouse Artifact to badspots of FeralList;
 
 Instead of resolving Curious Pearl:
 	if KyrverthStage is 3:
@@ -50,7 +50,7 @@ to say blackpearlusing:
 	say "     This pearl already had quite some influence over you, so why did you decide to take it away from Kyrverth? This dangerous sphere was at least far away from you, unable to tempt you to look at it, feel it. And yet... you cannot resist taking it out of your bag, marveling at the flawless globe in your hands. What is this thing and why can you not stop thinking about it? As if searching for this answer, you keep staring at the orb, trying to scope the surface of the blackness for anything odd. You do see something in it though... It's... your face, licking your lips as you stare at yourself. Why are you licking your lips... because you need to lick over this orb perhaps? Poking the pearl with your tongue, you feel a shiver going down your spine. This feels right. Bathing the orb in your saliva for some reason, you take note that the orb does carry the salty taste of the sea and fish.";
 	say "     Odd, how did you not notice this before? The pearl did have an otherworldly feel before, but now it seems like that you've always known what it is. As you are licking and tasting the orb, your tongue elongates and widens a bit, fit to taste more of the pearl at once. Deciding that this isn't enough, you try to open your mouth as wide as possible, trying to explore even more of this pearl, and somehow you find yourself able to open your mouth wider than ever before. Realizing you are different, you pull your head off in surprise. Looking at it again, your face has shifted into that of an eel; your snout is pointed with a wide mouth, armed with lots of sharp, small teeth, while your eyes have reoriented themselves to each side of your now pointed head.";
 	WaitLineBreak;
-	say "     While it is hard to tell the skin color on your head, it seems to be just as black as the perfect darkness of this treasure, but somehow, this doesn't seem to matter. Your head is better fit to pleasure yourself on the pearl now. A bit unsure, you move the pearl again towards your mouth. This thing is doing something to you, and yet, you don't seem to be able to fight it, or rather you don't want to fight it. Opening your wide mouth, you are now able to fit the large pearl inside, able to properly lick the orb from every angle. While this pearl is in your mouth, you also end up sucking on the orb, enjoying more of its salty and fishy taste. The taste does feel compelling enough that you do want to swallow the pearl, but something tells you that you aren't quite done with it yet. When you take out the pearl again, you discover that the change has spread from your head downwards, your neck also having extended. Your skin has changed along with it, your old [skin of Player] skin peeling off to reveal a pitch-black layer of scales";
+	say "     While it is hard to tell the skin color on your head, it seems to be just as black as the perfect darkness of this treasure, but somehow, this doesn't seem to matter. Your head is better fit to pleasure yourself on the pearl now. A bit unsure, you move the pearl again towards your mouth. This thing is doing something to you, and yet, you don't seem to be able to fight it, or rather you don't want to fight it. Opening your wide mouth, you are now able to fit the large pearl inside, able to properly lick the orb from every angle. While this pearl is in your mouth, you also end up sucking on the orb, enjoying more of its salty and fishy taste. The taste does feel compelling enough that you do want to swallow the pearl, but something tells you that you aren't quite done with it yet. When you take out the pearl again, you discover that the change has spread from your head downwards, your neck also having extended. Your skin has changed along with it, your old [Skin of Player] skin peeling off to reveal a pitch-black layer of scales";
 	if Breast Size of Player > 0:
 		say ". Your breasts fall off to the ground with the rest of the old skin peeling away from your front. Good riddance, you think. You weren't too fond of them anyway. Wait, didn't you have good memories of playing with them?";
 	else if Nipple Count of Player > 0:
@@ -87,17 +87,17 @@ to say blackpearlusing:
 		say "     Getting ready for this act, you start relaxing and drive one of your clawed digits into your anus, fingering yourself. Unfortunately, your state of mind doesn't allow you to get much more than one of your thick fingers inside, and you just press the black pearl against your opening in your impatience. Surprisingly, you do end up relaxing as the cool yet slickened ball is pressed against your anal ring. It feels like never before were you able to relax better, and your opening gives way easily. With a 'plop', your anus even latches onto the pearl, changing when the black orb starts entering you. It seems that triangular, little shapes have grown within your anal ring which you can extend at will, similar to your claws. They seem to be perfectly made for this situation as these little 'mandibles' are perfectly able to latch onto the pearl and keep pushing it in. When it finally enters you, you roar out in a strained yet pleasurable state when you feel the orb still travel along your intestines, rubbing against your most sensitive spots, until you lose track of it, the shape having disappeared into you forever.";
 	say "     With the pearl inside of you, you have been completed and you roar out a high-pitched noise, announcing your return to this world.";
 	WaitLineBreak;
-	now bodyname of Player is "Leviathan";
-	now facename of Player is "Leviathan";
-	now tailname of Player is "Leviathan";
-	now skinname of Player is "Leviathan";
-	now cockname of Player is "Leviathan";
+	now BodyName of Player is "Leviathan";
+	now FaceName of Player is "Leviathan";
+	now TailName of Player is "Leviathan";
+	now SkinName of Player is "Leviathan";
+	now CockName of Player is "Leviathan";
 	end the story saying "You have become the Leviathan.";
 
 Section 2 - Endings
 
 when play ends:
-	if bodyname of Player is "Leviathan":
+	if BodyName of Player is "Leviathan":
 		say "     The Great Leviathan has awakened. How could you have been blind your entire life? You were always destined for greatness and divinity. It just took this magnificent pearl to bring it out of you. ";
 		if location of play is beach:
 			say "Standing on the beach, you squint at the light reflecting in the water. Without a second thought, you slither towards the water, feeling somewhat vulnerable out here. You need to dive down back into the darkness, to grow and establish your rule over the sea again. ";

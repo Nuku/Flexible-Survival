@@ -9,7 +9,7 @@ Version 1 of Butterfly by Guest Writers begins here.
 Section 1 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 Section 2 - Variable and constant definitions
@@ -42,8 +42,8 @@ Section 3 - Creature Responses
 To say butterfly defeat:
 	let ButterflyCanGetPregnant be False;
 	let cocktext be "";
-	if cock of Player is not "":
-		now cocktext is "[cock size desc of Player] [cock of Player] ";
+	if Cock of Player is not "":
+		now cocktext is "[cock size desc of Player] [Cock of Player] ";
 	else:
 		now cocktext is "[cock size desc of Player] ";
 	if "Sterile" is not listed in feats of Player:
@@ -58,11 +58,11 @@ To say butterfly defeat:
 		if Player is male:
 			if a random number from 1 to 100 < Libido of Player:
 				say "Unable to sustain her flight any longer she falls to her knees and you advance on her, pulling down your pants. She looks at your [cocktext]cock[smn] and blushes bashfully. Slowly her head moves closer, sniffing, and as her mouth opens you feel her long proboscis coil around [if Cock Count of Player > 1]the largest of your shafts[else]your shaft[end if]. With the supply of blood to your member constrained it hardens even further. The butterfly plays with the head of your dick in her mouth as her prehensile tongue tightens its grip. She rubs and squeezes your [Ball Size Adjective of Player] [Balls] with her supple hands.";
-				say "As you feel yourself about to cum, she sniffs curiously at the head of [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] and then in a sudden movement thrusts her proboscis down the tiny opening at the tip. You feel like your cock is on fire as her thin feeding organ presses deep inside through the center of your shaft and down towards your balls. As your muscles spasm, you feel yourself begin to cum. Drained with the sensation, you fall to your knees, her head following, greedily slurping your seed directly from the source, sucking it out before it even has the chance to exit your body. As you lay on the ground, exhausted, but without the familiar puddle, you look at the butterfly's flushed face. She smiles at you as she cleans and licks at her lips in a satisfied manner. 'Tasty,' she says as she flaps up on top of your [skin of Player] body. She passionately kisses you on the lips and then quickly lifts off, flying away.";
+				say "As you feel yourself about to cum, she sniffs curiously at the head of [if Cock Count of Player > 1]one of your cocks[else]your cock[end if] and then in a sudden movement thrusts her proboscis down the tiny opening at the tip. You feel like your cock is on fire as her thin feeding organ presses deep inside through the center of your shaft and down towards your balls. As your muscles spasm, you feel yourself begin to cum. Drained with the sensation, you fall to your knees, her head following, greedily slurping your seed directly from the source, sucking it out before it even has the chance to exit your body. As you lay on the ground, exhausted, but without the familiar puddle, you look at the butterfly's flushed face. She smiles at you as she cleans and licks at her lips in a satisfied manner. 'Tasty,' she says as she flaps up on top of your [Skin of Player] body. She passionately kisses you on the lips and then quickly lifts off, flying away.";
 				now ButterflyForeplay is True;
 		else if Breast Size of Player > 0:
 			if a random number from 1 to 100 < Libido of Player:
-				say "Unable to sustain her flight any longer she falls to her knees and you advance on her squeezing your [breast size desc of Player] breasts. Kneeling down in front of her, she hesitantly climbs on to your lap, exposes your [skin of Player] chest and begins to suckle. [if ButterflyNegligeeTorn is False]You let slip the bow on her negligee and brush the strap off her shoulder[else]You brush aside the tattered remains of her negligee fully[end if] exposing one of her flawless breasts decorated with an erect tender red nipple. You want it for yourself and lift her light frame into the air, the suction of her mouth releasing from your boob with a pop.";
+				say "Unable to sustain her flight any longer she falls to her knees and you advance on her squeezing your [breast size desc of Player] breasts. Kneeling down in front of her, she hesitantly climbs on to your lap, exposes your [Skin of Player] chest and begins to suckle. [if ButterflyNegligeeTorn is False]You let slip the bow on her negligee and brush the strap off her shoulder[else]You brush aside the tattered remains of her negligee fully[end if] exposing one of her flawless breasts decorated with an erect tender red nipple. You want it for yourself and lift her light frame into the air, the suction of her mouth releasing from your boob with a pop.";
 				say "As you pull her in close, your arms wrapped around her midriff, you begin to suck at her breast, squeezing and tugging at her stiff nipple between your tongue and your lip. To your surprise, a thick, sugary liquid sprays into your mouth from her teat. You continue to feed as she moans and flexes her large, colorful wings at the sensation. Soon you begin to feel tired, but as you start to fall asleep she lays your head down gently on the ground. 'Is your thirst satisfied?' she asks, speaking up for the first time as she caresses your full belly. The butterfly smiles and leans in to give your lips a heartfelt kiss. She affectionately cups your cheek in her palm as you drift off. By the time you awake once again, she is nowhere to be seen.";
 				now ButterflyForeplay is True;
 				PlayerEat 25;
@@ -112,7 +112,7 @@ To say butterfly defeat:
 				now speech is "'You didn't need to be so rough!' she protests with tears forming in her eyes. As you approach she fidgets anxiously, worried at what you may do. She ponders escape but still hopes that you may continue where you previously left off.";
 			else:
 				now speech is "'Not again!' she shouts in frustration sensing the mood of the moment. As you approach she fidgets anxiously, sure that a repeat of your previous encounter is about to occur. 'You brute,' she murmurs.";
-			say "The butterfly girl falls to her knees defeated. [speech] As you kneel down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[else]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[else if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[else]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] plunge [if Cock Count of Player > 1]one of your [cocktext]cock[else]your [cocktext]cock[end if] deep into her wet and [one of]eager[or]expectant[or]excited[or]willing[at random] vagina. Simultaneously your tongue slips into her mouth as her proboscis coils around it, locking your heads together as you exchange fluids. As you ramp up the pace, she pushes at your [skin of Player] body in an attempt to pull away from your cock. You've reached the limits of her petite vagina and are banging hard at the end of her passage. Her eyes well up with tears in pain. What will you do?";
+			say "The butterfly girl falls to her knees defeated. [speech] As you kneel down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[else]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[else if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[else]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] plunge [if Cock Count of Player > 1]one of your [cocktext]cock[else]your [cocktext]cock[end if] deep into her wet and [one of]eager[or]expectant[or]excited[or]willing[at random] vagina. Simultaneously your tongue slips into her mouth as her proboscis coils around it, locking your heads together as you exchange fluids. As you ramp up the pace, she pushes at your [Skin of Player] body in an attempt to pull away from your cock. You've reached the limits of her petite vagina and are banging hard at the end of her passage. Her eyes well up with tears in pain. What will you do?";
 			wait for any key;
 			let old menu depth be menu depth;
 			let ButterflyRapedBefore be ButterflyRaped;
@@ -138,7 +138,7 @@ To say butterfly defeat:
 					say "She screams and almost faints in shock as you orgasm and pump a seemingly never ending supply of cum directly into her womb. She lies there for a while, your spooge dribbling from her cunt as her antennas twitch. Soon the butterfly rises still dazed, unsteady on her legs and crying. 'You meanie!' she shouts just before flying off ungracefully in tears.";
 					now ButterflyLove is False;
 			else:
-				say "Reacting to her discomfort you ease back to her pace and avoid probing so deep. Appreciating your kindness she embraces your [skin of Player] body to get even closer relishing your every thrust as it gently kisses at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext]cock and she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never ending supply of cum into her womb. Her eyes letting you know that she welcomes every spurt[if ButterflyCanGetPregnant is True], and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you each rise to go your separate ways. She gives you a deep kiss in the way only a girl with a tongue like hers can, and then lifts off the ground happily flapping her wings she turns to depart. The last sight you see is your creamy semen oozing from her noticeably red cunt.";
+				say "Reacting to her discomfort you ease back to her pace and avoid probing so deep. Appreciating your kindness she embraces your [Skin of Player] body to get even closer relishing your every thrust as it gently kisses at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext]cock and she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never ending supply of cum into her womb. Her eyes letting you know that she welcomes every spurt[if ButterflyCanGetPregnant is True], and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you each rise to go your separate ways. She gives you a deep kiss in the way only a girl with a tongue like hers can, and then lifts off the ground happily flapping her wings she turns to depart. The last sight you see is your creamy semen oozing from her noticeably red cunt.";
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
 					if Name entry is "Butterfly":
@@ -181,7 +181,7 @@ To say butterfly defeat:
 				now speech is "'You didn't need to be so rough!' she protests with tears forming in her eyes. As you approach she fidgets anxiously, worried at what you may do. She ponders escape but still hopes that you may continue where you previously left off.";
 			else:
 				now speech is "'Not again!' she shouts in frustration sensing the mood of the moment. As you approach she fidgets anxiously, sure that a repeat of your previous encounter is about to occur. 'You brute,' she murmurs.";
-			say "The butterfly girl falls down on her back defeated. [speech] As you kneel your [skin of Player] form down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[else]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[else if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[else]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] then without warning ram three of your fingers in her pussy. As she gasps at the unexpected attack you ramp up the pace and spread her wide. Her eyes well up with tears in pain and she rolls over and tries to pull away. What will you do?";
+			say "The butterfly girl falls down on her back defeated. [speech] As you kneel your [Skin of Player] form down between her legs she uneasily [if ButterflyHasNegligee is True]lifts her negligee up to her waist[else]pulls the leather straps aside[end if] exposing her [one of]beautiful[or]attractive[or]alluring[or]elegant[or]graceful[at random] pussy. The moisture of her [one of]pristine[or]perfect[or]flawless[at random] slit glistens in the light. [if ButterflyNegligeeTorn is False and ButterflyHasNegligee is True]You grab the straps of her negligee and roughly yank them aside tearing the ribbon holding it to her chest and[else if ButterflyHasNegligee is True]Fondling the [ButterflyBreastDesc] breasts protruding through her torn negligee you circle your finger over her textured areola and[else]You slip your hand down her top roughly fondling her [ButterflyBreastDesc] breasts. Dragging them up by the nipples her tits pop free of her leather top and bulge forward prominently as you[end if] then without warning ram three of your fingers in her pussy. As she gasps at the unexpected attack you ramp up the pace and spread her wide. Her eyes well up with tears in pain and she rolls over and tries to pull away. What will you do?";
 			now ButterflyNegligeeTorn is True;
 			wait for any key;
 			let old menu depth be menu depth;
@@ -207,7 +207,7 @@ To say butterfly defeat:
 					say "You restrain her by the leg as you insert a fourth and then a fifth finger. With her on all fours you fist away at the butterfly stretching her passage to its limits. Unable to take the punishment she screams and almost faints in shock as you push deep. She lies there for a while, her cunt red and distended as her antennas twitch. Soon the butterfly rises still dazed, unsteady on her legs and crying. 'You meanie!' she shouts just before flying off ungracefully in tears.";
 					now ButterflyLove is False;
 			else:
-				say "Reacting to her discomfort you withdraw your fingers and gently hold on to her legs. Softly you kiss her petals in apology. Appreciating your consideration she stops resisting as you gently caress her plump stripy abdomen and lower belly as you lap away at her rapidly moistening vagina with your tongue. The butterfly's moans increase as you service her cunt and toy with her erect clitoris, her [ButterflyBreastDesc] tits swinging freely beneath her. Arching her back in ecstasy, her wings flicking about wildly, she cums in a torrent and squirts her sweet and sticky juice over your face in a succession of powerful bursts. As you rub your cum-soaked eyes, she turns and looks at you, embarrassed at her transgression. 'I'm sorry! I'm sorry!' she exclaims, mortified as she attempts to clean your face with her hands and mouth, but is taken aback when you lick between her fingers and retrieve the cum on her lips using yours. Coming to the realization that you loved every moment of her liquid discharge, she accepts your embrace as your [skin of Player] body entwines with hers. As her cum drips down and smears between your bodies, you whittle away time cleaning one another with your mouths.";
+				say "Reacting to her discomfort you withdraw your fingers and gently hold on to her legs. Softly you kiss her petals in apology. Appreciating your consideration she stops resisting as you gently caress her plump stripy abdomen and lower belly as you lap away at her rapidly moistening vagina with your tongue. The butterfly's moans increase as you service her cunt and toy with her erect clitoris, her [ButterflyBreastDesc] tits swinging freely beneath her. Arching her back in ecstasy, her wings flicking about wildly, she cums in a torrent and squirts her sweet and sticky juice over your face in a succession of powerful bursts. As you rub your cum-soaked eyes, she turns and looks at you, embarrassed at her transgression. 'I'm sorry! I'm sorry!' she exclaims, mortified as she attempts to clean your face with her hands and mouth, but is taken aback when you lick between her fingers and retrieve the cum on her lips using yours. Coming to the realization that you loved every moment of her liquid discharge, she accepts your embrace as your [Skin of Player] body entwines with hers. As her cum drips down and smears between your bodies, you whittle away time cleaning one another with your mouths.";
 				increase ButterflyEncounters by 1;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
@@ -255,8 +255,8 @@ To say butterfly defeat:
 To say butterfly attack:
 	let ButterflyCanGetPregnant be False;
 	let cocktext be "";
-	if cock of Player is not "":
-		now cocktext is "[cock size desc of Player] [cock of Player] ";
+	if Cock of Player is not "":
+		now cocktext is "[cock size desc of Player] [Cock of Player] ";
 	else:
 		now cocktext is "[cock size desc of Player] ";
 	if "Sterile" is not listed in feats of Player:
@@ -287,7 +287,7 @@ To say butterfly attack:
 					say "You barely have time to give a whimper as you cease to be a male.";
 					now Cock Count of Player is 0;
 				if Cock Count of Player > 1 and a random chance of 1 in 3 succeeds:
-					say "Sudden pleasure runs through one of your doomed [cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
+					say "Sudden pleasure runs through one of your doomed [Cock of Player] cocks as it sprays the last of its seed, dwindling down to nothing at all and vanishing, leaving only the powerful orgasm to remember it by.";
 					decrease Cock Count of Player by 1;
 		else if Player is female:
 			say "She reaches down and roughly pulls [if Cunt Count of Player > 1]the largest of your cunts[else]your cunt[end if] wide open with her hands. Her proboscis shoots down your passage, quickly bursting into your uterus. It then runs up each of your fallopian tubes in turn. Her long tongue pierces through and begins to suck the eggs right out of your ovaries. You feel your womb contract with the assault as her feeding renders you sterile. As your lower tummy convulses in pain, she recoils her tongue and chides, 'You're not licking.'";
@@ -415,13 +415,20 @@ To say butterfly attack:
 Section 4 - Monster Definition
 
 When Play begins:
-	add { "Butterfly" } to infections of girl;
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "Butterfly"; [name of the overall species of the infection, used for children, ...]
+	add "Butterfly" to infections of InsectList;
+	add "Butterfly" to infections of FurryList;
+	add "Butterfly" to infections of NatureList;
+	add "Butterfly" to infections of FemaleList;
+	add "Butterfly" to infections of InternalCockList;
+	add "Butterfly" to infections of BipedalList;
+	add "Butterfly" to infections of FlightList;
 	now Name entry is "Butterfly"; [Name of your new Monster]
-	now enemy title entry is "";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Mariposa";
-	now enemy type entry is 1; [unique enemy]
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]She darts up suddenly, kicks at your head and painfully connects![or]The butterfly punches you in the midsection with her fist![or]She wraps her legs around your neck [or]Your colorful opponent emits a high-pitched noise that hurts your head![at random]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[butterfly defeat]";
 	[ Text or say command used when Monster is defeated.]
@@ -472,11 +479,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -484,7 +492,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -492,20 +500,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -526,26 +534,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -561,11 +569,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -574,7 +582,7 @@ When Play begins:
 Section 5 - Monster Endings
 
 when play ends:
-	if bodyname of Player is "Butterfly":
+	if BodyName of Player is "Butterfly":
 		let player_sterile be False;
 		if "Sterile" is listed in feats of Player:
 			now player_sterile is True;
@@ -750,7 +758,7 @@ name	desc	weight	object
 rlingfound is a truth state that varies. rlingfound is usually false.
 racy lingerie is a grab object. racy lingerie is equipment. It is not temporary.
 The placement of racy lingerie is "crotch".
-The descmod of racy lingerie is "Over your [bodyname of Player] body, you're wearing a very racy set of red lingerie.".
+The descmod of racy lingerie is "Over your [BodyName of Player] body, you're wearing a very racy set of red lingerie.".
 The slot of racy lingerie is "crotch".
 the scent of racy lingerie is "While always smelling clean and fresh at first, smelling a little longer picks up a faint perfume and the scent of [if Player is herm]male and female [else if Player is female]female [else if Player is male]male [end if]arousal.".
 
@@ -798,8 +806,8 @@ before using a grab object (called x):
 
 to say testosterone pill use:
 	let cocktext be "";
-	if cock of Player is not "":
-		now cocktext is "[cock size desc of Player] [cock of Player] ";
+	if Cock of Player is not "":
+		now cocktext is "[cock size desc of Player] [Cock of Player] ";
 	else:
 		now cocktext is "[cock size desc of Player] ";
 	if Player is herm:		[HERM]
@@ -811,7 +819,7 @@ to say testosterone pill use:
 		increase Ball Size of Player by 2;
 		follow the cock descr rule;
 		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]! ";
-		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [Skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";
 	else if Player is female:				[FEMALE]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
@@ -820,7 +828,7 @@ to say testosterone pill use:
 		now Cock Length of Player is 6;
 		now Ball Size of Player is 2;
 		follow the cock descr rule;
-		say "With your body in shock, you feel your cunt[sfn] tighten, push out of your body and form into a [cocktext]cock, pulsing in excitement. As your vaginal passage closes, some new [Ball Size Adjective of Player] [Balls] [if cockname of Player is listed in infections of internallist]forming inside you[else]then pop out underneath your new manhood[end if]. ";
+		say "With your body in shock, you feel your cunt[sfn] tighten, push out of your body and form into a [cocktext]cock, pulsing in excitement. As your vaginal passage closes, some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]forming inside you[else]then pop out underneath your new manhood[end if]. ";
 	else if Player is male:				[MALE]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
@@ -829,7 +837,7 @@ to say testosterone pill use:
 		increase Ball Size of Player by 2;
 		follow the cock descr rule;
 		say "You can see your [if Cock Count of Player is 1][one of]cock[or]penis[or]shaft[or]maleness[at random][else][one of]cocks[or]malenesses[at random][end if] [one of]engorge[or]swell[or]throb[at random] as [if Cock Count of Player > 1]they gain[else]it gains[end if] in length, becoming [descr]! ";
-		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";
+		say "Your [one of]sac[or]balls[or]orbs[or]cum factories[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [Skin of Player] flesh growing taught with the expansion, leaving you with [Ball Size Adjective of Player] [Balls]! ";
 	else:								[NEUTER]
 		now Cunt Count of Player is 0;
 		now Cunt Tightness of Player is 0;
@@ -837,7 +845,7 @@ to say testosterone pill use:
 		now Cock Count of Player is 1;
 		now Cock Length of Player is 6;
 		now Ball Size of Player is 4;
-		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [Ball Size Adjective of Player] [Balls] [if cockname of Player is listed in infections of internallist]form inside you[else]then pop out underneath your new manhood[end if]. ";
+		say "With your body in shock, you feel your bare groin clench as internal changes begin and soon push out of your body to form into a [cocktext]cock, pulsing in excitement. Some new [Ball Size Adjective of Player] [Balls] [if CockName of Player is listed in infections of InternalCockList]form inside you[else]then pop out underneath your new manhood[end if]. ";
 	if "Breasts" is not listed in feats of Player:
 		if Breast Size of Player > 0:
 			now Breast Size of Player is 0;
@@ -845,7 +853,7 @@ to say testosterone pill use:
 	if gestation of child > 0 and the player is not mpreg_ok:
 		let infection be "";
 		now the child is not born;
-		now the gestation of child is 0;
+		now the gestation of Child is 0;
 		say "The odd feeling in your lower belly ceases. ";
 	LineBreak;
 
@@ -860,8 +868,8 @@ Butterfly Grove is a room. "[butterfly grove scene]". It is unknown. It is fastt
 
 to say butterfly grove scene:
 	let cocktext be "";
-	if cock of Player is not "":
-		now cocktext is "[cock size desc of Player] [cock of Player] ";
+	if Cock of Player is not "":
+		now cocktext is "[cock size desc of Player] [Cock of Player] ";
 	else:
 		now cocktext is "[cock size desc of Player] ";
 	let ButterflyCanGetPregnant be False;
@@ -880,14 +888,14 @@ to say butterfly grove scene:
 		say "[bold type]You gain 1 testosterone pill![roman type][line break]";
 		now carried of testosterone pill is 1;
 	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
-		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [Headname of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
+		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. Your child, hungry for knowledge and experience of the world decides to stay with you.";
 		say "[bold type]Please name your child: [roman type]";
 		get typed command as playerinput;
 		now Name of ButterflyBaby is playerinput;
 		choose a blank row in the Table of PlayerChildren;
 		now Name entry is Name of ButterflyBaby;
 		now BirthTurn entry is turns;
-		now Head entry is Headname of ButterflyBaby;
+		now Head entry is HeadName of ButterflyBaby;
 		now Torso entry is TorsoName of ButterflyBaby;
 		now Back entry is BackName of ButterflyBaby;
 		now Arms entry is ArmsName of ButterflyBaby;
@@ -1013,7 +1021,7 @@ to say butterfly grove scene:
 		WaitLineBreak;
 		say "You decide to follow the butterfly girl's example and remove your clothes, unable to hide your raging boner[smn]. She approaches you affectionately while looking quietly pleased with herself. She flies hovering in front of you, kissing you enthusiastically and holding your face in her hands as you lift your hands up to her waist and abdomen. She lowers to the ground allowing your hands to wrap around her. Slowly she spins her body in your grip, her large wing brushing across your hands and chest. Your hands come to rest on her belly and she holds them there for a moment as she entwines her fingers with yours. Letting out an excited giggle she turns her head back for a quick kiss. She then turns to face you once again brushing you softly with her other colorful wing and reaches behind your neck. After kissing each other for a moment she tries to lift her body using your shoulders as leverage, but your dick[smn] get[smv] in the way. With both her legs and wings flailing you stoop and pull her up by her thighs.";
 		WaitLineBreak;
-		say "As her [ButterflyBreastDesc] breasts press against your [skin of Player] body she wraps her legs around your midsection kissing you obsessively. With one hand firmly on her abdomen you position [if Cock Count of Player > 1]the largest of [end if]your cock[smn] against her moist labia. Noticing your member draw near she slides back on both arms around your neck to get a good view of you inserting into her. As she peers down, her antennae bob before your eyes. You press your face into her golden tresses and take in her sweet scent. The moans begin as your cock slips into her cunt and you both begin to rock your hips. Her wings spasming in pulses she begins a kissing assault once again, and you return the favor. As her hindquarters fuck you relentlessly you feel the tension build in your cock. Quickly pulling it out of her you press it between your bodies as it explodes in a torrent spraying cum up over her tummy and splattering it on the underside of her breasts. With her legs still wrapped around your waist, she grinds her clit against your cock[smn] as she holds on to you from a single arm around your neck. With her free hand she scoops the cum off her body and feeds it into her mouth.";
+		say "As her [ButterflyBreastDesc] breasts press against your [Skin of Player] body she wraps her legs around your midsection kissing you obsessively. With one hand firmly on her abdomen you position [if Cock Count of Player > 1]the largest of [end if]your cock[smn] against her moist labia. Noticing your member draw near she slides back on both arms around your neck to get a good view of you inserting into her. As she peers down, her antennae bob before your eyes. You press your face into her golden tresses and take in her sweet scent. The moans begin as your cock slips into her cunt and you both begin to rock your hips. Her wings spasming in pulses she begins a kissing assault once again, and you return the favor. As her hindquarters fuck you relentlessly you feel the tension build in your cock. Quickly pulling it out of her you press it between your bodies as it explodes in a torrent spraying cum up over her tummy and splattering it on the underside of her breasts. With her legs still wrapped around your waist, she grinds her clit against your cock[smn] as she holds on to you from a single arm around your neck. With her free hand she scoops the cum off her body and feeds it into her mouth.";
 		wait for any key;
 	else if ButterflyPregnant is True and ButterflyLove is True and ButterflyBabyGestation is 2 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
@@ -1029,14 +1037,14 @@ to say butterfly grove scene:
 	else if ButterflyLove is True and ButterflyBabyGestation is 3 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
-		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [Headname of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
+		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [HeadName of ButterflyBaby] head, their [TorsoName of ButterflyBaby] front and [BackName of ButterflyBaby] back. Your ButterflyBaby has [ArmsName of ButterflyBaby] arms, [LegsName of ButterflyBaby] legs and a [AssName of ButterflyBaby] behind. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
 		say "[bold type]Please name your child: [roman type]";
 		get typed command as playerinput;
 		now Name of ButterflyBaby is playerinput;
 		choose a blank row in the Table of PlayerChildren;
 		now Name entry is Name of ButterflyBaby;
 		now BirthTurn entry is turns;
-		now Head entry is Headname of ButterflyBaby;
+		now Head entry is HeadName of ButterflyBaby;
 		now Torso entry is TorsoName of ButterflyBaby;
 		now Back entry is BackName of ButterflyBaby;
 		now Arms entry is ArmsName of ButterflyBaby;
@@ -1066,16 +1074,16 @@ to say butterfly grove scene:
 			if cute panties is owned:
 				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cocktext]cock[if Cock Count of Player > 1]s were[else] was[end if] already standing to attention, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctually, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
 				WaitLineBreak;
-				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap, her panties pressed against your throbbing cock[smn] as you both kiss passionately and hold each other close. As you grope her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. She maneuvers for penetration and a moment later you're in the heat of sex as she rides [if Cock Count of Player > 1]one of your rods[else]your rod[end if] fervently. Sensing your member harden she lets it slip out as you cum expelling a sizable load of sperm over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
+				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [Skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap, her panties pressed against your throbbing cock[smn] as you both kiss passionately and hold each other close. As you grope her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. She maneuvers for penetration and a moment later you're in the heat of sex as she rides [if Cock Count of Player > 1]one of your rods[else]your rod[end if] fervently. Sensing your member harden she lets it slip out as you cum expelling a sizable load of sperm over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
 				say "[bold type]You lose 1 cute panties![roman type][line break]";
 				decrease carried of cute panties by 1;
 			else:
-				say "If there was any doubt as to her intentions the pheromones wafting from your lover make them clear. With moisture already streaming down her thighs she begins to strip you. 'I need you inside me,' she says, yearning for your cock[smn]. She leans against a nearby tree and bends over awaiting penetration. Reaching an arm under her body she uses two fingers to spread her pussy apart welcomingly. Your mate bites her lip as she feels the head of [if Cock Count of Player > 1]one of your [cocktext]rods[else]your [cocktext]rod[end if] finding its bearings and rubbing against her lips, her abdomen resting against your [skin of Player] tummy. As your pole presses in you sense how her passage has adapted to the shape of your cock[smn] from your various encounters. You pump away, your hands on her hips and it's not long until you're pouring your cum inside.";
+				say "If there was any doubt as to her intentions the pheromones wafting from your lover make them clear. With moisture already streaming down her thighs she begins to strip you. 'I need you inside me,' she says, yearning for your cock[smn]. She leans against a nearby tree and bends over awaiting penetration. Reaching an arm under her body she uses two fingers to spread her pussy apart welcomingly. Your mate bites her lip as she feels the head of [if Cock Count of Player > 1]one of your [cocktext]rods[else]your [cocktext]rod[end if] finding its bearings and rubbing against her lips, her abdomen resting against your [Skin of Player] tummy. As your pole presses in you sense how her passage has adapted to the shape of your cock[smn] from your various encounters. You pump away, your hands on her hips and it's not long until you're pouring your cum inside.";
 				WaitLineBreak;
 				say "Not finished yet though you lift her leg and carefully spin her around to face you as she suspends her upper body on a branch of the tree, her wings placed carefully out of harms way, and her [ButterflyBreastDesc] breasts heaving with each breath. 'Let me have all your babies,' she says, drunk on the sex. With one hand supporting her abdomen while you thrust, and the other fondling her soft tits and squeezing her nipples you kiss. Your tongue explores her mouth as her proboscis entwines with it. As you exchange saliva without a care, your cum mixes with her juices foaming along your shaft like whipped cream as it constantly plumbs the depths of her pussy. Hoping this moment will last forever you orgasm in unison, your seed once again spurting into her womb as her nectar sprays out at you in pulses trickling down your [Ball Size Adjective of Player] [Balls].";
 				infect "Butterfly";
 				WaitLineBreak;
-				say "As you decouple, the butterfly eases you down to the ground on your back and begins to play with your cock[smn] and balls. She begins to clean the foamy white lather of the intermixed cum from your shaft[smn] using her mouth, never losing your gaze with her own. Soon enough your dick[if Cock Count of Player > 1]s are[else] is[end if] fully hard once again and coated in a thick layer of her clear saliva. She lifts into the air, hovering above you with her wings, then slowly impales her vagina down upon [if Cock Count of Player > 1]the largest of your shafts[else]your shaft[end if], riding you cowgirl style. With her hands resting on your [skin of Player] chest, her antennae bounce in time with her [ButterflyBreastDesc] boobs bulging out between her arms. As her ruby red nipples cavort freely, you look into your lover's beautiful green eyes, her blonde hair billowing around her face, and you readily grasp the deep love she feels for you. Sensing the unspoken understanding between you, she tightens around your rod as her lower-half prances upon it. Reaching for each other's hands, you intertwine your fingers as you both climax once again. Her wings jerk with each spasm as a fountain of cum erupts into her uterus and her sticky fluids cascade over your groin. Still connected, your mate leans forward collapsing onto your chest, [if Breast Size of Player > 0]your [breast size desc of Player][else]her[end if] breasts cushioning her fall. Your bodies steaming and dripping with both sweat and cum, she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth, you drift off to sleep.";
+				say "As you decouple, the butterfly eases you down to the ground on your back and begins to play with your cock[smn] and balls. She begins to clean the foamy white lather of the intermixed cum from your shaft[smn] using her mouth, never losing your gaze with her own. Soon enough your dick[if Cock Count of Player > 1]s are[else] is[end if] fully hard once again and coated in a thick layer of her clear saliva. She lifts into the air, hovering above you with her wings, then slowly impales her vagina down upon [if Cock Count of Player > 1]the largest of your shafts[else]your shaft[end if], riding you cowgirl style. With her hands resting on your [Skin of Player] chest, her antennae bounce in time with her [ButterflyBreastDesc] boobs bulging out between her arms. As her ruby red nipples cavort freely, you look into your lover's beautiful green eyes, her blonde hair billowing around her face, and you readily grasp the deep love she feels for you. Sensing the unspoken understanding between you, she tightens around your rod as her lower-half prances upon it. Reaching for each other's hands, you intertwine your fingers as you both climax once again. Her wings jerk with each spasm as a fountain of cum erupts into her uterus and her sticky fluids cascade over your groin. Still connected, your mate leans forward collapsing onto your chest, [if Breast Size of Player > 0]your [breast size desc of Player][else]her[end if] breasts cushioning her fall. Your bodies steaming and dripping with both sweat and cum, she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth, you drift off to sleep.";
 			infect "Butterfly";
 			if ButterflyCanGetPregnant is True:
 				now Libido of Player is (Libido of Player) / 2;
@@ -1095,7 +1103,7 @@ to say butterfly grove scene:
 			if cute panties is owned:
 				say "Your naked lover spots something sticking out of your pocket and looks at you with a curious expression. You pull the pair of cute panties out and show them to her. She stretches them out examining them closely, her antennae twitching quizzically, but she remains perplexed. You offer to show her their purpose, and taking the panties back you stoop down and lift one of her legs through the appropriate hole, and then move on to the other leg as she reacts in surprise. Pulling them up her velvet thighs and in to place, you realize how lucky it is that they're low-cut since they don't get in the way of her large abdomen. She twists around with her arms in the air to view them from various angles. Still curious, she tugs at them, clearly not used to the feeling. Your [cunt size desc of Player] vagina[if Cunt Count of Player > 1]s were[else] was[end if] already becoming damp, but to your surprise, the sight of her camel toe takes it up a notch further. With your arm moving instinctually, you reach for it and fondle her through the fabric as she continues to show more interest in the panties than what you're doing.";
 				WaitLineBreak;
-				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap as you both kiss passionately and hold each other close. As you fondle her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. You both begin to finger each other's cunts and soon are in the heat of sex as she kneads your [if Cunt Count of Player > 1]many pussies[else]pussy[end if] fervently. In a moment of pure ecstasy you both cum as her liquid pours over your lap and you spray a sizable load of fluid over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
+				say "As you put an arm around her midriff and suck at her earlobe, she awakens to your advance and starts stroking your [Skin of Player] [if Breast Size of Player > 0][breast size desc of Player] boobs[else]chest[end if]. You kneel down on the ground as the butterfly follows, pausing a moment first to give you a good close-up of the panties. She sits on your lap as you both kiss passionately and hold each other close. As you fondle her [ButterflyBreastDesc] breasts you wonder quietly how she'd react to a bra. You reach down and pull the crotch of her panties aside exposing her cunt as she peers down still intrigued at this mysterious piece of cloth. You both begin to finger each other's cunts and soon are in the heat of sex as she kneads your [if Cunt Count of Player > 1]many pussies[else]pussy[end if] fervently. In a moment of pure ecstasy you both cum as her liquid pours over your lap and you spray a sizable load of fluid over her new panties. She climbs off and tries to examine them as best she can before starting to take them off. You enjoy her usual [']au naturale['] look returning from behind as she strips. As she continues to examine the sodden panties curiously you offer to take them back, but she immediately moves them out of your reach. Stepping away she holds them up to her face, and breathes in your scent. Delirious with excitement, she speeds off, still clutching the panties to her face.";
 				say "[bold type]You lose 1 cute panties![roman type][line break]";
 				decrease carried of cute panties by 1;
 			else:
@@ -1104,7 +1112,7 @@ to say butterfly grove scene:
 				say "Not finished yet though you lift her leg and carefully spin her around to face you as she suspends her upper body on a branch of the tree, her wings placed carefully out of harms way, and her [ButterflyBreastDesc] breasts heaving with each breath. 'Let me look after you now,' she says giddily, but you pay little attention. With one of your hands fingering her pussy, and the other fondling her soft tits, you kiss. Your tongue explores her mouth as her proboscis entwines with it. As you exchange saliva without a care, her juices flow over your hand. Soon you prod into her cunt with a finger as you move your head down to lick and tease her clitoris. Unable to resist any longer you masturbate your own wet slit[sfn]. Hoping this moment will last forever you both orgasm together as her nectar sprays out at you in pulses trickling down your face.";
 				infect "Butterfly";
 				WaitLineBreak;
-				say "The butterfly eases you down to the ground on your back and begins to play with your vagina[sfn]. She tastes the stray moisture using her mouth, never losing your gaze with her own. With your clitoris erect and covered in a layer of her clear saliva she lifts into the air hovering above you with her wings. Slowly she rotates her body lowering her rear down upon your face as she resumes pleasuring your [if Cunt Count of Player > 1]many [end if]cunt[sfn]. With her hands parting your [skin of Player] thighs, her breasts bounce lively on your tummy as you suck at her petals. Feeling your lover's warm breath as she takes in your scent, you readily grasp the deep love she feels for you. Sensing the unspoken understanding her cunt quivers and tightens around your fingers once again probing her insides. Spreading and rubbing your vagina[sfn] with her fingers she explores your insides with her proboscis reaching deep into places no cock has ever seen. You climax in unison, her wings jerking with each spasm as her sticky fluids cascade over your face and she buries hers in your equally wet orifice[sfn]. Your mate lifts off, once again rotating her body, and descends down. [if Breast Size of Player > 0]Your [breast size desc of Player][else]Her[end if] breasts cushion her fall. Your bodies steaming and dripping with both sweat and cum, she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth, you drift off to sleep.";
+				say "The butterfly eases you down to the ground on your back and begins to play with your vagina[sfn]. She tastes the stray moisture using her mouth, never losing your gaze with her own. With your clitoris erect and covered in a layer of her clear saliva she lifts into the air hovering above you with her wings. Slowly she rotates her body lowering her rear down upon your face as she resumes pleasuring your [if Cunt Count of Player > 1]many [end if]cunt[sfn]. With her hands parting your [Skin of Player] thighs, her breasts bounce lively on your tummy as you suck at her petals. Feeling your lover's warm breath as she takes in your scent, you readily grasp the deep love she feels for you. Sensing the unspoken understanding her cunt quivers and tightens around your fingers once again probing her insides. Spreading and rubbing your vagina[sfn] with her fingers she explores your insides with her proboscis reaching deep into places no cock has ever seen. You climax in unison, her wings jerking with each spasm as her sticky fluids cascade over your face and she buries hers in your equally wet orifice[sfn]. Your mate lifts off, once again rotating her body, and descends down. [if Breast Size of Player > 0]Your [breast size desc of Player][else]Her[end if] breasts cushion her fall. Your bodies steaming and dripping with both sweat and cum, she nuzzles into your neck as you see her antennae bobbing around contentedly. Enjoying each other's warmth, you drift off to sleep.";
 			infect "Butterfly";
 			wait for any key;
 			SanLoss 5;

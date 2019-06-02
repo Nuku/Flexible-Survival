@@ -120,21 +120,21 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
 	if weapon object of Player is chair and Name entry is "Wrestling Wolf":
 		increase plhitbonus by 2;
-	if weapon object of Player is riding crop and ( bodyname of Player is "Latex Mistress" or player is dominant ):
+	if weapon object of Player is riding crop and ( BodyName of Player is "Latex Mistress" or player is dominant ):
 		increase plhitbonus by 2;
-	if ( weapon object of Player is pistol or weapon object of Player is banana peel gun ) and bodyname of Player is "Gunbunny":
+	if ( weapon object of Player is pistol or weapon object of Player is banana peel gun ) and BodyName of Player is "Gunbunny":
 		increase plhitbonus by 2;
 	if weapon object of Player is journal:
 		if "Black Belt" is listed in feats of Player, increase plhitbonus by 1;
 	if "Know Thyself" is listed in feats of Player:
 		let mmb be 0;
-		if bodyname of Player matches the text Name entry, case insensitively:
+		if BodyName of Player matches the text Name entry, case insensitively:
 			increase ktspeciesbonus by 3;
 			increase mmb by 1;
-		if facename of Player matches the text Name entry, case insensitively:
+		if FaceName of Player matches the text Name entry, case insensitively:
 			increase ktspeciesbonus by 2;
 			increase mmb by 1;
-		if cockname of Player matches the text Name entry, case insensitively:
+		if CockName of Player matches the text Name entry, case insensitively:
 			increase mmb by 2;
 			now ktcockmatch is true;
 		if ktspeciesbonus > 4, now ktspeciesbonus is 4;
@@ -166,7 +166,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 		now plnatarmor is 625; [25^2]
 		now plweaknatarmor is 156; [ (25/2)^2 ]
 	if hospquest >= 19:
-		if bodyname of Player is "Enhanced Chimera":
+		if BodyName of Player is "Enhanced Chimera":
 			if Player is pure:
 				increase plhitbonus by 1;
 				increase pldamagebonus by 1;
@@ -399,10 +399,10 @@ This is the player attack rule:
 				increase dam by 1;
 			if "Black Belt" is listed in feats of Player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
-			if "Natural Armaments" is listed in feats of Player and bodyname of Player is not "Human":
+			if "Natural Armaments" is listed in feats of Player and BodyName of Player is not "Human":
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry matches the text bodyname of Player, case insensitively:
+					if Name entry matches the text BodyName of Player, case insensitively:
 						now z is y;
 						break;
 				if z is 0:		[creature not listed]
@@ -441,7 +441,7 @@ This is the player attack rule:
 			say "[one of]You skillfully use[or]You attack precisely with[or]Using your weapons knowledge, you attack with[or]Like the veteran fighter you are, you strike with[or]You strike with[or]You attack with[at random] [weapon of Player], hitting the [Name entry in lower case] for [special-style-2][dam][roman type] damage!";
 		else if weapon object of Player is journal:
 			if z is not 0:	[Natural Armaments used]
-				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of Player] body[or]Drawing strength from your [bodyname of Player] body, you attack[or]You attack using your [bodyname of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [bodyname of Player] form's natural defenses[at random], hitting the [Name entry in lower case] for [special-style-2][dam][roman type] damage!";
+				say "[one of]You strike using your unnatural form[or]You instinctively attack using your [bodytype of Player] body[or]Drawing strength from your [BodyName of Player] body, you attack[or]You attack using your [BodyName of Player] might[or]You ferociously resist your foe with your tainted body's power[or]You attack using your [BodyName of Player] form's natural defenses[at random], hitting the [Name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else if "Black Belt" is listed in feats of Player or "Martial Artist" is listed in feats of Player:
 				say "[one of]You strike your foe using your trained unarmed combat, [or]You land an open-palmed strike on your foe, [or]You land a close-fisted blow on your enemy, [or]You attack using your martial arts skill, [or]You land a series of quick blows, [or]You grapple and toss your foe using your training, [or]Your kung-fu is the best, [or]Whoa! You know kung-fu! [at random]hitting the [Name entry in lower case] for [special-style-2][dam][roman type] damage!";
 			else:
@@ -452,19 +452,19 @@ This is the player attack rule:
 		let specattchance be 4;
 		if peppereyes > 0, increase specattchance by 1;
 		if a random chance of specattchance in 20 succeeds and "Tail Strike" is listed in feats of Player and bonusattacks < 2:
-			if tailname of Player is listed in infections of Tailweapon:
+			if TailName of Player is listed in infections of TailweaponList:
 				increase bonusattack by 1;
 				let z be 0;
 				repeat with y running from 1 to number of filled rows in Table of Random Critters:
 					choose row y in Table of Random Critters;
-					if Name entry matches the text tailname of Player, case insensitively:
+					if Name entry matches the text TailName of Player, case insensitively:
 						now z is y;
 						break;
 				choose row z in Table of Random Critters;
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
-				say "[line break]You make an additional attack using your [tailname of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
+				say "[line break]You make an additional attack using your [TailName of Player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
 				choose row MonsterID from Table of Random Critters;
 		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of Player and Cock Length of Player >= 12 and bonusattacks < 2:
@@ -475,7 +475,7 @@ This is the player attack rule:
 			if dammy > 8, now dammy is 8;
 			increase dammy by a random number between 0 and 1;
 			if Cock Count of Player >= 3, increase dammy by a random number between 0 and 1;
-			if tailname of Player is "Cerberus":
+			if TailName of Player is "Cerberus":
 				increase dammy by a random number between 0 and 2;
 				say "[line break]Your tailcock swings in to [one of]smack[or]swat[or]slap[or]ejaculate[or]cum[purely at random] at your enemy, splattering a spray of your [one of]seed[or]semen[at random] onto them, for [special-style-2][dammy][roman type] additional damage!";
 			else:
@@ -677,13 +677,13 @@ This is the flee rule:
 		let the defense bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus - defense bonus;
 		if "Gas Cloud" is listed in feats of Player and gascloud is 0 and peppereyes is 0:
-			if tailname of Player is "Skunk" or tailname of Player is "Skunkbeast Lord" or tailname of Player is "Skunk Taur" or tailname of Player is "Hyperskunk":
+			if TailName of Player is "Skunk" or TailName of Player is "Skunkbeast Lord" or TailName of Player is "Skunk Taur" or TailName of Player is "Hyperskunk":
 				say "You give your striped tail a meaningful wave at your enemy before releasing your spray and trying to escape.";
 				increase gascloud by 5;
-			else if tailname of Player is "Squid":
+			else if TailName of Player is "Squid":
 				say "Turning around, you spray an inky cloud towards your enemy before trying to escape.";
 				increase gascloud by 5;
-			else if bodyname of Player is "Corota":
+			else if BodyName of Player is "Corota":
 				say "Rustling your wings, you send a cloud of choking dust at your foe before you attempt your escape.";
 				increase gascloud by 5;
 			else:
@@ -1153,9 +1153,9 @@ to win:
 		increase vorechance by ( 100 - humanity of Player ) / 4;
 		increase vorechance by ( scalevalue of Player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds or hunger of Player > 80:					[chance for vore]
-			if Name entry is not listed in infections of VoreExclusion:
+			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now voreprompted is true; [player will be prompted for vore]
-	if Playercanub is true and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of child is 0 and larvaegg is not 2 and player is female:
+	if Playercanub is true and inasituation is false and scalevalue of Player >= scale entry and fightoutcome is 10 and ubchoice is not 2 and gestation of Child is 0 and larvaegg is not 2 and player is female:
 		let vorechance be 25 + ( Cunt Tightness of Player * 5 );
 		if vorechance > 125, now vorechance is 125;
 		if "Fertile" is listed in feats of Player, increase vorechance by 25;
@@ -1169,7 +1169,7 @@ to win:
 		increase vorechance by ( 100 - humanity of Player ) / 4;
 		increase vorechance by ( scalevalue of Player - scale entry ) * 5;
 		if a random chance of vorechance in 300 succeeds:					[chance for ub]
-			if Name entry is not listed in infections of VoreExclusion:
+			if Name entry is not listed in infections of VoreExclusion and enemy type entry is 0: [not on the exclude list and non-unique infection]
 				now ubprompted is true; [player will be prompted for ub]
 	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
@@ -1566,7 +1566,7 @@ this is the humping rule:
 		decrease wdam entry by ( ( lev entry + 7 ) / 4 ); [then restore stats to normal]
 		increase dex entry by 2;
 		now monsterpowerup is 0;
-	else if bodyname of Player is Name entry and a random chance of 1 in 5 succeeds:
+	else if BodyName of Player is Name entry and a random chance of 1 in 5 succeeds:
 		let rangenum be ( 80 - ( peppereyes * 4 ) );
 		let xyz be ( a random number from rangenum to 120 ) + 30 + ( 2 * lev entry );
 		let dam be ( ( wdam entry times xyz ) / 100 );

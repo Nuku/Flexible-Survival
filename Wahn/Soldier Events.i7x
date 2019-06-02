@@ -8,9 +8,9 @@ Soldier Squad	"Soldier Squad"
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse".
 when play begins:
-	add Soldier Squad to badspots of guy;       [male soldiers]
-	add Soldier Squad to badspots of girl;      [one changes into a female husky]
-	add Soldier Squad to badspots of furry;     [female husky involved]
+	add Soldier Squad to BadSpots of MaleList;       [male soldiers]
+	add Soldier Squad to BadSpots of FemaleList;      [one changes into a female husky]
+	add Soldier Squad to BadSpots of FurryList;     [female husky involved]
 
 SquadEncounters is a number that varies. SquadEncounters is usually 0.
 
@@ -110,7 +110,7 @@ Instead of resolving a Soldier Squad:
 			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you.* Petting her head with one hand, you stroke over her fur with the other, feeling her feminine curves. 'You're a good dog, aren't you? A beautiful little bitch who does what she's told.' Finding you looking into her face expectantly, she hesitantly replies '...yes?' A grin on your face, you move your hands to her four breasts. 'Wonderful. You know, dogs are meant to follow their master's orders.' Her breathing deepens and a sigh escapes her lips as you start fondling her nipples, rubbing your fingers slowly around them. Then you move a hand down to her crotch and start stroking over her sensitive pussy lips, making her gasp at the feelings suddenly coursing through her body. Pushing two fingers inside her until they bump against her hymen and rubbing her clit is enough to soon give her her first climax.";
 			WaitLineBreak;
 			if Player is male:
-				say "     As the husky rides out her orgasm, you quickly take off your clothes and use the femcum dripping from her pussy to lube up your already hard [cock of Player] shaft. 'I got something even better for you now...' you tell the husky, then turn her around and make her raise her arms to hold on to the windowsill. Stepping up behind her, you rub your erect manhood up and down over her crotch, then put it between her pussy lips and press forward. The tip of your shaft poking against her fleshy barrier, you lean forward and fondle her breasts, then put a hand over her mouth, saying 'You're almost a woman now... this'll hurt just a moment.' Then you pull back a bit and thrust into her, hard, taking her virginity. She does a pained yip, muffled through your hand, then soon starts moaning as you fuck into her. Such a nice feeling to be the first to explore this juicy cunt. Eager to fill her up with your seed, you fuck her fast and hard and soon feel a familiar urge rise in your balls. Burying your [cock of Player] shaft inside her pussy[if Cock Length of Player > 10] until it pushes against her cervix[end if], you give a satisfied moan and shoot string after string of cum deep into her body. ";
+				say "     As the husky rides out her orgasm, you quickly take off your clothes and use the femcum dripping from her pussy to lube up your already hard [Cock of Player] shaft. 'I got something even better for you now...' you tell the husky, then turn her around and make her raise her arms to hold on to the windowsill. Stepping up behind her, you rub your erect manhood up and down over her crotch, then put it between her pussy lips and press forward. The tip of your shaft poking against her fleshy barrier, you lean forward and fondle her breasts, then put a hand over her mouth, saying 'You're almost a woman now... this'll hurt just a moment.' Then you pull back a bit and thrust into her, hard, taking her virginity. She does a pained yip, muffled through your hand, then soon starts moaning as you fuck into her. Such a nice feeling to be the first to explore this juicy cunt. Eager to fill her up with your seed, you fuck her fast and hard and soon feel a familiar urge rise in your balls. Burying your [Cock of Player] shaft inside her pussy[if Cock Length of Player > 10] until it pushes against her cervix[end if], you give a satisfied moan and shoot string after string of cum deep into her body. ";
 				LineBreak;
 			say "     Satisfied, you tell the canine woman 'Listen, you should get back in the room there and stay with your mother. And don't tell anyone you saw me, ok?' Unquestioningly accepting your orders, the young husky nods, then lets herself be helped back through the window. The last you see of her is her bushy tail, wagging happily at doing what you want. Time to get out of here for now...";
 			now Resolution of Soldier Squad is 6; [fucked Amy, put her back]
@@ -265,8 +265,8 @@ Human Urges	"Human Urges"
 Human Urges is a situation.
 The sarea of Human Urges is "Red".
 when play begins:
-	add Human Urges to badspots of guy;      [male soldier]
-	add Human Urges to badspots of girl;     [female soldier]
+	add Human Urges to BadSpots of MaleList;      [male soldier]
+	add Human Urges to BadSpots of FemaleList;     [female soldier]
 
 Instead of resolving a Human Urges:
 	say "     As you wander through one of the residential areas next to this seedy section of town, you hear moaning coming from an open window of a nearby house. Curious what kind of creatures are in there, you slowly walk closer, careful not to make a sound. When you arrive at the window and peek inside, you see that it's... humans.";
@@ -285,8 +285,8 @@ Soldiers & Snowmeows	"Soldiers & Snowmeows"
 Soldiers & Snowmeows is a situation.
 The sarea of Soldiers & Snowmeows is "Red".
 when play begins:
-	add Soldiers & Snowmeows to badspots of guy;      [male soldier & snow leopard]
-	add Soldiers & Snowmeows to badspots of furry;    [snow leopard involved]
+	add Soldiers & Snowmeows to BadSpots of MaleList;      [male soldier & snow leopard]
+	add Soldiers & Snowmeows to BadSpots of FurryList;    [snow leopard involved]
 
 SnowmeowSoldierStatus is a number that varies. SnowmeowSoldierStatus is usually 0.
 
@@ -316,7 +316,7 @@ Instead of resolving a Soldiers & Snowmeows:
 				now Resolution of Soldiers & Snowmeows is 4; [player fled]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Dropping the bruised snow leopard with a last swing, you then turn to his victim. As you look at the soldier's feline face, you realize that it's much too late to save his humanity. His body is now fully gray furred with the typical spotted pattern of a snow leopard, and the eyes have already turned a shade of purple and seem lost in infectious lust. As you watch, two mounds push out against the fabric of his khaki shirt, topped by two hard, dark nipples that show clearly through the thin material. Between his spread thighs, a long jet of semen covers the pavement, tapering into a growing pool of clear vaginal juice that now drips from the soldier's new female opening. You watch as his buzz-cut blond hair lengthens, growing long and white-gray down his back, until no sign of the male form remains.";
-				if bodyname of Player is "Snow Leopard" and player is pure and player is male:
+				if BodyName of Player is "Snow Leopard" and player is pure and player is male:
 					say "     Glancing up at you with a panicked expression, the newly female snow feline dashes off down the street. She's pretty fast and almost manages to get away, but as you run after her you surprise yourself with a sudden rush of energy and catch up, getting a paw-hold on her arm. Bringing the both of you to a standstill, two felines panting together after a moment of exhaustion and breathing in each other's scent, you realize what it was that pushed you past your usual limits. Chasing an aroused female smelling of heat and sex must really have pushed all the buttons of your body's primal urges, just like being close to her now made your cock go rock-hard. And she's starting to feel it too, her eyes wide as she stares at you, breathing getting faster and faster with each sniff of your masculine pheromones.";
 					LineBreak;
 					say "     Do you want to give in and do what comes naturally ([link]Y[as]y[end link]), or will you let her go, resisting the instincts to mate that threaten to overwhelm you ([link]N[as]n[end link])?";
@@ -380,8 +380,8 @@ Dangerous Load	"Dangerous Load"
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
 when play begins:
-	add Dangerous Load to badspots of guy;
-	add Dangerous Load to badspots of furry;
+	add Dangerous Load to BadSpots of MaleList;
+	add Dangerous Load to BadSpots of FurryList;
 
 Instead of resolving a Dangerous Load:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really, as this makes you wonder what monster might be hiding behind the next corner. Then, as you come to the next street intersection and peek around the edge of a brick building, you are surprised by the fact that it isn't one of the infected in some sort of strange shape that you see. No, instead there are two humans just a few steps away - dressed in army fatigues and armed with rifles.";
@@ -442,8 +442,8 @@ Lone Soldier	"Lone Soldier"
 Lone Soldier is a situation.
 The sarea of Lone Soldier is "Outside".
 when play begins:
-	add Lone Soldier to badspots of guy;
-	add Lone Soldier to badspots of furry;
+	add Lone Soldier to BadSpots of MaleList;
+	add Lone Soldier to BadSpots of FurryList;
 
 Instead of resolving a Lone Soldier:
 	say "     Wandering through the mostly empty streets, skirting around piles of rubble and wrecked cars, you can't help but think how quiet it is - too quiet for comfort really. Therefore you're not really surprised when grunts, growls and shouts echo out of a nearby alley, drawing your attention. Being the curious person that you are, you do a little sprint over to the opening of said alley and peek inside. The fight going on in the alley is between two anthro hyenas in leather jackets and a male soldier. As you stick your head around the corner, the muscular black guy just punches the first of his attackers right in the muzzle, sending her sprawling on the floor. This enrages the second hyena quite a bit, who throws himself on the soldier, earning him a painful punch to the side but also forcing the human into close-up wrestling to keep the hyena's gnashing teeth from his throat.";

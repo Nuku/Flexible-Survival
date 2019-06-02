@@ -38,7 +38,7 @@ Instead of Resolving a Military presence:
 		say "     Traveling through the streets again, you hear a distant sound in the air for a minute. Looking up and all around, you can only barely make out a jet trail high in the sky. Wondering why someone would be traveling that high, you are about to turn away and continue about your business when you notice a small speck drifting in the sky. You pull out your newly acquired binoculars and try to focus in on the speck to see what it is. Surprisingly, as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky! As you watch breathlessly, their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city. Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
 		now mtp is 3;
-		if girl is not banned, now Paratrooper is active; [- Vanessa]
+		if FemaleList is not banned, now Paratrooper is active; [- Vanessa]
 		[also makes the 'womanfruittree' event live - Colleen]
 	else if mtp is 3:
 		say "     Traveling through the city, you come across what appears to have been a military style barricade, currently unoccupied. Investigating further, you find that several military tents had been set up past the barricade in a mostly empty store parking lot. Investigating carefully in case there are still any trigger-happy soldiers around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.";
@@ -87,8 +87,8 @@ Hyena Gang	"Hyena Gang"
 
 Hyena Gang is a situation.
 when play begins:
-	add Hyena Gang to badspots of hermaphrodite;
-	add Hyena Gang to badspots of furry;
+	add Hyena Gang to badspots of HermList;
+	add Hyena Gang to BadSpots of FurryList;
 
 HYG is a number that varies.
 
@@ -104,7 +104,7 @@ Instead of Resolving a Hyena Gang:
 	else if hyg is 2:
 		say "     As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.";
 		say "     'Hey don't worry,' the hyena says as she draws closer, making you nervous. 'I'm not here for a fight, but we've noticed you near our turf and looking at our signage before,' she says with a gesture at the graffiti. 'So I thought I'd come over and offer you a chance to join on up. ";
-		if bodyname of Player is "Herm Hyena":
+		if BodyName of Player is "Hyena Herm":
 			say "Besides, it looks like you would fit right in around here already,' the hyena says as she eyes your hyena-like frame. 'What do you say to giving us a try?'";
 			if Player consents:
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile. 'But first,' she says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
@@ -149,8 +149,8 @@ Locked utility room	"Locked utility room"
 Locked utility room is a situation.
 The sarea of Locked utility room is "Mall".
 when play begins:
-	add Locked utility room to badspots of guy;
-	add Locked utility room to badspots of hellspawn;
+	add Locked utility room to BadSpots of MaleList;
+	add Locked utility room to badspots of DemonList;
 
 Instead of Resolving a Locked utility room:
 	if Resolution of Locked Utility Room is 0: [first encounter]
@@ -246,8 +246,8 @@ Twisted grove	"Twisted grove"
 Twisted grove is a situation.
 The sarea of Twisted grove is "Park".
 when play begins:
-	add Twisted grove to badspots of girl;
-	add Twisted grove to badspots of furry;
+	add Twisted grove to BadSpots of FemaleList;
+	add Twisted grove to BadSpots of FurryList;
 
 Instead of Resolving a Twisted grove:
 	say "     Exploring the park trails, you hear muffled sounds from a distance. Deciding to investigate, you creep up over a small hill, only to stare in astonishment as what seems to be a small grove of animated plants violate a skunk-like woman, holding her suspended off the ground like some obscene fruit. As you watch, more and more cum drips off of her onto the ground as she is pounded by several vines into orgasm again and again. Your eye is quickly drawn to the patch of earth where some of the cum fell, the grass seeming to writhe and twitch and start to grow in obscene shapes as well. As there is nothing you can do for the skunkwoman against the growing grove of twisted plants, you decide to move on quickly before you end up joining her.";
@@ -378,6 +378,6 @@ to piggyify:
 	Infect "Messy Pig";
 
 to hyenaify:
-	Infect "Herm Hyena";
+	Infect "Hyena Herm";
 
 New Events ends here.

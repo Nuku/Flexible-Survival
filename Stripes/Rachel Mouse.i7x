@@ -13,12 +13,12 @@ Quiet Apartment Building	"Quiet Apartment Building"
 Quiet Apartment Building is a situation.
 The sarea of Quiet Apartment Building is "Red".
 when play begins:
-	add Quiet Apartment Building to badspots of hermaphrodite;
-	add Quiet Apartment Building to badspots of furry;
+	add Quiet Apartment Building to badspots of HermList;
+	add Quiet Apartment Building to BadSpots of FurryList;
 
 Instead of resolving a Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
-	if bodyname of Player is "Mental Mouse" and humanity of Player <= 75:
+	if BodyName of Player is "Mental Mouse" and humanity of Player <= 75:
 		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";
 		WaitLineBreak;
 		say "[mouseapts]";
@@ -38,7 +38,7 @@ to say mouseapts:
 	say "     You step into the small apartment building and look around, still feeling oddly at ease. The main doors are unlocked and you enter the lobby. There is an apartment door slightly ajar at the back of the hall beside the steps up to the next floor and you head towards it. As you reach out and push it open, you are tackled from behind by someone. No, it's multiple someones. There is a mob of gray mice which slipped quietly from the other rooms to tackle out. More come out from the apartment ahead of you and you are pulled in. You struggle, but there are too many of them on top of you already, weighing you down and overpowering you. While they may only be three feet tall, they are already about a dozen grabbing you and you can sense many more in the hall behind you.";
 	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";
 	WaitLineBreak;
-	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [skinname of Player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
+	say "     Sensing your increasing willingness, they release you and help you up onto the couch where you are snuggled by a bunch of them. Others set up in groups around the room, playing with one another. The mice run their paws over your [SkinName of Player] flesh while kissing and fondling you. One of them, somehow particularly beautiful despite looking pretty much the same as the rest, snuggles herself against you and starts kissing you passionately. She is meant to be with you, to be your mate. Your mind is so full of happiness, having found so many beautiful lovers and a perfect mate.";
 	if Player is male:
 		increase rachelfuck by 1;
 		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if Cock Length of Player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if Cock Length of Player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
@@ -68,7 +68,7 @@ to say mouseapts:
 	decrease humanity of Player by 20 + a random number between 1 and 10;
 	if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
 	if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 1 and 5;
-	if bodyname of Player is not "Mental Mouse", now mousecounter is 0;
+	if BodyName of Player is not "Mental Mouse", now mousecounter is 0;
 	say "[fullmousification]";
 	if hellHoundLevel is 0:
 		follow the sex change rule;
@@ -107,17 +107,17 @@ to say fullmousification:
 		if Name entry is "Mental Mouse":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Mental Mouse";
-	now facename of Player is "Mental Mouse";
-	now skinname of Player is "Mental Mouse";
-	now bodyname of Player is "Mental Mouse";
-	now cockname of Player is "Mental Mouse";
+	now TailName of Player is "Mental Mouse";
+	now FaceName of Player is "Mental Mouse";
+	now SkinName of Player is "Mental Mouse";
+	now BodyName of Player is "Mental Mouse";
+	now CockName of Player is "Mental Mouse";
 	attributeinfect;
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 
 
 Section 2 - Mouse Girl Pet
@@ -353,7 +353,7 @@ Section 4 - Endings
 when play ends:
 	if mouse girl is tamed:
 		if humanity of Player < 10:
-			if bodyname of Player is "Albino Mouse" or bodyname of Player is "Mental Mouse":
+			if BodyName of Player is "Albino Mouse" or BodyName of Player is "Mental Mouse":
 				say "     Giving into your murine urges, you fully accept Rachel, and the whole of the mouse collective, into your mind. Becoming one with them, your own mind recedes away to make room for the united minds of the mice. You love them all, but love Rachel the most of all. The mouse girl who was willing to accompany you into the city, to risk losing you to let you come to this point on your own, is your special mate among the group, though all those in the collective are your lovers. From your frequent matings, there comes several lovely children who are exceptionally powerful from your chosen union, helping the making the mouse collective even stronger. Several of them move to help be part of new nests, forming an interconnected web of hive-minds that cannot be resisted, growing slowly, secretly, around the world.";
 		else:
 			say "     When the military comes to rescue you and the other survivors they can find, Rachel seems very nervous and fretful. You don't have to ask, knowing she's aware you'll be leaving the city without becoming a member of the mouse collective - without joining her. With tears in the corner of her eyes, the mouse girl hugs herself to you tightly. You can sense that she longs to overpower your will or to summon the others, to force you to come. From what you've sensed of her power and from the strength of your bond to her, she might even be able to do it, but she loves you too much to bring herself to do so. Hugging the small mouse girl, you give her a parting kiss before she runs off into the city. Your sense of her mind fades as she runs off, filled with a mix of sadness at her loss as well as joy for your success";

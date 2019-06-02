@@ -10,11 +10,6 @@ dolphinmode is a number that varies.
 dolphinflatablefight is a number that varies.
 dolinfloss is a number that varies.
 
-when play begins:
-	add { "Bottlenose Toy" } to infections of girl;
-	add { "Bottlenose Toy" } to infections of furry;
-	add { "Bottlenose Toy" } to infections of tailweapon;
-
 to say dolphinflatabledesc:
 	setmongender 4; [creature is female]
 	choose row MonsterID from Table of Random Critters;
@@ -190,16 +185,16 @@ to say losetodolphinflatable:
 				now XP of Player is 0; [prevents accidental level up]
 				if the player is not lonely, now XP of companion of Player is 0;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now tailname of Player is "Bottlenose Toy";
-				now facename of Player is "Bottlenose Toy";
-				now skinname of Player is "Bottlenose Toy";
-				now bodyname of Player is "Bottlenose Toy";
-				now cockname of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy";
+				now FaceName of Player is "Bottlenose Toy";
+				now SkinName of Player is "Bottlenose Toy";
+				now BodyName of Player is "Bottlenose Toy";
+				now CockName of Player is "Bottlenose Toy";
 				now tail of Player is "You have a buoyant, inflatable dolphin tail.";
-				now face of Player is "that of a cute, smiling dolphin";
-				now skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
-				now body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
-				now cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
+				now Face of Player is "that of a cute, smiling dolphin";
+				now Skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
+				now Body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
+				now Cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
 				now scalevalue of Player is 3;
 				now bodydesc of Player is "inflatable";
 				now bodytype of Player is "dolphin";
@@ -218,9 +213,9 @@ to say losetodolphinflatable:
 				stop the action;
 ]
 		[END SCENE]
-		else if ( sex entry is not "Male" or "Breasts" is listed in feats of Player ) and "Passing Grade Chest" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and bodyname of Player is "Bottlenose Toy" and Nipple Count of Player > 0 and ( Breast Size of Player < 6 or "One Way" is listed in feats of Player ) and a random chance of 2 in 5 succeeds:
+		else if ( sex entry is not "Male" or "Breasts" is listed in feats of Player ) and "Passing Grade Chest" is not listed in feats of Player and "Flat Chested" is not listed in feats of Player and BodyName of Player is "Bottlenose Toy" and Nipple Count of Player > 0 and ( Breast Size of Player < 6 or "One Way" is listed in feats of Player ) and a random chance of 2 in 5 succeeds:
 			say ". She settles herself atop you and runs her decal eyes over your cetacean body, and soon has them focused on your nipples and their plastic air valves.";
-			say "     The dolphin girl smirks down at you slyly while her fin-like hands drift across your [bodytype of Player] form, squeaking lightly as the stroke and tease your PVC imitation of [skinname of Player] flesh. A sharp gasp escapes your lips as one hand finds its way to your chest[if Breast Size of Player > 0], giving your breast a quick squeeze before she[else] and[end if] pinches your inflation nozzle nipple with a giggle. With your arms bound and the giggling dolphin girl atop you, all you can do is squirm and moan in pleasure as your altered nipples are teased and tweaked endlessly. Eventually the pinching comes to an end and you are given a moment to catch your breath before the inflatable leans forward to take your altered nipple into her mouth with a mischievous squeak.";
+			say "     The dolphin girl smirks down at you slyly while her fin-like hands drift across your [bodytype of Player] form, squeaking lightly as the stroke and tease your PVC imitation of [SkinName of Player] flesh. A sharp gasp escapes your lips as one hand finds its way to your chest[if Breast Size of Player > 0], giving your breast a quick squeeze before she[else] and[end if] pinches your inflation nozzle nipple with a giggle. With your arms bound and the giggling dolphin girl atop you, all you can do is squirm and moan in pleasure as your altered nipples are teased and tweaked endlessly. Eventually the pinching comes to an end and you are given a moment to catch your breath before the inflatable leans forward to take your altered nipple into her mouth with a mischievous squeak.";
 			say "     Taking a deep breath before wrapping her snout tightly around your inflation nozzle, the dolphin girl begins blowing into your breast, filling your chest with a sudden tightness. Your PVC flesh creaks and groans as the bottlenose girl continues forcing air into your body, stretching your bosom to new limits. The sudden influx of air makes you lightheaded and giggly, and by the time she stops to take another breath you've given up resisting completely. After a quick kiss, the dolphin girl resumes at your other breast, plumping it up to match the first";
 			if Nipple Count of Player > 2 and "Bouncy Bouncy" is listed in feats of Player:
 				say ". Your additional breasts are also given the same treatment once your upper pair's been expanded up a cup size";
@@ -232,22 +227,22 @@ to say losetodolphinflatable:
 			say ".";
 			if dolinfloss is 2:	[oral]
 				say "     She settles herself over your head, pressing her damp slit to your face. There is an arousing scent to her juices beyond the faint plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. You start licking and kissing at her wet pussy, making her giggle merrily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue.";
-				say "     Once you've gotten into the moment and are eating her out eagerly, she leans forward and takes your [cock size desc of Player] [cock of Player] shaft into her cetacean head, giggling cutely before stuffing it in[if Cock Length of Player > 36]. Her latex mouth stretches tightly around your huge member as she takes it all in happily despite the excessive stretching necessary to accomplish this[else if Cock Length of Player > 24]. Her latex mouth stretches around your large member as she takes it all in with ease, seeming quite pleased to have it stretch her mouth open[else]. Her latex mouth engulfs your member as she takes it all in with ease[end if]. Her smooth, slick mouth and throat squeeze and slide across your pulsing meat, working you until you cum with a load groan and pump your load into the inflatable girl[if Ball Size of Player > 6]. Despite your massive output, the dolphin girl swallows it all down, ending up considerably more inflated from your added semen filling her[else if Ball Size of Player > 5]. Despite your considerable output, the dolphin girl swallows it all down, ending up visibly more inflated from your added semen inside her[end if][if daytimer is day]. With the sunlight shining through her, you can see the slightly shaded streaks where your cum has landed on the inside of her vinyl skin[end if][if daytimer is day and Ball Size of Player > 5] and the pool it's forming in her belly[end if]. As she's drinking down your load, she cums with a trill of squeaky delight, spilling her slick juices across your face. Finished, the smiling inflatable slides off you, her towel unraveling on its own. She dons it like a bright red cape and dashes back into the water to frolic again.";
+				say "     Once you've gotten into the moment and are eating her out eagerly, she leans forward and takes your [cock size desc of Player] [Cock of Player] shaft into her cetacean head, giggling cutely before stuffing it in[if Cock Length of Player > 36]. Her latex mouth stretches tightly around your huge member as she takes it all in happily despite the excessive stretching necessary to accomplish this[else if Cock Length of Player > 24]. Her latex mouth stretches around your large member as she takes it all in with ease, seeming quite pleased to have it stretch her mouth open[else]. Her latex mouth engulfs your member as she takes it all in with ease[end if]. Her smooth, slick mouth and throat squeeze and slide across your pulsing meat, working you until you cum with a load groan and pump your load into the inflatable girl[if Ball Size of Player > 6]. Despite your massive output, the dolphin girl swallows it all down, ending up considerably more inflated from your added semen filling her[else if Ball Size of Player > 5]. Despite your considerable output, the dolphin girl swallows it all down, ending up visibly more inflated from your added semen inside her[end if][if daytimer is day]. With the sunlight shining through her, you can see the slightly shaded streaks where your cum has landed on the inside of her vinyl skin[end if][if daytimer is day and Ball Size of Player > 5] and the pool it's forming in her belly[end if]. As she's drinking down your load, she cums with a trill of squeaky delight, spilling her slick juices across your face. Finished, the smiling inflatable slides off you, her towel unraveling on its own. She dons it like a bright red cape and dashes back into the water to frolic again.";
 			else:
-				say "     She settles herself into your lap, rubbing her slit over your cock and moaning softly. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. A clear, slick fluid leaks from her plastic pussy, lubricating your shaft before she reaches back and guides it up into her. She trills in squeaky delight at having your throbbing cock inside her, stretching and resizing herself to take your [cock size desc of Player] [cock of Player] cock perfectly. Despite being a PVC pussy, it is quite warm and slick, gripping your cock nicely as the airhead giggles merrily. As she rides you, there's just something about her cute, innocent nature that really turns you on and you cum hard into her, pumping your seed into her[if daytimer is day]. With the sunlight shining through her, you can see the slightly shaded streaks where your cum has landed on the inside of her vinyl skin[end if][if daytimer is day and Ball Size of Player > 5] and the pool it's forming in her belly[end if]. Finished, the smiling inflatable slides off you, her towel unravels on its own. She wraps it back around herself and runs into the water to play and splash around some more.";
+				say "     She settles herself into your lap, rubbing her slit over your cock and moaning softly. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. A clear, slick fluid leaks from her plastic pussy, lubricating your shaft before she reaches back and guides it up into her. She trills in squeaky delight at having your throbbing cock inside her, stretching and resizing herself to take your [cock size desc of Player] [Cock of Player] cock perfectly. Despite being a PVC pussy, it is quite warm and slick, gripping your cock nicely as the airhead giggles merrily. As she rides you, there's just something about her cute, innocent nature that really turns you on and you cum hard into her, pumping your seed into her[if daytimer is day]. With the sunlight shining through her, you can see the slightly shaded streaks where your cum has landed on the inside of her vinyl skin[end if][if daytimer is day and Ball Size of Player > 5] and the pool it's forming in her belly[end if]. Finished, the smiling inflatable slides off you, her towel unravels on its own. She wraps it back around herself and runs into the water to play and splash around some more.";
 		else:
 			say "     She settles herself over your head, pressing her damp slit to your face. There is an arousing scent to her juices beyond the faint plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. You start licking and kissing at her wet pussy, making her giggle merrily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. As she rides your face, there's just something about her cute, innocent nature that really drives you to please her until finally she cums with a trill of squeaky delight, spilling her slick juices across your face. Finished, the smiling inflatable slides off you, her towel unraveling on its own. She dons it like a bright red cape and dashes back into the water to splash and play.";
 	else if dolphinmode is 2:	[lose to toy form - normal]
 		say ".";
 		if Player is male:
-			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you into the water with it. Floating on its back, it bobs in the water with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as the waves press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and bobs on the water with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of Player] [cock of Player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large wave, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly take you back both to shore. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright, splashing backwards over the water on its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives into the water to frolic.";
+			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you into the water with it. Floating on its back, it bobs in the water with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as the waves press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and bobs on the water with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of Player] [Cock of Player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large wave, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly take you back both to shore. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright, splashing backwards over the water on its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives into the water to frolic.";
 		else:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the edge of the water with it. Laying on your back at the edge of the ocean, it lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You shiver a little each time a wave splashes a little higher, sending cool water around your hot pussy, but the beach toy's tongue feels all the warmer and more pleasant after these splashes. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. After cumming hard, another big wave hits, making you cum again. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives into the water to splash and play, leaving you panting at the water's edge in the afterglow of the strangely erotic toy's visit.";
 	else if dolphinmode is 3:	[lose to toy mode - castle]
 		now dolcastlefight is 2;
 		say ".";
 		if Player is male:
-			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the floor with it. Resting on its back, it bobs in the sway of the rubbery floor with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as its motion press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and rocks on the padded floor with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of Player] [cock of Player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large sway of the castle, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly rock you both. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright and flicks its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
+			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the floor with it. Resting on its back, it bobs in the sway of the rubbery floor with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as its motion press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and rocks on the padded floor with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of Player] [Cock of Player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large sway of the castle, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly rock you both. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright and flicks its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 		else:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pushing you onto the soft floor of the bouncy castle. Laying on your back on its bouncy surface, the dolphin lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You moan and sway on the soft floor you're rocked by the waves of the ocean and the waves of pleasure running through your hot pussy. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 
@@ -257,9 +252,9 @@ to say beatthedolphinflatable:
 	now dolcastlefight is 1;
 	if dolphinmode is 1:			[defeat girl form]
 		if Libido of Player > 45 and player is male and a random chance of 2 in 3 succeeds:
-			say "     Having beaten the inflatable toy, you decide you want to have a little fun with her. Taking her own towel, you wind it around her wrists and push her onto the sandy beach. She squirms as if trying to get away, all while raising her tail and bubble bottom and trying to stifle her playful giggles. As she's so willing to play along, you climb atop her and line up your stiff cock with her leaking pussy. She moans softly as you sink it into her. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, and resizes itself to be a perfect fit for your [cock size desc of Player] [cock of Player] cock. You hold the playfully squirming pooltoy down as you pound away at her, her inflated body shifting and deforming a little under your weight while it supports you softly. There's just something about her cute, innocent nature that really turns you on and you fuck her hard and fast, knowing you can't hurt her stretchy body. After a nice, satisfying ride atop her smooth body, you push into her one last time and unleash your hot load, spilling a pool of your hot cum inside her[if daytimer is day]. Under the bright sun, you can see the darker streaks and pool your semen makes against her inner skin[end if]. Finished, you get up and the bottlenose girl easily unwinds her towel and runs back off into the water. She gives you a farewell wave to you before getting back to splashing around, wearing her towel now as a cute, red bonnet.";
+			say "     Having beaten the inflatable toy, you decide you want to have a little fun with her. Taking her own towel, you wind it around her wrists and push her onto the sandy beach. She squirms as if trying to get away, all while raising her tail and bubble bottom and trying to stifle her playful giggles. As she's so willing to play along, you climb atop her and line up your stiff cock with her leaking pussy. She moans softly as you sink it into her. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, and resizes itself to be a perfect fit for your [cock size desc of Player] [Cock of Player] cock. You hold the playfully squirming pooltoy down as you pound away at her, her inflated body shifting and deforming a little under your weight while it supports you softly. There's just something about her cute, innocent nature that really turns you on and you fuck her hard and fast, knowing you can't hurt her stretchy body. After a nice, satisfying ride atop her smooth body, you push into her one last time and unleash your hot load, spilling a pool of your hot cum inside her[if daytimer is day]. Under the bright sun, you can see the darker streaks and pool your semen makes against her inner skin[end if]. Finished, you get up and the bottlenose girl easily unwinds her towel and runs back off into the water. She gives you a farewell wave to you before getting back to splashing around, wearing her towel now as a cute, red bonnet.";
 		else if Libido of Player > 30 and player is male and a random chance of 3 in 4 succeeds:
-			say "     The inflatable dolphin girl giggles playfully as you pin her down on the sandy beach, smiling happily up at you. Looking over her strange body, you can't help but find her cute and adorable. Feeling yourself get hard, you decide to listen to your cock and move to line it up with her wet slit. She moans softly and helps you guide it into her, eager to keep playing with you. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, resizing itself to best fit your [cock size desc of Player] [cock of Player] cock. As you thrust into her slick, lubricated hole, you let your hands wander across her body, running along the seams of her unusual skin, then to her breasts. They are like firm balloons, yielding to your touch as your squeezes make her giggle happily. But when you start playing with her nozzle nipples, she starts panting and moaning, drawing in fresh air to replace what you release as you tease them. Leaning forward, you blow into one, making her breast swell temporarily and that sets the bottlenose girl off, cumming hard around your cock and soaking your crotch in her slick juices. You cum as well, blasting your hot load into her, painting her inner skin with your semen. After you're finished, you let her back up[if daytimer is day], the sunlight showing the sticky streaks of your cum clinging to the inside of her skin,[end if] and watch her bound her way back into the water to play in the waves with her towel now around her waist like a skirt.";
+			say "     The inflatable dolphin girl giggles playfully as you pin her down on the sandy beach, smiling happily up at you. Looking over her strange body, you can't help but find her cute and adorable. Feeling yourself get hard, you decide to listen to your cock and move to line it up with her wet slit. She moans softly and helps you guide it into her, eager to keep playing with you. She trills in squeaky delight as you mount her. Her PVC pussy is quite nice and warm, resizing itself to best fit your [cock size desc of Player] [Cock of Player] cock. As you thrust into her slick, lubricated hole, you let your hands wander across her body, running along the seams of her unusual skin, then to her breasts. They are like firm balloons, yielding to your touch as your squeezes make her giggle happily. But when you start playing with her nozzle nipples, she starts panting and moaning, drawing in fresh air to replace what you release as you tease them. Leaning forward, you blow into one, making her breast swell temporarily and that sets the bottlenose girl off, cumming hard around your cock and soaking your crotch in her slick juices. You cum as well, blasting your hot load into her, painting her inner skin with your semen. After you're finished, you let her back up[if daytimer is day], the sunlight showing the sticky streaks of your cum clinging to the inside of her skin,[end if] and watch her bound her way back into the water to play in the waves with her towel now around her waist like a skirt.";
 		else if Cunt Count of Player > 45 and a random chance of 2 in 3 succeeds:
 			say "     Having beaten the inflatable toy, you decide to have a little fun with her. Taking a hold of her yielding head, you pull her face to your pussy. Giggling happily, she nuzzles at your groin and starts licking. Her tongue is slick and plasticky like the rest of her, sliding smoothly along your sensitive folds and slipping into your cunt. You stroke her smooth head encouragingly and she licks all the more eagerly, pressing her dolphin nose all the more firmly against your pussy as she tries to please you. You moan in sudden surprise as the inflatable snout pushes into you, filling you like a dildo as she seeks to lick deeper inside you. She giggles happily at your reaction and runs her fin-like hands over your hips, licking and bobbing his head until you cum. Satisfied by the strange bit of fun with the toy, you let her get back up and she bounds her way happily back to the water, folding her towel and wrapping it around herself like a long, red scarf.";
 		else:
@@ -273,7 +268,7 @@ to say beatthedolphinflatable:
 			say "     ([link]N[as]n[end link]) - No.";
 			if Player consents:
 				if Player is male:
-					say "     Climbing atop the toy, you pin it on its back on the sandy beach beneath you and rub your body against it, grinding your maleness along its smooth, plastic skin. As your cock stiffens, it giggles happily that you've decided to play with it after all. Pressing yourself down onto its inflatable body, you deform it slightly as you drive your throbbing shaft between those slick folds. It trills in squeaky delight as you mount it. Its PVC pussy is pleasantly warm and slick with lubricant, resizing itself to grip your [cock size desc of Player] [cock of Player] cock perfectly. You hold the playfully squirming pooltoy down by its handles as you pound into it, the creature's inflated body shifting and deforming a little under your weight while supporting you softly. There's just something about its smooth skin and pliable body that excites you more the longer you touch it. Knowing you can't hurt its stretchy body, you pound away at it good and hard, making the green dolphin squeak and trill in delight. After a nice, satisfying ride atop its smooth body, you push into the dolphin toy one last time and unleash your hot load, spilling a pool of your hot cum inside it[if daytimer is day]. Under the bright sun, you can see the darker streaks and the puddle your semen makes against her inner skin[end if]. Finished, you get up and the inflatable toy back up and it floats slowly back up into the air, weighed down a little by the tiring fight and your load. It slips its dark green towel back on and dives into the water to frolic and play in the waves.";
+					say "     Climbing atop the toy, you pin it on its back on the sandy beach beneath you and rub your body against it, grinding your maleness along its smooth, plastic skin. As your cock stiffens, it giggles happily that you've decided to play with it after all. Pressing yourself down onto its inflatable body, you deform it slightly as you drive your throbbing shaft between those slick folds. It trills in squeaky delight as you mount it. Its PVC pussy is pleasantly warm and slick with lubricant, resizing itself to grip your [cock size desc of Player] [Cock of Player] cock perfectly. You hold the playfully squirming pooltoy down by its handles as you pound into it, the creature's inflated body shifting and deforming a little under your weight while supporting you softly. There's just something about its smooth skin and pliable body that excites you more the longer you touch it. Knowing you can't hurt its stretchy body, you pound away at it good and hard, making the green dolphin squeak and trill in delight. After a nice, satisfying ride atop its smooth body, you push into the dolphin toy one last time and unleash your hot load, spilling a pool of your hot cum inside it[if daytimer is day]. Under the bright sun, you can see the darker streaks and the puddle your semen makes against her inner skin[end if]. Finished, you get up and the inflatable toy back up and it floats slowly back up into the air, weighed down a little by the tiring fight and your load. It slips its dark green towel back on and dives into the water to frolic and play in the waves.";
 				else:
 					say "     Pulling the toy over to the water by its handle, you float it on its back and climb atop the buoyant, green dolphin. Gripping its handles for support, you rub yourself against its wet slit, letting its PVC pussy glide against yours. The dolphin trills, happy that you've decided to play with it after all. Floating on its back, it bobs in the water with you on top of it as the waves press its wet slit against yours. You rub yourself against its smooth, pliable body, something about the feel of it making you more and more aroused as the motion of the ocean helps you rock against one another until finally you cum hard while riding a large wave, soaking your groins in a mix of feminine juices and slick lubricant. Finished, you pant atop the buoyant toy as the waves slowly take you back both to shore. You climb off the green toy, help it get righted and send it on its way to play in the waves with a soft slap. It does a little spin to pull its towel back into a scarf, flashing its pussy at you one last time before frolicking in the water.";
 			else:
@@ -334,16 +329,16 @@ to bottleboundstate:
 			now dolinfloss is -100;
 			now XP of Player is 0;
 			now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-			now tailname of Player is "Bottlenose Toy";
-			now facename of Player is "Bottlenose Toy";
-			now skinname of Player is "Bottlenose Toy";
-			now bodyname of Player is "Bottlenose Toy";
-			now cockname of Player is "Bottlenose Toy";
+			now TailName of Player is "Bottlenose Toy";
+			now FaceName of Player is "Bottlenose Toy";
+			now SkinName of Player is "Bottlenose Toy";
+			now BodyName of Player is "Bottlenose Toy";
+			now CockName of Player is "Bottlenose Toy";
 			now tail of Player is "You have a buoyant, inflatable dolphin tail.";
-			now face of Player is "that of a cute, smiling dolphin";
-			now skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
-			now body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
-			now cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
+			now Face of Player is "that of a cute, smiling dolphin";
+			now Skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
+			now Body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
+			now Cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
 			now scalevalue of Player is 3;
 			now bodydesc of Player is "inflatable";
 			now bodytype of Player is "dolphin";
@@ -377,7 +372,7 @@ to bottleboundstate:
 					if struggleatt is 3:
 						say "You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hellbent on keeping a hold on you and maintaining its toxic influence[one of]. The dolphin lady appears to have run off, ensuring this situation doesn't become even more difficult for you[or][stopping].";
 					LineBreak;
-					if bodyname of Player is "Bottlenose Toy":
+					if BodyName of Player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
 					else if a random chance of 2 in 3 succeeds:
@@ -391,7 +386,7 @@ to bottleboundstate:
 					if boundmod < 3:
 						say "     You try to peel the suit off of you, [one of]tainted apparel clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -413,7 +408,7 @@ to bottleboundstate:
 				if obliging is true:
 					say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of Player] form[at random].";
 					LineBreak;
-					if bodyname of Player is "Bottlenose Toy":
+					if BodyName of Player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
 					else if a random chance of 2 in 3 succeeds:
@@ -425,7 +420,7 @@ to bottleboundstate:
 				else:
 					say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of Player] form[at random].";
 					LineBreak;
-					if bodyname of Player is "Bottlenose Toy":
+					if BodyName of Player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
 					else if a random chance of 2 in 3 succeeds:
@@ -443,7 +438,7 @@ to bottleboundstate:
 					SanBoost 3;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					LineBreak;
-					if bodyname of Player is "Bottlenose Toy":
+					if BodyName of Player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
 					else if a random chance of 2 in 3 succeeds:
@@ -453,7 +448,7 @@ to bottleboundstate:
 				else:
 					say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
 					LineBreak;
-					if bodyname of Player is "Bottlenose Toy":
+					if BodyName of Player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
 							infect;
 					else if a random chance of 2 in 3 succeeds:
@@ -479,27 +474,37 @@ to say dolphinflatableattack:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Bottlenose Toy" to infections of AquaticList;
+	add "Bottlenose Toy" to infections of FurryList;
+	add "Bottlenose Toy" to infections of ToyList;
+	add "Bottlenose Toy" to infections of FemaleList;
+	add "Bottlenose Toy" to infections of BipedalList;
+	add "Bottlenose Toy" to infections of SwimList;
+	add "Bottlenose Toy" to infections of NotBreathingList;
+	add "Bottlenose Toy" to infections of TailList;
+	add "Bottlenose Toy" to infections of TailweaponList;
 	now Name entry is "Bottlenose Toy"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[dolphinflatableattack]"; [ Successful attack message ]
 	now defeated entry is "[beatthedolphinflatable]"; [ Text when monster loses. ]
 	now victory entry is "[losetodolphinflatable]"; [ Text when monster wins. ]
 	now desc entry is "[dolphinflatabledesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "the cute face of a cartoonishly rounded dolphin, like some kind of inflatable pool toy. You have big, flat eyes and a wide grin drawn on your bottlenose snout. Both your eyes and mouth seem to work fine and your head feels hollow and empty, bending like a balloon when you touch it";
-	now body entry is "that of an anthropomorphic dolphin, strangely somehow empty and filled with air. There is even a flappy little inflated fin at your back that you have press to one side when wearing your backpack. Your body is covered in a PVC imitation of [skinname of Player] flesh, complete with seams. Your body is able to bend and reshape itself to move instead of having any actual bones or muscles. The scent of fresh plastic lingers around you. Your nipples have been replaced with small inflation nozzles, but are just as sensitive as normal nipples, if not more";
+	now body entry is "that of an anthropomorphic dolphin, strangely somehow empty and filled with air. There is even a flappy little inflated fin at your back that you have press to one side when wearing your backpack. Your body is covered in a PVC imitation of [SkinName of Player] flesh, complete with seams. Your body is able to bend and reshape itself to move instead of having any actual bones or muscles. The scent of fresh plastic lingers around you. Your nipples have been replaced with small inflation nozzles, but are just as sensitive as normal nipples, if not more";
 	now skin entry is "shiny PVC plastic of smooth [if Player is herm]royal purple[else if Player is male]sky blue[else]bright pink[end if] and glossy white";
 	now tail entry is "You have an inflated, balloon-like dolphin tail attached just over your bubble-butt rear end."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]inflatable[or]PVC[or]vinyl[at random]";
 	now face change entry is "your head bulges and swells as you take a deep breath. But the air is not drawn into your lungs, but instead into your head, filling it with air. Your head reforms into that of a cartoonish dolphin with a smooth exterior. Your eyes water momentarily before they flatten and become large, flat drawing on your surface of your face. Your mouth soon follows the same fate, turning into a cartoonish grin on your bottlenose snout";
-	now body change entry is "a strange lightness suffuses through your body. You start panting heavily, but only drawing in air, never exhaling. But your body doesn't swell up either, instead the air seems to be replacing the contents of your body. Your skin becomes smooth and plasticky, becoming an imitation of [skinname of Player] flesh with seams between the sections and airbrushed markings and shading. Your body reforms into a smooth, slender shape with fin-like hands and feet, as well as an inflated dorsal fin on your back";
+	now body change entry is "a strange lightness suffuses through your body. You start panting heavily, but only drawing in air, never exhaling. But your body doesn't swell up either, instead the air seems to be replacing the contents of your body. Your skin becomes smooth and plasticky, becoming an imitation of [SkinName of Player] flesh with seams between the sections and airbrushed markings and shading. Your body reforms into a smooth, slender shape with fin-like hands and feet, as well as an inflated dorsal fin on your back";
 	now skin change entry is "your skin becomes shiny and smooth, turning into flexible vinyl. Your front and inner thighs become a smooth, glossy white while the rest is a [if Player is herm]royal purple[else if Player is male]sky blue[else]bright pink[end if]";
 	now ass change entry is "you feel a pressure building before releasing with a soft squeak. For a moment you think you farted, but the squeaking sound continues as a plump dolphin tail grows from your ass. But it is not made of flesh, but is made of plastic and is inflated with air, yet moves all the same";
 	now cock change entry is "feels like it's swelling and growing wildly. A quick look shows that it's not growing, but instead filling with air and becoming an inflatable cock, but still sensitive and fully functional, leaking a slick lubricant from its tip";
@@ -538,11 +543,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -550,7 +556,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -558,20 +564,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -592,26 +598,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -627,11 +633,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -641,7 +647,7 @@ When Play begins:
 [Numerous other examples can be found in existing creature files.]
 
 when play ends:
-	if bodyname of Player is "Bottlenose Toy":
+	if BodyName of Player is "Bottlenose Toy":
 		if dolinfloss is -100:
 			say "     Safely stored away in the [if dolphinmode is 3]floating bouncy castle[else]small storage building[end if], you are continuously pleasured by the dolphin suit wrapped around you. What little remains of your fading mind is vaguely aware that you're being changed by the slick inner walls rubbing against you. You are unclear on what's happening and don't really care, your thoughts evaporating away as you become as empty and airheaded as those cute girls on the beach. After some time has passed (probably a few days, though you were unable to count them as you were only dimly aware of the growing and fading light outside), several of the girls return to the [if dolphinmode is 3]colorful castle[else]building[end if] and remove you and the inflatable dolphin suit.";
 			say "     Snuggling and kissing it, they slowly open it up and release you. Their fin-hands run over your new, smooth skin and inflatable body, having been transformed a new feral dolphin toy. You are happy to be released and merrily play with several of the girls in the water while one of them licks the inside of the suit clean and bundles it up for the next happy victim they can find to put into it.";

@@ -4,16 +4,25 @@ Version 5 of Slutrat by Nuku Valente begins here.
 Section 0 - Slut Rat Monster
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Slut Rat" to infections of RodentList;
+	add "Slut Rat" to infections of FurryList;
+	add "Slut Rat" to infections of NatureList;
+	add "Slut Rat" to infections of HermList;
+	add "Slut Rat" to infections of TaperedCockList;
+	add "Slut Rat" to infections of SheathedCockList;
+	add "Slut Rat" to infections of BipedalList;
+	add "Slut Rat" to infections of TailList;
 	now Name entry is "Slut Rat"; [Name of your new Monster]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[slutratattacks]"; [Text used when the monster makes an Attack]
 	now defeated entry is "[defeattheslutrat]"; [ Text or say command used when Monster is defeated.]
 	now victory entry is "[slut rat victory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
@@ -21,10 +30,10 @@ When Play begins:
 	now face entry is "furry and narrow snout, with quivering black nose set in the middle of a very female, but clearly rodent"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "bent to emphasize fertile signals, with wide hips and narrow waist. You feel like you're putting out a constant ready signal to anyone looking at you"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]black furred[or]rat furred[or]softly furred[at random]"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "You have a long, [skin of Player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."; [ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long, [Skin of Player] tail. It is segmented, like a rat tail should be, thin and whip-like, moving about in long motions."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]leaking[or]human like[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "your face draws forward into a long snout as hair spills to your shoulders"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [skin of Player]"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now body change entry is "you can feel your entire body changing configuration to emphasize your fertile signals, ass and hips pushing outwards as waist slims. Short claws forming on your hands, which remain smooth. The rest of you [Skin of Player]"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "a wave of erotic satisfaction forces you to your knees, your genitals releasing their fluids across thighs as fur explodes out across your form"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "A long slithering sensation is felt in your pants. A quick check reveals it to be a naked pink rat tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it swells and throbs and refuses to calm down. It is soon leaking prefluids all over the place in constant readiness"; [ cock change text. format as "Your cock feels funny as (your text)." ]
@@ -63,11 +72,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -75,7 +85,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -83,20 +93,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -117,26 +127,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -152,11 +162,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -184,14 +194,14 @@ this is the rattymilk rule:
 		say ". Your balls throb with pleasure as their sperm production goes into overdrive and you start dribbling sperm-rich precum from your pulsing erection.";
 		increase Libido of Player by 2;
 	else:
-		say ". You squirm in shock as you feel a new set of balls erupt from your body and a [cock of Player] cock forming to go with them!";
+		say ". You squirm in shock as you feel a new set of balls erupt from your body and a [Cock of Player] cock forming to go with them!";
 		increase Ball Size of Player by 1;
 		if Player is not male, now Cock Count of Player is 1;
 		if Cock Length of Player is 0, now Cock Length of Player is a random number from 2 to 4;
 		increase Ball Size of Player by 1;
 		say "Your balls feel like they have become [Ball Size Adjective of Player]!";
 	increase Libido of Player by a random number between 3 and 8;
-	if bodyname of Player is "Slut Rat", increase Libido of Player by 2;
+	if BodyName of Player is "Slut Rat", increase Libido of Player by 2;
 	if "Horny Bastard" is listed in feats of Player, increase Libido of Player by 1;
 	if "Cold Fish" is listed in feats of Player, decrease Libido of Player by a random number between 1 and 3;
 	decrease humanity of Player by a random number between 1 and 4;
@@ -254,7 +264,7 @@ to say slut rat victory:
 		else:
 			say "     Defeated, she grabs you and hauls you rapidly back towards her den, grinning the whole way like she knows a joke she does not care yet to share. When you arrive, you find many large pillows strewn about comfortably, and almost half a dozen other slut rats, stroking themselves, or each other, or kissing and otherwise engaged. They all pause when you are hauled in, and scramble to their feet, rushing up to enjoy and share the fresh meat.";
 		if Player is male:
-			say "     One rat lowers before you and takes your [cock size desc of Player] [cock of Player] dick into her waiting snout, suckling firmly as her hands caress your [Ball Size Adjective of Player] [Balls] in eager rubs of her smooth hands";
+			say "     One rat lowers before you and takes your [cock size desc of Player] [Cock of Player] dick into her waiting snout, suckling firmly as her hands caress your [Ball Size Adjective of Player] [Balls] in eager rubs of her smooth hands";
 			if Cock Count of Player > 1:
 				say ". Your extra endowment is not put to waste, as a rat girl reaches for each, and you are soon being stroked in increasingly fast motions. [if Cock Count of Player > 2]Your extra cocks are[else]Your extra cock is[end if] stroked with loving adoration as they nuzzle into your excited flesh and lap at it with warm soft tongues.";
 			else:
@@ -287,7 +297,7 @@ To say slut rat growth:
 		now Cock Count of Player is 1;
 		increase Cock Length of Player by a random number from 2 to 4;
 		increase Ball Size of Player by 1;
-		say "Your new balls feel like they have become [Ball Size Adjective of Player] [Balls] and you gain a small [cock of Player] cock to go with them!";
+		say "Your new balls feel like they have become [Ball Size Adjective of Player] [Balls] and you gain a small [Cock of Player] cock to go with them!";
 	else if Ball Size of Player >= 4:
 		say "Your balls throb with pleasure as their sperm production goes into overdrive and you start dribbling sperm-rich precum from your pulsing erection.";
 		increase Libido of Player by 2;
@@ -345,7 +355,7 @@ To Say slutratdenscene:
 		say "[ratstopoolhall]";
 	else:
 		increase SlutRatDenVisitTimes by 1;
-	if HP of Ronda is 9 and bodyname of Player is "Slut Rat":
+	if HP of Ronda is 9 and BodyName of Player is "Slut Rat":
 		say "[rondarescue]";
 
 
@@ -353,20 +363,20 @@ Section 2 - Slut Rat Welcome
 
 To Say ratslutwelcome:
 	if Breast Size of Player > 0:
-		say "     Her slender fingers brush up across your [skin of Player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing,' she whispers as she gazes into your eyes with her own vibrantly violet ones. 'Such a good little bitch,' she croons[if Nipple Count of Player > 0], trailing claws down over your nipples[end if] as she looks downwards.";
+		say "     Her slender fingers brush up across your [Skin of Player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing,' she whispers as she gazes into your eyes with her own vibrantly violet ones. 'Such a good little bitch,' she croons[if Nipple Count of Player > 0], trailing claws down over your nipples[end if] as she looks downwards.";
 	[Male scene, 50% chance if herm]
 	if (player is puremale) or ( player is herm and a random chance of 1 in 2 succeeds):
-		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of Player] [cock of Player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
+		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of Player] [Cock of Player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
 		if Cock Count of Player > 1:
 			say ". Her fine whiskers tickle at your extra man meat. She leans back and brushes across all of your painfully erect shafts, tickling from the base to the tips and back down again in slow appraisal";
 		if Cock Length of Player > 9:
-			say ". Seemingly pleased with what she finds, she takes a moment to rub her snout alongside your [cock of Player] cock[smn]. With the barest flicker of her tongue, she continues her inspection. Her paws roam over the rest of your body, stroking your [if Player is female]cunt[sfn], [end if]thighs and ass, putting you on display for all the other rats as she does. After your lustful introduction to the rat nest, she gives your ass a swat. 'Go have fun now, little bitch.'";
+			say ". Seemingly pleased with what she finds, she takes a moment to rub her snout alongside your [Cock of Player] cock[smn]. With the barest flicker of her tongue, she continues her inspection. Her paws roam over the rest of your body, stroking your [if Player is female]cunt[sfn], [end if]thighs and ass, putting you on display for all the other rats as she does. After your lustful introduction to the rat nest, she gives your ass a swat. 'Go have fun now, little bitch.'";
 			infect "Slut Rat";
 		else:
 			say ". 'This won't do,' she says with a frown on her pointed snout. Warm fingers squeeze at your shaft, 'This won't do at all.' On saying this, another rat hurries forward with a plastic bottle filled with some strange purple syrup that sloshes slowly with the vigorous movement. The first rat raises up and reaches for your mouth, 'Say [']ahhh[']' she beckons with a smile.";
 			say "Allow her?";
 			if Player consents:
-				say "     The new rat pops off the top and lifts it to your [facename of Player] lips. 'Drink drink drink,' she says with a clear excitement. She isn't alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
+				say "     The new rat pops off the top and lifts it to your [FaceName of Player] lips. 'Drink drink drink,' she says with a clear excitement. She isn't alone in this. All the rats have their eyes on you, glowing eyes in the dim light locked on you as the bottle is upturned for you to swig on.";
 				now lost is 0;
 				ratslutchug;
 				if lost is 1: [ bad end]
@@ -412,7 +422,7 @@ To Say ratslutwelcome:
 			infect "Slut Rat";
 	else:
 		if Breast Size of Player > 0:
-			say "     The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [skin of Player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek. 'Poor thing. We will just have to fix that.'";
+			say "     The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [Skin of Player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek. 'Poor thing. We will just have to fix that.'";
 		else:
 			say "     She brushes up alongside you, nose twitching lightly as she takes your scent. 'Mmm, something is wrong,' she murmurs, reaching for your flat chest, then grasping your featureless groin openly. 'You have nothing.' She moves around behind you and presses against your back. 'That won't work at all...'";
 		if "Female Preferred" is not listed in feats of Player:
@@ -438,18 +448,18 @@ To ratslutchug:
 		increase Slutratcor by 1;
 		follow the cock descr rule;
 		SanLoss 20;
-		say "     As the pain fades, a warmth rushes down between your thighs. Your [cock of Player] cock[smn] begin[smv] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of Player] equipment with agile fingers and slippery tongues.";
-		say "     Their hands leave your sensitive bits to haul you to your feet. That's when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [skin of Player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears. [if slutratcor is 1]'Welcome, bitch. We'll have lots of fun together[else]'That's a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step and moves back to her pillow.";
+		say "     As the pain fades, a warmth rushes down between your thighs. Your [Cock of Player] cock[smn] begin[smv] to grow rapidly. The sound of stretching flesh is barely heard as pleasure runs through your altering shaft in sharp, almost painful, spikes of delight. The rats are cheering on the growth while the two beside you reach to rub and caress encouragingly. You are all too soon long enough for both of them to pull, squeeze, and play with you without getting in the way of the other, lavishing attention on your now [cock size desc of Player] equipment with agile fingers and slippery tongues.";
+		say "     Their hands leave your sensitive bits to haul you to your feet. That's when you notice their scent has changed. Instead of smelling like dirty animals, they smell like a delicate floral perfume, subtle and bogglingly attractive. You reach for one of them and your hand is swatted away lightly, 'Easy there, bitch,' she says with a smile, 'Good bitch. But you only touch when told to,' she says as she leans in and plants a kiss. Her fur tickles lightly against your own [Skin of Player] flesh as she draws you in against her curvy form. Down below, her throbbing shaft nudges against you through the leather she wears. [if slutratcor is 1]'Welcome, bitch. We'll have lots of fun together[else]'That's a good boy, drink nice and hard[end if].' Greeting given, she pushes you back half a step and moves back to her pillow.";
 		WaitLineBreak;
 		try looking;
 		continue the action;
 	else:
-		say "     You seal your lips on the bottle, but make no special effort to chug down that thick, powerfully sweet, stuff. At first, the gunk doesn't move at all, being so thick, but the rats are quite happy to give it a squeeze, forcing a great dollop of the honey like texture. You force yourself to swallow it and the rats pull the bottle back, looking at you expectantly. All the rats are staring at you at this point. Your potential nervousness at this fades as a new sensation distracts you from down below. Your [cock of Player] cock[smn] begin[smv] to grow, slowly, inching forward as little crawly feelings run up and down your altering equipment.";
+		say "     You seal your lips on the bottle, but make no special effort to chug down that thick, powerfully sweet, stuff. At first, the gunk doesn't move at all, being so thick, but the rats are quite happy to give it a squeeze, forcing a great dollop of the honey like texture. You force yourself to swallow it and the rats pull the bottle back, looking at you expectantly. All the rats are staring at you at this point. Your potential nervousness at this fades as a new sensation distracts you from down below. Your [Cock of Player] cock[smn] begin[smv] to grow, slowly, inching forward as little crawly feelings run up and down your altering equipment.";
 		increase Cock Length of Player by 4;
 		increase Ball Size of Player by 4;
 		follow the cock descr rule;
 		SanLoss 10;
-		say "     Those strange crawling sensations run from the tip of your [cock of Player] cock[smn] down to your swelling [Ball Size Adjective of Player] [Balls]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [cock of Player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";
+		say "     Those strange crawling sensations run from the tip of your [Cock of Player] cock[smn] down to your swelling [Ball Size Adjective of Player] [Balls]. Your hips buck forward against your will, bits of prefluid splattering across the floor as arousal mounts in your sensitive flesh. You clench your hands, gasping for breath as the growth begins to ebb, with a light stream of pearly fluids running down the underside of your [Cock of Player] equipment to pool between your legs on the floor. One of the two rats leans forward and flicks her tongue, wet and so warm, across the mess at the end, cleaning you with soft slurps. The other rat presses against your side, 'That is looking much better.'";
 		say "     As the excitement fades from you, the rats abandon you to your arousal, moving to retake their places and watch you, ever so curiously, as if to see what you might do next.";
 	if humanity of Player < 1:
 		now lost is 1;
@@ -614,7 +624,7 @@ Instead of resolving a Pool Hall:
 	now Pool Hall is resolved;
 
 to say ratstopoolhall:
-	if bodyname of Player is "Slut Rat":
+	if BodyName of Player is "Slut Rat":
 		LineBreak;
 		say "     Returning to the Slut Rat Den, you locate try to mobilize the troops against the cougars of the pool hall. The large rat who started this plan is all on board, as is the skeeball nut. Most of them are reluctant to leave their life of lustful indolence to go, so you try your best to convince them.";
 		let the bonus be (( the charisma of the player minus 10 ) divided by 2);
@@ -777,10 +787,10 @@ Section 9 - Endings
 
 When play ends:
 	if humanity of Player < 10 and HP of the player > 0:
-		if bodyname of Player is "Slut Rat":
+		if BodyName of Player is "Slut Rat":
 			say "     You can no longer deny your new basic needs. You flee to the mall and its comforting sewers. Following your instincts, you are soon in the welcoming embrace of your rodent sisters, who take turns fucking and being fucked by you for what feels like days in a celebration of your coming around. Your family remains there, hiding from the rescue, and living out your days together.";
 			if slutratcor > 4:
-				say "     Your [skin of Player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
+				say "     Your [Skin of Player] hide slowly tints to a deep angry red shade, turning towards black at your hands and feet. Those feet harden into cloven like hooves as the months go by and strange images assault you in your fevered lust dreams. It all comes to a crest when you awaken to a rat sister mounted on top of you, riding you for all your worth. As you climax together, you realize that this is Rod's girl. She leans in and licks her tongue over your nose, gazing into your eyes, 'It's time,' she whispers. You rise with her, each smelling of the other, and leave the other rats behind. Your dark lords have need of you both.";
 				continue the action;
 			else if SlutRatDenVisitTimes > 0:
 				if slutratsub is 5:
@@ -788,7 +798,7 @@ When play ends:
 				if slutratsub > 6:
 					say "     The others call you [']little sister['] when they are very happy with you, and [']bitch['] the rest of the time. You are the omega of the group, made to do the more menial of tasks. Still, their love for you is unquestionable, and they protect you from any and all threats to your sewer lair.";
 	else:
-		if bodyname of Player is "Slut Rat":
+		if BodyName of Player is "Slut Rat":
 			say "     Despite your sanity, you find your thoughts drifting back to your rodent sisters. When the rescue comes, you point them out. They put out a terrific struggle, but, with your help, they are rounded up successfully and brought out of the city. They slowly come around to sentience again, and you all live together, working a massage parlor as a strangely loving family. No customer leaves unhappy.";
 
 

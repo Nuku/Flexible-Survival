@@ -38,8 +38,8 @@ Snared Vixen is a situation. The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
 
 when play begins:
-	add Snared Vixen to badspots of girl; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
-	add Snared Vixen to badspots of furry;
+	add Snared Vixen to BadSpots of FemaleList; [We may want to add an event later to allow people with 'girl' banned access to the Bouncy Castle]
+	add Snared Vixen to BadSpots of FurryList;
 
 Instead of resolving a Snared Vixen:
 	say "     As you're traveling along the beach, you can hear some giggling in the distance. As you crest the next sandy rise, you can see several bright pink dolphin girls playing with a vixen they've found. She's struggling a little, but her resistance becomes less and less as the playful inflatables tease her body while taking off what few scraps of clothes she has. As they're several hundred yards away, you'd not be able to get there in time to interfere if you wanted to. It's hard to make out all the details at this distance.";
@@ -63,10 +63,10 @@ Instead of resolving a Snared Vixen:
 		now dolphinlist is { "C", "A", "X", "B", "X", "C", "A", "D", "X", "C", "X", "A" }; [Creates a list of letters that are pulled for later events]
 		let templist be { "A", "C", "D", "E"}; [Prepares additional events to add to dolphinlist]
 		sort templist in random order; [Sets these extra events to slots 3, 5, 9, and 11 for a quasi-random search]
-		now entry 3 of dolphinlist is entry 1 of templist;
-		now entry 5 of dolphinlist is entry 2 of templist;
-		now entry 9 of dolphinlist is entry 3 of templist;
-		now entry 11 of dolphinlist is entry 4 of templist;
+		now entry 3 of dolphinlist is entry 1 of tempList;
+		now entry 5 of dolphinlist is entry 2 of tempList;
+		now entry 9 of dolphinlist is entry 3 of tempList;
+		now entry 11 of dolphinlist is entry 4 of tempList;
 		now Resolution of Snared Vixen is 1;	[Vixen was taken to Bouncy Castle]
 	else: [Aborts finding the Bouncy Castle entirely]
 		say "     Deciding that it's not of interest to you, you turn away and head back the way you came.";
@@ -426,25 +426,25 @@ to say bcplayroom:
 				say "You try to knock the seal toy away with a few blows, but you are too unsteady on your feet and the small seat squirms between your legs, tripping you onto the soft floor. Even as you're still swaying atop the yielding floor, the seal hops atop you, pressing his hindquarters to your face. You fumble to push him away, but are treated to a mouthful of his inflatable cock. As he humps your face, you find yourself submitting to just let the lonely creature have his fun. It starts to dribble some latex-like precum that becomes increasingly enjoyable and makes you all the more aroused and playful.";
 				if Player is female:
 					let baby be 0;
-					if child is born or gestation of child is not 0, now baby is 1;
+					if child is born or gestation of Child is not 0, now baby is 1;
 					say "     After humping your face for a while, the toy shuffles around and starts trying to nose your clothes and gear off as he nuzzles at your crotch. Knowing what he's after and too overcome to resist it, you strip down and offer to let the cute seat ride you for a little while. He hops up behind you and grips you lightly with his inflated flippers as his slick shaft slides into your juicy pussy. You moan softly and push back, letting the little guy thrust into you until he cums with a happy squeak. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.[impregchance]";
 					say "     You stretch out on the soft floor and decide to rest for a bit, feeling happy and buoyed by the experience, losing track for a while of your intended mission.";
-					if baby is 0 and gestation of child is not 0:
-						now facename of child is "Seal Toy";
-						now bodyname of child is "Seal Toy";
-						now skinname of child is "Seal Toy";
+					if baby is 0 and gestation of Child is not 0:
+						now FaceName of Child is "Seal Toy";
+						now BodyName of Child is "Seal Toy";
+						now SkinName of Child is "Seal Toy";
 					LibidoBoost 10;
 					SanLoss 10;
 					follow the turnpass rule;
 				else if anallevel is 3 and a random chance of 1 in 2 succeeds:
 					let baby be 0;
-					if child is born or gestation of child is not 0, now baby is 1;
+					if child is born or gestation of Child is not 0, now baby is 1;
 					say "     After humping your face for a while, the toy shuffles around and starts trying to nose your clothes and gear off as he nuzzles at your rear. Knowing what he's after and too overcome to resist it, you strip down and offer to let the cute seat ride you for a little while. He hops up behind you and grips you lightly with his inflated flippers as his slick shaft slides into your tight bottom. You moan softly and push back, letting the little guy thrust into you until he cums with a happy squeak. Spent from his orgasm, he starts to deflate somewhat and waddles back to the corner to rest and reinflate.[mimpregchance]";
 					say "     You stretch out on the soft floor and decide to rest for a bit, feeling happy and buoyed by the experience, losing track for a while of your intended mission.";
-					if baby is 0 and gestation of child is not 0:
-						now facename of child is "Seal Toy";
-						now bodyname of child is "Seal Toy";
-						now skinname of child is "Seal Toy";
+					if baby is 0 and gestation of Child is not 0:
+						now FaceName of Child is "Seal Toy";
+						now BodyName of Child is "Seal Toy";
+						now SkinName of Child is "Seal Toy";
 					LibidoBoost 10;
 					SanLoss 10;
 					follow the turnpass rule;
@@ -476,16 +476,16 @@ to say bctoyroom:
 		else:
 			if lastoctofight is 255:
 				say "     As you're looking around, some of the junk scattered here starts to shift and move. Thinking at first it's only the result of your weight shifting the floor, you try to tread more carefully. But when the yellow tentacles start to appear from beneath the mess, you find yourself surrounded. One large pile shifts and you see a grinning inflatable with a vapid expression of joy on its smooth, round face. The inflatable octopus is sunshine yellow with amber along the underside of the inflated tentacles and on a few spots atop its head. It shambles towards you as its curled tentacles try to wrap around you";
-				if bodyname of Player is "Anime Babe":
+				if BodyName of Player is "Anime Babe":
 					say ". Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your mind's commands to resist";
 				say ".";
 			else:
 				say "     As you try to move around the room, the yellow octopus rouses itself and makes another grab at you with its sunshine yellow tentacles. It grins at you with the same, unchanging expression of giggling happiness";
-				if bodyname of Player is "Anime Babe":
+				if BodyName of Player is "Anime Babe":
 					say ". Your anime babe body quivers at the knees at the sight of those tentacles, your body no longer obeying your mind's commands to resist";
 				say ".";
 			let bonus be ( strength of Player - 10 ) / 2;
-			if bodyname of Player is "Anime Babe", decrease bonus by 5;
+			if BodyName of Player is "Anime Babe", decrease bonus by 5;
 			let dice be a random number from 1 to 20;
 			say "     You roll 1d20([dice])+[bonus]: [dice + bonus] vs 17: ";
 			if bonus + dice > 16:
@@ -590,7 +590,7 @@ to say bckingschamber:
 			say "     ([link]N[as]n[end link]) - Take a seat.";
 			if Player consents: [FLOT - DONE]
 				let bonus be ( humanity of Player - Libido of Player ) / 20; [+5 to -5 for humanity vs libido]
-				if skinname of Player is listed in infections of Latexlist, decrease bonus by 1;
+				if SkinName of Player is listed in infections of Latexlist, decrease bonus by 1;
 				decrease bonus by 4 - ( ( ( HP of Player * 100 ) / maxHP of Player ) / 25 ); [-4 to 0 for current HP]
 				let levbonus be level of Player / 3;
 				if levbonus > 5, now levbonus is 5;
@@ -623,7 +623,7 @@ to say bckingchair:
 	WaitLineBreak;
 	let playernum be a random number between 1 and strength of Player;
 	let chairnum be 15;
-	if skinname of Player is listed in infections of Latexlist, increase chairnum by 2;
+	if SkinName of Player is listed in infections of Latexlist, increase chairnum by 2;
 	if hardmode is true, increase chairnum by ( level of Player / 6 );
 	let chairnum be a random number between 1 and chairnum;
 	if Playernum >= chairnum:
@@ -644,7 +644,7 @@ to say bckingchair:
 			increase playernum by 10;
 		let playernum be a random number between 1 and playernum;
 		let chairnum be 170;
-		if skinname of Player is listed in infections of Latexlist, increase chairnum by 30;
+		if SkinName of Player is listed in infections of Latexlist, increase chairnum by 30;
 		if hardmode is true, increase chairnum by level of Player;
 		let chairnum be a random number between 1 and chairnum;
 		if Playernum >= chairnum:
@@ -662,22 +662,22 @@ to say bckingchair:
 			WaitLineBreak;
 			let playernum be a random number between 1 and strength of Player;
 			let chairnum be 18;
-			if skinname of Player is listed in infections of Latexlist, increase chairnum by 3;
+			if SkinName of Player is listed in infections of Latexlist, increase chairnum by 3;
 			if hardmode is true, increase chairnum by ( level of Player / 5 );
 			let chairnum be a random number between 1 and chairnum;
 			if Playernum >= chairnum:
 				let chairescape be true;
 			else:
 				say "     Your final attempt to break free seems to require the last of your strength and you sag back into the seat. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. There they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. As they are flattened out, they turn into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
-				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [bodyname of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
+				say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 				Waitlinebreak;
 				now bcending is 3;
-				now bcfinalchairform is bodyname of Player;
-				now bodyname of Player is "Captured";
-				now facename of Player is "Captured";
-				now skinname of Player is "Captured";
-				now tailname of Player is "Captured";
-				now cockname of Player is "Captured";
+				now bcfinalchairform is BodyName of Player;
+				now BodyName of Player is "Captured";
+				now FaceName of Player is "Captured";
+				now SkinName of Player is "Captured";
+				now TailName of Player is "Captured";
+				now CockName of Player is "Captured";
 				now humanity of Player is 0;
 				end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 	if chairescape is true:
@@ -712,15 +712,15 @@ to say bckingchair_accept:
 	say "     Squirming happily in your seat, the feel of the smooth material inside you becomes increasingly pleasurable and distracting. You let your mind wander, simply basking in the simple pleasure of sitting in the chair. It is so soft, so comfy. There's no reason to resist, you feel. It'll probably let you go when it's done, you think to yourself as you grind your ass down so a sensitive spot inside you can be better stimulated. You sigh softly in pleasure and relax into your seat to enjoy the moment.";
 	WaitLineBreak;
 	say "     As your mind fades away further, you notice that your skin is turning the same yellow as the plastic at the edges nearest its touch. Lost in the relaxing pleasure of the chair, you can't help but smile. Sitting in this wonderful chair feels so good, so being this wonderful chair must be even better. As the chair continues to bond with you, your thoughts fade away until they're peaceful and placid, like the chair, like your own[if compnumber > 1]. With one of your last conscious thoughts, you glance over at your companions, seeing them getting pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into more knight decals to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else if compnumber is 1]. With one of your last conscious thoughts, you glance over at your companion being pressed up against the wall by the knights. Seeing you giving in, they give in as well, letting themselves be groped and fondled while they are flattened out, turning into another knight decal to decorate the castle. You can't help but smile at this, feeling that it's somehow right[else]. Happiness grows and swells inside you and you smile[end if]. Your smile stretches and becomes transfixed on your face as your head becomes inflatable. You are left with a smile and big, happy eyes as permanent designs on your face.";
-	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [bodyname of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
+	say "     As you and the chair continue to merge, your [bodytype of Player] body becomes one with it, reshaping it as you and it become one happy whole. You're now a yellow inflatable chair version of a [BodyName of Player] with a matching head. There's even cute matching prints at the end of the chair's arms to complete the look.";
 	WaitLineBreak;
 	now bcending is 3;
-	now bcfinalchairform is bodyname of Player;
-	now bodyname of Player is "Captured";
-	now facename of Player is "Captured";
-	now skinname of Player is "Captured";
-	now tailname of Player is "Captured";
-	now cockname of Player is "Captured";
+	now bcfinalchairform is BodyName of Player;
+	now BodyName of Player is "Captured";
+	now FaceName of Player is "Captured";
+	now SkinName of Player is "Captured";
+	now TailName of Player is "Captured";
+	now CockName of Player is "Captured";
 	now humanity of Player is 0;
 	end the story saying "You are transformed into an inflatable [bcfinalchairform] chair.";
 
@@ -752,7 +752,7 @@ to say bcpunchingpillars:
 			say "start to rock a little before thick tendrils of gooey latex flow out of them and make a grab for you";
 		else:
 			say "start to rock again, releasing fresh tendrils of gooey latex out of themselves in an attempt to grab you";
-		if bodyname of Player is "Anime Babe":
+		if BodyName of Player is "Anime Babe":
 			say ". The sight of these tentacles has your anime babe body shiver in anticipation despite how you might truly feel about the prospect";
 		say ".";
 		if bcseenpunchingpillars is false:
@@ -772,14 +772,14 @@ to say bcpptendril:
 	let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 	if companion of Player is not nullpet, increase compnumber by 1;
 	sort primarycolorlist in random order;
-	now ppcolor is entry 1 in primarycolorlist;
+	now ppcolor is entry 1 in primarycolorList;
 	say "     [one of]Before you can move away, the pillar in front of you strikes you with one of the[or]As you're attempting to move away, a pillar behind you strikes you with one of its[at random] tentacles with a wet, sticky sound[if weapon object of Player is not journal]. You attempt to fight it off with your [weapon of Player], but it seems to have no effect on the flowing [ppcolor] latex[end if]. Trying to steady yourself on the unsteady floor with the slimy appendage wrapping around your leg, you attempt to pull yourself free[if compnumber is 1]. Your companion moves to assist you, but is ensnared by the tendrils of another of the pillars[else if compnumber > 1]. Your companions move to assist you, but are ensnared by the tendrils of the other pillars[end if].";
 	let playernum be strength of Player + dexterity of Player + scalevalue of Player;
 	if bcseenpunchingpillars is true, increase playernum by 5;
 	let playernum be a random number between 1 and playernum;
 	let tendrilnum be 30;
-	if skinname of Player is listed in infections of Latexlist, increase tendrilnum by 2;
-	if bodyname of Player is "Anime Babe", increase tendrilnum by 4;
+	if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
+	if BodyName of Player is "Anime Babe", increase tendrilnum by 4;
 	if hardmode is true, increase tendrilnum by ( level of Player / 4 );
 	let tendrilnum be a random number between 1 and tendrilnum;
 	if Playernum >= tendrilnum:
@@ -797,8 +797,8 @@ to say bcpptendril:
 			increase playernum by 10;
 		let playernum be a random number between 1 and playernum;
 		let tendrilnum be 170;
-		if skinname of Player is listed in infections of Latexlist, increase tendrilnum by 15;
-		if bodyname of Player is "Anime Babe", increase tendrilnum by 25;
+		if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 15;
+		if BodyName of Player is "Anime Babe", increase tendrilnum by 25;
 		if hardmode is true, increase tendrilnum by level of Player / 2;
 		let tendrilnum be a random number between 1 and tendrilnum;
 		if Playernum >= tendrilnum:
@@ -806,9 +806,9 @@ to say bcpptendril:
 		else:
 			say "     You try to keep struggling, but the sensation of that latex goo coating you and pulsing into your lower body becomes increasingly pleasurable and distracting. You try to pull yourself away, but you're finding it difficult to do anything besides enjoy the intense sensations you're receiving as the [ppcolor] latex ";
 			if Player is herm:
-				say "squeezes and pumps at your [cock size desc of Player] [cock of Player] cock[smn], milking your man meat until you cum with a loud groan. This sends ripples of ecstasy through your [cunt size desc of Player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+				say "squeezes and pumps at your [cock size desc of Player] [Cock of Player] cock[smn], milking your man meat until you cum with a loud groan. This sends ripples of ecstasy through your [cunt size desc of Player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 			else if Player is male:
-				say "squeezes and pumps at your [cock size desc of Player] [cock of Player] cock[smn], milking your man meat until you cum with a loud groan[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+				say "squeezes and pumps at your [cock size desc of Player] [Cock of Player] cock[smn], milking your man meat until you cum with a loud groan[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 			else if Player is female:
 				say "pumps and pushes inside your [cunt size desc of Player] cunt[sfn], pushing you to orgasm. This releases your feminine juices, allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 			else:
@@ -824,8 +824,8 @@ to say bcpptendril:
 			WaitLineBreak;
 			let playernum be a random number between 1 and ( strength of Player + scalevalue of Player );
 			let tendrilnum be 18;
-			if skinname of Player is listed in infections of Latexlist, increase tendrilnum by 2;
-			if bodyname of Player is "Anime Babe", increase tendrilnum by 3;
+			if SkinName of Player is listed in infections of Latexlist, increase tendrilnum by 2;
+			if BodyName of Player is "Anime Babe", increase tendrilnum by 3;
 			if hardmode is true, increase tendrilnum by ( level of Player / 6 );
 			let tendrilnum be a random number between 1 and tendrilnum;
 			if Playernum >= tendrilnum:
@@ -835,12 +835,12 @@ to say bcpptendril:
 				say "     Inside, you experience orgasm after orgasm as the [ppcolor] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
 				WaitLineBreak;
 				now bcending is 5;
-				now bcfinalpillarform is bodyname of Player;
-				now bodyname of Player is "Captured";
-				now facename of Player is "Captured";
-				now skinname of Player is "Captured";
-				now tailname of Player is "Captured";
-				now cockname of Player is "Captured";
+				now bcfinalpillarform is BodyName of Player;
+				now BodyName of Player is "Captured";
+				now FaceName of Player is "Captured";
+				now SkinName of Player is "Captured";
+				now TailName of Player is "Captured";
+				now CockName of Player is "Captured";
 				now humanity of Player is 0;
 				end the story saying "You are transformed into another [ppcolor] pillar.";
 	if tendrilescape is true:
@@ -869,9 +869,9 @@ to say bcpptendril_accept:
 		say ". You feel an unrestrained wave of pleasure as liquid latex flows into your rectum, as if trying coat you inside and out[if Player is male] while it ripples and flows over your hard manhood[smn][end if].";
 	say "     Awash in the delights of the pillar's flowing touch, you can feel the latex goo coating you and pulsing into your lower body. Having that rippling flow of goo inside your [bodytype of Player] body becomes increasingly pleasurable and distracting, keeping you from noticing at first that your hands are starting to sink right into the [ppcolor] pillar. As it is, you find it difficult to do anything besides enjoy the intense sensations you're receiving as the [ppcolor] latex ";
 	if Player is herm:
-		say "squeezes and pumps at your [cock size desc of Player] [cock of Player] cock[smn], milking your man meat until you cum with a loud groan. This sends ripples of ecstasy through your [cunt size desc of Player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+		say "squeezes and pumps at your [cock size desc of Player] [Cock of Player] cock[smn], milking your man meat until you cum with a loud groan. This sends ripples of ecstasy through your [cunt size desc of Player] cunt[sfn], releasing your feminine juices and allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 	else if Player is male:
-		say "squeezes and pumps at your [cock size desc of Player] [cock of Player] cock[smn], milking your man meat until you cum with a loud groan[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
+		say "squeezes and pumps at your [cock size desc of Player] [Cock of Player] cock[smn], milking your man meat until you cum with a loud groan[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 	else if Player is female:
 		say "pumps and pushes inside your [cunt size desc of Player] cunt[sfn], pushing you to orgasm. This releases your feminine juices, allowing the sliding goo even better access to your vagina[if anallevel > 1]. As you're cumming, you are also vaguely aware of the gooey flow working its way further into your bowels[end if].";
 	else:
@@ -881,12 +881,12 @@ to say bcpptendril_accept:
 	say "     Inside, you experience orgasm after orgasm as the [ppcolor] latex flows further and further inside you, filling up your insides and slowly replacing them with more latex, your whole body melting away and being absorbed into the pillar until you're nothing more than flowing rubber filled with pleasure and lust.";
 	WaitLineBreak;
 	now bcending is 5;
-	now bcfinalpillarform is bodyname of Player;
-	now bodyname of Player is "Captured";
-	now facename of Player is "Captured";
-	now skinname of Player is "Captured";
-	now tailname of Player is "Captured";
-	now cockname of Player is "Captured";
+	now bcfinalpillarform is BodyName of Player;
+	now BodyName of Player is "Captured";
+	now FaceName of Player is "Captured";
+	now SkinName of Player is "Captured";
+	now TailName of Player is "Captured";
+	now CockName of Player is "Captured";
 	now humanity of Player is 0;
 	end the story saying "You are transformed into another [ppcolor] pillar.";
 
@@ -1100,11 +1100,11 @@ to chairboundstate:
 			say "     By the time the haze lifts, you realize that the chair has recovered and is resuming to engulf you. The tubes have continued to climb up your arms and legs. They join up with the other material from the seat itself, starting to seal you in seamlessly. The vinyl flows up across your back and melds with the hood, encapsulating you fully. While it is hard to tell from within your latex prison, you get the feeling that you're sinking. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 			WaitLineBreak;
 			now bcending is 1;
-			now bodyname of Player is "Captured";
-			now facename of Player is "Captured";
-			now skinname of Player is "Captured";
-			now tailname of Player is "Captured";
-			now cockname of Player is "Captured";
+			now BodyName of Player is "Captured";
+			now FaceName of Player is "Captured";
+			now SkinName of Player is "Captured";
+			now TailName of Player is "Captured";
+			now CockName of Player is "Captured";
 			now humanity of Player is 0;
 			end the story saying "You are imprisoned by the Bouncy Castle.";
 			now Trixieexit is 1;
@@ -1346,11 +1346,11 @@ to chairpassivelosses:
 				say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 				WaitLineBreak;
 				now bcending is 1;
-				now bodyname of Player is "Captured";
-				now facename of Player is "Captured";
-				now skinname of Player is "Captured";
-				now tailname of Player is "Captured";
-				now cockname of Player is "Captured";
+				now BodyName of Player is "Captured";
+				now FaceName of Player is "Captured";
+				now SkinName of Player is "Captured";
+				now TailName of Player is "Captured";
+				now CockName of Player is "Captured";
 				now humanity of Player is 0;
 				end the story saying "You are imprisoned by the Bouncy Castle.";
 		else:
@@ -1387,11 +1387,11 @@ to say bcchairsubmit:
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
 	now bcending is 2;
-	now bodyname of Player is "Captured";
-	now facename of Player is "Captured";
-	now skinname of Player is "Captured";
-	now tailname of Player is "Captured";
-	now cockname of Player is "Captured";
+	now BodyName of Player is "Captured";
+	now FaceName of Player is "Captured";
+	now SkinName of Player is "Captured";
+	now TailName of Player is "Captured";
+	now CockName of Player is "Captured";
 	now humanity of Player is 0;
 	end the story saying "You become part of the Bouncy Castle.";]
 
@@ -1433,7 +1433,7 @@ to say bcduofight:
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Now that they've got you pinned down, the two inflatables start to fondle and grope you with their flippers. The sea lion's cock and the orca's pussy rub against you as well. As you grow aroused from their touch, the rubbery duo slowly pushes off your gear and clothes, leaving you bare so they may have some fun with you.";
 		if Player is male and ( Cunt Count of Player is 0 or ( player is female and a random chance of 3 in 5 succeeds ) ):
-			say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you.";
+			say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [Cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you.";
 			say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch. Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth. As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
 			say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [Cum Load Size of Player] load into the inflatable female while she trills happily. Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat. The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they push you into the [if bcseenthroneroom is true]throne room[else]next room[end if].";
 			say "     At least they're nice enough to toss your gear out after you as they tidy up their room of your junk.";
@@ -1528,7 +1528,7 @@ carry out dolchecking: [Picks events from dolphinlist, defined earlier in the do
 	if x > 12:
 		say "There are only a dozen to search.";
 	else:
-		let status be entry x of dolphinlist;
+		let status be entry x of dolphinList;
 		if status is "A":
 			say "[dolcheckA]";
 		else if status is "B":
@@ -1604,16 +1604,16 @@ to dolboundstate:
 				say "     With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 				now dolinfloss is -100;
 				now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-				now tailname of Player is "Bottlenose Toy";
-				now facename of Player is "Bottlenose Toy";
-				now skinname of Player is "Bottlenose Toy";
-				now bodyname of Player is "Bottlenose Toy";
-				now cockname of Player is "Bottlenose Toy";
+				now TailName of Player is "Bottlenose Toy";
+				now FaceName of Player is "Bottlenose Toy";
+				now SkinName of Player is "Bottlenose Toy";
+				now BodyName of Player is "Bottlenose Toy";
+				now CockName of Player is "Bottlenose Toy";
 				now tail of Player is "You have a buoyant, inflatable dolphin tail.";
-				now face of Player is "that of a cute, smiling dolphin";
-				now skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
-				now body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
-				now cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
+				now Face of Player is "that of a cute, smiling dolphin";
+				now Skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
+				now Body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
+				now Cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
 				now scalevalue of Player is 3;
 				now bodydesc of Player is "inflatable";
 				now bodytype of Player is "dolphin";
@@ -1649,7 +1649,7 @@ to dolboundstate:
 						else:
 							say ".";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -1663,7 +1663,7 @@ to dolboundstate:
 						if boundmod < 3:
 							say "     You try to peel the suit off of you, [one of]tainted apparel clinging to you like tape[or]creaking and whining as it fights to cling to you[or]a fight to remove it without it sticking to something else[at random].";
 							LineBreak;
-							if bodyname of Player is "Bottlenose Toy":
+							if BodyName of Player is "Bottlenose Toy":
 								if a random chance of 1 in 3 succeeds:
 									infect;
 							else if a random chance of 2 in 3 succeeds:
@@ -1690,7 +1690,7 @@ to dolboundstate:
 					if obliging is true:
 						say "     You actively submit to these overwhelming circumstances, [one of]mind quickly drowning in a haze of dizzying lust[or]loudly moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your eager, [bodytype of Player] form[at random].";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -1702,7 +1702,7 @@ to dolboundstate:
 					else:
 						say "     You make the choice to tolerate these overwhelming circumstances, [one of]mind quickly losing itself in a lustful haze[or]moaning and panting in a dizzying haze of rapidly rising need[or]tight suit squeezing shamelessly against your [bodytype of Player] form[at random].";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -1724,7 +1724,7 @@ to dolboundstate:
 						SanBoost 3;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -1734,7 +1734,7 @@ to dolboundstate:
 					else:
 						say "     You fight to maintain clarity within these tight confines, [one of]its powerful influence making it difficult to maintain any clarity[or]barely able to keep the tide of need from overwhelming you[or]the creaking suit clinging ever more firmly against its occupant[at random].";
 						LineBreak;
-						if bodyname of Player is "Bottlenose Toy":
+						if BodyName of Player is "Bottlenose Toy":
 							if a random chance of 1 in 3 succeeds:
 								infect;
 						else if a random chance of 2 in 3 succeeds:
@@ -1787,7 +1787,7 @@ to say dolcheckA:		[empty]
 		now tempnum2 is 0;
 	else:
 		now tempnum2 is 5;
-	say "     [if tempnum2 is 5]The[else]Ignoring your attempts to resist it, the[end if] strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [skinname of Player] skin as it works to enclose your [bodydesc of Player] body as best it can [if tempnum2 is 5]without assistance[else]in spite of your protests[end if]. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you.";
+	say "     [if tempnum2 is 5]The[else]Ignoring your attempts to resist it, the[end if] strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinName of Player] skin as it works to enclose your [bodydesc of Player] body as best it can [if tempnum2 is 5]without assistance[else]in spite of your protests[end if]. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you.";
 	say "     You can feel a slick lubricant coating its inside, letting it slide easily over[if tempnum2 is not 5] part of[end if] your [bodydesc of Player] form. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet[if tempnum2 is not 5] even as you try to rip it free of you[end if]. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 	if tempnum2 is 5:
 		say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside";
@@ -1830,7 +1830,7 @@ to say dolcheckA:		[empty]
 				say ". You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 				say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside. You feel an increasing sense of euphoria as the inner lining [if Player is herm]rubs against your throbbing cock and presses into your wet pussy[else if Player is male]rubs against your maleness[else if Player is female]presses into your wet pussy[else]slides against your bare groin[end if] arousing you greatly[if Player is not neuter]. You cum several times from the toy's motion against you as the rubbery walls slide over you";
 	else: [Submit variant]
-		say "     The strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [skinname of Player] skin as it works to enclose your [bodydesc of Player] body as best it can without assistance. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you. You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
+		say "     The strange suit starts pulling itself overtop of you, letting its slick inner surface slide across your [SkinName of Player] skin as it works to enclose your [bodydesc of Player] body as best it can without assistance. As the material is stretched over you, it feels very good and quite arousing, squeezing and rubbing against you as it does. It seems to stretch and adjust itself to be just the right shape and size to contain you. You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. Guiding itself over your legs, it presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin inflatable.";
 		say "     As it starts sealing itself around you, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. Its inner walls press in snugly around your skin, squeezing your limbs and body tightly while inflates to become a large dolphin-shaped toy with you held inside. You feel an increasing sense of euphoria as the inner lining [if Player is herm]rubs against your throbbing cock and presses into your wet pussy[else if Player is male]rubs against your maleness[else if Player is female]presses into your wet pussy[else]slides against your bare groin[end if] arousing you greatly[if Player is not neuter]. You cum several times from the toy's motion against you as the rubbery walls slide over you";
 	if dolphinbundle is not 2 and dolescape is 0: [Standard Eject]
 		say ". After several orgasms, the suit begins to open up again, releasing you back onto the floor of the bouncy castle. You lay there panting for a while, aroused by the strange experience.";
@@ -1846,16 +1846,16 @@ to say dolcheckA:		[empty]
 		say "     After playing in the water for a while, the girls decide to frolic in the bouncy castle and you're pulled back inside[if Player is not neuter]. You cum several more times as the girls push, pull and squeeze the inflatable suit, dragging you out of the ocean into their floating castle[end if]. With you safely aboard, the excited girls resume their giggling playtime with you as their new toy. The dolphin girls bounce around the castle happily, occasionally stopping to squeeze each other's inflatable bodies, or lick at the slits between their legs, but there are always several girls focusing on you, lavishing attention on the inflatable suit. With the pleasure of each movement rolling through your body and the sounds of their trills and laughter echoing through you mind, you're soon able to focus on nothing but the excitement around you. Finally the girls seem to tire of their play, several of them pick you up and hang you alongside the other inflatable dolphin suits lining the walls of the castle before jumping back into the sea and heading for the shore. With the breathing tube in your mouth, all you can do is moan softly as the strange suit continues to pleasure you over and over again, seeming to draw strength from it.";
 		now dolinfloss is -100;
 		now non-infectious entry is true; [prevents regular dolphin girl infection from occurring]
-		now tailname of Player is "Bottlenose Toy";
-		now facename of Player is "Bottlenose Toy";
-		now skinname of Player is "Bottlenose Toy";
-		now bodyname of Player is "Bottlenose Toy";
-		now cockname of Player is "Bottlenose Toy";
+		now TailName of Player is "Bottlenose Toy";
+		now FaceName of Player is "Bottlenose Toy";
+		now SkinName of Player is "Bottlenose Toy";
+		now BodyName of Player is "Bottlenose Toy";
+		now CockName of Player is "Bottlenose Toy";
 		now tail of Player is "You have a buoyant, inflatable dolphin tail.";
-		now face of Player is "that of a cute, smiling dolphin";
-		now skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
-		now body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
-		now cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
+		now Face of Player is "that of a cute, smiling dolphin";
+		now Skin of Player is "smooth and green plastic, stretched and shaped with visible seams";
+		now Body of Player is "shaped like an inflatable dolphin water toy. You are roughly as large as a real dolphin and have a pair of handles for someone to ride you";
+		now Cock of Player is "tapered and made of clear, inflatable plastic, but can still become full and hard for mating. It leaks a clear, slick lubricant as precum";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "inflatable";
 		now bodytype of Player is "dolphin";
@@ -2101,11 +2101,11 @@ to say bcchairfinal1: [FLOT - Check?]
 					say "     Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, succumbing as a mindless prisoner of lust as you enjoy orgasm after orgasm in the hidden safety of your new home.";
 					WaitLineBreak;
 					now bcending is 1;
-					now bodyname of Player is "Captured";
-					now facename of Player is "Captured";
-					now skinname of Player is "Captured";
-					now tailname of Player is "Captured";
-					now cockname of Player is "Captured";
+					now BodyName of Player is "Captured";
+					now FaceName of Player is "Captured";
+					now SkinName of Player is "Captured";
+					now TailName of Player is "Captured";
+					now CockName of Player is "Captured";
 					now humanity of Player is 0;
 					end the story saying "You are imprisoned by the Bouncy Castle.";
 			else:
@@ -2157,11 +2157,11 @@ to say bcchairfinal2:
 	say "     You push yourself to further heights, your sex-crazed mind only seeking another release and more pleasure. When your climax finally comes[if Player is male] and you pump your hot seed into the sex chair[end if], your cries are muffled by the thick rod stuffed into your mouth[if Cunt Count of Player > 1]. Your cunts clamp down around the throbbing dildos inside you as you release another flow of your hot juices over them, soaking yourself and the seat[else if Cunt Count of Player is 1]. Your cunt clamps down around the throbbing dildo inside you as you release another flow of your hot juices over it, soaking yourself and the seat[end if]. Once spent, you collapse onto the seat, basking in the powerful afterglow and breathing in more of that arousing gas as you pant for breath. Even as your mind sinks away, fading away beneath the gas that keeps you constantly aroused, so does the pod encapsulating you fade back into the floor. Slick liquid flows in around you and your gear is either dissolved or expelled from the pod, leaving you naked and able to enjoy smooth stimulation over every square inch of your body. You give in to the pleasure, giving yourself over to become a part of this wonderful castle and to the wonderful delights your new home can give.";
 	WaitLineBreak;
 	now bcending is 2;
-	now bodyname of Player is "Captured";
-	now facename of Player is "Captured";
-	now skinname of Player is "Captured";
-	now tailname of Player is "Captured";
-	now cockname of Player is "Captured";
+	now BodyName of Player is "Captured";
+	now FaceName of Player is "Captured";
+	now SkinName of Player is "Captured";
+	now TailName of Player is "Captured";
+	now CockName of Player is "Captured";
 	now humanity of Player is 0;
 	end the story saying "You become part of the Bouncy Castle.";
 
@@ -2175,7 +2175,7 @@ to say bcfinal1:		[Success - leave w/vixen]
 to say bcfinal2:		[Fail - caught w/vixen]
 	say "     Now that they've got you pinned down, the vixen squeaks happily and comes over to join in the fun. You try to tell her to help you, but she's having trouble focusing and as the pair start to fondle and grope you with their flippers, it becomes harder for you to resist as well. The sea lion's cock and the orca's pussy rub against you as well. As you grow aroused from their touch, the slowly push off your gear and clothes, leaving you bare so they may have some fun with you. You may as well just relax and enjoy the fun, you tell yourself.";
 	if Player is male and ( Cunt Count of Player is 0 or ( player is female and a random chance of 3 in 5 succeeds ) ):
-		say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you. You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your rod and the stretched pussy around it.";
+		say "     After a few trills and barks between them, a decision seems to be reached and the orca moves herself over your crotch, rubbing her rubbery pussy down onto your cock. Growing hard despite the trouble you're in, you're soon ready and she sinks her slick cunt down over your [cock size desc of Player] [Cock of Player] shaft. Her cunt stretched to squeeze around you just right as she takes you in inch by inch until you're fully sheathed in her and her air nozzle clit is rubbing against your crotch. She trills happily and starts bouncing atop you, working her squeezing vinyl walls down around you. You can feel the smooth, wet touch of the vixen's tongue as well as she licks at your rod and the stretched pussy around it.";
 		say "     Not to be left out, the sea lion moves up beside you and pulls your face into his crotch. Presented with his dark purple cock, you can see it's similarly got an air nozzle at its tip and that some slick, oily pre is leaking out around the edges of it. For some reason, perhaps the growing arousal you're feeling from having the eager orca atop you, you open your mouth and willingly accept the strange balloon-cock into your mouth. As the sea lion pulls your face into his groin as he fucks your mouth, you lick and suck at his pulsing rod, moaning softly.";
 		say "     They go at it for quite a while until you're pushed past your limit and cum hard, shooting your [Cum Load Size of Player] load into the inflatable female while she trills happily. Moments later the sea lion is set off, shooting a jet of air-driven semen right down your throat. The orgasm, the gas and the semen all work to leave you momentarily dazed and weak, unable to resist as they move to dealing with the vixen. She's mounted in turn and fucked while eating your hot load from the orca's pussy.";
 	else if Player is female:
@@ -2193,11 +2193,11 @@ to say bcfinal2:		[Fail - caught w/vixen]
 	say "     As you [if Player is male]fuck her[else]grope and fondle her[end if], the big orca around you sways and rocks, her well-stuffed body most likely being fucked by the horny sea lion. This is confirmed soon enough with a rush of his hot seed and mind-numbing gas spraying into her uterus, filling it up and coating you both in the gooey semen. This is enough to have you both cum hard before conscious thought fades and you eventually pass out in one another's arms.";
 	WaitLineBreak;
 	now bcending is 4;
-	now bodyname of Player is "Captured";
-	now facename of Player is "Captured";
-	now skinname of Player is "Captured";
-	now tailname of Player is "Captured";
-	now cockname of Player is "Captured";
+	now BodyName of Player is "Captured";
+	now FaceName of Player is "Captured";
+	now SkinName of Player is "Captured";
+	now TailName of Player is "Captured";
+	now CockName of Player is "Captured";
 	now humanity of Player is 0;
 	end the story saying "You and the vixen failed to escape your latex fate.";
 
@@ -2333,25 +2333,25 @@ carry out dolphincastletesting:
 Section 7 - Captured Endings
 
 when play ends:
-	if bodyname of Player is "Captured" and bcending is 1:
+	if BodyName of Player is "Captured" and bcending is 1:
 		say "     Your pod ends up hidden beneath the bouncy castle, attached to the underside. There, your life becomes one of unending pleasure as the sex chair that's become your whole world stimulates you. You have orgasm after unending orgasm, as somehow your pleasure satisfies some need of the giant inflatable play area. You consciousness largely fades away under the constant treatment of the aphrodisiacs pumped into you as it sustains you with a sweet, nourishing liquid and air heavily laced with the mind-altering gasses. You become its eternal prisoner, but somehow that doesn't matter, as long as it continues to let you [if Player is not neuter]cum[else]climax[end if].";
 		if Player is female or player is mpreg_ok:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your womb is periodically pumped full of semen from these other prisoners, impregnating you with their offspring, providing your broken mind with another delight to enjoy. Your children are born as inflatable versions of their sires. They are removed from your pod as they are pushed from your [if Player is female]vagina[else]ass as latex eggs[end if] and released as more servants for the bouncy castle[if Player is male]. Also being male, you take added pleasure in knowing your seed is similarly being used to impregnate females in other pods[end if].";
 		else if Player is male:
 			say "     You are vaguely aware that there are other pods down there as well despite being fully enclosed and unable to see or sense anything but the pleasures provided. Your semen is pumped out of you and periodically provided to the others, used to breed the female prisoners to sire inflatable young inside them to be more servants for the bouncy castle.";
-	else if bodyname of Player is "Captured" and bcending is 2:
+	else if BodyName of Player is "Captured" and bcending is 2:
 		say "     Your pod ends up hidden beneath the bouncy castle, attached to the underside. But you don't remain entirely there, either. A section of your mind, having so willingly accepted the pleasures of the castle, is drawn away from your body and starts to meld into the consciousness that is the bouncy castle. You can share in some of its senses and feel it drawing energy from the pleasure of others, both your body and the other prisoners in pods beneath the castle. It has a small collection of them to sustain itself and this constant feeding brings a pleasure of its own to you as part of the inflatable castle.";
 		say "     Those converted by the floating play area and its creatures are its servants, providing additional energy and pleasure to it. The others, more prisoners of their pods rather than fully part of the castle like you are, live in constant ecstasy and orgasm, as your body does. These creatures are bred with one another as well, semen pumped from the males into the females so they may birth inflatable creatures like their parents to act as fresh servants for the castle. Still sharing some connection with your body, you get to enjoy [if Player is not neuter or player is mpreg_ok]this as well as all the other[else]all the[end if] physical pleasures the castle provides, more directly sharing them with your united consciousness.";
-	else if bodyname of Player is "Captured" and bcending is 3:
+	else if BodyName of Player is "Captured" and bcending is 3:
 		say "     Having little mind of your own past a vague sense of happiness as an inflatable chair, you spend some time in the lonely room with only the knights to watch as they'll occasionally take a break from their stoic vigil to play with one another on the walls. Eventually though, one of the inflatable dolphin girls finds you. Having been lonely, you do your best to look inviting and comfy and yellow. Drawn in, she takes a seat in you. When you inflate a cock in your seat for her to ride, she's very happy and bounces around to ride it. Being sat in and being able to please (and pleasure) someone feels very good. She rides herself to several orgasms in you, leaving your seat pleasantly wet and sticky.";
 		say "     When she's finally satisfied and a new thought enters her bubbleheaded mind, you're pleased that she takes you out with her, showing you off to her friends. They all take turns in you and you have a wonderful time pleasing them. You're eventually left in the toy room where they keep all their beach toys and inflatables, but they're in there much more often than the out of the way room where you were, so you get much more use now. You have a happy life pleasing the dolphin girls and distracting the occasional intruder until they can be found and made them into another cute dolphin playmate.";
-	else if bodyname of Player is "Captured" and bcending is 4:
+	else if BodyName of Player is "Captured" and bcending is 4:
 		say "     You are awoken to a shifting of the soft chamber around you both, and with an outpouring of sticky latex fluids, you and your womb-sibling are pushed back out into the world.";
 		if Player is male:
 			say "     You emerge as a [if Player is female]cherry red[else]purple[end if] sea lion and she as an orange orca. Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily. After licking the tasty fluids from each other, you mount her, rocking your pinniped body atop her until you cum and fill her with your sticky seed. From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you. Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
 		else:
 			say "     You emerge as a [if Player is female]magenta[else]dusty red[end if] orca and she as an orange one. Having forgotten your past lives now that you've been reborn as another pair of inflatable pool toys, you snuggle up to her happily. After licking the tasty fluids from each other, you turn your attention to each other's pussy and eating it out until you've shared several sticky climaxes. From that day forth, you work as a team, helping to guard the castle, playing with the numerous dolphin girls and the infrequent intruders who stumble across you. Most you simply fuck into a stupor and leave for the dolphin suits, but occasionally you bring them to your orca mother and make them into new siblings.";
-	else if bodyname of Player is "Captured" and bcending is 5:
+	else if BodyName of Player is "Captured" and bcending is 5:
 		let compnumber be (number of filled rows in the Table of PlayerChildren + number of entries in childrenfaces);
 		if companion of Player is not nullpet, increase compnumber by 1;
 		say "     An uncertain amount of time later, you flow out from the pillar which engulfed you as a mass of [ppcolor] latex. Moving across the inflated floor, your simple mind chooses an open spot for yourself and you form yourself into another pillar. Soon enough, you're rooted in place among the others of your kind in the room. On your front, you have the design of an aggressive [bcfinalpillarform] on your padded [ppcolor] surface[if compnumber is 1]. Your companion, similarly transformed, has become a green pillar with a design suiting their previous form[else if compnumber > 1]. Your companions, similarly transformed, have become colorful pillars with designs suiting their previous forms[end if].";

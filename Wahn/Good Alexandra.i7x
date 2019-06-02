@@ -261,7 +261,7 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 2;
 		now description entry is "Ask Alexandra about her past";
 	[]
-	if HP of Alexandra < 56 or ( HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned ):
+	if HP of Alexandra < 56 or ( HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned ):
 		choose a blank row in table of fucking options;
 		now title entry is "Supplies";
 		now sortorder entry is 3;
@@ -505,7 +505,7 @@ to say alexandra_supplies:
 		else:
 			say "     Lacking the necessary supplies she needs at the moment, you [if carried of food > 0]decide to hang onto what you've got for the moment and [end if]politely tell her you'll be on the lookout for some.";
 			now sextablerun is 0; [continued talking allowed]
-	else if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
+	else if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned:
 		say "     'I was thinking we should have some medical supplies here in case of emergencies. I figured I'd go check out the city hospital to get them. I'll be heading out there shortly. Did you want to come along? I should be fine, but the help would be appreciated if you're free.'";
 		say "     Shall you accompany the doberwoman on her scavenging expedition?";
 		if Player consents:
@@ -673,7 +673,7 @@ to say goodalexandrasex00:
 		say "     Taking your [cock size desc of Player] cock in hand, she guides it between her legs. You can feel the wet touch of her pussy lips there, warmly and invitingly ready for you. The two of you moan passionately as you thrust into her [if Cock Length of Player > 30]with extra care because it's her first time. Despite your extreme size, she accommodates you easily - her body's clearly long been ready and waiting for this moment[else if Cock Length of Player > 15]with care because it's her first time. Despite your large size, she accommodates you easily - her body's clearly long been ready and waiting for this moment[else]gently because it's her first time. You slip into her easily - her body's clearly long been ready and waiting for this moment[end if]. Her legs wrap around your hips and pull you inwards, urging you on as she gives a barking cry.";
 		WaitLineBreak;
 		say "     While fucking her, you lick and kiss across her bosom. Finding a dark-skinned nipple, you wrap your lips around it and give it a light nibble. She responds with a soft, lustful growl and grips your shoulders with her paws. Panting for more, her hips rock into your thrusts and you eagerly reciprocate.";
-		say "     With your long pent-up desires for each other, your lovemaking is wild and passionate. Many kisses are exchanged even as you pound into her once-virgin pussy. Despite her inexperience, the strength of her need has her canine body responding. Her cunt squeezes and tugs at your [cock of Player] cock, driving you to orgasm. As your hot seed is pumped into your doberwoman lover, she yowls in response as the feel of you seeding her pushes her into climactic bliss. Lips to muzzle, the two of you kiss, her doggy tongue writhing in your mouth as the two of you breathe, pant, thrust and even beat hearts in synch.";
+		say "     With your long pent-up desires for each other, your lovemaking is wild and passionate. Many kisses are exchanged even as you pound into her once-virgin pussy. Despite her inexperience, the strength of her need has her canine body responding. Her cunt squeezes and tugs at your [Cock of Player] cock, driving you to orgasm. As your hot seed is pumped into your doberwoman lover, she yowls in response as the feel of you seeding her pushes her into climactic bliss. Lips to muzzle, the two of you kiss, her doggy tongue writhing in your mouth as the two of you breathe, pant, thrust and even beat hearts in synch.";
 		if recentsex is false:
 			WaitLineBreak;
 			say "     You continue thrusting through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's on her side with a leg raised and you're standing upright. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass. Before you know it, you're fucking her for a second time, the two of you needing more of one another.";
@@ -718,7 +718,7 @@ to say goodAlexandrasex2:
 	say "[goodAlexandrasex_lead-in]";
 	WaitLineBreak;
 	say "     After running your hands down Alexandra's body one more time, you roll her over onto her front. With your hands on that toned ass of hers, you mount her from behind. Her stubby tail wags eagerly as you get in position and thrust into her. She moans in delight and barks as she's penetrated, her ass pushing back into it.";
-	say "     You take easy, steady thrusts into the doberwoman's pussy and she rocks back into them in return. As her panting grows heavier, you pick up the pace and she matches your rhythm. The feel of her warm, wet tunnel around your [cock of Player] cock is wonderful, every wiggle of her hips or shiver of delight resulting in a flutter of her inner walls around your thrusting member. Having settled into a good pace, you let your hands roam free again, stroking, petting and caressing the canine female you're pounding. She gives a particularly amusing whimper and tremble of her hips as you scritch the underside of her tail, resulting in her cunt squeezing around you with greater need.";
+	say "     You take easy, steady thrusts into the doberwoman's pussy and she rocks back into them in return. As her panting grows heavier, you pick up the pace and she matches your rhythm. The feel of her warm, wet tunnel around your [Cock of Player] cock is wonderful, every wiggle of her hips or shiver of delight resulting in a flutter of her inner walls around your thrusting member. Having settled into a good pace, you let your hands roam free again, stroking, petting and caressing the canine female you're pounding. She gives a particularly amusing whimper and tremble of her hips as you scritch the underside of her tail, resulting in her cunt squeezing around you with greater need.";
 	WaitLineBreak;
 	say "     As your mutual excitement grows, you can feel your arousal building towards its peak. Moving your hands to her thighs, you raise her legs to your hips and pound into her harder and faster. Sweet moans and whimpers of delight leave her muzzle as she grips the desk tightly, panting for you to cum in her. Not one to deny the canine beauty her desires, especially when that's just what you want to do, you drive your [cock size desc of Player] cock into her and cum hard. Shot after shot of your [Cum Load Size of Player] load is pumped into her until [if Ball Size of Player > 6]her belly is bloated overfull with your semen[else if Ball Size of Player > 5]her belly is visibly rounded with your semen[else]you have no more to give, for now[end if]. Her orgasming pussy milks as much as it can [if Ball Size of Player > 6]hold[else]get[end if] out of you.";
 	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
@@ -731,7 +731,7 @@ to say goodAlexandrasex3:
 		say "     Still panting from her orgasm, Alexandra releases a lustfully playful growl and moves you around and back. Now you're the one back against the desk and she's between your legs. She makes a show of sniffing your crotch like a dog before letting her long tongue slather across your loins.";
 		WaitLineBreak;
 		if Player is male:
-			say "     Soon licking is not enough for the horny hound and she takes your [cock of Player] cock into her muzzle. She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra slurps up [if Ball Size of Player >= 6]as much of your [Cum Load Size of Player] load as she can manage[else]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
+			say "     Soon licking is not enough for the horny hound and she takes your [Cock of Player] cock into her muzzle. She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra slurps up [if Ball Size of Player >= 6]as much of your [Cum Load Size of Player] load as she can manage[else]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
 		else:
 			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny. She works her tongue in and out of you eagerly, delving into your depths with obvious relish. She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
 		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each other's flavor with your partner). Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
@@ -779,14 +779,14 @@ to AlexandraTaskChat:
 	if Zoo Entrance is unknown, add 12 to AlexandraTask;
 	if Husky Pack is unresolved and AT_Sarah is false, add 13 to AlexandraTask;
 	if Eager Dal is unresolved and AT_Stella is false, add 14 to AlexandraTask;
-	if AT_Jimmy is false and guy is not banned and HP of Alexandra >= 56:
+	if AT_Jimmy is false and MaleList is not banned and HP of Alexandra >= 56:
 		if HP of Jimmy is 0:
 			add { 50, 50, 50, 50, 50, 50 } to AlexandraTask;
 		else:
 			add { 50, 50 } to AlexandraTask;
 	if AT_Repair is false and HP of Alexandra >= 56 and policerepair is 0:
 		add { 51, 51, 51, 51, 51 } to AlexandraTask;
-	if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and guy is not banned and girl is not banned:
+	if HP of Jimmy > 2 and HP of Alexandra >= 56 and AT_Paula is false and MaleList is not banned and FemaleList is not banned:
 		add { 52, 52, 52, 52, 52 } to AlexandraTask;
 	if HP of Alexandra >= 56:
 		if AT_Patrol is false:
@@ -1073,7 +1073,7 @@ to say alexandra_repairs:
 				say ". Shall you do so?";
 				if Player consents:
 					if Player is male and anallevel > 1:
-						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [cock of Player] cock pop into his tight tailhole[if Cock Length of Player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if Cock Length of Player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of Player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
+						say "     Deciding to take his offer quite literally, you pick up the little guy into your arms. As you kiss the cute corgi, Alexandra politely excuses herself until you two are done. Kneading his ass with one hand, you guide your cock under his tail with the other. The little guy moans softly and his tail wags excitedly. Easing him down slowly, you let your [Cock of Player] cock pop into his tight tailhole[if Cock Length of Player > 15]. Due to your size, you have to go quite slow at first and never manage to bury yourself fully into him, but that doesn't stop either of you from enjoying it[else if Cock Length of Player > 7]. Due to your size, you have to take it slow at first, but eventually you're able to bury yourself fully into him, much to your mutual enjoyment[else]. Your [cock size desc of Player] shaft slips fairly easily into his tight little buns and soon you're buried fully into him, much to your mutual enjoyment[end if].";
 						say "     You bounce the cute fellow easily up and down your cock. He pants and moans as you fuck his ass. His own canine cock throbs against your belly, the six-inch red rod spurting precum onto it with every press of your penis against his prostate. As his excitement builds, his knot swells up and soon he's spurting dog cum across the both of you with a cry of ecstasy. Feeling him clamp down around your shaft, you push deep into him one last time and cum, pumping your [Cum Load Size of Player] load into the happy doggy.";
 						say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support. 'Oh wow! I mean... I'd never... that was awesome. I wish I knew how great that felt; I'd have been doing that for years had I known.' Taking a seat on the floor, you cuddle the cute guy, wiping up the mess you've made with a [if Ball Size of Player >= 4]few rags[else]rag[end if]. After a few more kisses, you let Alexandra know you're ready to get back to work.";
 						now HP of Jimmy is 5;
@@ -1455,17 +1455,17 @@ to say A_Task55:	[Automatons 2]
 			say "     Their leader then turns to you, hands moving to cradle your head. You scream and then, it is over.";
 			say "000100011111000110000100011011010100100101011100110010101010000011110100101010010101001010100101010101001110010101001010010101010010101010100100101001010101001001111100100100101010100101010010010010101011010101001100110010100101010110101110110101101110110101110111001001111100111010101000010101010110010100100001010101101110100010100101001011111001010100101001010100101010101101000001011011010101010100101101010101010101010101010101010101001111101010100101010101001000101010101010001011010101010101010111101010101010101010100101010101010101000101010101001010101111100100011010100010010000010100101001010101010101011010101010101111101000110101010010101010001010101010101010101010101110001101010100010101110101011010101001011110100100110111001010001111010101010101010101010101010100011111001010010100100101010010001010010101010101011010010101010101010010111010001111100101010111001111000101010101010100101010101010101010101010010101010101011010100101010001101010010101111010000101010101010101101111001010101010001001010100101000010101010101010010001001001001010101010101010101010101010101010100111101000101010101010010101011101010000101001010101010001010101010101001001010101001010101001010111001001010110101010100101010101010100010101010101010101010101010010101001010100101010100101010101001010101001010111100101010101010101010001010101010101010010101010101010101010101010101010101010101110000101010101010101010101001010101010010101010101010100101010001110110011001010101010101010101010010101010101001010101010100110101010010101010101010101010100101010101011101101010010010101010100101010101010101011010101010100101110010101010...";
 			now humanity of Player is 9;
-			now tailname of Player is "Automaton";
-			now facename of Player is "Automaton";
-			now skinname of Player is "Automaton";
-			now bodyname of Player is "Automaton";
-			now cockname of Player is "Automaton";
+			now TailName of Player is "Automaton";
+			now FaceName of Player is "Automaton";
+			now SkinName of Player is "Automaton";
+			now BodyName of Player is "Automaton";
+			now CockName of Player is "Automaton";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			if Libido of Player < 60, now Libido of Player is 60;
 			now automatonending is 1;
 			wait for any key;
@@ -1479,17 +1479,17 @@ to say A_Task55:	[Automatons 2]
 			say "     Finding yourself in a losing battle, you weave and edge backwards, then make a break for the door. You call for Alexandra to fall back as well, but she's too deeply into the fight to get away. You hesitate for a moment, but with automatons moving steadily towards you, you are now cut off from her and have to make a break for it. Running down the hallway, you search for a way out. As you're pulling open one door, then comes a loud, growling snarl that is cut off. There's nothing to be done now but escape. Reaching an emergency exit, you pull open the door, only to be confronted by a patrol group waiting right there. You turn around, but the metal men pursuing you have barred that end of the hall as well. Your attempts to fight are futile, their greater numbers bearing you down. At some point during the orgy centered upon you, the glass-domed elite comes up, cradling your head even as you're [if Player is male]fucking a bronze female[else]being fucked by a bronze male[end if]. And then it is over.";
 			say "000100011111000110000100011011010100100101011100110010101010000011110100101010010101001010100101010101001110010101001010010101010010101010100100101001010101001001111100100100101010100101010010010010101011010101001100110010100101010110101110110101101110110101110111001001111100111010101000010101010110010100100001010101101110100010100101001011111001010100101001010100101010101101000001011011010101010100101101010101010101010101010101010101001111101010100101010101001000101010101010001011010101010101010111101010101010101010100101010101010101000101010101001010101111100100011010100010010000010100101001010101010101011010101010101111101000110101010010101010001010101010101010101010101110001101010100010101110101011010101001011110100100110111001010001111010101010101010101010101010100011111001010010100100101010010001010010101010101011010010101010101010010111010001111100101010111001111000101010101010100101010101010101010101010010101010101011010100101010001101010010101111010000101010101010101101111001010101010001001010100101000010101010101010010001001001001010101010101010101010101010101010100111101000101010101010010101011101010000101001010101010001010101010101001001010101001010101001010111001001010110101010100101010101010100010101010101010101010101010010101001010100101010100101010101001010101001010111100101010101010101010001010101010101010010101010101010101010101010101010101010101110000101010101010101010101001010101010010101010101010100101010001110110011001010101010101010101010010101010101001010101010100110101010010101010101010101010100101010101011101101010010010101010100101010101010101011010101010100101110010101010...";
 			now humanity of Player is 9;
-			now tailname of Player is "Automaton";
-			now facename of Player is "Automaton";
-			now skinname of Player is "Automaton";
-			now bodyname of Player is "Automaton";
-			now cockname of Player is "Automaton";
+			now TailName of Player is "Automaton";
+			now FaceName of Player is "Automaton";
+			now SkinName of Player is "Automaton";
+			now BodyName of Player is "Automaton";
+			now CockName of Player is "Automaton";
 			attributeinfect;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			if Libido of Player < 60, now Libido of Player is 60;
 			now automatonending is 1;
 			wait for any key;

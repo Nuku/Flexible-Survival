@@ -178,7 +178,7 @@ to say JennaTalk3: [Solve the Murder]
 	if calcnumber is 1:
 		LineBreak;
 		say "     'What?! It's not me!' the big bear shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Barry's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 2:
 		LineBreak;
@@ -210,12 +210,12 @@ to say JennaTalk3: [Solve the Murder]
 	else if calcnumber is 3:
 		LineBreak;
 		say "     'What?! It's not me!' the lizard girl shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Tawnya's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 4:
 		LineBreak;
 		say "     'What?! It's not me!' the dog shouts, acting out in a panic. In the skirmish, you lose track of what's happening and suddenly feel a sharp piercing sensation all over. Looking down you see severe cuts all over you and a knife in your stomach. As you're fading out, you can hear Jenna barking orders out loud to everyone else. 'God damnit! Cane's not the killer go get the real one! They ran off!' she shouts to all of her wolverine subordinates. Well, it turns out that you chose wrongly. That is the last thought you have before you die.";
-		now bodyname of Player is "dead";
+		now BodyName of Player is "dead";
 		end the story saying "You're dead - DEAD!";
 	else if calcnumber is 5:
 		LineBreak;
@@ -242,7 +242,7 @@ instead of going north from Smith Haven Mall Lot South while (LoganCommand is 0)
 
 instead of going southeast from Mall East Wing while (MurderMystery > 3 and HP of Moreau > 0 and LoganCommand is 1):
 	if debugactive is 1:
-		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp].LoganCommnad: [LoganCommand][line break]";
+		say "     DEBUG: Walk-in Event in the body shop. MurderMystery: [MurderMystery].hp: [hp]. LoganCommnad: [LoganCommand][line break]";
 	say "     Upon entering the body shop you notice a familiar person in here, it is none other than Jenna, the leader of the Wolverine Guard. What's interesting is the person next to her, a fellow Wolverine Guard. But... by the look on his face and how he appears to stare at the woman angrily you can rather instantly tell it is the one guard that [italic type]does not[roman type] get along with her, Logan. Your friend looks to be talking to Moreau about something before the naga gestures for them to follow him to his offices. Your curiosity gets the better of you, so you follow them into the back. When you get there you can see that the body shop owner is staring intently at the male wolverine. 'Just look into my eyes and relax...' the naga orders, focusing his green-slitted irises on the anthro canine. 'Yes sir,' Logan tonelessly replies.";
 	say "     Jenna, who has been looking at Logan during this, now turns to Moreau with a smile. 'Perfect. Now what?' she asks. That kind of response appears to make the naga chuckle at her. 'Now my dear, all you need to do is give me a trance command and one to bring him out of the trance,' he tells her. The female wolverine nods before thinking for a second, quickly coming to a decision. 'I think... [']Come here, will you?['] would work for the trance command as it's something I can say without alerting others,' she replies to Moreau. Giving her a smile and a little nod of the head, the shop owner turns his attention back to the other wolverine. 'You will go into this trance whenever you hear the command [']Come here, will you?['] Do you understand?' Moreau says. Logan mindlessly nods before repeating what he said earlier. The naga then turns to Jenna for the next command. 'Hmmm.. how about [']Good Boy['] to end the trance?' she asks. The body shop owner shrugs before turning back to the male wolverine.";
 	WaitLineBreak;

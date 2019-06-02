@@ -12,7 +12,7 @@ Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 The sarea of Mysterious Stranger is "Outside".
 
 Instead of resolving a Mysterious Stranger:
-	say "     'Hey, you over there with the [facename of Player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
+	say "     'Hey, you over there with the [FaceName of Player] face. Come here for a second.' It's the sound of the other's voice that makes you stop dead in your tracks more than what the other just said. Having not become used to being addressed so casually you stop dead in your tracks and then turn to have a look over at the...[italic type]man[roman type], at least you think it's a man from the sound of the other's voice, standing in front of an overturned Cadillac. Some unfamiliar instinct has you lowering your guard as you step closer to the unknown person, who oddly enough seems quite human given his very [italic type]normal[roman type] looking gait.";
 	WaitLineBreak;
 	say "     'Say, you look like the kinda persona that could use a little [italic type]somethin somethin[roman type] to help perk [if Player is male]him[else]them[end if] up. So why not try this?' The man calmly fishes through a backpack sitting on the ground next to him and then hands something over to you. Hesitantly you stretch out your hand out and then watch as the stranger drops three small capsules into your hand. Looking over them, you immediately wonder if you've just been given a narcotic, but before you can ask the question the other the mysterious stranger is chuckling and shaking his head at you.";
 	WaitLineBreak;
@@ -82,7 +82,7 @@ Magical Girl	"Magical Girl"
 Magical Girl is a situation.
 The sarea of Magical Girl is "Outside".
 When play begins:
-	Add Magical Girl to badspots of humorous;
+	Add Magical Girl to badspots of HumorousList;
 
 Instead of resolving a Magical Girl:
 	say "     When out of the blue something falls onto your head, you find yourself wincing and then groaning in pain as you bow from the force of the blow to your skull. Not sure what's this on about, but hoping you're not about to be bothered by any weirdo mutants, you blink as you look down to find a...small wand-like object winking up on the ground in front of you. The fact that said object has a small piece of paper tied to it only serves to make increase your confusion as you kneel down to pick up the wand thing.";
@@ -168,7 +168,7 @@ Free Catch	"Free Catch"
 Free Catch is a situation.
 The sarea of Free Catch is "Warehouse".
 When play begins:
-	Add Free Catch to badspots of furry;
+	Add Free Catch to BadSpots of FurryList;
 
 Instead of resolving a Free Catch:
 	say "     'Fresh fish!' The words make you pause even as you think how odd they sound given the limited amount of supplies there are here in the city. Turning you search for the area in which the voice had come from you look to find a black furred otter holding up a fish in one of her webbed hands. Thinking that maybe having a little extra variety in today's meal might be good for your stomach you head over to the otter to ask how much. 'There's no charge dear. I'm giving away what I have to those who don't have much. So here,' the otter hands you two fish, 'take these and take care of yourself.' Nodding to the kind mustelid, you smile as you think about how nice some people can be, despite the craziness going on in the city.";
@@ -217,7 +217,7 @@ Lackadaisical	"Lackadaisical"
 Lackadaisical is a situation.
 The sarea of Lackadaisical is "Warehouse".
 When play begins:
-	Add Lackadaisical to badspots of furry;
+	Add Lackadaisical to BadSpots of FurryList;
 
 Instead of resolving a Lackadaisical:
 	say "     Watching as several furry mutants cast lines off into the sea from the edge of pier, you find yourself in awe of how [italic type]comfortable[roman type] everyone seems to be despite their various mutations. Listening as some of the otters chitter and chatter to the taller orcas and sharks currently standing beside them, you laugh to yourself about how lackadaisical others can be even during the midst of a crisis.";

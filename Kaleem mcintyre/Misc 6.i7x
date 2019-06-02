@@ -26,8 +26,8 @@ Guess that Character One	"Guess that Character One"
 Guess that Character One is a situation.
 The sarea of Guess that Character One is "Campus".
 When play begins:
-	Add Guess that Character One to badspots of furry;
-	Add Guess that Character One to badspots of guy;
+	Add Guess that Character One to BadSpots of FurryList;
+	Add Guess that Character One to BadSpots of MaleList;
 
 Instead of resolving a Guess that Character One:
 	say "     While making your way across the college campus, you come to a stop as you notice two students, or anthro mutants you assume are students, seeming to argue with each other while sitting together out on the campus's lawn. Not seeing anything dangerous about the others you hesitantly move closer to them to see what the altercation is about. When you do however, you find yourself blinking at what you hear coming from one of them. 'Omae o korosu!' A slim, but toned half naked brown wolf says. The lupines blue eyes are twinkling dangerously as he shouts to a smaller calico cat feline whose bright violet eyes are smiling up at him. Both are sitting on the ground together with a three foot distance between them and from the looks of things it would seem that the wolf is trying to get a point across to the feline. The calico cat seems to be missing it as he smiles charmingly up at the other. 'Omae o kisu?' The feline repeats, though somewhat off the mark. 'Omae o korosu!' The wolf snarls. A little bit of foam is seeping down the side of his dark muzzle as anger shoots through his bristling hide. 'Omae o kisu!' The feline purrs in pride as his long tail goes flailing around wildly behind his tri-colored feline's back.";
@@ -54,9 +54,9 @@ Guess that Character Three	"Guess that Character Three"
 Guess that Character Three is a situation.
 The sarea of Guess that Character Three is "Red".
 When play begins:
-	Add Guess that Character Three to badspots of furry;
-	Add Guess that Character Three to badspots of hermaphrodite;
-	Add Guess that Character Three to badspots of guy;
+	Add Guess that Character Three to BadSpots of FurryList;
+	Add Guess that Character Three to badspots of HermList;
+	Add Guess that Character Three to BadSpots of MaleList;
 
 Instead of resolving a Guess that Character Three:
 	say "     Making your way down the streets of the red light district you find yourself watching an interesting sight as one tigress hooker is standing in between two furry male cat figures who seem to be somewhat perplexed with the she-cat. Curiosity getting the better of you, you walk over to see what's going on, but keep well enough away so that you won't be drawn into the situation, unless things dictate else. 'What part of [']we ain't interested['] don't you get, lady?' A hulking tom cat in a grease pit uniform says while growling somewhat angrily at the red dress wearing female. 'Awww, but honey, I could show you and your little friend here such a good time.' The tigress winks before running a finger down the line of her dress and to the bulge sticking out just slightly. 'Uhm, miss. We're not...that is...my friend and I...we're...uhm.' The more lithe ginger furred feline wearing the same uniform as his cohort stumbles over his words while looking up and down the sexy frame of the tigress. It takes the female a second to understand the lankier feline's words, but once she does... 'Ohhh! Well if you two were into each then you should have just said so earlier.' Waving her hand dismissively the feline hooker brushes the two males off suddenly.";
@@ -74,8 +74,8 @@ Scopaesthesia	"Scopaesthesia"
 Scopaesthesia is a situation.
 scopnum is a number that varies.
 When play begins:
-	Add Scopaesthesia to badspots of furry;
-	Add Scopaesthesia to badspots of guy;
+	Add Scopaesthesia to BadSpots of FurryList;
+	Add Scopaesthesia to BadSpots of MaleList;
 
 Instead of resolving a Scopaesthesia:
 	if scopnum is 0:

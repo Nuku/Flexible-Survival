@@ -15,8 +15,8 @@ Anal Probing is a situation.
 The sarea of Anal Probing is "Beach".
 
 when play begins:
-	add Anal Probing to badspots of furry;
-	add Anal Probing to badspots of guy;
+	add Anal Probing to BadSpots of FurryList;
+	add Anal Probing to BadSpots of MaleList;
 
 Instead of resolving Anal Probing:
 	say "     As you climb over the crest of a sand dune you find yourself witnessing a very strange sight. You've seen many weird things in the city as of late but this just might take the cake. Before you is a large, muscled, and very male anthro lion lying on the sand with what appear to be metallic-looking tentacles writhing in and around him. The numerous shiny appendages seem to literally sprout from the ground, with some burrowing to the surface as others retract to who knows what is their source beneath. Meanwhile, the anthro lion is spasming on the ground from what the creature is doing to him, his clawed fingers digging grooves into the sand as he twitches uncontrollably, drool leaking from his open muzzle. Watching from your hiding place at the edge of the dune you see him yowl in helpless pleasure, thrusting his broad hips reflexively into the air.";

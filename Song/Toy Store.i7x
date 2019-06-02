@@ -9,8 +9,8 @@ Toy Store	"Toy Store"
 
 Toy Store is a situation. The level of Toy Store is 1.
 when play begins:
-	add Toy Store to badspots of guy;
-	add Toy Store to badspots of furry;
+	add Toy Store to BadSpots of MaleList;
+	add Toy Store to BadSpots of FurryList;
 
 toystoreseen is a truth state that varies. toystoreseen is usually false.
 toystoreoverride is a truth state that varies. toystoreoverride is usually false.

@@ -155,7 +155,7 @@ to say KyrverthSmellDesc:
 	else if KyrverthStage is 2:
 		say "     The dragon has a musk to him, it smells nice but there is a tang to the smell and you struggle to place what it is. Something about the smell makes you feel [one of]nice[or]good[at random]...";
 	else if KyrverthStage is 3 or KyrverthStage is 5:
-		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if Player is male][cock of Player] cock to engorge[else if Player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
+		say "     The dragon has a [one of]thick[or]pungent[at random] musk that floods the room with a tang that invades your nostrils and causes your [if Player is male][Cock of Player] cock to engorge[else if Player is female][one of]cunt[or]vagina[or]nether regions[at random] to moisten[else]nether regions to tingle[end if].";
 	else if KyrverthStage is 4 or KyrverthStage is 6:
 		say "     The thick smell infiltrates your nose and arouses your loins. If it gets much stronger you aren't sure whether or not Kyrverth might be able to cause an orgasm through smell alone.";
 
@@ -492,7 +492,7 @@ to say KyrverthSmallPlayerAnal:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly is already distending rather obviously, a testament to the massive tool taking your hole.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching painfully wide as the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pain. You're belly is stretched out in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a fair amount of resistance. Eventually, on his tip remains inside you.";
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching painfully wide as the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [Cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pain. You're belly is stretched out in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a fair amount of resistance. Eventually, on his tip remains inside you.";
 	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
 	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He let's out a roar, as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
@@ -511,7 +511,7 @@ to say KyrverthAveragePlayerAnal:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he completely blocks you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly is already distending noticeably, a testament to the massive tool taking your hole.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure and a little bit of pain. You're belly is bulging outwards in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a little bit of resistance. Eventually, on his tip remains inside you.";
+	say "     You're given another moment to adjust before he presses in with even more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [Cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure and a little bit of pain. You're belly is bulging outwards in the shape of the dragon's cock, nearly a foot of it buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you with a little bit of resistance. Eventually, on his tip remains inside you.";
 	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp in both pain and pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
 	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust rocks your body forward, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He lets out a roar as he ruts into you, his knot slamming into your tight hole with so much force you swear he's going to break you. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
@@ -530,7 +530,7 @@ to say KyrverthLargePlayerAnal:
 		say "     Kyrverth wastes no time in positioning his massive cock in front of your hole, shifting his body so that he is standing over you, his body almost eclipsing you from view. He prods at your pucker a few times, before pressing into your hole, the tapered shaft slipping into you easily, lubricated by his pre. ";
 	say "He gives you a moment to adjust before pressing further into you. Inch after inch sinks into you, until he's a quarter of the way buried inside of you, his ridges making further entry harder. Your belly has a very slight bulge in it from his shaft already.";
 	WaitLineBreak;
-	say "     You're given another moment to adjust before he presses in with a little more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure. You're belly is bulging outwards more noticeably now, nearly a foot of draconic cock buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you, sending waves of pleasure throughout you. Eventually, on his tip remains inside.";
+	say "     You're given another moment to adjust before he presses in with a little more force, your hole stretching wider until the ridge slips in past your ring[if Player is male], pressing against your prostate, causing your [cock size desc of Player] [Cock of Player] to throb from pleasure[end if]. With a little more pressure and pushing, you feel the next ridge beginning to slide in, and it too, passes through your hole with a fair amount of pleasure. You're belly is bulging outwards more noticeably now, nearly a foot of draconic cock buried inside your hole. His assault continues, pressing the next ridge into you, leaving only one ridge left between you and his massive knot. Soon enough, that ridge slips into you as well and his knot presses firmly against your ass before he pulls back, each ridge coming out of you, sending waves of pleasure throughout you. Eventually, on his tip remains inside.";
 	say "     This doesn't last very long, however, as he's soon pushing his length into your hole once more. The protrusions manage to go in a little more easily this time, allowing him to bottom out in about half the time. This time, he yanks his tool out roughly, causing you to gasp at the sudden pleasure[if Player is male], your cock throbbing and dripping pre[end if]. The dragon pushes into you harshly, finally reaching a speed that's pleasurable for him as well. He continues to thrust into you again and again, and with each thrust, you swear you can feel his ridges getting bigger.";
 	WaitLineBreak;
 	say "     True enough, his ridges have been flaring outward slightly, adding even more sensation to the thorough fucking your receiving. Each thrust jolts you ever so slightly, and you can't help but moan from the amazing feeling of being taken by this beast's massive cock[if Player is male], your own tool twitching and throbbing, orgasm close[end if]. It seems like Kyrverth is getting closer to his peak[if Player is male] as well[end if]. He lets out a roar, as he ruts into you, his knot slamming into your tight hole. Your eyes go wide as you feel the dragon pushing harder into you, straining your ass as he attempts to knot you.";
@@ -603,9 +603,9 @@ The level of Strange Sighting is 5. [minimum level to find the event]
 The sarea of Strange Sighting is "High". [or "Park", or "Museum", ...]
 
 when play begins: [flags for blocking this event]
-	add Strange Sighting to badspots of guy;
-	add Strange Sighting to badspots of feral;
-	add Strange Sighting to badspots of furry;
+	add Strange Sighting to BadSpots of MaleList;
+	add Strange Sighting to badspots of FeralList;
+	add Strange Sighting to BadSpots of FurryList;
 
 Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 	say "     As you walk down the street you could swear you saw a glimpse of red in a shop window but as you get close all that can be seen through the broken glass is a dark room with overturned or broken tables and chairs.";
@@ -643,9 +643,9 @@ The sarea of Jewel Heist is "High". [or "Park", or "Museum", ...]
 Jewel Heist is resolved.
 
 when play begins: [flags for blocking this event]
-	add Jewel Heist to badspots of guy;
-	add Jewel Heist to badspots of feral;
-	add Jewel Heist to badspots of furry;
+	add Jewel Heist to BadSpots of MaleList;
+	add Jewel Heist to badspots of FeralList;
+	add Jewel Heist to BadSpots of FurryList;
 
 Instead of resolving a Jewel Heist:
 	say "     Walking down the street you spot a good source of jewels, a jewelry shop! The faded blue shop has two windows with bars behind them. Display cases inside catch your eye but a wolverine standing in front of the only entrance gives you pause. It would not be easy to try and fight your way past him, and he does not look friendly enough to trade with. You think about Kyrverth and resolve that this would be the easiest way to start his hoard.";
@@ -779,18 +779,18 @@ The sarea of Valuable Museum Artifact is "Museum". [or "Park", or "Museum", ...]
 Valuable Museum Artifact is inactive.
 
 when play begins: [flags for blocking these events]
-	add Valuable Museum Artifact to badspots of guy;
-	add Valuable Museum Artifact to badspots of feral;
-	add Valuable Museum Artifact to badspots of furry;
-	add Valuable Warehouse Artifact to badspots of guy;
-	add Valuable Warehouse Artifact to badspots of feral;
-	add Valuable Warehouse Artifact to badspots of furry;
-	add Valuable RLD Artifact to badspots of guy;
-	add Valuable RLD Artifact to badspots of feral;
-	add Valuable RLD Artifact to badspots of furry;
-	add Valuable Stables Artifact to badspots of guy;
-	add Valuable Stables Artifact to badspots of feral;
-	add Valuable Stables Artifact to badspots of furry;
+	add Valuable Museum Artifact to BadSpots of MaleList;
+	add Valuable Museum Artifact to badspots of FeralList;
+	add Valuable Museum Artifact to BadSpots of FurryList;
+	add Valuable Warehouse Artifact to BadSpots of MaleList;
+	add Valuable Warehouse Artifact to badspots of FeralList;
+	add Valuable Warehouse Artifact to BadSpots of FurryList;
+	add Valuable RLD Artifact to BadSpots of MaleList;
+	add Valuable RLD Artifact to badspots of FeralList;
+	add Valuable RLD Artifact to BadSpots of FurryList;
+	add Valuable Stables Artifact to BadSpots of MaleList;
+	add Valuable Stables Artifact to badspots of FeralList;
+	add Valuable Stables Artifact to BadSpots of FurryList;
 	[Something to play with later, but not right now:		]
 	[let eventlist be {"Valuable Museum Artifact", "Valuable Warehouse Artifact", "Valuable RLD Artifact", "Valuable Stables Artifact"};
 	let badspotlist be {"guy", "feral", "furry"};
@@ -1004,11 +1004,11 @@ to say anubismaskuse:
 	LineBreak;
 	say "     Over the next few minutes, you can do nothing but watch as the black fur slowly engulfs and changes your body. At first, you dread the change, but the further the change progresses, the stronger strange, new instincts creep into you. When the fur reaches the middle of your chest, you don't mind the change, and from the knees down, you welcome it. Time passes, and you wonder what will be left when you are completely engulfed. Will you still be yourself? Will these new instincts take over? You have no time to think on the issue, as the change completes at your feet, and everything goes black.";
 	WaitLineBreak;
-	now bodyname of Player is "Jackal King"; [optional, custom infection for a loss sequence]
-	now facename of Player is "Jackal King";
-	now tailname of Player is "Jackal King";
-	now skinname of Player is "Jackal King";
-	now cockname of Player is "Jackal King";
+	now BodyName of Player is "Jackal King"; [optional, custom infection for a loss sequence]
+	now FaceName of Player is "Jackal King";
+	now TailName of Player is "Jackal King";
+	now SkinName of Player is "Jackal King";
+	now CockName of Player is "Jackal King";
 	end the story saying "You have become the Jackal King.";
 
 instead of sniffing Anubis Mask:
@@ -1030,11 +1030,11 @@ to say racinghorseshoeuse:
 	say "     The energy fizzles inside of you and suddenly [one of]focuses on[or]moves to[at random] your groin. In the fastest [one of]change[or]transformation[at random] you have had so far, [if Player is female]your pussy closes up, [end if]a sheath forms, and [if Player is male]your [one of]cock[or]dick[at random] within is suddenly much larger and[else]the large [one of]cock[or]dick[at random] within is[end if] equine-shaped: long and wide, a medial ring halfway up, and a flare at the top throbs before being covered in a mare's mouth as she quickly begins to suck. Her mouth is heaven, and her long head is able to take you down to the hilt. The energy still [one of]fizzing[or]buzzing[at random] inside of you heightens your pleasure, and combined with her masterful [one of]tongue[or]skill[at random] you don't last long. Your body tenses up, and you tell her that you are about to [one of]cum[or]blow[at random]. Pressure mounts up and builds, and just as you are thinking that you can't take anymore, she releases and pulls back, letting an explosion of cum cover her face and chest. It covers her in spurt after spurt, way more than you would normally produce. The reason for that soon becomes obvious - now that her head is out of the way, you can see what the tingling in your groin was for. Your[if Player is female] new[end if] sack is stretched tight by your [one of]newly[or]now[at random] [one of]massive[or]huge[at random] balls.";
 	say "     The mare leans forward, stroking your cock seductively to grab your attention. She puts her mouth to your ear, breathlessly whispering 'So, will you stay?' Your dick is as hard as [one of]a rock[or]diamond[at random] in her hands and you immediately say yes. The energy within you surges a final time and focuses on your shoulders. On each side, a circle of chestnut fur turns white, with a number [one of]69[or]34[at random] forming in black fur to mark you as their racer.";
 	WaitLineBreak;
-	now bodyname of Player is "Racehorse"; [optional, custom infection for a loss sequence]
-	now facename of Player is "Racehorse";
-	now tailname of Player is "Racehorse";
-	now skinname of Player is "Racehorse";
-	now cockname of Player is "Racehorse";
+	now BodyName of Player is "Racehorse"; [optional, custom infection for a loss sequence]
+	now FaceName of Player is "Racehorse";
+	now TailName of Player is "Racehorse";
+	now SkinName of Player is "Racehorse";
+	now CockName of Player is "Racehorse";
 	end the story saying "You have become a racehorse for the stables."; [one to two sentences in bold]
 
 instead of sniffing Racing Horseshoe:
@@ -1087,11 +1087,11 @@ to say goldensculptureuse:
 		say "     Being utterly [if Player is submissive]dominated[else]filled[end if] like this quickly brings to towards another orgasm, and just as you reach your peak the dragons head fills in and his [one of]handsome[or]strong[or]masculine[at random] [one of]grin[or]smile[at random] appears to the side of your vision as he knots you again and you both [one of]cry out[or]shout[or]scream[or]roar[at random] in pleasure. His [one of]strong[or]muscled[at random] arms hold you while you wait for the knot to go down. You rest in that place together, secure in the knowledge your new [if Player is submissive]master[else]mate[end if] will take care of you.";
 	WaitLineBreak;
 	[Make ending happen]
-	now bodyname of Player is "Golden Dragon"; [optional, custom infection for a loss sequence]
-	now facename of Player is "Golden Dragon";
-	now tailname of Player is "Golden Dragon";
-	now skinname of Player is "Golden Dragon";
-	now cockname of Player is "Golden Dragon";
+	now BodyName of Player is "Golden Dragon"; [optional, custom infection for a loss sequence]
+	now FaceName of Player is "Golden Dragon";
+	now TailName of Player is "Golden Dragon";
+	now SkinName of Player is "Golden Dragon";
+	now CockName of Player is "Golden Dragon";
 	end the story saying "You have become a golden dragon."; [one to two sentences in bold]
 
 instead of sniffing Golden Sculpture:
@@ -1117,11 +1117,11 @@ to say tigersuituse:
 	say "feeling returns to you. Being a massive tiger doesn't feel that good at first, you stumble around trying to get your coordination back for an embarrassingly long time before finally realizing that your tail isn't just for show. Once you have your bearings, you look at yourself from head to toe.";
 	say "     8ft tall, your muscled body is a typical tiger, if a bit big. Your feet and paws seem a little too big for your body, but you can't complain for having better weapons in [bold type]this[roman type] city. Something else that seems slightly big is your sheath. Poking out is an ample cock for your body size, its size and spines at the tip are sure to please any future partner.";
 	WaitLineBreak;
-	now bodyname of Player is "Fighting Tiger"; [optional, custom infection for a loss sequence]
-	now facename of Player is "Fighting Tiger";
-	now tailname of Player is "Fighting Tiger";
-	now skinname of Player is "Fighting Tiger";
-	now cockname of Player is "Fighting Tiger";
+	now BodyName of Player is "Fighting Tiger"; [optional, custom infection for a loss sequence]
+	now FaceName of Player is "Fighting Tiger";
+	now TailName of Player is "Fighting Tiger";
+	now SkinName of Player is "Fighting Tiger";
+	now CockName of Player is "Fighting Tiger";
 	end the story saying "You have been consumed by the suit, and are now a fighting tiger."; [one to two sentences in bold]
 
 instead of sniffing Tiger Suit:
@@ -1130,8 +1130,8 @@ instead of sniffing Tiger Suit:
 Section 5 - Endings [TO BE COMPLETED 		...At some point.]
 
 when play ends: [Unique TF endings for using the items above]
-	if bodyname of Player is "Fighting Tiger": [Tiger Suit endings]
-		if bodyname of Player is listed in infections of taurlist: [Taur ending]
+	if BodyName of Player is "Fighting Tiger": [Tiger Suit endings]
+		if BodyName of Player is listed in infections of taurlist: [Taur ending]
 			say "     The costume has already closed up around you, but hits a snag when your tauric body prevents it from closing completely. The second it has finished changing your main body, you feel a pulse sent backwards and as the pulse passes it makes the hairs on your rear end stand up. Slowly your tauric lower half changes to match your upper half. Looking at yourself, your body looks like one of the Tigertaurs at the zoo - if the Tigertaurs went to the gym. Returning to normal life is a laughable idea, your massive body keeps hitting things by accident and with your changed shape, sitting in an office just isn't an option. The good news is that you don't need to look far to find a new job. The military happily takes you on as you are able to fight like a normal soldier while carrying supplies for the entire group on your back.";
 		else if Player is Submissive: [sub ending]
 			say "     Your new body shivers, apparently not done changing. A black leather collar materializes around your neck. A black band with a D ring on the front, apparently your form has changed to match your submissive tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people, at least when they aren't staring at your neck. While the leather collar isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. It's not until a misread map leads you into a rather adult club that you find your true calling. While you are distracted someone sneaks up on you and by the time you feel the tug it's already too late, your new master has you leashed. You find yourself unable to resist commands while they hold the leash and are brought back to their house for a new stress free, submissive life.";
@@ -1140,9 +1140,9 @@ when play ends: [Unique TF endings for using the items above]
 			say "     Your new body shivers, apparently not done changing. A black leather harness materializes around your torso. An X across your chest, apparently your form has changed to match your dominant tendencies. Going back to normal life is all but impossible. Your thoughts almost constantly shift to sex and your form intimidates most normal people. While the leather harness on your chest isn't stuck to you, every time you leave it behind it finds its way back on to you within a few hours. You would suggest teleportation if you didn't know for sure it was impossible. The harness gets you some awkward questions when out and about and it's not until a misread map leads you into a gay bar that you find your true calling. Every week you visit a clients house and utterly dominate them for hours on end. This causes both of you great pleasure and at the end of the weekend they always pay handsomely.";
 		else: [Normal Ending]
 			say "     Going back to normal life is almost impossible, your body looks comical when you sit in the tiny chairs found in an office. At first you try to find work with being an escort, but while the ladies love your size compared to the average tiger, they find out it's just [bold type]too[roman type] big. Eventually you stumble into a gym and the friendly owner quickly takes you under his wing. You quickly find the world of fashion needs more underwear models and the world of celebrities needs more bodyguards. Working with your new friend in the gym, your skills in boxing begin to rise and you start taking on amateur bouts as well. Your new work life pays well, but at the end of the day you are now part tiger, and your body has needs. You find yourself trying the other side of the fence and loving it, since your massive penis seems to be a key that actually fits in many a guys backdoor.";
-	else if bodyname of Player is "Racehorse": [Racehorse shoe ending]
+	else if BodyName of Player is "Racehorse": [Racehorse shoe ending]
 		say "     After the military comes into the city, you stick with the folks at the Stables. Between regular orgies, you are an athlete of sorts. Representing the stables, you go up against the cheetahs from the Zoo and greyhounds from a gym across the city. You quickly develop a taste for winning, because the best prize isn't the money or mares, but the asses of the losers. Normal sex is sweetened massively by the thrill of victory, and you work hard to win. You put more and more effort into your training, and soon, the Stables is in contention for having the fastest team in the country.";
-	else if bodyname of Player is "Jackal King": [Jackal Mask Ending]
+	else if BodyName of Player is "Jackal King": [Jackal Mask Ending]
 		say "     Upon waking up, you look into the mirror you previously sought out. Looking back at you has [one of]no[or]little[or]barely any[at random] resemblance to what you were before. The mask has changed you completely into a jackal, and considering the markings, probably the jackal king. [if Player is female]Wait, the king? You feel your flat chest. Where did they go? You reach down and feel a telltale bulge. Oh... Your instincts distract you from your gender change and point you towards the rest of your body, and you take it all in. [end if]Standing at almost nine feet tall, your athletic body is toned but thin, and short, black hair covers you from your head to your new paws. Tall, pointed ears let you hear all around, and your handsomeness is accentuated by the golden markings painted on your face and body. Something inside of you nudges your brain away from admiring yourself and on to more pressing matters. A king cannot go without subjects!";
 		let randomnumber be a random number from 1 to 2;
 		if randomnumber is 1: [Ending 1]
@@ -1154,7 +1154,7 @@ when play ends: [Unique TF endings for using the items above]
 				say "     When the army comes in, you welcome them with open arms. Posing yourself as a generous savior, the military doesn't investigate much, preoccupied with more troublesome characters as they are. You set up in a nearby city, and it doesn't take long before you control most of it and get yourself appointed mayor.";
 			else: [Ending 2b]
 				say "     When the army comes in, you and your subjects meet them with force. At first, it is a soldier here and there, but as your 'army' grows, whole squads begin to disappear. By the time the military begins to realize that they are facing an organized enemy, you almost completely control the area. The military has no choice but to negotiate with you, and eventually, you are given the city as yours, as long as you clear out the rest of the infected for the military. The soldiers never notice how a good proportion of infected never make it out; they are just happy they don't have to deal with them any more. As your ranks swell, you have no intention of staying put - already looking towards expanding to other cities.";
-	else if bodyname of Player is "Golden Dragon": [Gold Dildo Ending]
+	else if BodyName of Player is "Golden Dragon": [Gold Dildo Ending]
 		if Player is male or player is herm:
 			say "     When the military enters the city, you are asleep and they mistake you for a golden statue at first, you give them a bit of a surprise when the 'statue' wakes up, but you quickly make friends with the soldiers and they escort you to the border wall where you are examined by scientists. Unlike most people they keep you for three days and take lots of samples, especially from your scales. It's not until you ask a nearby colonel what is so interesting about your scales that the scientists are busted, your scales contain gold! They were melting them down, scraping off the organic stuff, and selling it for money. The military quickly issues you with a formal apology and releases you into the world, hoping to sweep it under the rug.";
 			LineBreak;

@@ -19,7 +19,7 @@ to say bitch breaker gel use:
 		say "     You [SelfStripCrotch], then slowly smear the red goo over your cock[smn] making sure that it is completely coated. After applying the spicy-scented, slime you start to feel your dick[smn] heat up, leaving you feeling hot and aroused, your libido climbing rapidly. ";
 		increase Cock Length of Player by a random number from 2 to 4;
 		Follow the cock descr rule;
-		say "You groan as you gain more male meat, leaving you with [if Cock Count of Player < 2]a[end if] [cock size desc of Player] [cock of Player] cock[smn].";
+		say "You groan as you gain more male meat, leaving you with [if Cock Count of Player < 2]a[end if] [cock size desc of Player] [Cock of Player] cock[smn].";
 		LibidoBoost 10;
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cock Count of Player: [Cock Count of Player]; Cock Length of Player: [Cock Length of Player][line break]";
@@ -96,7 +96,7 @@ to say sissifier gel use:
 		else if Cock Length of Player > 2:
 			decrease Cock Length of Player by 2;
 			Follow the cock descr rule;
-			say "You groan as your prick[smn] [if Cock Count of Player > 1]decrease in size, leaving you with[else]decreases in size, leaving you with a[end if] [cock size desc of Player] [cock of Player] cock[smn]";
+			say "You groan as your prick[smn] [if Cock Count of Player > 1]decrease in size, leaving you with[else]decreases in size, leaving you with a[end if] [cock size desc of Player] [Cock of Player] cock[smn]";
 		else:
 			say "Weirdly enough, nothing else seems to happen. Apparently, the gel can't make your prick[smn] any smaller.";
 			LibidoBoost 10;

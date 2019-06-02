@@ -67,19 +67,19 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 			choose row X from the Table of Random Critters;
 			if there is no area entry, next;
 			if area entry is heatzone:
-				add X to hmonlist;
+				add X to hmonList;
 				if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
-					add X to hmonlist;
+					add X to hmonList;
 		if hmonlist is empty and heatzone is not "Outside":		[if none valid found, default back to Outside]
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[Loop through and select all monsters that appear nearby (Outside by default)]
 				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry is "Outside":
-					add X to hmonlist;
+					add X to hmonList;
 					if Name entry is "Husky Alpha" or Name entry is "Husky Bitch":		[Huskies are more likely]
-						add X to hmonlist;
+						add X to hmonList;
 		sort hmonlist in random order;
-		now MonsterID is entry 1 of hmonlist;
+		now MonsterID is entry 1 of hmonList;
 		choose row MonsterID from the Table of Random Critters;
 		say "The enticing scent leads to a [Name entry]. Immediately upon seeing the infected monster, you immediately submit, offering yourself freely in the hopes of satisfying your body's lustful, heat-fueled needs.";
 		wait for any key;
@@ -101,7 +101,7 @@ to say huskyheat: 	[Husky stays in heat permanently. Let's make an interesting e
 This is the check heat rule:
 	if heat enabled is true and heatlevel is not 1:
 		if humanity of Player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if Player is female and (cockname of Player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
+			if Player is female and (CockName of Player is not "Human") and player is impreg_able:	[Only run if female w/groin infection and able to get preggers]
 				if animal heat is not True:	[Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -109,8 +109,8 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
-				if cockname of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
-					choose a row with a infect name of (cockname of Player) in Table of infection heat;
+				if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
+					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
 						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
@@ -140,15 +140,15 @@ This is the check heat rule:
 				else:		[not in heat period]
 					if heatlevel is 3 and a random chance of 1 in 4 succeeds:
 						increase turns in heat by 1; [20% duration of non-heated period lost]
-			else if Player is not female and cockname of Player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
+			else if Player is not female and CockName of Player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to get mpreggers]
 				if animal heat is not True:	[Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
 				increase turns in heat by 1;
-				if cockname of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
-					choose a row with a infect name of (cockname of Player) in Table of infection heat;
+				if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
+					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
 						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
@@ -188,16 +188,16 @@ This is the check heat rule:
 [This accelerates a new heat or extends the duration of a current heat. If the trigger is during combat, post-combat or otherwise during an event that might be thrown off by heat effects occurring, make sure heatdrive is set to 0 before running.]
 to drive heat:
 	if animal heat is true:
-		if Player is female and (cockname of Player is not "Human") and player is impreg_able:
-			if cockname of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
-				choose a row with a infect name of (cockname of Player) in Table of infection heat;
+		if Player is female and (CockName of Player is not "Human") and player is impreg_able:
+			if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
+				choose a row with a infect name of (CockName of Player) in Table of infection heat;
 				if fheat entry is false:	[no female heat for that form]
 					choose row 1 in table of infection heat;
 			else: [No specific Data, use Generic entry.]
 				choose a row 1 in Table of infection heat;
-		else if Player is not female and cockname of Player is not "Human" and player is mpreg_able:
-			if cockname of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
-				choose a row with a infect name of (cockname of Player) in Table of infection heat;
+		else if Player is not female and CockName of Player is not "Human" and player is mpreg_able:
+			if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
+				choose a row with a infect name of (CockName of Player) in Table of infection heat;
 				if mpregheat entry is false:	[no mpreg heat for that form]
 					choose row 1 in table of infection heat;
 			else: [No specific Data, use Generic entry.]
@@ -222,7 +222,7 @@ to drive heat:
 This is the check heat rule:
 	if heat enabled is true:
 		if humanity of Player > 0 and skipturnblocker is 0:	[Effects don't occur if turns are skipped.]
-			if Player is female and (cockname of Player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
+			if Player is female and (CockName of Player is not "Human") and player is fpreg_able:	[Only run if female w/groin infection and able to currently get f-preggers]
 				if animal heat is not True:	[Check if it's just triggered]
 					say "You feel a warning tingle deep within yourself, as a part of your body deep within alters to suit your more tainted sexuality.";
 					now turns in heat is 0;
@@ -230,8 +230,8 @@ This is the check heat rule:
 				now lastturn is turns;
 				increase turns in heat by 1;
 				[She's vulnerable to heat, Time to calculate if she's actually Triggered or reverted.]
-				if cockname of Player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
-					choose a row with a infect name of (cockname of Player) in Table of infection heat;
+				if CockName of Player is a infect name listed in Table of infection heat:	[ If the species is in the table use it]
+					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if fheat entry is false:	[no female heat for that form]
 						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]
@@ -256,15 +256,15 @@ This is the check heat rule:
 					if there is heat end entry, say "[heat end entry]"; [Heat start Trigger]
 					now Libido of Player is Libido of Player divided by 2; [Halve the players libido.]
 					now inheat is False;
-			else if Player is not female and cockname of Player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
+			else if Player is not female and CockName of Player is not "Human" and player is mpreg_able:	[Only run if male/neuter w/groin infection and able to currently get m-preggers]
 				if animal heat is not True:	[Check if it's just triggered]
 					say "You feel a hot rush in your lower belly as some hidden part of you is affected by your tainted sexuality.";
 					now turns in heat is 0;
 					now animal heat is True;
 				now lastturn is turns;
 				increase turns in heat by 1;
-				if cockname of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
-					choose a row with a infect name of (cockname of Player) in Table of infection heat;
+				if CockName of Player is a infect name listed in Table of infection heat:	[If the species is in the table use it]
+					choose a row with a infect name of (CockName of Player) in Table of infection heat;
 					if mpregheat entry is false:	[no mpreg heat for that form]
 						choose row 1 in table of infection heat;
 				else: [No specific Data, use Generic entry.]

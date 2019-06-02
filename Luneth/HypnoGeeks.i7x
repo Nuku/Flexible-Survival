@@ -38,8 +38,8 @@ The level of HypnoGeeks is 5. [minimum level to find the event]
 The sarea of HypnoGeeks is "Campus".
 
 when play begins: [flags for blocking this event]
-	add HypnoGeeks to badspots of guy;
-	add HypnoGeeks to badspots of furry;
+	add HypnoGeeks to BadSpots of MaleList;
+	add HypnoGeeks to BadSpots of FurryList;
 
 Instead of resolving a HypnoGeeks:
 	say "     Making your way through the campus grounds isn't as difficult as the rest of the city, but you make sure to keep your guard up. A couple of half-dressed stags stumble out of a nearby building, antlers locking together as they wrestle for dominance and move onto the front lawn. It's a situation that isn't exactly strange these days, but two bucks in rut is still something that you'd rather avoid. Crossing the street, you plan to keep moving forward, but you pause when you hear a loud yelp and a short scuffle. Something's going on around the back side of the building, and unless the collectively sixteen points of buck back there lose interest in each other long enough to hear what's going on, you're the only one that might be able to help.";

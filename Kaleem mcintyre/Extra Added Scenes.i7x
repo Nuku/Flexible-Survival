@@ -48,8 +48,8 @@ Challenge of the Alphas	"Challenge of the Alphas"
 Challenge of the Alphas is a situation. The level of Challenge of the Alphas is 8.
 
 when play begins:
-	add Challenge of the Alphas to badspots of furry;
-	add Challenge of the Alphas to badspots of guy;
+	add Challenge of the Alphas to BadSpots of FurryList;
+	add Challenge of the Alphas to BadSpots of MaleList;
 
 Instead of resolving a Challenge of the Alphas:
 	say "     Finding yourself coming across an Alpha Husky and Alpha Wolf circling each other, you blink in uncertainty as you wonder what are the two males are doing together in the middle of the street. That is, right before you take a cautious step back when both mutants bare their fangs at each other after drawing up their fleshy black lips. Body postures suddenly going rigid, the two stop dead in their tracks while glaring bloody murder at you for intruding, as if they weren't already wishing death on the other. Uncertain of what to do in this situation, you can see the rage rolling off of both creatures making your spine lock up almost, you continue to watch as the two lay their ears flat against their heads while their tails snap directly up into the air in a sign that their battle will grow physical in a matter of moments. Fur bristling so much that both look like aggravated porcupines, you feel your heart hammer tightly into your chest as you watch the two canines bark and growl and drool down the sides of their muzzles as the loose themselves to their inner animals. If something's not done soon, you know that this will end bloodily with either one or both of the males dead since neither seem to be taking the better choice to flee rather than fight. Yet is this really any of your business?";

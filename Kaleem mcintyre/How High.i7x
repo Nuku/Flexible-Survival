@@ -11,8 +11,8 @@ How High	"How High"
 How High is a situation.
 The sarea of How High is "Park".
 when play begins:
-	add How High to badspots of furry;
-	add How High to badspots of guy;
+	add How High to BadSpots of FurryList;
+	add How High to BadSpots of MaleList;
 
 Instead of resolving a How High:
 	say "     Making your way through the park, you find yourself coming across a very strange, if not somewhat arousing sight. There in the middle of a small glen surrounded by trees on all side with bushes dotted in between said trees, there sit several mutant stallions all conversing with one another while passing something between each other. While what you see doesn't exactly look like a cigarette, it's much longer than that, not to mention much wider, you do see that the item in question is smoking slightly as a long length of white trails up into the sky. Taking a sniff of the air you find yourself sneezing somewhat as a weird musky scent cloys at your nose with a... strangely... revitalizing sort of smell. Right away you can feel your body start to shiver as your back arches while down below your legs quiver as though they are made of jelly. It takes you a full minute to shake off the effects of the obvious intoxicant that the stud horses, as you don't see any fillies around the small group, are passing between one another. Not really sure how you feel about mutants getting high in the middle of the park, you don't have long to think over the moral aspects of your feelings before one of the equines, a pitch black stallion with enough muscles on him to make a professional bodybuilder feel envious, raises his head to spot you. Like a child with their hand in the proverbial cookie jar, you find yourself freezing as pitch black eyes look upon you with a carefully guarded stare.";

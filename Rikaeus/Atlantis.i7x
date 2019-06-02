@@ -60,8 +60,8 @@ Lost Trident is a situation. The level of Lost Trident is 9.
 
 The sarea of Lost Trident is "Beach".
 When play begins:
-	Add Lost Trident to badspots of furry;
-	Add Lost Trident to badspots of guy;
+	Add Lost Trident to BadSpots of FurryList;
+	Add Lost Trident to BadSpots of MaleList;
 
 Instead of resolving a Lost Trident:
 	say "     Walking along the beach you watch as the crashing waves of the sea bounce across the shore as the [if daytimer is day]sun rides along the sky[else]moon dances along the night skyline[end if] while listening to the soft intelligible sounds of marine life reverberate all around you. As the minutes pass by, the soothing sounds of the water lapping along the sands makes a sense of nostalgia surge up throughout you, mind lulling you almost to sleep. However, before you can become too lost in the all-encompassing feelings of sleep about to overtake you, you find your gaze drifting over to what looks like a bronze colored trident free-floating like an abandoned surfboard along the waterline.";

@@ -27,8 +27,8 @@ Finding Mack is a situation. The level of Finding Mack is 8.
 The sarea of Finding Mack is "Forest".
 
 when play begins:
-	add Finding Mack to badspots of guy;
-	add Finding Mack to badspots of furry;
+	add Finding Mack to BadSpots of MaleList;
+	add Finding Mack to BadSpots of FurryList;
 
 Instead of resolving Finding Mack:
 	if HP of Macadamia is 0:
@@ -106,7 +106,7 @@ to attackingnutsofactory:
 			say "     Feeling there'd be no better way to celebrate your victory, you let your hands slide through Macadamia's fluffy fur to cup those large nuts of his. The gray squirrel churrs happily and nuzzles your neck as you rub his heavy balls. As his cock starts to slide from his sheath, he sets your pack aside and starts sliding off your remaining clothes and his belt of pouches. Once that's done, he pushes you to the ground amid the nuts and gives you another kiss before rolling you onto all fours.";
 			say "     Quite aroused and excited now, you let him move atop you, bringing his stiff cock and heavy balls into position. 'Chuk... you did great, my sweet hazelnut,' he chitters, affectionately referring to the nut he used to represent you while planning the raid. He nibbles along your shoulder and neck before lining up his hard shaft. You moan in pleasure as he sinks it into your [if Player is female]pussy quickly[else]asshole slowly[end if] and starts mating you. You reach back and rub those heavy, swinging orbs of his, knowing their hot nutbutter'll be filling you soon.";
 			WaitLineBreak;
-			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [skinname of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
+			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [SkinName of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
 			say "     After resting for a while, he helps you up and back into your gear, giving you several kisses and nips. He makes you promise to come back and see him again after he's had time to take inventory. He promises to give you some more nuts if you'll come back and play with him again. 'Thanks again for your help, my lovely hazelnut,' he churrs. 'Come back again soon and we can have some more fun. But for now, I think I want to be alone with my nuts for a while.' And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
 			increase carried of food by 2;
 			now HP of Macadamia is 10;
@@ -202,7 +202,7 @@ to say sexwithMacadamia:
 			say "     Wanting some fun with the energetic squirrel, you snuggle in close and scritch his chest. He chirrs happily and slides his fluffy tail around you both as he gives you a kiss. Soon you're on the floor together with the squirrel's nuts in your hand. He nuzzles at your neck as your rub his balls, rubbing his furry cheeks against you. As his cock starts to slide from his sheath, he sets your pack aside and starts sliding off your remaining clothes and his belt of pouches. Once that's done, he gives you another kiss before rolling you onto all fours.";
 			say "     Quite aroused and excited now, you let him move atop you, bringing his stiff cock and heavy balls into position. 'Chuk... you did great, my sweet hazelnut,' he chitters, affectionately referring to the nut he used to represent you while planning the raid. He nibbles along your shoulder and neck before lining up his hard shaft. You moan in pleasure as he sinks it into your [if Player is female]pussy quickly[else]asshole slowly[end if] and starts mating you. You reach back and rub those heavy, swinging orbs of his, knowing their hot nutbutter'll be filling you soon.";
 			WaitLineBreak;
-			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [skinname of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
+			say "     As the horny rodent fucks you, his paws roam over your [bodytype of Player] body, stroking your [SkinName of Player] skin and eventually settling at your chest to play with your nipples. You give a chitter as he pinches them and push harder back into him. As your mutual lusts build, he pounds into you hard and faster until eventually blasting his hot load into you, draining his nuts to flood your [if Player is female]womb[else]bowels[end if] with his semen. Eventually his large orbs are drained and you find yourself left with a noticeable bulge from his considerable output.[impregchance]";
 			say "     After resting for a while, he helps you up and back into your gear, giving you several kisses and nips. He makes you promise to come back and see him again. 'I'll be looking forward to you stopping by so I can take another break from sorting and moving the nuts. Oh, the nuts! Here,' he says, scurrying excitedly over to give you another handful. 'I'd set these ones aside for you. They're particularly tasty ones,' he says, pouring a bowl of assorted, unshelled nuts into your pack. 'I can tell. We squirrels know these things.'";
 			infect "Gray Squirrel";
 			increase carried of food by 2;
@@ -292,7 +292,7 @@ Section 7 - Endings
 
 when play ends:
 	[for Gray Squirrel endings, see that file.]
-	if HP of Macadamia >= 13 and bodyname of Player is not "Gray Squirrel":
+	if HP of Macadamia >= 13 and BodyName of Player is not "Gray Squirrel":
 		if humanity of Player < 10:
 			say "     With you having succumbed, Macadamia decides that the bunker's not quite as safe as he'd hoped and moves out, searching for a new place to hide his nuts and hole up for the winter.";
 		else:

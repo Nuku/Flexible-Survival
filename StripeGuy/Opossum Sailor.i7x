@@ -6,12 +6,6 @@ Opossum Sailor by StripeGuy begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Opossum Sailor" } to infections of girl;
-	add { "Opossum Sailor" } to infections of furry;
-	add { "Opossum Sailor" } to infections of Tailweapon; [usable for Tail Strike feat]
-
-
 to say Opossum Sailor wins:
 	if HP of Player > 0: [submission]
 		if Player is male: [male + herm]
@@ -20,8 +14,8 @@ to say Opossum Sailor wins:
 			say "     'You'll give us girls a bad name, just rolling over like that!' The she-sailor huffs and shakes her head in disgust before swaggering away.";
 	else: [defeat]
 		if Player is male: [male + herm]
-			say "     The opossum sailor tips back her hat, showing off an array of gold-capped teeth in joy at victory over you. She need no words as she strides closer, lifting one booted foot and resting it on your chest, heaving in an effort to catch a breath after being so thoroughly defeated. 'I see that you'll belay those struggles.' A shove sends to tumbling onto your back, and before your weakened limbs can even begin the task of righting yourself, the salty sailor is upon you. Her weight presses against your middle, hot sex-juices splashing from her sopping cunt to soak into your skin. The scent overpowers your restraint, [cock of Player] cock surging to full hardness as she grinds teasingly. 'Stand before the mast they say, but I rather to sit on it.' She laughs at her own weak joke, ample tits bouncing out of the gold-trimmed jacket, achingly just beyond the reach of your lips or hands. Unlike you, weakened from lust and defeat, this sea-faring tart is free to grope your [bodytype of Player] body as she likes! Her nimble pink fingers pinch at your nipples while her prehensile tail just wraps around your [cock size desc of Player] dick like an anaconda. The marsupial teases you until your labored breathes are moans of desire, wordless adulation and need for the female straddling you!";
-			say "     When finally bored of teasing, the sex-starved sailor pushes against you, lifting herself up and over your throbbing, [cock size desc of Player] cock. 'Gangway, slut!' The opossum sniggers, her tail lining the head of your dick up with the well-warmed lips of her needy slit. 'I'll use your cock like a holystone!' Your confusion over all the nautical terminology is condensed into a fine point and then quickly forgotten as that hot snatch devours your length, the sensation dulled by the tail still wrapped firmly about your shaft! It is of no concern how you feel, as the sailor is having a jolly time of taking your [cock of Player] cock and the added thickness of her own tail! She gropes firmly at her heaving breasts as the sensation of so much stuffed inside ignites her first orgasm, hot juices squelching out to flood your hips with her nanite-infused fluids. That first orgasm fails to faze her, and within seconds she is riding your cock as if it never happened. The heat and intoxicating aroma of her cunt is enough to get you off, but with that tail locked around your base tighter than any cockring orgasm is impossible! Several times you come close, the pleasure denied as pressure builds and backfires. The torment is beyond cruel, as she cums again and again.";
+			say "     The opossum sailor tips back her hat, showing off an array of gold-capped teeth in joy at victory over you. She need no words as she strides closer, lifting one booted foot and resting it on your chest, heaving in an effort to catch a breath after being so thoroughly defeated. 'I see that you'll belay those struggles.' A shove sends to tumbling onto your back, and before your weakened limbs can even begin the task of righting yourself, the salty sailor is upon you. Her weight presses against your middle, hot sex-juices splashing from her sopping cunt to soak into your skin. The scent overpowers your restraint, [Cock of Player] cock surging to full hardness as she grinds teasingly. 'Stand before the mast they say, but I rather to sit on it.' She laughs at her own weak joke, ample tits bouncing out of the gold-trimmed jacket, achingly just beyond the reach of your lips or hands. Unlike you, weakened from lust and defeat, this sea-faring tart is free to grope your [bodytype of Player] body as she likes! Her nimble pink fingers pinch at your nipples while her prehensile tail just wraps around your [cock size desc of Player] dick like an anaconda. The marsupial teases you until your labored breathes are moans of desire, wordless adulation and need for the female straddling you!";
+			say "     When finally bored of teasing, the sex-starved sailor pushes against you, lifting herself up and over your throbbing, [cock size desc of Player] cock. 'Gangway, slut!' The opossum sniggers, her tail lining the head of your dick up with the well-warmed lips of her needy slit. 'I'll use your cock like a holystone!' Your confusion over all the nautical terminology is condensed into a fine point and then quickly forgotten as that hot snatch devours your length, the sensation dulled by the tail still wrapped firmly about your shaft! It is of no concern how you feel, as the sailor is having a jolly time of taking your [Cock of Player] cock and the added thickness of her own tail! She gropes firmly at her heaving breasts as the sensation of so much stuffed inside ignites her first orgasm, hot juices squelching out to flood your hips with her nanite-infused fluids. That first orgasm fails to faze her, and within seconds she is riding your cock as if it never happened. The heat and intoxicating aroma of her cunt is enough to get you off, but with that tail locked around your base tighter than any cockring orgasm is impossible! Several times you come close, the pleasure denied as pressure builds and backfires. The torment is beyond cruel, as she cums again and again.";
 			say "     You are used like a toy, but in time the rhythmic gyrations and steady pressure wear on your mind. Are you not meant to be a toy, as you were so handily defeated? Do you really deserve the pleasure of orgasm, or is it something only the opossum can grant? When you mentally cede the point and stop expecting the pleasure to come, you finally stop feeling the pain. Instead a deep self-sacrificing satisfaction blossoms inside you, accompanying your passive acceptance. When she at last relaxes her tail, your orgasm comes slow and mild, your voice barely rising above a whisper as you moan out your thanks. She stands, juice-soaked tail thrashing to clean itself off. 'Find me later, maybe you can be boatswain.' She tips her cap and swaggers back into the crowds, leaving you a shuddering mess.";
 		else: [female + neuter]
 			say "     The triumphant sailor whips off her hat and makes an exaggerated bow to your prone form. 'Come now my lady. No reason we girls can't have a bit of fun.' The buttons on her breeches snap open easily, revealing the bright pink contours of her needy cunt. Feminine juices dribble down onto the ground, misting into the hot scent of a marsupial in need. 'No, don't stand...' She steps closer, her thick pink tail curling around her other thigh, the tip teasing along those pink pussy folds, getting well coated in short order with slick juice. The opossum looms over you, grinning with gold-capped teeth, kicking your thighs apart with her hobnailed boots. The casual violence is weirdly arousing, your [cunt size desc of Player] cunt already throbbing with the sped-up beating of your heart. With a shock you realize that you have synchronized with the dominant female, mirroring her arousal! That thought is deeply disturbing, so much so that you do not notice her tail moving until the slender tip is tickling your asshole. The question dies on your lips, smothered by the moan triggered by that tail sliding inside your ass! It coils, twists, and tickles at your insides, driving your pussy to higher tiers of arousal from sheer jealousy!";
@@ -34,16 +28,25 @@ To say Opossum Sailor loses:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Name entry is "Opossum Sailor";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now Species Name entry is "Opossum"; [name of the overall species of the infection, used for children, ...]
+	add "Opossum Herm" to infections of FurryList;
+	add "Opossum Herm" to infections of NatureList;
+	add "Opossum Herm" to infections of HermList;
+	add "Opossum Herm" to infections of BarbedCockList;
+	add "Opossum Herm" to infections of SheathedCockList;
+	add "Opossum Herm" to infections of BipedalList;
+	add "Opossum Herm" to infections of TailList;
+	add "Opossum Herm" to infections of TailweaponList;
+	now Name entry is "Opossum Herm";
+	now enemy title entry is "Opossum Sailor"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The opossum snaps her hips forward and around, prehensile tail whipping toward your face![or]With a hissing growl, the opossum hops up and swings from a rope to kick you hard![or]Darting forward, she goes low and swipes upward to slash you with her claws![or]The opossum fumbles for her cutlass, and finding it missing, whups you with the leather scabbard![or]Feeling threatened, the opossum slumps onto the ground and flops around for a moment before spraying foul-smelling secretions on you![at random]";
 	now defeated entry is "[Opossum Sailor loses]";
 	now victory entry is "[Opossum Sailor wins]";
@@ -93,11 +96,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -105,7 +109,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -113,20 +117,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -147,26 +151,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -182,18 +186,18 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
 
 
 when play ends:
-	if bodyname of Player is "Opossum Sailor":
+	if BodyName of Player is "Opossum Herm":
 		if humanity of Player < 10:
 			say "     Giving in fully to your marsupial instincts, you are driven to find the one that gifted you such an adaptable lust. You find her at the docks, and no words are needed between the two of you. You wear nothing but a blue coat, your life serving her ship in sail and her body in sex. You are one among many in her crew of opossum sailors, seeking new lands and new people to explore. You walk on burning sands and ice, your tongue tastes the cum of all creatures the ship can find. In time the turning of scenery erasing all long term memories that you have, your life and humanity fading away forever. Nothing stays in your mind for long, except for your love and submissive service to the saucy swashbuckling lady you call captain.";
 		else:

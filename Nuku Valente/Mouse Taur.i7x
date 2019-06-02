@@ -14,8 +14,8 @@ Mouse Taur Encounter	"Mouse Taur Encounter"
 Mouse Taur Encounter is a situation.
 The sarea of Mouse Taur Encounter is "Red".
 When play begins:
-	add Mouse Taur Encounter to badspots of furry;
-	add Mouse Taur Encounter to badspots of girl;
+	add Mouse Taur Encounter to BadSpots of FurryList;
+	add Mouse Taur Encounter to BadSpots of FemaleList;
 
 After resolving a Mouse Taur Encounter, try looking;
 
@@ -44,9 +44,9 @@ Find Porn Store	"Find Porn Store"
 Find Porn Store is a situation. The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
 When play begins:
-	add Find Porn Store to badspots of furry;
-	add Find Porn Store to badspots of girl;
-	add Find Porn Store to badspots of hermaphrodite;
+	add Find Porn Store to BadSpots of FurryList;
+	add Find Porn Store to BadSpots of FemaleList;
+	add Find Porn Store to badspots of HermList;
 
 Instead of Resolving a Find Porn Store:
 	FindPornStore;
@@ -77,7 +77,7 @@ to FindPornStore:
 			LineBreak;
 			say "     Putting on a determined expression, you back up and get ready to ram the door. Yet just as you dash forward, it swings open a little to allow a large mouse taur to look out. Unable to slow down in time you ram into the door, smacking it against the shoulder and side of the taur, sending you both crashing to the floor right behind the doorstep. A little dizzy from the impact, you stand up and lean against a wall to recover, still blinking away stars as you hear the mouse taur get up. Shaking her head clear she glares at you. 'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell are you?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses and you start out in an angry argument.";
 			say "     [bold type]Sadly, all the noise attracts the attention of one of the more hands-on locals.[roman type]";
-			challenge "Tigress Hooker";
+			challenge "Malayan Tiger Herm";
 			if fightoutcome < 20: [player won]
 				say "     By the time you have beaten off the overeager tigress hooker and she is swaying on her feet from your last blow, the mouse taur has retrieved what looks like a sturdy quarterstaff and a squirt gun from inside the store. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away from her store. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. She listens to you for a little while, then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
 				say "[LisaIntroTalk]";
@@ -168,7 +168,7 @@ to say pornstoredesc:
 		say "     Given the feline's interest in the toys, you ask Lisa about them. 'Well, I'd set them aside for a potential customer who wanted them, but the kitty's not been back for quite some time. At this point, I suspect he got caught by some critter out there and has gone feral. Poor guy.' She scritches her chin, pondering for a moment.";
 		say "     'How does this sound? Since they're probably not coming back, I could sell them off to you and your kitty.' Artemis mrowls eagerly and nuzzles against your hip, purring loudly, clearly seeking to endear herself to you to get her desired treats. 'But since money's no good and I won't take those silly freecred, I guess you can maybe do me a favor instead to pay for it. Not that kind of favor,' she adds quickly.";
 		WaitLineBreak;
-		if hellspawn is not banned:
+		if DemonList is not banned:
 			say "     'There's been some succubi in the area who have been harassing my store. And it's too bad, too. They look like they'd be a lot of fun if they'd just be more neighborly,' she adds wistfully, licking her lips at the thought of those sexy females. 'If you'll go around and deal with some of them, warning them to not bother my store, I'd appreciate it. If you beat up four of them, let's say, I'll consider those paid for and Ms. Meowlyface here can have them.' Artemis ignores the final comment, mewling again and purring happily. You pet her head and agree to Lisa's deal.";
 			now lisaartemiscount1 is 1;
 		else:
@@ -179,7 +179,7 @@ to say pornstoredesc:
 
 instead of conversing the Lisa:
 	if lisaartemiscount1 is 5 or lisaartemiscount2 is 5:
-		say "     Having helped deal with her [if hellspawn is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them. She smiles at the news and heads towards the counter. 'I thought that might be the case. There's been a lot less trouble from them lately. It's looking like the word's getting around among them not to harass my place. I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
+		say "     Having helped deal with her [if DemonList is not banned]demoness[else][']roo[end if] problem, you tell Lisa that you've driven off several of them. She smiles at the news and heads towards the counter. 'I thought that might be the case. There's been a lot less trouble from them lately. It's looking like the word's getting around among them not to harass my place. I hate to resort to such tactics, but until they become more civil about it, I can't have them bugging me and my few customers just because it's a sex shop.'";
 		say "     As she's been talking to you, she's opened up the cabinet and taken out the toys reserved for Artemis[if companion of Player is rubber tigress], much to the feline's mewling delight. She nuzzles at your hip and winds around your legs, threatening to topple you over in her eagerness[end if]. You take the two boxes from Lisa, grumbling a little that it's a lot to do just so she can have a tasty treat. The mousetaur giggles at this and leans over the counter. 'I couldn't help noticing that your feline friend's a little lacking under the tail. Maybe your rubber kitty's wants a little more out of them than you think.' [if companion of Player is rubber tigress]As Artemis mrowls all the louder, [end if]Lisa slides a tube of rubber cement across the counter with a playful grin on her murine face. Hmm... Maybe you'd best take a closer [bold type]look[roman type] at the rubber tigress.";
 		now HP of rubber tigress is 10;
 		now lisaartemiscount1 is 0;
@@ -255,11 +255,11 @@ To mousefuck:
 				say "When you push through the curtains, ready, she looks at you a bit oddly. 'No offense,' she starts, 'but you seem to be missing parts to play with.' She brushes alongside you back towards the front. 'You come right back when you feel more... capable.'";
 				now lastfuck of Lisa is turns plus 12;
 				stop the action;
-			say "As you push through the curtain, you see she is rubbing over her soft human belly, tail curled behind her as she looks you over. She glances down at your [cock of Player] dick and cracks a smile. 'I should warn,' she says in an almost musical trill, 'that will not last for long.' She advances on you, her warm front pressing to you as her left hand reaches to encircle your length and pull at it gently. 'The... disease, it tells me to grab you up like a chocolate, but I am not a beast. You sure you want this?'";
+			say "As you push through the curtain, you see she is rubbing over her soft human belly, tail curled behind her as she looks you over. She glances down at your [Cock of Player] dick and cracks a smile. 'I should warn,' she says in an almost musical trill, 'that will not last for long.' She advances on you, her warm front pressing to you as her left hand reaches to encircle your length and pull at it gently. 'The... disease, it tells me to grab you up like a chocolate, but I am not a beast. You sure you want this?'";
 			say "     Give her what she wants?";
 			if Player consents:
 				increase mousefucked by 1;
-				say "     You nod in consent even as she gives soft tugs with her furred fingers. She smiles, leaning in to nip at your neck and shoulder slowly as she noses her way downwards, sinking down until her lower belly lays on the rug. She pushes you back far enough to sniff lightly at the [cock size desc of Player] organ you have. 'I can smell a lot better these days,' she says. 'You are a tough one.' She licks over her lips, then licks over the head of your organ, sending shivers along your body as she starts to bathe it in slow long draws of her slippery and skilled tongue. Your hips buck forward, driving against her as she snorts around it, fine whiskers tickling your [skin of Player] thighs. She draws back and nuzzles at you a moment before lifting it up out of the way and reaching for your [Ball Size Adjective of Player] balls and extending her tongue. Warm wetness flows over the sensitive bag of flesh, making your toes clench as she slowly cleans you, even lapping at the joint where sac joins torso. Her softly furred fingers squeeze at you and start pulling in slow strokes as she draws back[if Cock Count of Player > 1]. She noses gently at your extra equipment, then begins to rub her face along it, stimulating all [Cock Count of Player] of your cocks in soft strokes of her furry face and agile hands[end if].";
+				say "     You nod in consent even as she gives soft tugs with her furred fingers. She smiles, leaning in to nip at your neck and shoulder slowly as she noses her way downwards, sinking down until her lower belly lays on the rug. She pushes you back far enough to sniff lightly at the [cock size desc of Player] organ you have. 'I can smell a lot better these days,' she says. 'You are a tough one.' She licks over her lips, then licks over the head of your organ, sending shivers along your body as she starts to bathe it in slow long draws of her slippery and skilled tongue. Your hips buck forward, driving against her as she snorts around it, fine whiskers tickling your [Skin of Player] thighs. She draws back and nuzzles at you a moment before lifting it up out of the way and reaching for your [Ball Size Adjective of Player] balls and extending her tongue. Warm wetness flows over the sensitive bag of flesh, making your toes clench as she slowly cleans you, even lapping at the joint where sac joins torso. Her softly furred fingers squeeze at you and start pulling in slow strokes as she draws back[if Cock Count of Player > 1]. She noses gently at your extra equipment, then begins to rub her face along it, stimulating all [Cock Count of Player] of your cocks in soft strokes of her furry face and agile hands[end if].";
 				say "     You feel your body tense with anticipation and she looks up at you with a grin. 'You want me to swallow?' she asks.";
 				say "     Let her swallow?";
 				if Player consents:
@@ -285,7 +285,7 @@ To mousefuck:
 				say "     That ass looks fine, or is that the nanites talking? Who cares! Go for it?";
 				if Player consents:
 					increase mousefucked by 1;
-					say "     Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of Player] [cock of Player] cock deep inside her wet cunt. [if Cock Length of Player > 12]Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion[else]Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury[end if][if Cock Count of Player > 1]. Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you[end if].";
+					say "     Giving in to the urge, you close the distance with the mouse swiftly and seize her by the back hips. She looks over her shoulder at you and gives a leer of a smile as her tail flips up over her back in consent. You are on her in moments, driving your [cock size desc of Player] [Cock of Player] cock deep inside her wet cunt. [if Cock Length of Player > 12]Your cock stretches her eager tunnel to a snug fit as you drive against her, drawing out the most pleased of noises from her with every motion[else]Her large cunt proves so wet and hot around your eager pole as you begin to rut against her in a fury[end if][if Cock Count of Player > 1]. Your other shaft finds a home in her tight pucker. She goes red in the ears as it nudges at her, then it works into her trembling form. As it pops fully into her, she coos in delight, rocking back against you[end if].";
 					say "     Her tauric body rocks in powerful motions against your own, taking you further and deeper as she grows warm under you. Your loins burn with a fiery pleasure as you can feel your [Ball Size Adjective of Player] sac contract. You fill her body with a few thick sprays of your virility and she squeals in a shuddering hiss that seems to fill the room. As you both start to relax, your body resting against her, she slowly turns about to half-face you. 'And I thought you were going to say no,' she taunts lightly.";
 					if "Male Preferred" is listed in feats of Player:
 						say "     Your body humms loudly as your innate resistance throws off the sexual change attempting to occur inside your manly body.";
@@ -303,7 +303,7 @@ To mousefuck:
 			if Player is female: [ Have player eat her out ]
 				say "     'Well aren't you just a cutie?' the mouse exclaims, seeing you sway slowly into the room. The mouse-taur is watching you from a big pile of pillows in one corner, seeing you notice her she smiles widely. 'Well? Come on over, I don't bite unless you ask nicely,' she says, beckoning you over. An urge, a need, compels you to disrobe for her, and in moments every last stitch of clothing is on the floor.";
 				if Player is male:
-					say "     The mouse wrinkles her nose a little at the sight of your [cock of Player] member[smn], but spying the honeypot below, beckons you closer with an outstretched arm.";
+					say "     The mouse wrinkles her nose a little at the sight of your [Cock of Player] member[smn], but spying the honeypot below, beckons you closer with an outstretched arm.";
 				else:
 					say "     'Perfect,' the mouse utters, one paw raised and reaching for your own hand, seeming to draw your own up, meeting it, taking it.";
 				say "     Drawing you closer, the mouse leans forward, her stiff little whiskers tickling your belly as she begins to nuzzle and lick at you. Looking down into her eyes, you are caught by the look of adoration she gives you. As you open your mouth to compliment her, she cuts you short. 'Shhh, no words, little one. Let me make this your day,' she whispers as she goes back to nuzzling, slowly descending down, past your own waist to the folds she had been admiring not a moment earlier.";

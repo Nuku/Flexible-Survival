@@ -153,7 +153,7 @@ to say fangsex:
 		now title entry is "Mount Fang";
 		now sortorder entry is 3;
 		now description entry is "Mount the big wolf to show him who's alpha.";
-		if bodyname of Player is "Skunkbeast Lord" and player is pure:
+		if BodyName of Player is "Skunkbeast Lord" and player is pure:
 			choose a blank row in table of fucking options;
 			now title entry is "SBL fuck";
 			now sortorder entry is 4;
@@ -580,7 +580,7 @@ to say fangalphatrio:
 
 Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from the game]
 
-instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and player is not neuter:	[ignored for 3+ days]
+instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and FemaleList is banned) and player is not neuter:	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
 	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
@@ -681,7 +681,7 @@ to say fangalphaoral:
 	NPCSexAftermath Player receives "OralCock" from Fang;
 
 to say fangalphafucked:
-	if bodyname of Player is "Skunkbeast Lord" and the player is pure:
+	if BodyName of Player is "Skunkbeast Lord" and the player is pure:
 		say "[fangalphafuckedSBL]";
 	else:
 		if Player is impreg_able and hunger of Fang is 0:
@@ -738,7 +738,7 @@ to say fangwscontent:
 Chapter 4 - Alpha Fang and Candy
 
 an everyturn rule:
-	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 0 and coonstatus is 2:
+	if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 0 and coonstatus is 2:
 		now lust of Candy is 1;
 		now lastCandyfucked is turns;
 		now lastfuck of Fang is turns;
@@ -753,7 +753,7 @@ an everyturn rule:
 			say "     Sliding your gear aside for the moment, you shift in your seat to better view the upcoming show. You watch as Candy chats briefly with the large wolf before sliding down his panties and moving onto all fours. With a flick of his tail, he flashes his bare ass at you, raising his skirt. Fang strides around the coon, sniffing at him with increasing interest, then licks under his tail. He seems to find the coon's cotton candy flavor interesting and lashes his tongue over the proffered tailhole. The coon releases some girlish moans as the long, broad tongue laps at his asshole and even slips into it a little.";
 			say "     Once he's gotten his playmate ready, Fang moves atop him, nudging his throbbing wolf cock against the coon's back door before slowly sliding in into him. Candy releases a sensual moan of delight and pushes back, easily taking the wolf's big girth into his practiced hole. His bubble bottom bounces with each thrust of his feral lover.";
 			if Player is male:
-				say "     Enjoying the impromptu show, you take your cock in hand and slowly stroke yourself, sliding over your [cock of Player] dick. As you watch the pair continue to go at it, precum dribbles down your length, allowing you to get nice and slick[if Player is female]. Your free hand moves down to your pussy, slipping a few fingers into it to pleasure your female sex as well[else]. Your free hand moves down to your balls, rubbing over them for further pleasure[end if]. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the powerful wolf banging away quickly at the girly coon's ass.";
+				say "     Enjoying the impromptu show, you take your cock in hand and slowly stroke yourself, sliding over your [Cock of Player] dick. As you watch the pair continue to go at it, precum dribbles down your length, allowing you to get nice and slick[if Player is female]. Your free hand moves down to your pussy, slipping a few fingers into it to pleasure your female sex as well[else]. Your free hand moves down to your balls, rubbing over them for further pleasure[end if]. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the powerful wolf banging away quickly at the girly coon's ass.";
 			else:
 				say "     Enjoying the impromptu show, you slide a hand between your legs and slide them across your pussy, teasing yourself. As your fingers get damp from your juices, you push [if Cunt Tightness of Player > 3]a trio of fingers[else if Cunt Tightness of Player > 1]a pair of fingers[else]a finger[end if] into your needy hole. Your other hand teases at your clit and sensitive folds while you fingerfuck yourself while watching the pair. With such a sexy show, you start to moan softly in pleasure, getting quite excited rather quickly. Your pace settles to match that of the thick wolf cock sinking into the girly coon's ass.";
 			WaitLineBreak;
@@ -766,7 +766,7 @@ an everyturn rule:
 		else:
 			say "     Grabbing your pack, you toss the rest of the stuff back into it and head into the bunker to give the two some privacy. You putter around in there for a while, Candy eventually returning. His fur is rather scruffy and his dress has got a tear in it. He's got a wild look in his eyes that you haven't seen since his time at the hospital and snarls a little[if the number of bunkered people > 3]. The others seem a little concerned at this and you[else]. You[end if] get up slowly, concerned the girly coon may have regressed further and shift into a fighting stance.";
 			say "     'Aieee! My dress!' Candy shrieks, spotting the torn shoulder. He immediately slides it off, pausing only a moment to tease his nipples and straighten his fur. He runs over to grab his little sewing kit and gets to work repairing his outfit, clearly making a show of grumbling about [']such brutish behavior['] and the like between commenting about how the wolf was [']at least a good fuck['] and [']quite the beast in the sack[']. As this goes on, Candy recounts his romp in increasingly graphic detail and you slip back into the library.";
-	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
+	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( Libido of Fang is 7 or Libido of Fang is 6 or ( lust of Fang >= 2 and FemaleList is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		now lastfuck of Fang is turns;
 		project the Figure of Fang_face_icon;
@@ -808,7 +808,7 @@ when play ends:
 			if Sandra is in the bunker:
 				say "     Sandra, thankful to the big wolf for helping to keep everyone safe in the bunker, is always very kind to the big wolf when she comes to visit. Often, during visits or get-togethers at your place, you'll find that the bunny's quietly slipped away. Always knowing where you'll find her, you'll check and see her safely beneath the big wolf, getting his large, red cock stuffed into her cunt. The bunny's tummy grows large after one of these visits and she eventually gives birth to a pair of wolf cubs with bunny ears and a tail. These quiet, taciturn boys are never lacking in companionship, always having numerous lovers drawn in by the strong bodies and brooding nature, eager to bend over for them.";
 	else if HP of Fang is 3 or HP of Fang is 4:				[ alpha Fang ]
-		if bodyname of Player is "Feral Wolf":
+		if BodyName of Player is "Feral Wolf":
 			[ see Feral Wolf file for this ending ]
 			now tempnum is 0;
 		else:
@@ -819,7 +819,7 @@ when play ends:
 					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own.";
 			else:
 				say "     When the military comes, you worry about how they'll react to Fang. Secretly your lupine alpha, you keep that fact hidden when speaking to the military. His bestial form distresses the soldiers, but you do your best to appease them. As the squad leader tries to move you out of the way, telling you the wolf can't come, Fang pads confidently in front of you growls for him to let you go. Clearing his throat, he starts talking with some difficulty. In anticipation of this moment, it's clear your clever master has spent some time among the library stacks reading in preparation. With his clearly rational arguments (albeit cribbed from the philosophy section), he's able to articulate clearly his points and that he WILL be going with you. While two soldiers remain with guns trained on him, the rest of the squad moves on to inspect and search the rest of the building. You hug your wonderful alpha's head before going along to show them the rest of the place. He gives your cheek a lick and ignores the soldiers guarding him as inconsequential, having impressed their alpha, and strides back to his favorite resting spot to await departure.";
-				if bodyname of Player is "Felinoid" and felinoid companion is tamed:
+				if BodyName of Player is "Felinoid" and felinoid companion is tamed:
 					[ see Felinoid Companion file for this ending ]
 					now tempnum is 0;
 				else if Felinoid companion is tamed and player is female:
@@ -830,7 +830,7 @@ when play ends:
 					else if lust of Fang < ( level of Felinoid companion - 6 ):	[felinoid victor]
 						say "     After your release from the military, you settle into your new life with the two of them coming along. They snap and growl at one another, but things remain civil enough at first. In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so. You accept your role readily, having become the wolf's fucktoy. But one day, Klauz takes exception to this and the two have a great fight that devastates your living room. In the end, your felinoid companion is victorious and forces the big wolf to submit to him as well.";
 						say "     Klauz celebrates his victory by mounting you while the wolf is left to watch, breeding you with a powerful roar. Once finished with you, he forces himself onto the defeated wolf, fucking him as well. ";
-						if hermaphrodite is banned:
+						if HermList is banned:
 							say "As you watch, Fang is fucked repeatedly until he's made submissive to the stronger cat. Klauz trains the wolf well, always making sure the wolf knows his place beneath him. Fang may still be your alpha wolf, but Klauz owns you both now.";
 						else:
 							say "As you watch, Fang gains a wet, bitch pussy to go along with his cock and balls and is then bred by the victorious Klauz. The felinoid trains the wolf well, breeding cubs in both your bellies. Fang may still be your alpha wolf, but Klauz owns you both now.";

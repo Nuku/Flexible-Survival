@@ -174,29 +174,35 @@ instead of conversing the Nermine:
 	now sortorder entry is 7;
 	now description entry is "Ask Nermine about the counter with rare treasures she has laid out";
 	[]
-	if Libido of Brennan is 1:
+	if NewTypeInfectionActive is true:
 		choose a blank row in table of fucking options;
-		now title entry is "Helping Brennan";
+		now title entry is "Rare Infections";
 		now sortorder entry is 8;
-		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
+		now description entry is "Ask Nermine if she can help you gain some unique and exceptional infections";
 	[]
 	if (Libido of Danny is 4 or Libido of Danny is 5) and NermineBukkakeTurn - turns > 8:
 		choose a blank row in table of fucking options;
 		now title entry is "Starting her ritual to transform the mall rat";
-		now sortorder entry is 9;
+		now sortorder entry is 18;
 		now description entry is "Give your jackal bitch the go-ahead for her spell";
 	[]
 	if (Libido of Danny > 5 and Libido of Danny < 14):
 		choose a blank row in table of fucking options;
 		now title entry is "Let her turn Cole into a girl again";
-		now sortorder entry is 10;
+		now sortorder entry is 19;
 		now description entry is "Time for Coura to make another appearance";
 	[]
 	if (Libido of Danny > 15):
 		choose a blank row in table of fucking options;
 		now title entry is "Let her call Coura from the back room";
-		now sortorder entry is 11;
+		now sortorder entry is 20;
 		now description entry is "Time for Coura to make another appearance";
+	[]
+	if Libido of Brennan is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Helping Brennan";
+		now sortorder entry is 30;
+		now description entry is "Ask Nermine if she has some way of helping Brennan with his little problem";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -214,23 +220,25 @@ instead of conversing the Nermine:
 				now sextablerun is 1;
 				if (nam is "Her and her store"):
 					say "[NermineTalk1]";
-				if (nam is "Ask her help for becoming a jackal"):
+				else if (nam is "Ask her help for becoming a jackal"):
 					NermineRequestHelp;
-				if (nam is "The wereraptor curse"):
+				else if (nam is "The wereraptor curse"):
 					say "[NermineTalk2]";
-				if (nam is "Hayato"):
+				else if (nam is "Hayato"):
 					say "[NermineTalk3]";
-				if (nam is "The nightmare"):
+				else if (nam is "The nightmare"):
 					say "[NermineTalk4]";
-				if (nam is "Brutus"):
+				else if (nam is "Brutus"):
 					say "[NermineTalk5]";
-				if (nam is "The rare items counter"):
+				else if (nam is "The rare items counter"):
 					say "[RareItemQuestTalk]";
-				if (nam is "Helping Brennan"):
+				else if (nam is "Rare Infections"):
+					say "[RareInfectionMenu]";
+				else if (nam is "Helping Brennan"):
 					say "[NermineBrennanTalk]";
-				if (nam is "Starting her ritual to transform the mall rat"):
+				else if (nam is "Starting her ritual to transform the mall rat"):
 					say "[NermineRatRitual]";
-				if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
+				else if (nam is "Let her turn Cole into a girl again" or nam is "Let her call Coura from the back room"):
 					say "[NermineCouraSpell]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -245,7 +253,7 @@ to say NermineTalk1:
 	if debugactive is 1:
 		say "     DEBUG-> NermineTalk [NermineTalk] <- DEBUG[line break]";
 	if NermineTalk is 1:
-		say "     The jackaless gives you a friendly... if somewhat calculating... smile and says '[one of]Does the visitor need help finding what is of their desire? Nermine can help!'[or]The visitor should not hesitate to ask Nermine any questions [SubjectPro of Player] might have!'[or]Nermine's visitor says the shop was not here before? She must regrettably disagree - her store has been here before the mall was, and now is again. In the time in between? It may have been somewhere else...[or]Does not the candlelight seem rather romantic and mysterious in Nermine's visitor's opinion too?'[or]Would the dear visitor like to try one of the new vanishing drinks? Nermine will give a free sample as soon as she can find where they went...'[or]Nermine has heard there is a nice museum in this town now. Maybe her visitor should check it out and find something interesting there to take.'[or]Nermine keeps meaning to go see what happened at the Egypt exhibit. But then, it would not do to leave the store unattended for long...'[or]Nermine does enjoy the more... flexible state of reality as it is now hereabouts. It reminds her of the old times, and she gets much fewer odd looks from the customers now...'[or]Did the dear visitor know that jackals were considered to be very mystical animals and sacred to Anubis?'[or][if Player is male]What a very fine [cockname of Player] cock Nermine's visitor has there[else]'Nermine thinks the dear visitor would look quite fetching with a [cockname of Player] cock[end if]!' Nermine says with a smile, making you blush.[or]Nermine would like to compliment her visitor's [skin of Player] skin, but she very much prefers her own soft fur. It is a lovely shade of black, would the guest not agree?'[at random]";
+		say "     The jackaless gives you a friendly... if somewhat calculating... smile and says '[one of]Does the visitor need help finding what is of their desire? Nermine can help!'[or]The visitor should not hesitate to ask Nermine any questions [SubjectPro of Player] might have!'[or]Nermine's visitor says the shop was not here before? She must regrettably disagree - her store has been here before the mall was, and now is again. In the time in between? It may have been somewhere else...[or]Does not the candlelight seem rather romantic and mysterious in Nermine's visitor's opinion too?'[or]Would the dear visitor like to try one of the new vanishing drinks? Nermine will give a free sample as soon as she can find where they went...'[or]Nermine has heard there is a nice museum in this town now. Maybe her visitor should check it out and find something interesting there to take.'[or]Nermine keeps meaning to go see what happened at the Egypt exhibit. But then, it would not do to leave the store unattended for long...'[or]Nermine does enjoy the more... flexible state of reality as it is now hereabouts. It reminds her of the old times, and she gets much fewer odd looks from the customers now...'[or]Did the dear visitor know that jackals were considered to be very mystical animals and sacred to Anubis?'[or][if Player is male]What a very fine [CockName of Player] cock Nermine's visitor has there[else]'Nermine thinks the dear visitor would look quite fetching with a [CockName of Player] cock[end if]!' Nermine says with a smile, making you blush.[or]Nermine would like to compliment her visitor's [Skin of Player] skin, but she very much prefers her own soft fur. It is a lovely shade of black, would the guest not agree?'[at random]";
 	else if NermineTalk is 2:
 		say "     Is the visitor enjoying Nermine's special brand of help?' the jackal-woman asks you with a sultry smile. 'Nermine is certainly enjoying having helper as nice and cute as [ObjectPro of Player]...' Nermine says as she licks her lips playfully. 'Of course if the eager helper is not happy Nermine can fix things for [ObjectPro of Player] to the way they were before. But that would be such a shame...' the jackal-woman lets her voice trail off as she gives you a lonely look. Do you ask her to undo the 'help' she has given you?'";
 		if Player consents:
@@ -467,6 +475,63 @@ to say NermineBrennanTalk:
 	increase carried of cult flyer by 1;
 	now Libido of Brennan is 2;
 
+to say RareInfectionMenu:
+	say "     As you ask Nermine about any 'interesting' physical shapes she might be able to help you achieve, the jackaless smiles mysteriously and taps the side of her delicate muzzle. 'Ah, the dear customer has a taste for the exceptional? [SubjectProCap of Player] is wise to come to Nermine with their desires. The humble jackaless does indeed have some rare and precious artifacts that are bound to allow for special transformations!' She takes you for a little tour through her over-filled store and points out this or that ancient item, some of which wake your interest while others make you cringe internally as you imagine what you could end up as. 'So, what shall it be, dear customer? Oh, and please be advised that Nermine has much more to offer, she just needs some time to locate the items in storage...'";
+	LineBreak;
+	say "Which infection are you interested in?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if FemaleList is not banned:
+		choose a blank row in table of fucking options;
+		now title entry is "Female Spidertaur";
+		now sortorder entry is 1;
+		now description entry is "Ask to become a half-human, half-arachnid mythical beast";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if Player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Female Spidertaur"):
+					say "[FemaleSpidertaurTransform]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     As you say that nothing she showed you at the moment appeals to you, Nermine's muzzle pulls into a frown. 'How regrettable,' she sighs.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+
+to say FemaleSpidertaurTransform:
+	say "     A smile spreadsover Nermine's muzzle as she saunters over to one of the high shelves, stretching herself to pull a wooden spindle from the topmost board. It looks fairly ancient, with black a thick bundle of black flax thread wrapped around it. Both ends of the spindle look sharp enough to pierce skin. 'This belonged to Arachne herself,' Nermine explains in a proud tone, showing the ancient artifact to you demonstratively. 'A memento of that cautionary tale from Colophon. It should hold enough of an imprint to allow the spreading machine magic here to pick up on it. Nermine can't help but wonder what Athena will think of the fact that someone is actually seeking out her curse because they enjoy it.' An almost musical chuckle escapes the jackaless's throat and she holds the spindle close to you - only to pull it back when you reach for it. 'There still is the little matter of Nermine's payment to consider,' she says with a somewhat predatory smile. 'Given the rarity of this unique artifact, Nermine thinks that a package of pre-packed food should serve well as payment for making use of it.'";
+	if carried of food > 0:
+		say "     [bold type]Do you pay her the price?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yup, you want to become more like a female spidertaur right away!";
+		say "     ([link]N[as]n[end link]) - No, not right now.";
+		if Player consents:
+			LineBreak;
+			say "     Digging the food out of your pack and handing it over to Nermine, you watch her stash it away behind the counter. Then the jackaless comes up to you and holds out the spindle, allowing you to touch it. Stroking over the rough fibers of black cloth, you let your finger wander to the sharp end, pricking your fingertip on it.";
+			infect "Spidertaur Female";
+			LineBreak;
+			say "[bold type]You lose 1 food![roman type][line break]";
+			decrease carried of food by 1;
+		else:
+			say "     Shaking your head, you turn down the sorceress for now. 'A pity. Nermine will keep the item at hand until her dear customer changes their mind,' she tells you, then goes to put the spindle away again.";
+	else:
+		say "     Since you don't have any food on you right now, you can't help but admit this fact to the sorceress. 'A pity. Nermine will keep the item at hand until her customer returns with her payment then,' she tells you, then goes to put the spindle away again.";
+
 the fuckscene of Nermine is "[SexWithNermine]".
 
 testnermine is an action applying to nothing.
@@ -499,7 +564,7 @@ to say SexWithNermine:
 			say "     'Ah yes! Nermine's new friend is ready to play?' the happy jackal-woman says with a canine grin on her black muzzle. 'And such a handsome looking jackal too,' she says as she reaches out and strokes the tip of her claw along the side of your own jackal-like muzzle, idly tracing the swirls of gold the ankh left in your fur. Her soft touch makes your cock harden even as you nod, and Nermine licks her lips as she looks down at your stiff rod, one of her hands tugging at the neck of her t-shirt slightly as if she was hot. 'Mmm, it has been so long since Nermine has had a proper partner to play with, Nermine is so looking forward to this,' she says teasingly as she leans forward and kisses the tip of your muzzle teasingly. 'Maybe the back room would be a better place for this, so there will not be any interruptions to an enjoyable time,' the jackal-woman says teasingly, as she steps back from the counter, running her hands along her sides teasingly before pulling aside the dark curtain behind her and stepping through.";
 			say "     You can see her glance teasingly over her shoulder at you as her tail wags invitingly behind her, giving you a teasing glimpse of her legs underneath her soft skirt as she vanishes into the darkness beyond. You grin as you move around the counter, to follow, your cock stiff and eager to play with the constantly teasing jackal. Pushing aside the curtains you step forward to find yourself in the back room of the shop. Looking around, you find yourself in a rather large back room, boxes piled high along one side, your attention however, is drawn immediately to the other side of the room, where a soft mattress lies on the floor piled high with blankets. Next to the mattress is a small writing desk with a laptop on it, and a large comfy looking chair positioned next to it. However your attention is immediately drawn to where Nermine is lying teasingly on the bed, clothed in only her soft black fur as she grins at you.";
 			WaitLineBreak;
-			say "     Feeling an answering grin stretching across your own canine muzzle, you waste no time in discarding your pack as you stalk over to the bed yourself, your cock rock hard as she licks the tip of her claw as you approach, before tracing her claw down the edge of her full breasts. Easing yourself down onto the bed beside her, you can feel yourself growing even more aroused as she reaches out and pulls you closer to her, rubbing her own dark fur up against your own. 'Let's play,' she whispers in your ear, before covering your jackal muzzle with her own, her eyes closed as she pulls you tight up against her body. You moan into her mouth as you can feel her damp pussy rubbing up against your [cock of Player] cock, and you can feel her grin against your mouth as she begins to position herself so you can enter her.";
+			say "     Feeling an answering grin stretching across your own canine muzzle, you waste no time in discarding your pack as you stalk over to the bed yourself, your cock rock hard as she licks the tip of her claw as you approach, before tracing her claw down the edge of her full breasts. Easing yourself down onto the bed beside her, you can feel yourself growing even more aroused as she reaches out and pulls you closer to her, rubbing her own dark fur up against your own. 'Let's play,' she whispers in your ear, before covering your jackal muzzle with her own, her eyes closed as she pulls you tight up against her body. You moan into her mouth as you can feel her damp pussy rubbing up against your [Cock of Player] cock, and you can feel her grin against your mouth as she begins to position herself so you can enter her.";
 			say "     You groan into her mouth as your tongues dance together eagerly, as you feel your cock sink into her body at last, her warm heat engulfing your shaft, even as her hands roam over your body. Letting your own hands wander, you begin to thrust into her eager passage, the kiss breaking as she begins to pant and yip needily, your own canine voice soon mingling with hers as your pleasure builds quickly. Soon you are kissing and groping each other eagerly as you roll around on the mattress, enjoying each other sexually in an act somewhere between making love, and rutting like animals. Eventually your cock explodes in pleasure as you spill your load of seed deep into her body, while she clutches you close and groans in her own orgasm. The two of you clutch each other tight, still locked together in passion even as your orgasm begins to fade, Nermine kissing you deeply several more times, eventually though she pulls herself away, leaving you to groan as you flop back on the soft mattress completely spent.";
 			WaitLineBreak;
 			say "     As she pulls herself up and begins to slip her clothes on, she looks back at you teasingly to make sure you are watching, sauntering sexily over to the curtain with her tail lifting her skirt up teasingly. Pausing at the curtain, she looks back at you for a minute with a smile on her face. 'Nermine thanks you for the most amazing time, It is so rare for her to find a real partner these days, all of them are so submissive they are only fit for little pet in bed not partner. You though,' she says with a wink. 'You are best sex Nermine has had in long time, Nermine thinks we will have to do this again soon yes?' the jackal-woman says with a teasing lick of her lips, before she vanishes through the curtain, leaving you lying there on the bed with a large smile on your muzzle, already anticipating the next time...";
@@ -687,7 +752,7 @@ to NermineRequestHelp:
 		say "     ([link]N[as]n[end link]) - Eh - better not. There have to be other ways...";
 		if Player consents:
 			LineBreak;
-			if guy is banned or furry is banned or girl is banned:
+			if MaleList is banned or FurryList is banned or FemaleList is banned:
 				say "     'Oh, Nermine is seeing now that she looks closer at her visitor that [SubjectPro of Player] will not be able to help her. She is feeling sad to see someone restrict their fun so. Being not so picky would be much more interesting, she thinks.' Saying this, Nermine shakes her jackal head sadly.";
 				say "[bold type](The helping quest requires guy, girl and furry content to be available.)[roman type]";
 			else:
@@ -1133,23 +1198,23 @@ To say jackaltotemmagic:
 	else if JackalBoyTF is 0:
 		say "     Rubbing the small totem you wonder just what effects Nermine expects it to have. You are initially disappointed when all that seems to happen is that the totem grows a bit warmer in your hands. You sigh and are about to put the tiny black statue away when suddenly your ass start to tingle and feel strange while the totem grows ever warmer under your touch. Glancing behind, you are surprised to see your ass seeming to stretch and change, your rear flattening out slightly as a small black jackal-like tail forms behind you. You feel a strange almost pleasant stretching sensation as your new tail grows until its tip is hanging just below your knees.";
 		say "     Staring at your new appendage you find yourself experimentally moving it from side to side a few times, and watch as it responds with surprising dexterity. Taking a few steps you are surprised to find your new tail helping your balance greatly. To yourself, you have to admit, the nice jackal tail does look rather hot on you. A strange sensation in your hand makes you look down, where you see the little token turn into fine grains of black sand and slip through your fingers, then blow away on a sudden gust of wind coming out of nowhere. Huh. Guess its purpose has been fulfilled, so you won't need it anymore...";
-		now tailname of Player is "Jackalboy";
+		now TailName of Player is "Jackalboy";
 		now tail of Player is "You have a sleek black-furred jackal's tail attached to your rear. It seems to sway happily over your tight sexy ass with every step you take.";
 		say "[bold type]Your dexterity has increased by 3![roman type][line break]";
 		increase dexterity of Player by 3;
 		now JackalBoyTF is 1;
 	else if JackalBoyTF is 1:
 		say "     Taking hold of this new jackal figurine, you nervously rub it between your hands several times, wondering what will happen this time. The totem seems to grow warm before crumbling into dust between your fingers, making your hands start to tingle strangely as the dust sticks to them, covering them in blackness. Looking down at your skin, you blink as the night-black color starts to spread, covering your hands in shiny blackness. You quickly realize as the blackness surges up your arms and starts to cover your body in leaps and bounds that it is actually shiny black fur, sleek dark jackal fur just like Nermine's. For some reason, the idea of having soft and sexy black fur just like the nice and wonderful shopkeeper of that strange shop seems to make you feel happier and more content, and also perhaps just a bit horny as well. Somehow you are sure your nice new pelt of soft fur will appeal to more than just the shopkeeper as well, and find yourself looking forward to showing off your new beautiful pelt.";
-		now skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
-		now skinname of Player is "Jackalboy";
+		now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+		now SkinName of Player is "Jackalboy";
 		say "[bold type]Your charisma has increased by 4![roman type][line break]";
 		increase charisma of Player by 4;
 		now JackalBoyTF is 2;
 	else if JackalBoyTF is 2:
 		say "     Taking out the shiny black jackal statue, you get the impression for a second that this particular jackal totem is grinning at you, but when you take a closer look you see that it looks just like the other statues. You rub the little figurine eagerly, looking forward to whatever powerful change this one will bring out in you. There it is again! This time, you are sure that you've seen the totem grin and wink at you, so you raise it to right in front of your eyes once more. As you focus on the black jackal intently, he wags his ears at you and grins, then suddenly crumbles into dust that a gust of what seems to be warm desert air blows straight into your face. You reach your hands up to feel your face, even as it seems to crack and shift, your sight clouding over as your eyes seem to change. When you can see again a second later, the lower half of your face seems to shift, pulling forward into a black-furred muzzle like a jackal would have.";
 		say "     While you are feeling the sides of this new jackal-like face, even as the bones settle and it finishes forming, new scents explode through your brain as your nose finishes shifting into place atop your narrow canine muzzle. You blink several times as you focus on something else than your own face for a second, finding that you see the world through new sharper eyes, and all sounds around you intensify as your new black canine ears finish shifting to stand straight up on your changed head. A feral grin stretches your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal-woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little jackal you just know you need to be.";
-		now facename of Player is "Jackalboy";
-		now face of Player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
+		now FaceName of Player is "Jackalboy";
+		now Face of Player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
 		say "[bold type]Your perception has increased by 3![roman type][line break]";
 		increase perception of Player by 3;
 		now JackalBoyTF is 3;
@@ -1158,11 +1223,11 @@ To say jackaltotemmagic:
 		say "     Looking down over yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter. Your new body is obviously more built for grace and speed than combat or hard labor. The sight of your new form makes you smile happily - it is just what you needed for serving your mistress, with its silky soft skin and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal-woman. Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackal-toy she wanted you to be.";
 		LineBreak;
 		say "     Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head. Maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.";
-		now bodyname of Player is "Jackalboy";
-		now body of Player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
+		now BodyName of Player is "Jackalboy";
+		now Body of Player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
 		attributeinfect "Jackalboy";
-		now cockname of Player is "Jackalboy";
-		now cock of Player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
+		now CockName of Player is "Jackalboy";
+		now Cock of Player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
 		say "[bold type]Your strength has decreased by 2![roman type][line break]";
 		decrease strength of Player by 2;
 		decrease capacity of Player by 10;
@@ -1175,29 +1240,29 @@ An everyturn rule:
 		increase score by 0;  [do nothing statement]
 	else:
 		if JackalBoyTF >= 1:
-			if tailname of Player is not "Jackalboy":
+			if TailName of Player is not "Jackalboy":
 				say "     Your ass tingles as it shifts and changes while you watch, the power of that strange totem you used obviously still strongly affecting your body. It doesn't take long for your jackal-like tail to reform. Its sleek dark presence behind you proves that its form is stronger then your more recent infection.";
-				now tailname of Player is "Jackalboy";
+				now TailName of Player is "Jackalboy";
 				now tail of Player is "You have a sleek black-furred jackal's tail attached to your rear. It seems to sway happily over your tight sexy ass with every step you take.";
 		if JackalBoyTF >= 2:
-			if skinname of Player is not "Jackalboy":
+			if SkinName of Player is not "Jackalboy":
 				say "     Your skin seems to writhe and twitch, as if something were fighting underneath the surface. Soon you can see patches of silky soft black jackal fur once more pushing their way out of your body. The fur continues to spread in a pleasurable wave as the other infection is conquered, until finally your entire body is covered in its dark softness once again.";
-				now skinname of Player is "Jackalboy";
-				now skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
+				now SkinName of Player is "Jackalboy";
+				now Skin of Player is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]";
 		if JackalBoyTF >= 3:
-			if facename of Player is not "Jackalboy":
+			if FaceName of Player is not "Jackalboy":
 				say "     Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
-				now facename of Player is "Jackalboy";
-				now face of Player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
+				now FaceName of Player is "Jackalboy";
+				now Face of Player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
 		if JackalBoyTF >= 4:
-			if bodyname of Player is not "Jackalboy":
+			if BodyName of Player is not "Jackalboy":
 				say "     Your body seems to twist and warp, making you convulse as its fights off the intrusive new infection. Soon you can see your form slimming back down into the sleek soft lines of the jackalboy your mistress likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
-				now bodyname of Player is "Jackalboy";
-				now body of Player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
+				now BodyName of Player is "Jackalboy";
+				now Body of Player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
 				attributeinfect "Jackalboy";
-			if cockname of Player is not "Jackalboy":
-				now cockname of Player is "Jackalboy";
-				now cock of Player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
+			if CockName of Player is not "Jackalboy":
+				now CockName of Player is "Jackalboy";
+				now Cock of Player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
 
 Section 5 Nermine quests
 

@@ -10,9 +10,9 @@ The sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
 
 when play begins:
-	add One flew into the Cuckoos Nest to badspots of humorous;
-	add One flew into the Cuckoos Nest to badspots of guy;
-	add One flew into the Cuckoos Nest to badspots of girl;
+	add One flew into the Cuckoos Nest to badspots of HumorousList;
+	add One flew into the Cuckoos Nest to BadSpots of MaleList;
+	add One flew into the Cuckoos Nest to BadSpots of FemaleList;
 
 Instead of resolving a One flew into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -47,9 +47,9 @@ The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
 The sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
-	add Two crash into the Cuckoos Nest to badspots of humorous;
-	add Two crash into the Cuckoos Nest to badspots of guy;
-	add Two crash into the Cuckoos Nest to badspots of girl;
+	add Two crash into the Cuckoos Nest to badspots of HumorousList;
+	add Two crash into the Cuckoos Nest to BadSpots of MaleList;
+	add Two crash into the Cuckoos Nest to BadSpots of FemaleList;
 
 Instead of resolving a Two crash into the Cuckoos Nest:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -85,7 +85,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		say "     'I can't believe how hot it was watching you get blown. I totally get why you enjoy watching from that spot. It's a great feeling,' Izzy gushes at Gray and the two share a happy smile. Then the male bird asks in an impish tone, 'Better than getting stuffed by that draft horse?' Emphatically shaking her head left and right, Izzy replies, 'Against THAT stud, even graduating college with a 4.0 would be inferior. You saw how big he was!' Their banter is interrupted by someone clearing his throat right outside the tent entrance. Looking over there, you see a large stag with an impressive tent-pole in his pants.";
 		say "     'Soooo... are we gonna do anything, or is this lovey dovey time?' the stag asks with a grin, adjusting his bulge suggestively. Gray whispers in Izzy's ear and after giving him a kiss, she says to the buck, 'It seems that the fellatio provided my boy with a new idea of fun - you get to ram my pussy, while Gray gets round two on some oral action.' All three smile and start to get into the right positions. Meanwhile, you drop the towel and quietly leave, happy to have inspired new ways for the couple to have fun together.";
 		WaitLineBreak;
-		say "     After stepping out of the entrance of the tent, you start to walk back the way you came. The campfire tenders are eyeing you with great interest. [if bodyname of Player is listed in infections of Caninelist]The squirrel says boldly, 'Ha! I knew it was gonna be some doggy this time.' The fox rolls his eyes and says, 'We didn't say if it would be for the man or woman, but what the hell I'll throw you a bone.'[else if bodyname of Player is listed in infections of Equinelist]The fox says matter-of-factly, 'Told you it be a horse.' Grumbling, the squirrel hands two marshmallows over and says, 'Yeah yeah... whatever.'[else]Both infected shrug and state that it is a draw and wonder which symbol the couple is going to carve as your tally mark.[end if]";
+		say "     After stepping out of the entrance of the tent, you start to walk back the way you came. The campfire tenders are eyeing you with great interest. [if BodyName of Player is listed in infections of Caninelist]The squirrel says boldly, 'Ha! I knew it was gonna be some doggy this time.' The fox rolls his eyes and says, 'We didn't say if it would be for the man or woman, but what the hell I'll throw you a bone.'[else if BodyName of Player is listed in infections of Equinelist]The fox says matter-of-factly, 'Told you it be a horse.' Grumbling, the squirrel hands two marshmallows over and says, 'Yeah yeah... whatever.'[else]Both infected shrug and state that it is a draw and wonder which symbol the couple is going to carve as your tally mark.[end if]";
 		now CuckooWatched is 2;
 		now Resolution of Two Crash into the Cuckoos Nest is 1;
 	else:
@@ -104,8 +104,8 @@ The Prereq1Resolution of Avian Tent is { 1, 2 }.
 The sarea of Avian Tent is "Forest";
 
 when play begins:
-	add Avian Tent to badspots of guy;
-	add Avian Tent to badspots of girl;
+	add Avian Tent to BadSpots of MaleList;
+	add Avian Tent to BadSpots of FemaleList;
 
 Instead of resolving a Avian Tent:
 	say "     As you are making your way through the forest you come across Izzy, the female member of the cuckoo couple you've met before. She is strolling down a path not too far from your own, heading deeper into the woods away from you. Based on the clothing she is wearing and only carrying a metal bar for self-defense it seems like she's on the 'hunt' for something besides supplies. The sexy avian wears a low cut white blouse which has been tied off to show her slender waist, combined with a skimpy tartan miniskirt that hardly conceals anything. As she bends down to get past a low-hanging branch you see that she doesn't have any panties on either.";
@@ -187,8 +187,8 @@ The sarea of Thief's Punishment is "Forest".
 BridgetPowellEventVar is a number that varies. BridgetPowellEventVar is usually 0.
 
 when play begins:
-	add Thief's Punishment to badspots of guy;
-	add Thief's Punishment to badspots of girl;
+	add Thief's Punishment to BadSpots of MaleList;
+	add Thief's Punishment to BadSpots of FemaleList;
 
 instead of resolving Thief's Punishment:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
@@ -233,8 +233,8 @@ The Prereq1Resolution of Thief's Reformation is { 1, 2 }.
 The sarea of Thief's Reformation is "Forest".
 
 when play begins:
-	add Thief's Reformation to badspots of guy;
-	add Thief's Reformation to badspots of girl;
+	add Thief's Reformation to BadSpots of MaleList;
+	add Thief's Reformation to BadSpots of FemaleList;
 
 instead of resolving Thief's Reformation:
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]

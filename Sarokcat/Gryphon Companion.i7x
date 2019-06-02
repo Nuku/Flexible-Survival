@@ -129,7 +129,7 @@ to say sexwithgryphoness:
 	project Figure of BlueGryphon_icon;
 	if lastfuck of gryphoness - turns < 4:
 		say "You shouldn't pressure the gryphoness too much for it. Give her a short break.";
-	else if bodyname of Player is "Blue Gryphon Herm" or bodyname of Player is "Feral Gryphon":
+	else if BodyName of Player is "Blue Gryphon Herm" or BodyName of Player is "Feral Gryphon":
 		if Player is male:
 			let T be a random number between one and five;
 			if T is 1:
@@ -150,7 +150,7 @@ to say sexwithgryphoness:
 				SanLoss 5;
 			if T is 4:
 				say "     Looking over at your increasingly lustful gryphon companion, you realize that she is staring back at you eagerly as well. You open your mouth to comment, only to have her shake her head slightly, before turning and dropping to all fours on the ground and looking back over her shoulder at you with a happy grin on her beak. The sight of her winking passage as her tail waves above her rear eagerly makes you pant in need as well, and glancing around you realize that it certainly wouldn't hurt anything to help your gryphon companion out with her own needs.";
-				say "     Grinning eagerly, you quickly stalk over to her on your own leonine legs, your [cock of Player] rod already ready and eager as you run your talons through the soft fur of her hips, making her shudder with desire. Reaching around her body, you pin her wings to her back as you lean over her, your taloned hands gripping her soft breasts eagerly as you rub your cock up against her damp pussy teasingly. She moans underneath you as your dominant positioning enhances her already strong submissive instincts, her own cock growing stiff as she pants and moans incoherently.";
+				say "     Grinning eagerly, you quickly stalk over to her on your own leonine legs, your [Cock of Player] rod already ready and eager as you run your talons through the soft fur of her hips, making her shudder with desire. Reaching around her body, you pin her wings to her back as you lean over her, your taloned hands gripping her soft breasts eagerly as you rub your cock up against her damp pussy teasingly. She moans underneath you as your dominant positioning enhances her already strong submissive instincts, her own cock growing stiff as she pants and moans incoherently.";
 				WaitLineBreak;
 				say "     Deciding to reward her submission, you slowly sink your cock into her all too eager body, her pussy lips parting easily for you as she continues to moan helplessly, her lust fogged mind obviously unable to form coherent sentences, or even coherent thought under your pleasurable assault on her body. Your pleasure growing not only from the wonderful sensations of her body engulfing and massaging your cock so eagerly, but with the dominant joy of reducing your companion to little more than a slutty little pet underneath you as well. You are hardly able to restrain your building pleasure as you thrust into her eager body, your hands teasing her breasts eagerly, each little moan of submission you draw out from the slutty gryphoness underneath you a victory all its own, as your pleasure builds higher and higher.";
 				say "     Eventually you can't take it any more, and you are soon spilling your seed into her needy body, every pulse of your cock sending more and more of your dominant cum into her body to lay claim to her heat-filled womb. Panting with exhaustion and a near overload of pleasure yourself, you pull out of her well-fucked body, Denise collapsing on the spot as she pants mindlessly for a while, even while you try to reclaim the shreds of your own scattered wits. Eventually you both manage to haul yourselves up to continue on exploring the city, although from the looks Denise keeps sending you, she seems more eager than ever to explore being your submissive little pet again soon...";
@@ -255,8 +255,8 @@ Lonely Gryphoness	"Lonely Gryphoness"
 Lonely Gryphoness is a situation.
 The sarea of Lonely Gryphoness is "Outside".
 when play begins:
-	add Lonely Gryphoness to badspots of hermaphrodite;
-	add Lonely Gryphoness to badspots of furry;
+	add Lonely Gryphoness to badspots of HermList;
+	add Lonely Gryphoness to BadSpots of FurryList;
 
 gryphoncomforted is a number that varies.
 
@@ -268,7 +268,7 @@ Instead of resolving Lonely Gryphoness:
 		project Figure of BlueGryphon_icon;
 		say "     Carefully climbing up the fire escape, you find yourself enjoying the strange, haunting song more and more, and you grow increasingly curious as to just who, or what, is creating the music. Eventually reaching the top, you pull yourself up onto the roof, where you are surprised to see one of those blue furred gryphons is staring out over the city with her back to you, soft sweet notes spilling out of her beak as she stares out over the changed city.";
 		say "     The sight of one of the changed gryphons singing such a lonely song is rather startling, and you almost can't help but move forward for a closer look. The song cuts off mid note as you slide forward, as the gryphon apparently notices you and whirls around in surprise. ";
-		if bodyname of Player is "Blue Gryphon Herm":
+		if BodyName of Player is "Blue Gryphon Herm":
 			say "Looking down at your own gryphon-like body, the singing gryphon seems almost embarrassed for a minute, though when you open your mouth to speak, she darts towards you instead. Blinking in anticipation of a fight, you find her arms going around you in a soft hug, and hear her sweet voice whisper 'You're very cute,' in your ear. Before you can actually respond to this, the gryphon lets you go and turns and launches herself from the rooftop, shooting occasional wistful glances back at you as [bold type]she vanishes in the direction of the beach[roman type].";
 			infect "Blue Gryphon Herm";
 			now gryphoncomforted is 1;
@@ -308,8 +308,8 @@ Gryphoness nest	"Gryphoness nest"
 Gryphoness nest is a situation. Gryphoness nest is inactive.
 The sarea of Gryphoness nest is "Beach".
 when play begins:
-	add Gryphoness nest to badspots of hermaphrodite;
-	add Gryphoness nest to badspots of furry;
+	add Gryphoness nest to badspots of HermList;
+	add Gryphoness nest to BadSpots of FurryList;
 
 Instead of resolving Gryphoness nest:
 	project Figure of BlueGryphon_icon;
@@ -323,7 +323,7 @@ Instead of resolving Gryphoness nest:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				fight;
 				if fightoutcome >= 10 and fightoutcome <= 19: [won]
-					say "     Recovering from the fight you stagger back out onto the beach, only to find yourself assaulted by a blue furred gryphon instead. You find yourself grinning slightly as the obviously shy gryphon wraps you in her arms, her softly furred body pressing up against your own even as she rubs her gryphon like beak against your [skin of Player] cheek. The gryphon releases you after a minute, seeming slightly embarrassed at her actions, as she shifts her feline paws around in the sand nervously. 'Um, thank you for your help,' she says in her soft musical voice as she looks at you curiously, 'It was really nice of you to actually help me like that, since everything has changed... well especially since I've changed, most people have been either afraid of or attacked me on sight,' she says with a soft sigh.";
+					say "     Recovering from the fight you stagger back out onto the beach, only to find yourself assaulted by a blue furred gryphon instead. You find yourself grinning slightly as the obviously shy gryphon wraps you in her arms, her softly furred body pressing up against your own even as she rubs her gryphon like beak against your [Skin of Player] cheek. The gryphon releases you after a minute, seeming slightly embarrassed at her actions, as she shifts her feline paws around in the sand nervously. 'Um, thank you for your help,' she says in her soft musical voice as she looks at you curiously, 'It was really nice of you to actually help me like that, since everything has changed... well especially since I've changed, most people have been either afraid of or attacked me on sight,' she says with a soft sigh.";
 					say "     'Um, my name is, well it was Denise. I'm not really sure that fits so much now,' the gryphon says as she gestures to where her half erect knotted black gryphon cock is perched above her leonine female entrance. She seems about to say something else, when you both hear something splash in the surf behind you, and she jumps instead, her wings flapping in panic as she looks around. 'Um, maybe this isn't the best place to talk, I have a small alcove up near the beach cliffs where I am staying if you want to stop by and talk sometime,' Denise says as she bunches her hindquarters before leaping into the air. 'I think I would really like having you visit...' you can hear her say, before she turns and flies off, her leonine tail swaying behind her and leaving you with a lot to think about as you continue your journey along the beach.";
 				now Resolution of Gryphoness nest is 1; [won]
 				now gryphoncomforted is 2;
@@ -355,7 +355,7 @@ Instead of resolving Gryphoness nest:
 		say "You roll 1d20([diceroll])+[bonus]= [special-style-1][diceroll + bonus][roman type] vs [special-style-2]14[roman type] (Charisma Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 14: [charisma check success]
-			if bodyname of Player is "Blue Gryphon Herm":
+			if BodyName of Player is "Blue Gryphon Herm":
 				say "     'Oh well, since you are interested...' Denise says, as she almost unconsciously rubs her gryphonic body up against your own gryphon-like form. 'Well you see, just a little while ago I and most of the rest of the people in my apartment complex found a container of milk out on our doorstep, with a note saying it was from the apartment manager,' she says with a soft sigh as she rubs her breasts absently. 'I'm sure you know what kind of milk it was, and when I put some in my cereal that morning... well... I spent the next hour in the shower masturbating... and changing,' Denise says with embarrassment, even as her cock stiffens and the scent of her increased arousal washes over you.";
 				say "     'I managed to get a hold of myself by the time the knock on the door came, and when I looked outside there was a gryphon just like me standing there, of course I figured they had just changed too when I opened the door.' She sighs as she wraps her arms around you and snuggles closer, seeming to take comfort from your presence as she continues. 'As I'm sure you know, he was a sexy, handsome... lovely looking... gryphon...' Denise says as she begins to pant a little, before blinking and looking at you. 'Not as handsome as you are though... um... sorry,' the gryphoness says as she shifts uncomfortably.";
 				WaitLineBreak;
@@ -363,10 +363,10 @@ Instead of resolving Gryphoness nest:
 				if Player is male:
 					say "     'Of course I darted past him and well, in my rush to get away I ended up jumping off the balcony in a panic,' Denise says with a soft sigh as she rubs her taloned hands over your chest absently, making you grin as you stroke your own talons through the increasingly aroused gryphons feathers. 'Course I nearly crashed before I figured out the wings, I was actually kind of expecting to hit the ground, but I just wanted to get away from him so badly,' Denise says as she nuzzles you softly.";
 					WaitLineBreak;
-					say "     'I didn't want to be his little slutty breeder gryphon right then... or any gryphon's... until I met you...' she says in a happier tone, before seeming to realize just what she said. 'Um I mean... well, you make me feel... so...' she trails off for a minute, seeming to think even as you continue to stroke her soft body with your talons teasingly, the gryphoness almost purring under your touch as she tries to gather her thoughts. 'I think, actually, I wouldn't mind being your pet, I mean I flew off into the city after that, but... it's been so lonely...' she says slowly, her own cock erect and her pussy damp, even as she lowers her gaze down to your own erect [cock of Player] cock.";
+					say "     'I didn't want to be his little slutty breeder gryphon right then... or any gryphon's... until I met you...' she says in a happier tone, before seeming to realize just what she said. 'Um I mean... well, you make me feel... so...' she trails off for a minute, seeming to think even as you continue to stroke her soft body with your talons teasingly, the gryphoness almost purring under your touch as she tries to gather her thoughts. 'I think, actually, I wouldn't mind being your pet, I mean I flew off into the city after that, but... it's been so lonely...' she says slowly, her own cock erect and her pussy damp, even as she lowers her gaze down to your own erect [Cock of Player] cock.";
 					say "     You can feel yourself grinning as you realize the effect your body is having on the other gryphon, your body growing more excited by the minute as she presses herself up against you. 'I wanted to resist but... it doesn't really seem so bad now... as long as I can be yours... and then I wouldn't be lonely anymore...' Denise says absently, as her talon reaches down to trace over the tip of your cock teasingly. 'Please... will you finish it? Fuck... fuck me and make me a real gryphon pet. I know the other gryphons want to... but... I want it to be you...' she says with a moan as she rubs her feline hindlegs together absently. The scent of a gryphon in heat fills the room as she looks up at you eagerly, her hand still stroking your cock absently...";
 					WaitLineBreak;
-					if cockname of Player is "Blue Gryphon Herm":
+					if CockName of Player is "Blue Gryphon Herm":
 						say "     Your erect cock easily makes the decision for you, its soft barbs teased by her talon tips, even as she reaches down to stroke over its swelling knot teasingly. Wasting little time on foreplay given how aroused you are in the small space, you slowly push Denise backwards onto the cushions, her tongue hanging out of the side of her beak as she pants absently while you move between her legs. She moans as you fondle her breasts with your taloned hands teasingly, your mind already imagining them swelling larger and full of milk like a good little gryphoness. Your barbed cock rubs up against her already slick passage, before sinking into her body just like it was made to do, causing her to moan and wrap her arms around you tightly.";
 						say "     Grinning you push yourself fully into her, your knot swelling larger as you begin to rock your leonine hind legs up against her own, making her moan and pant in need as she rubs her own feline legs up against you. You can feel your barbs rubbing her insides teasingly even as your knot swells up inside her, becoming harder and harder to pull out with every thrust, her own cock bobbing stiffly and thrusting against you with each thrust of your hips. Finally you can feel yourself lock inside her body, your knot fully inflated as she cries out in pleasure, making you groan eagerly as you rock yourself up against her.";
 						WaitLineBreak;
@@ -386,7 +386,7 @@ Instead of resolving Gryphoness nest:
 						now Gryphoness nest is resolved;
 						follow the turnpass rule;
 					else:
-						say "     Her eager teasing of your cock, and her begging are too much for you to resist, and almost before you can realize what you are doing, you are clutching the female gryphoness close. She moans in need as you pull her close, turning her face down on the cushions as you pin her wings down underneath your weight. Denise grips the cushions tightly as her leonine tail moves eagerly to the side, letting your [cock of Player] cock rub up against her eager passage, your own body almost as eager for this as hers obviously is, you waste no time sheathing yourself in her damp passage.";
+						say "     Her eager teasing of your cock, and her begging are too much for you to resist, and almost before you can realize what you are doing, you are clutching the female gryphoness close. She moans in need as you pull her close, turning her face down on the cushions as you pin her wings down underneath your weight. Denise grips the cushions tightly as her leonine tail moves eagerly to the side, letting your [Cock of Player] cock rub up against her eager passage, your own body almost as eager for this as hers obviously is, you waste no time sheathing yourself in her damp passage.";
 						say "     Her talons rip into the cushions as she lets out a low needy moan at the feel of your cock splitting her open, and you grip her body even tighter as you move over her eagerly, your wings flapping behind you slightly even as you rock your leonine hindquarters up against the gryphoness's own lion like lower body. You cry out eagerly as she shifts and pants underneath you, finally giving in to the needy instincts she was denying as she pushes back up against your body and begs for you to fill her with your seed.";
 						WaitLineBreak;
 						say "     You waste no time in giving the submissive gryphoness the treat she so obviously wants, your cries of pleasure echoing around the small alcove as both orgasm eagerly together. Your cock spurting its seed into her eager body even as her own cock spills its seed on the soft cushions underneath you both. Sighing you unclench your talons from where they were beginning to rip into the cushions as you pull yourself off of her, and Denise moans as she lies there and continues to knead the cushions with her talons for several minutes longer, her ass waving in the air slightly even as a few drops of your seed run down the soft fur of her inner thighs.";

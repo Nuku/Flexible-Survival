@@ -7,9 +7,6 @@ Version 5 of Yamato Dragoness by Blue Bishop begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Yamato Dragoness" } to infections of girl;
-
 YDSF is a number that varies. [Yamato Dragon Succumb Fate]
 FYDTBMM is a number that varies. [Female Yamato Dragon TBM Memory]
 FYDM is a number that varies. [Female Yamato Dragon Memory]
@@ -43,7 +40,7 @@ to say Yamato Dragoness vic:
 			if FYDTBMM is 0:
 				say "     As she's about to set herself upon you, the dragoness finds herself struck by an otherworldly notion, seemingly interrupting whatever she was planning for you. For a few brief moments she appears conflicted, before she looks at you with an almost insane glare, apparently inspired by some new plan for you.";
 				say "     'N-no... What you offer is not enough, I must have all of you!' Wanton need reignited by this twisted plot, the creature pulls you into the air, ";
-				if bodyname of Player is "Yamato Dragon" or bodyname of Player is "Yamato Dragoness":
+				if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 					say "similarly serpentine form exposed before her";
 				else:
 					say "[bodytype of Player] form exposed before her";
@@ -54,7 +51,7 @@ to say Yamato Dragoness vic:
 			else:
 				say "     The way she looks as you, it's made very clear what twisted fate this massive beast has planned for you. [if HP of Player < 1 and player is not submissive]Not wanting to subject yourself to that ordeal all over again, you try to get up and run, but you're too weak to flee her and, doubtlessly amused by your struggle, follows you in tow[else]Tainted hunger-streaked grin emerging from her lips, you feel somewhat sheepish regarding the dragoness's devious plans, who's clearly excited for it to go underway[end if].";
 				say "     '[one of]Yes, yes[or]Oh, yes[or]Good[at random], [one of]ALL of you will be mine[or]your body will suffice[or]you will know my embrace[or]I beg you to squirm, whelp[or]there is no escape now[at random]!' Wanton need twisted by an insane desperation, she plucks you from the ground, ";
-				if bodyname of Player is "Yamato Dragon" or bodyname of Player is "Yamato Dragoness":
+				if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 					say "similarly serpentine form exposed before her";
 				else:
 					say "[bodytype of Player] form exposed before her";
@@ -62,7 +59,7 @@ to say Yamato Dragoness vic:
 				say "     Eager to begin consuming you, [if HP of Player < 1 and player is not submissive]you immediately fight to resist, feet planted firmly against the hard-scaled lips of her hungering cunt. You only briefly inconvenience the dragoness, however, before [one of]she forcibly straightens you out and thrusts you in, quickly plummeting[or]you slip on her slick honey, quickly plunging yourself[at random] into her depths[else]you can't help but be a little troubled by being subjected to this twisted fate again, not that the dragoness has much regard for your feelings on the matter, quickly plunging you into her slick depths[end if].";
 				say "     Slippery, supple inner-flesh rapidly embracing your [bodydesc of Player] form, you're quickly forced to endure to her familiar, oppressive tightness, hugging firmly against you as she stuffs you ever-deeper into her throbbing abyss. Heated snatch wafting up against your abused frame, she spares no time to let you adjust to these circumstances before she commences fucking herself with you proper.";
 			say "     Pulling and pushing you against her slick, vice-like hole, she ";
-			if bodyname of Player is "Yamato Dragon" or bodyname of Player is "Yamato Dragoness":
+			if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 				say "[if FYDTBMM is 0]shows no remorse in tormenting one of her own kind; on the contrary, it seems to make you all the more effective as her twisted toy[else]exploits her toy's elongated frame to further satisfy her twisted hunger[end if]";
 			else:
 				say "[if FYDTBMM is 0]shows no remorse in tormenting you, now relegating to being a mere toy for her twisted hunger[else]never relents in tormenting her toy in the name of her twisted hunger[end if]";
@@ -76,7 +73,7 @@ to say Yamato Dragoness vic:
 			WaitLineBreak;
 			if (player is kinky and a random chance of 1 in 3 succeeds) or ("Horny Bastard" is listed in feats of Player and a random chance of 1 in 3 succeeds) or a random chance of 1 in 6 succeeds:
 				say "     You're gradually roused from unconsciousness by the feel of something slick and scaled writhing against your [bodytype of Player] form. Quickly realizing you're walled off within the translucent confines of an egg, the immediate and much more apparent issue is quickly brought to your attention. Another, much closer to your size, ";
-				if a random chance of 1 in 2 succeeds and guy is not banned:
+				if a random chance of 1 in 2 succeeds and MaleList is not banned:
 					say "dragon is wrapped around you. You can only assume that you weren't enough to satisfy your captor's mad need and left you another victim to keep you company. You can feel your body having long been impaled by his throbbing, ever-hard dick. Try to free yourself of him?";
 					if Player consents:
 						let bonus be ( strength of Player - 10 ) / 2;
@@ -128,7 +125,7 @@ to say Yamato Dragoness vic:
 						infect;
 			else:
 				say "     You're gradually roused back from unconsciousness, quickly finding yourself trapped within the tight, translucent confines of an egg, compelling yourself to break free of this hot, moist prison. Exposed to the dry, [if daytimer is night]night[else]day[end if]time air once more, she at least offered the small courtesy of leaving you [if showlocale is true]in the park[else]where you first met[end if]. It takes you some time to find your things and return back from whence you came.";
-		else if bodyname of Player is "Yamato Dragon" or bodyname of Player is "Yamato Dragoness":
+		else if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 			if Player is male and a random chance of 1 in 2 succeeds:
 				say "     Pinning you to the ground with a talon, you feel her scaled lips encircle your [if Player is internal]crotch, coaxing your [cock size desc of Player] cock[smn] out into the open air[else][cock size desc of Player] cock[smn], coaxing you into becoming fully hard[end if]. Satisfied with your preparation, she pulls your [if HP of Player > 0]exposed[else]battered[end if] form up into the air with her.";
 				say "     '[one of]Such a little thing, I will grant you but a glimpse of your inevitable fate[or]So small and flightless you are, feel the open sky, as we all do[or]You will feel what only I might offer you[at random].' Drawing attention to your shared infection, her influence floods you with a rush of uncontrollable, tainted excitement at the notion of being great beast's consort.";
@@ -303,7 +300,7 @@ to say ydskinchange:
 to say Yamato Dragoness Loss:
 	say "     You successfully manage to fend off the massive dragoness... Or, at least, she seems to yield to you, [one of]perhaps figuring that this fight is going nowhere for her[or]no doubt satisfied with you[stopping]. Pulling back, she glares down at you.";
 	say "     '[one of]Alright[or]Very well[or]I see now[at random], ";
-	if bodyname of Player is "Yamato Dragon" or bodyname of Player is "Yamato Dragoness":
+	if BodyName of Player is "Yamato Dragon" or BodyName of Player is "Yamato Dragoness":
 		say "whelp";
 	else if scalevalue of Player < 4 and a random chance of 1 in 2 succeeds:
 		say "little one";
@@ -451,7 +448,7 @@ to say YamatF_1: [cunt pitching]
 			now tempnum2 is 0;
 	else:
 		now tempnum2 is 0;
-	say "     Ready to take the plunge, you expose[if Cock Count of Player is 2 and tempnum2 > 0] both of[else if tempnum2 > 0] two of[else if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-aroused dick[smn]. Grinding [if tempnum2 > 0]them[else]it[end if] against the eager vent, the dragoness faintly moans against your touch, [if tempnum is 1]your motion slicked by her eager juices[else]slowly becoming aroused by the tease[end if], before you slowly sink the[if Player is flared] blunt[end if] head[if tempnum2 > 0]s[end if] past its scaled lips.";
+	say "     Ready to take the plunge, you expose[if Cock Count of Player is 2 and tempnum2 > 0] both of[else if tempnum2 > 0] two of[else if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-aroused dick[smn]. Grinding [if tempnum2 > 0]them[else]it[end if] against the eager vent, the dragoness faintly moans against your touch, [if tempnum is 1]your motion slicked by her eager juices[else]slowly becoming aroused by the tease[end if], before you slowly sink the[if Player is blunt] blunt[end if] head[if tempnum2 > 0]s[end if] past its scaled lips.";
 	say "     It quickly becomes a struggle to force yourself deeper, the hole exceedingly tight[if tempnum is 1] in spite of your prior preparations[end if][if tempnum2 > 0], made worse by having both in there[else if Cock Length of Player > 20], made worse by your impressive size[end if]. The dragoness grins slightly down at you.";
 	say "     '[one of]Ha[or]Hmpf[or]Oh[at random], [one of]I allowed you to ride me, but I didn't say I would make it easy[or]if you want my hole so badly, prove your convictions[or]it would be a shame for you to fail this close to your goal[at random]!' Mocking you in your struggles, you're forced to steel yourself for the fight to inch deeper down the beast's [if tempnum2 is 2]twin passages[else]cunt[end if], its vice-like hold giving you difficulty all the way[if Cock Length of Player < 12] even with assets that she should have no problem taking[end if]. Several minutes of sweat and grunts eventually allows you to engulf your cock[if tempnum2 is 1]s[end if] all the way[if Player is knotted] - to the knot -[end if] down her powerful vent.";
 	say "     After taking a moment to try and stretch out the serpentine creature's hole a bit more, you begin to fuck her proper. Even though she was teasing you before, she can't help but succumb once more to her baser desires, lowly moaning as she's railed by her[if scalevalue of Player < 5] much[end if] smaller companion. You seem to have no difficulty causing her to writhe in pleasure against your touch, which in turn makes her grip on you a little less tight and easier for you to work with. Her slick, throbbing cave[if tempnum2 is 2]s[end if] ache and squeeze against [if tempnum2 is 2]their[else]its[end if] invader[if tempnum2 > 0]s[end if], it's nearly incessant gushing making a bit of a mess of you.";
@@ -497,7 +494,7 @@ to say YamatF_2: [anal pitching]
 			now tempnum2 is 0;
 	else:
 		now tempnum2 is 0;
-	say "     Ready to take the plunge, you expose[if Cock Count of Player is 2 and tempnum2 > 0] both of[else if tempnum2 > 0] two of[else if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-aroused dick[smn]. Grinding [if tempnum2 > 0]them[else]it[end if] against the eager vent, the dragoness faintly moans against your touch, [if tempnum is 1]your motion slicked by her eager juices[else]slowly becoming aroused by the tease[end if], before you slowly sink the[if Player is flared] blunt[end if] head[if tempnum2 > 0]s[end if] past its scaled lips.";
+	say "     Ready to take the plunge, you expose[if Cock Count of Player is 2 and tempnum2 > 0] both of[else if tempnum2 > 0] two of[else if Cock Count of Player > 1] one of[end if] your [cock size desc of Player], half-aroused dick[smn]. Grinding [if tempnum2 > 0]them[else]it[end if] against the eager vent, the dragoness faintly moans against your touch, [if tempnum is 1]your motion slicked by her eager juices[else]slowly becoming aroused by the tease[end if], before you slowly sink the[if Player is blunt] blunt[end if] head[if tempnum2 > 0]s[end if] past its scaled lips.";
 	say "     It quickly becomes a struggle to force yourself deeper, the hole exceedingly tight[if tempnum is 1] in spite of your prior preparations[end if][if tempnum2 > 0], made worse by having both in there[else if Cock Length of Player > 20], made worse by your impressive size[end if]. The dragoness grins slightly down at you.";
 	say "     '[one of]Ha[or]Hmpf[or]Oh[at random], [one of]I allowed you to ride me, but I didn't say I would make it easy[or]if you want my hole so badly, prove your convictions[or]it would be a shame for you to fail this close to your goal[at random]!' Mocking you in your struggles, you're forced to steel yourself for the fight to inch deeper down the beast's [if tempnum2 is 2]twin passages[else]bowels[end if], its vice-like hold giving you difficulty all the way[if Cock Length of Player < 12] even with assets that she should have no problem taking[end if]. Several minutes of sweat and grunts eventually allows you to engulf your cock[if tempnum2 is 1]s[end if] all the way[if Player is knotted] - to the knot -[end if] down her powerful vent.";
 	say "     After taking a moment to try and stretch out the serpentine creature's hole a bit more, you begin to fuck her proper. Even though she was teasing you before, she can't help but succumb once more to her baser desires, lowly moaning as she's railed by her[if scalevalue of Player < 5] much[end if] smaller companion. You seem to have no difficulty causing her to writhe in pleasure against your touch, which in turn makes her grip on you a little less tight and easier for you to work with. Her slick, throbbing cave[if tempnum2 is 2]s[end if] ache and squeeze against [if tempnum2 is 2]their[else]its[end if] invader[if tempnum2 > 0]s[end if], it's nearly incessant gushing making a bit of a mess of you.";
@@ -576,16 +573,25 @@ to say YamatF_5: [Oral Giving Cunt]
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "Yamato Dragon"; [name of the overall species of the infection, used for children, ...]
+	add "Yamato Dragoness" to infections of ReptileList;
+	add "Yamato Dragoness" to infections of MythologicalList;
+	add "Yamato Dragoness" to infections of FemaleList;
+	add "Yamato Dragoness" to infections of BarbedCockList;
+	add "Yamato Dragoness" to infections of InternalCockList;
+	add "Yamato Dragoness" to infections of QuadrupedalList;
+	add "Yamato Dragoness" to infections of TailList;
+	add "Yamato Dragoness" to infections of TailweaponList;
 	now Name entry is "Yamato Dragoness";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The serpentine dragoness[or]The Yamato Dragoness[or]It[purely at random] [one of]snaps it's neck forward like a snake to bite at you.[or]whips it's tail around, smacking your body off the ground and through the air before landing roughly onto the ground.[or]slams you with one of its talons.[at random]";
 	now defeated entry is "[Yamato Dragoness Loss]";
 	now victory entry is "[Yamato Dragoness Vic]";
@@ -635,11 +641,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -647,7 +654,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -655,20 +662,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -689,26 +696,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -724,11 +731,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -769,11 +776,11 @@ to YamatFvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of Player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of Player]	Thirst: [thirst of Player]	Struggle: [yamatstrugglebar][line break][run paragraph on]";
 		if humanity of Player < 1:
-			now bodyname of Player is "Yamato Dragon";
-			now facename of Player is "Yamato Dragon";
-			now tailname of Player is "Yamato Dragon";
-			now skinname of Player is "Yamato Dragon";
-			now cockname of Player is "Yamato Dragon";
+			now BodyName of Player is "Yamato Dragon";
+			now FaceName of Player is "Yamato Dragon";
+			now TailName of Player is "Yamato Dragon";
+			now SkinName of Player is "Yamato Dragon";
+			now CockName of Player is "Yamato Dragon";
 			now tempnum is 0;
 			now voreloss is true;
 			now Trixieexit is 1;

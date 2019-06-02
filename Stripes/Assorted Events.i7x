@@ -12,7 +12,7 @@ Fallen Kunoichi	"Fallen Kunoichi"
 Fallen Kunoichi is a situation.
 The sarea of Fallen Kunoichi is "Museum".
 when play begins:
-	add Fallen Kunoichi to badspots of furry;
+	add Fallen Kunoichi to BadSpots of FurryList;
 
 Instead of resolving a Fallen Kunoichi:
 	say "     Passing through the halls of the museum, you come across the aftermath of what was an epic battle. Many of the displays here are knocked over or shattered by what must have been powerful blows by a great weapon. You can see gouges cut deep into the walls, many stained with blood. Smaller darts and shuriken are embedded in the wall as well. The floor is marked with several blood stains and cum puddles, as well as soot marks from flash powder or smoke bombs. Clearly many battled a great foe here.";
@@ -36,8 +36,8 @@ Suddenly Ninjas	"Suddenly Ninjas"
 Suddenly Ninjas is a situation.
 The sarea of Suddenly Ninjas is "Museum".
 when play begins:
-	add Suddenly Ninjas to badspots of furry;
-	add Suddenly Ninjas to badspots of guy;
+	add Suddenly Ninjas to BadSpots of FurryList;
+	add Suddenly Ninjas to BadSpots of MaleList;
 
 Instead of resolving a Suddenly Ninjas:
 	say "     Suddenly! Ninjas! Everywhere!";
@@ -84,8 +84,8 @@ Losing It	"Losing It"
 
 Losing It is a situation. The level of Losing It is 7.
 when play begins:
-	add Losing It to badspots of furry;
-	add Losing It to badspots of guy;
+	add Losing It to BadSpots of FurryList;
+	add Losing It to BadSpots of MaleList;
 
 Instead of resolving a Losing It:
 	say "     Traveling through the city, you see a stumbling figure with a skirt and a handbag in an alley. Hoping to find another survivor, you rush over, but are disappointed by her current state. Her face is reshaping itself into a feline muzzle while fur spreads over the last of her uncovered skin. But most striking of it is the large erection and hefty balls propping up her... no, his skirt. Suffering a complete gender swap from the infection, the poor woman has become a snow leopard man. You try to help him along while he complains about the wretched heat and pants. Then something changes in his eyes and he looks at you with an animalistic thirst. He grabs you tightly and tries to wrestle you down, his mind unraveling even as you try to help him. You escape his grip, but are left with facing the lustful snow leopard.";
@@ -117,7 +117,7 @@ Tour Bus	"Tour Bus"
 
 Tour Bus is a situation. The level of Tour Bus is 6.
 when play begins:
-	add Tour Bus to badspots of furry;
+	add Tour Bus to BadSpots of FurryList;
 
 instead of resolving a Tour Bus:
 	say "     Your path through the city is interrupted by an overturned tour bus. It seems there was quite an accident here, with several cars piled up around the bus as well. You do manage to weave your way through the mess, but it takes some time. You remind yourself not to take this street again next time when passing through this area. You head over to check out the bus, hopeful to find something of use in there. You climb up onto a car, then get on the bus's side. Looking in the windows, you can see several bags and packs, but you also see large amounts of semen and scratches to the seats. Regardless of how the accident came to pass, it seems like the occupants were all transformed into more sexual monsters. Certainly, it would not be safe to enter the bus, given how soaked in cum everything is.";
@@ -136,9 +136,9 @@ Trickster	"Trickster"
 Trickster is a situation. The level of Trickster is 4.
 wolffight is a number that varies.
 when play begins:
-	add Trickster to badspots of furry;
-	add Trickster to badspots of guy;
-	add Trickster to badspots of girl;
+	add Trickster to BadSpots of FurryList;
+	add Trickster to BadSpots of MaleList;
+	add Trickster to BadSpots of FemaleList;
 
 instead of resolving a Trickster:
 	setmonster "Feral Wolf";
@@ -211,8 +211,8 @@ Prank Aftermath	"Prank Aftermath"
 Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 prankevent is a number that varies.
 when play begins:
-	add Prank Aftermath to badspots of furry;
-	add Prank Aftermath to badspots of hermaphrodite;
+	add Prank Aftermath to BadSpots of FurryList;
+	add Prank Aftermath to badspots of HermList;
 
 instead of resolving a Prank Aftermath:
 	say "     As you travel through the city, you hear some moaning mewls coming from up ahead. On your guard, you sneak forward and take in the sight of several of those puma creatures playing with what was once a team of six soldiers. The cougars have the men pinned to the ground and are having their way with them. As you watch, the cougars force them to nurse from their breasts or suck their cocks until they develop a wet, new pussy for the herm kitties to fuck. Outnumbered, the soldiers have no chance to escape and there are several felines waiting for their turn to sate their lusts on the transforming humans.";
@@ -254,9 +254,9 @@ Lovers Bench is a situation.
 The sarea of Lovers Bench is "Park".
 loversbench is a number that varies.
 when play begins:
-	add Lovers Bench to badspots of furry;
-	add Lovers Bench to badspots of guy;
-	add Lovers Bench to badspots of girl;
+	add Lovers Bench to BadSpots of FurryList;
+	add Lovers Bench to BadSpots of MaleList;
+	add Lovers Bench to BadSpots of FemaleList;
 
 lbcomplist is a list of text that varies.
 
@@ -467,7 +467,7 @@ Instead of resolving a Lovers Bench:
 		else:
 			increase Libido of Player by ( 100 - Libido of Player ) / 4;
 			say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench. You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
-		add printed name of companion of Player to lbcomplist;
+		add printed name of companion of Player to lbcompList;
 
 [
 		now Lovers Bench is resolved;
@@ -502,7 +502,7 @@ to say BenchDBFucksPlayer: [Brutus fucks female player]
 	say "     A hand on the demon's horned head as he eats you out, moaning deeply in your mounting arousal, you could almost just let him keep going like this... but no, you want something else right now. A smile on your lips, you tell him he may use that thick cock of his to fuck you. With an eager, lust-filled grunt, the demon is up on his feet, reaching down to lift and spread your legs with amazing gentleness. He is on top of you in a second, his body leaned over yours and hips thrusting forward - only to stop with just the tip of his thick erection nudging your nether lips apart slightly. Brutus's face close to yours, he says, 'With pleasure, my master,' then puts his arms forward to hold you softly as he presses forward, entering your body with his hard shaft.";
 	say "     It's big - very big, spreading your pussy lips around it, then sinking deeper into your body, creating pleasant feelings as the bumps on his shaft rub your inner walls. Even as relaxed as your muscles got during the thorough eating out the demon gave you, it's still quite a lot to take. Thankfully, he seems to know what very well, only slowly moving deeper and often stopping to just hold you so you can get used to it. Finally he bottoms out inside you, hard shaft buried all the way and his two large cum-factories resting against your skin. Panting deeply, you grab his head and pull it close, finding his lips with yours. It's amazing to have this huge, muscular creature on top of you, feeling him deep inside you - and being absolutely sure that you're safe in his arms.";
 	WaitLineBreak;
-	say "     A few minutes of making out with Brutus later, you tell him to continue - slowly. Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Over time, it becomes easier to have him inside you, with the demon leaking more and more precum and your muscles being stretched out and getting used to it. Which allows your companion to speed up his thrusts, going faster and faster, the slapping noises of his balls against your hips now coming in rapid succession. Soon, this drives your arousal over the edge, and with a loud moan, [if Player is male]your [cock of Player] shaft sprays cum all over your chest[else if Player is female]you orgasm, femcum running down from your stretched cunt[else]your body shakes in orgasm[end if].";
+	say "     A few minutes of making out with Brutus later, you tell him to continue - slowly. Moving in and out of you, the bumps on his cock rub against your stretched insides, making you shudder with rising lust. Over time, it becomes easier to have him inside you, with the demon leaking more and more precum and your muscles being stretched out and getting used to it. Which allows your companion to speed up his thrusts, going faster and faster, the slapping noises of his balls against your hips now coming in rapid succession. Soon, this drives your arousal over the edge, and with a loud moan, [if Player is male]your [Cock of Player] shaft sprays cum all over your chest[else if Player is female]you orgasm, femcum running down from your stretched cunt[else]your body shakes in orgasm[end if].";
 	say "     His duty at getting you off fulfilled, the demon gives something like a very deep purr in satisfaction, his pleasure at serving his master quite obvious. He keeps fucking you while you ride out your orgasm, getting a bit faster than before in his urge to join you. Soon, he reaches his own climax - and with a loud grunt, he begins to pump your insides full of his seed. With the head of his shaft pushing open your cervix, he easily fills your womb and vagina, with the remaining cum squirting out around Brutus's thick cock as he thrusts into you a few more times. As he finally removes his cock with a lout *pop*, your stomach looks distended from the sheer amount of cum he has injected into you, with more of it leaking from your stretched hole to run over the wooden bench before dripping to the ground.[fimpregchance]";
 	WaitLineBreak;
 	say "     After catching his breath for a second, Brutus pulls you into a tight embrace against his broad chest, bodily picking you up and then sitting on the bench himself. Just letting yourself be held like that for a while, you bask in the affection the large creature shows towards you, his savior and master, and you can't help to feel closer to him after your lovemaking on this well-used parkbench.";
@@ -542,7 +542,7 @@ The sarea of PeachTree is "Park".
 peachtreefight is a number that varies.
 
 when play begins:
-	add PeachTree to badspots of hermaphrodite;
+	add PeachTree to badspots of HermList;
 
 Instead of resolving a PeachTree:
 	now peachtreefight is 3;
@@ -629,8 +629,8 @@ Concession Stand is a situation.
 The sarea of Concession Stand is "Fair".
 foodvendor is a number that varies.
 when play begins:
-	add Concession Stand to badspots of furry;
-	add Concession Stand to badspots of guy;
+	add Concession Stand to BadSpots of FurryList;
+	add Concession Stand to BadSpots of MaleList;
 
 Instead of resolving a Concession Stand:
 	if foodvendor is 0:
@@ -700,11 +700,11 @@ Instead of resolving a Concession Stand:
 				wait for any key;
 				now humanity of Player is 9;
 				increase foodvendor by 1;
-				now tailname of Player is "Shifting Pet";
-				now facename of Player is "Shifting Pet";
-				now skinname of Player is "Shifting Pet";
-				now bodyname of Player is "Shifting Pet";
-				now cockname of Player is "Shifting Pet";
+				now TailName of Player is "Shifting Pet";
+				now FaceName of Player is "Shifting Pet";
+				now SkinName of Player is "Shifting Pet";
+				now BodyName of Player is "Shifting Pet";
+				now CockName of Player is "Shifting Pet";
 				now scalevalue of Player is 3;
 				now bodydesc of Player is "malleable";
 				now bodytype of Player is "ever-changing";
@@ -753,10 +753,10 @@ Sweet Exchange	"Sweet Exchange"
 Sweet Exchange is a situation.
 The sarea of Sweet Exchange is "Fair".
 when play begins:
-	add Sweet Exchange to badspots of furry;
-	add Sweet Exchange to badspots of girl;
-	add Sweet Exchange to badspots of guy;
-	add Sweet Exchange to badspots of humorous;
+	add Sweet Exchange to BadSpots of FurryList;
+	add Sweet Exchange to BadSpots of FemaleList;
+	add Sweet Exchange to BadSpots of MaleList;
+	add Sweet Exchange to badspots of HumorousList;
 
 Instead of resolving a Sweet Exchange:
 	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out. What you discover is a mob of pastel colored ferrets poinging up and down in front of a stall. Atop the stall are some sugar gliders covered in cotton candy fur. Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
@@ -764,11 +764,11 @@ Instead of resolving a Sweet Exchange:
 	say "     'Pay up then, you soda jerks,' one sugar glider responds. 'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that. 'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
 	say "     'Candy ass! The Sweet Tooth is our place. We found the CandyShop first, so the candy's ours too. Find your own!' a pastel green ferret yells up. 'Yeah!' 'We want pop!' 'Hey, I'll fuck you for a can.' 'Sugar snatchers!' the business of colorful ferrets calls up, several of them making rude gestures all the while grinning happily.";
 	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola. One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans. As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
-	if bodyname of Player is "Sugar Ferret" and player is pure:
+	if BodyName of Player is "Sugar Ferret" and player is pure:
 		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange. Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front. With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some. A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away. You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
 		increase carried of soda by 1;
 		now Resolution of Sweet Exchange is 1;	[Got soda as a Sugar Ferret]
-	else if bodyname of Player is "Sugar Glider" and player is pure:
+	else if BodyName of Player is "Sugar Glider" and player is pure:
 		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy. Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials. The giggling girls pass around the collected bags of candy, stuffing them into their pouches. Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your [if Player is female]pouch[else]backpack[end if] before making your escape before they catch on.";
 		increase carried of chips by 1;
 		now Resolution of Sweet Exchange is 2;	[Got chips as a Sugar Glider]
@@ -786,10 +786,10 @@ Caught Glider	"Caught Glider"
 Caught Glider is a situation. Caught Glider is inactive.
 The sarea of Caught Glider is "Fair".
 when play begins:
-	add Caught Glider to badspots of furry;
-	add Caught Glider to badspots of girl;
-	add Caught Glider to badspots of guy;
-	add Caught Glider to badspots of humorous;
+	add Caught Glider to BadSpots of FurryList;
+	add Caught Glider to BadSpots of FemaleList;
+	add Caught Glider to BadSpots of MaleList;
+	add Caught Glider to badspots of HumorousList;
 
 Instead of resolving a Caught Glider:
 	say "     Hearing some commotion start up suddenly behind you, you turn around in time to see one of those cotton-candy-colored sugar gliders run across the laneway. In hot pursuit of her are a pack of the colorful, sugar-crazed ferrets. 'Sugar thief!' 'Come back here!' 'Don't let her get away, guys!' 'Candy-assed scoundrel!' they call out excitedly, laughing as they give chase. Following cautiously, you watch the sugar glider string them along for a while rather than just glide away, giggling as well at the fun and yelling taunts back at them.";
@@ -813,8 +813,8 @@ Beach Party	"Beach Party"
 Beach Party is a situation. The level of Beach Party is 5.
 The sarea of Beach Party is "Beach".
 when play begins:
-	add Beach Party to badspots of furry;
-	add Beach Party to badspots of girl;
+	add Beach Party to BadSpots of FurryList;
+	add Beach Party to BadSpots of FemaleList;
 
 Instead of resolving a Beach Party:
 	say "     Traveling along the beach, you crest a small dune to find a group of bright pink, dolphin girls splashing around in the water. They seem to be throwing a [if daytimer is day]sunny[else]nighttime[end if] beach party for themselves, giggling and playing around a large dolphin pooltoy. One runs over to a small cooler and pulls out a can of soda. After shaking it up, she sprays it wildly across her friend's body, causing her to squeak and laugh as she tries to block the foamy spray[if thirst of Player > 30]. Feeling rather thirsty yourself, you find it disappointing they'd waste a drink like that[end if]. As the foam slides down her body, you notice that something is odd about their appearance. In the [if daytimer is day]sunlight, you can see that the dark cola running down her back can be seen through her[else]moonlight, you can see the foam cola running smoothly down her body[end if]. These dolphin girls are inflatable creatures and completely empty save for air.";
@@ -839,7 +839,7 @@ Instead of resolving a Beach Party:
 					increase score by 10;
 					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
-		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [cockname of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
+		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if Breast Size of Player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if Player is male]sticky, throbbing [CockName of Player] cock[smn][else if Player is female]sticky, juicy puss[yfn][else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you. [if Player is neuter]Once you're finally all cleaned up[else]When you finally cum[end if], the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
 		SanLoss 20;
 		increase morale of Player by 5;
@@ -849,17 +849,17 @@ Instead of resolving a Beach Party:
 			if Name entry is "Bottlenose Toy":
 				now MonsterID is y;
 				break;
-		now tailname of Player is "Bottlenose Toy";
-		now facename of Player is "Bottlenose Toy";
-		now skinname of Player is "Bottlenose Toy";
-		now bodyname of Player is "Bottlenose Toy";
-		now cockname of Player is "Bottlenose Toy";
+		now TailName of Player is "Bottlenose Toy";
+		now FaceName of Player is "Bottlenose Toy";
+		now SkinName of Player is "Bottlenose Toy";
+		now BodyName of Player is "Bottlenose Toy";
+		now CockName of Player is "Bottlenose Toy";
 		attributeinfect;
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
@@ -905,7 +905,7 @@ Slumbering Giant	"Slumbering Giant"
 Slumbering Giant is a situation.
 The sarea of Slumbering Giant is "Zoo".
 when play begins:
-	add Slumbering Giant to badspots of guy;
+	add Slumbering Giant to BadSpots of MaleList;
 
 Instead of resolving a Slumbering Giant:
 	say "     Going over a small rise, you are met with an impressive sight. Lying down in one of the smaller pasture paddocks is a giant human being. You'd guess he's about forty feet tall and he takes up a good part of the grassy area he's sleeping in. You'd not spotted him until now because his chosen napping spot is a depression behind the hill you're on. He's wearing a large tan jacket that's scaled to his size and nothing else. He groans softly and rolls over, giving you a view of his enormous cock, semi-hard in his sleep. Yawning wide, he gives his enormous balls a scratch and his cock a quick rub before his hand slides back to the ground with a heavy thud. Given the size of he and knowing how grumpy you can be if someone wakes you up from a nap, you quietly turn around and sneak off, hoping he won't wake up until you're long gone from here.";
@@ -918,7 +918,7 @@ My Own Zoo Playset	"My Own Zoo Playset"
 My Own Zoo Playset is a situation. The level of My Own Zoo Playset is 12.
 The sarea of My Own Zoo Playset is "Zoo".
 when play begins:
-	add My Own Zoo Playset to badspots of guy;
+	add My Own Zoo Playset to BadSpots of MaleList;
 
 Instead of resolving a My Own Zoo Playset:
 	say "     While moving through an area of empty pens and habitats, you turn hear some activity coming from the opposite side of a thick cluster of trees. Cautiously peering out from some bushes at the edge of the copse of trees, you are met with a startling sight. There's a giant of a man wearing a zookeeper's jacket. He's probably over forty feet tall and is sitting cross-legged on the ground with a couple a cars and zoo maintenance vehicles scattered around him. Given how the grass is all torn up with tire tracks, it looks like he's been pushing them around like they're toys.";

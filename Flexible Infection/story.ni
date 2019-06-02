@@ -6625,8 +6625,8 @@ Cheating is an action applying to nothing. Understand "cheat" as cheating.
 Carry out cheating:
 	let cheatcount be 0;
 	let cheatlist be the list of on-stage not fixed in place not scenery things;
-	remove the list of backdrops from cheatlist;
-	remove the list of people from cheatlist;
+	remove the list of backdrops from cheatList;
+	remove the list of people from cheatList;
 	repeat with cheatitem running through cheatlist:
 		if cheatitem is not carried by the player and cheatitem is not part of something and cheatitem is not in the holdingpen and (cheatitem is not enclosed by someone or cheatitem is in a container) and cheatitem is cheatable:
 			move cheatitem to the player;

@@ -37,9 +37,9 @@ Fall-O-the-Wisp is a situation.
 The sarea of Fall-O-the-Wisp is "Nowhere".
 
 when play begins:
-	add Fall-O-the-Wisp to badspots of girl;
-	add Fall-O-the-Wisp to badspots of guy;
-	add Fall-O-the-Wisp to badspots of furry;
+	add Fall-O-the-Wisp to BadSpots of FemaleList;
+	add Fall-O-the-Wisp to BadSpots of MaleList;
+	add Fall-O-the-Wisp to BadSpots of FurryList;
 
 instead of resolving Fall-O-the-Wisp:
 	WispFollow;
@@ -58,7 +58,7 @@ to WispFollow:
 		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 			break;
 		else:
-			say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
+			say "Invalid choice. Type [link]1[end link] to follow, [link]2[end link] to leave it or [link]3[end link] to avoid this area.";
 	if calcnumber is 1:
 		LineBreak;
 		say "     You hesitate to pursue a mysterious glowing spirit, but your curiosity wins out in the end, so despite your better judgment, you push forward and leave the glade behind.";
@@ -111,10 +111,10 @@ to WispFollow:
 				now Avalon-Crossroads is known;
 				move player to Avalon-Crossroads;
 				now Resolution of Fall-O-the-Wisp is 4;
-			move Runestone to NPC Nexus;
-			change the south exit of Mysterious Glade to Virgin's Pass; [connecting the location to the travel room]
-			change the north exit of Virgin's Pass to Mysterious Glade; [connecting the location to the travel room]
-			now Fall-O-the-Wisp is resolved;
+		move Runestone to NPC Nexus;
+		change the south exit of Mysterious Glade to Virgin's Pass; [connecting the location to the travel room]
+		change the north exit of Virgin's Pass to Mysterious Glade; [connecting the location to the travel room]
+		now Fall-O-the-Wisp is resolved;
 	else if calcnumber is 2:
 		LineBreak;
 		say "     Following strange, glowing forest-spirits seems like a good way to get yourself cursed or killed. Turning the other way, you leave the wisp behind, though you can't help but wonder where it would have lead you.";

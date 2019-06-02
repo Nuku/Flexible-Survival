@@ -39,7 +39,7 @@ Virgin of Zeke is true.
 AnalVirgin of Zeke is true.
 PenileVirgin of Zeke is true.
 SexuallyExperienced of Zeke is false.
-MainInfection of Zeke is "Anthro Fox".
+MainInfection of Zeke is "Red Fox".
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
@@ -360,7 +360,7 @@ to say ZekeSex7: [being facefucked]
 	now lastfuck of Zeke is turns;
 
 to say ZekeSex8: [being fucked]
-	setmonster "Anthro Fox";
+	setmonster "Red Fox";
 	say "     You've lost, and that means Zeke gets to do what he wants with you. And after that contest, he makes it very clear what it is he wants to do to you. In no time at all, he has you bent over one side of the couch, with him standing naked behind you. A thrill runs through you at the knowledge of what is about to happen, knowledge that is confirmed further as you feel the vulpine cock come to rest on top of your ass, moving back and forth ever so slightly. You feel a warmth on your back as the fox leans further over you, his chest pressed against your back. A shift in the position of his member, bringing the tip to a stop right up against your hole, tells you exactly what comes next.";
 	say "     You receive a sudden shock when Zeke slams forward, the tapered head of his dick making the entry smooth and easy, until he rests about halfway into you. For several moments, he holds that position, his cock stretching you open, but as intense as the sensations flooding through you are, this is only the beginning. The fox starts pumping in and out, his cock ending up deeper inside you on each thrust, stretching you yet further. Once he gets even deeper in you, his thrusts are enough that his knot begins to collide with your ass on each thrust. As the action continues, your attentions focus further and further on the pleasure you're getting from being fucked, and nothing else.";
 	WaitLineBreak;

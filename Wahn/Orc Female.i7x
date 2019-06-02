@@ -44,7 +44,7 @@ Noteworthy Ruin	"Noteworthy Ruin"
 Noteworthy Ruin is a situation. The level of Noteworthy Ruin is 8.
 The sarea of Noteworthy Ruin is "Plains".
 when play begins:
-	add Noteworthy Ruin to badspots of girl;
+	add Noteworthy Ruin to BadSpots of FemaleList;
 
 Instead of resolving a Noteworthy Ruin:
 	if HP of Katya is 0: [first time]
@@ -287,7 +287,7 @@ to say KatyaBeatenSex3: [lick her pussy]
 
 to say KatyaBeatenSex4: [fuck her pussy]
 	say "     After quickly stripping off your gear and clothes, you kneel down between the legs of the female orc and check her out. Her pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the dazed woman. Fuck yeah - such a sexy and strong amazon laid out before you helplessly. You've beaten her in a fair fight, so now is the time to savor the spoils of your victory!";
-	say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift and spread them some more, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. Finally nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
+	say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift and spread them some more, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [Cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. Finally nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
 	WaitLineBreak;
 	say "     Katya comes to again fully as you bottom out in her, as if reacting to the touch of your balls rubbing against her crotch. Groaning, she opens her eyes and looks up at you, baring her fangs in a scowl. 'You bastard! Get off me ri-*nnnghhhh*' she starts to say, but you distract her by pulling a little outwards and then hammering back into her depths. Even as pissed off as she is right now with your intrusion into her camp - and now her pussy too - the orc can't help but moan as you start fucking her. Not giving her any time to get her bearings and maybe start resisting, you saw your erection in and out of her snatch and push all her buttons, rubbing Katya's clit at the same time.";
 	say "     Fucking and fingering the muscular orc works well to keep her under control, given how exhausted she still is after your earlier fight. She was fully healed before you even started making moves on her, demonstrating an orc's remarkable level of regeneration, but that doesn't mean she isn't still worn out and needs time to recuperate. Thanks to your efforts, all her energy right now is being redirected towards being ready for sex - as demonstrated by the increasing wetness between her legs, the twitch of inner muscles around your thrusting cock and the fact that Katya's face and chest are becoming flushed in a somewhat lighter emerald green.";
@@ -318,18 +318,18 @@ to say KatyaBeatenSex5: [fuck her ass]
 
 to say OrcFemVictorious:
 	if HP of Player > 0: [player submits]
-		if bodyname of Player is "Orc Breeder" and facename of Player is "Orc Breeder" and skinname of Player is "Orc Breeder":
+		if BodyName of Player is "Orc Breeder" and FaceName of Player is "Orc Breeder" and SkinName of Player is "Orc Breeder":
 			say "     'Did you lose your master, little breeder?' the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Well, you won't find a thick green prick here either, that's for sure! But I think I'll have fun with you nonetheless.' ";
-		else if bodyname of Player is "Orc Warrior" and facename of Player is "Orc Warrior" and skinname of Player is "Orc Warrior":
+		else if BodyName of Player is "Orc Warrior" and FaceName of Player is "Orc Warrior" and SkinName of Player is "Orc Warrior":
 			say "     'Pathetic,' snorts as she steps up to you, giving you a shove. 'I'm three times the orc you are and still those bastards call me a [']dick-less freak[']! Pah, who needs them! As for you - if you got the temperament of a breeder, then I'll just use you as one!' ";
 		else:
 			say "     'Weakling. I'm surprised you even made it far enough to stumble into my camp,' the female orc says in a gruff voice as you surrender. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'Better leave the fighting to those made for it. I'll show you your place.' ";
 		say "With that said, Katya pushes you further and further backwards, then hooks a foot behind yours and gives a hard shove. You fall only a short distance before her other hand slid under your back slows your descent, softening the impact so you land relatively softly on her sleeping bag, stretched out on your back. The green-skinned woman stands over you and looks down with a lusty grin after that.";
 		say "     Katya's hands move to her hips and start undoing her loincloth, loosening the knots that secure the ragged fabric. Within moments the fabric falls away and is casually thrown aside to reveal her glistening nether lips. Clearly, she got worked up and in the mood by assuming dominance over you.";
 	else: [player beaten]
-		if bodyname of Player is "Orc Breeder" and facename of Player is "Orc Breeder" and skinname of Player is "Orc Breeder":
+		if BodyName of Player is "Orc Breeder" and FaceName of Player is "Orc Breeder" and SkinName of Player is "Orc Breeder":
 			say "     'Had some delusions of grandeur, little breeder?' the female orc says in a gruff voice as you sway back and forth, barely keeping on your feet. Then she grasps your chin and bends your head left and right, inspecting you with a snort. 'You look the part of a sex toy slut, but have some fight in you, eh? Maybe you're as much as a 'freak' as me. But don't think that'll earn you anything - you came into MY camp, so you're mine to have fun with for now.' With that said, Katya pushes you further and further backwards, then hooks a foot behind yours and gives a hard shove. You fall only a short distance before her other hand slid under your back slows your descent, softening the impact so you land relatively softly on her sleeping bag, stretched out on your back. The green-skinned woman stands over you and looks down with a lusty grin after that.";
-		else if bodyname of Player is "Orc Warrior" and facename of Player is "Orc Warrior" and skinname of Player is "Orc Warrior":
+		else if BodyName of Player is "Orc Warrior" and FaceName of Player is "Orc Warrior" and SkinName of Player is "Orc Warrior":
 			say "     'The 'dick-less freak' isn't so weak after all, eh?' Katya growls and steps forward towards your swaying form. With a full-force elbow blow to your face, she sends you crashing to the ground immediately afterwards. Your vision is filled with stars for a moment after that, but you feel your arms being lifted and used to drag you along the ground for a little bit. Eventually you're let go to flop down on something at least a little softer than the bare earth - seems like she dragged you onto her sleeping bag.' As your vision starts to clear, you see the green-skinned woman standing over you, looking down with a lusty grin.";
 		else:
 			say "     'You made a mistake in challenging THIS orc. Or are you a masochist or something?' Katya growls and lands a last blow against the side of your head with her fist. For a moment, you see nothing but stars, then become aware of a large hand grasping your shoulder - the only reason you didn't crash to the ground. With the other hand, she grasps your chin and bends your head left and right, inspecting you with a snort. 'Better leave the fighting to those made for it. I'll show you your place.' With that said, Katya pushes you further and further backwards, then hooks a foot behind yours and gives a hard shove. You fall only a short distance before her other hand slid under your back slows your descent, softening the impact so you land relatively softly on her sleeping bag, stretched out on your back. The green-skinned woman stands over you and looks down with a lusty grin after that.";
@@ -392,16 +392,21 @@ to say OrcFemDesc:
 Section 3 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is false;
+	now NewTypeInfection entry is true;
+	now Species Name entry is "Orc";
+	add "Orc Female" to infections of FemaleList;
+	add "Orc Female" to infections of OrcList;
+	add "Orc Female" to infections of MpregList;
+	add "Orc Female" to infections of BipedalList;
 	now Name entry is "Orc Female";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is "Katya";
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "The [one of]orc[or]green-skinned amazon[or]muscular woman[or]brutish woman[or]muscled amazon[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]pounds you with a big fist[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[OrcFemBeaten]";
 	now victory entry is "[OrcFemVictorious]";
@@ -422,20 +427,20 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 8;
 	now cha entry is 12;
-	now sex entry is "Male";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now sex entry is "Female";           [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
 	now HP entry is 80;
 	now lev entry is 8;                [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 12;              [ Monster's average damage when attacking. ]
 	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 4;        [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 3;         [ Cock width, more commonly used for ball size. ]
+	now Cock Count entry is 0;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 0;        [ Length in inches infection will make cock grow to if cocks. ]
+	now Ball Size entry is 0;         [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2;            [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 6;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now Male Breast Size entry is 6;   [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0;        [ Depth in inches of female sex the infection will attempt to give a player. ]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
+	now Breast Size entry is 5;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Male Breast Size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 14;        [ Depth in inches of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 3; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]         [ Width in inches of female sex the infection will try to give a player. ]
 	now libido entry is 70;
 	now loot entry is "orc femcum";    [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;         [ Percentage chance of dropping loot, from 0-100. ]
@@ -451,112 +456,111 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	now Species Name entry is "Orc";
+	now Name entry is "Orc Female"; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 7; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 9; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
 	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	now Androginity entry is 7; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Change entry is "a splitting headache has you hold your skull with both hands. Then the changes overtake you, jaw broadening into a square shape as two sharp tusks push up out of your lower jaw. Your nose flattens and becomes wider, then the rest of your features change into a pretty brutish visage with protruding brows above your eyes"; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is "a somewhat brutish, [Head Color of Player] humanoid. Two sharp tusks protrude from your lower mandible, giving all your expressions a terrifying undertone and distorting your speech somewhat"; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is "orcish"; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	now Head Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "protruding orcish tusks";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 4; [hair length in inches]
+	now Hair Shape entry is "straight"; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is "black"; [one word color descriptor]
+	now Hair Style entry is "crew cut"; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 1; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is "yellow"; [one word color descriptor]
+	now Eye Adjective entry is "round"; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 11; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 4; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Tongue Adjective entry is "broad"; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is "pine green"; [one word color descriptor]
+	now Tongue Length entry is 8; [length in inches]
+	now Torso Change entry is "it shifts and changes, becoming larger than a normal human's, with a broad set of shoulders. Your skin turns a deep shade of olive green, complete with a moderate amount of body hair"; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is "larger than a normal human's and with broad shoulders"; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is "orcish"; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Breast Adjective entry is "perky"; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 5; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Nipple Color entry is "moss green"; [one word color descriptor]
+	now Nipple Shape entry is "oval"; [shape example: any shape will do as long as it has a baseline with a current infection or item]
 	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
 	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
 	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Back Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Change entry is "olive green skin spreads down from your shoulders to cover their whole length. Another change is that they become longer than a regular human's, with the strong hands at the end somewhat oversized too"; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is "covered in [Arms Color of Player] skin and are longer than a normal human's, ending in strong, somewhat oversized hands"; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Arms Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is "bipedal"; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is "olive green skin spreads down from your hips to cover their whole length. Another change is that they become longer than a regular human's, with the wide feet at the end somewhat oversized too"; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is "[Legs Color of Player], longer than a normal human's and end in broad, somewhat oversized feet"; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Legs Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is "it becomes well rounded, with olive green skin spreading over it"; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is "green-skinned ass"; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
+	now Tail Color entry is "olive green"; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 13; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is "moss green"; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
+	now Cock Adjective entry is "orcish"; [one word adjective: avian/canine/...]
+	now Cock Change entry is "it takes on human shape, thick in girth and with a moss green color as well as a stretchy foreskin"; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is "is [Cock Color of Player], fairly thick and is human in shape. It is covered in moss green skin and even has a stretchy foreskin covering the head"; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is "moss green"; [one word color descriptor]
 	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Ball Description entry is "balls in a loose-hanging, somewhat hairy sack"; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 1;
+	now Cunt Depth entry is 14;
+	now Cunt Tightness entry is 3; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	now Cunt Adjective entry is "orcish"; [one word adjective: avian/canine/...]
+	now Cunt Change entry is "it takes on human shape, complete with a well-sized clit at the top and all of it in moss green color"; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is "is [Cunt Color of Player] in color and human-shaped, complete with a well-sized clit and all of it is moss green in color"; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is "moss green"; [one word color descriptor]
+	now Clit Size entry is 4; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-
-
 
 Table of Game Objects (continued)
 name	desc	weight	object
 "orc femcum"	"A plastic water bottle you've filled with orc femcum. Its contents are mostly clear yet thick and somewhat sticky, drawing strings on the walls as you turn the bottle this way or that. If you didn't know where it's from, you'd almost think it might be some sort of flavored syrup. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	orc femcum
 
 instead of sniffing orc femcum:
-say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
+	say "You open the lid for a moment and take a sniff. Smells rather tasty actually and you're tempted to take a pull from the bottle.";
 
 orc femcum is a grab object. orc femcum is cum.
 the usedesc of orc femcum is "[orc femcum use]";
@@ -565,8 +569,8 @@ to say orc femcum use:
 	say "Lifting the plastic bottle to your mouth, you take a drink from it, letting the thick orc femcum run over your tongue and down your throat. Mmmmh, this stuff has a really great taste that calls for more. You can't help yourself and keep drinking until all of it is gone, filling your mind with a giddy, pleasant buzz. Now where do you get more of this stuff? You're really tempted to return to Katya and milk some more from her.";
 	PlayerDrink 6;
 	SanLoss 10;
-	infect "Orc Female";
-
+	if "Iron Stomach" is not listed in Feats of Player:
+		OrcFemaleInfect;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -588,10 +592,20 @@ to say SmellingKatyasDildo:
 		if Libido of Player > 100:
 			now Libido of Player is 100;
 		SanLoss 5;
-		infect "Orc Female";
+		OrcFemaleInfect;
 	else:
 		LineBreak;
 		say "     Shaking off the urge, you pack away Katya's dildo.";
+
+to OrcFemaleInfect:
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if Name entry is "Orc Female":
+			now MonsterID is y;
+			break;
+	now non-infectious entry is false;
+	infect "Orc Female";
+	now non-infectious entry is true;
 
 instead of using Katya's dildo:
 	if Player is female:
@@ -611,14 +625,14 @@ to say KatyasDildoPussyFuck:
 	say "     Pushing the flared head of the sex toy between your nether lips, you nudge them apart with a moan and gasp out loud as it slips into you easily, helped along nicely by Katya's juices. The sensation of having the hard shaft inside you is great, especially with the orc femcum showing its usual stimulating side effects. Starting to bounce up and down on the thick pole, you ride it with great enthusiasm, driving yourself closer and closer to a quickly building orgasm. Then as you push yourself all the way down on the equine dildo until the curve of their balls presses against your buttocks, you come with a loud gasp [if Player is male]and start blasting heavy spurts of cum from your own cock - to land with little splats on the ground a little further away[else if Player is female]and start leaking copious amounts of your own femcum - running down between your legs and leaking onto the dildo and the ground[else]and tremble in lust[end if].";
 	LineBreak;
 	say "     As you slide your stretched pussy off the thick equine prick a little while later, you can't help but think of the female orc. Maybe you should visit Katya again sometime soon...";
-	infect "Orc Female";
+	OrcFemaleInfect;
 
 to say KatyasDildoAssFuck:
 	say "     Plopping the big dildo on the ground (where it stands upright on its own, thanks to the heavy balls at its base), you quickly get rid of your clothes and gear. Thoughts going back to the strong and beautiful orc woman you stole it from, you step over the toy crouch down. Soon, the flared head of its length touches your buttocks and you grab it with your hand to guide it into your body. The silicone feels slightly wet and slippery under your fingers - that's still Katya's femcum, despite the fact that it's been a while since you took the dildo from her. It must have absorbed so much of her essence that that's a permanent effect now.";
 	say "     Pushing your pucker down against the sex toy's head, you gasp out loud as it slips into you after a little pressure, helped along nicely by Katya's juices. The sensation of having the hard shaft inside you is great, especially with the orc femcum showing its usual stimulating side effects. Starting to bounce up and down on the thick pole, you ride it with great enthusiasm, driving yourself closer and closer to a quickly building orgasm. Then as you push yourself all the way down on the equine dildo until the curve of their balls presses against your buttocks, you come with a loud gasp [if Player is male]and start blasting heavy spurts of cum from your own cock - to land with little splats on the ground a little further away[else if Player is female]and start leaking copious amounts of your own femcum - running down between your legs and leaking onto the dildo and the ground[else]and tremble in lust[end if].";
 	LineBreak;
 	say "     As you slide your stretched asshole off the thick equine prick a little while later, you can't help but think of the female orc. Maybe you should visit Katya again sometime soon...";
-	infect "Orc Female";
+	OrcFemaleInfect;
 
 Section 4 - Location
 
@@ -802,7 +816,7 @@ instead of going north from Dry Plains while (HP of Katya is 3 and KatyaRelation
 	say "     Smiling at the fact that Katya called you a friend, you chat with her and listen to her plans of scavenging some seemingly untouched houses at the edge of the city. But then, she suddenly raises a hand and hushes you, whispering, 'Don't move. Did you hear that?' Freezing in your spot, you let your eyes stray left and right, sweeping over the sea of grass - and making out a void in the thin blades of grass sticking up. Something is sneaking up on you! 'Two more over there,' Katya adds in a quiet tone, 'I'll go for them, you keep my back free.' And with that said, she suddenly whips around and charges into the grassland. Two surprised growls from animalistic throats tell you that she did indeed spot some ambush predators - as do the two pairs of tentacles suddenly being raised high in combat readiness.";
 	WaitLineBreak;
 	say "     As Katya engages the two beasts in the high grass, the third one starts running, breaking out of hiding at a rapid pace. In the seconds before it pounces you, the creature's appearance becomes clear to you - a big cat with gray and black fur, sporting an additional pair of appendages - two long tentacles growing out of its back, ending in diamond-shaped gripping pads that to glow in a bio-luminescent green color. Its movements appear strangely blurred, as if shadows stick to the beast, but one thing is clear - you'll have to fight unless you want to be held down and fucked!";
-	challenge "Shadow Beast";
+	challenge "Shadow Beast Male";
 	if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 		say "[KatyaTrailFightLoss]";
 	else if fightoutcome >= 30: [fled]
@@ -1131,7 +1145,7 @@ to say KatyaSex4: [fuck her pussy]
 		say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and tell her to get naked and on her sleeping bag. She glances at the pile of your equipment, almost as if evaluating if she can take you now that you're naked, then gives an almost imperceptible shrug and says, 'Fine, you horny bastard. I'm all yours.' With that, she grabs her chest-wrap and pulls it off over her head and also takes off the loincloth from around her hips. The sight of her muscular and toned naked body makes [if Player is male]your cock twitch in arousal[else if Player is female]your pussy get wet in arousal[else]your arousal spike sharply[end if] and you eagerly follow Katya as she walks over to her bedding and lies down.";
 		say "     You kneel between the legs of the female orc and check her out. Her pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the horny woman. Fuck yeah - such a sexy and strong amazon laid out before you, ready for anything you want to do with her. You've beaten her again and again, wearing down Katya's resistance and claiming this glorious beauty as yours. In some ways, the nanite apocalypse is absolutely amazing!";
 		WaitLineBreak;
-		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift and spread them some more, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. Finally nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
+		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift and spread them some more, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [Cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. Finally nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
 		say "     Katya moans in arousal as you bottom out in her and says, 'Fuck yeah, that feels nice!' as your balls rub against her crotch. Throwing you a lust-filled look, she tenses her muscles around your manhood, squeezing it tightly and drawing an aroused grunt in turn. 'In some regards it's not so bad to have a [if Player is female]herm[else]guy[end if] here. Fuck me hard you bastard! Show me you're man enough to satisfy an orc!' Katya almost shouts to you, her legs wrapping around your hips to pull you in against her body. She asked for it - so you gleefully pull out a little, then hammer back into her depth. The orc can't help but shout out a moan as you start fucking her in earnest then grins wildly with her tusks bared. You saw your erection in and out of her snatch and push all her buttons, rubbing Katya's clit at the same time.";
 		WaitLineBreak;
 		say "     Fucking and fingering the muscular orc works well to put her under your control, allowing the exquisite fun of trying out just what you can make her do. Fucking got her going good, demonstrated by the increasing wetness between her legs, the twitch of inner muscles around your thrusting cock and the fact that Katya's face and chest are becoming flushed in a somewhat lighter emerald green. But you want to tease more out of her - like the aroused groan she lets out when you caress the curve of her breasts, followed by a breathless grunt when you wrap your lips around one nipple, sucking hard. Experimentation reveals many a spot you can use to have fun with her, making the green-skinned woman whimper in helpless pleasure.";
@@ -1147,7 +1161,7 @@ to say KatyaSex4: [fuck her pussy]
 			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to fuck, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with - and in - her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal.";
 		say "     You kneel between the legs of your green-skinned friend and check out her beautiful shape. Katya's pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the horny woman. Fuck yeah - such a sexy and strong amazon laid out before you, trembling in lust as she waits for you to take her. The eager expression on her face is a glorious thing to behold, making you so very glad that you managed to befriend her, despite the rocky beginnings. Then a half-moaned request pulls you out of your reverie, as Katya tells you, 'Come on! I'm waiting!'";
 		WaitLineBreak;
-		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you stroke their insides in a caress that winds your friend up a little further, then push her legs apart, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. 'Damn! Take me already!' she groans impatiently, sliding her legs around your hips and giving them a little push. Chuckling at her antics, you contemplate teasing her some more - but no, Katya might actually just wrestle you to the ground and ride your dick if you do that. Finally going ahead and nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
+		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you stroke their insides in a caress that winds your friend up a little further, then push her legs apart, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [Cock of Player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. 'Damn! Take me already!' she groans impatiently, sliding her legs around your hips and giving them a little push. Chuckling at her antics, you contemplate teasing her some more - but no, Katya might actually just wrestle you to the ground and ride your dick if you do that. Finally going ahead and nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
 		say "     Katya moans in arousal as you bottom out in her and grunts, 'Fuck yeah, that feels nice!' as your balls rub against her crotch. Throwing you a lust-filled look, she tenses her muscles around your manhood, squeezing it tightly and drawing an aroused groan in turn. 'Can't say that I don't like having a horny [if Player is female]herm[else]guy[end if] here with me. A dildo is fun, but... nnghh. The real thing feels better! Come on now - show me you're man enough to really satisfy an orc!' Katya almost shouts to you, her legs wrapping around your hips even tighter to pull you in against her body. She asked for it - so you gleefully pull out a little, then hammer back into her depth. The orc can't help but shout out a moan as you start fucking her in earnest, all the while grinning wildly with her tusks bared. You saw your erection in and out of her snatch and push all her buttons, rubbing Katya's clit at the same time.";
 		WaitLineBreak;
 		say "     Fucking and fingering the muscular orc works very well in making her putty in your hands, allowing the exquisite fun of trying out just what you can make her do. Fucking got her going good, demonstrated by the increasing wetness between her legs, the twitch of inner muscles around your thrusting cock and the fact that Katya's face and chest are becoming flushed in a somewhat lighter emerald green. But you want to tease more out of her - like the aroused groan she lets out when you caress the curve of her breasts, followed by a breathless grunt as you wrap your lips around one nipple, sucking hard. Experimentation reveals many a spot you can use to have fun with her, making the green-skinned woman whimper in helpless pleasure.";

@@ -28,7 +28,7 @@ Dressing Room Crisis is a situation.
 The sarea of Dressing Room Crisis is "Smith Haven".
 
 when play begins:
-	add Dressing Room Crisis to badspots of furry;
+	add Dressing Room Crisis to BadSpots of FurryList;
 
 Instead of resolving a Dressing Room Crisis:
 	say "     Wandering the hallways of the Smith Haven Mall, you pass through crowds of all sorts of people: lots of mall rats, demi-human hybrids, and countless other species, as well as the rare pure human. You stroll in and out of various stores, some occupied by the refugees of the outbreak, others laying abandoned. But just as you pass through an empty clothing boutique, you hear something - sniffles and quiet sobs. Curiosity guides your steps deeper into the store, walking along the aisles full of skimpy garments that are less than useless in the current crisis, until you spot a series of dressing rooms against the back wall. You notice that the second little room has its curtain drawn closed, and you can see a pair of clawed feet in the little bit of empty space between it and the ground. The sobbing is clearly coming from within the cabin, and from the tone of their voice, it is a woman in some sort of distress.";
@@ -77,10 +77,11 @@ Instead of resolving a Dressing Room Crisis:
 			say "     'Nnnghh. Please - Please just keep going,' she pants out, her hands moving cautiously to rest on your shoulders, lusting for your contact. Lapping along the edges of her sensitive nether lips a few times, you soon direct your attention to her clit, encircling it with the tip of your tongue a few times before sweeping the flat of that warm, slick muscle against it repeatedly, your merciless assault on her senses making Diana tremble and moan with desire. She sucks a sharp breath through her teeth when your lips clamp down over her button, overwhelming her with a sudden wave of arousal. 'F-Fuck, yes!' Diana gasps out, grinding against your face as her lusts soar. Before long, the young woman's legs start to grow a little wobbly from your relentless oral stimulation, and she sighs, 'I - I think I need to sit down.' Smiling in understanding, you let go of her hips and watch her take a step or two back, then sit down on the little bench in the booth. Once she's settled, you take your place between her legs again and return to pleasuring her mound.";
 			WaitLineBreak;
 			if Player is male:
-				say "     After a little more time of playing around with your new friend, you look up and see her leaning back against the dressing booth wall, eyes closed and just giving in to all of the feelings you have awakened in her. Which makes it just the perfect time to stand up and release the hard length of your [cock of Player] shaft from the tight confines of your clothes. Hard cock in hand, you bend your knees a little and brush it over Diana's sex, drawing a moan from her, then slip the head in between her nether lips before she knows what is going on. You grunt in satisfaction as the warm and wet cave of her sex enfolds your shaft, the desire to ram deep into her burning on your soul. Then suddenly, you encounter a little bit of resistance - not from Diana, but rather a flexible membrane in her otherwise so eager pussy. The girl is a virgin!";
+				say "     After a little more time of playing around with your new friend, you look up and see her leaning back against the dressing booth wall, eyes closed and just giving in to all of the feelings you have awakened in her. Which makes it just the perfect time to stand up and release the hard length of your [Cock of Player] shaft from the tight confines of your clothes. Hard cock in hand, you bend your knees a little and brush it over Diana's sex, drawing a moan from her, then slip the head in between her nether lips before she knows what is going on. You grunt in satisfaction as the warm and wet cave of her sex enfolds your shaft, the desire to ram deep into her burning on your soul. Then suddenly, you encounter a little bit of resistance - not from Diana, but rather a flexible membrane in her otherwise so eager pussy. The girl is a virgin!";
 				say "     As you bump her hymen and pause, Diana's eyes shoot open, her blue, cat-like irises catching your gaze in an intense look. Swallowing, you start to ask if she wants you to go ahead, but before the question has even left your lips, she lets out a deep mrowl, filled with animalistic need. The next thing that happens is that Diana humps her hips towards your crotch, spearing herself on your shaft and wrapping both legs around your body. A little yowl escapes her lips at the momentary pain of losing her cherry, to be replaced by an eager moan as you do the natural thing and push into her the rest of the way. Diana's arms wrap around your shoulders and she meets your lips in a hungry kiss, purring pleasantly from the depths of her throat. The two of you need no words to understand each other after that, your bodies doing the talking for you - from the way her legs push against your ass, to your own exploration of her mouth with your tongue and the young woman's fingernails raking your back to urge you to fuck her harder.";
 				WaitLineBreak;
 				say "     Fucking Diana is wild, to give it a name, even though the word barely covers just how enthusiastic the little sex-kitten takes to having a dick inside her. She wraps herself around you tightly, both with her sweet little pussy as well as arms and legs, clinging to your body in relentless desire. You can't even pause and get a breather, as Diana will just grind herself against you from beneath, riding your dick for her own pleasure. With such non-stop stimulation, it is little wonder that your hybrid partner reaches the place she is rushing to reach before much longer, fingernails digging into your back and pussy twitching around your shaft as she climaxes. The trembling of her sex around your member and her continuing grinding push you over the edge just moments later, and you start to pump your potent load deep into her receptive body, spurt after spurt flooding Diana's pussy and womb.";
+				NPCSexAftermath Diana receives "PussyFuck" from Player;
 				say "     With the tight grip of the young woman's arms slackening as she rides out the high of her orgasm, Diana comes to lean against the wall of the dressing booth. Yet even as her arousal winds down after a little while, her breathing stays at the same quick pace and you can see a flush pass over the naked skin of her human body, with the furred parts having their hair stand on end. 'I - I feel really hot,' the young woman says in a breathless tone and fans her chest with both hands. Curious and still a little adventurous, even after having already filled her with your load, you reach out and lay a hand on her chest, feeling the curve of her petite breasts and giving them a little squeeze. She really does feel abnormally warm to the touch - and almost as if the nanites had been waiting for a signal, a wave of change runs over the young woman's body before your very eyes.";
 				WaitLineBreak;
 				say "     Diana's breasts fill out a little right under your fingers; still just a handful, but reaching a solid claim to B-cups, at the same time as silky smooth white fur sprouts from her skin. The edge of her feline characteristics wanders down from her shoulders, passing over those beautiful breasts to come to a halt above her ribs. Against your hips, you can feel something similar happen to her legs, with more fluffy blue fur spreading to cover all of her legs, followed by the change washing over her crotch. With your slowly softening shaft still embedded inside her sex, you can literally feel it adjust around you, subtly changing in shape and size to almost mold itself to you. The transformation stops right beneath her navel, meaning that of the original human woman, just her midriff remains as it once was. Blinking in shock, Diana pushes herself back to sit on the bench, her pussy slipping off your member in a little gush of cum.";
@@ -90,6 +91,10 @@ Instead of resolving a Dressing Room Crisis:
 			else: [oral for everyone else]
 				say "     After a little more time of playing around with your new friend, you look up and see her leaning back against the dressing booth wall, eyes closed and just giving in to all of the feelings you have awakened in her. Which makes it just the perfect to raise your hand and lay it on her sex, stroking your fingers over the sensitive folds of your new friend. Diana lets out a little sigh as you nudge apart her nether lips, then slip two fingers in between them, pushing your fingers deeper - until you suddenly encounter a little bit of resistance - not from Diana, but rather a flexible membrane in her otherwise so eager pussy. The girl is a virgin! As you bump her hymen and pause, Diana's eyes shoot open, her blue, cat-like irises catching your gaze in an intense look. Swallowing, you start to ask if she wants you to go ahead, but before the question has even left your lips, she lets out a deep mrowl, filled with animalistic need.";
 				say "     Overtaken by lust, Diana thrusts her hips forth in an impulsive, needy gesture, spearing herself on your probing fingers and wrapping both legs around your upper body. A little yowl escapes her lips at the momentary pain of breaking her own cherry like that, to be replaced by an eager moan as you wiggle your fingers inside of her. Clearly, the young woman is more pent up than you had expected, so you do your best to give her what she needs, frigging her pussy with your fingers while using your other hand to caress the clit above. Having someone to rub and fondle her, with total focus on getting her off, Diana bucks under your touch and gasps out the sweetest sighs and meows as you experiment a little and find just the right ways to wind her up. Having been a virgin until just a few minutes ago, the stimulation is enough to rapidly drive her over the edge, shouting out loud as she comes, her inner muscles twitching around your fingers and a trickle of femcum leaking out of her.";
+				NPCSexAftermath Player receives "OralPussy" from Diana;
+				now Virgin of Diana is false;
+				say "     [Bold Type]You have taken Diana's virginity with your fingers![roman type][line break]";
+				add "Diana" to VirginitiesTaken of Player;
 				WaitLineBreak;
 				say "     With the strength of her legs wrapped around you slackening as she rides out the high of her orgasm, Diana comes to lean against the wall of the dressing booth. Yet even as her arousal winds down after a little while, her breathing stays at the same quick pace and you can see a flush pass over the naked skin of her human body, with the furred parts having their hair stand on end. 'I - I feel really hot,' the young woman says in a breathless tone and fans her chest with both hands. Curious and still a little adventurous, even after having already fingered her to orgasm, you reach out and lay a hand on her chest, feeling the curve of her petite breasts and giving them a little squeeze. She really does feel abnormally warm to the touch - and almost as if the nanites had been waiting for a signal, a wave of change runs over the young woman's body before your very eyes.";
 				say "     Diana's breasts fill out a little right under your fingers; still just a handful, but reaching a solid claim to B-cups, at the same time as silky smooth white fur sprouts from her skin. The edge of her feline characteristics wanders down from her shoulders, passing over those beautiful breasts to come to a halt above her ribs. Against your sides, you can feel something similar happen to her legs, with more fluffy blue fur spreading to cover all of her legs, followed by the change washing over her crotch. With your hand still resting on her sex, you can literally feel it adjust under your touch, subtly changing in shape and size. The transformation stops right beneath her navel, meaning that of the original human woman, just her midriff remains as it once was. Blinking in shock, Diana pushes herself back to sit on the bench, her pussy slipping off your member in a little gush of cum.";
@@ -133,7 +138,6 @@ Instead of resolving a Mall Optician:
 	say "     As soon as you are securely out of sight from her home, Diana's urgency ebbs a little and she guides you a few steps into a seemingly unused side passage that is out of the way of the bustling crowd filling the main hallways. [if DianaRelationship is 10]She gives you an eager kiss, [else]She smiles at you, [end if]then says, 'Sorry for the sudden rush, but I had to talk to you before you meet my friends. Could you... maybe not tell them just how we met? Me freaking out about the transformations and all that? I - I think I caught the cat thing from Nana Simpson and don't want to make her feel bad about it. She is so incredibly nice and was the best friend of my own grandma before she died. It's not her fault if she is a bit... touchy feely. That's why I couldn't talk to her or any of the others and ended up alone in that dressing room - until you came along.' She blushes a little as she says this, then gives you a hopeful smile that leads up to a full-on hug when you agree to edit the story of your first meeting a bit.";
 	say "     'Thanks! You're a lifesaver. How about... err, we met in the Brookstone Books store and liked the same books? That should be innocent enough and easy to remember.' The young woman nods to herself and then glances at her wristwatch, 'So. Now that that's out of the way, wanna hang out? The bookstore really is a nice place, even in our current situation. Or we can talk about anything you want.'";
 	say "[DianaTalkMenu]";
-
 
 to say DianaTalkMenu:
 	LineBreak;
@@ -258,5 +262,61 @@ to say DianaOral1: [Eat her out in public]
 	now DianaRelationship is 11; [public cunnilingus done]
 	now Resolution of Mall Optician is 3; [public oral]
 	now Mall Optician is resolved;
+
+Section 2 - NPC
+
+
+Table of GameCharacterIDs (continued)
+object	name
+Diana	"Diana"
+
+Diana is a woman.
+ScaleValue of Diana is 3. [human sized]
+Body Weight of Diana is 3. [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+Body Definition of Diana is 9. [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+Androginity of Diana is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+Mouth Length of Diana is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+Mouth Circumference of Diana is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Tongue Length of Diana is 4. [length in inches]
+Breast Size of Diana is 2. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+Nipple Count of Diana is 2. [count of nipples]
+Asshole Depth of Diana is 8. [inches deep for anal fucking]
+Asshole Tightness of Diana is 2. [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+Cock Count of Diana is 0. [number of cocks]
+Cock Girth of Diana is 0. [thickness 1-5, thin/slender/average/thick/monstrous]
+Cock Length of Diana is 0. [length in inches]
+Ball Count of Diana is 0. [allowed numbers: 1 (uniball), 2 or 4]
+Ball Size of Diana is 2. [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+Cunt Count of Diana is 1. [number of cunts]
+Cunt Depth of Diana is 8. [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+Cunt Tightness of Diana is 2. [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+Clit Size of Diana is 3. [size 1-5, very small/small/average/large/very large]
+[Basic Interaction states as of game start]
+PlayerMet of Diana is false.
+PlayerRomanced of Diana is false.
+PlayerFriended of Diana is false.
+PlayerControlled of Diana is false.
+PlayerFucked of Diana is false.
+OralVirgin of Diana is false.
+Virgin of Diana is true.
+AnalVirgin of Diana is true.
+PenileVirgin of Diana is true.
+SexuallyExperienced of Diana is true.
+TwistedCapacity of Diana is false. [Twisted Characters can take any penetration, no matter the size]
+Sterile of Diana is false. [steriles can't knock people up]
+MainInfection of Diana is "Sphinx".
+The description of Diana is "[Dianadesc]".
+The conversation of Diana is { "Meep!" }.
+
+to say Dianadesc:
+	if DianaTransformationProgress is 0: [gryphon legs, human middle, cat head]
+		say "     Diana is a young woman who seems to have caught both a siamese cat infection, which has made her head into that of a white-furred anthro cat, as well as the blue gryphon infection, judging by the blue lion's fur covering two digitigrade legs down to her clawed paws. She has gotten more confident about herself recently, coming quite far from the girl you found crying in a dressing room in your first encounter. Apparently [if Resolution of Dressing Room Crisis is 1]your friendly advice[else]the physical affection you have shared[end if] was just what she needed to find a new balance in her life. She is dressed in a black t-shirt and a blue, not quite knee-length skirt. As Diana notices you looking at her, she gives you a friendly smile.";
+	else if DianaTransformationProgress is 1: [gryphon to the navel, human belly, cat to the breasts]
+		say "     Diana is a young woman who seems to have caught both a siamese cat infection, which has made her head, arms and upper chest feline with white fur, as well as the blue gryphon infection, judging by the blue lion's fur covering two digitigrade legs down to her clawed paws. She has gotten more confident about herself recently, coming quite far from the girl you found crying in a dressing room in your first encounter. Apparently the physical affection you have shared was just what she needed to find a new balance in her life. She is dressed in a black t-shirt and a blue, not quite knee-length skirt. As Diana notices you looking at her, she gives you a beaming smile and a small wave.";
+	else if DianaTransformationProgress is 2: [gryphon/cat transformations met, starting to overlap]
+		say "     Diana is a young woman who seems to have caught both a siamese cat infection, which has made her head, arms and chest feline with white fur, as well as the blue gryphon infection, judging by the blue lion's fur covering her from her tummy down over two digitigrade legs and all the way to her clawed paws. The two infections seem to overlap in the middle, apparently not competing but rather working together to create a unique look. Meanwhile, Diana has gotten more confident about herself, coming quite far from the girl you found crying in a dressing room in your first encounter. Apparently the physical affection you have shared was just what she needed to find a new balance in her life. She is dressed in a black t-shirt and a blue, not quite knee-length skirt. As Diana notices you looking at her, she gives you a beaming smile, followed by a not at all tame wink.";
+	else if DianaTransformationProgress is 3: [complete overlap of gryphon/cat -> anthro sphinx look]
+		say "     Diana's transformation has progressed so far that she seems to have only a single strain on her now, which apparently came into being by combining her siamese cat side with some details of the blue gryphon. Her whole body is that of a white-furred feline now, with the legs being that of a toned lioness with fairly impressive claws, while her upper body remains somewhat more human in a cat-like way. For example, she still has hands instead of hand-paws, though they do have slightly claw-like fingernails. The head is anthro feline too and quite attractive, while her back is dominated by the biggest contribution of the gryphon infection: A magnificent pair of white-feathered wings. As Diana notices you looking at her, she gives you a beaming smile, followed by a not at all tame wink.";
 
 Diana ends here.

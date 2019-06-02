@@ -37,73 +37,73 @@ instead of sniffing Warehouse Door:
 Section 2 - Entering the Warehouse
 
 Definition: a person is facially human:
-	if facename of Player is "Human", yes;
-	if facename of Player is "Herm Human", yes;
-	if facename of Player is "Awesome tree", yes;
-	if facename of Player is "Siren", yes;
-	if facename of Player is "Greek Nymph", yes;
-	if facename of Player is "Spartan", yes;
-	if facename of Player is "Helot", yes;
-	if facename of Player is "Amazonian", yes;
-	if facename of Player is "Naiad", yes;
-	if facename of Player is "Math Teacher", yes;
-	if facename of Player is "Viking", yes;
-	if facename of Player is "Knight", yes;
-	if facename of Player is "Squire", yes;
+	if FaceName of Player is "Human", yes;
+	if FaceName of Player is "Herm Human", yes;
+	if FaceName of Player is "Pod Person", yes;
+	if FaceName of Player is "Siren", yes;
+	if FaceName of Player is "Greek Nymph", yes;
+	if FaceName of Player is "Spartan Warrior", yes;
+	if FaceName of Player is "Helot Manservant", yes;
+	if FaceName of Player is "Amazonian", yes;
+	if FaceName of Player is "Naiad", yes;
+	if FaceName of Player is "Math Teacher", yes;
+	if FaceName of Player is "Viking Woman", yes;
+	if FaceName of Player is "Knight", yes;
+	if FaceName of Player is "Squire", yes;
 	if HeadName of Player is "Human", yes;
 	if HeadName of Player is "Herm Human", yes;
-	if HeadName of Player is "Awesome tree", yes;
+	if HeadName of Player is "Pod Person", yes;
 	if HeadName of Player is "Siren", yes;
 	if HeadName of Player is "Greek Nymph", yes;
-	if HeadName of Player is "Spartan", yes;
-	if HeadName of Player is "Helot", yes;
+	if HeadName of Player is "Spartan Warrior", yes;
+	if HeadName of Player is "Helot Manservant", yes;
 	if HeadName of Player is "Amazonian", yes;
 	if HeadName of Player is "Naiad", yes;
 	if HeadName of Player is "Math Teacher", yes;
-	if HeadName of Player is "Viking", yes;
+	if HeadName of Player is "Viking Woman", yes;
 	if HeadName of Player is "Knight", yes;
 	if HeadName of Player is "Squire", yes;
 	no;
 
 Definition: a person is skintone human:
-	if skinname of Player is "Human", yes;
-	if skinname of Player is "Herm Human", yes;
-	if skinname of Player is "Awesome tree", yes;
-	if skinname of Player is "City Sprite", yes;
-	if skinname of Player is "Wood Elf", yes;
-	if skinname of Player is "Elven Hunter", yes;
-	if skinname of Player is "Harpy", yes;
-	if skinname of Player is "Siren", yes;
-	if skinname of Player is "Succubus", yes;
-	if skinname of Player is "Incubus", yes;
-	if skinname of Player is "Greek Nymph", yes;
-	if skinname of Player is "Spartan", yes;
-	if skinname of Player is "Helot", yes;
-	if skinname of Player is "Amazonian", yes;
-	if skinname of Player is "Naiad", yes;
-	if skinname of Player is "Caveman", yes;
-	if skinname of Player is "Math Teacher", yes;
-	if skinname of Player is "Viking", yes;
-	if skinname of Player is "Knight", yes;
-	if skinname of Player is "Squire", yes;
-	if skinname of Player is "Gunbunny", yes;
+	if SkinName of Player is "Human", yes;
+	if SkinName of Player is "Herm Human", yes;
+	if SkinName of Player is "Pod Person", yes;
+	if SkinName of Player is "City Sprite", yes;
+	if SkinName of Player is "Wood Elf", yes;
+	if SkinName of Player is "Elven Hunter", yes;
+	if SkinName of Player is "Harpy", yes;
+	if SkinName of Player is "Siren", yes;
+	if SkinName of Player is "Succubus", yes;
+	if SkinName of Player is "Incubus", yes;
+	if SkinName of Player is "Greek Nymph", yes;
+	if SkinName of Player is "Spartan Warrior", yes;
+	if SkinName of Player is "Helot Manservant", yes;
+	if SkinName of Player is "Amazonian", yes;
+	if SkinName of Player is "Naiad", yes;
+	if SkinName of Player is "Caveman", yes;
+	if SkinName of Player is "Math Teacher", yes;
+	if SkinName of Player is "Viking Woman", yes;
+	if SkinName of Player is "Knight", yes;
+	if SkinName of Player is "Squire", yes;
+	if SkinName of Player is "Gunbunny", yes;
 	no;
 
 Definition: a person is bodily human:
-	if bodyname of Player is "Human", yes;
-	if bodyname of Player is "Herm Human", yes;
-	if bodyname of Player is "Wood Elf", yes;
-	if bodyname of Player is "Elven Hunter", yes;
-	if bodyname of Player is "Awesome tree", yes;
-	if bodyname of Player is "Greek Nymph", yes;
-	if bodyname of Player is "Spartan", yes;
-	if bodyname of Player is "Helot", yes;
-	if bodyname of Player is "Amazonian", yes;
-	if bodyname of Player is "Naiad", yes;
-	if bodyname of Player is "Math Teacher", yes;
-	if bodyname of Player is "Viking", yes;
-	if bodyname of Player is "Knight", yes;
-	if bodyname of Player is "Squire", yes;
+	if BodyName of Player is "Human", yes;
+	if BodyName of Player is "Herm Human", yes;
+	if BodyName of Player is "Wood Elf", yes;
+	if BodyName of Player is "Elven Hunter", yes;
+	if BodyName of Player is "Pod Person", yes;
+	if BodyName of Player is "Greek Nymph", yes;
+	if BodyName of Player is "Spartan Warrior", yes;
+	if BodyName of Player is "Helot Manservant", yes;
+	if BodyName of Player is "Amazonian", yes;
+	if BodyName of Player is "Naiad", yes;
+	if BodyName of Player is "Math Teacher", yes;
+	if BodyName of Player is "Viking Woman", yes;
+	if BodyName of Player is "Knight", yes;
+	if BodyName of Player is "Squire", yes;
 	no;
 
 Instead of entering the Storage Room:
@@ -122,12 +122,12 @@ Instead of going south from the Abandoned Lot:
 			if StevenSwayed is 1: [gave Steven soda before]
 				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but I [italic type]really[roman type] can't let you in here looking like that. Try changing your appearance somehow, okay?' Giving you an apologetic look, he quickly closes the slat again right after that.";
 			else:
-				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [facename of Player] face.";
-		else if scalevalue of Player is 1 or scalevalue of Player > 3 or bodyname of Player is listed in infections of Taurlist: [small or large player, or taurs]
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [FaceName of Player] face.";
+		else if scalevalue of Player is 1 or scalevalue of Player > 3 or BodyName of Player is listed in infections of Taurlist: [small or large player, or taurs]
 			if StevenSwayed is 1: [gave Steven soda before]
-				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if bodyname of Player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[else if scalevalue of Player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[else]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
+				say "A person you recognize as Steven looks out at you for a moment, startled by your change in appearance. 'I'm sorry,' he whispers, 'but there's [italic type]no[roman type] way to hide [if BodyName of Player is listed in infections of Taurlist]those four feet of yours. You're going to have to at least be humanoid, okay[else if scalevalue of Player is 1]just how small you are. They're sure to know something's up. Try to find a way to get back to normal size, okay[else]big you've gotten. Try to find a way to shrink back down somehow, okay[end if]?' Giving you an apologetic look, he quickly closes the slat again right after that.";
 			else:
-				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if bodyname of Player is listed in infections of Taurlist]tauric body[else]altered body and its [Body Size Adjective of Player] size[end if].";
+				say "You barely see a pair of eyes look out at you before a man cries, 'Yikes!' and the slat closes rapidly. Perhaps it was your [if BodyName of Player is listed in infections of Taurlist]tauric body[else]altered body and its [Body Size Adjective of Player] size[end if].";
 		else:
 			say "'Hello! Who's there?' a man from behind the door says, looking out at you.";
 			if StevenSwayed is 1: [gave Steven soda before]
@@ -209,7 +209,7 @@ After going to Storage Room from Steven's Office:
 To say Steven flattery:
 	if the player is bodily human:
 		if the player is skintone human:
-			if tailname is not "Human":
+			if TailName is not "Human":
 				if Breast Size of Player < 4:
 					if Cock Length of Player < 12 or the Ball Size of Player < 12:
 						say "You seem pretty reasonably human. Glad the disaster didn't take a hit out of you, eh?";
@@ -404,8 +404,8 @@ To StevenFuck:
 	move Steven to Steven's Home;
 	now MonsterID is 1;
 	say "You slowly pull yourself up, still wheezing from excitement. "; [continues into next line]
-	infect "Red Horse";
-	infect "Red Horse";
+	infect "Morgan Horse Stallion";
+	infect "Morgan Horse Stallion";
 
 Section 4 - Steven in the Junkyard
 
@@ -418,7 +418,7 @@ To Stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Red Horse":
+		if Name entry is "Morgan Horse Stallion":
 			now MonsterID is y;
 			break;
 	if lastfuck of Steven - turns < 6:
@@ -457,8 +457,8 @@ To Stevenjunkfuck:
 			else:
 				say ". Frowning a bit, you realize you don't have any male or female equipment. A little discouraged, you're about to stop when you realize you still have one thing you could use to get this sexy horse off. You lick your lips and take a deep breath, getting your jaw nice and loose for his sexy equine length.";
 				say "[Stevensuck]";
-		infect "Red Horse";
-		infect "Red Horse";
+		infect "Morgan Horse Stallion";
+		infect "Morgan Horse Stallion";
 		now lastfuck of Steven is turns;
 
 StevenFuckcount is a number that varies.
@@ -487,13 +487,13 @@ to say Stevensuck:
 		say "you moaning beneath him for him to mount you, bringing a smile to his equine face.";
 		say "     The strong horse guides his throbbing cock against your [if Player is female]pussy before thrusting into your wet hole[else]pucker before thrusting into your tight hole[end if]. Climbing atop you, he nickers in pleasure as he fucks you, fucking you energetically despite having just gotten off[if Breast Size of Player > 0]. He moves a hand to your [breast size desc of Player] breasts, tweaking your nipples while he rides you[else]. He rubs one hand over your flat [bodytype of Player] chest[end if].";
 		if Player is puremale:		[male sub bonus scene]
-			say "     His hand moves lower, wrapping around your [cock size desc of Player] [cock of Player] dick and stroking it as he fucks you. 'What a strange mare you are with a leaking cock like this. You're a sexy mare though, aren't you? Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you. You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you. At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
+			say "     His hand moves lower, wrapping around your [cock size desc of Player] [Cock of Player] dick and stroking it as he fucks you. 'What a strange mare you are with a leaking cock like this. You're a sexy mare though, aren't you? Or maybe I'm wrong and I should stop fucking you,' he says, slowing his thrusts and moving to withdraw from you. You release a soft whinny of need and push back onto his rod, replying that you want to be his sexy mare and that you need him to fill you. At your words, he thrusts back into you hard and resumes fucking you, still stroking your dribbling erection.";
 		say "     Having already fucked you a few minutes ago, the stallion has more endurance this time, making for a nice, long fuck that has you moaning and whinnying beneath him. He nuzzles at your neck and nips at it with his flat teeth as you both get hot and sweaty from the mating. Finally his excitement boils over and he thrusts hard into you one last time, blasting his hot load deep inside you. His load, while not as big as the last, it still quite impressive and gives your [if Player is female]womb[else]lower belly[end if] a wonderfully full feeling. After withdrawing, he wipes his spent shaft across your rear and snuggles you in his arms.[impregchance]";
 
 
 to say Stevenanal:
 	say "     After stroking the equine man until he's nice and hard, you lean down and give the tip of his rod a tender kiss, licking up and swallowing some of the pre that's leaking out. You then slide up on top of him, pressing your body to his and giving him a deep kiss. As you kiss him, you lower yourself into position on his hard rod before he realizes what is happening. You groan a little into the kiss as his enlarged, equine shaft presses into your back passage.";
-	say "     You take a breath and push back, sliding more of his thick meat into you. You groan and begin to ride him, taking it slow at first, but soon picking up speed. His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass. You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if Player is male]. This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud. Your seed splatters across his chest as your [cock size desc of Player] [cock of Player] cock pulses[end if].";
+	say "     You take a breath and push back, sliding more of his thick meat into you. You groan and begin to ride him, taking it slow at first, but soon picking up speed. His strong hands move to your hips, squeezing your bottom and pulling you down onto him as he accepts his lustful urges and fucks your sexy ass. You can feel the pulse of his rod inside you and feeling his copious pre making you more and more slick. Panting and moaning hard, it isn't long before you feel Steven tense up under you, the head of his equine flaring up as he climaxes, flooding your bowels with his fertile cum[if Player is male]. This pushes you over the edge into your own orgasm, your ass clenching around his thick shaft, squeezing as much cum as you can get from this equine stud. Your seed splatters across his chest as your [cock size desc of Player] [Cock of Player] cock pulses[end if].";
 	say "     Collapsing on top of him, you pant hard, enjoying the feel of his warm cum inside you. You stretch out and slide up of his shaft, his cum flooding out of you. You grin and lean down, giving him a kiss before you go and clean yourself up. He leans back and smiles happily, seeming quite pleased with himself and the large load of thick horse cum now slowly leaking out of your stretched pucker.[mimpregchance]";
 	if Stevenmm < 2, increase Stevenmm by 1;
 
@@ -518,27 +518,35 @@ to say Stevenonbottom:
 		say "     Your stiff, dribbling rod finds its place under his balls and against his dark red asshole. That horse pucker spreads open for you [if Cock Length of Player < 20]readily, having little difficulty accommodating your [cock size desc of Player] manhood[else]slowly, having a little trouble with your [cock size desc of Player] manhood[end if]. His ass is hot and grips so nicely around your pulsing shaft that you have to hold yourself back from pounding him right away. He releases a nickering moan and blushes all the redder upon your next thrust. While it's a little tempting to tease him, you instead resume stroking his cock, further keeping the strong horse happy as you fuck him.";
 		WaitLineBreak;
 		say "     The grinding of your cock against his prostate soon gets to him and he's panting heavily soon enough. You keep at playing with his cock and balls, enjoying how they pulse and throb with growing need. The sight of him laying there as you drill into him is wonderfully arousing; the tough stallion looks so sexy as he moans with a cock buried in his butt. As your pace picks up, he's not able to hold out much longer, the stimulation against his prostate eventually putting him over the edge. He groans loudly and cums in messy spurts across himself, staining his red coat with streaks of white.";
-		say "     The sight of him cumming's enough to push you over the top as well. Driving your [cock of Player] shaft [if Cock Length of Player < 18]fully [end if]into him, you groan and cum messily into his ass. Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him. By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
+		say "     The sight of him cumming's enough to push you over the top as well. Driving your [Cock of Player] shaft [if Cock Length of Player < 18]fully [end if]into him, you groan and cum messily into his ass. Your gooey load pools in his bowels, making him extra-slick for the few last thrusts as you drain your balls in him. By the time you pull out, he's left panting and dazed with a sated smiled on his equine face.";
 		if Stevenmm < 4, increase Stevenmm by 1;
 	else:
 		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back. 'Hey, I said I'm not in the mood.' He gets up and looks around. 'I'm going to go take a walk.'";
 
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Name entry is "Red Horse";
-	now enemy title entry is "";
+	now Species Name entry is "Morgan Horse";
+	add "Morgan Horse Stallion" to infections of Equinelist;
+	add "Morgan Horse Stallion" to infections of NatureList;
+	add "Morgan Horse Stallion" to infections of MaleList;
+	add "Morgan Horse Stallion" to infections of BluntCockList;
+	add "Morgan Horse Stallion" to infections of SheathedCockList;
+	add "Morgan Horse Stallion" to infections of BipedalList;
+	add "Morgan Horse Stallion" to infections of TailList;
+	now Name entry is "Morgan Horse Stallion";
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is "Steven";
-	now enemy type entry is 1; [non-unique enemy]
-	now attack entry is "nothing.";
-	now defeated entry is "nothing.";
-	now victory entry is "nothing.";
-	now desc entry is "nothing.";
+	now enemy type entry is 1; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
 	now face entry is "flat-toothed, prehensile-lipped equine";
 	now body entry is "well-muscled";
 	now skin entry is "long red hairs up and down your";
@@ -584,11 +592,12 @@ When play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -596,7 +605,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -604,20 +613,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -638,26 +647,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -673,11 +682,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]

@@ -22,8 +22,8 @@ Grumpy Old Men is a situation.
 The sarea of Grumpy Old Men is "Outside".
 
 when play begins:
-	add Grumpy Old Men to badspots of furry;
-	add Grumpy Old Men to badspots of guy;
+	add Grumpy Old Men to BadSpots of FurryList;
+	add Grumpy Old Men to BadSpots of MaleList;
 
 Instead of resolving Grumpy Old Men:
 	say "     While walking down the city streets, you stop when your eyes catch the form of two old men, a tiger and a wolf, arguing with each other while waving their hands up and down wildly at one another. Worrying that the two are about to start a fight, you watch as they move right on down the street past you, completely ignoring you. You wonder if you should speak up to say anything to stop their argument, but you find your words disappearing inside of your throat as you listen to their conversation, if only in bits and pieces.";
@@ -44,9 +44,9 @@ Fleeing Minotaur is a situation.
 The sarea of Fleeing Minotaur is "Outside".
 
 when play begins:
-	add Fleeing Minotaur to badspots of furry;
-	add Fleeing Minotaur to badspots of hermaphrodite;
-	add Fleeing Minotaur to badspots of guy;
+	add Fleeing Minotaur to BadSpots of FurryList;
+	add Fleeing Minotaur to badspots of HermList;
+	add Fleeing Minotaur to BadSpots of MaleList;
 
 Instead of resolving Fleeing Minotaur:
 	say "     While traversing the city streets, you spot a figure swerving rapidly around a corner. As it sprints closer, you realize that it's some kind of minotaur, and you dodge it just in time to avoid being pulverized. To your surprise, the creature runs straight past you, ignoring your presence entirely and hightailing it at top speeds in the direction you just came from. Seeing the odd creature running so fast makes wonder what the hell could scare it so badly, only for the answer to come in the form of a hyena dominatrix charging down the street with a whip in her hand.";
@@ -64,8 +64,8 @@ Scavenging Dalmatian is a situation.
 The sarea of Scavenging Dalmatian is "Outside".
 
 when play begins:
-	add Scavenging Dalmatian to badspots of furry;
-	add Scavenging Dalmatian to badspots of guy;
+	add Scavenging Dalmatian to BadSpots of FurryList;
+	add Scavenging Dalmatian to BadSpots of MaleList;
 
 Instead of resolving Scavenging Dalmatian:
 	say "     Walking down the almost deserted streets of the city, you come across a lone Dalmatian scavenging through a trash can. More than likely looking for food, the figure is failing to find anything appetizing inside the smelly waste container, their spotted tail hanging limply behind them.";
@@ -110,8 +110,8 @@ Captured Wyvern is a situation.
 The sarea of Captured Wyvern is "Outside".
 
 when play begins:
-	add Captured Wyvern to badspots of feral;
-	add Captured Wyvern to badspots of furry;
+	add Captured Wyvern to badspots of FeralList;
+	add Captured Wyvern to BadSpots of FurryList;
 
 Instead of resolving Captured Wyvern:
 	say "     Coming across a large group of soldiers, you notice that the uniformed men and women seem to have somehow brought a wyvern down onto the ground and are currently staring at the mutant irritably. The large beast, which has to be almost thirty feet long, cries and chirps loudly as the soldiers begin to shout and kick at it. The desperation in some of the humans['] voices has your body tensing as you watch the assembled collective.";
@@ -151,9 +151,9 @@ Secrets is a situation.
 The sarea of Secrets is "Outside".
 
 when play begins:
-	add Secrets to badspots of furry;
-	add Secrets to badspots of girl;
-	add Secrets to badspots of hermaphrodite;
+	add Secrets to BadSpots of FurryList;
+	add Secrets to BadSpots of FemaleList;
+	add Secrets to badspots of HermList;
 
 Instead of resolving Secrets:
 	say "     While walking through the streets of the city, you come across an old public bathroom and decide to stop in to see if the water is working in here. You doubt it'll still be running, but there's no harm in checking. Walking into the public facility, you step carefully to avoid the globs of cum, milk and urine littering the once white tiled floor and walls. You make your way to the women's side of the restrooms, figuring the men's side is probably a biohazard zone by now. Right before you head to the sinks, which are amazingly free from any kind of stains, you freeze in place as an all too familiar noise reaches your ears. The sounds of moaning and thumping are resounding from off of the stalls of the public washroom, and you immediately feel compelled to flee before trouble finds you. However, before you can beat a retreat, one of the bathroom stalls pops open. The banging you had heard was coming from the cheap tin frame and not the far wall, and quickly two half-dressed soldiers pop out and onto the ground. Both are indeed female, and the larger of the pair catches her bulk with her hands to avoid crushing her fuck buddy. You find it odd that two women could be making so much noise, but your confusion is lifted when you spot the large feline shaft connecting them together. It would seem that the larger valkyrie has been tainted by this unclean world.";
@@ -172,7 +172,7 @@ School Spirit is a situation.
 The sarea of School Spirit is "Outside".
 
 when play begins:
-	add School Spirit to badspots of girl;
+	add School Spirit to BadSpots of FemaleList;
 
 Instead of resolving School Spirit:
 	say "     While exploring the city, you discover a crashed school bus. There is no one on the bus, but you do find a dozen shredded cheerleader uniforms. Judging by the uniforms, the cheerleaders were from the local college. All the uniforms are ripped around the middle, almost as if the bellies of all the cheerleaders grew until they ripped through their uniforms. You can only surmise that a creature must have boarded the bus and impregnated every single cheerleader with its infectious seed. Feeling uneasy, you quietly leave the bus and sneak away before the cheerleaders or their spawn return.";
@@ -190,8 +190,8 @@ Another Survivor is a situation.
 The sarea of Another Survivor is "Outside".
 
 when play begins:
-	add Another Survivor to badspots of furry;
-	add Another Survivor to badspots of hermaphrodite;
+	add Another Survivor to BadSpots of FurryList;
+	add Another Survivor to badspots of HermList;
 
 Instead of resolving Another Survivor:
 	say "     While exploring the city, you spot another survivor. Before you get a chance to introduce yourself, a Hermaphrodite Gryphon swoops out of the sky, snatches up the other survivor, and flies away.";
@@ -209,8 +209,8 @@ Masturbating Fox is a situation.
 The sarea of Masturbating Fox is "Outside".
 
 when play begins:
-	add Masturbating Fox to badspots of furry;
-	add Masturbating Fox to badspots of guy;
+	add Masturbating Fox to BadSpots of FurryList;
+	add Masturbating Fox to BadSpots of MaleList;
 
 Instead of resolving Masturbating Fox:
 	say "     While exploring the city, you hear a strange sound in the distance.";
@@ -245,8 +245,8 @@ Ice Cream Truck is a situation.
 The sarea of Ice Cream Truck is "Outside".
 
 when play begins:
-	add Ice Cream Truck to badspots of furry;
-	add Ice Cream Truck to badspots of hermaphrodite;
+	add Ice Cream Truck to BadSpots of FurryList;
+	add Ice Cream Truck to badspots of HermList;
 
 IceCreamTruckBadEnd is a truth state that varies. IceCreamTruckBadEnd is usually false.
 
@@ -254,7 +254,7 @@ Instead of resolving Ice Cream Truck:
 	say "     An abandoned ice cream truck sits on its lonesome in the middle of the street. You quickly investigate it to check if there's anything edible that hasn't already been scavenged. Looking in the cooler in back, you are disappointed to find that the ice cream has melted all over the place, soaking the inside of the truck. Taking a whiff of a strange smell, you realize that the sticky white stuff may not be ice cream after all, but someone or something's cream. You might be able to find something useful here, but it would be messy. Do you try?";
 	if Player consents:
 		if humanity of Player < 10:
-			say "     Try as you might to concentrate on your search, you struggle to stay focused amidst all the milk and cum coating almost every part of the interior. The heady miasma of sex leaves you increasingly lightheaded and aroused, and your body is enveloped in scintillating tingles as the fluids begin to seep into your [skin of Player] skin. Feeling as though you're being sensually licked and caressed from every angle, your already fragile mind shuts down, and you sink to your knees in the slurry of mixed seed, rubbing and stroking yourself as lust roars through you.";
+			say "     Try as you might to concentrate on your search, you struggle to stay focused amidst all the milk and cum coating almost every part of the interior. The heady miasma of sex leaves you increasingly lightheaded and aroused, and your body is enveloped in scintillating tingles as the fluids begin to seep into your [Skin of Player] skin. Feeling as though you're being sensually licked and caressed from every angle, your already fragile mind shuts down, and you sink to your knees in the slurry of mixed seed, rubbing and stroking yourself as lust roars through you.";
 			say "     Looking over all the warm, sticky spunk that surrounds you, you debate how to best debase yourself. Your body seems to decide the next course of action for you, and you reach below to ";
 			if Player is herm:
 				say "cram some of the delicious cream into your cunt[sfn], your spare hand taking hold of your hardening [if Cock Count of Player > 1]cocks to stroke and frot them together[else]cock to stroke and pump it slowly[end if]. Your [cock size desc of Player] length[smn] throb[smv] and pulse[smv] with excitement as your fingers sink into your cum-sullied depths, spreading and rubbing along your sensitive inner walls";
@@ -311,7 +311,7 @@ Instead of resolving Ice Cream Truck:
 				say "     Your eyes flutter closed as her thick, knotted tool slides over your palate, the heady aroma of sex and cum clinging fragrantly to her warm, delectable cockflesh. She gives you a brief moment of respite to slide your tongue along her lance, curling it around her pliant meat and slurping at that musk-laced mast, relishing the heat and taste that suffuses your salivating maw. Her taloned hands take hold of your neck in a gentle vise as she pushes deeper, sinking inch after inch that massive dick into your throat. Even craning your head back, the straight descent makes you gag and gurgle wetly around her pole, unsure if you can take the entirety of it all. However, your altered form proves remarkably elastic, and she soon pushes the bulb of her knot past your gaping beak, her pre already dribbling down your throat.";
 				say "     What breath you manage is heavily doused in the strong scent of virility that wafts from the gryphon's crotch, the scent of her many past conquests enthralling your sex-addled mind. Your throat wrings around her embedded cock as you stare, upside down, into the lavish coat of blue fur that blots your vision, so close to her sack that your tongue can't help but flit further down to tickle at those weighty orbs. The gryphon gently massages your neck, pressing the walls of your throat directly against that pre-slick meat, feeding you more of her intoxicating aroma for what feels like an eternity of submissive bliss";
 				if Player is male:
-					say ", your neglected cock[smn] standing painfully erect throughout. Whether out of sympathy or simply to tease you further, the gryphon whips her tufted tail around to [if Cock Count of Player > 1]weave through your [cock of Player] lengths, coiling and brushing along your [cock size desc of Player] malenesses[else]curl around your [cock size desc of Player] maleness, a ticklish vise that caresses and gently pumps your [cock of Player] cock[end if]";
+					say ", your neglected cock[smn] standing painfully erect throughout. Whether out of sympathy or simply to tease you further, the gryphon whips her tufted tail around to [if Cock Count of Player > 1]weave through your [Cock of Player] lengths, coiling and brushing along your [cock size desc of Player] malenesses[else]curl around your [cock size desc of Player] maleness, a ticklish vise that caresses and gently pumps your [Cock of Player] cock[end if]";
 				say ".";
 				WaitLineBreak;
 				say "     Eventually tiring of teasing you, the avian draws her hips back, pulling that generous slab of knotted cockflesh back to smear across your tongue, then rams deep into your throat again. You a wince a little from the possessive force on display, only to moan when she leaks more of that delicious, sticky pre down your gullet, warming and arousing you from within. She wastes no time in setting a firm and confident tempo, sawing her immaculate gryphon cock back and forth in your well-stretched throat, her thrusts deliberate and measured in spite of her obvious need. Your moan and coo contentedly into the natural gag of her dick, muffled sounds of pleasure emanating from you in time with her pistoning motions[if Player is male]. Your length[smn] spurt[smv] and twitch[esmv] with each rough drive into your maw, the pleasure of being reduced to an obedient cocksleeve such a strong and sexy herm drilling into your mind and overpowering all thought[end if].";
@@ -323,7 +323,7 @@ Instead of resolving Ice Cream Truck:
 				say "     By the time your trembling bodies settle down, you feel your stomach bloated outwards in a small, sloshing dome of infected seed. The gryphon's softening knot allows her pry free from your beak without risk, dragging along with her the intense, heady flavor of the lingering cum she just stuffed into your pliable form. 'That was fun,' the sexy herm coos in almost a purr, then giggles sweetly and pulls the rest of the way out. Rich splatters of seed leak from your gaping maw, your vision still blurry from the hormones and adrenaline while your tongue chases after the remnants of her delicious, copious cum.";
 				say "     Stunned as you are, you pose no resistance as she hefts you up to your feet, slipping and stumbling a little in the slime of spent fluids. She then pulls you by the wrist with an infectious sense of excited urgency[if Player is male], your cock[smn] already hard and dribbling by the time you're back outside[end if]. Using the street as her runway, your mate takes off into the sky with powerful flaps her wings, and your broken mind has little trouble following her lead, joining her side in the air. You [if Player is mpreg_ok]fuck and breed[else]embrace each other and fuck[end if] wildly the moment you arrive at her nest, paying no heed to the world around you in the haze of taking her cock[if Player is male] and stuffing her pussy with your own knotted tool[smn][end if].";
 			WaitLineBreak;
-			now bodyname of Player is "Blue Gryphon Herm";
+			now BodyName of Player is "Blue Gryphon Herm";
 			now IceCreamTruckBadEnd is true; [ See - Timothy.i7x in Sarokcat's folder for endings ]
 			now humanity of Player is 0;
 			end the story saying "You spend the rest of your days with your lovely gryphon mate.";
@@ -348,7 +348,7 @@ Wyvern Flight is a situation.
 The sarea of Wyvern Flight is "Outside".
 
 when play begins:
-	add Wyvern Flight to badspots of furry;
+	add Wyvern Flight to BadSpots of FurryList;
 
 Instead of resolving Wyvern Flight:
 	say "     You spy a small group of wyverns hauling off tables and chairs from a sidewalk café, apparently building a large nest somewhere nearby. You quickly lie low in a nearby storefront until the activity ceases, thankful to not be noticed. It seems the city keeps getting more dangerous every day.";
@@ -365,8 +365,8 @@ Strange Preacher is a situation.
 The sarea of Strange Preacher is "Outside".
 
 when play begins:
-	add Strange Preacher to badspots of furry;
-	add Strange Preacher to badspots of hermaphrodite;
+	add Strange Preacher to BadSpots of FurryList;
+	add Strange Preacher to badspots of HermList;
 
 Instead of resolving Strange Preacher:
 	say "     Wandering the deserted streets, you hear what sounds like a loud voice father down the street. Hurrying to see who is talking, you are shocked to see a strange creature shouting out to an empty street. Moving closer in case this is some kind of trick, you get a better look at the creature and find yourself shaking your head in astonishment. With the lower body of one of those panther taurs, she is resting her front legs on a box of some type while her back ones brace her on the street, her spread legs giving you a good look at hir erect feline cock. Behind hir, a long reptilian tail is lashing in time with her words, its scaled length almost as long as her entire furred lower body. Her torso seems to be covered in rough brown dog fur, with a bovine udder hanging off her upper body's stomach. Her arms are twisted around and pulled up into almost wyvern-like wings, obviously not strong enough to lift her even an inch off the ground. It is almost startling to see the rather human head sitting on the shoulders of the creature, her eyes closed as she continues to speak.";
@@ -384,7 +384,7 @@ Hyena Kill is a situation.
 The sarea of Hyena Kill is "Outside".
 
 when play begins:
-	add Hyena Kill to badspots of furry;
+	add Hyena Kill to BadSpots of FurryList;
 
 Instead of resolving Hyena Kill:
 	say "     You come across a murder scene in the corner of one of the streets, blood spattered everywhere, on the walls, the sidewalk, the parked cars, and black spotted hair also. Powdered segments of bone are also scattered. It looks like one of the hyenas didn't go for the rape, but for the kill. Ouch. They must have really hated the person. You hope that isn't what they think of you.";
@@ -401,9 +401,9 @@ Panther Trap is a situation.
 The sarea of Panther Trap is "Outside".
 
 when play begins:
-	add Panther Trap to badspots of furry;
-	add Panther Trap to badspots of hermaphrodite;
-	add Panther Trap to badspots of noncon;
+	add Panther Trap to BadSpots of FurryList;
+	add Panther Trap to badspots of HermList;
+	add Panther Trap to badspots of NonconList;
 
 Instead of resolving Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
@@ -454,7 +454,7 @@ CatsandDogs is a situation.
 The sarea of CatsandDogs is "Outside".
 
 when play begins:
-	add CatsandDogs to badspots of furry;
+	add CatsandDogs to BadSpots of FurryList;
 
 Instead of resolving CatsandDogs:
 	say "     As you travel through the city, you come across a pair of old apartment buildings side by side. The windows are open and the tenants are yelling at one another. One building appears to be populated entirely by cats and the other by dogs. They are growling, yowling and making rude gestures at one another. They jeer at one another and toss trash across the alley dividing their buildings. Focused on their mutual hatred, they don't notice you, but you do steer clear, certain that you'd not be able to fight off the horde populating either building... or worse, end up as some sort of prize in a battle between them. You make note of the location and remind yourself to keep away, finding another path around this neighborhood.";

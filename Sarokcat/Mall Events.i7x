@@ -93,10 +93,10 @@ Captive Rat	"Captive Rat"
 Captive Rat is a situation. The level of Captive Rat is 6.
 The sarea of Captive Rat is "Mall".
 when play begins:
-	add Captive Rat to badspots of guy;
-	add Captive Rat to badspots of hermaphrodite;
-	add Captive Rat to badspots of furry;
-	add Captive Rat to badspots of hellspawn;
+	add Captive Rat to BadSpots of MaleList;
+	add Captive Rat to badspots of HermList;
+	add Captive Rat to BadSpots of FurryList;
+	add Captive Rat to badspots of DemonList;
 
 
 Instead of resolving a Captive Rat:
@@ -122,7 +122,7 @@ puddle of goo	"puddle of goo"
 puddle of goo is a situation.
 The sarea of puddle of goo is "Mall".
 when play begins:
-	add puddle of goo to badspots of girl;
+	add puddle of goo to BadSpots of FemaleList;
 
 Instead of resolving a puddle of goo:
 	say "     Looking around in the area under the mall, you find a strange puddle of goo just lying there in the middle of the passageway. You think you could take a sample if you wanted to.";
@@ -168,8 +168,8 @@ Goo Gathering	"Goo Gathering"
 Goo Gathering is a situation. The level of Goo Gathering is 2.
 The sarea of Goo Gathering is "Mall".
 when play begins:
-	add Goo Gathering to badspots of guy;
-	add Goo Gathering to badspots of furry;
+	add Goo Gathering to BadSpots of MaleList;
+	add Goo Gathering to BadSpots of FurryList;
 
 Instead of resolving a Goo Gathering:
 	say "     Traveling through the dim passages under the city, you come across a large open area where several tunnels come together. Looking out into the area, you are surprised to see a large amount of those gooey girls gathered around talking to each other. Deciding discretion is the better part of valor, you try to slip away down the passageway before you can be noticed.";

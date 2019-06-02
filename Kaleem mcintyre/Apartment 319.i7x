@@ -12,14 +12,14 @@ AptAid is a number that varies.
 
 The sarea of Apartment 319 is "High".
 When play begins:
-	Add Apartment 319 to badspots of hellspawn;
-	Add Apartment 319 to badspots of furry;
-	Add Apartment 319 to badspots of guy;
+	Add Apartment 319 to badspots of DemonList;
+	Add Apartment 319 to BadSpots of FurryList;
+	Add Apartment 319 to BadSpots of MaleList;
 
 Instead of resolving a Apartment 319:
 	if AptAid is 0:
 		say "     Briskly walking through the streets of the high rise, you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment, you simply shrug and go off about your way.";
-	If AptAid is 1 and ( guy is banned or hellspawn is banned or furry is banned or hermaphrodite is banned ):
+	If AptAid is 1 and ( MaleList is banned or DemonList is banned or FurryList is banned or HermList is banned ):
 		say "     Jogging down the side of the streets of the high rise district, you end up bumping into someone. Not being able to stop yourself, you flail around wildly to collect your balance only to end up collapsing on the other in spite of your attempts. Luckily, whoever is in front of you is able to catch your weight before you end up dragging the both of you down to the pavement. 'Whoa there, are you okay stranger?' The person holding you up, who just so happens to be a Dalmatian, asks with their dark brown eyes shining at you somewhat playfully.";
 		say "     Nodding to the other, you pull yourself away from them to stand on your own two feet and then, on a whim, look down to inspect the shirt the Dal is wearing, an oddity in this town with almost everyone running around half naked. What you see makes your senses slightly spark and you quickly tip your head up to ask the Dal if he is from Station 86. 'Y-yes, I am. Who are you though?' The man wearing the blue, firefighter-embroidered shirt takes a step back from you, yet in spite of this you give the Dalmatian the rundown of what's happening and who you just so happen to be. Watching the other's face go through a multitude of expression before stilling on surprise, you can bet that he never imagined hearing this information when he woke up today.";
 		WaitLineBreak;
@@ -72,11 +72,11 @@ Instead of resolving a Apartment 319:
 		if Player consents:
 			LineBreak;
 			say "     Telling the unknown man where he can shove it, you let him know that he'll be the one to get out, preferably with a foot in his ass if any of his thugs harms Dagaz any more. 'Really? Well, you got some moxie about you, whoever you are, but do you have anything to back it up?' A snap of fingers has the hyenas moving towards you.";
-			challenge "Herm Hyena";
+			challenge "Hyena Herm";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				challenge "Herm Hyena";
+				challenge "Hyena Herm";
 				if fightoutcome >= 10 and fightoutcome <= 19:
-					challenge "Herm Hyena";
+					challenge "Hyena Herm";
 					if fightoutcome >= 10 and fightoutcome <= 19:
 						say "     'Now I'm impressed.' The unknown mutant claps his hands while looking down at the defeated hyenas. 'But how do you handle demons?' Another snap of fingers, and the two demon brutes are coming your way.";
 						challenge "Demon Brute";
@@ -214,7 +214,7 @@ Instead of resolving a Apartment 319:
 		say "     'Well, if it isn't my supposed rescuer. Heh... uhm...' The other man looks somewhat conflicted as he rubs at the back of his head while looking at you somewhat unsurely. Asking him if he's alright, you watch as the Dalmatian nods at you before blushing somewhat sheepishly. 'Look, I appreciate everything you tried to do, but please, for my sake [italic type]don't[roman type] tell anybody about what happened the night before, okay?' Promising that you won't, you get a bitten off chuckle as Dagaz looks to you with something akin to embarrassment written on muzzle.";
 		WaitLineBreak;
 		say "     'Yeah, you see, that was... well...' The Dal man shakes his head before grumbling somewhat in annoyance. Whether he's upset at you or himself... well, you're not too sure at the moment. 'Look, I don't need to explain myself to you, but I will tell you this: that was something I willingly got myself into, but am not going to go through anymore.' Asking him what he means, Dagaz sighs before explaining. 'See, I kinda like the rough and kinky kind of stuff, but haven't been able to get it as of late at the clubs and places I normally haunt. However, with the city currently as it is, and us being laid off from the fire station, I got the chance when I found a place that caters to people with my... [']particular tastes['], so to say, from a friend of a friend.";
-		say "     'Anyway, thanks for the assist and don't go running your trap off to anybody about this, okay?' A slow and unsure nod has the firefighter smiling at you. A quick lick across your [facename of Player] cheek and Dagaz is pulling back to blush somewhat unsurely at you. 'Thank you, friend.' And with that, the Dalmatian walks backwards into his home and then quietly closes his door, leaving you standing in confusion as you look at the now sealed doorway.";
+		say "     'Anyway, thanks for the assist and don't go running your trap off to anybody about this, okay?' A slow and unsure nod has the firefighter smiling at you. A quick lick across your [FaceName of Player] cheek and Dagaz is pulling back to blush somewhat unsurely at you. 'Thank you, friend.' And with that, the Dalmatian walks backwards into his home and then quietly closes his door, leaving you standing in confusion as you look at the now sealed doorway.";
 		WaitLineBreak;
 		say "     Feeling like you've done all you can here, it's time to head back to Homaru's place!";
 		now Resolution of Apartment 319 is 5; [checked in with Dagaz after his SM session]

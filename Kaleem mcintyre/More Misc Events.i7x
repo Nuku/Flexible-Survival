@@ -16,8 +16,8 @@ Unorthodox Sight	"Unorthodox Sight"
 Unorthodox Sight is a situation.
 The sarea of Unorthodox Sight is "Red".
 when play begins:
-	add Unorthodox Sight to badspots of furry;
-	add Unorthodox Sight to badspots of guy;
+	add Unorthodox Sight to BadSpots of FurryList;
+	add Unorthodox Sight to BadSpots of MaleList;
 
 Instead of resolving a Unorthodox Sight:
 	say "     Suddenly overcome by the sensation that something is wrong, you quickly whip your head around, looking this way and that in an attempt to figure out what is amiss. Due to having managed to brave a great deal of dangers already, you know it is wise to listen to your instincts when they tell you that something is off. For now the street seems empty, with nothing but the burned-out husks of buildings on the side opposite you and a row of uninteresting shops along your side of the street. They seem to be the kind of places that virtually nobody would ever actually bother going into. You assume they only managed to survive at all because the rent was cheap here right at the edge of the red light district. Focusing on your other senses, you then hear movement somewhere down the street and around a corner. Whoever it is doesn't appear to be in a rush, but even so, they'll be here soon enough.";
@@ -54,8 +54,8 @@ Family Fun	"Family Fun"
 Family Fun is a situation.
 The sarea of Family Fun is "Beach".
 when play begins:
-	add Family Fun to badspots of furry;
-	add Family Fun to badspots of guy;
+	add Family Fun to BadSpots of FurryList;
+	add Family Fun to BadSpots of MaleList;
 
 Instead of resolving a Family Fun:
 	say "     As you stroll down the beach, you spot a young male fox walking between two muscular wolves. The wolf on the left is the largest, with a wide and burly figure, while the one on the right is comparatively lithe. The fox between the two appears rather young, most likely a teenager. All three of them are completely naked, making no effort to conceal their sizable sheaths and balls. Despite their altered bodies, they hold each other's hands like a family enjoying a vacation at the beach. You watch as the teenage vulpine looks between the two, presumably his guardians or parents, with a happy smile upon his narrow muzzle. You find your gaze locked to them as they continue down the beach.";
@@ -91,8 +91,8 @@ Auto Shop	"Auto Shop"
 Auto Shop is a situation.
 The sarea of Auto Shop is "Red".
 when play begins:
-	add Auto Shop to badspots of furry;
-	add Auto Shop to badspots of guy;
+	add Auto Shop to BadSpots of FurryList;
+	add Auto Shop to BadSpots of MaleList;
 
 Instead of resolving a Auto Shop:
 	say "     As you carefully make your way through the city's most notorious district, your ears twitch at the sound of a car revving. Pausing briefly to figure out where it is coming from, you move towards the source. As you get closer you find yourself slowing, wary of the possibility that although it may be a sane person or persons, it could just as easily be just a sex focused monster screwing around with a car. You continue regardless of your disquiet and soon find yourself looking at the entrance to an auto shop. With surprise, you see that the lights inside are on and quickly realize that it must be running off a generator.";

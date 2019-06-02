@@ -10,8 +10,8 @@ Orc Tag Team	"Orc Tag Team"
 Orc Tag Team is a situation.
 The sarea of Orc Tag Team is "Warehouse".
 when play begins:
-	add Orc Tag Team to badspots of Guy;       [male orcs]
-	add Orc Tag Team to badspots of Transgender;       [male orcs]
+	add Orc Tag Team to BadSpots of MaleList;       [male orcs]
+	add Orc Tag Team to badspots of TransList;       [male orcs]
 
 Instead of resolving a Orc Tag Team:
 	say "     Always looking for new locations you can scavenge in, your path brings to you to a three floor apartment building with a blocked entrance. Looks like something big fought in the street where it stands, smashing part of the upper floor and sending it tumbling down to block the front door. Of course, this might mean that there could still be something interesting inside, so you look for a different way in. Circling around the block and checking out the alley on the side of the building, you spot its fire escape and the dumpster someone has rolled underneath it to put the ladder into reachable distance. Hmm... seems like someone else had the same idea as you did. With a shrug, you climb on the dumpster, then the fire escape, hoping that something might have been missed. Ascending to the top of the iron staircase, you enter through a window already pried open from the outside.";

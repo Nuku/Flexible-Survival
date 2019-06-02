@@ -10,8 +10,8 @@ Demon Chase is a situation.
 The sarea of Demon Chase is "Outside".
 
 when play begins:
-	add Demon Chase to badspots of Hellspawn;
-	add Demon Chase to badspots of Incest;
+	add Demon Chase to badspots of DemonList;
+	add Demon Chase to badspots of IncestList;
 
 Instead of resolving a Demon Chase:
 	say "     Walking through the trash-strewn streets of the inner city, you follow a meandering path, checking out anything that might perhaps be of some use. As you are stopping to investigate the trunk of a car that crashed into a light pole, only to find it empty, you suddenly hear the rapid patter of running footsteps on asphalt. Raising your head from looking into the open trunk, you don't have long to wait before the source of the noise comes shooting out of a nearby alley, claws scratching over the ground as he takes the corner at a full run. It is an anthro Golden Labrador, a young man from the looks of it, dressed in a colorful t-shirt and shorts, and he seems to be running for his life! The guy dashes down the road your way, a backpack bouncing left and right where it is loosely slung over one shoulder - until it isn't as the strap snaps, and the bag is sent crashing to the ground.";
@@ -110,7 +110,7 @@ Intercepted Bike Courier is a situation.
 The sarea of Intercepted Bike Courier is "Outside".
 
 when play begins:
-	add Intercepted Bike Courier to badspots of Feral;
+	add Intercepted Bike Courier to badspots of FeralList;
 
 instead of resolving a Intercepted Bike Courier:
 	say "     As you wander the streets of the inner city, avoiding all sorts of roaming creatures and skirting around piles of trash and some burned-out cars, you come upon a dented bicycle. The front wheel is twisted into more or less a figure-eight shape, and ripped articles of clothing are scattered in front and on top of it. All of that isn't really extraordinary, but a feeling draws you in nonetheless, so you have a closer look: pulling aside a t-shirt crusty with dried cum reveals a bright red backpack lying on the bike, with the logo of the 'Flash Delivery' bike courier company emblazoned on its front. Looks like whatever creature got the courier was too busy fucking him to care one bit about his delivery pouch. With rising curiosity, you undo the zipper and rifle through the pack, finding an energy bar, a bottle of energy drink and a manila envelope inside.";
@@ -213,7 +213,7 @@ Dressing Room Spycam is a situation.
 The sarea of Dressing Room Spycam is "High".
 
 when play begins:
-	add Dressing Room Spycam to badspots of Hermaphrodite;
+	add Dressing Room Spycam to badspots of HermList;
 
 
 instead of resolving a Dressing Room Spycam:
@@ -248,7 +248,7 @@ Drone Wreckage is a situation.
 The sarea of Drone Wreckage is "High".
 
 when play begins:
-	add Drone Wreckage to badspots of guy;
+	add Drone Wreckage to BadSpots of MaleList;
 
 instead of resolving a Drone Wreckage:
 	say "     Looking around while exploring the High Rise District, you walk into one of the side alleys behind a number of looted stores. As you turn the corner, a scraping noise can be heard from somewhere ahead, alerting you to the presence of someone or something. Warily moving forward, you edge your way sideways to look behind a big dumpster standing a little distance down the alley and find a small-ish latex fox there, gnawing on a severely mangled technological device. From the looks of it, the creature must have dragged it here to feast on the rubber and plastic components in peace. As soon as the fox spots you, it lets out a frightened screech and flees, sprinting to a nearby storm drain. With a squeak of deforming latex, it then forces its flexible body through the narrow opening into the drain and vanishes into the underground passage.";
@@ -310,7 +310,7 @@ Lost Explorer is a situation.
 The sarea of Lost Explorer is "Warehouse".
 
 when play begins:
-	add Lost Explorer to badspots of feral;
+	add Lost Explorer to badspots of FeralList;
 
 instead of resolving a Lost Explorer:
 	say "     Roaming the expansive warehouse district in search of anything that might aid your survival in this fallen city, your exploration leads you into a section that has been largely abandoned. Wrecked buildings and long-dead factories dominate your surroundings, creating a fairly creepy ambiance. On top of that, the area seems eerily quiet, missing the usual groans and grunts of creatures rutting in the distance. Maybe there just isn't anything interesting here to attract the post-human denizens of the city, or maybe something is lurking and waiting? You dispel those concerns and soldier on, determined to find some salvage while you're here. Crumbling walls, rusted metal, and countless spray-paint tags are everywhere you look, and [if daytimer is day]even in daylight, the whole area seems tailor-made for a horror movie[else]in the dim moonlight, the whole area appears tailor-made for a horror movie[end if].";
@@ -367,7 +367,7 @@ Abandoned Fitness Dojo is a situation.
 The sarea of Abandoned Fitness Dojo is "High".
 
 when play begins:
-	add Abandoned Fitness Dojo to badspots of guy;
+	add Abandoned Fitness Dojo to BadSpots of MaleList;
 
 instead of resolving a Abandoned Fitness Dojo:
 	say "     Checking out one of the more recreational areas of the High Rise District, you come upon a fitness dojo. Looks like martial artists came here to train and have small tournaments. The place clearly hasn't been untouched since the outbreak of the nanite infection, as you can see that the front door has had its glass panes shattered, apparently when someone kicked it open. Checking further into the building, you see that the path of destruction extends further into the building too. In the [']fitness studio['] part of the building with its rows of exercise machines, one of the mirrors on the wall has been severely damaged, cracks radiating out from the impact site of what must have been a significantly large fist. In another spot, the metal disk of a weightlifting set is sticking out of a brick wall, with fragments of shattered bricks on the ground before it. Looks like a fight or something happened in here.";

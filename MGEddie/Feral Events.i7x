@@ -9,9 +9,9 @@ Breeding Pack is a situation.
 The sarea of Breeding Pack is "High".
 
 when play begins:
-	add Breeding Pack to badspots of furry;
-	add Breeding Pack to badspots of feral;
-	add Breeding Pack to badspots of guy;
+	add Breeding Pack to BadSpots of FurryList;
+	add Breeding Pack to badspots of FeralList;
+	add Breeding Pack to BadSpots of MaleList;
 
 instead of resolving a Breeding Pack:
 	say "     You walk down yet another empty street, out to find something that will help you survive in the fallen city. Your path leads past empty buildings and the husks of countless vehicles that used to roam the streets, eerily quiet now that they lie abandoned and mostly wrecked. After checking the inside of a police car, hoping futilely that something might have been left behind by other scavengers that already went through it, you hear the barking of dogs. It isn't directed at you but you can tell it is really close. From the sound of it, they're just behind the abandoned computer store you checked over a little while ago. Curious about what is going on, you sneak into the alley next to the building. There is a chain fence a few feet inside it, which thankfully has a gaping rent in it, which you carefully duck through so you don't make any noise. Reaching the far end of the alley, you peek around the corner and spot a bunch of dogs. A lot of them, at least fifteen.";

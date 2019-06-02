@@ -23,9 +23,9 @@ mattintel is a number that varies.
 mouseintel is a number that varies.
 hyenaintel is a number that varies.
 when play begins:
-	add Central Library to badspots of guy;
-	add Central Library to badspots of girl;
-	add Central Library to badspots of furry;
+	add Central Library to BadSpots of MaleList;
+	add Central Library to BadSpots of FemaleList;
+	add Central Library to BadSpots of FurryList;
 
 Instead of resolving a Central Library:
 	if centrallib is 0:
@@ -59,7 +59,7 @@ to say libraryentrance:
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
 	now description entry is "Shall you give up on this plan entirely";]
-	if centrallib is 1 or ( centrallib is 2 and bodyname of Player is "Wolverine Guard" ):
+	if centrallib is 1 or ( centrallib is 2 and BodyName of Player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";
 		now sortorder entry is 1;
@@ -78,7 +78,7 @@ to say libraryentrance:
 	now title entry is "Fight!";
 	now sortorder entry is 3;
 	now description entry is "Do you fight your way past him";
-	if jamessex is 0 or ( jamessex is 1 and player is female ) or ( jamessex is 2 and bodyname of Player is "Wolverine Guard" ):
+	if jamessex is 0 or ( jamessex is 1 and player is female ) or ( jamessex is 2 and BodyName of Player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Sex him up";
 		now sortorder entry is 4;
@@ -169,10 +169,10 @@ to say libraryentrance:
 
 
 to say libguard1:						[Bluff]
-	if bodyname of Player is "Wolverine Guard":
+	if BodyName of Player is "Wolverine Guard":
 		say "     You offer to take over for him, telling James that you're here to relieve him for a few hours. The wolverine says he doesn't recall you being on the team earlier and you quickly say that you were recently hired. You can see him infection-confused mind struggling to deal with the conflicts of his new instincts and his old memories and quickly try to convince him";
 		let bonus be ( charisma of Player minus 10 ) divided by 2;
-		if facename of Player is "Wolverine Guard" and skinname of Player is "Wolverine Guard":
+		if FaceName of Player is "Wolverine Guard" and SkinName of Player is "Wolverine Guard":
 			increase bonus by 3;
 			say ". You certainly look the part now, at least";
 		say ".";
@@ -302,7 +302,7 @@ to say libguard4:
 		now jamessex is 1;
 		now Resolution of Central Library is 8; [Male, Tried to seduce.]
 		WaitLineBreak;
-	else if bodyname of Player is not "Wolverine Guard" or facename of Player is not "Wolverine Guard":
+	else if BodyName of Player is not "Wolverine Guard" or FaceName of Player is not "Wolverine Guard":
 		say "     James clearly seems tempted by the offer, but manages to resist. 'I... I should really stay on duty,' he rumbles. Clearly there's some lust buried there. Perhaps if you were a little more appealing to him. Since he hasn't sent you off, you can always try another approach as well.";
 		WaitLineBreak;
 		now Resolution of Central Library is 9; [Female, Not Wolverine]
@@ -317,11 +317,11 @@ to say libguard4:
 		SanLoss 20;
 		if "Strong Psyche" is listed in feats of Player, SanBoost 5;
 		if humanity of Player < 10:
-			now tailname of Player is "Wolverine Guard";
-			now facename of Player is "Wolverine Guard";
-			now skinname of Player is "Wolverine Guard";
-			now bodyname of Player is "Wolverine Guard";
-			now cockname of Player is "Wolverine Guard";
+			now TailName of Player is "Wolverine Guard";
+			now FaceName of Player is "Wolverine Guard";
+			now SkinName of Player is "Wolverine Guard";
+			now BodyName of Player is "Wolverine Guard";
+			now CockName of Player is "Wolverine Guard";
 			attributeinfect "Wolverine Guard";
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
@@ -329,10 +329,10 @@ to say libguard4:
 					now MonsterID is y;
 					break;
 			now tail of Player is tail entry;
-			now face of Player is face entry;
-			now skin of Player is skin entry;
-			now body of Player is body entry;
-			now cock of Player is cock entry;
+			now Face of Player is face entry;
+			now Skin of Player is skin entry;
+			now Body of Player is body entry;
+			now Cock of Player is cock entry;
 			say "     Losing yourself in the lustful mating, you and James descend further into your wild, wolverine instincts until you both lose yourselves completely.";
 			end the story saying "You have become another wolverine guard watching over the Central Library.";
 			WaitLineBreak;
@@ -361,13 +361,13 @@ to say libraryexplore:
 	say "     Inside the library, you start looking around quickly, passing through the stacks. You spot a few signs of transformed victims - clothes and cum stains mostly - but not many. Clearly only a few people were here when the outbreak started. You scan through the stacks, looking for anything that might be helpful to your situation.";
 	WaitLineBreak;
 	let randomlist be a list of numbers;
-	if 1 is not listed in bookcollection, add 1 to randomlist;
-	if 2 is not listed in bookcollection, add 2 to randomlist;
-	if 3 is not listed in bookcollection, add 3 to randomlist;
-	if 4 is not listed in bookcollection, add 4 to randomlist;
-	if 5 is not listed in bookcollection, add 5 to randomlist;
-	if 6 is not listed in bookcollection, add 6 to randomlist;
-	if 7 is not listed in bookcollection, add 7 to randomlist;
+	if 1 is not listed in bookcollection, add 1 to randomList;
+	if 2 is not listed in bookcollection, add 2 to randomList;
+	if 3 is not listed in bookcollection, add 3 to randomList;
+	if 4 is not listed in bookcollection, add 4 to randomList;
+	if 5 is not listed in bookcollection, add 5 to randomList;
+	if 6 is not listed in bookcollection, add 6 to randomList;
+	if 7 is not listed in bookcollection, add 7 to randomList;
 	sort randomlist in random order;
 	if randomlist is empty:
 		say "     Perusing the books, you find nothing of interest in the nearby shelves. You are about to move to the next section when you spot a bottle of water and some chips someone must have set down on the shelf. From the pile of clothes and sticky mess on the floor, it's likely they won't be coming back for them any time soon. You grab them and stuff them into your pack for later consumption.";
@@ -442,17 +442,17 @@ to say libraryexplore:
 			if Name entry is "Harpy":
 				now MonsterID is y;
 				break;
-		now tailname of Player is "Harpy";
-		now facename of Player is "Harpy";
-		now skinname of Player is "Harpy";
-		now bodyname of Player is "Harpy";
-		now cockname of Player is "Harpy";
+		now TailName of Player is "Harpy";
+		now FaceName of Player is "Harpy";
+		now SkinName of Player is "Harpy";
+		now BodyName of Player is "Harpy";
+		now CockName of Player is "Harpy";
 		attributeinfect "Harpy";
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			if "Male Preferred" is not listed in feats of Player and "Herm Preferred" is not listed in feats of Player and "One Way" is not listed in feats of Player and "Always Cocky" is not listed in feats of Player:
 				now Cock Count of Player is 0;

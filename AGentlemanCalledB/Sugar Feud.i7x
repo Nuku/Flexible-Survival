@@ -12,9 +12,9 @@ Sugar Shack	"Sugar Shack"
 Sugar Shack is a situation.
 The sarea of Sugar Shack is "Fair".
 when play begins:
-	add Sugar Shack to badspots of furry;
-	add Sugar Shack to badspots of girl;
-	add Sugar Shack to badspots of humorous;
+	add Sugar Shack to BadSpots of FurryList;
+	add Sugar Shack to BadSpots of FemaleList;
+	add Sugar Shack to badspots of HumorousList;
 
 Instead of resolving a Sugar Shack:
 	setmonster "Sugar Glider";
@@ -26,15 +26,15 @@ Instead of resolving a Sugar Shack:
 	say "     She squeals with excitement as the machine begins spinning her contribution into sugary fluff, and when she can wait no longer, she simply reaches into the open drum, forgoing the sticks entirely as she collects a great spool of the stuff on her arm. Pulling out a sizable mass of the cottony fluff, the eager glider wastes no time digging in, burying her face in the cotton candy with a muffled 'Mmmm', filling her mouth with the stuff before waving her candy coated hand in your face, offering you a taste. You pull a small piece of the fluff off her arm and poke it into your mouth, savoring the powerful sweetness of the fresh cotton candy, and soon you're reaching for another piece. The two of you continue like this for some time, until her arm has been picked clean. After licking the last of the sweet fluff from between her fingers, the sugar glider gives you a cute smirk and offers you her paw. With the sugary taste of the last batch still on your lips, part of you wants to reach out and accept her paw, but a small part of you wonders if it's really a good idea. Will you take the sugar glider's offer?";
 	if Player consents:
 		say "     'What's the worst that could happen?' you ask yourself as you take the glider's open paw and return her smirk. She cheers as she reaches back into the drum full of spinning cotton candy, pulling your own arm in with her. An itchy tingling sensation builds as the candy fluff collects on your arm, but you are soon distracted from that and the sugar glider wraps her long tail around you, pulling you in close and planting a quick kiss on your cheek.";
-		if skinname of Player is "Sugar Glider" and bodyname of the player is "Sugar Glider":
+		if SkinName of Player is "Sugar Glider" and BodyName of the player is "Sugar Glider":
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine, you are delighted to find it covered in soft candy fluff and dig in with a cheer. Distracted by the delicious sugary treat, you hardly notice the sugar glider shifting to the other side of you, taking hold of you other arm and pulling it into the humming machine, this time all the way up to your shoulder.";
 		else:
 			say "     Moments later when the sugar glider pulls your hand back out of the cotton candy machine you are momentarily disappointed to find it lacking the large spool of sugar fluff you were expecting[run paragraph on]";
-			if skinname of Player is not "Sugar Glider":
+			if SkinName of Player is not "Sugar Glider":
 				say ", but you discover it now matches the sugar glider's own paw exactly [if Player is male]except that the thick coat of cotton candy fur that reaches up to your elbow is bright blue[else]with a thick coat of bright pink cotton candy fur reaching up to your elbow[end if][run paragraph on]";
 			say ". Entranced by watching the [if Player is not sugargliderskinned]thick fur[else]changes[end if] slowly creep up your arm, you hardly notice the sugar glider shifting to the other side of you, taking hold of you other arm and pulling it into the humming machine, this time all the way up to your shoulder.";
 		say "     With your face so close to the sweet-smelling candy, your sugar clouded mind struggles to find a reason to resist her advances, and when you feel the sugar glider's free hand at the back of your head you can only giggle in anticipation. [if Player is not sugargliderfaced]'You're going to be such a cute sugar glider,'[else]'This oughtta help you loosen up,'[end if] she whispers into your ear, placing another kiss on your cheek before plunging your head into the whirling candy filled drum. Fully focused on the cotton candy whirling around you, all you can do is open your mouth and try to catch all you can, giggling uncontrollably as the sugary fluff builds up on your face, ";
-		if facename of Player is not "Sugar Glider":
+		if FaceName of Player is not "Sugar Glider":
 			say "pressing against your flesh and forming a thick [if Player is male]blue[else]pink[end if] cotton candy hide on your shifting head. As the changes roll through you, ";
 		say "the fluff seems to press right into your mind, further clouding your thoughts and pushing any lingering resistance out.";
 		say "     You groan with disappointment as you are pulled from your cotton candy filled dream but soon find yourself face to face with your giggling lover once again. [if Player is not sugargliderskinned]'You look lovely,' she says with a[else]She stares deep into your large eyes with a loving[end if] smile, before pressing her muzzle to your own in a deep kiss. Her long, agile tongue darts around your mouth with practiced mastery, easily outmaneuvering your own and filling your mouth with her deliciously sweet flavor. Meanwhile her dexterous paws are roaming across your body, quickly stripping you of your clothing and gear as she presses you up against the stall wall.";
@@ -83,16 +83,16 @@ to say fullSugarGliderTF:
 		if Name entry is "Sugar Glider":
 			now MonsterID is y;
 			break;
-	now tailname of Player is "Sugar Glider";
-	now facename of Player is "Sugar Glider";
-	now skinname of Player is "Sugar Glider";
-	now bodyname of Player is "Sugar Glider";
-	now cockname of Player is "Sugar Glider";
+	now TailName of Player is "Sugar Glider";
+	now FaceName of Player is "Sugar Glider";
+	now SkinName of Player is "Sugar Glider";
+	now BodyName of Player is "Sugar Glider";
+	now CockName of Player is "Sugar Glider";
 	now tail of Player is tail entry;
-	now face of Player is face entry;
-	now skin of Player is skin entry;
-	now body of Player is body entry;
-	now cock of Player is cock entry;
+	now Face of Player is face entry;
+	now Skin of Player is skin entry;
+	now Body of Player is body entry;
+	now Cock of Player is cock entry;
 	if hellHoundLevel is 0:
 		follow the sex change rule;
 		follow the sex change rule;

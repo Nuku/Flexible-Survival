@@ -5,14 +5,6 @@ Version 2 of Latex Bobcat by Stripes begins here.
 
 Section 0 - Monster Variables, Flags and Markers
 
-when play begins:
-	add { "Latex Bobcat" } to infections of guy;
-	add { "Latex Bobcat" } to infections of furry;
-	add { "Latex Bobcat" } to infections of Felinelist; [list of feline infections]
-	add { "Latex Bobcat" } to infections of Latexlist; [list of latex/rubber/PVC skin infections]
-	add { "Latex Bobcat" } to infections of Internallist; [list of infections w/internal male genitals]
-
-
 Section 1 - Monster Description
 
 to say LatexBobcatDesc:
@@ -84,16 +76,16 @@ to say BeatTheLatexBobcat:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 
 to say LatexBobcat_pvsex01:
-	say "     Grabbing the feline sextoy by its back handles, you push it down onto all fours. It accepts this demand without further struggle, raising its padded ass and offering you its latex fuckhole. You line yourself up and thrust into that yielding hole[if Cock Length of Player > 24]; it smoothly stretches to accept your [cock size desc of Player] shaft[end if]. It grips and squeezes around your [cock of Player] cock, lightly milking at it. There's also a soft echo from the its rumbling dildo cock to add to your stimulation.";
+	say "     Grabbing the feline sextoy by its back handles, you push it down onto all fours. It accepts this demand without further struggle, raising its padded ass and offering you its latex fuckhole. You line yourself up and thrust into that yielding hole[if Cock Length of Player > 24]; it smoothly stretches to accept your [cock size desc of Player] shaft[end if]. It grips and squeezes around your [Cock of Player] cock, lightly milking at it. There's also a soft echo from the its rumbling dildo cock to add to your stimulation.";
 	say "     You thrust into the pleasure-bot, pounding that deliciously squeezing hole of its. With your hands on those handles on its back, it's easy and comfortable for you to fuck the latex feline. This creature was obviously made for fucking and you feel no shame for using it; it's clearly loving it, too. And that soft, rumbling purr of its motor and vibe-dick make it all the better.";
 	WaitLineBreak;
 	say "     With such a fine hole to fuck, you hold out as long as you can, but eventually can't take any more and drive deep into the bobcat's ass. You groan as you cum hard, firing shot after shot of hot semen into it. You empty your balls, draining your [Cum Load Size of Player] load into the rumbling sextoy's quivering, squeezing, milking, hungry hole[if Ball Size of Player > 5]. Your excessive seed causes the latex feline's belly to stretch and bulge from your load, much to its delight[end if]. After you pull out, it gets up and happily walks off, a trickle of your cum leaking down its brown, spotted thigh.";
 
 to say LatexBobcat_pvsex02:
-	say "     Taking the feline sextoy by the head, you bring its muzzle to your prick. It gives a rumbling purr and welcomes your [cock of Player] cock into its open and accommodating muzzle[if Cock Length of Player > 30]. Despite your considerable size, the opening stretches steadily as you thrust into it, accepting your [cock size desc of Player] shaft even as it stretches out the feline's body to do so[else if Cock Length of Player > 15]. Despite your comparatively large size, the opening stretches steadily as you thrust into it, accepting your impressive shaft[else if Cock Length of Player > 7]. Perhaps given your above-average size, the feline eagerly accepts your impressive shaft into its soft muzzle[else]. Your shaft slides easily into its soft muzzle[end if]. With a hand on either side of the latex kitty's head, your fingers slide comfortable into position. Your fingers are so perfectly placed upon cheekruffs that are sized and shaped for your digits that you don't even notice how good the fit is - it just seems right.";
+	say "     Taking the feline sextoy by the head, you bring its muzzle to your prick. It gives a rumbling purr and welcomes your [Cock of Player] cock into its open and accommodating muzzle[if Cock Length of Player > 30]. Despite your considerable size, the opening stretches steadily as you thrust into it, accepting your [cock size desc of Player] shaft even as it stretches out the feline's body to do so[else if Cock Length of Player > 15]. Despite your comparatively large size, the opening stretches steadily as you thrust into it, accepting your impressive shaft[else if Cock Length of Player > 7]. Perhaps given your above-average size, the feline eagerly accepts your impressive shaft into its soft muzzle[else]. Your shaft slides easily into its soft muzzle[end if]. With a hand on either side of the latex kitty's head, your fingers slide comfortable into position. Your fingers are so perfectly placed upon cheekruffs that are sized and shaped for your digits that you don't even notice how good the fit is - it just seems right.";
 	say "     Thus, comfortably gripping the living sextoy's head, you start to thrust and bob the cat's muzzle over your cock. The latex passage is slick and soft, snug but yielding, providing plenty of delightful stimulation. There's also a short, but broad and textured tongue in there to further delight you. Finding the creature's oral fuckhole very enjoyable indeed, you make the most of enjoying it. This kitty's obviously made to be used and is clearly loving being used, so you have no problem doing so. The rumble of the creature's excited dildo cock increases as it tweaks its nipples, sending faint sympathetic vibrations through its mouth and throat.";
 	WaitLineBreak;
-	say "     You work that delightful muzzle back and forth over your [cock of Player] shaft, sometimes turning its head a little one way or another to shift the points of greatest stimulation. And while you'd love to play with this pleasure-bot much longer, you can only hold out so long being subjected to its expertly designed cocksucking muzzle. As you reach your peak, you pull the bobcat's head forward, driving your full length into it and unleashing your hot, gooey load into the sextoy's [if Ball Size of Player > 5]stretching [end if]belly. After draining your balls, you push its head away and release the creature to walk off happily, molded paws rubbing its [if Ball Size of Player > 5]overstuffed[else if Ball Size of Player > 4]stuffed[else]well-fed[end if] tummy.";
+	say "     You work that delightful muzzle back and forth over your [Cock of Player] shaft, sometimes turning its head a little one way or another to shift the points of greatest stimulation. And while you'd love to play with this pleasure-bot much longer, you can only hold out so long being subjected to its expertly designed cocksucking muzzle. As you reach your peak, you pull the bobcat's head forward, driving your full length into it and unleashing your hot, gooey load into the sextoy's [if Ball Size of Player > 5]stretching [end if]belly. After draining your balls, you push its head away and release the creature to walk off happily, molded paws rubbing its [if Ball Size of Player > 5]overstuffed[else if Ball Size of Player > 4]stuffed[else]well-fed[end if] tummy.";
 
 to say LatexBobcat_pvsex03:
 	say "     You roll the defeated feline onto its back and straddle the latex creature. It makes no attempt to oppose you, moving as your hands direct it. With its vibrating dildo cock pointed upwards, you line yourself up and let it tease your waiting hole. ";
@@ -112,26 +104,33 @@ to say LatexBobcat_pvsex03:
 Section 4 - Monster Stats and Infection Data
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Latex Bobcat" to infections of FelineList;
+	add "Latex Bobcat" to infections of FurryList;
+	add "Latex Bobcat" to infections of LatexList;
+	add "Latex Bobcat" to infections of MaleList;
+	add "Latex Bobcat" to infections of QuadrupedalList;
+	add "Latex Bobcat" to infections of TailList;
 	now Name entry is "Latex Bobcat"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if Player is male and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if Player is male and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
 	now defeated entry is "[BeatTheLatexBobcat]"; [ Text when monster loses. ]
 	now victory entry is "[LoseToLatexBobcat]"; [ Text when monster wins. ]
 	now desc entry is "[LatexBobcatDesc]"; [ Description of the creature when you encounter it. ]
-	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if skinname of Player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if skinname of Player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";
+	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if SkinName of Player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if SkinName of Player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";
 	now body entry is "altered inside and out. You're now only about five and a half feet tall and have a decidedly feline build with paws instead of hands and feet. But the greater changes are the internal ones, with your insides feeling more like they're artificial and now made of latex and mechanical parts rather than living flesh. Rather than having a normal heartbeat, your heart sounds more like a motor softly purring away. Upon your back at the shoulders, you have a set of handle loops made of padded rubber, perfect for holding onto you from behind";
 	now skin entry is "a layer of spotted brown latex that has replaced your";
 	now tail entry is "You have a short, stubby tail make of semi-firm latex at the base of your spine. Under this tail, you've got a bubble butt with a latex fuckhole between your cheeks.";
 	now cock entry is "[one of]latex[or]smooth[or]dildo-like[or]vibrating[or]vibe[as decreasingly likely outcomes]";
-	now face change entry is "it becomes decidedly feline in form. As your head turns into that of a bobcat, you gain pointed ears and cheek ruffs[if skinname of Player is listed in infections of LatexList] made of latex textured for comfortable gripping[end if]. Your tongue and the inside of your mouth feel funny as they become lightly textured and your muzzle opens in a rounded, welcoming manner. Your sense of hearing is momentarily thrown off as your inner ears are replaced with audio receptors behind metal grills";
+	now face change entry is "it becomes decidedly feline in form. As your head turns into that of a bobcat, you gain pointed ears and cheek ruffs[if SkinName of Player is listed in infections of LatexList] made of latex textured for comfortable gripping[end if]. Your tongue and the inside of your mouth feel funny as they become lightly textured and your muzzle opens in a rounded, welcoming manner. Your sense of hearing is momentarily thrown off as your inner ears are replaced with audio receptors behind metal grills";
 	now body change entry is "strange alternations occur both inside and out. Your body changes shape, gaining rounded paws instead of hands and feet. Your size changes as well, [if scalevalue of Player < 3]growing to about five and a half feet tall[else if scalevalue of Player is 3]adjusting to about five and a half feet tall[else]shrinking down to about five and a half feet tall[end if]. Your insides shift and change as you become more latex and mechanical parts instead of flesh and bones under your skin. Everything still seems to work roughly the same, though your heartbeat sounds more like motor softly purring now. Uncomfortable bumps form at your shoulders, growing larger until they push up into handle loops made of padded rubber";
 	now skin change entry is "light brown latex replaces your skin. You can't help but watch as it spreads until you're left with a smooth coating of it that is lightly speckled with dime-sized darker markings. Your new skin has seams at your joints that smoothly slide over one another";
 	now ass change entry is "short, stubby tail made of latex sticks from the base of your spine. Your ass gets round, firm and fuckable even as your tailhole alters as well, becoming a snug, padded latex hole that's clearly designed for others to fill";
@@ -155,7 +154,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	now libido entry is 65; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -171,11 +170,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -183,7 +183,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -191,20 +191,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -225,26 +225,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -260,11 +260,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -310,7 +310,7 @@ to say bobcatinheat:
 	if Libido of Player > 80 and slutfucked > 8 and ( location of Player is not sleepsafe or location of Player is fasttravel ):
 		say "[line break]     A passerby catches your eye and you approach them before you realize what you're doing. Soon you're offering yourself up for sex to them, an offer they accept.";
 		let randombobcatfun be { 1 }; [blow job]
-		if Player is male and ( girl is not banned or hermaphrodite is not banned ):
+		if Player is male and ( FemaleList is not banned or HermList is not banned ):
 			add { 2 } to randombobcatfun; [give vag]
 			if anallevel > 2, add { 3 } to randombobcatfun; [give anal]
 		if Player is female:
@@ -337,14 +337,14 @@ to say bobcatinheat:
 to say bobcatheatsex1:		[blow job]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	setmongender 3; [male]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
 	let colorpick be ""; [See Stripes/Andrew.i7x for randomcolorlist]
 	if a random chance of 1 in 5 succeeds:
-		now colorpick is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now colorpick is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender is 7]maleherm[end if] [bodyselector]";
 	if colorpick is not "":
@@ -353,18 +353,18 @@ to say bobcatheatsex1:		[blow job]
 
 to say bobcatheatsex2:		[give vaginal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
-	if girl is not banned:
+	if FemaleList is not banned:
 		setmongender 4; [female]
 	else:
 		setmongender 5; [herm]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
 		if a random chance of 1 in 10 succeeds, setmongender 8; [cuntboy]
 	let colorpick be ""; [see Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colorpick is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now colorpick is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]";
 	if colorpick is not "":
@@ -374,17 +374,17 @@ to say bobcatheatsex2:		[give vaginal]
 to say bobcatheatsex3:		[give anal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	setmongender 3; [male]
-	if girl is not banned and a random chance of 1 in 6 succeeds:
+	if FemaleList is not banned and a random chance of 1 in 6 succeeds:
 		setmongender 4; [female]
-	else if hermaphrodite is not banned:
+	else if HermList is not banned:
 		if a random chance of 1 in 5 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 12 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 12 succeeds, setmongender 7; [maleherm]
 		if a random chance of 1 in 12 succeeds, setmongender 8; [cuntboy]
 	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colorpick is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now colorpick is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 4]female[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else if mongender of currentmonster is 7]maleherm[else]cuntboy[end if] [bodyselector]";
 	if colorpick is not "":
@@ -394,60 +394,60 @@ to say bobcatheatsex3:		[give anal]
 to say bobcatheatsex4:		[receive vag]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	setmongender 3; [male]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
 	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colorpick is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now colorpick is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	if child is born or gestation of Child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]";
 	if colorpick is not "":
 		say " with a [colorpick] coat";
 	say ". Intent on your slick cunt, you're moved onto all fours and mounted";
-	if bodyname of Player is "Latex Bobcat":
+	if BodyName of Player is "Latex Bobcat":
 		say ". It feels good to gripped by your back handles and pounded by a horny stud";
 	say ". The [bodyselector] drills [ghis] cock into you over and over again, stuffing your needy cunny with throbbing meat. Your hot tunnel squeezes and milks at the thrusting shaft as you strive to please [ghim] with your body. You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your vagina to flow into your heat-stricken womb. You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if]. Once spent, [ghe] pulls out and wipes [ghis] cock across one cheek while giving the other a light slap, thanking you for the fuck. The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[impregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "[bodyselector]";
-		now bodyname of child is "[bodyselector]";
-		now skinname of child is "[bodyselector]";
+	if baby is 0 and gestation of Child is not 0:
+		now FaceName of Child is "[bodyselector]";
+		now BodyName of Child is "[bodyselector]";
+		now SkinName of Child is "[bodyselector]";
 
 to say bobcatheatsex5:		[receive anal]
 	say "[randombodypart]"; [yields 'bodyselector' - see Stripes/Mismatched Chimera.i7x]
 	setmongender 3; [male]
-	if hermaphrodite is not banned:
+	if HermList is not banned:
 		if a random chance of 1 in 5 succeeds, setmongender 5; [herm]
 		if a random chance of 1 in 10 succeeds, setmongender 6; [shemale]
 		if a random chance of 1 in 10 succeeds, setmongender 7; [maleherm]
 	let colorpick be ""; [See Stripes/Andrew.i7x]
 	if a random chance of 1 in 5 succeeds:
-		now colorpick is entry 1 of randomcolorlist;
-		rotate randomcolorlist;
+		now colorpick is entry 1 of randomcolorList;
+		rotate randomcolorList;
 	if a random chance of 1 in 10 succeeds, sort randomcolorlist in random order; [10% chance to re-randomize each time]
 	let baby be 0;
-	if child is born or gestation of child is not 0, now baby is 1;
+	if child is born or gestation of Child is not 0, now baby is 1;
 	say "     Your lover of the moment is a [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if] [bodyselector]";
 	if colorpick is not "":
 		say " with a [colorpick] coat";
 	say ". Intent on your sexy ass[if Player is female] over your heat-stricken cunt[end if], you're moved onto all fours and mounted";
-	if bodyname of Player is "Latex Bobcat":
+	if BodyName of Player is "Latex Bobcat":
 		say ". It feels good to gripped by your back handles and pounded by a horny stud";
 	say ". The [bodyselector] sinks [ghis] cock into your rectum over and over again, stuffing welcoming ass with throbbing meat. Your hot tunnel squeezes and clenches around the thrusting shaft as you strive to please [ghim] with your body. You're pounded until [ghe] has a strong orgasm, pushing deep into you and unloading shot after shot of hot, gooey seed into your bowels. You cum as well, adding to the sticky mess being made as you're seeded by the horny [if mongender of currentmonster is 3]male[else if mongender of currentmonster is 5]herm[else if mongender of currentmonster is 6]shemale[else]maleherm[end if]. Once spent, [ghe] slides [ghis] sticky shaft from your creamy ass and wipes it across your buttcheeks and thanking you for the fuck. The feeling of the stranger's [bodyselector] semen pooled inside you makes you feel so delightfully used.[mimpregchance]";
-	if baby is 0 and gestation of child is not 0:
-		now facename of child is "[bodyselector]";
-		now bodyname of child is "[bodyselector]";
-		now skinname of child is "[bodyselector]";
+	if baby is 0 and gestation of Child is not 0:
+		now FaceName of Child is "[bodyselector]";
+		now BodyName of Child is "[bodyselector]";
+		now SkinName of Child is "[bodyselector]";
 
 
 Section 6 - Endings
 
 when play ends:
-	if bodyname of Player is "Latex Bobcat":
+	if BodyName of Player is "Latex Bobcat":
 		if humanity of Player < 10:
 			if Player is pure:
 				project Figure of Bobcat2_icon;

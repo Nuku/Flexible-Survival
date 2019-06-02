@@ -11,7 +11,7 @@ halodestroyed is a number that varies.
 
 instead of resolving a Secure Area:
 	say "     On your jaunt through the city, you come across a yard, mostly intact, covered with barbed wire and odd defensive technology you could have sworn was science fiction. Behind the barriers, one of which is a shimmering halo in midair, stand two creatures, tall, but their silhouette is blurred by the halo, and you cannot make out if they are human or not. You can still make out the huge doors, made of something clearish white...";
-	if guy is banned:
+	if MaleList is banned:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
 		now Resolution of Secure Area is 100; [content banned]
@@ -96,7 +96,7 @@ carry out shifting:
 	let critter list be a list of text;
 	repeat with X running from 1 to number of filled rows in Table of Random Critters:
 		choose row X from the Table of Random Critters;
-		add Name entry to critter list;
+		add Name entry to critter List;
 		if Name entry matches the regular expression "^[critter]$", case insensitively:
 			now MonsterID is X;
 			now ttransform is 1;
@@ -106,7 +106,7 @@ carry out shifting:
 		now critter list is {};
 		repeat with X running from 1 to number of filled rows in Table of Random Critters:
 			choose row X from the Table of Random Critters;
-			add Name entry to critter list;
+			add Name entry to critter List;
 			if Name entry matches the regular expression ".*[critter].*", case insensitively:
 				now MonsterID is X;
 				now ttransform is 1;
@@ -132,23 +132,23 @@ Section 3 -transform
 
 To transform:
 	choose row tmonster from the Table of Random Critters;
-	if skinname of Player is not Name entry:
+	if SkinName of Player is not Name entry:
 		say " Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
-		now skinname of Player is Name entry;
-		now skin of Player is skin entry;
-	if facename of Player is not Name entry:
+		now SkinName of Player is Name entry;
+		now Skin of Player is skin entry;
+	if FaceName of Player is not Name entry:
 		say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
-		now facename of Player is Name entry;
-		now face of Player is face entry;
-	if tailname of Player is not Name entry:
+		now FaceName of Player is Name entry;
+		now Face of Player is face entry;
+	if TailName of Player is not Name entry:
 		say " Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
-		now tailname of Player is Name entry;
+		now TailName of Player is Name entry;
 		now tail of Player is tail entry;
 	follow the breast change rule;
-	if bodyname of Player is not Name entry:
+	if BodyName of Player is not Name entry:
 		say "Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
-		now bodyname of Player is Name entry;
-		now body of Player is body entry;
+		now BodyName of Player is Name entry;
+		now Body of Player is body entry;
 		if there is a scale in row MonsterID of the Table of Random Critters:
 			now scalevalue of Player is scale entry;
 		else:
@@ -169,10 +169,10 @@ To transform:
 			now SleepRhythm of Player is 0; [standard]
 	follow the sex change rule;
 	follow the sex change rule;
-	if cockname of Player is not Name entry:
+	if CockName of Player is not Name entry:
 		if Player is male, say " Your groin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
-		now cockname of Player is Name entry;
-		now cock of Player is cock entry;
+		now CockName of Player is Name entry;
+		now Cock of Player is cock entry;
 	if strength of Player < str entry:
 		say "You feel your muscles swelling with [Name entry] [one of]strength[or]physique[or]power[at random].";
 		increase strength of Player by 1;
@@ -205,8 +205,8 @@ when play ends:
 		else:
 			say "Your feral impulses prevent the concentration required for shifting, and the knowledge doesn't return until the rescue comes.";
 			say "You are unable to choose a form and spend your days changing to whatever suits you. Within a few days of the revitalization of the city, the spy force contacts you, ringing your phone off the hook for hours until you finally return home. They offer you work and give such bonuses and pay that you can't resist. Your ability helps, and the only work you have to do is mimicking the knowledge of who you are impersonating, training yourself for future success.";
-		now body of Player is "nothing";
-		now bodyname of Player is "nothing";
+		now Body of Player is "nothing";
+		now BodyName of Player is "nothing";
 		now scalevalue of Player is 3;
 		now bodydesc of Player is "shapeshifting";
 		now bodytype of Player is "shapeshifter";

@@ -4,12 +4,6 @@ Manticore by Kaleem mcintyre begins here.
 
 Section 1 - Creature Responses
 
-when play begins:
-	add { "Manticore" } to infections of guy;
-	add { "Manticore" } to infections of furry;
-	add { "Manticore" } to infections of tailweapon;
-
-
 to say Manticore attack:
 	if Player is female:
 		say "     The lion-like beast lets out a roar loud enough to shake the surrounding world as he stands over your defeated form. Not believing that you could have lost to the beast, you are not ready for what happens next as the winged lion lowers his head to look down at you and then smile predatorily into your direction. Taking a thick gulp, you wonder just how bad this is going to be as you watch the mutant with the scorpion tail slowly pad his way over to you. Rust red fur puffing out because of his victory, you have about three seconds to think how much the other looks like an arrogant prick as he lets his black mane sway around him proudly before the manticore is pushing you back onto your back with a firm paw. Grunting as your back hits the ground, for a second time no less, you don't have the energy to struggle as the mythic creature tears you out of your clothing to reveal your nude body to the winged feline's lustful gaze. Clenching your legs together, you try and hide your leaking pussy as the manticore's blazing yellow eyes look you up and down. Growling at you with a savage rumble from deep within its throat, you can hardly stop yourself from growing more damp as the maned beast smirks at you again with a knowing look.";
@@ -64,13 +58,13 @@ To say Manticore loss:
 			say "     Shuffling out of your clothes you quickly kick your gear over to your side and then reach down to caress your wet snatch before looking down at the submissive beast. The manticore, looking at your gaping folds slowly dripping with juice, moves his head over to you to nudge his massive black maned head into your groin. Getting the idea you ease yourself down onto the ground and then spread your legs open, fully intent to enjoy everything this creature can sexually offer you. The glowing eyes of the other narrow before the manticore chuffs and then walks over to dip his muzzle down in between your thighs. The lion-like creature, just like his normal cousins, uses his raspy tongue to spread you open quickly and effectively as the roving organ moves up and down into you, seeking your hidden pleasure spots, thoroughly caressing your most intimate region as he does so. Hissing and then lying back fully onto the ground you slowly begin to buck your thighs into the other's chin, drenching the beast's chin with your leaking honey at the same time suffocating the manticore in the scent of your wet sex.";
 			say "     The manticore seems to take this in good stride, though; you did defeat it in honorable combat, after all. Licking and then drilling its tongue into your pussy, the winged lion reaches his scorpion tail around and then pricks you lightly onto the end of your thigh with the tip of his tail, making you eep slightly. Lifting your head up to glare at the other, you watch as the mythic lion-like creature backs himself away from you to smile, a surprising thing since his face really isn't built for it by human terms, with his wickedly sharp fangs just in time for you to suddenly feel as though you are on fire. Grunting and then groaning as your body ignites with the venom now coursing through you, you want to curse as your snatch suddenly starts to ooze with more juice than you thought was possible down the length of your legs. Feeling as though you could mate with a hundred and one lions at one time, you arch up onto the ground and then drop down to land in a heavy thump. Legs open wide like a yawning chasm, you don't have to wait long to be filled as the manticore walks over to you and then dips his hips down to spread your feminine folds open with his feline masculinity.";
 			WaitLineBreak;
-			say "     The leverage is somewhat awkward for him since his body is so much higher onto the ground because of his quadrupedal stance. The manticore soon fixes the height discrepancy as he gently curls his scorpion tail around you and then brings your sweating body up to embrace his in an eternal dance. Rust red hips pushing into your [bodyname of Player] body with unbelievably smooth and caring motions the manticore begins to mate you in an almost tender fashion as he stuffs his hard barbed cock into your body. Quietly the other leans down to lick you over the face, your eyes are partly shut so you can just barely make out the beast, before licking underneath your chin to show his acceptance of you. Thrusting heavy hips into your cunt the manticore jerks slightly when your legs come up to wrap around him, the monster hadn't been expecting such an action out of you in your current state. Huffing against your body almost breathlessly the beast continues to gently hammer his way inside of you with gaining force as you and he fulfill one another there on the ground. Shuddering from the feeling of them slapping against your taint, you have to marvel at how full the manticore's balls are as they grind heavily into your lower body.";
+			say "     The leverage is somewhat awkward for him since his body is so much higher onto the ground because of his quadrupedal stance. The manticore soon fixes the height discrepancy as he gently curls his scorpion tail around you and then brings your sweating body up to embrace his in an eternal dance. Rust red hips pushing into your [BodyName of Player] body with unbelievably smooth and caring motions the manticore begins to mate you in an almost tender fashion as he stuffs his hard barbed cock into your body. Quietly the other leans down to lick you over the face, your eyes are partly shut so you can just barely make out the beast, before licking underneath your chin to show his acceptance of you. Thrusting heavy hips into your cunt the manticore jerks slightly when your legs come up to wrap around him, the monster hadn't been expecting such an action out of you in your current state. Huffing against your body almost breathlessly the beast continues to gently hammer his way inside of you with gaining force as you and he fulfill one another there on the ground. Shuddering from the feeling of them slapping against your taint, you have to marvel at how full the manticore's balls are as they grind heavily into your lower body.";
 			say "     For you, there is nothing but utter ecstasy at being filled so deeply by this beast's charging cock and for the manticore, the winged lion knows nothing but unbridled bliss as your nethers squeeze and massage along his feline length like a wet glove. Hissing between his teeth the monster speeds himself up and then starts to really have at you, though keeping in mind that you are not to be taken as forcefully as he could really fuck you. Bucking and thrusting against the lion-like creature you unconsciously reach your hands out to hold your lover around his thick black mane while continuing to ride him like a bucking bronco in order to bring the other's muzzle closer to you. The two of you become lost in each other as pure rapture of the moment courses its way up and down both of your spines. The rust red fur along the beast's backside fluffs up as he nears close to his completion and in wanting to share this with you the manticore growls loudly into your face, waking you from your slight daze. The venom singing through your veins can't hold you in intoxicated euphoria as you swim up the sea of pleasure to blink unfocused eyes at the manticore. Feeling him, in both your body and next to your face, you groan and then shudder as the barbs along his cock stroke you in just the right way to send you into climax, almost exactly that the same time the winged lion stills his hips and then roars up to the sky.";
 			WaitLineBreak;
 			say "     Both of you shout your joy as you cum together, him into your belly with the silent hope that he can seed you, and you over and along his cock as your juicy honey splatters out and around the girth of his thick lion cock. When you both come down from your respective zeniths the manticore lowers you back down onto the ground, after commanding his tail to uncoil from out your waist. Feeling the other slip out of you as the mythic beast pulls his hips away from you completely you have a second to feel the monster lowering his head to lick out over your face before he turns and then darts away. Lying back on the ground, your snatch covered in manticore cum, you reach down to stroke a finger over your folds, and then down deep into them as you chuckle heartily while wondering if you'll get pregnant from this experience...[impregchance]";
 			infect "Manticore";
 		else if pick is 2:
-			say "     Seeing the docile monster in front of you, you stroke the other along the length of its black mane before running your hands down onto the sides of the lion-like mutant's rust red fur. Listening to the other grunt you smile predatorily right before you remove your hand to undress yourself. To the victor go the spoils, as you heard someone say once and in feeling your hard cock growing eager for the manticore you make yourself ready to take the mythic creature's tailhole as you stroke yourself with eager fingers. The manticore does not look pleased as he watches your [cockname of Player] cock growing hard between your legs, but since it had been defeated in an honorable battle the lion wastes little time in griping inside of its head before it walks forward and then bends down to present its ass to you. Long scorpion tail moving out of the way the feline turns to look around his shoulder at you and then gives you a sultry growl before wagging its rump in your direction. Obviously someone has a strong subservient nature, you think before chuckling and stepping over to claim your prize.";
+			say "     Seeing the docile monster in front of you, you stroke the other along the length of its black mane before running your hands down onto the sides of the lion-like mutant's rust red fur. Listening to the other grunt you smile predatorily right before you remove your hand to undress yourself. To the victor go the spoils, as you heard someone say once and in feeling your hard cock growing eager for the manticore you make yourself ready to take the mythic creature's tailhole as you stroke yourself with eager fingers. The manticore does not look pleased as he watches your [CockName of Player] cock growing hard between your legs, but since it had been defeated in an honorable battle the lion wastes little time in griping inside of its head before it walks forward and then bends down to present its ass to you. Long scorpion tail moving out of the way the feline turns to look around his shoulder at you and then gives you a sultry growl before wagging its rump in your direction. Obviously someone has a strong subservient nature, you think before chuckling and stepping over to claim your prize.";
 			say "     Reaching out to stick several fingers up into the beast's black puckered tailhole you find that the manticore has an almost unforgiving tightness about his rump as you wiggle your fingers into the other's pucker. Hearing a growl of pain from the other, you pull your fingers out to spit on them before stuffing them back into your conquered foe. This time the manticore simply purrs around at you while looking at you with heated golden eyes. Seeing that the other is getting into the swing of things more you reach around inside of the lion-like creature to try and find its prostate. When you do however, the lion-like creature lets out a booming roar as you stroke over several small bundles inside of the manticore. Chuckling at the strange body design of the other you pump your hands back and forth over and across the other's multiple prostates, driving the winged lion somewhat insane as it scratches at the ground with its impossibly thick claws from the indescribable pleasure you're giving it.";
 			WaitLineBreak;
 			say "     Taking several more seconds to play with your captive you listen to the beast yowl and purr and growl at you while shaking its black maned head around wildly before you decide that you've tortured the other creature enough. Pulling your hand out of the manticore's rump you look to find that your hand is covered in clear musky smelling fluid and you bring your hand up to sniff at your fingers. The first hit of the scent so close to your nose makes your head spin and then you begin to swoon slightly as your body feels as though its catching on fire. Like being given a shot of liquor and downing in one gulp you find your insides clenching up, your eyes watering and your cock growing impossibly hard as inhale the manticore's liquid pheromones. Licking your fingers and then shivering from the taste sizzling onto your taste buds you find yourself licking up the slimy clear fluid until nothing is left on your hand. Wanting another taste when there isn't any more you lower your hand to attempt to stick it into the manticore's rump, but before you can get a single finger inside of the other the winged lion's scorpion tail is pushing you forward into him. Seems like someone is eager to be fucked, you chuckle into the back of your lust clouded head.";
@@ -90,16 +84,26 @@ To say Manticore loss:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is "Manticore"; [name of the overall species of the infection, used for children, ...]
+	add "Manticore" to infections of HybridList;
+	add "Manticore" to infections of FurryList;
+	add "Manticore" to infections of MythologicalList;
+	add "Manticore" to infections of HermList;
+	add "Manticore" to infections of BarbedCockList;
+	add "Manticore" to infections of SheathedCockList;
+	add "Manticore" to infections of BipedalList;
+	add "Manticore" to infections of TailList;
+	add "Manticore" to infections of TailweaponList;
 	now Name entry is "Manticore";
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]A quick strike of a clawed hand sends you reeling back![or]The manticore charges into you in an attempt to headbutt you![or]Roaring loudly the manticore makes you freeze for a split second![or]Using his powerful tail the manticore deflects you incoming attack and the counters with his own![or]Pouncing on you the winged lion savagely strikes you twice before moving off of you![or]Flying up into the air the manticore dive-bombs at you![at random]";
 	now defeated entry is "[Manticore loss]";
 	now victory entry is "[Manticore attack]";
@@ -149,11 +153,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -161,7 +166,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -169,20 +174,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -203,26 +208,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -238,11 +243,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -266,7 +271,7 @@ this is the tailstinger rule:
 		if Playerpoison < ( 2 + ( lev entry / 5 ) ), now playerpoison is 2 + ( lev entry / 5 );
 	say "The [one of]manticore[or]mythological monstrosity[or]hybrid monster[or]leonine creature[at random] lashes out at you with its powerful tail. The large stinger drives into your [one of]thigh[or]arm[or]shoulder[or]chest[or]side[or]hip[at random] and releases its toxic venom. As the poison courses through your system, the wound continues to hurt and you find yourself getting dizzy from its toxic effects. Already, your nanites are attempting to clear it from your body, but it continues to harm you for the moment. You take [special-style-2][dam][roman type] damage!";
 	now damagein is dam;
-	say "[bodyabsorbancy]"; [attack directed to body of Player]
+	say "[bodyabsorbancy]"; [attack directed to Body of Player]
 	if absorb > dam:
 		now absorb is dam;
 	if absorb > 0:
@@ -279,7 +284,7 @@ this is the tailstinger rule:
 
 
 when play ends:
-	if bodyname of Player is "Manticore":
+	if BodyName of Player is "Manticore":
 		if humanity of Player < 10:
 			if Player is male:
 				say "     Feeling your mind going and subsequently taking you to someplace with far off sand dunes and towering mountains, you allow your humanity to slip like water from between your paws as the rest of your body succumbs to mythic beast infection running through you. Now no longer feeling either remorse or fear you flap your wings and take off into the air, the need for a great challenge making your blood literally sing inside of your ears. You find this challenge partially in taking on other mutants that seem to be of equal strength to yourself, however, most if not all of these challenges turn out to be nothing more than idle wastes of your time as you dominate most of the anthros and other creatures with your unwavering strength and fierce battle prowess. Not feeling that any of them were worth of your attentions after defeating them you move on to other challenges. Yet the ones that you are able to be bested by you quickly find yourself sexually trying to tease and copulate with these few strong opponents in order to spread your seed around. Some of antics end up bearing fruit, most didn't, but such is the life for a manticore like yourself. It's only when you meet a certain [']person['] that things change.";

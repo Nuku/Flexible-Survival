@@ -48,7 +48,7 @@ instead of going down from Open Ocean:
 	if hasgills is 1:
 		say "     You dive into the water, making your way to the sunken ship, feeling the gills appear on your neck to allow you to breath. It doesn't take you that long to get their thankfully so you quite quickly arrive at the ship.";
 		move player to Sunken Ship;
-	else if facename of Player is listed in infections of swimlist:
+	else if FaceName of Player is listed in infections of swimlist:
 		say "     With your natural ability to breathe underwater due to your infection, you dart under and swim towards the sunken ship. Thankfully for your patience it doesn't take you long to reach the ship.";
 		move player to Sunken Ship;
 	else:
@@ -66,19 +66,19 @@ to say sea dragon cum use:
 	if Player is female:
 		say "Do you wish to eat the seed (y), or impregnate yourself with it (n)?";
 		if Player consents:
-			if a random chance of one in two succeeds and guy is not banned:
+			if a random chance of one in two succeeds and MaleList is not banned:
 				infect "Feral Sea Dragon";
 			else:
 				infect "Feral Sea Dragoness";
 		else:
 			say "You rub the thick stuff into your waiting cunt, massaging it in. You moan in pleasure as you work the thick cum deep inside you.";
-			if a random chance of one in two succeeds and guy is not banned:
+			if a random chance of one in two succeeds and MaleList is not banned:
 				infect "Feral Sea Dragon";
 			else:
 				infect "Feral Sea Dragoness";
 			impregnate with "Feral Sea Dragon[one of][or]ess[at random]";
 	else:
-		if a random chance of one in two succeeds and guy is not banned:
+		if a random chance of one in two succeeds and MaleList is not banned:
 			infect "Feral Sea Dragon";
 		else:
 			infect "Feral Sea Dragoness";
@@ -91,34 +91,34 @@ Section 4 - Fighting
 to swimmingfight:
 	let T be a random number between one and 10;
 	if T is 1:
-		if furry is banned or guy is banned:
+		if FurryList is banned or MaleList is banned:
 			increase T by 1;
 		else:
 			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragon"; [duh case, all three ways]
 	if T is 2:
-		if furry is banned or girl is banned:
+		if FurryList is banned or FemaleList is banned:
 			increase T by 1;
 		else:
 			say "As you [if rowing is true]row[else]swim[end if], you spot a sleek and streamlined blue form cutting through the water. As the draconic serpent draws closer, you [if rowing is true]row[else]swim[end if] as quickly as you can to a nearly rocky outcropping and prepare to face the fearsome beast.";
 			challenge "Feral Sea Dragoness";
 	if T is 3:
-		if furry is banned or hermaphrodite is banned:
+		if FurryList is banned or HermList is banned:
 			increase T by 1;
 		else:
-			challenge "Hermaphrodite Dolphin";
+			challenge "Dolphin Herm";
 	if T is 4:
-		if furry is banned or guy is banned:
+		if FurryList is banned or MaleList is banned:
 			increase T by 1;
 		else:
 			challenge "Killer Whale";
 	if T is 5:
-		if furry is banned:
+		if FurryList is banned:
 			increase T by 1;
 		else:
 			challenge "Otter";
 	if T is 6:
-		if guy is banned:
+		if MaleList is banned:
 			increase T by 1;
 		else:
 			challenge "Siren";

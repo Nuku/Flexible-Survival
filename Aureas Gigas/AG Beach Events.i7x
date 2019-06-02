@@ -21,7 +21,7 @@ Hang Ten	"Hang Ten"
 Hang Ten is a situation. The sarea of Hang Ten is "Beach".
 
 when play begins:
-	add Hang Ten to badspots of girl;
+	add Hang Ten to BadSpots of FemaleList;
 
 Instead of resolving a Hang Ten:
 	say "     Strolling on the beach, you suddenly see a girl rush towards the ocean carrying a surfboard above her head. She shouts energetically as she enters the water. 'Ugh I've been out of the water, way too long! This feels soo good!' With a better view of the woman, you can see that she is a gorgeous-looking human. She has tanned skin, flowing blonde hair, and piercing green eyes. Based on the wetsuit and a sticker of the local colleges logo on her surfboard, it appears that she's a naiad from the college. Of course, seeing how comfortable she seems in sea water it seems more appropriate to call her a nereid. The lady sets her board in the sea, hops on it and begins to paddle out to deeper waters.";

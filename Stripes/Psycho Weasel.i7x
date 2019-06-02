@@ -8,11 +8,6 @@ Section 1 - Creature Responses
 weaselcount is a number that varies.
 weaselcolor is a text that varies. weaselcolor is usually "tan".
 
-when play begins:
-	add { "Psycho Weasel" } to infections of guy;
-	add { "Psycho Weasel" } to infections of furry;
-
-
 to say psychoweaseldesc:
 	setmongender 3; [creature is male]
 	increase weaselcount by 1;
@@ -28,7 +23,7 @@ to say psychoweaseldesc:
 to say losetopsychoweasel:
 	say "     Victorious, the crazed weasel moves in to have his way with you. His hard cock dribbles precum as he reaches for you with his covered paws.";
 	if Player is female:
-		say "     He rolls you onto all fours, pushes and tugs at your pack and clothes as best he can before mounting you. With some jingling of the jacket buckles, he takes his cock in one paw and lines it up with your exposed pussy. The weasel growls and babbles some nonsense words as he thrusts into you. Your body pushes back into the thrust instinctively, starting to give in to the crazed creature's lustful urges. His covered paws slide along your back and sides, sliding the sleeves over your [skin of Player] flesh. His pace is frantic and erratic, sometimes slow and sensual, but often frenetic as he pounds into you while spouting off about [one of]brain-sucking mice[or]space chickens[or]government fluoride[or]mind control chemicals in condoms[or]microwave sterilized semen[or]sewer sheep[or]alligators living in the sewers[or]rats after pirate treasure[or]smuggling root beer across state lines in your socks[at random]. You do your best to ignore it, but his words seem to leak into your mind even as his precum leaks into your quivering pussy[if humanity of Player <= 33]. Between moans of pleasure, you start babbling about the strangeness you've witnessed in the infected city, letting it all out as a rambling stream of consciousness, feeling a kind of release in doing so[end if].";
+		say "     He rolls you onto all fours, pushes and tugs at your pack and clothes as best he can before mounting you. With some jingling of the jacket buckles, he takes his cock in one paw and lines it up with your exposed pussy. The weasel growls and babbles some nonsense words as he thrusts into you. Your body pushes back into the thrust instinctively, starting to give in to the crazed creature's lustful urges. His covered paws slide along your back and sides, sliding the sleeves over your [Skin of Player] flesh. His pace is frantic and erratic, sometimes slow and sensual, but often frenetic as he pounds into you while spouting off about [one of]brain-sucking mice[or]space chickens[or]government fluoride[or]mind control chemicals in condoms[or]microwave sterilized semen[or]sewer sheep[or]alligators living in the sewers[or]rats after pirate treasure[or]smuggling root beer across state lines in your socks[at random]. You do your best to ignore it, but his words seem to leak into your mind even as his precum leaks into your quivering pussy[if humanity of Player <= 33]. Between moans of pleasure, you start babbling about the strangeness you've witnessed in the infected city, letting it all out as a rambling stream of consciousness, feeling a kind of release in doing so[end if].";
 		say "     The crazed weasel continues to screw you, sliding his throbbing meat into you again and again. Your cunt grips and squeezes at his hard rod as he fucks you like a madman. Leaning overtop you, he takes the back of your neck into his muzzle and drives himself hard into you. You ball your hands into fists and groan in pleasure as you feel the hot rush of his semen flowing into you, filling your womb. Your vaginal walls clamp down around him, milking his cock as you cum as well.[impregchance]";
 	else:
 		say "     It's clear that he's going to have his way with you, one way or another.";
@@ -42,7 +37,7 @@ to say losetopsychoweasel:
 			say "     The crazed weasel continues to thrust into your mouth as you suck his cock hungrily. Gripping you firmly, he buries your face in his groin and blasts his hot load down your throat. You moan around your mouthful of pulsing cock, swallowing down the sticky cum. You rub at his ballsack, feeling the heavy orbs inside twitch as his semen is pumped out quickly, some overflowing and running down your chin and neck. As you gulp down as much of the potent fluid as you can, you find yourself wishing you'd allowed him to mount you instead.";
 		else:
 			LineBreak;
-			say "     Deciding to simply accept what he wants, you turn around and move onto all fours. He pushes and tugs at your pack and clothes as best he can before mounting you. With some jingling of the jacket buckles, he takes his cock in one paw and lines it up with your exposed bottom. The weasel growls and babbles some nonsense words as he thrusts into you. Your body pushes back into the thrust instinctively, starting to give in to the crazed creature's lustful urges. His covered paws slide along your back and sides, sliding the sleeves over your [skin of Player] flesh. His pace is frantic and erratic, sometimes slow and sensual, but often frenetic as he pounds into you while spouting off about [one of]brain-sucking mice[or]space chickens[or]government fluoride[or]mind control chemicals in condoms[or]microwave sterilized semen[or]sewer sheep[or]rats after pirate treasure[or]smuggling root beer across state lines in your socks[at random]. You do your best to ignore it, but his words seem to leak into your mind even as his precum leaks into your stuffed anus[if humanity of Player <= 33]. Between moans of pleasure, you start babbling about the strangeness you've witnessed in the infected city, letting it all out as a rambling stream of consciousness, feeling a kind of release in doing so[end if].";
+			say "     Deciding to simply accept what he wants, you turn around and move onto all fours. He pushes and tugs at your pack and clothes as best he can before mounting you. With some jingling of the jacket buckles, he takes his cock in one paw and lines it up with your exposed bottom. The weasel growls and babbles some nonsense words as he thrusts into you. Your body pushes back into the thrust instinctively, starting to give in to the crazed creature's lustful urges. His covered paws slide along your back and sides, sliding the sleeves over your [Skin of Player] flesh. His pace is frantic and erratic, sometimes slow and sensual, but often frenetic as he pounds into you while spouting off about [one of]brain-sucking mice[or]space chickens[or]government fluoride[or]mind control chemicals in condoms[or]microwave sterilized semen[or]sewer sheep[or]rats after pirate treasure[or]smuggling root beer across state lines in your socks[at random]. You do your best to ignore it, but his words seem to leak into your mind even as his precum leaks into your stuffed anus[if humanity of Player <= 33]. Between moans of pleasure, you start babbling about the strangeness you've witnessed in the infected city, letting it all out as a rambling stream of consciousness, feeling a kind of release in doing so[end if].";
 			say "     The crazed weasel continues to screw you, sliding his throbbing meat into you again and again. Your asshole grips and squeezes at his hard rod as he fucks you like a madman. Leaning overtop you, he takes the back of your neck into his muzzle and drives himself hard into you, pressing firmly at your prostate. You ball your hands into fists and groan in pleasure as you feel the hot rush of his semen flowing into you, filling your bowels. Your anal muscles clamp down around him, milking his cock as you cum as well.[impregchance]";
 	if weaselcount > 2 and inasituation is false:
 		say "     When his balls are drained, he withdraws from you and stumbles off, only to be met by a vixen nurse not far away. 'Oh, there you are sweetie. You were very naughty, running away like that,' she says, as if speaking to a child. 'I see you found a friend. Did you have fun playing? Good boy. Now let's get you back to your nice room. If you're good, I'll give you a special treat,' she adds, rubbing his sheath as she tightens up his straps, binding his arms in place. She leads him off into the shadowy halls of the hospital, leaving you there, sticky with weasel cum and feeling rather fuzzy-headed for a while.";
@@ -55,7 +50,7 @@ to say losetopsychoweasel:
 
 
 to say beatthepsychoweasel:
-	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [bodyname of Player]. He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other.";
+	say "     Having knocked down the weasel with your final blow, he curls up in a ball and starts rocking in place, mumbling about the bad [BodyName of Player]. He wraps one cloth-covered paw around his throbbing cock and gnaws intermittently at the other.";
 	if Libido of Player > 29 or "Dominant" is listed in feats of Player:
 		say "     You prepare to continue on your way, but your arousal stops you long enough to wonder if you might take advantage of the weasel to satisfy your needs.";
 		say "     [bold type]Shall you sate your lusts?[roman type][line break]";
@@ -73,7 +68,7 @@ to say beatthepsychoweasel:
 				say "     ([link]N[as]n[end link]) - Ride his hard cock.";
 				if Player consents:
 					LineBreak;
-					say "     Pushing him to lean over a nearby gurney, you grab his tail and hold it up, exposing his waiting tailhole. He wiggles his rear even as he keeps squirming, as if the struggle is all part of the fun. Deciding to just get to the action instead of further pondering the motivations of the clearly crazy creature, you press your [cock size desc of Player] [cock of Player] cock to his backside and sink your shaft into him. He moans lustfully and starts to mutter something about [one of]raccoons with sticky fingers[or]busty skunk women[or]pushy jaguars[or]cold thermometers[or]lubricated sigmoidoscopes[as decreasingly likely outcomes], so you wrap your hand around his muzzle to silence his insane ramblings. He pushes back into each thrust you make, panting and moaning as you hold his muzzle in one hand and stroke his cock in the other. You pound away at the bound weasel's ass until you fill him with your hot cream and he spurts his load onto the gurney. Once your balls are drained, you bind his straightjacket to the railings and leave him like that, slumped onto the white sheets and leaking cum from his ass. Maybe someone else will come along to take care of him... in one way or another.";
+					say "     Pushing him to lean over a nearby gurney, you grab his tail and hold it up, exposing his waiting tailhole. He wiggles his rear even as he keeps squirming, as if the struggle is all part of the fun. Deciding to just get to the action instead of further pondering the motivations of the clearly crazy creature, you press your [cock size desc of Player] [Cock of Player] cock to his backside and sink your shaft into him. He moans lustfully and starts to mutter something about [one of]raccoons with sticky fingers[or]busty skunk women[or]pushy jaguars[or]cold thermometers[or]lubricated sigmoidoscopes[as decreasingly likely outcomes], so you wrap your hand around his muzzle to silence his insane ramblings. He pushes back into each thrust you make, panting and moaning as you hold his muzzle in one hand and stroke his cock in the other. You pound away at the bound weasel's ass until you fill him with your hot cream and he spurts his load onto the gurney. Once your balls are drained, you bind his straightjacket to the railings and leave him like that, slumped onto the white sheets and leaking cum from his ass. Maybe someone else will come along to take care of him... in one way or another.";
 				else if Player is female:
 					LineBreak;
 					say "     Grabbing the bound weasel, you push him onto a nearby gurney and hold him down by the shoulders. He struggles and snaps at you, but his cock is rock hard and leaking pre, as if the struggle is all part of the fun. Deciding to just get to the action instead of further pondering the motivations of the clearly crazed creature, you climb over him and grind your pussy down onto his leaking cock before sinking yourself down onto it. You moan in pleasure as it slides into your needy cunt. He moans and starts to mutter something about [one of]pushy nurses[or]fluffy birdies[or]giant skunk melons[or]vixens with mealtime milk[as decreasingly likely outcomes], so you wrap your hand around his muzzle to silence his insane ramblings. He bucks his hips, thrusting up into as you ride his pulsing rod, panting and moaning as you hold his muzzle in one hand and his shoulder down with the other. You bounce in the bound weasel's lap until your cunt quivers and clamps down around his shaft, cumming hard and sending the manic mustelid over the edge as well. His hot semen pumps into you, filling you with a satisfied warm wetness that helps prolong your orgasm. Your cock[smn], quite hard throughout the ride, blasts its load as well, leaving a mess of your semen all over the front of his harness. Once his balls are drained, you bind his straightjacket to the railing and leave him like that, resting on the gurney and soaked in your semen and feminine juices, as well as his own cum. Maybe someone else will come along to take care of him... in one way or another.[impregchance]";
@@ -92,16 +87,25 @@ to say beatthepsychoweasel:
 Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
-NewTypeInfection (truth state)	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	add "Psycho Weasel" to infections of MustelidList;
+	add "Psycho Weasel" to infections of FurryList;
+	add "Psycho Weasel" to infections of NatureList;
+	add "Psycho Weasel" to infections of MaleList;
+	add "Psycho Weasel" to infections of BarbedCockList;
+	add "Psycho Weasel" to infections of SheathedCockList;
+	add "Psycho Weasel" to infections of BipedalList;
+	add "Psycho Weasel" to infections of TailList;
 	now Name entry is "Psycho Weasel"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "";
-	now enemy Name entry is "";
-	now enemy type entry is 0; [non-unique enemy]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
 	now attack entry is "[one of]The crazed weasel batters at you with the long sleeves of his straightjacket![or]The wild-eyed creature bites you![or]The crazy weasel wraps his arms around you and humps his throbbing cock against your side![or]The weasel punches at you wildly![or]The weasel slams his shoulder into you, knocking you against the wall![or]The wild babble the creature keeps spouting fills you with confusion, giving it an opportunity to strike you![at random]";
 	now defeated entry is "[beatthepsychoweasel]"; [ Text when monster loses. ]
 	now victory entry is "[losetopsychoweasel]"; [ Text when monster wins. ]
@@ -135,7 +139,7 @@ When Play begins:
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping] [ Width of female sex the infection will try to give a player. ]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping] [ Width of female sex the infection will try to give a player. ]
 	now libido entry is 58; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
@@ -151,11 +155,12 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Table of New Infection Parts (continued)
-Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
 	now Name entry is ""; [matching infection name to Table of Random Critters]
 	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
 	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
@@ -163,7 +168,7 @@ When Play begins:
 	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
 	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
 	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Head Skin Adjective entry is ""; [one word descriptive adjective]
 	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
@@ -171,20 +176,20 @@ When Play begins:
 	now Hair Length entry is 2; [hair length in inches]
 	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
 	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
-	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
-	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
 	now Eye Color entry is ""; [one word color descriptor]
 	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
 	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
 	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3;
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
 	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
 	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
 	now Tongue Color entry is ""; [one word color descriptor]
 	now Tongue Length entry is 3; [length in inches]
 	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
 	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
 	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
 	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
@@ -205,26 +210,26 @@ When Play begins:
 	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
 	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
 	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
 	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
 	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
 	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
 	now Ass Width entry is 3; [ass width from 1-5]
 	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
 	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
 	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
 	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
 	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking;]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Asshole Tightness entry is 3;
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
 	now Cock Count entry is 0;
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
@@ -240,11 +245,11 @@ When Play begins:
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
 	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
 	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
 	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
@@ -254,7 +259,7 @@ When Play begins:
 [Numerous other examples can be found in existing creature files.]
 
 when play ends:
-	if bodyname of Player is "Psycho Weasel":
+	if BodyName of Player is "Psycho Weasel":
 		if humanity of Player < 10:
 			say "     As your experiences in this strange city gone mad overwhelm you, you do the only sane thing... you go insane as well. Released from the bonds of sanity, you feel so much better and run wild through the city. Overflowing with the strangeness you've witnessed, you start to babble wildly about it all, letting it loose in an incoherent stream of consciousness tirade. As you do this, you wander the city as if aimlessly, though somehow you find yourself at the city hospital. Inside, you are soon met by a friendly nurse and some strong orderlies who fit you in your very own snug straightjacket. Held in the psychiatric ward, you are tended to by several of the vixens and watched over by the big jaguars. They are nice to you, keeping bound up tight for your own good, but often willing to play with you when you'd been a good boy. Occasionally you get the urge to go wander the halls for fun and sneak out to play for a while before being brought back.";
 		else:

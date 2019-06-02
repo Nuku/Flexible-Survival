@@ -8,11 +8,11 @@ Horse Sense	"Horse Sense"
 Horse Sense is a situation.
 The sarea of Horse Sense is "Plains".
 when play begins:
-	add Horse Sense to badspots of furry;
-	add Horse Sense to badspots of hermaphrodite;
+	add Horse Sense to BadSpots of FurryList;
+	add Horse Sense to badspots of HermList;
 
 Instead of Resolving a Horse Sense:
-	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [bodyname of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
+	say "     Finding your way through the plains, you let the cool wind blowing across the open grass fields brush over chest and torso, turning your lips up into a smile. With your [BodyName of Player] body relishing in the pure [']feel['] of all that the plains have to offer, you find yourself letting go of yourself so that your spirit can become wrapped up in sensations of listening to the fluttering grass underneath your feet and rumble of the clouding sky above your head. A crack of thunder disturbs you from your mental reprieve, though, and soon you find your eyes fluttering open just as the first few drops of rain trickle over and across your chest and face.";
 	let bonus be ( intelligence of Player + perception of Player - 20 ) / 2;
 	let dice be a random number from 1 to 20;
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
@@ -36,17 +36,17 @@ Victim	"Victim"
 Victim is a situation. The level of Victim is 8.
 The sarea of Victim is "Red".
 when play begins:
-	add Victim to badspots of furry;
-	add Victim to badspots of hermaphrodite;
-	add Victim to badspots of guy;
+	add Victim to BadSpots of FurryList;
+	add Victim to badspots of HermList;
+	add Victim to BadSpots of MaleList;
 
 Instead of Resolving a Victim:
 	say "     Passing through the streets of the red light district, you hear some commotion nearby and hide around a corner to listen in without being seen. Daring a glance, you can make out the figures of a pimp and a tigress hooker locked in a heated argument. The man is castigating her about something, and when she tries to defy him, his hand is out like a whip to slap her cheek roughly. The harsh impact knocks her to the pavement, and the pimp's temper boils over into shouts and biting insults. Squinting to see more clearly, you realize that he's been trying to force her to drink something, a bottle of milky white fluid clutched tightly in his other hand. The hermaphrodite tigress seems very reluctant to comply, but she hesitantly reaches up to grab the drink when the pimp raises his hand again.";
 	WaitLineBreak;
 	if strength of Player > 15:
-		say "     Getting behind the greasy little slime ball as silently as you can manage, you lift your fist up and coldcock the pimp upside the head with all the force you can muster up out of your [bodyname of Player] muscles. Like the wimp he is you watch the other fall flat onto his face like a rock, dropping what appears to be some kind of milk onto the ground at the tigress hooker's feet. Blinking once she notices that the creature trying to add her to his harem has been knocked out cold the herm raises her eyes to look up at you and then smiles affectionately into your face. Offering her a hand up, you're not prepared to be tackled by the herm and then kissed with the kind of wild intensity only a tiger could display as the prostitute all but stuffs her tongue down your throat. Grunting in surprise you let the kiss linger for a second before grabbing both of the tigress hooker's arms and then snatching the needy herm away from your quickly blushing face.";
+		say "     Getting behind the greasy little slime ball as silently as you can manage, you lift your fist up and coldcock the pimp upside the head with all the force you can muster up out of your [BodyName of Player] muscles. Like the wimp he is you watch the other fall flat onto his face like a rock, dropping what appears to be some kind of milk onto the ground at the tigress hooker's feet. Blinking once she notices that the creature trying to add her to his harem has been knocked out cold the herm raises her eyes to look up at you and then smiles affectionately into your face. Offering her a hand up, you're not prepared to be tackled by the herm and then kissed with the kind of wild intensity only a tiger could display as the prostitute all but stuffs her tongue down your throat. Grunting in surprise you let the kiss linger for a second before grabbing both of the tigress hooker's arms and then snatching the needy herm away from your quickly blushing face.";
 		WaitLineBreak;
-		say "     'Thanks, sugar. Who knew my strong and charming guardian angel would be someone with a sexy [bodyname of Player] body like yours in this weird ass town.' The tigress chuckles before shaking her head, but you catch the sincerity in her eyes before she hurriedly masks it. 'Eddie here was saying something about wanting to get a girl with wings or something before you came along. I knew I should have gotten out of this business before all of this started. Damn me for being so stupid.' The tigress growls and then chuffs in a true tiger-like way as she gives a shake of hir striped head. Asking her what she's going to do now you watch as the hermaphrodite smirks and then looks down at [']Eddie[']. 'I think it's about time someone taught this little creep a lesson in humility, if you know what I mean?' A playful wink from the hooker has you nodding somewhat hesitantly.";
+		say "     'Thanks, sugar. Who knew my strong and charming guardian angel would be someone with a sexy [BodyName of Player] body like yours in this weird ass town.' The tigress chuckles before shaking her head, but you catch the sincerity in her eyes before she hurriedly masks it. 'Eddie here was saying something about wanting to get a girl with wings or something before you came along. I knew I should have gotten out of this business before all of this started. Damn me for being so stupid.' The tigress growls and then chuffs in a true tiger-like way as she gives a shake of hir striped head. Asking her what she's going to do now you watch as the hermaphrodite smirks and then looks down at [']Eddie[']. 'I think it's about time someone taught this little creep a lesson in humility, if you know what I mean?' A playful wink from the hooker has you nodding somewhat hesitantly.";
 		WaitLineBreak;
 		say "     Watching as the red dress wearing prostitute kneels down, scoops up what you guess is gryphon's milk and then turn the unconscious pimp over to dump it down his throat you slowly back away when you see the tigress whip out her cock and then start to pump at herself to get a full erection going. By the time you turn to walk away, the last you would remember seeing of [']Eddie['] is the struggling pimp sprouting both wings and deep stripes across his body as the wrathful tigress had her way with him.";
 		SanBoost 10;
@@ -54,7 +54,7 @@ Instead of Resolving a Victim:
 		now Resolution of Victim is 1; [punched out the pimp]
 		now Victim is resolved;
 	else:
-		challenge "Twisted Pimp";
+		challenge "Human Hybrid";
 		if lost is 0:
 			say "     Defeating the piece of scum you help the tigress up to her feet only to be glomped and then kissed like mad as the striped female shows her appreciation to you in a very physical way. Pushing the other off from you when the need for air becomes paramount you listen to the other rumble a purr at you before smiling and then turning to go about her way as quickly as possible. The unconscious pimp at your feet is left forgotten by the other, though you could have sworn that you heard the tigress say something about [']getting out of this business['] before she managed to get out of earshot. Shrugging you make your move out from the red light district to find somewhere else to be, you've done your job saving the little kittens stuck in a tree after all.";
 			SanBoost 10;
@@ -75,7 +75,7 @@ Runaway is a situation.
 The sarea of Runaway is "Beach".
 
 Instead of Resolving a Runaway:
-	say "     Walking across the sands of the long stretch of beach that the city has to offer you find a curious sight of what looks like a normal person sitting by themselves while shuffling their bare feet across the pale sands. Curious, you go over to them and then grunt to catch their attention when you realize that, yes indeed, the other is a full on human. What you find when the other turns around is a freckled faced boy of about seventeen looking up and down your [bodyname of Player] body somewhat curiously before he smiles up at you. 'Hello, come to watch the waves lap at the shore?' the young man says somewhat quietly. You look out at the small crashing waves and then turn back to the other to give a shake of your head. Telling them that you were actually curious about them and what they are doing here all alone, you find yourself slightly taking a step back when the other chuckles somewhat angrily all of a sudden.";
+	say "     Walking across the sands of the long stretch of beach that the city has to offer you find a curious sight of what looks like a normal person sitting by themselves while shuffling their bare feet across the pale sands. Curious, you go over to them and then grunt to catch their attention when you realize that, yes indeed, the other is a full on human. What you find when the other turns around is a freckled faced boy of about seventeen looking up and down your [BodyName of Player] body somewhat curiously before he smiles up at you. 'Hello, come to watch the waves lap at the shore?' the young man says somewhat quietly. You look out at the small crashing waves and then turn back to the other to give a shake of your head. Telling them that you were actually curious about them and what they are doing here all alone, you find yourself slightly taking a step back when the other chuckles somewhat angrily all of a sudden.";
 	WaitLineBreak;
 	say "     'I ran away from home and found my way coming here. Why do you ask?' You blink at the freckled youth and then ask him if he has actually noticed what's going on around the city as of late. 'Oh...the stuff with the [']deadly['] outbreak? Yeah everyone on the outside knows about it. That's one of the reasons I came here. Nobody would think to look for me out here.' The young man then lowers his head somewhat to let his long shaggy black mane of hair cover his youthful face. 'My folks found out that I'm gay and got on my case pretty bad about it. Since there's a plague or virus or whatever going on around here I figured that this would be the best place to go to since home has just gotten unbearable. Heh, what better place to come for someone who's [']confused['] about their sexuality, right?' the young man scoffs disdainfully.";
 	WaitLineBreak;
@@ -103,9 +103,9 @@ Portrait	"Portrait"
 Portrait is a situation. The level of Portrait is 9.
 The sarea of Portrait is "Outside".
 when play begins:
-	add Portrait to badspots of furry;
-	add Portrait to badspots of guy;
-	add Portrait to badspots of hermaphrodite;
+	add Portrait to BadSpots of FurryList;
+	add Portrait to BadSpots of MaleList;
+	add Portrait to badspots of HermList;
 
 
 Instead of Resolving a Portrait:
@@ -116,7 +116,7 @@ Instead of Resolving a Portrait:
 	challenge "Smooth Collie Shemale";
 	LineBreak;
 	say "     With the respective group of cano-mutt mutants taken care of you drop down onto the ground and then sigh as fatigue takes hold of you. A gentle tinkle of laughter makes you whip your head around just in time to see the foxwoman set down her brush and then stand up to stretch. Realizing that the artist has had no idea of what had just taken place, you grumble quietly before taking a look around side the other to notice the finished piece of artistry.";
-	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [facename of Player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
+	say "     What you see captivates you in an almost mesmeric way as the collage of inks and paints have come together to form a picture that astounds you down to your core. Coming to the conclusion that all of your hard work was worth the effort of protecting the other you say nothing as you slowly get up and then take your leave from the vixen. The sight of the city, and subsequently yourself with your [FaceName of Player] face standing in front of the metropolis looking at the viewer, will probably stay with you for a long, long time to come.";
 	SanBoost 10;
 	increase score by 1;
 	now Portrait is resolved;
@@ -128,8 +128,8 @@ Hurting	"Hurting"
 Hurting is a situation.
 The sarea of Hurting is "Hospital".
 when play begins:
-	add Hurting to badspots of furry;
-	add Hurting to badspots of guy;
+	add Hurting to BadSpots of FurryList;
+	add Hurting to BadSpots of MaleList;
 
 Instead of Resolving a Hurting:
 	say "     Walking through the halls of the hospital, you find yourself stopping when a sudden loud and anguished whimpering noise catches your attention. On guard, you find yourself looking around and then tracking the helpless sound until you get to a half opened door that leads to an unfamiliar looking room. Cautiously stepping into the small but well-lit area, you creep over to have a look over an overturned desk, only to find someone... or rather something... hiding behind it. Not wanting to startle whoever is there, you make a small sound in the back of your throat and then watch as a head pops up to look at you. The face of one of the weasels that belong in the hospital's psychiatric ward looks at you timidly before ducking back down to whimper fretfully behind his hiding spot.[line break]";
@@ -176,8 +176,8 @@ The sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies. beauceronmet is usually false.
 
 when play begins:
-	add Conchien to badspots of furry;
-	add Conchien to badspots of hermaphrodite;
+	add Conchien to BadSpots of FurryList;
+	add Conchien to badspots of HermList;
 
 Instead of Resolving a Conchien:
 	now beauceronmet is true;
@@ -196,9 +196,9 @@ Chocolate Treat is a situation.
 The sarea of Chocolate Treat is "High".
 
 when play begins:
-	add Chocolate Treat to badspots of furry;
-	add Chocolate Treat to badspots of humorous;
-	add Chocolate Treat to badspots of hermaphrodite;
+	add Chocolate Treat to BadSpots of FurryList;
+	add Chocolate Treat to badspots of HumorousList;
+	add Chocolate Treat to badspots of HermList;
 
 Instead of Resolving a Chocolate Treat:
 	setmonster "Chocolate Lab";
@@ -211,12 +211,12 @@ Instead of Resolving a Chocolate Treat:
 		LineBreak;
 		say "     Deciding what the heck, you get down onto your knees and then unhurriedly take the chocolate canine's prick into your warm mouth. The taste of warm chocolate makes you almost purr as you bob your head up and down while trying to milk the sweet tasting canine of the contents in its gooey balls. The Chocolate Lab grunts and whines as it begins to thrust into your face casually and consequently the sounds the stud dog is making draws over the small pack over as they wonder what the noise is all about. Upon finding you sucking off one of their own the rest of the chocolate canines are quick to try and get in on the action as they bark and yap and tear at your clothing to get you naked. Once done, you can't really fight them as two of the Labs have you pinned down against the one you're still sucking off. The group soon takes their turn at licking over your entire body and down further across your spine until they eventually start to tongue your [if Player is female]wet pussy and [end if]puckered hole all at once.";
 		WaitLineBreak;
-		say "     It isn't long before the one in your mouth explodes and, without missing a beat, you suck down the Lab's creamy treat while rolling your hand over the canine's pulsing balls to get every delicious drop. Once the other is done though, another Lab is quick to come over and then stuff himself deep inside of you slightly still full mouth to give you an extra added helping of the white chocolate delight you just had. This wouldn't have been so bad except in the next moment one of the Labradors behind you takes it upon himself to mount you. By the time you come think that maybe you've made a bad decision, the entire pack is circling around with many of the other Chocolate Labs humping at your sides and leaking milk chocolate precum onto your [bodyname of Player] body while waiting for their chance to get at you as the one atop you slowly begins to slide its gooey, flowing hips against across backside while its flowing cock pulses inside you.";
+		say "     It isn't long before the one in your mouth explodes and, without missing a beat, you suck down the Lab's creamy treat while rolling your hand over the canine's pulsing balls to get every delicious drop. Once the other is done though, another Lab is quick to come over and then stuff himself deep inside of you slightly still full mouth to give you an extra added helping of the white chocolate delight you just had. This wouldn't have been so bad except in the next moment one of the Labradors behind you takes it upon himself to mount you. By the time you come think that maybe you've made a bad decision, the entire pack is circling around with many of the other Chocolate Labs humping at your sides and leaking milk chocolate precum onto your [BodyName of Player] body while waiting for their chance to get at you as the one atop you slowly begins to slide its gooey, flowing hips against across backside while its flowing cock pulses inside you.";
 		WaitLineBreak;
 		say "     The fucking and sucking and creaming over and into your body lasts for almost an hour and before you know it you find that your own body has taken on the form of the Chocolate Labs around you. It almost seems as if part of you flowed and mingled with their molten chocolate bodies such that you lost part of yourself even as their confectionary canine instincts spread into you. By the time the orgy is done with you are no longer hungry for a taste of Chocolate as your belly is literally sloshing with milky cocoa goodness. Burping slightly when the last two Labradors flow away from both your face and ass, you pant gratefully as you watch the pack come over to lick you across the face and then slowly begin to move away from you one by one by one. Finding yourself alone soon after you chuckle slightly as you think about how your desires have finally gotten the best of you on this day.";
 		PlayerEat 20;
 		PlayerDrink 10;
-		if bodyname of Player is "Chocolate Lab" or facename of Player is "Chocolate Lab":
+		if BodyName of Player is "Chocolate Lab" or FaceName of Player is "Chocolate Lab":
 			decrease humanity of Player by a random number between 25 and 35;
 			if "Strong Psyche" is listed in feats of Player, increase humanity of Player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of Player, decrease humanity of Player by a random number between 0 and 5;
@@ -230,17 +230,17 @@ Instead of Resolving a Chocolate Treat:
 			if Name entry is "Chocolate Lab":
 				now MonsterID is y;
 				break;
-		now tailname of Player is "Chocolate Lab";
-		now facename of Player is "Chocolate Lab";
-		now skinname of Player is "Chocolate Lab";
-		now bodyname of Player is "Chocolate Lab";
-		now cockname of Player is "Chocolate Lab";
+		now TailName of Player is "Chocolate Lab";
+		now FaceName of Player is "Chocolate Lab";
+		now SkinName of Player is "Chocolate Lab";
+		now BodyName of Player is "Chocolate Lab";
+		now CockName of Player is "Chocolate Lab";
 		attributeinfect;
 		now tail of Player is tail entry;
-		now face of Player is face entry;
-		now skin of Player is skin entry;
-		now body of Player is body entry;
-		now cock of Player is cock entry;
+		now Face of Player is face entry;
+		now Skin of Player is skin entry;
+		now Body of Player is body entry;
+		now Cock of Player is cock entry;
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;

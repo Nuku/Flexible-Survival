@@ -5,7 +5,7 @@ Version 1 of Endings by Darthan begins here.
 Section 1 Human Ending
 
 when play ends:
-	if bodyname of Player is "Human":
+	if BodyName of Player is "Human":
 		if the player is pure:
 			say "[purehumanend]";
 		else if the player is facially human and the player is skintone human and the tail of the player is "" and Breast Size of Player <= 6 and Cock Length of Player <= 18 and Ball Size of Player <= 4 and Nipple Count of Player <= 2: [The player appears human to casual scrutiny and does not have hugely oversized junk that cannot be hidden.]
@@ -65,33 +65,33 @@ to say purehumanend: [Pure Human version]
 
 to say passhumanend: [Passably Human version]
 	if humanity of Player < 10:
-		if facename of Player is "Awesome tree":
+		if FaceName of Player is "Pod Person":
 			say "Succumbing to the infection that is spreading through your body, you wander the streets until you come across several tall trees with assorted fruits at their base. You instinctively begin eating the fruit at random as your body begins to become more and more human. After having your fill you look around and wonder at just how awesome this really is. After taking a few steps you are suddenly brought to a halt. Looking down it seems that you have gotten taller and that your feet seem to have taken root in the ground. You can't help but feel that you are slowly becoming more awesome as your skin starts to harden and take on a bark-like appearance.";
 			say "As you take one last look around before your neck becomes too hard and stiff to turn, it dawns on you just how awesome everything really is. As your mind slowly begins to fade you realize how awesome your new existence will be in this grove of awesome trees. Awesome.";
 			stop the action;
-		else if facename of Player is "Siren":
+		else if FaceName of Player is "Siren":
 			say "As the last of your humanity falls away to the infection your siren mind takes over and you are drawn to the beach where you once again come across the sirens who are more than happy to see you again. After they fully transform you into another sexy siren you join their hidden aerie, using your nearly-human bodies and angelic voices you lure many travelers in for you and your new friends to enjoy.";
-		else if facename of Player is "Greek Nymph":
+		else if FaceName of Player is "Greek Nymph":
 			say "As you loose the last of your humanity you are drawn back to the Museum by your Greek Nymph mind. Searching the halls you come across several nymphs that happily welcome you back. After several hours with your new friends you take your place as another sexy Greek Nymph. From then on you spend the rest of your days frolicking through the Museum halls chasing and being chased by the satyrs.";
-		else if skinname of Player is "Awesome Tree":
+		else if SkinName of Player is "Pod Person":
 			say "Succumbing to the infection that is spreading through your body, you wander the streets until you come across several tall trees with assorted fruits at their base. You instinctively begin eating the fruit at random as your body begins to become more and more human. After having your fill you look around and wonder at just how awesome this really is. After taking a few steps you are suddenly brought to a halt. Looking down it seems that you have gotten taller and that your feet seem to have taken root in the ground. You can't help but feel that you are slowly becoming more awesome as your skin starts to harden and take on a bark-like appearance.";
 			say "As you take one last look around before your neck becomes too hard and stiff to turn, it dawns on you just how awesome everything really is. As your mind slowly begins to fade you realize how awesome your new existence will be in this grove of awesome trees. Awesome.";
 			stop the action;
-		else if skinname of Player is "City Sprite":
+		else if SkinName of Player is "City Sprite":
 			say "As your humanity fades, your sprite skin begins to tingle as a familiar cloud comes into view, the swarm of sexy city sprites closing in you welcome their embrace. You spend time getting to know your new friends intimately, ending up shrinking down to their size and joining the swarm. Happy with your new friends, you travel the city looking for new people to add to the growing swarm.";
-		else if skinname of Player is "Wood Elf":
+		else if SkinName of Player is "Wood Elf":
 			say "Lost to the infection you wander through the forest until you are once again confronted by the beautiful female elf. 'It is good to see you again, but it seems that you are not yet ready to join me. Though I think that I can help with that.' The elf girl takes you further into the forest where she strips your clothing and begins playing with your body. After several hours you lay exhausted in a puddle of your own fluids. 'There, I think that we are ready now.' Leading you to a nearby stream so that you can clean up you are surprised to see a reflection of what appears to be a set of twin elves in the water. Before you are able to say anything the elf answers your bewildered look. 'I can have my new sister looking anything less than myself.' After cleaning up and wrapping yourself in your new green silks they two of you disappear into the forest, ready to look for new warriors to join your sisterhood.";
-		else if skinname of Player is "Elven Hunter":
+		else if SkinName of Player is "Elven Hunter":
 			say "As the infection washes away the last of your humanity you wander the forest looking for the elven hunter that you met before. Satisfying your lust on creatures you come across on you journey you are unable to find the young hunter. No matter how hard you look you are unable to find the one you are looking for. Feeling empty you continue your search for the elven hunter.";
-		else if skinname of Player is "Harpy":
+		else if SkinName of Player is "Harpy":
 			say "As your mind falls to the infection [if Centrallib is 5 or Centrallib is 6]you make your way back to the Central Library, being careful to avoid James the wolverine guard, and make your way inside. As soon as you enter the harpy librarians swoop in and carry you to their nest where they have their way with you until you become another sexy harpy librarian. When James comes in to see what all the commotion is about he is puzzled to find nothing but a bunch of harpies tumbling in their nest. As he leave you think you here him mumble something about the strange horny birds. Taking your place as another one of the library's busty keepers you spend the rest of your days tending to the books in the library[else]while searching the streets of the city a harpy swoops out of the sky grabbing you by the shoulders with her taloned feet and carries you back to her nest in the mountains. Dropping you into the nest you are quickly set upon by several harpies whom you gladly offer yourself to. When the harpies are finished with you, you have become another busty harpy and happily join their aerie. You spend your days hunting, enjoying the company of your sister harpies, or enjoying being fertilized by the occasional male that is brought to the nest by you or one of your sisters[end if].";
-		else if skinname of Player is "Siren":
+		else if SkinName of Player is "Siren":
 			say "As the last of your humanity falls away to the infection you are drawn to the beach where you once again come across the sirens who are more than happy to see you again. After they fully transform you into another sexy siren you join their hidden aerie, using your nearly-human bodies and angelic voices you lure many travelers in for you and your new friends to enjoy.";
-		else if skinname of Player is "Succubus":
+		else if SkinName of Player is "Succubus":
 			say "As the last of your humanity fades, you make your way back to the red light district and are pleased to see one of the sultry succubi walking toward you with a wide smile on her face. 'So does this mean that you have returned to join us?' Instead of giving a reply, you push the sexy succubus and begin using the demoness for your own pleasure. After the initial shock passes the succubus gets into it and helps you along. After you are finished the sexy demoness leads you to a small building where many succubi are busy enjoying their pets or each other. As you enter the building the succubi all turn their attention to you and soon begin taking turns with the new arrival. After several days of constant sex you lay in a puddle of the mixed fluids of the succubi that inhabit the building as well as your own. Looking over you now fully transformed succubus body, as your soul fades, you smile thinking about how much more fun things will be with your sexy new body.";
-		else if skinname of Player is "Incubus":
+		else if SkinName of Player is "Incubus":
 			say "When the last of your humanity fades, you find yourself drawn to the college campus. As you approach you see the smiling figure of an incubus waiting for you. 'We sensed that you would be coming to join us. Follow me.' As you follow the incubus you can't help but stare at his round, bubble butt. Eventually reaching your destination, a large condominium, you are ushered inside. Looking around you see incubi fucking their pets or each other. Things quickly change as all attention is turned toward you. As the mass of incubi pin you down and begin taking turns filling every available hole you are quickly lost in the pleasure. After several days of constant pleasure you lay covered in the seed of the incubi. As your [if Player is not male]new cock sprays[else if Cock Count of Player > 1]cocks spray[else]cock sprays[end if] a last few globs of your seed across your new incubus body you feel the light of your soul go out. With an evil grin you rise to your feet ready to create more sexy demons to join you and your brothers.";
-		else if skinname of Player is "Greek Nymph":
+		else if SkinName of Player is "Greek Nymph":
 			say "As you loose the last of your humanity you are drawn back to the Museum by some unknown force. Searching the halls you come across several nymphs that happily welcome you back. After several hours with your new friends you take your place as another sexy Greek Nymph. From then on you spend the rest of your days frolicking through the Museum halls chasing and being chased by the satyrs.";
 		else:	[covers other generic outcomes like tailless forms, oversized junk, etc...]
 			sort Table of Random Critters in random order;
