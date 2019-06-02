@@ -8,6 +8,13 @@ Version 1 of Kurt by Rikaeus begins here.
 
 KurtRelationship is a number that varies.
 KurtEvent is a number that varies.
+KurtRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Predator's Lunch is resolved and KurtRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change west exit of Atlantis City Residential to Kurt's Abode;
+		change east exit of Kurt's Abode to Atlantis City Residential;
+		now KurtRoomConnection is 1; [make sure that it connects the room only once]
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -77,7 +84,7 @@ Object	Name
 Predator's Club Night	"Predator's Club Night"
 
 Predator's Club Night is a situation.
-The sarea of Predator's Club Night is "Atlantis".
+The sarea of Predator's Club Night is "Nowhere".
 
 when play begins:
 	add Predator's Club Night to badspots of MaleList;
