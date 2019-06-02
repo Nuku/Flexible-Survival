@@ -29,6 +29,14 @@ Version 2 of Horus by Rikaeus begins here.
 [   1: Lost once                                                        ]
 [   2: Lost twice                                                       ]
 
+HorusRoomConnection is a number that varies. [@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Sky Tower is resolved and HorusRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change up exit of High Rise District to Palace Near The Sun;
+		change down exit of Palace Near The Sun to High Rise District;
+		now HorusRoomConnection is 1; [make sure that it connects the room only once]
+
 Section A - Code for Horus and Zerbo
 
 HorusRelationship is a number that varies.
@@ -73,6 +81,8 @@ Instead of resolving Sky Tower:
 		change down exit of Palace Near The Sun to High Rise District;
 		now HorusRelationship is 1;
 		move player to Palace Near The Sun;
+		now Sky Tower is resolved;
+		now Resolution of Sky Tower is 1; [room connected]
 
 Table of GameRoomIDs (continued)
 Object	Name

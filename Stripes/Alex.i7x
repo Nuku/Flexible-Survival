@@ -344,14 +344,12 @@ to say alexmalesexy2:
 	[WaitLineBreak]
 	say "     Finally, you are driven over the edge and slam your cock deep inside him, shooting your hot seed into the sexy ferret's rump. He moans and dooks happily, begging for you to give him all you've got. With the tight grip of his asshole around you and his inner walls almost milking at you for more, you are happy to oblige and give him as much as you can while his own seed splatters onto the sheets.";
 
-
 to say alexfemalesexy2:
 	say "     Unable to resist such a sexy offer, you take a hold of his cock and point it upright, teasing your pussy's wet lips against it. As your juices run down his length, you lower yourself down over his throbbing meat. You both dook in delight and start bouncing on the bed with each thrust he makes into you.";
 	say "     With his slender cock stuffed fully inside you, you lower your flexible body overtop of him, bringing your breasts to the smaller ferret's muzzle. He licks and suckles at your nipples, making you shiver in delight. His paws grip your ass, squeezing it as he pulls your hips down into each thrust he makes.";
 	[WaitLineBreak]
 	say "     Finally, he is driven over the edge and thrusts his cock deep inside you, shooting his hot seed into his sexy mate's vagina and womb. You both moan and dook as he fills you with his thick semen. Driven to orgasm yourself, your inner walls squeeze and pull at his cock, begging it to give you all it can. His throbbing member and heavy balls are happy to oblige, filling you delightfully full.";
-	[TODO: Make Ferret Infection for impregnation]
-
+	CreatureSexAftermath "Player" receives "PussyFuck" from "Ferret";
 
 Section 5 - Brunch!
 

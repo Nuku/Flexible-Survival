@@ -1097,6 +1097,7 @@ carry out artistcredits:
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Corbin (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
+[	say "     Dash by Conchi @ https://artisticconch.tumblr.com/[line break]";] [disabled until art integration]
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
