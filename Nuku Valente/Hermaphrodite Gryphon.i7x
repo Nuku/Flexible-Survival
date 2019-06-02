@@ -277,6 +277,7 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is true;
 	now Species Name entry is "Blue Gryphon";
+	add "Blue Gryphon Herm" to infections of AvianpredList;
 	add "Blue Gryphon Herm" to infections of HybridList;
 	add "Blue Gryphon Herm" to infections of FurryList;
 	add "Blue Gryphon Herm" to infections of MythologicalList;

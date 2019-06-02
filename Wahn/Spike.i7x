@@ -798,7 +798,7 @@ to say SpikeSexMenu:
 		now sortorder entry is 5;
 		now description entry is "Get your cock up the dobie's rear end";
 	[]
-	if Player is female and Libido of Spike is 0 or Libido of Spike is 100:
+	if Player is female and (Libido of Spike is 0 or Libido of Spike is 100):
 		choose a blank row in table of fucking options;
 		now title entry is "Take Spike's dick";
 		now sortorder entry is 6;

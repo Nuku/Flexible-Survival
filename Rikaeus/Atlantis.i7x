@@ -49,6 +49,13 @@ ResidentialVisits is a number that varies.
 LastAtlantisCenterWalkin is a number that varies. LastAtlantisCenterWalkin is usually 10000.
 LastResidentialWalkin is a number that varies. LastResidentialWalkin is usually 10000.
 LastMarketWalkin is a number that varies. LastMarketWalkin is usually 10000.
+AtlantisRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if Lost Trident is resolved and Resolution of Lost Trident < 2 and AtlantisRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change west exit of Sunken Ship to Atlantis City Entrance;
+		change east exit of Atlantis City Entrance to Sunken Ship;
+		now AtlantisRoomConnection is 1; [make sure that it connects the room only once]
 
 Section 1 - Poseidon's Trident?
 
@@ -93,6 +100,7 @@ Instead of resolving a Lost Trident:
 						now PoseidonRelationship is 1;
 						change west exit of Sunken Ship to Atlantis City Entrance;
 						change east exit of Atlantis City Entrance to Sunken Ship;
+						now Resolution of Lost Trident is 1; [won]
 						now Lost Trident is resolved;
 		if fightoutcome >= 20:
 			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";

@@ -17,7 +17,6 @@ Version 1 of Chris by Wahn begins here.
 [ 100: zebra freed                                 ]
 
 [ Stamina of Chris - number of orc warrior sons    ]
-[ Perception of Chris - turn of the last training  ]
 
 [ Strength of Chris - interaction with eldest son  ]
 [   0: not met                                     ]
@@ -33,9 +32,6 @@ Version 1 of Chris by Wahn begins here.
 [  21: breeder Chris and Urik met                  ]
 [  22: breeder Chris and Urik got into talking     ]
 [  99: Urik warned away from breeder Chris         ]
-
-MaliksRandomCaptive is a number that varies. [@Tag:NotSaved]
-Perception of Chris is usually 20000.[@Tag:NotSaved]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -92,7 +88,7 @@ to say ChrisDesc:
 		else if Stamina of Chris > 1:
 			say "     [if Strength of Chris is 0]The multiple orc warrior sons that you've fathered together with Chris[else]Malik and his brothers[end if] often hang out with their chieftain father, drinking orc brews, boasting about the conquests they made out on the streets or starting playful wrestling matches with each other and their dad. Or maybe not so playful, as both participants usually end up with erections and they throw each other around without much restraint. The position of Chris as the leader doesn't seem to be in any danger though, as he hands-down beats anyone who tries, then sends them off with a manly hug and a slap on the ass to spend their energy outside.";
 		else if Stamina of Chris > 0:
-			say "     [if Strength of Chris is 0]The orc warrior son you've fathered together with Chris[else]Malik[end if] usually hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
+			say "     [if Strength of Chris is 0]The orc warrior son you've fathered together with Chris[else]Malik[end if] often hangs out with his father, and they share orc brews and boast about the conquests they made out on the streets. The two of them also start playful wrestling matches that usually end up giving both of them erections as they throw each other around without much restraint. Chris clearly is proud of his son, even though he beats him hands down in all of the matches. Aftewards, he sends the young man off with a manly hug and a slap on the ass to spend his energy outside.";
 
 instead of conversing the Chris:
 	say "[ChrisTalkMenu]";
@@ -253,7 +249,7 @@ Instead of fucking the Chris:
 			now sortorder entry is 3;
 			now description entry is "Pound your dick into Chris";
 		[]
-		if Libido of Chris is 2:
+		if Libido of Chris is 0 or Libido of Chris is 2:
 			choose a blank row in table of fucking options;
 			now title entry is "Let the orc take your ass";
 			now sortorder entry is 4;
