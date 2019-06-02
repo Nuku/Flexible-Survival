@@ -1,134 +1,14 @@
-Version 1 of Elk Tribe by Wahn begins here.
-[Version 0.1 - New Content in development]
+TestCreature by Wahn begins here.
+[ Version 1.0 - Male TestCreature by Kaleem Mcintyre          ]
+[ Version 2.0 - Multi Gender TestCreatures plus Items by Wahn ]
 
-"Adds elk tribesmembers to Flexible Survival's Wandering Monsters table"
+Section 1 - Creature Responses
 
-Section 1 - Elk Tribe Bull
+[see NonCombatError Function from Core Mechanics/Basic Functions: ]
+[to say NonCombatError:
+	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";]
 
-to say ElkBullVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
-
-to say ElkBullBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
-		say "     [bold type]What now?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkBullSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking him over for loot.";
-
-to say BeatenElkBullSexMenu:
-	LineBreak;
-	say "     What do you want to do with the male elk?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "AAA";
-	now sortorder entry is 1;
-	now description entry is "AAAA.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "BBB";
-	now sortorder entry is 2;
-	now description entry is "BBBB.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "CCC";
-	now sortorder entry is 3;
-	now description entry is "CCCC.";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "DDD";
-		now sortorder entry is 4;
-		now description entry is "DDDD.";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "AAA"):
-					say "[BeatenElkBullSex1]";
-				if (nam is "BBB"):
-					say "[BeatenElkBullSex2]";
-				if (nam is "CCC"):
-					say "[BeatenElkBullSex3]";
-				if (nam is "DDD"):
-					say "[BeatenElkBullSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You just walk away after checking him over for loot.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say BeatenElkBullSex1:
-	say "     ...";
-
-to say BeatenElkBullSex2:
-	say "     ...";
-
-to say BeatenElkBullSex3:
-	say "     ...";
-
-to say BeatenElkBullSex4:
-	say "     ...";
-
-to say ElkBullDesc:
-	setmongender 3;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else: [standard description]
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth barely hiding the bulge of his mighty shaft[or]wears not a stitch of clothing, his mighty shaft swinging proudly between his legs[or]wears a brown loincloth with red stripes barely hiding the bulge of his mighty shaft[or]wears a blue and white striped loincloth barely hiding the bulge of his mighty shaft[or]wears a simple black loincloth barely hiding the bulge of his mighty shaft[at random]. ";
-		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
-		[antlers]
-		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
-		else:
-			say "     ...";
+Section 2 - Creature Insertion
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -137,59 +17,60 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Elk";
-	add "Elk Tribe Bull" to infections of CervineList;
-	add "Elk Tribe Bull" to infections of FurryList;
-	add "Elk Tribe Bull" to infections of NatureList;
-	add "Elk Tribe Bull" to infections of MaleList;
-	add "Elk Tribe Bull" to infections of TaperedCockList;
-	add "Elk Tribe Bull" to infections of SheathedCockList;
-	add "Elk Tribe Bull" to infections of BipedalList;
-	add "Elk Tribe Bull" to infections of TailList;
-	now Name entry is "Elk Tribe Bull";
+	now Species Name entry is "TestCreature";
+	add "TestCreature Male" to infections of CanineList;
+	add "TestCreature Male" to infections of NatureList;
+	add "TestCreature Male" to infections of FurryList;
+	add "TestCreature Male" to infections of MaleList;
+	add "TestCreature Male" to infections of TaperedCockList;
+	add "TestCreature Male" to infections of KnottedCockList;
+	add "TestCreature Male" to infections of SheathedCockList;
+	add "TestCreature Male" to infections of BipedalList;
+	add "TestCreature Male" to infections of TailList;
+	now Name entry is "TestCreature Male"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkBullBeaten]";
-	now victory entry is "[ElkBullVictorious]";
-	now desc entry is "[ElkBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if Player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if Player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
-	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a short, brown tail.";
-	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if Player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if Player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if Player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
-	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
-	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
-	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 18; [ These are now the creature's stats... ]
-	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long[if Player is female], delicate[end if] muzzle completes the image of an anthro TestCreature's head";
+	now body entry is "lean and limber, its form fitting an anthro canine built for both strength and speed. [if Player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider as a preparation for bearing cubs. [end if]Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro TestCreature, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 20; [ These values may be used as part of alternate combat.]
-	now per entry is 12;
-	now int entry is 10;
-	now cha entry is 16;
+	now per entry is 22;
+	now int entry is 16;
+	now cha entry is 20;
 	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 110; [ The monster's starting HP. ]
-	now lev entry is 12; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 10; [ Monster's average damage when attacking. ]
-	now area entry is "Snowy Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now HP entry is 66; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 6;
-	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk bull fur"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
-	now type entry is "[one of]cervine[or]elk[at random]";
+	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
@@ -289,7 +170,7 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
@@ -301,146 +182,6 @@ When Play begins:
 ]
 
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"elk bull fur"	"A tuft of fur from one of the powerful elk tribe bulls."	0	elk bull fur
-
-instead of sniffing elk bull fur:
-	say "The tuft of fur smells a bit musky.";
-
-elk bull fur is a grab object.
-the usedesc of elk bull fur is "[elk bull fur use]";
-
-to say elk bull fur use:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Bull";
-
-
-Section 2 - Elk Tribe Cow
-
-to say ElkCowVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
-
-to say ElkCowBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkCowSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
-
-
-to say BeatenElkCowSexMenu:
-	LineBreak;
-	say "     What do you want to do with the female elk?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "AAA";
-	now sortorder entry is 1;
-	now description entry is "AAAA.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "BBB";
-	now sortorder entry is 2;
-	now description entry is "BBBB.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "CCC";
-	now sortorder entry is 3;
-	now description entry is "CCCC.";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "DDD";
-		now sortorder entry is 4;
-		now description entry is "DDDD.";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "AAA"):
-					say "[BeatenElkCowSex1]";
-				if (nam is "BBB"):
-					say "[BeatenElkCowSex2]";
-				if (nam is "CCC"):
-					say "[BeatenElkCowSex3]";
-				if (nam is "DDD"):
-					say "[BeatenElkCowSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You just walk away after checking her over for loot.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say BeatenElkCowSex1:
-	say "     ...";
-
-to say BeatenElkCowSex2:
-	say "     ...";
-
-to say BeatenElkCowSex3:
-	say "     ...";
-
-to say BeatenElkCowSex4:
-	say "     ...";
-
-to say ElkCowDesc:
-	setmongender 4;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare[or]wears not a stitch of clothing, her female sex as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -449,59 +190,60 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Elk";
-	add "Elk Tribe Cow" to infections of CervineList;
-	add "Elk Tribe Cow" to infections of FurryList;
-	add "Elk Tribe Cow" to infections of NatureList;
-	add "Elk Tribe Cow" to infections of FemaleList;
-	add "Elk Tribe Cow" to infections of TaperedCockList;
-	add "Elk Tribe Cow" to infections of SheathedCockList;
-	add "Elk Tribe Cow" to infections of BipedalList;
-	add "Elk Tribe Cow" to infections of TailList;
-	now Name entry is "Elk Tribe Cow";
+	now Species Name entry is "TestCreature";
+	add "TestCreature Bitch" to infections of CanineList;
+	add "TestCreature Bitch" to infections of NatureList;
+	add "TestCreature Bitch" to infections of FurryList;
+	add "TestCreature Bitch" to infections of FemaleList;
+	add "TestCreature Bitch" to infections of TaperedCockList;
+	add "TestCreature Bitch" to infections of KnottedCockList;
+	add "TestCreature Bitch" to infections of SheathedCockList;
+	add "TestCreature Bitch" to infections of BipedalList;
+	add "TestCreature Bitch" to infections of TailList;
+	now Name entry is "TestCreature Bitch"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkCowBeaten]";
-	now victory entry is "[ElkCowVictorious]";
-	now desc entry is "[ElkCowDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if Player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if Player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
-	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a short, brown tail.";
-	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if Player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if Player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if Player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
-	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
-	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
-	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 16; [ These are now the creature's stats... ]
-	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18; [ These values may be used as part of alternate combat.]
-	now per entry is 12;
-	now int entry is 10;
-	now cha entry is 18;
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long[if Player is female], delicate[end if] muzzle completes the image of an anthro TestCreature's head";
+	now body entry is "lean and limber, its form fitting an anthro canine built for both strength and speed. [if Player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider as a preparation for bearing cubs. [end if]Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro TestCreature, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
+	now per entry is 22;
+	now int entry is 16;
+	now cha entry is 20;
 	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 90; [ The monster's starting HP. ]
-	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 8; [ Monster's average damage when attacking. ]
-	now area entry is "Snowy Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now HP entry is 66; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 0; [ Cock width, more commonly used for ball size. ]
+	now Cock Length entry is 1; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 1; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 6;
-	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk cow fur"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
-	now type entry is "[one of]cervine[or]elk[at random]";
+	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
@@ -510,7 +252,6 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -601,158 +342,15 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
+	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"elk cow fur"	"A tuft of fur from one of the powerful elk tribe cows."	0	elk cow fur
-
-instead of sniffing elk cow fur:
-	say "The tuft of fur smells a bit musky.";
-
-elk cow fur is a grab object.
-the usedesc of elk cow fur is "[elk cow fur use]";
-
-to say elk cow fur use:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Cow";
-
-
-Section 3 - Elk Tribe Herm
-
-to say ElkHermVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
-
-to say ElkHermBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkHermSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
-
-
-to say BeatenElkHermSexMenu:
-	LineBreak;
-	say "     What do you want to do with the hermaphrodite elk?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "AAA";
-	now sortorder entry is 1;
-	now description entry is "AAAA.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "BBB";
-	now sortorder entry is 2;
-	now description entry is "BBBB.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "CCC";
-	now sortorder entry is 3;
-	now description entry is "CCCC.";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "DDD";
-		now sortorder entry is 4;
-		now description entry is "DDDD.";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "AAA"):
-					say "[BeatenElkHermSex1]";
-				if (nam is "BBB"):
-					say "[BeatenElkHermSex2]";
-				if (nam is "CCC"):
-					say "[BeatenElkHermSex3]";
-				if (nam is "DDD"):
-					say "[BeatenElkHermSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You just walk away after checking her over for loot.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say BeatenElkHermSex1:
-	say "     ...";
-
-to say BeatenElkHermSex2:
-	say "     ...";
-
-to say BeatenElkHermSex3:
-	say "     ...";
-
-to say BeatenElkHermSex4:
-	say "     ...";
-
-to say ElkHermDesc:
-	setmongender 5;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -761,381 +359,67 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Elk";
-	add "Elk Tribe Herm" to infections of CervineList;
-	add "Elk Tribe Herm" to infections of FurryList;
-	add "Elk Tribe Herm" to infections of NatureList;
-	add "Elk Tribe Herm" to infections of HermList;
-	add "Elk Tribe Herm" to infections of TaperedCockList;
-	add "Elk Tribe Herm" to infections of SheathedCockList;
-	add "Elk Tribe Herm" to infections of BipedalList;
-	add "Elk Tribe Herm" to infections of TailList;
-	now Name entry is "Elk Tribe Herm";
+	now Species Name entry is "TestCreature";
+	add "TestCreature Herm" to infections of CanineList;
+	add "TestCreature Herm" to infections of NatureList;
+	add "TestCreature Herm" to infections of FurryList;
+	add "TestCreature Herm" to infections of HermList;
+	add "TestCreature Herm" to infections of TaperedCockList;
+	add "TestCreature Herm" to infections of KnottedCockList;
+	add "TestCreature Herm" to infections of SheathedCockList;
+	add "TestCreature Herm" to infections of BipedalList;
+	add "TestCreature Herm" to infections of TailList;
+	now Name entry is "TestCreature Herm"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkHermBeaten]";
-	now victory entry is "[ElkHermVictorious]";
-	now desc entry is "[ElkHermDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if Player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if Player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
-	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a short, brown tail.";
-	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if Player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if Player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if Player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
-	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
-	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
-	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 16; [ These are now the creature's stats... ]
-	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18; [ These values may be used as part of alternate combat.]
-	now per entry is 12;
-	now int entry is 10;
-	now cha entry is 18;
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long[if Player is female], delicate[end if] muzzle completes the image of an anthro TestCreature's head";
+	now body entry is "lean and limber, its form fitting an anthro canine built for both strength and speed. [if Player is female]Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider as a preparation for bearing cubs. [end if]Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro TestCreature, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
+	now per entry is 22;
+	now int entry is 16;
+	now cha entry is 20;
 	now sex entry is "Both"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 100; [ The monster's starting HP. ]
-	now lev entry is 11; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "Snowy Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now HP entry is 66; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now Male Breast Size entry is 4; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 6;
-	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk herm fur"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
-	now type entry is "[one of]cervine[or]elk[at random]";
-	now magic entry is false;
-	now resbypass entry is false;
-	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
-	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default";
-	now BannedStatus entry is false;
-
-[
-Table of New Infection Parts (continued)
-Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of New Infection Parts;
-	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
-	now Name entry is ""; [matching infection name to Table of Random Critters]
-	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
-	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
-	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
-	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
-	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
-	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
-	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
-	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Head Skin Adjective entry is ""; [one word descriptive adjective]
-	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
-	now Hair Length entry is 2; [hair length in inches]
-	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
-	now Hair Color entry is ""; [one word color descriptor]
-	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
-	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
-	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
-	now Eye Color entry is ""; [one word color descriptor]
-	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
-	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
-	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
-	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
-	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
-	now Tongue Color entry is ""; [one word color descriptor]
-	now Tongue Length entry is 3; [length in inches]
-	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
-	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
-	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
-	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
-	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
-	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
-	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
-	now Nipple Count entry is 2; [count of nipples]
-	now Nipple Color entry is ""; [one word color descriptor]
-	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
-	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
-	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
-	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
-	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
-	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
-	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
-	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
-	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
-	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
-	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
-	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Ass Width entry is 3; [ass width from 1-5]
-	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
-	[Ass Adjective generated by function out of body definition and ass width]
-	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
-	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
-	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
-	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
-	now Asshole Depth entry is 7; [inches deep for anal fucking]
-	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
-	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
-	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
-	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
-	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
-	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
-	now Cock Length entry is 0; [length in inches]
-	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
-	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
-	now Cock Color entry is ""; [one word color descriptor]
-	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
-	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
-	[Ball Size Adjective is generated by a function and can be used in scenes too]
-	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
-	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
-	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
-	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
-	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
-
-
-Table of Game Objects (continued)
-name	desc	weight	object
-"elk herm fur"	"A tuft of fur from one of the powerful elk tribe herms."	0	elk herm fur
-
-instead of sniffing elk herm fur:
-	say "The tuft of fur smells a bit musky.";
-
-elk herm fur is a grab object.
-the usedesc of elk herm fur is "[elk herm fur use]";
-
-to say elk herm fur use:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Herm";
-
-
-Section 4 - Elk Tribe Trans Bull [cuntboy]
-
-to say ElkTransBullVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
-
-to say ElkTransBullBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk bull staggers a bit, his eyes unfocused - then he keels over with a groan and lands on his back with a loud thud. Seeing him lie on the ground, your eyes can't help but wander over his muscular form and down to his crotch.";
-		say "     [bold type]What now?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkTransBullSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking him over for loot.";
-
-to say BeatenElkTransBullSexMenu:
-	LineBreak;
-	say "     What do you want to do with the transgendered elk?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "AAA";
-	now sortorder entry is 1;
-	now description entry is "AAAA.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "BBB";
-	now sortorder entry is 2;
-	now description entry is "BBBB.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "CCC";
-	now sortorder entry is 3;
-	now description entry is "CCCC.";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "DDD";
-		now sortorder entry is 4;
-		now description entry is "DDDD.";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "AAA"):
-					say "[BeatenElkTransBullSex1]";
-				if (nam is "BBB"):
-					say "[BeatenElkTransBullSex2]";
-				if (nam is "CCC"):
-					say "[BeatenElkTransBullSex3]";
-				if (nam is "DDD"):
-					say "[BeatenElkTransBullSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You just walk away after checking him over for loot.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say BeatenElkTransBullSex1:
-	say "     ...";
-
-to say BeatenElkTransBullSex2:
-	say "     ...";
-
-to say BeatenElkTransBullSex3:
-	say "     ...";
-
-to say BeatenElkTransBullSex4:
-	say "     ...";
-
-to say ElkTransBullDesc:
-	setmongender 8;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With his element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With his element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This doesn't seem to be a regular male elk. ";
-		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
-		[antlers]
-		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
-		else:
-			say "     ...";
-
-Table of Random Critters (continued)
-NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-When Play begins:
-	Choose a blank row from Table of Random Critters;
-	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Elk";
-	add "Elk Tribe Trans Bull" to infections of CervineList;
-	add "Elk Tribe Trans Bull" to infections of FurryList;
-	add "Elk Tribe Trans Bull" to infections of NatureList;
-	add "Elk Tribe Trans Bull" to infections of TransList;
-	add "Elk Tribe Trans Bull" to infections of TaperedCockList;
-	add "Elk Tribe Trans Bull" to infections of SheathedCockList;
-	add "Elk Tribe Trans Bull" to infections of BipedalList;
-	add "Elk Tribe Trans Bull" to infections of TailList;
-	now Name entry is "Elk Tribe Trans Bull";
-	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
-	now enemy Name entry is ""; [specific name of unique enemy]
-	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkTransBullBeaten]";
-	now victory entry is "[ElkTransBullVictorious]";
-	now desc entry is "[ElkTransBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if Player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if Player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
-	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a short, brown tail.";
-	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if Player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if Player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if Player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
-	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
-	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
-	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 16; [ These are now the creature's stats... ]
-	now dex entry is 20; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18; [ These values may be used as part of alternate combat.]
-	now per entry is 14;
-	now int entry is 10;
-	now cha entry is 18;
-	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 90; [ The monster's starting HP. ]
-	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "Snowy Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
-	now Ball Size entry is 0; [ Cock width, more commonly used for ball size. ]
-	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
 	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 15;
-	now Cunt Tightness entry is 6;
-	now libido entry is 80; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk trans bull fur"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
-	now type entry is "[one of]cervine[or]elk[at random]";
+	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1213,7 +497,7 @@ When Play begins:
 	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
 	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
 	now Asshole Color entry is ""; [one word color descriptor]
-	now Cock Count entry is 0;
+	now Cock Count entry is 0; [number of cocks]
 	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
 	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
 	now Cock Length entry is 0; [length in inches]
@@ -1225,159 +509,17 @@ When Play begins:
 	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
-	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
+	now Cunt Count entry is 0; [number of pussies]
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
+	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"elk trans bull fur"	"A tuft of fur from one of the powerful elk tribe trans bulls."	0	elk trans bull fur
-
-instead of sniffing elk trans bull fur:
-	say "The tuft of fur smells a bit musky.";
-
-elk trans bull fur is a grab object.
-the usedesc of elk trans bull fur is "[elk trans bull fur use]";
-
-to say elk trans bull fur use:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Trans Bull";
-
-
-Section 5 - Elk Tribe Trans Cow
-
-to say ElkTransCowVictorious:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		if HP of Player > 0: [player submits]
-			say "     ...";
-		else: [player beaten]
-			say "     ...";
-
-to say ElkTransCowBeaten:
-	if inasituation is true: [dealt with in the event]
-		say "";
-	else:
-		say "     After your last hit, the elk cow staggers a bit, her eyes unfocused - then she keels over with a groan and lands on her back with a loud thud. Seeing her lie on the ground, your eyes can't help but wander over her shapely form and down to her crotch.";
-		say "     [bold type]What now?[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Have some fun with the elk.";
-		say "     ([link]N[as]n[end link]) - Just leave.";
-		if Player consents:
-			LineBreak;
-			say "[BeatenElkTransCowSexMenu]";
-		else:
-			LineBreak;
-			say "     You walk away after checking her over for loot.";
-
-
-to say BeatenElkTransCowSexMenu:
-	LineBreak;
-	say "     What do you want to do with the transgendered elk?";
-	now sextablerun is 0;
-	blank out the whole of table of fucking options;
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "AAA";
-	now sortorder entry is 1;
-	now description entry is "AAAA.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "BBB";
-	now sortorder entry is 2;
-	now description entry is "BBBB.";
-	[]
-	choose a blank row in table of fucking options;
-	now title entry is "CCC";
-	now sortorder entry is 3;
-	now description entry is "CCCC.";
-	[]
-	if Player is male:
-		choose a blank row in table of fucking options;
-		now title entry is "DDD";
-		now sortorder entry is 4;
-		now description entry is "DDDD.";
-	[]
-	sort the table of fucking options in sortorder order;
-	repeat with y running from 1 to number of filled rows in table of fucking options:
-		choose row y from the table of fucking options;
-		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
-	while sextablerun is 0:
-		say "Pick the corresponding number> [run paragraph on]";
-		get a number;
-		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-			now current menu selection is calcnumber;
-			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
-			if Player consents:
-				let nam be title entry;
-				now sextablerun is 1;
-				if (nam is "AAA"):
-					say "[BeatenElkTransCowSex1]";
-				if (nam is "BBB"):
-					say "[BeatenElkTransCowSex2]";
-				if (nam is "CCC"):
-					say "[BeatenElkTransCowSex3]";
-				if (nam is "DDD"):
-					say "[BeatenElkTransCowSex4]";
-				wait for any key;
-		else if calcnumber is 0:
-			now sextablerun is 1;
-			say "     You just walk away after checking her over for loot.";
-			wait for any key;
-		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
-	clear the screen and hyperlink list;
-
-to say BeatenElkTransCowSex1:
-	say "     ...";
-
-to say BeatenElkTransCowSex2:
-	say "     ...";
-
-to say BeatenElkTransCowSex3:
-	say "     ...";
-
-to say BeatenElkTransCowSex4:
-	say "     ...";
-
-to say ElkTransCowDesc:
-	setmongender 6;
-	if inasituation is true:
-		say ""; [dealt with in the origin event]
-	else:
-		say "     As you move through the snowy forest, ";
-		[appearance of the tribesman]
-		if a random chance of 1 in 3 succeeds: [spotted the elk]
-			say "[one of]the sudden sound of a twig snapping makes you stop and look around. With her element of surprise gone thanks to your keen senses, [or]the sudden crunch of someone else's step into the deep snow makes you stop and look around. With her element of surprise gone thanks to your keen senses, [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		else: [player was surprised by the elk]
-			say "[one of]you do not even notice that someone is watching you until [or]you find yourself surprised by the sudden appearance of [at random]";
-			[physical details]
-			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
-			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
-		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears not a stitch of clothing, revealing a thick cock hanging between her legs as openly as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[at random]. This is not a regular female elk it seems. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
-		if "Elk Tribe Markings" is not listed in feats of Player: [not initiated into the tribe]
-			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
-			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
-		else:
-			say "     ...";
 
 Table of Random Critters (continued)
 NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
@@ -1386,68 +528,67 @@ NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Ty
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
-	now Species Name entry is "Anthro Elk";
-	add "Elk Tribe Trans Cow" to infections of CervineList;
-	add "Elk Tribe Trans Cow" to infections of FurryList;
-	add "Elk Tribe Trans Cow" to infections of NatureList;
-	add "Elk Tribe Trans Cow" to infections of TransList;
-	add "Elk Tribe Trans Cow" to infections of TaperedCockList;
-	add "Elk Tribe Trans Cow" to infections of SheathedCockList;
-	add "Elk Tribe Trans Cow" to infections of BipedalList;
-	add "Elk Tribe Trans Cow" to infections of TailList;
-	now Name entry is "Elk Tribe Trans Cow";
+	now Species Name entry is "TestCreature";
+	add "TestCreature Transman" to infections of CanineList;
+	add "TestCreature Transman" to infections of NatureList;
+	add "TestCreature Transman" to infections of FurryList;
+	add "TestCreature Transman" to infections of TransList;
+	add "TestCreature Transman" to infections of TaperedCockList;
+	add "TestCreature Transman" to infections of KnottedCockList;
+	add "TestCreature Transman" to infections of SheathedCockList;
+	add "TestCreature Transman" to infections of BipedalList;
+	add "TestCreature Transman" to infections of TailList;
+	now Name entry is "TestCreature Transman"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
-	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
-	now defeated entry is "[ElkTransCowBeaten]";
-	now victory entry is "[ElkTransCowVictorious]";
-	now desc entry is "[ElkTransCowDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose. Your muzzle is slender and your features delicate, looking alluring and feminine";
-	now body entry is "something between an elk and a human being [if Player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
-	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
-	now tail entry is "You have a short, brown tail.";
-	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if Player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if Player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
-	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
-	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
-	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
-	now str entry is 16; [ These are now the creature's stats... ]
-	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
-	now sta entry is 18; [ These values may be used as part of alternate combat.]
-	now per entry is 12;
-	now int entry is 10;
-	now cha entry is 18;
-	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
-	now HP entry is 90; [ The monster's starting HP. ]
-	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
-	now wdam entry is 8; [ Monster's average damage when attacking. ]
-	now area entry is "Snowy Forest"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now Cock Length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long muzzle completes the image of an anthro TestCreature's head";
+	now body entry is "lean and limber, its form fitting an anthro canine built for both strength and speed. Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro TestCreature, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
+	now per entry is 22;
+	now int entry is 16;
+	now cha entry is 20;
+	now sex entry is "Female"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 66; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
 	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
-	now Breast Size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
-	now Male Breast Size entry is 3; [ Breast size for if Sex="Male", usually zero. ]
-	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
-	now Cunt Depth entry is 0;
-	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
-	now libido entry is 90; [ Target libido the infection will rise towards. ]
-	now loot entry is "elk trans cow fur"; [ Dropped item, blank for none. Case sensitive. ]
-	now lootchance entry is 25; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]strong[or]muscled[or]powerful[or]buff[at random]";
-	now type entry is "[one of]cervine[or]elk[at random]";
+	now Breast Size entry is 0; [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now Cross-Infection entry is ""; [infection that this infection will give the player when they lose; can be left empty if they infect with the monster's own]
 	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
-[
 Table of New Infection Parts (continued)
 Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
@@ -1538,60 +679,281 @@ When Play begins:
 	[Ball Size Adjective is generated by a function and can be used in scenes too]
 	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
 	now Cunt Count entry is 0;
-	now Cunt Depth entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
 	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
 	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
 	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
 	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
 	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
 	now Cunt Color entry is ""; [one word color descriptor]
-	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
-	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
-]
+	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
 
+
+
+Table of Random Critters (continued)
+NewTypeInfection (truth state)	Species Name	Name	Enemy Title	Enemy Name	Enemy Type	Attack	Defeated	Victory	Desc	Face	Body	Skin	Tail	Cock	Face Change	Body Change	Skin Change	Ass Change	Cock Change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	Cock Count	Cock Length	Ball Size	Nipple Count	Breast Size	Male Breast Size	Cunt Count	Cunt Depth	Cunt Tightness	Libido	Loot	Lootchance	Scale (number)	Body Descriptor (text)	Type (text)	Magic (truth state)	Resbypass (truth state)	non-infectious (truth state)	Cross-Infection (text)	DayCycle	Altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now NewTypeInfection entry is false;
+	now Species Name entry is "TestCreature";
+	add "TestCreature Transbitch" to infections of CanineList;
+	add "TestCreature Transbitch" to infections of NatureList;
+	add "TestCreature Transbitch" to infections of FurryList;
+	add "TestCreature Transbitch" to infections of TransList;
+	add "TestCreature Transbitch" to infections of TaperedCockList;
+	add "TestCreature Transbitch" to infections of KnottedCockList;
+	add "TestCreature Transbitch" to infections of SheathedCockList;
+	add "TestCreature Transbitch" to infections of BipedalList;
+	add "TestCreature Transbitch" to infections of TailList;
+	now Name entry is "TestCreature Transbitch"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is ""; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
+	now enemy Name entry is ""; [specific name of unique enemy]
+	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]";
+	now desc entry is "[NonCombatError]";
+	now face entry is "covered with black spots while long floppy ears hang down the side of your regal-looking head. A black button-nose at the end of a long, delicate muzzle completes the image of an anthro TestCreature's head";
+	now body entry is "lean and limber, its form fitting an anthro canine built for both strength and speed. Besides that, there is also a bit of a feminine curve to your hips, making them somewhat wider as a preparation for bearing cubs. Your legs end in digitigrade dog's paws, while your arms sport paw-hands as dexterous as a human's";
+	now skin entry is "short but thick fur, covered with black rosettes dotted all across your";
+	now tail entry is "A thin, almost wiry white tail sways from out of the end of your bubble-shaped rump.";
+	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
+	now face change entry is "your nose begins to push out from your face while your senses dull ever so slightly. Reaching up with a hand you have the strangest urge to scratch at your ears, which just so happen to be growing longer and floppier onside of your head, at the exact same moment your teeth are elongating into sharpened points. Feeling a strange sensation in your mouth, you open it while your muzzle is still taking shape, reflexively sticking out the long floppy tongue you have also gained";
+	now body change entry is "strong muscle-spasms go through your form, soon followed by the crunching noise of re-forming bone. Feeling like you want to curl into a ball, you can't even manage that much in coordinated movements, instead just swaying rather drunkenly as your body reshapes itself. After long moments of painful transformation you'd rather forget, your body now resembles an anthro TestCreature, complete with digitigrade paws to stand on";
+	now skin change entry is "white fur pushes free from out of your pores. The new growth quickly works to cover your entire body, bringing with it a random pattern of black dots on it";
+	now ass change entry is "your buttcheeks tighten into a firm pair of buttocks and a thin and wiry tail sprouts from your lower back";
+	now cock change entry is "it takes on a canine shape, complete with a furred sheath as well as a pair of weighty balls. Lust bubbles up inside you and the dog's cock that you now call your own hardens within seconds, showing off the thick knot swelling up at its base. Then you cum, spraying out what seems like a celebratory load from the newly formed cock.";
+	now str entry is 15; [ These are now the creature's stats... ]
+	now dex entry is 22; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
+	now sta entry is 20; [ These values may be used as part of alternate combat.]
+	now per entry is 22;
+	now int entry is 16;
+	now cha entry is 20;
+	now sex entry is "Male"; [ Infection will move the player towards this gender. Current: 'Male' 'Female' 'Both' ]
+	now HP entry is 66; [ The monster's starting HP. ]
+	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
+	now wdam entry is 15; [ Monster's average damage when attacking. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now Cock Count entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now Cock Length entry is 12; [ Length infection will make cock grow to if cocks. ]
+	now Ball Size entry is 3; [ Cock width, more commonly used for ball size. ]
+	now Nipple Count entry is 2; [ Number of nipples the infection will give a player. ]
+	now Breast Size entry is 5; [ Size of breasts the infection will try to attain. ]
+	now Male Breast Size entry is 5; [ Breast size for if Sex="Male", usually zero. ]
+	now Cunt Count entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
+	now Cunt Depth entry is 9; [ Depth of female sex the infection will attempt to give a player. ]
+	now Cunt Tightness entry is 6; [ Width of female sex the infection will try to give a player. ]
+	now libido entry is 55; [ Target libido the infection will rise towards. ]
+	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
+	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]lean[or]wiry[or]dexterous[or]limber[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now type entry is "canine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+Table of New Infection Parts (continued)
+Species Name	Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Species Name entry is ""; [name of the overall species of the infection, used for children, ...]
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [Head Description of Player]. You have [Eye Adjective of Player], [Eye Color of Player] eyes and an overall [Gender Adjective of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...) to fit "On top of your head you have [Hair Length of Player] inch long, [Hair Shape of Player] [Hair Color of Player] hair in the [Hair Style of Player] style."]
+	now Beard Style entry is ""; [short beard style (goatee/3-day stubble beard/porn stache/mutton chops beard/...) to go into "You have a [Hair Color of Player] [Beard Style of Player]."]
+	now Body Hair Length entry is 0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3; [mouth circumference 1-5, see Mouth Circumference Adjective]
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Gender Adjective of Player] with a [Body Adjective of Player] build. Your torso is [Torso Description of Player][if Body Hair Length of Player > 1], covered in [Torso Color of Player] skin and [Body Hair Description of Player][else if Body Hair Length of Player is 1], covered in smooth, [Torso Color of Player] skin[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/octapedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [Ass Shape Adjective of Player] [Ass Description of Player]." (For players with skin, instead of the period: ", covered in [Ass Color of Player] skin and [Body Hair Description of Player]"]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [if HasTail of Player is true]your existing tail is changed into a [Tail Description entry][else][Tail Change entry][end if]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite (< 3), shallow (< 5), average (< 9), deep (< 15), bottomless (15+)"]
+	now Asshole Tightness entry is 3; [asshole tightness 1-5, "extremely tight, tight, receptive, open, gaping"]
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "extremely tight, tight, receptive, open, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/receptive/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5 (very small/small/average/large/very large)] [Size of Clit (1-5); very small/small/average/large/very large]
+
+to SetMonsterRandomDalOffspring:
+	let randomnumber be a random number from 1 to 5;
+	if randomnumber is:
+		-- 1:
+			setmonster "TestCreature Male";
+		-- 2:
+			setmonster "TestCreature Bitch";
+		-- 3:
+			setmonster "TestCreature Herm";
+		-- 4:
+			setmonster "TestCreature Transman";
+		-- 5:
+			setmonster "TestCreature Transbitch";
+
+Section 3 - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"elk trans cow fur"	"A tuft of fur from one of the powerful elk tribe trans cows."	0	elk trans cow fur
+"TestCreature cum"	"A tiny plastic shampoo bottle as you might find in a motel, filled with something milky white, thick and creamy. If you didn't know where it's from, you'd almost think it to be liquid soap rather than Darius's cum. You could drink it to quench your thirst, but who knows what else it might do to you..."	1	TestCreature cum
 
-instead of sniffing elk trans cow fur:
-	say "The tuft of fur smells a bit musky.";
+instead of sniffing TestCreature cum:
+	say "You open the lid for a moment and take a sniff. Smells rather tasty actually, kinda nutty. You can't help but be tempted to take a swallow of it.";
 
-elk trans cow fur is a grab object.
-the usedesc of elk trans cow fur is "[elk trans cow fur use]";
+TestCreature cum is a grab object. TestCreature cum is cum.
+the usedesc of TestCreature cum is "[TestCreature cum use]";
 
-to say elk trans cow fur use:
-	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
-	infect "Elk Tribe Trans Cow";
+to say TestCreature cum use:
+	say "     Lifting the tiny plastic bottle to your mouth, you let Darius's creamy cum run over your tongue and down your throat. Mmmmh, this stuff actually tastes fairly nice and your body calls for more. You can't help yourself and keep pouring cum into your mouth, right until you're hungrily sucking at the mouth of the bottle with it turned upside down.";
+	if Darius is visible:
+		say "     Glancing over at you slurping down his cum, Darius lets out a hearty laugh. ";
+		if Player is female:
+			say "'Yeah babe, just swallow it all! If you like that one, I've got a whole lot more here for you...' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+		else:
+			say "'Let's hope the stuff makes something nice out of you. Wouldn't mind giving you more, if you want it that badly - as soon as you grow a juicy pussy!' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+	PlayerDrink 6;
+	SanLoss 5;
+	infect "TestCreature Bitch";
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"TestCreature fur"	"A small tuft of white and black fur, held together by a rubber band. You bought it from Darius."	1	TestCreature fur
+
+instead of sniffing TestCreature fur:
+	say "     You sniff at the tuft of fur. It has a definitive smell of dog to it.";
+
+TestCreature fur is a grab object.
+TestCreature fur is temporary.
+the usedesc of TestCreature fur is "[TestCreature fur use]";
+
+to say TestCreature fur use:
+	say "     Lifting the small tuft of fur with your fingers holding on to the rubber band around it, you brush the hairs over the inside of your other arm. It feels soft and tickles a little, then a lot, as the strands seem to slowly crumble away, leaving minute traces of silvery dust that vanishes into your skin.";
+	if Darius is visible:
+		say "     Glancing over at you playing around with the fur you bought, Darius lets out a hearty laugh. ";
+		if Player is female:
+			say "'Damn babe, are you trying to become a dude? How about you rather come here and let me show you a good time? Then you'll have a nice spotted coat too and be much more fun all around.' Grabbing his crotch, the anthro canine gives it a demonstrative squeeze.";
+		else:
+			say "'Let's hope the stuff mans you up a bit. I could use some reliable help later on, when I expand this operation.' The anthro canine steps up to give you a fist bump.";
+	SanLoss 2;
+	infect "TestCreature Male";
 
 
 Section 4 - Endings
 
 when play ends:
-	if BodyName of Player is "Elk Tribe Bull":
+	if BodyName of Player is "TestCreature Male":
 		if humanity of Player < 10:
-			say "     ...";
+			say "     Giving yourself over to the TestCreature infection taking over your body and mind you wander aimlessly about the city until you find yourself stumbling over a slightly familiar looking white and black spotted four legged canine. When the other gets a hold of your scent the TestCreature immediately senses something wrong as it turns to look you over. Slowly padding its way over to try and administer comfort onto you, you find yourself whimpering back at the other as the need to rut as well as play overtakes your sensibilities. At the touch of the TestCreature's cold nose touches your legs you kneel down next to the other Dal and then nuzzle the other four legged canine in turn before whining at it in confusion. Quickly as can be the feral creature barks into your face and then grabs you by your arm with its sharpened teeth to drag you off somewhere.";
+			say "     Not having a reason to fight you simply let the other take you to wherever it's trying to get to. When you ultimately find yourself coming to a red brick edifice, which [italic type]really[roman type] looks familiar to you, you bark happily as you think that you've finally found the place where you belong. This fact is made even more certain when your new friend releases your arm and then goes over to bark and scratch at the front door to the building. Upon getting a response from someone from the inside you find yourself panting in joy as your bright eyes look over the form of a tall white and black spotted canine, this one standing on two legs instead of all fours, whom your confused canine mind screams at you that you should know intimately. Hurriedly you go over to tackle the other and then proceed to show them in rampant licks across the face.";
+			say "     You definitely know now that this is where you belong now.";
 		else:
-			say "     ...";
-	else if BodyName of Player is "Elk Tribe Cow":
-		if humanity of Player < 10:
-			say "     ...";
-		else:
-			say "     ...";
-	else if BodyName of Player is "Elk Tribe Herm":
-		if humanity of Player < 10:
-			say "     ...";
-		else:
-			say "     ...";
-	else if BodyName of Player is "Elk Tribe Trans Bull":
-		if humanity of Player < 10:
-			say "     ...";
-		else:
-			say "     ...";
-	else if BodyName of Player is "Elk Tribe Trans Cow":
-		if humanity of Player < 10:
-			say "     ...";
-		else:
-			say "     ...";
+			say "     When the military rolls around to try and finally clean up the place you find yourself somewhat displeased to be taken by them and then led to one of their campsites along with several other mutants at gun point. However, before you can go to grip about the indignity of your situation a scream coming out of one of the soldier's walkie-talkies about [italic type]fire[roman type] and [italic type]casualties[roman type] has you snatching the handheld device off of said soldier's hips and then barking into it about location. The soldier you just stole the walkie-talkie from doesn't try to retrieve his communication device as you are swiftly hauling tail out of the sheltered area to go see what you can do to help.";
+			say "     What you see when you arrive is a somewhat high-class hotel on glistening with crimson flames from out of its windows along with several mutants all trying to run out at the same time with various items in their hands. Finding the person who had been squawking to you over the radio, quite literally in fact, you find yourself walking over to a large Pelican wearing a two-piece suit looking over the burning building with a quiet glare in his beady eyes. Asking the other about how many people are left in the complex you get your answer from a chimpanzee mutant instead of the bird. The simian creature nervously informs you that most of the people on the upper floors are outside now, but there might still be others on the lower floors. Not wasting a second to go over options you simply charge into the building and then begin sniffing around for any civilians who might have been left behind.";
+			if firefighter coat is owned:
+				say "     A faint ringing in your mind has you pulling out the firefighting coat Kenaz had given you and then tossing the heavy jacket over your furry white form.";
+				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
+				LineBreak;
+				say "     Working with the other TestCreatures of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
+				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other TestCreature proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other TestCreatures follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the TestCreatures quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
+				LineBreak;
+				if kto is 2:
+					say "     When several white trucks pull up you find yourself sighing in relief... that is, right before you turn to notice a very angry TestCreature looking down at you. Kenaz seems both pissed and elated that you've survived this trail, even more so at the fact that you actually managed to help out with your unrefined skills and instinctual talents. The herm makes no bones about telling you off though, and you actually pull back some as you try to whether the storm of the other's wrath. However, once the eight foot TestCreature has calmed down he tiredly reaches around you to take you into his arms before hugging you tight. No words need be spoken between either of you as you both understand what the other is thinking. Ironically the military shows up to help, late as usual, some minutes later to lead you and everyone else back to one of their campsites.";
+					say "     When you return with the armed forces back to their military camp to get checked over properly this time, you managing to drag the other Dals with you through some smooth jive talk, there's a lot of noise about you becoming a firefighter professionally after everything is said and done. However, you barely pay this any mind as you simply want to just be with Kenaz right now. The larger Dal is all too happy to comply with your desires, especially once the both of you get some alone time together at the behest of one of the scientist involved with checking you and Kenaz over. The howls you and your lover make are still talked about amongst the soldiers in the military to this day as many of them found themselves remembering the way a certain rickety cot inside of the tent you and Kenaz had been housed in literally squeaked and rocked a full night long.";
+				else:
+					say "     Othala seems more pissed at you than Kenaz as the former female Dal barks into your face as he tells you about how stupid you were. Of course just as soon as his anger has calmed down Othala is quick to congratulate you on doing such a fine job, what with your unrefined skills and all. You're not sure whether to be proud of yourself or ashamed as the growls from the former female TestCreature have actually made the hairs on your body stand up on end. However, when Kenaz comes over to take you into his arms you find yourself melting as the other Dal kisses and licks you across the slightly burnt fur of your muzzle you find yourself blushing and then smiling tiredly up at the other as he goes about showering you in affection.";
+					say "     When the military comes along to check over you, you find yourself, along with the rest of the pack, being taken in for inspection, much to everyone's annoyance. Being the [']hero['] of the hour does net you some perks though as when you and Kenaz finish being tested over by some of the weird procedures the doctors here have dreamed up for mutates of your species, the anal probing with thermometer is something you're still wondering about to this day, you find yourself being allowed some private time alone with Kenaz. No one present needed to guess what would happen next once the single flap to the tent you and your companion had been left in flipped to a close. And yet, the sounds of your [italic type]enjoyment[roman type] at being reunited with the TestCreature makes for some interesting gossip amongst the both military and the pack of firefighting Dals days later. However, by that time your biggest concern has shifted from whether or not you and Kenaz were an item to whether or not you should become a full-fledged firefighter and stay with the others or not.";
+					say "The offer is very tempting, considering that Kenaz and the others have decided to all buy a large condo together to make into their new den. However, you have a lot to think over first...";
+			else:
+				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
+				say "     Working with the other TestCreatures of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
+				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other TestCreature proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other TestCreatures follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the TestCreatures quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
+				LineBreak;
+				if kto is 2:
+					say "     When several white trucks pull up you find yourself sighing in relief... that is, right before you turn to notice a very angry TestCreature looking down at you. Kenaz seems both pissed and elated that you've survived this trail, even more so at the fact that you actually managed to help out with your unrefined skills and instinctual talents. The herm makes no bones about telling you off though, and you actually pull back some as you try to whether the storm of the other's wrath. However, once the eight foot TestCreature has calmed down he tiredly reaches around you to take you into his arms before hugging you tight. No words need be spoken between either of you as you both understand what the other is thinking. Ironically the military shows up to help, late as usual, some minutes later to lead you and everyone else back to one of their campsites.";
+					say "     When you return with the armed forces back to their military camp to get checked over properly this time, you managing to drag the other Dals with you through some smooth jive talk, there's a lot of noise about you becoming a firefighter professionally after everything is said and done. However, you barely pay this any mind as you simply want to just be with Kenaz right now. The larger Dal is all too happy to comply with your desires, especially once the both of you get some alone time together at the behest of one of the scientist involved with checking you and Kenaz over. The howls you and your lover make are still talked about amongst the soldiers in the military to this day as many of them found themselves remembering the way a certain rickety cot inside of the tent you and Kenaz had been housed in literally squeaked and rocked a full night long.";
+				else:
+					say "     Othala seems more pissed at you than Kenaz as the former female Dal barks into your face as he tells you about how stupid you were. Of course just as soon as his anger has calmed down Othala is quick to congratulate you on doing such a fine job, what with your unrefined skills and all. You're not sure whether to be proud of yourself or ashamed as the growls from the former female TestCreature have actually made the hairs on your body stand up on end. However, when Kenaz comes over to take you into his arms you find yourself melting as the other Dal kisses and licks you across the slightly burnt fur of your muzzle you find yourself blushing and then smiling tiredly up at the other as he goes about showering you in affection.";
+					say "     When the military comes along to check over you, you find yourself, along with the rest of the pack, being taken in for inspection, much to everyone's annoyance. Being the [']hero['] of the hour does net you some perks though as when you and Kenaz finish being tested over by some of the weird procedures the doctors here have dreamed up for mutates of your species, the anal probing with thermometer is something you're still wondering about to this day, you find yourself being allowed some private time alone with Kenaz. No one present needed to guess what would happen next once the single flap to the tent you and your companion had been left in flipped to a close. And yet, the sounds of your [italic type]enjoyment[roman type] at being reunited with the TestCreature makes for some interesting gossip amongst the both military and the pack of firefighting Dals days later. However, by that time your biggest concern has shifted from whether or not you and Kenaz were an item to whether or not you should become a full-fledged firefighter and stay with the others or not.";
+					say "     The offer is very tempting, considering that Kenaz and the others have decided to all buy a large condo together to make into their new den. However, you have a lot to think over first...";
 
-Elk Tribe ends here.
+TestCreature ends here.
