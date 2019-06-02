@@ -169,7 +169,17 @@ Object	Name
 Salamander Hideaway	"Salamander Hideaway"
 
 Salamander Hideaway is a room.
-The description of Salamander Hideaway is "     DESC".
-Mall East Wing is north of Salamander Hideaway.
+The description of Salamander Hideaway is "     This small service building has clearly been repurposed into a living space, with a number of comfortable pieces of furniture scattered around the space, and a makeshift kitchen set up in one corner.".
+Approaching the Capitol Building is northwest of Salamander Hideaway.
+Salamander Hideaway is southeast of Approaching the Capitol Building.
+
+instead of going southeast from Approaching the Capitol Building while Loyalty of Darren is 0:
+	say "     A";
+	if bodyname of Player is "Salamander":
+		say "     A";
+	else:
+		say "     A";
+		now Loyalty of Darren is 1;
+		move player to Salamander Hideaway;
 
 Darren ends here.

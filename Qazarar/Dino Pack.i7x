@@ -9,6 +9,7 @@ to say DinoPackLoss:
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
 		if mdasslevel > 5 and (a random chance of 1 in 2 succeeds): [anal focused gangbang]
+			say "     The pack finally wears you out, and you crumple to your knees. For a moment, they circle around you, laughing their strange reptilian laugh. Before you have any time to rest, however, a pair of them stalk forward. Together they grab you, and force your head and upper body down towards the ground, leaving your huge ass sticking out and completely vulnerable. You are completely at their mercy, but they do not take advantage of your defenseless state, instead continuining their prowling dance around you. You know instinctively that they won't let you get away unfucked, and they are merely toying with their prey, as is their right as the victors.";
 			say "     A";
 			infect "Magic Drake";
 		else: [teasing, blowjobs, and bukkake]
@@ -22,42 +23,52 @@ to say DinoPackLoss:
 				infect "Magic Drake";
 				infect "Magic Drake";
 			else: [normal loss]
-				say "     A";
+				say "     The others give you no time to reflect on the taunts, instead pressing in closer, entrapping you in a cage of oversized cocks. They remain just out of your reach, each bobbing up and down as they pleasure themselves, leaving you helpless before them. Clearly taking great joy in your growing awareness of your situation, they immediately launch into a tirade of taunts. 'Oh, you really are a slut, aren't you? Can't take your eyes off our cocks for even a minute.' You try to argue otherwise, but your pleas fall on deaf ears. 'Oh, you may not know it yet, but you're a slut deep down, and we'll teach you eventually'.";
+				WaitLineBreak;
+				say "     Even in the face of their mockery, you're unable to muster up any resistance. Perhaps there's more truth to their barbs than you would like to admit? You quickly shake your head as if attempting to dislodge the unexpected thoughts, but it doesn't quite clear your mind completely. Even as you try and focus on inconsequential, unarousing details, you keep noticing exactly the opposite. Attempts to focus on a nearby display case lead to watching the shimmering traces of pre on their members, thoughts of ancient artifacts drifting into thoughts about overfilled balls. It seems that the dino pack somehow notices this shift in your thoughts, your growing weakness acting as a signal. The lizards all close in further around you, their work pleasuring themselves on increasing in speed, the scent of their oncoming release growing heavy in the air.";
+				say "     You try not to react to their actions, but can't quite keep yourself from opening your mouth and leaning forward just in time for the first of the massive shafts to start spasming, releasing blast after blast of cum onto your face and front. From there you briefly enter a world consisting only of cocks and cum, the pack slowly releasing its combined bounty onto you. A splurt of enchanted jizz from one side is followed by a flood of the very same onto your face and mouth, and all you can do is passively take everything they offer you. After what seems like an eternity, it comes to an end, with even the large reservoirs of fluids held by each dino emptied onto your skin. They pull back from you, before hurling one final taunt. 'Oh, look at you just kneeling in a pool of cum, like the slut you are. You may not have given in completely yet, but you will soon enough.' After those words, the circle breaks, and the crowd of dinos trek off, completely satisfied. On the other hand, you're left glazed and humiliated, eventually lifting yourself back onto your feet, staggering back off into the museum, already dreaming of the next time you run into them.";
 				infect "Magic Drake";
 
 to say DinoPackVictory:
 	if inasituation is true:
 		say ""; [dealt with in the file where the event is described]
 	else:
-		say "     As you land a final solid blow, your target is knocked to the ground. In that moment, the other dinos all scatter, darting away from the site of the battle and quickly disappearing around corners and through doorways. The single remaining dinosaur is lying on the ground, helpless before you.";
-		say "     [bold type]You could easily have your way with one of them if you want.[roman type][line break]";
+		say "     As you land a final solid blow, your target is knocked to the ground. In that moment, the other dinos all scatter, darting away from the site of the battle and quickly disappearing around corners and through doorways. The single remaining dinosaur is lying on the ground, helpless before you, massive cock just waiting to be used.";
+		say "     [bold type]You could easily have your way with one of their cocks if you want.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Have fun with the little dinosaur.";
 		say "     ([link]N[as]n[end link]) - Leave it be.";
 		if player consents:
-			if player is male:
-				say "     Now that you've decided to enjoy the colorful reptile, it's simply a matter of how. You could  (Y=Ride, N=Suck)";
-				if player consents:
+			say "     Now that you've decided to enjoy the colorful reptile, it's simply a matter of how. You could  (Y=Ride, N=Suck)";
+			if player consents:
+				if player is male:
 					if player is female: [herm ride]
 						say "     A";
 					else: [male ride]
 						say "     A";
-				else: [sucking the dinos]
-					say "     A";
-			else:
-				if player is female: [female ride]
-					say "     A";
-				else: [neuter ride]
-					say "     A";
+				else:
+					if player is female: [female ride]
+						say "     A";
+					else: [neuter ride]
+						say "     A";
+			else: [sucking the dinos. later add scene variants for player sizes]
+				say "     You decide to take advantage of the state the adorable lizard by swallowing his oversized member, a task as exciting as it is daunting. Wasting no time, you bring your head in closer, ready to enjoy everything before you. From there you extend your tongue, and start to run it up and down the huge reptilian shaft, showering it in oral affection. Finally, you shift position and bring the head into place just outside your mouth. You take the plunge, and start making your best attempt to swallow that massive dinosaur cock, pushing ever so slowly down the length, feeding more of it into you inch by inch. Unfortunately, the shaft is just too much for you to handle completely, as each ridge is ever so slightly wider than the last. Despite your best efforts you could only impale your throat a third of the way down before it was too wide for your mouth to open any further.";
+				say "     A";
 		else:
 			WaitLineBreak;
 			say "     Deciding against it, you turn around and head off, leaving the remaining dino to fend for itself.";
 
+to say DinoBargain:
+	say "     Once more you lay beaten and defeated in the center of a ring of the tiny dinos. They have proven their superior skills, and you are eagerly awaiting the moment when they prove how suprerior they are in other ways as well. However, after a moment, you realize that isn't quite what's about to happen. Instead of dominating you with their mighty dicks, several of the reptiles seem to be quietly discussing something. As much as you may want to know what's going on, you wait patiently, knowing that you're certain to enjoy anything they come up with. When they finally stop taliking and turn back to you, you're surprised once more, as rather than torment you with their endowments, they press in tightly around you and lift you up into the air. Before you can react, the pack is already carrying you away.";
+	say "     It doesn't take long for you to realize exactly where they're taking you, as they enter the red light district. Sure enough, you're soon brought into a small square, and placed on the ground before the Magic Drake. The dinos spread out around you, before looking expectantly at the drake. She raises her staff slowly, eyeing you in your new place on the ground as she does so. 'You have done well, bringing my familiar back to me, and shall be rewarded.' A single twist of her phallic staff, and you can feel a tingling in the air, like what you feel each time the drake has worked her magic on you. This time, however, you're instead watching her do the same to three of the dinos. Their already huge shafts and balls start growing to even greater proportions, dwarfing their reptilian forms in a cascade of cockflesh.";
+	WaitLineBreak;
+	say "     The newly blessed dinosaurs each shudder and moan, the sensation of their new endowments clearly too much, each of them cumming on the spot, a miniature flood of spunk flowing out of each one of them. Unconsciously you lick your lips in anticipation, because surely such impressive cocks wouldn't exist if you weren't going to be given the honor of serving them? Even as you imagine various ways of enjoying those members, the other dinos are clearly in awe of what the chosen three were given, chittering excitedly at each other. After several moments of this, the empowered dinos finally seem to get a hold of themselves, turning their attention towards you. The drake looks on, grinning at the sight before her, before speaking. 'Go ahead. I've given you your payment, now why don't you put it to use showing my familiar their place? I promise that they'll enjoy it.'";
+	say "     A";
 
 to say DinoPackDesc:
 	setmongender 3;
 	if inasituation is false: [regular text]
-		say "     A whole pack of little reptiles, covered in bright scales of various colors and with wickedly sharp teeth and claws, much like those of a velociraptor. The most clearly visible feature is that they have incredibly disproportionate endowments, each dinosaur toting a turbo sized cock, almost the size of their bodies, complete with a matching external sack quite unlike your average lizard. Despite their size, you can see from the gleam in their eyes that they are clearly intelligent. Before you can think further, they suddenly dart forward and swarm you!";
+		say "     A whole pack of small reptiles, covered in bright scales of various colors and with wickedly sharp teeth and claws, much like those of a velociraptor. The most clearly visible feature is that they have incredibly disproportionate endowments, each dinosaur toting a turbo sized cock, almost the size of their bodies, complete with a matching external sack quite unlike your average lizard. Despite their size, you can see from the gleam in their eyes that they are clearly intelligent. Before you can think further, they suddenly dart forward and swarm you!";
 	else:
 		say ""; [dealt with at the source]
 
@@ -69,7 +80,7 @@ name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	sk
 
 
 When Play begins:
-	add "Dino Pack" to infections of guy;
+	add "Tiny Dino" to infections of guy;
 	Choose a blank row from Table of Random Critters;
 	now name entry is "Dino Pack";
 	now enemy title entry is "";
@@ -79,41 +90,41 @@ When Play begins:
 	now defeated entry is "[DinoPackVictory]";
 	now victory entry is "[DinoPackLoss]";
 	now desc entry is "[DinoPackDesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "Dino Pack face, with a long canine snout filled with the sharp teeth of a powerful predator"; [ Face description, format as "Your face is (your text)."]
-	now body entry is "that of a large and very muscled wolf, with canine features that give you a wild and deadly appearance"; [ Body Description, format as "Your Body is (your text)"]
-	now skin entry is "[one of]black furred[or]roughly furred[or]furry[at random]"; [ skin Description, format as "You have (your text) skin"]
-	now tail entry is "You have a long black tail that trails behind you, your lupine tail displaying your emotions quite clearly."; [ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]feral canine[or]Dino Pack[or]lupine[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "your face stretches and creaks as it warps into a long canine snout"; [ face change text. format as "Your face feels funny as (your text)." ]
-	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the strong body of a Dino Pack"; [ body change text. format as "Your body feels funny as (your text)." ]
-	now skin change entry is "coarse dark fur spreads rapidly over your form, leaving you more capable of enduring the elements"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a long, bushy black tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, a thick knot swelling up at the base, giving it a distinct canine shape, the entire length taking on an intense reddish color"; [ cock change text. format as "Your cock feels funny as (your text)." ]
-	now str entry is 19;
-	now dex entry is 14;
-	now sta entry is 18;
-	now per entry is 14;
-	now int entry is 12;
-	now cha entry is 10;
+	now face entry is "like that of a dinosaur, with a long reptilian snout filled with sharp teeth"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "reptilian, with powerful muscles built for hunting"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]colorfully scaled[or]finely scaled[or]scaled[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "You have a relatively short tail with a thick base."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]reptilian[or]saurian[or]dinosaur[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
+	now face change entry is "it flows into a reptilian shape"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "your bones creak and crack as they morph into a more suitable form for hunting, leaving you with the lithe body of a dinosaur"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "very small scales of various colors flow over your body"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "a short reptilian tail emerges from above your ass, twitching about lightly"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "your shaft swells with sudden arousal as the end tapers out to a point, bulbous ridges forming along the length as the shaft takes on a purplish color, finally settling into a reptilian length"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 15;
+	now dex entry is 18;
+	now sta entry is 15;
+	now per entry is 18;
+	now int entry is 15;
+	now cha entry is 12;
 	now sex entry is "Male"; 	[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 65;
-	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 14; [Amount of Damage monster Does when attacking.]
-	now area entry is "Forest"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 2; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 20; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 14; [ Size of balls ]
-	now breasts entry is 6; [ Number of Breasts infection will give you. ]
-	now breast size entry is 9; [Size of breasts infection will try to attain ]
+	now HP entry is 75;
+	now lev entry is 10; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
+	now area entry is "Museum"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 13; [ Size of balls ]
+	now breasts entry is 2; [ Number of Breasts infection will give you. ]
+	now breast size entry is 6; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 15;
-	now cunt width entry is 10;
-	now libido entry is 50; [ Amount player Libido will go up if defeated ]
-	now loot entry is "dire-wolf cum";
+	now cunt length entry is 5;
+	now cunt width entry is 4;
+	now libido entry is 35; [ Amount player Libido will go up if defeated ]
+	now loot entry is "";
 	now lootchance entry is 35; [ Chance of loot dropping 0-100 ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]powerful[or]strong[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
+	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]scaly[or]lithe[or]dinosaur[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "saurian"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
@@ -122,6 +133,104 @@ When Play begins:
 	now altcombat entry is "default";
 	now BannedStatus entry is false;
 
+[Table of New Infection Parts (continued)
+Name	Body Weight	Body Definition	Androginity	Head Change	Head Description	Head Adjective	Head Skin Adjective	Head Color	Head Adornments	Hair Length	Hair Shape	Hair Color	Hair Style	Beard Style	Body Hair Length	Eye Color	Eye Adjective	Mouth Length	Mouth Circumference	Tongue Adjective	Tongue Color	Tongue Length	Torso Change	Torso Description	Torso Adjective	Torso Skin Adjective	Torso Adornments	Torso Color	Torso Pattern	Breast Adjective	Breast Size	Male Breast Size	Nipple Count	Nipple Color	Nipple Shape	Back Change	Back Adornments	Back Skin Adjective	Back Color	Arms Change	Arms Description	Arms Skin Adjective	Arms Color	Locomotion	Legs Change	Legs Description	Legs Skin Adjective	Legs Color	Ass Change	Ass Description	Ass Skin Adjective	Ass Color	Ass Width	Tail Change	Tail Description	tail skin adjective	Tail Color	Asshole Depth	Asshole Tightness	Asshole Color	Cock Change	Cock Description	Cock Adjective	Cock Color	Cock Count	Cock Girth	Cock Length	Ball Description	Ball Count	Ball Size	Cunt Change	Cunt Description	Cunt Adjective	Cunt Color	Cunt Count	Cunt Depth	Cunt Tightness	Clit Size
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+When Play begins:
+	Choose a blank row from Table of New Infection Parts;
+	now Name entry is ""; [matching infection name to Table of Random Critters]
+	now Body Weight entry is 5; [scale of 1-9 for body weight, grouped into low weight (1-3), mid weight (4-6) and high weight (7-9)]
+	now Body Definition entry is 5; [scale of 1-9 for body definition, grouped into low muscle (1-3), mid muscle (4-6), high muscle (7-9)]
+	[Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
+	now Androginity entry is 5; [1-9 scale of hypermasculine to hyperfeminine]
+	[Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/effeminate/somewhat effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
+	now Head Change entry is ""; [partial sentence that fits in: "Your head and face [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [head change entry]."]
+	now Head Description entry is ""; [partial sentence that fits in "Your face and head resemble that of [head description of Player] with [eye color of Player], [eye type of Player] eyes and an overall [gender appearance of Player] appearance."]
+	now Head Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Head Skin Adjective entry is ""; [one word descriptive adjective]
+	now Head Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Head Adornments entry is "";[partial sentence that fits in "Before moving on from your head, you give your [head adornments of Player] a proud glance followed by a light caress."]
+	now Hair Length entry is 2; [hair length in inches]
+	now Hair Shape entry is ""; [one word shape descriptor (curly/straight/...)]
+	now Hair Color entry is ""; [one word color descriptor]
+	now Hair Style entry is ""; [one word style descriptor (ponytail/mohawk/buzzcut/...)]
+	now Beard Style entry is ""; [short beard style (goatee/three day stubble/full beard/...)]
+	now Body Hair Length entry is  0; [numerical value, 0-4 (no body hair/light/moderate/heavy/furry) - only set to > 0 if the infection does not have fur/scales/etc. !]
+	now Eye Color entry is ""; [one word color descriptor]
+	now Eye Adjective entry is ""; [one word descriptive adjective (slitted/round/...)]
+	now Mouth Length entry is 3; [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
+	[Mouth Length Adjective  is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Mouth Circumference entry is 3;
+	[Mouth Circumference Adjective is generated by a function and can be used in scenes too - "tiny, small, normal, wide, gaping"]
+	now Tongue Adjective entry is ""; [one word descriptive adjective (wide/slobbery/...)]
+	now Tongue Color entry is ""; [one word color descriptor]
+	now Tongue Length entry is 3; [length in inches]
+	now Torso Change entry is ""; [partial sentence that fits in: "Your torso [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Torso Change entry]."]
+	now Torso Description entry is ""; [partial sentence, fitting in "Looking down at yourself, you appear [Body Adjective of Player], [Gender Adjective of Player] and your torso is [Torso Description of Player][if Body Hair Length of Player > 0], covered in [Body Hair Adjective of Player] [Hair Color of Player] chest hair[end if]."]
+	now Torso Adjective entry is ""; [one word descriptive adjective (avian/canine/...)]
+	now Torso Adornments entry is ""; [(pouch/udders/...); partial sentence to fit: "You take a moment to feel your [torso adornments of Player]."]
+	now Torso Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Torso Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Torso Pattern entry is ""; [single word color adjective for the dominant pattern of the skin/fur/feathers/scales]
+	now Breast Adjective entry is ""; [adjective(s) example: round, pointy, perky, saggy, bouncy. This would serve as either a general appearance of a infections breasts or possibly something that may be effected by a item or NPC.]
+	now Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Male Breast Size entry is 0; [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
+	now Nipple Count entry is 2; [count of nipples]
+	now Nipple Color entry is ""; [one word color descriptor]
+	now Nipple Shape entry is ""; [shape example: any shape will do as long as it has a baseline with a current infection or item]
+	now Back Change entry is ""; [partial sentence that fits in: "Your back [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Back Change entry]."]
+	now Back Adornments entry is ""; [partial sentence to fit: "Your back tickles with the feeling of movement caused by [back adornments of Player]."]
+	now Back Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Back Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	[Limbs Adjective is generated by a function and can be used in scenes too - "rail-thin, slender, sinewy, average, firm, muscular, flabby, meaty, rippling"]
+	now Arms Change entry is ""; [partial sentence that fits in: "Your arms [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Arms Change entry]."]
+	now Arms Description entry is ""; [partial sentence to fit: "Your [Limbs Adjective of Player] arms are [Arms Description of Player]."]
+	now Arms Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Arms Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Locomotion entry is ""; [one word adjective: (bipedal/quadrupedal/serpentine/sliding)]
+	now Legs Change entry is ""; [partial sentence that fits in: "Your legs [one of]tingle[or]go flush[or]vibrate with odd pleasure[or]go cold[or]feel oily[at random] as [Legs Change entry]."]
+	now Legs Description entry is ""; [partial sentence to fit: "As your inspection goes even lower, you come to the two [Body Adjective of Player] legs supporting you. They are [legs description of Player]."]
+	now Legs Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Legs Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Change entry is ""; [partial sentence that fits in: "Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Ass Change entry]."]
+	now Ass Description entry is ""; [partial sentence to fit: "Using your hands you feel your behind enjoying the sensation of your [Ass Width Adjective of Player], [ass description of Player]."]
+	now Ass Skin Adjective entry is "";  [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Ass Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Ass Width entry is 3; [ass width from 1-5]
+	[Ass Width Adjective generated by function out of ass width: dainty/small/round/huge/enormous]
+	[Ass Adjective generated by function out of body definition and ass width]
+	now Tail Change entry is ""; [partial sentence that fits in: "Your rear [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Tail Change entry]."]
+	now Tail Description entry is ""; [partial sentence to fit: "Just below your lower back sprouts a [tail description of Player], which you move back and forth with glee."]
+	now Tail Skin Adjective entry is ""; [one word adjective (feathered/furred/scaly/...); EMPTY "" for creatures with just skin]
+	now Tail Color entry is ""; [single word color adjective for the dominant color of the skin/fur/feathers/scales]
+	now Asshole Depth entry is 7; [inches deep for anal fucking;]
+	[Asshole Depth Adjective is generated by a function and can be used in scenes too - "petite, shallow, average, deep, bottomless"]
+	now Asshole Tightness entry is 3;
+	[Asshole Tightness Adjective is generated by a function and can be used in scenes too - "tiny, small, tight, wide, gaping"]
+	now Asshole Color entry is ""; [one word color descriptor]
+	now Cock Count entry is 0;
+	now Cock Girth entry is 0; [thickness 1-5, generates the Cock Girth Adjective]
+	[Cock Girth Adjective is generated by a function and can be used in scenes too: thin/slender/average/thick/monstrous]
+	now Cock Length entry is 0; [length in inches]
+	now Cock Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cock Change entry is ""; [partial sentence that fits in: "Your cock [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cock Change entry]."]
+	now Cock Description entry is ""; [partial sentence to fit: "You have a [Cock Girth Adjective of Player], [Cock Length of Player]-inch-long [cock adjective of Player] [one of]cock[or]penis[or]shaft[or]maleness[at random] that [cock description of Player]."]
+	now Cock Color entry is ""; [one word color descriptor]
+	now Ball Count entry is 0; [allowed numbers: 1 (uniball), 2 or 4]
+	now Ball Size entry is 0; [size of balls 1-7: "acorn-sized", "dove egg-sized", "chicken egg-sized" "goose-egg sized", "ostrich-egg sized", "basketball-sized", "beachball-sized"]
+	[Ball Size Adjective is generated by a function and can be used in scenes too]
+	now Ball Description entry is ""; [partial sentence to fit: "Underneath it hangs a pair of [Ball Size Adjective of Player] [ball description of Player]."]
+	now Cunt Count entry is 0;
+	now Cunt Depth entry is 0; [penetratable length in inches; some minor stretching allowed, or more with Twisted Capacity]
+	now Cunt Tightness entry is 0; [size 1-5, generates adjectives of extremely tight/tight/well-used/open/gaping]
+	[Cunt Tightness Adjective is generated by a function and can be used in scenes too: extremely tight/tight/well-used/open/gaping]
+	now Cunt Adjective entry is ""; [one word adjective: avian/canine/...]
+	now Cunt Change entry is ""; [partial sentence that fits in: "Your pussy [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [Cunt change entry]."]
+	now Cunt Description entry is ""; [partial sentence to fit: "You have a [Cunt Tightness Adjective of Player] [one of]cunt[or]pussy[or]vagina[or]cleft[at random] that is [cunt description of Player]."]
+	now Cunt Color entry is ""; [one word color descriptor]
+	now Clit Size entry is 0; [size 1-5, see Clit Size Adjective]
+	[Clit Size Adjective is generated by a function and can be used in scenes: very small/small/average/large/very large]
+]
 when play ends: [currently not infectious]
 	if bodyname of player is "Dino Pack":
 		if humanity of player < 10:
