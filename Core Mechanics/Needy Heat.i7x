@@ -30,7 +30,7 @@ mpregtrigger - trigger text for mpreg heat starting
 Book 2 - Logic & Rules
 
 to say defaultheat:
-	[say "You shift uncomfortably. still being driven by the swollen needy heat between your legs.";]
+	[say "You shift uncomfortably, still being driven by the swollen needy heat between your legs.";]
 	increase Libido of Player by 5;
 	if heatlevel is 3:
 		increase Libido of Player by 2;

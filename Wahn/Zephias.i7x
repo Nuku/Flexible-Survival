@@ -18,7 +18,7 @@ Body Definition of Zephias is 5. [scale of 1-9 for body definition, grouped into
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Zephias is 2. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Zephias is 6. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Zephias is 3.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Zephias is 3. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Zephias is 4. [length in inches]
 Breast Size of Zephias is 0. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Zephias is 2. [count of nipples]
