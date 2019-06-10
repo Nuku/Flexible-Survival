@@ -147,7 +147,7 @@ Body Definition of Wendy is 3. [scale of 1-9 for body definition, grouped into l
 [Body Adjective is generated out of the body weight and body definition and can be used in scenes - one word descriptive adjective depending on weight and definition groups: low weight group: skinny/slender/lithe; mid weight group: average/fit/muscled; high weight group: pudgy/husky/jacked]
 Androginity of Wendy is 8. [Gender Adjective is generated out of androginity 1-9: hypermasculine/masculine/somewhat effeminate/effeminate/androgynous/feminine butch/tomboyish/feminine/hyperfeminine]
 Mouth Length of Wendy is 10. [inches deep for face fucking; maximum possible will be double this number (when deep throating)]
-Mouth Circumference of Wendy is 4.  [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
+Mouth Circumference of Wendy is 4. [mouth circumference 1-5, "tiny, small, normal, wide, gaping"]
 Tongue Length of Wendy is 8. [length in inches]
 Breast Size of Wendy is 5. [cup size as number, counting Flat Pecs = 0, A = 1, B = 2, ...]
 Nipple Count of Wendy is 4. [count of nipples]

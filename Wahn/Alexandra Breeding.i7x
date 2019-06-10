@@ -19,9 +19,9 @@ Version 1 of Alexandra Breeding by Wahn begins here.
 For Breeding Alexandra
 Player
 Likes/fetishes: male doms, female subs or power bottom, Impregnation/Breeding, pregnancy, threesomes/multiple partners, collars with titles on them like breeder, tattoos with titles on them like breeder, oral and dirty talk for cock and ball worship, big balls, lots of cum, dirty talk
-Dislikes: vore, unbirth, death, permanent appearance tf,  mind control [90% of the time], hard bondage by itself
+Dislikes: vore, unbirth, death, permanent appearance tf, mind control [90% of the time], hard bondage by itself
 Other comments: I like culting and peer pressure, like if someone likes getting bred they also what others to get bred too and they want to help make that happen, coerce them, and/or force them to do it. But it's nothing they wouldn't do themselves and prefer would do it with them and help them revel in the good parts
-i like it when someone is so interested in something that the conviction they have drives them to find others to help or make them experience it.
+I like it when someone is so interested in something that the conviction they have drives them to find others to help or make them experience it.
 
 Character
 The gender of my player character is (usually): male or female
