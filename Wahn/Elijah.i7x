@@ -597,7 +597,7 @@ The sarea of Examination Room is "Hospital".
 
 Instead of resolving a Examination Room:
 	say "     Coming across a set of examination rooms, you start searching them in the hopes of finding some useful supplies. Unfortunately, it seems that they've already been searched and much of the useful items have already been gathered. As you're ransacking a third of them in increasing frustration, you hear the door slam open as a jaguar dressed like an orderly comes striding in, clearly upset at having found you snooping around.";
-	challenge "Jaguar";
+	challenge "Jaguar Male";
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten the orderly, you give the other rooms a cursory search. As others may be drawn by the noise of the fight, you go as quick as you can. The only item of any use you're able to find is a small syringe labelled as a [']healing booster[']. Concerned that you've already tarried too long, you take it and leave.";
 		increase carried of healing booster by 1;

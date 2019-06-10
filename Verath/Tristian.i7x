@@ -2,6 +2,10 @@ Version 2 of Tristian by Verath begins here.
 [ Updated files, reordered content, renamed infection to Palomino and made it non-infectious normally ]
 [ Two new sex scenes: one random and one timed, then random after - Stripes ]
 
+an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
+	if Tristian is in NPC Nexus:
+		move Tristian to Palomino;
+
 Section 1 - Tristian Basics
 
 Table of GameCharacterIDs (continued)

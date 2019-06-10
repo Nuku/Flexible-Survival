@@ -323,6 +323,7 @@ A person has a list of text called Traits.
 
 freecred is a number that varies.
 playon is a number that varies.
+JournalNotes is a list of text that varies.
 the player has a list of text called invent.
 the player has a list of text called vials.
 the player has a list of text called tapes.
@@ -493,6 +494,7 @@ A situation has a truth state called Prereq3ResolvedMandatory. Prereq3ResolvedMa
 A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is usually { 0 }.
 A situation has an object called PrereqCompanion.
 A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any".
+[TODO: Add PrereqNavpoint]
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
@@ -1842,7 +1844,7 @@ name	desc	weight	object	sortname (indexed text)
 "water bottle"	"A bottle of water. Good for slaking thirst."	1	water bottle
 "dirty water"	"A bottle of contaminated water. Drinker beware."	1	dirty water
 "food"	"Some food. Nothing fancy. Maybe a sandwich, or a husky girl leg, whatever happens to be handy."	2	food
-"journal"	"A small, leather-clad book. Spending some time writing in it can help clear your thoughts and recenter your troubled mind."	2	journal
+"journal"	"A small, leather-clad book. Spending some time [link]writing[as]use journal[end link] in it can help clear your thoughts and recenter your troubled mind. Or if you have something especially important that you want to remember, you could just [link]write down a note[as]write a note[end link] at the back end of it. [if number of filled rows in Table of JournalNotes > 0]In fact, you remember noting down some things in it that must have been important somehow. You can [link]browse through your notes[as]browse notes[end link] if you want to. Alternatively, [link]ripping them all out[as]rip notes[end link] is also possible.[end if][line break]"	2	journal
 "pocketknife"	"Mighty big for a pocket knife, nice and solid too. Could be handy."	1	pocketknife
 "chair"	"A metal folding chair that belongs in a food court. It could serve as a weapon in a pinch!"	10	chair
 "gryphon milk"	"A small bottle filled with fluid taken from one of those gryphons. You are fairly certain drinking it would be a poor idea, but maybe there is a use for it?"	2	gryphon milk
@@ -2095,7 +2097,7 @@ when play begins:
 	add { "Anthro Shaft Beast", "Dragon", "Anthro Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Dolphin Herm", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Shark Herm", "Red Kangaroo", "Gator Herm", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of TailweaponList;
 
 when play begins:
-	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
+	add { "Cheetah Woman", "Cougar", "Feline", "Felinoid", "Feral Cheetah", "Jaguar Male", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Panther Herm", "Panther Taur", "Plush lion", "Rubber Puma", "Rubber tigress", "Sabretooth", "Siamese Cat", "Snow Bat", "Snow Leopard", "Sphinx", "Tiger", "Tigertaur", "Malayan Tiger Herm", "Wildcat" } to infections of FelineList;
 
 when play begins:
 	add { "Husky Alpha", "Alpha Wolf", "Ember Breeder", "Cerberus", "Chocolate Lab", "Coyote", "Dalmatian", "Doberman Bitch", "Doberman Male", "Husky Bitch", "Feral Wolf", "German Shepherd Male", "German Shepherd Bitch", "Jackalboy", "Jackalman", "Latex Wolf", "Painted Wolf Herm", "Pit bull", "Retriever Female", "Smooth Collie Shemale", "Werewolf Costume", "Wolftaur", "Wrestling Wolf" } to infections of CanineList;
@@ -6272,6 +6274,7 @@ Include Masturbate by Core Mechanics.
 Include Microwave by Core Mechanics.
 Include Milking by Core Mechanics.
 Include Navigation by Core Mechanics.
+Include Notes by Core Mechanics.
 Include Needy Heat by Core Mechanics.
 Include Patron Credits by Nuku Valente.
 Include Pets by Core Mechanics.
@@ -6318,7 +6321,7 @@ Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
 Include Milking Facility by Kernog.
 Include Museum by Sarokcat.
-Include New Ewe Store by Sarokcat.
+Include New Ewe Store by Luneth.
 Include PIG Frat by Stripes.
 Include Pirate Island by Sarokcat.
 Include Power Plant by Hellerhound.
@@ -6529,6 +6532,7 @@ Include Dalmatian by Wahn.
 Include Dark Elf by Stripes.
 Include Demon Brute by Wahn.
 Include Demon Fox by Dys.
+Include Dino Pack by Qazarar.
 Include Dire Wolf by Qazarar.
 Include Doberman Cop by Stripes.
 Include Doberman Male by Wahn.
@@ -6548,7 +6552,7 @@ Include Elk by Stripes.
 Include Elven Hunter by Wahn.
 Include Enhanced Chimera by Stripes.
 Include Erica by Wahn.
-Include Ewe by Sarokcat.
+Include Ewe by Luneth.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
@@ -6683,7 +6687,7 @@ Include Prairie Dog by Stripes.
 Include Psycho Weasel by Stripes.
 Include Queen Bee by Stripes.
 Include Quilled Tousky by Stripes.
-Include Ram by Sarokcat.
+Include Ram by Luneth.
 Include Random Shemale Smooth Collie by Guest Writers.
 Include Random Tentacle Horror by Guest Writers.
 Include Rat Twins by Kernog.
@@ -6734,6 +6738,18 @@ Include Sugar Glider by AGentlemanCalledB.
 Include Taurus by Defth.
 Include Teddy Bear by Sarokcat.
 Include Tenrec by StripeGuy.
+[
+Include Testcreature1 by Wahn.
+Include Testcreature2 by Wahn.
+Include Testcreature3 by Wahn.
+Include Testcreature4 by Wahn.
+Include Testcreature5 by Wahn.
+Include Testcreature6 by Wahn.
+Include Testcreature7 by Wahn.
+Include Testcreature8 by Wahn.
+Include Testcreature9 by Wahn.
+Include Testcreature10 by Wahn.
+]
 Include Thought Eater by Wahn.
 Include Tiger by Sarokcat.
 Include Tiger Cop by Stripes.
@@ -6834,6 +6850,8 @@ Include Felix by Wahn.
 Include Finn by Wahn.
 Include Francois by AGentlemanCalledB.
 Include Frank by Stripes.
+Include Friesian Twin Isaac by Wahn.
+Include Friesian Twin Karel by Wahn.
 Include G-Shep Squad by Rikaeus.
 Include Garrett by Stripes.
 Include Gerty by Qazarar.
@@ -6976,7 +6994,7 @@ Include Equinoid Warrior by Song.
 Include Felinoid Companion by Sarokcat.
 Include Feral Pets by Luneth.
 Include Gryphon Companion by Sarokcat.
-Include Honey by Stripes.
+Include Honey by Luneth.
 Include Korvin by Stripes.
 Include Rachel Mouse by Stripes.
 Include Ryousei by Wahn.
@@ -8578,11 +8596,11 @@ to say menuwardlist:
 		if FurryList is warded:
 			say "Furry ";
 		if MaleList is warded:
-			say "Guy ";
+			say "Male ";
 		if FemaleList is warded:
-			say "Girl ";
+			say "Female ";
 		if HermList is warded:
-			say "Hermaphrodite ";
+			say "Herm ";
 		if HumorousList is warded:
 			say "Humorous ";
 		if DemonList is warded:
@@ -8611,11 +8629,11 @@ to say menubanlist:
 		if FurryList is banned:
 			say "Furry ";
 		if MaleList is banned:
-			say "Guy ";
+			say "Male ";
 		if FemaleList is banned:
-			say "Girl ";
+			say "Female ";
 		if HermList is banned:
-			say "Hermaphrodite ";
+			say "Herm ";
 		if HumorousList is banned:
 			say "Humorous ";
 		if DemonList is banned:

@@ -8,7 +8,7 @@ to say DinoPackLoss:
 	if inasituation is true: [special event]
 		say ""; [dealt with in the file where the event is described]
 	else: [regular scene]
-		if (mdasslevel > 5 and a random chance of 1 in 2 succeeds): [anal focused gangbang] [TODO: Fill in missing scene; disabled till then]
+		if (mdasslevel > 5 and a random chance of 1 in 2 succeeds and 20000 < 1): [anal focused gangbang] [TODO: Fill in missing scene; disabled till then]
 			say "     The pack finally wears you out, and you crumple to your knees. For a moment, they circle around you, laughing their strange reptilian laugh. Before you have any time to rest, however, a pair of them stalk forward. Together they grab you, and force your head and upper body down towards the ground, leaving your huge ass sticking out and completely vulnerable. You are completely at their mercy, but they do not take advantage of your defenseless state, instead continuining their prowling dance around you. You know instinctively that they won't let you get away unfucked, and they are merely toying with their prey, as is their right as the victors.";
 			say "     A";
 			infect "Magic Drake";

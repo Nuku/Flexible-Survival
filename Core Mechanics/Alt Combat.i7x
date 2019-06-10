@@ -1352,16 +1352,17 @@ To lose:
 	if scenario is "Researcher" and ( there is no resbypass in row MonsterID of Table of Random Critters or resbypass entry is false ):
 		say "";
 	else:
-		if there is no Cross-Infection in row MonsterID of Table of Random Critters or Cross-Infection entry is "": [cross-infection does not exist or empty]
-			infect; [regular infect]
-		else: [Cross-Infection found]
-			if there is a name of Cross-Infection entry in the Table of Random Critters:
-				if the BannedStatus corresponding to the name of Cross-Infection entry in the Table of Random Critters is true:
-					infect; [cross-infection banned -> defaulting back to regular infect]
-				else:
-					infect Cross-Infection entry; [monster's sexually transmitted infection is not the monster's own - for example Husky Bitch <-> Husky Alpha]
-			else: [cross infection not found]
-				say "ERROR! Cross-Infection [Cross-Infection entry] for the infection [name entry] not found! Please report how you saw this on the FS Discord and quote this message!";
+		if non-infectious entry is false:
+			if there is no Cross-Infection in row MonsterID of Table of Random Critters or Cross-Infection entry is "": [cross-infection does not exist or empty]
+				infect; [regular infect]
+			else: [Cross-Infection found]
+				if there is a name of Cross-Infection entry in the Table of Random Critters:
+					if the BannedStatus corresponding to the name of Cross-Infection entry in the Table of Random Critters is true:
+						infect; [cross-infection banned -> defaulting back to regular infect]
+					else:
+						infect Cross-Infection entry; [monster's sexually transmitted infection is not the monster's own - for example Husky Bitch <-> Husky Alpha]
+				else: [cross infection not found]
+					say "ERROR! Cross-Infection [Cross-Infection entry] for the infection [name entry] not found! Please report how you saw this on the FS Discord and quote this message!";
 	choose row MonsterID from the Table of Random Critters;
 	if Libido of Player < libido entry and non-infectious entry is false:
 		increase Libido of Player by 4;

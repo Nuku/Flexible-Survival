@@ -151,9 +151,9 @@ to oldflagward (flagname - text):
 			now CockvoreList is warded;
 		-- "Furry":
 			now FurryList is warded;
-		-- "Guy":
+		-- "Males":
 			now MaleList is warded;
-		-- "Girl":
+		-- "Females":
 			now FemaleList is warded;
 		-- "Humorous":
 			now HumorousList is warded;
@@ -182,9 +182,9 @@ to oldflagunban (flagname - text):
 			now CockvoreList is not banned;
 		-- "Furry":
 			now FurryList is not banned;
-		-- "Guy":
+		-- "Males":
 			now MaleList is not banned;
-		-- "Girl":
+		-- "Females":
 			now FemaleList is not banned;
 		-- "Humorous":
 			now HumorousList is not banned;
@@ -213,9 +213,9 @@ to oldflagunward (flagname - text):
 			now CockvoreList is not warded;
 		-- "Furry":
 			now FurryList is not warded;
-		-- "Guy":
+		-- "Males":
 			now MaleList is not warded;
-		-- "Girl":
+		-- "Females":
 			now FemaleList is not warded;
 		-- "Humorous":
 			now HumorousList is not warded;

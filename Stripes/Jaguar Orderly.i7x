@@ -113,15 +113,15 @@ When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now NewTypeInfection entry is false;
 	now Species Name entry is "Jaguar"; [name of the overall species of the infection, used for children, ...]
-	add "Jaguar" to infections of FelineList;
-	add "Jaguar" to infections of FurryList;
-	add "Jaguar" to infections of NatureList;
-	add "Jaguar" to infections of MaleList;
-	add "Jaguar" to infections of BarbedCockList;
-	add "Jaguar" to infections of SheathedCockList;
-	add "Jaguar" to infections of BipedalList;
-	add "Jaguar" to infections of TailList;
-	now Name entry is "Jaguar"; [Name of your new Monster]
+	add "Jaguar Male" to infections of FelineList;
+	add "Jaguar Male" to infections of FurryList;
+	add "Jaguar Male" to infections of NatureList;
+	add "Jaguar Male" to infections of MaleList;
+	add "Jaguar Male" to infections of BarbedCockList;
+	add "Jaguar Male" to infections of SheathedCockList;
+	add "Jaguar Male" to infections of BipedalList;
+	add "Jaguar Male" to infections of TailList;
+	now Name entry is "Jaguar Male"; [Name of your new Monster]
 	now enemy title entry is "Jaguar Orderly"; [name of the encountered creature at combat start - Example: "You run into a giant collie." instead of using "Smooth Collie Shemale" infection name]
 	now enemy Name entry is ""; [specific name of unique enemy]
 	now enemy type entry is 0; [0 = non unique enemy; 1 = unique (unknown name); 2 = unique (known name) | Used to disqualify unique enemies from Vore/UB and showing the enemy name in encounters]
@@ -301,7 +301,7 @@ to say libsupp:
 Section 4 - Endings
 
 when play ends:
-	if BodyName of Player is "Jaguar":
+	if BodyName of Player is "Jaguar Male":
 		if humanity of Player < 10:
 			say "     As your human mind and experiences fade away, you give in to the instinctual urges of your body. You are drawn to the city hospital, feeling the need to work alongside your feline brethren in the corrupted medical facility. You are welcomed by the other jaguars as well as the other denizens.";
 			if hospquest < 2:

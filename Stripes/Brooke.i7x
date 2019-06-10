@@ -3,6 +3,9 @@ Version 1 of Brooke by Stripes begins here.
 
 "Adds a primarily M/M Otter NPC named Brooke to the Flexible Survival game."
 
+an everyturn rule: [bugfix for misplaced npcs 2019-06-08] [TODO: Remove in a month or so]
+	if Brooke is in NPC Nexus:
+		move Brooke to Palomino;
 
 Section 1 - Brooke
 

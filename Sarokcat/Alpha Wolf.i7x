@@ -7,16 +7,16 @@ Version 2 of Alpha Wolf by Sarokcat begins here.
 Section 1 - Creature Responses
 
 Alpha Wolfdefeat is a number that varies.
-alphawolfbeaten is a number that varies.
-alphawolfreplaced is a truth state that varies. alphawolfreplaced is usually false.
+AlphaWolfBeaten is a number that varies.
+AlphaWolfReplaced is a truth state that varies. AlphaWolfReplaced is usually false.
 
-to say alphawolfdesc:
+to say AlphaWolfdesc:
 	setmongender 3;  [creature is male]
-	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light. Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see. '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if alphawolfreplaced is true]. While similar to the alpha wolf you've seen before, this one is clearly a different one. Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[else], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
-	if alphawolfreplaced is true:			[reset for new alpha wolf]
-		now alphawolfreplaced is false;
-		now alphawolfbeaten is 0;
-		now Alpha Wolfdefeat is 0;
+	say "     Sauntering through the forest towards you, a large male wolf pads on all fours, his thick black fur gleaming in the light. Spying you, he quickly raises himself up onto his digitigrade legs, a feral grin crossing his muzzle as his new upright stance reveals his semi-erect canine cock for all to see. '[one of]Oh look, a chew toy for me to play with[or]Hmm now the question is, will you submit to the packleader with or without a struggle? Either way sounds fun to me[or]I can't wait to see you on all fours beneath me[at random],' he says, dominance rolling off of him in waves[if AlphaWolfReplaced is true]. While similar to the alpha wolf you've seen before, this one is clearly a different one. Whether that means the last one had his position usurped or if this is a new pack entirely is unclear, it seems this new alpha's just as confidence of his success[else], making you shudder as you realize you have definitely managed to encounter an alpha wolf[end if].";
+	if AlphaWolfReplaced is true:			[reset for new alpha wolf]
+		now AlphaWolfReplaced is false;
+		now AlphaWolfBeaten is 0; [wins over alpha reset]
+		now Alpha Wolfdefeat is 0; [defeats for the player reset]
 
 
 to say Alpha Wolf attack:
@@ -70,30 +70,35 @@ To say Alpha Wolf loss:
 		if debugactive is 1:
 			say "     DEBUG: EMPTY SCENE IN THE FILE 'Alpha Wolf.i7x' - DEALING WITH THE EVENT OUTCOME IS TAKEN CARE OF ELSEWHERE[line break]";
 	else: [regular combat victory]
-		increase alphawolfbeaten by 3;
-		if wolffight is not 3 and alphawolfbeaten >= 8 and a random chance of alphawolfbeaten in 15 succeeds:
-			decrease alphawolfbeaten by 4;
+		increase AlphaWolfBeaten by 3;
+		if wolffight is not 3 and AlphaWolfBeaten >= 8 and a random chance of AlphaWolfBeaten in 15 succeeds:
+			decrease AlphaWolfBeaten by 4;
 			say "     The large, black-furred wolf sinks to the ground, his tail tucked between his legs as his ears droop back and he starts to slink back a few feet. But this time you manage to pounce atop him before he can get away and pin him down. He whines and growls, but seems to submit, at least for the moment. What shall you do to your beaten foe?";
 			now sextablerun is 0;
 			blank out the whole of table of fucking options;
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Ride the wolf";
 			now sortorder entry is 2;
 			now description entry is "Get that knot in you.";
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Let him go";
 			now sortorder entry is 99;
 			now description entry is "Release the wolf.";
+			[]
 			if Player is male:
 				choose a blank row in table of fucking options;
 				now title entry is "Fuck the wolf";
 				now sortorder entry is 1;
 				now description entry is "Mount the alpha wolf.";
+			[]
 			if Player is not neuter:
 				choose a blank row in table of fucking options;
 				now title entry is "Force oral";
 				now sortorder entry is 3;
 				now description entry is "Make the alpha orally pleasure you.";
+			[]
 			sort the table of fucking options in sortorder order;
 			while sextablerun is 0:
 				repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -111,49 +116,54 @@ To say Alpha Wolf loss:
 						clear the screen and hyperlink list;
 						now sextablerun is 1;
 						if nam is "Fuck the wolf":
-							say "     Deciding you want to give the over-confident wolf a taste of his own medicine and put him in his place, you keep him pinned down and yank up his tail, exposing his tight tailstar. He whimpers a little and starts making boastful threats, but you don't listen, instead just pressing your throbbing cock against his back entrance and enjoying his whine as you push into him. He tries to scrape himself forward, but you keep a tight grip on him, moaning in his ear as you sink your [cock size desc of Player] [Cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";
-							say "     Reaching beneath him, you find that his cock has become quite hard and is leaking precum steadily. Chuckling at this, you tease the beaten wolf about how much he clearly likes being the bitch. He growls and tries to respond that he's not your bitch, but you just thrust harder into him, pressing against his prostate and making him moan. His penis throbs in his hand, releasing a large spurt of precum as his ears dip down in shame. Your cock throbs in response as well as you revel in making this dominant male submit to you. You fuck him hard until he howls in defeat, cumming a large puddle of wolf cum onto the ground from being pounded in the ass. This sends you over the edge and you cram your shaft deep inside him and cum hard, filling him [if Ball Size of Player >= 5]to the point of overflowing [end if]with your hot load.";
-							say "     After pulling out, you give his ass a slap and send him on his way, tail tucked between his legs and cum leaking from his well-used asshole. He tries to maintain his bravado, but his alpha identity is clearly shaken. And with the scent of defeat and another male's cum on him, he may not remain the alpha long if the others find him before he can get cleaned up.";
-							if a random chance of alphawolfbeaten in 10 succeeds, now alphawolfreplaced is true;
-							decrease Libido of Player by 15;
-							if Libido of Player < 0, now Libido of Player is 0;
+							say "[AlphaWolfSex1]";
 						else if nam is "Ride the wolf":
-							say "     Deciding that while you'd like the alpha wolf's cock inside you, you'll be taking on your own terms. You shove the wolf over onto his back and keep him pinned down with one arm which your other gropes his furry package. He squirms a little, but settles down as he realizes what you have in mind when you grind your [if Player is female]pussy[else]ass[end if] down onto his meat. With his cock dribbling precum, you let his pointed glans brush across your [if Player is female]wet folds[else]tight pucker[end if] as a prelude to the main event. With his cock quite hard, he whimpers a little with need as you deny him a hole to fuck, reveling in your position of power above this strong alpha you've defeated. After you've teased several spurts of precum from him, you ease yourself down onto his throbbing pole, letting the tapered tip of his lupine shaft sink into you.";
-							say "     Keeping the wolf pinned on his back, you ride up and down on his cock, enjoying his lustful panting and moaning as he struggles the thrust up into you. You keep a hand firmly on his pelvis, ensuring that you're the one setting the pace and in charge of this hard fucking you're getting. You take your time with it, rubbing down onto the wolf's knot, but not letting him tie with you, denying him release several times as you draw out as much pleasure as you can from your carnal act. Only once you're ready do you push yourself firmly down onto the wolf's cock and let his engorged knot stretch your [if Player is female]vagina wide[else]asshole open[end if] to tie with him. You bounce rapidly upon it and clamp down hard, getting the wolf to howl loudly in release as he blasts his thick load into your [if Player is female]waiting womb[else]bowels[end if] before you cum hard[if Player is male], spraying your own seed across his body[end if].[impregchance]";
-							say "     After his knot has gone down, you pull yourself off him and get up. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, growling about his superiority even as he backs away, but he doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if Player is male] and another male marking him[end if], he may face some trouble if he can't get a confidence boost before meeting up with the rest of the pack.";
-							let targetnum be 16;
-							if Player is male, decrease targetnum by ( Ball Size of Player / 5 );
-							if targetnum < 12, now targetnum is 12;
-							if a random chance of alphawolfbeaten in targetnum succeeds, now alphawolfreplaced is true;
-							decrease Libido of Player by 15;
-							if Libido of Player < 0, now Libido of Player is 0;
+							say "[AlphaWolfSex2]";
 						else if nam is "Force oral":
-							say "     Deciding you'd like to make use of the wolf's long tongue, you grab his head and force his muzzle between your thighs, forcing him to take in your scent. You grind your [if Player is male]cock[else]cunt[end if] against his muzzle and order him to start licking. He growls a little, but acquiesces as you squeeze his downturned ears. His long, lupine tongue slips out and starts lapping over your groin, taking in the musky flavor of the one who defeated him.";
-							if Player is herm:
-								say "     The alpha wolf whimpers a little at having to lick your cock and does so halfheartedly, always switching back to your pussy after just a few swipes of his tongue. You grab his muzzle and force your shaft into his mouth, ordering him to do a proper job to prove he's worth bothering with at all. His ears dip, but he starts lavishing increasing attention upon your erection as you start thrusting into his warm, wet muzzle. In time he's licking and sucking at your throbbing penis eagerly, even if it's mostly just to end his humiliation. And you make sure to tell him what a good job and a fine cocksucker he is when presented with a proper cock.";
-								say "     Remaining in charge, you only ever let him switch from your cock when you feel he's earned another go at your pussy. His canine tongue feels great upon it, sliding all over it and then diving deep inside to pleasure you. You stroke his head and ears, telling him to lick deeper like a good and obedient bitch. He whines a little at this, but does as he's told, working hard to please the one who bested him. Your juices flow across his tongue and muzzle while your cock twitches and leaves spurts of precum across his face.";
-								say "     After a very enjoyable blow job from the beaten male, you grip his head firmly and shove your cock fully into his maw. You cum hard with a groan of pleasure, blasting your thick seed down his throat while your hot juices soak your thighs[if Ball Size of Player >= 5]. Your large load fills his muzzle and overflows from it even as much of it is forced into his belly[end if]. After your first several shots, you pull out, letting the rest of your load spray across his face and muzzle. With the last of your load dribbling out, you press his muzzle to your pussy, getting him to lick you clean. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
-							else if Player is male:
-								say "     The alpha wolf whimpers a little at having to lick another male's cock and does so halfheartedly at first. You grab his muzzle and force your cock into his mouth, ordering him to do a proper job to prove he's worth bothering with at all. His ears dip, but he starts lavishing increasing attention upon your cock as you start thrusting into his warm, wet muzzle. In time he's licking and sucking at your throbbing penis eagerly, even if it's mostly just to end his humiliation. And you make sure to tell him what a good job and a fine cocksucker he is for a stronger male's cock.";
-								say "     After a very enjoyable blow job from the beaten male, you grip his head firmly and shove your cock fully into his maw. You cum hard with a groan of pleasure, blasting your thick seed down his throat[if Ball Size of Player >= 5]. Your large load fills his muzzle and overflows from it even as much of it is forced into his belly[end if]. After your first several shots, you pull out, letting the rest of your load spray across his face and muzzle. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
-							else:
-								say "     The alpha wolf whimpers a little at having to submit to you, but does lick at your pussy enthusiastically. His canine tongue feels great upon it, sliding all over it and then diving deep inside to pleasure you. You stroke his head and ears, telling him to lick deeper like a good and obedient bitch. He whines a little at this, but does as he's told, working hard to please the one who bested him. Your juices flow across his tongue and muzzle as he licks your dripping cunt.";
-								say "     After a very enjoyable tongue job from the beaten male, you grip his head firmly and bury his nose in your muff. You cum hard with a groan of pleasure, soaking his muzzle and your thighs in your hot juices. You keep your plaything's muzzle trapped there, ordering him to lick you clean before you'll let him go. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
-							say "     Once you're finished, you push the wolf's head away dismissively. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, head soaked in the scent of the one who defeated him. As he backs away with his tail between his legs, he growls about his superiority, but it doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if Player is male] and another male's seed all over his face and muzzle[end if], he may not be able to hold his position in the pack if he cannot maintain his dominance.";
-							let targetnum be 18;
-							if Player is male, decrease targetnum by Cock Count of Player + ( Ball Size of Player / 5 );
-							if targetnum < 10, now targetnum is 10;
-							if a random chance of alphawolfbeaten in targetnum succeeds, now alphawolfreplaced is true;
-							increase Libido of Player by 15;
-							if Libido of Player > 100, now Libido of Player is 100;
+							say "[AlphaWolfSex3]";
 						else if nam is "Let him go":
 							say "     Deciding to send the defeated wolf on his way, you grind his face against the ground and remind him that you've beaten him before getting off. As he starts to rise, you press your heel to his side and knock him over again as an added reminder. He slinks off, tail between his legs. He growls that he'll not go as easy on you the next time, but his bravado is somewhat shaken and he doesn't sound as confident as earlier. With his confidence weakened, you can imagine him running into some trouble staying in charge of his pack.";
 							let targetnum be 20;
-							if a random chance of alphawolfbeaten in targetnum succeeds, now alphawolfreplaced is true;
+							if a random chance of AlphaWolfBeaten in targetnum succeeds, now AlphaWolfReplaced is true;
 		else:
-			say "The large, black-furred wolf sinks to the ground his tail tucked between his legs as his ears droop back, his mouth falling open in astonishment. 'You? You managed to defeat an alpha? This must be a mistake...' the wolf mutters to himself as he lowers his head and exposes his neck in acknowledgment of your dominance... for now. Once the wolf has backed a short distance away, his head comes back up and he stares right into your eyes for a minute before opening his mouth in a lupine laugh. 'Don't think this is over little one, you definitely have my attention now... You might even manage to make a good little alpha bitch someday at this rate,' he says with a barking laugh, before he turns and lopes off down the road[if alphawolfbeaten > 3]. Despite his losses, it seems the alpha wolf's infected mind remains confident in his superiority[end if].";
+			say "The large, black-furred wolf sinks to the ground his tail tucked between his legs as his ears droop back, his mouth falling open in astonishment. 'You? You managed to defeat an alpha? This must be a mistake...' the wolf mutters to himself as he lowers his head and exposes his neck in acknowledgment of your dominance... for now. Once the wolf has backed a short distance away, his head comes back up and he stares right into your eyes for a minute before opening his mouth in a lupine laugh. 'Don't think this is over little one, you definitely have my attention now... You might even manage to make a good little alpha bitch someday at this rate,' he says with a barking laugh, before he turns and lopes off down the road[if AlphaWolfBeaten > 3]. Despite his losses, it seems the alpha wolf's infected mind remains confident in his superiority[end if].";
 		now wolffight is 1;  [victory]
 
+to say AlphaWolfSex1: [fuck the wolf]
+	say "     Deciding you want to give the over-confident wolf a taste of his own medicine and put him in his place, you keep him pinned down and yank up his tail, exposing his tight tailstar. He whimpers a little and starts making boastful threats, but you don't listen, instead just pressing your throbbing cock against his back entrance and enjoying his whine as you push into him. He tries to scrape himself forward, but you keep a tight grip on him, moaning in his ear as you sink your [cock size desc of Player] [Cock of Player] cock into his tight ass. The wolf's hole [if Cock Length of Player >= 24]has trouble stretching to accommodate your massive meat, but you keep at it, forcing it[else]slowly relaxes to accommodate your thrusting pole, forced[end if] to accept you so you can bugger him thoroughly.";
+	say "     Reaching beneath him, you find that his cock has become quite hard and is leaking precum steadily. Chuckling at this, you tease the beaten wolf about how much he clearly likes being the bitch. He growls and tries to respond that he's not your bitch, but you just thrust harder into him, pressing against his prostate and making him moan. His penis throbs in his hand, releasing a large spurt of precum as his ears dip down in shame. Your cock throbs in response as well as you revel in making this dominant male submit to you. You fuck him hard until he howls in defeat, cumming a large puddle of wolf cum onto the ground from being pounded in the ass. This sends you over the edge and you cram your shaft deep inside him and cum hard, filling him [if Ball Size of Player >= 5]to the point of overflowing [end if]with your hot load.";
+	say "     After pulling out, you give his ass a slap and send him on his way, tail tucked between his legs and cum leaking from his well-used asshole. He tries to maintain his bravado, but his alpha identity is clearly shaken. And with the scent of defeat and another male's cum on him, he may not remain the alpha long if the others find him before he can get cleaned up.";
+	if a random chance of AlphaWolfBeaten in 10 succeeds, now AlphaWolfReplaced is true;
+	LibidoLoss 15;
+
+to say AlphaWolfSex2: [ride the wolf]
+	say "     Deciding that while you'd like the alpha wolf's cock inside you, you'll be taking on your own terms. You shove the wolf over onto his back and keep him pinned down with one arm which your other gropes his furry package. He squirms a little, but settles down as he realizes what you have in mind when you grind your [if Player is female]pussy[else]ass[end if] down onto his meat. With his cock dribbling precum, you let his pointed glans brush across your [if Player is female]wet folds[else]tight pucker[end if] as a prelude to the main event. With his cock quite hard, he whimpers a little with need as you deny him a hole to fuck, reveling in your position of power above this strong alpha you've defeated. After you've teased several spurts of precum from him, you ease yourself down onto his throbbing pole, letting the tapered tip of his lupine shaft sink into you.";
+	say "     Keeping the wolf pinned on his back, you ride up and down on his cock, enjoying his lustful panting and moaning as he struggles the thrust up into you. You keep a hand firmly on his pelvis, ensuring that you're the one setting the pace and in charge of this hard fucking you're getting. You take your time with it, rubbing down onto the wolf's knot, but not letting him tie with you, denying him release several times as you draw out as much pleasure as you can from your carnal act. Only once you're ready do you push yourself firmly down onto the wolf's cock and let his engorged knot stretch your [if Player is female]vagina wide[else]asshole open[end if] to tie with him. You bounce rapidly upon it and clamp down hard, getting the wolf to howl loudly in release as he blasts his thick load into your [if Player is female]waiting womb[else]bowels[end if] before you cum hard[if Player is male], spraying your own seed across his body[end if].[impregchance]";
+	say "     After his knot has gone down, you pull yourself off him and get up. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, growling about his superiority even as he backs away, but he doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if Player is male] and another male marking him[end if], he may face some trouble if he can't get a confidence boost before meeting up with the rest of the pack.";
+	let targetnum be 16;
+	if Player is male, decrease targetnum by ( Ball Size of Player / 5 );
+	if targetnum < 12, now targetnum is 12;
+	if a random chance of AlphaWolfBeaten in targetnum succeeds, now AlphaWolfReplaced is true;
+	LibidoLoss 15;
+
+to say AlphaWolfSex3:
+	say "     Deciding you'd like to make use of the wolf's long tongue, you grab his head and force his muzzle between your thighs, forcing him to take in your scent. You grind your [if Player is male]cock[else]cunt[end if] against his muzzle and order him to start licking. He growls a little, but acquiesces as you squeeze his downturned ears. His long, lupine tongue slips out and starts lapping over your groin, taking in the musky flavor of the one who defeated him.";
+	if Player is herm:
+		say "     The alpha wolf whimpers a little at having to lick your cock and does so halfheartedly, always switching back to your pussy after just a few swipes of his tongue. You grab his muzzle and force your shaft into his mouth, ordering him to do a proper job to prove he's worth bothering with at all. His ears dip, but he starts lavishing increasing attention upon your erection as you start thrusting into his warm, wet muzzle. In time he's licking and sucking at your throbbing penis eagerly, even if it's mostly just to end his humiliation. And you make sure to tell him what a good job and a fine cocksucker he is when presented with a proper cock.";
+		say "     Remaining in charge, you only ever let him switch from your cock when you feel he's earned another go at your pussy. His canine tongue feels great upon it, sliding all over it and then diving deep inside to pleasure you. You stroke his head and ears, telling him to lick deeper like a good and obedient bitch. He whines a little at this, but does as he's told, working hard to please the one who bested him. Your juices flow across his tongue and muzzle while your cock twitches and leaves spurts of precum across his face.";
+		say "     After a very enjoyable blow job from the beaten male, you grip his head firmly and shove your cock fully into his maw. You cum hard with a groan of pleasure, blasting your thick seed down his throat while your hot juices soak your thighs[if Ball Size of Player >= 5]. Your large load fills his muzzle and overflows from it even as much of it is forced into his belly[end if]. After your first several shots, you pull out, letting the rest of your load spray across his face and muzzle. With the last of your load dribbling out, you press his muzzle to your pussy, getting him to lick you clean. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
+	else if Player is male:
+		say "     The alpha wolf whimpers a little at having to lick another male's cock and does so halfheartedly at first. You grab his muzzle and force your cock into his mouth, ordering him to do a proper job to prove he's worth bothering with at all. His ears dip, but he starts lavishing increasing attention upon your cock as you start thrusting into his warm, wet muzzle. In time he's licking and sucking at your throbbing penis eagerly, even if it's mostly just to end his humiliation. And you make sure to tell him what a good job and a fine cocksucker he is for a stronger male's cock.";
+		say "     After a very enjoyable blow job from the beaten male, you grip his head firmly and shove your cock fully into his maw. You cum hard with a groan of pleasure, blasting your thick seed down his throat[if Ball Size of Player >= 5]. Your large load fills his muzzle and overflows from it even as much of it is forced into his belly[end if]. After your first several shots, you pull out, letting the rest of your load spray across his face and muzzle. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
+	else:
+		say "     The alpha wolf whimpers a little at having to submit to you, but does lick at your pussy enthusiastically. His canine tongue feels great upon it, sliding all over it and then diving deep inside to pleasure you. You stroke his head and ears, telling him to lick deeper like a good and obedient bitch. He whines a little at this, but does as he's told, working hard to please the one who bested him. Your juices flow across his tongue and muzzle as he licks your dripping cunt.";
+		say "     After a very enjoyable tongue job from the beaten male, you grip his head firmly and bury his nose in your muff. You cum hard with a groan of pleasure, soaking his muzzle and your thighs in your hot juices. You keep your plaything's muzzle trapped there, ordering him to lick you clean before you'll let him go. Looking down, you can see the wolf's cock is hard and leaking from arousal at what he's been made to do, and you make certain to tease the wolf about that as well.";
+	say "     Once you're finished, you push the wolf's head away dismissively. As he starts to rise, you give his ass a shove with your heel, sending him on his way. He slinks off, head soaked in the scent of the one who defeated him. As he backs away with his tail between his legs, he growls about his superiority, but it doesn't seem quite as confident as before. Having been beaten and used seems to have shaken his alpha identity somewhat. And with the scent of defeat[if Player is male] and another male's seed all over his face and muzzle[end if], he may not be able to hold his position in the pack if he cannot maintain his dominance.";
+	let targetnum be 18;
+	if Player is male, decrease targetnum by Cock Count of Player + ( Ball Size of Player / 5 );
+	if targetnum < 10, now targetnum is 10;
+	if a random chance of AlphaWolfBeaten in targetnum succeeds, now AlphaWolfReplaced is true;
+	LibidoBoost 15;
 
 Section 2 - Creature Insertion
 
@@ -181,7 +191,7 @@ When Play begins:
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed paw out, slapping you down like a submissive wolf[or]His large, erect member catches your eye for a minute. Noticing, he pauses to stroke it and gestures towards you, the obvious demand eroding your desire to resist[or]He grabs your arm in his teeth and wrestles you to the ground[or]Striking where you aren't expecting it, he grabs your foot and jerks it out from under you, dumping you on the ground[at random].";
 	now defeated entry is "[Alpha Wolf loss]";
 	now victory entry is "[Alpha Wolf attack]";
-	now desc entry is "[alphawolfdesc]";
+	now desc entry is "[AlphaWolfdesc]";
 	now face entry is "a long canine muzzle sticking out of your feral lupine countenance. Your mouth hangs open in a lupine grin, revealing your sharp teeth. If it weren't for the intelligence sparking in your eyes and the slightly bigger forehead, it would be hard to tell your face from a regular wolf's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and equally well-suited to life in the wild or the streets, your canine form stands easily on its new digitigrade legs. Your paw-like hands are still as dexterous as ever, though you know that you could drop to all fours in an instant if the situation called for it or your alpha came along to mount you"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]black[or]roughly[or]thickly[at random]-furred"; [ skin Description, format as "You have (your text) skin"]

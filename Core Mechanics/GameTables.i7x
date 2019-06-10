@@ -1,5 +1,8 @@
 Version 1 of GameTables by Core Mechanics begins here.
 
+Table of JournalNotes
+Date(number)	Note (text)
+with 1000 blank rows
 
 Table of TestTable
 Name(text)	ListOfText (list of text)
@@ -1162,6 +1165,7 @@ Name(text)	Type(text)
 "SatyrFratRichardRelationship"	"number"
 "scaledr"	"number"
 "scopnum"	"number"
+"Score"	"number"
 "ScottyRelationship"	"number"
 "scufflecount"	"number"
 "sdbook"	"number"

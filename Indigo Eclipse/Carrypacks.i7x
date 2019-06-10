@@ -24,6 +24,11 @@ to say HBPuse:
 	else:
 		increase capacity of Player by 10;
 
+
+Table of GameEventIDs (continued)
+Object	Name
+Happy Trails	"Happy Trails"
+
 Happy Trails is a scavevent. The sarea of Happy Trails is "Allzones".
 
 instead of resolving a Happy Trails:

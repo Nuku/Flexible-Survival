@@ -14,6 +14,8 @@ Version 2 of Spike by Wahn begins here.
 [   3: Korvin                                      ]
 [   4: Carl                                        ]
 [   5: Brutus                                      ]
+[   6: Karel                                       ]
+[   7: Isaac                                       ]
 
 [ thirst of Spike - what does he call the player?  ]
 [  0: <name of Player>                             ]

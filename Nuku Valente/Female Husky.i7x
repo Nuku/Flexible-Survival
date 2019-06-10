@@ -176,7 +176,7 @@ When Play begins:
 	add "Husky Bitch" to infections of CanineList;
 	add "Husky Bitch" to infections of FurryList;
 	add "Husky Bitch" to infections of NatureList;
-	add "Husky Bitch" to infections of MaleList;
+	add "Husky Bitch" to infections of FemaleList;
 	add "Husky Bitch" to infections of TaperedCockList;
 	add "Husky Bitch" to infections of KnottedCockList;
 	add "Husky Bitch" to infections of SheathedCockList;

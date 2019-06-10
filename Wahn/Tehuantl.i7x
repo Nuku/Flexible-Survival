@@ -652,7 +652,7 @@ to say TehuantlSex_FuckKorvin:
 
 [Section 7 - Endings
 when play ends:
-	if BodyName of Player is "Jaguar":
+	if BodyName of Player is "Jaguar Male":
 		if humanity of Player < 10:
 			say "     You succumb to your Jaguar infection.";
 		else:

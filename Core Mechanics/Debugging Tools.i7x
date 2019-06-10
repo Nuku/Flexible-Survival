@@ -461,6 +461,15 @@ to DescriptionDisplay:
 	now looknow is 0;
 	rule succeeds;
 
+DebugCurrentMonsterID is an action applying to nothing.
+
+understand "DebugCurrentMonsterID" as DebugCurrentMonsterID.
+
+carry out DebugCurrentMonsterID:
+	say "Current MonsterID: [MonsterID][line break]";
+	choose row MonsterID from the Table of Random Critters;
+	say "Current Monster: [Name Entry][line break]";
+
 DebugCritterRow is an action applying to one topic.
 
 understand "DebugCritterRow [text]" as DebugCritterRow.

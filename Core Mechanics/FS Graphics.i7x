@@ -49,6 +49,7 @@ Figure of BlueGryphon_icon is the file "BlueGryphon.jpg".
 Figure of BlueGryphon_face_icon is the file "BlueGryphon_face.jpg".
 Figure of Gunbunny_icon is the file "Gunbunny_ig.jpg".
 Figure of Ebonflame_Drake_icon is the file "Ebonflame_Drake.jpg".
+Figure of Hawkman_naked_icon is the file "Hawkman_naked.jpg".
 Figure of Helot_icon is the file "Helot.jpg".
 Figure of Helot_face_icon is the file "Helot_face.jpg".
 Figure of Herm_Hyena_clothed_icon is the file "Hyena_clothed.jpg".
@@ -93,6 +94,7 @@ Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
 Figure of Pewter_Consort_icon is the file "Pewter_Consort.png".
 Figure of PirateShark_icon is the file "sharkpirate.png".
+Figure of Ram_naked_icon is the file "Ram_naked.jpg".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
 Figure of SnowLeopard_icon is the file "SnowLeopard.jpg".
@@ -705,6 +707,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Hadiya_icon"	Figure of Hadiya_icon	""	g-black	"normal"
 "Harold"	Figure of Harold_icon	"Hufnaar"	g-black	"normal"
 "Harold_naked"	Figure of Harold_naked_icon	"Hufnaar"	g-black	"normal"
+"Hawkman Male"	Figure of Hawkman_naked_icon	"Vashaa"	g-black	"normal"
 "Hayato"	Figure of Hayato_icon	"Darian821"	g-black	"normal"
 "Helen"	Figure of Helen_naked_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Helot Manservant"	Figure of Helot_icon	"Obieblu"	g-white	"normal"
@@ -827,7 +830,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Shark Herm"	Figure of PirateShark_icon	"Zealot"	g-white	"normal"
 "Queen Bee"	Figure of QueenBee_icon	"Caltroplay"	g-white	"normal"
 "Rachel"	Figure of Rachel_icon	"o-kemono"	g-white	"normal"
-"Ram"	Figure of Ram_icon	"Anymouse1968"	g-white	"normal"
+"Ram"	Figure of Ram_naked_icon	"Vashaa"	g-white	"normal"
 "Rane_clothed"	Figure of Rane_clothed_icon	"Inkydemon"	g-black	"normal"
 "Rane_face"	Figure of Rane_face_icon	"SineAlas"	g-black	"normal"
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
@@ -1012,6 +1015,7 @@ carry out artistcredits:
 	say "     Giraffe by Sharei @ furaffinity.net[line break]";
 	say "     Goo Girl by Rastear @ y-gallery.net[line break]";
 	say "     Gunbunny by HBruton @ furaffinity.net[line break]";
+	say "     Hawkman by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Helot by Obieblu @ tumblr.com[line break]";
 	say "     Hermaphrodite Gryphon by dbd @ furaffinity.net[line break]";
 	say "     Hermaphrodite Latex Vixen by Anymouse1968 @ furaffinity.net[line break]";
@@ -1043,7 +1047,7 @@ carry out artistcredits:
 	say "     Pirate Shark by Zealot @  https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Plush Lion by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Queen Bee by Caltroplay @ furaffinity.net[line break]";
-	say "     Ram by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Ram by Vashaa @ https://www.furaffinity.net/user/vashaa/[line break]";
 	say "     Reindeer by MoT @ furaffinity.net[line break]";
 	say "     Sand Man by Rastear @ y-gallery.net[line break]";
 	say "     Shadow Beast by Hioshiru @ https://www.furaffinity.net/user/hioshiru/[line break]";

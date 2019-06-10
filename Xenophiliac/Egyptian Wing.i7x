@@ -579,53 +579,49 @@ to say FinalQuestConclusion:
 
 to say AmuranSexMenu:
 	now calcnumber is -1;
-	now XP of Amuran is 0;
-	while XP of Amuran is 0:
-		LineBreak;
+	if Player is female:
+		say "(1) [link]Get Fucked[as]1[end link][line break]";
+		say "(2) [link]Get Stuffed - Anal[as]2[end link][line break]";
+		say "(3) [link]Jerk Him[as]3[end link][line break]";
+		say "(4) [link]Blow Him[as]4[end link][line break]";
 		say "(0) [link]Nevermind[as]0[end link][line break]";
-		if Player is female:
-			say "(1) [link]Get Fucked[as]1[end link][line break]";
-			say "(2) [link]Get Stuffed - Anal[as]2[end link][line break]";
-			say "(3) [link]Jerk Him[as]3[end link][line break]";
-			say "(4) [link]Blow Him[as]4[end link][line break]";
-			say "(0) [link]Nevermind[as]0[end link][line break]";
-			while 1 is 1:
-				say "Choice? (0-4)> [run paragraph on]";
-				get a number;
-				if calcnumber >= 0 and calcnumber <= 4:
-					break;
-				else:
-					say "Invalid Number. Try Again.";
-			if calcnumber is 1:
-				say "[AmuranCuntStuffed]";
-			else if calcnumber is 2:
-				say "[AmuranAnal]";
-			else if calcnumber is 3:
-				say "[AmuranJerkedOff]";
-			else if calcnumber is 4:
-				say "[AmuranBlown]";
+		while 1 is 1:
+			say "Choice? (0-4)> [run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 4:
+				break;
 			else:
-				say "[AmuranNevermind]";
+				say "Invalid Number. Try Again.";
+		if calcnumber is 1:
+			say "[AmuranCuntStuffed]";
+		else if calcnumber is 2:
+			say "[AmuranAnal]";
+		else if calcnumber is 3:
+			say "[AmuranJerkedOff]";
+		else if calcnumber is 4:
+			say "[AmuranBlown]";
 		else:
-			say "(1) [link]Get Stuffed - Anal[as]1[end link][line break]";
-			say "(2) [link]Jerk Him Off[as]2[end link][line break]";
-			say "(3) [link]Blow Him Off[as]3[end link][line break]";
-			say "(0) [link]Nevermind[as]0[end link][line break]";
-			while 1 is 1:
-				say "Choice? (0-3)> [run paragraph on]";
-				get a number;
-				if calcnumber >= 0 and calcnumber <= 3:
-					break;
-				else:
-					say "Invalid Number. Try Again.";
-			if calcnumber is 1:
-				say "[AmuranAnal]";
-			else if calcnumber is 2:
-				say "[AmuranJerkedOff]";
-			else if calcnumber is 3:
-				say "[AmuranBlown]";
+			say "[AmuranNevermind]";
+	else:
+		say "(1) [link]Get Stuffed - Anal[as]1[end link][line break]";
+		say "(2) [link]Jerk Him Off[as]2[end link][line break]";
+		say "(3) [link]Blow Him Off[as]3[end link][line break]";
+		say "(0) [link]Nevermind[as]0[end link][line break]";
+		while 1 is 1:
+			say "Choice? (0-3)> [run paragraph on]";
+			get a number;
+			if calcnumber >= 0 and calcnumber <= 3:
+				break;
 			else:
-				say "[AmuranNevermind]";
+				say "Invalid Number. Try Again.";
+		if calcnumber is 1:
+			say "[AmuranAnal]";
+		else if calcnumber is 2:
+			say "[AmuranJerkedOff]";
+		else if calcnumber is 3:
+			say "[AmuranBlown]";
+		else:
+			say "[AmuranNevermind]";
 
 to say AmuranNevermind:
 	say "     You decide not to have sex with the scarab-man. Maybe some other time?";

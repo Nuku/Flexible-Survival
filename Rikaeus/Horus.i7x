@@ -252,9 +252,9 @@ instead of fucking the Horus:
 		say "     The God shakes his head and gives you a smile. 'I'm sorry but the Darkness requires my attention for now.' He says with an apologetic look in his eyes.";
 	else if HorusRelationship < 13:
 		say "     Horus gives you a soft smile and shakes his head. 'I'm sorry my friend but despite your small victory against the Darkness we still need to focus on it.' He starts before continuing with a chuckle. 'Afterall, what kind of king would I be if I focused on sex over solving a problem involving the people?' Looks like you won't be getting into bed with the deity until the issue with the mutant is solved.";
-	else if HorusRelationship > 13 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
+	else if HorusRelationship > 12 and (lastfuck of Horus - turns < 3): [had sex 9 hours ago]
 		say "     As soon as you try to proposition the god he chuckles. 'My friend, as delectable as you are, I do have work to do. Come find me in a couple hours and then we can see about it.' Horus says.";
-	else if HorusRelationship > 13:
+	else if HorusRelationship > 12:
 		say "     Walking up to the sun deity you give him a sultry smirk and ask if he'd like to let out a little steam. He raises a brow at you before chuckling. 'Sure, why not, I have some free time on my hands.' Horus says, before asking you what you want to do in particular as he gestures for his retainers to leave the room.";
 		say "[HorusSexMenu]";
 

@@ -11,6 +11,25 @@ Version 2 of Razorback Boar by Wahn begins here.
 RazorbackBoarEvents is a number that varies.
 FuckedByRazorbackBoar is a number that varies.
 GarthRelationship is a number that varies.
+GarthInfectionArea is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if GarthInfectionArea is 0:
+		if Razorback Fury is resolved:
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
+				if Name entry is "Razorback Boar Male":
+					now MonsterID is y;
+					now area entry is "Forest";
+					break;
+		if GarthRelationship > 0: [agreed to get fucked without fighting]
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
+				if Name entry is "Razorback Boar Male":
+					now MonsterID is y;
+					now area entry is "Nowhere";
+					break;
+
 
 Section 1 - Events
 
@@ -40,7 +59,7 @@ Instead of resolving a Razorback Fury:
 	now RazorbackBoarEvents is 1;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
-		if Name entry is "Razorback Boar":
+		if Name entry is "Razorback Boar Male":
 			now MonsterID is y;
 			now area entry is "Forest";
 			break;
@@ -673,7 +692,7 @@ to say BoarAlphaChoice:
 			say "     Garth grins broadly around his jutting tusks as you agree. He runs his hand down your front in a slightly possessive manner, then says, 'Glad you recognize the proper way for things to be. And just in case you're the worrying type - I'm not gonna make any of my people here become drooling sex slaves or anything. That messed up stuff is for the sick fucks in that damned city outside the forest. We got a new start here, so feel free to do your own thing - just be ready to give your alpha some love.' With a wiggle of his furry eyebrows, the anthro boar stands up and walks off, his still half-hard cock dangling between his legs and dipping cum.";
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
-				if Name entry is "Razorback Boar":
+				if Name entry is "Razorback Boar Male":
 					now MonsterID is y;
 					now area entry is "Nowhere";
 					break;

@@ -32,7 +32,7 @@ to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 8:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He heard a rumor about a [bold type]ruthless horse hermaphrodite roaming the park[roman type], and would like me to investigate[roman type].";
 	if HP of Roman is 9:
-		say "[bold type]Football team additions[roman type]: the Black Equinoid accepted to join the Tenvale Gorillas. I should report back to Roman.";
+		say "[bold type]Football team additions[roman type]: The Black Equinoid accepted to join the Tenvale Gorillas. I should report back to Roman.";
 	if HP of Roman is 10:
 		say "[bold type]Football team additions[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He would like to recruit some female cheerleaders, this time. He told about a [bold type]Husky Gang[roman type], with whom he has some history.";
 	if HP of Roman is 11:
@@ -328,7 +328,7 @@ instead of fucking Team Captain Roman:
 			LibidoLoss 50;
 		else:
 			say "     Poor Roman is currently [one of]already taken by a couple of visitors[or]spitroasted by two horny wolfmen footballers[or]forced to rim one of his former teammates['] ass[or]having his pussy toyed with by a pair of cheerleaders[at random]. You will have to try again later.";
-	else if HP of Roman is 5:
+	else if HP of Roman > 4:
 		if (lastFuck of Roman - turns > 8):
 			say "[RomanFuck2]";
 			LibidoLoss 50;

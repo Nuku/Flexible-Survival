@@ -650,6 +650,9 @@ understand "testpronouns" as pronountesting.
 
 carry out pronountesting:
 	say "[master].";
+	say "[Master].";
+	say "[sir].";
+	say "[Sir].";
 	say "[PronounChoice of Player].";
 	say "[PronounSet of Player].";
 	say "[SubjectPro of Player]";

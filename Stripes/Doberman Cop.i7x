@@ -1,9 +1,20 @@
 Version 6 of Doberman Cop by Stripes begins here.
 [ Version 5.0 - Friendly option started]
 [ Version 6.0 - New choice point and menu coding]
-
+[ Version 6.1 - Area Entry fix ]
 
 "Adds a Doberman infection and creature. This file pulls double-duty, with the creature/combat portions written by Stripes to run the Doberwoman Cop. The infection and ending portions of this file were written by Kaleem to deal with the Doberman NPC for the Firehouse content."
+
+AlexandraInfectionArea is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if AlexandraInfectionArea is 0 and HP of Alexandra > 0: [she isn't roaming anymore]
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
+			if Name entry is "Doberman Bitch":
+				now MonsterID is y;
+				now area entry is "Nowhere";
+				break;
 
 Section 1 - Creature Responses		[Note: Combat related portions deal with the Doberwoman Cop.]
 
