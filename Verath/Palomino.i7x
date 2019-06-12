@@ -8,9 +8,9 @@ Section 1 - The Palomino Club
 
 Table of GameRoomIDs (continued)
 Object	Name
-PALOMINO	"Palomino"
+PALOMINO	"PALOMINO"
 
-Palomino is a room. It is fasttravel.
+PALOMINO is a room. It is fasttravel.
 The earea of Palomino is "Outside".
 
 The description of The Palomino is "[palominodesc]".

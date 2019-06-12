@@ -498,6 +498,10 @@ instead of going up from Ruby's Cave while (Ruby is in Ruby's Cave):
 	LineBreak;
 	move player to Ashen Cliff;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Ruby's Cave	"Ruby's Cave"
+
 Ruby's Cave is a room.
 Ruby's Cave is down from Ashen Cliff.
 The description of Ruby's Cave is "Ruby's humble abode consists of a short tunnel that leads into a natural cave, about sixty by thirty feet in its farthest extent. It is dimly lit by glowing volcanic rock formations and holds some scavenged furniture brought in by the dragoness.".

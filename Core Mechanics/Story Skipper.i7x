@@ -405,7 +405,7 @@ to CharacterRestore:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
 				else:
-					say "DEBUG -> Room [LocationName entry] does not exist. Character moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
+					say "DEBUG -> Room [LocationName entry] does not exist. '[CharacterIdName]' moved to NPC Nexus. Please report this error on the FS Discord Bug Report Channel![line break]";
 					move CharacterObject to NPC Nexus;
 				now Energy of CharacterObject is Energy entry;
 				now HP of CharacterObject is HP entry;
