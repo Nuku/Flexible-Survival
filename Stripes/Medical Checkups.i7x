@@ -2,6 +2,7 @@ Version 5 of Medical Checkups by Stripes begins here.
 [ Version 4.0 - Main Storyline tie-in - Stripes]
 [ Version 5.0 - Added cunt pills - Kurainyx]
 [ Version 5.1 - Easier cunt pill access for males - Kurainyx]
+[ Version 5.2 - Added Black Wasp parasite removal - Kurainyx]
 [- Originally Authored By: Hellerhound -]
 
 Section 1 - Pediatrics Lobby
@@ -319,11 +320,17 @@ to say Medeaadjustments:
 			now sortorder entry is 9;
 			now description entry is "Talk to her about her pills";
 		[]
-		else if Medeapill is true:
+		if Medeapill is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Cunt Pills";
 			now sortorder entry is 9;
 			now description entry is "Trade for her cunt pills";
+		[]
+		if insectlarva is true:
+			choose a blank row in table of fucking options;
+			now title entry is "Parasite";
+			now sortorder entry is 10;
+			now description entry is "See if Medea can do anything about the parasite inside of you";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -598,14 +605,14 @@ to say Medeaadjustments:
 							now sextablerun is 1;
 							if nam is "Trade medkit":
 								if carried of medkit > 0:
-									say "You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
+									say "     You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of medkit by 1;
 									increase carried of cunt pill by 1;
 								else:
 									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
 							if nam is "Trade healing booster":
 								if carried of healing booster > 0:
-									say "You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
+									say "     You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of healing booster by 1;
 									increase carried of cunt pill by 1;
 								else:
@@ -618,6 +625,37 @@ to say Medeaadjustments:
 						else:
 							say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 					clear the screen and hyperlink list;
+				else if nam is "Parasite":
+					say "     Medea's face contorts into one of disgust when you tell her about your encounter with the black wasps and the parasite they put inside of you. 'Yes, I know about those vile creatures,' the lizard doctor says disdainfully. 'They turn their victims into hapless egg-layers that are unable to experience the wonders of a natural birth, and I'm afraid that you have succumbed to their dreadful influence. Fortunately, I have been developing a concoction that will kill the parasite that dwells within you. All I need is a medkit to make you a dose.";
+					if carried of medkit > 0:
+						say "     [bold type]Do you want to give Medea a medkit so that she can remove the parasite within you?[roman type][line break]";
+						LineBreak;
+						say "     ([link]Y[as]y[end link]) - Trade your medkit to get rid of the parasite.";
+						say "     ([link]N[as]n[end link]) - Turn down the offer and try to deal with the problem yourself.";
+						if Player consents:
+							LineBreak;
+							say "     Medea quickly takes your offered medkit over to a counter and begins tinkering with it, along with a number of other medical equipment. It only takes a few moments for the lizard doctor to come back with a needle and syringe filled with a green liquid. 'This will kill the parasite, allowing you to expel the nasty bug. I must warn you though: this will hurt,' Medea explains. She gives you a moment to steel yourself before she injects the concoction directly into your stomach. It only takes a moment for the parasite within you to violently react to Medea's treatment, and you keel over from the intense pain in your belly.";
+							say "     Thankfully, the parasite's movements and the pain dies down after a few moments. With Medea's assistance, you manage to push out a puddle of thick goo, followed by the parasite itself. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and a phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. 'Good riddance,' Medea says, glaring at the mess with scorn. She then turns to you with a cheerful smile. 'Congratulations, the treatment was a success.'";
+							decrease carried of medkit by 1;
+							now insectlarva is false;
+							now preghijack is false;
+							now mpreghijack is false;
+							now larvacounter is 0;
+							now larvaegg is 0;
+							SanBoost 10;
+							now Libido of Player is Libido of Player / 2;
+							repeat with y running from 1 to number of filled rows in Table of Random Critters:
+								choose row y in Table of Random Critters;
+								if Name entry is "Black Wasp":
+									now area entry is "Nowhere";
+									now non-infectious entry is true; [Wasps locked again]
+									break;
+						else:
+							say "     You say that you don't have a medkit to give to Medea. The lizard doctor sighs in disappointment and says, 'Then, I'm afraid that I have nothing else to help you with your parasite problem. Do please reconsider my offer if you have trouble ridding yourself of the disgusting thing.'";
+						wait for any key;
+					else:
+						say "     You say that you don't have a medkit to give to Medea. The lizard doctor sighs in disappointment and says, 'Then, I'm afraid that I have nothing else to help you with your parasite problem. Do please reconsider my offer if you have trouble ridding yourself of the disgusting thing.'";
+						wait for any key;
 				else if nam is "Doctor Matt's request" or nam is "Doctor Mouse's demand":
 					say "[Medeaassistance_plot]";
 

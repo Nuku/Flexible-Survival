@@ -1,7 +1,8 @@
-Version 1 of Ranae by Kurainyx begins here.
+Version 3 of Ranae by Kurainyx begins here.
 [ Version 1.0 - Created Ranae - Kurainyx ]
 [ Version 2.0 - Add one luxury item event and oral vore/bound state - Kurainyx]
 [ Version 3.0 - Add two more luxury item events, anal vore scene, and a second bound state ending - Kurainyx]
+[ Version 3.1 - Can activate luxury item events in the case of old imports via 'Gift' talk option - Kurainyx]
 
 "Adds a female frog NPC to Flexible Survival"
 
@@ -365,8 +366,14 @@ to say RanaeGift:
 		else if charisma of Ranae is 1:	[Bracelet]
 			say "     As soon as you pull out the emerald bracelet that you [italic type]found[roman type], Ranae's eyes fly wide open, and she quickly snatches the jewlery from you. 'Oh my gosh!' the frog gushes as she holds the bracelet in her left hand and adoringly rubs it with her right one, a giddy smile on her face. 'It's so pretty! You really do know how to spoil a girl.' She slips the bracelet through her right hand, letting it hang on her wrist. Holding her arm up to the light, she giggles in joy over her new accessory. 'It's a perfect fit! I love it!' As Ranae continues to fawn over her bracelet, you realize that the frog isn't aware that the bracelet is a fake. You briefly wonder if you should tell her that, but with how happy she is, you decide to keep quiet.";
 			now charisma of Ranae is 2;
-		else:
+		else:		[Turns on luxury item events if not activated due to old save imports]
 			say "     You pull out several knickknacks and trinkets that you have found during your exploration, but none of them seems to catch Ranae's eye. When you run out of stuff to show to the frog woman, she snorts in annoyance and gives you a dismissive wave with her hand. 'Go and find me stuff that's actually interesting,' she commands before sending you on your way.";
+			if perception of Ranae is 0:
+				now Boarded-up Building is active;
+			if intelligence of Ranae is 0:
+				now Ransacked Shop is active;
+			if charisma of Ranae is 0:
+				now Trench Coat Salesman is active;
 
 instead of fucking the Ranae:
 	LineBreak;
